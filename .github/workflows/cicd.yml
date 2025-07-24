@@ -541,3 +541,20 @@ jobs:
         env:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
         continue-on-error: true
+
+      - name: Build for ra8p1-pac
+        id: build-ra8p1
+        run: cd pac/ra8p1-pac && cargo build --target thumbv8m.main-none-eabihf && cargo fmt --all -- --check
+        continue-on-error: true
+
+      - name: Build docs for ra8p1-pac
+        if: steps.build-ra8p1.outcome == 'success'
+        run: cd pac/ra8p1-pac && cargo doc --no-deps
+        continue-on-error: true
+
+      - name: Publish ra8p1-pac
+        if: steps.build-ra8p1.outcome == 'success' && github.ref == 'refs/heads/main'
+        run: cd pac/ra8p1-pac && cargo publish --allow-dirty
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        continue-on-error: true

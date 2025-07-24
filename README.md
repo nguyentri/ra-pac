@@ -3,7 +3,7 @@
 
 This repository contains the Peripheral Access Crate (PAC) for Renesas RA Microcontrollers.
 
-The crate is automatically generated from the SVD files in [packs](https://www.keil.arm.com/packs) using [svd2pac](https://github.com/Infineon/svd2pac).
+The crate is generated from the SVD files in [packs](https://www.keil.arm.com/packs) using [svd2pac](https://github.com/Infineon/svd2pac).
 
 It serves as the foundation for the Hardware Abstraction Layer (HAL) in Rust for Renesas RA Series Microcontrollers.
 
@@ -38,6 +38,7 @@ It serves as the foundation for the Hardware Abstraction Layer (HAL) in Rust for
 - RA8E1
 - RA8E2
 - RA8M1
+- RA8P1
 
 ## Target Architectures
 
@@ -58,7 +59,7 @@ Each device corresponds to a specific architecture target:
   - Cortex-M33 devices: `thumbv8m.main-none-eabihf`
     - The other RA4 and RA6 devices
 
-- **RA8 Series**: `thumbv8m.main-none-eabihf` (Cortex-M33)
+- **RA8 Series**: `thumbv8m.main-none-eabihf` (Cortex-M85)
 
 ## License
 

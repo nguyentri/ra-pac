@@ -52,7 +52,7 @@ jobs:
 
       - name: Build docs for ra0e1-pac
         if: steps.build-ra0e1.outcome == 'success'
-        run: cd pac/ra0e1-pac && cargo doc --no-deps
+        run: cd pac/ra0e1-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra0e1-pac
@@ -70,7 +70,7 @@ jobs:
 
       - name: Build docs for ra2a1-pac
         if: steps.build-ra2a1.outcome == 'success'
-        run: cd pac/ra2a1-pac && cargo doc --no-deps
+        run: cd pac/ra2a1-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra2a1-pac
@@ -87,7 +87,7 @@ jobs:
 
       - name: Build docs for ra2a2-pac
         if: steps.build-ra2a2.outcome == 'success'
-        run: cd pac/ra2a2-pac && cargo doc --no-deps
+        run: cd pac/ra2a2-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra2a2-pac
@@ -104,7 +104,7 @@ jobs:
 
       - name: Build docs for ra2e1-pac
         if: steps.build-ra2e1.outcome == 'success'
-        run: cd pac/ra2e1-pac && cargo doc --no-deps
+        run: cd pac/ra2e1-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra2e1-pac
@@ -121,7 +121,7 @@ jobs:
 
       - name: Build docs for ra2e2-pac
         if: steps.build-ra2e2.outcome == 'success'
-        run: cd pac/ra2e2-pac && cargo doc --no-deps
+        run: cd pac/ra2e2-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra2e2-pac
@@ -138,7 +138,7 @@ jobs:
 
       - name: Build docs for ra2e3-pac
         if: steps.build-ra2e3.outcome == 'success'
-        run: cd pac/ra2e3-pac && cargo doc --no-deps
+        run: cd pac/ra2e3-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra2e3-pac
@@ -155,7 +155,7 @@ jobs:
 
       - name: Build docs for ra2l1-pac
         if: steps.build-ra2l1.outcome == 'success'
-        run: cd pac/ra2l1-pac && cargo doc --no-deps
+        run: cd pac/ra2l1-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra2l1-pac
@@ -173,7 +173,7 @@ jobs:
 
       - name: Build docs for ra4e1-pac
         if: steps.build-ra4e1.outcome == 'success'
-        run: cd pac/ra4e1-pac && cargo doc --no-deps
+        run: cd pac/ra4e1-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra4e1-pac
@@ -190,7 +190,7 @@ jobs:
 
       - name: Build docs for ra4e2-pac
         if: steps.build-ra4e2.outcome == 'success'
-        run: cd pac/ra4e2-pac && cargo doc --no-deps
+        run: cd pac/ra4e2-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra4e2-pac
@@ -207,7 +207,7 @@ jobs:
 
       - name: Build docs for ra4l1-pac
         if: steps.build-ra4l1.outcome == 'success'
-        run: cd pac/ra4l1-pac && cargo doc --no-deps
+        run: cd pac/ra4l1-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra4l1-pac
@@ -224,7 +224,7 @@ jobs:
 
       - name: Build docs for ra4m1-pac
         if: steps.build-ra4m1.outcome == 'success'
-        run: cd pac/ra4m1-pac && cargo doc --no-deps
+        run: cd pac/ra4m1-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra4m1-pac
@@ -241,7 +241,7 @@ jobs:
 
       - name: Build docs for ra4m2-pac
         if: steps.build-ra4m2.outcome == 'success'
-        run: cd pac/ra4m2-pac && cargo doc --no-deps
+        run: cd pac/ra4m2-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra4m2-pac
@@ -258,7 +258,7 @@ jobs:
 
       - name: Build docs for ra4m3-pac
         if: steps.build-ra4m3.outcome == 'success'
-        run: cd pac/ra4m3-pac && cargo doc --no-deps
+        run: cd pac/ra4m3-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra4m3-pac
@@ -275,7 +275,7 @@ jobs:
 
       - name: Build docs for ra4t1-pac
         if: steps.build-ra4t1.outcome == 'success'
-        run: cd pac/ra4t1-pac && cargo doc --no-deps
+        run: cd pac/ra4t1-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra4t1-pac
@@ -292,7 +292,7 @@ jobs:
 
       - name: Build docs for ra4w1-pac
         if: steps.build-ra4w1.outcome == 'success'
-        run: cd pac/ra4w1-pac && cargo doc --no-deps
+        run: cd pac/ra4w1-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra4w1-pac
@@ -310,7 +310,7 @@ jobs:
 
       - name: Build docs for ra6e1-pac
         if: steps.build-ra6e1.outcome == 'success'
-        run: cd pac/ra6e1-pac && cargo doc --no-deps
+        run: cd pac/ra6e1-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra6e1-pac
@@ -327,7 +327,7 @@ jobs:
 
       - name: Build docs for ra6e2-pac
         if: steps.build-ra6e2.outcome == 'success'
-        run: cd pac/ra6e2-pac && cargo doc --no-deps
+        run: cd pac/ra6e2-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra6e2-pac
@@ -344,7 +344,7 @@ jobs:
 
       - name: Build docs for ra6m1-pac
         if: steps.build-ra6m1.outcome == 'success'
-        run: cd pac/ra6m1-pac && cargo doc --no-deps
+        run: cd pac/ra6m1-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra6m1-pac
@@ -361,7 +361,7 @@ jobs:
 
       - name: Build docs for ra6m2-pac
         if: steps.build-ra6m2.outcome == 'success'
-        run: cd pac/ra6m2-pac && cargo doc --no-deps
+        run: cd pac/ra6m2-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra6m2-pac
@@ -378,7 +378,7 @@ jobs:
 
       - name: Build docs for ra6m3-pac
         if: steps.build-ra6m3.outcome == 'success'
-        run: cd pac/ra6m3-pac && cargo doc --no-deps
+        run: cd pac/ra6m3-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra6m3-pac
@@ -395,7 +395,7 @@ jobs:
 
       - name: Build docs for ra6m4-pac
         if: steps.build-ra6m4.outcome == 'success'
-        run: cd pac/ra6m4-pac && cargo doc --no-deps
+        run: cd pac/ra6m4-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra6m4-pac
@@ -412,7 +412,7 @@ jobs:
 
       - name: Build docs for ra6m5-pac
         if: steps.build-ra6m5.outcome == 'success'
-        run: cd pac/ra6m5-pac && cargo doc --no-deps
+        run: cd pac/ra6m5-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra6m5-pac
@@ -429,7 +429,7 @@ jobs:
 
       - name: Build docs for ra6t1-pac
         if: steps.build-ra6t1.outcome == 'success'
-        run: cd pac/ra6t1-pac && cargo doc --no-deps
+        run: cd pac/ra6t1-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra6t1-pac
@@ -446,7 +446,7 @@ jobs:
 
       - name: Build docs for ra6t2-pac
         if: steps.build-ra6t2.outcome == 'success'
-        run: cd pac/ra6t2-pac && cargo doc --no-deps
+        run: cd pac/ra6t2-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra6t2-pac
@@ -463,7 +463,7 @@ jobs:
 
       - name: Build docs for ra6t3-pac
         if: steps.build-ra6t3.outcome == 'success'
-        run: cd pac/ra6t3-pac && cargo doc --no-deps
+        run: cd pac/ra6t3-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra6t3-pac
@@ -481,7 +481,7 @@ jobs:
 
       - name: Build docs for ra8d1-pac
         if: steps.build-ra8d1.outcome == 'success'
-        run: cd pac/ra8d1-pac && cargo doc --no-deps
+        run: cd pac/ra8d1-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra8d1-pac
@@ -498,7 +498,7 @@ jobs:
 
       - name: Build docs for ra8e1-pac
         if: steps.build-ra8e1.outcome == 'success'
-        run: cd pac/ra8e1-pac && cargo doc --no-deps
+        run: cd pac/ra8e1-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra8e1-pac
@@ -515,7 +515,7 @@ jobs:
 
       - name: Build docs for ra8e2-pac
         if: steps.build-ra8e2.outcome == 'success'
-        run: cd pac/ra8e2-pac && cargo doc --no-deps
+        run: cd pac/ra8e2-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra8e2-pac
@@ -532,7 +532,7 @@ jobs:
 
       - name: Build docs for ra8m1-pac
         if: steps.build-ra8m1.outcome == 'success'
-        run: cd pac/ra8m1-pac && cargo doc --no-deps
+        run: cd pac/ra8m1-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra8m1-pac
@@ -549,7 +549,7 @@ jobs:
 
       - name: Build docs for ra8p1-pac
         if: steps.build-ra8p1.outcome == 'success'
-        run: cd pac/ra8p1-pac && cargo doc --no-deps
+        run: cd pac/ra8p1-pac && cargo doc --features "all,rt" --no-deps
         continue-on-error: true
 
       - name: Publish ra8p1-pac

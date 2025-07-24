@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.1, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:53 +0000
+// Generated from SVD 1.1, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:11 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Pmisc {
         self.ptr
     }
 
+    #[doc = "Write-Protect Register"]
     #[inline(always)]
     pub const fn pwpr(&self) -> &'static crate::common::Reg<self::Pwpr_SPEC, crate::common::RW> {
         unsafe {
@@ -50,9 +51,11 @@ impl crate::sealed::RegSpec for Pwpr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Write-Protect Register"]
 pub type Pwpr = crate::RegValueT<Pwpr_SPEC>;
 
 impl Pwpr {
+    #[doc = "PFSWE Bit Write Disable"]
     #[inline(always)]
     pub fn b0wi(
         self,
@@ -78,6 +81,7 @@ impl Pwpr {
         >::from_register(self, 0)
     }
 
+    #[doc = "PFS Register Write Enable"]
     #[inline(always)]
     pub fn pfswe(
         self,
@@ -103,6 +107,7 @@ impl Pwpr {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -122,16 +127,20 @@ pub mod pwpr {
     pub struct B0Wi_SPEC;
     pub type B0Wi = crate::EnumBitfieldStruct<u8, B0Wi_SPEC>;
     impl B0Wi {
+        #[doc = "Writing to the PFSWE bit is enabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Writing to the PFSWE bit is disabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pfswe_SPEC;
     pub type Pfswe = crate::EnumBitfieldStruct<u8, Pfswe_SPEC>;
     impl Pfswe {
+        #[doc = "Writing to the PFS register is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Writing to the PFS register is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:23:25 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Rmpu {
         self.ptr
     }
 
+    #[doc = "MMPU Operation After Detection Register"]
     #[inline(always)]
     pub const fn mmpuoad(
         &self,
@@ -45,6 +46,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Operation After Detection Protect Register"]
     #[inline(always)]
     pub const fn mmpuoadpt(
         &self,
@@ -56,6 +58,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Enable Register for DMAC"]
     #[inline(always)]
     pub const fn mmpuendmac(
         &self,
@@ -67,6 +70,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Enable Protect Register for DMAC"]
     #[inline(always)]
     pub const fn mmpuenptdmac(
         &self,
@@ -78,6 +82,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Regions Protect Register for DMAC"]
     #[inline(always)]
     pub const fn mmpurptdmac(
         &self,
@@ -89,6 +94,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Regions Protect register for DMAC Secure"]
     #[inline(always)]
     pub const fn mmpurptdmac_sec(
         &self,
@@ -100,6 +106,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Access Control Register for DMAC %s"]
     #[inline(always)]
     pub const fn mmpuacdmac(
         &self,
@@ -112,7 +119,88 @@ impl super::Rmpu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x200usize))
         }
     }
+    #[inline(always)]
+    pub const fn mmpuacdmac0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x200usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacdmac1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x210usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacdmac2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x220usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacdmac3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x230usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacdmac4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x240usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacdmac5(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x250usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacdmac6(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x260usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacdmac7(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x270usize),
+            )
+        }
+    }
 
+    #[doc = "MMPU Start Address Register for DMAC %s"]
     #[inline(always)]
     pub const fn mmpusdmac(
         &self,
@@ -125,7 +213,88 @@ impl super::Rmpu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x204usize))
         }
     }
+    #[inline(always)]
+    pub const fn mmpusdmac0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x204usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusdmac1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x214usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusdmac2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x224usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusdmac3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x234usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusdmac4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x244usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusdmac5(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x254usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusdmac6(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x264usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusdmac7(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x274usize),
+            )
+        }
+    }
 
+    #[doc = "MMPU End Address Register for DMAC %s"]
     #[inline(always)]
     pub const fn mmpuedmac(
         &self,
@@ -138,7 +307,88 @@ impl super::Rmpu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x208usize))
         }
     }
+    #[inline(always)]
+    pub const fn mmpuedmac0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x208usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuedmac1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x218usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuedmac2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x228usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuedmac3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x238usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuedmac4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x248usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuedmac5(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x258usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuedmac6(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x268usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuedmac7(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x278usize),
+            )
+        }
+    }
 
+    #[doc = "MMPU Enable Register for EDMAC"]
     #[inline(always)]
     pub const fn mmpuenedmac(
         &self,
@@ -150,6 +400,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Enable Protect Register for EDMAC"]
     #[inline(always)]
     pub const fn mmpuenptedmac(
         &self,
@@ -161,6 +412,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Regions Protect Register for EDMAC"]
     #[inline(always)]
     pub const fn mmpurptedmac(
         &self,
@@ -172,6 +424,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Access Control Register for EDMAC %s"]
     #[inline(always)]
     pub const fn mmpuacedmac(
         &self,
@@ -184,7 +437,48 @@ impl super::Rmpu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x600usize))
         }
     }
+    #[inline(always)]
+    pub const fn mmpuacedmac0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x600usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacedmac1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x610usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacedmac2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x620usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacedmac3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x630usize),
+            )
+        }
+    }
 
+    #[doc = "MMPU Start Address Register for EDMAC %s"]
     #[inline(always)]
     pub const fn mmpusedmac(
         &self,
@@ -197,7 +491,48 @@ impl super::Rmpu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x604usize))
         }
     }
+    #[inline(always)]
+    pub const fn mmpusedmac0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x604usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusedmac1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x614usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusedmac2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x624usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusedmac3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x634usize),
+            )
+        }
+    }
 
+    #[doc = "MMPU End Address Register for EDMAC %s"]
     #[inline(always)]
     pub const fn mmpueedmac(
         &self,
@@ -210,7 +545,48 @@ impl super::Rmpu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x608usize))
         }
     }
+    #[inline(always)]
+    pub const fn mmpueedmac0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpueedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpueedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x608usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpueedmac1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpueedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpueedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x618usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpueedmac2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpueedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpueedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x628usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpueedmac3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpueedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpueedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x638usize),
+            )
+        }
+    }
 
+    #[doc = "MMPU Enable Register for GLCDC"]
     #[inline(always)]
     pub const fn mmpuenglcdc(
         &self,
@@ -222,6 +598,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Enable Protect Register for GLCDC"]
     #[inline(always)]
     pub const fn mmpuenptglcdc(
         &self,
@@ -233,6 +610,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Regions Protect Register for GLCDC"]
     #[inline(always)]
     pub const fn mmpurptglcdc(
         &self,
@@ -244,6 +622,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Access Control Register for GLCDC %s"]
     #[inline(always)]
     pub const fn mmpuacglcdc(
         &self,
@@ -256,7 +635,28 @@ impl super::Rmpu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x800usize))
         }
     }
+    #[inline(always)]
+    pub const fn mmpuacglcdc0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacglcdc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacglcdc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x800usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacglcdc1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacglcdc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacglcdc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x810usize),
+            )
+        }
+    }
 
+    #[doc = "MMPU Start Address Register for GLCDC %s"]
     #[inline(always)]
     pub const fn mmpusglcdc(
         &self,
@@ -269,7 +669,28 @@ impl super::Rmpu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x804usize))
         }
     }
+    #[inline(always)]
+    pub const fn mmpusglcdc0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusglcdc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusglcdc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x804usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusglcdc1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusglcdc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusglcdc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x814usize),
+            )
+        }
+    }
 
+    #[doc = "Graphics Region %s End Address Register"]
     #[inline(always)]
     pub const fn mmpueglcdc(
         &self,
@@ -282,7 +703,28 @@ impl super::Rmpu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x808usize))
         }
     }
+    #[inline(always)]
+    pub const fn mmpueglcdc0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpueglcdc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpueglcdc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x808usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpueglcdc1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpueglcdc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpueglcdc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x818usize),
+            )
+        }
+    }
 
+    #[doc = "MMPU Enable Register for DRW"]
     #[inline(always)]
     pub const fn mmpuendrw(
         &self,
@@ -294,6 +736,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Enable Protect Register for DRW"]
     #[inline(always)]
     pub const fn mmpuenpdrw(
         &self,
@@ -305,6 +748,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Regions Protect Register for DRW"]
     #[inline(always)]
     pub const fn mmpurptdrw(
         &self,
@@ -316,6 +760,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Access Control Register for DRW %s"]
     #[inline(always)]
     pub const fn mmpuacdrw(
         &self,
@@ -328,7 +773,38 @@ impl super::Rmpu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xa00usize))
         }
     }
+    #[inline(always)]
+    pub const fn mmpuacdrw0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacdrw_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacdrw_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa00usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacdrw1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacdrw_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacdrw_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa10usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacdrw2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacdrw_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacdrw_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa20usize),
+            )
+        }
+    }
 
+    #[doc = "MMPU Start Address Register for DRW %s"]
     #[inline(always)]
     pub const fn mmpusdrw(
         &self,
@@ -341,7 +817,38 @@ impl super::Rmpu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xa04usize))
         }
     }
+    #[inline(always)]
+    pub const fn mmpusdrw0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusdrw_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusdrw_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa04usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusdrw1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusdrw_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusdrw_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa14usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusdrw2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusdrw_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusdrw_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa24usize),
+            )
+        }
+    }
 
+    #[doc = "Graphics Region %s End Address Register"]
     #[inline(always)]
     pub const fn mmpuedrw(
         &self,
@@ -354,7 +861,28 @@ impl super::Rmpu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xa08usize))
         }
     }
+    #[inline(always)]
+    pub const fn mmpuedrw0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuedrw_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuedrw_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa08usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuedrw1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuedrw_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuedrw_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa18usize),
+            )
+        }
+    }
 
+    #[doc = "MMPU Enable Register for MIPI"]
     #[inline(always)]
     pub const fn mmpuenmipi(
         &self,
@@ -366,6 +894,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Enable Protect Register for MIPI"]
     #[inline(always)]
     pub const fn mmpuenptmipi(
         &self,
@@ -377,6 +906,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Regions Protect Register for MIPI"]
     #[inline(always)]
     pub const fn mmpurptmipi(
         &self,
@@ -388,6 +918,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Access Control Register for MIPI"]
     #[inline(always)]
     pub const fn mmpuacmipi(
         &self,
@@ -399,6 +930,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Start Address Register for MIPI"]
     #[inline(always)]
     pub const fn mmpusmipi(
         &self,
@@ -410,6 +942,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU End Address Register for MIPI"]
     #[inline(always)]
     pub const fn mmpuemipi(
         &self,
@@ -421,6 +954,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Enable Register for CEU"]
     #[inline(always)]
     pub const fn mmpuenceu(
         &self,
@@ -432,6 +966,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Enable Protect Register for CEU"]
     #[inline(always)]
     pub const fn mmpuenptceu(
         &self,
@@ -443,6 +978,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Regions Protect Register for CEU"]
     #[inline(always)]
     pub const fn mmpurptceu(
         &self,
@@ -454,6 +990,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Access Control Register for CEU %s"]
     #[inline(always)]
     pub const fn mmpuacceu(
         &self,
@@ -466,7 +1003,28 @@ impl super::Rmpu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xe00usize))
         }
     }
+    #[inline(always)]
+    pub const fn mmpuacceu0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacceu_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacceu_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe00usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacceu1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacceu_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacceu_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe10usize),
+            )
+        }
+    }
 
+    #[doc = "MMPU Start Address Register for CEU %s"]
     #[inline(always)]
     pub const fn mmpusceu(
         &self,
@@ -479,7 +1037,28 @@ impl super::Rmpu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xe04usize))
         }
     }
+    #[inline(always)]
+    pub const fn mmpusceu0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusceu_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusceu_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe04usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusceu1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusceu_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusceu_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe14usize),
+            )
+        }
+    }
 
+    #[doc = "MMPU End Address Register for CEU %s"]
     #[inline(always)]
     pub const fn mmpueceu(
         &self,
@@ -492,6 +1071,26 @@ impl super::Rmpu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xe08usize))
         }
     }
+    #[inline(always)]
+    pub const fn mmpueceu0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpueceu_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpueceu_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe08usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpueceu1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpueceu_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpueceu_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe18usize),
+            )
+        }
+    }
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -500,9 +1099,11 @@ impl crate::sealed::RegSpec for Mmpuoad_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Operation After Detection Register"]
 pub type Mmpuoad = crate::RegValueT<Mmpuoad_SPEC>;
 
 impl Mmpuoad {
+    #[doc = "Operation after detection"]
     #[inline(always)]
     pub fn oad(
         self,
@@ -528,6 +1129,7 @@ impl Mmpuoad {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -535,6 +1137,7 @@ impl Mmpuoad {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpuoad_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -554,8 +1157,10 @@ pub mod mmpuoad {
     pub struct Oad_SPEC;
     pub type Oad = crate::EnumBitfieldStruct<u8, Oad_SPEC>;
     impl Oad {
+        #[doc = "NMI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Reset"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -566,9 +1171,11 @@ impl crate::sealed::RegSpec for Mmpuoadpt_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Operation After Detection Protect Register"]
 pub type Mmpuoadpt = crate::RegValueT<Mmpuoadpt_SPEC>;
 
 impl Mmpuoadpt {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -594,6 +1201,7 @@ impl Mmpuoadpt {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -602,6 +1210,7 @@ impl Mmpuoadpt {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpuoadpt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -621,8 +1230,10 @@ pub mod mmpuoadpt {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "MMPUOAD register writing is possible."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "MMPUOAD register writing is protected. Read is possible."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -633,9 +1244,11 @@ impl crate::sealed::RegSpec for Mmpuendmac_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Enable Register for DMAC"]
 pub type Mmpuendmac = crate::RegValueT<Mmpuendmac_SPEC>;
 
 impl Mmpuendmac {
+    #[doc = "Bus master MPU of DMAC Enable"]
     #[inline(always)]
     pub fn enable(
         self,
@@ -661,6 +1274,7 @@ impl Mmpuendmac {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -669,6 +1283,7 @@ impl Mmpuendmac {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpuendmac_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -689,8 +1304,10 @@ pub mod mmpuendmac {
     pub struct Enable_SPEC;
     pub type Enable = crate::EnumBitfieldStruct<u8, Enable_SPEC>;
     impl Enable {
+        #[doc = "Bus master MPU of DMAC is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus master MPU of DMAC is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -701,9 +1318,11 @@ impl crate::sealed::RegSpec for Mmpuenptdmac_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Enable Protect Register for DMAC"]
 pub type Mmpuenptdmac = crate::RegValueT<Mmpuenptdmac_SPEC>;
 
 impl Mmpuenptdmac {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -729,6 +1348,7 @@ impl Mmpuenptdmac {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -737,6 +1357,7 @@ impl Mmpuenptdmac {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpuenptdmac_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -757,8 +1378,10 @@ pub mod mmpuenptdmac {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "MMPUENDMAC register write is possible"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "MMPUENDMAC register write is protected. Read is possible."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -769,9 +1392,11 @@ impl crate::sealed::RegSpec for Mmpurptdmac_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Regions Protect Register for DMAC"]
 pub type Mmpurptdmac = crate::RegValueT<Mmpurptdmac_SPEC>;
 
 impl Mmpurptdmac {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -797,6 +1422,7 @@ impl Mmpurptdmac {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -805,6 +1431,7 @@ impl Mmpurptdmac {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpurptdmac_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -825,8 +1452,10 @@ pub mod mmpurptdmac {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "Bus master MPU register for DMAC write is possible"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus master MPU register for DMAC write is protected. Read is possible."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -837,9 +1466,11 @@ impl crate::sealed::RegSpec for MmpurptdmacSec_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Regions Protect register for DMAC Secure"]
 pub type MmpurptdmacSec = crate::RegValueT<MmpurptdmacSec_SPEC>;
 
 impl MmpurptdmacSec {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -865,6 +1496,7 @@ impl MmpurptdmacSec {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -873,6 +1505,7 @@ impl MmpurptdmacSec {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,MmpurptdmacSec_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -893,8 +1526,10 @@ pub mod mmpurptdmac_sec {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "Bus master MPU register for DMAC Secure write is possible"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus master MPU register for DMAC Secure write is protected. Read is possible."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -905,9 +1540,11 @@ impl crate::sealed::RegSpec for Mmpuacdmac_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Access Control Register for DMAC %s"]
 pub type Mmpuacdmac = crate::RegValueT<Mmpuacdmac_SPEC>;
 
 impl Mmpuacdmac {
+    #[doc = "Region Enable"]
     #[inline(always)]
     pub fn enable(
         self,
@@ -933,6 +1570,7 @@ impl Mmpuacdmac {
         >::from_register(self, 0)
     }
 
+    #[doc = "Read protection"]
     #[inline(always)]
     pub fn rp(
         self,
@@ -958,6 +1596,7 @@ impl Mmpuacdmac {
         >::from_register(self, 0)
     }
 
+    #[doc = "Write protection"]
     #[inline(always)]
     pub fn wp(
         self,
@@ -983,6 +1622,7 @@ impl Mmpuacdmac {
         >::from_register(self, 0)
     }
 
+    #[doc = "Privilege protection"]
     #[inline(always)]
     pub fn pp(
         self,
@@ -1008,6 +1648,7 @@ impl Mmpuacdmac {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000. The write value should be 000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1028,32 +1669,40 @@ pub mod mmpuacdmac {
     pub struct Enable_SPEC;
     pub type Enable = crate::EnumBitfieldStruct<u8, Enable_SPEC>;
     impl Enable {
+        #[doc = "DMAC region n unit is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMAC region n unit is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rp_SPEC;
     pub type Rp = crate::EnumBitfieldStruct<u8, Rp_SPEC>;
     impl Rp {
+        #[doc = "Read permission"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Read protection"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wp_SPEC;
     pub type Wp = crate::EnumBitfieldStruct<u8, Wp_SPEC>;
     impl Wp {
+        #[doc = "Write permission"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Write protection"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pp_SPEC;
     pub type Pp = crate::EnumBitfieldStruct<u8, Pp_SPEC>;
     impl Pp {
+        #[doc = "Unprivileged access permission"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Unprivileged access protection"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1064,9 +1713,11 @@ impl crate::sealed::RegSpec for Mmpusdmac_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MMPU Start Address Register for DMAC %s"]
 pub type Mmpusdmac = crate::RegValueT<Mmpusdmac_SPEC>;
 
 impl Mmpusdmac {
+    #[doc = "Region Stat Address : Address where the region starts, for use in region determination.NOTE: The low-order 5 bits are fixed to 0."]
     #[inline(always)]
     pub fn mmpus(
         self,
@@ -1106,9 +1757,11 @@ impl crate::sealed::RegSpec for Mmpuedmac_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MMPU End Address Register for DMAC %s"]
 pub type Mmpuedmac = crate::RegValueT<Mmpuedmac_SPEC>;
 
 impl Mmpuedmac {
+    #[doc = "Region End Address : Address where the region end, for use in region determination.NOTE: The low-order 5 bits are fixed to 1."]
     #[inline(always)]
     pub fn mmpue(
         self,
@@ -1148,9 +1801,11 @@ impl crate::sealed::RegSpec for Mmpuenedmac_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Enable Register for EDMAC"]
 pub type Mmpuenedmac = crate::RegValueT<Mmpuenedmac_SPEC>;
 
 impl Mmpuenedmac {
+    #[doc = "Bus master MPU of EDMAC Enable"]
     #[inline(always)]
     pub fn enable(
         self,
@@ -1176,6 +1831,7 @@ impl Mmpuenedmac {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1184,6 +1840,7 @@ impl Mmpuenedmac {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpuenedmac_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -1204,8 +1861,10 @@ pub mod mmpuenedmac {
     pub struct Enable_SPEC;
     pub type Enable = crate::EnumBitfieldStruct<u8, Enable_SPEC>;
     impl Enable {
+        #[doc = "Bus master MPU of EDMAC is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus master MPU of EDMAC is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1216,9 +1875,11 @@ impl crate::sealed::RegSpec for Mmpuenptedmac_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Enable Protect Register for EDMAC"]
 pub type Mmpuenptedmac = crate::RegValueT<Mmpuenptedmac_SPEC>;
 
 impl Mmpuenptedmac {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -1244,6 +1905,7 @@ impl Mmpuenptedmac {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1252,6 +1914,7 @@ impl Mmpuenptedmac {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpuenptedmac_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -1272,8 +1935,10 @@ pub mod mmpuenptedmac {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "MMPUENEDMAC register write is possible"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "MMPUENEDMAC register write is protected. Read is possible."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1284,9 +1949,11 @@ impl crate::sealed::RegSpec for Mmpurptedmac_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Regions Protect Register for EDMAC"]
 pub type Mmpurptedmac = crate::RegValueT<Mmpurptedmac_SPEC>;
 
 impl Mmpurptedmac {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -1312,6 +1979,7 @@ impl Mmpurptedmac {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1320,6 +1988,7 @@ impl Mmpurptedmac {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpurptedmac_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -1340,8 +2009,10 @@ pub mod mmpurptedmac {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "Bus master MPU register for EDMAC write is possible"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus master MPU register for EDMAC write is protected. Read is possible."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1352,9 +2023,11 @@ impl crate::sealed::RegSpec for Mmpuacedmac_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Access Control Register for EDMAC %s"]
 pub type Mmpuacedmac = crate::RegValueT<Mmpuacedmac_SPEC>;
 
 impl Mmpuacedmac {
+    #[doc = "Region Enable"]
     #[inline(always)]
     pub fn enable(
         self,
@@ -1380,6 +2053,7 @@ impl Mmpuacedmac {
         >::from_register(self, 0)
     }
 
+    #[doc = "Read protection"]
     #[inline(always)]
     pub fn rp(
         self,
@@ -1405,6 +2079,7 @@ impl Mmpuacedmac {
         >::from_register(self, 0)
     }
 
+    #[doc = "Write protection"]
     #[inline(always)]
     pub fn wp(
         self,
@@ -1430,6 +2105,7 @@ impl Mmpuacedmac {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000. The write value should be 000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1450,24 +2126,30 @@ pub mod mmpuacedmac {
     pub struct Enable_SPEC;
     pub type Enable = crate::EnumBitfieldStruct<u8, Enable_SPEC>;
     impl Enable {
+        #[doc = "EDMAC region n unit is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "EDMAC region n unit is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rp_SPEC;
     pub type Rp = crate::EnumBitfieldStruct<u8, Rp_SPEC>;
     impl Rp {
+        #[doc = "Read permission"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Read protection"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wp_SPEC;
     pub type Wp = crate::EnumBitfieldStruct<u8, Wp_SPEC>;
     impl Wp {
+        #[doc = "Write permission"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Write protection"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1478,9 +2160,11 @@ impl crate::sealed::RegSpec for Mmpusedmac_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MMPU Start Address Register for EDMAC %s"]
 pub type Mmpusedmac = crate::RegValueT<Mmpusedmac_SPEC>;
 
 impl Mmpusedmac {
+    #[doc = "Region Stat Address : Address where the region starts, for use in region determination.NOTE: The low-order 5 bits are fixed to 0."]
     #[inline(always)]
     pub fn mmpus(
         self,
@@ -1520,9 +2204,11 @@ impl crate::sealed::RegSpec for Mmpueedmac_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MMPU End Address Register for EDMAC %s"]
 pub type Mmpueedmac = crate::RegValueT<Mmpueedmac_SPEC>;
 
 impl Mmpueedmac {
+    #[doc = "Region End Address : Address where the region end, for use in region determination.NOTE: The low-order 5 bits are fixed to 1."]
     #[inline(always)]
     pub fn mmpue(
         self,
@@ -1562,9 +2248,11 @@ impl crate::sealed::RegSpec for Mmpuenglcdc_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Enable Register for GLCDC"]
 pub type Mmpuenglcdc = crate::RegValueT<Mmpuenglcdc_SPEC>;
 
 impl Mmpuenglcdc {
+    #[doc = "Bus master MPU of GLCDC Enable"]
     #[inline(always)]
     pub fn enable(
         self,
@@ -1590,6 +2278,7 @@ impl Mmpuenglcdc {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1598,6 +2287,7 @@ impl Mmpuenglcdc {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpuenglcdc_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -1618,8 +2308,10 @@ pub mod mmpuenglcdc {
     pub struct Enable_SPEC;
     pub type Enable = crate::EnumBitfieldStruct<u8, Enable_SPEC>;
     impl Enable {
+        #[doc = "Bus master MPU of GLCDC is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus master MPU of GLCDC is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1630,9 +2322,11 @@ impl crate::sealed::RegSpec for Mmpuenptglcdc_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Enable Protect Register for GLCDC"]
 pub type Mmpuenptglcdc = crate::RegValueT<Mmpuenptglcdc_SPEC>;
 
 impl Mmpuenptglcdc {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -1658,6 +2352,7 @@ impl Mmpuenptglcdc {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1666,6 +2361,7 @@ impl Mmpuenptglcdc {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpuenptglcdc_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -1686,8 +2382,10 @@ pub mod mmpuenptglcdc {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "MMPUENGLCDC register write is possible"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "MMPUENGLCDC register write is protected. Read is possible."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1698,9 +2396,11 @@ impl crate::sealed::RegSpec for Mmpurptglcdc_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Regions Protect Register for GLCDC"]
 pub type Mmpurptglcdc = crate::RegValueT<Mmpurptglcdc_SPEC>;
 
 impl Mmpurptglcdc {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -1726,6 +2426,7 @@ impl Mmpurptglcdc {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1734,6 +2435,7 @@ impl Mmpurptglcdc {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpurptglcdc_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -1754,8 +2456,10 @@ pub mod mmpurptglcdc {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "Bus master MPU register for GLCDC write is possible"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus master MPU register for GLCDC write is protected. Read is possible."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1766,9 +2470,11 @@ impl crate::sealed::RegSpec for Mmpuacglcdc_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Access Control Register for GLCDC %s"]
 pub type Mmpuacglcdc = crate::RegValueT<Mmpuacglcdc_SPEC>;
 
 impl Mmpuacglcdc {
+    #[doc = "Region Enable"]
     #[inline(always)]
     pub fn enable(
         self,
@@ -1794,6 +2500,7 @@ impl Mmpuacglcdc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Read protection"]
     #[inline(always)]
     pub fn rp(
         self,
@@ -1819,6 +2526,7 @@ impl Mmpuacglcdc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Write protection"]
     #[inline(always)]
     pub fn wp(
         self,
@@ -1844,6 +2552,7 @@ impl Mmpuacglcdc {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000. The write value should be 000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1864,24 +2573,30 @@ pub mod mmpuacglcdc {
     pub struct Enable_SPEC;
     pub type Enable = crate::EnumBitfieldStruct<u8, Enable_SPEC>;
     impl Enable {
+        #[doc = "GLCDC region n unit is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "GLCDC region n unit is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rp_SPEC;
     pub type Rp = crate::EnumBitfieldStruct<u8, Rp_SPEC>;
     impl Rp {
+        #[doc = "Read permission"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Read protection"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wp_SPEC;
     pub type Wp = crate::EnumBitfieldStruct<u8, Wp_SPEC>;
     impl Wp {
+        #[doc = "Write permission"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Write protection"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1892,9 +2607,11 @@ impl crate::sealed::RegSpec for Mmpusglcdc_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MMPU Start Address Register for GLCDC %s"]
 pub type Mmpusglcdc = crate::RegValueT<Mmpusglcdc_SPEC>;
 
 impl Mmpusglcdc {
+    #[doc = "Region Stat Address : Address where the region starts, for use in region determination.NOTE: The low-order 10 bits are fixed to 0."]
     #[inline(always)]
     pub fn mmpus(
         self,
@@ -1934,9 +2651,11 @@ impl crate::sealed::RegSpec for Mmpueglcdc_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Graphics Region %s End Address Register"]
 pub type Mmpueglcdc = crate::RegValueT<Mmpueglcdc_SPEC>;
 
 impl Mmpueglcdc {
+    #[doc = "Region End Address : Address where the region end, for use in region determination.NOTE: The low-order 10 bits are fixed to 1."]
     #[inline(always)]
     pub fn mmpue(
         self,
@@ -1976,9 +2695,11 @@ impl crate::sealed::RegSpec for Mmpuendrw_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Enable Register for DRW"]
 pub type Mmpuendrw = crate::RegValueT<Mmpuendrw_SPEC>;
 
 impl Mmpuendrw {
+    #[doc = "Bus master MPU of DRW Enable"]
     #[inline(always)]
     pub fn enable(
         self,
@@ -2004,6 +2725,7 @@ impl Mmpuendrw {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2012,6 +2734,7 @@ impl Mmpuendrw {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpuendrw_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -2031,8 +2754,10 @@ pub mod mmpuendrw {
     pub struct Enable_SPEC;
     pub type Enable = crate::EnumBitfieldStruct<u8, Enable_SPEC>;
     impl Enable {
+        #[doc = "Bus master MPU of DRW is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus master MPU of DRW is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2043,9 +2768,11 @@ impl crate::sealed::RegSpec for Mmpuenpdrw_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Enable Protect Register for DRW"]
 pub type Mmpuenpdrw = crate::RegValueT<Mmpuenpdrw_SPEC>;
 
 impl Mmpuenpdrw {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -2071,6 +2798,7 @@ impl Mmpuenpdrw {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2079,6 +2807,7 @@ impl Mmpuenpdrw {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpuenpdrw_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -2099,8 +2828,10 @@ pub mod mmpuenpdrw {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "MMPUENDRW register write is possible"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "MMPUENDRW register write is protected. Read is possible."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2111,9 +2842,11 @@ impl crate::sealed::RegSpec for Mmpurptdrw_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Regions Protect Register for DRW"]
 pub type Mmpurptdrw = crate::RegValueT<Mmpurptdrw_SPEC>;
 
 impl Mmpurptdrw {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -2139,6 +2872,7 @@ impl Mmpurptdrw {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2147,6 +2881,7 @@ impl Mmpurptdrw {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpurptdrw_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -2167,8 +2902,10 @@ pub mod mmpurptdrw {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "Bus master MPU register for DRW write is possible"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus master MPU register for DRW write is protected. Read is possible."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2179,9 +2916,11 @@ impl crate::sealed::RegSpec for Mmpuacdrw_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Access Control Register for DRW %s"]
 pub type Mmpuacdrw = crate::RegValueT<Mmpuacdrw_SPEC>;
 
 impl Mmpuacdrw {
+    #[doc = "Region Enable"]
     #[inline(always)]
     pub fn enable(
         self,
@@ -2207,6 +2946,7 @@ impl Mmpuacdrw {
         >::from_register(self, 0)
     }
 
+    #[doc = "Read protection"]
     #[inline(always)]
     pub fn rp(
         self,
@@ -2232,6 +2972,7 @@ impl Mmpuacdrw {
         >::from_register(self, 0)
     }
 
+    #[doc = "Write protection"]
     #[inline(always)]
     pub fn wp(
         self,
@@ -2257,6 +2998,7 @@ impl Mmpuacdrw {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000. The write value should be 000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2277,24 +3019,30 @@ pub mod mmpuacdrw {
     pub struct Enable_SPEC;
     pub type Enable = crate::EnumBitfieldStruct<u8, Enable_SPEC>;
     impl Enable {
+        #[doc = "DRW region n unit is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DRW region n unit is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rp_SPEC;
     pub type Rp = crate::EnumBitfieldStruct<u8, Rp_SPEC>;
     impl Rp {
+        #[doc = "Read permission"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Read protection"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wp_SPEC;
     pub type Wp = crate::EnumBitfieldStruct<u8, Wp_SPEC>;
     impl Wp {
+        #[doc = "Write permission"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Write protection"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2305,9 +3053,11 @@ impl crate::sealed::RegSpec for Mmpusdrw_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MMPU Start Address Register for DRW %s"]
 pub type Mmpusdrw = crate::RegValueT<Mmpusdrw_SPEC>;
 
 impl Mmpusdrw {
+    #[doc = "Region Stat Address : Address where the region starts, for use in region determination.NOTE: The low-order 10 bits are fixed to 0."]
     #[inline(always)]
     pub fn mmpus(
         self,
@@ -2339,9 +3089,11 @@ impl crate::sealed::RegSpec for Mmpuedrw_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Graphics Region %s End Address Register"]
 pub type Mmpuedrw = crate::RegValueT<Mmpuedrw_SPEC>;
 
 impl Mmpuedrw {
+    #[doc = "Region End Address : Address where the region end, for use in region determination.NOTE: The low-order 10 bits are fixed to 1."]
     #[inline(always)]
     pub fn mmpue(
         self,
@@ -2373,9 +3125,11 @@ impl crate::sealed::RegSpec for Mmpuenmipi_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Enable Register for MIPI"]
 pub type Mmpuenmipi = crate::RegValueT<Mmpuenmipi_SPEC>;
 
 impl Mmpuenmipi {
+    #[doc = "Bus master MPU of MIPI Enable"]
     #[inline(always)]
     pub fn enable(
         self,
@@ -2401,6 +3155,7 @@ impl Mmpuenmipi {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2409,6 +3164,7 @@ impl Mmpuenmipi {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpuenmipi_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -2429,8 +3185,10 @@ pub mod mmpuenmipi {
     pub struct Enable_SPEC;
     pub type Enable = crate::EnumBitfieldStruct<u8, Enable_SPEC>;
     impl Enable {
+        #[doc = "Bus master MPU of MIPI is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus master MPU of MIPI is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2441,9 +3199,11 @@ impl crate::sealed::RegSpec for Mmpuenptmipi_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Enable Protect Register for MIPI"]
 pub type Mmpuenptmipi = crate::RegValueT<Mmpuenptmipi_SPEC>;
 
 impl Mmpuenptmipi {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -2469,6 +3229,7 @@ impl Mmpuenptmipi {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2477,6 +3238,7 @@ impl Mmpuenptmipi {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpuenptmipi_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -2497,8 +3259,10 @@ pub mod mmpuenptmipi {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "MMPUENMIPI register write is possible"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "MMPUENMIPI register write is protected. Read is possible."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2509,9 +3273,11 @@ impl crate::sealed::RegSpec for Mmpurptmipi_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Regions Protect Register for MIPI"]
 pub type Mmpurptmipi = crate::RegValueT<Mmpurptmipi_SPEC>;
 
 impl Mmpurptmipi {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -2537,6 +3303,7 @@ impl Mmpurptmipi {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2545,6 +3312,7 @@ impl Mmpurptmipi {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpurptmipi_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -2565,8 +3333,10 @@ pub mod mmpurptmipi {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "Bus master MPU register for MIPI write is possible"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus master MPU register for MIPI write is protected. Read is possible."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2577,9 +3347,11 @@ impl crate::sealed::RegSpec for Mmpuacmipi_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Access Control Register for MIPI"]
 pub type Mmpuacmipi = crate::RegValueT<Mmpuacmipi_SPEC>;
 
 impl Mmpuacmipi {
+    #[doc = "Region Enable"]
     #[inline(always)]
     pub fn enable(
         self,
@@ -2605,6 +3377,7 @@ impl Mmpuacmipi {
         >::from_register(self, 0)
     }
 
+    #[doc = "Read protection"]
     #[inline(always)]
     pub fn rp(
         self,
@@ -2630,6 +3403,7 @@ impl Mmpuacmipi {
         >::from_register(self, 0)
     }
 
+    #[doc = "Write protection"]
     #[inline(always)]
     pub fn wp(
         self,
@@ -2655,6 +3429,7 @@ impl Mmpuacmipi {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000. The write value should be 000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2675,24 +3450,30 @@ pub mod mmpuacmipi {
     pub struct Enable_SPEC;
     pub type Enable = crate::EnumBitfieldStruct<u8, Enable_SPEC>;
     impl Enable {
+        #[doc = "MIPI region n unit is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "MIPI region n unit is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rp_SPEC;
     pub type Rp = crate::EnumBitfieldStruct<u8, Rp_SPEC>;
     impl Rp {
+        #[doc = "Read permission"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Read protection"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wp_SPEC;
     pub type Wp = crate::EnumBitfieldStruct<u8, Wp_SPEC>;
     impl Wp {
+        #[doc = "Write permission"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Write protection"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2703,9 +3484,11 @@ impl crate::sealed::RegSpec for Mmpusmipi_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MMPU Start Address Register for MIPI"]
 pub type Mmpusmipi = crate::RegValueT<Mmpusmipi_SPEC>;
 
 impl Mmpusmipi {
+    #[doc = "Region Stat Address : Address where the region starts, for use in region determination.NOTE: The low-order 12 bits are fixed to 0."]
     #[inline(always)]
     pub fn mmpus(
         self,
@@ -2745,9 +3528,11 @@ impl crate::sealed::RegSpec for Mmpuemipi_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MMPU End Address Register for MIPI"]
 pub type Mmpuemipi = crate::RegValueT<Mmpuemipi_SPEC>;
 
 impl Mmpuemipi {
+    #[doc = "Region End Address : Address where the region end, for use in region determination.NOTE: The low-order 12 bits are fixed to 1."]
     #[inline(always)]
     pub fn mmpue(
         self,
@@ -2787,9 +3572,11 @@ impl crate::sealed::RegSpec for Mmpuenceu_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Enable Register for CEU"]
 pub type Mmpuenceu = crate::RegValueT<Mmpuenceu_SPEC>;
 
 impl Mmpuenceu {
+    #[doc = "Bus master MPU of CEU Enable"]
     #[inline(always)]
     pub fn enable(
         self,
@@ -2815,6 +3602,7 @@ impl Mmpuenceu {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2823,6 +3611,7 @@ impl Mmpuenceu {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpuenceu_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -2842,8 +3631,10 @@ pub mod mmpuenceu {
     pub struct Enable_SPEC;
     pub type Enable = crate::EnumBitfieldStruct<u8, Enable_SPEC>;
     impl Enable {
+        #[doc = "Bus master MPU of CEU is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus master MPU of CEU is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2854,9 +3645,11 @@ impl crate::sealed::RegSpec for Mmpuenptceu_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Enable Protect Register for CEU"]
 pub type Mmpuenptceu = crate::RegValueT<Mmpuenptceu_SPEC>;
 
 impl Mmpuenptceu {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -2882,6 +3675,7 @@ impl Mmpuenptceu {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2890,6 +3684,7 @@ impl Mmpuenptceu {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpuenptceu_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -2910,8 +3705,10 @@ pub mod mmpuenptceu {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "MMPUENCEU register write is possible"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "MMPUENCEU register write is protected. Read is possible."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2922,9 +3719,11 @@ impl crate::sealed::RegSpec for Mmpurptceu_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Regions Protect Register for CEU"]
 pub type Mmpurptceu = crate::RegValueT<Mmpurptceu_SPEC>;
 
 impl Mmpurptceu {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -2950,6 +3749,7 @@ impl Mmpurptceu {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2958,6 +3758,7 @@ impl Mmpurptceu {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Mmpurptceu_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -2978,8 +3779,10 @@ pub mod mmpurptceu {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "Bus master MPU register for CEU write is possible"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus master MPU register for CEU write is protected. Read is possible."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2990,9 +3793,11 @@ impl crate::sealed::RegSpec for Mmpuacceu_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Access Control Register for CEU %s"]
 pub type Mmpuacceu = crate::RegValueT<Mmpuacceu_SPEC>;
 
 impl Mmpuacceu {
+    #[doc = "Region Enable"]
     #[inline(always)]
     pub fn enable(
         self,
@@ -3018,6 +3823,7 @@ impl Mmpuacceu {
         >::from_register(self, 0)
     }
 
+    #[doc = "Read protection"]
     #[inline(always)]
     pub fn rp(
         self,
@@ -3043,6 +3849,7 @@ impl Mmpuacceu {
         >::from_register(self, 0)
     }
 
+    #[doc = "Write protection"]
     #[inline(always)]
     pub fn wp(
         self,
@@ -3068,6 +3875,7 @@ impl Mmpuacceu {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000. The write value should be 000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -3088,24 +3896,30 @@ pub mod mmpuacceu {
     pub struct Enable_SPEC;
     pub type Enable = crate::EnumBitfieldStruct<u8, Enable_SPEC>;
     impl Enable {
+        #[doc = "CEU region n unit is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CEU region n unit is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rp_SPEC;
     pub type Rp = crate::EnumBitfieldStruct<u8, Rp_SPEC>;
     impl Rp {
+        #[doc = "Read permission"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Read protection"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wp_SPEC;
     pub type Wp = crate::EnumBitfieldStruct<u8, Wp_SPEC>;
     impl Wp {
+        #[doc = "Write permission"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Write protection"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3116,9 +3930,11 @@ impl crate::sealed::RegSpec for Mmpusceu_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MMPU Start Address Register for CEU %s"]
 pub type Mmpusceu = crate::RegValueT<Mmpusceu_SPEC>;
 
 impl Mmpusceu {
+    #[doc = "Region Stat Address : Address where the region starts, for use in region determination.NOTE: The low-order 12 bits are fixed to 0."]
     #[inline(always)]
     pub fn mmpus(
         self,
@@ -3150,9 +3966,11 @@ impl crate::sealed::RegSpec for Mmpueceu_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MMPU End Address Register for CEU %s"]
 pub type Mmpueceu = crate::RegValueT<Mmpueceu_SPEC>;
 
 impl Mmpueceu {
+    #[doc = "Region End Address : Address where the region end, for use in region determination.NOTE: The low-order 12 bits are fixed to 1."]
     #[inline(always)]
     pub fn mmpue(
         self,

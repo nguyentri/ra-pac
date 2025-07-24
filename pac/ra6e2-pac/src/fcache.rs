@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.30.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:19:41 +0000
+// Generated from SVD 1.30.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:50:47 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Fcache {
         self.ptr
     }
 
+    #[doc = "Flash Cache Enable Register"]
     #[inline(always)]
     pub const fn fcachee(
         &self,
@@ -45,6 +46,7 @@ impl super::Fcache {
         }
     }
 
+    #[doc = "Flash Cache Invalidate Register"]
     #[inline(always)]
     pub const fn fcacheiv(
         &self,
@@ -56,6 +58,7 @@ impl super::Fcache {
         }
     }
 
+    #[doc = "Flash Wait Cycle Register"]
     #[inline(always)]
     pub const fn flwt(&self) -> &'static crate::common::Reg<self::Flwt_SPEC, crate::common::RW> {
         unsafe {
@@ -65,6 +68,7 @@ impl super::Fcache {
         }
     }
 
+    #[doc = "Flash Security Attribution Register"]
     #[inline(always)]
     pub const fn fsar(&self) -> &'static crate::common::Reg<self::Fsar_SPEC, crate::common::RW> {
         unsafe {
@@ -81,9 +85,11 @@ impl crate::sealed::RegSpec for Fcachee_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Flash Cache Enable Register"]
 pub type Fcachee = crate::RegValueT<Fcachee_SPEC>;
 
 impl Fcachee {
+    #[doc = "Flash Cache Enable"]
     #[inline(always)]
     pub fn fcacheen(
         self,
@@ -121,8 +127,10 @@ pub mod fcachee {
     pub struct Fcacheen_SPEC;
     pub type Fcacheen = crate::EnumBitfieldStruct<u8, Fcacheen_SPEC>;
     impl Fcacheen {
+        #[doc = "FCACHE is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FCACHE is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -133,9 +141,11 @@ impl crate::sealed::RegSpec for Fcacheiv_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Flash Cache Invalidate Register"]
 pub type Fcacheiv = crate::RegValueT<Fcacheiv_SPEC>;
 
 impl Fcacheiv {
+    #[doc = "Flash Cache Invalidate"]
     #[inline(always)]
     pub fn fcacheiv(
         self,
@@ -173,8 +183,10 @@ pub mod fcacheiv {
     pub struct Fcacheiv_SPEC;
     pub type Fcacheiv = crate::EnumBitfieldStruct<u8, Fcacheiv_SPEC>;
     impl Fcacheiv {
+        #[doc = "Read: Do not invalidate. Write: The setting is ignored."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Invalidate FCACHE is invalidated."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -185,9 +197,11 @@ impl crate::sealed::RegSpec for Flwt_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Flash Wait Cycle Register"]
 pub type Flwt = crate::RegValueT<Flwt_SPEC>;
 
 impl Flwt {
+    #[doc = "Flash Wait Cycle"]
     #[inline(always)]
     pub fn flwt(
         self,
@@ -225,14 +239,19 @@ pub mod flwt {
     pub struct Flwt_SPEC;
     pub type Flwt = crate::EnumBitfieldStruct<u8, Flwt_SPEC>;
     impl Flwt {
+        #[doc = "0 wait (ICLK ≤ 50 MHz)"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "1 wait (50 MHz < ICLK ≤ 100 MHz)"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "2 wait (100 MHz < ICLK ≤ 150 MHz)"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "3 wait (ICLK > 150 MHz)"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -243,9 +262,11 @@ impl crate::sealed::RegSpec for Fsar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Flash Security Attribution Register"]
 pub type Fsar = crate::RegValueT<Fsar_SPEC>;
 
 impl Fsar {
+    #[doc = "FLWT Security Attribution"]
     #[inline(always)]
     pub fn flwtsa(
         self,
@@ -271,6 +292,7 @@ impl Fsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "FCKMHZ Security Attribution"]
     #[inline(always)]
     pub fn fckmhzsa(
         self,
@@ -308,16 +330,20 @@ pub mod fsar {
     pub struct Flwtsa_SPEC;
     pub type Flwtsa = crate::EnumBitfieldStruct<u8, Flwtsa_SPEC>;
     impl Flwtsa {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Fckmhzsa_SPEC;
     pub type Fckmhzsa = crate::EnumBitfieldStruct<u8, Fckmhzsa_SPEC>;
     impl Fckmhzsa {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-Secure"]
         pub const _1: Self = Self::new(1);
     }
 }

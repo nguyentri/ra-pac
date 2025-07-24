@@ -13,11 +13,11 @@
 # following link:
 # http://www.renesas.com/disclaimer
 #
-# Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:18:26 +0000
+# Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:18 +0000
 
 [package]
 name = "ra4m1-pac"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 description = "Peripheral Access Crate (PAC) for R7FAA4M1."
 authors = ["Tri Nguyen <trongtribk06@gmail.com>"]
@@ -27,14 +27,14 @@ documentation = "https://docs.rs/crate/ra4m1-pac/latest"
 categories = ["embedded", "hardware-support", "no-std"]
 include = ["src/*", "Cargo.toml", "README.md", "build.rs", "device.x"]
 readme = "README.md"
-license-file = "LICENSE.txt"
+license = "MIT OR Apache-2.0"
 
 [lib]
 test = false
 bench = false
 
 [dependencies]
-phf = { version = "0.11", features = ["macros"], optional = true }
+phf = { version = "0.12.1", features = ["macros"], optional = true }
 cortex-m-rt = { version = "0.7", optional = true }
 cortex-m = "0.7.6"
 
@@ -49,9 +49,9 @@ ctsu = []
 dac12 = []
 dac8 = []
 dmac0 = []
-dmac1 = ["dmac0"]
-dmac2 = ["dmac0"]
-dmac3 = ["dmac0"]
+dmac1 = [ "dmac0" ]
+dmac2 = [ "dmac0" ]
+dmac3 = [ "dmac0" ]
 dma = []
 doc = []
 dtc = []
@@ -59,14 +59,14 @@ elc = []
 fcache = []
 port0 = []
 port1 = []
-port2 = ["port1"]
-port3 = ["port1"]
-port4 = ["port1"]
-port5 = ["port0"]
-port6 = ["port0"]
-port7 = ["port0"]
-port8 = ["port0"]
-port9 = ["port0"]
+port2 = [ "port1" ]
+port3 = [ "port1" ]
+port4 = [ "port1" ]
+port5 = [ "port0" ]
+port6 = [ "port0" ]
+port7 = [ "port0" ]
+port8 = [ "port0" ]
+port9 = [ "port0" ]
 pfs = []
 pmisc = []
 icu = []
@@ -83,9 +83,9 @@ poeg = []
 sram = []
 rtc = []
 sci0 = []
-sci1 = ["sci0"]
+sci1 = [ "sci0" ]
 sci2 = []
-sci9 = ["sci2"]
+sci9 = [ "sci2" ]
 slcdc = []
 spi0 = []
 spi1 = []
@@ -96,86 +96,18 @@ wdt = []
 acmplp = []
 adc140 = []
 agt0 = []
-agt1 = ["agt0"]
+agt1 = [ "agt0" ]
 gpt320 = []
-gpt321 = ["gpt320"]
+gpt321 = [ "gpt320" ]
 gpt162 = []
-gpt163 = ["gpt162"]
-gpt164 = ["gpt162"]
-gpt165 = ["gpt162"]
-gpt166 = ["gpt162"]
-gpt167 = ["gpt162"]
+gpt163 = [ "gpt162" ]
+gpt164 = [ "gpt162" ]
+gpt165 = [ "gpt162" ]
+gpt166 = [ "gpt162" ]
+gpt167 = [ "gpt162" ]
 gpt_ops = []
 
-all = [
-    "system",
-    "bus",
-    "cac",
-    "can0",
-    "dbg",
-    "crc",
-    "ctsu",
-    "dac12",
-    "dac8",
-    "dmac0",
-    "dmac1",
-    "dmac2",
-    "dmac3",
-    "dma",
-    "doc",
-    "dtc",
-    "elc",
-    "fcache",
-    "port0",
-    "port1",
-    "port2",
-    "port3",
-    "port4",
-    "port5",
-    "port6",
-    "port7",
-    "port8",
-    "port9",
-    "pfs",
-    "pmisc",
-    "icu",
-    "iic0",
-    "iic1",
-    "iwdt",
-    "kint",
-    "mstp",
-    "mmpu",
-    "smpu",
-    "spmon",
-    "opamp",
-    "poeg",
-    "sram",
-    "rtc",
-    "sci0",
-    "sci1",
-    "sci2",
-    "sci9",
-    "slcdc",
-    "spi0",
-    "spi1",
-    "ssie0",
-    "tsn",
-    "usbfs",
-    "wdt",
-    "acmplp",
-    "adc140",
-    "agt0",
-    "agt1",
-    "gpt320",
-    "gpt321",
-    "gpt162",
-    "gpt163",
-    "gpt164",
-    "gpt165",
-    "gpt166",
-    "gpt167",
-    "gpt_ops",
-]
+all = ["system" , "bus" , "cac" , "can0" , "dbg" , "crc" , "ctsu" , "dac12" , "dac8" , "dmac0" , "dmac1" , "dmac2" , "dmac3" , "dma" , "doc" , "dtc" , "elc" , "fcache" , "port0" , "port1" , "port2" , "port3" , "port4" , "port5" , "port6" , "port7" , "port8" , "port9" , "pfs" , "pmisc" , "icu" , "iic0" , "iic1" , "iwdt" , "kint" , "mstp" , "mmpu" , "smpu" , "spmon" , "opamp" , "poeg" , "sram" , "rtc" , "sci0" , "sci1" , "sci2" , "sci9" , "slcdc" , "spi0" , "spi1" , "ssie0" , "tsn" , "usbfs" , "wdt" , "acmplp" , "adc140" , "agt0" , "agt1" , "gpt320" , "gpt321" , "gpt162" , "gpt163" , "gpt164" , "gpt165" , "gpt166" , "gpt167" , "gpt_ops"]
 
 tracing = ["dep:phf"]
 

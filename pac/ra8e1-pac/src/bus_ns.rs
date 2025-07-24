@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.00.01, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:22:22 +0000
+// Generated from SVD 1.00.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:56 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::BusNs {
         self.ptr
     }
 
+    #[doc = "CS0 Control Register"]
     #[inline(always)]
     pub const fn cs0cr(&self) -> &'static crate::common::Reg<self::Cs0Cr_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::BusNs {
         }
     }
 
+    #[doc = "CS%s Control Register"]
     #[inline(always)]
     pub const fn cscr(
         &self,
@@ -55,7 +57,64 @@ impl super::BusNs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x812usize))
         }
     }
+    #[inline(always)]
+    pub const fn cs1cr(&self) -> &'static crate::common::Reg<self::Cscr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cscr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x812usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cs2cr(&self) -> &'static crate::common::Reg<self::Cscr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cscr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x822usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cs3cr(&self) -> &'static crate::common::Reg<self::Cscr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cscr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x832usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cs4cr(&self) -> &'static crate::common::Reg<self::Cscr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cscr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x842usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cs5cr(&self) -> &'static crate::common::Reg<self::Cscr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cscr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x852usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cs6cr(&self) -> &'static crate::common::Reg<self::Cscr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cscr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x862usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cs7cr(&self) -> &'static crate::common::Reg<self::Cscr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cscr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x872usize),
+            )
+        }
+    }
 
+    #[doc = "BUS Operation After Detection Register"]
     #[inline(always)]
     pub const fn busoad(
         &self,
@@ -67,6 +126,7 @@ impl super::BusNs {
         }
     }
 
+    #[doc = "BUS Operation After Detection Protect Register"]
     #[inline(always)]
     pub const fn busoadpt(
         &self,
@@ -78,6 +138,7 @@ impl super::BusNs {
         }
     }
 
+    #[doc = "Bus Slave Arbitration Control Register 1(x = FHBI, S1BI)"]
     #[inline(always)]
     pub const fn bussabt1fhbi(
         &self,
@@ -89,6 +150,7 @@ impl super::BusNs {
         }
     }
 
+    #[doc = "Bus Slave Arbitration Control Register 0"]
     #[inline(always)]
     pub const fn bussabt0flbi(
         &self,
@@ -100,6 +162,7 @@ impl super::BusNs {
         }
     }
 
+    #[doc = "Bus Slave Arbitration Control Register 1(x = FHBI, S1BI)"]
     #[inline(always)]
     pub const fn bussabt1s1bi(
         &self,
@@ -111,6 +174,7 @@ impl super::BusNs {
         }
     }
 
+    #[doc = "Bus Slave Arbitration Control Register 0"]
     #[inline(always)]
     pub const fn bussabt0stbysbi(
         &self,
@@ -122,6 +186,7 @@ impl super::BusNs {
         }
     }
 
+    #[doc = "Bus Slave Arbitration Control Register 0"]
     #[inline(always)]
     pub const fn bussabt0eobi(
         &self,
@@ -133,6 +198,7 @@ impl super::BusNs {
         }
     }
 
+    #[doc = "Bus Slave Arbitration Control Register 0"]
     #[inline(always)]
     pub const fn bussabt0pbbi(
         &self,
@@ -144,6 +210,7 @@ impl super::BusNs {
         }
     }
 
+    #[doc = "Bus Slave Arbitration Control Register 0"]
     #[inline(always)]
     pub const fn bussabt0pabi(
         &self,
@@ -155,6 +222,7 @@ impl super::BusNs {
         }
     }
 
+    #[doc = "Bus Slave Arbitration Control Register 0"]
     #[inline(always)]
     pub const fn bussabt0pibi(
         &self,
@@ -166,6 +234,7 @@ impl super::BusNs {
         }
     }
 
+    #[doc = "Bus Slave Arbitration Control Register 0"]
     #[inline(always)]
     pub const fn bussabt0psbi(
         &self,
@@ -177,6 +246,7 @@ impl super::BusNs {
         }
     }
 
+    #[doc = "Bus Divider Bypass Register"]
     #[inline(always)]
     pub const fn busdivbyp(
         &self,
@@ -188,6 +258,7 @@ impl super::BusNs {
         }
     }
 
+    #[doc = "BUS Error Read Write (n = 4, 5)"]
     #[inline(always)]
     pub const fn buserrrw(
         &self,
@@ -200,7 +271,28 @@ impl super::BusNs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1804usize))
         }
     }
+    #[inline(always)]
+    pub const fn bus4errrw(
+        &self,
+    ) -> &'static crate::common::Reg<self::Buserrrw_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Buserrrw_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1804usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bus5errrw(
+        &self,
+    ) -> &'static crate::common::Reg<self::Buserrrw_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Buserrrw_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1814usize),
+            )
+        }
+    }
 
+    #[doc = "BUS Error Address Register (n = 4, 5)"]
     #[inline(always)]
     pub const fn buserradd(
         &self,
@@ -213,7 +305,28 @@ impl super::BusNs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1830usize))
         }
     }
+    #[inline(always)]
+    pub const fn bus4erradd(
+        &self,
+    ) -> &'static crate::common::Reg<self::Buserradd_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Buserradd_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1830usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bus5erradd(
+        &self,
+    ) -> &'static crate::common::Reg<self::Buserradd_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Buserradd_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1840usize),
+            )
+        }
+    }
 
+    #[doc = "Bus Master Security Attribution Unit Error Address"]
     #[inline(always)]
     pub const fn bmsaerradd(
         &self,
@@ -226,7 +339,28 @@ impl super::BusNs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1900usize))
         }
     }
+    #[inline(always)]
+    pub const fn bmsa4erradd(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bmsaerradd_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Bmsaerradd_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1900usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bmsa5erradd(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bmsaerradd_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Bmsaerradd_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1910usize),
+            )
+        }
+    }
 
+    #[doc = "BUS Master Security Attribution Unit Error Read Write (n = 4, 5)"]
     #[inline(always)]
     pub const fn bmsaerrrw(
         &self,
@@ -239,7 +373,28 @@ impl super::BusNs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1904usize))
         }
     }
+    #[inline(always)]
+    pub const fn bmsa4errrw(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bmsaerrrw_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Bmsaerrrw_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1904usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bmsa5errrw(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bmsaerrrw_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Bmsaerrrw_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1914usize),
+            )
+        }
+    }
 
+    #[doc = "BUS Error Status Register"]
     #[inline(always)]
     pub const fn buserrstat(
         &self,
@@ -251,6 +406,7 @@ impl super::BusNs {
         }
     }
 
+    #[doc = "BUS Error Clear Register"]
     #[inline(always)]
     pub const fn buserrclr(
         &self,
@@ -262,6 +418,7 @@ impl super::BusNs {
         }
     }
 
+    #[doc = "Master Bufferable Write Error Status Register"]
     #[inline(always)]
     pub const fn mbwerrstat(
         &self,
@@ -273,6 +430,7 @@ impl super::BusNs {
         }
     }
 
+    #[doc = "Master Bufferable Write Error Clear Register"]
     #[inline(always)]
     pub const fn mbwerrclr(
         &self,
@@ -284,6 +442,7 @@ impl super::BusNs {
         }
     }
 
+    #[doc = "Slave Bufferable Write Error Status Register"]
     #[inline(always)]
     pub const fn sbwerrstat(
         &self,
@@ -295,6 +454,7 @@ impl super::BusNs {
         }
     }
 
+    #[doc = "Slave Bufferable Write Error Clear Register"]
     #[inline(always)]
     pub const fn sbwerrclr(
         &self,
@@ -313,9 +473,11 @@ impl crate::sealed::RegSpec for Cs0Cr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "CS0 Control Register"]
 pub type Cs0Cr = crate::RegValueT<Cs0Cr_SPEC>;
 
 impl Cs0Cr {
+    #[doc = "Operation Enable"]
     #[inline(always)]
     pub fn exenb(
         self,
@@ -341,6 +503,7 @@ impl Cs0Cr {
         >::from_register(self, 0)
     }
 
+    #[doc = "External Bus Width Select"]
     #[inline(always)]
     pub fn bsize(
         self,
@@ -366,6 +529,7 @@ impl Cs0Cr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Endian Mode"]
     #[inline(always)]
     pub fn emode(
         self,
@@ -391,6 +555,7 @@ impl Cs0Cr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Address/Data Multiplexed I/O Interface Select"]
     #[inline(always)]
     pub fn mpxen(
         self,
@@ -428,34 +593,43 @@ pub mod cs0cr {
     pub struct Exenb_SPEC;
     pub type Exenb = crate::EnumBitfieldStruct<u8, Exenb_SPEC>;
     impl Exenb {
+        #[doc = "Disable operation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable operation"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bsize_SPEC;
     pub type Bsize = crate::EnumBitfieldStruct<u8, Bsize_SPEC>;
     impl Bsize {
+        #[doc = "16-bit bus space"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "8-bit bus space"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Emode_SPEC;
     pub type Emode = crate::EnumBitfieldStruct<u8, Emode_SPEC>;
     impl Emode {
+        #[doc = "Little endian"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Big endian"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mpxen_SPEC;
     pub type Mpxen = crate::EnumBitfieldStruct<u8, Mpxen_SPEC>;
     impl Mpxen {
+        #[doc = "Separate bus interface is selected for area n."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Address/data multiplexed I/O interface is selected for area n."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -466,9 +640,11 @@ impl crate::sealed::RegSpec for Cscr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "CS%s Control Register"]
 pub type Cscr = crate::RegValueT<Cscr_SPEC>;
 
 impl Cscr {
+    #[doc = "Operation Enable"]
     #[inline(always)]
     pub fn exenb(
         self,
@@ -494,6 +670,7 @@ impl Cscr {
         >::from_register(self, 0)
     }
 
+    #[doc = "External Bus Width Select"]
     #[inline(always)]
     pub fn bsize(
         self,
@@ -519,6 +696,7 @@ impl Cscr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Endian Mode"]
     #[inline(always)]
     pub fn emode(
         self,
@@ -544,6 +722,7 @@ impl Cscr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Address/Data Multiplexed I/O Interface Select"]
     #[inline(always)]
     pub fn mpxen(
         self,
@@ -581,34 +760,43 @@ pub mod cscr {
     pub struct Exenb_SPEC;
     pub type Exenb = crate::EnumBitfieldStruct<u8, Exenb_SPEC>;
     impl Exenb {
+        #[doc = "Disable operation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable operation"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bsize_SPEC;
     pub type Bsize = crate::EnumBitfieldStruct<u8, Bsize_SPEC>;
     impl Bsize {
+        #[doc = "16-bit bus space"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "8-bit bus space"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Emode_SPEC;
     pub type Emode = crate::EnumBitfieldStruct<u8, Emode_SPEC>;
     impl Emode {
+        #[doc = "Little endian"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Big endian"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mpxen_SPEC;
     pub type Mpxen = crate::EnumBitfieldStruct<u8, Mpxen_SPEC>;
     impl Mpxen {
+        #[doc = "Separate bus interface is selected for area n."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Address/data multiplexed I/O interface is selected for area n."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -619,9 +807,11 @@ impl crate::sealed::RegSpec for Busoad_SPEC {
     type DataType = u16;
 }
 
+#[doc = "BUS Operation After Detection Register"]
 pub type Busoad = crate::RegValueT<Busoad_SPEC>;
 
 impl Busoad {
+    #[doc = "Illegal address access error operation after detection"]
     #[inline(always)]
     pub fn ilerroad(
         self,
@@ -631,6 +821,7 @@ impl Busoad {
         )
     }
 
+    #[doc = "Slave bus error operation after detection"]
     #[inline(always)]
     pub fn slerroad(
         self,
@@ -640,6 +831,7 @@ impl Busoad {
         )
     }
 
+    #[doc = "Bufferable write error operation after detection"]
     #[inline(always)]
     pub fn bwerroad(
         self,
@@ -663,9 +855,11 @@ impl crate::sealed::RegSpec for Busoadpt_SPEC {
     type DataType = u16;
 }
 
+#[doc = "BUS Operation After Detection Protect Register"]
 pub type Busoadpt = crate::RegValueT<Busoadpt_SPEC>;
 
 impl Busoadpt {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -691,6 +885,7 @@ impl Busoadpt {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -710,8 +905,10 @@ pub mod busoadpt {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "BUSOAD register writing is possible."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "BUSOAD register writing is protected. Read is possible."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -722,9 +919,11 @@ impl crate::sealed::RegSpec for Bussabt1Fhbi_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Slave Arbitration Control Register 1(x = FHBI, S1BI)"]
 pub type Bussabt1Fhbi = crate::RegValueT<Bussabt1Fhbi_SPEC>;
 
 impl Bussabt1Fhbi {
+    #[doc = "Arbitration Select for <slave>"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -762,12 +961,16 @@ pub mod bussabt1fhbi {
     pub struct Arbs_SPEC;
     pub type Arbs = crate::EnumBitfieldStruct<u8, Arbs_SPEC>;
     impl Arbs {
+        #[doc = "Fixed priority"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Setting prohibited"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Combination of round-robin and fixed priority"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Round-robin"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -778,9 +981,11 @@ impl crate::sealed::RegSpec for Bussabt0Flbi_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Slave Arbitration Control Register 0"]
 pub type Bussabt0Flbi = crate::RegValueT<Bussabt0Flbi_SPEC>;
 
 impl Bussabt0Flbi {
+    #[doc = "Arbitration Select for <slave>"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -818,8 +1023,10 @@ pub mod bussabt0flbi {
     pub struct Arbs_SPEC;
     pub type Arbs = crate::EnumBitfieldStruct<u8, Arbs_SPEC>;
     impl Arbs {
+        #[doc = "Fixed priority"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Round-robin"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -830,9 +1037,11 @@ impl crate::sealed::RegSpec for Bussabt1S1Bi_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Slave Arbitration Control Register 1(x = FHBI, S1BI)"]
 pub type Bussabt1S1Bi = crate::RegValueT<Bussabt1S1Bi_SPEC>;
 
 impl Bussabt1S1Bi {
+    #[doc = "Arbitration Select for <slave>"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -870,12 +1079,16 @@ pub mod bussabt1s1bi {
     pub struct Arbs_SPEC;
     pub type Arbs = crate::EnumBitfieldStruct<u8, Arbs_SPEC>;
     impl Arbs {
+        #[doc = "Fixed priority"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Setting prohibited"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Combination of round-robin and fixed priority"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Round-robin"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -886,9 +1099,11 @@ impl crate::sealed::RegSpec for Bussabt0Stbysbi_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Slave Arbitration Control Register 0"]
 pub type Bussabt0Stbysbi = crate::RegValueT<Bussabt0Stbysbi_SPEC>;
 
 impl Bussabt0Stbysbi {
+    #[doc = "Arbitration Select for <slave>"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -926,8 +1141,10 @@ pub mod bussabt0stbysbi {
     pub struct Arbs_SPEC;
     pub type Arbs = crate::EnumBitfieldStruct<u8, Arbs_SPEC>;
     impl Arbs {
+        #[doc = "Fixed priority"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Round-robin"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -938,9 +1155,11 @@ impl crate::sealed::RegSpec for Bussabt0Eobi_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Slave Arbitration Control Register 0"]
 pub type Bussabt0Eobi = crate::RegValueT<Bussabt0Eobi_SPEC>;
 
 impl Bussabt0Eobi {
+    #[doc = "Arbitration Select for <slave>"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -978,8 +1197,10 @@ pub mod bussabt0eobi {
     pub struct Arbs_SPEC;
     pub type Arbs = crate::EnumBitfieldStruct<u8, Arbs_SPEC>;
     impl Arbs {
+        #[doc = "Fixed priority"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Round-robin"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -990,9 +1211,11 @@ impl crate::sealed::RegSpec for Bussabt0Pbbi_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Slave Arbitration Control Register 0"]
 pub type Bussabt0Pbbi = crate::RegValueT<Bussabt0Pbbi_SPEC>;
 
 impl Bussabt0Pbbi {
+    #[doc = "Arbitration Select for <slave>"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -1030,8 +1253,10 @@ pub mod bussabt0pbbi {
     pub struct Arbs_SPEC;
     pub type Arbs = crate::EnumBitfieldStruct<u8, Arbs_SPEC>;
     impl Arbs {
+        #[doc = "Fixed priority"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Round-robin"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1042,9 +1267,11 @@ impl crate::sealed::RegSpec for Bussabt0Pabi_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Slave Arbitration Control Register 0"]
 pub type Bussabt0Pabi = crate::RegValueT<Bussabt0Pabi_SPEC>;
 
 impl Bussabt0Pabi {
+    #[doc = "Arbitration Select for <slave>"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -1082,8 +1309,10 @@ pub mod bussabt0pabi {
     pub struct Arbs_SPEC;
     pub type Arbs = crate::EnumBitfieldStruct<u8, Arbs_SPEC>;
     impl Arbs {
+        #[doc = "Fixed priority"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Round-robin"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1094,9 +1323,11 @@ impl crate::sealed::RegSpec for Bussabt0Pibi_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Slave Arbitration Control Register 0"]
 pub type Bussabt0Pibi = crate::RegValueT<Bussabt0Pibi_SPEC>;
 
 impl Bussabt0Pibi {
+    #[doc = "Arbitration Select for <slave>"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -1134,8 +1365,10 @@ pub mod bussabt0pibi {
     pub struct Arbs_SPEC;
     pub type Arbs = crate::EnumBitfieldStruct<u8, Arbs_SPEC>;
     impl Arbs {
+        #[doc = "Fixed priority"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Round-robin"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1146,9 +1379,11 @@ impl crate::sealed::RegSpec for Bussabt0Psbi_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Slave Arbitration Control Register 0"]
 pub type Bussabt0Psbi = crate::RegValueT<Bussabt0Psbi_SPEC>;
 
 impl Bussabt0Psbi {
+    #[doc = "Arbitration Select for <slave>"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -1186,8 +1421,10 @@ pub mod bussabt0psbi {
     pub struct Arbs_SPEC;
     pub type Arbs = crate::EnumBitfieldStruct<u8, Arbs_SPEC>;
     impl Arbs {
+        #[doc = "Fixed priority"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Round-robin"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1198,9 +1435,11 @@ impl crate::sealed::RegSpec for Busdivbyp_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Divider Bypass Register"]
 pub type Busdivbyp = crate::RegValueT<Busdivbyp_SPEC>;
 
 impl Busdivbyp {
+    #[doc = "Divider for EDMACBI bypass enable"]
     #[inline(always)]
     pub fn edmabpe(
         self,
@@ -1226,6 +1465,7 @@ impl Busdivbyp {
         >::from_register(self, 0)
     }
 
+    #[doc = "Divider for CPUSAHBI bypass enable"]
     #[inline(always)]
     pub fn cpu0sbpe(
         self,
@@ -1263,16 +1503,20 @@ pub mod busdivbyp {
     pub struct Edmabpe_SPEC;
     pub type Edmabpe = crate::EnumBitfieldStruct<u8, Edmabpe_SPEC>;
     impl Edmabpe {
+        #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cpu0Sbpe_SPEC;
     pub type Cpu0Sbpe = crate::EnumBitfieldStruct<u8, Cpu0Sbpe_SPEC>;
     impl Cpu0Sbpe {
+        #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1283,9 +1527,11 @@ impl crate::sealed::RegSpec for Buserrrw_SPEC {
     type DataType = u8;
 }
 
+#[doc = "BUS Error Read Write (n = 4, 5)"]
 pub type Buserrrw = crate::RegValueT<Buserrrw_SPEC>;
 
 impl Buserrrw {
+    #[doc = "Error access Read/Write Status"]
     #[inline(always)]
     pub fn rwstat(
         self,
@@ -1323,8 +1569,10 @@ pub mod buserrrw {
     pub struct Rwstat_SPEC;
     pub type Rwstat = crate::EnumBitfieldStruct<u8, Rwstat_SPEC>;
     impl Rwstat {
+        #[doc = "Read access"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Write access"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1335,9 +1583,11 @@ impl crate::sealed::RegSpec for Buserradd_SPEC {
     type DataType = u32;
 }
 
+#[doc = "BUS Error Address Register (n = 4, 5)"]
 pub type Buserradd = crate::RegValueT<Buserradd_SPEC>;
 
 impl Buserradd {
+    #[doc = "Bus Error Address"]
     #[inline(always)]
     pub fn berad(
         self,
@@ -1369,9 +1619,11 @@ impl crate::sealed::RegSpec for Bmsaerradd_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Master Security Attribution Unit Error Address"]
 pub type Bmsaerradd = crate::RegValueT<Bmsaerradd_SPEC>;
 
 impl Bmsaerradd {
+    #[doc = "Bus Master Security Attribution Unit Error Address"]
     #[inline(always)]
     pub fn mserad(
         self,
@@ -1411,9 +1663,11 @@ impl crate::sealed::RegSpec for Bmsaerrrw_SPEC {
     type DataType = u8;
 }
 
+#[doc = "BUS Master Security Attribution Unit Error Read Write (n = 4, 5)"]
 pub type Bmsaerrrw = crate::RegValueT<Bmsaerrrw_SPEC>;
 
 impl Bmsaerrrw {
+    #[doc = "Master Security Attribution Unit error access Read/Write Status"]
     #[inline(always)]
     pub fn msarwstat(
         self,
@@ -1451,8 +1705,10 @@ pub mod bmsaerrrw {
     pub struct Msarwstat_SPEC;
     pub type Msarwstat = crate::EnumBitfieldStruct<u8, Msarwstat_SPEC>;
     impl Msarwstat {
+        #[doc = "Read access"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Write access"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1463,9 +1719,11 @@ impl crate::sealed::RegSpec for Buserrstat_SPEC {
     type DataType = u8;
 }
 
+#[doc = "BUS Error Status Register"]
 pub type Buserrstat = crate::RegValueT<Buserrstat_SPEC>;
 
 impl Buserrstat {
+    #[doc = "Slave Bus Error Status"]
     #[inline(always)]
     pub fn slerrstat(
         self,
@@ -1491,6 +1749,7 @@ impl Buserrstat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Master MPU Error Status"]
     #[inline(always)]
     pub fn mmerrstat(
         self,
@@ -1516,6 +1775,7 @@ impl Buserrstat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Illegal Address Access Error Status"]
     #[inline(always)]
     pub fn ilerrstat(
         self,
@@ -1541,6 +1801,7 @@ impl Buserrstat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Master Security Attribution Unit Error Status"]
     #[inline(always)]
     pub fn mserrstat(
         self,
@@ -1578,32 +1839,40 @@ pub mod buserrstat {
     pub struct Slerrstat_SPEC;
     pub type Slerrstat = crate::EnumBitfieldStruct<u8, Slerrstat_SPEC>;
     impl Slerrstat {
+        #[doc = "No error occurred"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Error occurred"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mmerrstat_SPEC;
     pub type Mmerrstat = crate::EnumBitfieldStruct<u8, Mmerrstat_SPEC>;
     impl Mmerrstat {
+        #[doc = "No error occurred"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Error occurred"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ilerrstat_SPEC;
     pub type Ilerrstat = crate::EnumBitfieldStruct<u8, Ilerrstat_SPEC>;
     impl Ilerrstat {
+        #[doc = "No error occurred"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Error occurred"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mserrstat_SPEC;
     pub type Mserrstat = crate::EnumBitfieldStruct<u8, Mserrstat_SPEC>;
     impl Mserrstat {
+        #[doc = "No error occurred"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Error occurred"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1614,9 +1883,11 @@ impl crate::sealed::RegSpec for Buserrclr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "BUS Error Clear Register"]
 pub type Buserrclr = crate::RegValueT<Buserrclr_SPEC>;
 
 impl Buserrclr {
+    #[doc = "Slave Bus Error Clear"]
     #[inline(always)]
     pub fn slerrclr(
         self,
@@ -1624,6 +1895,7 @@ impl Buserrclr {
         crate::common::RegisterFieldBool::<0,1,0,Buserrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Master MPU Error Clear"]
     #[inline(always)]
     pub fn mmerrclr(
         self,
@@ -1631,6 +1903,7 @@ impl Buserrclr {
         crate::common::RegisterFieldBool::<3,1,0,Buserrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Illegal Address Access Error Clear"]
     #[inline(always)]
     pub fn ilerrclr(
         self,
@@ -1638,6 +1911,7 @@ impl Buserrclr {
         crate::common::RegisterFieldBool::<4,1,0,Buserrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Master Security Attribution Unit Error Clear"]
     #[inline(always)]
     pub fn mserrclr(
         self,
@@ -1659,9 +1933,11 @@ impl crate::sealed::RegSpec for Mbwerrstat_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Master Bufferable Write Error Status Register"]
 pub type Mbwerrstat = crate::RegValueT<Mbwerrstat_SPEC>;
 
 impl Mbwerrstat {
+    #[doc = "Master Bufferable Write Error"]
     #[inline(always)]
     pub fn mbwerr0(
         self,
@@ -1687,6 +1963,7 @@ impl Mbwerrstat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Master Bufferable Write Error"]
     #[inline(always)]
     pub fn mbwerr1(
         self,
@@ -1712,6 +1989,7 @@ impl Mbwerrstat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Master Bufferable Write Error"]
     #[inline(always)]
     pub fn mbwerr8(
         self,
@@ -1737,6 +2015,7 @@ impl Mbwerrstat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Master Bufferable Write Error"]
     #[inline(always)]
     pub fn mbwerr16(
         self,
@@ -1762,6 +2041,7 @@ impl Mbwerrstat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Master Bufferable Write Error"]
     #[inline(always)]
     pub fn mbwerr21(
         self,
@@ -1799,40 +2079,50 @@ pub mod mbwerrstat {
     pub struct Mbwerr0_SPEC;
     pub type Mbwerr0 = crate::EnumBitfieldStruct<u8, Mbwerr0_SPEC>;
     impl Mbwerr0 {
+        #[doc = "No bufferable write error in Master #0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bufferable write error occurs in Master #0"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mbwerr1_SPEC;
     pub type Mbwerr1 = crate::EnumBitfieldStruct<u8, Mbwerr1_SPEC>;
     impl Mbwerr1 {
+        #[doc = "No bufferable write error in Master #1"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bufferable write error occurs in Master #1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mbwerr8_SPEC;
     pub type Mbwerr8 = crate::EnumBitfieldStruct<u8, Mbwerr8_SPEC>;
     impl Mbwerr8 {
+        #[doc = "No bufferable write error in Master #8"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bufferable write error occurs in Master #8"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mbwerr16_SPEC;
     pub type Mbwerr16 = crate::EnumBitfieldStruct<u8, Mbwerr16_SPEC>;
     impl Mbwerr16 {
+        #[doc = "No bufferable write error in Master #16"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bufferable write error occurs in Master #16"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mbwerr21_SPEC;
     pub type Mbwerr21 = crate::EnumBitfieldStruct<u8, Mbwerr21_SPEC>;
     impl Mbwerr21 {
+        #[doc = "No bufferable write error in Master #21"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bufferable write error occurs in Master #21"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1843,9 +2133,11 @@ impl crate::sealed::RegSpec for Mbwerrclr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Master Bufferable Write Error Clear Register"]
 pub type Mbwerrclr = crate::RegValueT<Mbwerrclr_SPEC>;
 
 impl Mbwerrclr {
+    #[doc = "Master Bufferable Write Error Clear"]
     #[inline(always)]
     pub fn mbweclr0(
         self,
@@ -1853,6 +2145,7 @@ impl Mbwerrclr {
         crate::common::RegisterFieldBool::<0,1,0,Mbwerrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Master Bufferable Write Error Clear"]
     #[inline(always)]
     pub fn mbweclr1(
         self,
@@ -1860,6 +2153,7 @@ impl Mbwerrclr {
         crate::common::RegisterFieldBool::<1,1,0,Mbwerrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Master Bufferable Write Error Clear"]
     #[inline(always)]
     pub fn mbweclr8(
         self,
@@ -1867,6 +2161,7 @@ impl Mbwerrclr {
         crate::common::RegisterFieldBool::<8,1,0,Mbwerrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Master Bufferable Write Error Clear"]
     #[inline(always)]
     pub fn mbweclr16(
         self,
@@ -1874,6 +2169,7 @@ impl Mbwerrclr {
         crate::common::RegisterFieldBool::<16,1,0,Mbwerrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Master Bufferable Write Error Clear"]
     #[inline(always)]
     pub fn mbweclr21(
         self,
@@ -1895,9 +2191,11 @@ impl crate::sealed::RegSpec for Sbwerrstat_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Slave Bufferable Write Error Status Register"]
 pub type Sbwerrstat = crate::RegValueT<Sbwerrstat_SPEC>;
 
 impl Sbwerrstat {
+    #[doc = "Slave Bufferable Write Error"]
     #[inline(always)]
     pub fn sbwerr0(
         self,
@@ -1923,6 +2221,7 @@ impl Sbwerrstat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Bufferable Write Error"]
     #[inline(always)]
     pub fn sbwerr1(
         self,
@@ -1948,6 +2247,7 @@ impl Sbwerrstat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Bufferable Write Error"]
     #[inline(always)]
     pub fn sbwerr2(
         self,
@@ -1973,6 +2273,7 @@ impl Sbwerrstat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Bufferable Write Error"]
     #[inline(always)]
     pub fn sbwerr4(
         self,
@@ -1998,6 +2299,7 @@ impl Sbwerrstat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Bufferable Write Error"]
     #[inline(always)]
     pub fn sbwerr5(
         self,
@@ -2023,6 +2325,7 @@ impl Sbwerrstat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Bufferable Write Error"]
     #[inline(always)]
     pub fn sbwerr7(
         self,
@@ -2048,6 +2351,7 @@ impl Sbwerrstat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Bufferable Write Error"]
     #[inline(always)]
     pub fn sbwerr8(
         self,
@@ -2073,6 +2377,7 @@ impl Sbwerrstat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Bufferable Write Error"]
     #[inline(always)]
     pub fn sbwerr9(
         self,
@@ -2098,6 +2403,7 @@ impl Sbwerrstat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Bufferable Write Error"]
     #[inline(always)]
     pub fn sbwerr10(
         self,
@@ -2123,6 +2429,7 @@ impl Sbwerrstat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Bufferable Write Error"]
     #[inline(always)]
     pub fn sbwerr11(
         self,
@@ -2148,6 +2455,7 @@ impl Sbwerrstat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Bufferable Write Error"]
     #[inline(always)]
     pub fn sbwerr12(
         self,
@@ -2185,88 +2493,110 @@ pub mod sbwerrstat {
     pub struct Sbwerr0_SPEC;
     pub type Sbwerr0 = crate::EnumBitfieldStruct<u8, Sbwerr0_SPEC>;
     impl Sbwerr0 {
+        #[doc = "No bufferable write error in Slave #0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bufferable write error occurs in Slave #0"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sbwerr1_SPEC;
     pub type Sbwerr1 = crate::EnumBitfieldStruct<u8, Sbwerr1_SPEC>;
     impl Sbwerr1 {
+        #[doc = "No bufferable write error in Slave #1"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bufferable write error occurs in Slave #1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sbwerr2_SPEC;
     pub type Sbwerr2 = crate::EnumBitfieldStruct<u8, Sbwerr2_SPEC>;
     impl Sbwerr2 {
+        #[doc = "No bufferable write error in Slave #2"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bufferable write error occurs in Slave #2"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sbwerr4_SPEC;
     pub type Sbwerr4 = crate::EnumBitfieldStruct<u8, Sbwerr4_SPEC>;
     impl Sbwerr4 {
+        #[doc = "No bufferable write error in Slave #4"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bufferable write error occurs in Slave #4"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sbwerr5_SPEC;
     pub type Sbwerr5 = crate::EnumBitfieldStruct<u8, Sbwerr5_SPEC>;
     impl Sbwerr5 {
+        #[doc = "No bufferable write error in Slave #5"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bufferable write error occurs in Slave #5"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sbwerr7_SPEC;
     pub type Sbwerr7 = crate::EnumBitfieldStruct<u8, Sbwerr7_SPEC>;
     impl Sbwerr7 {
+        #[doc = "No bufferable write error in Slave #7"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bufferable write error occurs in Slave #7"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sbwerr8_SPEC;
     pub type Sbwerr8 = crate::EnumBitfieldStruct<u8, Sbwerr8_SPEC>;
     impl Sbwerr8 {
+        #[doc = "No bufferable write error in Slave #8"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bufferable write error occurs in Slave #8"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sbwerr9_SPEC;
     pub type Sbwerr9 = crate::EnumBitfieldStruct<u8, Sbwerr9_SPEC>;
     impl Sbwerr9 {
+        #[doc = "No bufferable write error in Slave #9"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bufferable write error occurs in Slave #9"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sbwerr10_SPEC;
     pub type Sbwerr10 = crate::EnumBitfieldStruct<u8, Sbwerr10_SPEC>;
     impl Sbwerr10 {
+        #[doc = "No bufferable write error in Slave #10"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bufferable write error occurs in Slave #10"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sbwerr11_SPEC;
     pub type Sbwerr11 = crate::EnumBitfieldStruct<u8, Sbwerr11_SPEC>;
     impl Sbwerr11 {
+        #[doc = "No bufferable write error in Slave #11"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bufferable write error occurs in Slave #11"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sbwerr12_SPEC;
     pub type Sbwerr12 = crate::EnumBitfieldStruct<u8, Sbwerr12_SPEC>;
     impl Sbwerr12 {
+        #[doc = "No bufferable write error in Slave #12"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bufferable write error occurs in Slave #12"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2277,9 +2607,11 @@ impl crate::sealed::RegSpec for Sbwerrclr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Slave Bufferable Write Error Clear Register"]
 pub type Sbwerrclr = crate::RegValueT<Sbwerrclr_SPEC>;
 
 impl Sbwerrclr {
+    #[doc = "Slave Bufferable Write Error Clear"]
     #[inline(always)]
     pub fn sbweclr0(
         self,
@@ -2287,6 +2619,7 @@ impl Sbwerrclr {
         crate::common::RegisterFieldBool::<0,1,0,Sbwerrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Bufferable Write Error Clear"]
     #[inline(always)]
     pub fn sbweclr1(
         self,
@@ -2294,6 +2627,7 @@ impl Sbwerrclr {
         crate::common::RegisterFieldBool::<1,1,0,Sbwerrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Bufferable Write Error Clear"]
     #[inline(always)]
     pub fn sbweclr2(
         self,
@@ -2301,6 +2635,7 @@ impl Sbwerrclr {
         crate::common::RegisterFieldBool::<2,1,0,Sbwerrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Bufferable Write Error Clear"]
     #[inline(always)]
     pub fn sbweclr4(
         self,
@@ -2308,6 +2643,7 @@ impl Sbwerrclr {
         crate::common::RegisterFieldBool::<4,1,0,Sbwerrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Bufferable Write Error Clear"]
     #[inline(always)]
     pub fn sbweclr5(
         self,
@@ -2315,6 +2651,7 @@ impl Sbwerrclr {
         crate::common::RegisterFieldBool::<5,1,0,Sbwerrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Bufferable Write Error Clear"]
     #[inline(always)]
     pub fn sbweclr7(
         self,
@@ -2322,6 +2659,7 @@ impl Sbwerrclr {
         crate::common::RegisterFieldBool::<7,1,0,Sbwerrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Bufferable Write Error Clear"]
     #[inline(always)]
     pub fn sbweclr8(
         self,
@@ -2329,6 +2667,7 @@ impl Sbwerrclr {
         crate::common::RegisterFieldBool::<8,1,0,Sbwerrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Bufferable Write Error Clear"]
     #[inline(always)]
     pub fn sbweclr9(
         self,
@@ -2336,6 +2675,7 @@ impl Sbwerrclr {
         crate::common::RegisterFieldBool::<9,1,0,Sbwerrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Bufferable Write Error Clear"]
     #[inline(always)]
     pub fn sbweclr10(
         self,
@@ -2343,6 +2683,7 @@ impl Sbwerrclr {
         crate::common::RegisterFieldBool::<10,1,0,Sbwerrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Bufferable Write Error Clear"]
     #[inline(always)]
     pub fn sbweclr11(
         self,
@@ -2350,6 +2691,7 @@ impl Sbwerrclr {
         crate::common::RegisterFieldBool::<11,1,0,Sbwerrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Bufferable Write Error Clear"]
     #[inline(always)]
     pub fn sbweclr12(
         self,

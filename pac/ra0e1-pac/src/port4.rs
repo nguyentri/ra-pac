@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.10.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:47 +0000
+// Generated from SVD 1.10.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:59 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Port4 {
         self.ptr
     }
 
+    #[doc = "Port 4 Output Data Register"]
     #[inline(always)]
     pub const fn podr4(&self) -> &'static crate::common::Reg<self::Podr4_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Port4 {
         }
     }
 
+    #[doc = "Port 4 Direction Register"]
     #[inline(always)]
     pub const fn pdr4(&self) -> &'static crate::common::Reg<self::Pdr4_SPEC, crate::common::RW> {
         unsafe {
@@ -52,6 +54,7 @@ impl super::Port4 {
         }
     }
 
+    #[doc = "Port 4 State Register"]
     #[inline(always)]
     pub const fn pidr4(&self) -> &'static crate::common::Reg<self::Pidr4_SPEC, crate::common::R> {
         unsafe {
@@ -61,6 +64,7 @@ impl super::Port4 {
         }
     }
 
+    #[doc = "Port 4 Output Reset Register"]
     #[inline(always)]
     pub const fn porr4(&self) -> &'static crate::common::Reg<self::Porr4_SPEC, crate::common::W> {
         unsafe {
@@ -70,6 +74,7 @@ impl super::Port4 {
         }
     }
 
+    #[doc = "Port 4 Output Set Register"]
     #[inline(always)]
     pub const fn posr4(&self) -> &'static crate::common::Reg<self::Posr4_SPEC, crate::common::W> {
         unsafe {
@@ -86,9 +91,11 @@ impl crate::sealed::RegSpec for Podr4_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port 4 Output Data Register"]
 pub type Podr4 = crate::RegValueT<Podr4_SPEC>;
 
 impl Podr4 {
+    #[doc = "P407 Output Data"]
     #[inline(always)]
     pub fn podr07(
         self,
@@ -126,8 +133,10 @@ pub mod podr4 {
     pub struct Podr07_SPEC;
     pub type Podr07 = crate::EnumBitfieldStruct<u8, Podr07_SPEC>;
     impl Podr07 {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -138,9 +147,11 @@ impl crate::sealed::RegSpec for Pdr4_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port 4 Direction Register"]
 pub type Pdr4 = crate::RegValueT<Pdr4_SPEC>;
 
 impl Pdr4 {
+    #[doc = "P407 Direction"]
     #[inline(always)]
     pub fn pdr07(
         self,
@@ -178,8 +189,10 @@ pub mod pdr4 {
     pub struct Pdr07_SPEC;
     pub type Pdr07 = crate::EnumBitfieldStruct<u8, Pdr07_SPEC>;
     impl Pdr07 {
+        #[doc = "Output 0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output 1"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -190,9 +203,11 @@ impl crate::sealed::RegSpec for Pidr4_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port 4 State Register"]
 pub type Pidr4 = crate::RegValueT<Pidr4_SPEC>;
 
 impl Pidr4 {
+    #[doc = "P407 State"]
     #[inline(always)]
     pub fn pidr07(
         self,
@@ -230,8 +245,10 @@ pub mod pidr4 {
     pub struct Pidr07_SPEC;
     pub type Pidr07 = crate::EnumBitfieldStruct<u8, Pidr07_SPEC>;
     impl Pidr07 {
+        #[doc = "Low level"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High level"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -242,9 +259,11 @@ impl crate::sealed::RegSpec for Porr4_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port 4 Output Reset Register"]
 pub type Porr4 = crate::RegValueT<Porr4_SPEC>;
 
 impl Porr4 {
+    #[doc = "P407 Output Reset"]
     #[inline(always)]
     pub fn porr07(
         self,
@@ -282,8 +301,10 @@ pub mod porr4 {
     pub struct Porr07_SPEC;
     pub type Porr07 = crate::EnumBitfieldStruct<u8, Porr07_SPEC>;
     impl Porr07 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Low output"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -294,9 +315,11 @@ impl crate::sealed::RegSpec for Posr4_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port 4 Output Set Register"]
 pub type Posr4 = crate::RegValueT<Posr4_SPEC>;
 
 impl Posr4 {
+    #[doc = "P407 Output Set"]
     #[inline(always)]
     pub fn posr07(
         self,
@@ -334,8 +357,10 @@ pub mod posr4 {
     pub struct Posr07_SPEC;
     pub type Posr07 = crate::EnumBitfieldStruct<u8, Posr07_SPEC>;
     impl Posr07 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
 }

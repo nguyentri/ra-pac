@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:21:54 +0000
+// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Flad {
         self.ptr
     }
 
+    #[doc = "Data Flash Access Frequency Register"]
     #[inline(always)]
     pub const fn fckmhz(
         &self,
@@ -52,9 +53,11 @@ impl crate::sealed::RegSpec for Fckmhz_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Data Flash Access Frequency Register"]
 pub type Fckmhz = crate::RegValueT<Fckmhz_SPEC>;
 
 impl Fckmhz {
+    #[doc = "Data Flash Access Frequency Register"]
     #[inline(always)]
     pub fn fckmhz(
         self,
@@ -65,6 +68,6 @@ impl Fckmhz {
 impl ::core::default::Default for Fckmhz {
     #[inline(always)]
     fn default() -> Fckmhz {
-        <crate::RegValueT<Fckmhz_SPEC> as RegisterValue<_>>::new(0)
+        <crate::RegValueT<Fckmhz_SPEC> as RegisterValue<_>>::new(60)
     }
 }

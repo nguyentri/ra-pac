@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:23:25 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Iic0Wu {
         self.ptr
     }
 
+    #[doc = "I2C Bus Wake Up Unit Register"]
     #[inline(always)]
     pub const fn icwur(&self) -> &'static crate::common::Reg<self::Icwur_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Iic0Wu {
         }
     }
 
+    #[doc = "I2C Bus Wake Up Unit Register 2"]
     #[inline(always)]
     pub const fn icwur2(
         &self,
@@ -61,9 +63,11 @@ impl crate::sealed::RegSpec for Icwur_SPEC {
     type DataType = u8;
 }
 
+#[doc = "I2C Bus Wake Up Unit Register"]
 pub type Icwur = crate::RegValueT<Icwur_SPEC>;
 
 impl Icwur {
+    #[doc = "Wake-Up Analog Filter Additional Selection"]
     #[inline(always)]
     pub fn wuafa(
         self,
@@ -89,6 +93,7 @@ impl Icwur {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -98,6 +103,7 @@ impl Icwur {
         )
     }
 
+    #[doc = "Bus Free During Wake-Up Mode"]
     #[inline(always)]
     pub fn wubfr(
         self,
@@ -123,6 +129,7 @@ impl Icwur {
         >::from_register(self, 0)
     }
 
+    #[doc = "Asynchronous/Synchronous Operation State Flag"]
     #[inline(always)]
     pub fn wuack(
         self,
@@ -148,6 +155,7 @@ impl Icwur {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake-Up Event Occurrence Flag"]
     #[inline(always)]
     pub fn wuf(
         self,
@@ -173,6 +181,7 @@ impl Icwur {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake Up Interrupt Request Enable"]
     #[inline(always)]
     pub fn wuie(
         self,
@@ -198,6 +207,7 @@ impl Icwur {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake Up function Enable"]
     #[inline(always)]
     pub fn wue(
         self,
@@ -235,48 +245,60 @@ pub mod icwur {
     pub struct Wuafa_SPEC;
     pub type Wuafa = crate::EnumBitfieldStruct<u8, Wuafa_SPEC>;
     impl Wuafa {
+        #[doc = "Do not add the Wake Up analog filter."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Add the Wake Up analog filter."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wubfr_SPEC;
     pub type Wubfr = crate::EnumBitfieldStruct<u8, Wubfr_SPEC>;
     impl Wubfr {
+        #[doc = "IIC bus is busy during Wake-Up mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IIC bus is free during Wake-Up mode"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wuack_SPEC;
     pub type Wuack = crate::EnumBitfieldStruct<u8, Wuack_SPEC>;
     impl Wuack {
+        #[doc = "State of synchronous operation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "State of asynchronous operation"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wuf_SPEC;
     pub type Wuf = crate::EnumBitfieldStruct<u8, Wuf_SPEC>;
     impl Wuf {
+        #[doc = "Slave address match during Wake-Up function."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave address not match during Wake-Up function."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wuie_SPEC;
     pub type Wuie = crate::EnumBitfieldStruct<u8, Wuie_SPEC>;
     impl Wuie {
+        #[doc = "Wake Up Interrupt Request (WUI) is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Wake Up Interrupt Request (WUI) is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wue_SPEC;
     pub type Wue = crate::EnumBitfieldStruct<u8, Wue_SPEC>;
     impl Wue {
+        #[doc = "Wake-up function is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Wake-up function is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -287,9 +309,11 @@ impl crate::sealed::RegSpec for Icwur2_SPEC {
     type DataType = u8;
 }
 
+#[doc = "I2C Bus Wake Up Unit Register 2"]
 pub type Icwur2 = crate::RegValueT<Icwur2_SPEC>;
 
 impl Icwur2 {
+    #[doc = "Wake-Up function synchronous enable"]
     #[inline(always)]
     pub fn wusen(
         self,
@@ -315,6 +339,7 @@ impl Icwur2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake-Up function asynchronous operation status flag"]
     #[inline(always)]
     pub fn wuasyf(
         self,
@@ -340,6 +365,7 @@ impl Icwur2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake-Up function synchronous operation status flag"]
     #[inline(always)]
     pub fn wusyf(
         self,
@@ -365,6 +391,7 @@ impl Icwur2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -384,24 +411,30 @@ pub mod icwur2 {
     pub struct Wusen_SPEC;
     pub type Wusen = crate::EnumBitfieldStruct<u8, Wusen_SPEC>;
     impl Wusen {
+        #[doc = "IIC asynchronous circuit enable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IIC synchronous circuit enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wuasyf_SPEC;
     pub type Wuasyf = crate::EnumBitfieldStruct<u8, Wuasyf_SPEC>;
     impl Wuasyf {
+        #[doc = "IIC synchronous circuit enable condition"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IIC asynchronous circuit enable condition"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wusyf_SPEC;
     pub type Wusyf = crate::EnumBitfieldStruct<u8, Wusyf_SPEC>;
     impl Wusyf {
+        #[doc = "IIC asynchronous circuit enable condition"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IIC synchronous circuit enable condition"]
         pub const _1: Self = Self::new(1);
     }
 }

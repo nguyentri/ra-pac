@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:20:22 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:32 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Ami {
         self.ptr
     }
 
+    #[doc = "D/A A/D Synchronous Unit Select Register"]
     #[inline(always)]
     pub const fn daadusr(
         &self,
@@ -52,9 +53,11 @@ impl crate::sealed::RegSpec for Daadusr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "D/A A/D Synchronous Unit Select Register"]
 pub type Daadusr = crate::RegValueT<Daadusr_SPEC>;
 
 impl Daadusr {
+    #[doc = "A/D Unit 1 Select"]
     #[inline(always)]
     pub fn amadsel1(
         self,
@@ -92,8 +95,10 @@ pub mod daadusr {
     pub struct Amadsel1_SPEC;
     pub type Amadsel1 = crate::EnumBitfieldStruct<u8, Amadsel1_SPEC>;
     impl Amadsel1 {
+        #[doc = "Unit 1 is not selected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Unit 1 is selected."]
         pub const _1: Self = Self::new(1);
     }
 }

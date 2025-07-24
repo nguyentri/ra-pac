@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.30.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:20:54 +0000
+// Generated from SVD 1.41.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:06 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Dmac0 {
         self.ptr
     }
 
+    #[doc = "DMA Source Address Register"]
     #[inline(always)]
     pub const fn dmsar(&self) -> &'static crate::common::Reg<self::Dmsar_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Dmac0 {
         }
     }
 
+    #[doc = "DMA Destination Address Register"]
     #[inline(always)]
     pub const fn dmdar(&self) -> &'static crate::common::Reg<self::Dmdar_SPEC, crate::common::RW> {
         unsafe {
@@ -52,6 +54,7 @@ impl super::Dmac0 {
         }
     }
 
+    #[doc = "DMA Transfer Count Register"]
     #[inline(always)]
     pub const fn dmcra(&self) -> &'static crate::common::Reg<self::Dmcra_SPEC, crate::common::RW> {
         unsafe {
@@ -61,6 +64,7 @@ impl super::Dmac0 {
         }
     }
 
+    #[doc = "DMA Block Transfer Count Register"]
     #[inline(always)]
     pub const fn dmcrb(&self) -> &'static crate::common::Reg<self::Dmcrb_SPEC, crate::common::RW> {
         unsafe {
@@ -70,6 +74,7 @@ impl super::Dmac0 {
         }
     }
 
+    #[doc = "DMA Transfer Mode Register"]
     #[inline(always)]
     pub const fn dmtmd(&self) -> &'static crate::common::Reg<self::Dmtmd_SPEC, crate::common::RW> {
         unsafe {
@@ -79,6 +84,7 @@ impl super::Dmac0 {
         }
     }
 
+    #[doc = "DMA Interrupt Setting Register"]
     #[inline(always)]
     pub const fn dmint(&self) -> &'static crate::common::Reg<self::Dmint_SPEC, crate::common::RW> {
         unsafe {
@@ -88,6 +94,7 @@ impl super::Dmac0 {
         }
     }
 
+    #[doc = "DMA Address Mode Register"]
     #[inline(always)]
     pub const fn dmamd(&self) -> &'static crate::common::Reg<self::Dmamd_SPEC, crate::common::RW> {
         unsafe {
@@ -97,6 +104,7 @@ impl super::Dmac0 {
         }
     }
 
+    #[doc = "DMA Offset Register"]
     #[inline(always)]
     pub const fn dmofr(&self) -> &'static crate::common::Reg<self::Dmofr_SPEC, crate::common::RW> {
         unsafe {
@@ -106,6 +114,7 @@ impl super::Dmac0 {
         }
     }
 
+    #[doc = "DMA Transfer Enable Register"]
     #[inline(always)]
     pub const fn dmcnt(&self) -> &'static crate::common::Reg<self::Dmcnt_SPEC, crate::common::RW> {
         unsafe {
@@ -115,6 +124,7 @@ impl super::Dmac0 {
         }
     }
 
+    #[doc = "DMA Software Start Register"]
     #[inline(always)]
     pub const fn dmreq(&self) -> &'static crate::common::Reg<self::Dmreq_SPEC, crate::common::RW> {
         unsafe {
@@ -124,6 +134,7 @@ impl super::Dmac0 {
         }
     }
 
+    #[doc = "DMA Status Register"]
     #[inline(always)]
     pub const fn dmsts(&self) -> &'static crate::common::Reg<self::Dmsts_SPEC, crate::common::RW> {
         unsafe {
@@ -133,6 +144,7 @@ impl super::Dmac0 {
         }
     }
 
+    #[doc = "DMA Source Reload Address Register"]
     #[inline(always)]
     pub const fn dmsrr(&self) -> &'static crate::common::Reg<self::Dmsrr_SPEC, crate::common::RW> {
         unsafe {
@@ -142,6 +154,7 @@ impl super::Dmac0 {
         }
     }
 
+    #[doc = "DMA Destination Reload Address Register"]
     #[inline(always)]
     pub const fn dmdrr(&self) -> &'static crate::common::Reg<self::Dmdrr_SPEC, crate::common::RW> {
         unsafe {
@@ -151,6 +164,7 @@ impl super::Dmac0 {
         }
     }
 
+    #[doc = "DMA Source Buffer Size Register"]
     #[inline(always)]
     pub const fn dmsbs(&self) -> &'static crate::common::Reg<self::Dmsbs_SPEC, crate::common::RW> {
         unsafe {
@@ -160,6 +174,7 @@ impl super::Dmac0 {
         }
     }
 
+    #[doc = "DMA Destination Buffer Size Register"]
     #[inline(always)]
     pub const fn dmdbs(&self) -> &'static crate::common::Reg<self::Dmdbs_SPEC, crate::common::RW> {
         unsafe {
@@ -169,6 +184,7 @@ impl super::Dmac0 {
         }
     }
 
+    #[doc = "DMA Bufferable Write Enable Register"]
     #[inline(always)]
     pub const fn dmbwr(&self) -> &'static crate::common::Reg<self::Dmbwr_SPEC, crate::common::RW> {
         unsafe {
@@ -185,6 +201,7 @@ impl crate::sealed::RegSpec for Dmsar_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DMA Source Address Register"]
 pub type Dmsar = crate::RegValueT<Dmsar_SPEC>;
 
 impl NoBitfieldReg<Dmsar_SPEC> for Dmsar {}
@@ -202,6 +219,7 @@ impl crate::sealed::RegSpec for Dmdar_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DMA Destination Address Register"]
 pub type Dmdar = crate::RegValueT<Dmdar_SPEC>;
 
 impl NoBitfieldReg<Dmdar_SPEC> for Dmdar {}
@@ -219,9 +237,11 @@ impl crate::sealed::RegSpec for Dmcra_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DMA Transfer Count Register"]
 pub type Dmcra = crate::RegValueT<Dmcra_SPEC>;
 
 impl Dmcra {
+    #[doc = "Lower bits of transfer count"]
     #[inline(always)]
     pub fn dmcral(
         self,
@@ -230,6 +250,7 @@ impl Dmcra {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Dmcra_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Upper bits of transfer count"]
     #[inline(always)]
     pub fn dmcrah(
         self,
@@ -252,9 +273,11 @@ impl crate::sealed::RegSpec for Dmcrb_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DMA Block Transfer Count Register"]
 pub type Dmcrb = crate::RegValueT<Dmcrb_SPEC>;
 
 impl Dmcrb {
+    #[doc = "Functions as a number of block, repeat or repeat-block transfer counter."]
     #[inline(always)]
     pub fn dmcrbl(
         self,
@@ -263,6 +286,7 @@ impl Dmcrb {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Dmcrb_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Specifies the number of block, repeat or repeat-block transfer operations."]
     #[inline(always)]
     pub fn dmcrbh(
         self,
@@ -285,9 +309,11 @@ impl crate::sealed::RegSpec for Dmtmd_SPEC {
     type DataType = u16;
 }
 
+#[doc = "DMA Transfer Mode Register"]
 pub type Dmtmd = crate::RegValueT<Dmtmd_SPEC>;
 
 impl Dmtmd {
+    #[doc = "Transfer Request Source Select"]
     #[inline(always)]
     pub fn dctg(
         self,
@@ -313,6 +339,7 @@ impl Dmtmd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transfer Data Size Select"]
     #[inline(always)]
     pub fn sz(
         self,
@@ -338,6 +365,7 @@ impl Dmtmd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transfer Keeping"]
     #[inline(always)]
     pub fn tkp(
         self,
@@ -363,6 +391,7 @@ impl Dmtmd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Repeat Area Select"]
     #[inline(always)]
     pub fn dts(
         self,
@@ -388,6 +417,7 @@ impl Dmtmd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transfer Mode Select"]
     #[inline(always)]
     pub fn md(
         self,
@@ -425,56 +455,74 @@ pub mod dmtmd {
     pub struct Dctg_SPEC;
     pub type Dctg = crate::EnumBitfieldStruct<u8, Dctg_SPEC>;
     impl Dctg {
+        #[doc = "Software request"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Hardware request"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Setting prohibited"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Setting prohibited"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sz_SPEC;
     pub type Sz = crate::EnumBitfieldStruct<u8, Sz_SPEC>;
     impl Sz {
+        #[doc = "8 bits"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "16 bits"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "32 bits"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Setting prohibited"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tkp_SPEC;
     pub type Tkp = crate::EnumBitfieldStruct<u8, Tkp_SPEC>;
     impl Tkp {
+        #[doc = "Transfer is stopped by completion of specified total number of transfer operations."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transfer is not stopped by completion of specified total number of transfer operations (free-running)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dts_SPEC;
     pub type Dts = crate::EnumBitfieldStruct<u8, Dts_SPEC>;
     impl Dts {
+        #[doc = "The destination is specified as the repeat area or block area."]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "The source is specified as the repeat area or block area."]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "The repeat area or block area is not specified."]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Setting prohibited."]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Md_SPEC;
     pub type Md = crate::EnumBitfieldStruct<u8, Md_SPEC>;
     impl Md {
+        #[doc = "Normal transfer"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Repeat transfer"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Block transfer"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Repeat-block transfer"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -485,9 +533,11 @@ impl crate::sealed::RegSpec for Dmint_SPEC {
     type DataType = u8;
 }
 
+#[doc = "DMA Interrupt Setting Register"]
 pub type Dmint = crate::RegValueT<Dmint_SPEC>;
 
 impl Dmint {
+    #[doc = "Destination Address Extended Repeat Area Overflow Interrupt Enable"]
     #[inline(always)]
     pub fn darie(
         self,
@@ -513,6 +563,7 @@ impl Dmint {
         >::from_register(self, 0)
     }
 
+    #[doc = "Source Address Extended Repeat Area Overflow Interrupt Enable"]
     #[inline(always)]
     pub fn sarie(
         self,
@@ -538,6 +589,7 @@ impl Dmint {
         >::from_register(self, 0)
     }
 
+    #[doc = "Repeat Size End Interrupt Enable"]
     #[inline(always)]
     pub fn rptie(
         self,
@@ -563,6 +615,7 @@ impl Dmint {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transfer Escape End Interrupt Enable"]
     #[inline(always)]
     pub fn esie(
         self,
@@ -588,6 +641,7 @@ impl Dmint {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transfer End Interrupt Enable"]
     #[inline(always)]
     pub fn dtie(
         self,
@@ -625,40 +679,50 @@ pub mod dmint {
     pub struct Darie_SPEC;
     pub type Darie = crate::EnumBitfieldStruct<u8, Darie_SPEC>;
     impl Darie {
+        #[doc = "Disables an interrupt request for an extended repeat area overflow on the destination address."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables an interrupt request for an extended repeat area overflow on the destination address."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sarie_SPEC;
     pub type Sarie = crate::EnumBitfieldStruct<u8, Sarie_SPEC>;
     impl Sarie {
+        #[doc = "Disables an interrupt request for an extended repeat area overflow on the source address."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables an interrupt request for an extended repeat area overflow on the source address."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rptie_SPEC;
     pub type Rptie = crate::EnumBitfieldStruct<u8, Rptie_SPEC>;
     impl Rptie {
+        #[doc = "Disables the repeat size end interrupt request."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables the repeat size end interrupt request."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Esie_SPEC;
     pub type Esie = crate::EnumBitfieldStruct<u8, Esie_SPEC>;
     impl Esie {
+        #[doc = "Disables the transfer escape end interrupt request."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables the transfer escape end interrupt request."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dtie_SPEC;
     pub type Dtie = crate::EnumBitfieldStruct<u8, Dtie_SPEC>;
     impl Dtie {
+        #[doc = "Disables the transfer end interrupt request."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables the transfer end interrupt request."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -669,9 +733,11 @@ impl crate::sealed::RegSpec for Dmamd_SPEC {
     type DataType = u16;
 }
 
+#[doc = "DMA Address Mode Register"]
 pub type Dmamd = crate::RegValueT<Dmamd_SPEC>;
 
 impl Dmamd {
+    #[doc = "Destination Address Extended Repeat Area"]
     #[inline(always)]
     pub fn dara(
         self,
@@ -679,6 +745,7 @@ impl Dmamd {
         crate::common::RegisterField::<0,0x1f,1,0,u8,u8,Dmamd_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Destination Address Update Select After Reload"]
     #[inline(always)]
     pub fn dadr(
         self,
@@ -704,6 +771,7 @@ impl Dmamd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Destination Address Update Mode"]
     #[inline(always)]
     pub fn dm(
         self,
@@ -729,6 +797,7 @@ impl Dmamd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Source Address Extended Repeat Area"]
     #[inline(always)]
     pub fn sara(
         self,
@@ -736,6 +805,7 @@ impl Dmamd {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,Dmamd_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Source Address Update Select After Reload"]
     #[inline(always)]
     pub fn sadr(
         self,
@@ -761,6 +831,7 @@ impl Dmamd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Source Address Update Mode"]
     #[inline(always)]
     pub fn sm(
         self,
@@ -798,40 +869,52 @@ pub mod dmamd {
     pub struct Dadr_SPEC;
     pub type Dadr = crate::EnumBitfieldStruct<u8, Dadr_SPEC>;
     impl Dadr {
+        #[doc = "Only reloading."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Add index after reloading."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dm_SPEC;
     pub type Dm = crate::EnumBitfieldStruct<u8, Dm_SPEC>;
     impl Dm {
+        #[doc = "Destination address is fixed."]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Offset addition."]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Destination address is incremented."]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Destination address is decremented."]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sadr_SPEC;
     pub type Sadr = crate::EnumBitfieldStruct<u8, Sadr_SPEC>;
     impl Sadr {
+        #[doc = "Only reloading."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Add index after reloading."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sm_SPEC;
     pub type Sm = crate::EnumBitfieldStruct<u8, Sm_SPEC>;
     impl Sm {
+        #[doc = "Source address is fixed."]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Offset addition."]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Source address is incremented."]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Source address is decremented."]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -842,6 +925,7 @@ impl crate::sealed::RegSpec for Dmofr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DMA Offset Register"]
 pub type Dmofr = crate::RegValueT<Dmofr_SPEC>;
 
 impl NoBitfieldReg<Dmofr_SPEC> for Dmofr {}
@@ -859,9 +943,11 @@ impl crate::sealed::RegSpec for Dmcnt_SPEC {
     type DataType = u8;
 }
 
+#[doc = "DMA Transfer Enable Register"]
 pub type Dmcnt = crate::RegValueT<Dmcnt_SPEC>;
 
 impl Dmcnt {
+    #[doc = "DMA Transfer Enable"]
     #[inline(always)]
     pub fn dte(
         self,
@@ -899,8 +985,10 @@ pub mod dmcnt {
     pub struct Dte_SPEC;
     pub type Dte = crate::EnumBitfieldStruct<u8, Dte_SPEC>;
     impl Dte {
+        #[doc = "Disables DMA transfer."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables DMA transfer."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -911,9 +999,11 @@ impl crate::sealed::RegSpec for Dmreq_SPEC {
     type DataType = u8;
 }
 
+#[doc = "DMA Software Start Register"]
 pub type Dmreq = crate::RegValueT<Dmreq_SPEC>;
 
 impl Dmreq {
+    #[doc = "DMA Software Start"]
     #[inline(always)]
     pub fn swreq(
         self,
@@ -939,6 +1029,7 @@ impl Dmreq {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Software Start Bit Auto Clear Select"]
     #[inline(always)]
     pub fn clrs(
         self,
@@ -976,16 +1067,20 @@ pub mod dmreq {
     pub struct Swreq_SPEC;
     pub type Swreq = crate::EnumBitfieldStruct<u8, Swreq_SPEC>;
     impl Swreq {
+        #[doc = "DMA transfer is not requested."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer is requested."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clrs_SPEC;
     pub type Clrs = crate::EnumBitfieldStruct<u8, Clrs_SPEC>;
     impl Clrs {
+        #[doc = "SWREQ bit is cleared after DMA transfer is started by software."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "SWREQ bit is not cleared after DMA transfer is started by software."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -996,9 +1091,11 @@ impl crate::sealed::RegSpec for Dmsts_SPEC {
     type DataType = u8;
 }
 
+#[doc = "DMA Status Register"]
 pub type Dmsts = crate::RegValueT<Dmsts_SPEC>;
 
 impl Dmsts {
+    #[doc = "Transfer Escape End Interrupt Flag"]
     #[inline(always)]
     pub fn esif(
         self,
@@ -1024,6 +1121,7 @@ impl Dmsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transfer End Interrupt Flag"]
     #[inline(always)]
     pub fn dtif(
         self,
@@ -1049,6 +1147,7 @@ impl Dmsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMAC Active Flag"]
     #[inline(always)]
     pub fn act(
         self,
@@ -1086,24 +1185,30 @@ pub mod dmsts {
     pub struct Esif_SPEC;
     pub type Esif = crate::EnumBitfieldStruct<u8, Esif_SPEC>;
     impl Esif {
+        #[doc = "A transfer escape end interrupt has not been generated."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A transfer escape end interrupt has been generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dtif_SPEC;
     pub type Dtif = crate::EnumBitfieldStruct<u8, Dtif_SPEC>;
     impl Dtif {
+        #[doc = "A transfer end interrupt has not been generated."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A transfer end interrupt has been generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Act_SPEC;
     pub type Act = crate::EnumBitfieldStruct<u8, Act_SPEC>;
     impl Act {
+        #[doc = "DMAC is in the idle state."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMAC is operating."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1114,6 +1219,7 @@ impl crate::sealed::RegSpec for Dmsrr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DMA Source Reload Address Register"]
 pub type Dmsrr = crate::RegValueT<Dmsrr_SPEC>;
 
 impl NoBitfieldReg<Dmsrr_SPEC> for Dmsrr {}
@@ -1131,6 +1237,7 @@ impl crate::sealed::RegSpec for Dmdrr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DMA Destination Reload Address Register"]
 pub type Dmdrr = crate::RegValueT<Dmdrr_SPEC>;
 
 impl NoBitfieldReg<Dmdrr_SPEC> for Dmdrr {}
@@ -1148,9 +1255,11 @@ impl crate::sealed::RegSpec for Dmsbs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DMA Source Buffer Size Register"]
 pub type Dmsbs = crate::RegValueT<Dmsbs_SPEC>;
 
 impl Dmsbs {
+    #[doc = "Functions as data transfer counter in repeat-block transfer mode"]
     #[inline(always)]
     pub fn dmsbsl(
         self,
@@ -1159,6 +1268,7 @@ impl Dmsbs {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Dmsbs_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Specifies the repeat-area size in repeat-block transfer mode"]
     #[inline(always)]
     pub fn dmsbsh(
         self,
@@ -1181,9 +1291,11 @@ impl crate::sealed::RegSpec for Dmdbs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DMA Destination Buffer Size Register"]
 pub type Dmdbs = crate::RegValueT<Dmdbs_SPEC>;
 
 impl Dmdbs {
+    #[doc = "Functions as data transfer counter in repeat-block transfer mode."]
     #[inline(always)]
     pub fn dmdbsl(
         self,
@@ -1192,6 +1304,7 @@ impl Dmdbs {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Dmdbs_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Specifies the repeat-area size in repeat-block transfer mode."]
     #[inline(always)]
     pub fn dmdbsh(
         self,
@@ -1214,9 +1327,11 @@ impl crate::sealed::RegSpec for Dmbwr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "DMA Bufferable Write Enable Register"]
 pub type Dmbwr = crate::RegValueT<Dmbwr_SPEC>;
 
 impl Dmbwr {
+    #[doc = "Bufferable Write Enable"]
     #[inline(always)]
     pub fn bwe(
         self,
@@ -1254,8 +1369,10 @@ pub mod dmbwr {
     pub struct Bwe_SPEC;
     pub type Bwe = crate::EnumBitfieldStruct<u8, Bwe_SPEC>;
     impl Bwe {
+        #[doc = "Disables Bufferable Write"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Bufferable Write"]
         pub const _1: Self = Self::new(1);
     }
 }

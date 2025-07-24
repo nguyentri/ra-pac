@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:17:48 +0000
+// Generated from SVD 1.20.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:48:16 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Sram {
         self.ptr
     }
 
+    #[doc = "SRAM Parity Error Operation After Detection Register"]
     #[inline(always)]
     pub const fn parioad(
         &self,
@@ -45,6 +46,7 @@ impl super::Sram {
         }
     }
 
+    #[doc = "SRAM Protection Register"]
     #[inline(always)]
     pub const fn sramprcr(
         &self,
@@ -56,6 +58,7 @@ impl super::Sram {
         }
     }
 
+    #[doc = "SRAM Wait State Control Register"]
     #[inline(always)]
     pub const fn sramwtsc(
         &self,
@@ -67,6 +70,7 @@ impl super::Sram {
         }
     }
 
+    #[doc = "SRAM Protection Register 2"]
     #[inline(always)]
     pub const fn sramprcr2(
         &self,
@@ -85,9 +89,11 @@ impl crate::sealed::RegSpec for Parioad_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SRAM Parity Error Operation After Detection Register"]
 pub type Parioad = crate::RegValueT<Parioad_SPEC>;
 
 impl Parioad {
+    #[doc = "Operation After Detection"]
     #[inline(always)]
     pub fn oad(
         self,
@@ -125,8 +131,10 @@ pub mod parioad {
     pub struct Oad_SPEC;
     pub type Oad = crate::EnumBitfieldStruct<u8, Oad_SPEC>;
     impl Oad {
+        #[doc = "Non-maskable interrupt"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Reset"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -137,9 +145,11 @@ impl crate::sealed::RegSpec for Sramprcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SRAM Protection Register"]
 pub type Sramprcr = crate::RegValueT<Sramprcr_SPEC>;
 
 impl Sramprcr {
+    #[doc = "Register Write Control"]
     #[inline(always)]
     pub fn sramprcr(
         self,
@@ -165,6 +175,7 @@ impl Sramprcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Write Key Code"]
     #[inline(always)]
     pub fn kw(
         self,
@@ -184,8 +195,10 @@ pub mod sramprcr {
     pub struct Sramprcr_SPEC;
     pub type Sramprcr = crate::EnumBitfieldStruct<u8, Sramprcr_SPEC>;
     impl Sramprcr {
+        #[doc = "Disable writes to protected registers"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable writes to protected registers"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -196,9 +209,11 @@ impl crate::sealed::RegSpec for Sramwtsc_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SRAM Wait State Control Register"]
 pub type Sramwtsc = crate::RegValueT<Sramwtsc_SPEC>;
 
 impl Sramwtsc {
+    #[doc = "SRAM0 wait enable"]
     #[inline(always)]
     pub fn sram0wten(
         self,
@@ -236,8 +251,10 @@ pub mod sramwtsc {
     pub struct Sram0Wten_SPEC;
     pub type Sram0Wten = crate::EnumBitfieldStruct<u8, Sram0Wten_SPEC>;
     impl Sram0Wten {
+        #[doc = "No wait"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Add wait state in read access cycle to SRAM0"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -248,9 +265,11 @@ impl crate::sealed::RegSpec for Sramprcr2_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SRAM Protection Register 2"]
 pub type Sramprcr2 = crate::RegValueT<Sramprcr2_SPEC>;
 
 impl Sramprcr2 {
+    #[doc = "Register Write Control"]
     #[inline(always)]
     pub fn sramprcr2(
         self,
@@ -276,6 +295,7 @@ impl Sramprcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Write Key Code"]
     #[inline(always)]
     pub fn kw(
         self,
@@ -295,8 +315,10 @@ pub mod sramprcr2 {
     pub struct Sramprcr2_SPEC;
     pub type Sramprcr2 = crate::EnumBitfieldStruct<u8, Sramprcr2_SPEC>;
     impl Sramprcr2 {
+        #[doc = "Disable writes to the protected registers"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable writes to the protected registers"]
         pub const _1: Self = Self::new(1);
     }
 }

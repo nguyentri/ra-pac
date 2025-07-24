@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:18:26 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:18 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Dac8 {
         self.ptr
     }
 
+    #[doc = "D/A Conversion Value Setting Register %s"]
     #[inline(always)]
     pub const fn dacs(
         &self,
@@ -46,7 +47,24 @@ impl super::Dac8 {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x0usize))
         }
     }
+    #[inline(always)]
+    pub const fn dacs0(&self) -> &'static crate::common::Reg<self::Dacs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Dacs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn dacs1(&self) -> &'static crate::common::Reg<self::Dacs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Dacs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1usize),
+            )
+        }
+    }
 
+    #[doc = "D/A Converter Mode Register"]
     #[inline(always)]
     pub const fn dam(&self) -> &'static crate::common::Reg<self::Dam_SPEC, crate::common::RW> {
         unsafe {
@@ -63,9 +81,11 @@ impl crate::sealed::RegSpec for Dacs_SPEC {
     type DataType = u8;
 }
 
+#[doc = "D/A Conversion Value Setting Register %s"]
 pub type Dacs = crate::RegValueT<Dacs_SPEC>;
 
 impl Dacs {
+    #[doc = "DACS D/A conversion store data \nnote: When 8-bit D/A Converter output is selected as the reference input for the ACMPLP in the COMPSEL1 register, and ACMPLP operation is enabled (COMPMDR.CnENB = 1), changing the DACS\\[7:0\\] bits for the channel in use is\nprohibited."]
     #[inline(always)]
     pub fn dacs(
         self,
@@ -87,9 +107,11 @@ impl crate::sealed::RegSpec for Dam_SPEC {
     type DataType = u8;
 }
 
+#[doc = "D/A Converter Mode Register"]
 pub type Dam = crate::RegValueT<Dam_SPEC>;
 
 impl Dam {
+    #[doc = "D/A Operation Enable 1"]
     #[inline(always)]
     pub fn dace1(
         self,
@@ -115,6 +137,7 @@ impl Dam {
         >::from_register(self, 0)
     }
 
+    #[doc = "D/A Operation Enable 0"]
     #[inline(always)]
     pub fn dace0(
         self,
@@ -140,6 +163,7 @@ impl Dam {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -159,16 +183,20 @@ pub mod dam {
     pub struct Dace1_SPEC;
     pub type Dace1 = crate::EnumBitfieldStruct<u8, Dace1_SPEC>;
     impl Dace1 {
+        #[doc = "D/A conversion disabled for channel 1"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "D/A conversion enabled for channel 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dace0_SPEC;
     pub type Dace0 = crate::EnumBitfieldStruct<u8, Dace0_SPEC>;
     impl Dace0 {
+        #[doc = "D/A conversion disabled for channel 0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "D/A conversion enabled for channel 0."]
         pub const _1: Self = Self::new(1);
     }
 }

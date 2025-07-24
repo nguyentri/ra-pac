@@ -13,11 +13,11 @@
 # following link:
 # http://www.renesas.com/disclaimer
 #
-# Generated from SVD 1.00.01, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:22:22 +0000
+# Generated from SVD 1.00.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:56 +0000
 
 [package]
 name = "ra8e1-pac"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 description = "Peripheral Access Crate (PAC) for R7FAA8E1."
 authors = ["Tri Nguyen <trongtribk06@gmail.com>"]
@@ -27,14 +27,14 @@ documentation = "https://docs.rs/crate/ra8e1-pac/latest"
 categories = ["embedded", "hardware-support", "no-std"]
 include = ["src/*", "Cargo.toml", "README.md", "build.rs", "device.x"]
 readme = "README.md"
-license-file = "LICENSE.txt"
+license = "MIT OR Apache-2.0"
 
 [lib]
 test = false
 bench = false
 
 [dependencies]
-phf = { version = "0.11", features = ["macros"], optional = true }
+phf = { version = "0.12.1", features = ["macros"], optional = true }
 cortex-m-rt = { version = "0.7", optional = true }
 cortex-m = "0.7.6"
 
@@ -45,13 +45,13 @@ bus = []
 icu_common = []
 cpscu = []
 dmac00 = []
-dmac01 = ["dmac00"]
-dmac02 = ["dmac00"]
-dmac03 = ["dmac00"]
-dmac04 = ["dmac00"]
-dmac05 = ["dmac00"]
-dmac06 = ["dmac00"]
-dmac07 = ["dmac00"]
+dmac01 = [ "dmac00" ]
+dmac02 = [ "dmac00" ]
+dmac03 = [ "dmac00" ]
+dmac04 = [ "dmac00" ]
+dmac05 = [ "dmac00" ]
+dmac06 = [ "dmac00" ]
+dmac07 = [ "dmac00" ]
 dma0 = []
 dtc0 = []
 icu = []
@@ -72,35 +72,35 @@ mstp = []
 pscu = []
 poeg = []
 ulpt0 = []
-ulpt1 = ["ulpt0"]
+ulpt1 = [ "ulpt0" ]
 agt0 = []
-agt1 = ["agt0"]
+agt1 = [ "agt0" ]
 tsn = []
 acmphs0 = []
-acmphs1 = ["acmphs0"]
+acmphs1 = [ "acmphs0" ]
 usbfs = []
 ssie0 = []
-ssie1 = ["ssie0"]
+ssie1 = [ "ssie0" ]
 iic0 = []
 iic0wu = []
-iic1 = ["iic0"]
+iic1 = [ "iic0" ]
 ospi0_b = []
 crc = []
 doc_b = []
 gpt320 = []
-gpt321 = ["gpt320"]
-gpt322 = ["gpt320"]
-gpt323 = ["gpt320"]
-gpt324 = ["gpt320"]
-gpt325 = ["gpt320"]
-gpt326 = ["gpt320"]
-gpt327 = ["gpt320"]
+gpt321 = [ "gpt320" ]
+gpt322 = [ "gpt320" ]
+gpt323 = [ "gpt320" ]
+gpt324 = [ "gpt320" ]
+gpt325 = [ "gpt320" ]
+gpt326 = [ "gpt320" ]
+gpt327 = [ "gpt320" ]
 gpt168 = []
-gpt169 = ["gpt168"]
+gpt169 = [ "gpt168" ]
 gpt1610 = []
-gpt1611 = ["gpt1610"]
-gpt1612 = ["gpt1610"]
-gpt1613 = ["gpt1610"]
+gpt1611 = [ "gpt1610" ]
+gpt1612 = [ "gpt1610" ]
+gpt1613 = [ "gpt1610" ]
 adc120 = []
 adc121 = []
 dac12 = []
@@ -108,27 +108,27 @@ ceu = []
 edmac0 = []
 etherc0 = []
 sci0_b = []
-sci1_b = ["sci0_b"]
-sci2_b = ["sci0_b"]
-sci3_b = ["sci0_b"]
-sci4_b = ["sci0_b"]
-sci9_b = ["sci0_b"]
+sci1_b = [ "sci0_b" ]
+sci2_b = [ "sci0_b" ]
+sci3_b = [ "sci0_b" ]
+sci4_b = [ "sci0_b" ]
+sci9_b = [ "sci0_b" ]
 spi0_b = []
-spi1_b = ["spi0_b"]
+spi1_b = [ "spi0_b" ]
 eccmb0 = []
-eccmb1 = ["eccmb0"]
+eccmb1 = [ "eccmb0" ]
 canfd0 = []
-canfd1 = ["canfd0"]
+canfd1 = [ "canfd0" ]
 port0 = []
 port1 = []
-port2 = ["port1"]
-port3 = ["port1"]
-port4 = ["port1"]
-port5 = ["port0"]
-port6 = ["port0"]
-port7 = ["port0"]
-port8 = ["port0"]
-port9 = ["port0"]
+port2 = [ "port1" ]
+port3 = [ "port1" ]
+port4 = [ "port1" ]
+port5 = [ "port0" ]
+port6 = [ "port0" ]
+port7 = [ "port0" ]
+port8 = [ "port0" ]
+port9 = [ "port0" ]
 porta = []
 portb = []
 pfs = []
@@ -138,13 +138,13 @@ bus_ns = []
 icu_common_ns = []
 cpscu_ns = []
 dmac00_ns = []
-dmac01_ns = ["dmac00_ns"]
-dmac02_ns = ["dmac00_ns"]
-dmac03_ns = ["dmac00_ns"]
-dmac04_ns = ["dmac00_ns"]
-dmac05_ns = ["dmac00_ns"]
-dmac06_ns = ["dmac00_ns"]
-dmac07_ns = ["dmac00_ns"]
+dmac01_ns = [ "dmac00_ns" ]
+dmac02_ns = [ "dmac00_ns" ]
+dmac03_ns = [ "dmac00_ns" ]
+dmac04_ns = [ "dmac00_ns" ]
+dmac05_ns = [ "dmac00_ns" ]
+dmac06_ns = [ "dmac00_ns" ]
+dmac07_ns = [ "dmac00_ns" ]
 dma0_ns = []
 dtc0_ns = []
 icu_ns = []
@@ -165,35 +165,35 @@ mstp_ns = []
 pscu_ns = []
 poeg_ns = []
 ulpt0_ns = []
-ulpt1_ns = ["ulpt0_ns"]
+ulpt1_ns = [ "ulpt0_ns" ]
 agt0_ns = []
-agt1_ns = ["agt0_ns"]
+agt1_ns = [ "agt0_ns" ]
 tsn_ns = []
 acmphs0_ns = []
-acmphs1_ns = ["acmphs0_ns"]
+acmphs1_ns = [ "acmphs0_ns" ]
 usbfs_ns = []
 ssie0_ns = []
-ssie1_ns = ["ssie0_ns"]
+ssie1_ns = [ "ssie0_ns" ]
 iic0_ns = []
 iic0wu_ns = []
-iic1_ns = ["iic0_ns"]
+iic1_ns = [ "iic0_ns" ]
 ospi0_b_ns = []
 crc_ns = []
 doc_b_ns = []
 gpt320_ns = []
-gpt321_ns = ["gpt320_ns"]
-gpt322_ns = ["gpt320_ns"]
-gpt323_ns = ["gpt320_ns"]
-gpt324_ns = ["gpt320_ns"]
-gpt325_ns = ["gpt320_ns"]
-gpt326_ns = ["gpt320_ns"]
-gpt327_ns = ["gpt320_ns"]
+gpt321_ns = [ "gpt320_ns" ]
+gpt322_ns = [ "gpt320_ns" ]
+gpt323_ns = [ "gpt320_ns" ]
+gpt324_ns = [ "gpt320_ns" ]
+gpt325_ns = [ "gpt320_ns" ]
+gpt326_ns = [ "gpt320_ns" ]
+gpt327_ns = [ "gpt320_ns" ]
 gpt168_ns = []
-gpt169_ns = ["gpt168_ns"]
+gpt169_ns = [ "gpt168_ns" ]
 gpt1610_ns = []
-gpt1611_ns = ["gpt1610_ns"]
-gpt1612_ns = ["gpt1610_ns"]
-gpt1613_ns = ["gpt1610_ns"]
+gpt1611_ns = [ "gpt1610_ns" ]
+gpt1612_ns = [ "gpt1610_ns" ]
+gpt1613_ns = [ "gpt1610_ns" ]
 adc120_ns = []
 adc121_ns = []
 dac12_ns = []
@@ -201,219 +201,32 @@ ceu_ns = []
 edmac0_ns = []
 etherc0_ns = []
 sci0_b_ns = []
-sci1_b_ns = ["sci0_b_ns"]
-sci2_b_ns = ["sci0_b_ns"]
-sci3_b_ns = ["sci0_b_ns"]
-sci4_b_ns = ["sci0_b_ns"]
-sci9_b_ns = ["sci0_b_ns"]
+sci1_b_ns = [ "sci0_b_ns" ]
+sci2_b_ns = [ "sci0_b_ns" ]
+sci3_b_ns = [ "sci0_b_ns" ]
+sci4_b_ns = [ "sci0_b_ns" ]
+sci9_b_ns = [ "sci0_b_ns" ]
 spi0_b_ns = []
-spi1_b_ns = ["spi0_b_ns"]
+spi1_b_ns = [ "spi0_b_ns" ]
 eccmb0_ns = []
-eccmb1_ns = ["eccmb0_ns"]
+eccmb1_ns = [ "eccmb0_ns" ]
 canfd0_ns = []
-canfd1_ns = ["canfd0_ns"]
+canfd1_ns = [ "canfd0_ns" ]
 port0_ns = []
 port1_ns = []
-port2_ns = ["port1_ns"]
-port3_ns = ["port1_ns"]
-port4_ns = ["port1_ns"]
-port5_ns = ["port0_ns"]
-port6_ns = ["port0_ns"]
-port7_ns = ["port0_ns"]
-port8_ns = ["port0_ns"]
-port9_ns = ["port0_ns"]
+port2_ns = [ "port1_ns" ]
+port3_ns = [ "port1_ns" ]
+port4_ns = [ "port1_ns" ]
+port5_ns = [ "port0_ns" ]
+port6_ns = [ "port0_ns" ]
+port7_ns = [ "port0_ns" ]
+port8_ns = [ "port0_ns" ]
+port9_ns = [ "port0_ns" ]
 porta_ns = []
 portb_ns = []
 pfs_ns = []
 
-all = [
-    "rmpu",
-    "sram",
-    "bus",
-    "icu_common",
-    "cpscu",
-    "dmac00",
-    "dmac01",
-    "dmac02",
-    "dmac03",
-    "dmac04",
-    "dmac05",
-    "dmac06",
-    "dmac07",
-    "dma0",
-    "dtc0",
-    "icu",
-    "cpu_ctrl",
-    "ocd_cpu",
-    "cpu_dbg",
-    "fcache",
-    "sysc",
-    "tsd",
-    "flad",
-    "faci",
-    "elc",
-    "rtc",
-    "iwdt",
-    "cac",
-    "wdt0",
-    "mstp",
-    "pscu",
-    "poeg",
-    "ulpt0",
-    "ulpt1",
-    "agt0",
-    "agt1",
-    "tsn",
-    "acmphs0",
-    "acmphs1",
-    "usbfs",
-    "ssie0",
-    "ssie1",
-    "iic0",
-    "iic0wu",
-    "iic1",
-    "ospi0_b",
-    "crc",
-    "doc_b",
-    "gpt320",
-    "gpt321",
-    "gpt322",
-    "gpt323",
-    "gpt324",
-    "gpt325",
-    "gpt326",
-    "gpt327",
-    "gpt168",
-    "gpt169",
-    "gpt1610",
-    "gpt1611",
-    "gpt1612",
-    "gpt1613",
-    "adc120",
-    "adc121",
-    "dac12",
-    "ceu",
-    "edmac0",
-    "etherc0",
-    "sci0_b",
-    "sci1_b",
-    "sci2_b",
-    "sci3_b",
-    "sci4_b",
-    "sci9_b",
-    "spi0_b",
-    "spi1_b",
-    "eccmb0",
-    "eccmb1",
-    "canfd0",
-    "canfd1",
-    "port0",
-    "port1",
-    "port2",
-    "port3",
-    "port4",
-    "port5",
-    "port6",
-    "port7",
-    "port8",
-    "port9",
-    "porta",
-    "portb",
-    "pfs",
-    "rmpu_ns",
-    "sram_ns",
-    "bus_ns",
-    "icu_common_ns",
-    "cpscu_ns",
-    "dmac00_ns",
-    "dmac01_ns",
-    "dmac02_ns",
-    "dmac03_ns",
-    "dmac04_ns",
-    "dmac05_ns",
-    "dmac06_ns",
-    "dmac07_ns",
-    "dma0_ns",
-    "dtc0_ns",
-    "icu_ns",
-    "cpu_ctrl_ns",
-    "ocd_cpu_ns",
-    "cpu_dbg_ns",
-    "fcache_ns",
-    "sysc_ns",
-    "tsd_ns",
-    "flad_ns",
-    "faci_ns",
-    "elc_ns",
-    "rtc_ns",
-    "iwdt_ns",
-    "cac_ns",
-    "wdt0_ns",
-    "mstp_ns",
-    "pscu_ns",
-    "poeg_ns",
-    "ulpt0_ns",
-    "ulpt1_ns",
-    "agt0_ns",
-    "agt1_ns",
-    "tsn_ns",
-    "acmphs0_ns",
-    "acmphs1_ns",
-    "usbfs_ns",
-    "ssie0_ns",
-    "ssie1_ns",
-    "iic0_ns",
-    "iic0wu_ns",
-    "iic1_ns",
-    "ospi0_b_ns",
-    "crc_ns",
-    "doc_b_ns",
-    "gpt320_ns",
-    "gpt321_ns",
-    "gpt322_ns",
-    "gpt323_ns",
-    "gpt324_ns",
-    "gpt325_ns",
-    "gpt326_ns",
-    "gpt327_ns",
-    "gpt168_ns",
-    "gpt169_ns",
-    "gpt1610_ns",
-    "gpt1611_ns",
-    "gpt1612_ns",
-    "gpt1613_ns",
-    "adc120_ns",
-    "adc121_ns",
-    "dac12_ns",
-    "ceu_ns",
-    "edmac0_ns",
-    "etherc0_ns",
-    "sci0_b_ns",
-    "sci1_b_ns",
-    "sci2_b_ns",
-    "sci3_b_ns",
-    "sci4_b_ns",
-    "sci9_b_ns",
-    "spi0_b_ns",
-    "spi1_b_ns",
-    "eccmb0_ns",
-    "eccmb1_ns",
-    "canfd0_ns",
-    "canfd1_ns",
-    "port0_ns",
-    "port1_ns",
-    "port2_ns",
-    "port3_ns",
-    "port4_ns",
-    "port5_ns",
-    "port6_ns",
-    "port7_ns",
-    "port8_ns",
-    "port9_ns",
-    "porta_ns",
-    "portb_ns",
-    "pfs_ns",
-]
+all = ["rmpu" , "sram" , "bus" , "icu_common" , "cpscu" , "dmac00" , "dmac01" , "dmac02" , "dmac03" , "dmac04" , "dmac05" , "dmac06" , "dmac07" , "dma0" , "dtc0" , "icu" , "cpu_ctrl" , "ocd_cpu" , "cpu_dbg" , "fcache" , "sysc" , "tsd" , "flad" , "faci" , "elc" , "rtc" , "iwdt" , "cac" , "wdt0" , "mstp" , "pscu" , "poeg" , "ulpt0" , "ulpt1" , "agt0" , "agt1" , "tsn" , "acmphs0" , "acmphs1" , "usbfs" , "ssie0" , "ssie1" , "iic0" , "iic0wu" , "iic1" , "ospi0_b" , "crc" , "doc_b" , "gpt320" , "gpt321" , "gpt322" , "gpt323" , "gpt324" , "gpt325" , "gpt326" , "gpt327" , "gpt168" , "gpt169" , "gpt1610" , "gpt1611" , "gpt1612" , "gpt1613" , "adc120" , "adc121" , "dac12" , "ceu" , "edmac0" , "etherc0" , "sci0_b" , "sci1_b" , "sci2_b" , "sci3_b" , "sci4_b" , "sci9_b" , "spi0_b" , "spi1_b" , "eccmb0" , "eccmb1" , "canfd0" , "canfd1" , "port0" , "port1" , "port2" , "port3" , "port4" , "port5" , "port6" , "port7" , "port8" , "port9" , "porta" , "portb" , "pfs" , "rmpu_ns" , "sram_ns" , "bus_ns" , "icu_common_ns" , "cpscu_ns" , "dmac00_ns" , "dmac01_ns" , "dmac02_ns" , "dmac03_ns" , "dmac04_ns" , "dmac05_ns" , "dmac06_ns" , "dmac07_ns" , "dma0_ns" , "dtc0_ns" , "icu_ns" , "cpu_ctrl_ns" , "ocd_cpu_ns" , "cpu_dbg_ns" , "fcache_ns" , "sysc_ns" , "tsd_ns" , "flad_ns" , "faci_ns" , "elc_ns" , "rtc_ns" , "iwdt_ns" , "cac_ns" , "wdt0_ns" , "mstp_ns" , "pscu_ns" , "poeg_ns" , "ulpt0_ns" , "ulpt1_ns" , "agt0_ns" , "agt1_ns" , "tsn_ns" , "acmphs0_ns" , "acmphs1_ns" , "usbfs_ns" , "ssie0_ns" , "ssie1_ns" , "iic0_ns" , "iic0wu_ns" , "iic1_ns" , "ospi0_b_ns" , "crc_ns" , "doc_b_ns" , "gpt320_ns" , "gpt321_ns" , "gpt322_ns" , "gpt323_ns" , "gpt324_ns" , "gpt325_ns" , "gpt326_ns" , "gpt327_ns" , "gpt168_ns" , "gpt169_ns" , "gpt1610_ns" , "gpt1611_ns" , "gpt1612_ns" , "gpt1613_ns" , "adc120_ns" , "adc121_ns" , "dac12_ns" , "ceu_ns" , "edmac0_ns" , "etherc0_ns" , "sci0_b_ns" , "sci1_b_ns" , "sci2_b_ns" , "sci3_b_ns" , "sci4_b_ns" , "sci9_b_ns" , "spi0_b_ns" , "spi1_b_ns" , "eccmb0_ns" , "eccmb1_ns" , "canfd0_ns" , "canfd1_ns" , "port0_ns" , "port1_ns" , "port2_ns" , "port3_ns" , "port4_ns" , "port5_ns" , "port6_ns" , "port7_ns" , "port8_ns" , "port9_ns" , "porta_ns" , "portb_ns" , "pfs_ns"]
 
 tracing = ["dep:phf"]
 

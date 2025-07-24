@@ -1,0 +1,3880 @@
+/*
+DISCLAIMER
+This software is supplied by Renesas Electronics Corporation and is only intended for use with Renesas products.
+No other uses are authorized. This software is owned by Renesas Electronics Corporation and is protected under all
+applicable laws, including copyright laws.
+THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING THIS SOFTWARE, WHETHER EXPRESS, IMPLIED
+OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY
+LAW, NEITHER RENESAS ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE FOR ANY DIRECT,
+INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR
+ITS AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+Renesas reserves the right, without notice, to make changes to this software and to discontinue the availability
+of this software. By using this software, you agree to the additional terms and conditions found by accessing the
+following link:
+http://www.renesas.com/disclaimer
+
+*/
+// Generated from SVD 1.00.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:39 +0000
+#![cfg_attr(not(feature = "tracing"), no_std)]
+#![allow(non_camel_case_types)]
+#![doc = "Arm Cortex-M85 based Microcontroller RA8M1group"]
+pub mod common;
+pub use common::*;
+
+#[cfg(feature = "tracing")]
+pub mod reg_name;
+#[cfg(feature = "tracing")]
+pub mod tracing;
+
+#[cfg(feature = "acmphs0")]
+pub mod acmphs0;
+#[cfg(feature = "acmphs0_ns")]
+pub mod acmphs0_ns;
+#[cfg(feature = "adc_b")]
+pub mod adc_b;
+#[cfg(feature = "adc_b_ns")]
+pub mod adc_b_ns;
+#[cfg(feature = "agt0")]
+pub mod agt0;
+#[cfg(feature = "agt0_ns")]
+pub mod agt0_ns;
+#[cfg(feature = "bus")]
+pub mod bus;
+#[cfg(feature = "bus_ns")]
+pub mod bus_ns;
+#[cfg(feature = "cac")]
+pub mod cac;
+#[cfg(feature = "cac_ns")]
+pub mod cac_ns;
+#[cfg(feature = "cache")]
+pub mod cache;
+#[cfg(feature = "cache_ns")]
+pub mod cache_ns;
+#[cfg(feature = "canfd0")]
+pub mod canfd0;
+#[cfg(feature = "canfd0_ns")]
+pub mod canfd0_ns;
+#[cfg(feature = "ceu")]
+pub mod ceu;
+#[cfg(feature = "ceu_ns")]
+pub mod ceu_ns;
+#[cfg(feature = "coma")]
+pub mod coma;
+#[cfg(feature = "coma_ns")]
+pub mod coma_ns;
+#[cfg(feature = "cpscu")]
+pub mod cpscu;
+#[cfg(feature = "cpscu_ns")]
+pub mod cpscu_ns;
+#[cfg(feature = "cpu_ctrl")]
+pub mod cpu_ctrl;
+#[cfg(feature = "cpu_ctrl_ns")]
+pub mod cpu_ctrl_ns;
+#[cfg(feature = "cpu_dbg")]
+pub mod cpu_dbg;
+#[cfg(feature = "cpu_ocd")]
+pub mod cpu_ocd;
+#[cfg(feature = "crc")]
+pub mod crc;
+#[cfg(feature = "crc_ns")]
+pub mod crc_ns;
+#[cfg(feature = "dac120")]
+pub mod dac120;
+#[cfg(feature = "dac120_ns")]
+pub mod dac120_ns;
+#[cfg(feature = "dma0")]
+pub mod dma0;
+#[cfg(feature = "dma0_ns")]
+pub mod dma0_ns;
+#[cfg(feature = "dmac00")]
+pub mod dmac00;
+#[cfg(feature = "dmac00_ns")]
+pub mod dmac00_ns;
+#[cfg(feature = "doc_b")]
+pub mod doc_b;
+#[cfg(feature = "doc_b_ns")]
+pub mod doc_b_ns;
+#[cfg(feature = "dotf0")]
+pub mod dotf0;
+#[cfg(feature = "dotf0_ns")]
+pub mod dotf0_ns;
+#[cfg(feature = "drw")]
+pub mod drw;
+#[cfg(feature = "drw_ns")]
+pub mod drw_ns;
+#[cfg(feature = "dtc0")]
+pub mod dtc0;
+#[cfg(feature = "dtc0_ns")]
+pub mod dtc0_ns;
+#[cfg(feature = "eccmb0")]
+pub mod eccmb0;
+#[cfg(feature = "eccmb0_ns")]
+pub mod eccmb0_ns;
+#[cfg(feature = "elc")]
+pub mod elc;
+#[cfg(feature = "elc_ns")]
+pub mod elc_ns;
+#[cfg(feature = "esc")]
+pub mod esc;
+#[cfg(feature = "esc_ini")]
+pub mod esc_ini;
+#[cfg(feature = "esc_ini_ns")]
+pub mod esc_ini_ns;
+#[cfg(feature = "esc_ns")]
+pub mod esc_ns;
+#[cfg(feature = "eswm")]
+pub mod eswm;
+#[cfg(feature = "eswm_ns")]
+pub mod eswm_ns;
+#[cfg(feature = "etha0_ns")]
+pub mod etha0_ns;
+#[cfg(feature = "faci")]
+pub mod faci;
+#[cfg(feature = "fcache")]
+pub mod fcache;
+#[cfg(feature = "fcache_ns")]
+pub mod fcache_ns;
+#[cfg(feature = "glcdc")]
+pub mod glcdc;
+#[cfg(feature = "glcdc_ns")]
+pub mod glcdc_ns;
+#[cfg(feature = "gpt320")]
+pub mod gpt320;
+#[cfg(feature = "gpt320_ns")]
+pub mod gpt320_ns;
+#[cfg(feature = "gpt_gtclk")]
+pub mod gpt_gtclk;
+#[cfg(feature = "gpt_gtclk_ns")]
+pub mod gpt_gtclk_ns;
+#[cfg(feature = "gpt_ops")]
+pub mod gpt_ops;
+#[cfg(feature = "gpt_ops_ns")]
+pub mod gpt_ops_ns;
+#[cfg(feature = "gptp")]
+pub mod gptp;
+#[cfg(feature = "gptp_ns")]
+pub mod gptp_ns;
+#[cfg(feature = "gwca0")]
+pub mod gwca0;
+#[cfg(feature = "gwca0_ns")]
+pub mod gwca0_ns;
+#[cfg(feature = "i3c")]
+pub mod i3c;
+#[cfg(feature = "i3c_ns")]
+pub mod i3c_ns;
+#[cfg(feature = "icu")]
+pub mod icu;
+#[cfg(feature = "icu_common")]
+pub mod icu_common;
+#[cfg(feature = "icu_common_ns")]
+pub mod icu_common_ns;
+#[cfg(feature = "icu_ns")]
+pub mod icu_ns;
+#[cfg(feature = "iic0")]
+pub mod iic0;
+#[cfg(feature = "iic0_ns")]
+pub mod iic0_ns;
+#[cfg(feature = "iic0wu")]
+pub mod iic0wu;
+#[cfg(feature = "iic0wu_ns")]
+pub mod iic0wu_ns;
+#[cfg(feature = "ipc")]
+pub mod ipc;
+#[cfg(feature = "ipc_ns")]
+pub mod ipc_ns;
+#[cfg(feature = "iwdt")]
+pub mod iwdt;
+#[cfg(feature = "iwdt_ns")]
+pub mod iwdt_ns;
+#[cfg(feature = "mfwd")]
+pub mod mfwd;
+#[cfg(feature = "mfwd_ns")]
+pub mod mfwd_ns;
+#[cfg(feature = "mipi_csi0")]
+pub mod mipi_csi0;
+#[cfg(feature = "mipi_csi0_ns")]
+pub mod mipi_csi0_ns;
+#[cfg(feature = "mipi_dsi")]
+pub mod mipi_dsi;
+#[cfg(feature = "mipi_dsi_ns")]
+pub mod mipi_dsi_ns;
+#[cfg(feature = "mipi_phy0")]
+pub mod mipi_phy0;
+#[cfg(feature = "mipi_phy0_ns")]
+pub mod mipi_phy0_ns;
+#[cfg(feature = "mram")]
+pub mod mram;
+#[cfg(feature = "mram_ns")]
+pub mod mram_ns;
+#[cfg(feature = "mstp")]
+pub mod mstp;
+#[cfg(feature = "mstp_ns")]
+pub mod mstp_ns;
+#[cfg(feature = "ospi0_b")]
+pub mod ospi0_b;
+#[cfg(feature = "ospi0_b_ns")]
+pub mod ospi0_b_ns;
+#[cfg(feature = "pdg")]
+pub mod pdg;
+#[cfg(feature = "pdg_ns")]
+pub mod pdg_ns;
+#[cfg(feature = "pdmif")]
+pub mod pdmif;
+#[cfg(feature = "pdmif_ns")]
+pub mod pdmif_ns;
+#[cfg(feature = "pfs")]
+pub mod pfs;
+#[cfg(feature = "pfs_ns")]
+pub mod pfs_ns;
+#[cfg(feature = "poeg")]
+pub mod poeg;
+#[cfg(feature = "poeg_ns")]
+pub mod poeg_ns;
+#[cfg(feature = "port0")]
+pub mod port0;
+#[cfg(feature = "port0_ns")]
+pub mod port0_ns;
+#[cfg(feature = "port1")]
+pub mod port1;
+#[cfg(feature = "port1_ns")]
+pub mod port1_ns;
+#[cfg(feature = "porta")]
+pub mod porta;
+#[cfg(feature = "porta_ns")]
+pub mod porta_ns;
+#[cfg(feature = "portb")]
+pub mod portb;
+#[cfg(feature = "portb_ns")]
+pub mod portb_ns;
+#[cfg(feature = "portc")]
+pub mod portc;
+#[cfg(feature = "portc_ns")]
+pub mod portc_ns;
+#[cfg(feature = "portd")]
+pub mod portd;
+#[cfg(feature = "portd_ns")]
+pub mod portd_ns;
+#[cfg(feature = "pscu")]
+pub mod pscu;
+#[cfg(feature = "pscu_ns")]
+pub mod pscu_ns;
+#[cfg(feature = "rmac0")]
+pub mod rmac0;
+#[cfg(feature = "rmac0_ns")]
+pub mod rmac0_ns;
+#[cfg(feature = "rmpu")]
+pub mod rmpu;
+#[cfg(feature = "rmpu_ns")]
+pub mod rmpu_ns;
+#[cfg(feature = "rtc")]
+pub mod rtc;
+#[cfg(feature = "rtc_ns")]
+pub mod rtc_ns;
+#[cfg(feature = "sci0_b")]
+pub mod sci0_b;
+#[cfg(feature = "sci0_b_ns")]
+pub mod sci0_b_ns;
+#[cfg(feature = "sdhi0")]
+pub mod sdhi0;
+#[cfg(feature = "sdhi0_ns")]
+pub mod sdhi0_ns;
+#[cfg(feature = "spi0_b")]
+pub mod spi0_b;
+#[cfg(feature = "spi0_b_ns")]
+pub mod spi0_b_ns;
+#[cfg(feature = "sram")]
+pub mod sram;
+#[cfg(feature = "sram_ns")]
+pub mod sram_ns;
+#[cfg(feature = "ssie0")]
+pub mod ssie0;
+#[cfg(feature = "ssie0_ns")]
+pub mod ssie0_ns;
+#[cfg(feature = "sysc")]
+pub mod sysc;
+#[cfg(feature = "sysc_ns")]
+pub mod sysc_ns;
+#[cfg(feature = "tcm")]
+pub mod tcm;
+#[cfg(feature = "tcm_ns")]
+pub mod tcm_ns;
+#[cfg(feature = "tsd")]
+pub mod tsd;
+#[cfg(feature = "tsd_ns")]
+pub mod tsd_ns;
+#[cfg(feature = "tsn")]
+pub mod tsn;
+#[cfg(feature = "tsn_ns")]
+pub mod tsn_ns;
+#[cfg(feature = "ulpt0")]
+pub mod ulpt0;
+#[cfg(feature = "ulpt0_ns")]
+pub mod ulpt0_ns;
+#[cfg(feature = "usbfs")]
+pub mod usbfs;
+#[cfg(feature = "usbfs_ns")]
+pub mod usbfs_ns;
+#[cfg(feature = "usbhs")]
+pub mod usbhs;
+#[cfg(feature = "usbhs_ns")]
+pub mod usbhs_ns;
+#[cfg(feature = "vin0")]
+pub mod vin0;
+#[cfg(feature = "vin0_ns")]
+pub mod vin0_ns;
+#[cfg(feature = "wdt0")]
+pub mod wdt0;
+#[cfg(feature = "wdt0_ns")]
+pub mod wdt0_ns;
+
+#[cfg(feature = "tsd")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Tsd {
+    ptr: *mut u8,
+}
+#[cfg(feature = "tsd")]
+pub const TSD: self::Tsd = self::Tsd {
+    ptr: 0x2c1eda0u32 as _,
+};
+#[cfg(feature = "tsd_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct TsdNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "tsd_ns")]
+pub const TSD_NS: self::TsdNs = self::TsdNs {
+    ptr: 0x12c1eda0u32 as _,
+};
+#[cfg(feature = "rmpu")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Rmpu {
+    ptr: *mut u8,
+}
+#[cfg(feature = "rmpu")]
+pub const RMPU: self::Rmpu = self::Rmpu {
+    ptr: 0x40000000u32 as _,
+};
+#[cfg(feature = "sram")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Sram {
+    ptr: *mut u8,
+}
+#[cfg(feature = "sram")]
+pub const SRAM: self::Sram = self::Sram {
+    ptr: 0x40002000u32 as _,
+};
+#[cfg(feature = "bus")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Bus {
+    ptr: *mut u8,
+}
+#[cfg(feature = "bus")]
+pub const BUS: self::Bus = self::Bus {
+    ptr: 0x40003000u32 as _,
+};
+#[cfg(feature = "icu_common")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct IcuCommon {
+    ptr: *mut u8,
+}
+#[cfg(feature = "icu_common")]
+pub const ICU_COMMON: self::IcuCommon = self::IcuCommon {
+    ptr: 0x40006000u32 as _,
+};
+#[cfg(feature = "cpscu")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Cpscu {
+    ptr: *mut u8,
+}
+#[cfg(feature = "cpscu")]
+pub const CPSCU: self::Cpscu = self::Cpscu {
+    ptr: 0x40008000u32 as _,
+};
+#[cfg(feature = "dmac00")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Dmac00 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "dmac00")]
+pub const DMAC00: self::Dmac00 = self::Dmac00 {
+    ptr: 0x4000a000u32 as _,
+};
+#[cfg(feature = "dmac01")]
+pub const DMAC01: self::Dmac00 = self::Dmac00 {
+    ptr: 0x4000a040u32 as _,
+};
+#[cfg(feature = "dmac02")]
+pub const DMAC02: self::Dmac00 = self::Dmac00 {
+    ptr: 0x4000a080u32 as _,
+};
+#[cfg(feature = "dmac03")]
+pub const DMAC03: self::Dmac00 = self::Dmac00 {
+    ptr: 0x4000a0c0u32 as _,
+};
+#[cfg(feature = "dmac04")]
+pub const DMAC04: self::Dmac00 = self::Dmac00 {
+    ptr: 0x4000a100u32 as _,
+};
+#[cfg(feature = "dmac05")]
+pub const DMAC05: self::Dmac00 = self::Dmac00 {
+    ptr: 0x4000a140u32 as _,
+};
+#[cfg(feature = "dmac06")]
+pub const DMAC06: self::Dmac00 = self::Dmac00 {
+    ptr: 0x4000a180u32 as _,
+};
+#[cfg(feature = "dmac07")]
+pub const DMAC07: self::Dmac00 = self::Dmac00 {
+    ptr: 0x4000a1c0u32 as _,
+};
+#[cfg(feature = "dma0")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Dma0 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "dma0")]
+pub const DMA0: self::Dma0 = self::Dma0 {
+    ptr: 0x4000a800u32 as _,
+};
+#[cfg(feature = "dtc0")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Dtc0 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "dtc0")]
+pub const DTC0: self::Dtc0 = self::Dtc0 {
+    ptr: 0x4000ac00u32 as _,
+};
+#[cfg(feature = "icu")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Icu {
+    ptr: *mut u8,
+}
+#[cfg(feature = "icu")]
+pub const ICU: self::Icu = self::Icu {
+    ptr: 0x4000c000u32 as _,
+};
+#[cfg(feature = "cpu_ctrl")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct CpuCtrl {
+    ptr: *mut u8,
+}
+#[cfg(feature = "cpu_ctrl")]
+pub const CPU_CTRL: self::CpuCtrl = self::CpuCtrl {
+    ptr: 0x4000f000u32 as _,
+};
+#[cfg(feature = "cpu_ocd")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct CpuOcd {
+    ptr: *mut u8,
+}
+#[cfg(feature = "cpu_ocd")]
+pub const CPU_OCD: self::CpuOcd = self::CpuOcd {
+    ptr: 0x40011000u32 as _,
+};
+#[cfg(feature = "cpu_dbg")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct CpuDbg {
+    ptr: *mut u8,
+}
+#[cfg(feature = "cpu_dbg")]
+pub const CPU_DBG: self::CpuDbg = self::CpuDbg {
+    ptr: 0x4001b000u32 as _,
+};
+#[cfg(feature = "cache")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Cache {
+    ptr: *mut u8,
+}
+#[cfg(feature = "cache")]
+pub const CACHE: self::Cache = self::Cache {
+    ptr: 0x4001c000u32 as _,
+};
+#[cfg(feature = "fcache")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Fcache {
+    ptr: *mut u8,
+}
+#[cfg(feature = "fcache")]
+pub const FCACHE: self::Fcache = self::Fcache {
+    ptr: 0x4001c100u32 as _,
+};
+#[cfg(feature = "tcm")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Tcm {
+    ptr: *mut u8,
+}
+#[cfg(feature = "tcm")]
+pub const TCM: self::Tcm = self::Tcm {
+    ptr: 0x4001c800u32 as _,
+};
+#[cfg(feature = "sysc")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Sysc {
+    ptr: *mut u8,
+}
+#[cfg(feature = "sysc")]
+pub const SYSC: self::Sysc = self::Sysc {
+    ptr: 0x4001e000u32 as _,
+};
+#[cfg(feature = "ipc")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Ipc {
+    ptr: *mut u8,
+}
+#[cfg(feature = "ipc")]
+pub const IPC: self::Ipc = self::Ipc {
+    ptr: 0x40020000u32 as _,
+};
+#[cfg(feature = "faci")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Faci {
+    ptr: *mut u8,
+}
+#[cfg(feature = "faci")]
+pub const FACI: self::Faci = self::Faci {
+    ptr: 0x4011e000u32 as _,
+};
+#[cfg(feature = "mram")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Mram {
+    ptr: *mut u8,
+}
+#[cfg(feature = "mram")]
+pub const MRAM: self::Mram = self::Mram {
+    ptr: 0x4013c000u32 as _,
+};
+#[cfg(feature = "elc")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Elc {
+    ptr: *mut u8,
+}
+#[cfg(feature = "elc")]
+pub const ELC: self::Elc = self::Elc {
+    ptr: 0x40201000u32 as _,
+};
+#[cfg(feature = "rtc")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Rtc {
+    ptr: *mut u8,
+}
+#[cfg(feature = "rtc")]
+pub const RTC: self::Rtc = self::Rtc {
+    ptr: 0x40202000u32 as _,
+};
+#[cfg(feature = "iwdt")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Iwdt {
+    ptr: *mut u8,
+}
+#[cfg(feature = "iwdt")]
+pub const IWDT: self::Iwdt = self::Iwdt {
+    ptr: 0x40202200u32 as _,
+};
+#[cfg(feature = "cac")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Cac {
+    ptr: *mut u8,
+}
+#[cfg(feature = "cac")]
+pub const CAC: self::Cac = self::Cac {
+    ptr: 0x40202400u32 as _,
+};
+#[cfg(feature = "wdt0")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Wdt0 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "wdt0")]
+pub const WDT0: self::Wdt0 = self::Wdt0 {
+    ptr: 0x40202600u32 as _,
+};
+#[cfg(feature = "wdt1")]
+pub const WDT1: self::Wdt0 = self::Wdt0 {
+    ptr: 0x40202700u32 as _,
+};
+#[cfg(feature = "mstp")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Mstp {
+    ptr: *mut u8,
+}
+#[cfg(feature = "mstp")]
+pub const MSTP: self::Mstp = self::Mstp {
+    ptr: 0x40203000u32 as _,
+};
+#[cfg(feature = "pscu")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pscu {
+    ptr: *mut u8,
+}
+#[cfg(feature = "pscu")]
+pub const PSCU: self::Pscu = self::Pscu {
+    ptr: 0x40204000u32 as _,
+};
+#[cfg(feature = "poeg")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Poeg {
+    ptr: *mut u8,
+}
+#[cfg(feature = "poeg")]
+pub const POEG: self::Poeg = self::Poeg {
+    ptr: 0x40212000u32 as _,
+};
+#[cfg(feature = "ulpt0")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Ulpt0 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "ulpt0")]
+pub const ULPT0: self::Ulpt0 = self::Ulpt0 {
+    ptr: 0x40220000u32 as _,
+};
+#[cfg(feature = "ulpt1")]
+pub const ULPT1: self::Ulpt0 = self::Ulpt0 {
+    ptr: 0x40220100u32 as _,
+};
+#[cfg(feature = "agt0")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Agt0 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "agt0")]
+pub const AGT0: self::Agt0 = self::Agt0 {
+    ptr: 0x40221000u32 as _,
+};
+#[cfg(feature = "agt1")]
+pub const AGT1: self::Agt0 = self::Agt0 {
+    ptr: 0x40221100u32 as _,
+};
+#[cfg(feature = "dac120")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Dac120 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "dac120")]
+pub const DAC120: self::Dac120 = self::Dac120 {
+    ptr: 0x40233000u32 as _,
+};
+#[cfg(feature = "dac121")]
+pub const DAC121: self::Dac120 = self::Dac120 {
+    ptr: 0x40233100u32 as _,
+};
+#[cfg(feature = "tsn")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Tsn {
+    ptr: *mut u8,
+}
+#[cfg(feature = "tsn")]
+pub const TSN: self::Tsn = self::Tsn {
+    ptr: 0x40235000u32 as _,
+};
+#[cfg(feature = "acmphs0")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Acmphs0 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "acmphs0")]
+pub const ACMPHS0: self::Acmphs0 = self::Acmphs0 {
+    ptr: 0x40236000u32 as _,
+};
+#[cfg(feature = "acmphs1")]
+pub const ACMPHS1: self::Acmphs0 = self::Acmphs0 {
+    ptr: 0x40236100u32 as _,
+};
+#[cfg(feature = "acmphs2")]
+pub const ACMPHS2: self::Acmphs0 = self::Acmphs0 {
+    ptr: 0x40236200u32 as _,
+};
+#[cfg(feature = "acmphs3")]
+pub const ACMPHS3: self::Acmphs0 = self::Acmphs0 {
+    ptr: 0x40236300u32 as _,
+};
+#[cfg(feature = "usbfs")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Usbfs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "usbfs")]
+pub const USBFS: self::Usbfs = self::Usbfs {
+    ptr: 0x40250000u32 as _,
+};
+#[cfg(feature = "sdhi0")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Sdhi0 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "sdhi0")]
+pub const SDHI0: self::Sdhi0 = self::Sdhi0 {
+    ptr: 0x40252000u32 as _,
+};
+#[cfg(feature = "sdhi1")]
+pub const SDHI1: self::Sdhi0 = self::Sdhi0 {
+    ptr: 0x40252400u32 as _,
+};
+#[cfg(feature = "pdmif")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pdmif {
+    ptr: *mut u8,
+}
+#[cfg(feature = "pdmif")]
+pub const PDMIF: self::Pdmif = self::Pdmif {
+    ptr: 0x40256000u32 as _,
+};
+#[cfg(feature = "ssie0")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Ssie0 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "ssie0")]
+pub const SSIE0: self::Ssie0 = self::Ssie0 {
+    ptr: 0x4025d000u32 as _,
+};
+#[cfg(feature = "ssie1")]
+pub const SSIE1: self::Ssie0 = self::Ssie0 {
+    ptr: 0x4025d100u32 as _,
+};
+#[cfg(feature = "iic0")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Iic0 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "iic0")]
+pub const IIC0: self::Iic0 = self::Iic0 {
+    ptr: 0x4025e000u32 as _,
+};
+#[cfg(feature = "iic0wu")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Iic0Wu {
+    ptr: *mut u8,
+}
+#[cfg(feature = "iic0wu")]
+pub const IIC0WU: self::Iic0Wu = self::Iic0Wu {
+    ptr: 0x4025e014u32 as _,
+};
+#[cfg(feature = "iic1")]
+pub const IIC1: self::Iic0 = self::Iic0 {
+    ptr: 0x4025e100u32 as _,
+};
+#[cfg(feature = "iic2")]
+pub const IIC2: self::Iic0 = self::Iic0 {
+    ptr: 0x4025e200u32 as _,
+};
+#[cfg(feature = "ospi0_b")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Ospi0B {
+    ptr: *mut u8,
+}
+#[cfg(feature = "ospi0_b")]
+pub const OSPI0_B: self::Ospi0B = self::Ospi0B {
+    ptr: 0x40268000u32 as _,
+};
+#[cfg(feature = "ospi1_b")]
+pub const OSPI1_B: self::Ospi0B = self::Ospi0B {
+    ptr: 0x40268400u32 as _,
+};
+#[cfg(feature = "dotf0")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Dotf0 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "dotf0")]
+pub const DOTF0: self::Dotf0 = self::Dotf0 {
+    ptr: 0x40268800u32 as _,
+};
+#[cfg(feature = "dotf1")]
+pub const DOTF1: self::Dotf0 = self::Dotf0 {
+    ptr: 0x40268900u32 as _,
+};
+#[cfg(feature = "crc")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Crc {
+    ptr: *mut u8,
+}
+#[cfg(feature = "crc")]
+pub const CRC: self::Crc = self::Crc {
+    ptr: 0x40310000u32 as _,
+};
+#[cfg(feature = "doc_b")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct DocB {
+    ptr: *mut u8,
+}
+#[cfg(feature = "doc_b")]
+pub const DOC_B: self::DocB = self::DocB {
+    ptr: 0x40311000u32 as _,
+};
+#[cfg(feature = "gpt320")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Gpt320 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "gpt320")]
+pub const GPT320: self::Gpt320 = self::Gpt320 {
+    ptr: 0x40322000u32 as _,
+};
+#[cfg(feature = "gpt321")]
+pub const GPT321: self::Gpt320 = self::Gpt320 {
+    ptr: 0x40322100u32 as _,
+};
+#[cfg(feature = "gpt322")]
+pub const GPT322: self::Gpt320 = self::Gpt320 {
+    ptr: 0x40322200u32 as _,
+};
+#[cfg(feature = "gpt323")]
+pub const GPT323: self::Gpt320 = self::Gpt320 {
+    ptr: 0x40322300u32 as _,
+};
+#[cfg(feature = "gpt324")]
+pub const GPT324: self::Gpt320 = self::Gpt320 {
+    ptr: 0x40322400u32 as _,
+};
+#[cfg(feature = "gpt325")]
+pub const GPT325: self::Gpt320 = self::Gpt320 {
+    ptr: 0x40322500u32 as _,
+};
+#[cfg(feature = "gpt326")]
+pub const GPT326: self::Gpt320 = self::Gpt320 {
+    ptr: 0x40322600u32 as _,
+};
+#[cfg(feature = "gpt327")]
+pub const GPT327: self::Gpt320 = self::Gpt320 {
+    ptr: 0x40322700u32 as _,
+};
+#[cfg(feature = "gpt328")]
+pub const GPT328: self::Gpt320 = self::Gpt320 {
+    ptr: 0x40322800u32 as _,
+};
+#[cfg(feature = "gpt329")]
+pub const GPT329: self::Gpt320 = self::Gpt320 {
+    ptr: 0x40322900u32 as _,
+};
+#[cfg(feature = "gpt3210")]
+pub const GPT3210: self::Gpt320 = self::Gpt320 {
+    ptr: 0x40322a00u32 as _,
+};
+#[cfg(feature = "gpt3211")]
+pub const GPT3211: self::Gpt320 = self::Gpt320 {
+    ptr: 0x40322b00u32 as _,
+};
+#[cfg(feature = "gpt3212")]
+pub const GPT3212: self::Gpt320 = self::Gpt320 {
+    ptr: 0x40322c00u32 as _,
+};
+#[cfg(feature = "gpt3213")]
+pub const GPT3213: self::Gpt320 = self::Gpt320 {
+    ptr: 0x40322d00u32 as _,
+};
+#[cfg(feature = "gpt_ops")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct GptOps {
+    ptr: *mut u8,
+}
+#[cfg(feature = "gpt_ops")]
+pub const GPT_OPS: self::GptOps = self::GptOps {
+    ptr: 0x40323f00u32 as _,
+};
+#[cfg(feature = "gpt_gtclk")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct GptGtclk {
+    ptr: *mut u8,
+}
+#[cfg(feature = "gpt_gtclk")]
+pub const GPT_GTCLK: self::GptGtclk = self::GptGtclk {
+    ptr: 0x40323f10u32 as _,
+};
+#[cfg(feature = "pdg")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pdg {
+    ptr: *mut u8,
+}
+#[cfg(feature = "pdg")]
+pub const PDG: self::Pdg = self::Pdg {
+    ptr: 0x40324000u32 as _,
+};
+#[cfg(feature = "adc_b")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct AdcB {
+    ptr: *mut u8,
+}
+#[cfg(feature = "adc_b")]
+pub const ADC_B: self::AdcB = self::AdcB {
+    ptr: 0x40338000u32 as _,
+};
+#[cfg(feature = "glcdc")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Glcdc {
+    ptr: *mut u8,
+}
+#[cfg(feature = "glcdc")]
+pub const GLCDC: self::Glcdc = self::Glcdc {
+    ptr: 0x40342000u32 as _,
+};
+#[cfg(feature = "mipi_dsi")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct MipiDsi {
+    ptr: *mut u8,
+}
+#[cfg(feature = "mipi_dsi")]
+pub const MIPI_DSI: self::MipiDsi = self::MipiDsi {
+    ptr: 0x40346000u32 as _,
+};
+#[cfg(feature = "mipi_phy0")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct MipiPhy0 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "mipi_phy0")]
+pub const MIPI_PHY0: self::MipiPhy0 = self::MipiPhy0 {
+    ptr: 0x40346c00u32 as _,
+};
+#[cfg(feature = "mipi_csi0")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct MipiCsi0 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "mipi_csi0")]
+pub const MIPI_CSI0: self::MipiCsi0 = self::MipiCsi0 {
+    ptr: 0x40347000u32 as _,
+};
+#[cfg(feature = "vin0")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Vin0 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "vin0")]
+pub const VIN0: self::Vin0 = self::Vin0 {
+    ptr: 0x40347400u32 as _,
+};
+#[cfg(feature = "ceu")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Ceu {
+    ptr: *mut u8,
+}
+#[cfg(feature = "ceu")]
+pub const CEU: self::Ceu = self::Ceu {
+    ptr: 0x40348000u32 as _,
+};
+#[cfg(feature = "usbhs")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Usbhs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "usbhs")]
+pub const USBHS: self::Usbhs = self::Usbhs {
+    ptr: 0x40351000u32 as _,
+};
+#[cfg(feature = "sci0_b")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Sci0B {
+    ptr: *mut u8,
+}
+#[cfg(feature = "sci0_b")]
+pub const SCI0_B: self::Sci0B = self::Sci0B {
+    ptr: 0x40358000u32 as _,
+};
+#[cfg(feature = "sci1_b")]
+pub const SCI1_B: self::Sci0B = self::Sci0B {
+    ptr: 0x40358100u32 as _,
+};
+#[cfg(feature = "sci2_b")]
+pub const SCI2_B: self::Sci0B = self::Sci0B {
+    ptr: 0x40358200u32 as _,
+};
+#[cfg(feature = "sci3_b")]
+pub const SCI3_B: self::Sci0B = self::Sci0B {
+    ptr: 0x40358300u32 as _,
+};
+#[cfg(feature = "sci4_b")]
+pub const SCI4_B: self::Sci0B = self::Sci0B {
+    ptr: 0x40358400u32 as _,
+};
+#[cfg(feature = "sci5_b")]
+pub const SCI5_B: self::Sci0B = self::Sci0B {
+    ptr: 0x40358500u32 as _,
+};
+#[cfg(feature = "sci6_b")]
+pub const SCI6_B: self::Sci0B = self::Sci0B {
+    ptr: 0x40358600u32 as _,
+};
+#[cfg(feature = "sci7_b")]
+pub const SCI7_B: self::Sci0B = self::Sci0B {
+    ptr: 0x40358700u32 as _,
+};
+#[cfg(feature = "sci8_b")]
+pub const SCI8_B: self::Sci0B = self::Sci0B {
+    ptr: 0x40358800u32 as _,
+};
+#[cfg(feature = "sci9_b")]
+pub const SCI9_B: self::Sci0B = self::Sci0B {
+    ptr: 0x40358900u32 as _,
+};
+#[cfg(feature = "spi0_b")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Spi0B {
+    ptr: *mut u8,
+}
+#[cfg(feature = "spi0_b")]
+pub const SPI0_B: self::Spi0B = self::Spi0B {
+    ptr: 0x4035c000u32 as _,
+};
+#[cfg(feature = "spi1_b")]
+pub const SPI1_B: self::Spi0B = self::Spi0B {
+    ptr: 0x4035c100u32 as _,
+};
+#[cfg(feature = "i3c")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct I3C {
+    ptr: *mut u8,
+}
+#[cfg(feature = "i3c")]
+pub const I3C: self::I3C = self::I3C {
+    ptr: 0x4035f000u32 as _,
+};
+#[cfg(feature = "eccmb0")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Eccmb0 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "eccmb0")]
+pub const ECCMB0: self::Eccmb0 = self::Eccmb0 {
+    ptr: 0x4036f200u32 as _,
+};
+#[cfg(feature = "eccmb1")]
+pub const ECCMB1: self::Eccmb0 = self::Eccmb0 {
+    ptr: 0x4036f300u32 as _,
+};
+#[cfg(feature = "canfd0")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Canfd0 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "canfd0")]
+pub const CANFD0: self::Canfd0 = self::Canfd0 {
+    ptr: 0x40380000u32 as _,
+};
+#[cfg(feature = "canfd1")]
+pub const CANFD1: self::Canfd0 = self::Canfd0 {
+    ptr: 0x40382000u32 as _,
+};
+#[cfg(feature = "esc")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Esc {
+    ptr: *mut u8,
+}
+#[cfg(feature = "esc")]
+pub const ESC: self::Esc = self::Esc {
+    ptr: 0x403a0000u32 as _,
+};
+#[cfg(feature = "esc_ini")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct EscIni {
+    ptr: *mut u8,
+}
+#[cfg(feature = "esc_ini")]
+pub const ESC_INI: self::EscIni = self::EscIni {
+    ptr: 0x403a4000u32 as _,
+};
+#[cfg(feature = "mfwd")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Mfwd {
+    ptr: *mut u8,
+}
+#[cfg(feature = "mfwd")]
+pub const MFWD: self::Mfwd = self::Mfwd {
+    ptr: 0x403c0000u32 as _,
+};
+#[cfg(feature = "eswm")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Eswm {
+    ptr: *mut u8,
+}
+#[cfg(feature = "eswm")]
+pub const ESWM: self::Eswm = self::Eswm {
+    ptr: 0x403c8000u32 as _,
+};
+#[cfg(feature = "coma")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Coma {
+    ptr: *mut u8,
+}
+#[cfg(feature = "coma")]
+pub const COMA: self::Coma = self::Coma {
+    ptr: 0x403c9000u32 as _,
+};
+#[cfg(feature = "rmac0")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Rmac0 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "rmac0")]
+pub const RMAC0: self::Rmac0 = self::Rmac0 {
+    ptr: 0x403cb000u32 as _,
+};
+#[cfg(feature = "rmac1")]
+pub const RMAC1: self::Rmac0 = self::Rmac0 {
+    ptr: 0x403cd000u32 as _,
+};
+#[cfg(feature = "gwca0")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Gwca0 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "gwca0")]
+pub const GWCA0: self::Gwca0 = self::Gwca0 {
+    ptr: 0x403ce000u32 as _,
+};
+#[cfg(feature = "gptp")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Gptp {
+    ptr: *mut u8,
+}
+#[cfg(feature = "gptp")]
+pub const GPTP: self::Gptp = self::Gptp {
+    ptr: 0x403e0000u32 as _,
+};
+#[cfg(feature = "port0")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Port0 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "port0")]
+pub const PORT0: self::Port0 = self::Port0 {
+    ptr: 0x40400000u32 as _,
+};
+#[cfg(feature = "port1")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Port1 {
+    ptr: *mut u8,
+}
+#[cfg(feature = "port1")]
+pub const PORT1: self::Port1 = self::Port1 {
+    ptr: 0x40400020u32 as _,
+};
+#[cfg(feature = "port2")]
+pub const PORT2: self::Port1 = self::Port1 {
+    ptr: 0x40400040u32 as _,
+};
+#[cfg(feature = "port3")]
+pub const PORT3: self::Port1 = self::Port1 {
+    ptr: 0x40400060u32 as _,
+};
+#[cfg(feature = "port4")]
+pub const PORT4: self::Port1 = self::Port1 {
+    ptr: 0x40400080u32 as _,
+};
+#[cfg(feature = "port5")]
+pub const PORT5: self::Port0 = self::Port0 {
+    ptr: 0x404000a0u32 as _,
+};
+#[cfg(feature = "port6")]
+pub const PORT6: self::Port0 = self::Port0 {
+    ptr: 0x404000c0u32 as _,
+};
+#[cfg(feature = "port7")]
+pub const PORT7: self::Port0 = self::Port0 {
+    ptr: 0x404000e0u32 as _,
+};
+#[cfg(feature = "port8")]
+pub const PORT8: self::Port0 = self::Port0 {
+    ptr: 0x40400100u32 as _,
+};
+#[cfg(feature = "port9")]
+pub const PORT9: self::Port0 = self::Port0 {
+    ptr: 0x40400120u32 as _,
+};
+#[cfg(feature = "porta")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Porta {
+    ptr: *mut u8,
+}
+#[cfg(feature = "porta")]
+pub const PORTA: self::Porta = self::Porta {
+    ptr: 0x40400140u32 as _,
+};
+#[cfg(feature = "portb")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Portb {
+    ptr: *mut u8,
+}
+#[cfg(feature = "portb")]
+pub const PORTB: self::Portb = self::Portb {
+    ptr: 0x40400160u32 as _,
+};
+#[cfg(feature = "portc")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Portc {
+    ptr: *mut u8,
+}
+#[cfg(feature = "portc")]
+pub const PORTC: self::Portc = self::Portc {
+    ptr: 0x40400180u32 as _,
+};
+#[cfg(feature = "portd")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Portd {
+    ptr: *mut u8,
+}
+#[cfg(feature = "portd")]
+pub const PORTD: self::Portd = self::Portd {
+    ptr: 0x404001a0u32 as _,
+};
+#[cfg(feature = "pfs")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pfs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "pfs")]
+pub const PFS: self::Pfs = self::Pfs {
+    ptr: 0x40400800u32 as _,
+};
+#[cfg(feature = "drw")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Drw {
+    ptr: *mut u8,
+}
+#[cfg(feature = "drw")]
+pub const DRW: self::Drw = self::Drw {
+    ptr: 0x40444000u32 as _,
+};
+#[cfg(feature = "rmpu_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct RmpuNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "rmpu_ns")]
+pub const RMPU_NS: self::RmpuNs = self::RmpuNs {
+    ptr: 0x50000000u32 as _,
+};
+#[cfg(feature = "sram_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct SramNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "sram_ns")]
+pub const SRAM_NS: self::SramNs = self::SramNs {
+    ptr: 0x50002000u32 as _,
+};
+#[cfg(feature = "bus_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct BusNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "bus_ns")]
+pub const BUS_NS: self::BusNs = self::BusNs {
+    ptr: 0x50003000u32 as _,
+};
+#[cfg(feature = "icu_common_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct IcuCommonNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "icu_common_ns")]
+pub const ICU_COMMON_NS: self::IcuCommonNs = self::IcuCommonNs {
+    ptr: 0x50006000u32 as _,
+};
+#[cfg(feature = "cpscu_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct CpscuNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "cpscu_ns")]
+pub const CPSCU_NS: self::CpscuNs = self::CpscuNs {
+    ptr: 0x50008000u32 as _,
+};
+#[cfg(feature = "dmac00_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Dmac00Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "dmac00_ns")]
+pub const DMAC00_NS: self::Dmac00Ns = self::Dmac00Ns {
+    ptr: 0x5000a000u32 as _,
+};
+#[cfg(feature = "dmac01_ns")]
+pub const DMAC01_NS: self::Dmac00Ns = self::Dmac00Ns {
+    ptr: 0x5000a040u32 as _,
+};
+#[cfg(feature = "dmac02_ns")]
+pub const DMAC02_NS: self::Dmac00Ns = self::Dmac00Ns {
+    ptr: 0x5000a080u32 as _,
+};
+#[cfg(feature = "dmac03_ns")]
+pub const DMAC03_NS: self::Dmac00Ns = self::Dmac00Ns {
+    ptr: 0x5000a0c0u32 as _,
+};
+#[cfg(feature = "dmac04_ns")]
+pub const DMAC04_NS: self::Dmac00Ns = self::Dmac00Ns {
+    ptr: 0x5000a100u32 as _,
+};
+#[cfg(feature = "dmac05_ns")]
+pub const DMAC05_NS: self::Dmac00Ns = self::Dmac00Ns {
+    ptr: 0x5000a140u32 as _,
+};
+#[cfg(feature = "dmac06_ns")]
+pub const DMAC06_NS: self::Dmac00Ns = self::Dmac00Ns {
+    ptr: 0x5000a180u32 as _,
+};
+#[cfg(feature = "dmac07_ns")]
+pub const DMAC07_NS: self::Dmac00Ns = self::Dmac00Ns {
+    ptr: 0x5000a1c0u32 as _,
+};
+#[cfg(feature = "dma0_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Dma0Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "dma0_ns")]
+pub const DMA0_NS: self::Dma0Ns = self::Dma0Ns {
+    ptr: 0x5000a800u32 as _,
+};
+#[cfg(feature = "dtc0_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Dtc0Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "dtc0_ns")]
+pub const DTC0_NS: self::Dtc0Ns = self::Dtc0Ns {
+    ptr: 0x5000ac00u32 as _,
+};
+#[cfg(feature = "icu_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct IcuNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "icu_ns")]
+pub const ICU_NS: self::IcuNs = self::IcuNs {
+    ptr: 0x5000c000u32 as _,
+};
+#[cfg(feature = "cpu_ctrl_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct CpuCtrlNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "cpu_ctrl_ns")]
+pub const CPU_CTRL_NS: self::CpuCtrlNs = self::CpuCtrlNs {
+    ptr: 0x5000f000u32 as _,
+};
+#[cfg(feature = "cache_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct CacheNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "cache_ns")]
+pub const CACHE_NS: self::CacheNs = self::CacheNs {
+    ptr: 0x5001c000u32 as _,
+};
+#[cfg(feature = "fcache_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct FcacheNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "fcache_ns")]
+pub const FCACHE_NS: self::FcacheNs = self::FcacheNs {
+    ptr: 0x5001c100u32 as _,
+};
+#[cfg(feature = "tcm_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct TcmNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "tcm_ns")]
+pub const TCM_NS: self::TcmNs = self::TcmNs {
+    ptr: 0x5001c800u32 as _,
+};
+#[cfg(feature = "sysc_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct SyscNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "sysc_ns")]
+pub const SYSC_NS: self::SyscNs = self::SyscNs {
+    ptr: 0x5001e000u32 as _,
+};
+#[cfg(feature = "ipc_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct IpcNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "ipc_ns")]
+pub const IPC_NS: self::IpcNs = self::IpcNs {
+    ptr: 0x50020000u32 as _,
+};
+#[cfg(feature = "mram_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct MramNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "mram_ns")]
+pub const MRAM_NS: self::MramNs = self::MramNs {
+    ptr: 0x5013c000u32 as _,
+};
+#[cfg(feature = "elc_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct ElcNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "elc_ns")]
+pub const ELC_NS: self::ElcNs = self::ElcNs {
+    ptr: 0x50201000u32 as _,
+};
+#[cfg(feature = "rtc_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct RtcNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "rtc_ns")]
+pub const RTC_NS: self::RtcNs = self::RtcNs {
+    ptr: 0x50202000u32 as _,
+};
+#[cfg(feature = "iwdt_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct IwdtNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "iwdt_ns")]
+pub const IWDT_NS: self::IwdtNs = self::IwdtNs {
+    ptr: 0x50202200u32 as _,
+};
+#[cfg(feature = "cac_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct CacNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "cac_ns")]
+pub const CAC_NS: self::CacNs = self::CacNs {
+    ptr: 0x50202400u32 as _,
+};
+#[cfg(feature = "wdt0_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Wdt0Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "wdt0_ns")]
+pub const WDT0_NS: self::Wdt0Ns = self::Wdt0Ns {
+    ptr: 0x50202600u32 as _,
+};
+#[cfg(feature = "wdt1_ns")]
+pub const WDT1_NS: self::Wdt0Ns = self::Wdt0Ns {
+    ptr: 0x50202700u32 as _,
+};
+#[cfg(feature = "mstp_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct MstpNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "mstp_ns")]
+pub const MSTP_NS: self::MstpNs = self::MstpNs {
+    ptr: 0x50203000u32 as _,
+};
+#[cfg(feature = "pscu_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct PscuNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "pscu_ns")]
+pub const PSCU_NS: self::PscuNs = self::PscuNs {
+    ptr: 0x50204000u32 as _,
+};
+#[cfg(feature = "poeg_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct PoegNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "poeg_ns")]
+pub const POEG_NS: self::PoegNs = self::PoegNs {
+    ptr: 0x50212000u32 as _,
+};
+#[cfg(feature = "ulpt0_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Ulpt0Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "ulpt0_ns")]
+pub const ULPT0_NS: self::Ulpt0Ns = self::Ulpt0Ns {
+    ptr: 0x50220000u32 as _,
+};
+#[cfg(feature = "ulpt1_ns")]
+pub const ULPT1_NS: self::Ulpt0Ns = self::Ulpt0Ns {
+    ptr: 0x50220100u32 as _,
+};
+#[cfg(feature = "agt0_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Agt0Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "agt0_ns")]
+pub const AGT0_NS: self::Agt0Ns = self::Agt0Ns {
+    ptr: 0x50221000u32 as _,
+};
+#[cfg(feature = "agt1_ns")]
+pub const AGT1_NS: self::Agt0Ns = self::Agt0Ns {
+    ptr: 0x50221100u32 as _,
+};
+#[cfg(feature = "dac120_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Dac120Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "dac120_ns")]
+pub const DAC120_NS: self::Dac120Ns = self::Dac120Ns {
+    ptr: 0x50233000u32 as _,
+};
+#[cfg(feature = "dac121_ns")]
+pub const DAC121_NS: self::Dac120Ns = self::Dac120Ns {
+    ptr: 0x50233100u32 as _,
+};
+#[cfg(feature = "tsn_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct TsnNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "tsn_ns")]
+pub const TSN_NS: self::TsnNs = self::TsnNs {
+    ptr: 0x50235000u32 as _,
+};
+#[cfg(feature = "acmphs0_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Acmphs0Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "acmphs0_ns")]
+pub const ACMPHS0_NS: self::Acmphs0Ns = self::Acmphs0Ns {
+    ptr: 0x50236000u32 as _,
+};
+#[cfg(feature = "acmphs1_ns")]
+pub const ACMPHS1_NS: self::Acmphs0Ns = self::Acmphs0Ns {
+    ptr: 0x50236100u32 as _,
+};
+#[cfg(feature = "acmphs2_ns")]
+pub const ACMPHS2_NS: self::Acmphs0Ns = self::Acmphs0Ns {
+    ptr: 0x50236200u32 as _,
+};
+#[cfg(feature = "acmphs3_ns")]
+pub const ACMPHS3_NS: self::Acmphs0Ns = self::Acmphs0Ns {
+    ptr: 0x50236300u32 as _,
+};
+#[cfg(feature = "usbfs_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct UsbfsNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "usbfs_ns")]
+pub const USBFS_NS: self::UsbfsNs = self::UsbfsNs {
+    ptr: 0x50250000u32 as _,
+};
+#[cfg(feature = "sdhi0_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Sdhi0Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "sdhi0_ns")]
+pub const SDHI0_NS: self::Sdhi0Ns = self::Sdhi0Ns {
+    ptr: 0x50252000u32 as _,
+};
+#[cfg(feature = "sdhi1_ns")]
+pub const SDHI1_NS: self::Sdhi0Ns = self::Sdhi0Ns {
+    ptr: 0x50252400u32 as _,
+};
+#[cfg(feature = "pdmif_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct PdmifNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "pdmif_ns")]
+pub const PDMIF_NS: self::PdmifNs = self::PdmifNs {
+    ptr: 0x50256000u32 as _,
+};
+#[cfg(feature = "ssie0_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Ssie0Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "ssie0_ns")]
+pub const SSIE0_NS: self::Ssie0Ns = self::Ssie0Ns {
+    ptr: 0x5025d000u32 as _,
+};
+#[cfg(feature = "ssie1_ns")]
+pub const SSIE1_NS: self::Ssie0Ns = self::Ssie0Ns {
+    ptr: 0x5025d100u32 as _,
+};
+#[cfg(feature = "iic0_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Iic0Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "iic0_ns")]
+pub const IIC0_NS: self::Iic0Ns = self::Iic0Ns {
+    ptr: 0x5025e000u32 as _,
+};
+#[cfg(feature = "iic0wu_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Iic0WuNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "iic0wu_ns")]
+pub const IIC0WU_NS: self::Iic0WuNs = self::Iic0WuNs {
+    ptr: 0x5025e014u32 as _,
+};
+#[cfg(feature = "iic1_ns")]
+pub const IIC1_NS: self::Iic0Ns = self::Iic0Ns {
+    ptr: 0x5025e100u32 as _,
+};
+#[cfg(feature = "iic2_ns")]
+pub const IIC2_NS: self::Iic0Ns = self::Iic0Ns {
+    ptr: 0x5025e200u32 as _,
+};
+#[cfg(feature = "ospi0_b_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Ospi0BNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "ospi0_b_ns")]
+pub const OSPI0_B_NS: self::Ospi0BNs = self::Ospi0BNs {
+    ptr: 0x50268000u32 as _,
+};
+#[cfg(feature = "ospi1_b_ns")]
+pub const OSPI1_B_NS: self::Ospi0BNs = self::Ospi0BNs {
+    ptr: 0x50268400u32 as _,
+};
+#[cfg(feature = "dotf0_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Dotf0Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "dotf0_ns")]
+pub const DOTF0_NS: self::Dotf0Ns = self::Dotf0Ns {
+    ptr: 0x50268800u32 as _,
+};
+#[cfg(feature = "dotf1_ns")]
+pub const DOTF1_NS: self::Dotf0Ns = self::Dotf0Ns {
+    ptr: 0x50268900u32 as _,
+};
+#[cfg(feature = "crc_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct CrcNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "crc_ns")]
+pub const CRC_NS: self::CrcNs = self::CrcNs {
+    ptr: 0x50310000u32 as _,
+};
+#[cfg(feature = "doc_b_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct DocBNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "doc_b_ns")]
+pub const DOC_B_NS: self::DocBNs = self::DocBNs {
+    ptr: 0x50311000u32 as _,
+};
+#[cfg(feature = "gpt320_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Gpt320Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "gpt320_ns")]
+pub const GPT320_NS: self::Gpt320Ns = self::Gpt320Ns {
+    ptr: 0x50322000u32 as _,
+};
+#[cfg(feature = "gpt321_ns")]
+pub const GPT321_NS: self::Gpt320Ns = self::Gpt320Ns {
+    ptr: 0x50322100u32 as _,
+};
+#[cfg(feature = "gpt322_ns")]
+pub const GPT322_NS: self::Gpt320Ns = self::Gpt320Ns {
+    ptr: 0x50322200u32 as _,
+};
+#[cfg(feature = "gpt323_ns")]
+pub const GPT323_NS: self::Gpt320Ns = self::Gpt320Ns {
+    ptr: 0x50322300u32 as _,
+};
+#[cfg(feature = "gpt324_ns")]
+pub const GPT324_NS: self::Gpt320Ns = self::Gpt320Ns {
+    ptr: 0x50322400u32 as _,
+};
+#[cfg(feature = "gpt325_ns")]
+pub const GPT325_NS: self::Gpt320Ns = self::Gpt320Ns {
+    ptr: 0x50322500u32 as _,
+};
+#[cfg(feature = "gpt326_ns")]
+pub const GPT326_NS: self::Gpt320Ns = self::Gpt320Ns {
+    ptr: 0x50322600u32 as _,
+};
+#[cfg(feature = "gpt327_ns")]
+pub const GPT327_NS: self::Gpt320Ns = self::Gpt320Ns {
+    ptr: 0x50322700u32 as _,
+};
+#[cfg(feature = "gpt328_ns")]
+pub const GPT328_NS: self::Gpt320Ns = self::Gpt320Ns {
+    ptr: 0x50322800u32 as _,
+};
+#[cfg(feature = "gpt329_ns")]
+pub const GPT329_NS: self::Gpt320Ns = self::Gpt320Ns {
+    ptr: 0x50322900u32 as _,
+};
+#[cfg(feature = "gpt3210_ns")]
+pub const GPT3210_NS: self::Gpt320Ns = self::Gpt320Ns {
+    ptr: 0x50322a00u32 as _,
+};
+#[cfg(feature = "gpt3211_ns")]
+pub const GPT3211_NS: self::Gpt320Ns = self::Gpt320Ns {
+    ptr: 0x50322b00u32 as _,
+};
+#[cfg(feature = "gpt3212_ns")]
+pub const GPT3212_NS: self::Gpt320Ns = self::Gpt320Ns {
+    ptr: 0x50322c00u32 as _,
+};
+#[cfg(feature = "gpt3213_ns")]
+pub const GPT3213_NS: self::Gpt320Ns = self::Gpt320Ns {
+    ptr: 0x50322d00u32 as _,
+};
+#[cfg(feature = "gpt_ops_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct GptOpsNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "gpt_ops_ns")]
+pub const GPT_OPS_NS: self::GptOpsNs = self::GptOpsNs {
+    ptr: 0x50323f00u32 as _,
+};
+#[cfg(feature = "gpt_gtclk_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct GptGtclkNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "gpt_gtclk_ns")]
+pub const GPT_GTCLK_NS: self::GptGtclkNs = self::GptGtclkNs {
+    ptr: 0x50323f10u32 as _,
+};
+#[cfg(feature = "pdg_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct PdgNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "pdg_ns")]
+pub const PDG_NS: self::PdgNs = self::PdgNs {
+    ptr: 0x50324000u32 as _,
+};
+#[cfg(feature = "adc_b_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct AdcBNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "adc_b_ns")]
+pub const ADC_B_NS: self::AdcBNs = self::AdcBNs {
+    ptr: 0x50338000u32 as _,
+};
+#[cfg(feature = "glcdc_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct GlcdcNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "glcdc_ns")]
+pub const GLCDC_NS: self::GlcdcNs = self::GlcdcNs {
+    ptr: 0x50342000u32 as _,
+};
+#[cfg(feature = "mipi_dsi_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct MipiDsiNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "mipi_dsi_ns")]
+pub const MIPI_DSI_NS: self::MipiDsiNs = self::MipiDsiNs {
+    ptr: 0x50346000u32 as _,
+};
+#[cfg(feature = "mipi_phy0_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct MipiPhy0Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "mipi_phy0_ns")]
+pub const MIPI_PHY0_NS: self::MipiPhy0Ns = self::MipiPhy0Ns {
+    ptr: 0x50346c00u32 as _,
+};
+#[cfg(feature = "mipi_csi0_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct MipiCsi0Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "mipi_csi0_ns")]
+pub const MIPI_CSI0_NS: self::MipiCsi0Ns = self::MipiCsi0Ns {
+    ptr: 0x50347000u32 as _,
+};
+#[cfg(feature = "vin0_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Vin0Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "vin0_ns")]
+pub const VIN0_NS: self::Vin0Ns = self::Vin0Ns {
+    ptr: 0x50347400u32 as _,
+};
+#[cfg(feature = "ceu_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct CeuNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "ceu_ns")]
+pub const CEU_NS: self::CeuNs = self::CeuNs {
+    ptr: 0x50348000u32 as _,
+};
+#[cfg(feature = "usbhs_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct UsbhsNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "usbhs_ns")]
+pub const USBHS_NS: self::UsbhsNs = self::UsbhsNs {
+    ptr: 0x50351000u32 as _,
+};
+#[cfg(feature = "sci0_b_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Sci0BNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "sci0_b_ns")]
+pub const SCI0_B_NS: self::Sci0BNs = self::Sci0BNs {
+    ptr: 0x50358000u32 as _,
+};
+#[cfg(feature = "sci1_b_ns")]
+pub const SCI1_B_NS: self::Sci0BNs = self::Sci0BNs {
+    ptr: 0x50358100u32 as _,
+};
+#[cfg(feature = "sci2_b_ns")]
+pub const SCI2_B_NS: self::Sci0BNs = self::Sci0BNs {
+    ptr: 0x50358200u32 as _,
+};
+#[cfg(feature = "sci3_b_ns")]
+pub const SCI3_B_NS: self::Sci0BNs = self::Sci0BNs {
+    ptr: 0x50358300u32 as _,
+};
+#[cfg(feature = "sci4_b_ns")]
+pub const SCI4_B_NS: self::Sci0BNs = self::Sci0BNs {
+    ptr: 0x50358400u32 as _,
+};
+#[cfg(feature = "sci5_b_ns")]
+pub const SCI5_B_NS: self::Sci0BNs = self::Sci0BNs {
+    ptr: 0x50358500u32 as _,
+};
+#[cfg(feature = "sci6_b_ns")]
+pub const SCI6_B_NS: self::Sci0BNs = self::Sci0BNs {
+    ptr: 0x50358600u32 as _,
+};
+#[cfg(feature = "sci7_b_ns")]
+pub const SCI7_B_NS: self::Sci0BNs = self::Sci0BNs {
+    ptr: 0x50358700u32 as _,
+};
+#[cfg(feature = "sci8_b_ns")]
+pub const SCI8_B_NS: self::Sci0BNs = self::Sci0BNs {
+    ptr: 0x50358800u32 as _,
+};
+#[cfg(feature = "sci9_b_ns")]
+pub const SCI9_B_NS: self::Sci0BNs = self::Sci0BNs {
+    ptr: 0x50358900u32 as _,
+};
+#[cfg(feature = "spi0_b_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Spi0BNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "spi0_b_ns")]
+pub const SPI0_B_NS: self::Spi0BNs = self::Spi0BNs {
+    ptr: 0x5035c000u32 as _,
+};
+#[cfg(feature = "spi1_b_ns")]
+pub const SPI1_B_NS: self::Spi0BNs = self::Spi0BNs {
+    ptr: 0x5035c100u32 as _,
+};
+#[cfg(feature = "i3c_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct I3CNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "i3c_ns")]
+pub const I3C_NS: self::I3CNs = self::I3CNs {
+    ptr: 0x5035f000u32 as _,
+};
+#[cfg(feature = "eccmb0_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Eccmb0Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "eccmb0_ns")]
+pub const ECCMB0_NS: self::Eccmb0Ns = self::Eccmb0Ns {
+    ptr: 0x5036f200u32 as _,
+};
+#[cfg(feature = "eccmb1_ns")]
+pub const ECCMB1_NS: self::Eccmb0Ns = self::Eccmb0Ns {
+    ptr: 0x5036f300u32 as _,
+};
+#[cfg(feature = "canfd0_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Canfd0Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "canfd0_ns")]
+pub const CANFD0_NS: self::Canfd0Ns = self::Canfd0Ns {
+    ptr: 0x50380000u32 as _,
+};
+#[cfg(feature = "canfd1_ns")]
+pub const CANFD1_NS: self::Canfd0Ns = self::Canfd0Ns {
+    ptr: 0x50380200u32 as _,
+};
+#[cfg(feature = "esc_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct EscNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "esc_ns")]
+pub const ESC_NS: self::EscNs = self::EscNs {
+    ptr: 0x503a0000u32 as _,
+};
+#[cfg(feature = "esc_ini_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct EscIniNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "esc_ini_ns")]
+pub const ESC_INI_NS: self::EscIniNs = self::EscIniNs {
+    ptr: 0x503a4000u32 as _,
+};
+#[cfg(feature = "mfwd_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct MfwdNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "mfwd_ns")]
+pub const MFWD_NS: self::MfwdNs = self::MfwdNs {
+    ptr: 0x503c0000u32 as _,
+};
+#[cfg(feature = "eswm_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct EswmNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "eswm_ns")]
+pub const ESWM_NS: self::EswmNs = self::EswmNs {
+    ptr: 0x503c8000u32 as _,
+};
+#[cfg(feature = "coma_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct ComaNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "coma_ns")]
+pub const COMA_NS: self::ComaNs = self::ComaNs {
+    ptr: 0x503c9000u32 as _,
+};
+#[cfg(feature = "etha0_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Etha0Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "etha0_ns")]
+pub const ETHA0_NS: self::Etha0Ns = self::Etha0Ns {
+    ptr: 0x503ca000u32 as _,
+};
+#[cfg(feature = "rmac0_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Rmac0Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "rmac0_ns")]
+pub const RMAC0_NS: self::Rmac0Ns = self::Rmac0Ns {
+    ptr: 0x503cb000u32 as _,
+};
+#[cfg(feature = "etha1_ns")]
+pub const ETHA1_NS: self::Etha0Ns = self::Etha0Ns {
+    ptr: 0x503cc000u32 as _,
+};
+#[cfg(feature = "rmac1_ns")]
+pub const RMAC1_NS: self::Rmac0Ns = self::Rmac0Ns {
+    ptr: 0x503cd000u32 as _,
+};
+#[cfg(feature = "gwca0_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Gwca0Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "gwca0_ns")]
+pub const GWCA0_NS: self::Gwca0Ns = self::Gwca0Ns {
+    ptr: 0x503ce000u32 as _,
+};
+#[cfg(feature = "gptp_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct GptpNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "gptp_ns")]
+pub const GPTP_NS: self::GptpNs = self::GptpNs {
+    ptr: 0x503e0000u32 as _,
+};
+#[cfg(feature = "port0_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Port0Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "port0_ns")]
+pub const PORT0_NS: self::Port0Ns = self::Port0Ns {
+    ptr: 0x50400000u32 as _,
+};
+#[cfg(feature = "port1_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Port1Ns {
+    ptr: *mut u8,
+}
+#[cfg(feature = "port1_ns")]
+pub const PORT1_NS: self::Port1Ns = self::Port1Ns {
+    ptr: 0x50400020u32 as _,
+};
+#[cfg(feature = "port2_ns")]
+pub const PORT2_NS: self::Port1Ns = self::Port1Ns {
+    ptr: 0x50400040u32 as _,
+};
+#[cfg(feature = "port3_ns")]
+pub const PORT3_NS: self::Port1Ns = self::Port1Ns {
+    ptr: 0x50400060u32 as _,
+};
+#[cfg(feature = "port4_ns")]
+pub const PORT4_NS: self::Port1Ns = self::Port1Ns {
+    ptr: 0x50400080u32 as _,
+};
+#[cfg(feature = "port5_ns")]
+pub const PORT5_NS: self::Port0Ns = self::Port0Ns {
+    ptr: 0x504000a0u32 as _,
+};
+#[cfg(feature = "port6_ns")]
+pub const PORT6_NS: self::Port0Ns = self::Port0Ns {
+    ptr: 0x504000c0u32 as _,
+};
+#[cfg(feature = "port7_ns")]
+pub const PORT7_NS: self::Port0Ns = self::Port0Ns {
+    ptr: 0x504000e0u32 as _,
+};
+#[cfg(feature = "port8_ns")]
+pub const PORT8_NS: self::Port0Ns = self::Port0Ns {
+    ptr: 0x50400100u32 as _,
+};
+#[cfg(feature = "port9_ns")]
+pub const PORT9_NS: self::Port0Ns = self::Port0Ns {
+    ptr: 0x50400120u32 as _,
+};
+#[cfg(feature = "porta_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct PortaNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "porta_ns")]
+pub const PORTA_NS: self::PortaNs = self::PortaNs {
+    ptr: 0x50400140u32 as _,
+};
+#[cfg(feature = "portb_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct PortbNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "portb_ns")]
+pub const PORTB_NS: self::PortbNs = self::PortbNs {
+    ptr: 0x50400160u32 as _,
+};
+#[cfg(feature = "portc_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct PortcNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "portc_ns")]
+pub const PORTC_NS: self::PortcNs = self::PortcNs {
+    ptr: 0x50400180u32 as _,
+};
+#[cfg(feature = "portd_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct PortdNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "portd_ns")]
+pub const PORTD_NS: self::PortdNs = self::PortdNs {
+    ptr: 0x504001a0u32 as _,
+};
+#[cfg(feature = "pfs_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct PfsNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "pfs_ns")]
+pub const PFS_NS: self::PfsNs = self::PfsNs {
+    ptr: 0x50400800u32 as _,
+};
+#[cfg(feature = "drw_ns")]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct DrwNs {
+    ptr: *mut u8,
+}
+#[cfg(feature = "drw_ns")]
+pub const DRW_NS: self::DrwNs = self::DrwNs {
+    ptr: 0x50444000u32 as _,
+};
+
+pub use cortex_m::peripheral::Peripherals as CorePeripherals;
+pub use cortex_m::peripheral::{CBP, CPUID, DCB, DWT, FPB, FPU, ITM, MPU, NVIC, SCB, SYST, TPIU};
+#[doc = "Number available in the NVIC for configuring priority"]
+pub const NVIC_PRIO_BITS: u8 = 4;
+#[doc(hidden)]
+pub union Vector {
+    _handler: unsafe extern "C" fn(),
+    _reserved: u32,
+}
+#[cfg(feature = "rt")]
+pub use self::Interrupt as interrupt;
+#[cfg(feature = "rt")]
+pub use cortex_m_rt::interrupt;
+#[cfg(feature = "rt")]
+pub mod interrupt_handlers {
+    unsafe extern "C" {
+        pub fn IEL0();
+        pub fn IEL1();
+        pub fn IEL2();
+        pub fn IEL3();
+        pub fn IEL4();
+        pub fn IEL5();
+        pub fn IEL6();
+        pub fn IEL7();
+        pub fn IEL8();
+        pub fn IEL9();
+        pub fn IEL10();
+        pub fn IEL11();
+        pub fn IEL12();
+        pub fn IEL13();
+        pub fn IEL14();
+        pub fn IEL15();
+        pub fn IEL16();
+        pub fn IEL17();
+        pub fn IEL18();
+        pub fn IEL19();
+        pub fn IEL20();
+        pub fn IEL21();
+        pub fn IEL22();
+        pub fn IEL23();
+        pub fn IEL24();
+        pub fn IEL25();
+        pub fn IEL26();
+        pub fn IEL27();
+        pub fn IEL28();
+        pub fn IEL29();
+        pub fn IEL30();
+        pub fn IEL31();
+        pub fn IEL32();
+        pub fn IEL33();
+        pub fn IEL34();
+        pub fn IEL35();
+        pub fn IEL36();
+        pub fn IEL37();
+        pub fn IEL38();
+        pub fn IEL39();
+        pub fn IEL40();
+        pub fn IEL41();
+        pub fn IEL42();
+        pub fn IEL43();
+        pub fn IEL44();
+        pub fn IEL45();
+        pub fn IEL46();
+        pub fn IEL47();
+        pub fn IEL48();
+        pub fn IEL49();
+        pub fn IEL50();
+        pub fn IEL51();
+        pub fn IEL52();
+        pub fn IEL53();
+        pub fn IEL54();
+        pub fn IEL55();
+        pub fn IEL56();
+        pub fn IEL57();
+        pub fn IEL58();
+        pub fn IEL59();
+        pub fn IEL60();
+        pub fn IEL61();
+        pub fn IEL62();
+        pub fn IEL63();
+        pub fn IEL64();
+        pub fn IEL65();
+        pub fn IEL66();
+        pub fn IEL67();
+        pub fn IEL68();
+        pub fn IEL69();
+        pub fn IEL70();
+        pub fn IEL71();
+        pub fn IEL72();
+        pub fn IEL73();
+        pub fn IEL74();
+        pub fn IEL75();
+        pub fn IEL76();
+        pub fn IEL77();
+        pub fn IEL78();
+        pub fn IEL79();
+        pub fn IEL80();
+        pub fn IEL81();
+        pub fn IEL82();
+        pub fn IEL83();
+        pub fn IEL84();
+        pub fn IEL85();
+        pub fn IEL86();
+        pub fn IEL87();
+        pub fn IEL88();
+        pub fn IEL89();
+        pub fn IEL90();
+        pub fn IEL91();
+        pub fn IEL92();
+        pub fn IEL93();
+        pub fn IEL94();
+        pub fn IEL95();
+    }
+}
+#[cfg(feature = "rt")]
+#[doc(hidden)]
+#[unsafe(link_section = ".vector_table.interrupts")]
+#[unsafe(no_mangle)]
+pub static __INTERRUPTS: [Vector; 96] = [
+    Vector {
+        _handler: interrupt_handlers::IEL0,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL1,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL2,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL3,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL4,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL5,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL6,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL7,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL8,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL9,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL10,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL11,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL12,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL13,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL14,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL15,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL16,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL17,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL18,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL19,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL20,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL21,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL22,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL23,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL24,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL25,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL26,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL27,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL28,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL29,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL30,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL31,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL32,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL33,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL34,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL35,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL36,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL37,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL38,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL39,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL40,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL41,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL42,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL43,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL44,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL45,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL46,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL47,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL48,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL49,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL50,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL51,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL52,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL53,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL54,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL55,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL56,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL57,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL58,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL59,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL60,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL61,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL62,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL63,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL64,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL65,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL66,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL67,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL68,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL69,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL70,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL71,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL72,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL73,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL74,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL75,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL76,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL77,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL78,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL79,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL80,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL81,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL82,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL83,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL84,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL85,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL86,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL87,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL88,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL89,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL90,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL91,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL92,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL93,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL94,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL95,
+    },
+];
+#[doc = "Enumeration of all the interrupts."]
+#[derive(Copy, Clone, Debug, PartialEq, Eq)]
+#[repr(u16)]
+pub enum Interrupt {
+    #[doc = "ICU Interrupt 0"]
+    IEL0 = 0,
+
+    #[doc = "ICU Interrupt 1"]
+    IEL1 = 1,
+
+    #[doc = "ICU Interrupt 2"]
+    IEL2 = 2,
+
+    #[doc = "ICU Interrupt 3"]
+    IEL3 = 3,
+
+    #[doc = "ICU Interrupt 4"]
+    IEL4 = 4,
+
+    #[doc = "ICU Interrupt 5"]
+    IEL5 = 5,
+
+    #[doc = "ICU Interrupt 6"]
+    IEL6 = 6,
+
+    #[doc = "ICU Interrupt 7"]
+    IEL7 = 7,
+
+    #[doc = "ICU Interrupt 8"]
+    IEL8 = 8,
+
+    #[doc = "ICU Interrupt 9"]
+    IEL9 = 9,
+
+    #[doc = "ICU Interrupt 10"]
+    IEL10 = 10,
+
+    #[doc = "ICU Interrupt 11"]
+    IEL11 = 11,
+
+    #[doc = "ICU Interrupt 12"]
+    IEL12 = 12,
+
+    #[doc = "ICU Interrupt 13"]
+    IEL13 = 13,
+
+    #[doc = "ICU Interrupt 14"]
+    IEL14 = 14,
+
+    #[doc = "ICU Interrupt 15"]
+    IEL15 = 15,
+
+    #[doc = "ICU Interrupt 16"]
+    IEL16 = 16,
+
+    #[doc = "ICU Interrupt 17"]
+    IEL17 = 17,
+
+    #[doc = "ICU Interrupt 18"]
+    IEL18 = 18,
+
+    #[doc = "ICU Interrupt 19"]
+    IEL19 = 19,
+
+    #[doc = "ICU Interrupt 20"]
+    IEL20 = 20,
+
+    #[doc = "ICU Interrupt 21"]
+    IEL21 = 21,
+
+    #[doc = "ICU Interrupt 22"]
+    IEL22 = 22,
+
+    #[doc = "ICU Interrupt 23"]
+    IEL23 = 23,
+
+    #[doc = "ICU Interrupt 24"]
+    IEL24 = 24,
+
+    #[doc = "ICU Interrupt 25"]
+    IEL25 = 25,
+
+    #[doc = "ICU Interrupt 26"]
+    IEL26 = 26,
+
+    #[doc = "ICU Interrupt 27"]
+    IEL27 = 27,
+
+    #[doc = "ICU Interrupt 28"]
+    IEL28 = 28,
+
+    #[doc = "ICU Interrupt 29"]
+    IEL29 = 29,
+
+    #[doc = "ICU Interrupt 30"]
+    IEL30 = 30,
+
+    #[doc = "ICU Interrupt 31"]
+    IEL31 = 31,
+
+    #[doc = "ICU Interrupt 32"]
+    IEL32 = 32,
+
+    #[doc = "ICU Interrupt 33"]
+    IEL33 = 33,
+
+    #[doc = "ICU Interrupt 34"]
+    IEL34 = 34,
+
+    #[doc = "ICU Interrupt 35"]
+    IEL35 = 35,
+
+    #[doc = "ICU Interrupt 36"]
+    IEL36 = 36,
+
+    #[doc = "ICU Interrupt 37"]
+    IEL37 = 37,
+
+    #[doc = "ICU Interrupt 38"]
+    IEL38 = 38,
+
+    #[doc = "ICU Interrupt 39"]
+    IEL39 = 39,
+
+    #[doc = "ICU Interrupt 40"]
+    IEL40 = 40,
+
+    #[doc = "ICU Interrupt 41"]
+    IEL41 = 41,
+
+    #[doc = "ICU Interrupt 42"]
+    IEL42 = 42,
+
+    #[doc = "ICU Interrupt 43"]
+    IEL43 = 43,
+
+    #[doc = "ICU Interrupt 44"]
+    IEL44 = 44,
+
+    #[doc = "ICU Interrupt 45"]
+    IEL45 = 45,
+
+    #[doc = "ICU Interrupt 46"]
+    IEL46 = 46,
+
+    #[doc = "ICU Interrupt 47"]
+    IEL47 = 47,
+
+    #[doc = "ICU Interrupt 48"]
+    IEL48 = 48,
+
+    #[doc = "ICU Interrupt 49"]
+    IEL49 = 49,
+
+    #[doc = "ICU Interrupt 50"]
+    IEL50 = 50,
+
+    #[doc = "ICU Interrupt 51"]
+    IEL51 = 51,
+
+    #[doc = "ICU Interrupt 52"]
+    IEL52 = 52,
+
+    #[doc = "ICU Interrupt 53"]
+    IEL53 = 53,
+
+    #[doc = "ICU Interrupt 54"]
+    IEL54 = 54,
+
+    #[doc = "ICU Interrupt 55"]
+    IEL55 = 55,
+
+    #[doc = "ICU Interrupt 56"]
+    IEL56 = 56,
+
+    #[doc = "ICU Interrupt 57"]
+    IEL57 = 57,
+
+    #[doc = "ICU Interrupt 58"]
+    IEL58 = 58,
+
+    #[doc = "ICU Interrupt 59"]
+    IEL59 = 59,
+
+    #[doc = "ICU Interrupt 60"]
+    IEL60 = 60,
+
+    #[doc = "ICU Interrupt 61"]
+    IEL61 = 61,
+
+    #[doc = "ICU Interrupt 62"]
+    IEL62 = 62,
+
+    #[doc = "ICU Interrupt 63"]
+    IEL63 = 63,
+
+    #[doc = "ICU Interrupt 64"]
+    IEL64 = 64,
+
+    #[doc = "ICU Interrupt 65"]
+    IEL65 = 65,
+
+    #[doc = "ICU Interrupt 66"]
+    IEL66 = 66,
+
+    #[doc = "ICU Interrupt 67"]
+    IEL67 = 67,
+
+    #[doc = "ICU Interrupt 68"]
+    IEL68 = 68,
+
+    #[doc = "ICU Interrupt 69"]
+    IEL69 = 69,
+
+    #[doc = "ICU Interrupt 70"]
+    IEL70 = 70,
+
+    #[doc = "ICU Interrupt 71"]
+    IEL71 = 71,
+
+    #[doc = "ICU Interrupt 72"]
+    IEL72 = 72,
+
+    #[doc = "ICU Interrupt 73"]
+    IEL73 = 73,
+
+    #[doc = "ICU Interrupt 74"]
+    IEL74 = 74,
+
+    #[doc = "ICU Interrupt 75"]
+    IEL75 = 75,
+
+    #[doc = "ICU Interrupt 76"]
+    IEL76 = 76,
+
+    #[doc = "ICU Interrupt 77"]
+    IEL77 = 77,
+
+    #[doc = "ICU Interrupt 78"]
+    IEL78 = 78,
+
+    #[doc = "ICU Interrupt 79"]
+    IEL79 = 79,
+
+    #[doc = "ICU Interrupt 80"]
+    IEL80 = 80,
+
+    #[doc = "ICU Interrupt 81"]
+    IEL81 = 81,
+
+    #[doc = "ICU Interrupt 82"]
+    IEL82 = 82,
+
+    #[doc = "ICU Interrupt 83"]
+    IEL83 = 83,
+
+    #[doc = "ICU Interrupt 84"]
+    IEL84 = 84,
+
+    #[doc = "ICU Interrupt 85"]
+    IEL85 = 85,
+
+    #[doc = "ICU Interrupt 86"]
+    IEL86 = 86,
+
+    #[doc = "ICU Interrupt 87"]
+    IEL87 = 87,
+
+    #[doc = "ICU Interrupt 88"]
+    IEL88 = 88,
+
+    #[doc = "ICU Interrupt 89"]
+    IEL89 = 89,
+
+    #[doc = "ICU Interrupt 90"]
+    IEL90 = 90,
+
+    #[doc = "ICU Interrupt 91"]
+    IEL91 = 91,
+
+    #[doc = "ICU Interrupt 92"]
+    IEL92 = 92,
+
+    #[doc = "ICU Interrupt 93"]
+    IEL93 = 93,
+
+    #[doc = "ICU Interrupt 94"]
+    IEL94 = 94,
+
+    #[doc = "ICU Interrupt 95"]
+    IEL95 = 95,
+}
+unsafe impl cortex_m::interrupt::InterruptNumber for Interrupt {
+    #[inline(always)]
+    fn number(self) -> u16 {
+        self as u16
+    }
+}
+#[allow(non_snake_case)]
+/// Required for compatibility with RTIC and other frameworks
+pub struct Peripherals {
+    #[cfg(feature = "tsd")]
+    pub TSD: self::Tsd,
+    #[cfg(feature = "tsd_ns")]
+    pub TSD_NS: self::TsdNs,
+    #[cfg(feature = "rmpu")]
+    pub RMPU: self::Rmpu,
+    #[cfg(feature = "sram")]
+    pub SRAM: self::Sram,
+    #[cfg(feature = "bus")]
+    pub BUS: self::Bus,
+    #[cfg(feature = "icu_common")]
+    pub ICU_COMMON: self::IcuCommon,
+    #[cfg(feature = "cpscu")]
+    pub CPSCU: self::Cpscu,
+    #[cfg(feature = "dmac00")]
+    pub DMAC00: self::Dmac00,
+    #[cfg(feature = "dmac01")]
+    pub DMAC01: self::Dmac00,
+    #[cfg(feature = "dmac02")]
+    pub DMAC02: self::Dmac00,
+    #[cfg(feature = "dmac03")]
+    pub DMAC03: self::Dmac00,
+    #[cfg(feature = "dmac04")]
+    pub DMAC04: self::Dmac00,
+    #[cfg(feature = "dmac05")]
+    pub DMAC05: self::Dmac00,
+    #[cfg(feature = "dmac06")]
+    pub DMAC06: self::Dmac00,
+    #[cfg(feature = "dmac07")]
+    pub DMAC07: self::Dmac00,
+    #[cfg(feature = "dma0")]
+    pub DMA0: self::Dma0,
+    #[cfg(feature = "dtc0")]
+    pub DTC0: self::Dtc0,
+    #[cfg(feature = "icu")]
+    pub ICU: self::Icu,
+    #[cfg(feature = "cpu_ctrl")]
+    pub CPU_CTRL: self::CpuCtrl,
+    #[cfg(feature = "cpu_ocd")]
+    pub CPU_OCD: self::CpuOcd,
+    #[cfg(feature = "cpu_dbg")]
+    pub CPU_DBG: self::CpuDbg,
+    #[cfg(feature = "cache")]
+    pub CACHE: self::Cache,
+    #[cfg(feature = "fcache")]
+    pub FCACHE: self::Fcache,
+    #[cfg(feature = "tcm")]
+    pub TCM: self::Tcm,
+    #[cfg(feature = "sysc")]
+    pub SYSC: self::Sysc,
+    #[cfg(feature = "ipc")]
+    pub IPC: self::Ipc,
+    #[cfg(feature = "faci")]
+    pub FACI: self::Faci,
+    #[cfg(feature = "mram")]
+    pub MRAM: self::Mram,
+    #[cfg(feature = "elc")]
+    pub ELC: self::Elc,
+    #[cfg(feature = "rtc")]
+    pub RTC: self::Rtc,
+    #[cfg(feature = "iwdt")]
+    pub IWDT: self::Iwdt,
+    #[cfg(feature = "cac")]
+    pub CAC: self::Cac,
+    #[cfg(feature = "wdt0")]
+    pub WDT0: self::Wdt0,
+    #[cfg(feature = "wdt1")]
+    pub WDT1: self::Wdt0,
+    #[cfg(feature = "mstp")]
+    pub MSTP: self::Mstp,
+    #[cfg(feature = "pscu")]
+    pub PSCU: self::Pscu,
+    #[cfg(feature = "poeg")]
+    pub POEG: self::Poeg,
+    #[cfg(feature = "ulpt0")]
+    pub ULPT0: self::Ulpt0,
+    #[cfg(feature = "ulpt1")]
+    pub ULPT1: self::Ulpt0,
+    #[cfg(feature = "agt0")]
+    pub AGT0: self::Agt0,
+    #[cfg(feature = "agt1")]
+    pub AGT1: self::Agt0,
+    #[cfg(feature = "dac120")]
+    pub DAC120: self::Dac120,
+    #[cfg(feature = "dac121")]
+    pub DAC121: self::Dac120,
+    #[cfg(feature = "tsn")]
+    pub TSN: self::Tsn,
+    #[cfg(feature = "acmphs0")]
+    pub ACMPHS0: self::Acmphs0,
+    #[cfg(feature = "acmphs1")]
+    pub ACMPHS1: self::Acmphs0,
+    #[cfg(feature = "acmphs2")]
+    pub ACMPHS2: self::Acmphs0,
+    #[cfg(feature = "acmphs3")]
+    pub ACMPHS3: self::Acmphs0,
+    #[cfg(feature = "usbfs")]
+    pub USBFS: self::Usbfs,
+    #[cfg(feature = "sdhi0")]
+    pub SDHI0: self::Sdhi0,
+    #[cfg(feature = "sdhi1")]
+    pub SDHI1: self::Sdhi0,
+    #[cfg(feature = "pdmif")]
+    pub PDMIF: self::Pdmif,
+    #[cfg(feature = "ssie0")]
+    pub SSIE0: self::Ssie0,
+    #[cfg(feature = "ssie1")]
+    pub SSIE1: self::Ssie0,
+    #[cfg(feature = "iic0")]
+    pub IIC0: self::Iic0,
+    #[cfg(feature = "iic0wu")]
+    pub IIC0WU: self::Iic0Wu,
+    #[cfg(feature = "iic1")]
+    pub IIC1: self::Iic0,
+    #[cfg(feature = "iic2")]
+    pub IIC2: self::Iic0,
+    #[cfg(feature = "ospi0_b")]
+    pub OSPI0_B: self::Ospi0B,
+    #[cfg(feature = "ospi1_b")]
+    pub OSPI1_B: self::Ospi0B,
+    #[cfg(feature = "dotf0")]
+    pub DOTF0: self::Dotf0,
+    #[cfg(feature = "dotf1")]
+    pub DOTF1: self::Dotf0,
+    #[cfg(feature = "crc")]
+    pub CRC: self::Crc,
+    #[cfg(feature = "doc_b")]
+    pub DOC_B: self::DocB,
+    #[cfg(feature = "gpt320")]
+    pub GPT320: self::Gpt320,
+    #[cfg(feature = "gpt321")]
+    pub GPT321: self::Gpt320,
+    #[cfg(feature = "gpt322")]
+    pub GPT322: self::Gpt320,
+    #[cfg(feature = "gpt323")]
+    pub GPT323: self::Gpt320,
+    #[cfg(feature = "gpt324")]
+    pub GPT324: self::Gpt320,
+    #[cfg(feature = "gpt325")]
+    pub GPT325: self::Gpt320,
+    #[cfg(feature = "gpt326")]
+    pub GPT326: self::Gpt320,
+    #[cfg(feature = "gpt327")]
+    pub GPT327: self::Gpt320,
+    #[cfg(feature = "gpt328")]
+    pub GPT328: self::Gpt320,
+    #[cfg(feature = "gpt329")]
+    pub GPT329: self::Gpt320,
+    #[cfg(feature = "gpt3210")]
+    pub GPT3210: self::Gpt320,
+    #[cfg(feature = "gpt3211")]
+    pub GPT3211: self::Gpt320,
+    #[cfg(feature = "gpt3212")]
+    pub GPT3212: self::Gpt320,
+    #[cfg(feature = "gpt3213")]
+    pub GPT3213: self::Gpt320,
+    #[cfg(feature = "gpt_ops")]
+    pub GPT_OPS: self::GptOps,
+    #[cfg(feature = "gpt_gtclk")]
+    pub GPT_GTCLK: self::GptGtclk,
+    #[cfg(feature = "pdg")]
+    pub PDG: self::Pdg,
+    #[cfg(feature = "adc_b")]
+    pub ADC_B: self::AdcB,
+    #[cfg(feature = "glcdc")]
+    pub GLCDC: self::Glcdc,
+    #[cfg(feature = "mipi_dsi")]
+    pub MIPI_DSI: self::MipiDsi,
+    #[cfg(feature = "mipi_phy0")]
+    pub MIPI_PHY0: self::MipiPhy0,
+    #[cfg(feature = "mipi_csi0")]
+    pub MIPI_CSI0: self::MipiCsi0,
+    #[cfg(feature = "vin0")]
+    pub VIN0: self::Vin0,
+    #[cfg(feature = "ceu")]
+    pub CEU: self::Ceu,
+    #[cfg(feature = "usbhs")]
+    pub USBHS: self::Usbhs,
+    #[cfg(feature = "sci0_b")]
+    pub SCI0_B: self::Sci0B,
+    #[cfg(feature = "sci1_b")]
+    pub SCI1_B: self::Sci0B,
+    #[cfg(feature = "sci2_b")]
+    pub SCI2_B: self::Sci0B,
+    #[cfg(feature = "sci3_b")]
+    pub SCI3_B: self::Sci0B,
+    #[cfg(feature = "sci4_b")]
+    pub SCI4_B: self::Sci0B,
+    #[cfg(feature = "sci5_b")]
+    pub SCI5_B: self::Sci0B,
+    #[cfg(feature = "sci6_b")]
+    pub SCI6_B: self::Sci0B,
+    #[cfg(feature = "sci7_b")]
+    pub SCI7_B: self::Sci0B,
+    #[cfg(feature = "sci8_b")]
+    pub SCI8_B: self::Sci0B,
+    #[cfg(feature = "sci9_b")]
+    pub SCI9_B: self::Sci0B,
+    #[cfg(feature = "spi0_b")]
+    pub SPI0_B: self::Spi0B,
+    #[cfg(feature = "spi1_b")]
+    pub SPI1_B: self::Spi0B,
+    #[cfg(feature = "i3c")]
+    pub I3C: self::I3C,
+    #[cfg(feature = "eccmb0")]
+    pub ECCMB0: self::Eccmb0,
+    #[cfg(feature = "eccmb1")]
+    pub ECCMB1: self::Eccmb0,
+    #[cfg(feature = "canfd0")]
+    pub CANFD0: self::Canfd0,
+    #[cfg(feature = "canfd1")]
+    pub CANFD1: self::Canfd0,
+    #[cfg(feature = "esc")]
+    pub ESC: self::Esc,
+    #[cfg(feature = "esc_ini")]
+    pub ESC_INI: self::EscIni,
+    #[cfg(feature = "mfwd")]
+    pub MFWD: self::Mfwd,
+    #[cfg(feature = "eswm")]
+    pub ESWM: self::Eswm,
+    #[cfg(feature = "coma")]
+    pub COMA: self::Coma,
+    #[cfg(feature = "rmac0")]
+    pub RMAC0: self::Rmac0,
+    #[cfg(feature = "rmac1")]
+    pub RMAC1: self::Rmac0,
+    #[cfg(feature = "gwca0")]
+    pub GWCA0: self::Gwca0,
+    #[cfg(feature = "gptp")]
+    pub GPTP: self::Gptp,
+    #[cfg(feature = "port0")]
+    pub PORT0: self::Port0,
+    #[cfg(feature = "port1")]
+    pub PORT1: self::Port1,
+    #[cfg(feature = "port2")]
+    pub PORT2: self::Port1,
+    #[cfg(feature = "port3")]
+    pub PORT3: self::Port1,
+    #[cfg(feature = "port4")]
+    pub PORT4: self::Port1,
+    #[cfg(feature = "port5")]
+    pub PORT5: self::Port0,
+    #[cfg(feature = "port6")]
+    pub PORT6: self::Port0,
+    #[cfg(feature = "port7")]
+    pub PORT7: self::Port0,
+    #[cfg(feature = "port8")]
+    pub PORT8: self::Port0,
+    #[cfg(feature = "port9")]
+    pub PORT9: self::Port0,
+    #[cfg(feature = "porta")]
+    pub PORTA: self::Porta,
+    #[cfg(feature = "portb")]
+    pub PORTB: self::Portb,
+    #[cfg(feature = "portc")]
+    pub PORTC: self::Portc,
+    #[cfg(feature = "portd")]
+    pub PORTD: self::Portd,
+    #[cfg(feature = "pfs")]
+    pub PFS: self::Pfs,
+    #[cfg(feature = "drw")]
+    pub DRW: self::Drw,
+    #[cfg(feature = "rmpu_ns")]
+    pub RMPU_NS: self::RmpuNs,
+    #[cfg(feature = "sram_ns")]
+    pub SRAM_NS: self::SramNs,
+    #[cfg(feature = "bus_ns")]
+    pub BUS_NS: self::BusNs,
+    #[cfg(feature = "icu_common_ns")]
+    pub ICU_COMMON_NS: self::IcuCommonNs,
+    #[cfg(feature = "cpscu_ns")]
+    pub CPSCU_NS: self::CpscuNs,
+    #[cfg(feature = "dmac00_ns")]
+    pub DMAC00_NS: self::Dmac00Ns,
+    #[cfg(feature = "dmac01_ns")]
+    pub DMAC01_NS: self::Dmac00Ns,
+    #[cfg(feature = "dmac02_ns")]
+    pub DMAC02_NS: self::Dmac00Ns,
+    #[cfg(feature = "dmac03_ns")]
+    pub DMAC03_NS: self::Dmac00Ns,
+    #[cfg(feature = "dmac04_ns")]
+    pub DMAC04_NS: self::Dmac00Ns,
+    #[cfg(feature = "dmac05_ns")]
+    pub DMAC05_NS: self::Dmac00Ns,
+    #[cfg(feature = "dmac06_ns")]
+    pub DMAC06_NS: self::Dmac00Ns,
+    #[cfg(feature = "dmac07_ns")]
+    pub DMAC07_NS: self::Dmac00Ns,
+    #[cfg(feature = "dma0_ns")]
+    pub DMA0_NS: self::Dma0Ns,
+    #[cfg(feature = "dtc0_ns")]
+    pub DTC0_NS: self::Dtc0Ns,
+    #[cfg(feature = "icu_ns")]
+    pub ICU_NS: self::IcuNs,
+    #[cfg(feature = "cpu_ctrl_ns")]
+    pub CPU_CTRL_NS: self::CpuCtrlNs,
+    #[cfg(feature = "cache_ns")]
+    pub CACHE_NS: self::CacheNs,
+    #[cfg(feature = "fcache_ns")]
+    pub FCACHE_NS: self::FcacheNs,
+    #[cfg(feature = "tcm_ns")]
+    pub TCM_NS: self::TcmNs,
+    #[cfg(feature = "sysc_ns")]
+    pub SYSC_NS: self::SyscNs,
+    #[cfg(feature = "ipc_ns")]
+    pub IPC_NS: self::IpcNs,
+    #[cfg(feature = "mram_ns")]
+    pub MRAM_NS: self::MramNs,
+    #[cfg(feature = "elc_ns")]
+    pub ELC_NS: self::ElcNs,
+    #[cfg(feature = "rtc_ns")]
+    pub RTC_NS: self::RtcNs,
+    #[cfg(feature = "iwdt_ns")]
+    pub IWDT_NS: self::IwdtNs,
+    #[cfg(feature = "cac_ns")]
+    pub CAC_NS: self::CacNs,
+    #[cfg(feature = "wdt0_ns")]
+    pub WDT0_NS: self::Wdt0Ns,
+    #[cfg(feature = "wdt1_ns")]
+    pub WDT1_NS: self::Wdt0Ns,
+    #[cfg(feature = "mstp_ns")]
+    pub MSTP_NS: self::MstpNs,
+    #[cfg(feature = "pscu_ns")]
+    pub PSCU_NS: self::PscuNs,
+    #[cfg(feature = "poeg_ns")]
+    pub POEG_NS: self::PoegNs,
+    #[cfg(feature = "ulpt0_ns")]
+    pub ULPT0_NS: self::Ulpt0Ns,
+    #[cfg(feature = "ulpt1_ns")]
+    pub ULPT1_NS: self::Ulpt0Ns,
+    #[cfg(feature = "agt0_ns")]
+    pub AGT0_NS: self::Agt0Ns,
+    #[cfg(feature = "agt1_ns")]
+    pub AGT1_NS: self::Agt0Ns,
+    #[cfg(feature = "dac120_ns")]
+    pub DAC120_NS: self::Dac120Ns,
+    #[cfg(feature = "dac121_ns")]
+    pub DAC121_NS: self::Dac120Ns,
+    #[cfg(feature = "tsn_ns")]
+    pub TSN_NS: self::TsnNs,
+    #[cfg(feature = "acmphs0_ns")]
+    pub ACMPHS0_NS: self::Acmphs0Ns,
+    #[cfg(feature = "acmphs1_ns")]
+    pub ACMPHS1_NS: self::Acmphs0Ns,
+    #[cfg(feature = "acmphs2_ns")]
+    pub ACMPHS2_NS: self::Acmphs0Ns,
+    #[cfg(feature = "acmphs3_ns")]
+    pub ACMPHS3_NS: self::Acmphs0Ns,
+    #[cfg(feature = "usbfs_ns")]
+    pub USBFS_NS: self::UsbfsNs,
+    #[cfg(feature = "sdhi0_ns")]
+    pub SDHI0_NS: self::Sdhi0Ns,
+    #[cfg(feature = "sdhi1_ns")]
+    pub SDHI1_NS: self::Sdhi0Ns,
+    #[cfg(feature = "pdmif_ns")]
+    pub PDMIF_NS: self::PdmifNs,
+    #[cfg(feature = "ssie0_ns")]
+    pub SSIE0_NS: self::Ssie0Ns,
+    #[cfg(feature = "ssie1_ns")]
+    pub SSIE1_NS: self::Ssie0Ns,
+    #[cfg(feature = "iic0_ns")]
+    pub IIC0_NS: self::Iic0Ns,
+    #[cfg(feature = "iic0wu_ns")]
+    pub IIC0WU_NS: self::Iic0WuNs,
+    #[cfg(feature = "iic1_ns")]
+    pub IIC1_NS: self::Iic0Ns,
+    #[cfg(feature = "iic2_ns")]
+    pub IIC2_NS: self::Iic0Ns,
+    #[cfg(feature = "ospi0_b_ns")]
+    pub OSPI0_B_NS: self::Ospi0BNs,
+    #[cfg(feature = "ospi1_b_ns")]
+    pub OSPI1_B_NS: self::Ospi0BNs,
+    #[cfg(feature = "dotf0_ns")]
+    pub DOTF0_NS: self::Dotf0Ns,
+    #[cfg(feature = "dotf1_ns")]
+    pub DOTF1_NS: self::Dotf0Ns,
+    #[cfg(feature = "crc_ns")]
+    pub CRC_NS: self::CrcNs,
+    #[cfg(feature = "doc_b_ns")]
+    pub DOC_B_NS: self::DocBNs,
+    #[cfg(feature = "gpt320_ns")]
+    pub GPT320_NS: self::Gpt320Ns,
+    #[cfg(feature = "gpt321_ns")]
+    pub GPT321_NS: self::Gpt320Ns,
+    #[cfg(feature = "gpt322_ns")]
+    pub GPT322_NS: self::Gpt320Ns,
+    #[cfg(feature = "gpt323_ns")]
+    pub GPT323_NS: self::Gpt320Ns,
+    #[cfg(feature = "gpt324_ns")]
+    pub GPT324_NS: self::Gpt320Ns,
+    #[cfg(feature = "gpt325_ns")]
+    pub GPT325_NS: self::Gpt320Ns,
+    #[cfg(feature = "gpt326_ns")]
+    pub GPT326_NS: self::Gpt320Ns,
+    #[cfg(feature = "gpt327_ns")]
+    pub GPT327_NS: self::Gpt320Ns,
+    #[cfg(feature = "gpt328_ns")]
+    pub GPT328_NS: self::Gpt320Ns,
+    #[cfg(feature = "gpt329_ns")]
+    pub GPT329_NS: self::Gpt320Ns,
+    #[cfg(feature = "gpt3210_ns")]
+    pub GPT3210_NS: self::Gpt320Ns,
+    #[cfg(feature = "gpt3211_ns")]
+    pub GPT3211_NS: self::Gpt320Ns,
+    #[cfg(feature = "gpt3212_ns")]
+    pub GPT3212_NS: self::Gpt320Ns,
+    #[cfg(feature = "gpt3213_ns")]
+    pub GPT3213_NS: self::Gpt320Ns,
+    #[cfg(feature = "gpt_ops_ns")]
+    pub GPT_OPS_NS: self::GptOpsNs,
+    #[cfg(feature = "gpt_gtclk_ns")]
+    pub GPT_GTCLK_NS: self::GptGtclkNs,
+    #[cfg(feature = "pdg_ns")]
+    pub PDG_NS: self::PdgNs,
+    #[cfg(feature = "adc_b_ns")]
+    pub ADC_B_NS: self::AdcBNs,
+    #[cfg(feature = "glcdc_ns")]
+    pub GLCDC_NS: self::GlcdcNs,
+    #[cfg(feature = "mipi_dsi_ns")]
+    pub MIPI_DSI_NS: self::MipiDsiNs,
+    #[cfg(feature = "mipi_phy0_ns")]
+    pub MIPI_PHY0_NS: self::MipiPhy0Ns,
+    #[cfg(feature = "mipi_csi0_ns")]
+    pub MIPI_CSI0_NS: self::MipiCsi0Ns,
+    #[cfg(feature = "vin0_ns")]
+    pub VIN0_NS: self::Vin0Ns,
+    #[cfg(feature = "ceu_ns")]
+    pub CEU_NS: self::CeuNs,
+    #[cfg(feature = "usbhs_ns")]
+    pub USBHS_NS: self::UsbhsNs,
+    #[cfg(feature = "sci0_b_ns")]
+    pub SCI0_B_NS: self::Sci0BNs,
+    #[cfg(feature = "sci1_b_ns")]
+    pub SCI1_B_NS: self::Sci0BNs,
+    #[cfg(feature = "sci2_b_ns")]
+    pub SCI2_B_NS: self::Sci0BNs,
+    #[cfg(feature = "sci3_b_ns")]
+    pub SCI3_B_NS: self::Sci0BNs,
+    #[cfg(feature = "sci4_b_ns")]
+    pub SCI4_B_NS: self::Sci0BNs,
+    #[cfg(feature = "sci5_b_ns")]
+    pub SCI5_B_NS: self::Sci0BNs,
+    #[cfg(feature = "sci6_b_ns")]
+    pub SCI6_B_NS: self::Sci0BNs,
+    #[cfg(feature = "sci7_b_ns")]
+    pub SCI7_B_NS: self::Sci0BNs,
+    #[cfg(feature = "sci8_b_ns")]
+    pub SCI8_B_NS: self::Sci0BNs,
+    #[cfg(feature = "sci9_b_ns")]
+    pub SCI9_B_NS: self::Sci0BNs,
+    #[cfg(feature = "spi0_b_ns")]
+    pub SPI0_B_NS: self::Spi0BNs,
+    #[cfg(feature = "spi1_b_ns")]
+    pub SPI1_B_NS: self::Spi0BNs,
+    #[cfg(feature = "i3c_ns")]
+    pub I3C_NS: self::I3CNs,
+    #[cfg(feature = "eccmb0_ns")]
+    pub ECCMB0_NS: self::Eccmb0Ns,
+    #[cfg(feature = "eccmb1_ns")]
+    pub ECCMB1_NS: self::Eccmb0Ns,
+    #[cfg(feature = "canfd0_ns")]
+    pub CANFD0_NS: self::Canfd0Ns,
+    #[cfg(feature = "canfd1_ns")]
+    pub CANFD1_NS: self::Canfd0Ns,
+    #[cfg(feature = "esc_ns")]
+    pub ESC_NS: self::EscNs,
+    #[cfg(feature = "esc_ini_ns")]
+    pub ESC_INI_NS: self::EscIniNs,
+    #[cfg(feature = "mfwd_ns")]
+    pub MFWD_NS: self::MfwdNs,
+    #[cfg(feature = "eswm_ns")]
+    pub ESWM_NS: self::EswmNs,
+    #[cfg(feature = "coma_ns")]
+    pub COMA_NS: self::ComaNs,
+    #[cfg(feature = "etha0_ns")]
+    pub ETHA0_NS: self::Etha0Ns,
+    #[cfg(feature = "rmac0_ns")]
+    pub RMAC0_NS: self::Rmac0Ns,
+    #[cfg(feature = "etha1_ns")]
+    pub ETHA1_NS: self::Etha0Ns,
+    #[cfg(feature = "rmac1_ns")]
+    pub RMAC1_NS: self::Rmac0Ns,
+    #[cfg(feature = "gwca0_ns")]
+    pub GWCA0_NS: self::Gwca0Ns,
+    #[cfg(feature = "gptp_ns")]
+    pub GPTP_NS: self::GptpNs,
+    #[cfg(feature = "port0_ns")]
+    pub PORT0_NS: self::Port0Ns,
+    #[cfg(feature = "port1_ns")]
+    pub PORT1_NS: self::Port1Ns,
+    #[cfg(feature = "port2_ns")]
+    pub PORT2_NS: self::Port1Ns,
+    #[cfg(feature = "port3_ns")]
+    pub PORT3_NS: self::Port1Ns,
+    #[cfg(feature = "port4_ns")]
+    pub PORT4_NS: self::Port1Ns,
+    #[cfg(feature = "port5_ns")]
+    pub PORT5_NS: self::Port0Ns,
+    #[cfg(feature = "port6_ns")]
+    pub PORT6_NS: self::Port0Ns,
+    #[cfg(feature = "port7_ns")]
+    pub PORT7_NS: self::Port0Ns,
+    #[cfg(feature = "port8_ns")]
+    pub PORT8_NS: self::Port0Ns,
+    #[cfg(feature = "port9_ns")]
+    pub PORT9_NS: self::Port0Ns,
+    #[cfg(feature = "porta_ns")]
+    pub PORTA_NS: self::PortaNs,
+    #[cfg(feature = "portb_ns")]
+    pub PORTB_NS: self::PortbNs,
+    #[cfg(feature = "portc_ns")]
+    pub PORTC_NS: self::PortcNs,
+    #[cfg(feature = "portd_ns")]
+    pub PORTD_NS: self::PortdNs,
+    #[cfg(feature = "pfs_ns")]
+    pub PFS_NS: self::PfsNs,
+    #[cfg(feature = "drw_ns")]
+    pub DRW_NS: self::DrwNs,
+}
+
+impl Peripherals {
+    /// Returns Peripheral struct multiple times
+    /// Required for compatibility with RTIC and other frameworks
+    #[inline]
+    pub fn take() -> Option<Self> {
+        Some(Self::steal())
+    }
+
+    /// Returns Peripheral struct multiple times
+    /// Required for compatibility with RTIC and other frameworks
+    #[inline]
+    pub fn steal() -> Self {
+        Peripherals {
+            #[cfg(feature = "tsd")]
+            TSD: crate::TSD,
+            #[cfg(feature = "tsd_ns")]
+            TSD_NS: crate::TSD_NS,
+            #[cfg(feature = "rmpu")]
+            RMPU: crate::RMPU,
+            #[cfg(feature = "sram")]
+            SRAM: crate::SRAM,
+            #[cfg(feature = "bus")]
+            BUS: crate::BUS,
+            #[cfg(feature = "icu_common")]
+            ICU_COMMON: crate::ICU_COMMON,
+            #[cfg(feature = "cpscu")]
+            CPSCU: crate::CPSCU,
+            #[cfg(feature = "dmac00")]
+            DMAC00: crate::DMAC00,
+            #[cfg(feature = "dmac01")]
+            DMAC01: crate::DMAC01,
+            #[cfg(feature = "dmac02")]
+            DMAC02: crate::DMAC02,
+            #[cfg(feature = "dmac03")]
+            DMAC03: crate::DMAC03,
+            #[cfg(feature = "dmac04")]
+            DMAC04: crate::DMAC04,
+            #[cfg(feature = "dmac05")]
+            DMAC05: crate::DMAC05,
+            #[cfg(feature = "dmac06")]
+            DMAC06: crate::DMAC06,
+            #[cfg(feature = "dmac07")]
+            DMAC07: crate::DMAC07,
+            #[cfg(feature = "dma0")]
+            DMA0: crate::DMA0,
+            #[cfg(feature = "dtc0")]
+            DTC0: crate::DTC0,
+            #[cfg(feature = "icu")]
+            ICU: crate::ICU,
+            #[cfg(feature = "cpu_ctrl")]
+            CPU_CTRL: crate::CPU_CTRL,
+            #[cfg(feature = "cpu_ocd")]
+            CPU_OCD: crate::CPU_OCD,
+            #[cfg(feature = "cpu_dbg")]
+            CPU_DBG: crate::CPU_DBG,
+            #[cfg(feature = "cache")]
+            CACHE: crate::CACHE,
+            #[cfg(feature = "fcache")]
+            FCACHE: crate::FCACHE,
+            #[cfg(feature = "tcm")]
+            TCM: crate::TCM,
+            #[cfg(feature = "sysc")]
+            SYSC: crate::SYSC,
+            #[cfg(feature = "ipc")]
+            IPC: crate::IPC,
+            #[cfg(feature = "faci")]
+            FACI: crate::FACI,
+            #[cfg(feature = "mram")]
+            MRAM: crate::MRAM,
+            #[cfg(feature = "elc")]
+            ELC: crate::ELC,
+            #[cfg(feature = "rtc")]
+            RTC: crate::RTC,
+            #[cfg(feature = "iwdt")]
+            IWDT: crate::IWDT,
+            #[cfg(feature = "cac")]
+            CAC: crate::CAC,
+            #[cfg(feature = "wdt0")]
+            WDT0: crate::WDT0,
+            #[cfg(feature = "wdt1")]
+            WDT1: crate::WDT1,
+            #[cfg(feature = "mstp")]
+            MSTP: crate::MSTP,
+            #[cfg(feature = "pscu")]
+            PSCU: crate::PSCU,
+            #[cfg(feature = "poeg")]
+            POEG: crate::POEG,
+            #[cfg(feature = "ulpt0")]
+            ULPT0: crate::ULPT0,
+            #[cfg(feature = "ulpt1")]
+            ULPT1: crate::ULPT1,
+            #[cfg(feature = "agt0")]
+            AGT0: crate::AGT0,
+            #[cfg(feature = "agt1")]
+            AGT1: crate::AGT1,
+            #[cfg(feature = "dac120")]
+            DAC120: crate::DAC120,
+            #[cfg(feature = "dac121")]
+            DAC121: crate::DAC121,
+            #[cfg(feature = "tsn")]
+            TSN: crate::TSN,
+            #[cfg(feature = "acmphs0")]
+            ACMPHS0: crate::ACMPHS0,
+            #[cfg(feature = "acmphs1")]
+            ACMPHS1: crate::ACMPHS1,
+            #[cfg(feature = "acmphs2")]
+            ACMPHS2: crate::ACMPHS2,
+            #[cfg(feature = "acmphs3")]
+            ACMPHS3: crate::ACMPHS3,
+            #[cfg(feature = "usbfs")]
+            USBFS: crate::USBFS,
+            #[cfg(feature = "sdhi0")]
+            SDHI0: crate::SDHI0,
+            #[cfg(feature = "sdhi1")]
+            SDHI1: crate::SDHI1,
+            #[cfg(feature = "pdmif")]
+            PDMIF: crate::PDMIF,
+            #[cfg(feature = "ssie0")]
+            SSIE0: crate::SSIE0,
+            #[cfg(feature = "ssie1")]
+            SSIE1: crate::SSIE1,
+            #[cfg(feature = "iic0")]
+            IIC0: crate::IIC0,
+            #[cfg(feature = "iic0wu")]
+            IIC0WU: crate::IIC0WU,
+            #[cfg(feature = "iic1")]
+            IIC1: crate::IIC1,
+            #[cfg(feature = "iic2")]
+            IIC2: crate::IIC2,
+            #[cfg(feature = "ospi0_b")]
+            OSPI0_B: crate::OSPI0_B,
+            #[cfg(feature = "ospi1_b")]
+            OSPI1_B: crate::OSPI1_B,
+            #[cfg(feature = "dotf0")]
+            DOTF0: crate::DOTF0,
+            #[cfg(feature = "dotf1")]
+            DOTF1: crate::DOTF1,
+            #[cfg(feature = "crc")]
+            CRC: crate::CRC,
+            #[cfg(feature = "doc_b")]
+            DOC_B: crate::DOC_B,
+            #[cfg(feature = "gpt320")]
+            GPT320: crate::GPT320,
+            #[cfg(feature = "gpt321")]
+            GPT321: crate::GPT321,
+            #[cfg(feature = "gpt322")]
+            GPT322: crate::GPT322,
+            #[cfg(feature = "gpt323")]
+            GPT323: crate::GPT323,
+            #[cfg(feature = "gpt324")]
+            GPT324: crate::GPT324,
+            #[cfg(feature = "gpt325")]
+            GPT325: crate::GPT325,
+            #[cfg(feature = "gpt326")]
+            GPT326: crate::GPT326,
+            #[cfg(feature = "gpt327")]
+            GPT327: crate::GPT327,
+            #[cfg(feature = "gpt328")]
+            GPT328: crate::GPT328,
+            #[cfg(feature = "gpt329")]
+            GPT329: crate::GPT329,
+            #[cfg(feature = "gpt3210")]
+            GPT3210: crate::GPT3210,
+            #[cfg(feature = "gpt3211")]
+            GPT3211: crate::GPT3211,
+            #[cfg(feature = "gpt3212")]
+            GPT3212: crate::GPT3212,
+            #[cfg(feature = "gpt3213")]
+            GPT3213: crate::GPT3213,
+            #[cfg(feature = "gpt_ops")]
+            GPT_OPS: crate::GPT_OPS,
+            #[cfg(feature = "gpt_gtclk")]
+            GPT_GTCLK: crate::GPT_GTCLK,
+            #[cfg(feature = "pdg")]
+            PDG: crate::PDG,
+            #[cfg(feature = "adc_b")]
+            ADC_B: crate::ADC_B,
+            #[cfg(feature = "glcdc")]
+            GLCDC: crate::GLCDC,
+            #[cfg(feature = "mipi_dsi")]
+            MIPI_DSI: crate::MIPI_DSI,
+            #[cfg(feature = "mipi_phy0")]
+            MIPI_PHY0: crate::MIPI_PHY0,
+            #[cfg(feature = "mipi_csi0")]
+            MIPI_CSI0: crate::MIPI_CSI0,
+            #[cfg(feature = "vin0")]
+            VIN0: crate::VIN0,
+            #[cfg(feature = "ceu")]
+            CEU: crate::CEU,
+            #[cfg(feature = "usbhs")]
+            USBHS: crate::USBHS,
+            #[cfg(feature = "sci0_b")]
+            SCI0_B: crate::SCI0_B,
+            #[cfg(feature = "sci1_b")]
+            SCI1_B: crate::SCI1_B,
+            #[cfg(feature = "sci2_b")]
+            SCI2_B: crate::SCI2_B,
+            #[cfg(feature = "sci3_b")]
+            SCI3_B: crate::SCI3_B,
+            #[cfg(feature = "sci4_b")]
+            SCI4_B: crate::SCI4_B,
+            #[cfg(feature = "sci5_b")]
+            SCI5_B: crate::SCI5_B,
+            #[cfg(feature = "sci6_b")]
+            SCI6_B: crate::SCI6_B,
+            #[cfg(feature = "sci7_b")]
+            SCI7_B: crate::SCI7_B,
+            #[cfg(feature = "sci8_b")]
+            SCI8_B: crate::SCI8_B,
+            #[cfg(feature = "sci9_b")]
+            SCI9_B: crate::SCI9_B,
+            #[cfg(feature = "spi0_b")]
+            SPI0_B: crate::SPI0_B,
+            #[cfg(feature = "spi1_b")]
+            SPI1_B: crate::SPI1_B,
+            #[cfg(feature = "i3c")]
+            I3C: crate::I3C,
+            #[cfg(feature = "eccmb0")]
+            ECCMB0: crate::ECCMB0,
+            #[cfg(feature = "eccmb1")]
+            ECCMB1: crate::ECCMB1,
+            #[cfg(feature = "canfd0")]
+            CANFD0: crate::CANFD0,
+            #[cfg(feature = "canfd1")]
+            CANFD1: crate::CANFD1,
+            #[cfg(feature = "esc")]
+            ESC: crate::ESC,
+            #[cfg(feature = "esc_ini")]
+            ESC_INI: crate::ESC_INI,
+            #[cfg(feature = "mfwd")]
+            MFWD: crate::MFWD,
+            #[cfg(feature = "eswm")]
+            ESWM: crate::ESWM,
+            #[cfg(feature = "coma")]
+            COMA: crate::COMA,
+            #[cfg(feature = "rmac0")]
+            RMAC0: crate::RMAC0,
+            #[cfg(feature = "rmac1")]
+            RMAC1: crate::RMAC1,
+            #[cfg(feature = "gwca0")]
+            GWCA0: crate::GWCA0,
+            #[cfg(feature = "gptp")]
+            GPTP: crate::GPTP,
+            #[cfg(feature = "port0")]
+            PORT0: crate::PORT0,
+            #[cfg(feature = "port1")]
+            PORT1: crate::PORT1,
+            #[cfg(feature = "port2")]
+            PORT2: crate::PORT2,
+            #[cfg(feature = "port3")]
+            PORT3: crate::PORT3,
+            #[cfg(feature = "port4")]
+            PORT4: crate::PORT4,
+            #[cfg(feature = "port5")]
+            PORT5: crate::PORT5,
+            #[cfg(feature = "port6")]
+            PORT6: crate::PORT6,
+            #[cfg(feature = "port7")]
+            PORT7: crate::PORT7,
+            #[cfg(feature = "port8")]
+            PORT8: crate::PORT8,
+            #[cfg(feature = "port9")]
+            PORT9: crate::PORT9,
+            #[cfg(feature = "porta")]
+            PORTA: crate::PORTA,
+            #[cfg(feature = "portb")]
+            PORTB: crate::PORTB,
+            #[cfg(feature = "portc")]
+            PORTC: crate::PORTC,
+            #[cfg(feature = "portd")]
+            PORTD: crate::PORTD,
+            #[cfg(feature = "pfs")]
+            PFS: crate::PFS,
+            #[cfg(feature = "drw")]
+            DRW: crate::DRW,
+            #[cfg(feature = "rmpu_ns")]
+            RMPU_NS: crate::RMPU_NS,
+            #[cfg(feature = "sram_ns")]
+            SRAM_NS: crate::SRAM_NS,
+            #[cfg(feature = "bus_ns")]
+            BUS_NS: crate::BUS_NS,
+            #[cfg(feature = "icu_common_ns")]
+            ICU_COMMON_NS: crate::ICU_COMMON_NS,
+            #[cfg(feature = "cpscu_ns")]
+            CPSCU_NS: crate::CPSCU_NS,
+            #[cfg(feature = "dmac00_ns")]
+            DMAC00_NS: crate::DMAC00_NS,
+            #[cfg(feature = "dmac01_ns")]
+            DMAC01_NS: crate::DMAC01_NS,
+            #[cfg(feature = "dmac02_ns")]
+            DMAC02_NS: crate::DMAC02_NS,
+            #[cfg(feature = "dmac03_ns")]
+            DMAC03_NS: crate::DMAC03_NS,
+            #[cfg(feature = "dmac04_ns")]
+            DMAC04_NS: crate::DMAC04_NS,
+            #[cfg(feature = "dmac05_ns")]
+            DMAC05_NS: crate::DMAC05_NS,
+            #[cfg(feature = "dmac06_ns")]
+            DMAC06_NS: crate::DMAC06_NS,
+            #[cfg(feature = "dmac07_ns")]
+            DMAC07_NS: crate::DMAC07_NS,
+            #[cfg(feature = "dma0_ns")]
+            DMA0_NS: crate::DMA0_NS,
+            #[cfg(feature = "dtc0_ns")]
+            DTC0_NS: crate::DTC0_NS,
+            #[cfg(feature = "icu_ns")]
+            ICU_NS: crate::ICU_NS,
+            #[cfg(feature = "cpu_ctrl_ns")]
+            CPU_CTRL_NS: crate::CPU_CTRL_NS,
+            #[cfg(feature = "cache_ns")]
+            CACHE_NS: crate::CACHE_NS,
+            #[cfg(feature = "fcache_ns")]
+            FCACHE_NS: crate::FCACHE_NS,
+            #[cfg(feature = "tcm_ns")]
+            TCM_NS: crate::TCM_NS,
+            #[cfg(feature = "sysc_ns")]
+            SYSC_NS: crate::SYSC_NS,
+            #[cfg(feature = "ipc_ns")]
+            IPC_NS: crate::IPC_NS,
+            #[cfg(feature = "mram_ns")]
+            MRAM_NS: crate::MRAM_NS,
+            #[cfg(feature = "elc_ns")]
+            ELC_NS: crate::ELC_NS,
+            #[cfg(feature = "rtc_ns")]
+            RTC_NS: crate::RTC_NS,
+            #[cfg(feature = "iwdt_ns")]
+            IWDT_NS: crate::IWDT_NS,
+            #[cfg(feature = "cac_ns")]
+            CAC_NS: crate::CAC_NS,
+            #[cfg(feature = "wdt0_ns")]
+            WDT0_NS: crate::WDT0_NS,
+            #[cfg(feature = "wdt1_ns")]
+            WDT1_NS: crate::WDT1_NS,
+            #[cfg(feature = "mstp_ns")]
+            MSTP_NS: crate::MSTP_NS,
+            #[cfg(feature = "pscu_ns")]
+            PSCU_NS: crate::PSCU_NS,
+            #[cfg(feature = "poeg_ns")]
+            POEG_NS: crate::POEG_NS,
+            #[cfg(feature = "ulpt0_ns")]
+            ULPT0_NS: crate::ULPT0_NS,
+            #[cfg(feature = "ulpt1_ns")]
+            ULPT1_NS: crate::ULPT1_NS,
+            #[cfg(feature = "agt0_ns")]
+            AGT0_NS: crate::AGT0_NS,
+            #[cfg(feature = "agt1_ns")]
+            AGT1_NS: crate::AGT1_NS,
+            #[cfg(feature = "dac120_ns")]
+            DAC120_NS: crate::DAC120_NS,
+            #[cfg(feature = "dac121_ns")]
+            DAC121_NS: crate::DAC121_NS,
+            #[cfg(feature = "tsn_ns")]
+            TSN_NS: crate::TSN_NS,
+            #[cfg(feature = "acmphs0_ns")]
+            ACMPHS0_NS: crate::ACMPHS0_NS,
+            #[cfg(feature = "acmphs1_ns")]
+            ACMPHS1_NS: crate::ACMPHS1_NS,
+            #[cfg(feature = "acmphs2_ns")]
+            ACMPHS2_NS: crate::ACMPHS2_NS,
+            #[cfg(feature = "acmphs3_ns")]
+            ACMPHS3_NS: crate::ACMPHS3_NS,
+            #[cfg(feature = "usbfs_ns")]
+            USBFS_NS: crate::USBFS_NS,
+            #[cfg(feature = "sdhi0_ns")]
+            SDHI0_NS: crate::SDHI0_NS,
+            #[cfg(feature = "sdhi1_ns")]
+            SDHI1_NS: crate::SDHI1_NS,
+            #[cfg(feature = "pdmif_ns")]
+            PDMIF_NS: crate::PDMIF_NS,
+            #[cfg(feature = "ssie0_ns")]
+            SSIE0_NS: crate::SSIE0_NS,
+            #[cfg(feature = "ssie1_ns")]
+            SSIE1_NS: crate::SSIE1_NS,
+            #[cfg(feature = "iic0_ns")]
+            IIC0_NS: crate::IIC0_NS,
+            #[cfg(feature = "iic0wu_ns")]
+            IIC0WU_NS: crate::IIC0WU_NS,
+            #[cfg(feature = "iic1_ns")]
+            IIC1_NS: crate::IIC1_NS,
+            #[cfg(feature = "iic2_ns")]
+            IIC2_NS: crate::IIC2_NS,
+            #[cfg(feature = "ospi0_b_ns")]
+            OSPI0_B_NS: crate::OSPI0_B_NS,
+            #[cfg(feature = "ospi1_b_ns")]
+            OSPI1_B_NS: crate::OSPI1_B_NS,
+            #[cfg(feature = "dotf0_ns")]
+            DOTF0_NS: crate::DOTF0_NS,
+            #[cfg(feature = "dotf1_ns")]
+            DOTF1_NS: crate::DOTF1_NS,
+            #[cfg(feature = "crc_ns")]
+            CRC_NS: crate::CRC_NS,
+            #[cfg(feature = "doc_b_ns")]
+            DOC_B_NS: crate::DOC_B_NS,
+            #[cfg(feature = "gpt320_ns")]
+            GPT320_NS: crate::GPT320_NS,
+            #[cfg(feature = "gpt321_ns")]
+            GPT321_NS: crate::GPT321_NS,
+            #[cfg(feature = "gpt322_ns")]
+            GPT322_NS: crate::GPT322_NS,
+            #[cfg(feature = "gpt323_ns")]
+            GPT323_NS: crate::GPT323_NS,
+            #[cfg(feature = "gpt324_ns")]
+            GPT324_NS: crate::GPT324_NS,
+            #[cfg(feature = "gpt325_ns")]
+            GPT325_NS: crate::GPT325_NS,
+            #[cfg(feature = "gpt326_ns")]
+            GPT326_NS: crate::GPT326_NS,
+            #[cfg(feature = "gpt327_ns")]
+            GPT327_NS: crate::GPT327_NS,
+            #[cfg(feature = "gpt328_ns")]
+            GPT328_NS: crate::GPT328_NS,
+            #[cfg(feature = "gpt329_ns")]
+            GPT329_NS: crate::GPT329_NS,
+            #[cfg(feature = "gpt3210_ns")]
+            GPT3210_NS: crate::GPT3210_NS,
+            #[cfg(feature = "gpt3211_ns")]
+            GPT3211_NS: crate::GPT3211_NS,
+            #[cfg(feature = "gpt3212_ns")]
+            GPT3212_NS: crate::GPT3212_NS,
+            #[cfg(feature = "gpt3213_ns")]
+            GPT3213_NS: crate::GPT3213_NS,
+            #[cfg(feature = "gpt_ops_ns")]
+            GPT_OPS_NS: crate::GPT_OPS_NS,
+            #[cfg(feature = "gpt_gtclk_ns")]
+            GPT_GTCLK_NS: crate::GPT_GTCLK_NS,
+            #[cfg(feature = "pdg_ns")]
+            PDG_NS: crate::PDG_NS,
+            #[cfg(feature = "adc_b_ns")]
+            ADC_B_NS: crate::ADC_B_NS,
+            #[cfg(feature = "glcdc_ns")]
+            GLCDC_NS: crate::GLCDC_NS,
+            #[cfg(feature = "mipi_dsi_ns")]
+            MIPI_DSI_NS: crate::MIPI_DSI_NS,
+            #[cfg(feature = "mipi_phy0_ns")]
+            MIPI_PHY0_NS: crate::MIPI_PHY0_NS,
+            #[cfg(feature = "mipi_csi0_ns")]
+            MIPI_CSI0_NS: crate::MIPI_CSI0_NS,
+            #[cfg(feature = "vin0_ns")]
+            VIN0_NS: crate::VIN0_NS,
+            #[cfg(feature = "ceu_ns")]
+            CEU_NS: crate::CEU_NS,
+            #[cfg(feature = "usbhs_ns")]
+            USBHS_NS: crate::USBHS_NS,
+            #[cfg(feature = "sci0_b_ns")]
+            SCI0_B_NS: crate::SCI0_B_NS,
+            #[cfg(feature = "sci1_b_ns")]
+            SCI1_B_NS: crate::SCI1_B_NS,
+            #[cfg(feature = "sci2_b_ns")]
+            SCI2_B_NS: crate::SCI2_B_NS,
+            #[cfg(feature = "sci3_b_ns")]
+            SCI3_B_NS: crate::SCI3_B_NS,
+            #[cfg(feature = "sci4_b_ns")]
+            SCI4_B_NS: crate::SCI4_B_NS,
+            #[cfg(feature = "sci5_b_ns")]
+            SCI5_B_NS: crate::SCI5_B_NS,
+            #[cfg(feature = "sci6_b_ns")]
+            SCI6_B_NS: crate::SCI6_B_NS,
+            #[cfg(feature = "sci7_b_ns")]
+            SCI7_B_NS: crate::SCI7_B_NS,
+            #[cfg(feature = "sci8_b_ns")]
+            SCI8_B_NS: crate::SCI8_B_NS,
+            #[cfg(feature = "sci9_b_ns")]
+            SCI9_B_NS: crate::SCI9_B_NS,
+            #[cfg(feature = "spi0_b_ns")]
+            SPI0_B_NS: crate::SPI0_B_NS,
+            #[cfg(feature = "spi1_b_ns")]
+            SPI1_B_NS: crate::SPI1_B_NS,
+            #[cfg(feature = "i3c_ns")]
+            I3C_NS: crate::I3C_NS,
+            #[cfg(feature = "eccmb0_ns")]
+            ECCMB0_NS: crate::ECCMB0_NS,
+            #[cfg(feature = "eccmb1_ns")]
+            ECCMB1_NS: crate::ECCMB1_NS,
+            #[cfg(feature = "canfd0_ns")]
+            CANFD0_NS: crate::CANFD0_NS,
+            #[cfg(feature = "canfd1_ns")]
+            CANFD1_NS: crate::CANFD1_NS,
+            #[cfg(feature = "esc_ns")]
+            ESC_NS: crate::ESC_NS,
+            #[cfg(feature = "esc_ini_ns")]
+            ESC_INI_NS: crate::ESC_INI_NS,
+            #[cfg(feature = "mfwd_ns")]
+            MFWD_NS: crate::MFWD_NS,
+            #[cfg(feature = "eswm_ns")]
+            ESWM_NS: crate::ESWM_NS,
+            #[cfg(feature = "coma_ns")]
+            COMA_NS: crate::COMA_NS,
+            #[cfg(feature = "etha0_ns")]
+            ETHA0_NS: crate::ETHA0_NS,
+            #[cfg(feature = "rmac0_ns")]
+            RMAC0_NS: crate::RMAC0_NS,
+            #[cfg(feature = "etha1_ns")]
+            ETHA1_NS: crate::ETHA1_NS,
+            #[cfg(feature = "rmac1_ns")]
+            RMAC1_NS: crate::RMAC1_NS,
+            #[cfg(feature = "gwca0_ns")]
+            GWCA0_NS: crate::GWCA0_NS,
+            #[cfg(feature = "gptp_ns")]
+            GPTP_NS: crate::GPTP_NS,
+            #[cfg(feature = "port0_ns")]
+            PORT0_NS: crate::PORT0_NS,
+            #[cfg(feature = "port1_ns")]
+            PORT1_NS: crate::PORT1_NS,
+            #[cfg(feature = "port2_ns")]
+            PORT2_NS: crate::PORT2_NS,
+            #[cfg(feature = "port3_ns")]
+            PORT3_NS: crate::PORT3_NS,
+            #[cfg(feature = "port4_ns")]
+            PORT4_NS: crate::PORT4_NS,
+            #[cfg(feature = "port5_ns")]
+            PORT5_NS: crate::PORT5_NS,
+            #[cfg(feature = "port6_ns")]
+            PORT6_NS: crate::PORT6_NS,
+            #[cfg(feature = "port7_ns")]
+            PORT7_NS: crate::PORT7_NS,
+            #[cfg(feature = "port8_ns")]
+            PORT8_NS: crate::PORT8_NS,
+            #[cfg(feature = "port9_ns")]
+            PORT9_NS: crate::PORT9_NS,
+            #[cfg(feature = "porta_ns")]
+            PORTA_NS: crate::PORTA_NS,
+            #[cfg(feature = "portb_ns")]
+            PORTB_NS: crate::PORTB_NS,
+            #[cfg(feature = "portc_ns")]
+            PORTC_NS: crate::PORTC_NS,
+            #[cfg(feature = "portd_ns")]
+            PORTD_NS: crate::PORTD_NS,
+            #[cfg(feature = "pfs_ns")]
+            PFS_NS: crate::PFS_NS,
+            #[cfg(feature = "drw_ns")]
+            DRW_NS: crate::DRW_NS,
+        }
+    }
+}

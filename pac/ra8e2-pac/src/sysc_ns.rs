@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.00.01, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:22:53 +0000
+// Generated from SVD 1.00.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:54:26 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::SyscNs {
         self.ptr
     }
 
+    #[doc = "Standby Control Register"]
     #[inline(always)]
     pub const fn sbycr(&self) -> &'static crate::common::Reg<self::Sbycr_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "System Clock Division Control Register"]
     #[inline(always)]
     pub const fn sckdivcr(
         &self,
@@ -54,6 +56,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "System Clock Division Control Register 2"]
     #[inline(always)]
     pub const fn sckdivcr2(
         &self,
@@ -65,6 +68,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "System Clock Source Control Register"]
     #[inline(always)]
     pub const fn sckscr(
         &self,
@@ -76,6 +80,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "PLL Clock Control Register"]
     #[inline(always)]
     pub const fn pllccr(
         &self,
@@ -87,6 +92,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "PLL Control Register"]
     #[inline(always)]
     pub const fn pllcr(&self) -> &'static crate::common::Reg<self::Pllcr_SPEC, crate::common::RW> {
         unsafe {
@@ -96,6 +102,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "External Bus Clock Control Register"]
     #[inline(always)]
     pub const fn bckcr(&self) -> &'static crate::common::Reg<self::Bckcr_SPEC, crate::common::RW> {
         unsafe {
@@ -105,6 +112,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Main Clock Oscillator Control Register"]
     #[inline(always)]
     pub const fn mosccr(
         &self,
@@ -116,6 +124,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "High-Speed On-Chip Oscillator Control Register"]
     #[inline(always)]
     pub const fn hococr(
         &self,
@@ -127,6 +136,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "High-Speed On-Chip Oscillator Control Register2"]
     #[inline(always)]
     pub const fn hococr2(
         &self,
@@ -138,6 +148,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Middle-Speed On-Chip Oscillator Control Register"]
     #[inline(always)]
     pub const fn mococr(
         &self,
@@ -149,6 +160,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "FLL Control Register1"]
     #[inline(always)]
     pub const fn fllcr1(
         &self,
@@ -160,6 +172,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "FLL Control Register2"]
     #[inline(always)]
     pub const fn fllcr2(
         &self,
@@ -171,6 +184,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Oscillation Stabilization Flag Register"]
     #[inline(always)]
     pub const fn oscsf(&self) -> &'static crate::common::Reg<self::Oscsf_SPEC, crate::common::R> {
         unsafe {
@@ -180,6 +194,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Clock Out Control Register"]
     #[inline(always)]
     pub const fn ckocr(&self) -> &'static crate::common::Reg<self::Ckocr_SPEC, crate::common::RW> {
         unsafe {
@@ -189,6 +204,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Trace Clock Control Register"]
     #[inline(always)]
     pub const fn trckcr(
         &self,
@@ -200,6 +216,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Oscillation Stop Detection Control Register"]
     #[inline(always)]
     pub const fn ostdcr(
         &self,
@@ -211,6 +228,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Oscillation Stop Detection Status Register"]
     #[inline(always)]
     pub const fn ostdsr(
         &self,
@@ -222,6 +240,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Oscillator Monitor Register"]
     #[inline(always)]
     pub const fn oscmonr(
         &self,
@@ -233,6 +252,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "PLL2 Clock Control Register"]
     #[inline(always)]
     pub const fn pll2ccr(
         &self,
@@ -244,6 +264,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "PLL2 Control Register"]
     #[inline(always)]
     pub const fn pll2cr(
         &self,
@@ -255,6 +276,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "PLL Clock Control Register 2"]
     #[inline(always)]
     pub const fn pllccr2(
         &self,
@@ -266,6 +288,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "PLL2 Clock Control Register 2"]
     #[inline(always)]
     pub const fn pll2ccr2(
         &self,
@@ -277,6 +300,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "External Bus Clock Output Control Register"]
     #[inline(always)]
     pub const fn ebckocr(
         &self,
@@ -288,6 +312,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "SDRAM Clock Output Control Register"]
     #[inline(always)]
     pub const fn sdckocr(
         &self,
@@ -299,6 +324,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "SCI clock Division control register"]
     #[inline(always)]
     pub const fn scickdivcr(
         &self,
@@ -310,6 +336,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "SCI clock control register"]
     #[inline(always)]
     pub const fn scickcr(
         &self,
@@ -321,6 +348,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "SPI clock Division control register"]
     #[inline(always)]
     pub const fn spickdivcr(
         &self,
@@ -332,6 +360,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "SPI clock control register"]
     #[inline(always)]
     pub const fn spickcr(
         &self,
@@ -343,6 +372,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "LCD clock Division control register"]
     #[inline(always)]
     pub const fn lcdckdivcr(
         &self,
@@ -354,6 +384,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "LCD clock control register"]
     #[inline(always)]
     pub const fn lcdckcr(
         &self,
@@ -365,6 +396,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "MOCO User Trimming Control Register"]
     #[inline(always)]
     pub const fn mocoutcr(
         &self,
@@ -376,6 +408,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "HOCO User Trimming Control Register"]
     #[inline(always)]
     pub const fn hocoutcr(
         &self,
@@ -387,6 +420,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "USB Clock Division Control Register"]
     #[inline(always)]
     pub const fn usbckdivcr(
         &self,
@@ -398,6 +432,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Octal-SPI Clock Division Control Register"]
     #[inline(always)]
     pub const fn octackdivcr(
         &self,
@@ -409,6 +444,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "CANFD Core Clock Division Control Register"]
     #[inline(always)]
     pub const fn canfdckdivcr(
         &self,
@@ -420,6 +456,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "USB Clock Control Register"]
     #[inline(always)]
     pub const fn usbckcr(
         &self,
@@ -431,6 +468,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Octal-SPI Clock Control Register"]
     #[inline(always)]
     pub const fn octackcr(
         &self,
@@ -442,6 +480,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "CANFD Core Clock Control Register"]
     #[inline(always)]
     pub const fn canfdckcr(
         &self,
@@ -453,6 +492,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Main Clock Oscillator Standby Control Register"]
     #[inline(always)]
     pub const fn moscscr(
         &self,
@@ -464,6 +504,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "High-Speed On-Chip Oscillator Standby Control Register"]
     #[inline(always)]
     pub const fn hocoscr(
         &self,
@@ -475,6 +516,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Operating Power Control Register"]
     #[inline(always)]
     pub const fn opccr(&self) -> &'static crate::common::Reg<self::Opccr_SPEC, crate::common::RW> {
         unsafe {
@@ -484,6 +526,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Main Clock Oscillator Wait Control Register"]
     #[inline(always)]
     pub const fn moscwtcr(
         &self,
@@ -495,6 +538,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Reset Status Register 1"]
     #[inline(always)]
     pub const fn rstsr1(
         &self,
@@ -506,6 +550,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "System Register Access Control Register"]
     #[inline(always)]
     pub const fn syraccr(
         &self,
@@ -517,6 +562,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Voltage Monitor %s Circuit Control Register 1"]
     #[inline(always)]
     pub const fn pvdcr1(
         &self,
@@ -529,7 +575,28 @@ impl super::SyscNs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xe0usize))
         }
     }
+    #[inline(always)]
+    pub const fn pvd1cr1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pvdcr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pvdcr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pvd2cr1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pvdcr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pvdcr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe2usize),
+            )
+        }
+    }
 
+    #[doc = "Voltage Monitor %s Circuit Status Register"]
     #[inline(always)]
     pub const fn pvdsr(
         &self,
@@ -542,7 +609,24 @@ impl super::SyscNs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xe1usize))
         }
     }
+    #[inline(always)]
+    pub const fn pvd1sr(&self) -> &'static crate::common::Reg<self::Pvdsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pvdsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe1usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pvd2sr(&self) -> &'static crate::common::Reg<self::Pvdsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pvdsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe3usize),
+            )
+        }
+    }
 
+    #[doc = "Graphics Power Domain Control Register"]
     #[inline(always)]
     pub const fn pdctrgd(
         &self,
@@ -554,6 +638,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "SRAM Power Domain Standby Control Register 0"]
     #[inline(always)]
     pub const fn pdramscr0(
         &self,
@@ -565,6 +650,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "SRAM Power Domain Standby Control Register 1"]
     #[inline(always)]
     pub const fn pdramscr1(
         &self,
@@ -576,6 +662,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "VBATT Backup Register Privilege Attribute Boundary Address Register for Non-secure Region"]
     #[inline(always)]
     pub const fn vbrpabarns(
         &self,
@@ -587,6 +674,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Clock Generation Function Security Attribute Register"]
     #[inline(always)]
     pub const fn cgfsar(
         &self,
@@ -598,6 +686,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Reset Security Attribution Register"]
     #[inline(always)]
     pub const fn rstsar(
         &self,
@@ -609,6 +698,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Low Power Mode Security Attribution Register"]
     #[inline(always)]
     pub const fn lpmsar(
         &self,
@@ -620,6 +710,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Programable Voltage Detection Security Attribution Register"]
     #[inline(always)]
     pub const fn pvdsar(
         &self,
@@ -631,6 +722,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Battery Backup Function Security Attribute Register"]
     #[inline(always)]
     pub const fn bbfsar(
         &self,
@@ -642,6 +734,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Power Gating Control Security Attribution Register"]
     #[inline(always)]
     pub const fn pgcsar(
         &self,
@@ -653,6 +746,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribution Register"]
     #[inline(always)]
     pub const fn dpfsar(
         &self,
@@ -664,6 +758,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "RAM Standby Control Security Attribution Register"]
     #[inline(always)]
     pub const fn rscsar(
         &self,
@@ -675,6 +770,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Protect Register for Non-secure (PRCR_NS)"]
     #[inline(always)]
     pub const fn prcr_ns(
         &self,
@@ -686,6 +782,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Low-Speed On-Chip Oscillator Control Register"]
     #[inline(always)]
     pub const fn lococr(
         &self,
@@ -697,6 +794,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "LOCO User Trimming Control Register"]
     #[inline(always)]
     pub const fn locoutcr(
         &self,
@@ -708,6 +806,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Deep Software Standby Control Register"]
     #[inline(always)]
     pub const fn dpsbycr(
         &self,
@@ -719,6 +818,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Deep Software Standby Wait Control Register"]
     #[inline(always)]
     pub const fn dpswcr(
         &self,
@@ -730,6 +830,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Deep Software Standby Interrupt Enable Register 0"]
     #[inline(always)]
     pub const fn dpsier0(
         &self,
@@ -741,6 +842,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Deep Software Standby Interrupt Enable Register 1"]
     #[inline(always)]
     pub const fn dpsier1(
         &self,
@@ -752,6 +854,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Deep Software Standby Interrupt Enable Register 2"]
     #[inline(always)]
     pub const fn dpsier2(
         &self,
@@ -763,6 +866,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Deep Software Standby Interrupt Enable Register 3"]
     #[inline(always)]
     pub const fn dpsier3(
         &self,
@@ -774,6 +878,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Deep Software Standby Interrupt Flag Register 0"]
     #[inline(always)]
     pub const fn dpsifr0(
         &self,
@@ -785,6 +890,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Deep Software Standby Interrupt Flag Register 1"]
     #[inline(always)]
     pub const fn dpsifr1(
         &self,
@@ -796,6 +902,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Deep Software Standby Interrupt Flag Register 2"]
     #[inline(always)]
     pub const fn dpsifr2(
         &self,
@@ -807,6 +914,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Deep Software Standby Interrupt Flag Register 3"]
     #[inline(always)]
     pub const fn dpsifr3(
         &self,
@@ -818,6 +926,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Deep Software Standby Interrupt Edge Register 0"]
     #[inline(always)]
     pub const fn dpsiegr0(
         &self,
@@ -829,6 +938,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Deep Software Standby Interrupt Edge Register 1"]
     #[inline(always)]
     pub const fn dpsiegr1(
         &self,
@@ -840,6 +950,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Deep Software Standby Interrupt Edge Register 2"]
     #[inline(always)]
     pub const fn dpsiegr2(
         &self,
@@ -851,6 +962,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "System Control OCD Control Register"]
     #[inline(always)]
     pub const fn syocdcr(
         &self,
@@ -862,6 +974,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Reset Status Register 0"]
     #[inline(always)]
     pub const fn rstsr0(
         &self,
@@ -873,6 +986,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Reset Status Register 2"]
     #[inline(always)]
     pub const fn rstsr2(
         &self,
@@ -884,6 +998,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Main Clock Oscillator Mode Oscillation Control Register"]
     #[inline(always)]
     pub const fn momcr(&self) -> &'static crate::common::Reg<self::Momcr_SPEC, crate::common::RW> {
         unsafe {
@@ -893,6 +1008,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Flash P/E Protect Register"]
     #[inline(always)]
     pub const fn fwepror(
         &self,
@@ -904,6 +1020,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Voltage Monitor %s Comparator Control Register"]
     #[inline(always)]
     pub const fn pvdcmpcr(
         &self,
@@ -916,7 +1033,28 @@ impl super::SyscNs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xa58usize))
         }
     }
+    #[inline(always)]
+    pub const fn pvd1cmpcr(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pvdcmpcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pvdcmpcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa58usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pvd2cmpcr(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pvdcmpcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pvdcmpcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa5cusize),
+            )
+        }
+    }
 
+    #[doc = "Voltage Monitor %s Circuit Control Register 0"]
     #[inline(always)]
     pub const fn pvdcr0(
         &self,
@@ -929,7 +1067,28 @@ impl super::SyscNs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xa70usize))
         }
     }
+    #[inline(always)]
+    pub const fn pvd1cr0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pvdcr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pvdcr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa70usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pvd2cr0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pvdcr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pvdcr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa74usize),
+            )
+        }
+    }
 
+    #[doc = "Battery Backup Voltage Monitor Function Select Register"]
     #[inline(always)]
     pub const fn vbattmnselr(
         &self,
@@ -941,6 +1100,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "VBATT Battery Power Supply Control Register 1"]
     #[inline(always)]
     pub const fn vbtbpcr1(
         &self,
@@ -952,6 +1112,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Low Power State Control Register"]
     #[inline(always)]
     pub const fn lpscr(&self) -> &'static crate::common::Reg<self::Lpscr_SPEC, crate::common::RW> {
         unsafe {
@@ -961,6 +1122,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Software Standby Control Register 1"]
     #[inline(always)]
     pub const fn sscr1(&self) -> &'static crate::common::Reg<self::Sscr1_SPEC, crate::common::RW> {
         unsafe {
@@ -970,6 +1132,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Low Voltage Operation Control register"]
     #[inline(always)]
     pub const fn lvocr(&self) -> &'static crate::common::Reg<self::Lvocr_SPEC, crate::common::RW> {
         unsafe {
@@ -979,6 +1142,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "PLL1-LDO Control Register"]
     #[inline(always)]
     pub const fn pll1ldocr(
         &self,
@@ -990,6 +1154,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "PLL2-LDO Control Register"]
     #[inline(always)]
     pub const fn pll2ldocr(
         &self,
@@ -1001,6 +1166,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "HOCO-LDO Control Register"]
     #[inline(always)]
     pub const fn hocoldocr(
         &self,
@@ -1012,6 +1178,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Voltage Monitor %s Function Control Register"]
     #[inline(always)]
     pub const fn pvdfcr(
         &self,
@@ -1024,7 +1191,28 @@ impl super::SyscNs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xb20usize))
         }
     }
+    #[inline(always)]
+    pub const fn pvd1fcr(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pvdfcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pvdfcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xb20usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pvd2fcr(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pvdfcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pvdfcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xb24usize),
+            )
+        }
+    }
 
+    #[doc = "Sub-Clock Oscillator Control Register"]
     #[inline(always)]
     pub const fn sosccr(
         &self,
@@ -1036,6 +1224,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "Sub-Clock Oscillator Mode Control Register"]
     #[inline(always)]
     pub const fn somcr(&self) -> &'static crate::common::Reg<self::Somcr_SPEC, crate::common::RW> {
         unsafe {
@@ -1045,6 +1234,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "VBATT Backup Enable Register"]
     #[inline(always)]
     pub const fn vbtber(
         &self,
@@ -1056,6 +1246,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "VBATT Battery Power Supply Control Register 2"]
     #[inline(always)]
     pub const fn vbtbpcr2(
         &self,
@@ -1067,6 +1258,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "VBATT Battery Power Supply Status Register"]
     #[inline(always)]
     pub const fn vbtbpsr(
         &self,
@@ -1078,6 +1270,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "VBATT Tamper detection Status Register"]
     #[inline(always)]
     pub const fn vbtadsr(
         &self,
@@ -1089,6 +1282,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "VBATT Tamper detection Control Register 1"]
     #[inline(always)]
     pub const fn vbtadcr1(
         &self,
@@ -1100,6 +1294,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "VBATT Tamper detection Control Register 2"]
     #[inline(always)]
     pub const fn vbtadcr2(
         &self,
@@ -1111,6 +1306,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "VBATT Input Control Register"]
     #[inline(always)]
     pub const fn vbtictlr(
         &self,
@@ -1122,6 +1318,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "VBATT Input Control Register 2"]
     #[inline(always)]
     pub const fn vbtictlr2(
         &self,
@@ -1133,6 +1330,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "VBATT Input Monitor Register"]
     #[inline(always)]
     pub const fn vbtimonr(
         &self,
@@ -1144,6 +1342,7 @@ impl super::SyscNs {
         }
     }
 
+    #[doc = "VBATT Backup Register"]
     #[inline(always)]
     pub const fn vbtbkr(
         &self,
@@ -1164,9 +1363,11 @@ impl crate::sealed::RegSpec for Sbycr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Standby Control Register"]
 pub type Sbycr = crate::RegValueT<Sbycr_SPEC>;
 
 impl Sbycr {
+    #[doc = "Output Port Enable"]
     #[inline(always)]
     pub fn ope(
         self,
@@ -1204,8 +1405,10 @@ pub mod sbycr {
     pub struct Ope_SPEC;
     pub type Ope = crate::EnumBitfieldStruct<u8, Ope_SPEC>;
     impl Ope {
+        #[doc = "In Software Standby mode or Deep Software Standby mode, set the address bus and other bus control signal to the high-impedance state."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "In Software Standby mode or Deep Software Standby mode, address bus and other bus control signal retain the output state."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1216,9 +1419,11 @@ impl crate::sealed::RegSpec for Sckdivcr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "System Clock Division Control Register"]
 pub type Sckdivcr = crate::RegValueT<Sckdivcr_SPEC>;
 
 impl Sckdivcr {
+    #[doc = "Peripheral Module Clock D (PCLKD) Select"]
     #[inline(always)]
     pub fn pckd(
         self,
@@ -1244,6 +1449,7 @@ impl Sckdivcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Peripheral Module Clock C (PCLKC) Select"]
     #[inline(always)]
     pub fn pckc(
         self,
@@ -1269,6 +1475,7 @@ impl Sckdivcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Peripheral Module Clock B (PCLKB) Select"]
     #[inline(always)]
     pub fn pckb(
         self,
@@ -1294,6 +1501,7 @@ impl Sckdivcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Peripheral Module Clock A (PCLKA) Select"]
     #[inline(always)]
     pub fn pcka(
         self,
@@ -1319,6 +1527,7 @@ impl Sckdivcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "External Bus Clock (BCLK) Select"]
     #[inline(always)]
     pub fn bck(
         self,
@@ -1344,6 +1553,7 @@ impl Sckdivcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "System Clock (ICLK) Select"]
     #[inline(always)]
     pub fn ick(
         self,
@@ -1369,6 +1579,7 @@ impl Sckdivcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "FlashIF Clock (FCLK) Select"]
     #[inline(always)]
     pub fn fck(
         self,
@@ -1406,182 +1617,259 @@ pub mod sckdivcr {
     pub struct Pckd_SPEC;
     pub type Pckd = crate::EnumBitfieldStruct<u8, Pckd_SPEC>;
     impl Pckd {
+        #[doc = "x 1/1"]
         pub const _0000: Self = Self::new(0);
 
+        #[doc = "x 1/2"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "x 1/4"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "x 1/8"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "x 1/16"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "x 1/32"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "x 1/64"]
         pub const _0110: Self = Self::new(6);
 
+        #[doc = "x 1/3"]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "x 1/6"]
         pub const _1001: Self = Self::new(9);
 
+        #[doc = "x 1/12"]
         pub const _1010: Self = Self::new(10);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pckc_SPEC;
     pub type Pckc = crate::EnumBitfieldStruct<u8, Pckc_SPEC>;
     impl Pckc {
+        #[doc = "x 1/1"]
         pub const _0000: Self = Self::new(0);
 
+        #[doc = "x 1/2"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "x 1/4"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "x 1/8"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "x 1/16"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "x 1/32"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "x 1/64"]
         pub const _0110: Self = Self::new(6);
 
+        #[doc = "x 1/3"]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "x 1/6"]
         pub const _1001: Self = Self::new(9);
 
+        #[doc = "x 1/12"]
         pub const _1010: Self = Self::new(10);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pckb_SPEC;
     pub type Pckb = crate::EnumBitfieldStruct<u8, Pckb_SPEC>;
     impl Pckb {
+        #[doc = "x 1/1"]
         pub const _0000: Self = Self::new(0);
 
+        #[doc = "x 1/2"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "x 1/4"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "x 1/8"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "x 1/16"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "x 1/32"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "x 1/64"]
         pub const _0110: Self = Self::new(6);
 
+        #[doc = "x 1/3"]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "x 1/6"]
         pub const _1001: Self = Self::new(9);
 
+        #[doc = "x 1/12"]
         pub const _1010: Self = Self::new(10);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcka_SPEC;
     pub type Pcka = crate::EnumBitfieldStruct<u8, Pcka_SPEC>;
     impl Pcka {
+        #[doc = "x 1/1"]
         pub const _0000: Self = Self::new(0);
 
+        #[doc = "x 1/2"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "x 1/4"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "x 1/8"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "x 1/16"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "x 1/32"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "x 1/64"]
         pub const _0110: Self = Self::new(6);
 
+        #[doc = "x 1/3"]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "x 1/6"]
         pub const _1001: Self = Self::new(9);
 
+        #[doc = "x 1/12"]
         pub const _1010: Self = Self::new(10);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bck_SPEC;
     pub type Bck = crate::EnumBitfieldStruct<u8, Bck_SPEC>;
     impl Bck {
+        #[doc = "x 1/1"]
         pub const _0000: Self = Self::new(0);
 
+        #[doc = "x 1/2"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "x 1/4"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "x 1/8"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "x 1/16"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "x 1/32"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "x 1/64"]
         pub const _0110: Self = Self::new(6);
 
+        #[doc = "x 1/3"]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "x 1/6"]
         pub const _1001: Self = Self::new(9);
 
+        #[doc = "x 1/12"]
         pub const _1010: Self = Self::new(10);
 
+        #[doc = "Settings prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ick_SPEC;
     pub type Ick = crate::EnumBitfieldStruct<u8, Ick_SPEC>;
     impl Ick {
+        #[doc = "x 1/1"]
         pub const _0000: Self = Self::new(0);
 
+        #[doc = "x 1/2"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "x 1/4"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "x 1/8"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "x 1/16"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "x 1/32"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "x 1/64"]
         pub const _0110: Self = Self::new(6);
 
+        #[doc = "x 1/3"]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "x 1/6"]
         pub const _1001: Self = Self::new(9);
 
+        #[doc = "x 1/12"]
         pub const _1010: Self = Self::new(10);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Fck_SPEC;
     pub type Fck = crate::EnumBitfieldStruct<u8, Fck_SPEC>;
     impl Fck {
+        #[doc = "x 1/1"]
         pub const _0000: Self = Self::new(0);
 
+        #[doc = "x 1/2"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "x 1/4"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "x 1/8"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "x 1/16"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "x 1/32"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "x 1/64"]
         pub const _0110: Self = Self::new(6);
 
+        #[doc = "x 1/3"]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "x 1/6"]
         pub const _1001: Self = Self::new(9);
 
+        #[doc = "x 1/12"]
         pub const _1010: Self = Self::new(10);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -1592,9 +1880,11 @@ impl crate::sealed::RegSpec for Sckdivcr2_SPEC {
     type DataType = u8;
 }
 
+#[doc = "System Clock Division Control Register 2"]
 pub type Sckdivcr2 = crate::RegValueT<Sckdivcr2_SPEC>;
 
 impl Sckdivcr2 {
+    #[doc = "CPU Clock (CPUCLK) Select"]
     #[inline(always)]
     pub fn cpuck(
         self,
@@ -1632,26 +1922,37 @@ pub mod sckdivcr2 {
     pub struct Cpuck_SPEC;
     pub type Cpuck = crate::EnumBitfieldStruct<u8, Cpuck_SPEC>;
     impl Cpuck {
+        #[doc = "x 1/1"]
         pub const _0000: Self = Self::new(0);
 
+        #[doc = "x 1/2"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "x 1/4"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "x 1/8"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "x 1/16"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "x 1/32"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "x 1/64"]
         pub const _0110: Self = Self::new(6);
 
+        #[doc = "x 1/3"]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "x 1/6"]
         pub const _1001: Self = Self::new(9);
 
+        #[doc = "x 1/12"]
         pub const _1010: Self = Self::new(10);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -1662,9 +1963,11 @@ impl crate::sealed::RegSpec for Sckscr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "System Clock Source Control Register"]
 pub type Sckscr = crate::RegValueT<Sckscr_SPEC>;
 
 impl Sckscr {
+    #[doc = "Clock Source Select"]
     #[inline(always)]
     pub fn cksel(
         self,
@@ -1702,20 +2005,28 @@ pub mod sckscr {
     pub struct Cksel_SPEC;
     pub type Cksel = crate::EnumBitfieldStruct<u8, Cksel_SPEC>;
     impl Cksel {
+        #[doc = "HOCO"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "MOCO (Value after reset)"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "Setting prohibited"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Main clock oscillator (MOSC)"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "Sub-clock oscillator (SOSC)"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "PLL1 output clock P (PLL1P)"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "Setting prohibited"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting prohibited"]
         pub const _111: Self = Self::new(7);
     }
 }
@@ -1726,9 +2037,11 @@ impl crate::sealed::RegSpec for Pllccr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "PLL Clock Control Register"]
 pub type Pllccr = crate::RegValueT<Pllccr_SPEC>;
 
 impl Pllccr {
+    #[doc = "PLL1 Input Frequency Division Ratio Select"]
     #[inline(always)]
     pub fn plidiv(
         self,
@@ -1754,6 +2067,7 @@ impl Pllccr {
         >::from_register(self, 0)
     }
 
+    #[doc = "PLL1 Clock Source Select"]
     #[inline(always)]
     pub fn plsrcsel(
         self,
@@ -1779,6 +2093,7 @@ impl Pllccr {
         >::from_register(self, 0)
     }
 
+    #[doc = "PLL1 Frequency Multiplication Fractional Factor Select"]
     #[inline(always)]
     pub fn pllmulnf(
         self,
@@ -1804,6 +2119,7 @@ impl Pllccr {
         >::from_register(self, 0)
     }
 
+    #[doc = "PLL1 Frequency Multiplication Factor Select"]
     #[inline(always)]
     pub fn pllmul(
         self,
@@ -1823,32 +2139,42 @@ pub mod pllccr {
     pub struct Plidiv_SPEC;
     pub type Plidiv = crate::EnumBitfieldStruct<u8, Plidiv_SPEC>;
     impl Plidiv {
+        #[doc = "1/1"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "1/2"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "1/3"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "1/4"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Plsrcsel_SPEC;
     pub type Plsrcsel = crate::EnumBitfieldStruct<u8, Plsrcsel_SPEC>;
     impl Plsrcsel {
+        #[doc = "Main clock oscillator"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "HOCO"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pllmulnf_SPEC;
     pub type Pllmulnf = crate::EnumBitfieldStruct<u8, Pllmulnf_SPEC>;
     impl Pllmulnf {
+        #[doc = "0.00 (Value after reset)"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "0.33 (1/3)"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "0.66 (2/3)"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "0.50 (1/2)"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -1859,9 +2185,11 @@ impl crate::sealed::RegSpec for Pllcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "PLL Control Register"]
 pub type Pllcr = crate::RegValueT<Pllcr_SPEC>;
 
 impl Pllcr {
+    #[doc = "PLL1 Stop Control"]
     #[inline(always)]
     pub fn pllstp(
         self,
@@ -1899,8 +2227,10 @@ pub mod pllcr {
     pub struct Pllstp_SPEC;
     pub type Pllstp = crate::EnumBitfieldStruct<u8, Pllstp_SPEC>;
     impl Pllstp {
+        #[doc = "PLL1 is operating"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "PLL1 is stopped"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1911,9 +2241,11 @@ impl crate::sealed::RegSpec for Bckcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "External Bus Clock Control Register"]
 pub type Bckcr = crate::RegValueT<Bckcr_SPEC>;
 
 impl Bckcr {
+    #[doc = "BCLK Pin Output Select"]
     #[inline(always)]
     pub fn bclkdiv(
         self,
@@ -1951,8 +2283,10 @@ pub mod bckcr {
     pub struct Bclkdiv_SPEC;
     pub type Bclkdiv = crate::EnumBitfieldStruct<u8, Bclkdiv_SPEC>;
     impl Bclkdiv {
+        #[doc = "BCLK"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "BCLK/2"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1963,9 +2297,11 @@ impl crate::sealed::RegSpec for Mosccr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Main Clock Oscillator Control Register"]
 pub type Mosccr = crate::RegValueT<Mosccr_SPEC>;
 
 impl Mosccr {
+    #[doc = "Main Clock Oscillator Stop"]
     #[inline(always)]
     pub fn mostp(
         self,
@@ -2003,8 +2339,10 @@ pub mod mosccr {
     pub struct Mostp_SPEC;
     pub type Mostp = crate::EnumBitfieldStruct<u8, Mostp_SPEC>;
     impl Mostp {
+        #[doc = "Operate the main clock oscillator"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stop the main clock oscillator"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2015,9 +2353,11 @@ impl crate::sealed::RegSpec for Hococr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High-Speed On-Chip Oscillator Control Register"]
 pub type Hococr = crate::RegValueT<Hococr_SPEC>;
 
 impl Hococr {
+    #[doc = "HOCO Stop"]
     #[inline(always)]
     pub fn hcstp(
         self,
@@ -2055,8 +2395,10 @@ pub mod hococr {
     pub struct Hcstp_SPEC;
     pub type Hcstp = crate::EnumBitfieldStruct<u8, Hcstp_SPEC>;
     impl Hcstp {
+        #[doc = "Operate the HOCO clock"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stop the HOCO clock"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2067,9 +2409,11 @@ impl crate::sealed::RegSpec for Hococr2_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High-Speed On-Chip Oscillator Control Register2"]
 pub type Hococr2 = crate::RegValueT<Hococr2_SPEC>;
 
 impl Hococr2 {
+    #[doc = "HOCO Frequency Setting 0"]
     #[inline(always)]
     pub fn hcfrq0(
         self,
@@ -2107,14 +2451,19 @@ pub mod hococr2 {
     pub struct Hcfrq0_SPEC;
     pub type Hcfrq0 = crate::EnumBitfieldStruct<u8, Hcfrq0_SPEC>;
     impl Hcfrq0 {
+        #[doc = "16MHz"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "18MHz"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "20MHz"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "32MHz"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "48MHz"]
         pub const _111: Self = Self::new(7);
     }
 }
@@ -2125,9 +2474,11 @@ impl crate::sealed::RegSpec for Mococr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Middle-Speed On-Chip Oscillator Control Register"]
 pub type Mococr = crate::RegValueT<Mococr_SPEC>;
 
 impl Mococr {
+    #[doc = "MOCO Stop"]
     #[inline(always)]
     pub fn mcstp(
         self,
@@ -2165,8 +2516,10 @@ pub mod mococr {
     pub struct Mcstp_SPEC;
     pub type Mcstp = crate::EnumBitfieldStruct<u8, Mcstp_SPEC>;
     impl Mcstp {
+        #[doc = "MOCO clock is operating"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "MOCO clock is stopped"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2177,9 +2530,11 @@ impl crate::sealed::RegSpec for Fllcr1_SPEC {
     type DataType = u8;
 }
 
+#[doc = "FLL Control Register1"]
 pub type Fllcr1 = crate::RegValueT<Fllcr1_SPEC>;
 
 impl Fllcr1 {
+    #[doc = "FLL Enable"]
     #[inline(always)]
     pub fn fllen(
         self,
@@ -2217,8 +2572,10 @@ pub mod fllcr1 {
     pub struct Fllen_SPEC;
     pub type Fllen = crate::EnumBitfieldStruct<u8, Fllen_SPEC>;
     impl Fllen {
+        #[doc = "FLL function is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FLL function is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2229,9 +2586,11 @@ impl crate::sealed::RegSpec for Fllcr2_SPEC {
     type DataType = u16;
 }
 
+#[doc = "FLL Control Register2"]
 pub type Fllcr2 = crate::RegValueT<Fllcr2_SPEC>;
 
 impl Fllcr2 {
+    #[doc = "FLL Multiplication Control"]
     #[inline(always)]
     pub fn fllcntl(
         self,
@@ -2254,9 +2613,11 @@ impl crate::sealed::RegSpec for Oscsf_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Oscillation Stabilization Flag Register"]
 pub type Oscsf = crate::RegValueT<Oscsf_SPEC>;
 
 impl Oscsf {
+    #[doc = "HOCO Clock Oscillation Stabilization Flag"]
     #[inline(always)]
     pub fn hocosf(
         self,
@@ -2282,6 +2643,7 @@ impl Oscsf {
         >::from_register(self, 0)
     }
 
+    #[doc = "Main Clock Oscillation Stabilization Flag"]
     #[inline(always)]
     pub fn moscsf(
         self,
@@ -2307,6 +2669,7 @@ impl Oscsf {
         >::from_register(self, 0)
     }
 
+    #[doc = "PLL1 Clock Oscillation Stabilization Flag"]
     #[inline(always)]
     pub fn pllsf(
         self,
@@ -2332,6 +2695,7 @@ impl Oscsf {
         >::from_register(self, 0)
     }
 
+    #[doc = "PLL2 Clock Oscillation Stabilization Flag"]
     #[inline(always)]
     pub fn pll2sf(
         self,
@@ -2369,32 +2733,40 @@ pub mod oscsf {
     pub struct Hocosf_SPEC;
     pub type Hocosf = crate::EnumBitfieldStruct<u8, Hocosf_SPEC>;
     impl Hocosf {
+        #[doc = "The HOCO clock is stopped or is not yet stable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The HOCO clock is stable, so is available for use as the system clock source"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Moscsf_SPEC;
     pub type Moscsf = crate::EnumBitfieldStruct<u8, Moscsf_SPEC>;
     impl Moscsf {
+        #[doc = "The main clock oscillator is stopped or is not yet stable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The main clock oscillator is stable, so is available for use as the system clock source"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pllsf_SPEC;
     pub type Pllsf = crate::EnumBitfieldStruct<u8, Pllsf_SPEC>;
     impl Pllsf {
+        #[doc = "The PLL1 clock is stopped or is not yet stable."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The PLL1 clock is stable, so is available for use as the system clock source"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pll2Sf_SPEC;
     pub type Pll2Sf = crate::EnumBitfieldStruct<u8, Pll2Sf_SPEC>;
     impl Pll2Sf {
+        #[doc = "The PLL2 clock is stopped or is not yet stable."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The PLL2 clock is stable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2405,9 +2777,11 @@ impl crate::sealed::RegSpec for Ckocr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Clock Out Control Register"]
 pub type Ckocr = crate::RegValueT<Ckocr_SPEC>;
 
 impl Ckocr {
+    #[doc = "Clock Out Source Select"]
     #[inline(always)]
     pub fn ckosel(
         self,
@@ -2433,6 +2807,7 @@ impl Ckocr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Clock Output Frequency Division Ratio"]
     #[inline(always)]
     pub fn ckodiv(
         self,
@@ -2458,6 +2833,7 @@ impl Ckocr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Clock Out Enable"]
     #[inline(always)]
     pub fn ckoen(
         self,
@@ -2495,44 +2871,60 @@ pub mod ckocr {
     pub struct Ckosel_SPEC;
     pub type Ckosel = crate::EnumBitfieldStruct<u8, Ckosel_SPEC>;
     impl Ckosel {
+        #[doc = "HOCO"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "MOCO (Value after reset)"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "LOCO"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "MOSC"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "SOSC"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ckodiv_SPEC;
     pub type Ckodiv = crate::EnumBitfieldStruct<u8, Ckodiv_SPEC>;
     impl Ckodiv {
+        #[doc = "x 1/1"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "x 1/2"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "x 1/4"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "x 1/8"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "x 1/16"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "x 1/32"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "x 1/128"]
         pub const _111: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ckoen_SPEC;
     pub type Ckoen = crate::EnumBitfieldStruct<u8, Ckoen_SPEC>;
     impl Ckoen {
+        #[doc = "Disable clock out"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable clock out"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2543,9 +2935,11 @@ impl crate::sealed::RegSpec for Trckcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Trace Clock Control Register"]
 pub type Trckcr = crate::RegValueT<Trckcr_SPEC>;
 
 impl Trckcr {
+    #[doc = "Trace Clock operating frequency select"]
     #[inline(always)]
     pub fn trck(
         self,
@@ -2571,6 +2965,7 @@ impl Trckcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Trace Clock source select"]
     #[inline(always)]
     pub fn trcksel(
         self,
@@ -2596,6 +2991,7 @@ impl Trckcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Trace Clock operating Enable"]
     #[inline(always)]
     pub fn trcken(
         self,
@@ -2633,46 +3029,63 @@ pub mod trckcr {
     pub struct Trck_SPEC;
     pub type Trck = crate::EnumBitfieldStruct<u8, Trck_SPEC>;
     impl Trck {
+        #[doc = "1/1"]
         pub const _0000: Self = Self::new(0);
 
+        #[doc = "1/2"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "1/4 (Value after reset)"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "1/8"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "1/16"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "1/32"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "1/64"]
         pub const _0110: Self = Self::new(6);
 
+        #[doc = "1/128"]
         pub const _0111: Self = Self::new(7);
 
+        #[doc = "1/256"]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "1/3"]
         pub const _1001: Self = Self::new(9);
 
+        #[doc = "1/6"]
         pub const _1010: Self = Self::new(10);
 
+        #[doc = "1/12"]
         pub const _1011: Self = Self::new(11);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Trcksel_SPEC;
     pub type Trcksel = crate::EnumBitfieldStruct<u8, Trcksel_SPEC>;
     impl Trcksel {
+        #[doc = "System clock source (Value after reset)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "HOCO (oscillation in debug mode)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Trcken_SPEC;
     pub type Trcken = crate::EnumBitfieldStruct<u8, Trcken_SPEC>;
     impl Trcken {
+        #[doc = "Stop"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Operation enable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2683,9 +3096,11 @@ impl crate::sealed::RegSpec for Ostdcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Oscillation Stop Detection Control Register"]
 pub type Ostdcr = crate::RegValueT<Ostdcr_SPEC>;
 
 impl Ostdcr {
+    #[doc = "Oscillation Stop Detection Interrupt Enable"]
     #[inline(always)]
     pub fn ostdie(
         self,
@@ -2711,6 +3126,7 @@ impl Ostdcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Oscillation Stop Detection Function Enable"]
     #[inline(always)]
     pub fn ostde(
         self,
@@ -2748,16 +3164,20 @@ pub mod ostdcr {
     pub struct Ostdie_SPEC;
     pub type Ostdie = crate::EnumBitfieldStruct<u8, Ostdie_SPEC>;
     impl Ostdie {
+        #[doc = "Disable oscillation stop detection interrupt (do not notify the POEG)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable oscillation stop detection interrupt (notify the POEG)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ostde_SPEC;
     pub type Ostde = crate::EnumBitfieldStruct<u8, Ostde_SPEC>;
     impl Ostde {
+        #[doc = "Disable oscillation stop detection function"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable oscillation stop detection function"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2768,9 +3188,11 @@ impl crate::sealed::RegSpec for Ostdsr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Oscillation Stop Detection Status Register"]
 pub type Ostdsr = crate::RegValueT<Ostdsr_SPEC>;
 
 impl Ostdsr {
+    #[doc = "Oscillation Stop Detection Flag"]
     #[inline(always)]
     pub fn ostdf(
         self,
@@ -2808,8 +3230,10 @@ pub mod ostdsr {
     pub struct Ostdf_SPEC;
     pub type Ostdf = crate::EnumBitfieldStruct<u8, Ostdf_SPEC>;
     impl Ostdf {
+        #[doc = "Main clock oscillation stop not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Main clock oscillation stop detected"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2820,9 +3244,11 @@ impl crate::sealed::RegSpec for Oscmonr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Oscillator Monitor Register"]
 pub type Oscmonr = crate::RegValueT<Oscmonr_SPEC>;
 
 impl Oscmonr {
+    #[doc = "MOCO operation monitor"]
     #[inline(always)]
     pub fn mocomon(
         self,
@@ -2848,6 +3274,7 @@ impl Oscmonr {
         >::from_register(self, 0)
     }
 
+    #[doc = "LOCO operation monitor"]
     #[inline(always)]
     pub fn locomon(
         self,
@@ -2885,16 +3312,20 @@ pub mod oscmonr {
     pub struct Mocomon_SPEC;
     pub type Mocomon = crate::EnumBitfieldStruct<u8, Mocomon_SPEC>;
     impl Mocomon {
+        #[doc = "MOCO is set to operate."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "MOCO is set to stop."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Locomon_SPEC;
     pub type Locomon = crate::EnumBitfieldStruct<u8, Locomon_SPEC>;
     impl Locomon {
+        #[doc = "LOCO is set to operate."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "LOCO is set to stop."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2905,9 +3336,11 @@ impl crate::sealed::RegSpec for Pll2Ccr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "PLL2 Clock Control Register"]
 pub type Pll2Ccr = crate::RegValueT<Pll2Ccr_SPEC>;
 
 impl Pll2Ccr {
+    #[doc = "PLL2 Input Frequency Division Ratio Select"]
     #[inline(always)]
     pub fn pl2idiv(
         self,
@@ -2933,6 +3366,7 @@ impl Pll2Ccr {
         >::from_register(self, 0)
     }
 
+    #[doc = "PLL2 Clock Source Select"]
     #[inline(always)]
     pub fn pl2srcsel(
         self,
@@ -2958,6 +3392,7 @@ impl Pll2Ccr {
         >::from_register(self, 0)
     }
 
+    #[doc = "PLL2 Frequency Multiplication Fractional Factor Select"]
     #[inline(always)]
     pub fn pll2mulnf(
         self,
@@ -2983,6 +3418,7 @@ impl Pll2Ccr {
         >::from_register(self, 0)
     }
 
+    #[doc = "PLL2 Frequency Multiplication Factor Select"]
     #[inline(always)]
     pub fn pll2mul(
         self,
@@ -3002,32 +3438,42 @@ pub mod pll2ccr {
     pub struct Pl2Idiv_SPEC;
     pub type Pl2Idiv = crate::EnumBitfieldStruct<u8, Pl2Idiv_SPEC>;
     impl Pl2Idiv {
+        #[doc = "1/1 (Value after reset)"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "1/2"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "1/3"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "1/4"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pl2Srcsel_SPEC;
     pub type Pl2Srcsel = crate::EnumBitfieldStruct<u8, Pl2Srcsel_SPEC>;
     impl Pl2Srcsel {
+        #[doc = "Main clock oscillator"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "HOCO"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pll2Mulnf_SPEC;
     pub type Pll2Mulnf = crate::EnumBitfieldStruct<u8, Pll2Mulnf_SPEC>;
     impl Pll2Mulnf {
+        #[doc = "0.00 (Value after reset)"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "0.33 (1/3)"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "0.66 (2/3)"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "0.50 (1/2)"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -3038,9 +3484,11 @@ impl crate::sealed::RegSpec for Pll2Cr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "PLL2 Control Register"]
 pub type Pll2Cr = crate::RegValueT<Pll2Cr_SPEC>;
 
 impl Pll2Cr {
+    #[doc = "PLL2 Stop Control"]
     #[inline(always)]
     pub fn pll2stp(
         self,
@@ -3078,8 +3526,10 @@ pub mod pll2cr {
     pub struct Pll2Stp_SPEC;
     pub type Pll2Stp = crate::EnumBitfieldStruct<u8, Pll2Stp_SPEC>;
     impl Pll2Stp {
+        #[doc = "PLL2 is operating"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "PLL2 is stopped"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3090,9 +3540,11 @@ impl crate::sealed::RegSpec for Pllccr2_SPEC {
     type DataType = u16;
 }
 
+#[doc = "PLL Clock Control Register 2"]
 pub type Pllccr2 = crate::RegValueT<Pllccr2_SPEC>;
 
 impl Pllccr2 {
+    #[doc = "PLL1 Output Frequency Division Ratio Select for output clock P"]
     #[inline(always)]
     pub fn plodivp(
         self,
@@ -3118,6 +3570,7 @@ impl Pllccr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "PLL1 Output Frequency Division Ratio Select for output clock Q"]
     #[inline(always)]
     pub fn plodivq(
         self,
@@ -3143,6 +3596,7 @@ impl Pllccr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "PLL1 Output Frequency Division Ratio Select for output clock R"]
     #[inline(always)]
     pub fn plodivr(
         self,
@@ -3180,56 +3634,78 @@ pub mod pllccr2 {
     pub struct Plodivp_SPEC;
     pub type Plodivp = crate::EnumBitfieldStruct<u8, Plodivp_SPEC>;
     impl Plodivp {
+        #[doc = "× 1/2"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "× 1/4"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "× 1/6 (Value after reset)"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "× 1/8"]
         pub const _0111: Self = Self::new(7);
 
+        #[doc = "× 1/16"]
         pub const _1111: Self = Self::new(15);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Plodivq_SPEC;
     pub type Plodivq = crate::EnumBitfieldStruct<u8, Plodivq_SPEC>;
     impl Plodivq {
+        #[doc = "× 1/2"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "× 1/3"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "× 1/4"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "× 1/5"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "× 1/6 (Value after reset)"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "× 1/8"]
         pub const _0111: Self = Self::new(7);
 
+        #[doc = "× 1/9"]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Plodivr_SPEC;
     pub type Plodivr = crate::EnumBitfieldStruct<u8, Plodivr_SPEC>;
     impl Plodivr {
+        #[doc = "× 1/2"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "× 1/3"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "× 1/4"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "× 1/5"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "× 1/6 (Value after reset)"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "× 1/8"]
         pub const _0111: Self = Self::new(7);
 
+        #[doc = "× 1/9"]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -3240,9 +3716,11 @@ impl crate::sealed::RegSpec for Pll2Ccr2_SPEC {
     type DataType = u16;
 }
 
+#[doc = "PLL2 Clock Control Register 2"]
 pub type Pll2Ccr2 = crate::RegValueT<Pll2Ccr2_SPEC>;
 
 impl Pll2Ccr2 {
+    #[doc = "PLL2 Output Frequency Division Ratio Select for output clock P"]
     #[inline(always)]
     pub fn pl2odivp(
         self,
@@ -3268,6 +3746,7 @@ impl Pll2Ccr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "PLL2 Output Frequency Division Ratio Select for output clock Q"]
     #[inline(always)]
     pub fn pl2odivq(
         self,
@@ -3293,6 +3772,7 @@ impl Pll2Ccr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "PLL2 Output Frequency Division Ratio Select for output clock R"]
     #[inline(always)]
     pub fn pl2odivr(
         self,
@@ -3330,56 +3810,78 @@ pub mod pll2ccr2 {
     pub struct Pl2Odivp_SPEC;
     pub type Pl2Odivp = crate::EnumBitfieldStruct<u8, Pl2Odivp_SPEC>;
     impl Pl2Odivp {
+        #[doc = "× 1/2"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "× 1/4"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "× 1/6 (Value after reset)"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "× 1/8"]
         pub const _0111: Self = Self::new(7);
 
+        #[doc = "× 1/16"]
         pub const _1111: Self = Self::new(15);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pl2Odivq_SPEC;
     pub type Pl2Odivq = crate::EnumBitfieldStruct<u8, Pl2Odivq_SPEC>;
     impl Pl2Odivq {
+        #[doc = "× 1/2"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "× 1/3"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "× 1/4"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "× 1/5"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "× 1/6 (Value after reset)"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "× 1/8"]
         pub const _0111: Self = Self::new(7);
 
+        #[doc = "× 1/9"]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pl2Odivr_SPEC;
     pub type Pl2Odivr = crate::EnumBitfieldStruct<u8, Pl2Odivr_SPEC>;
     impl Pl2Odivr {
+        #[doc = "× 1/2"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "× 1/3"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "× 1/4"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "× 1/5"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "× 1/6 (Value after reset)"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "× 1/8"]
         pub const _0111: Self = Self::new(7);
 
+        #[doc = "× 1/9"]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -3390,9 +3892,11 @@ impl crate::sealed::RegSpec for Ebckocr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "External Bus Clock Output Control Register"]
 pub type Ebckocr = crate::RegValueT<Ebckocr_SPEC>;
 
 impl Ebckocr {
+    #[doc = "EBCLK Pin Output Control"]
     #[inline(always)]
     pub fn ebckoen(
         self,
@@ -3430,8 +3934,10 @@ pub mod ebckocr {
     pub struct Ebckoen_SPEC;
     pub type Ebckoen = crate::EnumBitfieldStruct<u8, Ebckoen_SPEC>;
     impl Ebckoen {
+        #[doc = "EBCLK pin output is disabled (fixed high)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "EBCLK pin output is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3442,9 +3948,11 @@ impl crate::sealed::RegSpec for Sdckocr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SDRAM Clock Output Control Register"]
 pub type Sdckocr = crate::RegValueT<Sdckocr_SPEC>;
 
 impl Sdckocr {
+    #[doc = "SDCLK Pin Output Control"]
     #[inline(always)]
     pub fn sdckoen(
         self,
@@ -3482,8 +3990,10 @@ pub mod sdckocr {
     pub struct Sdckoen_SPEC;
     pub type Sdckoen = crate::EnumBitfieldStruct<u8, Sdckoen_SPEC>;
     impl Sdckoen {
+        #[doc = "SDCLK pin output is disabled. (Fixed high)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "SDCLK pin output is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3494,9 +4004,11 @@ impl crate::sealed::RegSpec for Scickdivcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SCI clock Division control register"]
 pub type Scickdivcr = crate::RegValueT<Scickdivcr_SPEC>;
 
 impl Scickdivcr {
+    #[doc = "SCI clock (SCICLK) Division Select"]
     #[inline(always)]
     pub fn scickdiv(
         self,
@@ -3534,20 +4046,28 @@ pub mod scickdivcr {
     pub struct Scickdiv_SPEC;
     pub type Scickdiv = crate::EnumBitfieldStruct<u8, Scickdiv_SPEC>;
     impl Scickdiv {
+        #[doc = "1/1 (Value after reset)"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "1/2"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "1/4"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "1/6"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "1/8"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "1/3"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "1/5"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -3558,9 +4078,11 @@ impl crate::sealed::RegSpec for Scickcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SCI clock control register"]
 pub type Scickcr = crate::RegValueT<Scickcr_SPEC>;
 
 impl Scickcr {
+    #[doc = "SCI clock (SCICLK) Source Select"]
     #[inline(always)]
     pub fn scicksel(
         self,
@@ -3586,6 +4108,7 @@ impl Scickcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SCI clock (SCICLK) Switching Request"]
     #[inline(always)]
     pub fn scicksreq(
         self,
@@ -3611,6 +4134,7 @@ impl Scickcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SCI clock (SCICLK) Switching Ready state flag"]
     #[inline(always)]
     pub fn scicksrdy(
         self,
@@ -3648,44 +4172,60 @@ pub mod scickcr {
     pub struct Scicksel_SPEC;
     pub type Scicksel = crate::EnumBitfieldStruct<u8, Scicksel_SPEC>;
     impl Scicksel {
+        #[doc = "HOCO"]
         pub const _0000: Self = Self::new(0);
 
+        #[doc = "MOCO (Value after reset)"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "LOCO"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "Main clock oscillator"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "Sub-clock oscillator"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "PLL1P"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "PLL2P"]
         pub const _0110: Self = Self::new(6);
 
+        #[doc = "PLL1Q"]
         pub const _0111: Self = Self::new(7);
 
+        #[doc = "PLL1R"]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "PLL2Q"]
         pub const _1001: Self = Self::new(9);
 
+        #[doc = "PLL2R"]
         pub const _1010: Self = Self::new(10);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Scicksreq_SPEC;
     pub type Scicksreq = crate::EnumBitfieldStruct<u8, Scicksreq_SPEC>;
     impl Scicksreq {
+        #[doc = "No request"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Request switching"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Scicksrdy_SPEC;
     pub type Scicksrdy = crate::EnumBitfieldStruct<u8, Scicksrdy_SPEC>;
     impl Scicksrdy {
+        #[doc = "Impossible to Switch"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Possible to Switch"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3696,9 +4236,11 @@ impl crate::sealed::RegSpec for Spickdivcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SPI clock Division control register"]
 pub type Spickdivcr = crate::RegValueT<Spickdivcr_SPEC>;
 
 impl Spickdivcr {
+    #[doc = "SPI clock (SPICLK) Division Select"]
     #[inline(always)]
     pub fn spickdiv(
         self,
@@ -3736,20 +4278,28 @@ pub mod spickdivcr {
     pub struct Spickdiv_SPEC;
     pub type Spickdiv = crate::EnumBitfieldStruct<u8, Spickdiv_SPEC>;
     impl Spickdiv {
+        #[doc = "1/1 (Value after reset)"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "1/2"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "1/4"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "1/6"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "1/8"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "1/3"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "1/5"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -3760,9 +4310,11 @@ impl crate::sealed::RegSpec for Spickcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SPI clock control register"]
 pub type Spickcr = crate::RegValueT<Spickcr_SPEC>;
 
 impl Spickcr {
+    #[doc = "SPI clock (SPICLK) Source Select"]
     #[inline(always)]
     pub fn spicksel(
         self,
@@ -3788,6 +4340,7 @@ impl Spickcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI clock (SPICLK) Switching Request"]
     #[inline(always)]
     pub fn spicksreq(
         self,
@@ -3813,6 +4366,7 @@ impl Spickcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI clock (SPICLK) Switching Ready state flag"]
     #[inline(always)]
     pub fn spicksrdy(
         self,
@@ -3850,44 +4404,60 @@ pub mod spickcr {
     pub struct Spicksel_SPEC;
     pub type Spicksel = crate::EnumBitfieldStruct<u8, Spicksel_SPEC>;
     impl Spicksel {
+        #[doc = "HOCO"]
         pub const _0000: Self = Self::new(0);
 
+        #[doc = "MOCO (Value after reset)"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "LOCO"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "Main clock oscillator"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "Sub-clock oscillator"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "PLL1P"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "PLL2P"]
         pub const _0110: Self = Self::new(6);
 
+        #[doc = "PLL1Q"]
         pub const _0111: Self = Self::new(7);
 
+        #[doc = "PLL1R"]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "PLL2Q"]
         pub const _1001: Self = Self::new(9);
 
+        #[doc = "PLL2R"]
         pub const _1010: Self = Self::new(10);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spicksreq_SPEC;
     pub type Spicksreq = crate::EnumBitfieldStruct<u8, Spicksreq_SPEC>;
     impl Spicksreq {
+        #[doc = "No request"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Request switching"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spicksrdy_SPEC;
     pub type Spicksrdy = crate::EnumBitfieldStruct<u8, Spicksrdy_SPEC>;
     impl Spicksrdy {
+        #[doc = "Impossible to Switch"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Possible to Switch"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3898,9 +4468,11 @@ impl crate::sealed::RegSpec for Lcdckdivcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "LCD clock Division control register"]
 pub type Lcdckdivcr = crate::RegValueT<Lcdckdivcr_SPEC>;
 
 impl Lcdckdivcr {
+    #[doc = "LCD clock (LCDCLK) Division Select"]
     #[inline(always)]
     pub fn lcdckdiv(
         self,
@@ -3938,20 +4510,28 @@ pub mod lcdckdivcr {
     pub struct Lcdckdiv_SPEC;
     pub type Lcdckdiv = crate::EnumBitfieldStruct<u8, Lcdckdiv_SPEC>;
     impl Lcdckdiv {
+        #[doc = "1/1"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "1/2"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "1/4"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "1/6"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "1/8"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "1/3"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "1/5"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -3962,9 +4542,11 @@ impl crate::sealed::RegSpec for Lcdckcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "LCD clock control register"]
 pub type Lcdckcr = crate::RegValueT<Lcdckcr_SPEC>;
 
 impl Lcdckcr {
+    #[doc = "LCD clock (LCDCLK) Source Select"]
     #[inline(always)]
     pub fn lcdcksel(
         self,
@@ -3990,6 +4572,7 @@ impl Lcdckcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "LCD clock (LCDCLK) Switching Request"]
     #[inline(always)]
     pub fn lcdcksreq(
         self,
@@ -4015,6 +4598,7 @@ impl Lcdckcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "LCD clock (LCDCLK) Switching Ready state flag"]
     #[inline(always)]
     pub fn lcdcksrdy(
         self,
@@ -4052,36 +4636,48 @@ pub mod lcdckcr {
     pub struct Lcdcksel_SPEC;
     pub type Lcdcksel = crate::EnumBitfieldStruct<u8, Lcdcksel_SPEC>;
     impl Lcdcksel {
+        #[doc = "MOCO (Value after reset)"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "PLL1P"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "PLL2P"]
         pub const _0110: Self = Self::new(6);
 
+        #[doc = "PLL1Q"]
         pub const _0111: Self = Self::new(7);
 
+        #[doc = "PLL1R"]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "PLL2Q"]
         pub const _1001: Self = Self::new(9);
 
+        #[doc = "PLL2R"]
         pub const _1010: Self = Self::new(10);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lcdcksreq_SPEC;
     pub type Lcdcksreq = crate::EnumBitfieldStruct<u8, Lcdcksreq_SPEC>;
     impl Lcdcksreq {
+        #[doc = "No request"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Request switching"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lcdcksrdy_SPEC;
     pub type Lcdcksrdy = crate::EnumBitfieldStruct<u8, Lcdcksrdy_SPEC>;
     impl Lcdcksrdy {
+        #[doc = "Impossible to Switch"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Possible to Switch"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4092,9 +4688,11 @@ impl crate::sealed::RegSpec for Mocoutcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "MOCO User Trimming Control Register"]
 pub type Mocoutcr = crate::RegValueT<Mocoutcr_SPEC>;
 
 impl Mocoutcr {
+    #[doc = "MOCO User Trimming"]
     #[inline(always)]
     pub fn mocoutrm(
         self,
@@ -4116,9 +4714,11 @@ impl crate::sealed::RegSpec for Hocoutcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "HOCO User Trimming Control Register"]
 pub type Hocoutcr = crate::RegValueT<Hocoutcr_SPEC>;
 
 impl Hocoutcr {
+    #[doc = "HOCO User Trimming"]
     #[inline(always)]
     pub fn hocoutrm(
         self,
@@ -4140,9 +4740,11 @@ impl crate::sealed::RegSpec for Usbckdivcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "USB Clock Division Control Register"]
 pub type Usbckdivcr = crate::RegValueT<Usbckdivcr_SPEC>;
 
 impl Usbckdivcr {
+    #[doc = "USB Clock (USBCLK) Division Select"]
     #[inline(always)]
     pub fn usbckdiv(
         self,
@@ -4180,20 +4782,28 @@ pub mod usbckdivcr {
     pub struct Usbckdiv_SPEC;
     pub type Usbckdiv = crate::EnumBitfieldStruct<u8, Usbckdiv_SPEC>;
     impl Usbckdiv {
+        #[doc = "1/1"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "1/2"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "1/4"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "1/6"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "1/8"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "1/3"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "1/5"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -4204,9 +4814,11 @@ impl crate::sealed::RegSpec for Octackdivcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Octal-SPI Clock Division Control Register"]
 pub type Octackdivcr = crate::RegValueT<Octackdivcr_SPEC>;
 
 impl Octackdivcr {
+    #[doc = "Octal-SPI Clock (OCTACLK) Division Select"]
     #[inline(always)]
     pub fn octackdiv(
         self,
@@ -4244,20 +4856,28 @@ pub mod octackdivcr {
     pub struct Octackdiv_SPEC;
     pub type Octackdiv = crate::EnumBitfieldStruct<u8, Octackdiv_SPEC>;
     impl Octackdiv {
+        #[doc = "1/1 (Value after reset)"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "1/2"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "1/4"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "1/6"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "1/8"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "1/3"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "1/5"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -4268,9 +4888,11 @@ impl crate::sealed::RegSpec for Canfdckdivcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CANFD Core Clock Division Control Register"]
 pub type Canfdckdivcr = crate::RegValueT<Canfdckdivcr_SPEC>;
 
 impl Canfdckdivcr {
+    #[doc = "CANFD core clock (CANFDCLK) Division Select"]
     #[inline(always)]
     pub fn canfdckdiv(
         self,
@@ -4308,20 +4930,28 @@ pub mod canfdckdivcr {
     pub struct Canfdckdiv_SPEC;
     pub type Canfdckdiv = crate::EnumBitfieldStruct<u8, Canfdckdiv_SPEC>;
     impl Canfdckdiv {
+        #[doc = "1/1 (Value after reset)"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "1/2"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "1/4"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "1/6"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "1/8"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "1/3"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "1/5"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -4332,9 +4962,11 @@ impl crate::sealed::RegSpec for Usbckcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "USB Clock Control Register"]
 pub type Usbckcr = crate::RegValueT<Usbckcr_SPEC>;
 
 impl Usbckcr {
+    #[doc = "USB Clock (USBCLK) Source Select"]
     #[inline(always)]
     pub fn usbcksel(
         self,
@@ -4360,6 +4992,7 @@ impl Usbckcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "USB Clock (USBCLK) Switching Request"]
     #[inline(always)]
     pub fn usbcksreq(
         self,
@@ -4385,6 +5018,7 @@ impl Usbckcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "USB Clock (USBCLK) Switching Ready state flag"]
     #[inline(always)]
     pub fn usbcksrdy(
         self,
@@ -4422,40 +5056,54 @@ pub mod usbckcr {
     pub struct Usbcksel_SPEC;
     pub type Usbcksel = crate::EnumBitfieldStruct<u8, Usbcksel_SPEC>;
     impl Usbcksel {
+        #[doc = "HOCO"]
         pub const _0000: Self = Self::new(0);
 
+        #[doc = "MOCO (Value after reset)"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "Main clock oscillator"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "PLL1P"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "PLL2P"]
         pub const _0110: Self = Self::new(6);
 
+        #[doc = "PLL1Q"]
         pub const _0111: Self = Self::new(7);
 
+        #[doc = "PLL1R"]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "PLL2Q"]
         pub const _1001: Self = Self::new(9);
 
+        #[doc = "PLL2R"]
         pub const _1010: Self = Self::new(10);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Usbcksreq_SPEC;
     pub type Usbcksreq = crate::EnumBitfieldStruct<u8, Usbcksreq_SPEC>;
     impl Usbcksreq {
+        #[doc = "No request"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Request switching."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Usbcksrdy_SPEC;
     pub type Usbcksrdy = crate::EnumBitfieldStruct<u8, Usbcksrdy_SPEC>;
     impl Usbcksrdy {
+        #[doc = "Impossible to Switch"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Possible to Switch"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4466,9 +5114,11 @@ impl crate::sealed::RegSpec for Octackcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Octal-SPI Clock Control Register"]
 pub type Octackcr = crate::RegValueT<Octackcr_SPEC>;
 
 impl Octackcr {
+    #[doc = "Octal-SPI Clock (OCTACLK) Source Select"]
     #[inline(always)]
     pub fn octacksel(
         self,
@@ -4494,6 +5144,7 @@ impl Octackcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Octal-SPI Clock (OCTACLK) Switching Request"]
     #[inline(always)]
     pub fn octacksreq(
         self,
@@ -4519,6 +5170,7 @@ impl Octackcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Octal-SPI Clock (OCTACLK) Switching Ready state flag"]
     #[inline(always)]
     pub fn octacksrdy(
         self,
@@ -4556,44 +5208,60 @@ pub mod octackcr {
     pub struct Octacksel_SPEC;
     pub type Octacksel = crate::EnumBitfieldStruct<u8, Octacksel_SPEC>;
     impl Octacksel {
+        #[doc = "HOCO"]
         pub const _0000: Self = Self::new(0);
 
+        #[doc = "MOCO (Value after reset)"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "LOCO"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "Main clock oscillator"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "Sub-clock oscillator"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "PLL1P"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "PLL2P"]
         pub const _0110: Self = Self::new(6);
 
+        #[doc = "PLL1Q"]
         pub const _0111: Self = Self::new(7);
 
+        #[doc = "PLL1R"]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "PLL2Q"]
         pub const _1001: Self = Self::new(9);
 
+        #[doc = "PLL2R"]
         pub const _1010: Self = Self::new(10);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Octacksreq_SPEC;
     pub type Octacksreq = crate::EnumBitfieldStruct<u8, Octacksreq_SPEC>;
     impl Octacksreq {
+        #[doc = "No request"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Request switching."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Octacksrdy_SPEC;
     pub type Octacksrdy = crate::EnumBitfieldStruct<u8, Octacksrdy_SPEC>;
     impl Octacksrdy {
+        #[doc = "Impossible to Switch"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Possible to Switch"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4604,9 +5272,11 @@ impl crate::sealed::RegSpec for Canfdckcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CANFD Core Clock Control Register"]
 pub type Canfdckcr = crate::RegValueT<Canfdckcr_SPEC>;
 
 impl Canfdckcr {
+    #[doc = "CANFD Core Clock (CANFDCLK) Source Select"]
     #[inline(always)]
     pub fn canfdcksel(
         self,
@@ -4632,6 +5302,7 @@ impl Canfdckcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "CANFD Core Clock (CANFDCLK) Switching Request"]
     #[inline(always)]
     pub fn canfdcksreq(
         self,
@@ -4669,36 +5340,50 @@ pub mod canfdckcr {
     pub struct Canfdcksel_SPEC;
     pub type Canfdcksel = crate::EnumBitfieldStruct<u8, Canfdcksel_SPEC>;
     impl Canfdcksel {
+        #[doc = "HOCO"]
         pub const _0000: Self = Self::new(0);
 
+        #[doc = "MOCO (Value after reset)"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "LOCO"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "Main clock oscillator"]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "Sub-clock oscillator"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "PLL1P"]
         pub const _0101: Self = Self::new(5);
 
+        #[doc = "PLL2P"]
         pub const _0110: Self = Self::new(6);
 
+        #[doc = "PLL1Q"]
         pub const _0111: Self = Self::new(7);
 
+        #[doc = "PLL1R"]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "PLL2Q"]
         pub const _1001: Self = Self::new(9);
 
+        #[doc = "PLL2R"]
         pub const _1010: Self = Self::new(10);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Canfdcksreq_SPEC;
     pub type Canfdcksreq = crate::EnumBitfieldStruct<u8, Canfdcksreq_SPEC>;
     impl Canfdcksreq {
+        #[doc = "No request"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Request switching"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4709,9 +5394,11 @@ impl crate::sealed::RegSpec for Moscscr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Main Clock Oscillator Standby Control Register"]
 pub type Moscscr = crate::RegValueT<Moscscr_SPEC>;
 
 impl Moscscr {
+    #[doc = "Main Clock Oscillator Standby Oscillation Keep select"]
     #[inline(always)]
     pub fn moscsokp(
         self,
@@ -4749,8 +5436,10 @@ pub mod moscscr {
     pub struct Moscsokp_SPEC;
     pub type Moscsokp = crate::EnumBitfieldStruct<u8, Moscsokp_SPEC>;
     impl Moscsokp {
+        #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4761,9 +5450,11 @@ impl crate::sealed::RegSpec for Hocoscr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High-Speed On-Chip Oscillator Standby Control Register"]
 pub type Hocoscr = crate::RegValueT<Hocoscr_SPEC>;
 
 impl Hocoscr {
+    #[doc = "HOCO Standby Oscillation Keep select."]
     #[inline(always)]
     pub fn hocosokp(
         self,
@@ -4801,8 +5492,10 @@ pub mod hocoscr {
     pub struct Hocosokp_SPEC;
     pub type Hocosokp = crate::EnumBitfieldStruct<u8, Hocosokp_SPEC>;
     impl Hocosokp {
+        #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4813,9 +5506,11 @@ impl crate::sealed::RegSpec for Opccr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Operating Power Control Register"]
 pub type Opccr = crate::RegValueT<Opccr_SPEC>;
 
 impl Opccr {
+    #[doc = "Operating Power Control Mode Select"]
     #[inline(always)]
     pub fn opcm(
         self,
@@ -4841,6 +5536,7 @@ impl Opccr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Operating Power Control Mode Transition Status Flag"]
     #[inline(always)]
     pub fn opcmtsf(
         self,
@@ -4878,20 +5574,26 @@ pub mod opccr {
     pub struct Opcm_SPEC;
     pub type Opcm = crate::EnumBitfieldStruct<u8, Opcm_SPEC>;
     impl Opcm {
+        #[doc = "High-speed mode"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Setting prohibited"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Setting prohibited"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Low-speed mode"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Opcmtsf_SPEC;
     pub type Opcmtsf = crate::EnumBitfieldStruct<u8, Opcmtsf_SPEC>;
     impl Opcmtsf {
+        #[doc = "Transition completed"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "During transition"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4902,9 +5604,11 @@ impl crate::sealed::RegSpec for Moscwtcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Main Clock Oscillator Wait Control Register"]
 pub type Moscwtcr = crate::RegValueT<Moscwtcr_SPEC>;
 
 impl Moscwtcr {
+    #[doc = "Main Clock Oscillator Wait Time Setting"]
     #[inline(always)]
     pub fn msts(
         self,
@@ -4942,26 +5646,37 @@ pub mod moscwtcr {
     pub struct Msts_SPEC;
     pub type Msts = crate::EnumBitfieldStruct<u8, Msts_SPEC>;
     impl Msts {
+        #[doc = "Wait time = 3 cycles (11.4 us)"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Wait time = 35 cycles (133.5 us)"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Wait time = 67 cycles (255.6 us)"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Wait time = 131 cycles (499.7 us)"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Wait time = 259 cycles (988.0 us)"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Wait time = 547 cycles (2086.6 us)"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Wait time = 1059 cycles (4039.8 us)"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Wait time = 2147 cycles (8190.2 us)"]
         pub const _0_X_7: Self = Self::new(7);
 
+        #[doc = "Wait time = 4291 cycles (16368.9 us)"]
         pub const _0_X_8: Self = Self::new(8);
 
+        #[doc = "Wait time = 8163 cycles (31139.4 us)"]
         pub const _0_X_9: Self = Self::new(9);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -4972,9 +5687,11 @@ impl crate::sealed::RegSpec for Rstsr1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Reset Status Register 1"]
 pub type Rstsr1 = crate::RegValueT<Rstsr1_SPEC>;
 
 impl Rstsr1 {
+    #[doc = "Independent Watchdog Timer Reset Detect Flag"]
     #[inline(always)]
     pub fn iwdtrf(
         self,
@@ -5000,6 +5717,7 @@ impl Rstsr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Watchdog Timer Reset Detect Flag"]
     #[inline(always)]
     pub fn wdt0rf(
         self,
@@ -5025,6 +5743,7 @@ impl Rstsr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Software Reset Detect Flag"]
     #[inline(always)]
     pub fn swrf(
         self,
@@ -5050,6 +5769,7 @@ impl Rstsr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "CPU Lockup Reset Detect Flag"]
     #[inline(always)]
     pub fn clu0rf(
         self,
@@ -5075,6 +5795,7 @@ impl Rstsr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus Error Reset Detect Flag"]
     #[inline(always)]
     pub fn busrf(
         self,
@@ -5100,6 +5821,7 @@ impl Rstsr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common Memory Error Reset Detect Flag"]
     #[inline(always)]
     pub fn cmrf(
         self,
@@ -5137,48 +5859,60 @@ pub mod rstsr1 {
     pub struct Iwdtrf_SPEC;
     pub type Iwdtrf = crate::EnumBitfieldStruct<u8, Iwdtrf_SPEC>;
     impl Iwdtrf {
+        #[doc = "Independent watchdog timer reset not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Independent watchdog timer reset detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wdt0Rf_SPEC;
     pub type Wdt0Rf = crate::EnumBitfieldStruct<u8, Wdt0Rf_SPEC>;
     impl Wdt0Rf {
+        #[doc = "Watchdog timer reset not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Watchdog timer reset detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Swrf_SPEC;
     pub type Swrf = crate::EnumBitfieldStruct<u8, Swrf_SPEC>;
     impl Swrf {
+        #[doc = "Software reset not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software reset detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clu0Rf_SPEC;
     pub type Clu0Rf = crate::EnumBitfieldStruct<u8, Clu0Rf_SPEC>;
     impl Clu0Rf {
+        #[doc = "CPU Lockup reset not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CPU Lockup reset detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Busrf_SPEC;
     pub type Busrf = crate::EnumBitfieldStruct<u8, Busrf_SPEC>;
     impl Busrf {
+        #[doc = "Bus error reset not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus error reset detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmrf_SPEC;
     pub type Cmrf = crate::EnumBitfieldStruct<u8, Cmrf_SPEC>;
     impl Cmrf {
+        #[doc = "Common memory error reset not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Common memory error reset detected"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5189,9 +5923,11 @@ impl crate::sealed::RegSpec for Syraccr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "System Register Access Control Register"]
 pub type Syraccr = crate::RegValueT<Syraccr_SPEC>;
 
 impl Syraccr {
+    #[doc = "Access Ready monitor"]
     #[inline(always)]
     pub fn busy(
         self,
@@ -5229,8 +5965,10 @@ pub mod syraccr {
     pub struct Busy_SPEC;
     pub type Busy = crate::EnumBitfieldStruct<u8, Busy_SPEC>;
     impl Busy {
+        #[doc = "Ready to read/write access"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Writing in progress"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5241,9 +5979,11 @@ impl crate::sealed::RegSpec for Pvdcr1_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Voltage Monitor %s Circuit Control Register 1"]
 pub type Pvdcr1 = crate::RegValueT<Pvdcr1_SPEC>;
 
 impl Pvdcr1 {
+    #[doc = "Voltage Monitor m Interrupt Generation Condition Select"]
     #[inline(always)]
     pub fn idtsel(
         self,
@@ -5251,6 +5991,7 @@ impl Pvdcr1 {
         crate::common::RegisterField::<0,0x3,1,0,u8,u8,Pvdcr1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Voltage Monitor m Interrupt Type Select"]
     #[inline(always)]
     pub fn irqsel(
         self,
@@ -5288,8 +6029,10 @@ pub mod pvdcr1 {
     pub struct Irqsel_SPEC;
     pub type Irqsel = crate::EnumBitfieldStruct<u8, Irqsel_SPEC>;
     impl Irqsel {
+        #[doc = "Non-maskable interrupt"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Maskable interrupt"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5300,9 +6043,11 @@ impl crate::sealed::RegSpec for Pvdsr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Voltage Monitor %s Circuit Status Register"]
 pub type Pvdsr = crate::RegValueT<Pvdsr_SPEC>;
 
 impl Pvdsr {
+    #[doc = "Voltage Monitor m Voltage Change Detection Flag"]
     #[inline(always)]
     pub fn det(self) -> crate::common::RegisterFieldBool<0, 1, 0, Pvdsr_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<0, 1, 0, Pvdsr_SPEC, crate::common::RW>::from_register(
@@ -5310,6 +6055,7 @@ impl Pvdsr {
         )
     }
 
+    #[doc = "Voltage Monitor 1 Signal Monitor Flag"]
     #[inline(always)]
     pub fn mon(self) -> crate::common::RegisterFieldBool<1, 1, 0, Pvdsr_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1, 1, 0, Pvdsr_SPEC, crate::common::RW>::from_register(
@@ -5331,9 +6077,11 @@ impl crate::sealed::RegSpec for Pdctrgd_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Graphics Power Domain Control Register"]
 pub type Pdctrgd = crate::RegValueT<Pdctrgd_SPEC>;
 
 impl Pdctrgd {
+    #[doc = "Power control enable"]
     #[inline(always)]
     pub fn pdde(
         self,
@@ -5359,6 +6107,7 @@ impl Pdctrgd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Power control status flag"]
     #[inline(always)]
     pub fn pdcsf(
         self,
@@ -5384,6 +6133,7 @@ impl Pdctrgd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Power gating status flag"]
     #[inline(always)]
     pub fn pdpgsf(
         self,
@@ -5421,24 +6171,30 @@ pub mod pdctrgd {
     pub struct Pdde_SPEC;
     pub type Pdde = crate::EnumBitfieldStruct<u8, Pdde_SPEC>;
     impl Pdde {
+        #[doc = "Power on the target domain"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Power off the target domain"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdcsf_SPEC;
     pub type Pdcsf = crate::EnumBitfieldStruct<u8, Pdcsf_SPEC>;
     impl Pdcsf {
+        #[doc = "Power gating control is not executed (idle)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Power gating control is in progress"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdpgsf_SPEC;
     pub type Pdpgsf = crate::EnumBitfieldStruct<u8, Pdpgsf_SPEC>;
     impl Pdpgsf {
+        #[doc = "Target domain is power on (not gating)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Target domain is power off (during Gating)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5449,9 +6205,11 @@ impl crate::sealed::RegSpec for Pdramscr0_SPEC {
     type DataType = u16;
 }
 
+#[doc = "SRAM Power Domain Standby Control Register 0"]
 pub type Pdramscr0 = crate::RegValueT<Pdramscr0_SPEC>;
 
 impl Pdramscr0 {
+    #[doc = "Unnecessary Circuit Retention"]
     #[inline(always)]
     pub fn rkeep0(
         self,
@@ -5477,6 +6235,7 @@ impl Pdramscr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Unnecessary Circuit Retention"]
     #[inline(always)]
     pub fn rkeep1(
         self,
@@ -5502,6 +6261,7 @@ impl Pdramscr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RAM Retention"]
     #[inline(always)]
     pub fn rkeep2(
         self,
@@ -5527,6 +6287,7 @@ impl Pdramscr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RAM Retention"]
     #[inline(always)]
     pub fn rkeep3(
         self,
@@ -5552,6 +6313,7 @@ impl Pdramscr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RAM Retention"]
     #[inline(always)]
     pub fn rkeep4(
         self,
@@ -5577,6 +6339,7 @@ impl Pdramscr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RAM Retention"]
     #[inline(always)]
     pub fn rkeep5(
         self,
@@ -5602,6 +6365,7 @@ impl Pdramscr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RAM Retention"]
     #[inline(always)]
     pub fn rkeep6(
         self,
@@ -5639,56 +6403,70 @@ pub mod pdramscr0 {
     pub struct Rkeep0_SPEC;
     pub type Rkeep0 = crate::EnumBitfieldStruct<u8, Rkeep0_SPEC>;
     impl Rkeep0 {
+        #[doc = "When entering the Software Standby mode, the contents of unnecessary circuit are not kept."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "When entering the Software Standby mode, the contents of unnecessary circuit are kept."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rkeep1_SPEC;
     pub type Rkeep1 = crate::EnumBitfieldStruct<u8, Rkeep1_SPEC>;
     impl Rkeep1 {
+        #[doc = "When entering the Software Standby mode, the contents of unnecessary circuit are not kept."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "When entering the Software Standby mode, the contents of unnecessary circuit are kept."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rkeep2_SPEC;
     pub type Rkeep2 = crate::EnumBitfieldStruct<u8, Rkeep2_SPEC>;
     impl Rkeep2 {
+        #[doc = "When entering the Software Standby mode, the contents of the target RAM are not kept."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "When entering the Software Standby mode, the contents of the target RAM are kept."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rkeep3_SPEC;
     pub type Rkeep3 = crate::EnumBitfieldStruct<u8, Rkeep3_SPEC>;
     impl Rkeep3 {
+        #[doc = "When entering the Software Standby mode, the contents of the target RAM are not kept."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "When entering the Software Standby mode, the contents of the target RAM are kept."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rkeep4_SPEC;
     pub type Rkeep4 = crate::EnumBitfieldStruct<u8, Rkeep4_SPEC>;
     impl Rkeep4 {
+        #[doc = "When entering the Software Standby mode, the contents of the target RAM are not kept."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "When entering the Software Standby mode, the contents of the target RAM are kept."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rkeep5_SPEC;
     pub type Rkeep5 = crate::EnumBitfieldStruct<u8, Rkeep5_SPEC>;
     impl Rkeep5 {
+        #[doc = "When entering the Software Standby mode, the contents of the target RAM are not kept."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "When entering the Software Standby mode, the contents of the target RAM are kept."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rkeep6_SPEC;
     pub type Rkeep6 = crate::EnumBitfieldStruct<u8, Rkeep6_SPEC>;
     impl Rkeep6 {
+        #[doc = "When entering the Software Standby mode, the contents of the target RAM are not kept."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "When entering the Software Standby mode, the contents of the target RAM are kept."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5699,9 +6477,11 @@ impl crate::sealed::RegSpec for Pdramscr1_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SRAM Power Domain Standby Control Register 1"]
 pub type Pdramscr1 = crate::RegValueT<Pdramscr1_SPEC>;
 
 impl Pdramscr1 {
+    #[doc = "RAM Retention"]
     #[inline(always)]
     pub fn rkeep0(
         self,
@@ -5739,8 +6519,10 @@ pub mod pdramscr1 {
     pub struct Rkeep0_SPEC;
     pub type Rkeep0 = crate::EnumBitfieldStruct<u8, Rkeep0_SPEC>;
     impl Rkeep0 {
+        #[doc = "When entering the CPU Deep Sleep and Software Standby mode, the contents of the target RAM are not kept."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "When entering the CPU Deep Sleep and Software Standby mode, the contents of the target RAM are kept."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5751,9 +6533,11 @@ impl crate::sealed::RegSpec for Vbrpabarns_SPEC {
     type DataType = u16;
 }
 
+#[doc = "VBATT Backup Register Privilege Attribute Boundary Address Register for Non-secure Region"]
 pub type Vbrpabarns = crate::RegValueT<Vbrpabarns_SPEC>;
 
 impl Vbrpabarns {
+    #[doc = "Boundary address between privileged and unprivileged."]
     #[inline(always)]
     pub fn pabans(
         self,
@@ -5776,9 +6560,11 @@ impl crate::sealed::RegSpec for Cgfsar_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Clock Generation Function Security Attribute Register"]
 pub type Cgfsar = crate::RegValueT<Cgfsar_SPEC>;
 
 impl Cgfsar {
+    #[doc = "Non Secure Attribute bit 00"]
     #[inline(always)]
     pub fn nonsec00(
         self,
@@ -5804,6 +6590,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 02"]
     #[inline(always)]
     pub fn nonsec02(
         self,
@@ -5829,6 +6616,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 03"]
     #[inline(always)]
     pub fn nonsec03(
         self,
@@ -5854,6 +6642,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 04"]
     #[inline(always)]
     pub fn nonsec04(
         self,
@@ -5879,6 +6668,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 05"]
     #[inline(always)]
     pub fn nonsec05(
         self,
@@ -5904,6 +6694,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 06"]
     #[inline(always)]
     pub fn nonsec06(
         self,
@@ -5929,6 +6720,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 07"]
     #[inline(always)]
     pub fn nonsec07(
         self,
@@ -5954,6 +6746,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 08"]
     #[inline(always)]
     pub fn nonsec08(
         self,
@@ -5979,6 +6772,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 09"]
     #[inline(always)]
     pub fn nonsec09(
         self,
@@ -6004,6 +6798,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 11"]
     #[inline(always)]
     pub fn nonsec11(
         self,
@@ -6029,6 +6824,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 12"]
     #[inline(always)]
     pub fn nonsec12(
         self,
@@ -6054,6 +6850,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 13"]
     #[inline(always)]
     pub fn nonsec13(
         self,
@@ -6079,6 +6876,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 16"]
     #[inline(always)]
     pub fn nonsec16(
         self,
@@ -6104,6 +6902,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 17"]
     #[inline(always)]
     pub fn nonsec17(
         self,
@@ -6129,6 +6928,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 18"]
     #[inline(always)]
     pub fn nonsec18(
         self,
@@ -6154,6 +6954,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 21"]
     #[inline(always)]
     pub fn nonsec21(
         self,
@@ -6179,6 +6980,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 22"]
     #[inline(always)]
     pub fn nonsec22(
         self,
@@ -6204,6 +7006,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 26"]
     #[inline(always)]
     pub fn nonsec26(
         self,
@@ -6241,144 +7044,180 @@ pub mod cgfsar {
     pub struct Nonsec00_SPEC;
     pub type Nonsec00 = crate::EnumBitfieldStruct<u8, Nonsec00_SPEC>;
     impl Nonsec00 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec02_SPEC;
     pub type Nonsec02 = crate::EnumBitfieldStruct<u8, Nonsec02_SPEC>;
     impl Nonsec02 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec03_SPEC;
     pub type Nonsec03 = crate::EnumBitfieldStruct<u8, Nonsec03_SPEC>;
     impl Nonsec03 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec04_SPEC;
     pub type Nonsec04 = crate::EnumBitfieldStruct<u8, Nonsec04_SPEC>;
     impl Nonsec04 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec05_SPEC;
     pub type Nonsec05 = crate::EnumBitfieldStruct<u8, Nonsec05_SPEC>;
     impl Nonsec05 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec06_SPEC;
     pub type Nonsec06 = crate::EnumBitfieldStruct<u8, Nonsec06_SPEC>;
     impl Nonsec06 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec07_SPEC;
     pub type Nonsec07 = crate::EnumBitfieldStruct<u8, Nonsec07_SPEC>;
     impl Nonsec07 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec08_SPEC;
     pub type Nonsec08 = crate::EnumBitfieldStruct<u8, Nonsec08_SPEC>;
     impl Nonsec08 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec09_SPEC;
     pub type Nonsec09 = crate::EnumBitfieldStruct<u8, Nonsec09_SPEC>;
     impl Nonsec09 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec11_SPEC;
     pub type Nonsec11 = crate::EnumBitfieldStruct<u8, Nonsec11_SPEC>;
     impl Nonsec11 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec12_SPEC;
     pub type Nonsec12 = crate::EnumBitfieldStruct<u8, Nonsec12_SPEC>;
     impl Nonsec12 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec13_SPEC;
     pub type Nonsec13 = crate::EnumBitfieldStruct<u8, Nonsec13_SPEC>;
     impl Nonsec13 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec16_SPEC;
     pub type Nonsec16 = crate::EnumBitfieldStruct<u8, Nonsec16_SPEC>;
     impl Nonsec16 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec17_SPEC;
     pub type Nonsec17 = crate::EnumBitfieldStruct<u8, Nonsec17_SPEC>;
     impl Nonsec17 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec18_SPEC;
     pub type Nonsec18 = crate::EnumBitfieldStruct<u8, Nonsec18_SPEC>;
     impl Nonsec18 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec21_SPEC;
     pub type Nonsec21 = crate::EnumBitfieldStruct<u8, Nonsec21_SPEC>;
     impl Nonsec21 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec22_SPEC;
     pub type Nonsec22 = crate::EnumBitfieldStruct<u8, Nonsec22_SPEC>;
     impl Nonsec22 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec26_SPEC;
     pub type Nonsec26 = crate::EnumBitfieldStruct<u8, Nonsec26_SPEC>;
     impl Nonsec26 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6389,9 +7228,11 @@ impl crate::sealed::RegSpec for Rstsar_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Reset Security Attribution Register"]
 pub type Rstsar = crate::RegValueT<Rstsar_SPEC>;
 
 impl Rstsar {
+    #[doc = "Non-secure Attribute bit 0"]
     #[inline(always)]
     pub fn nonsec0(
         self,
@@ -6417,6 +7258,7 @@ impl Rstsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non-secure Attribute bit 1"]
     #[inline(always)]
     pub fn nonsec1(
         self,
@@ -6442,6 +7284,7 @@ impl Rstsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non-secure Attribute bit 2"]
     #[inline(always)]
     pub fn nonsec2(
         self,
@@ -6479,24 +7322,30 @@ pub mod rstsar {
     pub struct Nonsec0_SPEC;
     pub type Nonsec0 = crate::EnumBitfieldStruct<u8, Nonsec0_SPEC>;
     impl Nonsec0 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec1_SPEC;
     pub type Nonsec1 = crate::EnumBitfieldStruct<u8, Nonsec1_SPEC>;
     impl Nonsec1 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec2_SPEC;
     pub type Nonsec2 = crate::EnumBitfieldStruct<u8, Nonsec2_SPEC>;
     impl Nonsec2 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6507,9 +7356,11 @@ impl crate::sealed::RegSpec for Lpmsar_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Low Power Mode Security Attribution Register"]
 pub type Lpmsar = crate::RegValueT<Lpmsar_SPEC>;
 
 impl Lpmsar {
+    #[doc = "Non-secure Attribute bit 0"]
     #[inline(always)]
     pub fn nonsec0(
         self,
@@ -6535,6 +7386,7 @@ impl Lpmsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non-secure Attribute bit 1"]
     #[inline(always)]
     pub fn nonsec1(
         self,
@@ -6560,6 +7412,7 @@ impl Lpmsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non-secure Attribute bit 2"]
     #[inline(always)]
     pub fn nonsec2(
         self,
@@ -6585,6 +7438,7 @@ impl Lpmsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non-secure Attribute bit 8"]
     #[inline(always)]
     pub fn nonsec8(
         self,
@@ -6610,6 +7464,7 @@ impl Lpmsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non-secure Attribute bit 17"]
     #[inline(always)]
     pub fn nonsec17(
         self,
@@ -6635,6 +7490,7 @@ impl Lpmsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non-secure Attribute bit 18"]
     #[inline(always)]
     pub fn nonsec18(
         self,
@@ -6660,6 +7516,7 @@ impl Lpmsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non-secure Attribute bit 19"]
     #[inline(always)]
     pub fn nonsec19(
         self,
@@ -6685,6 +7542,7 @@ impl Lpmsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non-secure Attribute bit 21"]
     #[inline(always)]
     pub fn nonsec21(
         self,
@@ -6722,64 +7580,80 @@ pub mod lpmsar {
     pub struct Nonsec0_SPEC;
     pub type Nonsec0 = crate::EnumBitfieldStruct<u8, Nonsec0_SPEC>;
     impl Nonsec0 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec1_SPEC;
     pub type Nonsec1 = crate::EnumBitfieldStruct<u8, Nonsec1_SPEC>;
     impl Nonsec1 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec2_SPEC;
     pub type Nonsec2 = crate::EnumBitfieldStruct<u8, Nonsec2_SPEC>;
     impl Nonsec2 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec8_SPEC;
     pub type Nonsec8 = crate::EnumBitfieldStruct<u8, Nonsec8_SPEC>;
     impl Nonsec8 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec17_SPEC;
     pub type Nonsec17 = crate::EnumBitfieldStruct<u8, Nonsec17_SPEC>;
     impl Nonsec17 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec18_SPEC;
     pub type Nonsec18 = crate::EnumBitfieldStruct<u8, Nonsec18_SPEC>;
     impl Nonsec18 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec19_SPEC;
     pub type Nonsec19 = crate::EnumBitfieldStruct<u8, Nonsec19_SPEC>;
     impl Nonsec19 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec21_SPEC;
     pub type Nonsec21 = crate::EnumBitfieldStruct<u8, Nonsec21_SPEC>;
     impl Nonsec21 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6790,9 +7664,11 @@ impl crate::sealed::RegSpec for Pvdsar_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Programable Voltage Detection Security Attribution Register"]
 pub type Pvdsar = crate::RegValueT<Pvdsar_SPEC>;
 
 impl Pvdsar {
+    #[doc = "Non Secure Attribute bit 0"]
     #[inline(always)]
     pub fn nonsec0(
         self,
@@ -6818,6 +7694,7 @@ impl Pvdsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 1"]
     #[inline(always)]
     pub fn nonsec1(
         self,
@@ -6855,16 +7732,20 @@ pub mod pvdsar {
     pub struct Nonsec0_SPEC;
     pub type Nonsec0 = crate::EnumBitfieldStruct<u8, Nonsec0_SPEC>;
     impl Nonsec0 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec1_SPEC;
     pub type Nonsec1 = crate::EnumBitfieldStruct<u8, Nonsec1_SPEC>;
     impl Nonsec1 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6875,9 +7756,11 @@ impl crate::sealed::RegSpec for Bbfsar_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Battery Backup Function Security Attribute Register"]
 pub type Bbfsar = crate::RegValueT<Bbfsar_SPEC>;
 
 impl Bbfsar {
+    #[doc = "Non Secure Attribute bit 0"]
     #[inline(always)]
     pub fn nonsec0(
         self,
@@ -6903,6 +7786,7 @@ impl Bbfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 1"]
     #[inline(always)]
     pub fn nonsec1(
         self,
@@ -6928,6 +7812,7 @@ impl Bbfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 2"]
     #[inline(always)]
     pub fn nonsec2(
         self,
@@ -6953,6 +7838,7 @@ impl Bbfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 3"]
     #[inline(always)]
     pub fn nonsec3(
         self,
@@ -6978,6 +7864,7 @@ impl Bbfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Non Secure Attribute bit 4"]
     #[inline(always)]
     pub fn nonsec4(
         self,
@@ -7015,40 +7902,50 @@ pub mod bbfsar {
     pub struct Nonsec0_SPEC;
     pub type Nonsec0 = crate::EnumBitfieldStruct<u8, Nonsec0_SPEC>;
     impl Nonsec0 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec1_SPEC;
     pub type Nonsec1 = crate::EnumBitfieldStruct<u8, Nonsec1_SPEC>;
     impl Nonsec1 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec2_SPEC;
     pub type Nonsec2 = crate::EnumBitfieldStruct<u8, Nonsec2_SPEC>;
     impl Nonsec2 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec3_SPEC;
     pub type Nonsec3 = crate::EnumBitfieldStruct<u8, Nonsec3_SPEC>;
     impl Nonsec3 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nonsec4_SPEC;
     pub type Nonsec4 = crate::EnumBitfieldStruct<u8, Nonsec4_SPEC>;
     impl Nonsec4 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7059,9 +7956,11 @@ impl crate::sealed::RegSpec for Pgcsar_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Power Gating Control Security Attribution Register"]
 pub type Pgcsar = crate::RegValueT<Pgcsar_SPEC>;
 
 impl Pgcsar {
+    #[doc = "Non-secure Attribute bit 1"]
     #[inline(always)]
     pub fn nonsec1(
         self,
@@ -7099,8 +7998,10 @@ pub mod pgcsar {
     pub struct Nonsec1_SPEC;
     pub type Nonsec1 = crate::EnumBitfieldStruct<u8, Nonsec1_SPEC>;
     impl Nonsec1 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7111,9 +8012,11 @@ impl crate::sealed::RegSpec for Dpfsar_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Deep Software Standby Interrupt Factor Security Attribution Register"]
 pub type Dpfsar = crate::RegValueT<Dpfsar_SPEC>;
 
 impl Dpfsar {
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit n (n = 0 to 7)"]
     #[inline(always)]
     pub fn dpfsa0(
         self,
@@ -7139,6 +8042,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit n (n = 0 to 7)"]
     #[inline(always)]
     pub fn dpfsa1(
         self,
@@ -7164,6 +8068,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit n (n = 0 to 7)"]
     #[inline(always)]
     pub fn dpfsa2(
         self,
@@ -7189,6 +8094,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit n (n = 0 to 7)"]
     #[inline(always)]
     pub fn dpfsa3(
         self,
@@ -7214,6 +8120,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit n (n = 0 to 7)"]
     #[inline(always)]
     pub fn dpfsa4(
         self,
@@ -7239,6 +8146,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit n (n = 0 to 7)"]
     #[inline(always)]
     pub fn dpfsa5(
         self,
@@ -7264,6 +8172,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit n (n = 0 to 7)"]
     #[inline(always)]
     pub fn dpfsa6(
         self,
@@ -7289,6 +8198,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit n (n = 0 to 7)"]
     #[inline(always)]
     pub fn dpfsa7(
         self,
@@ -7314,6 +8224,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit n (n = 8 to 15)"]
     #[inline(always)]
     pub fn dpfsa08(
         self,
@@ -7339,6 +8250,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit n (n = 8 to 15)"]
     #[inline(always)]
     pub fn dpfsa09(
         self,
@@ -7364,6 +8276,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit n (n = 8 to 15)"]
     #[inline(always)]
     pub fn dpfsa10(
         self,
@@ -7389,6 +8302,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit n (n = 8 to 15)"]
     #[inline(always)]
     pub fn dpfsa11(
         self,
@@ -7414,6 +8328,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit n (n = 8 to 15)"]
     #[inline(always)]
     pub fn dpfsa12(
         self,
@@ -7439,6 +8354,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit n (n = 8 to 15)"]
     #[inline(always)]
     pub fn dpfsa13(
         self,
@@ -7464,6 +8380,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit n (n = 8 to 15)"]
     #[inline(always)]
     pub fn dpfsa14(
         self,
@@ -7489,6 +8406,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit n (n = 8 to 15)"]
     #[inline(always)]
     pub fn dpfsa15(
         self,
@@ -7514,6 +8432,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit 16"]
     #[inline(always)]
     pub fn dpfsa16(
         self,
@@ -7539,6 +8458,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit 17"]
     #[inline(always)]
     pub fn dpfsa17(
         self,
@@ -7564,6 +8484,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit 18"]
     #[inline(always)]
     pub fn dpfsa18(
         self,
@@ -7589,6 +8510,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit 19"]
     #[inline(always)]
     pub fn dpfsa19(
         self,
@@ -7614,6 +8536,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit 20"]
     #[inline(always)]
     pub fn dpfsa20(
         self,
@@ -7639,6 +8562,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit 24"]
     #[inline(always)]
     pub fn dpfsa24(
         self,
@@ -7664,6 +8588,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit 26"]
     #[inline(always)]
     pub fn dpfsa26(
         self,
@@ -7689,6 +8614,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit 27"]
     #[inline(always)]
     pub fn dpfsa27(
         self,
@@ -7714,6 +8640,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit 29"]
     #[inline(always)]
     pub fn dpfsa29(
         self,
@@ -7739,6 +8666,7 @@ impl Dpfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Interrupt Factor Security Attribute bit 31"]
     #[inline(always)]
     pub fn dpfsa31(
         self,
@@ -7776,208 +8704,260 @@ pub mod dpfsar {
     pub struct Dpfsa0_SPEC;
     pub type Dpfsa0 = crate::EnumBitfieldStruct<u8, Dpfsa0_SPEC>;
     impl Dpfsa0 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa1_SPEC;
     pub type Dpfsa1 = crate::EnumBitfieldStruct<u8, Dpfsa1_SPEC>;
     impl Dpfsa1 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa2_SPEC;
     pub type Dpfsa2 = crate::EnumBitfieldStruct<u8, Dpfsa2_SPEC>;
     impl Dpfsa2 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa3_SPEC;
     pub type Dpfsa3 = crate::EnumBitfieldStruct<u8, Dpfsa3_SPEC>;
     impl Dpfsa3 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa4_SPEC;
     pub type Dpfsa4 = crate::EnumBitfieldStruct<u8, Dpfsa4_SPEC>;
     impl Dpfsa4 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa5_SPEC;
     pub type Dpfsa5 = crate::EnumBitfieldStruct<u8, Dpfsa5_SPEC>;
     impl Dpfsa5 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa6_SPEC;
     pub type Dpfsa6 = crate::EnumBitfieldStruct<u8, Dpfsa6_SPEC>;
     impl Dpfsa6 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa7_SPEC;
     pub type Dpfsa7 = crate::EnumBitfieldStruct<u8, Dpfsa7_SPEC>;
     impl Dpfsa7 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa08_SPEC;
     pub type Dpfsa08 = crate::EnumBitfieldStruct<u8, Dpfsa08_SPEC>;
     impl Dpfsa08 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa09_SPEC;
     pub type Dpfsa09 = crate::EnumBitfieldStruct<u8, Dpfsa09_SPEC>;
     impl Dpfsa09 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa10_SPEC;
     pub type Dpfsa10 = crate::EnumBitfieldStruct<u8, Dpfsa10_SPEC>;
     impl Dpfsa10 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa11_SPEC;
     pub type Dpfsa11 = crate::EnumBitfieldStruct<u8, Dpfsa11_SPEC>;
     impl Dpfsa11 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa12_SPEC;
     pub type Dpfsa12 = crate::EnumBitfieldStruct<u8, Dpfsa12_SPEC>;
     impl Dpfsa12 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa13_SPEC;
     pub type Dpfsa13 = crate::EnumBitfieldStruct<u8, Dpfsa13_SPEC>;
     impl Dpfsa13 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa14_SPEC;
     pub type Dpfsa14 = crate::EnumBitfieldStruct<u8, Dpfsa14_SPEC>;
     impl Dpfsa14 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa15_SPEC;
     pub type Dpfsa15 = crate::EnumBitfieldStruct<u8, Dpfsa15_SPEC>;
     impl Dpfsa15 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa16_SPEC;
     pub type Dpfsa16 = crate::EnumBitfieldStruct<u8, Dpfsa16_SPEC>;
     impl Dpfsa16 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa17_SPEC;
     pub type Dpfsa17 = crate::EnumBitfieldStruct<u8, Dpfsa17_SPEC>;
     impl Dpfsa17 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa18_SPEC;
     pub type Dpfsa18 = crate::EnumBitfieldStruct<u8, Dpfsa18_SPEC>;
     impl Dpfsa18 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa19_SPEC;
     pub type Dpfsa19 = crate::EnumBitfieldStruct<u8, Dpfsa19_SPEC>;
     impl Dpfsa19 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa20_SPEC;
     pub type Dpfsa20 = crate::EnumBitfieldStruct<u8, Dpfsa20_SPEC>;
     impl Dpfsa20 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa24_SPEC;
     pub type Dpfsa24 = crate::EnumBitfieldStruct<u8, Dpfsa24_SPEC>;
     impl Dpfsa24 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa26_SPEC;
     pub type Dpfsa26 = crate::EnumBitfieldStruct<u8, Dpfsa26_SPEC>;
     impl Dpfsa26 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa27_SPEC;
     pub type Dpfsa27 = crate::EnumBitfieldStruct<u8, Dpfsa27_SPEC>;
     impl Dpfsa27 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa29_SPEC;
     pub type Dpfsa29 = crate::EnumBitfieldStruct<u8, Dpfsa29_SPEC>;
     impl Dpfsa29 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpfsa31_SPEC;
     pub type Dpfsa31 = crate::EnumBitfieldStruct<u8, Dpfsa31_SPEC>;
     impl Dpfsa31 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7988,9 +8968,11 @@ impl crate::sealed::RegSpec for Rscsar_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RAM Standby Control Security Attribution Register"]
 pub type Rscsar = crate::RegValueT<Rscsar_SPEC>;
 
 impl Rscsar {
+    #[doc = "Unnecessary Circuit Control Security Attribution bit n (n = 0 to 1)"]
     #[inline(always)]
     pub fn rscsa0(
         self,
@@ -8016,6 +8998,7 @@ impl Rscsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Unnecessary Circuit Control Security Attribution bit n (n = 0 to 1)"]
     #[inline(always)]
     pub fn rscsa1(
         self,
@@ -8041,6 +9024,7 @@ impl Rscsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "RAM Standby Control Security Attribute bit n (n = 2 to 6)"]
     #[inline(always)]
     pub fn rscsa2(
         self,
@@ -8066,6 +9050,7 @@ impl Rscsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "RAM Standby Control Security Attribute bit n (n = 2 to 6)"]
     #[inline(always)]
     pub fn rscsa3(
         self,
@@ -8091,6 +9076,7 @@ impl Rscsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "RAM Standby Control Security Attribute bit n (n = 2 to 6)"]
     #[inline(always)]
     pub fn rscsa4(
         self,
@@ -8116,6 +9102,7 @@ impl Rscsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "RAM Standby Control Security Attribute bit n (n = 2 to 6)"]
     #[inline(always)]
     pub fn rscsa5(
         self,
@@ -8141,6 +9128,7 @@ impl Rscsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "RAM Standby Control Security Attribute bit n (n = 2 to 6)"]
     #[inline(always)]
     pub fn rscsa6(
         self,
@@ -8166,6 +9154,7 @@ impl Rscsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "RAM Standby Control Security Attribute bit n (n = 16)"]
     #[inline(always)]
     pub fn rscsa16(
         self,
@@ -8203,64 +9192,80 @@ pub mod rscsar {
     pub struct Rscsa0_SPEC;
     pub type Rscsa0 = crate::EnumBitfieldStruct<u8, Rscsa0_SPEC>;
     impl Rscsa0 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rscsa1_SPEC;
     pub type Rscsa1 = crate::EnumBitfieldStruct<u8, Rscsa1_SPEC>;
     impl Rscsa1 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rscsa2_SPEC;
     pub type Rscsa2 = crate::EnumBitfieldStruct<u8, Rscsa2_SPEC>;
     impl Rscsa2 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rscsa3_SPEC;
     pub type Rscsa3 = crate::EnumBitfieldStruct<u8, Rscsa3_SPEC>;
     impl Rscsa3 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rscsa4_SPEC;
     pub type Rscsa4 = crate::EnumBitfieldStruct<u8, Rscsa4_SPEC>;
     impl Rscsa4 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rscsa5_SPEC;
     pub type Rscsa5 = crate::EnumBitfieldStruct<u8, Rscsa5_SPEC>;
     impl Rscsa5 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rscsa6_SPEC;
     pub type Rscsa6 = crate::EnumBitfieldStruct<u8, Rscsa6_SPEC>;
     impl Rscsa6 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rscsa16_SPEC;
     pub type Rscsa16 = crate::EnumBitfieldStruct<u8, Rscsa16_SPEC>;
     impl Rscsa16 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8271,9 +9276,11 @@ impl crate::sealed::RegSpec for PrcrNs_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Protect Register for Non-secure (PRCR_NS)"]
 pub type PrcrNs = crate::RegValueT<PrcrNs_SPEC>;
 
 impl PrcrNs {
+    #[doc = "Enable writing to the registers related to the clock generation circuit"]
     #[inline(always)]
     pub fn prc0(
         self,
@@ -8299,6 +9306,7 @@ impl PrcrNs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Enable writing to the registers related to the low power modes, and the battery backup function"]
     #[inline(always)]
     pub fn prc1(
         self,
@@ -8324,6 +9332,7 @@ impl PrcrNs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Enable writing to the registers related to the PVD"]
     #[inline(always)]
     pub fn prc3(
         self,
@@ -8374,6 +9383,7 @@ impl PrcrNs {
         >::from_register(self, 0)
     }
 
+    #[doc = "0xA5: Enables writing to the PRCR_NS register."]
     #[inline(always)]
     pub fn prkey(
         self,
@@ -8393,32 +9403,40 @@ pub mod prcr_ns {
     pub struct Prc0_SPEC;
     pub type Prc0 = crate::EnumBitfieldStruct<u8, Prc0_SPEC>;
     impl Prc0 {
+        #[doc = "Disable writes"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable writes"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Prc1_SPEC;
     pub type Prc1 = crate::EnumBitfieldStruct<u8, Prc1_SPEC>;
     impl Prc1 {
+        #[doc = "Disable writes"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable writes"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Prc3_SPEC;
     pub type Prc3 = crate::EnumBitfieldStruct<u8, Prc3_SPEC>;
     impl Prc3 {
+        #[doc = "Disable writes"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable writes"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Prc4_SPEC;
     pub type Prc4 = crate::EnumBitfieldStruct<u8, Prc4_SPEC>;
     impl Prc4 {
+        #[doc = "Disable writes"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable writes"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8429,9 +9447,11 @@ impl crate::sealed::RegSpec for Lococr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Low-Speed On-Chip Oscillator Control Register"]
 pub type Lococr = crate::RegValueT<Lococr_SPEC>;
 
 impl Lococr {
+    #[doc = "LOCO Stop"]
     #[inline(always)]
     pub fn lcstp(
         self,
@@ -8469,8 +9489,10 @@ pub mod lococr {
     pub struct Lcstp_SPEC;
     pub type Lcstp = crate::EnumBitfieldStruct<u8, Lcstp_SPEC>;
     impl Lcstp {
+        #[doc = "Operate the LOCO clock"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stop the LOCO clock"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8481,9 +9503,11 @@ impl crate::sealed::RegSpec for Locoutcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "LOCO User Trimming Control Register"]
 pub type Locoutcr = crate::RegValueT<Locoutcr_SPEC>;
 
 impl Locoutcr {
+    #[doc = "LOCO User Trimming"]
     #[inline(always)]
     pub fn locoutrm(
         self,
@@ -8505,6 +9529,7 @@ impl crate::sealed::RegSpec for Dpsbycr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Deep Software Standby Control Register"]
 pub type Dpsbycr = crate::RegValueT<Dpsbycr_SPEC>;
 
 impl Dpsbycr {
@@ -8533,6 +9558,7 @@ impl Dpsbycr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Standby SRAM Retention"]
     #[inline(always)]
     pub fn srkeep(
         self,
@@ -8558,6 +9584,7 @@ impl Dpsbycr {
         >::from_register(self, 0)
     }
 
+    #[doc = "I/O Port Rentention"]
     #[inline(always)]
     pub fn iokeep(
         self,
@@ -8595,24 +9622,30 @@ pub mod dpsbycr {
     pub struct Dcssmode_SPEC;
     pub type Dcssmode = crate::EnumBitfieldStruct<u8, Dcssmode_SPEC>;
     impl Dcssmode {
+        #[doc = "When the Deep Software Standby mode is canceled, the time required to recover is the standard time."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "When the Deep Software Standby mode is canceled, the time required to recover is shortened."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Srkeep_SPEC;
     pub type Srkeep = crate::EnumBitfieldStruct<u8, Srkeep_SPEC>;
     impl Srkeep {
+        #[doc = "When entering the Software Standby mode or the Deep Software Standby mode 1, the contents of Standby SRAM are not kept."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "When entering the Software Standby mode or the Deep Software Standby mode 1, the contents of Standby SRAM are kept."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Iokeep_SPEC;
     pub type Iokeep = crate::EnumBitfieldStruct<u8, Iokeep_SPEC>;
     impl Iokeep {
+        #[doc = "When the Deep Software Standby mode is canceled, the I/O ports are in the reset state."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "When the Deep Software Standby mode is canceled, the I/O ports are in the same state as in the Deep Software Standby mode."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8623,9 +9656,11 @@ impl crate::sealed::RegSpec for Dpswcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Deep Software Standby Wait Control Register"]
 pub type Dpswcr = crate::RegValueT<Dpswcr_SPEC>;
 
 impl Dpswcr {
+    #[doc = "Deep Software Wait Standby Time Setting Bit"]
     #[inline(always)]
     pub fn wtsts(
         self,
@@ -8663,10 +9698,13 @@ pub mod dpswcr {
     pub struct Wtsts_SPEC;
     pub type Wtsts = crate::EnumBitfieldStruct<u8, Wtsts_SPEC>;
     impl Wtsts {
+        #[doc = "Wait cycle for fast recovery"]
         pub const _0_X_0_B: Self = Self::new(11);
 
+        #[doc = "Wait cycle for slow recovery"]
         pub const _0_X_9_A: Self = Self::new(154);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -8677,9 +9715,11 @@ impl crate::sealed::RegSpec for Dpsier0_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Deep Software Standby Interrupt Enable Register 0"]
 pub type Dpsier0 = crate::RegValueT<Dpsier0_SPEC>;
 
 impl Dpsier0 {
+    #[doc = "IRQ0-DS Pin Enable"]
     #[inline(always)]
     pub fn dirq0e(
         self,
@@ -8705,6 +9745,7 @@ impl Dpsier0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ1-DS Pin Enable"]
     #[inline(always)]
     pub fn dirq1e(
         self,
@@ -8730,6 +9771,7 @@ impl Dpsier0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ2-DS Pin Enable"]
     #[inline(always)]
     pub fn dirq2e(
         self,
@@ -8755,6 +9797,7 @@ impl Dpsier0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ3-DS Pin Enable"]
     #[inline(always)]
     pub fn dirq3e(
         self,
@@ -8780,6 +9823,7 @@ impl Dpsier0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ4-DS Pin Enable"]
     #[inline(always)]
     pub fn dirq4e(
         self,
@@ -8805,6 +9849,7 @@ impl Dpsier0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ5-DS Pin Enable"]
     #[inline(always)]
     pub fn dirq5e(
         self,
@@ -8830,6 +9875,7 @@ impl Dpsier0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ6-DS Pin Enable"]
     #[inline(always)]
     pub fn dirq6e(
         self,
@@ -8855,6 +9901,7 @@ impl Dpsier0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ7-DS Pin Enable"]
     #[inline(always)]
     pub fn dirq7e(
         self,
@@ -8892,64 +9939,80 @@ pub mod dpsier0 {
     pub struct Dirq0E_SPEC;
     pub type Dirq0E = crate::EnumBitfieldStruct<u8, Dirq0E_SPEC>;
     impl Dirq0E {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq1E_SPEC;
     pub type Dirq1E = crate::EnumBitfieldStruct<u8, Dirq1E_SPEC>;
     impl Dirq1E {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq2E_SPEC;
     pub type Dirq2E = crate::EnumBitfieldStruct<u8, Dirq2E_SPEC>;
     impl Dirq2E {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq3E_SPEC;
     pub type Dirq3E = crate::EnumBitfieldStruct<u8, Dirq3E_SPEC>;
     impl Dirq3E {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq4E_SPEC;
     pub type Dirq4E = crate::EnumBitfieldStruct<u8, Dirq4E_SPEC>;
     impl Dirq4E {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq5E_SPEC;
     pub type Dirq5E = crate::EnumBitfieldStruct<u8, Dirq5E_SPEC>;
     impl Dirq5E {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq6E_SPEC;
     pub type Dirq6E = crate::EnumBitfieldStruct<u8, Dirq6E_SPEC>;
     impl Dirq6E {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq7E_SPEC;
     pub type Dirq7E = crate::EnumBitfieldStruct<u8, Dirq7E_SPEC>;
     impl Dirq7E {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8960,9 +10023,11 @@ impl crate::sealed::RegSpec for Dpsier1_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Deep Software Standby Interrupt Enable Register 1"]
 pub type Dpsier1 = crate::RegValueT<Dpsier1_SPEC>;
 
 impl Dpsier1 {
+    #[doc = "IRQ8-DS Pin Enable"]
     #[inline(always)]
     pub fn dirq8e(
         self,
@@ -8988,6 +10053,7 @@ impl Dpsier1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ9-DS Pin Enable"]
     #[inline(always)]
     pub fn dirq9e(
         self,
@@ -9013,6 +10079,7 @@ impl Dpsier1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ10-DS Pin Enable"]
     #[inline(always)]
     pub fn dirq10e(
         self,
@@ -9038,6 +10105,7 @@ impl Dpsier1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ11-DS Pin Enable"]
     #[inline(always)]
     pub fn dirq11e(
         self,
@@ -9063,6 +10131,7 @@ impl Dpsier1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ12-DS Pin Enable"]
     #[inline(always)]
     pub fn dirq12e(
         self,
@@ -9088,6 +10157,7 @@ impl Dpsier1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ13-DS Pin Enable"]
     #[inline(always)]
     pub fn dirq13e(
         self,
@@ -9113,6 +10183,7 @@ impl Dpsier1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ14-DS Pin Enable"]
     #[inline(always)]
     pub fn dirq14e(
         self,
@@ -9138,6 +10209,7 @@ impl Dpsier1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ15-DS Pin Enable"]
     #[inline(always)]
     pub fn dirq15e(
         self,
@@ -9175,64 +10247,80 @@ pub mod dpsier1 {
     pub struct Dirq8E_SPEC;
     pub type Dirq8E = crate::EnumBitfieldStruct<u8, Dirq8E_SPEC>;
     impl Dirq8E {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq9E_SPEC;
     pub type Dirq9E = crate::EnumBitfieldStruct<u8, Dirq9E_SPEC>;
     impl Dirq9E {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq10E_SPEC;
     pub type Dirq10E = crate::EnumBitfieldStruct<u8, Dirq10E_SPEC>;
     impl Dirq10E {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq11E_SPEC;
     pub type Dirq11E = crate::EnumBitfieldStruct<u8, Dirq11E_SPEC>;
     impl Dirq11E {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq12E_SPEC;
     pub type Dirq12E = crate::EnumBitfieldStruct<u8, Dirq12E_SPEC>;
     impl Dirq12E {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq13E_SPEC;
     pub type Dirq13E = crate::EnumBitfieldStruct<u8, Dirq13E_SPEC>;
     impl Dirq13E {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq14E_SPEC;
     pub type Dirq14E = crate::EnumBitfieldStruct<u8, Dirq14E_SPEC>;
     impl Dirq14E {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq15E_SPEC;
     pub type Dirq15E = crate::EnumBitfieldStruct<u8, Dirq15E_SPEC>;
     impl Dirq15E {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -9243,9 +10331,11 @@ impl crate::sealed::RegSpec for Dpsier2_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Deep Software Standby Interrupt Enable Register 2"]
 pub type Dpsier2 = crate::RegValueT<Dpsier2_SPEC>;
 
 impl Dpsier2 {
+    #[doc = "PVD1 Deep Software Standby Cancel Signal Enable"]
     #[inline(always)]
     pub fn dpvd1ie(
         self,
@@ -9271,6 +10361,7 @@ impl Dpsier2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "PVD2 Deep Software Standby Cancel Signal Enable"]
     #[inline(always)]
     pub fn dpvd2ie(
         self,
@@ -9296,6 +10387,7 @@ impl Dpsier2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RTC Interval interrupt Deep Software Standby Cancel Signal Enable"]
     #[inline(always)]
     pub fn drtciie(
         self,
@@ -9321,6 +10413,7 @@ impl Dpsier2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RTC Alarm interrupt Deep Software Standby Cancel Signal Enable"]
     #[inline(always)]
     pub fn drtcaie(
         self,
@@ -9346,6 +10439,7 @@ impl Dpsier2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "NMI Pin Deep Software Standby Cancel Signal Enable"]
     #[inline(always)]
     pub fn dnmie(
         self,
@@ -9383,40 +10477,50 @@ pub mod dpsier2 {
     pub struct Dpvd1Ie_SPEC;
     pub type Dpvd1Ie = crate::EnumBitfieldStruct<u8, Dpvd1Ie_SPEC>;
     impl Dpvd1Ie {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpvd2Ie_SPEC;
     pub type Dpvd2Ie = crate::EnumBitfieldStruct<u8, Dpvd2Ie_SPEC>;
     impl Dpvd2Ie {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Drtciie_SPEC;
     pub type Drtciie = crate::EnumBitfieldStruct<u8, Drtciie_SPEC>;
     impl Drtciie {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Drtcaie_SPEC;
     pub type Drtcaie = crate::EnumBitfieldStruct<u8, Drtcaie_SPEC>;
     impl Drtcaie {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dnmie_SPEC;
     pub type Dnmie = crate::EnumBitfieldStruct<u8, Dnmie_SPEC>;
     impl Dnmie {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -9427,9 +10531,11 @@ impl crate::sealed::RegSpec for Dpsier3_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Deep Software Standby Interrupt Enable Register 3"]
 pub type Dpsier3 = crate::RegValueT<Dpsier3_SPEC>;
 
 impl Dpsier3 {
+    #[doc = "USBFS Suspend/Resume Deep Software Standby Cancel Signal Enable"]
     #[inline(always)]
     pub fn dusbfsie(
         self,
@@ -9455,6 +10561,7 @@ impl Dpsier3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "ULPT0 Overflow Deep Software Standby Cancel Signal Enable"]
     #[inline(always)]
     pub fn dulpt0ie(
         self,
@@ -9480,6 +10587,7 @@ impl Dpsier3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "ULPT1 Overflow Deep Software Standby Cancel Signal Enable"]
     #[inline(always)]
     pub fn dulpt1ie(
         self,
@@ -9505,6 +10613,7 @@ impl Dpsier3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IWDT Underflow Deep Software Standby Cancel Signal Enable"]
     #[inline(always)]
     pub fn diwdtie(
         self,
@@ -9530,6 +10639,7 @@ impl Dpsier3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT Tamper Detection Deep Software Standby Cancel Signal Enable"]
     #[inline(always)]
     pub fn dvbattadie(
         self,
@@ -9567,40 +10677,50 @@ pub mod dpsier3 {
     pub struct Dusbfsie_SPEC;
     pub type Dusbfsie = crate::EnumBitfieldStruct<u8, Dusbfsie_SPEC>;
     impl Dusbfsie {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dulpt0Ie_SPEC;
     pub type Dulpt0Ie = crate::EnumBitfieldStruct<u8, Dulpt0Ie_SPEC>;
     impl Dulpt0Ie {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dulpt1Ie_SPEC;
     pub type Dulpt1Ie = crate::EnumBitfieldStruct<u8, Dulpt1Ie_SPEC>;
     impl Dulpt1Ie {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Diwdtie_SPEC;
     pub type Diwdtie = crate::EnumBitfieldStruct<u8, Diwdtie_SPEC>;
     impl Diwdtie {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvbattadie_SPEC;
     pub type Dvbattadie = crate::EnumBitfieldStruct<u8, Dvbattadie_SPEC>;
     impl Dvbattadie {
+        #[doc = "Canceling Deep Software Standby mode is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Canceling Deep Software Standby mode is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -9611,9 +10731,11 @@ impl crate::sealed::RegSpec for Dpsifr0_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Deep Software Standby Interrupt Flag Register 0"]
 pub type Dpsifr0 = crate::RegValueT<Dpsifr0_SPEC>;
 
 impl Dpsifr0 {
+    #[doc = "IRQ0-DS Pin Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dirq0f(
         self,
@@ -9639,6 +10761,7 @@ impl Dpsifr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ1-DS Pin Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dirq1f(
         self,
@@ -9664,6 +10787,7 @@ impl Dpsifr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ2-DS Pin Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dirq2f(
         self,
@@ -9689,6 +10813,7 @@ impl Dpsifr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ3-DS Pin Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dirq3f(
         self,
@@ -9714,6 +10839,7 @@ impl Dpsifr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ4-DS Pin Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dirq4f(
         self,
@@ -9739,6 +10865,7 @@ impl Dpsifr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ5-DS Pin Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dirq5f(
         self,
@@ -9764,6 +10891,7 @@ impl Dpsifr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ6-DS Pin Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dirq6f(
         self,
@@ -9789,6 +10917,7 @@ impl Dpsifr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ7-DS Pin Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dirq7f(
         self,
@@ -9826,64 +10955,80 @@ pub mod dpsifr0 {
     pub struct Dirq0F_SPEC;
     pub type Dirq0F = crate::EnumBitfieldStruct<u8, Dirq0F_SPEC>;
     impl Dirq0F {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq1F_SPEC;
     pub type Dirq1F = crate::EnumBitfieldStruct<u8, Dirq1F_SPEC>;
     impl Dirq1F {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq2F_SPEC;
     pub type Dirq2F = crate::EnumBitfieldStruct<u8, Dirq2F_SPEC>;
     impl Dirq2F {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq3F_SPEC;
     pub type Dirq3F = crate::EnumBitfieldStruct<u8, Dirq3F_SPEC>;
     impl Dirq3F {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq4F_SPEC;
     pub type Dirq4F = crate::EnumBitfieldStruct<u8, Dirq4F_SPEC>;
     impl Dirq4F {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq5F_SPEC;
     pub type Dirq5F = crate::EnumBitfieldStruct<u8, Dirq5F_SPEC>;
     impl Dirq5F {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq6F_SPEC;
     pub type Dirq6F = crate::EnumBitfieldStruct<u8, Dirq6F_SPEC>;
     impl Dirq6F {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq7F_SPEC;
     pub type Dirq7F = crate::EnumBitfieldStruct<u8, Dirq7F_SPEC>;
     impl Dirq7F {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -9894,9 +11039,11 @@ impl crate::sealed::RegSpec for Dpsifr1_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Deep Software Standby Interrupt Flag Register 1"]
 pub type Dpsifr1 = crate::RegValueT<Dpsifr1_SPEC>;
 
 impl Dpsifr1 {
+    #[doc = "IRQ8-DS Pin Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dirq8f(
         self,
@@ -9922,6 +11069,7 @@ impl Dpsifr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ9-DS Pin Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dirq9f(
         self,
@@ -9947,6 +11095,7 @@ impl Dpsifr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ10-DS Pin Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dirq10f(
         self,
@@ -9972,6 +11121,7 @@ impl Dpsifr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ11-DS Pin Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dirq11f(
         self,
@@ -9997,6 +11147,7 @@ impl Dpsifr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ12-DS Pin Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dirq12f(
         self,
@@ -10022,6 +11173,7 @@ impl Dpsifr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ13-DS Pin Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dirq13f(
         self,
@@ -10047,6 +11199,7 @@ impl Dpsifr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ14-DS Pin Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dirq14f(
         self,
@@ -10072,6 +11225,7 @@ impl Dpsifr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ15-DS Pin Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dirq15f(
         self,
@@ -10109,64 +11263,80 @@ pub mod dpsifr1 {
     pub struct Dirq8F_SPEC;
     pub type Dirq8F = crate::EnumBitfieldStruct<u8, Dirq8F_SPEC>;
     impl Dirq8F {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq9F_SPEC;
     pub type Dirq9F = crate::EnumBitfieldStruct<u8, Dirq9F_SPEC>;
     impl Dirq9F {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq10F_SPEC;
     pub type Dirq10F = crate::EnumBitfieldStruct<u8, Dirq10F_SPEC>;
     impl Dirq10F {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq11F_SPEC;
     pub type Dirq11F = crate::EnumBitfieldStruct<u8, Dirq11F_SPEC>;
     impl Dirq11F {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq12F_SPEC;
     pub type Dirq12F = crate::EnumBitfieldStruct<u8, Dirq12F_SPEC>;
     impl Dirq12F {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq13F_SPEC;
     pub type Dirq13F = crate::EnumBitfieldStruct<u8, Dirq13F_SPEC>;
     impl Dirq13F {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq14F_SPEC;
     pub type Dirq14F = crate::EnumBitfieldStruct<u8, Dirq14F_SPEC>;
     impl Dirq14F {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq15F_SPEC;
     pub type Dirq15F = crate::EnumBitfieldStruct<u8, Dirq15F_SPEC>;
     impl Dirq15F {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10177,9 +11347,11 @@ impl crate::sealed::RegSpec for Dpsifr2_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Deep Software Standby Interrupt Flag Register 2"]
 pub type Dpsifr2 = crate::RegValueT<Dpsifr2_SPEC>;
 
 impl Dpsifr2 {
+    #[doc = "PVD1 Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dpvd1if(
         self,
@@ -10205,6 +11377,7 @@ impl Dpsifr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "PVD2 Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dpvd2if(
         self,
@@ -10230,6 +11403,7 @@ impl Dpsifr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RTC Interval Interrupt Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn drtciif(
         self,
@@ -10255,6 +11429,7 @@ impl Dpsifr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RTC Alarm Interrupt Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn drtcaif(
         self,
@@ -10280,6 +11455,7 @@ impl Dpsifr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "NMI Pin Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dnmif(
         self,
@@ -10317,40 +11493,50 @@ pub mod dpsifr2 {
     pub struct Dpvd1If_SPEC;
     pub type Dpvd1If = crate::EnumBitfieldStruct<u8, Dpvd1If_SPEC>;
     impl Dpvd1If {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpvd2If_SPEC;
     pub type Dpvd2If = crate::EnumBitfieldStruct<u8, Dpvd2If_SPEC>;
     impl Dpvd2If {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Drtciif_SPEC;
     pub type Drtciif = crate::EnumBitfieldStruct<u8, Drtciif_SPEC>;
     impl Drtciif {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Drtcaif_SPEC;
     pub type Drtcaif = crate::EnumBitfieldStruct<u8, Drtcaif_SPEC>;
     impl Drtcaif {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dnmif_SPEC;
     pub type Dnmif = crate::EnumBitfieldStruct<u8, Dnmif_SPEC>;
     impl Dnmif {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10361,9 +11547,11 @@ impl crate::sealed::RegSpec for Dpsifr3_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Deep Software Standby Interrupt Flag Register 3"]
 pub type Dpsifr3 = crate::RegValueT<Dpsifr3_SPEC>;
 
 impl Dpsifr3 {
+    #[doc = "USBFS Suspend/Resume Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dusbfsif(
         self,
@@ -10389,6 +11577,7 @@ impl Dpsifr3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "ULPT0 Overflow Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dulpt0if(
         self,
@@ -10414,6 +11603,7 @@ impl Dpsifr3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "ULPT1 Overflow Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dulpt1if(
         self,
@@ -10439,6 +11629,7 @@ impl Dpsifr3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IWDT Underflow Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn diwdtif(
         self,
@@ -10464,6 +11655,7 @@ impl Dpsifr3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT Tamper Detection Deep Software Standby Cancel Flag"]
     #[inline(always)]
     pub fn dvbattadif(
         self,
@@ -10501,40 +11693,50 @@ pub mod dpsifr3 {
     pub struct Dusbfsif_SPEC;
     pub type Dusbfsif = crate::EnumBitfieldStruct<u8, Dusbfsif_SPEC>;
     impl Dusbfsif {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dulpt0If_SPEC;
     pub type Dulpt0If = crate::EnumBitfieldStruct<u8, Dulpt0If_SPEC>;
     impl Dulpt0If {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dulpt1If_SPEC;
     pub type Dulpt1If = crate::EnumBitfieldStruct<u8, Dulpt1If_SPEC>;
     impl Dulpt1If {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Diwdtif_SPEC;
     pub type Diwdtif = crate::EnumBitfieldStruct<u8, Diwdtif_SPEC>;
     impl Diwdtif {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvbattadif_SPEC;
     pub type Dvbattadif = crate::EnumBitfieldStruct<u8, Dvbattadif_SPEC>;
     impl Dvbattadif {
+        #[doc = "The cancel request is not generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The cancel request is generated"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10545,9 +11747,11 @@ impl crate::sealed::RegSpec for Dpsiegr0_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Deep Software Standby Interrupt Edge Register 0"]
 pub type Dpsiegr0 = crate::RegValueT<Dpsiegr0_SPEC>;
 
 impl Dpsiegr0 {
+    #[doc = "IRQ0-DS Pin Edge Select"]
     #[inline(always)]
     pub fn dirq0eg(
         self,
@@ -10573,6 +11777,7 @@ impl Dpsiegr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ1-DS Pin Edge Select"]
     #[inline(always)]
     pub fn dirq1eg(
         self,
@@ -10598,6 +11803,7 @@ impl Dpsiegr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ2-DS Pin Edge Select"]
     #[inline(always)]
     pub fn dirq2eg(
         self,
@@ -10623,6 +11829,7 @@ impl Dpsiegr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ3-DS Pin Edge Select"]
     #[inline(always)]
     pub fn dirq3eg(
         self,
@@ -10648,6 +11855,7 @@ impl Dpsiegr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ4-DS Pin Edge Select"]
     #[inline(always)]
     pub fn dirq4eg(
         self,
@@ -10673,6 +11881,7 @@ impl Dpsiegr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ5-DS Pin Edge Select"]
     #[inline(always)]
     pub fn dirq5eg(
         self,
@@ -10698,6 +11907,7 @@ impl Dpsiegr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ6-DS Pin Edge Select"]
     #[inline(always)]
     pub fn dirq6eg(
         self,
@@ -10723,6 +11933,7 @@ impl Dpsiegr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ7-DS Pin Edge Select"]
     #[inline(always)]
     pub fn dirq7eg(
         self,
@@ -10760,64 +11971,80 @@ pub mod dpsiegr0 {
     pub struct Dirq0Eg_SPEC;
     pub type Dirq0Eg = crate::EnumBitfieldStruct<u8, Dirq0Eg_SPEC>;
     impl Dirq0Eg {
+        #[doc = "A cancel request is generated at a falling edge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A cancel request is generated at a rising edge"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq1Eg_SPEC;
     pub type Dirq1Eg = crate::EnumBitfieldStruct<u8, Dirq1Eg_SPEC>;
     impl Dirq1Eg {
+        #[doc = "A cancel request is generated at a falling edge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A cancel request is generated at a rising edge"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq2Eg_SPEC;
     pub type Dirq2Eg = crate::EnumBitfieldStruct<u8, Dirq2Eg_SPEC>;
     impl Dirq2Eg {
+        #[doc = "A cancel request is generated at a falling edge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A cancel request is generated at a rising edge"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq3Eg_SPEC;
     pub type Dirq3Eg = crate::EnumBitfieldStruct<u8, Dirq3Eg_SPEC>;
     impl Dirq3Eg {
+        #[doc = "A cancel request is generated at a falling edge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A cancel request is generated at a rising edge"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq4Eg_SPEC;
     pub type Dirq4Eg = crate::EnumBitfieldStruct<u8, Dirq4Eg_SPEC>;
     impl Dirq4Eg {
+        #[doc = "A cancel request is generated at a falling edge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A cancel request is generated at a rising edge"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq5Eg_SPEC;
     pub type Dirq5Eg = crate::EnumBitfieldStruct<u8, Dirq5Eg_SPEC>;
     impl Dirq5Eg {
+        #[doc = "A cancel request is generated at a falling edge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A cancel request is generated at a rising edge"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq6Eg_SPEC;
     pub type Dirq6Eg = crate::EnumBitfieldStruct<u8, Dirq6Eg_SPEC>;
     impl Dirq6Eg {
+        #[doc = "A cancel request is generated at a falling edge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A cancel request is generated at a rising edge"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq7Eg_SPEC;
     pub type Dirq7Eg = crate::EnumBitfieldStruct<u8, Dirq7Eg_SPEC>;
     impl Dirq7Eg {
+        #[doc = "A cancel request is generated at a falling edge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A cancel request is generated at a rising edge"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10828,9 +12055,11 @@ impl crate::sealed::RegSpec for Dpsiegr1_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Deep Software Standby Interrupt Edge Register 1"]
 pub type Dpsiegr1 = crate::RegValueT<Dpsiegr1_SPEC>;
 
 impl Dpsiegr1 {
+    #[doc = "IRQ8-DS Pin Edge Select"]
     #[inline(always)]
     pub fn dirq8eg(
         self,
@@ -10856,6 +12085,7 @@ impl Dpsiegr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ9-DS Pin Edge Select"]
     #[inline(always)]
     pub fn dirq9eg(
         self,
@@ -10881,6 +12111,7 @@ impl Dpsiegr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ10-DS Pin Edge Select"]
     #[inline(always)]
     pub fn dirq10eg(
         self,
@@ -10906,6 +12137,7 @@ impl Dpsiegr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ11-DS Pin Edge Select"]
     #[inline(always)]
     pub fn dirq11eg(
         self,
@@ -10931,6 +12163,7 @@ impl Dpsiegr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ12-DS Pin Edge Select"]
     #[inline(always)]
     pub fn dirq12eg(
         self,
@@ -10956,6 +12189,7 @@ impl Dpsiegr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ13-DS Pin Edge Select"]
     #[inline(always)]
     pub fn dirq13eg(
         self,
@@ -10981,6 +12215,7 @@ impl Dpsiegr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ14-DS Pin Edge Select"]
     #[inline(always)]
     pub fn dirq14eg(
         self,
@@ -11006,6 +12241,7 @@ impl Dpsiegr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ15-DS Pin Edge Select"]
     #[inline(always)]
     pub fn dirq15eg(
         self,
@@ -11043,64 +12279,80 @@ pub mod dpsiegr1 {
     pub struct Dirq8Eg_SPEC;
     pub type Dirq8Eg = crate::EnumBitfieldStruct<u8, Dirq8Eg_SPEC>;
     impl Dirq8Eg {
+        #[doc = "A cancel request is generated at a falling edge."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A cancel request is generated at a rising edge."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq9Eg_SPEC;
     pub type Dirq9Eg = crate::EnumBitfieldStruct<u8, Dirq9Eg_SPEC>;
     impl Dirq9Eg {
+        #[doc = "A cancel request is generated at a falling edge."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A cancel request is generated at a rising edge."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq10Eg_SPEC;
     pub type Dirq10Eg = crate::EnumBitfieldStruct<u8, Dirq10Eg_SPEC>;
     impl Dirq10Eg {
+        #[doc = "A cancel request is generated at a falling edge."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A cancel request is generated at a rising edge"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq11Eg_SPEC;
     pub type Dirq11Eg = crate::EnumBitfieldStruct<u8, Dirq11Eg_SPEC>;
     impl Dirq11Eg {
+        #[doc = "A cancel request is generated at a falling edge."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A cancel request is generated at a rising edge."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq12Eg_SPEC;
     pub type Dirq12Eg = crate::EnumBitfieldStruct<u8, Dirq12Eg_SPEC>;
     impl Dirq12Eg {
+        #[doc = "A cancel request is generated at a falling edge."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A cancel request is generated at a rising edge."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq13Eg_SPEC;
     pub type Dirq13Eg = crate::EnumBitfieldStruct<u8, Dirq13Eg_SPEC>;
     impl Dirq13Eg {
+        #[doc = "A cancel request is generated at a falling edge."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A cancel request is generated at a rising edge."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq14Eg_SPEC;
     pub type Dirq14Eg = crate::EnumBitfieldStruct<u8, Dirq14Eg_SPEC>;
     impl Dirq14Eg {
+        #[doc = "A cancel request is generated at a falling edge."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A cancel request is generated at a rising edge."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirq15Eg_SPEC;
     pub type Dirq15Eg = crate::EnumBitfieldStruct<u8, Dirq15Eg_SPEC>;
     impl Dirq15Eg {
+        #[doc = "A cancel request is generated at a falling edge."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A cancel request is generated at a rising edge."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -11111,9 +12363,11 @@ impl crate::sealed::RegSpec for Dpsiegr2_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Deep Software Standby Interrupt Edge Register 2"]
 pub type Dpsiegr2 = crate::RegValueT<Dpsiegr2_SPEC>;
 
 impl Dpsiegr2 {
+    #[doc = "PVD1 Edge Select"]
     #[inline(always)]
     pub fn dpvd1eg(
         self,
@@ -11139,6 +12393,7 @@ impl Dpsiegr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "PVD2 Edge Select"]
     #[inline(always)]
     pub fn dpvd2eg(
         self,
@@ -11164,6 +12419,7 @@ impl Dpsiegr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "NMI Pin Edge Select"]
     #[inline(always)]
     pub fn dnmieg(
         self,
@@ -11201,24 +12457,30 @@ pub mod dpsiegr2 {
     pub struct Dpvd1Eg_SPEC;
     pub type Dpvd1Eg = crate::EnumBitfieldStruct<u8, Dpvd1Eg_SPEC>;
     impl Dpvd1Eg {
+        #[doc = "A cancel request is generated when VCC < Vdet1 (fall) is detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A cancel request is generated when VCC ≥ Vdet1 (rise) is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpvd2Eg_SPEC;
     pub type Dpvd2Eg = crate::EnumBitfieldStruct<u8, Dpvd2Eg_SPEC>;
     impl Dpvd2Eg {
+        #[doc = "A cancel request is generated when VCC < Vdet2 (fall) is detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A cancel request is generated when VCC ≥ Vdet2 (rise) is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dnmieg_SPEC;
     pub type Dnmieg = crate::EnumBitfieldStruct<u8, Dnmieg_SPEC>;
     impl Dnmieg {
+        #[doc = "A cancel request is generated at a falling edge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A cancel request is generated at a rising edge"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -11229,9 +12491,11 @@ impl crate::sealed::RegSpec for Syocdcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "System Control OCD Control Register"]
 pub type Syocdcr = crate::RegValueT<Syocdcr_SPEC>;
 
 impl Syocdcr {
+    #[doc = "Debugger Enable bit"]
     #[inline(always)]
     pub fn dbgen(
         self,
@@ -11269,8 +12533,10 @@ pub mod syocdcr {
     pub struct Dbgen_SPEC;
     pub type Dbgen = crate::EnumBitfieldStruct<u8, Dbgen_SPEC>;
     impl Dbgen {
+        #[doc = "On-chip debugger is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "On-chip debugger is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -11281,9 +12547,11 @@ impl crate::sealed::RegSpec for Rstsr0_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Reset Status Register 0"]
 pub type Rstsr0 = crate::RegValueT<Rstsr0_SPEC>;
 
 impl Rstsr0 {
+    #[doc = "Power-On Reset Detect Flag"]
     #[inline(always)]
     pub fn porf(
         self,
@@ -11309,6 +12577,7 @@ impl Rstsr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Voltage Monitor 0 Reset Detect Flag"]
     #[inline(always)]
     pub fn pvd0rf(
         self,
@@ -11334,6 +12603,7 @@ impl Rstsr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Voltage Monitor 1 Reset Detect Flag"]
     #[inline(always)]
     pub fn pvd1rf(
         self,
@@ -11359,6 +12629,7 @@ impl Rstsr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Voltage Monitor 2 Reset Detect Flag"]
     #[inline(always)]
     pub fn pvd2rf(
         self,
@@ -11384,6 +12655,7 @@ impl Rstsr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Deep Software Standby Reset Flag"]
     #[inline(always)]
     pub fn dpsrstf(
         self,
@@ -11421,40 +12693,50 @@ pub mod rstsr0 {
     pub struct Porf_SPEC;
     pub type Porf = crate::EnumBitfieldStruct<u8, Porf_SPEC>;
     impl Porf {
+        #[doc = "Power-on reset not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Power-on reset detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pvd0Rf_SPEC;
     pub type Pvd0Rf = crate::EnumBitfieldStruct<u8, Pvd0Rf_SPEC>;
     impl Pvd0Rf {
+        #[doc = "Voltage monitor 0 reset not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Voltage monitor 0 reset detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pvd1Rf_SPEC;
     pub type Pvd1Rf = crate::EnumBitfieldStruct<u8, Pvd1Rf_SPEC>;
     impl Pvd1Rf {
+        #[doc = "Voltage monitor 1 reset not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Voltage monitor 1 reset detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pvd2Rf_SPEC;
     pub type Pvd2Rf = crate::EnumBitfieldStruct<u8, Pvd2Rf_SPEC>;
     impl Pvd2Rf {
+        #[doc = "Voltage monitor 2 reset not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Voltage monitor 2 reset detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpsrstf_SPEC;
     pub type Dpsrstf = crate::EnumBitfieldStruct<u8, Dpsrstf_SPEC>;
     impl Dpsrstf {
+        #[doc = "Deep Software Standby mode cancellation not requested by an interrupt or a reset."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Software Standby mode cancellation requested by an interrupt or a reset."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -11465,9 +12747,11 @@ impl crate::sealed::RegSpec for Rstsr2_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Reset Status Register 2"]
 pub type Rstsr2 = crate::RegValueT<Rstsr2_SPEC>;
 
 impl Rstsr2 {
+    #[doc = "Cold/Warm Start Determination Flag"]
     #[inline(always)]
     pub fn cwsf(
         self,
@@ -11505,8 +12789,10 @@ pub mod rstsr2 {
     pub struct Cwsf_SPEC;
     pub type Cwsf = crate::EnumBitfieldStruct<u8, Cwsf_SPEC>;
     impl Cwsf {
+        #[doc = "Cold start"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Warm start"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -11517,9 +12803,11 @@ impl crate::sealed::RegSpec for Momcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Main Clock Oscillator Mode Oscillation Control Register"]
 pub type Momcr = crate::RegValueT<Momcr_SPEC>;
 
 impl Momcr {
+    #[doc = "Main Clock Oscillator Drive Capability 0 Switching"]
     #[inline(always)]
     pub fn modrv0(
         self,
@@ -11545,6 +12833,7 @@ impl Momcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Main Clock Oscillator Switching"]
     #[inline(always)]
     pub fn mosel(
         self,
@@ -11582,20 +12871,26 @@ pub mod momcr {
     pub struct Modrv0_SPEC;
     pub type Modrv0 = crate::EnumBitfieldStruct<u8, Modrv0_SPEC>;
     impl Modrv0 {
+        #[doc = "8 MHz"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "8 MHz to 24 MHz"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "8 MHz to 48 MHz"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mosel_SPEC;
     pub type Mosel = crate::EnumBitfieldStruct<u8, Mosel_SPEC>;
     impl Mosel {
+        #[doc = "Resonator"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "External clock input"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -11606,9 +12901,11 @@ impl crate::sealed::RegSpec for Fwepror_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Flash P/E Protect Register"]
 pub type Fwepror = crate::RegValueT<Fwepror_SPEC>;
 
 impl Fwepror {
+    #[doc = "Flash Programming and Erasure"]
     #[inline(always)]
     pub fn flwe(
         self,
@@ -11646,12 +12943,16 @@ pub mod fwepror {
     pub struct Flwe_SPEC;
     pub type Flwe = crate::EnumBitfieldStruct<u8, Flwe_SPEC>;
     impl Flwe {
+        #[doc = "Prohibits Program, Block Erase, Multi Block Erase, Blank Check, and Configuration set command processing."]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Permits Program, Block Erase, Multi Block Erase, Blank Check, and Configuration set command processing."]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Prohibits Program, Block Erase, Multi Block Erase, Blank Check, and Configuration set command processing."]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Prohibits Program, Block Erase, Multi Block Erase, Blank Check, and Configuration set command processing."]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -11662,9 +12963,11 @@ impl crate::sealed::RegSpec for Pvdcmpcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Voltage Monitor %s Comparator Control Register"]
 pub type Pvdcmpcr = crate::RegValueT<Pvdcmpcr_SPEC>;
 
 impl Pvdcmpcr {
+    #[doc = "Detection Voltage m Level Select"]
     #[inline(always)]
     pub fn pvdlvl(
         self,
@@ -11690,6 +12993,7 @@ impl Pvdcmpcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Voltage Detection m Enable"]
     #[inline(always)]
     pub fn pvde(
         self,
@@ -11727,40 +13031,56 @@ pub mod pvdcmpcr {
     pub struct Pvdlvl_SPEC;
     pub type Pvdlvl = crate::EnumBitfieldStruct<u8, Pvdlvl_SPEC>;
     impl Pvdlvl {
+        #[doc = "3.86 V (Vdetm_3)"]
         pub const _0_X_03: Self = Self::new(3);
 
+        #[doc = "3.14 V (Vdetm_4)"]
         pub const _0_X_04: Self = Self::new(4);
 
+        #[doc = "3.10 V (Vdetm_5)"]
         pub const _0_X_05: Self = Self::new(5);
 
+        #[doc = "3.08 V (Vdetm_6)"]
         pub const _0_X_06: Self = Self::new(6);
 
+        #[doc = "2.85 V (Vdetm_7)"]
         pub const _0_X_07: Self = Self::new(7);
 
+        #[doc = "2.83 V (Vdetm_8)"]
         pub const _0_X_08: Self = Self::new(8);
 
+        #[doc = "2.80 V (Vdetm_9)"]
         pub const _0_X_09: Self = Self::new(9);
 
+        #[doc = "2.62V (Vdetm_10)"]
         pub const _0_X_0_A: Self = Self::new(10);
 
+        #[doc = "2.33V (Vdetm_11)"]
         pub const _0_X_0_B: Self = Self::new(11);
 
+        #[doc = "1.90V (Vdetm_12)"]
         pub const _0_X_0_C: Self = Self::new(12);
 
+        #[doc = "1.86V (Vdetm_13)"]
         pub const _0_X_0_D: Self = Self::new(13);
 
+        #[doc = "1.74V (Vdetm_14)"]
         pub const _0_X_0_E: Self = Self::new(14);
 
+        #[doc = "1.71V (Vdetm_15)"]
         pub const _0_X_0_F: Self = Self::new(15);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pvde_SPEC;
     pub type Pvde = crate::EnumBitfieldStruct<u8, Pvde_SPEC>;
     impl Pvde {
+        #[doc = "Voltage detection m circuit disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Voltage detection m circuit enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -11771,9 +13091,11 @@ impl crate::sealed::RegSpec for Pvdcr0_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Voltage Monitor %s Circuit Control Register 0"]
 pub type Pvdcr0 = crate::RegValueT<Pvdcr0_SPEC>;
 
 impl Pvdcr0 {
+    #[doc = "Voltage Monitor m Interrupt/Reset Enable"]
     #[inline(always)]
     pub fn rie(
         self,
@@ -11799,6 +13121,7 @@ impl Pvdcr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Voltage monitor m Digital Filter Disabled Mode Select"]
     #[inline(always)]
     pub fn dfdis(
         self,
@@ -11824,6 +13147,7 @@ impl Pvdcr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Voltage Monitor m Circuit Comparison Result Output Enable"]
     #[inline(always)]
     pub fn cmpe(
         self,
@@ -11849,6 +13173,7 @@ impl Pvdcr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Sampling Clock Select"]
     #[inline(always)]
     pub fn fsamp(
         self,
@@ -11874,6 +13199,7 @@ impl Pvdcr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Voltage Monitor m Circuit Mode Select"]
     #[inline(always)]
     pub fn ri(self) -> crate::common::RegisterFieldBool<6, 1, 0, Pvdcr0_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<6, 1, 0, Pvdcr0_SPEC, crate::common::RW>::from_register(
@@ -11881,6 +13207,7 @@ impl Pvdcr0 {
         )
     }
 
+    #[doc = "Voltage Monitor m Reset Negate Select"]
     #[inline(always)]
     pub fn rn(self) -> crate::common::RegisterFieldBool<7, 1, 0, Pvdcr0_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<7, 1, 0, Pvdcr0_SPEC, crate::common::RW>::from_register(
@@ -11900,36 +13227,46 @@ pub mod pvdcr0 {
     pub struct Rie_SPEC;
     pub type Rie = crate::EnumBitfieldStruct<u8, Rie_SPEC>;
     impl Rie {
+        #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dfdis_SPEC;
     pub type Dfdis = crate::EnumBitfieldStruct<u8, Dfdis_SPEC>;
     impl Dfdis {
+        #[doc = "Enable the digital filter"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Disable the digital filter"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpe_SPEC;
     pub type Cmpe = crate::EnumBitfieldStruct<u8, Cmpe_SPEC>;
     impl Cmpe {
+        #[doc = "Voltage monitor m circuit comparison result output disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Voltage monitor m circuit comparison result output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Fsamp_SPEC;
     pub type Fsamp = crate::EnumBitfieldStruct<u8, Fsamp_SPEC>;
     impl Fsamp {
+        #[doc = "1/2 LOCO frequency"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "1/4 LOCO frequency"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "1/8 LOCO frequency"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "1/16 LOCO frequency"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -11940,9 +13277,11 @@ impl crate::sealed::RegSpec for Vbattmnselr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Battery Backup Voltage Monitor Function Select Register"]
 pub type Vbattmnselr = crate::RegValueT<Vbattmnselr_SPEC>;
 
 impl Vbattmnselr {
+    #[doc = "VBATT Voltage Monitor Function Select Bit"]
     #[inline(always)]
     pub fn vbtmnsel(
         self,
@@ -11980,8 +13319,10 @@ pub mod vbattmnselr {
     pub struct Vbtmnsel_SPEC;
     pub type Vbtmnsel = crate::EnumBitfieldStruct<u8, Vbtmnsel_SPEC>;
     impl Vbtmnsel {
+        #[doc = "Disables VBATT voltage monitor function"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables VBATT voltage monitor function"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -11992,9 +13333,11 @@ impl crate::sealed::RegSpec for Vbtbpcr1_SPEC {
     type DataType = u8;
 }
 
+#[doc = "VBATT Battery Power Supply Control Register 1"]
 pub type Vbtbpcr1 = crate::RegValueT<Vbtbpcr1_SPEC>;
 
 impl Vbtbpcr1 {
+    #[doc = "Battery Power Supply Switch Stop"]
     #[inline(always)]
     pub fn bpwswstp(
         self,
@@ -12032,8 +13375,10 @@ pub mod vbtbpcr1 {
     pub struct Bpwswstp_SPEC;
     pub type Bpwswstp = crate::EnumBitfieldStruct<u8, Bpwswstp_SPEC>;
     impl Bpwswstp {
+        #[doc = "Battery power supply switch enable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Battery power supply switch stop"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12044,9 +13389,11 @@ impl crate::sealed::RegSpec for Lpscr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Low Power State Control Register"]
 pub type Lpscr = crate::RegValueT<Lpscr_SPEC>;
 
 impl Lpscr {
+    #[doc = "Low power mode setting bit"]
     #[inline(always)]
     pub fn lpmd(
         self,
@@ -12084,16 +13431,22 @@ pub mod lpscr {
     pub struct Lpmd_SPEC;
     pub type Lpmd = crate::EnumBitfieldStruct<u8, Lpmd_SPEC>;
     impl Lpmd {
+        #[doc = "System Active"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Software Standby mode"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Deep Software Standby mode 1"]
         pub const _0_X_8: Self = Self::new(8);
 
+        #[doc = "Deep Software Standby mode 2"]
         pub const _0_X_9: Self = Self::new(9);
 
+        #[doc = "Deep Software Standby mode 3"]
         pub const _0_X_A: Self = Self::new(10);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -12104,9 +13457,11 @@ impl crate::sealed::RegSpec for Sscr1_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Software Standby Control Register 1"]
 pub type Sscr1 = crate::RegValueT<Sscr1_SPEC>;
 
 impl Sscr1 {
+    #[doc = "Software Standby Fast Return"]
     #[inline(always)]
     pub fn ss1fr(
         self,
@@ -12144,8 +13499,10 @@ pub mod sscr1 {
     pub struct Ss1Fr_SPEC;
     pub type Ss1Fr = crate::EnumBitfieldStruct<u8, Ss1Fr_SPEC>;
     impl Ss1Fr {
+        #[doc = "When returning from Software Standby mode, fast return function is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "When returning from Software Standby mode, fast return function is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12156,9 +13513,11 @@ impl crate::sealed::RegSpec for Lvocr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Low Voltage Operation Control register"]
 pub type Lvocr = crate::RegValueT<Lvocr_SPEC>;
 
 impl Lvocr {
+    #[doc = "Low Voltage Operation 0 Enable"]
     #[inline(always)]
     pub fn lvo0e(
         self,
@@ -12184,6 +13543,7 @@ impl Lvocr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Low Voltage Operation 1 Enable"]
     #[inline(always)]
     pub fn lvo1e(
         self,
@@ -12221,16 +13581,20 @@ pub mod lvocr {
     pub struct Lvo0E_SPEC;
     pub type Lvo0E = crate::EnumBitfieldStruct<u8, Lvo0E_SPEC>;
     impl Lvo0E {
+        #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lvo1E_SPEC;
     pub type Lvo1E = crate::EnumBitfieldStruct<u8, Lvo1E_SPEC>;
     impl Lvo1E {
+        #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12241,9 +13605,11 @@ impl crate::sealed::RegSpec for Pll1Ldocr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "PLL1-LDO Control Register"]
 pub type Pll1Ldocr = crate::RegValueT<Pll1Ldocr_SPEC>;
 
 impl Pll1Ldocr {
+    #[doc = "LDO Stop"]
     #[inline(always)]
     pub fn ldostp(
         self,
@@ -12269,6 +13635,7 @@ impl Pll1Ldocr {
         >::from_register(self, 0)
     }
 
+    #[doc = "STBY Keep"]
     #[inline(always)]
     pub fn skeep(
         self,
@@ -12306,16 +13673,20 @@ pub mod pll1ldocr {
     pub struct Ldostp_SPEC;
     pub type Ldostp = crate::EnumBitfieldStruct<u8, Ldostp_SPEC>;
     impl Ldostp {
+        #[doc = "PLL1-LDO is enabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "PLL1-LDO is stopped"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Skeep_SPEC;
     pub type Skeep = crate::EnumBitfieldStruct<u8, Skeep_SPEC>;
     impl Skeep {
+        #[doc = "PLL1-LDO is stopped during Software Standby mode."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "PLL1-LDO state before Software Standby mode is retained during Software Standby mode."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12326,9 +13697,11 @@ impl crate::sealed::RegSpec for Pll2Ldocr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "PLL2-LDO Control Register"]
 pub type Pll2Ldocr = crate::RegValueT<Pll2Ldocr_SPEC>;
 
 impl Pll2Ldocr {
+    #[doc = "LDO Stop"]
     #[inline(always)]
     pub fn ldostp(
         self,
@@ -12354,6 +13727,7 @@ impl Pll2Ldocr {
         >::from_register(self, 0)
     }
 
+    #[doc = "STBY Keep"]
     #[inline(always)]
     pub fn skeep(
         self,
@@ -12391,16 +13765,20 @@ pub mod pll2ldocr {
     pub struct Ldostp_SPEC;
     pub type Ldostp = crate::EnumBitfieldStruct<u8, Ldostp_SPEC>;
     impl Ldostp {
+        #[doc = "PLL2-LDO is enabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "PLL2-LDO is stopped"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Skeep_SPEC;
     pub type Skeep = crate::EnumBitfieldStruct<u8, Skeep_SPEC>;
     impl Skeep {
+        #[doc = "PLL2-LDO is stopped during Software Standby mode."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "PLL2-LDO state before Software Standby mode is retained during Software Standby mode."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12411,9 +13789,11 @@ impl crate::sealed::RegSpec for Hocoldocr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "HOCO-LDO Control Register"]
 pub type Hocoldocr = crate::RegValueT<Hocoldocr_SPEC>;
 
 impl Hocoldocr {
+    #[doc = "LDO Stop"]
     #[inline(always)]
     pub fn ldostp(
         self,
@@ -12439,6 +13819,7 @@ impl Hocoldocr {
         >::from_register(self, 0)
     }
 
+    #[doc = "STBY Keep"]
     #[inline(always)]
     pub fn skeep(
         self,
@@ -12476,16 +13857,20 @@ pub mod hocoldocr {
     pub struct Ldostp_SPEC;
     pub type Ldostp = crate::EnumBitfieldStruct<u8, Ldostp_SPEC>;
     impl Ldostp {
+        #[doc = "HOCO-LDO is enabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "HOCO-LDO is stopped"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Skeep_SPEC;
     pub type Skeep = crate::EnumBitfieldStruct<u8, Skeep_SPEC>;
     impl Skeep {
+        #[doc = "HOCO-LDO is stopped during Software Standby mode."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "HOCO-LDO state before Software Standby mode is retained during Software Standby mode."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12496,9 +13881,11 @@ impl crate::sealed::RegSpec for Pvdfcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Voltage Monitor %s Function Control Register"]
 pub type Pvdfcr = crate::RegValueT<Pvdfcr_SPEC>;
 
 impl Pvdfcr {
+    #[doc = "Rise Hysteresis Select"]
     #[inline(always)]
     pub fn rhsel(
         self,
@@ -12536,8 +13923,10 @@ pub mod pvdfcr {
     pub struct Rhsel_SPEC;
     pub type Rhsel = crate::EnumBitfieldStruct<u8, Rhsel_SPEC>;
     impl Rhsel {
+        #[doc = "Hysteresis level for VCC-fall detection is selected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Hysteresis level for VCC-rise detection is selected."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12548,9 +13937,11 @@ impl crate::sealed::RegSpec for Sosccr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Sub-Clock Oscillator Control Register"]
 pub type Sosccr = crate::RegValueT<Sosccr_SPEC>;
 
 impl Sosccr {
+    #[doc = "Sub-Clock Oscillator Stop"]
     #[inline(always)]
     pub fn sostp(
         self,
@@ -12588,8 +13979,10 @@ pub mod sosccr {
     pub struct Sostp_SPEC;
     pub type Sostp = crate::EnumBitfieldStruct<u8, Sostp_SPEC>;
     impl Sostp {
+        #[doc = "Operate the sub-clock oscillator"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stop the sub-clock oscillator"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12600,9 +13993,11 @@ impl crate::sealed::RegSpec for Somcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Sub-Clock Oscillator Mode Control Register"]
 pub type Somcr = crate::RegValueT<Somcr_SPEC>;
 
 impl Somcr {
+    #[doc = "Sub-Clock Oscillator Drive Capability Switching"]
     #[inline(always)]
     pub fn sodrv(
         self,
@@ -12628,6 +14023,7 @@ impl Somcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Sub-Clock Oscillator Switching"]
     #[inline(always)]
     pub fn sosel(
         self,
@@ -12665,20 +14061,26 @@ pub mod somcr {
     pub struct Sodrv_SPEC;
     pub type Sodrv = crate::EnumBitfieldStruct<u8, Sodrv_SPEC>;
     impl Sodrv {
+        #[doc = "Standard (12.5pf)"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Lowpower mode 1 (9pf)"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Lowpower mode 2 (7pf)"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Lowpower mode 3 (4pf)"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sosel_SPEC;
     pub type Sosel = crate::EnumBitfieldStruct<u8, Sosel_SPEC>;
     impl Sosel {
+        #[doc = "Resonator"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "External clock input"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12689,9 +14091,11 @@ impl crate::sealed::RegSpec for Vbtber_SPEC {
     type DataType = u8;
 }
 
+#[doc = "VBATT Backup Enable Register"]
 pub type Vbtber = crate::RegValueT<Vbtber_SPEC>;
 
 impl Vbtber {
+    #[doc = "VBATT backup register access enable bit"]
     #[inline(always)]
     pub fn vbae(
         self,
@@ -12729,8 +14133,10 @@ pub mod vbtber {
     pub struct Vbae_SPEC;
     pub type Vbae = crate::EnumBitfieldStruct<u8, Vbae_SPEC>;
     impl Vbae {
+        #[doc = "Disable to access VBTBKR\\[n\\]"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable to access VBTBKR\\[n\\]"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12741,9 +14147,11 @@ impl crate::sealed::RegSpec for Vbtbpcr2_SPEC {
     type DataType = u8;
 }
 
+#[doc = "VBATT Battery Power Supply Control Register 2"]
 pub type Vbtbpcr2 = crate::RegValueT<Vbtbpcr2_SPEC>;
 
 impl Vbtbpcr2 {
+    #[doc = "VDETBAT Level Select"]
     #[inline(always)]
     pub fn vdetlvl(
         self,
@@ -12769,6 +14177,7 @@ impl Vbtbpcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Voltage drop detection enable"]
     #[inline(always)]
     pub fn vdete(
         self,
@@ -12806,28 +14215,38 @@ pub mod vbtbpcr2 {
     pub struct Vdetlvl_SPEC;
     pub type Vdetlvl = crate::EnumBitfieldStruct<u8, Vdetlvl_SPEC>;
     impl Vdetlvl {
+        #[doc = "2.80 V"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "2.53 V"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "2.10 V"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "1.95 V"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "1.85 V"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "1.75 V"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "setting prohibited"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "setting prohibited"]
         pub const _111: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vdete_SPEC;
     pub type Vdete = crate::EnumBitfieldStruct<u8, Vdete_SPEC>;
     impl Vdete {
+        #[doc = "VCC Voltage drop detection disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "VCC Voltage drop detection enable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12838,9 +14257,11 @@ impl crate::sealed::RegSpec for Vbtbpsr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "VBATT Battery Power Supply Status Register"]
 pub type Vbtbpsr = crate::RegValueT<Vbtbpsr_SPEC>;
 
 impl Vbtbpsr {
+    #[doc = "VBATT_POR Flag"]
     #[inline(always)]
     pub fn vbporf(
         self,
@@ -12866,6 +14287,7 @@ impl Vbtbpsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT_POR Monitor"]
     #[inline(always)]
     pub fn vbporm(
         self,
@@ -12891,6 +14313,7 @@ impl Vbtbpsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Battery Power Supply Switch Status Monitor"]
     #[inline(always)]
     pub fn bpwswm(
         self,
@@ -12928,24 +14351,30 @@ pub mod vbtbpsr {
     pub struct Vbporf_SPEC;
     pub type Vbporf = crate::EnumBitfieldStruct<u8, Vbporf_SPEC>;
     impl Vbporf {
+        #[doc = "VBATT_R voltage drop is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "VBATT_R voltage drop is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vbporm_SPEC;
     pub type Vbporm = crate::EnumBitfieldStruct<u8, Vbporm_SPEC>;
     impl Vbporm {
+        #[doc = "VBATT_R voltage < VPDR (BATR)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "VBATT_R voltage > VPDR (BATR)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bpwswm_SPEC;
     pub type Bpwswm = crate::EnumBitfieldStruct<u8, Bpwswm_SPEC>;
     impl Bpwswm {
+        #[doc = "VCC voltage < VDETBATT_m"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "VCC voltage > VDETBATT_m"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12956,9 +14385,11 @@ impl crate::sealed::RegSpec for Vbtadsr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "VBATT Tamper detection Status Register"]
 pub type Vbtadsr = crate::RegValueT<Vbtadsr_SPEC>;
 
 impl Vbtadsr {
+    #[doc = "VBATT Tamper Detection flag 0"]
     #[inline(always)]
     pub fn vbtadf0(
         self,
@@ -12984,6 +14415,7 @@ impl Vbtadsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT Tamper Detection flag 1"]
     #[inline(always)]
     pub fn vbtadf1(
         self,
@@ -13009,6 +14441,7 @@ impl Vbtadsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT Tamper Detection flag 2"]
     #[inline(always)]
     pub fn vbtadf2(
         self,
@@ -13046,24 +14479,30 @@ pub mod vbtadsr {
     pub struct Vbtadf0_SPEC;
     pub type Vbtadf0 = crate::EnumBitfieldStruct<u8, Vbtadf0_SPEC>;
     impl Vbtadf0 {
+        #[doc = "RTCIC0 input edge is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RTCIC0 input edge is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vbtadf1_SPEC;
     pub type Vbtadf1 = crate::EnumBitfieldStruct<u8, Vbtadf1_SPEC>;
     impl Vbtadf1 {
+        #[doc = "RTCIC1 input edge is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RTCIC1 input edge is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vbtadf2_SPEC;
     pub type Vbtadf2 = crate::EnumBitfieldStruct<u8, Vbtadf2_SPEC>;
     impl Vbtadf2 {
+        #[doc = "RTCIC2 input edge is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RTCIC2 input edge is detected"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -13074,9 +14513,11 @@ impl crate::sealed::RegSpec for Vbtadcr1_SPEC {
     type DataType = u8;
 }
 
+#[doc = "VBATT Tamper detection Control Register 1"]
 pub type Vbtadcr1 = crate::RegValueT<Vbtadcr1_SPEC>;
 
 impl Vbtadcr1 {
+    #[doc = "VBATT Tamper Detection Interrupt Enable 0"]
     #[inline(always)]
     pub fn vbtadie0(
         self,
@@ -13102,6 +14543,7 @@ impl Vbtadcr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT Tamper Detection Interrupt Enable 1"]
     #[inline(always)]
     pub fn vbtadie1(
         self,
@@ -13127,6 +14569,7 @@ impl Vbtadcr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT Tamper Detection Interrupt Enable 2"]
     #[inline(always)]
     pub fn vbtadie2(
         self,
@@ -13152,6 +14595,7 @@ impl Vbtadcr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT Tamper Detection Backup Register Clear Enable 0"]
     #[inline(always)]
     pub fn vbtadce0(
         self,
@@ -13177,6 +14621,7 @@ impl Vbtadcr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT Tamper Detection Backup Register Clear Enable 1"]
     #[inline(always)]
     pub fn vbtadce1(
         self,
@@ -13202,6 +14647,7 @@ impl Vbtadcr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT Tamper Detection Backup Register Clear Enable 2"]
     #[inline(always)]
     pub fn vbtadce2(
         self,
@@ -13239,48 +14685,60 @@ pub mod vbtadcr1 {
     pub struct Vbtadie0_SPEC;
     pub type Vbtadie0 = crate::EnumBitfieldStruct<u8, Vbtadie0_SPEC>;
     impl Vbtadie0 {
+        #[doc = "Interrupt by VBTADF0 flag is disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt by VBTADF0 flag is enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vbtadie1_SPEC;
     pub type Vbtadie1 = crate::EnumBitfieldStruct<u8, Vbtadie1_SPEC>;
     impl Vbtadie1 {
+        #[doc = "Interrupt by VBTADF1 flag is disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt by VBTADF1 flag is enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vbtadie2_SPEC;
     pub type Vbtadie2 = crate::EnumBitfieldStruct<u8, Vbtadie2_SPEC>;
     impl Vbtadie2 {
+        #[doc = "Interrupt by VBTADF2 flag is disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt by VBTADF2 flag is enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vbtadce0_SPEC;
     pub type Vbtadce0 = crate::EnumBitfieldStruct<u8, Vbtadce0_SPEC>;
     impl Vbtadce0 {
+        #[doc = "Clear Backup Register by VBTADF0 flag is disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear Backup Register by VBTADF0 flag is enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vbtadce1_SPEC;
     pub type Vbtadce1 = crate::EnumBitfieldStruct<u8, Vbtadce1_SPEC>;
     impl Vbtadce1 {
+        #[doc = "Clear Backup Register by VBTADF1 flag is disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear Backup Register by VBTADF1 flag is enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vbtadce2_SPEC;
     pub type Vbtadce2 = crate::EnumBitfieldStruct<u8, Vbtadce2_SPEC>;
     impl Vbtadce2 {
+        #[doc = "Clear Backup Register by VBTADF2 flag is disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear Backup Register by VBTADF2 flag is enable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -13291,9 +14749,11 @@ impl crate::sealed::RegSpec for Vbtadcr2_SPEC {
     type DataType = u8;
 }
 
+#[doc = "VBATT Tamper detection Control Register 2"]
 pub type Vbtadcr2 = crate::RegValueT<Vbtadcr2_SPEC>;
 
 impl Vbtadcr2 {
+    #[doc = "VBATT RTC Time Capture Event Source Select 0"]
     #[inline(always)]
     pub fn vbrtces0(
         self,
@@ -13319,6 +14779,7 @@ impl Vbtadcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT RTC Time Capture Event Source Select 1"]
     #[inline(always)]
     pub fn vbrtces1(
         self,
@@ -13344,6 +14805,7 @@ impl Vbtadcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT RTC Time Capture Event Source Select 2"]
     #[inline(always)]
     pub fn vbrtces2(
         self,
@@ -13381,24 +14843,30 @@ pub mod vbtadcr2 {
     pub struct Vbrtces0_SPEC;
     pub type Vbrtces0 = crate::EnumBitfieldStruct<u8, Vbrtces0_SPEC>;
     impl Vbrtces0 {
+        #[doc = "RTCIC0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "VBTADF0"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vbrtces1_SPEC;
     pub type Vbrtces1 = crate::EnumBitfieldStruct<u8, Vbrtces1_SPEC>;
     impl Vbrtces1 {
+        #[doc = "RTCIC1"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "VBTADF1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vbrtces2_SPEC;
     pub type Vbrtces2 = crate::EnumBitfieldStruct<u8, Vbrtces2_SPEC>;
     impl Vbrtces2 {
+        #[doc = "RTCIC2"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "VBTADF2"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -13409,9 +14877,11 @@ impl crate::sealed::RegSpec for Vbtictlr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "VBATT Input Control Register"]
 pub type Vbtictlr = crate::RegValueT<Vbtictlr_SPEC>;
 
 impl Vbtictlr {
+    #[doc = "VBATT CH0 Input Enable"]
     #[inline(always)]
     pub fn vch0inen(
         self,
@@ -13437,6 +14907,7 @@ impl Vbtictlr {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT CH1 Input Enable"]
     #[inline(always)]
     pub fn vch1inen(
         self,
@@ -13462,6 +14933,7 @@ impl Vbtictlr {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT CH2 Input Enable"]
     #[inline(always)]
     pub fn vch2inen(
         self,
@@ -13499,24 +14971,30 @@ pub mod vbtictlr {
     pub struct Vch0Inen_SPEC;
     pub type Vch0Inen = crate::EnumBitfieldStruct<u8, Vch0Inen_SPEC>;
     impl Vch0Inen {
+        #[doc = "RTCIC0 input disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RTCIC0 input enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vch1Inen_SPEC;
     pub type Vch1Inen = crate::EnumBitfieldStruct<u8, Vch1Inen_SPEC>;
     impl Vch1Inen {
+        #[doc = "RTCIC1 input disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RTCIC1 input enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vch2Inen_SPEC;
     pub type Vch2Inen = crate::EnumBitfieldStruct<u8, Vch2Inen_SPEC>;
     impl Vch2Inen {
+        #[doc = "RTCIC2 input disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RTCIC2 input enable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -13527,9 +15005,11 @@ impl crate::sealed::RegSpec for Vbtictlr2_SPEC {
     type DataType = u8;
 }
 
+#[doc = "VBATT Input Control Register 2"]
 pub type Vbtictlr2 = crate::RegValueT<Vbtictlr2_SPEC>;
 
 impl Vbtictlr2 {
+    #[doc = "VBATT CH0 Input Noise Canceler Enable"]
     #[inline(always)]
     pub fn vch0nce(
         self,
@@ -13555,6 +15035,7 @@ impl Vbtictlr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT CH1 Input Noise Canceler Enable"]
     #[inline(always)]
     pub fn vch1nce(
         self,
@@ -13580,6 +15061,7 @@ impl Vbtictlr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT CH2 Input Noise Canceler Enable"]
     #[inline(always)]
     pub fn vch2nce(
         self,
@@ -13605,6 +15087,7 @@ impl Vbtictlr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT CH0 Input Edge Select"]
     #[inline(always)]
     pub fn vch0eg(
         self,
@@ -13630,6 +15113,7 @@ impl Vbtictlr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT CH1 Input Edge Select"]
     #[inline(always)]
     pub fn vch1eg(
         self,
@@ -13655,6 +15139,7 @@ impl Vbtictlr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT CH2 Input Edge Select"]
     #[inline(always)]
     pub fn vch2eg(
         self,
@@ -13692,48 +15177,60 @@ pub mod vbtictlr2 {
     pub struct Vch0Nce_SPEC;
     pub type Vch0Nce = crate::EnumBitfieldStruct<u8, Vch0Nce_SPEC>;
     impl Vch0Nce {
+        #[doc = "RTCIC0 pin input noise canceler disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RTCIC0 pin input noise canceler enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vch1Nce_SPEC;
     pub type Vch1Nce = crate::EnumBitfieldStruct<u8, Vch1Nce_SPEC>;
     impl Vch1Nce {
+        #[doc = "RTCIC1 pin input noise canceler disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RTCIC1 pin input noise canceler enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vch2Nce_SPEC;
     pub type Vch2Nce = crate::EnumBitfieldStruct<u8, Vch2Nce_SPEC>;
     impl Vch2Nce {
+        #[doc = "RTCIC2 pin input noise canceler disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RTCIC2 pin input noise canceler enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vch0Eg_SPEC;
     pub type Vch0Eg = crate::EnumBitfieldStruct<u8, Vch0Eg_SPEC>;
     impl Vch0Eg {
+        #[doc = "RTCIC0 pin input event is detected on falling edge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RTCIC0 pin input event is detected on rising edge"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vch1Eg_SPEC;
     pub type Vch1Eg = crate::EnumBitfieldStruct<u8, Vch1Eg_SPEC>;
     impl Vch1Eg {
+        #[doc = "RTCIC1 pin input event is detected on falling edge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RTCIC1 pin input event is detected on rising edge"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vch2Eg_SPEC;
     pub type Vch2Eg = crate::EnumBitfieldStruct<u8, Vch2Eg_SPEC>;
     impl Vch2Eg {
+        #[doc = "RTCIC2 pin input event is detected on falling edge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RTCIC2 pin input event is detected on rising edge"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -13744,9 +15241,11 @@ impl crate::sealed::RegSpec for Vbtimonr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "VBATT Input Monitor Register"]
 pub type Vbtimonr = crate::RegValueT<Vbtimonr_SPEC>;
 
 impl Vbtimonr {
+    #[doc = "VBATT CH0 Input monitor"]
     #[inline(always)]
     pub fn vch0mon(
         self,
@@ -13772,6 +15271,7 @@ impl Vbtimonr {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT CH1 Input monitor"]
     #[inline(always)]
     pub fn vch1mon(
         self,
@@ -13797,6 +15297,7 @@ impl Vbtimonr {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT CH2 Input monitor"]
     #[inline(always)]
     pub fn vch2mon(
         self,
@@ -13834,24 +15335,30 @@ pub mod vbtimonr {
     pub struct Vch0Mon_SPEC;
     pub type Vch0Mon = crate::EnumBitfieldStruct<u8, Vch0Mon_SPEC>;
     impl Vch0Mon {
+        #[doc = "RTCIC0 pin input is low level"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RTCIC0 pin input is high level."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vch1Mon_SPEC;
     pub type Vch1Mon = crate::EnumBitfieldStruct<u8, Vch1Mon_SPEC>;
     impl Vch1Mon {
+        #[doc = "RTCIC1 pin input is low level"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RTCIC1 pin input is high level"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vch2Mon_SPEC;
     pub type Vch2Mon = crate::EnumBitfieldStruct<u8, Vch2Mon_SPEC>;
     impl Vch2Mon {
+        #[doc = "RTCIC2 pin input is low level"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RTCIC2 pin input is high level."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -13862,6 +15369,7 @@ impl crate::sealed::RegSpec for Vbtbkr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "VBATT Backup Register"]
 pub type Vbtbkr = crate::RegValueT<Vbtbkr_SPEC>;
 
 impl NoBitfieldReg<Vbtbkr_SPEC> for Vbtbkr {}

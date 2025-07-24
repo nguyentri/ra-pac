@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.0, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:19:15 +0000
+// Generated from SVD 1.0, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:50:19 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Kint {
         self.ptr
     }
 
+    #[doc = "KEY Return Control Register"]
     #[inline(always)]
     pub const fn krctl(&self) -> &'static crate::common::Reg<self::Krctl_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Kint {
         }
     }
 
+    #[doc = "KEY Return Flag Register"]
     #[inline(always)]
     pub const fn krf(&self) -> &'static crate::common::Reg<self::Krf_SPEC, crate::common::RW> {
         unsafe {
@@ -52,6 +54,7 @@ impl super::Kint {
         }
     }
 
+    #[doc = "KEY Return Mode Register"]
     #[inline(always)]
     pub const fn krm(&self) -> &'static crate::common::Reg<self::Krm_SPEC, crate::common::RW> {
         unsafe {
@@ -68,9 +71,11 @@ impl crate::sealed::RegSpec for Krctl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "KEY Return Control Register"]
 pub type Krctl = crate::RegValueT<Krctl_SPEC>;
 
 impl Krctl {
+    #[doc = "Usage of Key Interrupt Flags(KR0 to KR7)"]
     #[inline(always)]
     pub fn krmd(
         self,
@@ -96,6 +101,7 @@ impl Krctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -103,6 +109,7 @@ impl Krctl {
         crate::common::RegisterField::<1,0x3f,1,0,u8,u8,Krctl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Detection Edge Selection (KRF0 to KRF7)"]
     #[inline(always)]
     pub fn kreg(
         self,
@@ -140,16 +147,20 @@ pub mod krctl {
     pub struct Krmd_SPEC;
     pub type Krmd = crate::EnumBitfieldStruct<u8, Krmd_SPEC>;
     impl Krmd {
+        #[doc = "Do not use key interrupt flags"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Use key interrupt flags."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Kreg_SPEC;
     pub type Kreg = crate::EnumBitfieldStruct<u8, Kreg_SPEC>;
     impl Kreg {
+        #[doc = "Falling edge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Rising edge"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -160,9 +171,11 @@ impl crate::sealed::RegSpec for Krf_SPEC {
     type DataType = u8;
 }
 
+#[doc = "KEY Return Flag Register"]
 pub type Krf = crate::RegValueT<Krf_SPEC>;
 
 impl Krf {
+    #[doc = "Key interrupt flag 7"]
     #[inline(always)]
     pub fn krf7(
         self,
@@ -180,6 +193,7 @@ impl Krf {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key interrupt flag 6"]
     #[inline(always)]
     pub fn krf6(
         self,
@@ -197,6 +211,7 @@ impl Krf {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key interrupt flag 5"]
     #[inline(always)]
     pub fn krf5(
         self,
@@ -214,6 +229,7 @@ impl Krf {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key interrupt flag 4"]
     #[inline(always)]
     pub fn krf4(
         self,
@@ -231,6 +247,7 @@ impl Krf {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key interrupt flag 3"]
     #[inline(always)]
     pub fn krf3(
         self,
@@ -248,6 +265,7 @@ impl Krf {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key interrupt flag 2"]
     #[inline(always)]
     pub fn krf2(
         self,
@@ -265,6 +283,7 @@ impl Krf {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key interrupt flag 1"]
     #[inline(always)]
     pub fn krf1(
         self,
@@ -282,6 +301,7 @@ impl Krf {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key interrupt flag 0"]
     #[inline(always)]
     pub fn krf0(
         self,
@@ -311,64 +331,80 @@ pub mod krf {
     pub struct Krf7_SPEC;
     pub type Krf7 = crate::EnumBitfieldStruct<u8, Krf7_SPEC>;
     impl Krf7 {
+        #[doc = "No interrupt detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt detected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Krf6_SPEC;
     pub type Krf6 = crate::EnumBitfieldStruct<u8, Krf6_SPEC>;
     impl Krf6 {
+        #[doc = "No interrupt detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt detected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Krf5_SPEC;
     pub type Krf5 = crate::EnumBitfieldStruct<u8, Krf5_SPEC>;
     impl Krf5 {
+        #[doc = "No interrupt detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt detected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Krf4_SPEC;
     pub type Krf4 = crate::EnumBitfieldStruct<u8, Krf4_SPEC>;
     impl Krf4 {
+        #[doc = "No interrupt detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt detected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Krf3_SPEC;
     pub type Krf3 = crate::EnumBitfieldStruct<u8, Krf3_SPEC>;
     impl Krf3 {
+        #[doc = "No interrupt detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt detected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Krf2_SPEC;
     pub type Krf2 = crate::EnumBitfieldStruct<u8, Krf2_SPEC>;
     impl Krf2 {
+        #[doc = "No interrupt detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt detected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Krf1_SPEC;
     pub type Krf1 = crate::EnumBitfieldStruct<u8, Krf1_SPEC>;
     impl Krf1 {
+        #[doc = "No interrupt detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt detected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Krf0_SPEC;
     pub type Krf0 = crate::EnumBitfieldStruct<u8, Krf0_SPEC>;
     impl Krf0 {
+        #[doc = "No interrupt detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt detected."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -379,9 +415,11 @@ impl crate::sealed::RegSpec for Krm_SPEC {
     type DataType = u8;
 }
 
+#[doc = "KEY Return Mode Register"]
 pub type Krm = crate::RegValueT<Krm_SPEC>;
 
 impl Krm {
+    #[doc = "Key interrupt mode control 7"]
     #[inline(always)]
     pub fn krm7(
         self,
@@ -399,6 +437,7 @@ impl Krm {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key interrupt mode control 6"]
     #[inline(always)]
     pub fn krm6(
         self,
@@ -416,6 +455,7 @@ impl Krm {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key interrupt mode control 5"]
     #[inline(always)]
     pub fn krm5(
         self,
@@ -433,6 +473,7 @@ impl Krm {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key interrupt mode control 4"]
     #[inline(always)]
     pub fn krm4(
         self,
@@ -450,6 +491,7 @@ impl Krm {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key interrupt mode control 3"]
     #[inline(always)]
     pub fn krm3(
         self,
@@ -467,6 +509,7 @@ impl Krm {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key interrupt mode control 2"]
     #[inline(always)]
     pub fn krm2(
         self,
@@ -484,6 +527,7 @@ impl Krm {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key interrupt mode control 1"]
     #[inline(always)]
     pub fn krm1(
         self,
@@ -501,6 +545,7 @@ impl Krm {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key interrupt mode control 0"]
     #[inline(always)]
     pub fn krm0(
         self,
@@ -530,64 +575,80 @@ pub mod krm {
     pub struct Krm7_SPEC;
     pub type Krm7 = crate::EnumBitfieldStruct<u8, Krm7_SPEC>;
     impl Krm7 {
+        #[doc = "Does not detect key interrupt signal"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detect key interrupt signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Krm6_SPEC;
     pub type Krm6 = crate::EnumBitfieldStruct<u8, Krm6_SPEC>;
     impl Krm6 {
+        #[doc = "Does not detect key interrupt signal"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detect key interrupt signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Krm5_SPEC;
     pub type Krm5 = crate::EnumBitfieldStruct<u8, Krm5_SPEC>;
     impl Krm5 {
+        #[doc = "Does not detect key interrupt signal"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detect key interrupt signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Krm4_SPEC;
     pub type Krm4 = crate::EnumBitfieldStruct<u8, Krm4_SPEC>;
     impl Krm4 {
+        #[doc = "Does not detect key interrupt signal"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detect key interrupt signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Krm3_SPEC;
     pub type Krm3 = crate::EnumBitfieldStruct<u8, Krm3_SPEC>;
     impl Krm3 {
+        #[doc = "Does not detect key interrupt signal"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detect key interrupt signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Krm2_SPEC;
     pub type Krm2 = crate::EnumBitfieldStruct<u8, Krm2_SPEC>;
     impl Krm2 {
+        #[doc = "Does not detect key interrupt signal"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detect key interrupt signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Krm1_SPEC;
     pub type Krm1 = crate::EnumBitfieldStruct<u8, Krm1_SPEC>;
     impl Krm1 {
+        #[doc = "Does not detect key interrupt signal"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detect key interrupt signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Krm0_SPEC;
     pub type Krm0 = crate::EnumBitfieldStruct<u8, Krm0_SPEC>;
     impl Krm0 {
+        #[doc = "Does not detect key interrupt signal"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detect key interrupt signal."]
         pub const _1: Self = Self::new(1);
     }
 }

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:20:07 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:16 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Pmisc {
         self.ptr
     }
 
+    #[doc = "Ethernet Control Register"]
     #[inline(always)]
     pub const fn pfenet(
         &self,
@@ -45,6 +46,7 @@ impl super::Pmisc {
         }
     }
 
+    #[doc = "Write-Protect Register"]
     #[inline(always)]
     pub const fn pwpr(&self) -> &'static crate::common::Reg<self::Pwpr_SPEC, crate::common::RW> {
         unsafe {
@@ -61,9 +63,11 @@ impl crate::sealed::RegSpec for Pfenet_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Ethernet Control Register"]
 pub type Pfenet = crate::RegValueT<Pfenet_SPEC>;
 
 impl Pfenet {
+    #[doc = "Ethernet Mode Setting ch0"]
     #[inline(always)]
     pub fn phymode0(
         self,
@@ -101,8 +105,10 @@ pub mod pfenet {
     pub struct Phymode0_SPEC;
     pub type Phymode0 = crate::EnumBitfieldStruct<u8, Phymode0_SPEC>;
     impl Phymode0 {
+        #[doc = "RMII mode (ETHERC channel 0)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "MII mode (ETHERC channel 0)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -113,9 +119,11 @@ impl crate::sealed::RegSpec for Pwpr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Write-Protect Register"]
 pub type Pwpr = crate::RegValueT<Pwpr_SPEC>;
 
 impl Pwpr {
+    #[doc = "PFSWE Bit Write Disable"]
     #[inline(always)]
     pub fn bowi(
         self,
@@ -141,6 +149,7 @@ impl Pwpr {
         >::from_register(self, 0)
     }
 
+    #[doc = "PFS Register Write Enable"]
     #[inline(always)]
     pub fn pfswe(
         self,
@@ -178,16 +187,20 @@ pub mod pwpr {
     pub struct Bowi_SPEC;
     pub type Bowi = crate::EnumBitfieldStruct<u8, Bowi_SPEC>;
     impl Bowi {
+        #[doc = "Writing to the PFSWE bit is enabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Writing to the PFSWE bit is disabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pfswe_SPEC;
     pub type Pfswe = crate::EnumBitfieldStruct<u8, Pfswe_SPEC>;
     impl Pfswe {
+        #[doc = "Writing to the PFS register is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Writing to the PFS register is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }

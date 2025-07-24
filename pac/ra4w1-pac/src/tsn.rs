@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.0, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:19:15 +0000
+// Generated from SVD 1.0, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:50:19 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Tsn {
         self.ptr
     }
 
+    #[doc = "Temperature Sensor Calibration Data Register H"]
     #[inline(always)]
     pub const fn tscdrh(&self) -> &'static crate::common::Reg<self::Tscdrh_SPEC, crate::common::R> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Tsn {
         }
     }
 
+    #[doc = "Temperature Sensor Calibration Data Register L"]
     #[inline(always)]
     pub const fn tscdrl(&self) -> &'static crate::common::Reg<self::Tscdrl_SPEC, crate::common::R> {
         unsafe {
@@ -59,9 +61,11 @@ impl crate::sealed::RegSpec for Tscdrh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Temperature Sensor Calibration Data Register H"]
 pub type Tscdrh = crate::RegValueT<Tscdrh_SPEC>;
 
 impl Tscdrh {
+    #[doc = "The calibration data stores the higher 8 bits of the convertedvalue."]
     #[inline(always)]
     pub fn tscdrh(
         self,
@@ -83,9 +87,11 @@ impl crate::sealed::RegSpec for Tscdrl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Temperature Sensor Calibration Data Register L"]
 pub type Tscdrl = crate::RegValueT<Tscdrl_SPEC>;
 
 impl Tscdrl {
+    #[doc = "The calibration data stores the lower 8 bits of the convertedvalue."]
     #[inline(always)]
     pub fn tscdrl(
         self,

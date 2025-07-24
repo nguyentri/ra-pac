@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.0, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:21:11 +0000
+// Generated from SVD 1.0, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:24 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Irda {
         self.ptr
     }
 
+    #[doc = "IrDA Control Register"]
     #[inline(always)]
     pub const fn ircr(&self) -> &'static crate::common::Reg<self::Ircr_SPEC, crate::common::RW> {
         unsafe {
@@ -50,9 +51,11 @@ impl crate::sealed::RegSpec for Ircr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "IrDA Control Register"]
 pub type Ircr = crate::RegValueT<Ircr_SPEC>;
 
 impl Ircr {
+    #[doc = "IrDA Enable"]
     #[inline(always)]
     pub fn ire(
         self,
@@ -78,6 +81,7 @@ impl Ircr {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRTXD Polarity Switching"]
     #[inline(always)]
     pub fn irtxinv(
         self,
@@ -103,6 +107,7 @@ impl Ircr {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRRXD Polarity Switching"]
     #[inline(always)]
     pub fn irrxinv(
         self,
@@ -140,24 +145,30 @@ pub mod ircr {
     pub struct Ire_SPEC;
     pub type Ire = crate::EnumBitfieldStruct<u8, Ire_SPEC>;
     impl Ire {
+        #[doc = "Serial I/O pins are used for normal serial communication."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Serial I/O pins are used for IrDA data communication."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irtxinv_SPEC;
     pub type Irtxinv = crate::EnumBitfieldStruct<u8, Irtxinv_SPEC>;
     impl Irtxinv {
+        #[doc = "Data to be transmitted is output to IRTXD as is."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Data to be transmitted is output to IRTXD after the polarity is inverted."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irrxinv_SPEC;
     pub type Irrxinv = crate::EnumBitfieldStruct<u8, Irrxinv_SPEC>;
     impl Irrxinv {
+        #[doc = "IRRXD input is used as received data as is."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IRRXD input is used as received data after the polarity is inverted."]
         pub const _1: Self = Self::new(1);
     }
 }

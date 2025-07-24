@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.30.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:19:41 +0000
+// Generated from SVD 1.30.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:50:47 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Tsn {
         self.ptr
     }
 
+    #[doc = "Temperature Sensor Control Register"]
     #[inline(always)]
     pub const fn tscr(&self) -> &'static crate::common::Reg<self::Tscr_SPEC, crate::common::RW> {
         unsafe {
@@ -50,9 +51,11 @@ impl crate::sealed::RegSpec for Tscr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Temperature Sensor Control Register"]
 pub type Tscr = crate::RegValueT<Tscr_SPEC>;
 
 impl Tscr {
+    #[doc = "Temperature Sensor Output Enable"]
     #[inline(always)]
     pub fn tsoe(
         self,
@@ -78,6 +81,7 @@ impl Tscr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Temperature Sensor Enable"]
     #[inline(always)]
     pub fn tsen(
         self,
@@ -115,16 +119,20 @@ pub mod tscr {
     pub struct Tsoe_SPEC;
     pub type Tsoe = crate::EnumBitfieldStruct<u8, Tsoe_SPEC>;
     impl Tsoe {
+        #[doc = "Disable output from the temperature sensor to the ADC12"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable output from the temperature sensor to the ADC12"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tsen_SPEC;
     pub type Tsen = crate::EnumBitfieldStruct<u8, Tsen_SPEC>;
     impl Tsen {
+        #[doc = "Stop the temperature sensor"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Start the temperature sensor."]
         pub const _1: Self = Self::new(1);
     }
 }

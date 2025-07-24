@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:21:54 +0000
+// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -24,7 +24,7 @@ http://www.renesas.com/disclaimer
 use crate::common::sealed;
 #[allow(unused_imports)]
 use crate::common::*;
-#[doc = r"Temperature Sensor Data"]
+#[doc = r"Temperature Sensor Calibration Data"]
 unsafe impl ::core::marker::Send for super::Tsd {}
 unsafe impl ::core::marker::Sync for super::Tsd {}
 impl super::Tsd {
@@ -34,11 +34,12 @@ impl super::Tsd {
         self.ptr
     }
 
+    #[doc = "Temperature Sensor Calibration Data Register"]
     #[inline(always)]
     pub const fn tscdr(&self) -> &'static crate::common::Reg<self::Tscdr_SPEC, crate::common::R> {
         unsafe {
             crate::common::Reg::<self::Tscdr_SPEC, crate::common::R>::from_ptr(
-                self._svd2pac_as_ptr().add(0usize),
+                self._svd2pac_as_ptr().add(380usize),
             )
         }
     }
@@ -50,22 +51,16 @@ impl crate::sealed::RegSpec for Tscdr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Temperature Sensor Calibration Data Register"]
 pub type Tscdr = crate::RegValueT<Tscdr_SPEC>;
 
 impl Tscdr {
+    #[doc = "Temperature Sensor Calibration Data"]
     #[inline(always)]
-    pub fn tscd(
+    pub fn tscdr(
         self,
-    ) -> crate::common::RegisterField<0, 0xfff, 1, 0, u16, u16, Tscdr_SPEC, crate::common::R> {
-        crate::common::RegisterField::<0,0xfff,1,0,u16,u16,Tscdr_SPEC,crate::common::R>::from_register(self,0)
-    }
-
-    #[inline(always)]
-    pub fn reserved(
-        self,
-    ) -> crate::common::RegisterField<12, 0xfffff, 1, 0, u32, u32, Tscdr_SPEC, crate::common::R>
-    {
-        crate::common::RegisterField::<12,0xfffff,1,0,u32,u32,Tscdr_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Tscdr_SPEC, crate::common::R> {
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Tscdr_SPEC,crate::common::R>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Tscdr {

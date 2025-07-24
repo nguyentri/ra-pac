@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 0.90.02, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:18:12 +0000
+// Generated from SVD 1.20.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:48:57 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Cibc {
         self.ptr
     }
 
+    #[doc = "CTSU Trimming Register A"]
     #[inline(always)]
     pub const fn ctsutrima(
         &self,
@@ -45,6 +46,7 @@ impl super::Cibc {
         }
     }
 
+    #[doc = "CTSU Trimming Register B"]
     #[inline(always)]
     pub const fn ctsutrimb(
         &self,
@@ -63,9 +65,11 @@ impl crate::sealed::RegSpec for Ctsutrima_SPEC {
     type DataType = u32;
 }
 
+#[doc = "CTSU Trimming Register A"]
 pub type Ctsutrima = crate::RegValueT<Ctsutrima_SPEC>;
 
 impl Ctsutrima {
+    #[doc = "CTSU Reference Resistance Adjustment"]
     #[inline(always)]
     pub fn rtrim(
         self,
@@ -74,6 +78,7 @@ impl Ctsutrima {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Ctsutrima_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Linearity Adjustment of Offset Current"]
     #[inline(always)]
     pub fn dactrim(
         self,
@@ -82,6 +87,7 @@ impl Ctsutrima {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Ctsutrima_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "CTSU SUCLK Frequency Adjustment"]
     #[inline(always)]
     pub fn suadjd(
         self,
@@ -90,6 +96,7 @@ impl Ctsutrima {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Ctsutrima_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Coefficient of variation for the reference load resistance"]
     #[inline(always)]
     pub fn tresult4(
         self,
@@ -112,9 +119,11 @@ impl crate::sealed::RegSpec for Ctsutrimb_SPEC {
     type DataType = u32;
 }
 
+#[doc = "CTSU Trimming Register B"]
 pub type Ctsutrimb = crate::RegValueT<Ctsutrimb_SPEC>;
 
 impl Ctsutrimb {
+    #[doc = "The coefficient of variation for the 7.5 kΩ reference load resistance is stored."]
     #[inline(always)]
     pub fn tresult0(
         self,
@@ -123,6 +132,7 @@ impl Ctsutrimb {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Ctsutrimb_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "The coefficient of variation for the 15 kΩ reference load resistance is stored."]
     #[inline(always)]
     pub fn tresult1(
         self,
@@ -131,6 +141,7 @@ impl Ctsutrimb {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Ctsutrimb_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "The coefficient of variation for the 30 kΩ reference load resistance is stored."]
     #[inline(always)]
     pub fn tresult2(
         self,
@@ -139,6 +150,7 @@ impl Ctsutrimb {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Ctsutrimb_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "The coefficient of variation for the 60 kΩ reference load resistance is stored."]
     #[inline(always)]
     pub fn tresult3(
         self,

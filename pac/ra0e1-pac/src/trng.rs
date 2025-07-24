@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.10.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:47 +0000
+// Generated from SVD 1.10.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:59 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Trng {
         self.ptr
     }
 
+    #[doc = "TRNG Seed Data Register"]
     #[inline(always)]
     pub const fn trngsdr(
         &self,
@@ -45,6 +46,7 @@ impl super::Trng {
         }
     }
 
+    #[doc = "TRNG Seed Command Register 0"]
     #[inline(always)]
     pub const fn trngscr0(
         &self,
@@ -56,6 +58,7 @@ impl super::Trng {
         }
     }
 
+    #[doc = "TRNG Seed Command Register 1"]
     #[inline(always)]
     pub const fn trngscr1(
         &self,
@@ -74,6 +77,7 @@ impl crate::sealed::RegSpec for Trngsdr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "TRNG Seed Data Register"]
 pub type Trngsdr = crate::RegValueT<Trngsdr_SPEC>;
 
 impl NoBitfieldReg<Trngsdr_SPEC> for Trngsdr {}
@@ -91,9 +95,11 @@ impl crate::sealed::RegSpec for Trngscr0_SPEC {
     type DataType = u8;
 }
 
+#[doc = "TRNG Seed Command Register 0"]
 pub type Trngscr0 = crate::RegValueT<Trngscr0_SPEC>;
 
 impl Trngscr0 {
+    #[doc = "Seed Generation Start"]
     #[inline(always)]
     pub fn sgstart(
         self,
@@ -119,6 +125,7 @@ impl Trngscr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Seed Generation Circuit Enable"]
     #[inline(always)]
     pub fn sgcen(
         self,
@@ -144,6 +151,7 @@ impl Trngscr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Read Ready"]
     #[inline(always)]
     pub fn rdrdy(
         self,
@@ -165,16 +173,20 @@ pub mod trngscr0 {
     pub struct Sgstart_SPEC;
     pub type Sgstart = crate::EnumBitfieldStruct<u8, Sgstart_SPEC>;
     impl Sgstart {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Start to generate the seed data"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sgcen_SPEC;
     pub type Sgcen = crate::EnumBitfieldStruct<u8, Sgcen_SPEC>;
     impl Sgcen {
+        #[doc = "Seed generation circuit is disable."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Seed generation circuit is enable."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -185,9 +197,11 @@ impl crate::sealed::RegSpec for Trngscr1_SPEC {
     type DataType = u8;
 }
 
+#[doc = "TRNG Seed Command Register 1"]
 pub type Trngscr1 = crate::RegValueT<Trngscr1_SPEC>;
 
 impl Trngscr1 {
+    #[doc = "TRNG Interrupt Enable"]
     #[inline(always)]
     pub fn inten(
         self,
@@ -225,8 +239,10 @@ pub mod trngscr1 {
     pub struct Inten_SPEC;
     pub type Inten = crate::EnumBitfieldStruct<u8, Inten_SPEC>;
     impl Inten {
+        #[doc = "TRNG interrupt is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TRNG interrupt is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }

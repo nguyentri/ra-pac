@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:23:25 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Elc {
         self.ptr
     }
 
+    #[doc = "Event Link Controller Register"]
     #[inline(always)]
     pub const fn elcr(&self) -> &'static crate::common::Reg<self::Elcr_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Elc {
         }
     }
 
+    #[doc = "Event Link Software Event Generation Register %s"]
     #[inline(always)]
     pub const fn elsegr(
         &self,
@@ -55,7 +57,28 @@ impl super::Elc {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x4usize))
         }
     }
+    #[inline(always)]
+    pub const fn elsegr0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Elsegr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsegr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsegr1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Elsegr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsegr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8usize),
+            )
+        }
+    }
 
+    #[doc = "Event Link Setting Register %s"]
     #[inline(always)]
     pub const fn elsr(
         &self,
@@ -68,7 +91,152 @@ impl super::Elc {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x20usize))
         }
     }
+    #[inline(always)]
+    pub const fn elsr0(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x20usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr1(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x24usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr2(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x28usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr3(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr4(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x30usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr5(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x34usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr6(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x38usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr7(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr8(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x40usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr9(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x44usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr10(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x48usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr11(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x4cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr12(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x50usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr13(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x54usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr14(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x58usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr15(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x5cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr16(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x60usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr17(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x64usize),
+            )
+        }
+    }
 
+    #[doc = "Event Link Setting Register 30"]
     #[inline(always)]
     pub const fn elsr30(
         &self,
@@ -80,6 +248,7 @@ impl super::Elc {
         }
     }
 
+    #[doc = "Event Link Controller Security Attribution Register A"]
     #[inline(always)]
     pub const fn elcsara(
         &self,
@@ -91,6 +260,7 @@ impl super::Elc {
         }
     }
 
+    #[doc = "Event Link Controller Security Attribution Register B"]
     #[inline(always)]
     pub const fn elcsarb(
         &self,
@@ -102,6 +272,7 @@ impl super::Elc {
         }
     }
 
+    #[doc = "Event Link Controller Priviledge Attribution Register A"]
     #[inline(always)]
     pub const fn elcpara(
         &self,
@@ -113,6 +284,7 @@ impl super::Elc {
         }
     }
 
+    #[doc = "Event Link Controller Priviledge Attribution Register B"]
     #[inline(always)]
     pub const fn elcparb(
         &self,
@@ -131,9 +303,11 @@ impl crate::sealed::RegSpec for Elcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Event Link Controller Register"]
 pub type Elcr = crate::RegValueT<Elcr_SPEC>;
 
 impl Elcr {
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -141,6 +315,7 @@ impl Elcr {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Elcr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "All Event Link Enable"]
     #[inline(always)]
     pub fn elcon(
         self,
@@ -178,8 +353,10 @@ pub mod elcr {
     pub struct Elcon_SPEC;
     pub type Elcon = crate::EnumBitfieldStruct<u8, Elcon_SPEC>;
     impl Elcon {
+        #[doc = "Disable ELC function"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable ELC function."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -190,9 +367,11 @@ impl crate::sealed::RegSpec for Elsegr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Event Link Software Event Generation Register %s"]
 pub type Elsegr = crate::RegValueT<Elsegr_SPEC>;
 
 impl Elsegr {
+    #[doc = "Software Event Generation"]
     #[inline(always)]
     pub fn seg(
         self,
@@ -218,6 +397,7 @@ impl Elsegr {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -225,6 +405,7 @@ impl Elsegr {
         crate::common::RegisterField::<1,0x1f,1,0,u8,u8,Elsegr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "SEG Bit Write Enable"]
     #[inline(always)]
     pub fn we(
         self,
@@ -250,6 +431,7 @@ impl Elsegr {
         >::from_register(self, 0)
     }
 
+    #[doc = "ELSEGR Register Write Disable"]
     #[inline(always)]
     pub fn wi(
         self,
@@ -287,24 +469,30 @@ pub mod elsegr {
     pub struct Seg_SPEC;
     pub type Seg = crate::EnumBitfieldStruct<u8, Seg_SPEC>;
     impl Seg {
+        #[doc = "Normal operation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Generate a software event"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct We_SPEC;
     pub type We = crate::EnumBitfieldStruct<u8, We_SPEC>;
     impl We {
+        #[doc = "Disable writes to SEG bit"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable writes to SEG bit"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wi_SPEC;
     pub type Wi = crate::EnumBitfieldStruct<u8, Wi_SPEC>;
     impl Wi {
+        #[doc = "Enable writes to ELSEGR register"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Disable writes to ELSEGR register."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -315,9 +503,11 @@ impl crate::sealed::RegSpec for Elsr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Event Link Setting Register %s"]
 pub type Elsr = crate::RegValueT<Elsr_SPEC>;
 
 impl Elsr {
+    #[doc = "Event Link Select"]
     #[inline(always)]
     pub fn els(
         self,
@@ -343,6 +533,7 @@ impl Elsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -362,8 +553,10 @@ pub mod elsr {
     pub struct Els_SPEC;
     pub type Els = crate::EnumBitfieldStruct<u8, Els_SPEC>;
     impl Els {
+        #[doc = "Event output to the corresponding peripheral module is disabled."]
         pub const _0_X_000: Self = Self::new(0);
 
+        #[doc = "Set the number for the event signal to be linked."]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -374,9 +567,11 @@ impl crate::sealed::RegSpec for Elsr30_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Event Link Setting Register 30"]
 pub type Elsr30 = crate::RegValueT<Elsr30_SPEC>;
 
 impl Elsr30 {
+    #[doc = "Event Link Select"]
     #[inline(always)]
     pub fn els(
         self,
@@ -402,6 +597,7 @@ impl Elsr30 {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -421,8 +617,10 @@ pub mod elsr30 {
     pub struct Els_SPEC;
     pub type Els = crate::EnumBitfieldStruct<u8, Els_SPEC>;
     impl Els {
+        #[doc = "Event output to the corresponding peripheral module is disabled."]
         pub const _0_X_000: Self = Self::new(0);
 
+        #[doc = "Set the number for the event signal to be linked."]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -433,9 +631,63 @@ impl crate::sealed::RegSpec for Elcsara_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Event Link Controller Security Attribution Register A"]
 pub type Elcsara = crate::RegValueT<Elcsara_SPEC>;
 
 impl Elcsara {
+    #[doc = "Event Link Controller RegisterSecurity Attribution"]
+    #[inline(always)]
+    pub fn elcr(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0x1,
+        1,
+        0,
+        elcsara::Elcr,
+        elcsara::Elcr,
+        Elcsara_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x1,
+            1,
+            0,
+            elcsara::Elcr,
+            elcsara::Elcr,
+            Elcsara_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Software Event Generation Register 0Security Attribution"]
+    #[inline(always)]
+    pub fn elsegr0(
+        self,
+    ) -> crate::common::RegisterField<
+        1,
+        0x1,
+        1,
+        0,
+        elcsara::Elsegr0,
+        elcsara::Elsegr0,
+        Elcsara_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            1,
+            0x1,
+            1,
+            0,
+            elcsara::Elsegr0,
+            elcsara::Elsegr0,
+            Elcsara_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Software Event Generation Register 1Security Attribution"]
     #[inline(always)]
     pub fn elsegr1(
         self,
@@ -461,6 +713,7 @@ impl Elcsara {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -478,11 +731,33 @@ impl ::core::default::Default for Elcsara {
 pub mod elcsara {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elcr_SPEC;
+    pub type Elcr = crate::EnumBitfieldStruct<u8, Elcr_SPEC>;
+    impl Elcr {
+        #[doc = "Secure"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "NonSecure"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsegr0_SPEC;
+    pub type Elsegr0 = crate::EnumBitfieldStruct<u8, Elsegr0_SPEC>;
+    impl Elsegr0 {
+        #[doc = "Secure"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "NonSecure"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsegr1_SPEC;
     pub type Elsegr1 = crate::EnumBitfieldStruct<u8, Elsegr1_SPEC>;
     impl Elsegr1 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NonSecure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -493,9 +768,401 @@ impl crate::sealed::RegSpec for Elcsarb_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Event Link Controller Security Attribution Register B"]
 pub type Elcsarb = crate::RegValueT<Elcsarb_SPEC>;
 
 impl Elcsarb {
+    #[doc = "Event Link Setting Register 0Security Attribution"]
+    #[inline(always)]
+    pub fn elsr0(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0x1,
+        1,
+        0,
+        elcsarb::Elsr0,
+        elcsarb::Elsr0,
+        Elcsarb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x1,
+            1,
+            0,
+            elcsarb::Elsr0,
+            elcsarb::Elsr0,
+            Elcsarb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 1Security Attribution"]
+    #[inline(always)]
+    pub fn elsr1(
+        self,
+    ) -> crate::common::RegisterField<
+        1,
+        0x1,
+        1,
+        0,
+        elcsarb::Elsr1,
+        elcsarb::Elsr1,
+        Elcsarb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            1,
+            0x1,
+            1,
+            0,
+            elcsarb::Elsr1,
+            elcsarb::Elsr1,
+            Elcsarb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 2Security Attribution"]
+    #[inline(always)]
+    pub fn elsr2(
+        self,
+    ) -> crate::common::RegisterField<
+        2,
+        0x1,
+        1,
+        0,
+        elcsarb::Elsr2,
+        elcsarb::Elsr2,
+        Elcsarb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            2,
+            0x1,
+            1,
+            0,
+            elcsarb::Elsr2,
+            elcsarb::Elsr2,
+            Elcsarb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 3Security Attribution"]
+    #[inline(always)]
+    pub fn elsr3(
+        self,
+    ) -> crate::common::RegisterField<
+        3,
+        0x1,
+        1,
+        0,
+        elcsarb::Elsr3,
+        elcsarb::Elsr3,
+        Elcsarb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            3,
+            0x1,
+            1,
+            0,
+            elcsarb::Elsr3,
+            elcsarb::Elsr3,
+            Elcsarb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 4Security Attribution"]
+    #[inline(always)]
+    pub fn elsr4(
+        self,
+    ) -> crate::common::RegisterField<
+        4,
+        0x1,
+        1,
+        0,
+        elcsarb::Elsr4,
+        elcsarb::Elsr4,
+        Elcsarb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            4,
+            0x1,
+            1,
+            0,
+            elcsarb::Elsr4,
+            elcsarb::Elsr4,
+            Elcsarb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 5Security Attribution"]
+    #[inline(always)]
+    pub fn elsr5(
+        self,
+    ) -> crate::common::RegisterField<
+        5,
+        0x1,
+        1,
+        0,
+        elcsarb::Elsr5,
+        elcsarb::Elsr5,
+        Elcsarb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            5,
+            0x1,
+            1,
+            0,
+            elcsarb::Elsr5,
+            elcsarb::Elsr5,
+            Elcsarb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 6Security Attribution"]
+    #[inline(always)]
+    pub fn elsr6(
+        self,
+    ) -> crate::common::RegisterField<
+        6,
+        0x1,
+        1,
+        0,
+        elcsarb::Elsr6,
+        elcsarb::Elsr6,
+        Elcsarb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            6,
+            0x1,
+            1,
+            0,
+            elcsarb::Elsr6,
+            elcsarb::Elsr6,
+            Elcsarb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 7Security Attribution"]
+    #[inline(always)]
+    pub fn elsr7(
+        self,
+    ) -> crate::common::RegisterField<
+        7,
+        0x1,
+        1,
+        0,
+        elcsarb::Elsr7,
+        elcsarb::Elsr7,
+        Elcsarb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            7,
+            0x1,
+            1,
+            0,
+            elcsarb::Elsr7,
+            elcsarb::Elsr7,
+            Elcsarb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 8Security Attribution"]
+    #[inline(always)]
+    pub fn elsr8(
+        self,
+    ) -> crate::common::RegisterField<
+        8,
+        0x1,
+        1,
+        0,
+        elcsarb::Elsr8,
+        elcsarb::Elsr8,
+        Elcsarb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            8,
+            0x1,
+            1,
+            0,
+            elcsarb::Elsr8,
+            elcsarb::Elsr8,
+            Elcsarb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 9Security Attribution"]
+    #[inline(always)]
+    pub fn elsr9(
+        self,
+    ) -> crate::common::RegisterField<
+        9,
+        0x1,
+        1,
+        0,
+        elcsarb::Elsr9,
+        elcsarb::Elsr9,
+        Elcsarb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            9,
+            0x1,
+            1,
+            0,
+            elcsarb::Elsr9,
+            elcsarb::Elsr9,
+            Elcsarb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 10Security Attribution"]
+    #[inline(always)]
+    pub fn elsr10(
+        self,
+    ) -> crate::common::RegisterField<
+        10,
+        0x1,
+        1,
+        0,
+        elcsarb::Elsr10,
+        elcsarb::Elsr10,
+        Elcsarb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            10,
+            0x1,
+            1,
+            0,
+            elcsarb::Elsr10,
+            elcsarb::Elsr10,
+            Elcsarb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 11Security Attribution"]
+    #[inline(always)]
+    pub fn elsr11(
+        self,
+    ) -> crate::common::RegisterField<
+        11,
+        0x1,
+        1,
+        0,
+        elcsarb::Elsr11,
+        elcsarb::Elsr11,
+        Elcsarb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            11,
+            0x1,
+            1,
+            0,
+            elcsarb::Elsr11,
+            elcsarb::Elsr11,
+            Elcsarb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 12Security Attribution"]
+    #[inline(always)]
+    pub fn elsr12(
+        self,
+    ) -> crate::common::RegisterField<
+        12,
+        0x1,
+        1,
+        0,
+        elcsarb::Elsr12,
+        elcsarb::Elsr12,
+        Elcsarb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            12,
+            0x1,
+            1,
+            0,
+            elcsarb::Elsr12,
+            elcsarb::Elsr12,
+            Elcsarb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 13Security Attribution"]
+    #[inline(always)]
+    pub fn elsr13(
+        self,
+    ) -> crate::common::RegisterField<
+        13,
+        0x1,
+        1,
+        0,
+        elcsarb::Elsr13,
+        elcsarb::Elsr13,
+        Elcsarb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            13,
+            0x1,
+            1,
+            0,
+            elcsarb::Elsr13,
+            elcsarb::Elsr13,
+            Elcsarb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 14Security Attribution"]
+    #[inline(always)]
+    pub fn elsr14(
+        self,
+    ) -> crate::common::RegisterField<
+        14,
+        0x1,
+        1,
+        0,
+        elcsarb::Elsr14,
+        elcsarb::Elsr14,
+        Elcsarb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            14,
+            0x1,
+            1,
+            0,
+            elcsarb::Elsr14,
+            elcsarb::Elsr14,
+            Elcsarb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 15Security Attribution"]
     #[inline(always)]
     pub fn elsr15(
         self,
@@ -521,6 +1188,33 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register 16Security Attribution"]
+    #[inline(always)]
+    pub fn elsr16(
+        self,
+    ) -> crate::common::RegisterField<
+        16,
+        0x1,
+        1,
+        0,
+        elcsarb::Elsr16,
+        elcsarb::Elsr16,
+        Elcsarb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0x1,
+            1,
+            0,
+            elcsarb::Elsr16,
+            elcsarb::Elsr16,
+            Elcsarb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 17Security Attribution"]
     #[inline(always)]
     pub fn elsr17(
         self,
@@ -546,6 +1240,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register 30Security Attribution"]
     #[inline(always)]
     pub fn elsr30(
         self,
@@ -571,6 +1266,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -589,27 +1285,193 @@ impl ::core::default::Default for Elcsarb {
 pub mod elcsarb {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr0_SPEC;
+    pub type Elsr0 = crate::EnumBitfieldStruct<u8, Elsr0_SPEC>;
+    impl Elsr0 {
+        #[doc = "Secure"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "NonSecure"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr1_SPEC;
+    pub type Elsr1 = crate::EnumBitfieldStruct<u8, Elsr1_SPEC>;
+    impl Elsr1 {
+        #[doc = "Secure"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "NonSecure"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr2_SPEC;
+    pub type Elsr2 = crate::EnumBitfieldStruct<u8, Elsr2_SPEC>;
+    impl Elsr2 {
+        #[doc = "Secure"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "NonSecure"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr3_SPEC;
+    pub type Elsr3 = crate::EnumBitfieldStruct<u8, Elsr3_SPEC>;
+    impl Elsr3 {
+        #[doc = "Secure"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "NonSecure"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr4_SPEC;
+    pub type Elsr4 = crate::EnumBitfieldStruct<u8, Elsr4_SPEC>;
+    impl Elsr4 {
+        #[doc = "Secure"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "NonSecure"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr5_SPEC;
+    pub type Elsr5 = crate::EnumBitfieldStruct<u8, Elsr5_SPEC>;
+    impl Elsr5 {
+        #[doc = "Secure"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "NonSecure"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr6_SPEC;
+    pub type Elsr6 = crate::EnumBitfieldStruct<u8, Elsr6_SPEC>;
+    impl Elsr6 {
+        #[doc = "Secure"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "NonSecure"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr7_SPEC;
+    pub type Elsr7 = crate::EnumBitfieldStruct<u8, Elsr7_SPEC>;
+    impl Elsr7 {
+        #[doc = "Secure"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "NonSecure"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr8_SPEC;
+    pub type Elsr8 = crate::EnumBitfieldStruct<u8, Elsr8_SPEC>;
+    impl Elsr8 {
+        #[doc = "Secure"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "NonSecure"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr9_SPEC;
+    pub type Elsr9 = crate::EnumBitfieldStruct<u8, Elsr9_SPEC>;
+    impl Elsr9 {
+        #[doc = "Secure"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "NonSecure"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr10_SPEC;
+    pub type Elsr10 = crate::EnumBitfieldStruct<u8, Elsr10_SPEC>;
+    impl Elsr10 {
+        #[doc = "Secure"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "NonSecure"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr11_SPEC;
+    pub type Elsr11 = crate::EnumBitfieldStruct<u8, Elsr11_SPEC>;
+    impl Elsr11 {
+        #[doc = "Secure"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "NonSecure"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr12_SPEC;
+    pub type Elsr12 = crate::EnumBitfieldStruct<u8, Elsr12_SPEC>;
+    impl Elsr12 {
+        #[doc = "Secure"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "NonSecure"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr13_SPEC;
+    pub type Elsr13 = crate::EnumBitfieldStruct<u8, Elsr13_SPEC>;
+    impl Elsr13 {
+        #[doc = "Secure"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "NonSecure"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr14_SPEC;
+    pub type Elsr14 = crate::EnumBitfieldStruct<u8, Elsr14_SPEC>;
+    impl Elsr14 {
+        #[doc = "Secure"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "NonSecure"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr15_SPEC;
     pub type Elsr15 = crate::EnumBitfieldStruct<u8, Elsr15_SPEC>;
     impl Elsr15 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NonSecure"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr16_SPEC;
+    pub type Elsr16 = crate::EnumBitfieldStruct<u8, Elsr16_SPEC>;
+    impl Elsr16 {
+        #[doc = "Secure"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "NonSecure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr17_SPEC;
     pub type Elsr17 = crate::EnumBitfieldStruct<u8, Elsr17_SPEC>;
     impl Elsr17 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NonSecure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr30_SPEC;
     pub type Elsr30 = crate::EnumBitfieldStruct<u8, Elsr30_SPEC>;
     impl Elsr30 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NonSecure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -620,9 +1482,63 @@ impl crate::sealed::RegSpec for Elcpara_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Event Link Controller Priviledge Attribution Register A"]
 pub type Elcpara = crate::RegValueT<Elcpara_SPEC>;
 
 impl Elcpara {
+    #[doc = "Event Link Controller RegisterPriviledge Attribution"]
+    #[inline(always)]
+    pub fn elcr(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0x1,
+        1,
+        0,
+        elcpara::Elcr,
+        elcpara::Elcr,
+        Elcpara_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x1,
+            1,
+            0,
+            elcpara::Elcr,
+            elcpara::Elcr,
+            Elcpara_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Software Event Generation Register 0Priviledge Attribution"]
+    #[inline(always)]
+    pub fn elsegr0(
+        self,
+    ) -> crate::common::RegisterField<
+        1,
+        0x1,
+        1,
+        0,
+        elcpara::Elsegr0,
+        elcpara::Elsegr0,
+        Elcpara_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            1,
+            0x1,
+            1,
+            0,
+            elcpara::Elsegr0,
+            elcpara::Elsegr0,
+            Elcpara_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Software Event Generation Register 1Priviledge Attribution"]
     #[inline(always)]
     pub fn elsegr1(
         self,
@@ -648,6 +1564,7 @@ impl Elcpara {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 1111111111111111. The write value should be 1111111111111111."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -665,11 +1582,33 @@ impl ::core::default::Default for Elcpara {
 pub mod elcpara {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elcr_SPEC;
+    pub type Elcr = crate::EnumBitfieldStruct<u8, Elcr_SPEC>;
+    impl Elcr {
+        #[doc = "Priviledge"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AnyPriviledge"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsegr0_SPEC;
+    pub type Elsegr0 = crate::EnumBitfieldStruct<u8, Elsegr0_SPEC>;
+    impl Elsegr0 {
+        #[doc = "Priviledge"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AnyPriviledge"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsegr1_SPEC;
     pub type Elsegr1 = crate::EnumBitfieldStruct<u8, Elsegr1_SPEC>;
     impl Elsegr1 {
+        #[doc = "Priviledge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "AnyPriviledge"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -680,9 +1619,401 @@ impl crate::sealed::RegSpec for Elcparb_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Event Link Controller Priviledge Attribution Register B"]
 pub type Elcparb = crate::RegValueT<Elcparb_SPEC>;
 
 impl Elcparb {
+    #[doc = "Event Link Setting Register 0Priviledge Attribution"]
+    #[inline(always)]
+    pub fn elsr0(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0x1,
+        1,
+        0,
+        elcparb::Elsr0,
+        elcparb::Elsr0,
+        Elcparb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x1,
+            1,
+            0,
+            elcparb::Elsr0,
+            elcparb::Elsr0,
+            Elcparb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 1Priviledge Attribution"]
+    #[inline(always)]
+    pub fn elsr1(
+        self,
+    ) -> crate::common::RegisterField<
+        1,
+        0x1,
+        1,
+        0,
+        elcparb::Elsr1,
+        elcparb::Elsr1,
+        Elcparb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            1,
+            0x1,
+            1,
+            0,
+            elcparb::Elsr1,
+            elcparb::Elsr1,
+            Elcparb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 2Priviledge Attribution"]
+    #[inline(always)]
+    pub fn elsr2(
+        self,
+    ) -> crate::common::RegisterField<
+        2,
+        0x1,
+        1,
+        0,
+        elcparb::Elsr2,
+        elcparb::Elsr2,
+        Elcparb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            2,
+            0x1,
+            1,
+            0,
+            elcparb::Elsr2,
+            elcparb::Elsr2,
+            Elcparb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 3Priviledge Attribution"]
+    #[inline(always)]
+    pub fn elsr3(
+        self,
+    ) -> crate::common::RegisterField<
+        3,
+        0x1,
+        1,
+        0,
+        elcparb::Elsr3,
+        elcparb::Elsr3,
+        Elcparb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            3,
+            0x1,
+            1,
+            0,
+            elcparb::Elsr3,
+            elcparb::Elsr3,
+            Elcparb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 4Priviledge Attribution"]
+    #[inline(always)]
+    pub fn elsr4(
+        self,
+    ) -> crate::common::RegisterField<
+        4,
+        0x1,
+        1,
+        0,
+        elcparb::Elsr4,
+        elcparb::Elsr4,
+        Elcparb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            4,
+            0x1,
+            1,
+            0,
+            elcparb::Elsr4,
+            elcparb::Elsr4,
+            Elcparb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 5Priviledge Attribution"]
+    #[inline(always)]
+    pub fn elsr5(
+        self,
+    ) -> crate::common::RegisterField<
+        5,
+        0x1,
+        1,
+        0,
+        elcparb::Elsr5,
+        elcparb::Elsr5,
+        Elcparb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            5,
+            0x1,
+            1,
+            0,
+            elcparb::Elsr5,
+            elcparb::Elsr5,
+            Elcparb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 6Priviledge Attribution"]
+    #[inline(always)]
+    pub fn elsr6(
+        self,
+    ) -> crate::common::RegisterField<
+        6,
+        0x1,
+        1,
+        0,
+        elcparb::Elsr6,
+        elcparb::Elsr6,
+        Elcparb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            6,
+            0x1,
+            1,
+            0,
+            elcparb::Elsr6,
+            elcparb::Elsr6,
+            Elcparb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 7Priviledge Attribution"]
+    #[inline(always)]
+    pub fn elsr7(
+        self,
+    ) -> crate::common::RegisterField<
+        7,
+        0x1,
+        1,
+        0,
+        elcparb::Elsr7,
+        elcparb::Elsr7,
+        Elcparb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            7,
+            0x1,
+            1,
+            0,
+            elcparb::Elsr7,
+            elcparb::Elsr7,
+            Elcparb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 8Priviledge Attribution"]
+    #[inline(always)]
+    pub fn elsr8(
+        self,
+    ) -> crate::common::RegisterField<
+        8,
+        0x1,
+        1,
+        0,
+        elcparb::Elsr8,
+        elcparb::Elsr8,
+        Elcparb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            8,
+            0x1,
+            1,
+            0,
+            elcparb::Elsr8,
+            elcparb::Elsr8,
+            Elcparb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 9Priviledge Attribution"]
+    #[inline(always)]
+    pub fn elsr9(
+        self,
+    ) -> crate::common::RegisterField<
+        9,
+        0x1,
+        1,
+        0,
+        elcparb::Elsr9,
+        elcparb::Elsr9,
+        Elcparb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            9,
+            0x1,
+            1,
+            0,
+            elcparb::Elsr9,
+            elcparb::Elsr9,
+            Elcparb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 10Priviledge Attribution"]
+    #[inline(always)]
+    pub fn elsr10(
+        self,
+    ) -> crate::common::RegisterField<
+        10,
+        0x1,
+        1,
+        0,
+        elcparb::Elsr10,
+        elcparb::Elsr10,
+        Elcparb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            10,
+            0x1,
+            1,
+            0,
+            elcparb::Elsr10,
+            elcparb::Elsr10,
+            Elcparb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 11Priviledge Attribution"]
+    #[inline(always)]
+    pub fn elsr11(
+        self,
+    ) -> crate::common::RegisterField<
+        11,
+        0x1,
+        1,
+        0,
+        elcparb::Elsr11,
+        elcparb::Elsr11,
+        Elcparb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            11,
+            0x1,
+            1,
+            0,
+            elcparb::Elsr11,
+            elcparb::Elsr11,
+            Elcparb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 12Priviledge Attribution"]
+    #[inline(always)]
+    pub fn elsr12(
+        self,
+    ) -> crate::common::RegisterField<
+        12,
+        0x1,
+        1,
+        0,
+        elcparb::Elsr12,
+        elcparb::Elsr12,
+        Elcparb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            12,
+            0x1,
+            1,
+            0,
+            elcparb::Elsr12,
+            elcparb::Elsr12,
+            Elcparb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 13Priviledge Attribution"]
+    #[inline(always)]
+    pub fn elsr13(
+        self,
+    ) -> crate::common::RegisterField<
+        13,
+        0x1,
+        1,
+        0,
+        elcparb::Elsr13,
+        elcparb::Elsr13,
+        Elcparb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            13,
+            0x1,
+            1,
+            0,
+            elcparb::Elsr13,
+            elcparb::Elsr13,
+            Elcparb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 14Priviledge Attribution"]
+    #[inline(always)]
+    pub fn elsr14(
+        self,
+    ) -> crate::common::RegisterField<
+        14,
+        0x1,
+        1,
+        0,
+        elcparb::Elsr14,
+        elcparb::Elsr14,
+        Elcparb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            14,
+            0x1,
+            1,
+            0,
+            elcparb::Elsr14,
+            elcparb::Elsr14,
+            Elcparb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 15Priviledge Attribution"]
     #[inline(always)]
     pub fn elsr15(
         self,
@@ -708,6 +2039,33 @@ impl Elcparb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register 16Priviledge Attribution"]
+    #[inline(always)]
+    pub fn elsr16(
+        self,
+    ) -> crate::common::RegisterField<
+        16,
+        0x1,
+        1,
+        0,
+        elcparb::Elsr16,
+        elcparb::Elsr16,
+        Elcparb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0x1,
+            1,
+            0,
+            elcparb::Elsr16,
+            elcparb::Elsr16,
+            Elcparb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Event Link Setting Register 17Priviledge Attribution"]
     #[inline(always)]
     pub fn elsr17(
         self,
@@ -733,6 +2091,7 @@ impl Elcparb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register 30Priviledge Attribution"]
     #[inline(always)]
     pub fn elsr30(
         self,
@@ -758,6 +2117,7 @@ impl Elcparb {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 1. The write value should be 1."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -776,27 +2136,193 @@ impl ::core::default::Default for Elcparb {
 pub mod elcparb {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr0_SPEC;
+    pub type Elsr0 = crate::EnumBitfieldStruct<u8, Elsr0_SPEC>;
+    impl Elsr0 {
+        #[doc = "Priviledge"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AnyPriviledge"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr1_SPEC;
+    pub type Elsr1 = crate::EnumBitfieldStruct<u8, Elsr1_SPEC>;
+    impl Elsr1 {
+        #[doc = "Priviledge"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AnyPriviledge"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr2_SPEC;
+    pub type Elsr2 = crate::EnumBitfieldStruct<u8, Elsr2_SPEC>;
+    impl Elsr2 {
+        #[doc = "Priviledge"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AnyPriviledge"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr3_SPEC;
+    pub type Elsr3 = crate::EnumBitfieldStruct<u8, Elsr3_SPEC>;
+    impl Elsr3 {
+        #[doc = "Priviledge"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AnyPriviledge"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr4_SPEC;
+    pub type Elsr4 = crate::EnumBitfieldStruct<u8, Elsr4_SPEC>;
+    impl Elsr4 {
+        #[doc = "Priviledge"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AnyPriviledge"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr5_SPEC;
+    pub type Elsr5 = crate::EnumBitfieldStruct<u8, Elsr5_SPEC>;
+    impl Elsr5 {
+        #[doc = "Priviledge"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AnyPriviledge"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr6_SPEC;
+    pub type Elsr6 = crate::EnumBitfieldStruct<u8, Elsr6_SPEC>;
+    impl Elsr6 {
+        #[doc = "Priviledge"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AnyPriviledge"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr7_SPEC;
+    pub type Elsr7 = crate::EnumBitfieldStruct<u8, Elsr7_SPEC>;
+    impl Elsr7 {
+        #[doc = "Priviledge"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AnyPriviledge"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr8_SPEC;
+    pub type Elsr8 = crate::EnumBitfieldStruct<u8, Elsr8_SPEC>;
+    impl Elsr8 {
+        #[doc = "Priviledge"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AnyPriviledge"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr9_SPEC;
+    pub type Elsr9 = crate::EnumBitfieldStruct<u8, Elsr9_SPEC>;
+    impl Elsr9 {
+        #[doc = "Priviledge"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AnyPriviledge"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr10_SPEC;
+    pub type Elsr10 = crate::EnumBitfieldStruct<u8, Elsr10_SPEC>;
+    impl Elsr10 {
+        #[doc = "Priviledge"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AnyPriviledge"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr11_SPEC;
+    pub type Elsr11 = crate::EnumBitfieldStruct<u8, Elsr11_SPEC>;
+    impl Elsr11 {
+        #[doc = "Priviledge"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AnyPriviledge"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr12_SPEC;
+    pub type Elsr12 = crate::EnumBitfieldStruct<u8, Elsr12_SPEC>;
+    impl Elsr12 {
+        #[doc = "Priviledge"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AnyPriviledge"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr13_SPEC;
+    pub type Elsr13 = crate::EnumBitfieldStruct<u8, Elsr13_SPEC>;
+    impl Elsr13 {
+        #[doc = "Priviledge"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AnyPriviledge"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr14_SPEC;
+    pub type Elsr14 = crate::EnumBitfieldStruct<u8, Elsr14_SPEC>;
+    impl Elsr14 {
+        #[doc = "Priviledge"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AnyPriviledge"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr15_SPEC;
     pub type Elsr15 = crate::EnumBitfieldStruct<u8, Elsr15_SPEC>;
     impl Elsr15 {
+        #[doc = "Priviledge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "AnyPriviledge"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Elsr16_SPEC;
+    pub type Elsr16 = crate::EnumBitfieldStruct<u8, Elsr16_SPEC>;
+    impl Elsr16 {
+        #[doc = "Priviledge"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AnyPriviledge"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr17_SPEC;
     pub type Elsr17 = crate::EnumBitfieldStruct<u8, Elsr17_SPEC>;
     impl Elsr17 {
+        #[doc = "Priviledge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "AnyPriviledge"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr30_SPEC;
     pub type Elsr30 = crate::EnumBitfieldStruct<u8, Elsr30_SPEC>;
     impl Elsr30 {
+        #[doc = "Priviledge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "AnyPriviledge"]
         pub const _1: Self = Self::new(1);
     }
 }

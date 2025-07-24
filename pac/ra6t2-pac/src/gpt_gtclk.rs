@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.40.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:21:24 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:39 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::GptGtclk {
         self.ptr
     }
 
+    #[doc = "General PWM Timer Clock Control Register"]
     #[inline(always)]
     pub const fn gtclkcr(
         &self,
@@ -52,9 +53,11 @@ impl crate::sealed::RegSpec for Gtclkcr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "General PWM Timer Clock Control Register"]
 pub type Gtclkcr = crate::RegValueT<Gtclkcr_SPEC>;
 
 impl Gtclkcr {
+    #[doc = "Synchronization Circuit Bypass Enable"]
     #[inline(always)]
     pub fn bpen(
         self,
@@ -92,8 +95,10 @@ pub mod gtclkcr {
     pub struct Bpen_SPEC;
     pub type Bpen = crate::EnumBitfieldStruct<u8, Bpen_SPEC>;
     impl Bpen {
+        #[doc = "In case of using Bus Clock and GPT Core Clock asynchronously"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "In case of using Bus Clock and GPT Core Clock synchronously"]
         pub const _1: Self = Self::new(1);
     }
 }

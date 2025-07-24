@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:23:25 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Icu {
         self.ptr
     }
 
+    #[doc = "Software Interrupt Request Register for Secure Interrupt"]
     #[inline(always)]
     pub const fn swirq_s(
         &self,
@@ -45,6 +46,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "Software Interrupt Request Register for Non-secure Interrupt"]
     #[inline(always)]
     pub const fn swirq_ns(
         &self,
@@ -56,6 +58,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "Integrated Error NMI Interrupt Enable Registe for CPU"]
     #[inline(always)]
     pub const fn ienmier(
         &self,
@@ -67,6 +70,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "Non-Maskable Interrupt Enable Register"]
     #[inline(always)]
     pub const fn nmier(&self) -> &'static crate::common::Reg<self::Nmier_SPEC, crate::common::RW> {
         unsafe {
@@ -76,6 +80,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "Non-Maskable Interrupt Status Clear Register"]
     #[inline(always)]
     pub const fn nmiclr(
         &self,
@@ -87,6 +92,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "Non-Maskable Interrupt Status Register"]
     #[inline(always)]
     pub const fn nmisr(&self) -> &'static crate::common::Reg<self::Nmisr_SPEC, crate::common::R> {
         unsafe {
@@ -96,6 +102,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "Wake Up Interrupt Enable Register 0"]
     #[inline(always)]
     pub const fn wupen0(
         &self,
@@ -107,6 +114,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "Wake Up Interrupt Enable Register 1"]
     #[inline(always)]
     pub const fn wupen1(
         &self,
@@ -118,6 +126,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "SYS Event Link Setting Register"]
     #[inline(always)]
     pub const fn selsr0(
         &self,
@@ -129,6 +138,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "ICU Event Link Setting Register %s"]
     #[inline(always)]
     pub const fn ielsr(
         &self,
@@ -141,6 +151,946 @@ impl super::Icu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x300usize))
         }
     }
+    #[inline(always)]
+    pub const fn ielsr0(&self) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x300usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr1(&self) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x304usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr2(&self) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x308usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr3(&self) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x30cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr4(&self) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x310usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr5(&self) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x314usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr6(&self) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x318usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr7(&self) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x31cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr8(&self) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x320usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr9(&self) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x324usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr10(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x328usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr11(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x32cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr12(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x330usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr13(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x334usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr14(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x338usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr15(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x33cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr16(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x340usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr17(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x344usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr18(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x348usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr19(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x34cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr20(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x350usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr21(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x354usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr22(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x358usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr23(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x35cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr24(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x360usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr25(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x364usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr26(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x368usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr27(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x36cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr28(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x370usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr29(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x374usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr30(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x378usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr31(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x37cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr32(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x380usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr33(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x384usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr34(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x388usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr35(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x38cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr36(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x390usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr37(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x394usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr38(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x398usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr39(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x39cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr40(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr41(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr42(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr43(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr44(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr45(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr46(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr47(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr48(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr49(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr50(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr51(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3ccusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr52(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3d0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr53(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3d4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr54(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3d8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr55(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3dcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr56(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3e0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr57(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3e4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr58(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3e8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr59(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3ecusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr60(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3f0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr61(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3f4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr62(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3f8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr63(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3fcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr64(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x400usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr65(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x404usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr66(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x408usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr67(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x40cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr68(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x410usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr69(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x414usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr70(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x418usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr71(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x41cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr72(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x420usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr73(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x424usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr74(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x428usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr75(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x42cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr76(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x430usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr77(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x434usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr78(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x438usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr79(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x43cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr80(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x440usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr81(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x444usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr82(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x448usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr83(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x44cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr84(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x450usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr85(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x454usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr86(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x458usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr87(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x45cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr88(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x460usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr89(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x464usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr90(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x468usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr91(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x46cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr92(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x470usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr93(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x474usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr94(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x478usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn ielsr95(
+        &self,
+    ) -> &'static crate::common::Reg<self::Ielsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Ielsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x47cusize),
+            )
+        }
+    }
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -149,9 +1099,11 @@ impl crate::sealed::RegSpec for SwirqS_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Software Interrupt Request Register for Secure Interrupt"]
 pub type SwirqS = crate::RegValueT<SwirqS_SPEC>;
 
 impl SwirqS {
+    #[doc = "Generates an interrupt for the other CPU subsystem."]
     #[inline(always)]
     pub fn swirqs(
         self,
@@ -161,6 +1113,7 @@ impl SwirqS {
         )
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -182,9 +1135,11 @@ impl crate::sealed::RegSpec for SwirqNs_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Software Interrupt Request Register for Non-secure Interrupt"]
 pub type SwirqNs = crate::RegValueT<SwirqNs_SPEC>;
 
 impl SwirqNs {
+    #[doc = "Generates an interrupt for the other CPU subsystem."]
     #[inline(always)]
     pub fn swirqns(
         self,
@@ -194,6 +1149,7 @@ impl SwirqNs {
         )
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -215,9 +1171,11 @@ impl crate::sealed::RegSpec for Ienmier_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Integrated Error NMI Interrupt Enable Registe for CPU"]
 pub type Ienmier = crate::RegValueT<Ienmier_SPEC>;
 
 impl Ienmier {
+    #[doc = "Integrated Common Memory error nmi Enable"]
     #[inline(always)]
     pub fn cmen(
         self,
@@ -243,6 +1201,7 @@ impl Ienmier {
         >::from_register(self, 0)
     }
 
+    #[doc = "Integrated Local Memory error nmi Enable"]
     #[inline(always)]
     pub fn lmen(
         self,
@@ -268,6 +1227,7 @@ impl Ienmier {
         >::from_register(self, 0)
     }
 
+    #[doc = "Integrated BUS error nmi Enable"]
     #[inline(always)]
     pub fn busen(
         self,
@@ -293,6 +1253,7 @@ impl Ienmier {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000. The write value should be 0000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -313,24 +1274,30 @@ pub mod ienmier {
     pub struct Cmen_SPEC;
     pub type Cmen = crate::EnumBitfieldStruct<u8, Cmen_SPEC>;
     impl Cmen {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lmen_SPEC;
     pub type Lmen = crate::EnumBitfieldStruct<u8, Lmen_SPEC>;
     impl Lmen {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Busen_SPEC;
     pub type Busen = crate::EnumBitfieldStruct<u8, Busen_SPEC>;
     impl Busen {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -341,9 +1308,11 @@ impl crate::sealed::RegSpec for Nmier_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Non-Maskable Interrupt Enable Register"]
 pub type Nmier = crate::RegValueT<Nmier_SPEC>;
 
 impl Nmier {
+    #[doc = "IWDT Underflow/Refresh Error Interrupt Enable"]
     #[inline(always)]
     pub fn iwdten(
         self,
@@ -369,6 +1338,7 @@ impl Nmier {
         >::from_register(self, 0)
     }
 
+    #[doc = "WDT Underflow/Refresh Error Interrupt Enable"]
     #[inline(always)]
     pub fn wdten(
         self,
@@ -394,6 +1364,7 @@ impl Nmier {
         >::from_register(self, 0)
     }
 
+    #[doc = "Voltage-Monitoring 1 Interrupt Enable"]
     #[inline(always)]
     pub fn pvd1en(
         self,
@@ -419,6 +1390,7 @@ impl Nmier {
         >::from_register(self, 0)
     }
 
+    #[doc = "Voltage-Monitoring 2 Interrupt Enable"]
     #[inline(always)]
     pub fn pvd2en(
         self,
@@ -444,6 +1416,7 @@ impl Nmier {
         >::from_register(self, 0)
     }
 
+    #[doc = "Oscillation Stop Detection Interrupt Enable"]
     #[inline(always)]
     pub fn osten(
         self,
@@ -469,6 +1442,7 @@ impl Nmier {
         >::from_register(self, 0)
     }
 
+    #[doc = "NMI Pin Interrupt Enable"]
     #[inline(always)]
     pub fn nmien(
         self,
@@ -494,6 +1468,7 @@ impl Nmier {
         >::from_register(self, 0)
     }
 
+    #[doc = "BUS error Interrupt Enable"]
     #[inline(always)]
     pub fn busen(
         self,
@@ -519,6 +1494,7 @@ impl Nmier {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common Memory error Interrupt Enable"]
     #[inline(always)]
     pub fn cmen(
         self,
@@ -544,6 +1520,7 @@ impl Nmier {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -553,6 +1530,7 @@ impl Nmier {
         )
     }
 
+    #[doc = "LockUp Interrupt Enable"]
     #[inline(always)]
     pub fn luen(
         self,
@@ -590,72 +1568,90 @@ pub mod nmier {
     pub struct Iwdten_SPEC;
     pub type Iwdten = crate::EnumBitfieldStruct<u8, Iwdten_SPEC>;
     impl Iwdten {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wdten_SPEC;
     pub type Wdten = crate::EnumBitfieldStruct<u8, Wdten_SPEC>;
     impl Wdten {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pvd1En_SPEC;
     pub type Pvd1En = crate::EnumBitfieldStruct<u8, Pvd1En_SPEC>;
     impl Pvd1En {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pvd2En_SPEC;
     pub type Pvd2En = crate::EnumBitfieldStruct<u8, Pvd2En_SPEC>;
     impl Pvd2En {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Osten_SPEC;
     pub type Osten = crate::EnumBitfieldStruct<u8, Osten_SPEC>;
     impl Osten {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nmien_SPEC;
     pub type Nmien = crate::EnumBitfieldStruct<u8, Nmien_SPEC>;
     impl Nmien {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Busen_SPEC;
     pub type Busen = crate::EnumBitfieldStruct<u8, Busen_SPEC>;
     impl Busen {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmen_SPEC;
     pub type Cmen = crate::EnumBitfieldStruct<u8, Cmen_SPEC>;
     impl Cmen {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Luen_SPEC;
     pub type Luen = crate::EnumBitfieldStruct<u8, Luen_SPEC>;
     impl Luen {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -666,9 +1662,11 @@ impl crate::sealed::RegSpec for Nmiclr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Non-Maskable Interrupt Status Clear Register"]
 pub type Nmiclr = crate::RegValueT<Nmiclr_SPEC>;
 
 impl Nmiclr {
+    #[doc = "IWDT Clear"]
     #[inline(always)]
     pub fn iwdtclr(
         self,
@@ -694,6 +1692,7 @@ impl Nmiclr {
         >::from_register(self, 0)
     }
 
+    #[doc = "WDT Clear"]
     #[inline(always)]
     pub fn wdtclr(
         self,
@@ -719,6 +1718,7 @@ impl Nmiclr {
         >::from_register(self, 0)
     }
 
+    #[doc = "PVD1 Clear"]
     #[inline(always)]
     pub fn pvd1clr(
         self,
@@ -744,6 +1744,7 @@ impl Nmiclr {
         >::from_register(self, 0)
     }
 
+    #[doc = "PVD2 Clear"]
     #[inline(always)]
     pub fn pvd2clr(
         self,
@@ -769,6 +1770,7 @@ impl Nmiclr {
         >::from_register(self, 0)
     }
 
+    #[doc = "OST Clear"]
     #[inline(always)]
     pub fn ostclr(
         self,
@@ -794,6 +1796,7 @@ impl Nmiclr {
         >::from_register(self, 0)
     }
 
+    #[doc = "NMI Clear"]
     #[inline(always)]
     pub fn nmiclr(
         self,
@@ -819,6 +1822,7 @@ impl Nmiclr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus Clear"]
     #[inline(always)]
     pub fn busclr(
         self,
@@ -844,6 +1848,7 @@ impl Nmiclr {
         >::from_register(self, 0)
     }
 
+    #[doc = "CM Clear"]
     #[inline(always)]
     pub fn cmclr(
         self,
@@ -869,6 +1874,7 @@ impl Nmiclr {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -878,6 +1884,7 @@ impl Nmiclr {
         )
     }
 
+    #[doc = "LU Clear"]
     #[inline(always)]
     pub fn luclr(
         self,
@@ -915,72 +1922,90 @@ pub mod nmiclr {
     pub struct Iwdtclr_SPEC;
     pub type Iwdtclr = crate::EnumBitfieldStruct<u8, Iwdtclr_SPEC>;
     impl Iwdtclr {
+        #[doc = "No effect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear the NMISR.IWDTST flag."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wdtclr_SPEC;
     pub type Wdtclr = crate::EnumBitfieldStruct<u8, Wdtclr_SPEC>;
     impl Wdtclr {
+        #[doc = "No effect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear the NMISR.WDTST flag."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pvd1Clr_SPEC;
     pub type Pvd1Clr = crate::EnumBitfieldStruct<u8, Pvd1Clr_SPEC>;
     impl Pvd1Clr {
+        #[doc = "No effect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear the NMISR.PVD1ST flag."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pvd2Clr_SPEC;
     pub type Pvd2Clr = crate::EnumBitfieldStruct<u8, Pvd2Clr_SPEC>;
     impl Pvd2Clr {
+        #[doc = "No effect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear the NMISR.PVD2ST flag."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ostclr_SPEC;
     pub type Ostclr = crate::EnumBitfieldStruct<u8, Ostclr_SPEC>;
     impl Ostclr {
+        #[doc = "No effect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear the NMISR.OSTST flag."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nmiclr_SPEC;
     pub type Nmiclr = crate::EnumBitfieldStruct<u8, Nmiclr_SPEC>;
     impl Nmiclr {
+        #[doc = "No effect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear the NMISR.NMIST flag."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Busclr_SPEC;
     pub type Busclr = crate::EnumBitfieldStruct<u8, Busclr_SPEC>;
     impl Busclr {
+        #[doc = "No effect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear the NMISR.BUSST flag."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmclr_SPEC;
     pub type Cmclr = crate::EnumBitfieldStruct<u8, Cmclr_SPEC>;
     impl Cmclr {
+        #[doc = "No effect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear the NMISR.CMST flag."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Luclr_SPEC;
     pub type Luclr = crate::EnumBitfieldStruct<u8, Luclr_SPEC>;
     impl Luclr {
+        #[doc = "No effect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear the NMISR.LUST flag."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -991,9 +2016,11 @@ impl crate::sealed::RegSpec for Nmisr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Non-Maskable Interrupt Status Register"]
 pub type Nmisr = crate::RegValueT<Nmisr_SPEC>;
 
 impl Nmisr {
+    #[doc = "IWDT Underflow/Refresh Error Status Flag"]
     #[inline(always)]
     pub fn iwdtst(
         self,
@@ -1019,6 +2046,7 @@ impl Nmisr {
         >::from_register(self, 0)
     }
 
+    #[doc = "WDT Underflow/Refresh Error Status Flag"]
     #[inline(always)]
     pub fn wdtst(
         self,
@@ -1044,6 +2072,7 @@ impl Nmisr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Voltage-Monitoring 1 Interrupt Status Flag"]
     #[inline(always)]
     pub fn pvd1st(
         self,
@@ -1069,6 +2098,7 @@ impl Nmisr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Voltage-Monitoring 2 Interrupt Status Flag"]
     #[inline(always)]
     pub fn pvd2st(
         self,
@@ -1094,6 +2124,7 @@ impl Nmisr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Oscillation Stop Detection Interrupt Status Flag"]
     #[inline(always)]
     pub fn ostst(
         self,
@@ -1119,6 +2150,7 @@ impl Nmisr {
         >::from_register(self, 0)
     }
 
+    #[doc = "NMI Status Flag"]
     #[inline(always)]
     pub fn nmist(
         self,
@@ -1144,6 +2176,7 @@ impl Nmisr {
         >::from_register(self, 0)
     }
 
+    #[doc = "BUS error Interrupt Status Flag"]
     #[inline(always)]
     pub fn busst(
         self,
@@ -1169,6 +2202,7 @@ impl Nmisr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common Memory error Interrupt Status Flag"]
     #[inline(always)]
     pub fn cmst(
         self,
@@ -1194,6 +2228,7 @@ impl Nmisr {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1203,6 +2238,7 @@ impl Nmisr {
         )
     }
 
+    #[doc = "LockUp Interrupt Status Flag"]
     #[inline(always)]
     pub fn lust(
         self,
@@ -1240,72 +2276,90 @@ pub mod nmisr {
     pub struct Iwdtst_SPEC;
     pub type Iwdtst = crate::EnumBitfieldStruct<u8, Iwdtst_SPEC>;
     impl Iwdtst {
+        #[doc = "interrupt not requested."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "interrupt requested."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wdtst_SPEC;
     pub type Wdtst = crate::EnumBitfieldStruct<u8, Wdtst_SPEC>;
     impl Wdtst {
+        #[doc = "interrupt not requested."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "interrupt requested."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pvd1St_SPEC;
     pub type Pvd1St = crate::EnumBitfieldStruct<u8, Pvd1St_SPEC>;
     impl Pvd1St {
+        #[doc = "interrupt not requested."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "interrupt requested."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pvd2St_SPEC;
     pub type Pvd2St = crate::EnumBitfieldStruct<u8, Pvd2St_SPEC>;
     impl Pvd2St {
+        #[doc = "interrupt not requested."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "interrupt requested."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ostst_SPEC;
     pub type Ostst = crate::EnumBitfieldStruct<u8, Ostst_SPEC>;
     impl Ostst {
+        #[doc = "interrupt not requested."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "interrupt requested."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nmist_SPEC;
     pub type Nmist = crate::EnumBitfieldStruct<u8, Nmist_SPEC>;
     impl Nmist {
+        #[doc = "interrupt not requested."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "interrupt requested."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Busst_SPEC;
     pub type Busst = crate::EnumBitfieldStruct<u8, Busst_SPEC>;
     impl Busst {
+        #[doc = "interrupt not requested."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "interrupt requested."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmst_SPEC;
     pub type Cmst = crate::EnumBitfieldStruct<u8, Cmst_SPEC>;
     impl Cmst {
+        #[doc = "interrupt not requested."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "interrupt requested."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lust_SPEC;
     pub type Lust = crate::EnumBitfieldStruct<u8, Lust_SPEC>;
     impl Lust {
+        #[doc = "interrupt not requested."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "interrupt requested."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1316,9 +2370,11 @@ impl crate::sealed::RegSpec for Wupen0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Wake Up Interrupt Enable Register 0"]
 pub type Wupen0 = crate::RegValueT<Wupen0_SPEC>;
 
 impl Wupen0 {
+    #[doc = "IRQ0 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn irqwupen0(
         self,
@@ -1344,6 +2400,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ1 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn irqwupen1(
         self,
@@ -1369,6 +2426,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ2 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn irqwupen2(
         self,
@@ -1394,6 +2452,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ3 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn irqwupen3(
         self,
@@ -1419,6 +2478,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ4 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn irqwupen4(
         self,
@@ -1444,6 +2504,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ5 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn irqwupen5(
         self,
@@ -1469,6 +2530,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ6 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn irqwupen6(
         self,
@@ -1494,6 +2556,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ7 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn irqwupen7(
         self,
@@ -1519,6 +2582,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ8 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn irqwupen8(
         self,
@@ -1544,6 +2608,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ9 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn irqwupen9(
         self,
@@ -1569,6 +2634,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ10 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn irqwupen10(
         self,
@@ -1594,6 +2660,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ11 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn irqwupen11(
         self,
@@ -1619,6 +2686,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ12 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn irqwupen12(
         self,
@@ -1644,6 +2712,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ13 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn irqwupen13(
         self,
@@ -1669,6 +2738,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ14 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn irqwupen14(
         self,
@@ -1694,6 +2764,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ15 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn irqwupen15(
         self,
@@ -1719,6 +2790,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IWDT Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn iwdtwupen(
         self,
@@ -1744,6 +2816,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "PVD1 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn pvd1wupen(
         self,
@@ -1769,6 +2842,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "PVD2 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn pvd2wupen(
         self,
@@ -1794,6 +2868,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "VBATT Monitor Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn vbattwupen(
         self,
@@ -1819,6 +2894,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1826,6 +2902,7 @@ impl Wupen0 {
         crate::common::RegisterField::<21,0x7,1,0,u8,u8,Wupen0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "RTC Alarm Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn rtcalmwupen(
         self,
@@ -1851,6 +2928,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RCT Period Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn rtcprdwupen(
         self,
@@ -1876,6 +2954,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "USBHS Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn usbhswupen(
         self,
@@ -1901,6 +2980,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "USBFS0 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn usbfswupen(
         self,
@@ -1926,6 +3006,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "AGT1 Underflow Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn agt1udwupen(
         self,
@@ -1951,6 +3032,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "AGT1 Compare Match A Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn agt1cawupen(
         self,
@@ -1976,6 +3058,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "AGT1 Compare Match B Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn agt1cbwupen(
         self,
@@ -2001,6 +3084,7 @@ impl Wupen0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RIIC0 Address Match Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn riic0wupen(
         self,
@@ -2038,224 +3122,280 @@ pub mod wupen0 {
     pub struct Irqwupen0_SPEC;
     pub type Irqwupen0 = crate::EnumBitfieldStruct<u8, Irqwupen0_SPEC>;
     impl Irqwupen0 {
+        #[doc = "Deep Sleep/Software Standby returns by IRQ0 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by IRQ0 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irqwupen1_SPEC;
     pub type Irqwupen1 = crate::EnumBitfieldStruct<u8, Irqwupen1_SPEC>;
     impl Irqwupen1 {
+        #[doc = "Deep Sleep/Software Standby returns by IRQ1 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by IRQ1 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irqwupen2_SPEC;
     pub type Irqwupen2 = crate::EnumBitfieldStruct<u8, Irqwupen2_SPEC>;
     impl Irqwupen2 {
+        #[doc = "Deep Sleep/Software Standby returns by IRQ2 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by IRQ2 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irqwupen3_SPEC;
     pub type Irqwupen3 = crate::EnumBitfieldStruct<u8, Irqwupen3_SPEC>;
     impl Irqwupen3 {
+        #[doc = "Deep Sleep/Software Standby returns by IRQ3 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by IRQ3 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irqwupen4_SPEC;
     pub type Irqwupen4 = crate::EnumBitfieldStruct<u8, Irqwupen4_SPEC>;
     impl Irqwupen4 {
+        #[doc = "Deep Sleep/Software Standby returns by IRQ4 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by IRQ4 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irqwupen5_SPEC;
     pub type Irqwupen5 = crate::EnumBitfieldStruct<u8, Irqwupen5_SPEC>;
     impl Irqwupen5 {
+        #[doc = "Deep Sleep/Software Standby returns by IRQ5 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by IRQ5 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irqwupen6_SPEC;
     pub type Irqwupen6 = crate::EnumBitfieldStruct<u8, Irqwupen6_SPEC>;
     impl Irqwupen6 {
+        #[doc = "Deep Sleep/Software Standby returns by IRQ6 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by IRQ6 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irqwupen7_SPEC;
     pub type Irqwupen7 = crate::EnumBitfieldStruct<u8, Irqwupen7_SPEC>;
     impl Irqwupen7 {
+        #[doc = "Deep Sleep/Software Standby returns by IRQ7 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by IRQ7 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irqwupen8_SPEC;
     pub type Irqwupen8 = crate::EnumBitfieldStruct<u8, Irqwupen8_SPEC>;
     impl Irqwupen8 {
+        #[doc = "Deep Sleep/Software Standby returns by IRQ8 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by IRQ8 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irqwupen9_SPEC;
     pub type Irqwupen9 = crate::EnumBitfieldStruct<u8, Irqwupen9_SPEC>;
     impl Irqwupen9 {
+        #[doc = "Deep Sleep/Software Standby returns by IRQ9 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by IRQ9 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irqwupen10_SPEC;
     pub type Irqwupen10 = crate::EnumBitfieldStruct<u8, Irqwupen10_SPEC>;
     impl Irqwupen10 {
+        #[doc = "Deep Sleep/Software Standby returns by IRQ10 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by IRQ10 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irqwupen11_SPEC;
     pub type Irqwupen11 = crate::EnumBitfieldStruct<u8, Irqwupen11_SPEC>;
     impl Irqwupen11 {
+        #[doc = "Deep Sleep/Software Standby returns by IRQ11 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by IRQ11 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irqwupen12_SPEC;
     pub type Irqwupen12 = crate::EnumBitfieldStruct<u8, Irqwupen12_SPEC>;
     impl Irqwupen12 {
+        #[doc = "Deep Sleep/Software Standby returns by IRQ12 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by IRQ12 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irqwupen13_SPEC;
     pub type Irqwupen13 = crate::EnumBitfieldStruct<u8, Irqwupen13_SPEC>;
     impl Irqwupen13 {
+        #[doc = "Deep Sleep/Software Standby returns by IRQ13 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by IRQ13 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irqwupen14_SPEC;
     pub type Irqwupen14 = crate::EnumBitfieldStruct<u8, Irqwupen14_SPEC>;
     impl Irqwupen14 {
+        #[doc = "Deep Sleep/Software Standby returns by IRQ14 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by IRQ14 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irqwupen15_SPEC;
     pub type Irqwupen15 = crate::EnumBitfieldStruct<u8, Irqwupen15_SPEC>;
     impl Irqwupen15 {
+        #[doc = "Deep Sleep/Software Standby returns by IRQ15 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by IRQ15 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Iwdtwupen_SPEC;
     pub type Iwdtwupen = crate::EnumBitfieldStruct<u8, Iwdtwupen_SPEC>;
     impl Iwdtwupen {
+        #[doc = "Deep Sleep/Software Standby returns by IWDT interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by IWDT interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pvd1Wupen_SPEC;
     pub type Pvd1Wupen = crate::EnumBitfieldStruct<u8, Pvd1Wupen_SPEC>;
     impl Pvd1Wupen {
+        #[doc = "Deep Sleep/Software Standby returns by PVD1 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by PVD1 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pvd2Wupen_SPEC;
     pub type Pvd2Wupen = crate::EnumBitfieldStruct<u8, Pvd2Wupen_SPEC>;
     impl Pvd2Wupen {
+        #[doc = "Deep Sleep/Software Standby returns by PVD2 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by PVD2 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vbattwupen_SPEC;
     pub type Vbattwupen = crate::EnumBitfieldStruct<u8, Vbattwupen_SPEC>;
     impl Vbattwupen {
+        #[doc = "Deep Sleep/Software Standby returns by VBATT monitor interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by VBATT monitor interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rtcalmwupen_SPEC;
     pub type Rtcalmwupen = crate::EnumBitfieldStruct<u8, Rtcalmwupen_SPEC>;
     impl Rtcalmwupen {
+        #[doc = "Deep Sleep/Software Standby returns by RTC alarm interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by RTC alarm interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rtcprdwupen_SPEC;
     pub type Rtcprdwupen = crate::EnumBitfieldStruct<u8, Rtcprdwupen_SPEC>;
     impl Rtcprdwupen {
+        #[doc = "Deep Sleep/Software Standby returns by RTC period interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by RTC period interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Usbhswupen_SPEC;
     pub type Usbhswupen = crate::EnumBitfieldStruct<u8, Usbhswupen_SPEC>;
     impl Usbhswupen {
+        #[doc = "Deep Sleep/Software Standby returns by USBHS interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by USBHS interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Usbfswupen_SPEC;
     pub type Usbfswupen = crate::EnumBitfieldStruct<u8, Usbfswupen_SPEC>;
     impl Usbfswupen {
+        #[doc = "Deep Sleep/Software Standby returns by USBFS0 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by USBFS0 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Agt1Udwupen_SPEC;
     pub type Agt1Udwupen = crate::EnumBitfieldStruct<u8, Agt1Udwupen_SPEC>;
     impl Agt1Udwupen {
+        #[doc = "Deep Sleep/Software Standby returns by AGT1 underflow interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by AGT1 underflow interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Agt1Cawupen_SPEC;
     pub type Agt1Cawupen = crate::EnumBitfieldStruct<u8, Agt1Cawupen_SPEC>;
     impl Agt1Cawupen {
+        #[doc = "Deep Sleep/Software Standby returns by AGT1 compare match A interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by AGT1 compare match A interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Agt1Cbwupen_SPEC;
     pub type Agt1Cbwupen = crate::EnumBitfieldStruct<u8, Agt1Cbwupen_SPEC>;
     impl Agt1Cbwupen {
+        #[doc = "Deep Sleep/Software Standby returns by AGT1 compare match B interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by AGT1 compare match B interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Riic0Wupen_SPEC;
     pub type Riic0Wupen = crate::EnumBitfieldStruct<u8, Riic0Wupen_SPEC>;
     impl Riic0Wupen {
+        #[doc = "Deep Sleep/Software Standby returns by RIIC0 address match interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by RIIC0 address match interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2266,9 +3406,11 @@ impl crate::sealed::RegSpec for Wupen1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Wake Up Interrupt Enable Register 1"]
 pub type Wupen1 = crate::RegValueT<Wupen1_SPEC>;
 
 impl Wupen1 {
+    #[doc = "Comparator-HS0 Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn comphs0wupen(
         self,
@@ -2294,6 +3436,7 @@ impl Wupen1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "ULPT0 Underflow Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn ulp0uwupen(
         self,
@@ -2319,6 +3462,7 @@ impl Wupen1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "ULPT0 Compare Match A Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn ulp0awupen(
         self,
@@ -2344,6 +3488,7 @@ impl Wupen1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "ULPT0 Compare Match B Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn ulp0bwupen(
         self,
@@ -2369,6 +3514,7 @@ impl Wupen1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "I3C Wakeup Condition Detection Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn i3cwupen(
         self,
@@ -2394,6 +3540,7 @@ impl Wupen1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "ULPT1 Underflow Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn ulp1uwupen(
         self,
@@ -2419,6 +3566,7 @@ impl Wupen1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "ULPT1 Compare Match A Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn ulp1awupen(
         self,
@@ -2444,6 +3592,7 @@ impl Wupen1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "ULPT1 Compare Match B Interrupt Deep Sleep/Software Standby Returns Enable bit"]
     #[inline(always)]
     pub fn ulp1bwupen(
         self,
@@ -2469,6 +3618,7 @@ impl Wupen1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2490,64 +3640,80 @@ pub mod wupen1 {
     pub struct Comphs0Wupen_SPEC;
     pub type Comphs0Wupen = crate::EnumBitfieldStruct<u8, Comphs0Wupen_SPEC>;
     impl Comphs0Wupen {
+        #[doc = "Deep Sleep/Software Standby returns by Comparator-HS0 interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by Comparator-HS0 interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ulp0Uwupen_SPEC;
     pub type Ulp0Uwupen = crate::EnumBitfieldStruct<u8, Ulp0Uwupen_SPEC>;
     impl Ulp0Uwupen {
+        #[doc = "Deep Sleep/Software Standby returns by ULPT0 Underflow interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by ULPT0 Underflow interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ulp0Awupen_SPEC;
     pub type Ulp0Awupen = crate::EnumBitfieldStruct<u8, Ulp0Awupen_SPEC>;
     impl Ulp0Awupen {
+        #[doc = "Deep Sleep/Software Standby returns by ULPT0 Compare match A interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by ULPT0 Compare match A interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ulp0Bwupen_SPEC;
     pub type Ulp0Bwupen = crate::EnumBitfieldStruct<u8, Ulp0Bwupen_SPEC>;
     impl Ulp0Bwupen {
+        #[doc = "Deep Sleep/Software Standby returns by ULPT0 Compare match B interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by ULPT0 Compare match B interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct I3Cwupen_SPEC;
     pub type I3Cwupen = crate::EnumBitfieldStruct<u8, I3Cwupen_SPEC>;
     impl I3Cwupen {
+        #[doc = "Deep Sleep/Software Standby returns by I3C wake up interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by I3C wake up interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ulp1Uwupen_SPEC;
     pub type Ulp1Uwupen = crate::EnumBitfieldStruct<u8, Ulp1Uwupen_SPEC>;
     impl Ulp1Uwupen {
+        #[doc = "Deep Sleep/Software Standby returns by ULPT1 Underflow interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by ULPT1 Underflow interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ulp1Awupen_SPEC;
     pub type Ulp1Awupen = crate::EnumBitfieldStruct<u8, Ulp1Awupen_SPEC>;
     impl Ulp1Awupen {
+        #[doc = "Deep Sleep/Software Standby returns by ULPT1 Compare match A interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by ULPT1 Compare match A interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ulp1Bwupen_SPEC;
     pub type Ulp1Bwupen = crate::EnumBitfieldStruct<u8, Ulp1Bwupen_SPEC>;
     impl Ulp1Bwupen {
+        #[doc = "Deep Sleep/Software Standby returns by ULPT1 Compare match B interrupt is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Deep Sleep/Software Standby returns by ULPT1 Compare match B interrupt is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2558,9 +3724,11 @@ impl crate::sealed::RegSpec for Selsr0_SPEC {
     type DataType = u16;
 }
 
+#[doc = "SYS Event Link Setting Register"]
 pub type Selsr0 = crate::RegValueT<Selsr0_SPEC>;
 
 impl Selsr0 {
+    #[doc = "SYS Event Link Select"]
     #[inline(always)]
     pub fn sels(
         self,
@@ -2586,6 +3754,7 @@ impl Selsr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2605,8 +3774,10 @@ pub mod selsr0 {
     pub struct Sels_SPEC;
     pub type Sels = crate::EnumBitfieldStruct<u8, Sels_SPEC>;
     impl Sels {
+        #[doc = "Disable event output to the associated low-power mode module"]
         pub const _000000000: Self = Self::new(0);
 
+        #[doc = "Event signal number to be linked."]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -2617,9 +3788,11 @@ impl crate::sealed::RegSpec for Ielsr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "ICU Event Link Setting Register %s"]
 pub type Ielsr = crate::RegValueT<Ielsr_SPEC>;
 
 impl Ielsr {
+    #[doc = "Event selection to NVIC"]
     #[inline(always)]
     pub fn iels(
         self,
@@ -2645,6 +3818,7 @@ impl Ielsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Status Flag"]
     #[inline(always)]
     pub fn ir(
         self,
@@ -2670,6 +3844,7 @@ impl Ielsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Activation Enable"]
     #[inline(always)]
     pub fn dtce(
         self,
@@ -2695,6 +3870,7 @@ impl Ielsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2714,24 +3890,30 @@ pub mod ielsr {
     pub struct Iels_SPEC;
     pub type Iels = crate::EnumBitfieldStruct<u8, Iels_SPEC>;
     impl Iels {
+        #[doc = "Nothing is selected"]
         pub const _0_X_000: Self = Self::new(0);
 
+        #[doc = "See Event Table"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ir_SPEC;
     pub type Ir = crate::EnumBitfieldStruct<u8, Ir_SPEC>;
     impl Ir {
+        #[doc = "No interrupt request is generated"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "An interrupt request is generated ( \"1\" write to the IR bit is prohibited. )"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dtce_SPEC;
     pub type Dtce = crate::EnumBitfieldStruct<u8, Dtce_SPEC>;
     impl Dtce {
+        #[doc = "DTC activation is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC activation is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }

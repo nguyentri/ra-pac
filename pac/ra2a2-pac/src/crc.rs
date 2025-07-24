@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:17:03 +0000
+// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:19 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Crc {
         self.ptr
     }
 
+    #[doc = "CRC Control Register 0"]
     #[inline(always)]
     pub const fn crccr0(
         &self,
@@ -45,6 +46,7 @@ impl super::Crc {
         }
     }
 
+    #[doc = "CRC Control Register 1"]
     #[inline(always)]
     pub const fn crccr1(
         &self,
@@ -56,6 +58,7 @@ impl super::Crc {
         }
     }
 
+    #[doc = "CRC Data Input Register"]
     #[inline(always)]
     pub const fn crcdir(
         &self,
@@ -67,6 +70,7 @@ impl super::Crc {
         }
     }
 
+    #[doc = "CRC Data Input Register"]
     #[inline(always)]
     pub const fn crcdir_by(
         &self,
@@ -78,6 +82,7 @@ impl super::Crc {
         }
     }
 
+    #[doc = "CRC Data Output Register"]
     #[inline(always)]
     pub const fn crcdor(
         &self,
@@ -89,6 +94,7 @@ impl super::Crc {
         }
     }
 
+    #[doc = "CRC Data Output Register"]
     #[inline(always)]
     pub const fn crcdor_ha(
         &self,
@@ -100,6 +106,7 @@ impl super::Crc {
         }
     }
 
+    #[doc = "CRC Data Output Register"]
     #[inline(always)]
     pub const fn crcdor_by(
         &self,
@@ -111,6 +118,7 @@ impl super::Crc {
         }
     }
 
+    #[doc = "Snoop Address Register"]
     #[inline(always)]
     pub const fn crcsar(
         &self,
@@ -129,9 +137,11 @@ impl crate::sealed::RegSpec for Crccr0_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CRC Control Register 0"]
 pub type Crccr0 = crate::RegValueT<Crccr0_SPEC>;
 
 impl Crccr0 {
+    #[doc = "CRC Generating Polynomial Switching"]
     #[inline(always)]
     pub fn gps(
         self,
@@ -157,6 +167,7 @@ impl Crccr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "CRC Calculation Switching"]
     #[inline(always)]
     pub fn lms(
         self,
@@ -182,6 +193,7 @@ impl Crccr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "CRCDOR/CRCDOR_HA/CRCDOR_BY Register Clear"]
     #[inline(always)]
     pub fn dorclr(
         self,
@@ -219,32 +231,42 @@ pub mod crccr0 {
     pub struct Gps_SPEC;
     pub type Gps = crate::EnumBitfieldStruct<u8, Gps_SPEC>;
     impl Gps {
+        #[doc = "8-bit CRC-8 (X8 + X2 + X + 1)"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "16-bit CRC-16 (X16 + X15 + X2 + 1)"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "16-bit CRC-CCITT (X16 + X12 + X5 + 1)"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "32-bit CRC-32 (X32 + X26 + X23 + X22 + X16 + X12 + X11 +X10 + X8 + X7 + X5 + X4 + X2 + X + 1)"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "32-bit CRC-32C (X32 + X28 + X27 + X26 + X25 + X23 + X22 + X20 + X19 + X18 + X14 + X13 + X11 + X10 + X9 + X8 + X6 + 1)"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "No calculation is executed"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lms_SPEC;
     pub type Lms = crate::EnumBitfieldStruct<u8, Lms_SPEC>;
     impl Lms {
+        #[doc = "Generate CRC code for LSB-first communication"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Generate CRC code for MSB-first communication"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dorclr_SPEC;
     pub type Dorclr = crate::EnumBitfieldStruct<u8, Dorclr_SPEC>;
     impl Dorclr {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear the CRCDOR/CRCDOR_HA/CRCDOR_BY register"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -255,9 +277,11 @@ impl crate::sealed::RegSpec for Crccr1_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CRC Control Register 1"]
 pub type Crccr1 = crate::RegValueT<Crccr1_SPEC>;
 
 impl Crccr1 {
+    #[doc = "Snoop-On-Write/Read Switch"]
     #[inline(always)]
     pub fn crcswr(
         self,
@@ -283,6 +307,7 @@ impl Crccr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Snoop Enable"]
     #[inline(always)]
     pub fn crcsen(
         self,
@@ -320,16 +345,20 @@ pub mod crccr1 {
     pub struct Crcswr_SPEC;
     pub type Crcswr = crate::EnumBitfieldStruct<u8, Crcswr_SPEC>;
     impl Crcswr {
+        #[doc = "Snoop-on-read"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Snoop-on-write"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Crcsen_SPEC;
     pub type Crcsen = crate::EnumBitfieldStruct<u8, Crcsen_SPEC>;
     impl Crcsen {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -340,6 +369,7 @@ impl crate::sealed::RegSpec for Crcdir_SPEC {
     type DataType = u32;
 }
 
+#[doc = "CRC Data Input Register"]
 pub type Crcdir = crate::RegValueT<Crcdir_SPEC>;
 
 impl NoBitfieldReg<Crcdir_SPEC> for Crcdir {}
@@ -357,6 +387,7 @@ impl crate::sealed::RegSpec for CrcdirBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CRC Data Input Register"]
 pub type CrcdirBy = crate::RegValueT<CrcdirBy_SPEC>;
 
 impl NoBitfieldReg<CrcdirBy_SPEC> for CrcdirBy {}
@@ -374,6 +405,7 @@ impl crate::sealed::RegSpec for Crcdor_SPEC {
     type DataType = u32;
 }
 
+#[doc = "CRC Data Output Register"]
 pub type Crcdor = crate::RegValueT<Crcdor_SPEC>;
 
 impl NoBitfieldReg<Crcdor_SPEC> for Crcdor {}
@@ -391,6 +423,7 @@ impl crate::sealed::RegSpec for CrcdorHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "CRC Data Output Register"]
 pub type CrcdorHa = crate::RegValueT<CrcdorHa_SPEC>;
 
 impl NoBitfieldReg<CrcdorHa_SPEC> for CrcdorHa {}
@@ -408,6 +441,7 @@ impl crate::sealed::RegSpec for CrcdorBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CRC Data Output Register"]
 pub type CrcdorBy = crate::RegValueT<CrcdorBy_SPEC>;
 
 impl NoBitfieldReg<CrcdorBy_SPEC> for CrcdorBy {}
@@ -425,9 +459,11 @@ impl crate::sealed::RegSpec for Crcsar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Snoop Address Register"]
 pub type Crcsar = crate::RegValueT<Crcsar_SPEC>;
 
 impl Crcsar {
+    #[doc = "Register Snoop Address"]
     #[inline(always)]
     pub fn crcsa(
         self,

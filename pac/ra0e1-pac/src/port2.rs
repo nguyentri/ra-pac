@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.10.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:47 +0000
+// Generated from SVD 1.10.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:59 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Port2 {
         self.ptr
     }
 
+    #[doc = "Port 2 Output Data Register"]
     #[inline(always)]
     pub const fn podr2(&self) -> &'static crate::common::Reg<self::Podr2_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Port2 {
         }
     }
 
+    #[doc = "Port 2 Direction Register"]
     #[inline(always)]
     pub const fn pdr2(&self) -> &'static crate::common::Reg<self::Pdr2_SPEC, crate::common::RW> {
         unsafe {
@@ -52,6 +54,7 @@ impl super::Port2 {
         }
     }
 
+    #[doc = "Port 2 State Register"]
     #[inline(always)]
     pub const fn pidr2(&self) -> &'static crate::common::Reg<self::Pidr2_SPEC, crate::common::R> {
         unsafe {
@@ -61,6 +64,7 @@ impl super::Port2 {
         }
     }
 
+    #[doc = "Port 2 Output Reset Register"]
     #[inline(always)]
     pub const fn porr2(&self) -> &'static crate::common::Reg<self::Porr2_SPEC, crate::common::W> {
         unsafe {
@@ -70,6 +74,7 @@ impl super::Port2 {
         }
     }
 
+    #[doc = "Port 2 Output Set Register"]
     #[inline(always)]
     pub const fn posr2(&self) -> &'static crate::common::Reg<self::Posr2_SPEC, crate::common::W> {
         unsafe {
@@ -79,6 +84,7 @@ impl super::Port2 {
         }
     }
 
+    #[doc = "Port 2 Event Output Reset Register"]
     #[inline(always)]
     pub const fn eorr2(&self) -> &'static crate::common::Reg<self::Eorr2_SPEC, crate::common::RW> {
         unsafe {
@@ -88,6 +94,7 @@ impl super::Port2 {
         }
     }
 
+    #[doc = "Port 2 Event Output Set Register"]
     #[inline(always)]
     pub const fn eosr2(&self) -> &'static crate::common::Reg<self::Eosr2_SPEC, crate::common::RW> {
         unsafe {
@@ -104,9 +111,11 @@ impl crate::sealed::RegSpec for Podr2_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port 2 Output Data Register"]
 pub type Podr2 = crate::RegValueT<Podr2_SPEC>;
 
 impl Podr2 {
+    #[doc = "P201 Output Data"]
     #[inline(always)]
     pub fn podr01(
         self,
@@ -132,6 +141,7 @@ impl Podr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P206 Output Data"]
     #[inline(always)]
     pub fn podr06(
         self,
@@ -157,6 +167,7 @@ impl Podr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P207 Output Data"]
     #[inline(always)]
     pub fn podr07(
         self,
@@ -182,6 +193,7 @@ impl Podr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P208 Output Data"]
     #[inline(always)]
     pub fn podr08(
         self,
@@ -207,6 +219,7 @@ impl Podr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P212 Output Data"]
     #[inline(always)]
     pub fn podr12(
         self,
@@ -232,6 +245,7 @@ impl Podr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P213 Output Data"]
     #[inline(always)]
     pub fn podr13(
         self,
@@ -269,48 +283,60 @@ pub mod podr2 {
     pub struct Podr01_SPEC;
     pub type Podr01 = crate::EnumBitfieldStruct<u8, Podr01_SPEC>;
     impl Podr01 {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Podr06_SPEC;
     pub type Podr06 = crate::EnumBitfieldStruct<u8, Podr06_SPEC>;
     impl Podr06 {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Podr07_SPEC;
     pub type Podr07 = crate::EnumBitfieldStruct<u8, Podr07_SPEC>;
     impl Podr07 {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Podr08_SPEC;
     pub type Podr08 = crate::EnumBitfieldStruct<u8, Podr08_SPEC>;
     impl Podr08 {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Podr12_SPEC;
     pub type Podr12 = crate::EnumBitfieldStruct<u8, Podr12_SPEC>;
     impl Podr12 {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Podr13_SPEC;
     pub type Podr13 = crate::EnumBitfieldStruct<u8, Podr13_SPEC>;
     impl Podr13 {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -321,9 +347,11 @@ impl crate::sealed::RegSpec for Pdr2_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port 2 Direction Register"]
 pub type Pdr2 = crate::RegValueT<Pdr2_SPEC>;
 
 impl Pdr2 {
+    #[doc = "P201 Direction"]
     #[inline(always)]
     pub fn pdr01(
         self,
@@ -349,6 +377,7 @@ impl Pdr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P206 Direction"]
     #[inline(always)]
     pub fn pdr06(
         self,
@@ -374,6 +403,7 @@ impl Pdr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P207 Direction"]
     #[inline(always)]
     pub fn pdr07(
         self,
@@ -399,6 +429,7 @@ impl Pdr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P208 Direction"]
     #[inline(always)]
     pub fn pdr08(
         self,
@@ -424,6 +455,7 @@ impl Pdr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P212 Direction"]
     #[inline(always)]
     pub fn pdr12(
         self,
@@ -449,6 +481,7 @@ impl Pdr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P213 Direction"]
     #[inline(always)]
     pub fn pdr13(
         self,
@@ -486,48 +519,60 @@ pub mod pdr2 {
     pub struct Pdr01_SPEC;
     pub type Pdr01 = crate::EnumBitfieldStruct<u8, Pdr01_SPEC>;
     impl Pdr01 {
+        #[doc = "Output 0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr06_SPEC;
     pub type Pdr06 = crate::EnumBitfieldStruct<u8, Pdr06_SPEC>;
     impl Pdr06 {
+        #[doc = "Output 0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr07_SPEC;
     pub type Pdr07 = crate::EnumBitfieldStruct<u8, Pdr07_SPEC>;
     impl Pdr07 {
+        #[doc = "Output 0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr08_SPEC;
     pub type Pdr08 = crate::EnumBitfieldStruct<u8, Pdr08_SPEC>;
     impl Pdr08 {
+        #[doc = "Output 0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr12_SPEC;
     pub type Pdr12 = crate::EnumBitfieldStruct<u8, Pdr12_SPEC>;
     impl Pdr12 {
+        #[doc = "Output 0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr13_SPEC;
     pub type Pdr13 = crate::EnumBitfieldStruct<u8, Pdr13_SPEC>;
     impl Pdr13 {
+        #[doc = "Output 0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output 1"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -538,9 +583,11 @@ impl crate::sealed::RegSpec for Pidr2_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port 2 State Register"]
 pub type Pidr2 = crate::RegValueT<Pidr2_SPEC>;
 
 impl Pidr2 {
+    #[doc = "P200 State"]
     #[inline(always)]
     pub fn pidr00(
         self,
@@ -566,6 +613,7 @@ impl Pidr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P201 State"]
     #[inline(always)]
     pub fn pidr01(
         self,
@@ -591,6 +639,7 @@ impl Pidr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P206 State"]
     #[inline(always)]
     pub fn pidr06(
         self,
@@ -616,6 +665,7 @@ impl Pidr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P207 State"]
     #[inline(always)]
     pub fn pidr07(
         self,
@@ -641,6 +691,7 @@ impl Pidr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P208 State"]
     #[inline(always)]
     pub fn pidr08(
         self,
@@ -666,6 +717,7 @@ impl Pidr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P212 State"]
     #[inline(always)]
     pub fn pidr12(
         self,
@@ -691,6 +743,7 @@ impl Pidr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P213 State"]
     #[inline(always)]
     pub fn pidr13(
         self,
@@ -716,6 +769,7 @@ impl Pidr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P214 State"]
     #[inline(always)]
     pub fn pidr14(
         self,
@@ -741,6 +795,7 @@ impl Pidr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P215 State"]
     #[inline(always)]
     pub fn pidr15(
         self,
@@ -778,72 +833,90 @@ pub mod pidr2 {
     pub struct Pidr00_SPEC;
     pub type Pidr00 = crate::EnumBitfieldStruct<u8, Pidr00_SPEC>;
     impl Pidr00 {
+        #[doc = "Low level"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High level"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr01_SPEC;
     pub type Pidr01 = crate::EnumBitfieldStruct<u8, Pidr01_SPEC>;
     impl Pidr01 {
+        #[doc = "Low level"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High level"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr06_SPEC;
     pub type Pidr06 = crate::EnumBitfieldStruct<u8, Pidr06_SPEC>;
     impl Pidr06 {
+        #[doc = "Low level"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High level"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr07_SPEC;
     pub type Pidr07 = crate::EnumBitfieldStruct<u8, Pidr07_SPEC>;
     impl Pidr07 {
+        #[doc = "Low level"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High level"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr08_SPEC;
     pub type Pidr08 = crate::EnumBitfieldStruct<u8, Pidr08_SPEC>;
     impl Pidr08 {
+        #[doc = "Low level"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High level"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr12_SPEC;
     pub type Pidr12 = crate::EnumBitfieldStruct<u8, Pidr12_SPEC>;
     impl Pidr12 {
+        #[doc = "Low level"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High level"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr13_SPEC;
     pub type Pidr13 = crate::EnumBitfieldStruct<u8, Pidr13_SPEC>;
     impl Pidr13 {
+        #[doc = "Low level"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High level"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr14_SPEC;
     pub type Pidr14 = crate::EnumBitfieldStruct<u8, Pidr14_SPEC>;
     impl Pidr14 {
+        #[doc = "Low level"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High level"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr15_SPEC;
     pub type Pidr15 = crate::EnumBitfieldStruct<u8, Pidr15_SPEC>;
     impl Pidr15 {
+        #[doc = "Low level"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High level"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -854,9 +927,11 @@ impl crate::sealed::RegSpec for Porr2_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port 2 Output Reset Register"]
 pub type Porr2 = crate::RegValueT<Porr2_SPEC>;
 
 impl Porr2 {
+    #[doc = "P201 Output Reset"]
     #[inline(always)]
     pub fn porr01(
         self,
@@ -882,6 +957,7 @@ impl Porr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P206 Output Reset"]
     #[inline(always)]
     pub fn porr06(
         self,
@@ -907,6 +983,7 @@ impl Porr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P207 Output Reset"]
     #[inline(always)]
     pub fn porr07(
         self,
@@ -932,6 +1009,7 @@ impl Porr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P208 Output Reset"]
     #[inline(always)]
     pub fn porr08(
         self,
@@ -957,6 +1035,7 @@ impl Porr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P212 Output Reset"]
     #[inline(always)]
     pub fn porr12(
         self,
@@ -982,6 +1061,7 @@ impl Porr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P213 Output Reset"]
     #[inline(always)]
     pub fn porr13(
         self,
@@ -1019,48 +1099,60 @@ pub mod porr2 {
     pub struct Porr01_SPEC;
     pub type Porr01 = crate::EnumBitfieldStruct<u8, Porr01_SPEC>;
     impl Porr01 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Low output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Porr06_SPEC;
     pub type Porr06 = crate::EnumBitfieldStruct<u8, Porr06_SPEC>;
     impl Porr06 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Low output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Porr07_SPEC;
     pub type Porr07 = crate::EnumBitfieldStruct<u8, Porr07_SPEC>;
     impl Porr07 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Low output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Porr08_SPEC;
     pub type Porr08 = crate::EnumBitfieldStruct<u8, Porr08_SPEC>;
     impl Porr08 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Low output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Porr12_SPEC;
     pub type Porr12 = crate::EnumBitfieldStruct<u8, Porr12_SPEC>;
     impl Porr12 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Low output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Porr13_SPEC;
     pub type Porr13 = crate::EnumBitfieldStruct<u8, Porr13_SPEC>;
     impl Porr13 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Low output"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1071,9 +1163,11 @@ impl crate::sealed::RegSpec for Posr2_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port 2 Output Set Register"]
 pub type Posr2 = crate::RegValueT<Posr2_SPEC>;
 
 impl Posr2 {
+    #[doc = "P201 Output Set"]
     #[inline(always)]
     pub fn posr01(
         self,
@@ -1099,6 +1193,7 @@ impl Posr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P206 Output Set"]
     #[inline(always)]
     pub fn posr06(
         self,
@@ -1124,6 +1219,7 @@ impl Posr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P207 Output Set"]
     #[inline(always)]
     pub fn posr07(
         self,
@@ -1149,6 +1245,7 @@ impl Posr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P208 Output Set"]
     #[inline(always)]
     pub fn posr08(
         self,
@@ -1174,6 +1271,7 @@ impl Posr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P212 Output Set"]
     #[inline(always)]
     pub fn posr12(
         self,
@@ -1199,6 +1297,7 @@ impl Posr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P213 Output Set"]
     #[inline(always)]
     pub fn posr13(
         self,
@@ -1236,48 +1335,60 @@ pub mod posr2 {
     pub struct Posr01_SPEC;
     pub type Posr01 = crate::EnumBitfieldStruct<u8, Posr01_SPEC>;
     impl Posr01 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Posr06_SPEC;
     pub type Posr06 = crate::EnumBitfieldStruct<u8, Posr06_SPEC>;
     impl Posr06 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Posr07_SPEC;
     pub type Posr07 = crate::EnumBitfieldStruct<u8, Posr07_SPEC>;
     impl Posr07 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Posr08_SPEC;
     pub type Posr08 = crate::EnumBitfieldStruct<u8, Posr08_SPEC>;
     impl Posr08 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Posr12_SPEC;
     pub type Posr12 = crate::EnumBitfieldStruct<u8, Posr12_SPEC>;
     impl Posr12 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Posr13_SPEC;
     pub type Posr13 = crate::EnumBitfieldStruct<u8, Posr13_SPEC>;
     impl Posr13 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1288,9 +1399,11 @@ impl crate::sealed::RegSpec for Eorr2_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port 2 Event Output Reset Register"]
 pub type Eorr2 = crate::RegValueT<Eorr2_SPEC>;
 
 impl Eorr2 {
+    #[doc = "P201 Event Output Reset"]
     #[inline(always)]
     pub fn eorr01(
         self,
@@ -1316,6 +1429,7 @@ impl Eorr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P206 Event Output Reset"]
     #[inline(always)]
     pub fn eorr06(
         self,
@@ -1341,6 +1455,7 @@ impl Eorr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P207 Event Output Reset"]
     #[inline(always)]
     pub fn eorr07(
         self,
@@ -1366,6 +1481,7 @@ impl Eorr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P208 Event Output Reset"]
     #[inline(always)]
     pub fn eorr08(
         self,
@@ -1391,6 +1507,7 @@ impl Eorr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P212 Event Output Reset"]
     #[inline(always)]
     pub fn eorr12(
         self,
@@ -1416,6 +1533,7 @@ impl Eorr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P213 Event Output Reset"]
     #[inline(always)]
     pub fn eorr13(
         self,
@@ -1453,48 +1571,60 @@ pub mod eorr2 {
     pub struct Eorr01_SPEC;
     pub type Eorr01 = crate::EnumBitfieldStruct<u8, Eorr01_SPEC>;
     impl Eorr01 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Low output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eorr06_SPEC;
     pub type Eorr06 = crate::EnumBitfieldStruct<u8, Eorr06_SPEC>;
     impl Eorr06 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Low output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eorr07_SPEC;
     pub type Eorr07 = crate::EnumBitfieldStruct<u8, Eorr07_SPEC>;
     impl Eorr07 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Low output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eorr08_SPEC;
     pub type Eorr08 = crate::EnumBitfieldStruct<u8, Eorr08_SPEC>;
     impl Eorr08 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Low output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eorr12_SPEC;
     pub type Eorr12 = crate::EnumBitfieldStruct<u8, Eorr12_SPEC>;
     impl Eorr12 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Low output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eorr13_SPEC;
     pub type Eorr13 = crate::EnumBitfieldStruct<u8, Eorr13_SPEC>;
     impl Eorr13 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Low output"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1505,9 +1635,11 @@ impl crate::sealed::RegSpec for Eosr2_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port 2 Event Output Set Register"]
 pub type Eosr2 = crate::RegValueT<Eosr2_SPEC>;
 
 impl Eosr2 {
+    #[doc = "P201 Event Output Set"]
     #[inline(always)]
     pub fn eosr01(
         self,
@@ -1533,6 +1665,7 @@ impl Eosr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P206 Event Output Set"]
     #[inline(always)]
     pub fn eosr06(
         self,
@@ -1558,6 +1691,7 @@ impl Eosr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P207 Event Output Set"]
     #[inline(always)]
     pub fn eosr07(
         self,
@@ -1583,6 +1717,7 @@ impl Eosr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P208 Event Output Set"]
     #[inline(always)]
     pub fn eosr08(
         self,
@@ -1608,6 +1743,7 @@ impl Eosr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P212 Event Output Set"]
     #[inline(always)]
     pub fn eosr12(
         self,
@@ -1633,6 +1769,7 @@ impl Eosr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "P213 Event Output Set"]
     #[inline(always)]
     pub fn eosr13(
         self,
@@ -1670,48 +1807,60 @@ pub mod eosr2 {
     pub struct Eosr01_SPEC;
     pub type Eosr01 = crate::EnumBitfieldStruct<u8, Eosr01_SPEC>;
     impl Eosr01 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eosr06_SPEC;
     pub type Eosr06 = crate::EnumBitfieldStruct<u8, Eosr06_SPEC>;
     impl Eosr06 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eosr07_SPEC;
     pub type Eosr07 = crate::EnumBitfieldStruct<u8, Eosr07_SPEC>;
     impl Eosr07 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eosr08_SPEC;
     pub type Eosr08 = crate::EnumBitfieldStruct<u8, Eosr08_SPEC>;
     impl Eosr08 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eosr12_SPEC;
     pub type Eosr12 = crate::EnumBitfieldStruct<u8, Eosr12_SPEC>;
     impl Eosr12 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eosr13_SPEC;
     pub type Eosr13 = crate::EnumBitfieldStruct<u8, Eosr13_SPEC>;
     impl Eosr13 {
+        #[doc = "No effect on output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
 }

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.30.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:20:54 +0000
+// Generated from SVD 1.41.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:06 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Mstp {
         self.ptr
     }
 
+    #[doc = "Module Stop Control Register A"]
     #[inline(always)]
     pub const fn mstpcra(
         &self,
@@ -45,6 +46,7 @@ impl super::Mstp {
         }
     }
 
+    #[doc = "Module Stop Control Register B"]
     #[inline(always)]
     pub const fn mstpcrb(
         &self,
@@ -56,6 +58,7 @@ impl super::Mstp {
         }
     }
 
+    #[doc = "Module Stop Control Register C"]
     #[inline(always)]
     pub const fn mstpcrc(
         &self,
@@ -67,6 +70,7 @@ impl super::Mstp {
         }
     }
 
+    #[doc = "Module Stop Control Register D"]
     #[inline(always)]
     pub const fn mstpcrd(
         &self,
@@ -78,6 +82,7 @@ impl super::Mstp {
         }
     }
 
+    #[doc = "Module Stop Control Register E"]
     #[inline(always)]
     pub const fn mstpcre(
         &self,
@@ -96,9 +101,11 @@ impl crate::sealed::RegSpec for Mstpcra_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Module Stop Control Register A"]
 pub type Mstpcra = crate::RegValueT<Mstpcra_SPEC>;
 
 impl Mstpcra {
+    #[doc = "SRAM0 Module Stop"]
     #[inline(always)]
     pub fn mstpa0(
         self,
@@ -124,6 +131,7 @@ impl Mstpcra {
         >::from_register(self, 0)
     }
 
+    #[doc = "Standby SRAM Module Stop"]
     #[inline(always)]
     pub fn mstpa7(
         self,
@@ -149,6 +157,7 @@ impl Mstpcra {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Controller/Data Transfer Controller Module Stop"]
     #[inline(always)]
     pub fn mstpa22(
         self,
@@ -186,24 +195,30 @@ pub mod mstpcra {
     pub struct Mstpa0_SPEC;
     pub type Mstpa0 = crate::EnumBitfieldStruct<u8, Mstpa0_SPEC>;
     impl Mstpa0 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpa7_SPEC;
     pub type Mstpa7 = crate::EnumBitfieldStruct<u8, Mstpa7_SPEC>;
     impl Mstpa7 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpa22_SPEC;
     pub type Mstpa22 = crate::EnumBitfieldStruct<u8, Mstpa22_SPEC>;
     impl Mstpa22 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -214,9 +229,11 @@ impl crate::sealed::RegSpec for Mstpcrb_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Module Stop Control Register B"]
 pub type Mstpcrb = crate::RegValueT<Mstpcrb_SPEC>;
 
 impl Mstpcrb {
+    #[doc = "CEC Module Stop"]
     #[inline(always)]
     pub fn mstpb3(
         self,
@@ -242,6 +259,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Quad Serial Peripheral Interface Module Stop"]
     #[inline(always)]
     pub fn mstpb6(
         self,
@@ -267,6 +285,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "I2C Bus Interface 2 Module Stop"]
     #[inline(always)]
     pub fn mstpb7(
         self,
@@ -292,6 +311,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "I2C Bus Interface 1 Module Stop"]
     #[inline(always)]
     pub fn mstpb8(
         self,
@@ -317,6 +337,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "I2C Bus Interface 0 Module Stop"]
     #[inline(always)]
     pub fn mstpb9(
         self,
@@ -342,6 +363,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Universal Serial Bus 2.0 FS Interface 0 Module Stop"]
     #[inline(always)]
     pub fn mstpb11(
         self,
@@ -367,6 +389,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Universal Serial Bus 2.0 HS Interface Module Stop"]
     #[inline(always)]
     pub fn mstpb12(
         self,
@@ -392,6 +415,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "ETHERC0 and EDMAC0 Module Stop"]
     #[inline(always)]
     pub fn mstpb15(
         self,
@@ -417,6 +441,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "OSPI Module Stop"]
     #[inline(always)]
     pub fn mstpb16(
         self,
@@ -442,6 +467,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Serial Peripheral Interface 1 Module Stop"]
     #[inline(always)]
     pub fn mstpb18(
         self,
@@ -467,6 +493,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Serial Peripheral Interface 0 Module Stop"]
     #[inline(always)]
     pub fn mstpb19(
         self,
@@ -492,6 +519,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Serial Communication Interface 9 Module Stop"]
     #[inline(always)]
     pub fn mstpb22(
         self,
@@ -517,6 +545,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Serial Communication Interface 8 Module Stop"]
     #[inline(always)]
     pub fn mstpb23(
         self,
@@ -542,6 +571,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Serial Communication Interface 7 Module Stop"]
     #[inline(always)]
     pub fn mstpb24(
         self,
@@ -567,6 +597,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Serial Communication Interface 6 Module Stop"]
     #[inline(always)]
     pub fn mstpb25(
         self,
@@ -592,6 +623,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Serial Communication Interface 5 Module Stop"]
     #[inline(always)]
     pub fn mstpb26(
         self,
@@ -617,6 +649,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Serial Communication Interface 4 Module Stop"]
     #[inline(always)]
     pub fn mstpb27(
         self,
@@ -642,6 +675,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Serial Communication Interface 3 Module Stop"]
     #[inline(always)]
     pub fn mstpb28(
         self,
@@ -667,6 +701,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Serial Communication Interface 2 Module Stop"]
     #[inline(always)]
     pub fn mstpb29(
         self,
@@ -692,6 +727,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Serial Communication Interface 1 Module Stop"]
     #[inline(always)]
     pub fn mstpb30(
         self,
@@ -717,6 +753,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Serial Communication Interface 0 Module Stop"]
     #[inline(always)]
     pub fn mstpb31(
         self,
@@ -754,168 +791,210 @@ pub mod mstpcrb {
     pub struct Mstpb3_SPEC;
     pub type Mstpb3 = crate::EnumBitfieldStruct<u8, Mstpb3_SPEC>;
     impl Mstpb3 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb6_SPEC;
     pub type Mstpb6 = crate::EnumBitfieldStruct<u8, Mstpb6_SPEC>;
     impl Mstpb6 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb7_SPEC;
     pub type Mstpb7 = crate::EnumBitfieldStruct<u8, Mstpb7_SPEC>;
     impl Mstpb7 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb8_SPEC;
     pub type Mstpb8 = crate::EnumBitfieldStruct<u8, Mstpb8_SPEC>;
     impl Mstpb8 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb9_SPEC;
     pub type Mstpb9 = crate::EnumBitfieldStruct<u8, Mstpb9_SPEC>;
     impl Mstpb9 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb11_SPEC;
     pub type Mstpb11 = crate::EnumBitfieldStruct<u8, Mstpb11_SPEC>;
     impl Mstpb11 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb12_SPEC;
     pub type Mstpb12 = crate::EnumBitfieldStruct<u8, Mstpb12_SPEC>;
     impl Mstpb12 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb15_SPEC;
     pub type Mstpb15 = crate::EnumBitfieldStruct<u8, Mstpb15_SPEC>;
     impl Mstpb15 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb16_SPEC;
     pub type Mstpb16 = crate::EnumBitfieldStruct<u8, Mstpb16_SPEC>;
     impl Mstpb16 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb18_SPEC;
     pub type Mstpb18 = crate::EnumBitfieldStruct<u8, Mstpb18_SPEC>;
     impl Mstpb18 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb19_SPEC;
     pub type Mstpb19 = crate::EnumBitfieldStruct<u8, Mstpb19_SPEC>;
     impl Mstpb19 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb22_SPEC;
     pub type Mstpb22 = crate::EnumBitfieldStruct<u8, Mstpb22_SPEC>;
     impl Mstpb22 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb23_SPEC;
     pub type Mstpb23 = crate::EnumBitfieldStruct<u8, Mstpb23_SPEC>;
     impl Mstpb23 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb24_SPEC;
     pub type Mstpb24 = crate::EnumBitfieldStruct<u8, Mstpb24_SPEC>;
     impl Mstpb24 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb25_SPEC;
     pub type Mstpb25 = crate::EnumBitfieldStruct<u8, Mstpb25_SPEC>;
     impl Mstpb25 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb26_SPEC;
     pub type Mstpb26 = crate::EnumBitfieldStruct<u8, Mstpb26_SPEC>;
     impl Mstpb26 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb27_SPEC;
     pub type Mstpb27 = crate::EnumBitfieldStruct<u8, Mstpb27_SPEC>;
     impl Mstpb27 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb28_SPEC;
     pub type Mstpb28 = crate::EnumBitfieldStruct<u8, Mstpb28_SPEC>;
     impl Mstpb28 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb29_SPEC;
     pub type Mstpb29 = crate::EnumBitfieldStruct<u8, Mstpb29_SPEC>;
     impl Mstpb29 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb30_SPEC;
     pub type Mstpb30 = crate::EnumBitfieldStruct<u8, Mstpb30_SPEC>;
     impl Mstpb30 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpb31_SPEC;
     pub type Mstpb31 = crate::EnumBitfieldStruct<u8, Mstpb31_SPEC>;
     impl Mstpb31 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -926,9 +1005,11 @@ impl crate::sealed::RegSpec for Mstpcrc_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Module Stop Control Register C"]
 pub type Mstpcrc = crate::RegValueT<Mstpcrc_SPEC>;
 
 impl Mstpcrc {
+    #[doc = "Clock Frequency Accuracy Measurement Circuit Module Stop"]
     #[inline(always)]
     pub fn mstpc0(
         self,
@@ -954,6 +1035,7 @@ impl Mstpcrc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Cyclic Redundancy Check Calculator Module Stop"]
     #[inline(always)]
     pub fn mstpc1(
         self,
@@ -979,6 +1061,7 @@ impl Mstpcrc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Capacitive Touch Sensing Unit Module Stop"]
     #[inline(always)]
     pub fn mstpc3(
         self,
@@ -1004,6 +1087,7 @@ impl Mstpcrc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Serial Sound Interface Enhanced Module Stop"]
     #[inline(always)]
     pub fn mstpc8(
         self,
@@ -1029,6 +1113,7 @@ impl Mstpcrc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Secure Digital HOST IF / Multi Media Card 0 Module Stop"]
     #[inline(always)]
     pub fn mstpc12(
         self,
@@ -1054,6 +1139,7 @@ impl Mstpcrc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Data Operation Circuit Module Stop"]
     #[inline(always)]
     pub fn mstpc13(
         self,
@@ -1079,6 +1165,7 @@ impl Mstpcrc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Controller Module Stop"]
     #[inline(always)]
     pub fn mstpc14(
         self,
@@ -1104,6 +1191,7 @@ impl Mstpcrc {
         >::from_register(self, 0)
     }
 
+    #[doc = "CANFD Module Stop"]
     #[inline(always)]
     pub fn mstpc27(
         self,
@@ -1129,6 +1217,7 @@ impl Mstpcrc {
         >::from_register(self, 0)
     }
 
+    #[doc = "SCE9 Module Stop"]
     #[inline(always)]
     pub fn mstpc31(
         self,
@@ -1166,72 +1255,90 @@ pub mod mstpcrc {
     pub struct Mstpc0_SPEC;
     pub type Mstpc0 = crate::EnumBitfieldStruct<u8, Mstpc0_SPEC>;
     impl Mstpc0 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpc1_SPEC;
     pub type Mstpc1 = crate::EnumBitfieldStruct<u8, Mstpc1_SPEC>;
     impl Mstpc1 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpc3_SPEC;
     pub type Mstpc3 = crate::EnumBitfieldStruct<u8, Mstpc3_SPEC>;
     impl Mstpc3 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpc8_SPEC;
     pub type Mstpc8 = crate::EnumBitfieldStruct<u8, Mstpc8_SPEC>;
     impl Mstpc8 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpc12_SPEC;
     pub type Mstpc12 = crate::EnumBitfieldStruct<u8, Mstpc12_SPEC>;
     impl Mstpc12 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpc13_SPEC;
     pub type Mstpc13 = crate::EnumBitfieldStruct<u8, Mstpc13_SPEC>;
     impl Mstpc13 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpc14_SPEC;
     pub type Mstpc14 = crate::EnumBitfieldStruct<u8, Mstpc14_SPEC>;
     impl Mstpc14 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpc27_SPEC;
     pub type Mstpc27 = crate::EnumBitfieldStruct<u8, Mstpc27_SPEC>;
     impl Mstpc27 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpc31_SPEC;
     pub type Mstpc31 = crate::EnumBitfieldStruct<u8, Mstpc31_SPEC>;
     impl Mstpc31 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1242,9 +1349,11 @@ impl crate::sealed::RegSpec for Mstpcrd_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Module Stop Control Register D"]
 pub type Mstpcrd = crate::RegValueT<Mstpcrd_SPEC>;
 
 impl Mstpcrd {
+    #[doc = "Low Power Asynchronous General Purpose Timer 3 Module Stop"]
     #[inline(always)]
     pub fn mstpd0(
         self,
@@ -1270,6 +1379,7 @@ impl Mstpcrd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Low Power Asynchronous General Purpose Timer 2 Module Stop"]
     #[inline(always)]
     pub fn mstpd1(
         self,
@@ -1295,6 +1405,7 @@ impl Mstpcrd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Low Power Asynchronous General Purpose Timer 1 Module Stop"]
     #[inline(always)]
     pub fn mstpd2(
         self,
@@ -1320,6 +1431,7 @@ impl Mstpcrd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Low Power Asynchronous General Purpose Timer 0 Module Stop"]
     #[inline(always)]
     pub fn mstpd3(
         self,
@@ -1345,6 +1457,7 @@ impl Mstpcrd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Output Enable for GPT Group D Module Stop"]
     #[inline(always)]
     pub fn mstpd11(
         self,
@@ -1370,6 +1483,7 @@ impl Mstpcrd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Output Enable for GPT Group C Module Stop"]
     #[inline(always)]
     pub fn mstpd12(
         self,
@@ -1395,6 +1509,7 @@ impl Mstpcrd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Output Enable for GPT Group B Module Stop"]
     #[inline(always)]
     pub fn mstpd13(
         self,
@@ -1420,6 +1535,7 @@ impl Mstpcrd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Output Enable for GPT Group A Module Stop"]
     #[inline(always)]
     pub fn mstpd14(
         self,
@@ -1445,6 +1561,7 @@ impl Mstpcrd {
         >::from_register(self, 0)
     }
 
+    #[doc = "12-bit A/D Converter 1 Module Stop"]
     #[inline(always)]
     pub fn mstpd15(
         self,
@@ -1470,6 +1587,7 @@ impl Mstpcrd {
         >::from_register(self, 0)
     }
 
+    #[doc = "12-bit A/D Converter 0 Module Stop"]
     #[inline(always)]
     pub fn mstpd16(
         self,
@@ -1495,6 +1613,7 @@ impl Mstpcrd {
         >::from_register(self, 0)
     }
 
+    #[doc = "12-bit D/A Converter Module Stop"]
     #[inline(always)]
     pub fn mstpd20(
         self,
@@ -1520,6 +1639,7 @@ impl Mstpcrd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Temperature Sensor Module Stop"]
     #[inline(always)]
     pub fn mstpd22(
         self,
@@ -1557,96 +1677,120 @@ pub mod mstpcrd {
     pub struct Mstpd0_SPEC;
     pub type Mstpd0 = crate::EnumBitfieldStruct<u8, Mstpd0_SPEC>;
     impl Mstpd0 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpd1_SPEC;
     pub type Mstpd1 = crate::EnumBitfieldStruct<u8, Mstpd1_SPEC>;
     impl Mstpd1 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpd2_SPEC;
     pub type Mstpd2 = crate::EnumBitfieldStruct<u8, Mstpd2_SPEC>;
     impl Mstpd2 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpd3_SPEC;
     pub type Mstpd3 = crate::EnumBitfieldStruct<u8, Mstpd3_SPEC>;
     impl Mstpd3 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpd11_SPEC;
     pub type Mstpd11 = crate::EnumBitfieldStruct<u8, Mstpd11_SPEC>;
     impl Mstpd11 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpd12_SPEC;
     pub type Mstpd12 = crate::EnumBitfieldStruct<u8, Mstpd12_SPEC>;
     impl Mstpd12 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpd13_SPEC;
     pub type Mstpd13 = crate::EnumBitfieldStruct<u8, Mstpd13_SPEC>;
     impl Mstpd13 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpd14_SPEC;
     pub type Mstpd14 = crate::EnumBitfieldStruct<u8, Mstpd14_SPEC>;
     impl Mstpd14 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpd15_SPEC;
     pub type Mstpd15 = crate::EnumBitfieldStruct<u8, Mstpd15_SPEC>;
     impl Mstpd15 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpd16_SPEC;
     pub type Mstpd16 = crate::EnumBitfieldStruct<u8, Mstpd16_SPEC>;
     impl Mstpd16 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpd20_SPEC;
     pub type Mstpd20 = crate::EnumBitfieldStruct<u8, Mstpd20_SPEC>;
     impl Mstpd20 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpd22_SPEC;
     pub type Mstpd22 = crate::EnumBitfieldStruct<u8, Mstpd22_SPEC>;
     impl Mstpd22 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1657,9 +1801,11 @@ impl crate::sealed::RegSpec for Mstpcre_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Module Stop Control Register E"]
 pub type Mstpcre = crate::RegValueT<Mstpcre_SPEC>;
 
 impl Mstpcre {
+    #[doc = "Low Power Asynchronous General Purpose Timer 5 Module Stop"]
     #[inline(always)]
     pub fn mstpe14(
         self,
@@ -1685,6 +1831,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
+    #[doc = "Low Power Asynchronous General Purpose Timer 4 Module Stop"]
     #[inline(always)]
     pub fn mstpe15(
         self,
@@ -1710,6 +1857,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT9 Module Stop"]
     #[inline(always)]
     pub fn mstpe22(
         self,
@@ -1735,6 +1883,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT8 Module Stop"]
     #[inline(always)]
     pub fn mstpe23(
         self,
@@ -1760,6 +1909,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT7 Module Stop"]
     #[inline(always)]
     pub fn mstpe24(
         self,
@@ -1785,6 +1935,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT6 Module Stop"]
     #[inline(always)]
     pub fn mstpe25(
         self,
@@ -1810,6 +1961,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT5 Module Stop"]
     #[inline(always)]
     pub fn mstpe26(
         self,
@@ -1835,6 +1987,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT4 Module Stop"]
     #[inline(always)]
     pub fn mstpe27(
         self,
@@ -1860,6 +2013,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT3 Module Stop"]
     #[inline(always)]
     pub fn mstpe28(
         self,
@@ -1885,6 +2039,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT2 Module Stop"]
     #[inline(always)]
     pub fn mstpe29(
         self,
@@ -1910,6 +2065,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT1 Module Stop"]
     #[inline(always)]
     pub fn mstpe30(
         self,
@@ -1935,6 +2091,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT0 Module Stop"]
     #[inline(always)]
     pub fn mstpe31(
         self,
@@ -1972,96 +2129,120 @@ pub mod mstpcre {
     pub struct Mstpe14_SPEC;
     pub type Mstpe14 = crate::EnumBitfieldStruct<u8, Mstpe14_SPEC>;
     impl Mstpe14 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpe15_SPEC;
     pub type Mstpe15 = crate::EnumBitfieldStruct<u8, Mstpe15_SPEC>;
     impl Mstpe15 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpe22_SPEC;
     pub type Mstpe22 = crate::EnumBitfieldStruct<u8, Mstpe22_SPEC>;
     impl Mstpe22 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpe23_SPEC;
     pub type Mstpe23 = crate::EnumBitfieldStruct<u8, Mstpe23_SPEC>;
     impl Mstpe23 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpe24_SPEC;
     pub type Mstpe24 = crate::EnumBitfieldStruct<u8, Mstpe24_SPEC>;
     impl Mstpe24 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpe25_SPEC;
     pub type Mstpe25 = crate::EnumBitfieldStruct<u8, Mstpe25_SPEC>;
     impl Mstpe25 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpe26_SPEC;
     pub type Mstpe26 = crate::EnumBitfieldStruct<u8, Mstpe26_SPEC>;
     impl Mstpe26 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpe27_SPEC;
     pub type Mstpe27 = crate::EnumBitfieldStruct<u8, Mstpe27_SPEC>;
     impl Mstpe27 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpe28_SPEC;
     pub type Mstpe28 = crate::EnumBitfieldStruct<u8, Mstpe28_SPEC>;
     impl Mstpe28 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpe29_SPEC;
     pub type Mstpe29 = crate::EnumBitfieldStruct<u8, Mstpe29_SPEC>;
     impl Mstpe29 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpe30_SPEC;
     pub type Mstpe30 = crate::EnumBitfieldStruct<u8, Mstpe30_SPEC>;
     impl Mstpe30 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstpe31_SPEC;
     pub type Mstpe31 = crate::EnumBitfieldStruct<u8, Mstpe31_SPEC>;
     impl Mstpe31 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
 }

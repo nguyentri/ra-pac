@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.00.01, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:22:22 +0000
+// Generated from SVD 1.00.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:56 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Sram {
         self.ptr
     }
 
+    #[doc = "SRAM Protection Control Register for Secure"]
     #[inline(always)]
     pub const fn sramprcr_s(
         &self,
@@ -45,6 +46,7 @@ impl super::Sram {
         }
     }
 
+    #[doc = "SRAM Wait State Control Register"]
     #[inline(always)]
     pub const fn sramwtsc(
         &self,
@@ -56,6 +58,7 @@ impl super::Sram {
         }
     }
 
+    #[doc = "SRAM Control Register 1"]
     #[inline(always)]
     pub const fn sramcr1(
         &self,
@@ -67,6 +70,7 @@ impl super::Sram {
         }
     }
 
+    #[doc = "SRAM Error Status Register"]
     #[inline(always)]
     pub const fn sramesr(
         &self,
@@ -78,6 +82,7 @@ impl super::Sram {
         }
     }
 
+    #[doc = "SRAM Error Status Clear Register"]
     #[inline(always)]
     pub const fn sramesclr(
         &self,
@@ -89,6 +94,7 @@ impl super::Sram {
         }
     }
 
+    #[doc = "SRAM Error Address Register"]
     #[inline(always)]
     pub const fn sramear2(
         &self,
@@ -100,6 +106,7 @@ impl super::Sram {
         }
     }
 
+    #[doc = "Standby SRAM Control Register"]
     #[inline(always)]
     pub const fn stbramcr(
         &self,
@@ -111,6 +118,7 @@ impl super::Sram {
         }
     }
 
+    #[doc = "Standby SRAM Error Address Register"]
     #[inline(always)]
     pub const fn stbramear(
         &self,
@@ -129,9 +137,11 @@ impl crate::sealed::RegSpec for SramprcrS_SPEC {
     type DataType = u16;
 }
 
+#[doc = "SRAM Protection Control Register for Secure"]
 pub type SramprcrS = crate::RegValueT<SramprcrS_SPEC>;
 
 impl SramprcrS {
+    #[doc = "Register Write Control"]
     #[inline(always)]
     pub fn pr(
         self,
@@ -157,6 +167,7 @@ impl SramprcrS {
         >::from_register(self, 0)
     }
 
+    #[doc = "Write Key Code"]
     #[inline(always)]
     pub fn kw(
         self,
@@ -177,8 +188,10 @@ pub mod sramprcr_s {
     pub struct Pr_SPEC;
     pub type Pr = crate::EnumBitfieldStruct<u8, Pr_SPEC>;
     impl Pr {
+        #[doc = "Writing to registers are disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Writing to registers are enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -189,9 +202,11 @@ impl crate::sealed::RegSpec for Sramwtsc_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SRAM Wait State Control Register"]
 pub type Sramwtsc = crate::RegValueT<Sramwtsc_SPEC>;
 
 impl Sramwtsc {
+    #[doc = "SRAM Wait Enable"]
     #[inline(always)]
     pub fn wten(
         self,
@@ -229,8 +244,10 @@ pub mod sramwtsc {
     pub struct Wten_SPEC;
     pub type Wten = crate::EnumBitfieldStruct<u8, Wten_SPEC>;
     impl Wten {
+        #[doc = "No wait"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Add wait state in read access cycle to SRAMs"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -241,9 +258,11 @@ impl crate::sealed::RegSpec for Sramcr1_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SRAM Control Register 1"]
 pub type Sramcr1 = crate::RegValueT<Sramcr1_SPEC>;
 
 impl Sramcr1 {
+    #[doc = "Operation after Detection for Parity Error Detection"]
     #[inline(always)]
     pub fn oad(
         self,
@@ -281,8 +300,10 @@ pub mod sramcr1 {
     pub struct Oad_SPEC;
     pub type Oad = crate::EnumBitfieldStruct<u8, Oad_SPEC>;
     impl Oad {
+        #[doc = "Non-maskable interrupt"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Reset."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -293,9 +314,11 @@ impl crate::sealed::RegSpec for Sramesr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "SRAM Error Status Register"]
 pub type Sramesr = crate::RegValueT<Sramesr_SPEC>;
 
 impl Sramesr {
+    #[doc = "SRAM1 Parity Error Status"]
     #[inline(always)]
     pub fn err1(
         self,
@@ -321,6 +344,7 @@ impl Sramesr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Standby SRAM Parity Error status"]
     #[inline(always)]
     pub fn errs(
         self,
@@ -358,16 +382,20 @@ pub mod sramesr {
     pub struct Err1_SPEC;
     pub type Err1 = crate::EnumBitfieldStruct<u8, Err1_SPEC>;
     impl Err1 {
+        #[doc = "Parity error has not occurred."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Parity error has occurred."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Errs_SPEC;
     pub type Errs = crate::EnumBitfieldStruct<u8, Errs_SPEC>;
     impl Errs {
+        #[doc = "Parity error has not occurred."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Parity error has occurred."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -378,9 +406,11 @@ impl crate::sealed::RegSpec for Sramesclr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "SRAM Error Status Clear Register"]
 pub type Sramesclr = crate::RegValueT<Sramesclr_SPEC>;
 
 impl Sramesclr {
+    #[doc = "SRAM1 Parity Error Status Clear"]
     #[inline(always)]
     pub fn clr1(
         self,
@@ -406,6 +436,7 @@ impl Sramesclr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Standby SRAM Parity Error Status Clear"]
     #[inline(always)]
     pub fn clrs(
         self,
@@ -443,12 +474,14 @@ pub mod sramesclr {
     pub struct Clr1_SPEC;
     pub type Clr1 = crate::EnumBitfieldStruct<u8, Clr1_SPEC>;
     impl Clr1 {
+        #[doc = "Clear Parity error."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clrs_SPEC;
     pub type Clrs = crate::EnumBitfieldStruct<u8, Clrs_SPEC>;
     impl Clrs {
+        #[doc = "Clear Parity error."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -459,6 +492,7 @@ impl crate::sealed::RegSpec for Sramear2_SPEC {
     type DataType = u32;
 }
 
+#[doc = "SRAM Error Address Register"]
 pub type Sramear2 = crate::RegValueT<Sramear2_SPEC>;
 
 impl NoBitfieldReg<Sramear2_SPEC> for Sramear2 {}
@@ -476,9 +510,11 @@ impl crate::sealed::RegSpec for Stbramcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Standby SRAM Control Register"]
 pub type Stbramcr = crate::RegValueT<Stbramcr_SPEC>;
 
 impl Stbramcr {
+    #[doc = "Operation after detection"]
     #[inline(always)]
     pub fn oad(
         self,
@@ -516,8 +552,10 @@ pub mod stbramcr {
     pub struct Oad_SPEC;
     pub type Oad = crate::EnumBitfieldStruct<u8, Oad_SPEC>;
     impl Oad {
+        #[doc = "Non-maskable interrupt."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Reset."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -528,6 +566,7 @@ impl crate::sealed::RegSpec for Stbramear_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Standby SRAM Error Address Register"]
 pub type Stbramear = crate::RegValueT<Stbramear_SPEC>;
 
 impl NoBitfieldReg<Stbramear_SPEC> for Stbramear {}

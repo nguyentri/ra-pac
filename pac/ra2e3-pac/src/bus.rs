@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:17:29 +0000
+// Generated from SVD 1.20.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:50 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Bus {
         self.ptr
     }
 
+    #[doc = "Master Bus Control Register SYS"]
     #[inline(always)]
     pub const fn busmcntsys(
         &self,
@@ -45,6 +46,7 @@ impl super::Bus {
         }
     }
 
+    #[doc = "Master Bus Control Register DMA"]
     #[inline(always)]
     pub const fn busmcntdma(
         &self,
@@ -56,6 +58,7 @@ impl super::Bus {
         }
     }
 
+    #[doc = "Bus Error Address Register 3"]
     #[inline(always)]
     pub const fn bus3erradd(
         &self,
@@ -67,6 +70,7 @@ impl super::Bus {
         }
     }
 
+    #[doc = "BUS Error Status Register 3"]
     #[inline(always)]
     pub const fn bus3errstat(
         &self,
@@ -78,6 +82,7 @@ impl super::Bus {
         }
     }
 
+    #[doc = "Bus Error Address Register 4"]
     #[inline(always)]
     pub const fn bus4erradd(
         &self,
@@ -89,6 +94,7 @@ impl super::Bus {
         }
     }
 
+    #[doc = "BUS Error Status Register 4"]
     #[inline(always)]
     pub const fn bus4errstat(
         &self,
@@ -107,9 +113,11 @@ impl crate::sealed::RegSpec for Busmcntsys_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Master Bus Control Register SYS"]
 pub type Busmcntsys = crate::RegValueT<Busmcntsys_SPEC>;
 
 impl Busmcntsys {
+    #[doc = "Ignore Error Responses"]
     #[inline(always)]
     pub fn ieres(
         self,
@@ -147,8 +155,10 @@ pub mod busmcntsys {
     pub struct Ieres_SPEC;
     pub type Ieres = crate::EnumBitfieldStruct<u8, Ieres_SPEC>;
     impl Ieres {
+        #[doc = "A bus error is reported."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A bus error is not reported."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -159,9 +169,11 @@ impl crate::sealed::RegSpec for Busmcntdma_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Master Bus Control Register DMA"]
 pub type Busmcntdma = crate::RegValueT<Busmcntdma_SPEC>;
 
 impl Busmcntdma {
+    #[doc = "Ignore Error Responses"]
     #[inline(always)]
     pub fn ieres(
         self,
@@ -199,8 +211,10 @@ pub mod busmcntdma {
     pub struct Ieres_SPEC;
     pub type Ieres = crate::EnumBitfieldStruct<u8, Ieres_SPEC>;
     impl Ieres {
+        #[doc = "A bus error is reported."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A bus error is not reported."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -211,9 +225,11 @@ impl crate::sealed::RegSpec for Bus3Erradd_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Error Address Register 3"]
 pub type Bus3Erradd = crate::RegValueT<Bus3Erradd_SPEC>;
 
 impl Bus3Erradd {
+    #[doc = "Bus Error Address"]
     #[inline(always)]
     pub fn berad(
         self,
@@ -253,9 +269,11 @@ impl crate::sealed::RegSpec for Bus3Errstat_SPEC {
     type DataType = u8;
 }
 
+#[doc = "BUS Error Status Register 3"]
 pub type Bus3Errstat = crate::RegValueT<Bus3Errstat_SPEC>;
 
 impl Bus3Errstat {
+    #[doc = "Error Access Status flag"]
     #[inline(always)]
     pub fn accstat(
         self,
@@ -281,6 +299,7 @@ impl Bus3Errstat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus Error Status flag"]
     #[inline(always)]
     pub fn errstat(
         self,
@@ -318,16 +337,20 @@ pub mod bus3errstat {
     pub struct Accstat_SPEC;
     pub type Accstat = crate::EnumBitfieldStruct<u8, Accstat_SPEC>;
     impl Accstat {
+        #[doc = "Read access"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Write access"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Errstat_SPEC;
     pub type Errstat = crate::EnumBitfieldStruct<u8, Errstat_SPEC>;
     impl Errstat {
+        #[doc = "No bus error occurred."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus error occurred."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -338,9 +361,11 @@ impl crate::sealed::RegSpec for Bus4Erradd_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Error Address Register 4"]
 pub type Bus4Erradd = crate::RegValueT<Bus4Erradd_SPEC>;
 
 impl Bus4Erradd {
+    #[doc = "Bus Error Address"]
     #[inline(always)]
     pub fn berad(
         self,
@@ -380,9 +405,11 @@ impl crate::sealed::RegSpec for Bus4Errstat_SPEC {
     type DataType = u8;
 }
 
+#[doc = "BUS Error Status Register 4"]
 pub type Bus4Errstat = crate::RegValueT<Bus4Errstat_SPEC>;
 
 impl Bus4Errstat {
+    #[doc = "Error Access Status flag"]
     #[inline(always)]
     pub fn accstat(
         self,
@@ -408,6 +435,7 @@ impl Bus4Errstat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus Error Status flag"]
     #[inline(always)]
     pub fn errstat(
         self,
@@ -445,16 +473,20 @@ pub mod bus4errstat {
     pub struct Accstat_SPEC;
     pub type Accstat = crate::EnumBitfieldStruct<u8, Accstat_SPEC>;
     impl Accstat {
+        #[doc = "Read access"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Write access"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Errstat_SPEC;
     pub type Errstat = crate::EnumBitfieldStruct<u8, Errstat_SPEC>;
     impl Errstat {
+        #[doc = "No bus error occurred."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus error occurred."]
         pub const _1: Self = Self::new(1);
     }
 }

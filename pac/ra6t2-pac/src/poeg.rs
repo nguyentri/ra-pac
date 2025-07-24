@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.40.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:21:24 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:39 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Poeg {
         self.ptr
     }
 
+    #[doc = "POEG Group A Setting Register"]
     #[inline(always)]
     pub const fn poegga(
         &self,
@@ -45,6 +46,7 @@ impl super::Poeg {
         }
     }
 
+    #[doc = "GPT Output Stopping Control Group A Write Protection Register"]
     #[inline(always)]
     pub const fn gtoncwpa(
         &self,
@@ -56,6 +58,7 @@ impl super::Poeg {
         }
     }
 
+    #[doc = "GPT Output Stopping Control Group A Controlling Register"]
     #[inline(always)]
     pub const fn gtonccra(
         &self,
@@ -67,6 +70,7 @@ impl super::Poeg {
         }
     }
 
+    #[doc = "POEG Group B Setting Register"]
     #[inline(always)]
     pub const fn poeggb(
         &self,
@@ -78,6 +82,7 @@ impl super::Poeg {
         }
     }
 
+    #[doc = "GPT Output Stopping Control Group B Write Protection Register"]
     #[inline(always)]
     pub const fn gtoncwpb(
         &self,
@@ -89,6 +94,7 @@ impl super::Poeg {
         }
     }
 
+    #[doc = "GPT Output Stopping Control Group B Controlling Register"]
     #[inline(always)]
     pub const fn gtonccrb(
         &self,
@@ -100,6 +106,7 @@ impl super::Poeg {
         }
     }
 
+    #[doc = "POEG Group C Setting Register"]
     #[inline(always)]
     pub const fn poeggc(
         &self,
@@ -111,6 +118,7 @@ impl super::Poeg {
         }
     }
 
+    #[doc = "GPT Output Stopping Control Group C Write Protection Register"]
     #[inline(always)]
     pub const fn gtoncwpc(
         &self,
@@ -122,6 +130,7 @@ impl super::Poeg {
         }
     }
 
+    #[doc = "GPT Output Stopping Control Group C Controlling Register"]
     #[inline(always)]
     pub const fn gtonccrc(
         &self,
@@ -133,6 +142,7 @@ impl super::Poeg {
         }
     }
 
+    #[doc = "POEG Group D Setting Register"]
     #[inline(always)]
     pub const fn poeggd(
         &self,
@@ -144,6 +154,7 @@ impl super::Poeg {
         }
     }
 
+    #[doc = "GPT Output Stopping Control Group D Write Protection Register"]
     #[inline(always)]
     pub const fn gtoncwpd(
         &self,
@@ -155,6 +166,7 @@ impl super::Poeg {
         }
     }
 
+    #[doc = "GPT Output Stopping Control Group D Controlling Register"]
     #[inline(always)]
     pub const fn gtonccrd(
         &self,
@@ -173,9 +185,11 @@ impl crate::sealed::RegSpec for Poegga_SPEC {
     type DataType = u32;
 }
 
+#[doc = "POEG Group A Setting Register"]
 pub type Poegga = crate::RegValueT<Poegga_SPEC>;
 
 impl Poegga {
+    #[doc = "Port Input Detection Flag"]
     #[inline(always)]
     pub fn pidf(
         self,
@@ -201,6 +215,7 @@ impl Poegga {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT or ACMPHS Output Stop Request Detection Flag"]
     #[inline(always)]
     pub fn iocf(
         self,
@@ -226,6 +241,7 @@ impl Poegga {
         >::from_register(self, 0)
     }
 
+    #[doc = "Oscillation Stop Detection Flag"]
     #[inline(always)]
     pub fn ostpf(
         self,
@@ -251,6 +267,7 @@ impl Poegga {
         >::from_register(self, 0)
     }
 
+    #[doc = "Software Stop Flag"]
     #[inline(always)]
     pub fn ssf(
         self,
@@ -276,6 +293,7 @@ impl Poegga {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Detection Enable"]
     #[inline(always)]
     pub fn pide(
         self,
@@ -301,6 +319,7 @@ impl Poegga {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT Output Stop Request Enable"]
     #[inline(always)]
     pub fn ioce(
         self,
@@ -326,6 +345,7 @@ impl Poegga {
         >::from_register(self, 0)
     }
 
+    #[doc = "Enable Stopping Output on Stopping of Oscillation"]
     #[inline(always)]
     pub fn ostpe(
         self,
@@ -351,6 +371,7 @@ impl Poegga {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPHS0 Enable"]
     #[inline(always)]
     pub fn cdre0(
         self,
@@ -376,6 +397,7 @@ impl Poegga {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPHS1 Enable"]
     #[inline(always)]
     pub fn cdre1(
         self,
@@ -401,6 +423,7 @@ impl Poegga {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPHS2 Enable"]
     #[inline(always)]
     pub fn cdre2(
         self,
@@ -426,6 +449,7 @@ impl Poegga {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPHS3 Enable"]
     #[inline(always)]
     pub fn cdre3(
         self,
@@ -451,6 +475,7 @@ impl Poegga {
         >::from_register(self, 0)
     }
 
+    #[doc = "GTETRGn Input Status Flag"]
     #[inline(always)]
     pub fn st(
         self,
@@ -476,6 +501,7 @@ impl Poegga {
         >::from_register(self, 0)
     }
 
+    #[doc = "GTETRGn Input Inverting"]
     #[inline(always)]
     pub fn inv(
         self,
@@ -501,6 +527,7 @@ impl Poegga {
         >::from_register(self, 0)
     }
 
+    #[doc = "Noise filter Enable"]
     #[inline(always)]
     pub fn nfen(
         self,
@@ -526,6 +553,7 @@ impl Poegga {
         >::from_register(self, 0)
     }
 
+    #[doc = "Noise filter Clock Select"]
     #[inline(always)]
     pub fn nfcs(
         self,
@@ -563,124 +591,156 @@ pub mod poegga {
     pub struct Pidf_SPEC;
     pub type Pidf = crate::EnumBitfieldStruct<u8, Pidf_SPEC>;
     impl Pidf {
+        #[doc = "The selected input level was not detected on the GTETRGn pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The selected input level was detected on the GTETRGn pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Iocf_SPEC;
     pub type Iocf = crate::EnumBitfieldStruct<u8, Iocf_SPEC>;
     impl Iocf {
+        #[doc = "Neither stopping of GPT output nor a comparator edge was detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Either stopping of GPT output or comparator edge was detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ostpf_SPEC;
     pub type Ostpf = crate::EnumBitfieldStruct<u8, Ostpf_SPEC>;
     impl Ostpf {
+        #[doc = "Stopping of oscillation was not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stopping of oscillation was detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ssf_SPEC;
     pub type Ssf = crate::EnumBitfieldStruct<u8, Ssf_SPEC>;
     impl Ssf {
+        #[doc = "Software has not stopped output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software has stopped output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pide_SPEC;
     pub type Pide = crate::EnumBitfieldStruct<u8, Pide_SPEC>;
     impl Pide {
+        #[doc = "Detection of input levels on the corresponding GTETRGn pin is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detection of input levels on the corresponding GTETRGn pin is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ioce_SPEC;
     pub type Ioce = crate::EnumBitfieldStruct<u8, Ioce_SPEC>;
     impl Ioce {
+        #[doc = "Detection of stopping of output from the GPT is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detection of stopping of output from the GPT is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ostpe_SPEC;
     pub type Ostpe = crate::EnumBitfieldStruct<u8, Ostpe_SPEC>;
     impl Ostpe {
+        #[doc = "Detection of stopping of oscillation is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detection of stopping of oscillation is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre0_SPEC;
     pub type Cdre0 = crate::EnumBitfieldStruct<u8, Cdre0_SPEC>;
     impl Cdre0 {
+        #[doc = "Comparator edge detection 0 is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Comparator edge detection 0 is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre1_SPEC;
     pub type Cdre1 = crate::EnumBitfieldStruct<u8, Cdre1_SPEC>;
     impl Cdre1 {
+        #[doc = "Comparator edge detection 1 is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Comparator edge detection 1 is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre2_SPEC;
     pub type Cdre2 = crate::EnumBitfieldStruct<u8, Cdre2_SPEC>;
     impl Cdre2 {
+        #[doc = "Comparator edge detection 2 is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Comparator edge detection 2 is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre3_SPEC;
     pub type Cdre3 = crate::EnumBitfieldStruct<u8, Cdre3_SPEC>;
     impl Cdre3 {
+        #[doc = "Comparator edge detection 3 is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Comparator edge detection 3 is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St_SPEC;
     pub type St = crate::EnumBitfieldStruct<u8, St_SPEC>;
     impl St {
+        #[doc = "The corresponding external trigger for output to the GPT is 0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The corresponding external trigger for output to the GPT is 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Inv_SPEC;
     pub type Inv = crate::EnumBitfieldStruct<u8, Inv_SPEC>;
     impl Inv {
+        #[doc = "Input on the GTETRGn pin is not inverted"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Input on the GTETRGn pin is inverted"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfen_SPEC;
     pub type Nfen = crate::EnumBitfieldStruct<u8, Nfen_SPEC>;
     impl Nfen {
+        #[doc = "Digital noise filter on the GTETRGn pin is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Digital noise filter on the GTETRGn pin is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfcs_SPEC;
     pub type Nfcs = crate::EnumBitfieldStruct<u8, Nfcs_SPEC>;
     impl Nfcs {
+        #[doc = "Samples the input level of GTETRGn pin three times per PCLKB/1 clock"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Samples the input level of GTETRGn pin three times per PCLKB/8 clock"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Samples the input level of GTETRGn pin three times per PCLKB/32 clock"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Samples the input level of GTETRGn pin three times per PCLKB/128 clock"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -691,9 +751,11 @@ impl crate::sealed::RegSpec for Gtoncwpa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "GPT Output Stopping Control Group A Write Protection Register"]
 pub type Gtoncwpa = crate::RegValueT<Gtoncwpa_SPEC>;
 
 impl Gtoncwpa {
+    #[doc = "Register Writing Disable"]
     #[inline(always)]
     pub fn wp(
         self,
@@ -719,6 +781,7 @@ impl Gtoncwpa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn prkey(
         self,
@@ -738,8 +801,10 @@ pub mod gtoncwpa {
     pub struct Wp_SPEC;
     pub type Wp = crate::EnumBitfieldStruct<u8, Wp_SPEC>;
     impl Wp {
+        #[doc = "Writing to the GTONCCRn register is enabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Writing to the GTONCCRn register is disabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -750,9 +815,11 @@ impl crate::sealed::RegSpec for Gtonccra_SPEC {
     type DataType = u16;
 }
 
+#[doc = "GPT Output Stopping Control Group A Controlling Register"]
 pub type Gtonccra = crate::RegValueT<Gtonccra_SPEC>;
 
 impl Gtonccra {
+    #[doc = "Direct Stopping Request Setting"]
     #[inline(always)]
     pub fn ne(
         self,
@@ -778,6 +845,7 @@ impl Gtonccra {
         >::from_register(self, 0)
     }
 
+    #[doc = "Direct Stopping Request Selection"]
     #[inline(always)]
     pub fn nfs(
         self,
@@ -803,6 +871,7 @@ impl Gtonccra {
         >::from_register(self, 0)
     }
 
+    #[doc = "Direct Stopping Request Active Sense"]
     #[inline(always)]
     pub fn nfv(
         self,
@@ -840,32 +909,42 @@ pub mod gtonccra {
     pub struct Ne_SPEC;
     pub type Ne = crate::EnumBitfieldStruct<u8, Ne_SPEC>;
     impl Ne {
+        #[doc = "The signal for detection is not set as a direct stopping request signal"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The signal for detection is set as a direct stopping request signal"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfs_SPEC;
     pub type Nfs = crate::EnumBitfieldStruct<u8, Nfs_SPEC>;
     impl Nfs {
+        #[doc = "Comparator level detection 0"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Comparator level detection 1"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Comparator level detection 2"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Comparator level detection 3"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "GTETRGn pin input level detection (n = A to D)"]
         pub const _0_X_7: Self = Self::new(7);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfv_SPEC;
     pub type Nfv = crate::EnumBitfieldStruct<u8, Nfv_SPEC>;
     impl Nfv {
+        #[doc = "Stopping output is requested when the output stopping detection signal is 0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stopping output is requested when the output stopping detection signal is 1"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -876,9 +955,11 @@ impl crate::sealed::RegSpec for Poeggb_SPEC {
     type DataType = u32;
 }
 
+#[doc = "POEG Group B Setting Register"]
 pub type Poeggb = crate::RegValueT<Poeggb_SPEC>;
 
 impl Poeggb {
+    #[doc = "Port Input Detection Flag"]
     #[inline(always)]
     pub fn pidf(
         self,
@@ -904,6 +985,7 @@ impl Poeggb {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT or ACMPHS Output Stop Request Detection Flag"]
     #[inline(always)]
     pub fn iocf(
         self,
@@ -929,6 +1011,7 @@ impl Poeggb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Oscillation Stop Detection Flag"]
     #[inline(always)]
     pub fn ostpf(
         self,
@@ -954,6 +1037,7 @@ impl Poeggb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Software Stop Flag"]
     #[inline(always)]
     pub fn ssf(
         self,
@@ -979,6 +1063,7 @@ impl Poeggb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Detection Enable"]
     #[inline(always)]
     pub fn pide(
         self,
@@ -1004,6 +1089,7 @@ impl Poeggb {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT Output Stop Request Enable"]
     #[inline(always)]
     pub fn ioce(
         self,
@@ -1029,6 +1115,7 @@ impl Poeggb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Enable Stopping Output on Stopping of Oscillation"]
     #[inline(always)]
     pub fn ostpe(
         self,
@@ -1054,6 +1141,7 @@ impl Poeggb {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPHS0 Enable"]
     #[inline(always)]
     pub fn cdre0(
         self,
@@ -1079,6 +1167,7 @@ impl Poeggb {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPHS1 Enable"]
     #[inline(always)]
     pub fn cdre1(
         self,
@@ -1104,6 +1193,7 @@ impl Poeggb {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPHS2 Enable"]
     #[inline(always)]
     pub fn cdre2(
         self,
@@ -1129,6 +1219,7 @@ impl Poeggb {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPHS3 Enable"]
     #[inline(always)]
     pub fn cdre3(
         self,
@@ -1154,6 +1245,7 @@ impl Poeggb {
         >::from_register(self, 0)
     }
 
+    #[doc = "GTETRGn Input Status Flag"]
     #[inline(always)]
     pub fn st(
         self,
@@ -1179,6 +1271,7 @@ impl Poeggb {
         >::from_register(self, 0)
     }
 
+    #[doc = "GTETRGn Input Inverting"]
     #[inline(always)]
     pub fn inv(
         self,
@@ -1204,6 +1297,7 @@ impl Poeggb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Noise filter Enable"]
     #[inline(always)]
     pub fn nfen(
         self,
@@ -1229,6 +1323,7 @@ impl Poeggb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Noise filter Clock Select"]
     #[inline(always)]
     pub fn nfcs(
         self,
@@ -1266,124 +1361,156 @@ pub mod poeggb {
     pub struct Pidf_SPEC;
     pub type Pidf = crate::EnumBitfieldStruct<u8, Pidf_SPEC>;
     impl Pidf {
+        #[doc = "The selected input level was not detected on the GTETRGn pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The selected input level was detected on the GTETRGn pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Iocf_SPEC;
     pub type Iocf = crate::EnumBitfieldStruct<u8, Iocf_SPEC>;
     impl Iocf {
+        #[doc = "Neither stopping of GPT output nor a comparator edge was detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Either stopping of GPT output or comparator edge was detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ostpf_SPEC;
     pub type Ostpf = crate::EnumBitfieldStruct<u8, Ostpf_SPEC>;
     impl Ostpf {
+        #[doc = "Stopping of oscillation was not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stopping of oscillation was detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ssf_SPEC;
     pub type Ssf = crate::EnumBitfieldStruct<u8, Ssf_SPEC>;
     impl Ssf {
+        #[doc = "Software has not stopped output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software has stopped output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pide_SPEC;
     pub type Pide = crate::EnumBitfieldStruct<u8, Pide_SPEC>;
     impl Pide {
+        #[doc = "Detection of input levels on the corresponding GTETRGn pin is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detection of input levels on the corresponding GTETRGn pin is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ioce_SPEC;
     pub type Ioce = crate::EnumBitfieldStruct<u8, Ioce_SPEC>;
     impl Ioce {
+        #[doc = "Detection of stopping of output from the GPT is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detection of stopping of output from the GPT is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ostpe_SPEC;
     pub type Ostpe = crate::EnumBitfieldStruct<u8, Ostpe_SPEC>;
     impl Ostpe {
+        #[doc = "Detection of stopping of oscillation is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detection of stopping of oscillation is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre0_SPEC;
     pub type Cdre0 = crate::EnumBitfieldStruct<u8, Cdre0_SPEC>;
     impl Cdre0 {
+        #[doc = "Comparator edge detection 0 is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Comparator edge detection 0 is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre1_SPEC;
     pub type Cdre1 = crate::EnumBitfieldStruct<u8, Cdre1_SPEC>;
     impl Cdre1 {
+        #[doc = "Comparator edge detection 1 is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Comparator edge detection 1 is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre2_SPEC;
     pub type Cdre2 = crate::EnumBitfieldStruct<u8, Cdre2_SPEC>;
     impl Cdre2 {
+        #[doc = "Comparator edge detection 2 is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Comparator edge detection 2 is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre3_SPEC;
     pub type Cdre3 = crate::EnumBitfieldStruct<u8, Cdre3_SPEC>;
     impl Cdre3 {
+        #[doc = "Comparator edge detection 3 is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Comparator edge detection 3 is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St_SPEC;
     pub type St = crate::EnumBitfieldStruct<u8, St_SPEC>;
     impl St {
+        #[doc = "The corresponding external trigger for output to the GPT is 0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The corresponding external trigger for output to the GPT is 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Inv_SPEC;
     pub type Inv = crate::EnumBitfieldStruct<u8, Inv_SPEC>;
     impl Inv {
+        #[doc = "Input on the GTETRGn pin is not inverted"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Input on the GTETRGn pin is inverted"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfen_SPEC;
     pub type Nfen = crate::EnumBitfieldStruct<u8, Nfen_SPEC>;
     impl Nfen {
+        #[doc = "Digital noise filter on the GTETRGn pin is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Digital noise filter on the GTETRGn pin is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfcs_SPEC;
     pub type Nfcs = crate::EnumBitfieldStruct<u8, Nfcs_SPEC>;
     impl Nfcs {
+        #[doc = "Samples the input level of GTETRGn pin three times per PCLKB/1 clock"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Samples the input level of GTETRGn pin three times per PCLKB/8 clock"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Samples the input level of GTETRGn pin three times per PCLKB/32 clock"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Samples the input level of GTETRGn pin three times per PCLKB/128 clock"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -1394,9 +1521,11 @@ impl crate::sealed::RegSpec for Gtoncwpb_SPEC {
     type DataType = u16;
 }
 
+#[doc = "GPT Output Stopping Control Group B Write Protection Register"]
 pub type Gtoncwpb = crate::RegValueT<Gtoncwpb_SPEC>;
 
 impl Gtoncwpb {
+    #[doc = "Register Writing Disable"]
     #[inline(always)]
     pub fn wp(
         self,
@@ -1422,6 +1551,7 @@ impl Gtoncwpb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn prkey(
         self,
@@ -1441,8 +1571,10 @@ pub mod gtoncwpb {
     pub struct Wp_SPEC;
     pub type Wp = crate::EnumBitfieldStruct<u8, Wp_SPEC>;
     impl Wp {
+        #[doc = "Writing to the GTONCCRn register is enabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Writing to the GTONCCRn register is disabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1453,9 +1585,11 @@ impl crate::sealed::RegSpec for Gtonccrb_SPEC {
     type DataType = u16;
 }
 
+#[doc = "GPT Output Stopping Control Group B Controlling Register"]
 pub type Gtonccrb = crate::RegValueT<Gtonccrb_SPEC>;
 
 impl Gtonccrb {
+    #[doc = "Direct Stopping Request Setting"]
     #[inline(always)]
     pub fn ne(
         self,
@@ -1481,6 +1615,7 @@ impl Gtonccrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Direct Stopping Request Selection"]
     #[inline(always)]
     pub fn nfs(
         self,
@@ -1506,6 +1641,7 @@ impl Gtonccrb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Direct Stopping Request Active Sense"]
     #[inline(always)]
     pub fn nfv(
         self,
@@ -1543,32 +1679,42 @@ pub mod gtonccrb {
     pub struct Ne_SPEC;
     pub type Ne = crate::EnumBitfieldStruct<u8, Ne_SPEC>;
     impl Ne {
+        #[doc = "The signal for detection is not set as a direct stopping request signal"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The signal for detection is set as a direct stopping request signal"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfs_SPEC;
     pub type Nfs = crate::EnumBitfieldStruct<u8, Nfs_SPEC>;
     impl Nfs {
+        #[doc = "Comparator level detection 0"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Comparator level detection 1"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Comparator level detection 2"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Comparator level detection 3"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "GTETRGn pin input level detection (n = A to D)"]
         pub const _0_X_7: Self = Self::new(7);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfv_SPEC;
     pub type Nfv = crate::EnumBitfieldStruct<u8, Nfv_SPEC>;
     impl Nfv {
+        #[doc = "Stopping output is requested when the output stopping detection signal is 0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stopping output is requested when the output stopping detection signal is 1"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1579,9 +1725,11 @@ impl crate::sealed::RegSpec for Poeggc_SPEC {
     type DataType = u32;
 }
 
+#[doc = "POEG Group C Setting Register"]
 pub type Poeggc = crate::RegValueT<Poeggc_SPEC>;
 
 impl Poeggc {
+    #[doc = "Port Input Detection Flag"]
     #[inline(always)]
     pub fn pidf(
         self,
@@ -1607,6 +1755,7 @@ impl Poeggc {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT or ACMPHS Output Stop Request Detection Flag"]
     #[inline(always)]
     pub fn iocf(
         self,
@@ -1632,6 +1781,7 @@ impl Poeggc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Oscillation Stop Detection Flag"]
     #[inline(always)]
     pub fn ostpf(
         self,
@@ -1657,6 +1807,7 @@ impl Poeggc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Software Stop Flag"]
     #[inline(always)]
     pub fn ssf(
         self,
@@ -1682,6 +1833,7 @@ impl Poeggc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Detection Enable"]
     #[inline(always)]
     pub fn pide(
         self,
@@ -1707,6 +1859,7 @@ impl Poeggc {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT Output Stop Request Enable"]
     #[inline(always)]
     pub fn ioce(
         self,
@@ -1732,6 +1885,7 @@ impl Poeggc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Enable Stopping Output on Stopping of Oscillation"]
     #[inline(always)]
     pub fn ostpe(
         self,
@@ -1757,6 +1911,7 @@ impl Poeggc {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPHS0 Enable"]
     #[inline(always)]
     pub fn cdre0(
         self,
@@ -1782,6 +1937,7 @@ impl Poeggc {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPHS1 Enable"]
     #[inline(always)]
     pub fn cdre1(
         self,
@@ -1807,6 +1963,7 @@ impl Poeggc {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPHS2 Enable"]
     #[inline(always)]
     pub fn cdre2(
         self,
@@ -1832,6 +1989,7 @@ impl Poeggc {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPHS3 Enable"]
     #[inline(always)]
     pub fn cdre3(
         self,
@@ -1857,6 +2015,7 @@ impl Poeggc {
         >::from_register(self, 0)
     }
 
+    #[doc = "GTETRGn Input Status Flag"]
     #[inline(always)]
     pub fn st(
         self,
@@ -1882,6 +2041,7 @@ impl Poeggc {
         >::from_register(self, 0)
     }
 
+    #[doc = "GTETRGn Input Inverting"]
     #[inline(always)]
     pub fn inv(
         self,
@@ -1907,6 +2067,7 @@ impl Poeggc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Noise filter Enable"]
     #[inline(always)]
     pub fn nfen(
         self,
@@ -1932,6 +2093,7 @@ impl Poeggc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Noise filter Clock Select"]
     #[inline(always)]
     pub fn nfcs(
         self,
@@ -1969,124 +2131,156 @@ pub mod poeggc {
     pub struct Pidf_SPEC;
     pub type Pidf = crate::EnumBitfieldStruct<u8, Pidf_SPEC>;
     impl Pidf {
+        #[doc = "The selected input level was not detected on the GTETRGn pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The selected input level was detected on the GTETRGn pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Iocf_SPEC;
     pub type Iocf = crate::EnumBitfieldStruct<u8, Iocf_SPEC>;
     impl Iocf {
+        #[doc = "Neither stopping of GPT output nor a comparator edge was detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Either stopping of GPT output or comparator edge was detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ostpf_SPEC;
     pub type Ostpf = crate::EnumBitfieldStruct<u8, Ostpf_SPEC>;
     impl Ostpf {
+        #[doc = "Stopping of oscillation was not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stopping of oscillation was detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ssf_SPEC;
     pub type Ssf = crate::EnumBitfieldStruct<u8, Ssf_SPEC>;
     impl Ssf {
+        #[doc = "Software has not stopped output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software has stopped output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pide_SPEC;
     pub type Pide = crate::EnumBitfieldStruct<u8, Pide_SPEC>;
     impl Pide {
+        #[doc = "Detection of input levels on the corresponding GTETRGn pin is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detection of input levels on the corresponding GTETRGn pin is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ioce_SPEC;
     pub type Ioce = crate::EnumBitfieldStruct<u8, Ioce_SPEC>;
     impl Ioce {
+        #[doc = "Detection of stopping of output from the GPT is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detection of stopping of output from the GPT is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ostpe_SPEC;
     pub type Ostpe = crate::EnumBitfieldStruct<u8, Ostpe_SPEC>;
     impl Ostpe {
+        #[doc = "Detection of stopping of oscillation is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detection of stopping of oscillation is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre0_SPEC;
     pub type Cdre0 = crate::EnumBitfieldStruct<u8, Cdre0_SPEC>;
     impl Cdre0 {
+        #[doc = "Comparator edge detection 0 is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Comparator edge detection 0 is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre1_SPEC;
     pub type Cdre1 = crate::EnumBitfieldStruct<u8, Cdre1_SPEC>;
     impl Cdre1 {
+        #[doc = "Comparator edge detection 1 is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Comparator edge detection 1 is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre2_SPEC;
     pub type Cdre2 = crate::EnumBitfieldStruct<u8, Cdre2_SPEC>;
     impl Cdre2 {
+        #[doc = "Comparator edge detection 2 is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Comparator edge detection 2 is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre3_SPEC;
     pub type Cdre3 = crate::EnumBitfieldStruct<u8, Cdre3_SPEC>;
     impl Cdre3 {
+        #[doc = "Comparator edge detection 3 is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Comparator edge detection 3 is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St_SPEC;
     pub type St = crate::EnumBitfieldStruct<u8, St_SPEC>;
     impl St {
+        #[doc = "The corresponding external trigger for output to the GPT is 0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The corresponding external trigger for output to the GPT is 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Inv_SPEC;
     pub type Inv = crate::EnumBitfieldStruct<u8, Inv_SPEC>;
     impl Inv {
+        #[doc = "Input on the GTETRGn pin is not inverted"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Input on the GTETRGn pin is inverted"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfen_SPEC;
     pub type Nfen = crate::EnumBitfieldStruct<u8, Nfen_SPEC>;
     impl Nfen {
+        #[doc = "Digital noise filter on the GTETRGn pin is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Digital noise filter on the GTETRGn pin is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfcs_SPEC;
     pub type Nfcs = crate::EnumBitfieldStruct<u8, Nfcs_SPEC>;
     impl Nfcs {
+        #[doc = "Samples the input level of GTETRGn pin three times per PCLKB/1 clock"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Samples the input level of GTETRGn pin three times per PCLKB/8 clock"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Samples the input level of GTETRGn pin three times per PCLKB/32 clock"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Samples the input level of GTETRGn pin three times per PCLKB/128 clock"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -2097,9 +2291,11 @@ impl crate::sealed::RegSpec for Gtoncwpc_SPEC {
     type DataType = u16;
 }
 
+#[doc = "GPT Output Stopping Control Group C Write Protection Register"]
 pub type Gtoncwpc = crate::RegValueT<Gtoncwpc_SPEC>;
 
 impl Gtoncwpc {
+    #[doc = "Register Writing Disable"]
     #[inline(always)]
     pub fn wp(
         self,
@@ -2125,6 +2321,7 @@ impl Gtoncwpc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn prkey(
         self,
@@ -2144,8 +2341,10 @@ pub mod gtoncwpc {
     pub struct Wp_SPEC;
     pub type Wp = crate::EnumBitfieldStruct<u8, Wp_SPEC>;
     impl Wp {
+        #[doc = "Writing to the GTONCCRn register is enabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Writing to the GTONCCRn register is disabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2156,9 +2355,11 @@ impl crate::sealed::RegSpec for Gtonccrc_SPEC {
     type DataType = u16;
 }
 
+#[doc = "GPT Output Stopping Control Group C Controlling Register"]
 pub type Gtonccrc = crate::RegValueT<Gtonccrc_SPEC>;
 
 impl Gtonccrc {
+    #[doc = "Direct Stopping Request Setting"]
     #[inline(always)]
     pub fn ne(
         self,
@@ -2184,6 +2385,7 @@ impl Gtonccrc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Direct Stopping Request Selection"]
     #[inline(always)]
     pub fn nfs(
         self,
@@ -2209,6 +2411,7 @@ impl Gtonccrc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Direct Stopping Request Active Sense"]
     #[inline(always)]
     pub fn nfv(
         self,
@@ -2246,32 +2449,42 @@ pub mod gtonccrc {
     pub struct Ne_SPEC;
     pub type Ne = crate::EnumBitfieldStruct<u8, Ne_SPEC>;
     impl Ne {
+        #[doc = "The signal for detection is not set as a direct stopping request signal"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The signal for detection is set as a direct stopping request signal"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfs_SPEC;
     pub type Nfs = crate::EnumBitfieldStruct<u8, Nfs_SPEC>;
     impl Nfs {
+        #[doc = "Comparator level detection 0"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Comparator level detection 1"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Comparator level detection 2"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Comparator level detection 3"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "GTETRGn pin input level detection (n = A to D)"]
         pub const _0_X_7: Self = Self::new(7);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfv_SPEC;
     pub type Nfv = crate::EnumBitfieldStruct<u8, Nfv_SPEC>;
     impl Nfv {
+        #[doc = "Stopping output is requested when the output stopping detection signal is 0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stopping output is requested when the output stopping detection signal is 1"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2282,9 +2495,11 @@ impl crate::sealed::RegSpec for Poeggd_SPEC {
     type DataType = u32;
 }
 
+#[doc = "POEG Group D Setting Register"]
 pub type Poeggd = crate::RegValueT<Poeggd_SPEC>;
 
 impl Poeggd {
+    #[doc = "Port Input Detection Flag"]
     #[inline(always)]
     pub fn pidf(
         self,
@@ -2310,6 +2525,7 @@ impl Poeggd {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT or ACMPHS Output Stop Request Detection Flag"]
     #[inline(always)]
     pub fn iocf(
         self,
@@ -2335,6 +2551,7 @@ impl Poeggd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Oscillation Stop Detection Flag"]
     #[inline(always)]
     pub fn ostpf(
         self,
@@ -2360,6 +2577,7 @@ impl Poeggd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Software Stop Flag"]
     #[inline(always)]
     pub fn ssf(
         self,
@@ -2385,6 +2603,7 @@ impl Poeggd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Detection Enable"]
     #[inline(always)]
     pub fn pide(
         self,
@@ -2410,6 +2629,7 @@ impl Poeggd {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT Output Stop Request Enable"]
     #[inline(always)]
     pub fn ioce(
         self,
@@ -2435,6 +2655,7 @@ impl Poeggd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Enable Stopping Output on Stopping of Oscillation"]
     #[inline(always)]
     pub fn ostpe(
         self,
@@ -2460,6 +2681,7 @@ impl Poeggd {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPHS0 Enable"]
     #[inline(always)]
     pub fn cdre0(
         self,
@@ -2485,6 +2707,7 @@ impl Poeggd {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPHS1 Enable"]
     #[inline(always)]
     pub fn cdre1(
         self,
@@ -2510,6 +2733,7 @@ impl Poeggd {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPHS2 Enable"]
     #[inline(always)]
     pub fn cdre2(
         self,
@@ -2535,6 +2759,7 @@ impl Poeggd {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPHS3 Enable"]
     #[inline(always)]
     pub fn cdre3(
         self,
@@ -2560,6 +2785,7 @@ impl Poeggd {
         >::from_register(self, 0)
     }
 
+    #[doc = "GTETRGn Input Status Flag"]
     #[inline(always)]
     pub fn st(
         self,
@@ -2585,6 +2811,7 @@ impl Poeggd {
         >::from_register(self, 0)
     }
 
+    #[doc = "GTETRGn Input Inverting"]
     #[inline(always)]
     pub fn inv(
         self,
@@ -2610,6 +2837,7 @@ impl Poeggd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Noise filter Enable"]
     #[inline(always)]
     pub fn nfen(
         self,
@@ -2635,6 +2863,7 @@ impl Poeggd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Noise filter Clock Select"]
     #[inline(always)]
     pub fn nfcs(
         self,
@@ -2672,124 +2901,156 @@ pub mod poeggd {
     pub struct Pidf_SPEC;
     pub type Pidf = crate::EnumBitfieldStruct<u8, Pidf_SPEC>;
     impl Pidf {
+        #[doc = "The selected input level was not detected on the GTETRGn pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The selected input level was detected on the GTETRGn pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Iocf_SPEC;
     pub type Iocf = crate::EnumBitfieldStruct<u8, Iocf_SPEC>;
     impl Iocf {
+        #[doc = "Neither stopping of GPT output nor a comparator edge was detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Either stopping of GPT output or comparator edge was detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ostpf_SPEC;
     pub type Ostpf = crate::EnumBitfieldStruct<u8, Ostpf_SPEC>;
     impl Ostpf {
+        #[doc = "Stopping of oscillation was not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stopping of oscillation was detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ssf_SPEC;
     pub type Ssf = crate::EnumBitfieldStruct<u8, Ssf_SPEC>;
     impl Ssf {
+        #[doc = "Software has not stopped output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software has stopped output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pide_SPEC;
     pub type Pide = crate::EnumBitfieldStruct<u8, Pide_SPEC>;
     impl Pide {
+        #[doc = "Detection of input levels on the corresponding GTETRGn pin is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detection of input levels on the corresponding GTETRGn pin is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ioce_SPEC;
     pub type Ioce = crate::EnumBitfieldStruct<u8, Ioce_SPEC>;
     impl Ioce {
+        #[doc = "Detection of stopping of output from the GPT is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detection of stopping of output from the GPT is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ostpe_SPEC;
     pub type Ostpe = crate::EnumBitfieldStruct<u8, Ostpe_SPEC>;
     impl Ostpe {
+        #[doc = "Detection of stopping of oscillation is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Detection of stopping of oscillation is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre0_SPEC;
     pub type Cdre0 = crate::EnumBitfieldStruct<u8, Cdre0_SPEC>;
     impl Cdre0 {
+        #[doc = "Comparator edge detection 0 is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Comparator edge detection 0 is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre1_SPEC;
     pub type Cdre1 = crate::EnumBitfieldStruct<u8, Cdre1_SPEC>;
     impl Cdre1 {
+        #[doc = "Comparator edge detection 1 is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Comparator edge detection 1 is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre2_SPEC;
     pub type Cdre2 = crate::EnumBitfieldStruct<u8, Cdre2_SPEC>;
     impl Cdre2 {
+        #[doc = "Comparator edge detection 2 is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Comparator edge detection 2 is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre3_SPEC;
     pub type Cdre3 = crate::EnumBitfieldStruct<u8, Cdre3_SPEC>;
     impl Cdre3 {
+        #[doc = "Comparator edge detection 3 is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Comparator edge detection 3 is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St_SPEC;
     pub type St = crate::EnumBitfieldStruct<u8, St_SPEC>;
     impl St {
+        #[doc = "The corresponding external trigger for output to the GPT is 0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The corresponding external trigger for output to the GPT is 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Inv_SPEC;
     pub type Inv = crate::EnumBitfieldStruct<u8, Inv_SPEC>;
     impl Inv {
+        #[doc = "Input on the GTETRGn pin is not inverted"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Input on the GTETRGn pin is inverted"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfen_SPEC;
     pub type Nfen = crate::EnumBitfieldStruct<u8, Nfen_SPEC>;
     impl Nfen {
+        #[doc = "Digital noise filter on the GTETRGn pin is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Digital noise filter on the GTETRGn pin is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfcs_SPEC;
     pub type Nfcs = crate::EnumBitfieldStruct<u8, Nfcs_SPEC>;
     impl Nfcs {
+        #[doc = "Samples the input level of GTETRGn pin three times per PCLKB/1 clock"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Samples the input level of GTETRGn pin three times per PCLKB/8 clock"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Samples the input level of GTETRGn pin three times per PCLKB/32 clock"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Samples the input level of GTETRGn pin three times per PCLKB/128 clock"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -2800,9 +3061,11 @@ impl crate::sealed::RegSpec for Gtoncwpd_SPEC {
     type DataType = u16;
 }
 
+#[doc = "GPT Output Stopping Control Group D Write Protection Register"]
 pub type Gtoncwpd = crate::RegValueT<Gtoncwpd_SPEC>;
 
 impl Gtoncwpd {
+    #[doc = "Register Writing Disable"]
     #[inline(always)]
     pub fn wp(
         self,
@@ -2828,6 +3091,7 @@ impl Gtoncwpd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn prkey(
         self,
@@ -2847,8 +3111,10 @@ pub mod gtoncwpd {
     pub struct Wp_SPEC;
     pub type Wp = crate::EnumBitfieldStruct<u8, Wp_SPEC>;
     impl Wp {
+        #[doc = "Writing to the GTONCCRn register is enabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Writing to the GTONCCRn register is disabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2859,9 +3125,11 @@ impl crate::sealed::RegSpec for Gtonccrd_SPEC {
     type DataType = u16;
 }
 
+#[doc = "GPT Output Stopping Control Group D Controlling Register"]
 pub type Gtonccrd = crate::RegValueT<Gtonccrd_SPEC>;
 
 impl Gtonccrd {
+    #[doc = "Direct Stopping Request Setting"]
     #[inline(always)]
     pub fn ne(
         self,
@@ -2887,6 +3155,7 @@ impl Gtonccrd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Direct Stopping Request Selection"]
     #[inline(always)]
     pub fn nfs(
         self,
@@ -2912,6 +3181,7 @@ impl Gtonccrd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Direct Stopping Request Active Sense"]
     #[inline(always)]
     pub fn nfv(
         self,
@@ -2949,32 +3219,42 @@ pub mod gtonccrd {
     pub struct Ne_SPEC;
     pub type Ne = crate::EnumBitfieldStruct<u8, Ne_SPEC>;
     impl Ne {
+        #[doc = "The signal for detection is not set as a direct stopping request signal"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The signal for detection is set as a direct stopping request signal"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfs_SPEC;
     pub type Nfs = crate::EnumBitfieldStruct<u8, Nfs_SPEC>;
     impl Nfs {
+        #[doc = "Comparator level detection 0"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Comparator level detection 1"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Comparator level detection 2"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Comparator level detection 3"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "GTETRGn pin input level detection (n = A to D)"]
         pub const _0_X_7: Self = Self::new(7);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfv_SPEC;
     pub type Nfv = crate::EnumBitfieldStruct<u8, Nfv_SPEC>;
     impl Nfv {
+        #[doc = "Stopping output is requested when the output stopping detection signal is 0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stopping output is requested when the output stopping detection signal is 1"]
         pub const _1: Self = Self::new(1);
     }
 }

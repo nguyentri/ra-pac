@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:19:04 +0000
+// Generated from SVD 1.20.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:50:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Rtc {
         self.ptr
     }
 
+    #[doc = "Reset Control Register 1"]
     #[inline(always)]
     pub const fn rcr1(&self) -> &'static crate::common::Reg<self::Rcr1_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Reset Control Register 2"]
     #[inline(always)]
     pub const fn rcr2(&self) -> &'static crate::common::Reg<self::Rcr2_SPEC, crate::common::RW> {
         unsafe {
@@ -52,6 +54,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Reset Control Register 4"]
     #[inline(always)]
     pub const fn rcr4(&self) -> &'static crate::common::Reg<self::Rcr4_SPEC, crate::common::RW> {
         unsafe {
@@ -61,6 +64,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Time Capture Control Register %s"]
     #[inline(always)]
     pub const fn rtccr(
         &self,
@@ -73,6 +77,22 @@ impl super::Rtc {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x40usize))
         }
     }
+    #[inline(always)]
+    pub const fn rtccr0(&self) -> &'static crate::common::Reg<self::Rtccr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Rtccr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x40usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn rtccr1(&self) -> &'static crate::common::Reg<self::Rtccr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Rtccr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x42usize),
+            )
+        }
+    }
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -81,6 +101,7 @@ impl crate::sealed::RegSpec for Rcr1_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Reset Control Register 1"]
 pub type Rcr1 = crate::RegValueT<Rcr1_SPEC>;
 
 impl NoBitfieldReg<Rcr1_SPEC> for Rcr1 {}
@@ -98,9 +119,11 @@ impl crate::sealed::RegSpec for Rcr2_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Reset Control Register 2"]
 pub type Rcr2 = crate::RegValueT<Rcr2_SPEC>;
 
 impl Rcr2 {
+    #[doc = "Software Reset"]
     #[inline(always)]
     pub fn reset(
         self,
@@ -138,8 +161,10 @@ pub mod rcr2 {
     pub struct Reset_SPEC;
     pub type Reset = crate::EnumBitfieldStruct<u8, Reset_SPEC>;
     impl Reset {
+        #[doc = "In writing: Invalid (writing 0 has no effect) In reading: Software reset has completed."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "In writing: The target registers for software reset are initialized. In reading: Software reset in progress."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -150,9 +175,11 @@ impl crate::sealed::RegSpec for Rcr4_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Reset Control Register 4"]
 pub type Rcr4 = crate::RegValueT<Rcr4_SPEC>;
 
 impl Rcr4 {
+    #[doc = "Count Source Select"]
     #[inline(always)]
     pub fn rcksel(
         self,
@@ -190,8 +217,10 @@ pub mod rcr4 {
     pub struct Rcksel_SPEC;
     pub type Rcksel = crate::EnumBitfieldStruct<u8, Rcksel_SPEC>;
     impl Rcksel {
+        #[doc = "Sub-clock oscillator is selected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "LOCO is selected"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -202,9 +231,11 @@ impl crate::sealed::RegSpec for Rtccr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Time Capture Control Register %s"]
 pub type Rtccr = crate::RegValueT<Rtccr_SPEC>;
 
 impl Rtccr {
+    #[doc = "P402/AGTIO and P403/AGTIO input enable"]
     #[inline(always)]
     pub fn tcen(
         self,
@@ -242,8 +273,10 @@ pub mod rtccr {
     pub struct Tcen_SPEC;
     pub type Tcen = crate::EnumBitfieldStruct<u8, Tcen_SPEC>;
     impl Tcen {
+        #[doc = "AGTIO input disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "AGTIO input enable"]
         pub const _1: Self = Self::new(1);
     }
 }

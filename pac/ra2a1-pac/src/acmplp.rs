@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.1, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:53 +0000
+// Generated from SVD 1.1, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:11 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Acmplp {
         self.ptr
     }
 
+    #[doc = "ACMPLP Mode Setting Register"]
     #[inline(always)]
     pub const fn compmdr(
         &self,
@@ -45,6 +46,7 @@ impl super::Acmplp {
         }
     }
 
+    #[doc = "ACMPLP Filter Control Register"]
     #[inline(always)]
     pub const fn compfir(
         &self,
@@ -56,6 +58,7 @@ impl super::Acmplp {
         }
     }
 
+    #[doc = "ACMPLP Output Control Register"]
     #[inline(always)]
     pub const fn compocr(
         &self,
@@ -67,6 +70,7 @@ impl super::Acmplp {
         }
     }
 
+    #[doc = "Comparator Input Select Register"]
     #[inline(always)]
     pub const fn compsel0(
         &self,
@@ -78,6 +82,7 @@ impl super::Acmplp {
         }
     }
 
+    #[doc = "Comparator Reference voltage Select Register"]
     #[inline(always)]
     pub const fn compsel1(
         &self,
@@ -96,9 +101,11 @@ impl crate::sealed::RegSpec for Compmdr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "ACMPLP Mode Setting Register"]
 pub type Compmdr = crate::RegValueT<Compmdr_SPEC>;
 
 impl Compmdr {
+    #[doc = "ACMPLP1 Monitor Flag"]
     #[inline(always)]
     pub fn c1mon(
         self,
@@ -124,6 +131,7 @@ impl Compmdr {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPLP1 Reference Voltage SelectionNote1:  It\'s effective only at the time of standard mode.IVREF0 and IVREF1 are chosen at window mode condition in spite of setting of this bit."]
     #[inline(always)]
     pub fn c1vrf(
         self,
@@ -149,6 +157,7 @@ impl Compmdr {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPLP1 Window Function Mode Enable"]
     #[inline(always)]
     pub fn c1wde(
         self,
@@ -174,6 +183,7 @@ impl Compmdr {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPLP1 Operation Enable"]
     #[inline(always)]
     pub fn c1enb(
         self,
@@ -199,6 +209,7 @@ impl Compmdr {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPLP0 Monitor Flag"]
     #[inline(always)]
     pub fn c0mon(
         self,
@@ -224,6 +235,7 @@ impl Compmdr {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPLP0 Reference Voltage SelectionNote1:  It\'s effective only at the time of standard mode.IVREF0 and IVREF1 are chosen at window mode condition in spite of setting of this bit."]
     #[inline(always)]
     pub fn c0vrf(
         self,
@@ -249,6 +261,7 @@ impl Compmdr {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPLP0 Window Function Mode Enable"]
     #[inline(always)]
     pub fn c0wde(
         self,
@@ -274,6 +287,7 @@ impl Compmdr {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPLP0 Operation Enable"]
     #[inline(always)]
     pub fn c0enb(
         self,
@@ -311,64 +325,80 @@ pub mod compmdr {
     pub struct C1Mon_SPEC;
     pub type C1Mon = crate::EnumBitfieldStruct<u8, C1Mon_SPEC>;
     impl C1Mon {
+        #[doc = "IVCMP1 < Comparator1 Reference level(When the window function is disabled)/IVCMP1 < IVREF0 or IVCMP1 > IVREF1(When the window function is enabled)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IVCMP1 > Comparator1 Reference level(When the window function is disabled)/IVREF0 < IVCMP1 < IVREF1(When the window function is enabled)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct C1Vrf_SPEC;
     pub type C1Vrf = crate::EnumBitfieldStruct<u8, C1Vrf_SPEC>;
     impl C1Vrf {
+        #[doc = "CMPREF1 input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "internal reference voltage (Vref)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct C1Wde_SPEC;
     pub type C1Wde = crate::EnumBitfieldStruct<u8, C1Wde_SPEC>;
     impl C1Wde {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct C1Enb_SPEC;
     pub type C1Enb = crate::EnumBitfieldStruct<u8, C1Enb_SPEC>;
     impl C1Enb {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct C0Mon_SPEC;
     pub type C0Mon = crate::EnumBitfieldStruct<u8, C0Mon_SPEC>;
     impl C0Mon {
+        #[doc = "IVCMP0 < Comparator0 Reference level(When the window function is disabled)/IVCMP0 < IVREF0 or IVCMP0 > IVREF1(When the window function is enabled)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IVCMP0 > Comparator0 Reference level(When the window function is disabled)/IVREF0 < IVCMP0 < IVREF1(When the window function is enabled)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct C0Vrf_SPEC;
     pub type C0Vrf = crate::EnumBitfieldStruct<u8, C0Vrf_SPEC>;
     impl C0Vrf {
+        #[doc = "CMPREF0 input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "internal reference voltage (Vref)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct C0Wde_SPEC;
     pub type C0Wde = crate::EnumBitfieldStruct<u8, C0Wde_SPEC>;
     impl C0Wde {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct C0Enb_SPEC;
     pub type C0Enb = crate::EnumBitfieldStruct<u8, C0Enb_SPEC>;
     impl C0Enb {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -379,9 +409,11 @@ impl crate::sealed::RegSpec for Compfir_SPEC {
     type DataType = u8;
 }
 
+#[doc = "ACMPLP Filter Control Register"]
 pub type Compfir = crate::RegValueT<Compfir_SPEC>;
 
 impl Compfir {
+    #[doc = "ACMPLP1 Filter Select"]
     #[inline(always)]
     pub fn c1edg(
         self,
@@ -407,6 +439,7 @@ impl Compfir {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPLP1 Edge Polarity Switching"]
     #[inline(always)]
     pub fn c1epo(
         self,
@@ -432,6 +465,7 @@ impl Compfir {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPLP1 Edge Detection Selection"]
     #[inline(always)]
     pub fn c1fck(
         self,
@@ -457,6 +491,7 @@ impl Compfir {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPLP0 Filter Select"]
     #[inline(always)]
     pub fn c0edg(
         self,
@@ -482,6 +517,7 @@ impl Compfir {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPLP0 Edge Polarity Switching"]
     #[inline(always)]
     pub fn c0epo(
         self,
@@ -507,6 +543,7 @@ impl Compfir {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPLP0 Edge Detection Selection"]
     #[inline(always)]
     pub fn c0fck(
         self,
@@ -544,56 +581,72 @@ pub mod compfir {
     pub struct C1Edg_SPEC;
     pub type C1Edg = crate::EnumBitfieldStruct<u8, C1Edg_SPEC>;
     impl C1Edg {
+        #[doc = "Interrupt and ELC event request by one-edge detection"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt and ELC event request by both-edge detection"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct C1Epo_SPEC;
     pub type C1Epo = crate::EnumBitfieldStruct<u8, C1Epo_SPEC>;
     impl C1Epo {
+        #[doc = "Interrupt and ELC event request at rising edge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt and ELC event request at falling edge"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct C1Fck_SPEC;
     pub type C1Fck = crate::EnumBitfieldStruct<u8, C1Fck_SPEC>;
     impl C1Fck {
+        #[doc = "No Sampling (bypass)"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Sampling at PCLK"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Sampling at PCLK/8"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Sampling at PCLK/32"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct C0Edg_SPEC;
     pub type C0Edg = crate::EnumBitfieldStruct<u8, C0Edg_SPEC>;
     impl C0Edg {
+        #[doc = "Interrupt and ELC event request by one-edge detection"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt and ELC event request by both-edge detection"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct C0Epo_SPEC;
     pub type C0Epo = crate::EnumBitfieldStruct<u8, C0Epo_SPEC>;
     impl C0Epo {
+        #[doc = "Interrupt and ELC event request at rising edge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt and ELC event request at falling edge"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct C0Fck_SPEC;
     pub type C0Fck = crate::EnumBitfieldStruct<u8, C0Fck_SPEC>;
     impl C0Fck {
+        #[doc = "No Sampling (bypass)"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Sampling at PCLK"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Sampling at PCLK/8"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Sampling at PCLK/32"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -604,9 +657,11 @@ impl crate::sealed::RegSpec for Compocr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "ACMPLP Output Control Register"]
 pub type Compocr = crate::RegValueT<Compocr_SPEC>;
 
 impl Compocr {
+    #[doc = "ACMPLP0/ACMPLP1 Speed Selection"]
     #[inline(always)]
     pub fn spdmd(
         self,
@@ -632,6 +687,7 @@ impl Compocr {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPLP1 VCOUT Output Polarity Selection"]
     #[inline(always)]
     pub fn c1op(
         self,
@@ -657,6 +713,7 @@ impl Compocr {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPLP1 VCOUT Pin Output Enable"]
     #[inline(always)]
     pub fn c1oe(
         self,
@@ -682,6 +739,7 @@ impl Compocr {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPLP0 VCOUT Output Polarity Selection"]
     #[inline(always)]
     pub fn c0op(
         self,
@@ -707,6 +765,7 @@ impl Compocr {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPLP0 VCOUT Pin Output Enable"]
     #[inline(always)]
     pub fn c0oe(
         self,
@@ -732,6 +791,7 @@ impl Compocr {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -753,40 +813,50 @@ pub mod compocr {
     pub struct Spdmd_SPEC;
     pub type Spdmd = crate::EnumBitfieldStruct<u8, Spdmd_SPEC>;
     impl Spdmd {
+        #[doc = "Comparator low-speed mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Comparator high-speed mode"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct C1Op_SPEC;
     pub type C1Op = crate::EnumBitfieldStruct<u8, C1Op_SPEC>;
     impl C1Op {
+        #[doc = "Non inverted"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Inverted"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct C1Oe_SPEC;
     pub type C1Oe = crate::EnumBitfieldStruct<u8, C1Oe_SPEC>;
     impl C1Oe {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct C0Op_SPEC;
     pub type C0Op = crate::EnumBitfieldStruct<u8, C0Op_SPEC>;
     impl C0Op {
+        #[doc = "Non inverted"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Inverted"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct C0Oe_SPEC;
     pub type C0Oe = crate::EnumBitfieldStruct<u8, C0Oe_SPEC>;
     impl C0Oe {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -797,9 +867,11 @@ impl crate::sealed::RegSpec for Compsel0_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Comparator Input Select Register"]
 pub type Compsel0 = crate::RegValueT<Compsel0_SPEC>;
 
 impl Compsel0 {
+    #[doc = "ACMPLP1 Input (IVCMP1) Selection"]
     #[inline(always)]
     pub fn cmpsel54(
         self,
@@ -825,6 +897,7 @@ impl Compsel0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00. The write value should be 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -832,6 +905,7 @@ impl Compsel0 {
         crate::common::RegisterField::<2,0x3,1,0,u8,u8,Compsel0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "ACMPLP0 Input (IVCMP0) Selection"]
     #[inline(always)]
     pub fn cmpsel10(
         self,
@@ -869,20 +943,26 @@ pub mod compsel0 {
     pub struct Cmpsel54_SPEC;
     pub type Cmpsel54 = crate::EnumBitfieldStruct<u8, Cmpsel54_SPEC>;
     impl Cmpsel54 {
+        #[doc = "No input"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "CMPIN1 input selected"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "AMP1O output selected"]
         pub const _10: Self = Self::new(2);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpsel10_SPEC;
     pub type Cmpsel10 = crate::EnumBitfieldStruct<u8, Cmpsel10_SPEC>;
     impl Cmpsel10 {
+        #[doc = "No input"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "CMPIN0 input selected"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "AMP0O output selected"]
         pub const _10: Self = Self::new(2);
     }
 }
@@ -893,9 +973,11 @@ impl crate::sealed::RegSpec for Compsel1_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Comparator Reference voltage Select Register"]
 pub type Compsel1 = crate::RegValueT<Compsel1_SPEC>;
 
 impl Compsel1 {
+    #[doc = "ACMPLP1 Reference Voltage Selection"]
     #[inline(always)]
     pub fn c1vrf2(
         self,
@@ -921,6 +1003,7 @@ impl Compsel1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMPLP1 Reference Voltage(IVREF1) Selection"]
     #[inline(always)]
     pub fn crvs54(
         self,
@@ -946,6 +1029,7 @@ impl Compsel1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00. The write value should be 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -953,6 +1037,7 @@ impl Compsel1 {
         crate::common::RegisterField::<2,0x3,1,0,u8,u8,Compsel1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "ACMPLP0 Reference Voltage (IVREF0) Selection"]
     #[inline(always)]
     pub fn crvs10(
         self,
@@ -990,28 +1075,36 @@ pub mod compsel1 {
     pub struct C1Vrf2_SPEC;
     pub type C1Vrf2 = crate::EnumBitfieldStruct<u8, C1Vrf2_SPEC>;
     impl C1Vrf2 {
+        #[doc = "IVREF0 selected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IVREF1 selected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Crvs54_SPEC;
     pub type Crvs54 = crate::EnumBitfieldStruct<u8, Crvs54_SPEC>;
     impl Crvs54 {
+        #[doc = "No reference voltage"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "CMPREF1 selected"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "DA8_1 output selected"]
         pub const _10: Self = Self::new(2);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Crvs10_SPEC;
     pub type Crvs10 = crate::EnumBitfieldStruct<u8, Crvs10_SPEC>;
     impl Crvs10 {
+        #[doc = "No reference voltage"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "CMPREF0 selected"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "DA8_0 output selected"]
         pub const _10: Self = Self::new(2);
     }
 }

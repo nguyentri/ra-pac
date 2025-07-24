@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.0, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:19:15 +0000
+// Generated from SVD 1.0, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:50:19 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Dma {
         self.ptr
     }
 
+    #[doc = "DMAC Module Activation Register"]
     #[inline(always)]
     pub const fn dmast(&self) -> &'static crate::common::Reg<self::Dmast_SPEC, crate::common::RW> {
         unsafe {
@@ -50,9 +51,11 @@ impl crate::sealed::RegSpec for Dmast_SPEC {
     type DataType = u8;
 }
 
+#[doc = "DMAC Module Activation Register"]
 pub type Dmast = crate::RegValueT<Dmast_SPEC>;
 
 impl Dmast {
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -60,6 +63,7 @@ impl Dmast {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Dmast_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "DMAC Operation Enable"]
     #[inline(always)]
     pub fn dmst(
         self,
@@ -97,8 +101,10 @@ pub mod dmast {
     pub struct Dmst_SPEC;
     pub type Dmst = crate::EnumBitfieldStruct<u8, Dmst_SPEC>;
     impl Dmst {
+        #[doc = "Disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled."]
         pub const _1: Self = Self::new(1);
     }
 }

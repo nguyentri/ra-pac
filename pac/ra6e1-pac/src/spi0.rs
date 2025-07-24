@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:19:27 +0000
+// Generated from SVD 1.20.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:50:30 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Spi0 {
         self.ptr
     }
 
+    #[doc = "SPI Control Register"]
     #[inline(always)]
     pub const fn spcr(&self) -> &'static crate::common::Reg<self::Spcr_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Spi0 {
         }
     }
 
+    #[doc = "SPI Slave Select Polarity Register"]
     #[inline(always)]
     pub const fn sslp(&self) -> &'static crate::common::Reg<self::Sslp_SPEC, crate::common::RW> {
         unsafe {
@@ -52,6 +54,7 @@ impl super::Spi0 {
         }
     }
 
+    #[doc = "SPI Pin Control Register"]
     #[inline(always)]
     pub const fn sppcr(&self) -> &'static crate::common::Reg<self::Sppcr_SPEC, crate::common::RW> {
         unsafe {
@@ -61,6 +64,7 @@ impl super::Spi0 {
         }
     }
 
+    #[doc = "SPI Status Register"]
     #[inline(always)]
     pub const fn spsr(&self) -> &'static crate::common::Reg<self::Spsr_SPEC, crate::common::RW> {
         unsafe {
@@ -70,6 +74,7 @@ impl super::Spi0 {
         }
     }
 
+    #[doc = "SPI Data Register"]
     #[inline(always)]
     pub const fn spdr(&self) -> &'static crate::common::Reg<self::Spdr_SPEC, crate::common::RW> {
         unsafe {
@@ -79,6 +84,7 @@ impl super::Spi0 {
         }
     }
 
+    #[doc = "SPI Data Register"]
     #[inline(always)]
     pub const fn spdr_ha(
         &self,
@@ -90,6 +96,7 @@ impl super::Spi0 {
         }
     }
 
+    #[doc = "SPI Data Register"]
     #[inline(always)]
     pub const fn spdr_by(
         &self,
@@ -101,6 +108,7 @@ impl super::Spi0 {
         }
     }
 
+    #[doc = "SPI Sequence Control Register"]
     #[inline(always)]
     pub const fn spscr(&self) -> &'static crate::common::Reg<self::Spscr_SPEC, crate::common::RW> {
         unsafe {
@@ -110,6 +118,7 @@ impl super::Spi0 {
         }
     }
 
+    #[doc = "SPI Sequence Status Register"]
     #[inline(always)]
     pub const fn spssr(&self) -> &'static crate::common::Reg<self::Spssr_SPEC, crate::common::R> {
         unsafe {
@@ -119,6 +128,7 @@ impl super::Spi0 {
         }
     }
 
+    #[doc = "SPI Bit Rate Register"]
     #[inline(always)]
     pub const fn spbr(&self) -> &'static crate::common::Reg<self::Spbr_SPEC, crate::common::RW> {
         unsafe {
@@ -128,6 +138,7 @@ impl super::Spi0 {
         }
     }
 
+    #[doc = "SPI Data Control Register"]
     #[inline(always)]
     pub const fn spdcr(&self) -> &'static crate::common::Reg<self::Spdcr_SPEC, crate::common::RW> {
         unsafe {
@@ -137,6 +148,7 @@ impl super::Spi0 {
         }
     }
 
+    #[doc = "SPI Clock Delay Register"]
     #[inline(always)]
     pub const fn spckd(&self) -> &'static crate::common::Reg<self::Spckd_SPEC, crate::common::RW> {
         unsafe {
@@ -146,6 +158,7 @@ impl super::Spi0 {
         }
     }
 
+    #[doc = "SPI Slave Select Negation Delay Register"]
     #[inline(always)]
     pub const fn sslnd(&self) -> &'static crate::common::Reg<self::Sslnd_SPEC, crate::common::RW> {
         unsafe {
@@ -155,6 +168,7 @@ impl super::Spi0 {
         }
     }
 
+    #[doc = "SPI Next-Access Delay Register"]
     #[inline(always)]
     pub const fn spnd(&self) -> &'static crate::common::Reg<self::Spnd_SPEC, crate::common::RW> {
         unsafe {
@@ -164,6 +178,7 @@ impl super::Spi0 {
         }
     }
 
+    #[doc = "SPI Control Register 2"]
     #[inline(always)]
     pub const fn spcr2(&self) -> &'static crate::common::Reg<self::Spcr2_SPEC, crate::common::RW> {
         unsafe {
@@ -173,6 +188,7 @@ impl super::Spi0 {
         }
     }
 
+    #[doc = "SPI Command Register %s"]
     #[inline(always)]
     pub const fn spcmd(
         &self,
@@ -185,7 +201,72 @@ impl super::Spi0 {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x10usize))
         }
     }
+    #[inline(always)]
+    pub const fn spcmd0(&self) -> &'static crate::common::Reg<self::Spcmd_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Spcmd_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x10usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn spcmd1(&self) -> &'static crate::common::Reg<self::Spcmd_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Spcmd_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x12usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn spcmd2(&self) -> &'static crate::common::Reg<self::Spcmd_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Spcmd_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x14usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn spcmd3(&self) -> &'static crate::common::Reg<self::Spcmd_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Spcmd_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x16usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn spcmd4(&self) -> &'static crate::common::Reg<self::Spcmd_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Spcmd_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn spcmd5(&self) -> &'static crate::common::Reg<self::Spcmd_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Spcmd_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1ausize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn spcmd6(&self) -> &'static crate::common::Reg<self::Spcmd_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Spcmd_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn spcmd7(&self) -> &'static crate::common::Reg<self::Spcmd_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Spcmd_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1eusize),
+            )
+        }
+    }
 
+    #[doc = "SPI Data Control Register 2"]
     #[inline(always)]
     pub const fn spdcr2(
         &self,
@@ -197,6 +278,7 @@ impl super::Spi0 {
         }
     }
 
+    #[doc = "SPI Control Register 3"]
     #[inline(always)]
     pub const fn spcr3(&self) -> &'static crate::common::Reg<self::Spcr3_SPEC, crate::common::RW> {
         unsafe {
@@ -213,9 +295,11 @@ impl crate::sealed::RegSpec for Spcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SPI Control Register"]
 pub type Spcr = crate::RegValueT<Spcr_SPEC>;
 
 impl Spcr {
+    #[doc = "SPI Mode Select"]
     #[inline(always)]
     pub fn spms(
         self,
@@ -241,6 +325,7 @@ impl Spcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Communications Operating Mode Select"]
     #[inline(always)]
     pub fn txmd(
         self,
@@ -266,6 +351,7 @@ impl Spcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Mode Fault Error Detection Enable"]
     #[inline(always)]
     pub fn modfen(
         self,
@@ -291,6 +377,7 @@ impl Spcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI Master/Slave Mode Select"]
     #[inline(always)]
     pub fn mstr(
         self,
@@ -316,6 +403,7 @@ impl Spcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI Error Interrupt Enable"]
     #[inline(always)]
     pub fn speie(
         self,
@@ -341,6 +429,7 @@ impl Spcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transmit Buffer Empty Interrupt Enable"]
     #[inline(always)]
     pub fn sptie(
         self,
@@ -366,6 +455,7 @@ impl Spcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI Function Enable"]
     #[inline(always)]
     pub fn spe(
         self,
@@ -391,6 +481,7 @@ impl Spcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI Receive Buffer Full Interrupt Enable"]
     #[inline(always)]
     pub fn sprie(
         self,
@@ -428,64 +519,80 @@ pub mod spcr {
     pub struct Spms_SPEC;
     pub type Spms = crate::EnumBitfieldStruct<u8, Spms_SPEC>;
     impl Spms {
+        #[doc = "Select SPI operation (4-wire method)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Select clock synchronous operation (3-wire method)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txmd_SPEC;
     pub type Txmd = crate::EnumBitfieldStruct<u8, Txmd_SPEC>;
     impl Txmd {
+        #[doc = "Select full-duplex synchronous serial communications"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Select serial communications with transmit-only"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Modfen_SPEC;
     pub type Modfen = crate::EnumBitfieldStruct<u8, Modfen_SPEC>;
     impl Modfen {
+        #[doc = "Disable detection of mode fault errors"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable detection of mode fault errors"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mstr_SPEC;
     pub type Mstr = crate::EnumBitfieldStruct<u8, Mstr_SPEC>;
     impl Mstr {
+        #[doc = "Select slave mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Select master mode"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Speie_SPEC;
     pub type Speie = crate::EnumBitfieldStruct<u8, Speie_SPEC>;
     impl Speie {
+        #[doc = "Disable SPI error interrupt requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable SPI error interrupt requests"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sptie_SPEC;
     pub type Sptie = crate::EnumBitfieldStruct<u8, Sptie_SPEC>;
     impl Sptie {
+        #[doc = "Disable transmit buffer empty interrupt requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable transmit buffer empty interrupt requests"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spe_SPEC;
     pub type Spe = crate::EnumBitfieldStruct<u8, Spe_SPEC>;
     impl Spe {
+        #[doc = "Disable SPI function"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable SPI function"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sprie_SPEC;
     pub type Sprie = crate::EnumBitfieldStruct<u8, Sprie_SPEC>;
     impl Sprie {
+        #[doc = "Disable SPI receive buffer full interrupt requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable SPI receive buffer full interrupt requests"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -496,9 +603,11 @@ impl crate::sealed::RegSpec for Sslp_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SPI Slave Select Polarity Register"]
 pub type Sslp = crate::RegValueT<Sslp_SPEC>;
 
 impl Sslp {
+    #[doc = "SSLn0 Signal Polarity Setting"]
     #[inline(always)]
     pub fn ssl0p(
         self,
@@ -524,6 +633,7 @@ impl Sslp {
         >::from_register(self, 0)
     }
 
+    #[doc = "SSLn1 Signal Polarity Setting"]
     #[inline(always)]
     pub fn ssl1p(
         self,
@@ -549,6 +659,7 @@ impl Sslp {
         >::from_register(self, 0)
     }
 
+    #[doc = "SSLn2 Signal Polarity Setting"]
     #[inline(always)]
     pub fn ssl2p(
         self,
@@ -574,6 +685,7 @@ impl Sslp {
         >::from_register(self, 0)
     }
 
+    #[doc = "SSLn3 Signal Polarity Setting"]
     #[inline(always)]
     pub fn ssl3p(
         self,
@@ -611,32 +723,40 @@ pub mod sslp {
     pub struct Ssl0P_SPEC;
     pub type Ssl0P = crate::EnumBitfieldStruct<u8, Ssl0P_SPEC>;
     impl Ssl0P {
+        #[doc = "Set SSLn0 signal to active-low"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Set SSLn0 signal to active-high"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ssl1P_SPEC;
     pub type Ssl1P = crate::EnumBitfieldStruct<u8, Ssl1P_SPEC>;
     impl Ssl1P {
+        #[doc = "Set SSLn1 signal to active-low"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Set SSLn1 signal to active-high"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ssl2P_SPEC;
     pub type Ssl2P = crate::EnumBitfieldStruct<u8, Ssl2P_SPEC>;
     impl Ssl2P {
+        #[doc = "Set SSLn2 signal to active-low"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Set SSLn2 signal to active-high"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ssl3P_SPEC;
     pub type Ssl3P = crate::EnumBitfieldStruct<u8, Ssl3P_SPEC>;
     impl Ssl3P {
+        #[doc = "Set SSLn3 signal to active-low"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Set SSLn3 signal to active-high"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -647,9 +767,11 @@ impl crate::sealed::RegSpec for Sppcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SPI Pin Control Register"]
 pub type Sppcr = crate::RegValueT<Sppcr_SPEC>;
 
 impl Sppcr {
+    #[doc = "SPI Loopback"]
     #[inline(always)]
     pub fn splp(
         self,
@@ -675,6 +797,7 @@ impl Sppcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI Loopback 2"]
     #[inline(always)]
     pub fn splp2(
         self,
@@ -700,6 +823,7 @@ impl Sppcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "MOSI Idle Fixed Value"]
     #[inline(always)]
     pub fn moifv(
         self,
@@ -725,6 +849,7 @@ impl Sppcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "MOSI Idle Value Fixing Enable"]
     #[inline(always)]
     pub fn moife(
         self,
@@ -762,32 +887,40 @@ pub mod sppcr {
     pub struct Splp_SPEC;
     pub type Splp = crate::EnumBitfieldStruct<u8, Splp_SPEC>;
     impl Splp {
+        #[doc = "Normal mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Loopback mode (receive data = inverted transmit data)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Splp2_SPEC;
     pub type Splp2 = crate::EnumBitfieldStruct<u8, Splp2_SPEC>;
     impl Splp2 {
+        #[doc = "Normal mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Loopback mode (receive data = transmit data)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Moifv_SPEC;
     pub type Moifv = crate::EnumBitfieldStruct<u8, Moifv_SPEC>;
     impl Moifv {
+        #[doc = "Set level output on MOSIn pin during MOSI idling to low"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Set level output on MOSIn pin during MOSI idling to high"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Moife_SPEC;
     pub type Moife = crate::EnumBitfieldStruct<u8, Moife_SPEC>;
     impl Moife {
+        #[doc = "Set MOSI output value to equal final data from previous transfer"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Set MOSI output value to equal value set in the MOIFV bit"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -798,9 +931,11 @@ impl crate::sealed::RegSpec for Spsr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SPI Status Register"]
 pub type Spsr = crate::RegValueT<Spsr_SPEC>;
 
 impl Spsr {
+    #[doc = "Overrun Error Flag"]
     #[inline(always)]
     pub fn ovrf(
         self,
@@ -826,6 +961,7 @@ impl Spsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI Idle Flag"]
     #[inline(always)]
     pub fn idlnf(
         self,
@@ -851,6 +987,7 @@ impl Spsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Mode Fault Error Flag"]
     #[inline(always)]
     pub fn modf(
         self,
@@ -876,6 +1013,7 @@ impl Spsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Parity Error Flag"]
     #[inline(always)]
     pub fn perf(
         self,
@@ -901,6 +1039,7 @@ impl Spsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Underrun Error Flag"]
     #[inline(always)]
     pub fn udrf(
         self,
@@ -926,6 +1065,7 @@ impl Spsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI Transmit Buffer Empty Flag"]
     #[inline(always)]
     pub fn sptef(
         self,
@@ -951,6 +1091,7 @@ impl Spsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Communication End Flag"]
     #[inline(always)]
     pub fn cendf(
         self,
@@ -976,6 +1117,7 @@ impl Spsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI Receive Buffer Full Flag"]
     #[inline(always)]
     pub fn sprf(
         self,
@@ -1013,64 +1155,80 @@ pub mod spsr {
     pub struct Ovrf_SPEC;
     pub type Ovrf = crate::EnumBitfieldStruct<u8, Ovrf_SPEC>;
     impl Ovrf {
+        #[doc = "No overrun error occurred"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Overrun error occurred"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Idlnf_SPEC;
     pub type Idlnf = crate::EnumBitfieldStruct<u8, Idlnf_SPEC>;
     impl Idlnf {
+        #[doc = "SPI is in the idle state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "SPI is in the transfer state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Modf_SPEC;
     pub type Modf = crate::EnumBitfieldStruct<u8, Modf_SPEC>;
     impl Modf {
+        #[doc = "No mode fault or underrun error occurred"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Mode fault error or underrun error occurred"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Perf_SPEC;
     pub type Perf = crate::EnumBitfieldStruct<u8, Perf_SPEC>;
     impl Perf {
+        #[doc = "No parity error occurred"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Parity error occurred"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Udrf_SPEC;
     pub type Udrf = crate::EnumBitfieldStruct<u8, Udrf_SPEC>;
     impl Udrf {
+        #[doc = "Mode fault error occurred (MODF = 1)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Underrun error occurred (MODF = 1)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sptef_SPEC;
     pub type Sptef = crate::EnumBitfieldStruct<u8, Sptef_SPEC>;
     impl Sptef {
+        #[doc = "Data is in the transmit buffer"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "No data is in the transmit buffer"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cendf_SPEC;
     pub type Cendf = crate::EnumBitfieldStruct<u8, Cendf_SPEC>;
     impl Cendf {
+        #[doc = "Not communicating or communicating"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Communication completed"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sprf_SPEC;
     pub type Sprf = crate::EnumBitfieldStruct<u8, Sprf_SPEC>;
     impl Sprf {
+        #[doc = "No valid data is in SPDR/SPDR_HA"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Valid data is in SPDR/SPDR_HA"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1081,6 +1239,7 @@ impl crate::sealed::RegSpec for Spdr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "SPI Data Register"]
 pub type Spdr = crate::RegValueT<Spdr_SPEC>;
 
 impl NoBitfieldReg<Spdr_SPEC> for Spdr {}
@@ -1098,6 +1257,7 @@ impl crate::sealed::RegSpec for SpdrHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "SPI Data Register"]
 pub type SpdrHa = crate::RegValueT<SpdrHa_SPEC>;
 
 impl NoBitfieldReg<SpdrHa_SPEC> for SpdrHa {}
@@ -1115,6 +1275,7 @@ impl crate::sealed::RegSpec for SpdrBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SPI Data Register"]
 pub type SpdrBy = crate::RegValueT<SpdrBy_SPEC>;
 
 impl NoBitfieldReg<SpdrBy_SPEC> for SpdrBy {}
@@ -1132,9 +1293,11 @@ impl crate::sealed::RegSpec for Spscr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SPI Sequence Control Register"]
 pub type Spscr = crate::RegValueT<Spscr_SPEC>;
 
 impl Spscr {
+    #[doc = "SPI Sequence Length Specification"]
     #[inline(always)]
     pub fn spsln(
         self,
@@ -1172,20 +1335,28 @@ pub mod spscr {
     pub struct Spsln_SPEC;
     pub type Spsln = crate::EnumBitfieldStruct<u8, Spsln_SPEC>;
     impl Spsln {
+        #[doc = "Sequence Length is 1 (Referenced SPCMDn, n = 0→0→…)"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Sequence Length is 2 (Referenced SPCMDn, n = 0→1→0→…)"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "Sequence Length is 3 (Referenced SPCMDn, n = 0→1→2→0→…)"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Sequence Length is 4 (Referenced SPCMDn, n = 0→1→2→3→0→…)"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "Sequence Length is 5 (Referenced SPCMDn, n = 0→1→2→3→4→0→…)"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Sequence Length is 6 (Referenced SPCMDn, n = 0→1→2→3→4→5→0→…)"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "Sequence Length is 7 (Referenced SPCMDn, n = 0→1→2→3→4→5→6→0→…)"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Sequence Length is 8 (Referenced SPCMDn, n = 0→1→2→3→4→5→6→7→0→…)"]
         pub const _111: Self = Self::new(7);
     }
 }
@@ -1196,9 +1367,11 @@ impl crate::sealed::RegSpec for Spssr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SPI Sequence Status Register"]
 pub type Spssr = crate::RegValueT<Spssr_SPEC>;
 
 impl Spssr {
+    #[doc = "SPI Command Pointer"]
     #[inline(always)]
     pub fn spcp(
         self,
@@ -1224,6 +1397,7 @@ impl Spssr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI Error Command"]
     #[inline(always)]
     pub fn specm(
         self,
@@ -1261,40 +1435,56 @@ pub mod spssr {
     pub struct Spcp_SPEC;
     pub type Spcp = crate::EnumBitfieldStruct<u8, Spcp_SPEC>;
     impl Spcp {
+        #[doc = "SPCMD0"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "SPCMD1"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "SPCMD2"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "SPCMD3"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "SPCMD4"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "SPCMD5"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "SPCMD6"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "SPCMD7"]
         pub const _111: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Specm_SPEC;
     pub type Specm = crate::EnumBitfieldStruct<u8, Specm_SPEC>;
     impl Specm {
+        #[doc = "SPCMD0"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "SPCMD1"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "SPCMD2"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "SPCMD3"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "SPCMD4"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "SPCMD5"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "SPCMD6"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "SPCMD7"]
         pub const _111: Self = Self::new(7);
     }
 }
@@ -1305,6 +1495,7 @@ impl crate::sealed::RegSpec for Spbr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SPI Bit Rate Register"]
 pub type Spbr = crate::RegValueT<Spbr_SPEC>;
 
 impl NoBitfieldReg<Spbr_SPEC> for Spbr {}
@@ -1322,9 +1513,11 @@ impl crate::sealed::RegSpec for Spdcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SPI Data Control Register"]
 pub type Spdcr = crate::RegValueT<Spdcr_SPEC>;
 
 impl Spdcr {
+    #[doc = "Number of Frames Specification"]
     #[inline(always)]
     pub fn spfc(
         self,
@@ -1350,6 +1543,7 @@ impl Spdcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI Receive/Transmit Data Select"]
     #[inline(always)]
     pub fn sprdtd(
         self,
@@ -1375,6 +1569,7 @@ impl Spdcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI Word Access/Halfword Access Specification"]
     #[inline(always)]
     pub fn splw(
         self,
@@ -1400,6 +1595,7 @@ impl Spdcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI Byte Access Specification"]
     #[inline(always)]
     pub fn spbyt(
         self,
@@ -1437,36 +1633,46 @@ pub mod spdcr {
     pub struct Spfc_SPEC;
     pub type Spfc = crate::EnumBitfieldStruct<u8, Spfc_SPEC>;
     impl Spfc {
+        #[doc = "1 frame"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "2 frames"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "3 frames"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "4 frames"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sprdtd_SPEC;
     pub type Sprdtd = crate::EnumBitfieldStruct<u8, Sprdtd_SPEC>;
     impl Sprdtd {
+        #[doc = "Read SPDR/SPDR_HA values from receive buffer"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Read SPDR/SPDR_HA values from transmit buffer, but only if the transmit buffer is empty"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Splw_SPEC;
     pub type Splw = crate::EnumBitfieldStruct<u8, Splw_SPEC>;
     impl Splw {
+        #[doc = "Set SPDR_HA to valid for halfword access"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Set SPDR to valid for word access"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spbyt_SPEC;
     pub type Spbyt = crate::EnumBitfieldStruct<u8, Spbyt_SPEC>;
     impl Spbyt {
+        #[doc = "SPDR/SPDR_HA is accessed in halfword or word (SPLW is valid)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "SPDR_BY is accessed in byte (SPLW is invalid)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1477,9 +1683,11 @@ impl crate::sealed::RegSpec for Spckd_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SPI Clock Delay Register"]
 pub type Spckd = crate::RegValueT<Spckd_SPEC>;
 
 impl Spckd {
+    #[doc = "RSPCK Delay Setting"]
     #[inline(always)]
     pub fn sckdl(
         self,
@@ -1517,20 +1725,28 @@ pub mod spckd {
     pub struct Sckdl_SPEC;
     pub type Sckdl = crate::EnumBitfieldStruct<u8, Sckdl_SPEC>;
     impl Sckdl {
+        #[doc = "1 RSPCK"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "2 RSPCK"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "3 RSPCK"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "4 RSPCK"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "5 RSPCK"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "6 RSPCK"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "7 RSPCK"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "8 RSPCK"]
         pub const _111: Self = Self::new(7);
     }
 }
@@ -1541,9 +1757,11 @@ impl crate::sealed::RegSpec for Sslnd_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SPI Slave Select Negation Delay Register"]
 pub type Sslnd = crate::RegValueT<Sslnd_SPEC>;
 
 impl Sslnd {
+    #[doc = "SSL Negation Delay Setting"]
     #[inline(always)]
     pub fn slndl(
         self,
@@ -1581,20 +1799,28 @@ pub mod sslnd {
     pub struct Slndl_SPEC;
     pub type Slndl = crate::EnumBitfieldStruct<u8, Slndl_SPEC>;
     impl Slndl {
+        #[doc = "1 RSPCK"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "2 RSPCK"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "3 RSPCK"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "4 RSPCK"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "5 RSPCK"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "6 RSPCK"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "7 RSPCK"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "8 RSPCK"]
         pub const _111: Self = Self::new(7);
     }
 }
@@ -1605,9 +1831,11 @@ impl crate::sealed::RegSpec for Spnd_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SPI Next-Access Delay Register"]
 pub type Spnd = crate::RegValueT<Spnd_SPEC>;
 
 impl Spnd {
+    #[doc = "SPI Next-Access Delay Setting"]
     #[inline(always)]
     pub fn spndl(
         self,
@@ -1645,20 +1873,28 @@ pub mod spnd {
     pub struct Spndl_SPEC;
     pub type Spndl = crate::EnumBitfieldStruct<u8, Spndl_SPEC>;
     impl Spndl {
+        #[doc = "1 RSPCK + 2 PCLKA"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "2 RSPCK + 2 PCLKA"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "3 RSPCK + 2 PCLKA"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "4 RSPCK + 2 PCLKA"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "5 RSPCK + 2 PCLKA"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "6 RSPCK + 2 PCLKA"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "7 RSPCK + 2 PCLKA"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "8 RSPCK + 2 PCLKA"]
         pub const _111: Self = Self::new(7);
     }
 }
@@ -1669,9 +1905,11 @@ impl crate::sealed::RegSpec for Spcr2_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SPI Control Register 2"]
 pub type Spcr2 = crate::RegValueT<Spcr2_SPEC>;
 
 impl Spcr2 {
+    #[doc = "Parity Enable"]
     #[inline(always)]
     pub fn sppe(
         self,
@@ -1697,6 +1935,7 @@ impl Spcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Parity Mode"]
     #[inline(always)]
     pub fn spoe(
         self,
@@ -1722,6 +1961,7 @@ impl Spcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI Idle Interrupt Enable"]
     #[inline(always)]
     pub fn spiie(
         self,
@@ -1747,6 +1987,7 @@ impl Spcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Parity Self-Testing"]
     #[inline(always)]
     pub fn pte(
         self,
@@ -1772,6 +2013,7 @@ impl Spcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RSPCK Auto-Stop Function Enable"]
     #[inline(always)]
     pub fn sckase(
         self,
@@ -1809,40 +2051,50 @@ pub mod spcr2 {
     pub struct Sppe_SPEC;
     pub type Sppe = crate::EnumBitfieldStruct<u8, Sppe_SPEC>;
     impl Sppe {
+        #[doc = "Do not add parity bit to transmit data and do not check parity bit of receive data"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "When SPCR.TXMD = 0: Add parity bit to transmit data and check parity bit of receive data When SPCR.TXMD = 1: Add parity bit to transmit data but do not check parity bit of receive data"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spoe_SPEC;
     pub type Spoe = crate::EnumBitfieldStruct<u8, Spoe_SPEC>;
     impl Spoe {
+        #[doc = "Select even parity for transmission and reception"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Select odd parity for transmission and reception"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spiie_SPEC;
     pub type Spiie = crate::EnumBitfieldStruct<u8, Spiie_SPEC>;
     impl Spiie {
+        #[doc = "Disable idle interrupt requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable idle interrupt requests"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pte_SPEC;
     pub type Pte = crate::EnumBitfieldStruct<u8, Pte_SPEC>;
     impl Pte {
+        #[doc = "Disable self-diagnosis function of the parity circuit"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable self-diagnosis function of the parity circuit"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sckase_SPEC;
     pub type Sckase = crate::EnumBitfieldStruct<u8, Sckase_SPEC>;
     impl Sckase {
+        #[doc = "Disable RSPCK auto-stop function"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable RSPCK auto-stop function"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1853,9 +2105,11 @@ impl crate::sealed::RegSpec for Spcmd_SPEC {
     type DataType = u16;
 }
 
+#[doc = "SPI Command Register %s"]
 pub type Spcmd = crate::RegValueT<Spcmd_SPEC>;
 
 impl Spcmd {
+    #[doc = "RSPCK Phase Setting"]
     #[inline(always)]
     pub fn cpha(
         self,
@@ -1881,6 +2135,7 @@ impl Spcmd {
         >::from_register(self, 0)
     }
 
+    #[doc = "RSPCK Polarity Setting"]
     #[inline(always)]
     pub fn cpol(
         self,
@@ -1906,6 +2161,7 @@ impl Spcmd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bit Rate Division Setting"]
     #[inline(always)]
     pub fn brdv(
         self,
@@ -1931,6 +2187,7 @@ impl Spcmd {
         >::from_register(self, 0)
     }
 
+    #[doc = "SSL Signal Assertion Setting"]
     #[inline(always)]
     pub fn ssla(
         self,
@@ -1956,6 +2213,7 @@ impl Spcmd {
         >::from_register(self, 0)
     }
 
+    #[doc = "SSL Signal Level Keeping"]
     #[inline(always)]
     pub fn sslkp(
         self,
@@ -1981,6 +2239,7 @@ impl Spcmd {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI Data Length Setting"]
     #[inline(always)]
     pub fn spb(
         self,
@@ -2006,6 +2265,7 @@ impl Spcmd {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI LSB First"]
     #[inline(always)]
     pub fn lsbf(
         self,
@@ -2031,6 +2291,7 @@ impl Spcmd {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI Next-Access Delay Enable"]
     #[inline(always)]
     pub fn spnden(
         self,
@@ -2056,6 +2317,7 @@ impl Spcmd {
         >::from_register(self, 0)
     }
 
+    #[doc = "SSL Negation Delay Setting Enable"]
     #[inline(always)]
     pub fn slnden(
         self,
@@ -2081,6 +2343,7 @@ impl Spcmd {
         >::from_register(self, 0)
     }
 
+    #[doc = "RSPCK Delay Setting Enable"]
     #[inline(always)]
     pub fn sckden(
         self,
@@ -2118,112 +2381,148 @@ pub mod spcmd {
     pub struct Cpha_SPEC;
     pub type Cpha = crate::EnumBitfieldStruct<u8, Cpha_SPEC>;
     impl Cpha {
+        #[doc = "Select data sampling on leading edge, data change on trailing edge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Select data change on leading edge, data sampling on trailing edge"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cpol_SPEC;
     pub type Cpol = crate::EnumBitfieldStruct<u8, Cpol_SPEC>;
     impl Cpol {
+        #[doc = "Set RSPCK low during idle"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Set RSPCK high during idle"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Brdv_SPEC;
     pub type Brdv = crate::EnumBitfieldStruct<u8, Brdv_SPEC>;
     impl Brdv {
+        #[doc = "Base bit rate"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Base bit rate divided by 2"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Base bit rate divided by 4"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Base bit rate divided by 8"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ssla_SPEC;
     pub type Ssla = crate::EnumBitfieldStruct<u8, Ssla_SPEC>;
     impl Ssla {
+        #[doc = "SSL0"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "SSL1"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "SSL2"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "SSL3"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sslkp_SPEC;
     pub type Sslkp = crate::EnumBitfieldStruct<u8, Sslkp_SPEC>;
     impl Sslkp {
+        #[doc = "Negate all SSL signals on completion of transfer"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Keep SSL signal level from the end of transfer until the beginning of the next access"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spb_SPEC;
     pub type Spb = crate::EnumBitfieldStruct<u8, Spb_SPEC>;
     impl Spb {
+        #[doc = "20 bits"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "24 bits"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "32 bits"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "32 bits"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "9 bits"]
         pub const _0_X_8: Self = Self::new(8);
 
+        #[doc = "10 bits"]
         pub const _0_X_9: Self = Self::new(9);
 
+        #[doc = "11 bits"]
         pub const _0_X_A: Self = Self::new(10);
 
+        #[doc = "12 bits"]
         pub const _0_X_B: Self = Self::new(11);
 
+        #[doc = "13 bits"]
         pub const _0_X_C: Self = Self::new(12);
 
+        #[doc = "14 bits"]
         pub const _0_X_D: Self = Self::new(13);
 
+        #[doc = "15 bits"]
         pub const _0_X_E: Self = Self::new(14);
 
+        #[doc = "16 bits"]
         pub const _0_X_F: Self = Self::new(15);
 
+        #[doc = "8 bits"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lsbf_SPEC;
     pub type Lsbf = crate::EnumBitfieldStruct<u8, Lsbf_SPEC>;
     impl Lsbf {
+        #[doc = "MSB-first"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "LSB-first"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spnden_SPEC;
     pub type Spnden = crate::EnumBitfieldStruct<u8, Spnden_SPEC>;
     impl Spnden {
+        #[doc = "Select next-access delay of 1 RSPCK + 2 PCLKA"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Select next-access delay equal to the setting in the SPI Next-Access Delay Register (SPND)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Slnden_SPEC;
     pub type Slnden = crate::EnumBitfieldStruct<u8, Slnden_SPEC>;
     impl Slnden {
+        #[doc = "Select SSL negation delay of 1 RSPCK"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Select SSL negation delay equal to the setting in the SPI Slave Select Negation Delay Register (SSLND)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sckden_SPEC;
     pub type Sckden = crate::EnumBitfieldStruct<u8, Sckden_SPEC>;
     impl Sckden {
+        #[doc = "Select RSPCK delay of 1 RSPCK"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Select RSPCK delay equal to the setting in the SPI Clock Delay Register (SPCKD)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2234,9 +2533,11 @@ impl crate::sealed::RegSpec for Spdcr2_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SPI Data Control Register 2"]
 pub type Spdcr2 = crate::RegValueT<Spdcr2_SPEC>;
 
 impl Spdcr2 {
+    #[doc = "Byte Swap Operating Mode Select"]
     #[inline(always)]
     pub fn bysw(
         self,
@@ -2262,6 +2563,7 @@ impl Spdcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Serial Data Invert Bit"]
     #[inline(always)]
     pub fn sinv(
         self,
@@ -2299,16 +2601,20 @@ pub mod spdcr2 {
     pub struct Bysw_SPEC;
     pub type Bysw = crate::EnumBitfieldStruct<u8, Bysw_SPEC>;
     impl Bysw {
+        #[doc = "Byte Swap OFF"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Byte Swap ON"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sinv_SPEC;
     pub type Sinv = crate::EnumBitfieldStruct<u8, Sinv_SPEC>;
     impl Sinv {
+        #[doc = "Not invert serial data"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Invert serial data"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2319,9 +2625,11 @@ impl crate::sealed::RegSpec for Spcr3_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SPI Control Register 3"]
 pub type Spcr3 = crate::RegValueT<Spcr3_SPEC>;
 
 impl Spcr3 {
+    #[doc = "Extended Communication Mode Select"]
     #[inline(always)]
     pub fn etxmd(
         self,
@@ -2347,6 +2655,7 @@ impl Spcr3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Between Burst Transfer Frames Delay Select"]
     #[inline(always)]
     pub fn bfds(
         self,
@@ -2372,6 +2681,7 @@ impl Spcr3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI Communication End Interrupt Enable"]
     #[inline(always)]
     pub fn cendie(
         self,
@@ -2409,24 +2719,30 @@ pub mod spcr3 {
     pub struct Etxmd_SPEC;
     pub type Etxmd = crate::EnumBitfieldStruct<u8, Etxmd_SPEC>;
     impl Etxmd {
+        #[doc = "Full-duplex synchronous or transmit-only serial communications. \\[the SPCR.TXMD bit is enabled\\]"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Receive-only serial communications in slave mode (SPCR.MSTR bit = 0). \\[the SPCR.TXMD bit is disabled\\] Setting is prohibited in master mode (SPCR.MSTR bit = 1)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bfds_SPEC;
     pub type Bfds = crate::EnumBitfieldStruct<u8, Bfds_SPEC>;
     impl Bfds {
+        #[doc = "Delay (RSPCK delay, SSL negation delay and next-access delay) between frames is inserted in burst transfer."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Delay between frames is not inserted in burst transfer."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cendie_SPEC;
     pub type Cendie = crate::EnumBitfieldStruct<u8, Cendie_SPEC>;
     impl Cendie {
+        #[doc = "Communication end interrupt request is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Communication end interrupt request is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }

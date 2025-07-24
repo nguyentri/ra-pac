@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:19:53 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:01 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Port0 {
         self.ptr
     }
 
+    #[doc = "Port Control Register 1"]
     #[inline(always)]
     pub const fn pcntr1(
         &self,
@@ -45,6 +46,7 @@ impl super::Port0 {
         }
     }
 
+    #[doc = "Output data register"]
     #[inline(always)]
     pub const fn podr(&self) -> &'static crate::common::Reg<self::Podr_SPEC, crate::common::RW> {
         unsafe {
@@ -54,6 +56,7 @@ impl super::Port0 {
         }
     }
 
+    #[doc = "Data direction register"]
     #[inline(always)]
     pub const fn pdr(&self) -> &'static crate::common::Reg<self::Pdr_SPEC, crate::common::RW> {
         unsafe {
@@ -63,6 +66,7 @@ impl super::Port0 {
         }
     }
 
+    #[doc = "Port Control Register 2"]
     #[inline(always)]
     pub const fn pcntr2(&self) -> &'static crate::common::Reg<self::Pcntr2_SPEC, crate::common::R> {
         unsafe {
@@ -72,6 +76,7 @@ impl super::Port0 {
         }
     }
 
+    #[doc = "Input data register"]
     #[inline(always)]
     pub const fn pidr(&self) -> &'static crate::common::Reg<self::Pidr_SPEC, crate::common::R> {
         unsafe {
@@ -81,6 +86,7 @@ impl super::Port0 {
         }
     }
 
+    #[doc = "Port Control Register 3"]
     #[inline(always)]
     pub const fn pcntr3(&self) -> &'static crate::common::Reg<self::Pcntr3_SPEC, crate::common::W> {
         unsafe {
@@ -90,6 +96,7 @@ impl super::Port0 {
         }
     }
 
+    #[doc = "Output reset register"]
     #[inline(always)]
     pub const fn porr(&self) -> &'static crate::common::Reg<self::Porr_SPEC, crate::common::W> {
         unsafe {
@@ -99,6 +106,7 @@ impl super::Port0 {
         }
     }
 
+    #[doc = "Output set register"]
     #[inline(always)]
     pub const fn posr(&self) -> &'static crate::common::Reg<self::Posr_SPEC, crate::common::W> {
         unsafe {
@@ -115,9 +123,11 @@ impl crate::sealed::RegSpec for Pcntr1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Port Control Register 1"]
 pub type Pcntr1 = crate::RegValueT<Pcntr1_SPEC>;
 
 impl Pcntr1 {
+    #[doc = "Pmn Output Data"]
     #[inline(always)]
     pub fn podr(
         self,
@@ -143,6 +153,7 @@ impl Pcntr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Pmn Direction"]
     #[inline(always)]
     pub fn pdr(
         self,
@@ -180,16 +191,20 @@ pub mod pcntr1 {
     pub struct Podr_SPEC;
     pub type Podr = crate::EnumBitfieldStruct<u8, Podr_SPEC>;
     impl Podr {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr_SPEC;
     pub type Pdr = crate::EnumBitfieldStruct<u8, Pdr_SPEC>;
     impl Pdr {
+        #[doc = "Input (functions as an input pin)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output (functions as an output pin)."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -200,9 +215,11 @@ impl crate::sealed::RegSpec for Podr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Output data register"]
 pub type Podr = crate::RegValueT<Podr_SPEC>;
 
 impl Podr {
+    #[doc = "Pmn Output Data"]
     #[inline(always)]
     pub fn podr(
         self,
@@ -240,8 +257,10 @@ pub mod podr {
     pub struct Podr_SPEC;
     pub type Podr = crate::EnumBitfieldStruct<u8, Podr_SPEC>;
     impl Podr {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -252,9 +271,11 @@ impl crate::sealed::RegSpec for Pdr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Data direction register"]
 pub type Pdr = crate::RegValueT<Pdr_SPEC>;
 
 impl Pdr {
+    #[doc = "Pmn Direction"]
     #[inline(always)]
     pub fn pdr(
         self,
@@ -292,8 +313,10 @@ pub mod pdr {
     pub struct Pdr_SPEC;
     pub type Pdr = crate::EnumBitfieldStruct<u8, Pdr_SPEC>;
     impl Pdr {
+        #[doc = "Input (functions as an input pin)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output (functions as an output pin)."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -304,9 +327,11 @@ impl crate::sealed::RegSpec for Pcntr2_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Port Control Register 2"]
 pub type Pcntr2 = crate::RegValueT<Pcntr2_SPEC>;
 
 impl Pcntr2 {
+    #[doc = "Pmn Event Input Data"]
     #[inline(always)]
     pub fn eidr(
         self,
@@ -332,6 +357,7 @@ impl Pcntr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Pmn Input Data"]
     #[inline(always)]
     pub fn pidr(
         self,
@@ -369,16 +395,20 @@ pub mod pcntr2 {
     pub struct Eidr_SPEC;
     pub type Eidr = crate::EnumBitfieldStruct<u8, Eidr_SPEC>;
     impl Eidr {
+        #[doc = "Low input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr_SPEC;
     pub type Pidr = crate::EnumBitfieldStruct<u8, Pidr_SPEC>;
     impl Pidr {
+        #[doc = "Low input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High input."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -389,9 +419,11 @@ impl crate::sealed::RegSpec for Pidr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Input data register"]
 pub type Pidr = crate::RegValueT<Pidr_SPEC>;
 
 impl Pidr {
+    #[doc = "Pmn Input Data"]
     #[inline(always)]
     pub fn pidr(
         self,
@@ -429,8 +461,10 @@ pub mod pidr {
     pub struct Pidr_SPEC;
     pub type Pidr = crate::EnumBitfieldStruct<u8, Pidr_SPEC>;
     impl Pidr {
+        #[doc = "Low input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High input."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -441,9 +475,11 @@ impl crate::sealed::RegSpec for Pcntr3_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Port Control Register 3"]
 pub type Pcntr3 = crate::RegValueT<Pcntr3_SPEC>;
 
 impl Pcntr3 {
+    #[doc = "Pmn Output Reset"]
     #[inline(always)]
     pub fn porr(
         self,
@@ -469,6 +505,7 @@ impl Pcntr3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Pmn Output Set"]
     #[inline(always)]
     pub fn posr(
         self,
@@ -506,16 +543,20 @@ pub mod pcntr3 {
     pub struct Porr_SPEC;
     pub type Porr = crate::EnumBitfieldStruct<u8, Porr_SPEC>;
     impl Porr {
+        #[doc = "No affect to output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Low output."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Posr_SPEC;
     pub type Posr = crate::EnumBitfieldStruct<u8, Posr_SPEC>;
     impl Posr {
+        #[doc = "No affect to output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -526,9 +567,11 @@ impl crate::sealed::RegSpec for Porr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Output reset register"]
 pub type Porr = crate::RegValueT<Porr_SPEC>;
 
 impl Porr {
+    #[doc = "Pmn Output Reset"]
     #[inline(always)]
     pub fn porr(
         self,
@@ -566,8 +609,10 @@ pub mod porr {
     pub struct Porr_SPEC;
     pub type Porr = crate::EnumBitfieldStruct<u8, Porr_SPEC>;
     impl Porr {
+        #[doc = "No affect to output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Low output."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -578,9 +623,11 @@ impl crate::sealed::RegSpec for Posr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Output set register"]
 pub type Posr = crate::RegValueT<Posr_SPEC>;
 
 impl Posr {
+    #[doc = "Pmn Output Set"]
     #[inline(always)]
     pub fn posr(
         self,
@@ -618,8 +665,10 @@ pub mod posr {
     pub struct Posr_SPEC;
     pub type Posr = crate::EnumBitfieldStruct<u8, Posr_SPEC>;
     impl Posr {
+        #[doc = "No affect to output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output."]
         pub const _1: Self = Self::new(1);
     }
 }

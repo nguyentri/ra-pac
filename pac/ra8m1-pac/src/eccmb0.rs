@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:23:25 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Eccmb0 {
         self.ptr
     }
 
+    #[doc = "ECC control register"]
     #[inline(always)]
     pub const fn ec710ctl(
         &self,
@@ -45,6 +46,7 @@ impl super::Eccmb0 {
         }
     }
 
+    #[doc = "ECC test mode control register"]
     #[inline(always)]
     pub const fn ec710tmc(
         &self,
@@ -56,6 +58,7 @@ impl super::Eccmb0 {
         }
     }
 
+    #[doc = "ECC encode or decode data test register"]
     #[inline(always)]
     pub const fn ec710ted(
         &self,
@@ -67,6 +70,7 @@ impl super::Eccmb0 {
         }
     }
 
+    #[doc = "ECC error address register0"]
     #[inline(always)]
     pub const fn ec710ead0(
         &self,
@@ -85,9 +89,11 @@ impl crate::sealed::RegSpec for Ec710Ctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "ECC control register"]
 pub type Ec710Ctl = crate::RegValueT<Ec710Ctl_SPEC>;
 
 impl Ec710Ctl {
+    #[doc = "Flag bit of ECC error message"]
     #[inline(always)]
     pub fn ecemf(
         self,
@@ -97,6 +103,7 @@ impl Ec710Ctl {
         )
     }
 
+    #[doc = "Flag bit of ECC error detection and correction"]
     #[inline(always)]
     pub fn ecer1f(
         self,
@@ -106,6 +113,7 @@ impl Ec710Ctl {
         )
     }
 
+    #[doc = "Flag bit of 2bits ECC error detection"]
     #[inline(always)]
     pub fn ecer2f(
         self,
@@ -115,6 +123,7 @@ impl Ec710Ctl {
         )
     }
 
+    #[doc = "Control bit of interrupt at ECC 1bit error detection"]
     #[inline(always)]
     pub fn ec1edic(
         self,
@@ -140,6 +149,7 @@ impl Ec710Ctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Control bit of interrupt at ECC 2bits error detection"]
     #[inline(always)]
     pub fn ec2edic(
         self,
@@ -165,6 +175,7 @@ impl Ec710Ctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Permission bit of ECC 1bit error correction"]
     #[inline(always)]
     pub fn ec1ecp(
         self,
@@ -174,6 +185,7 @@ impl Ec710Ctl {
         )
     }
 
+    #[doc = "Flag bit to enable ECC error judgment"]
     #[inline(always)]
     pub fn ecervf(
         self,
@@ -183,6 +195,7 @@ impl Ec710Ctl {
         )
     }
 
+    #[doc = "Select bit of ECC function through mode"]
     #[inline(always)]
     pub fn ecthm(
         self,
@@ -208,6 +221,7 @@ impl Ec710Ctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Flag clear bit of accumulating ECC error detection and correction"]
     #[inline(always)]
     pub fn ecer1c(
         self,
@@ -217,6 +231,7 @@ impl Ec710Ctl {
         )
     }
 
+    #[doc = "Flag clear bit of 2bits ECC error detection"]
     #[inline(always)]
     pub fn ecer2c(
         self,
@@ -224,6 +239,7 @@ impl Ec710Ctl {
         crate::common::RegisterFieldBool::<10,1,0,Ec710Ctl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Flag bit of ECC overflow detection"]
     #[inline(always)]
     pub fn ecovff(
         self,
@@ -249,6 +265,7 @@ impl Ec710Ctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Access control bit0 to ECC mode select bit"]
     #[inline(always)]
     pub fn emca0(
         self,
@@ -256,6 +273,7 @@ impl Ec710Ctl {
         crate::common::RegisterFieldBool::<14,1,0,Ec710Ctl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Access control bit1 to ECC mode select bit"]
     #[inline(always)]
     pub fn emca1(
         self,
@@ -263,6 +281,7 @@ impl Ec710Ctl {
         crate::common::RegisterFieldBool::<15,1,0,Ec710Ctl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Flag bit of ECC Single bit Error Detection"]
     #[inline(always)]
     pub fn ecsedf0(
         self,
@@ -288,6 +307,7 @@ impl Ec710Ctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Flag bit of ECC Dual bit Error Detection"]
     #[inline(always)]
     pub fn ecdedf0(
         self,
@@ -313,6 +333,7 @@ impl Ec710Ctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000000000. The write value should be 00000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -333,48 +354,60 @@ pub mod ec710ctl {
     pub struct Ec1Edic_SPEC;
     pub type Ec1Edic = crate::EnumBitfieldStruct<u8, Ec1Edic_SPEC>;
     impl Ec1Edic {
+        #[doc = "Interrupt is not occurred at detecting 2bit error."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "EC7TIE2 is outputted at detecting 1bit error."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ec2Edic_SPEC;
     pub type Ec2Edic = crate::EnumBitfieldStruct<u8, Ec2Edic_SPEC>;
     impl Ec2Edic {
+        #[doc = "Interrupt is not occurred at detecting 2bits error."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "EC7TIE2 is outputted at detecting 2bits error. (initial value)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ecthm_SPEC;
     pub type Ecthm = crate::EnumBitfieldStruct<u8, Ecthm_SPEC>;
     impl Ecthm {
+        #[doc = "Through mode disable (normal operation mode). Initial value."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Through mode enable."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ecovff_SPEC;
     pub type Ecovff = crate::EnumBitfieldStruct<u8, Ecovff_SPEC>;
     impl Ecovff {
+        #[doc = "Overflow is not occurred after reset or clearing ECER2F and ECER1F."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Error address register overflowed"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ecsedf0_SPEC;
     pub type Ecsedf0 = crate::EnumBitfieldStruct<u8, Ecsedf0_SPEC>;
     impl Ecsedf0 {
+        #[doc = "no bit error"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "1bits error occurred"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ecdedf0_SPEC;
     pub type Ecdedf0 = crate::EnumBitfieldStruct<u8, Ecdedf0_SPEC>;
     impl Ecdedf0 {
+        #[doc = "no bit error"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "2bits error occurred"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -385,9 +418,11 @@ impl crate::sealed::RegSpec for Ec710Tmc_SPEC {
     type DataType = u16;
 }
 
+#[doc = "ECC test mode control register"]
 pub type Ec710Tmc = crate::RegValueT<Ec710Tmc_SPEC>;
 
 impl Ec710Tmc {
+    #[doc = "Select bit of ECC decode input"]
     #[inline(always)]
     pub fn ecdcs(
         self,
@@ -397,6 +432,7 @@ impl Ec710Tmc {
         )
     }
 
+    #[doc = "Enable bit of ECC test mode control"]
     #[inline(always)]
     pub fn ectmce(
         self,
@@ -406,6 +442,7 @@ impl Ec710Tmc {
         )
     }
 
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -413,6 +450,7 @@ impl Ec710Tmc {
         crate::common::RegisterField::<8,0x3f,1,0,u8,u8,Ec710Tmc_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Access control bit1 and bit0 to ECC test mode bit"]
     #[inline(always)]
     pub fn etma0(
         self,
@@ -420,6 +458,7 @@ impl Ec710Tmc {
         crate::common::RegisterFieldBool::<14,1,0,Ec710Tmc_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Access control bit1 and bit0 to ECC test mode bit"]
     #[inline(always)]
     pub fn etma1(
         self,
@@ -441,9 +480,11 @@ impl crate::sealed::RegSpec for Ec710Ted_SPEC {
     type DataType = u32;
 }
 
+#[doc = "ECC encode or decode data test register"]
 pub type Ec710Ted = crate::RegValueT<Ec710Ted_SPEC>;
 
 impl Ec710Ted {
+    #[doc = "At test mode, this register data is used as input data to encode circuit or decode circuit"]
     #[inline(always)]
     pub fn ecedb(
         self,
@@ -475,9 +516,11 @@ impl crate::sealed::RegSpec for Ec710Ead0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "ECC error address register0"]
 pub type Ec710Ead0 = crate::RegValueT<Ec710Ead0_SPEC>;
 
 impl Ec710Ead0 {
+    #[doc = "This is read only register to hold the ECC error occurred address."]
     #[inline(always)]
     pub fn ecead(
         self,
@@ -495,6 +538,7 @@ impl Ec710Ead0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0."]
     #[inline(always)]
     pub fn reserved(
         self,

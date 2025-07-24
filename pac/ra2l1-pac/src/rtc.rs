@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.50.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:17:37 +0000
+// Generated from SVD 1.50.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:47:04 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Rtc {
         self.ptr
     }
 
+    #[doc = "64-Hz Counter"]
     #[inline(always)]
     pub const fn r64cnt(&self) -> &'static crate::common::Reg<self::R64Cnt_SPEC, crate::common::R> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Binary Counter %s"]
     #[inline(always)]
     pub const fn bcnt(
         &self,
@@ -55,7 +57,40 @@ impl super::Rtc {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2usize))
         }
     }
+    #[inline(always)]
+    pub const fn bcnt0(&self) -> &'static crate::common::Reg<self::Bcnt_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Bcnt_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bcnt1(&self) -> &'static crate::common::Reg<self::Bcnt_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Bcnt_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bcnt2(&self) -> &'static crate::common::Reg<self::Bcnt_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Bcnt_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bcnt3(&self) -> &'static crate::common::Reg<self::Bcnt_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Bcnt_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8usize),
+            )
+        }
+    }
 
+    #[doc = "Second Counter (in Calendar Count Mode)"]
     #[inline(always)]
     pub const fn rseccnt(
         &self,
@@ -67,6 +102,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Minute Counter (in Calendar Count Mode)"]
     #[inline(always)]
     pub const fn rmincnt(
         &self,
@@ -78,6 +114,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Hour Counter (in Calendar Count Mode)"]
     #[inline(always)]
     pub const fn rhrcnt(
         &self,
@@ -89,6 +126,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Day-of-Week Counter (in Calendar Count Mode)"]
     #[inline(always)]
     pub const fn rwkcnt(
         &self,
@@ -100,6 +138,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Day Counter"]
     #[inline(always)]
     pub const fn rdaycnt(
         &self,
@@ -111,6 +150,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Month Counter"]
     #[inline(always)]
     pub const fn rmoncnt(
         &self,
@@ -122,6 +162,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Year Counter"]
     #[inline(always)]
     pub const fn ryrcnt(
         &self,
@@ -133,6 +174,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Binary Counter %s Alarm Register"]
     #[inline(always)]
     pub const fn bcntar(
         &self,
@@ -145,7 +187,48 @@ impl super::Rtc {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x10usize))
         }
     }
+    #[inline(always)]
+    pub const fn bcnt0ar(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcntar_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Bcntar_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x10usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bcnt1ar(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcntar_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Bcntar_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x12usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bcnt2ar(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcntar_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Bcntar_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x14usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bcnt3ar(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcntar_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Bcntar_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x16usize),
+            )
+        }
+    }
 
+    #[doc = "Second Alarm Register (in Calendar Count Mode)"]
     #[inline(always)]
     pub const fn rsecar(
         &self,
@@ -157,6 +240,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Minute Alarm Register (in Calendar Count Mode)"]
     #[inline(always)]
     pub const fn rminar(
         &self,
@@ -168,6 +252,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Hour Alarm Register (in Calendar Count Mode)"]
     #[inline(always)]
     pub const fn rhrar(&self) -> &'static crate::common::Reg<self::Rhrar_SPEC, crate::common::RW> {
         unsafe {
@@ -177,6 +262,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Day-of-Week Alarm Register (in Calendar Count Mode)"]
     #[inline(always)]
     pub const fn rwkar(&self) -> &'static crate::common::Reg<self::Rwkar_SPEC, crate::common::RW> {
         unsafe {
@@ -186,6 +272,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Binary Counter %s Alarm Enable Register"]
     #[inline(always)]
     pub const fn bcntaer(
         &self,
@@ -198,7 +285,28 @@ impl super::Rtc {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x18usize))
         }
     }
+    #[inline(always)]
+    pub const fn bcnt0aer(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcntaer_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Bcntaer_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bcnt1aer(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcntaer_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Bcntaer_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1ausize),
+            )
+        }
+    }
 
+    #[doc = "Date Alarm Register (in Calendar Count Mode)"]
     #[inline(always)]
     pub const fn rdayar(
         &self,
@@ -210,6 +318,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Month Alarm Register (in Calendar Count Mode)"]
     #[inline(always)]
     pub const fn rmonar(
         &self,
@@ -221,6 +330,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Binary Counter 2 Alarm Enable Register"]
     #[inline(always)]
     pub const fn bcnt2aer(
         &self,
@@ -232,6 +342,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Year Alarm Register (in Calendar Count Mode)"]
     #[inline(always)]
     pub const fn ryrar(&self) -> &'static crate::common::Reg<self::Ryrar_SPEC, crate::common::RW> {
         unsafe {
@@ -241,6 +352,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Binary Counter 3 Alarm Enable Register"]
     #[inline(always)]
     pub const fn bcnt3aer(
         &self,
@@ -252,6 +364,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Year Alarm Enable Register (in Calendar Count Mode)"]
     #[inline(always)]
     pub const fn ryraren(
         &self,
@@ -263,6 +376,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "RTC Control Register 1"]
     #[inline(always)]
     pub const fn rcr1(&self) -> &'static crate::common::Reg<self::Rcr1_SPEC, crate::common::RW> {
         unsafe {
@@ -272,6 +386,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "RTC Control Register 2 (in Calendar Count Mode)"]
     #[inline(always)]
     pub const fn rcr2(&self) -> &'static crate::common::Reg<self::Rcr2_SPEC, crate::common::RW> {
         unsafe {
@@ -281,6 +396,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "RTC Control Register 2 (in Binary Count Mode)"]
     #[inline(always)]
     pub const fn rcr2_bcnt(
         &self,
@@ -292,6 +408,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "RTC Control Register 4"]
     #[inline(always)]
     pub const fn rcr4(&self) -> &'static crate::common::Reg<self::Rcr4_SPEC, crate::common::RW> {
         unsafe {
@@ -301,6 +418,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Frequency Register H"]
     #[inline(always)]
     pub const fn rfrh(&self) -> &'static crate::common::Reg<self::Rfrh_SPEC, crate::common::RW> {
         unsafe {
@@ -310,6 +428,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Frequency Register L"]
     #[inline(always)]
     pub const fn rfrl(&self) -> &'static crate::common::Reg<self::Rfrl_SPEC, crate::common::RW> {
         unsafe {
@@ -319,6 +438,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Time Error Adjustment Register"]
     #[inline(always)]
     pub const fn radj(&self) -> &'static crate::common::Reg<self::Radj_SPEC, crate::common::RW> {
         unsafe {
@@ -335,9 +455,11 @@ impl crate::sealed::RegSpec for R64Cnt_SPEC {
     type DataType = u8;
 }
 
+#[doc = "64-Hz Counter"]
 pub type R64Cnt = crate::RegValueT<R64Cnt_SPEC>;
 
 impl R64Cnt {
+    #[doc = "64-Hz Flag"]
     #[inline(always)]
     pub fn f64hz(self) -> crate::common::RegisterFieldBool<0, 1, 0, R64Cnt_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<0, 1, 0, R64Cnt_SPEC, crate::common::R>::from_register(
@@ -345,6 +467,7 @@ impl R64Cnt {
         )
     }
 
+    #[doc = "32-Hz Flag"]
     #[inline(always)]
     pub fn f32hz(self) -> crate::common::RegisterFieldBool<1, 1, 0, R64Cnt_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<1, 1, 0, R64Cnt_SPEC, crate::common::R>::from_register(
@@ -352,6 +475,7 @@ impl R64Cnt {
         )
     }
 
+    #[doc = "16-Hz Flag"]
     #[inline(always)]
     pub fn f16hz(self) -> crate::common::RegisterFieldBool<2, 1, 0, R64Cnt_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<2, 1, 0, R64Cnt_SPEC, crate::common::R>::from_register(
@@ -359,6 +483,7 @@ impl R64Cnt {
         )
     }
 
+    #[doc = "8-Hz Flag"]
     #[inline(always)]
     pub fn f8hz(self) -> crate::common::RegisterFieldBool<3, 1, 0, R64Cnt_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<3, 1, 0, R64Cnt_SPEC, crate::common::R>::from_register(
@@ -366,6 +491,7 @@ impl R64Cnt {
         )
     }
 
+    #[doc = "4-Hz Flag"]
     #[inline(always)]
     pub fn f4hz(self) -> crate::common::RegisterFieldBool<4, 1, 0, R64Cnt_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<4, 1, 0, R64Cnt_SPEC, crate::common::R>::from_register(
@@ -373,6 +499,7 @@ impl R64Cnt {
         )
     }
 
+    #[doc = "2-Hz Flag"]
     #[inline(always)]
     pub fn f2hz(self) -> crate::common::RegisterFieldBool<5, 1, 0, R64Cnt_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<5, 1, 0, R64Cnt_SPEC, crate::common::R>::from_register(
@@ -380,6 +507,7 @@ impl R64Cnt {
         )
     }
 
+    #[doc = "1-Hz Flag"]
     #[inline(always)]
     pub fn f1hz(self) -> crate::common::RegisterFieldBool<6, 1, 0, R64Cnt_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<6, 1, 0, R64Cnt_SPEC, crate::common::R>::from_register(
@@ -410,9 +538,11 @@ impl crate::sealed::RegSpec for Bcnt_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Binary Counter %s"]
 pub type Bcnt = crate::RegValueT<Bcnt_SPEC>;
 
 impl Bcnt {
+    #[doc = "Binary Counter"]
     #[inline(always)]
     pub fn bcnt(
         self,
@@ -434,9 +564,11 @@ impl crate::sealed::RegSpec for Rseccnt_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Second Counter (in Calendar Count Mode)"]
 pub type Rseccnt = crate::RegValueT<Rseccnt_SPEC>;
 
 impl Rseccnt {
+    #[doc = "1-Second Count"]
     #[inline(always)]
     pub fn sec1(
         self,
@@ -444,6 +576,7 @@ impl Rseccnt {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Rseccnt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "10-Second Count"]
     #[inline(always)]
     pub fn sec10(
         self,
@@ -465,9 +598,11 @@ impl crate::sealed::RegSpec for Rmincnt_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Minute Counter (in Calendar Count Mode)"]
 pub type Rmincnt = crate::RegValueT<Rmincnt_SPEC>;
 
 impl Rmincnt {
+    #[doc = "1-Minute Count"]
     #[inline(always)]
     pub fn min1(
         self,
@@ -475,6 +610,7 @@ impl Rmincnt {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Rmincnt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "10-Minute Count"]
     #[inline(always)]
     pub fn min10(
         self,
@@ -496,9 +632,11 @@ impl crate::sealed::RegSpec for Rhrcnt_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Hour Counter (in Calendar Count Mode)"]
 pub type Rhrcnt = crate::RegValueT<Rhrcnt_SPEC>;
 
 impl Rhrcnt {
+    #[doc = "1-Hour Count"]
     #[inline(always)]
     pub fn hr1(
         self,
@@ -506,6 +644,7 @@ impl Rhrcnt {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Rhrcnt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "10-Hour Count"]
     #[inline(always)]
     pub fn hr10(
         self,
@@ -513,6 +652,7 @@ impl Rhrcnt {
         crate::common::RegisterField::<4,0x3,1,0,u8,u8,Rhrcnt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "AM/PM select for time counter setting."]
     #[inline(always)]
     pub fn pm(
         self,
@@ -550,8 +690,10 @@ pub mod rhrcnt {
     pub struct Pm_SPEC;
     pub type Pm = crate::EnumBitfieldStruct<u8, Pm_SPEC>;
     impl Pm {
+        #[doc = "AM"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "PM"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -562,9 +704,11 @@ impl crate::sealed::RegSpec for Rwkcnt_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Day-of-Week Counter (in Calendar Count Mode)"]
 pub type Rwkcnt = crate::RegValueT<Rwkcnt_SPEC>;
 
 impl Rwkcnt {
+    #[doc = "Day-of-Week Counting"]
     #[inline(always)]
     pub fn dayw(
         self,
@@ -602,20 +746,28 @@ pub mod rwkcnt {
     pub struct Dayw_SPEC;
     pub type Dayw = crate::EnumBitfieldStruct<u8, Dayw_SPEC>;
     impl Dayw {
+        #[doc = "Sunday"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Monday"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "Tuesday"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Wednesday"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "Thursday"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Friday"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "Saturday"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting prohibited"]
         pub const _111: Self = Self::new(7);
     }
 }
@@ -626,9 +778,11 @@ impl crate::sealed::RegSpec for Rdaycnt_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Day Counter"]
 pub type Rdaycnt = crate::RegValueT<Rdaycnt_SPEC>;
 
 impl Rdaycnt {
+    #[doc = "1-Day Count"]
     #[inline(always)]
     pub fn date1(
         self,
@@ -636,6 +790,7 @@ impl Rdaycnt {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Rdaycnt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "10-Day Count"]
     #[inline(always)]
     pub fn date10(
         self,
@@ -657,9 +812,11 @@ impl crate::sealed::RegSpec for Rmoncnt_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Month Counter"]
 pub type Rmoncnt = crate::RegValueT<Rmoncnt_SPEC>;
 
 impl Rmoncnt {
+    #[doc = "1-Month Count"]
     #[inline(always)]
     pub fn mon1(
         self,
@@ -667,6 +824,7 @@ impl Rmoncnt {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Rmoncnt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "10-Month Count"]
     #[inline(always)]
     pub fn mon10(
         self,
@@ -690,9 +848,11 @@ impl crate::sealed::RegSpec for Ryrcnt_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Year Counter"]
 pub type Ryrcnt = crate::RegValueT<Ryrcnt_SPEC>;
 
 impl Ryrcnt {
+    #[doc = "1-Year Count"]
     #[inline(always)]
     pub fn yr1(
         self,
@@ -700,6 +860,7 @@ impl Ryrcnt {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Ryrcnt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "10-Year Count"]
     #[inline(always)]
     pub fn yr10(
         self,
@@ -721,9 +882,11 @@ impl crate::sealed::RegSpec for Bcntar_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Binary Counter %s Alarm Register"]
 pub type Bcntar = crate::RegValueT<Bcntar_SPEC>;
 
 impl Bcntar {
+    #[doc = "Alarm register associated with the 32-bit binary counter"]
     #[inline(always)]
     pub fn bcntar(
         self,
@@ -745,9 +908,11 @@ impl crate::sealed::RegSpec for Rsecar_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Second Alarm Register (in Calendar Count Mode)"]
 pub type Rsecar = crate::RegValueT<Rsecar_SPEC>;
 
 impl Rsecar {
+    #[doc = "1 Second"]
     #[inline(always)]
     pub fn sec1(
         self,
@@ -755,6 +920,7 @@ impl Rsecar {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Rsecar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "10 Seconds"]
     #[inline(always)]
     pub fn sec10(
         self,
@@ -762,6 +928,7 @@ impl Rsecar {
         crate::common::RegisterField::<4,0x7,1,0,u8,u8,Rsecar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "ENB"]
     #[inline(always)]
     pub fn enb(
         self,
@@ -799,8 +966,10 @@ pub mod rsecar {
     pub struct Enb_SPEC;
     pub type Enb = crate::EnumBitfieldStruct<u8, Enb_SPEC>;
     impl Enb {
+        #[doc = "Do not compare register value with RSECCNT counter value"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Compare register value with RSECCNT counter value"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -811,9 +980,11 @@ impl crate::sealed::RegSpec for Rminar_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Minute Alarm Register (in Calendar Count Mode)"]
 pub type Rminar = crate::RegValueT<Rminar_SPEC>;
 
 impl Rminar {
+    #[doc = "1 Minute"]
     #[inline(always)]
     pub fn min1(
         self,
@@ -821,6 +992,7 @@ impl Rminar {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Rminar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "10 Minutes"]
     #[inline(always)]
     pub fn min10(
         self,
@@ -828,6 +1000,7 @@ impl Rminar {
         crate::common::RegisterField::<4,0x7,1,0,u8,u8,Rminar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "ENB"]
     #[inline(always)]
     pub fn enb(
         self,
@@ -865,8 +1038,10 @@ pub mod rminar {
     pub struct Enb_SPEC;
     pub type Enb = crate::EnumBitfieldStruct<u8, Enb_SPEC>;
     impl Enb {
+        #[doc = "Do not compare register value with RMINCNT counter value"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Compare register value with RMINCNT counter value"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -877,9 +1052,11 @@ impl crate::sealed::RegSpec for Rhrar_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Hour Alarm Register (in Calendar Count Mode)"]
 pub type Rhrar = crate::RegValueT<Rhrar_SPEC>;
 
 impl Rhrar {
+    #[doc = "1 Hour"]
     #[inline(always)]
     pub fn hr1(
         self,
@@ -887,6 +1064,7 @@ impl Rhrar {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Rhrar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "10 Hours"]
     #[inline(always)]
     pub fn hr10(
         self,
@@ -894,6 +1072,7 @@ impl Rhrar {
         crate::common::RegisterField::<4,0x3,1,0,u8,u8,Rhrar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "AM/PM select for alarm setting."]
     #[inline(always)]
     pub fn pm(
         self,
@@ -919,6 +1098,7 @@ impl Rhrar {
         >::from_register(self, 0)
     }
 
+    #[doc = "ENB"]
     #[inline(always)]
     pub fn enb(
         self,
@@ -956,16 +1136,20 @@ pub mod rhrar {
     pub struct Pm_SPEC;
     pub type Pm = crate::EnumBitfieldStruct<u8, Pm_SPEC>;
     impl Pm {
+        #[doc = "AM"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "PM"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Enb_SPEC;
     pub type Enb = crate::EnumBitfieldStruct<u8, Enb_SPEC>;
     impl Enb {
+        #[doc = "Do not compare register value with RHRCNT counter value"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Compare register value with RHRCNT counter value"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -976,9 +1160,11 @@ impl crate::sealed::RegSpec for Rwkar_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Day-of-Week Alarm Register (in Calendar Count Mode)"]
 pub type Rwkar = crate::RegValueT<Rwkar_SPEC>;
 
 impl Rwkar {
+    #[doc = "Day-of-Week Setting"]
     #[inline(always)]
     pub fn dayw(
         self,
@@ -1004,6 +1190,7 @@ impl Rwkar {
         >::from_register(self, 0)
     }
 
+    #[doc = "ENB"]
     #[inline(always)]
     pub fn enb(
         self,
@@ -1041,28 +1228,38 @@ pub mod rwkar {
     pub struct Dayw_SPEC;
     pub type Dayw = crate::EnumBitfieldStruct<u8, Dayw_SPEC>;
     impl Dayw {
+        #[doc = "Sunday"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Monday"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "Tuesday"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Wednesday"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "Thursday"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Friday"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "Saturday"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting prohibited"]
         pub const _111: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Enb_SPEC;
     pub type Enb = crate::EnumBitfieldStruct<u8, Enb_SPEC>;
     impl Enb {
+        #[doc = "Do not compare register value with RWKCNT counter value"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Compare register value with RWKCNT counter value"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1073,9 +1270,11 @@ impl crate::sealed::RegSpec for Bcntaer_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Binary Counter %s Alarm Enable Register"]
 pub type Bcntaer = crate::RegValueT<Bcntaer_SPEC>;
 
 impl Bcntaer {
+    #[doc = "Setting the alarm enable associated with the 32-bit binary counter"]
     #[inline(always)]
     pub fn enb(
         self,
@@ -1097,9 +1296,11 @@ impl crate::sealed::RegSpec for Rdayar_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Date Alarm Register (in Calendar Count Mode)"]
 pub type Rdayar = crate::RegValueT<Rdayar_SPEC>;
 
 impl Rdayar {
+    #[doc = "1 Day"]
     #[inline(always)]
     pub fn date1(
         self,
@@ -1107,6 +1308,7 @@ impl Rdayar {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Rdayar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "10 Days"]
     #[inline(always)]
     pub fn date10(
         self,
@@ -1114,6 +1316,7 @@ impl Rdayar {
         crate::common::RegisterField::<4,0x3,1,0,u8,u8,Rdayar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "ENB"]
     #[inline(always)]
     pub fn enb(
         self,
@@ -1151,8 +1354,10 @@ pub mod rdayar {
     pub struct Enb_SPEC;
     pub type Enb = crate::EnumBitfieldStruct<u8, Enb_SPEC>;
     impl Enb {
+        #[doc = "Do not compare register value with RDAYCNT counter value"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Compare register value with RDAYCNT counter value"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1163,9 +1368,11 @@ impl crate::sealed::RegSpec for Rmonar_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Month Alarm Register (in Calendar Count Mode)"]
 pub type Rmonar = crate::RegValueT<Rmonar_SPEC>;
 
 impl Rmonar {
+    #[doc = "1 Month"]
     #[inline(always)]
     pub fn mon1(
         self,
@@ -1173,6 +1380,7 @@ impl Rmonar {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Rmonar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "10 Months"]
     #[inline(always)]
     pub fn mon10(
         self,
@@ -1182,6 +1390,7 @@ impl Rmonar {
         )
     }
 
+    #[doc = "ENB"]
     #[inline(always)]
     pub fn enb(
         self,
@@ -1219,8 +1428,10 @@ pub mod rmonar {
     pub struct Enb_SPEC;
     pub type Enb = crate::EnumBitfieldStruct<u8, Enb_SPEC>;
     impl Enb {
+        #[doc = "Do not compare register value with RMONCNT counter value"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Compare register value with RMONCNT counter value"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1231,9 +1442,11 @@ impl crate::sealed::RegSpec for Bcnt2Aer_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Binary Counter 2 Alarm Enable Register"]
 pub type Bcnt2Aer = crate::RegValueT<Bcnt2Aer_SPEC>;
 
 impl Bcnt2Aer {
+    #[doc = "Setting the alarm enable associated with the 32-bit binary counter"]
     #[inline(always)]
     pub fn enb(
         self,
@@ -1255,9 +1468,11 @@ impl crate::sealed::RegSpec for Ryrar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Year Alarm Register (in Calendar Count Mode)"]
 pub type Ryrar = crate::RegValueT<Ryrar_SPEC>;
 
 impl Ryrar {
+    #[doc = "1 Year"]
     #[inline(always)]
     pub fn yr1(
         self,
@@ -1265,6 +1480,7 @@ impl Ryrar {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Ryrar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "10 Years"]
     #[inline(always)]
     pub fn yr10(
         self,
@@ -1286,9 +1502,11 @@ impl crate::sealed::RegSpec for Bcnt3Aer_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Binary Counter 3 Alarm Enable Register"]
 pub type Bcnt3Aer = crate::RegValueT<Bcnt3Aer_SPEC>;
 
 impl Bcnt3Aer {
+    #[doc = "Setting the alarm enable associated with the 32-bit binary counter"]
     #[inline(always)]
     pub fn enb(
         self,
@@ -1310,9 +1528,11 @@ impl crate::sealed::RegSpec for Ryraren_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Year Alarm Enable Register (in Calendar Count Mode)"]
 pub type Ryraren = crate::RegValueT<Ryraren_SPEC>;
 
 impl Ryraren {
+    #[doc = "ENB"]
     #[inline(always)]
     pub fn enb(
         self,
@@ -1350,8 +1570,10 @@ pub mod ryraren {
     pub struct Enb_SPEC;
     pub type Enb = crate::EnumBitfieldStruct<u8, Enb_SPEC>;
     impl Enb {
+        #[doc = "Do not compare register value with the RYRCNT counter value"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Compare register value with the RYRCNT counter value"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1362,9 +1584,11 @@ impl crate::sealed::RegSpec for Rcr1_SPEC {
     type DataType = u8;
 }
 
+#[doc = "RTC Control Register 1"]
 pub type Rcr1 = crate::RegValueT<Rcr1_SPEC>;
 
 impl Rcr1 {
+    #[doc = "Alarm Interrupt Enable"]
     #[inline(always)]
     pub fn aie(
         self,
@@ -1390,6 +1614,7 @@ impl Rcr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Carry Interrupt Enable"]
     #[inline(always)]
     pub fn cie(
         self,
@@ -1415,6 +1640,7 @@ impl Rcr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Periodic Interrupt Enable"]
     #[inline(always)]
     pub fn pie(
         self,
@@ -1440,6 +1666,7 @@ impl Rcr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RTCOUT Output Select"]
     #[inline(always)]
     pub fn rtcos(
         self,
@@ -1465,6 +1692,7 @@ impl Rcr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Periodic Interrupt Select"]
     #[inline(always)]
     pub fn pes(
         self,
@@ -1502,58 +1730,77 @@ pub mod rcr1 {
     pub struct Aie_SPEC;
     pub type Aie = crate::EnumBitfieldStruct<u8, Aie_SPEC>;
     impl Aie {
+        #[doc = "Disable alarm interrupt requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable alarm interrupt requests"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cie_SPEC;
     pub type Cie = crate::EnumBitfieldStruct<u8, Cie_SPEC>;
     impl Cie {
+        #[doc = "Disable carry interrupt requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable carry interrupt requests"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pie_SPEC;
     pub type Pie = crate::EnumBitfieldStruct<u8, Pie_SPEC>;
     impl Pie {
+        #[doc = "Disable periodic interrupt requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable periodic interrupt requests"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rtcos_SPEC;
     pub type Rtcos = crate::EnumBitfieldStruct<u8, Rtcos_SPEC>;
     impl Rtcos {
+        #[doc = "Outputs 1 Hz on RTCOUT"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Outputs 64 Hz RTCOUT"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pes_SPEC;
     pub type Pes = crate::EnumBitfieldStruct<u8, Pes_SPEC>;
     impl Pes {
+        #[doc = "Generate periodic interrupt every 1/256 second"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Generate periodic interrupt every 1/128 second"]
         pub const _0_X_7: Self = Self::new(7);
 
+        #[doc = "Generate periodic interrupt every 1/64 second"]
         pub const _0_X_8: Self = Self::new(8);
 
+        #[doc = "Generate periodic interrupt every 1/32 second"]
         pub const _0_X_9: Self = Self::new(9);
 
+        #[doc = "Generate periodic interrupt every 1/16 second"]
         pub const _0_X_A: Self = Self::new(10);
 
+        #[doc = "Generate periodic interrupt every 1/8 second"]
         pub const _0_X_B: Self = Self::new(11);
 
+        #[doc = "Generate periodic interrupt every 1/4 second"]
         pub const _0_X_C: Self = Self::new(12);
 
+        #[doc = "Generate periodic interrupt every 1/2 second"]
         pub const _0_X_D: Self = Self::new(13);
 
+        #[doc = "Generate periodic interrupt every 1 second"]
         pub const _0_X_E: Self = Self::new(14);
 
+        #[doc = "Generate periodic interrupt every 2 seconds"]
         pub const _0_X_F: Self = Self::new(15);
 
+        #[doc = "Do not generate periodic interrupts"]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -1564,9 +1811,11 @@ impl crate::sealed::RegSpec for Rcr2_SPEC {
     type DataType = u8;
 }
 
+#[doc = "RTC Control Register 2 (in Calendar Count Mode)"]
 pub type Rcr2 = crate::RegValueT<Rcr2_SPEC>;
 
 impl Rcr2 {
+    #[doc = "Start"]
     #[inline(always)]
     pub fn start(
         self,
@@ -1592,6 +1841,7 @@ impl Rcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RTC Software Reset"]
     #[inline(always)]
     pub fn reset(
         self,
@@ -1617,6 +1867,7 @@ impl Rcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "30-Second Adjustment"]
     #[inline(always)]
     pub fn adj30(
         self,
@@ -1642,6 +1893,7 @@ impl Rcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RTCOUT Output Enable"]
     #[inline(always)]
     pub fn rtcoe(
         self,
@@ -1667,6 +1919,7 @@ impl Rcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Automatic Adjustment Enable"]
     #[inline(always)]
     pub fn aadje(
         self,
@@ -1692,6 +1945,7 @@ impl Rcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Automatic Adjustment Period Select"]
     #[inline(always)]
     pub fn aadjp(
         self,
@@ -1717,6 +1971,7 @@ impl Rcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Hours Mode"]
     #[inline(always)]
     pub fn hr24(
         self,
@@ -1742,6 +1997,7 @@ impl Rcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Count Mode Select"]
     #[inline(always)]
     pub fn cntmd(
         self,
@@ -1779,64 +2035,80 @@ pub mod rcr2 {
     pub struct Start_SPEC;
     pub type Start = crate::EnumBitfieldStruct<u8, Start_SPEC>;
     impl Start {
+        #[doc = "Stop prescaler and time counter"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Operate prescaler and time counter normally"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Reset_SPEC;
     pub type Reset = crate::EnumBitfieldStruct<u8, Reset_SPEC>;
     impl Reset {
+        #[doc = "In writing: Invalid (writing 0 has no effect). In reading: Normal time operation in progress, or an RTC software reset has completed."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "In writing: Initialize the prescaler and target registers for RTC software reset. In reading: RTC software reset in progress."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Adj30_SPEC;
     pub type Adj30 = crate::EnumBitfieldStruct<u8, Adj30_SPEC>;
     impl Adj30 {
+        #[doc = "In writing: Invalid (writing 0 has no effect). In reading: Normal time operation in progress, or 30-second adjustment has completed."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "In writing: Execute 30-second adjustment. In reading: 30-second adjustment in progress."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rtcoe_SPEC;
     pub type Rtcoe = crate::EnumBitfieldStruct<u8, Rtcoe_SPEC>;
     impl Rtcoe {
+        #[doc = "Disable RTCOUT output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable RTCOUT output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aadje_SPEC;
     pub type Aadje = crate::EnumBitfieldStruct<u8, Aadje_SPEC>;
     impl Aadje {
+        #[doc = "Disable automatic adjustment"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable automatic adjustment"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aadjp_SPEC;
     pub type Aadjp = crate::EnumBitfieldStruct<u8, Aadjp_SPEC>;
     impl Aadjp {
+        #[doc = "In normal operation mode, adjust RADJ.ADJ\\[5:0\\] setting from the count value of the prescaler every minute. In low-consumption clock mode, adjust RADJ.ADJ\\[5:0\\] setting from the count value of the 64-Hz counter every day."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "In normal operation mode, adjust RADJ.ADJ\\[5:0\\] setting from the count value of the prescaler every 10 seconds. In low-consumption clock mode, adjust RADJ.ADJ\\[5:0\\] setting from the count value of the 64-Hz counter every hour."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hr24_SPEC;
     pub type Hr24 = crate::EnumBitfieldStruct<u8, Hr24_SPEC>;
     impl Hr24 {
+        #[doc = "Operate RTC in 12-hour mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Operate RTC in 24-hour mode"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cntmd_SPEC;
     pub type Cntmd = crate::EnumBitfieldStruct<u8, Cntmd_SPEC>;
     impl Cntmd {
+        #[doc = "Calendar count mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Binary count mode"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1847,9 +2119,11 @@ impl crate::sealed::RegSpec for Rcr2Bcnt_SPEC {
     type DataType = u8;
 }
 
+#[doc = "RTC Control Register 2 (in Binary Count Mode)"]
 pub type Rcr2Bcnt = crate::RegValueT<Rcr2Bcnt_SPEC>;
 
 impl Rcr2Bcnt {
+    #[doc = "Start"]
     #[inline(always)]
     pub fn start(
         self,
@@ -1875,6 +2149,7 @@ impl Rcr2Bcnt {
         >::from_register(self, 0)
     }
 
+    #[doc = "RTC Software Reset"]
     #[inline(always)]
     pub fn reset(
         self,
@@ -1900,6 +2175,7 @@ impl Rcr2Bcnt {
         >::from_register(self, 0)
     }
 
+    #[doc = "RTCOUT Output Enable"]
     #[inline(always)]
     pub fn rtcoe(
         self,
@@ -1925,6 +2201,7 @@ impl Rcr2Bcnt {
         >::from_register(self, 0)
     }
 
+    #[doc = "Automatic Adjustment Enable"]
     #[inline(always)]
     pub fn aadje(
         self,
@@ -1950,6 +2227,7 @@ impl Rcr2Bcnt {
         >::from_register(self, 0)
     }
 
+    #[doc = "Automatic Adjustment Period Select"]
     #[inline(always)]
     pub fn aadjp(
         self,
@@ -1975,6 +2253,7 @@ impl Rcr2Bcnt {
         >::from_register(self, 0)
     }
 
+    #[doc = "Count Mode Select"]
     #[inline(always)]
     pub fn cntmd(
         self,
@@ -2012,48 +2291,60 @@ pub mod rcr2_bcnt {
     pub struct Start_SPEC;
     pub type Start = crate::EnumBitfieldStruct<u8, Start_SPEC>;
     impl Start {
+        #[doc = "Stop the 32-bit binary counter, 64-Hz counter, and prescaler"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Operate the 32-bit binary counter, 64-Hz counter, and prescaler normally"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Reset_SPEC;
     pub type Reset = crate::EnumBitfieldStruct<u8, Reset_SPEC>;
     impl Reset {
+        #[doc = "In writing: Invalid (writing 0 has no effect). In reading: Normal time operation in progress, or an RTC software reset has completed."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "In writing: Initialize the prescaler and target registers for RTC software reset. In reading: RTC software reset in progress."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rtcoe_SPEC;
     pub type Rtcoe = crate::EnumBitfieldStruct<u8, Rtcoe_SPEC>;
     impl Rtcoe {
+        #[doc = "Disable RTCOUT output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable RTCOUT output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aadje_SPEC;
     pub type Aadje = crate::EnumBitfieldStruct<u8, Aadje_SPEC>;
     impl Aadje {
+        #[doc = "Disable automatic adjustment"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable automatic adjustment"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aadjp_SPEC;
     pub type Aadjp = crate::EnumBitfieldStruct<u8, Aadjp_SPEC>;
     impl Aadjp {
+        #[doc = "In normal operation mode, add or subtract the RADJ.ADJ\\[5:0\\] bits from the prescaler count value every 32 seconds. In low-consumption clock mode, add or subtract the RADJ.ADJ\\[5:0\\] bits from the 64-Hz counter count value every 8192 seconds."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "In normal operation mode, add or subtract the RADJ.ADJ\\[5:0\\] bits from the prescaler count value every 8 seconds. In low-consumption clock mode, add or subtract the RADJ.ADJ\\[5:0\\] bits from the 64-Hz counter count value every 2048 seconds."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cntmd_SPEC;
     pub type Cntmd = crate::EnumBitfieldStruct<u8, Cntmd_SPEC>;
     impl Cntmd {
+        #[doc = "Calendar count mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Binary count mode"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2064,9 +2355,11 @@ impl crate::sealed::RegSpec for Rcr4_SPEC {
     type DataType = u8;
 }
 
+#[doc = "RTC Control Register 4"]
 pub type Rcr4 = crate::RegValueT<Rcr4_SPEC>;
 
 impl Rcr4 {
+    #[doc = "Count Source Select in normal operation mode"]
     #[inline(always)]
     pub fn rcksel(
         self,
@@ -2092,6 +2385,7 @@ impl Rcr4 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RTC Operation Mode Select"]
     #[inline(always)]
     pub fn ropsel(
         self,
@@ -2129,16 +2423,20 @@ pub mod rcr4 {
     pub struct Rcksel_SPEC;
     pub type Rcksel = crate::EnumBitfieldStruct<u8, Rcksel_SPEC>;
     impl Rcksel {
+        #[doc = "Sub-clock oscillator is selected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "LOCO is selected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ropsel_SPEC;
     pub type Ropsel = crate::EnumBitfieldStruct<u8, Ropsel_SPEC>;
     impl Ropsel {
+        #[doc = "Normal operation mode is selected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Low-consumption clock mode is selected."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2149,9 +2447,11 @@ impl crate::sealed::RegSpec for Rfrh_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Frequency Register H"]
 pub type Rfrh = crate::RegValueT<Rfrh_SPEC>;
 
 impl Rfrh {
+    #[doc = "Write 0 before writing to the RFRL register after a cold start."]
     #[inline(always)]
     pub fn rfc16(self) -> crate::common::RegisterFieldBool<0, 1, 0, Rfrh_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<0, 1, 0, Rfrh_SPEC, crate::common::RW>::from_register(
@@ -2173,9 +2473,11 @@ impl crate::sealed::RegSpec for Rfrl_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Frequency Register L"]
 pub type Rfrl = crate::RegValueT<Rfrl_SPEC>;
 
 impl Rfrl {
+    #[doc = "Frequency Comparison Value"]
     #[inline(always)]
     pub fn rfc(
         self,
@@ -2197,9 +2499,11 @@ impl crate::sealed::RegSpec for Radj_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Time Error Adjustment Register"]
 pub type Radj = crate::RegValueT<Radj_SPEC>;
 
 impl Radj {
+    #[doc = "Adjustment Value"]
     #[inline(always)]
     pub fn adj(
         self,
@@ -2207,6 +2511,7 @@ impl Radj {
         crate::common::RegisterField::<0,0x3f,1,0,u8,u8,Radj_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Plus-Minus"]
     #[inline(always)]
     pub fn pmadj(
         self,
@@ -2244,12 +2549,16 @@ pub mod radj {
     pub struct Pmadj_SPEC;
     pub type Pmadj = crate::EnumBitfieldStruct<u8, Pmadj_SPEC>;
     impl Pmadj {
+        #[doc = "Do not perform adjustment."]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "In normal operation mode, adjustment is performed by the addition to the prescaler. In low-consumption clock mode, adjustment is performed by the addition to the 64-Hz counter."]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "In normal operation mode, adjustment is performed by the subtraction from the prescaler. In low-consumption clock mode, adjustment is performed by the subtraction from the 64-Hz counter."]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Setting prohibited."]
         pub const _11: Self = Self::new(3);
     }
 }

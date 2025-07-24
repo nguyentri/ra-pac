@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.00.01, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:22:53 +0000
+// Generated from SVD 1.00.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:54:26 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::CpuCtrlNs {
         self.ptr
     }
 
+    #[doc = "CPU Lockup Control Register"]
     #[inline(always)]
     pub const fn cpulckupcr(
         &self,
@@ -45,6 +46,7 @@ impl super::CpuCtrlNs {
         }
     }
 
+    #[doc = "CPU Non-secure Function Lock Control Register"]
     #[inline(always)]
     pub const fn cpulockcrns(
         &self,
@@ -56,6 +58,7 @@ impl super::CpuCtrlNs {
         }
     }
 
+    #[doc = "CPU Control Register Protection Register"]
     #[inline(always)]
     pub const fn cpucrpt(
         &self,
@@ -74,9 +77,11 @@ impl crate::sealed::RegSpec for Cpulckupcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CPU Lockup Control Register"]
 pub type Cpulckupcr = crate::RegValueT<Cpulckupcr_SPEC>;
 
 impl Cpulckupcr {
+    #[doc = "Operation after detection of CPU lockup"]
     #[inline(always)]
     pub fn oad(
         self,
@@ -114,8 +119,10 @@ pub mod cpulckupcr {
     pub struct Oad_SPEC;
     pub type Oad = crate::EnumBitfieldStruct<u8, Oad_SPEC>;
     impl Oad {
+        #[doc = "Non-maskable Interrupt"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CPU Lockup reset"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -126,6 +133,7 @@ impl crate::sealed::RegSpec for Cpulockcrns_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CPU Non-secure Function Lock Control Register"]
 pub type Cpulockcrns = crate::RegValueT<Cpulockcrns_SPEC>;
 
 impl Cpulockcrns {
@@ -136,6 +144,7 @@ impl Cpulockcrns {
         crate::common::RegisterFieldBool::<0,1,0,Cpulockcrns_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Disable writes to registers that are associated with the Non-secure MPU region from software or from a debug agent connected to the processor:"]
     #[inline(always)]
     pub fn lcknsmpu(
         self,
@@ -157,9 +166,11 @@ impl crate::sealed::RegSpec for Cpucrpt_SPEC {
     type DataType = u16;
 }
 
+#[doc = "CPU Control Register Protection Register"]
 pub type Cpucrpt = crate::RegValueT<Cpucrpt_SPEC>;
 
 impl Cpucrpt {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -185,6 +196,7 @@ impl Cpucrpt {
         >::from_register(self, 0)
     }
 
+    #[doc = "The KEY\\[7:0\\] bits enable or disable writing to the PROTECT bit."]
     #[inline(always)]
     pub fn key(
         self,
@@ -204,8 +216,10 @@ pub mod cpucrpt {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "Writing to CPULCKUPCR register is permitted."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Writing to CPULCKUPCR register is not permitted. Read access is permitted."]
         pub const _1: Self = Self::new(1);
     }
 }

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.00.01, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:22:53 +0000
+// Generated from SVD 1.00.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:54:26 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::OcdCpuNs {
         self.ptr
     }
 
+    #[doc = "MCU Control Register"]
     #[inline(always)]
     pub const fn mcuctrl(
         &self,
@@ -45,6 +46,7 @@ impl super::OcdCpuNs {
         }
     }
 
+    #[doc = "JTAG Boot Mode Entry Register"]
     #[inline(always)]
     pub const fn jbmdr(&self) -> &'static crate::common::Reg<self::Jbmdr_SPEC, crate::common::RW> {
         unsafe {
@@ -54,6 +56,7 @@ impl super::OcdCpuNs {
         }
     }
 
+    #[doc = "JTAG Boot Receive Data Register"]
     #[inline(always)]
     pub const fn jbrdr(&self) -> &'static crate::common::Reg<self::Jbrdr_SPEC, crate::common::RW> {
         unsafe {
@@ -63,6 +66,7 @@ impl super::OcdCpuNs {
         }
     }
 
+    #[doc = "JTAG Boot Transmit Data Register"]
     #[inline(always)]
     pub const fn jbtdr(&self) -> &'static crate::common::Reg<self::Jbtdr_SPEC, crate::common::RW> {
         unsafe {
@@ -72,6 +76,7 @@ impl super::OcdCpuNs {
         }
     }
 
+    #[doc = "JTAG Boot Status Register"]
     #[inline(always)]
     pub const fn jbstr(&self) -> &'static crate::common::Reg<self::Jbstr_SPEC, crate::common::RW> {
         unsafe {
@@ -81,6 +86,7 @@ impl super::OcdCpuNs {
         }
     }
 
+    #[doc = "JTAG Boot Interrupt Control Register"]
     #[inline(always)]
     pub const fn jbicr(&self) -> &'static crate::common::Reg<self::Jbicr_SPEC, crate::common::RW> {
         unsafe {
@@ -97,9 +103,11 @@ impl crate::sealed::RegSpec for Mcuctrl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MCU Control Register"]
 pub type Mcuctrl = crate::RegValueT<Mcuctrl_SPEC>;
 
 impl Mcuctrl {
+    #[doc = "External Debug Request. Writing 1 to the bit causes a CPU Halt or Debug Monitor exception request."]
     #[inline(always)]
     pub fn edbgrq(
         self,
@@ -162,16 +170,20 @@ pub mod mcuctrl {
     pub struct Edbgrq_SPEC;
     pub type Edbgrq = crate::EnumBitfieldStruct<u8, Edbgrq_SPEC>;
     impl Edbgrq {
+        #[doc = "Debug event is not requested"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Debug event is requested"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cpuwait_SPEC;
     pub type Cpuwait = crate::EnumBitfieldStruct<u8, Cpuwait_SPEC>;
     impl Cpuwait {
+        #[doc = "Deassert CPUWAIT CPU starts boot-up sequence and instruction execution out of Reset."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Assert CPUWAIT CPU is forced into a quiescent state out of Reset."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -182,9 +194,11 @@ impl crate::sealed::RegSpec for Jbmdr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "JTAG Boot Mode Entry Register"]
 pub type Jbmdr = crate::RegValueT<Jbmdr_SPEC>;
 
 impl Jbmdr {
+    #[doc = "Mode entry key"]
     #[inline(always)]
     pub fn key(
         self,
@@ -206,9 +220,11 @@ impl crate::sealed::RegSpec for Jbrdr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "JTAG Boot Receive Data Register"]
 pub type Jbrdr = crate::RegValueT<Jbrdr_SPEC>;
 
 impl Jbrdr {
+    #[doc = "Received data register"]
     #[inline(always)]
     pub fn rdat(
         self,
@@ -231,9 +247,11 @@ impl crate::sealed::RegSpec for Jbtdr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "JTAG Boot Transmit Data Register"]
 pub type Jbtdr = crate::RegValueT<Jbtdr_SPEC>;
 
 impl Jbtdr {
+    #[doc = "Transmitted data register"]
     #[inline(always)]
     pub fn tdat(
         self,
@@ -256,9 +274,11 @@ impl crate::sealed::RegSpec for Jbstr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "JTAG Boot Status Register"]
 pub type Jbstr = crate::RegValueT<Jbstr_SPEC>;
 
 impl Jbstr {
+    #[doc = "Receive buffer full"]
     #[inline(always)]
     pub fn rdf(
         self,
@@ -284,6 +304,7 @@ impl Jbstr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transmit data empty"]
     #[inline(always)]
     pub fn tde(
         self,
@@ -321,16 +342,20 @@ pub mod jbstr {
     pub struct Rdf_SPEC;
     pub type Rdf = crate::EnumBitfieldStruct<u8, Rdf_SPEC>;
     impl Rdf {
+        #[doc = "No receiving data"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "There is receiving data"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tde_SPEC;
     pub type Tde = crate::EnumBitfieldStruct<u8, Tde_SPEC>;
     impl Tde {
+        #[doc = "There is data transmission"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "No data transmission"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -341,9 +366,11 @@ impl crate::sealed::RegSpec for Jbicr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "JTAG Boot Interrupt Control Register"]
 pub type Jbicr = crate::RegValueT<Jbicr_SPEC>;
 
 impl Jbicr {
+    #[doc = "Receive buffer full interrupt enabled"]
     #[inline(always)]
     pub fn rdfie(
         self,
@@ -381,8 +408,10 @@ pub mod jbicr {
     pub struct Rdfie_SPEC;
     pub type Rdfie = crate::EnumBitfieldStruct<u8, Rdfie_SPEC>;
     impl Rdfie {
+        #[doc = "Interrupt request disabled by RDF = 1"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable interrupt request by RDF = 1"]
         pub const _1: Self = Self::new(1);
     }
 }

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.40.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:18:50 +0000
+// Generated from SVD 1.50.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:54 +0000
 
 //! Contains perfect hash function that maps form raw addresses to
 //! a string containing the names of all registers that point to an address.
@@ -820,6 +820,9 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
     ",
   0x4001e036u64 => "
       SYSC.hococr(),
+    ",
+  0x4001e037u64 => "
+      SYSC.hococr2(),
     ",
   0x4001e038u64 => "
       SYSC.mococr(),

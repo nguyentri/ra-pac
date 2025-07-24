@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.40.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:18:50 +0000
+// Generated from SVD 1.50.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:54 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Dma {
         self.ptr
     }
 
+    #[doc = "DMA Module Activation Register"]
     #[inline(always)]
     pub const fn dmast(&self) -> &'static crate::common::Reg<self::Dmast_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Dma {
         }
     }
 
+    #[doc = "DMAC Error Channel Register"]
     #[inline(always)]
     pub const fn dmechr(
         &self,
@@ -61,9 +63,11 @@ impl crate::sealed::RegSpec for Dmast_SPEC {
     type DataType = u8;
 }
 
+#[doc = "DMA Module Activation Register"]
 pub type Dmast = crate::RegValueT<Dmast_SPEC>;
 
 impl Dmast {
+    #[doc = "DMAC Operation Enable"]
     #[inline(always)]
     pub fn dmst(
         self,
@@ -101,8 +105,10 @@ pub mod dmast {
     pub struct Dmst_SPEC;
     pub type Dmst = crate::EnumBitfieldStruct<u8, Dmst_SPEC>;
     impl Dmst {
+        #[doc = "DMAC activation is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMAC activation is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -113,9 +119,11 @@ impl crate::sealed::RegSpec for Dmechr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DMAC Error Channel Register"]
 pub type Dmechr = crate::RegValueT<Dmechr_SPEC>;
 
 impl Dmechr {
+    #[doc = "DMAC Error channel"]
     #[inline(always)]
     pub fn dmech(
         self,
@@ -123,6 +131,7 @@ impl Dmechr {
         crate::common::RegisterField::<0,0x7,1,0,u8,u8,Dmechr_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "DMAC Error channel Security Attribution Monitor"]
     #[inline(always)]
     pub fn dmechsam(
         self,
@@ -148,6 +157,7 @@ impl Dmechr {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMAC Error Status"]
     #[inline(always)]
     pub fn dmesta(
         self,
@@ -185,16 +195,20 @@ pub mod dmechr {
     pub struct Dmechsam_SPEC;
     pub type Dmechsam = crate::EnumBitfieldStruct<u8, Dmechsam_SPEC>;
     impl Dmechsam {
+        #[doc = "Secure channel"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure channel"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dmesta_SPEC;
     pub type Dmesta = crate::EnumBitfieldStruct<u8, Dmesta_SPEC>;
     impl Dmesta {
+        #[doc = "No DMA transfer error occurred"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer error occurred"]
         pub const _1: Self = Self::new(1);
     }
 }

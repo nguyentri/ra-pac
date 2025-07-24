@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.40.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:21:24 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:39 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Tzf {
         self.ptr
     }
 
+    #[doc = "TrustZone Filter Operation After Detection Register"]
     #[inline(always)]
     pub const fn tzfoad(
         &self,
@@ -45,6 +46,7 @@ impl super::Tzf {
         }
     }
 
+    #[doc = "TrustZone Filter Protect Register"]
     #[inline(always)]
     pub const fn tzfpt(&self) -> &'static crate::common::Reg<self::Tzfpt_SPEC, crate::common::RW> {
         unsafe {
@@ -61,9 +63,11 @@ impl crate::sealed::RegSpec for Tzfoad_SPEC {
     type DataType = u16;
 }
 
+#[doc = "TrustZone Filter Operation After Detection Register"]
 pub type Tzfoad = crate::RegValueT<Tzfoad_SPEC>;
 
 impl Tzfoad {
+    #[doc = "Operation after detection"]
     #[inline(always)]
     pub fn oad(
         self,
@@ -89,6 +93,7 @@ impl Tzfoad {
         >::from_register(self, 0)
     }
 
+    #[doc = "KeyCode"]
     #[inline(always)]
     pub fn key(
         self,
@@ -108,8 +113,10 @@ pub mod tzfoad {
     pub struct Oad_SPEC;
     pub type Oad = crate::EnumBitfieldStruct<u8, Oad_SPEC>;
     impl Oad {
+        #[doc = "Non-maskable interrupt"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Reset"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -120,9 +127,11 @@ impl crate::sealed::RegSpec for Tzfpt_SPEC {
     type DataType = u16;
 }
 
+#[doc = "TrustZone Filter Protect Register"]
 pub type Tzfpt = crate::RegValueT<Tzfpt_SPEC>;
 
 impl Tzfpt {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -148,6 +157,7 @@ impl Tzfpt {
         >::from_register(self, 0)
     }
 
+    #[doc = "KeyCode"]
     #[inline(always)]
     pub fn key(
         self,
@@ -167,8 +177,10 @@ pub mod tzfpt {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "All Bus TrustZone Filter register writing is protected. Read is possible."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "All Bus TrustZone Filter register writing is possible."]
         pub const _1: Self = Self::new(1);
     }
 }

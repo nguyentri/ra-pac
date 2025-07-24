@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:20:07 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:16 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Spmon {
         self.ptr
     }
 
+    #[doc = "Stack Pointer Monitor Operation After Detection Register"]
     #[inline(always)]
     pub const fn mspmpuoad(
         &self,
@@ -45,6 +46,7 @@ impl super::Spmon {
         }
     }
 
+    #[doc = "Stack Pointer Monitor Access Control Register"]
     #[inline(always)]
     pub const fn mspmpuctl(
         &self,
@@ -56,6 +58,7 @@ impl super::Spmon {
         }
     }
 
+    #[doc = "Stack Pointer Monitor Protection Register"]
     #[inline(always)]
     pub const fn mspmpupt(
         &self,
@@ -67,6 +70,7 @@ impl super::Spmon {
         }
     }
 
+    #[doc = "Main Stack Pointer Monitor Start Address Register"]
     #[inline(always)]
     pub const fn mspmpusa(
         &self,
@@ -78,6 +82,7 @@ impl super::Spmon {
         }
     }
 
+    #[doc = "Main Stack Pointer Monitor End Address Register"]
     #[inline(always)]
     pub const fn mspmpuea(
         &self,
@@ -89,6 +94,7 @@ impl super::Spmon {
         }
     }
 
+    #[doc = "Stack Pointer Monitor Operation After Detection Register"]
     #[inline(always)]
     pub const fn pspmpuoad(
         &self,
@@ -100,6 +106,7 @@ impl super::Spmon {
         }
     }
 
+    #[doc = "Stack Pointer Monitor Access Control Register"]
     #[inline(always)]
     pub const fn pspmpuctl(
         &self,
@@ -111,6 +118,7 @@ impl super::Spmon {
         }
     }
 
+    #[doc = "Stack Pointer Monitor Protection Register"]
     #[inline(always)]
     pub const fn pspmpupt(
         &self,
@@ -122,6 +130,7 @@ impl super::Spmon {
         }
     }
 
+    #[doc = "Process Stack Pointer Monitor Start Address Register"]
     #[inline(always)]
     pub const fn pspmpusa(
         &self,
@@ -133,6 +142,7 @@ impl super::Spmon {
         }
     }
 
+    #[doc = "Process Stack Pointer Monitor End Address Register"]
     #[inline(always)]
     pub const fn pspmpuea(
         &self,
@@ -151,9 +161,11 @@ impl crate::sealed::RegSpec for Mspmpuoad_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Stack Pointer Monitor Operation After Detection Register"]
 pub type Mspmpuoad = crate::RegValueT<Mspmpuoad_SPEC>;
 
 impl Mspmpuoad {
+    #[doc = "Write Keyword The data written to these bits are not stored."]
     #[inline(always)]
     pub fn key(
         self,
@@ -179,6 +191,7 @@ impl Mspmpuoad {
         >::from_register(self, 0)
     }
 
+    #[doc = "Operation after detection"]
     #[inline(always)]
     pub fn oad(
         self,
@@ -216,16 +229,20 @@ pub mod mspmpuoad {
     pub struct Key_SPEC;
     pub type Key = crate::EnumBitfieldStruct<u8, Key_SPEC>;
     impl Key {
+        #[doc = "Writing to the OAD bit is valid, when the KEY bits are written 0xA5."]
         pub const _0_X_A_5: Self = Self::new(165);
 
+        #[doc = "Writing to the OAD bit is invalid."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Oad_SPEC;
     pub type Oad = crate::EnumBitfieldStruct<u8, Oad_SPEC>;
     impl Oad {
+        #[doc = "Internal reset."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "Non-maskable interrupt."]
         pub const _0: Self = Self::new(0);
     }
 }
@@ -236,9 +253,11 @@ impl crate::sealed::RegSpec for Mspmpuctl_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Stack Pointer Monitor Access Control Register"]
 pub type Mspmpuctl = crate::RegValueT<Mspmpuctl_SPEC>;
 
 impl Mspmpuctl {
+    #[doc = "SP_main monitor error flag"]
     #[inline(always)]
     pub fn error(
         self,
@@ -264,6 +283,7 @@ impl Mspmpuctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "SP_main monitor enable"]
     #[inline(always)]
     pub fn enable(
         self,
@@ -301,16 +321,20 @@ pub mod mspmpuctl {
     pub struct Error_SPEC;
     pub type Error = crate::EnumBitfieldStruct<u8, Error_SPEC>;
     impl Error {
+        #[doc = "SP_main has not overflowed or underflowed."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "SP_main has overflowed or underflowed."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Enable_SPEC;
     pub type Enable = crate::EnumBitfieldStruct<u8, Enable_SPEC>;
     impl Enable {
+        #[doc = "SP_main monitor is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "SP_main monitor is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -321,9 +345,11 @@ impl crate::sealed::RegSpec for Mspmpupt_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Stack Pointer Monitor Protection Register"]
 pub type Mspmpupt = crate::RegValueT<Mspmpupt_SPEC>;
 
 impl Mspmpupt {
+    #[doc = "Write Keyword The data written to these bits are not stored."]
     #[inline(always)]
     pub fn key(
         self,
@@ -349,6 +375,7 @@ impl Mspmpupt {
         >::from_register(self, 0)
     }
 
+    #[doc = "Protection of register (MSPMPUAC, MSPMPUSA and MSPMPUSE)"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -386,16 +413,20 @@ pub mod mspmpupt {
     pub struct Key_SPEC;
     pub type Key = crate::EnumBitfieldStruct<u8, Key_SPEC>;
     impl Key {
+        #[doc = "Writing to the PROTECT bit is valid, when the KEY bits are written 0xA5."]
         pub const _0_X_A_5: Self = Self::new(165);
 
+        #[doc = "Writing to the PROTECT bit is invalid."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "Stack Pointer Monitor register writing is possible."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stack Pointer Monitor register writing is protected."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -406,9 +437,11 @@ impl crate::sealed::RegSpec for Mspmpusa_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Main Stack Pointer Monitor Start Address Register"]
 pub type Mspmpusa = crate::RegValueT<Mspmpusa_SPEC>;
 
 impl Mspmpusa {
+    #[doc = "Region start address register Address where the region starts, for use in region determination.NOTE: Range: 0x1FF00000-0x200FFFFC         The low-order 2 bits are fixed to 0."]
     #[inline(always)]
     pub fn mspmpusa(
         self,
@@ -440,9 +473,11 @@ impl crate::sealed::RegSpec for Mspmpuea_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Main Stack Pointer Monitor End Address Register"]
 pub type Mspmpuea = crate::RegValueT<Mspmpuea_SPEC>;
 
 impl Mspmpuea {
+    #[doc = "Region end address register Address where the region starts, for use in region determination.NOTE: Range: 0x1FF00003-0x200FFFFF         The low-order 2 bits are fixed to 1."]
     #[inline(always)]
     pub fn mspmpuea(
         self,
@@ -474,9 +509,11 @@ impl crate::sealed::RegSpec for Pspmpuoad_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Stack Pointer Monitor Operation After Detection Register"]
 pub type Pspmpuoad = crate::RegValueT<Pspmpuoad_SPEC>;
 
 impl Pspmpuoad {
+    #[doc = "Write Keyword The data written to these bits are not stored."]
     #[inline(always)]
     pub fn key(
         self,
@@ -502,6 +539,7 @@ impl Pspmpuoad {
         >::from_register(self, 0)
     }
 
+    #[doc = "Operation after detection"]
     #[inline(always)]
     pub fn oad(
         self,
@@ -539,16 +577,20 @@ pub mod pspmpuoad {
     pub struct Key_SPEC;
     pub type Key = crate::EnumBitfieldStruct<u8, Key_SPEC>;
     impl Key {
+        #[doc = "Writing to the OAD bit is valid, when the KEY bits are written 0xA5."]
         pub const _0_X_A_5: Self = Self::new(165);
 
+        #[doc = "Writing to the OAD bit is invalid."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Oad_SPEC;
     pub type Oad = crate::EnumBitfieldStruct<u8, Oad_SPEC>;
     impl Oad {
+        #[doc = "Internal reset."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "Non-maskable interrupt."]
         pub const _0: Self = Self::new(0);
     }
 }
@@ -559,9 +601,11 @@ impl crate::sealed::RegSpec for Pspmpuctl_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Stack Pointer Monitor Access Control Register"]
 pub type Pspmpuctl = crate::RegValueT<Pspmpuctl_SPEC>;
 
 impl Pspmpuctl {
+    #[doc = "SP_process monitor error flag"]
     #[inline(always)]
     pub fn error(
         self,
@@ -587,6 +631,7 @@ impl Pspmpuctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "SP_process monitor enable"]
     #[inline(always)]
     pub fn enable(
         self,
@@ -624,16 +669,20 @@ pub mod pspmpuctl {
     pub struct Error_SPEC;
     pub type Error = crate::EnumBitfieldStruct<u8, Error_SPEC>;
     impl Error {
+        #[doc = "SP_process has not overflowed or underflowed."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "SP_process has overflowed or underflowed."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Enable_SPEC;
     pub type Enable = crate::EnumBitfieldStruct<u8, Enable_SPEC>;
     impl Enable {
+        #[doc = "SP_process monitor is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "SP_process monitor is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -644,9 +693,11 @@ impl crate::sealed::RegSpec for Pspmpupt_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Stack Pointer Monitor Protection Register"]
 pub type Pspmpupt = crate::RegValueT<Pspmpupt_SPEC>;
 
 impl Pspmpupt {
+    #[doc = "Write Keyword The data written to these bits are not stored."]
     #[inline(always)]
     pub fn key(
         self,
@@ -672,6 +723,7 @@ impl Pspmpupt {
         >::from_register(self, 0)
     }
 
+    #[doc = "Protection of register (PSPMPUAC, PSPMPUSA and PSPMPUSE)"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -709,16 +761,20 @@ pub mod pspmpupt {
     pub struct Key_SPEC;
     pub type Key = crate::EnumBitfieldStruct<u8, Key_SPEC>;
     impl Key {
+        #[doc = "Writing to the PROTECT bit is valid, when the KEY bits are written 0xA5."]
         pub const _0_X_A_5: Self = Self::new(165);
 
+        #[doc = "Writing to the PROTECT bit is invalid."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "Stack Pointer Monitor register writing is possible."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stack Pointer Monitor register writing is protected."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -729,9 +785,11 @@ impl crate::sealed::RegSpec for Pspmpusa_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Process Stack Pointer Monitor Start Address Register"]
 pub type Pspmpusa = crate::RegValueT<Pspmpusa_SPEC>;
 
 impl Pspmpusa {
+    #[doc = "Region start address register Address where the region starts, for use in region determination.NOTE: Range: 0x1FF00000-0x200FFFFC         The low-order 2 bits are fixed to 0."]
     #[inline(always)]
     pub fn pspmpusa(
         self,
@@ -763,9 +821,11 @@ impl crate::sealed::RegSpec for Pspmpuea_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Process Stack Pointer Monitor End Address Register"]
 pub type Pspmpuea = crate::RegValueT<Pspmpuea_SPEC>;
 
 impl Pspmpuea {
+    #[doc = "Region end address register Address where the region starts, for use in region determination.NOTE: Range: 0x1FF00003-0x200FFFFF         The low-order 2 bits are fixed to 1."]
     #[inline(always)]
     pub fn pspmpuea(
         self,

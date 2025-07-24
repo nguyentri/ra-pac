@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.10.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:47 +0000
+// Generated from SVD 1.10.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:59 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Flcn {
         self.ptr
     }
 
+    #[doc = "Data Flash Control Register"]
     #[inline(always)]
     pub const fn dflctl(
         &self,
@@ -45,6 +46,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash P/E Mode Control Register"]
     #[inline(always)]
     pub const fn fpmcr(&self) -> &'static crate::common::Reg<self::Fpmcr_SPEC, crate::common::RW> {
         unsafe {
@@ -54,6 +56,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Area Select Register"]
     #[inline(always)]
     pub const fn fasr(&self) -> &'static crate::common::Reg<self::Fasr_SPEC, crate::common::RW> {
         unsafe {
@@ -63,6 +66,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Processing Start Address Register L"]
     #[inline(always)]
     pub const fn fsarl(&self) -> &'static crate::common::Reg<self::Fsarl_SPEC, crate::common::RW> {
         unsafe {
@@ -72,6 +76,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Processing Start Address Register H"]
     #[inline(always)]
     pub const fn fsarh(&self) -> &'static crate::common::Reg<self::Fsarh_SPEC, crate::common::RW> {
         unsafe {
@@ -81,6 +86,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Control Register"]
     #[inline(always)]
     pub const fn fcr(&self) -> &'static crate::common::Reg<self::Fcr_SPEC, crate::common::RW> {
         unsafe {
@@ -90,6 +96,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Processing End Address Register L"]
     #[inline(always)]
     pub const fn fearl(&self) -> &'static crate::common::Reg<self::Fearl_SPEC, crate::common::RW> {
         unsafe {
@@ -99,6 +106,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Processing End Address Register H"]
     #[inline(always)]
     pub const fn fearh(&self) -> &'static crate::common::Reg<self::Fearh_SPEC, crate::common::RW> {
         unsafe {
@@ -108,6 +116,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Reset Register"]
     #[inline(always)]
     pub const fn fresetr(
         &self,
@@ -119,6 +128,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Status Register 1"]
     #[inline(always)]
     pub const fn fstatr1(
         &self,
@@ -130,6 +140,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Write Buffer Register L0"]
     #[inline(always)]
     pub const fn fwbl0(&self) -> &'static crate::common::Reg<self::Fwbl0_SPEC, crate::common::RW> {
         unsafe {
@@ -139,6 +150,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Write Buffer Register H0"]
     #[inline(always)]
     pub const fn fwbh0(&self) -> &'static crate::common::Reg<self::Fwbh0_SPEC, crate::common::RW> {
         unsafe {
@@ -148,6 +160,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Protection Unlock Register"]
     #[inline(always)]
     pub const fn fpr(&self) -> &'static crate::common::Reg<self::Fpr_SPEC, crate::common::W> {
         unsafe {
@@ -157,6 +170,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Protection Unlock Status Register"]
     #[inline(always)]
     pub const fn fpsr(&self) -> &'static crate::common::Reg<self::Fpsr_SPEC, crate::common::R> {
         unsafe {
@@ -166,6 +180,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Startup Setting Monitor Register"]
     #[inline(always)]
     pub const fn fscmr(&self) -> &'static crate::common::Reg<self::Fscmr_SPEC, crate::common::R> {
         unsafe {
@@ -175,6 +190,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Access Window Start Address Monitor Register"]
     #[inline(always)]
     pub const fn fawsmr(&self) -> &'static crate::common::Reg<self::Fawsmr_SPEC, crate::common::R> {
         unsafe {
@@ -184,6 +200,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Access Window End Address Monitor Register"]
     #[inline(always)]
     pub const fn fawemr(&self) -> &'static crate::common::Reg<self::Fawemr_SPEC, crate::common::R> {
         unsafe {
@@ -193,6 +210,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Initial Setting Register"]
     #[inline(always)]
     pub const fn fisr(&self) -> &'static crate::common::Reg<self::Fisr_SPEC, crate::common::RW> {
         unsafe {
@@ -202,6 +220,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Extra Area Control Register"]
     #[inline(always)]
     pub const fn fexcr(&self) -> &'static crate::common::Reg<self::Fexcr_SPEC, crate::common::RW> {
         unsafe {
@@ -211,6 +230,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Error Address Monitor Register L"]
     #[inline(always)]
     pub const fn feaml(&self) -> &'static crate::common::Reg<self::Feaml_SPEC, crate::common::R> {
         unsafe {
@@ -220,6 +240,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Error Address Monitor Register H"]
     #[inline(always)]
     pub const fn feamh(&self) -> &'static crate::common::Reg<self::Feamh_SPEC, crate::common::R> {
         unsafe {
@@ -229,6 +250,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Status Register 2"]
     #[inline(always)]
     pub const fn fstatr2(
         &self,
@@ -240,6 +262,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "High-speed On-chip Oscillator Trimming Register"]
     #[inline(always)]
     pub const fn hiotrm(
         &self,
@@ -251,6 +274,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Operating Mode Control Register"]
     #[inline(always)]
     pub const fn flmode(
         &self,
@@ -262,6 +286,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash Operating Mode Protect Register"]
     #[inline(always)]
     pub const fn flmwrp(
         &self,
@@ -273,6 +298,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Flash P/E Mode Entry Register"]
     #[inline(always)]
     pub const fn fentryr(
         &self,
@@ -291,9 +317,11 @@ impl crate::sealed::RegSpec for Dflctl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Data Flash Control Register"]
 pub type Dflctl = crate::RegValueT<Dflctl_SPEC>;
 
 impl Dflctl {
+    #[doc = "Data Flash Access Enable"]
     #[inline(always)]
     pub fn dflen(
         self,
@@ -331,8 +359,10 @@ pub mod dflctl {
     pub struct Dflen_SPEC;
     pub type Dflen = crate::EnumBitfieldStruct<u8, Dflen_SPEC>;
     impl Dflen {
+        #[doc = "Access to the data flash is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Access to the data flash is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -343,9 +373,11 @@ impl crate::sealed::RegSpec for Fpmcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Flash P/E Mode Control Register"]
 pub type Fpmcr = crate::RegValueT<Fpmcr_SPEC>;
 
 impl Fpmcr {
+    #[doc = "Flash Operating Mode Select 0"]
     #[inline(always)]
     pub fn fms0(
         self,
@@ -371,6 +403,7 @@ impl Fpmcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Code Flash P/E Disable"]
     #[inline(always)]
     pub fn rpdis(
         self,
@@ -396,6 +429,7 @@ impl Fpmcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Flash Operating Mode Select 1"]
     #[inline(always)]
     pub fn fms1(self) -> crate::common::RegisterFieldBool<4, 1, 0, Fpmcr_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<4, 1, 0, Fpmcr_SPEC, crate::common::RW>::from_register(
@@ -415,16 +449,20 @@ pub mod fpmcr {
     pub struct Fms0_SPEC;
     pub type Fms0 = crate::EnumBitfieldStruct<u8, Fms0_SPEC>;
     impl Fms0 {
+        #[doc = "FMS1 = 0: Read mode FMS1 = 1: Data flash P/E mode."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FMS1 = 0: Code flash P/E mode FMS1 = 1: Setting prohibited."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rpdis_SPEC;
     pub type Rpdis = crate::EnumBitfieldStruct<u8, Rpdis_SPEC>;
     impl Rpdis {
+        #[doc = "Programming of the code flash is enabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Programming of the code flash is disabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -435,9 +473,11 @@ impl crate::sealed::RegSpec for Fasr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Flash Area Select Register"]
 pub type Fasr = crate::RegValueT<Fasr_SPEC>;
 
 impl Fasr {
+    #[doc = "Extra Area Select"]
     #[inline(always)]
     pub fn exs(
         self,
@@ -475,8 +515,10 @@ pub mod fasr {
     pub struct Exs_SPEC;
     pub type Exs = crate::EnumBitfieldStruct<u8, Exs_SPEC>;
     impl Exs {
+        #[doc = "User area or data area"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Extra area."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -487,9 +529,11 @@ impl crate::sealed::RegSpec for Fsarl_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Flash Processing Start Address Register L"]
 pub type Fsarl = crate::RegValueT<Fsarl_SPEC>;
 
 impl Fsarl {
+    #[doc = "Flash Processing Start Address L"]
     #[inline(always)]
     pub fn fsarl(
         self,
@@ -512,9 +556,11 @@ impl crate::sealed::RegSpec for Fsarh_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Flash Processing Start Address Register H"]
 pub type Fsarh = crate::RegValueT<Fsarh_SPEC>;
 
 impl Fsarh {
+    #[doc = "Flash Processing Start Address H"]
     #[inline(always)]
     pub fn fsarh(
         self,
@@ -537,9 +583,11 @@ impl crate::sealed::RegSpec for Fcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Flash Control Register"]
 pub type Fcr = crate::RegValueT<Fcr_SPEC>;
 
 impl Fcr {
+    #[doc = "Software Command Setting"]
     #[inline(always)]
     pub fn cmd(
         self,
@@ -548,6 +596,7 @@ impl Fcr {
         crate::common::RegisterField::<0,0xf,1,0,fcr::Cmd,fcr::Cmd,Fcr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Forced Processing Stop"]
     #[inline(always)]
     pub fn stop(self) -> crate::common::RegisterFieldBool<6, 1, 0, Fcr_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<6, 1, 0, Fcr_SPEC, crate::common::RW>::from_register(
@@ -555,6 +604,7 @@ impl Fcr {
         )
     }
 
+    #[doc = "Processing Start"]
     #[inline(always)]
     pub fn opst(
         self,
@@ -584,22 +634,29 @@ pub mod fcr {
     pub struct Cmd_SPEC;
     pub type Cmd = crate::EnumBitfieldStruct<u8, Cmd_SPEC>;
     impl Cmd {
+        #[doc = "Program"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Blank check (code flash)"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Block erase"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Blank check (data flash)"]
         pub const _0_X_B: Self = Self::new(11);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Opst_SPEC;
     pub type Opst = crate::EnumBitfieldStruct<u8, Opst_SPEC>;
     impl Opst {
+        #[doc = "Processing stops"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Processing starts."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -610,9 +667,11 @@ impl crate::sealed::RegSpec for Fearl_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Flash Processing End Address Register L"]
 pub type Fearl = crate::RegValueT<Fearl_SPEC>;
 
 impl Fearl {
+    #[doc = "Flash Processing End Address L"]
     #[inline(always)]
     pub fn fearl(
         self,
@@ -635,9 +694,11 @@ impl crate::sealed::RegSpec for Fearh_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Flash Processing End Address Register H"]
 pub type Fearh = crate::RegValueT<Fearh_SPEC>;
 
 impl Fearh {
+    #[doc = "Flash Processing End Address H"]
     #[inline(always)]
     pub fn fearh(
         self,
@@ -660,9 +721,11 @@ impl crate::sealed::RegSpec for Fresetr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Flash Reset Register"]
 pub type Fresetr = crate::RegValueT<Fresetr_SPEC>;
 
 impl Fresetr {
+    #[doc = "Software Reset of the Registers"]
     #[inline(always)]
     pub fn freset(
         self,
@@ -700,8 +763,10 @@ pub mod fresetr {
     pub struct Freset_SPEC;
     pub type Freset = crate::EnumBitfieldStruct<u8, Freset_SPEC>;
     impl Freset {
+        #[doc = "The registers related to the flash programming are not reset"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The registers related to the flash programming are reset."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -712,9 +777,11 @@ impl crate::sealed::RegSpec for Fstatr1_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Flash Status Register 1"]
 pub type Fstatr1 = crate::RegValueT<Fstatr1_SPEC>;
 
 impl Fstatr1 {
+    #[doc = "Flash Ready Flag"]
     #[inline(always)]
     pub fn frdy(
         self,
@@ -740,6 +807,7 @@ impl Fstatr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Extra Area Ready Flag"]
     #[inline(always)]
     pub fn exrdy(
         self,
@@ -777,16 +845,20 @@ pub mod fstatr1 {
     pub struct Frdy_SPEC;
     pub type Frdy = crate::EnumBitfieldStruct<u8, Frdy_SPEC>;
     impl Frdy {
+        #[doc = "The software command of the FCR register is not terminated."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The software command of the FCR register is terminated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Exrdy_SPEC;
     pub type Exrdy = crate::EnumBitfieldStruct<u8, Exrdy_SPEC>;
     impl Exrdy {
+        #[doc = "The software command of the FEXCR register is not terminated."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The software command of the FEXCR register is terminated."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -797,9 +869,11 @@ impl crate::sealed::RegSpec for Fwbl0_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Flash Write Buffer Register L0"]
 pub type Fwbl0 = crate::RegValueT<Fwbl0_SPEC>;
 
 impl Fwbl0 {
+    #[doc = "Flash Write Buffer L0"]
     #[inline(always)]
     pub fn wdata(
         self,
@@ -822,9 +896,11 @@ impl crate::sealed::RegSpec for Fwbh0_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Flash Write Buffer Register H0"]
 pub type Fwbh0 = crate::RegValueT<Fwbh0_SPEC>;
 
 impl Fwbh0 {
+    #[doc = "Flash Write Buffer H0"]
     #[inline(always)]
     pub fn wdata(
         self,
@@ -847,9 +923,11 @@ impl crate::sealed::RegSpec for Fpr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Protection Unlock Register"]
 pub type Fpr = crate::RegValueT<Fpr_SPEC>;
 
 impl Fpr {
+    #[doc = "Protection Unlock"]
     #[inline(always)]
     pub fn fpr(
         self,
@@ -871,9 +949,11 @@ impl crate::sealed::RegSpec for Fpsr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Protection Unlock Status Register"]
 pub type Fpsr = crate::RegValueT<Fpsr_SPEC>;
 
 impl Fpsr {
+    #[doc = "Protect Error Flag"]
     #[inline(always)]
     pub fn perr(
         self,
@@ -911,8 +991,10 @@ pub mod fpsr {
     pub struct Perr_SPEC;
     pub type Perr = crate::EnumBitfieldStruct<u8, Perr_SPEC>;
     impl Perr {
+        #[doc = "No error"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "An error occurs"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -923,9 +1005,11 @@ impl crate::sealed::RegSpec for Fscmr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Flash Startup Setting Monitor Register"]
 pub type Fscmr = crate::RegValueT<Fscmr_SPEC>;
 
 impl Fscmr {
+    #[doc = "Startup Area Setting Monitor Flag"]
     #[inline(always)]
     pub fn sasmf(
         self,
@@ -951,6 +1035,7 @@ impl Fscmr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Access Window Protection Flag"]
     #[inline(always)]
     pub fn fspr(
         self,
@@ -988,16 +1073,20 @@ pub mod fscmr {
     pub struct Sasmf_SPEC;
     pub type Sasmf = crate::EnumBitfieldStruct<u8, Sasmf_SPEC>;
     impl Sasmf {
+        #[doc = "Setting to start up using the alternative area"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Setting to start up using the default area"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Fspr_SPEC;
     pub type Fspr = crate::EnumBitfieldStruct<u8, Fspr_SPEC>;
     impl Fspr {
+        #[doc = "Access window setting disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Access window setting enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1008,9 +1097,11 @@ impl crate::sealed::RegSpec for Fawsmr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Flash Access Window Start Address Monitor Register"]
 pub type Fawsmr = crate::RegValueT<Fawsmr_SPEC>;
 
 impl Fawsmr {
+    #[doc = "Access Window Start Address"]
     #[inline(always)]
     pub fn faws(
         self,
@@ -1018,6 +1109,7 @@ impl Fawsmr {
         crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,Fawsmr_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Access Window Protection Flag"]
     #[inline(always)]
     pub fn fspr(self) -> crate::common::RegisterFieldBool<15, 1, 0, Fawsmr_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<15, 1, 0, Fawsmr_SPEC, crate::common::R>::from_register(
@@ -1039,9 +1131,11 @@ impl crate::sealed::RegSpec for Fawemr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Flash Access Window End Address Monitor Register"]
 pub type Fawemr = crate::RegValueT<Fawemr_SPEC>;
 
 impl Fawemr {
+    #[doc = "Access Window End Address"]
     #[inline(always)]
     pub fn fawe(
         self,
@@ -1049,6 +1143,7 @@ impl Fawemr {
         crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,Fawemr_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Startup Area Setting Monitor Flag"]
     #[inline(always)]
     pub fn sasmf(
         self,
@@ -1072,9 +1167,11 @@ impl crate::sealed::RegSpec for Fisr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Flash Initial Setting Register"]
 pub type Fisr = crate::RegValueT<Fisr_SPEC>;
 
 impl Fisr {
+    #[doc = "Flash-IF Clock Notification"]
     #[inline(always)]
     pub fn pcka(
         self,
@@ -1082,6 +1179,7 @@ impl Fisr {
         crate::common::RegisterField::<0,0x1f,1,0,u8,u8,Fisr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Startup Area Select"]
     #[inline(always)]
     pub fn sas(
         self,
@@ -1119,10 +1217,13 @@ pub mod fisr {
     pub struct Sas_SPEC;
     pub type Sas = crate::EnumBitfieldStruct<u8, Sas_SPEC>;
     impl Sas {
+        #[doc = "The startup area is switched to the default area temporarily"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "The startup area is switched to the alternate area temporarily."]
         pub const _11: Self = Self::new(3);
 
+        #[doc = "The startup area is selected according to the settings of the extra area."]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -1133,9 +1234,11 @@ impl crate::sealed::RegSpec for Fexcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Flash Extra Area Control Register"]
 pub type Fexcr = crate::RegValueT<Fexcr_SPEC>;
 
 impl Fexcr {
+    #[doc = "Software Command Setting"]
     #[inline(always)]
     pub fn cmd(
         self,
@@ -1161,6 +1264,7 @@ impl Fexcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Processing Start"]
     #[inline(always)]
     pub fn opst(
         self,
@@ -1198,24 +1302,32 @@ pub mod fexcr {
     pub struct Cmd_SPEC;
     pub type Cmd = crate::EnumBitfieldStruct<u8, Cmd_SPEC>;
     impl Cmd {
+        #[doc = "Access window information program Startup area selection and security setting"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "OCDID1 program"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "OCDID2 program"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "OCDID3 program"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "OCDID4 program"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Opst_SPEC;
     pub type Opst = crate::EnumBitfieldStruct<u8, Opst_SPEC>;
     impl Opst {
+        #[doc = "Processing stops"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Processing starts."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1226,9 +1338,11 @@ impl crate::sealed::RegSpec for Feaml_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Flash Error Address Monitor Register L"]
 pub type Feaml = crate::RegValueT<Feaml_SPEC>;
 
 impl Feaml {
+    #[doc = "Flash Error Address Monitor Register L"]
     #[inline(always)]
     pub fn feaml(
         self,
@@ -1250,9 +1364,11 @@ impl crate::sealed::RegSpec for Feamh_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Flash Error Address Monitor Register H"]
 pub type Feamh = crate::RegValueT<Feamh_SPEC>;
 
 impl Feamh {
+    #[doc = "Flash Error Address Monitor Register H"]
     #[inline(always)]
     pub fn feamh(
         self,
@@ -1274,9 +1390,11 @@ impl crate::sealed::RegSpec for Fstatr2_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Flash Status Register 2"]
 pub type Fstatr2 = crate::RegValueT<Fstatr2_SPEC>;
 
 impl Fstatr2 {
+    #[doc = "Erase Error Flag"]
     #[inline(always)]
     pub fn ererr(
         self,
@@ -1302,6 +1420,7 @@ impl Fstatr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Program Error Flag"]
     #[inline(always)]
     pub fn prgerr(
         self,
@@ -1327,6 +1446,7 @@ impl Fstatr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Blank Check Error Flag"]
     #[inline(always)]
     pub fn bcerr(
         self,
@@ -1352,6 +1472,7 @@ impl Fstatr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Illegal Command Error Flag"]
     #[inline(always)]
     pub fn ilglerr(
         self,
@@ -1377,6 +1498,7 @@ impl Fstatr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Extra Area Illegal Command Error Flag"]
     #[inline(always)]
     pub fn eilglerr(
         self,
@@ -1414,40 +1536,50 @@ pub mod fstatr2 {
     pub struct Ererr_SPEC;
     pub type Ererr = crate::EnumBitfieldStruct<u8, Ererr_SPEC>;
     impl Ererr {
+        #[doc = "Erasure terminates normally"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "An error occurs during erasure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Prgerr_SPEC;
     pub type Prgerr = crate::EnumBitfieldStruct<u8, Prgerr_SPEC>;
     impl Prgerr {
+        #[doc = "Programming terminates normally"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "An error occurs during programming."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bcerr_SPEC;
     pub type Bcerr = crate::EnumBitfieldStruct<u8, Bcerr_SPEC>;
     impl Bcerr {
+        #[doc = "Blank checking terminates normally"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "An error occurs during blank checking."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ilglerr_SPEC;
     pub type Ilglerr = crate::EnumBitfieldStruct<u8, Ilglerr_SPEC>;
     impl Ilglerr {
+        #[doc = "No illegal software command or illegal access is detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "An illegal command or illegal access is detected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eilglerr_SPEC;
     pub type Eilglerr = crate::EnumBitfieldStruct<u8, Eilglerr_SPEC>;
     impl Eilglerr {
+        #[doc = "No illegal command or illegal access to the extra area is detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "An illegal command or illegal access to the extra area is detected."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1458,9 +1590,11 @@ impl crate::sealed::RegSpec for Hiotrm_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High-speed On-chip Oscillator Trimming Register"]
 pub type Hiotrm = crate::RegValueT<Hiotrm_SPEC>;
 
 impl Hiotrm {
+    #[doc = "HOCO User Trimming"]
     #[inline(always)]
     pub fn hiotrm(
         self,
@@ -1482,9 +1616,11 @@ impl crate::sealed::RegSpec for Flmode_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Flash Operating Mode Control Register"]
 pub type Flmode = crate::RegValueT<Flmode_SPEC>;
 
 impl Flmode {
+    #[doc = "Operating Mode Select"]
     #[inline(always)]
     pub fn mode(
         self,
@@ -1522,12 +1658,16 @@ pub mod flmode {
     pub struct Mode_SPEC;
     pub type Mode = crate::EnumBitfieldStruct<u8, Mode_SPEC>;
     impl Mode {
+        #[doc = "Setting prohibited"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Low-speed mode"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Middle-speed mode"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "High-speed mode"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -1538,9 +1678,11 @@ impl crate::sealed::RegSpec for Flmwrp_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Flash Operating Mode Protect Register"]
 pub type Flmwrp = crate::RegValueT<Flmwrp_SPEC>;
 
 impl Flmwrp {
+    #[doc = "Control of Flash Operation Mode Select Register"]
     #[inline(always)]
     pub fn flmwen(
         self,
@@ -1578,8 +1720,10 @@ pub mod flmwrp {
     pub struct Flmwen_SPEC;
     pub type Flmwen = crate::EnumBitfieldStruct<u8, Flmwen_SPEC>;
     impl Flmwen {
+        #[doc = "Rewriting the FLMODE register is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Rewriting the FLMODE register is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1590,9 +1734,11 @@ impl crate::sealed::RegSpec for Fentryr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Flash P/E Mode Entry Register"]
 pub type Fentryr = crate::RegValueT<Fentryr_SPEC>;
 
 impl Fentryr {
+    #[doc = "Code Flash P/E Mode Entry 0"]
     #[inline(always)]
     pub fn fentry0(
         self,
@@ -1618,6 +1764,7 @@ impl Fentryr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Data Flash P/E Mode Entry"]
     #[inline(always)]
     pub fn fentryd(
         self,
@@ -1643,6 +1790,7 @@ impl Fentryr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn fekey(
         self,
@@ -1662,16 +1810,20 @@ pub mod fentryr {
     pub struct Fentry0_SPEC;
     pub type Fentry0 = crate::EnumBitfieldStruct<u8, Fentry0_SPEC>;
     impl Fentry0 {
+        #[doc = "The code flash is the read mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The code flash is the P/E mode."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Fentryd_SPEC;
     pub type Fentryd = crate::EnumBitfieldStruct<u8, Fentryd_SPEC>;
     impl Fentryd {
+        #[doc = "The data flash is the read mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The data flash is the P/E mode."]
         pub const _1: Self = Self::new(1);
     }
 }

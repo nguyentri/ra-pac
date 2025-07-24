@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 0.90.02, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:18:12 +0000
+// Generated from SVD 1.20.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:48:57 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Flcn {
         self.ptr
     }
 
+    #[doc = "Data Flash Control Register"]
     #[inline(always)]
     pub const fn dflctl(
         &self,
@@ -45,6 +46,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Temperature Sensor Calibration Data Register"]
     #[inline(always)]
     pub const fn tscdr(&self) -> &'static crate::common::Reg<self::Tscdr_SPEC, crate::common::R> {
         unsafe {
@@ -54,6 +56,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Memory Wait Cycle Control Register for Data Flash"]
     #[inline(always)]
     pub const fn fldwaitr(
         &self,
@@ -65,6 +68,7 @@ impl super::Flcn {
         }
     }
 
+    #[doc = "Prefetch Buffer Enable Register"]
     #[inline(always)]
     pub const fn pfber(&self) -> &'static crate::common::Reg<self::Pfber_SPEC, crate::common::RW> {
         unsafe {
@@ -81,9 +85,11 @@ impl crate::sealed::RegSpec for Dflctl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Data Flash Control Register"]
 pub type Dflctl = crate::RegValueT<Dflctl_SPEC>;
 
 impl Dflctl {
+    #[doc = "Data Flash Access Enable"]
     #[inline(always)]
     pub fn dflen(
         self,
@@ -121,8 +127,10 @@ pub mod dflctl {
     pub struct Dflen_SPEC;
     pub type Dflen = crate::EnumBitfieldStruct<u8, Dflen_SPEC>;
     impl Dflen {
+        #[doc = "Access to the data flash is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Access to the data flash is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -133,9 +141,11 @@ impl crate::sealed::RegSpec for Tscdr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Temperature Sensor Calibration Data Register"]
 pub type Tscdr = crate::RegValueT<Tscdr_SPEC>;
 
 impl Tscdr {
+    #[doc = "Temperature Sensor Calibration Data"]
     #[inline(always)]
     pub fn tscdr(
         self,
@@ -157,9 +167,11 @@ impl crate::sealed::RegSpec for Fldwaitr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Memory Wait Cycle Control Register for Data Flash"]
 pub type Fldwaitr = crate::RegValueT<Fldwaitr_SPEC>;
 
 impl Fldwaitr {
+    #[doc = "Memory Wait Cycle Select for Data Flash"]
     #[inline(always)]
     pub fn fldwait1(
         self,
@@ -197,8 +209,10 @@ pub mod fldwaitr {
     pub struct Fldwait1_SPEC;
     pub type Fldwait1 = crate::EnumBitfieldStruct<u8, Fldwait1_SPEC>;
     impl Fldwait1 {
+        #[doc = "One wait access (default)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Two wait accesses"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -209,9 +223,11 @@ impl crate::sealed::RegSpec for Pfber_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Prefetch Buffer Enable Register"]
 pub type Pfber = crate::RegValueT<Pfber_SPEC>;
 
 impl Pfber {
+    #[doc = "Prefetch Buffer Enable bit"]
     #[inline(always)]
     pub fn pfbe(
         self,
@@ -249,8 +265,10 @@ pub mod pfber {
     pub struct Pfbe_SPEC;
     pub type Pfbe = crate::EnumBitfieldStruct<u8, Pfbe_SPEC>;
     impl Pfbe {
+        #[doc = "Prefetch buffer is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Prefetch buffer is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }

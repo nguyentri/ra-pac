@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:23:25 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Pfs {
         self.ptr
     }
 
+    #[doc = "P000 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p000pfs(
         &self,
@@ -45,6 +46,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P000 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p000pfs_ha(
         &self,
@@ -56,6 +58,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P000 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p000pfs_by(
         &self,
@@ -67,6 +70,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P00%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p00pfs(
         &self,
@@ -79,7 +83,28 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x20usize))
         }
     }
+    #[inline(always)]
+    pub const fn p008pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P00Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P00Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x20usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p009pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P00Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P00Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x24usize),
+            )
+        }
+    }
 
+    #[doc = "P00%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p00pfs_ha(
         &self,
@@ -92,7 +117,28 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x20usize))
         }
     }
+    #[inline(always)]
+    pub const fn p008pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P00PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P00PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x20usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p009pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P00PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P00PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x24usize),
+            )
+        }
+    }
 
+    #[doc = "P00%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p00pfs_by(
         &self,
@@ -105,7 +151,28 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x20usize))
         }
     }
+    #[inline(always)]
+    pub const fn p008pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P00PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P00PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x20usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p009pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P00PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P00PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x24usize),
+            )
+        }
+    }
 
+    #[doc = "P0%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p0pfs(
         &self,
@@ -118,7 +185,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x28usize))
         }
     }
+    #[inline(always)]
+    pub const fn p010pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x28usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p011pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p012pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x30usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p013pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x34usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p014pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x38usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p015pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3cusize),
+            )
+        }
+    }
 
+    #[doc = "P0%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p0pfs_ha(
         &self,
@@ -131,7 +259,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x28usize))
         }
     }
+    #[inline(always)]
+    pub const fn p010pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x28usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p011pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p012pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x30usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p013pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x34usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p014pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x38usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p015pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3cusize),
+            )
+        }
+    }
 
+    #[doc = "P0%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p0pfs_by(
         &self,
@@ -144,7 +333,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x28usize))
         }
     }
+    #[inline(always)]
+    pub const fn p010pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x28usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p011pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p012pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x30usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p013pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x34usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p014pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x38usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p015pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3cusize),
+            )
+        }
+    }
 
+    #[doc = "P100 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p100pfs(
         &self,
@@ -156,6 +406,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P100 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p100pfs_ha(
         &self,
@@ -167,6 +418,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P100 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p100pfs_by(
         &self,
@@ -178,6 +430,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P10%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p10pfs(
         &self,
@@ -190,7 +443,78 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x44usize))
         }
     }
+    #[inline(always)]
+    pub const fn p101pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x44usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p102pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x48usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p103pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x4cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p104pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x50usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p105pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x54usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p106pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x58usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p107pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x5cusize),
+            )
+        }
+    }
 
+    #[doc = "P10%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p10pfs_ha(
         &self,
@@ -203,7 +527,78 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x44usize))
         }
     }
+    #[inline(always)]
+    pub const fn p101pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x44usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p102pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x48usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p103pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x4cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p104pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x50usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p105pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x54usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p106pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x58usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p107pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x5cusize),
+            )
+        }
+    }
 
+    #[doc = "P10%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p10pfs_by(
         &self,
@@ -216,7 +611,78 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x44usize))
         }
     }
+    #[inline(always)]
+    pub const fn p101pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x44usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p102pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x48usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p103pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x4cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p104pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x50usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p105pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x54usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p106pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x58usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p107pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P10PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P10PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x5cusize),
+            )
+        }
+    }
 
+    #[doc = "P108 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p108pfs(
         &self,
@@ -228,6 +694,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P108 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p108pfs_ha(
         &self,
@@ -239,6 +706,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P108 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p108pfs_by(
         &self,
@@ -250,6 +718,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P109 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p109pfs(
         &self,
@@ -261,6 +730,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P109 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p109pfs_ha(
         &self,
@@ -272,6 +742,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P109 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p109pfs_by(
         &self,
@@ -283,6 +754,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P110 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p110pfs(
         &self,
@@ -294,6 +766,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P110 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p110pfs_ha(
         &self,
@@ -305,6 +778,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P110 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p110pfs_by(
         &self,
@@ -316,6 +790,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P1%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p1pfs(
         &self,
@@ -328,7 +803,58 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6cusize))
         }
     }
+    #[inline(always)]
+    pub const fn p111pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P1Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P1Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p112pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P1Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P1Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x70usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p113pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P1Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P1Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x74usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p114pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P1Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P1Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x78usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p115pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P1Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P1Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x7cusize),
+            )
+        }
+    }
 
+    #[doc = "P1%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p1pfs_ha(
         &self,
@@ -341,7 +867,58 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6cusize))
         }
     }
+    #[inline(always)]
+    pub const fn p111pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P1PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P1PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p112pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P1PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P1PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x70usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p113pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P1PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P1PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x74usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p114pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P1PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P1PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x78usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p115pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P1PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P1PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x7cusize),
+            )
+        }
+    }
 
+    #[doc = "P1%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p1pfs_by(
         &self,
@@ -354,7 +931,58 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6cusize))
         }
     }
+    #[inline(always)]
+    pub const fn p111pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P1PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P1PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p112pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P1PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P1PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x70usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p113pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P1PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P1PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x74usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p114pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P1PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P1PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x78usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p115pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P1PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P1PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x7cusize),
+            )
+        }
+    }
 
+    #[doc = "P200 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p200pfs(
         &self,
@@ -366,6 +994,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P200 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p200pfs_ha(
         &self,
@@ -377,6 +1006,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P200 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p200pfs_by(
         &self,
@@ -388,6 +1018,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P201 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p201pfs(
         &self,
@@ -399,6 +1030,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P201 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p201pfs_ha(
         &self,
@@ -410,6 +1042,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P201 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p201pfs_by(
         &self,
@@ -421,6 +1054,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P20%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p20pfs(
         &self,
@@ -433,7 +1067,88 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x88usize))
         }
     }
+    #[inline(always)]
+    pub const fn p202pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x88usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p203pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p204pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x90usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p205pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x94usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p206pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x98usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p207pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x9cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p208pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p209pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa4usize),
+            )
+        }
+    }
 
+    #[doc = "P20%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p20pfs_ha(
         &self,
@@ -446,7 +1161,88 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x88usize))
         }
     }
+    #[inline(always)]
+    pub const fn p202pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x88usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p203pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p204pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x90usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p205pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x94usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p206pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x98usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p207pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x9cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p208pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p209pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa4usize),
+            )
+        }
+    }
 
+    #[doc = "P20%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p20pfs_by(
         &self,
@@ -459,7 +1255,88 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x88usize))
         }
     }
+    #[inline(always)]
+    pub const fn p202pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x88usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p203pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p204pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x90usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p205pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x94usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p206pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x98usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p207pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x9cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p208pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p209pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P20PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P20PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa4usize),
+            )
+        }
+    }
 
+    #[doc = "P2%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p2pfs(
         &self,
@@ -472,7 +1349,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xa8usize))
         }
     }
+    #[inline(always)]
+    pub const fn p210pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P2Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P2Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p211pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P2Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P2Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xacusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p212pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P2Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P2Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xb0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p213pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P2Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P2Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xb4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p214pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P2Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P2Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xb8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p215pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P2Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P2Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xbcusize),
+            )
+        }
+    }
 
+    #[doc = "P2%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p2pfs_ha(
         &self,
@@ -485,7 +1423,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xa8usize))
         }
     }
+    #[inline(always)]
+    pub const fn p210pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P2PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P2PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p211pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P2PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P2PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xacusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p212pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P2PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P2PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xb0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p213pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P2PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P2PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xb4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p214pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P2PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P2PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xb8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p215pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P2PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P2PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xbcusize),
+            )
+        }
+    }
 
+    #[doc = "P2%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p2pfs_by(
         &self,
@@ -498,7 +1497,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xa8usize))
         }
     }
+    #[inline(always)]
+    pub const fn p210pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P2PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P2PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xa8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p211pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P2PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P2PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xacusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p212pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P2PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P2PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xb0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p213pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P2PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P2PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xb4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p214pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P2PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P2PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xb8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p215pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P2PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P2PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xbcusize),
+            )
+        }
+    }
 
+    #[doc = "P300 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p300pfs(
         &self,
@@ -510,6 +1570,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P300 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p300pfs_ha(
         &self,
@@ -521,6 +1582,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P300 Pin Function Control Register"]
     #[inline(always)]
     pub const fn p300pfs_by(
         &self,
@@ -532,6 +1594,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "P30%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p30pfs(
         &self,
@@ -544,7 +1607,98 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xc4usize))
         }
     }
+    #[inline(always)]
+    pub const fn p301pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xc4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p302pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xc8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p303pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xccusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p304pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xd0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p305pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xd4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p306pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xd8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p307pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xdcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p308pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p309pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe4usize),
+            )
+        }
+    }
 
+    #[doc = "P30%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p30pfs_ha(
         &self,
@@ -557,7 +1711,98 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xc4usize))
         }
     }
+    #[inline(always)]
+    pub const fn p301pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xc4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p302pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xc8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p303pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xccusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p304pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xd0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p305pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xd4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p306pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xd8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p307pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xdcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p308pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p309pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe4usize),
+            )
+        }
+    }
 
+    #[doc = "P30%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p30pfs_by(
         &self,
@@ -570,7 +1815,98 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xc4usize))
         }
     }
+    #[inline(always)]
+    pub const fn p301pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xc4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p302pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xc8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p303pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xccusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p304pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xd0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p305pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xd4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p306pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xd8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p307pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xdcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p308pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p309pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P30PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P30PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe4usize),
+            )
+        }
+    }
 
+    #[doc = "P3%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p3pfs(
         &self,
@@ -583,7 +1919,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xe8usize))
         }
     }
+    #[inline(always)]
+    pub const fn p310pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P3Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P3Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p311pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P3Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P3Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xecusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p312pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P3Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P3Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xf0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p313pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P3Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P3Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xf4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p314pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P3Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P3Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xf8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p315pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P3Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P3Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xfcusize),
+            )
+        }
+    }
 
+    #[doc = "P30%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p3pfs_ha(
         &self,
@@ -596,7 +1993,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xe8usize))
         }
     }
+    #[inline(always)]
+    pub const fn p310pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P3PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P3PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p311pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P3PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P3PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xecusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p312pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P3PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P3PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xf0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p313pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P3PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P3PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xf4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p314pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P3PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P3PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xf8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p315pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P3PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P3PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xfcusize),
+            )
+        }
+    }
 
+    #[doc = "P30%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p3pfs_by(
         &self,
@@ -609,7 +2067,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xe8usize))
         }
     }
+    #[inline(always)]
+    pub const fn p310pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P3PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P3PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p311pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P3PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P3PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xecusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p312pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P3PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P3PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xf0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p313pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P3PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P3PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xf4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p314pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P3PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P3PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xf8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p315pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P3PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P3PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xfcusize),
+            )
+        }
+    }
 
+    #[doc = "P40%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p40pfs(
         &self,
@@ -622,7 +2141,108 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x100usize))
         }
     }
+    #[inline(always)]
+    pub const fn p400pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x100usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p401pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x104usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p402pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x108usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p403pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x10cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p404pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x110usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p405pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x114usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p406pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x118usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p407pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p408pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x120usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p409pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x124usize),
+            )
+        }
+    }
 
+    #[doc = "P40%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p40pfs_ha(
         &self,
@@ -635,7 +2255,108 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x100usize))
         }
     }
+    #[inline(always)]
+    pub const fn p400pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x100usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p401pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x104usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p402pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x108usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p403pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x10cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p404pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x110usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p405pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x114usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p406pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x118usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p407pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p408pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x120usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p409pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x124usize),
+            )
+        }
+    }
 
+    #[doc = "P40%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p40pfs_by(
         &self,
@@ -648,7 +2369,108 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x100usize))
         }
     }
+    #[inline(always)]
+    pub const fn p400pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x100usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p401pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x104usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p402pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x108usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p403pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x10cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p404pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x110usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p405pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x114usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p406pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x118usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p407pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p408pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x120usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p409pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P40PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P40PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x124usize),
+            )
+        }
+    }
 
+    #[doc = "P4%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p4pfs(
         &self,
@@ -661,7 +2483,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x128usize))
         }
     }
+    #[inline(always)]
+    pub const fn p410pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P4Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P4Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x128usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p411pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P4Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P4Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x12cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p412pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P4Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P4Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x130usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p413pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P4Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P4Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x134usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p414pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P4Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P4Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x138usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p415pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P4Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P4Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13cusize),
+            )
+        }
+    }
 
+    #[doc = "P4%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p4pfs_ha(
         &self,
@@ -674,7 +2557,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x128usize))
         }
     }
+    #[inline(always)]
+    pub const fn p410pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P4PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P4PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x128usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p411pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P4PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P4PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x12cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p412pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P4PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P4PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x130usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p413pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P4PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P4PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x134usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p414pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P4PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P4PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x138usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p415pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P4PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P4PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13cusize),
+            )
+        }
+    }
 
+    #[doc = "P4%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p4pfs_by(
         &self,
@@ -687,7 +2631,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x128usize))
         }
     }
+    #[inline(always)]
+    pub const fn p410pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P4PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P4PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x128usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p411pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P4PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P4PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x12cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p412pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P4PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P4PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x130usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p413pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P4PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P4PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x134usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p414pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P4PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P4PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x138usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p415pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P4PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P4PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13cusize),
+            )
+        }
+    }
 
+    #[doc = "P50%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p50pfs(
         &self,
@@ -700,7 +2705,28 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x160usize))
         }
     }
+    #[inline(always)]
+    pub const fn p508pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P50Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P50Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x160usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p509pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P50Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P50Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x164usize),
+            )
+        }
+    }
 
+    #[doc = "P50%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p50pfs_ha(
         &self,
@@ -713,7 +2739,28 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x160usize))
         }
     }
+    #[inline(always)]
+    pub const fn p508pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P50PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P50PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x160usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p509pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P50PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P50PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x164usize),
+            )
+        }
+    }
 
+    #[doc = "P50%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p50pfs_by(
         &self,
@@ -726,7 +2773,28 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x160usize))
         }
     }
+    #[inline(always)]
+    pub const fn p508pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P50PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P50PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x160usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p509pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P50PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P50PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x164usize),
+            )
+        }
+    }
 
+    #[doc = "P5%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p5pfs(
         &self,
@@ -739,7 +2807,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x168usize))
         }
     }
+    #[inline(always)]
+    pub const fn p510pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P5Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P5Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x168usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p511pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P5Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P5Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x16cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p512pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P5Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P5Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x170usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p513pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P5Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P5Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x174usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p514pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P5Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P5Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x178usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p515pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P5Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P5Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x17cusize),
+            )
+        }
+    }
 
+    #[doc = "P5%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p5pfs_ha(
         &self,
@@ -752,7 +2881,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x168usize))
         }
     }
+    #[inline(always)]
+    pub const fn p510pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P5PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P5PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x168usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p511pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P5PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P5PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x16cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p512pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P5PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P5PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x170usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p513pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P5PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P5PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x174usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p514pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P5PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P5PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x178usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p515pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P5PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P5PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x17cusize),
+            )
+        }
+    }
 
+    #[doc = "P5%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p5pfs_by(
         &self,
@@ -765,7 +2955,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x168usize))
         }
     }
+    #[inline(always)]
+    pub const fn p510pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P5PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P5PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x168usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p511pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P5PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P5PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x16cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p512pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P5PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P5PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x170usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p513pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P5PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P5PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x174usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p514pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P5PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P5PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x178usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p515pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P5PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P5PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x17cusize),
+            )
+        }
+    }
 
+    #[doc = "P60%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p60pfs(
         &self,
@@ -778,7 +3029,28 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1a0usize))
         }
     }
+    #[inline(always)]
+    pub const fn p608pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P60Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P60Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p609pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P60Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P60Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1a4usize),
+            )
+        }
+    }
 
+    #[doc = "P60%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p60pfs_ha(
         &self,
@@ -791,7 +3063,28 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1a0usize))
         }
     }
+    #[inline(always)]
+    pub const fn p608pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P60PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P60PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p609pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P60PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P60PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1a4usize),
+            )
+        }
+    }
 
+    #[doc = "P60%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p60pfs_by(
         &self,
@@ -804,7 +3097,28 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1a0usize))
         }
     }
+    #[inline(always)]
+    pub const fn p608pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P60PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P60PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p609pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P60PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P60PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1a4usize),
+            )
+        }
+    }
 
+    #[doc = "P6%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p6pfs(
         &self,
@@ -817,7 +3131,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1a8usize))
         }
     }
+    #[inline(always)]
+    pub const fn p610pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P6Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P6Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p611pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P6Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P6Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p612pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P6Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P6Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p613pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P6Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P6Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p614pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P6Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P6Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p615pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P6Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P6Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1bcusize),
+            )
+        }
+    }
 
+    #[doc = "P6%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p6pfs_ha(
         &self,
@@ -830,7 +3205,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1a8usize))
         }
     }
+    #[inline(always)]
+    pub const fn p610pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P6PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P6PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p611pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P6PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P6PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p612pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P6PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P6PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p613pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P6PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P6PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p614pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P6PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P6PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p615pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P6PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P6PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1bcusize),
+            )
+        }
+    }
 
+    #[doc = "P6%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p6pfs_by(
         &self,
@@ -843,7 +3279,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1a8usize))
         }
     }
+    #[inline(always)]
+    pub const fn p610pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P6PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P6PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p611pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P6PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P6PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p612pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P6PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P6PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p613pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P6PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P6PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p614pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P6PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P6PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p615pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P6PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P6PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1bcusize),
+            )
+        }
+    }
 
+    #[doc = "P70%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p70pfs(
         &self,
@@ -856,7 +3353,108 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1c0usize))
         }
     }
+    #[inline(always)]
+    pub const fn p700pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p701pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p702pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p703pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1ccusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p704pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1d0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p705pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1d4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p706pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1d8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p707pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1dcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p708pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1e0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p709pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1e4usize),
+            )
+        }
+    }
 
+    #[doc = "P70%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p70pfs_ha(
         &self,
@@ -869,7 +3467,108 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1c0usize))
         }
     }
+    #[inline(always)]
+    pub const fn p700pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p701pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p702pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p703pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1ccusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p704pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1d0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p705pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1d4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p706pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1d8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p707pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1dcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p708pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1e0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p709pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1e4usize),
+            )
+        }
+    }
 
+    #[doc = "P70%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p70pfs_by(
         &self,
@@ -882,7 +3581,108 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1c0usize))
         }
     }
+    #[inline(always)]
+    pub const fn p700pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p701pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p702pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p703pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1ccusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p704pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1d0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p705pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1d4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p706pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1d8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p707pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1dcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p708pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1e0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p709pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P70PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P70PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1e4usize),
+            )
+        }
+    }
 
+    #[doc = "P7%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p7pfs(
         &self,
@@ -895,7 +3695,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1e8usize))
         }
     }
+    #[inline(always)]
+    pub const fn p710pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P7Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P7Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1e8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p711pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P7Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P7Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1ecusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p712pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P7Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P7Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1f0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p713pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P7Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P7Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1f4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p714pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P7Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P7Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1f8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p715pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P7Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P7Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1fcusize),
+            )
+        }
+    }
 
+    #[doc = "P7%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p7pfs_ha(
         &self,
@@ -908,7 +3769,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1e8usize))
         }
     }
+    #[inline(always)]
+    pub const fn p710pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P7PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P7PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1e8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p711pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P7PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P7PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1ecusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p712pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P7PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P7PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1f0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p713pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P7PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P7PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1f4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p714pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P7PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P7PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1f8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p715pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P7PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P7PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1fcusize),
+            )
+        }
+    }
 
+    #[doc = "P7%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p7pfs_by(
         &self,
@@ -921,7 +3843,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1e8usize))
         }
     }
+    #[inline(always)]
+    pub const fn p710pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P7PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P7PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1e8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p711pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P7PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P7PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1ecusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p712pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P7PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P7PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1f0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p713pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P7PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P7PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1f4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p714pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P7PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P7PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1f8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p715pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P7PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P7PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1fcusize),
+            )
+        }
+    }
 
+    #[doc = "P80%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p80pfs(
         &self,
@@ -934,7 +3917,108 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x200usize))
         }
     }
+    #[inline(always)]
+    pub const fn p800pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x200usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p801pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x204usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p802pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x208usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p803pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x20cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p804pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x210usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p805pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x214usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p806pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x218usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p807pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x21cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p808pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x220usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p809pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x224usize),
+            )
+        }
+    }
 
+    #[doc = "P80%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p80pfs_ha(
         &self,
@@ -947,7 +4031,108 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x200usize))
         }
     }
+    #[inline(always)]
+    pub const fn p800pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x200usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p801pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x204usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p802pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x208usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p803pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x20cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p804pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x210usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p805pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x214usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p806pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x218usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p807pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x21cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p808pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x220usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p809pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x224usize),
+            )
+        }
+    }
 
+    #[doc = "P80%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p80pfs_by(
         &self,
@@ -960,7 +4145,108 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x200usize))
         }
     }
+    #[inline(always)]
+    pub const fn p800pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x200usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p801pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x204usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p802pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x208usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p803pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x20cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p804pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x210usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p805pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x214usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p806pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x218usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p807pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x21cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p808pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x220usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p809pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P80PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P80PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x224usize),
+            )
+        }
+    }
 
+    #[doc = "P8%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p8pfs(
         &self,
@@ -973,7 +4259,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x228usize))
         }
     }
+    #[inline(always)]
+    pub const fn p810pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P8Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P8Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x228usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p811pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P8Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P8Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x22cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p812pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P8Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P8Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x230usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p813pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P8Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P8Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x234usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p814pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P8Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P8Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x238usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p815pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P8Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P8Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x23cusize),
+            )
+        }
+    }
 
+    #[doc = "P8%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p8pfs_ha(
         &self,
@@ -986,7 +4333,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x228usize))
         }
     }
+    #[inline(always)]
+    pub const fn p810pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P8PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P8PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x228usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p811pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P8PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P8PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x22cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p812pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P8PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P8PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x230usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p813pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P8PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P8PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x234usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p814pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P8PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P8PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x238usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p815pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P8PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P8PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x23cusize),
+            )
+        }
+    }
 
+    #[doc = "P8%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p8pfs_by(
         &self,
@@ -999,7 +4407,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x228usize))
         }
     }
+    #[inline(always)]
+    pub const fn p810pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P8PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P8PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x228usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p811pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P8PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P8PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x22cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p812pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P8PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P8PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x230usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p813pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P8PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P8PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x234usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p814pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P8PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P8PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x238usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p815pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P8PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P8PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x23cusize),
+            )
+        }
+    }
 
+    #[doc = "P90%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p90pfs(
         &self,
@@ -1012,7 +4481,108 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x240usize))
         }
     }
+    #[inline(always)]
+    pub const fn p900pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x240usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p901pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x244usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p902pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x248usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p903pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x24cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p904pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x250usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p905pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x254usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p906pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x258usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p907pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x25cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p908pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x260usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p909pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x264usize),
+            )
+        }
+    }
 
+    #[doc = "P90%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p90pfs_ha(
         &self,
@@ -1025,7 +4595,108 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x240usize))
         }
     }
+    #[inline(always)]
+    pub const fn p900pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x240usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p901pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x244usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p902pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x248usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p903pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x24cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p904pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x250usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p905pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x254usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p906pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x258usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p907pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x25cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p908pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x260usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p909pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x264usize),
+            )
+        }
+    }
 
+    #[doc = "P90%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p90pfs_by(
         &self,
@@ -1038,7 +4709,108 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x240usize))
         }
     }
+    #[inline(always)]
+    pub const fn p900pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x240usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p901pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x244usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p902pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x248usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p903pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x24cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p904pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x250usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p905pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x254usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p906pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x258usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p907pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x25cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p908pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x260usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p909pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P90PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P90PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x264usize),
+            )
+        }
+    }
 
+    #[doc = "P9%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p9pfs(
         &self,
@@ -1051,7 +4823,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x268usize))
         }
     }
+    #[inline(always)]
+    pub const fn p910pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P9Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P9Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x268usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p911pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P9Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P9Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x26cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p912pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P9Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P9Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x270usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p913pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P9Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P9Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x274usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p914pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P9Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P9Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x278usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p915pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::P9Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P9Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x27cusize),
+            )
+        }
+    }
 
+    #[doc = "P9%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p9pfs_ha(
         &self,
@@ -1064,7 +4897,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x268usize))
         }
     }
+    #[inline(always)]
+    pub const fn p910pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P9PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P9PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x268usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p911pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P9PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P9PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x26cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p912pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P9PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P9PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x270usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p913pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P9PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P9PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x274usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p914pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P9PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P9PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x278usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p915pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::P9PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P9PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x27cusize),
+            )
+        }
+    }
 
+    #[doc = "P9%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn p9pfs_by(
         &self,
@@ -1077,7 +4971,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x268usize))
         }
     }
+    #[inline(always)]
+    pub const fn p910pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P9PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P9PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x268usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p911pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P9PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P9PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x26cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p912pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P9PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P9PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x270usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p913pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P9PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P9PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x274usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p914pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P9PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P9PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x278usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn p915pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::P9PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::P9PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x27cusize),
+            )
+        }
+    }
 
+    #[doc = "PA0%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn pa0pfs(
         &self,
@@ -1090,7 +5045,108 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x280usize))
         }
     }
+    #[inline(always)]
+    pub const fn pa00pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x280usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa01pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x284usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa02pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x288usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa03pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x28cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa04pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x290usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa05pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x294usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa06pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x298usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa07pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x29cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa08pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa09pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a4usize),
+            )
+        }
+    }
 
+    #[doc = "PA0%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn pa0pfs_ha(
         &self,
@@ -1103,7 +5159,108 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x280usize))
         }
     }
+    #[inline(always)]
+    pub const fn pa00pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x280usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa01pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x284usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa02pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x288usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa03pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x28cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa04pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x290usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa05pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x294usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa06pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x298usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa07pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x29cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa08pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa09pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a4usize),
+            )
+        }
+    }
 
+    #[doc = "PA0%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn pa0pfs_by(
         &self,
@@ -1116,7 +5273,108 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x280usize))
         }
     }
+    #[inline(always)]
+    pub const fn pa00pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x280usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa01pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x284usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa02pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x288usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa03pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x28cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa04pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x290usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa05pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x294usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa06pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x298usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa07pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x29cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa08pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa09pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pa0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pa0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a4usize),
+            )
+        }
+    }
 
+    #[doc = "PA%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn papfs(
         &self,
@@ -1129,7 +5387,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2a8usize))
         }
     }
+    #[inline(always)]
+    pub const fn pa10pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Papfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Papfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa11pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Papfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Papfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa12pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Papfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Papfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa13pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Papfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Papfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa14pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Papfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Papfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa15pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Papfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Papfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2bcusize),
+            )
+        }
+    }
 
+    #[doc = "PA%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn papfs_ha(
         &self,
@@ -1142,7 +5461,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2a8usize))
         }
     }
+    #[inline(always)]
+    pub const fn pa10pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::PapfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PapfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa11pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::PapfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PapfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa12pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::PapfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PapfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa13pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::PapfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PapfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa14pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::PapfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PapfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa15pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::PapfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PapfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2bcusize),
+            )
+        }
+    }
 
+    #[doc = "PA%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn papfs_by(
         &self,
@@ -1155,7 +5535,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2a8usize))
         }
     }
+    #[inline(always)]
+    pub const fn pa10pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::PapfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PapfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa11pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::PapfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PapfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa12pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::PapfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PapfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa13pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::PapfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PapfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa14pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::PapfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PapfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pa15pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::PapfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PapfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2bcusize),
+            )
+        }
+    }
 
+    #[doc = "PB0%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn pb0pfs(
         &self,
@@ -1168,7 +5609,108 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2c0usize))
         }
     }
+    #[inline(always)]
+    pub const fn pb00pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb01pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb02pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb03pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ccusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb04pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb05pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb06pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb07pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2dcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb08pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb09pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0Pfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0Pfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e4usize),
+            )
+        }
+    }
 
+    #[doc = "PB0%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn pb0pfs_ha(
         &self,
@@ -1181,7 +5723,108 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2c0usize))
         }
     }
+    #[inline(always)]
+    pub const fn pb00pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb01pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb02pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb03pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ccusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb04pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb05pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb06pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb07pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2dcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb08pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb09pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e4usize),
+            )
+        }
+    }
 
+    #[doc = "PB0%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn pb0pfs_by(
         &self,
@@ -1194,7 +5837,108 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2c0usize))
         }
     }
+    #[inline(always)]
+    pub const fn pb00pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb01pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb02pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb03pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ccusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb04pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb05pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb06pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb07pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2dcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb08pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb09pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pb0PfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pb0PfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e4usize),
+            )
+        }
+    }
 
+    #[doc = "PB%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn pbpfs(
         &self,
@@ -1207,7 +5951,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2e8usize))
         }
     }
+    #[inline(always)]
+    pub const fn pb10pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pbpfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pbpfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb11pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pbpfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pbpfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ecusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb12pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pbpfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pbpfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb13pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pbpfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pbpfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb14pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pbpfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pbpfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb15pfs(
+        &self,
+    ) -> &'static crate::common::Reg<self::Pbpfs_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Pbpfs_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2fcusize),
+            )
+        }
+    }
 
+    #[doc = "PB%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn pbpfs_ha(
         &self,
@@ -1220,7 +6025,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2e8usize))
         }
     }
+    #[inline(always)]
+    pub const fn pb10pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::PbpfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PbpfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb11pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::PbpfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PbpfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ecusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb12pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::PbpfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PbpfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb13pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::PbpfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PbpfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb14pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::PbpfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PbpfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb15pfs_ha(
+        &self,
+    ) -> &'static crate::common::Reg<self::PbpfsHa_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PbpfsHa_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2fcusize),
+            )
+        }
+    }
 
+    #[doc = "PB%s Pin Function Control Register"]
     #[inline(always)]
     pub const fn pbpfs_by(
         &self,
@@ -1233,7 +6099,68 @@ impl super::Pfs {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2e8usize))
         }
     }
+    #[inline(always)]
+    pub const fn pb10pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::PbpfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PbpfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb11pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::PbpfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PbpfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ecusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb12pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::PbpfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PbpfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb13pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::PbpfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PbpfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb14pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::PbpfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PbpfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn pb15pfs_by(
+        &self,
+    ) -> &'static crate::common::Reg<self::PbpfsBy_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::PbpfsBy_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2fcusize),
+            )
+        }
+    }
 
+    #[doc = "Ethernet Control Register"]
     #[inline(always)]
     pub const fn pfenet(
         &self,
@@ -1245,6 +6172,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "NonSecure Write-Protect Register"]
     #[inline(always)]
     pub const fn pwpr_ns(
         &self,
@@ -1256,6 +6184,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "Secure Write Protect Register"]
     #[inline(always)]
     pub const fn pwpr_s(&self) -> &'static crate::common::Reg<self::PwprS_SPEC, crate::common::RW> {
         unsafe {
@@ -1265,6 +6194,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "I3C Control Register"]
     #[inline(always)]
     pub const fn pfi3c(&self) -> &'static crate::common::Reg<self::Pfi3C_SPEC, crate::common::RW> {
         unsafe {
@@ -1274,6 +6204,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "Port Security Attribute register 0"]
     #[inline(always)]
     pub const fn p0sar(&self) -> &'static crate::common::Reg<self::P0Sar_SPEC, crate::common::RW> {
         unsafe {
@@ -1283,6 +6214,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "Port Security Attribute register 1"]
     #[inline(always)]
     pub const fn p1sar(&self) -> &'static crate::common::Reg<self::P1Sar_SPEC, crate::common::RW> {
         unsafe {
@@ -1292,6 +6224,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "Port Security Attribute register 1"]
     #[inline(always)]
     pub const fn p2sar(&self) -> &'static crate::common::Reg<self::P2Sar_SPEC, crate::common::RW> {
         unsafe {
@@ -1301,6 +6234,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "Port Security Attribute register 1"]
     #[inline(always)]
     pub const fn p3sar(&self) -> &'static crate::common::Reg<self::P3Sar_SPEC, crate::common::RW> {
         unsafe {
@@ -1310,6 +6244,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "Port Security Attribute register 1"]
     #[inline(always)]
     pub const fn p4sar(&self) -> &'static crate::common::Reg<self::P4Sar_SPEC, crate::common::RW> {
         unsafe {
@@ -1319,6 +6254,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "Port Security Attribute register 1"]
     #[inline(always)]
     pub const fn p5sar(&self) -> &'static crate::common::Reg<self::P5Sar_SPEC, crate::common::RW> {
         unsafe {
@@ -1328,6 +6264,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "Port Security Attribute register 1"]
     #[inline(always)]
     pub const fn p6sar(&self) -> &'static crate::common::Reg<self::P6Sar_SPEC, crate::common::RW> {
         unsafe {
@@ -1337,6 +6274,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "Port Security Attribute register 1"]
     #[inline(always)]
     pub const fn p7sar(&self) -> &'static crate::common::Reg<self::P7Sar_SPEC, crate::common::RW> {
         unsafe {
@@ -1346,6 +6284,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "Port Security Attribute register 1"]
     #[inline(always)]
     pub const fn p8sar(&self) -> &'static crate::common::Reg<self::P8Sar_SPEC, crate::common::RW> {
         unsafe {
@@ -1355,6 +6294,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "Port Security Attribute register 1"]
     #[inline(always)]
     pub const fn p9sar(&self) -> &'static crate::common::Reg<self::P9Sar_SPEC, crate::common::RW> {
         unsafe {
@@ -1364,6 +6304,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "Port Security Attribute register 1"]
     #[inline(always)]
     pub const fn pasar(&self) -> &'static crate::common::Reg<self::Pasar_SPEC, crate::common::RW> {
         unsafe {
@@ -1373,6 +6314,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "Port Security Attribute register 1"]
     #[inline(always)]
     pub const fn pbsar(&self) -> &'static crate::common::Reg<self::Pbsar_SPEC, crate::common::RW> {
         unsafe {
@@ -1382,6 +6324,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "Port Security Attribute register 1"]
     #[inline(always)]
     pub const fn pcsar(&self) -> &'static crate::common::Reg<self::Pcsar_SPEC, crate::common::RW> {
         unsafe {
@@ -1391,6 +6334,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "Port Security Attribute register 1"]
     #[inline(always)]
     pub const fn pdsar(&self) -> &'static crate::common::Reg<self::Pdsar_SPEC, crate::common::RW> {
         unsafe {
@@ -1400,6 +6344,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "Port Security Attribute register 1"]
     #[inline(always)]
     pub const fn pesar(&self) -> &'static crate::common::Reg<self::Pesar_SPEC, crate::common::RW> {
         unsafe {
@@ -1409,6 +6354,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "Port Security Attribute register 1"]
     #[inline(always)]
     pub const fn pfsar(&self) -> &'static crate::common::Reg<self::Pfsar_SPEC, crate::common::RW> {
         unsafe {
@@ -1418,6 +6364,7 @@ impl super::Pfs {
         }
     }
 
+    #[doc = "Port Security Attribute register 1"]
     #[inline(always)]
     pub const fn pgsar(&self) -> &'static crate::common::Reg<self::Pgsar_SPEC, crate::common::RW> {
         unsafe {
@@ -1434,9 +6381,11 @@ impl crate::sealed::RegSpec for P000Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P000 Pin Function Control Register"]
 pub type P000Pfs = crate::RegValueT<P000Pfs_SPEC>;
 
 impl P000Pfs {
+    #[doc = "Port Output Data"]
     #[inline(always)]
     pub fn podr(
         self,
@@ -1462,6 +6411,7 @@ impl P000Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Data"]
     #[inline(always)]
     pub fn pidr(
         self,
@@ -1487,6 +6437,7 @@ impl P000Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Direction"]
     #[inline(always)]
     pub fn pdr(
         self,
@@ -1512,6 +6463,7 @@ impl P000Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Pull-up Control"]
     #[inline(always)]
     pub fn pcr(
         self,
@@ -1537,6 +6489,7 @@ impl P000Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "N-Channel Open Drain Control"]
     #[inline(always)]
     pub fn ncodr(
         self,
@@ -1562,6 +6515,7 @@ impl P000Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Drive Strength Control Register"]
     #[inline(always)]
     pub fn dscr(
         self,
@@ -1587,6 +6541,7 @@ impl P000Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ input enable"]
     #[inline(always)]
     pub fn isel(
         self,
@@ -1612,6 +6567,7 @@ impl P000Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Analog Input enable"]
     #[inline(always)]
     pub fn asel(
         self,
@@ -1637,6 +6593,7 @@ impl P000Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Mode Control"]
     #[inline(always)]
     pub fn pmr(
         self,
@@ -1662,6 +6619,7 @@ impl P000Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Function SelectThese bits select the peripheral function. For individual pin functions, see the MPC table"]
     #[inline(always)]
     pub fn psel(
         self,
@@ -1669,6 +6627,7 @@ impl P000Pfs {
         crate::common::RegisterField::<24,0x1f,1,0,u8,u8,P000Pfs_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1688,76 +6647,96 @@ pub mod p000pfs {
     pub struct Podr_SPEC;
     pub type Podr = crate::EnumBitfieldStruct<u8, Podr_SPEC>;
     impl Podr {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr_SPEC;
     pub type Pidr = crate::EnumBitfieldStruct<u8, Pidr_SPEC>;
     impl Pidr {
+        #[doc = "Low input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr_SPEC;
     pub type Pdr = crate::EnumBitfieldStruct<u8, Pdr_SPEC>;
     impl Pdr {
+        #[doc = "Input (Functions as an input pin.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output (Functions as an output pin.)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcr_SPEC;
     pub type Pcr = crate::EnumBitfieldStruct<u8, Pcr_SPEC>;
     impl Pcr {
+        #[doc = "Disables an input pull-up."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables an input pull-up."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ncodr_SPEC;
     pub type Ncodr = crate::EnumBitfieldStruct<u8, Ncodr_SPEC>;
     impl Ncodr {
+        #[doc = "CMOS output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NMOS open-drain output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dscr_SPEC;
     pub type Dscr = crate::EnumBitfieldStruct<u8, Dscr_SPEC>;
     impl Dscr {
+        #[doc = "Normal drive output"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Middle drive output"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Extra high drive"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "High-drive output"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Isel_SPEC;
     pub type Isel = crate::EnumBitfieldStruct<u8, Isel_SPEC>;
     impl Isel {
+        #[doc = "Not used as IRQn input pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as IRQn input pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asel_SPEC;
     pub type Asel = crate::EnumBitfieldStruct<u8, Asel_SPEC>;
     impl Asel {
+        #[doc = "Used other than as analog pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as analog pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pmr_SPEC;
     pub type Pmr = crate::EnumBitfieldStruct<u8, Pmr_SPEC>;
     impl Pmr {
+        #[doc = "Uses the pin as a general I/O pin."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Uses the pin as an I/O port for peripheral functions."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1768,9 +6747,11 @@ impl crate::sealed::RegSpec for P000PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P000 Pin Function Control Register"]
 pub type P000PfsHa = crate::RegValueT<P000PfsHa_SPEC>;
 
 impl P000PfsHa {
+    #[doc = "Port Output Data"]
     #[inline(always)]
     pub fn podr(
         self,
@@ -1796,6 +6777,7 @@ impl P000PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Data"]
     #[inline(always)]
     pub fn pidr(
         self,
@@ -1821,6 +6803,7 @@ impl P000PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Direction"]
     #[inline(always)]
     pub fn pdr(
         self,
@@ -1846,6 +6829,7 @@ impl P000PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Pull-up Control"]
     #[inline(always)]
     pub fn pcr(
         self,
@@ -1871,6 +6855,7 @@ impl P000PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "N-Channel Open Drain Control"]
     #[inline(always)]
     pub fn ncodr(
         self,
@@ -1896,6 +6881,7 @@ impl P000PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Drive Strength Control Register"]
     #[inline(always)]
     pub fn dscr(
         self,
@@ -1921,6 +6907,7 @@ impl P000PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00. The write value should be 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1929,6 +6916,7 @@ impl P000PfsHa {
         crate::common::RegisterField::<12,0x3,1,0,u8,u8,P000PfsHa_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "IRQ input enable"]
     #[inline(always)]
     pub fn isel(
         self,
@@ -1954,6 +6942,7 @@ impl P000PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Analog Input enable"]
     #[inline(always)]
     pub fn asel(
         self,
@@ -1991,68 +6980,86 @@ pub mod p000pfs_ha {
     pub struct Podr_SPEC;
     pub type Podr = crate::EnumBitfieldStruct<u8, Podr_SPEC>;
     impl Podr {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr_SPEC;
     pub type Pidr = crate::EnumBitfieldStruct<u8, Pidr_SPEC>;
     impl Pidr {
+        #[doc = "Low input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr_SPEC;
     pub type Pdr = crate::EnumBitfieldStruct<u8, Pdr_SPEC>;
     impl Pdr {
+        #[doc = "Input (Functions as an input pin.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output (Functions as an output pin.)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcr_SPEC;
     pub type Pcr = crate::EnumBitfieldStruct<u8, Pcr_SPEC>;
     impl Pcr {
+        #[doc = "Disables an input pull-up."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables an input pull-up."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ncodr_SPEC;
     pub type Ncodr = crate::EnumBitfieldStruct<u8, Ncodr_SPEC>;
     impl Ncodr {
+        #[doc = "CMOS output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NMOS open-drain output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dscr_SPEC;
     pub type Dscr = crate::EnumBitfieldStruct<u8, Dscr_SPEC>;
     impl Dscr {
+        #[doc = "Normal drive output"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Middle drive output"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Extra high drive"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "High-drive output"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Isel_SPEC;
     pub type Isel = crate::EnumBitfieldStruct<u8, Isel_SPEC>;
     impl Isel {
+        #[doc = "Not used as IRQn input pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as IRQn input pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asel_SPEC;
     pub type Asel = crate::EnumBitfieldStruct<u8, Asel_SPEC>;
     impl Asel {
+        #[doc = "Used other than as analog pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as analog pin"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2063,9 +7070,11 @@ impl crate::sealed::RegSpec for P000PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P000 Pin Function Control Register"]
 pub type P000PfsBy = crate::RegValueT<P000PfsBy_SPEC>;
 
 impl P000PfsBy {
+    #[doc = "Port Output Data"]
     #[inline(always)]
     pub fn podr(
         self,
@@ -2091,6 +7100,7 @@ impl P000PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Data"]
     #[inline(always)]
     pub fn pidr(
         self,
@@ -2116,6 +7126,7 @@ impl P000PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Direction"]
     #[inline(always)]
     pub fn pdr(
         self,
@@ -2141,6 +7152,7 @@ impl P000PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "Pull-up Control"]
     #[inline(always)]
     pub fn pcr(
         self,
@@ -2166,6 +7178,7 @@ impl P000PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "N-Channel Open Drain Control"]
     #[inline(always)]
     pub fn ncodr(
         self,
@@ -2191,6 +7204,7 @@ impl P000PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2210,40 +7224,50 @@ pub mod p000pfs_by {
     pub struct Podr_SPEC;
     pub type Podr = crate::EnumBitfieldStruct<u8, Podr_SPEC>;
     impl Podr {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr_SPEC;
     pub type Pidr = crate::EnumBitfieldStruct<u8, Pidr_SPEC>;
     impl Pidr {
+        #[doc = "Low input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr_SPEC;
     pub type Pdr = crate::EnumBitfieldStruct<u8, Pdr_SPEC>;
     impl Pdr {
+        #[doc = "Input (Functions as an input pin.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output (Functions as an output pin.)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcr_SPEC;
     pub type Pcr = crate::EnumBitfieldStruct<u8, Pcr_SPEC>;
     impl Pcr {
+        #[doc = "Disables an input pull-up."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables an input pull-up."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ncodr_SPEC;
     pub type Ncodr = crate::EnumBitfieldStruct<u8, Ncodr_SPEC>;
     impl Ncodr {
+        #[doc = "CMOS output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NMOS open-drain output"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2254,6 +7278,7 @@ impl crate::sealed::RegSpec for P00Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P00%s Pin Function Control Register"]
 pub type P00Pfs = crate::RegValueT<P00Pfs_SPEC>;
 
 impl NoBitfieldReg<P00Pfs_SPEC> for P00Pfs {}
@@ -2271,6 +7296,7 @@ impl crate::sealed::RegSpec for P00PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P00%s Pin Function Control Register"]
 pub type P00PfsHa = crate::RegValueT<P00PfsHa_SPEC>;
 
 impl NoBitfieldReg<P00PfsHa_SPEC> for P00PfsHa {}
@@ -2288,6 +7314,7 @@ impl crate::sealed::RegSpec for P00PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P00%s Pin Function Control Register"]
 pub type P00PfsBy = crate::RegValueT<P00PfsBy_SPEC>;
 
 impl NoBitfieldReg<P00PfsBy_SPEC> for P00PfsBy {}
@@ -2305,6 +7332,7 @@ impl crate::sealed::RegSpec for P0Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P0%s Pin Function Control Register"]
 pub type P0Pfs = crate::RegValueT<P0Pfs_SPEC>;
 
 impl NoBitfieldReg<P0Pfs_SPEC> for P0Pfs {}
@@ -2322,6 +7350,7 @@ impl crate::sealed::RegSpec for P0PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P0%s Pin Function Control Register"]
 pub type P0PfsHa = crate::RegValueT<P0PfsHa_SPEC>;
 
 impl NoBitfieldReg<P0PfsHa_SPEC> for P0PfsHa {}
@@ -2339,6 +7368,7 @@ impl crate::sealed::RegSpec for P0PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P0%s Pin Function Control Register"]
 pub type P0PfsBy = crate::RegValueT<P0PfsBy_SPEC>;
 
 impl NoBitfieldReg<P0PfsBy_SPEC> for P0PfsBy {}
@@ -2356,9 +7386,11 @@ impl crate::sealed::RegSpec for P100Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P100 Pin Function Control Register"]
 pub type P100Pfs = crate::RegValueT<P100Pfs_SPEC>;
 
 impl P100Pfs {
+    #[doc = "Port Output Data"]
     #[inline(always)]
     pub fn podr(
         self,
@@ -2384,6 +7416,7 @@ impl P100Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Data"]
     #[inline(always)]
     pub fn pidr(
         self,
@@ -2409,6 +7442,7 @@ impl P100Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Direction"]
     #[inline(always)]
     pub fn pdr(
         self,
@@ -2434,6 +7468,7 @@ impl P100Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Pull-up Control"]
     #[inline(always)]
     pub fn pcr(
         self,
@@ -2459,6 +7494,7 @@ impl P100Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "N-Channel Open Drain Control"]
     #[inline(always)]
     pub fn ncodr(
         self,
@@ -2484,6 +7520,7 @@ impl P100Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Drive Strength Control Register"]
     #[inline(always)]
     pub fn dscr(
         self,
@@ -2509,6 +7546,7 @@ impl P100Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event on Falling/Event on Rising"]
     #[inline(always)]
     pub fn eofr(
         self,
@@ -2534,6 +7572,7 @@ impl P100Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ input enable"]
     #[inline(always)]
     pub fn isel(
         self,
@@ -2559,6 +7598,7 @@ impl P100Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Analog Input enable"]
     #[inline(always)]
     pub fn asel(
         self,
@@ -2584,6 +7624,7 @@ impl P100Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Mode Control"]
     #[inline(always)]
     pub fn pmr(
         self,
@@ -2609,6 +7650,7 @@ impl P100Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Function SelectThese bits select the peripheral function. For individual pin functions, see the MPC table"]
     #[inline(always)]
     pub fn psel(
         self,
@@ -2616,6 +7658,7 @@ impl P100Pfs {
         crate::common::RegisterField::<24,0x1f,1,0,u8,u8,P100Pfs_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2635,88 +7678,112 @@ pub mod p100pfs {
     pub struct Podr_SPEC;
     pub type Podr = crate::EnumBitfieldStruct<u8, Podr_SPEC>;
     impl Podr {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr_SPEC;
     pub type Pidr = crate::EnumBitfieldStruct<u8, Pidr_SPEC>;
     impl Pidr {
+        #[doc = "Low input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr_SPEC;
     pub type Pdr = crate::EnumBitfieldStruct<u8, Pdr_SPEC>;
     impl Pdr {
+        #[doc = "Input (Functions as an input pin.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output (Functions as an output pin.)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcr_SPEC;
     pub type Pcr = crate::EnumBitfieldStruct<u8, Pcr_SPEC>;
     impl Pcr {
+        #[doc = "Disables an input pull-up."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables an input pull-up."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ncodr_SPEC;
     pub type Ncodr = crate::EnumBitfieldStruct<u8, Ncodr_SPEC>;
     impl Ncodr {
+        #[doc = "CMOS output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NMOS open-drain output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dscr_SPEC;
     pub type Dscr = crate::EnumBitfieldStruct<u8, Dscr_SPEC>;
     impl Dscr {
+        #[doc = "Normal drive output"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Middle drive output"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Extra high drive"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "High-drive output"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eofr_SPEC;
     pub type Eofr = crate::EnumBitfieldStruct<u8, Eofr_SPEC>;
     impl Eofr {
+        #[doc = "No need to care"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Detect rising edge"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Detect falling edge"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Detect both edges"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Isel_SPEC;
     pub type Isel = crate::EnumBitfieldStruct<u8, Isel_SPEC>;
     impl Isel {
+        #[doc = "Not used as IRQn input pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as IRQn input pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asel_SPEC;
     pub type Asel = crate::EnumBitfieldStruct<u8, Asel_SPEC>;
     impl Asel {
+        #[doc = "Used other than as analog pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as analog pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pmr_SPEC;
     pub type Pmr = crate::EnumBitfieldStruct<u8, Pmr_SPEC>;
     impl Pmr {
+        #[doc = "Uses the pin as a general I/O pin."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Uses the pin as an I/O port for peripheral functions."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2727,9 +7794,11 @@ impl crate::sealed::RegSpec for P100PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P100 Pin Function Control Register"]
 pub type P100PfsHa = crate::RegValueT<P100PfsHa_SPEC>;
 
 impl P100PfsHa {
+    #[doc = "Port Output Data"]
     #[inline(always)]
     pub fn podr(
         self,
@@ -2755,6 +7824,7 @@ impl P100PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Data"]
     #[inline(always)]
     pub fn pidr(
         self,
@@ -2780,6 +7850,7 @@ impl P100PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Direction"]
     #[inline(always)]
     pub fn pdr(
         self,
@@ -2805,6 +7876,7 @@ impl P100PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Pull-up Control"]
     #[inline(always)]
     pub fn pcr(
         self,
@@ -2830,6 +7902,7 @@ impl P100PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "N-Channel Open Drain Control"]
     #[inline(always)]
     pub fn ncodr(
         self,
@@ -2855,6 +7928,7 @@ impl P100PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2862,6 +7936,7 @@ impl P100PfsHa {
         crate::common::RegisterField::<7,0x7,1,0,u8,u8,P100PfsHa_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Drive Strength Control Register"]
     #[inline(always)]
     pub fn dscr(
         self,
@@ -2887,6 +7962,7 @@ impl P100PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event on Falling/Event on Rising"]
     #[inline(always)]
     pub fn eofr(
         self,
@@ -2912,6 +7988,7 @@ impl P100PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ input enable"]
     #[inline(always)]
     pub fn isel(
         self,
@@ -2937,6 +8014,7 @@ impl P100PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Analog Input enable"]
     #[inline(always)]
     pub fn asel(
         self,
@@ -2974,80 +8052,102 @@ pub mod p100pfs_ha {
     pub struct Podr_SPEC;
     pub type Podr = crate::EnumBitfieldStruct<u8, Podr_SPEC>;
     impl Podr {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr_SPEC;
     pub type Pidr = crate::EnumBitfieldStruct<u8, Pidr_SPEC>;
     impl Pidr {
+        #[doc = "Low input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr_SPEC;
     pub type Pdr = crate::EnumBitfieldStruct<u8, Pdr_SPEC>;
     impl Pdr {
+        #[doc = "Input (Functions as an input pin.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output (Functions as an output pin.)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcr_SPEC;
     pub type Pcr = crate::EnumBitfieldStruct<u8, Pcr_SPEC>;
     impl Pcr {
+        #[doc = "Disables an input pull-up."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables an input pull-up."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ncodr_SPEC;
     pub type Ncodr = crate::EnumBitfieldStruct<u8, Ncodr_SPEC>;
     impl Ncodr {
+        #[doc = "CMOS output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NMOS open-drain output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dscr_SPEC;
     pub type Dscr = crate::EnumBitfieldStruct<u8, Dscr_SPEC>;
     impl Dscr {
+        #[doc = "Normal drive output"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Middle drive output"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Extra high drive"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "High-drive output"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eofr_SPEC;
     pub type Eofr = crate::EnumBitfieldStruct<u8, Eofr_SPEC>;
     impl Eofr {
+        #[doc = "No need to care"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Detect rising edge"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Detect falling edge"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Detect both edges"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Isel_SPEC;
     pub type Isel = crate::EnumBitfieldStruct<u8, Isel_SPEC>;
     impl Isel {
+        #[doc = "Not used as IRQn input pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as IRQn input pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asel_SPEC;
     pub type Asel = crate::EnumBitfieldStruct<u8, Asel_SPEC>;
     impl Asel {
+        #[doc = "Used other than as analog pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as analog pin"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3058,9 +8158,11 @@ impl crate::sealed::RegSpec for P100PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P100 Pin Function Control Register"]
 pub type P100PfsBy = crate::RegValueT<P100PfsBy_SPEC>;
 
 impl P100PfsBy {
+    #[doc = "Port Output Data"]
     #[inline(always)]
     pub fn podr(
         self,
@@ -3086,6 +8188,7 @@ impl P100PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Data"]
     #[inline(always)]
     pub fn pidr(
         self,
@@ -3111,6 +8214,7 @@ impl P100PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Direction"]
     #[inline(always)]
     pub fn pdr(
         self,
@@ -3136,6 +8240,7 @@ impl P100PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "Pull-up Control"]
     #[inline(always)]
     pub fn pcr(
         self,
@@ -3161,6 +8266,7 @@ impl P100PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "N-Channel Open Drain Control"]
     #[inline(always)]
     pub fn ncodr(
         self,
@@ -3186,6 +8292,7 @@ impl P100PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -3205,40 +8312,50 @@ pub mod p100pfs_by {
     pub struct Podr_SPEC;
     pub type Podr = crate::EnumBitfieldStruct<u8, Podr_SPEC>;
     impl Podr {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr_SPEC;
     pub type Pidr = crate::EnumBitfieldStruct<u8, Pidr_SPEC>;
     impl Pidr {
+        #[doc = "Low input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr_SPEC;
     pub type Pdr = crate::EnumBitfieldStruct<u8, Pdr_SPEC>;
     impl Pdr {
+        #[doc = "Input (Functions as an input pin.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output (Functions as an output pin.)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcr_SPEC;
     pub type Pcr = crate::EnumBitfieldStruct<u8, Pcr_SPEC>;
     impl Pcr {
+        #[doc = "Disables an input pull-up."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables an input pull-up."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ncodr_SPEC;
     pub type Ncodr = crate::EnumBitfieldStruct<u8, Ncodr_SPEC>;
     impl Ncodr {
+        #[doc = "CMOS output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NMOS open-drain output"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3249,6 +8366,7 @@ impl crate::sealed::RegSpec for P10Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P10%s Pin Function Control Register"]
 pub type P10Pfs = crate::RegValueT<P10Pfs_SPEC>;
 
 impl NoBitfieldReg<P10Pfs_SPEC> for P10Pfs {}
@@ -3266,6 +8384,7 @@ impl crate::sealed::RegSpec for P10PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P10%s Pin Function Control Register"]
 pub type P10PfsHa = crate::RegValueT<P10PfsHa_SPEC>;
 
 impl NoBitfieldReg<P10PfsHa_SPEC> for P10PfsHa {}
@@ -3283,6 +8402,7 @@ impl crate::sealed::RegSpec for P10PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P10%s Pin Function Control Register"]
 pub type P10PfsBy = crate::RegValueT<P10PfsBy_SPEC>;
 
 impl NoBitfieldReg<P10PfsBy_SPEC> for P10PfsBy {}
@@ -3300,9 +8420,11 @@ impl crate::sealed::RegSpec for P108Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P108 Pin Function Control Register"]
 pub type P108Pfs = crate::RegValueT<P108Pfs_SPEC>;
 
 impl P108Pfs {
+    #[doc = "Port Output Data"]
     #[inline(always)]
     pub fn podr(
         self,
@@ -3328,6 +8450,7 @@ impl P108Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Data"]
     #[inline(always)]
     pub fn pidr(
         self,
@@ -3353,6 +8476,7 @@ impl P108Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Direction"]
     #[inline(always)]
     pub fn pdr(
         self,
@@ -3378,6 +8502,7 @@ impl P108Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Pull-up Control"]
     #[inline(always)]
     pub fn pcr(
         self,
@@ -3403,6 +8528,7 @@ impl P108Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "N-Channel Open Drain Control"]
     #[inline(always)]
     pub fn ncodr(
         self,
@@ -3428,6 +8554,7 @@ impl P108Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Drive Strength Control Register"]
     #[inline(always)]
     pub fn dscr(
         self,
@@ -3453,6 +8580,7 @@ impl P108Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event on Falling/Event on Rising"]
     #[inline(always)]
     pub fn eofr(
         self,
@@ -3478,6 +8606,7 @@ impl P108Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ input enable"]
     #[inline(always)]
     pub fn isel(
         self,
@@ -3503,6 +8632,7 @@ impl P108Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Analog Input enable"]
     #[inline(always)]
     pub fn asel(
         self,
@@ -3528,6 +8658,7 @@ impl P108Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Mode Control"]
     #[inline(always)]
     pub fn pmr(
         self,
@@ -3553,6 +8684,7 @@ impl P108Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Function SelectThese bits select the peripheral function. For individual pin functions, see the MPC table"]
     #[inline(always)]
     pub fn psel(
         self,
@@ -3560,6 +8692,7 @@ impl P108Pfs {
         crate::common::RegisterField::<24,0x1f,1,0,u8,u8,P108Pfs_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -3579,88 +8712,112 @@ pub mod p108pfs {
     pub struct Podr_SPEC;
     pub type Podr = crate::EnumBitfieldStruct<u8, Podr_SPEC>;
     impl Podr {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr_SPEC;
     pub type Pidr = crate::EnumBitfieldStruct<u8, Pidr_SPEC>;
     impl Pidr {
+        #[doc = "Low input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr_SPEC;
     pub type Pdr = crate::EnumBitfieldStruct<u8, Pdr_SPEC>;
     impl Pdr {
+        #[doc = "Input (Functions as an input pin.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output (Functions as an output pin.)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcr_SPEC;
     pub type Pcr = crate::EnumBitfieldStruct<u8, Pcr_SPEC>;
     impl Pcr {
+        #[doc = "Disables an input pull-up."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables an input pull-up."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ncodr_SPEC;
     pub type Ncodr = crate::EnumBitfieldStruct<u8, Ncodr_SPEC>;
     impl Ncodr {
+        #[doc = "CMOS output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NMOS open-drain output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dscr_SPEC;
     pub type Dscr = crate::EnumBitfieldStruct<u8, Dscr_SPEC>;
     impl Dscr {
+        #[doc = "Normal drive output"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Middle drive output"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Extra high drive"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "High-drive output"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eofr_SPEC;
     pub type Eofr = crate::EnumBitfieldStruct<u8, Eofr_SPEC>;
     impl Eofr {
+        #[doc = "No need to care"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Detect rising edge"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Detect falling edge"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Detect both edges"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Isel_SPEC;
     pub type Isel = crate::EnumBitfieldStruct<u8, Isel_SPEC>;
     impl Isel {
+        #[doc = "Not used as IRQn input pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as IRQn input pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asel_SPEC;
     pub type Asel = crate::EnumBitfieldStruct<u8, Asel_SPEC>;
     impl Asel {
+        #[doc = "Used other than as analog pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as analog pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pmr_SPEC;
     pub type Pmr = crate::EnumBitfieldStruct<u8, Pmr_SPEC>;
     impl Pmr {
+        #[doc = "Uses the pin as a general I/O pin."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Uses the pin as an I/O port for peripheral functions."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3671,9 +8828,11 @@ impl crate::sealed::RegSpec for P108PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P108 Pin Function Control Register"]
 pub type P108PfsHa = crate::RegValueT<P108PfsHa_SPEC>;
 
 impl P108PfsHa {
+    #[doc = "Port Output Data"]
     #[inline(always)]
     pub fn podr(
         self,
@@ -3699,6 +8858,7 @@ impl P108PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Data"]
     #[inline(always)]
     pub fn pidr(
         self,
@@ -3724,6 +8884,7 @@ impl P108PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Direction"]
     #[inline(always)]
     pub fn pdr(
         self,
@@ -3749,6 +8910,7 @@ impl P108PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Pull-up Control"]
     #[inline(always)]
     pub fn pcr(
         self,
@@ -3774,6 +8936,7 @@ impl P108PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "N-Channel Open Drain Control"]
     #[inline(always)]
     pub fn ncodr(
         self,
@@ -3799,6 +8962,7 @@ impl P108PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -3806,6 +8970,7 @@ impl P108PfsHa {
         crate::common::RegisterField::<7,0x7,1,0,u8,u8,P108PfsHa_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Drive Strength Control Register"]
     #[inline(always)]
     pub fn dscr(
         self,
@@ -3831,6 +8996,7 @@ impl P108PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event on Falling/Event on Rising"]
     #[inline(always)]
     pub fn eofr(
         self,
@@ -3856,6 +9022,7 @@ impl P108PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ input enable"]
     #[inline(always)]
     pub fn isel(
         self,
@@ -3881,6 +9048,7 @@ impl P108PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Analog Input enable"]
     #[inline(always)]
     pub fn asel(
         self,
@@ -3918,80 +9086,102 @@ pub mod p108pfs_ha {
     pub struct Podr_SPEC;
     pub type Podr = crate::EnumBitfieldStruct<u8, Podr_SPEC>;
     impl Podr {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr_SPEC;
     pub type Pidr = crate::EnumBitfieldStruct<u8, Pidr_SPEC>;
     impl Pidr {
+        #[doc = "Low input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr_SPEC;
     pub type Pdr = crate::EnumBitfieldStruct<u8, Pdr_SPEC>;
     impl Pdr {
+        #[doc = "Input (Functions as an input pin.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output (Functions as an output pin.)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcr_SPEC;
     pub type Pcr = crate::EnumBitfieldStruct<u8, Pcr_SPEC>;
     impl Pcr {
+        #[doc = "Disables an input pull-up."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables an input pull-up."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ncodr_SPEC;
     pub type Ncodr = crate::EnumBitfieldStruct<u8, Ncodr_SPEC>;
     impl Ncodr {
+        #[doc = "CMOS output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NMOS open-drain output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dscr_SPEC;
     pub type Dscr = crate::EnumBitfieldStruct<u8, Dscr_SPEC>;
     impl Dscr {
+        #[doc = "Normal drive output"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Middle drive output"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Extra high drive"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "High-drive output"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eofr_SPEC;
     pub type Eofr = crate::EnumBitfieldStruct<u8, Eofr_SPEC>;
     impl Eofr {
+        #[doc = "No need to care"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Detect rising edge"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Detect falling edge"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Detect both edges"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Isel_SPEC;
     pub type Isel = crate::EnumBitfieldStruct<u8, Isel_SPEC>;
     impl Isel {
+        #[doc = "Not used as IRQn input pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as IRQn input pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asel_SPEC;
     pub type Asel = crate::EnumBitfieldStruct<u8, Asel_SPEC>;
     impl Asel {
+        #[doc = "Used other than as analog pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as analog pin"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4002,9 +9192,11 @@ impl crate::sealed::RegSpec for P108PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P108 Pin Function Control Register"]
 pub type P108PfsBy = crate::RegValueT<P108PfsBy_SPEC>;
 
 impl P108PfsBy {
+    #[doc = "Port Output Data"]
     #[inline(always)]
     pub fn podr(
         self,
@@ -4030,6 +9222,7 @@ impl P108PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Data"]
     #[inline(always)]
     pub fn pidr(
         self,
@@ -4055,6 +9248,7 @@ impl P108PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Direction"]
     #[inline(always)]
     pub fn pdr(
         self,
@@ -4080,6 +9274,7 @@ impl P108PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "Pull-up Control"]
     #[inline(always)]
     pub fn pcr(
         self,
@@ -4105,6 +9300,7 @@ impl P108PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "N-Channel Open Drain Control"]
     #[inline(always)]
     pub fn ncodr(
         self,
@@ -4130,6 +9326,7 @@ impl P108PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -4149,40 +9346,50 @@ pub mod p108pfs_by {
     pub struct Podr_SPEC;
     pub type Podr = crate::EnumBitfieldStruct<u8, Podr_SPEC>;
     impl Podr {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr_SPEC;
     pub type Pidr = crate::EnumBitfieldStruct<u8, Pidr_SPEC>;
     impl Pidr {
+        #[doc = "Low input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr_SPEC;
     pub type Pdr = crate::EnumBitfieldStruct<u8, Pdr_SPEC>;
     impl Pdr {
+        #[doc = "Input (Functions as an input pin.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output (Functions as an output pin.)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcr_SPEC;
     pub type Pcr = crate::EnumBitfieldStruct<u8, Pcr_SPEC>;
     impl Pcr {
+        #[doc = "Disables an input pull-up."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables an input pull-up."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ncodr_SPEC;
     pub type Ncodr = crate::EnumBitfieldStruct<u8, Ncodr_SPEC>;
     impl Ncodr {
+        #[doc = "CMOS output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NMOS open-drain output"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4193,6 +9400,7 @@ impl crate::sealed::RegSpec for P109Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P109 Pin Function Control Register"]
 pub type P109Pfs = crate::RegValueT<P109Pfs_SPEC>;
 
 impl NoBitfieldReg<P109Pfs_SPEC> for P109Pfs {}
@@ -4210,6 +9418,7 @@ impl crate::sealed::RegSpec for P109PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P109 Pin Function Control Register"]
 pub type P109PfsHa = crate::RegValueT<P109PfsHa_SPEC>;
 
 impl NoBitfieldReg<P109PfsHa_SPEC> for P109PfsHa {}
@@ -4227,6 +9436,7 @@ impl crate::sealed::RegSpec for P109PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P109 Pin Function Control Register"]
 pub type P109PfsBy = crate::RegValueT<P109PfsBy_SPEC>;
 
 impl NoBitfieldReg<P109PfsBy_SPEC> for P109PfsBy {}
@@ -4244,9 +9454,11 @@ impl crate::sealed::RegSpec for P110Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P110 Pin Function Control Register"]
 pub type P110Pfs = crate::RegValueT<P110Pfs_SPEC>;
 
 impl P110Pfs {
+    #[doc = "Port Output Data"]
     #[inline(always)]
     pub fn podr(
         self,
@@ -4272,6 +9484,7 @@ impl P110Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Data"]
     #[inline(always)]
     pub fn pidr(
         self,
@@ -4297,6 +9510,7 @@ impl P110Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Direction"]
     #[inline(always)]
     pub fn pdr(
         self,
@@ -4322,6 +9536,7 @@ impl P110Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Pull-up Control"]
     #[inline(always)]
     pub fn pcr(
         self,
@@ -4347,6 +9562,7 @@ impl P110Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "N-Channel Open Drain Control"]
     #[inline(always)]
     pub fn ncodr(
         self,
@@ -4372,6 +9588,7 @@ impl P110Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Drive Strength Control Register"]
     #[inline(always)]
     pub fn dscr(
         self,
@@ -4397,6 +9614,7 @@ impl P110Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event on Falling/Event on Rising"]
     #[inline(always)]
     pub fn eofr(
         self,
@@ -4422,6 +9640,7 @@ impl P110Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ input enable"]
     #[inline(always)]
     pub fn isel(
         self,
@@ -4447,6 +9666,7 @@ impl P110Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Analog Input enable"]
     #[inline(always)]
     pub fn asel(
         self,
@@ -4472,6 +9692,7 @@ impl P110Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Mode Control"]
     #[inline(always)]
     pub fn pmr(
         self,
@@ -4497,6 +9718,7 @@ impl P110Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Function SelectThese bits select the peripheral function. For individual pin functions, see the MPC table"]
     #[inline(always)]
     pub fn psel(
         self,
@@ -4504,6 +9726,7 @@ impl P110Pfs {
         crate::common::RegisterField::<24,0x1f,1,0,u8,u8,P110Pfs_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -4523,88 +9746,112 @@ pub mod p110pfs {
     pub struct Podr_SPEC;
     pub type Podr = crate::EnumBitfieldStruct<u8, Podr_SPEC>;
     impl Podr {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr_SPEC;
     pub type Pidr = crate::EnumBitfieldStruct<u8, Pidr_SPEC>;
     impl Pidr {
+        #[doc = "Low input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr_SPEC;
     pub type Pdr = crate::EnumBitfieldStruct<u8, Pdr_SPEC>;
     impl Pdr {
+        #[doc = "Input (Functions as an input pin.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output (Functions as an output pin.)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcr_SPEC;
     pub type Pcr = crate::EnumBitfieldStruct<u8, Pcr_SPEC>;
     impl Pcr {
+        #[doc = "Disables an input pull-up."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables an input pull-up."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ncodr_SPEC;
     pub type Ncodr = crate::EnumBitfieldStruct<u8, Ncodr_SPEC>;
     impl Ncodr {
+        #[doc = "CMOS output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NMOS open-drain output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dscr_SPEC;
     pub type Dscr = crate::EnumBitfieldStruct<u8, Dscr_SPEC>;
     impl Dscr {
+        #[doc = "Normal drive output"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Middle drive output"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Extra high drive"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "High-drive output"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eofr_SPEC;
     pub type Eofr = crate::EnumBitfieldStruct<u8, Eofr_SPEC>;
     impl Eofr {
+        #[doc = "No need to care"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Detect rising edge"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Detect falling edge"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Detect both edges"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Isel_SPEC;
     pub type Isel = crate::EnumBitfieldStruct<u8, Isel_SPEC>;
     impl Isel {
+        #[doc = "Not used as IRQn input pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as IRQn input pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asel_SPEC;
     pub type Asel = crate::EnumBitfieldStruct<u8, Asel_SPEC>;
     impl Asel {
+        #[doc = "Used other than as analog pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as analog pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pmr_SPEC;
     pub type Pmr = crate::EnumBitfieldStruct<u8, Pmr_SPEC>;
     impl Pmr {
+        #[doc = "Uses the pin as a general I/O pin."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Uses the pin as an I/O port for peripheral functions."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4615,9 +9862,11 @@ impl crate::sealed::RegSpec for P110PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P110 Pin Function Control Register"]
 pub type P110PfsHa = crate::RegValueT<P110PfsHa_SPEC>;
 
 impl P110PfsHa {
+    #[doc = "Port Output Data"]
     #[inline(always)]
     pub fn podr(
         self,
@@ -4643,6 +9892,7 @@ impl P110PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Data"]
     #[inline(always)]
     pub fn pidr(
         self,
@@ -4668,6 +9918,7 @@ impl P110PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Direction"]
     #[inline(always)]
     pub fn pdr(
         self,
@@ -4693,6 +9944,7 @@ impl P110PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Pull-up Control"]
     #[inline(always)]
     pub fn pcr(
         self,
@@ -4718,6 +9970,7 @@ impl P110PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "N-Channel Open Drain Control"]
     #[inline(always)]
     pub fn ncodr(
         self,
@@ -4743,6 +9996,7 @@ impl P110PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -4750,6 +10004,7 @@ impl P110PfsHa {
         crate::common::RegisterField::<7,0x7,1,0,u8,u8,P110PfsHa_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Drive Strength Control Register"]
     #[inline(always)]
     pub fn dscr(
         self,
@@ -4775,6 +10030,7 @@ impl P110PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event on Falling/Event on Rising"]
     #[inline(always)]
     pub fn eofr(
         self,
@@ -4800,6 +10056,7 @@ impl P110PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ input enable"]
     #[inline(always)]
     pub fn isel(
         self,
@@ -4825,6 +10082,7 @@ impl P110PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Analog Input enable"]
     #[inline(always)]
     pub fn asel(
         self,
@@ -4862,80 +10120,102 @@ pub mod p110pfs_ha {
     pub struct Podr_SPEC;
     pub type Podr = crate::EnumBitfieldStruct<u8, Podr_SPEC>;
     impl Podr {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr_SPEC;
     pub type Pidr = crate::EnumBitfieldStruct<u8, Pidr_SPEC>;
     impl Pidr {
+        #[doc = "Low input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr_SPEC;
     pub type Pdr = crate::EnumBitfieldStruct<u8, Pdr_SPEC>;
     impl Pdr {
+        #[doc = "Input (Functions as an input pin.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output (Functions as an output pin.)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcr_SPEC;
     pub type Pcr = crate::EnumBitfieldStruct<u8, Pcr_SPEC>;
     impl Pcr {
+        #[doc = "Disables an input pull-up."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables an input pull-up."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ncodr_SPEC;
     pub type Ncodr = crate::EnumBitfieldStruct<u8, Ncodr_SPEC>;
     impl Ncodr {
+        #[doc = "CMOS output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NMOS open-drain output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dscr_SPEC;
     pub type Dscr = crate::EnumBitfieldStruct<u8, Dscr_SPEC>;
     impl Dscr {
+        #[doc = "Normal drive output"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Middle drive output"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Extra high drive"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "High-drive output"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eofr_SPEC;
     pub type Eofr = crate::EnumBitfieldStruct<u8, Eofr_SPEC>;
     impl Eofr {
+        #[doc = "No need to care"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Detect rising edge"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Detect falling edge"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Detect both edges"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Isel_SPEC;
     pub type Isel = crate::EnumBitfieldStruct<u8, Isel_SPEC>;
     impl Isel {
+        #[doc = "Not used as IRQn input pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as IRQn input pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asel_SPEC;
     pub type Asel = crate::EnumBitfieldStruct<u8, Asel_SPEC>;
     impl Asel {
+        #[doc = "Used other than as analog pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as analog pin"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4946,9 +10226,11 @@ impl crate::sealed::RegSpec for P110PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P110 Pin Function Control Register"]
 pub type P110PfsBy = crate::RegValueT<P110PfsBy_SPEC>;
 
 impl P110PfsBy {
+    #[doc = "Port Output Data"]
     #[inline(always)]
     pub fn podr(
         self,
@@ -4974,6 +10256,7 @@ impl P110PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Data"]
     #[inline(always)]
     pub fn pidr(
         self,
@@ -4999,6 +10282,7 @@ impl P110PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Direction"]
     #[inline(always)]
     pub fn pdr(
         self,
@@ -5024,6 +10308,7 @@ impl P110PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "Pull-up Control"]
     #[inline(always)]
     pub fn pcr(
         self,
@@ -5049,6 +10334,7 @@ impl P110PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "N-Channel Open Drain Control"]
     #[inline(always)]
     pub fn ncodr(
         self,
@@ -5074,6 +10360,7 @@ impl P110PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -5093,40 +10380,50 @@ pub mod p110pfs_by {
     pub struct Podr_SPEC;
     pub type Podr = crate::EnumBitfieldStruct<u8, Podr_SPEC>;
     impl Podr {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr_SPEC;
     pub type Pidr = crate::EnumBitfieldStruct<u8, Pidr_SPEC>;
     impl Pidr {
+        #[doc = "Low input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr_SPEC;
     pub type Pdr = crate::EnumBitfieldStruct<u8, Pdr_SPEC>;
     impl Pdr {
+        #[doc = "Input (Functions as an input pin.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output (Functions as an output pin.)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcr_SPEC;
     pub type Pcr = crate::EnumBitfieldStruct<u8, Pcr_SPEC>;
     impl Pcr {
+        #[doc = "Disables an input pull-up."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables an input pull-up."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ncodr_SPEC;
     pub type Ncodr = crate::EnumBitfieldStruct<u8, Ncodr_SPEC>;
     impl Ncodr {
+        #[doc = "CMOS output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NMOS open-drain output"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5137,6 +10434,7 @@ impl crate::sealed::RegSpec for P1Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P1%s Pin Function Control Register"]
 pub type P1Pfs = crate::RegValueT<P1Pfs_SPEC>;
 
 impl NoBitfieldReg<P1Pfs_SPEC> for P1Pfs {}
@@ -5154,6 +10452,7 @@ impl crate::sealed::RegSpec for P1PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P1%s Pin Function Control Register"]
 pub type P1PfsHa = crate::RegValueT<P1PfsHa_SPEC>;
 
 impl NoBitfieldReg<P1PfsHa_SPEC> for P1PfsHa {}
@@ -5171,6 +10470,7 @@ impl crate::sealed::RegSpec for P1PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P1%s Pin Function Control Register"]
 pub type P1PfsBy = crate::RegValueT<P1PfsBy_SPEC>;
 
 impl NoBitfieldReg<P1PfsBy_SPEC> for P1PfsBy {}
@@ -5188,6 +10488,7 @@ impl crate::sealed::RegSpec for P200Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P200 Pin Function Control Register"]
 pub type P200Pfs = crate::RegValueT<P200Pfs_SPEC>;
 
 impl NoBitfieldReg<P200Pfs_SPEC> for P200Pfs {}
@@ -5205,6 +10506,7 @@ impl crate::sealed::RegSpec for P200PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P200 Pin Function Control Register"]
 pub type P200PfsHa = crate::RegValueT<P200PfsHa_SPEC>;
 
 impl NoBitfieldReg<P200PfsHa_SPEC> for P200PfsHa {}
@@ -5222,6 +10524,7 @@ impl crate::sealed::RegSpec for P200PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P200 Pin Function Control Register"]
 pub type P200PfsBy = crate::RegValueT<P200PfsBy_SPEC>;
 
 impl NoBitfieldReg<P200PfsBy_SPEC> for P200PfsBy {}
@@ -5239,9 +10542,11 @@ impl crate::sealed::RegSpec for P201Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P201 Pin Function Control Register"]
 pub type P201Pfs = crate::RegValueT<P201Pfs_SPEC>;
 
 impl P201Pfs {
+    #[doc = "Port Output Data"]
     #[inline(always)]
     pub fn podr(
         self,
@@ -5267,6 +10572,7 @@ impl P201Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Data"]
     #[inline(always)]
     pub fn pidr(
         self,
@@ -5292,6 +10598,7 @@ impl P201Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Direction"]
     #[inline(always)]
     pub fn pdr(
         self,
@@ -5317,6 +10624,7 @@ impl P201Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Pull-up Control"]
     #[inline(always)]
     pub fn pcr(
         self,
@@ -5342,6 +10650,7 @@ impl P201Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "N-Channel Open Drain Control"]
     #[inline(always)]
     pub fn ncodr(
         self,
@@ -5367,6 +10676,7 @@ impl P201Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Drive Strength Control Register"]
     #[inline(always)]
     pub fn dscr(
         self,
@@ -5392,6 +10702,7 @@ impl P201Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event on Falling/Event on Rising"]
     #[inline(always)]
     pub fn eofr(
         self,
@@ -5417,6 +10728,7 @@ impl P201Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ input enable"]
     #[inline(always)]
     pub fn isel(
         self,
@@ -5442,6 +10754,7 @@ impl P201Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Analog Input enable"]
     #[inline(always)]
     pub fn asel(
         self,
@@ -5467,6 +10780,7 @@ impl P201Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Mode Control"]
     #[inline(always)]
     pub fn pmr(
         self,
@@ -5492,6 +10806,7 @@ impl P201Pfs {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Function SelectThese bits select the peripheral function. For individual pin functions, see the MPC table"]
     #[inline(always)]
     pub fn psel(
         self,
@@ -5499,6 +10814,7 @@ impl P201Pfs {
         crate::common::RegisterField::<24,0x1f,1,0,u8,u8,P201Pfs_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -5518,88 +10834,112 @@ pub mod p201pfs {
     pub struct Podr_SPEC;
     pub type Podr = crate::EnumBitfieldStruct<u8, Podr_SPEC>;
     impl Podr {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr_SPEC;
     pub type Pidr = crate::EnumBitfieldStruct<u8, Pidr_SPEC>;
     impl Pidr {
+        #[doc = "Low input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr_SPEC;
     pub type Pdr = crate::EnumBitfieldStruct<u8, Pdr_SPEC>;
     impl Pdr {
+        #[doc = "Input (Functions as an input pin.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output (Functions as an output pin.)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcr_SPEC;
     pub type Pcr = crate::EnumBitfieldStruct<u8, Pcr_SPEC>;
     impl Pcr {
+        #[doc = "Disables an input pull-up."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables an input pull-up."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ncodr_SPEC;
     pub type Ncodr = crate::EnumBitfieldStruct<u8, Ncodr_SPEC>;
     impl Ncodr {
+        #[doc = "CMOS output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NMOS open-drain output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dscr_SPEC;
     pub type Dscr = crate::EnumBitfieldStruct<u8, Dscr_SPEC>;
     impl Dscr {
+        #[doc = "Normal drive output"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Middle drive output"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Extra high drive"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "High-drive output"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eofr_SPEC;
     pub type Eofr = crate::EnumBitfieldStruct<u8, Eofr_SPEC>;
     impl Eofr {
+        #[doc = "No need to care"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Detect rising edge"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Detect falling edge"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Detect both edges"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Isel_SPEC;
     pub type Isel = crate::EnumBitfieldStruct<u8, Isel_SPEC>;
     impl Isel {
+        #[doc = "Not used as IRQn input pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as IRQn input pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asel_SPEC;
     pub type Asel = crate::EnumBitfieldStruct<u8, Asel_SPEC>;
     impl Asel {
+        #[doc = "Used other than as analog pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as analog pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pmr_SPEC;
     pub type Pmr = crate::EnumBitfieldStruct<u8, Pmr_SPEC>;
     impl Pmr {
+        #[doc = "Uses the pin as a general I/O pin."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Uses the pin as an I/O port for peripheral functions."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5610,9 +10950,11 @@ impl crate::sealed::RegSpec for P201PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P201 Pin Function Control Register"]
 pub type P201PfsHa = crate::RegValueT<P201PfsHa_SPEC>;
 
 impl P201PfsHa {
+    #[doc = "Port Output Data"]
     #[inline(always)]
     pub fn podr(
         self,
@@ -5638,6 +10980,7 @@ impl P201PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Data"]
     #[inline(always)]
     pub fn pidr(
         self,
@@ -5663,6 +11006,7 @@ impl P201PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Direction"]
     #[inline(always)]
     pub fn pdr(
         self,
@@ -5688,6 +11032,7 @@ impl P201PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Pull-up Control"]
     #[inline(always)]
     pub fn pcr(
         self,
@@ -5713,6 +11058,7 @@ impl P201PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "N-Channel Open Drain Control"]
     #[inline(always)]
     pub fn ncodr(
         self,
@@ -5738,6 +11084,7 @@ impl P201PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -5745,6 +11092,7 @@ impl P201PfsHa {
         crate::common::RegisterField::<7,0x7,1,0,u8,u8,P201PfsHa_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Drive Strength Control Register"]
     #[inline(always)]
     pub fn dscr(
         self,
@@ -5770,6 +11118,7 @@ impl P201PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event on Falling/Event on Rising"]
     #[inline(always)]
     pub fn eofr(
         self,
@@ -5795,6 +11144,7 @@ impl P201PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "IRQ input enable"]
     #[inline(always)]
     pub fn isel(
         self,
@@ -5820,6 +11170,7 @@ impl P201PfsHa {
         >::from_register(self, 0)
     }
 
+    #[doc = "Analog Input enable"]
     #[inline(always)]
     pub fn asel(
         self,
@@ -5857,80 +11208,102 @@ pub mod p201pfs_ha {
     pub struct Podr_SPEC;
     pub type Podr = crate::EnumBitfieldStruct<u8, Podr_SPEC>;
     impl Podr {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr_SPEC;
     pub type Pidr = crate::EnumBitfieldStruct<u8, Pidr_SPEC>;
     impl Pidr {
+        #[doc = "Low input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr_SPEC;
     pub type Pdr = crate::EnumBitfieldStruct<u8, Pdr_SPEC>;
     impl Pdr {
+        #[doc = "Input (Functions as an input pin.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output (Functions as an output pin.)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcr_SPEC;
     pub type Pcr = crate::EnumBitfieldStruct<u8, Pcr_SPEC>;
     impl Pcr {
+        #[doc = "Disables an input pull-up."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables an input pull-up."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ncodr_SPEC;
     pub type Ncodr = crate::EnumBitfieldStruct<u8, Ncodr_SPEC>;
     impl Ncodr {
+        #[doc = "CMOS output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NMOS open-drain output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dscr_SPEC;
     pub type Dscr = crate::EnumBitfieldStruct<u8, Dscr_SPEC>;
     impl Dscr {
+        #[doc = "Normal drive output"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Middle drive output"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Extra high drive"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "High-drive output"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eofr_SPEC;
     pub type Eofr = crate::EnumBitfieldStruct<u8, Eofr_SPEC>;
     impl Eofr {
+        #[doc = "No need to care"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Detect rising edge"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Detect falling edge"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Detect both edges"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Isel_SPEC;
     pub type Isel = crate::EnumBitfieldStruct<u8, Isel_SPEC>;
     impl Isel {
+        #[doc = "Not used as IRQn input pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as IRQn input pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asel_SPEC;
     pub type Asel = crate::EnumBitfieldStruct<u8, Asel_SPEC>;
     impl Asel {
+        #[doc = "Used other than as analog pin"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Used as analog pin"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5941,9 +11314,11 @@ impl crate::sealed::RegSpec for P201PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P201 Pin Function Control Register"]
 pub type P201PfsBy = crate::RegValueT<P201PfsBy_SPEC>;
 
 impl P201PfsBy {
+    #[doc = "Port Output Data"]
     #[inline(always)]
     pub fn podr(
         self,
@@ -5969,6 +11344,7 @@ impl P201PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Data"]
     #[inline(always)]
     pub fn pidr(
         self,
@@ -5994,6 +11370,7 @@ impl P201PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Direction"]
     #[inline(always)]
     pub fn pdr(
         self,
@@ -6019,6 +11396,7 @@ impl P201PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "Pull-up Control"]
     #[inline(always)]
     pub fn pcr(
         self,
@@ -6044,6 +11422,7 @@ impl P201PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "N-Channel Open Drain Control"]
     #[inline(always)]
     pub fn ncodr(
         self,
@@ -6069,6 +11448,7 @@ impl P201PfsBy {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -6088,40 +11468,50 @@ pub mod p201pfs_by {
     pub struct Podr_SPEC;
     pub type Podr = crate::EnumBitfieldStruct<u8, Podr_SPEC>;
     impl Podr {
+        #[doc = "Low output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidr_SPEC;
     pub type Pidr = crate::EnumBitfieldStruct<u8, Pidr_SPEC>;
     impl Pidr {
+        #[doc = "Low input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdr_SPEC;
     pub type Pdr = crate::EnumBitfieldStruct<u8, Pdr_SPEC>;
     impl Pdr {
+        #[doc = "Input (Functions as an input pin.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output (Functions as an output pin.)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcr_SPEC;
     pub type Pcr = crate::EnumBitfieldStruct<u8, Pcr_SPEC>;
     impl Pcr {
+        #[doc = "Disables an input pull-up."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables an input pull-up."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ncodr_SPEC;
     pub type Ncodr = crate::EnumBitfieldStruct<u8, Ncodr_SPEC>;
     impl Ncodr {
+        #[doc = "CMOS output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NMOS open-drain output"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6132,6 +11522,7 @@ impl crate::sealed::RegSpec for P20Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P20%s Pin Function Control Register"]
 pub type P20Pfs = crate::RegValueT<P20Pfs_SPEC>;
 
 impl NoBitfieldReg<P20Pfs_SPEC> for P20Pfs {}
@@ -6149,6 +11540,7 @@ impl crate::sealed::RegSpec for P20PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P20%s Pin Function Control Register"]
 pub type P20PfsHa = crate::RegValueT<P20PfsHa_SPEC>;
 
 impl NoBitfieldReg<P20PfsHa_SPEC> for P20PfsHa {}
@@ -6166,6 +11558,7 @@ impl crate::sealed::RegSpec for P20PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P20%s Pin Function Control Register"]
 pub type P20PfsBy = crate::RegValueT<P20PfsBy_SPEC>;
 
 impl NoBitfieldReg<P20PfsBy_SPEC> for P20PfsBy {}
@@ -6183,6 +11576,7 @@ impl crate::sealed::RegSpec for P2Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P2%s Pin Function Control Register"]
 pub type P2Pfs = crate::RegValueT<P2Pfs_SPEC>;
 
 impl NoBitfieldReg<P2Pfs_SPEC> for P2Pfs {}
@@ -6200,6 +11594,7 @@ impl crate::sealed::RegSpec for P2PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P2%s Pin Function Control Register"]
 pub type P2PfsHa = crate::RegValueT<P2PfsHa_SPEC>;
 
 impl NoBitfieldReg<P2PfsHa_SPEC> for P2PfsHa {}
@@ -6217,6 +11612,7 @@ impl crate::sealed::RegSpec for P2PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P2%s Pin Function Control Register"]
 pub type P2PfsBy = crate::RegValueT<P2PfsBy_SPEC>;
 
 impl NoBitfieldReg<P2PfsBy_SPEC> for P2PfsBy {}
@@ -6234,6 +11630,7 @@ impl crate::sealed::RegSpec for P300Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P300 Pin Function Control Register"]
 pub type P300Pfs = crate::RegValueT<P300Pfs_SPEC>;
 
 impl NoBitfieldReg<P300Pfs_SPEC> for P300Pfs {}
@@ -6251,6 +11648,7 @@ impl crate::sealed::RegSpec for P300PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P300 Pin Function Control Register"]
 pub type P300PfsHa = crate::RegValueT<P300PfsHa_SPEC>;
 
 impl NoBitfieldReg<P300PfsHa_SPEC> for P300PfsHa {}
@@ -6268,6 +11666,7 @@ impl crate::sealed::RegSpec for P300PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P300 Pin Function Control Register"]
 pub type P300PfsBy = crate::RegValueT<P300PfsBy_SPEC>;
 
 impl NoBitfieldReg<P300PfsBy_SPEC> for P300PfsBy {}
@@ -6285,6 +11684,7 @@ impl crate::sealed::RegSpec for P30Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P30%s Pin Function Control Register"]
 pub type P30Pfs = crate::RegValueT<P30Pfs_SPEC>;
 
 impl NoBitfieldReg<P30Pfs_SPEC> for P30Pfs {}
@@ -6302,6 +11702,7 @@ impl crate::sealed::RegSpec for P30PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P30%s Pin Function Control Register"]
 pub type P30PfsHa = crate::RegValueT<P30PfsHa_SPEC>;
 
 impl NoBitfieldReg<P30PfsHa_SPEC> for P30PfsHa {}
@@ -6319,6 +11720,7 @@ impl crate::sealed::RegSpec for P30PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P30%s Pin Function Control Register"]
 pub type P30PfsBy = crate::RegValueT<P30PfsBy_SPEC>;
 
 impl NoBitfieldReg<P30PfsBy_SPEC> for P30PfsBy {}
@@ -6336,6 +11738,7 @@ impl crate::sealed::RegSpec for P3Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P3%s Pin Function Control Register"]
 pub type P3Pfs = crate::RegValueT<P3Pfs_SPEC>;
 
 impl NoBitfieldReg<P3Pfs_SPEC> for P3Pfs {}
@@ -6353,6 +11756,7 @@ impl crate::sealed::RegSpec for P3PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P30%s Pin Function Control Register"]
 pub type P3PfsHa = crate::RegValueT<P3PfsHa_SPEC>;
 
 impl NoBitfieldReg<P3PfsHa_SPEC> for P3PfsHa {}
@@ -6370,6 +11774,7 @@ impl crate::sealed::RegSpec for P3PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P30%s Pin Function Control Register"]
 pub type P3PfsBy = crate::RegValueT<P3PfsBy_SPEC>;
 
 impl NoBitfieldReg<P3PfsBy_SPEC> for P3PfsBy {}
@@ -6387,6 +11792,7 @@ impl crate::sealed::RegSpec for P40Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P40%s Pin Function Control Register"]
 pub type P40Pfs = crate::RegValueT<P40Pfs_SPEC>;
 
 impl NoBitfieldReg<P40Pfs_SPEC> for P40Pfs {}
@@ -6404,6 +11810,7 @@ impl crate::sealed::RegSpec for P40PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P40%s Pin Function Control Register"]
 pub type P40PfsHa = crate::RegValueT<P40PfsHa_SPEC>;
 
 impl NoBitfieldReg<P40PfsHa_SPEC> for P40PfsHa {}
@@ -6421,6 +11828,7 @@ impl crate::sealed::RegSpec for P40PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P40%s Pin Function Control Register"]
 pub type P40PfsBy = crate::RegValueT<P40PfsBy_SPEC>;
 
 impl NoBitfieldReg<P40PfsBy_SPEC> for P40PfsBy {}
@@ -6438,6 +11846,7 @@ impl crate::sealed::RegSpec for P4Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P4%s Pin Function Control Register"]
 pub type P4Pfs = crate::RegValueT<P4Pfs_SPEC>;
 
 impl NoBitfieldReg<P4Pfs_SPEC> for P4Pfs {}
@@ -6455,6 +11864,7 @@ impl crate::sealed::RegSpec for P4PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P4%s Pin Function Control Register"]
 pub type P4PfsHa = crate::RegValueT<P4PfsHa_SPEC>;
 
 impl NoBitfieldReg<P4PfsHa_SPEC> for P4PfsHa {}
@@ -6472,6 +11882,7 @@ impl crate::sealed::RegSpec for P4PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P4%s Pin Function Control Register"]
 pub type P4PfsBy = crate::RegValueT<P4PfsBy_SPEC>;
 
 impl NoBitfieldReg<P4PfsBy_SPEC> for P4PfsBy {}
@@ -6489,6 +11900,7 @@ impl crate::sealed::RegSpec for P50Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P50%s Pin Function Control Register"]
 pub type P50Pfs = crate::RegValueT<P50Pfs_SPEC>;
 
 impl NoBitfieldReg<P50Pfs_SPEC> for P50Pfs {}
@@ -6506,6 +11918,7 @@ impl crate::sealed::RegSpec for P50PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P50%s Pin Function Control Register"]
 pub type P50PfsHa = crate::RegValueT<P50PfsHa_SPEC>;
 
 impl NoBitfieldReg<P50PfsHa_SPEC> for P50PfsHa {}
@@ -6523,6 +11936,7 @@ impl crate::sealed::RegSpec for P50PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P50%s Pin Function Control Register"]
 pub type P50PfsBy = crate::RegValueT<P50PfsBy_SPEC>;
 
 impl NoBitfieldReg<P50PfsBy_SPEC> for P50PfsBy {}
@@ -6540,6 +11954,7 @@ impl crate::sealed::RegSpec for P5Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P5%s Pin Function Control Register"]
 pub type P5Pfs = crate::RegValueT<P5Pfs_SPEC>;
 
 impl NoBitfieldReg<P5Pfs_SPEC> for P5Pfs {}
@@ -6557,6 +11972,7 @@ impl crate::sealed::RegSpec for P5PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P5%s Pin Function Control Register"]
 pub type P5PfsHa = crate::RegValueT<P5PfsHa_SPEC>;
 
 impl NoBitfieldReg<P5PfsHa_SPEC> for P5PfsHa {}
@@ -6574,6 +11990,7 @@ impl crate::sealed::RegSpec for P5PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P5%s Pin Function Control Register"]
 pub type P5PfsBy = crate::RegValueT<P5PfsBy_SPEC>;
 
 impl NoBitfieldReg<P5PfsBy_SPEC> for P5PfsBy {}
@@ -6591,6 +12008,7 @@ impl crate::sealed::RegSpec for P60Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P60%s Pin Function Control Register"]
 pub type P60Pfs = crate::RegValueT<P60Pfs_SPEC>;
 
 impl NoBitfieldReg<P60Pfs_SPEC> for P60Pfs {}
@@ -6608,6 +12026,7 @@ impl crate::sealed::RegSpec for P60PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P60%s Pin Function Control Register"]
 pub type P60PfsHa = crate::RegValueT<P60PfsHa_SPEC>;
 
 impl NoBitfieldReg<P60PfsHa_SPEC> for P60PfsHa {}
@@ -6625,6 +12044,7 @@ impl crate::sealed::RegSpec for P60PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P60%s Pin Function Control Register"]
 pub type P60PfsBy = crate::RegValueT<P60PfsBy_SPEC>;
 
 impl NoBitfieldReg<P60PfsBy_SPEC> for P60PfsBy {}
@@ -6642,6 +12062,7 @@ impl crate::sealed::RegSpec for P6Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P6%s Pin Function Control Register"]
 pub type P6Pfs = crate::RegValueT<P6Pfs_SPEC>;
 
 impl NoBitfieldReg<P6Pfs_SPEC> for P6Pfs {}
@@ -6659,6 +12080,7 @@ impl crate::sealed::RegSpec for P6PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P6%s Pin Function Control Register"]
 pub type P6PfsHa = crate::RegValueT<P6PfsHa_SPEC>;
 
 impl NoBitfieldReg<P6PfsHa_SPEC> for P6PfsHa {}
@@ -6676,6 +12098,7 @@ impl crate::sealed::RegSpec for P6PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P6%s Pin Function Control Register"]
 pub type P6PfsBy = crate::RegValueT<P6PfsBy_SPEC>;
 
 impl NoBitfieldReg<P6PfsBy_SPEC> for P6PfsBy {}
@@ -6693,6 +12116,7 @@ impl crate::sealed::RegSpec for P70Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P70%s Pin Function Control Register"]
 pub type P70Pfs = crate::RegValueT<P70Pfs_SPEC>;
 
 impl NoBitfieldReg<P70Pfs_SPEC> for P70Pfs {}
@@ -6710,6 +12134,7 @@ impl crate::sealed::RegSpec for P70PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P70%s Pin Function Control Register"]
 pub type P70PfsHa = crate::RegValueT<P70PfsHa_SPEC>;
 
 impl NoBitfieldReg<P70PfsHa_SPEC> for P70PfsHa {}
@@ -6727,6 +12152,7 @@ impl crate::sealed::RegSpec for P70PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P70%s Pin Function Control Register"]
 pub type P70PfsBy = crate::RegValueT<P70PfsBy_SPEC>;
 
 impl NoBitfieldReg<P70PfsBy_SPEC> for P70PfsBy {}
@@ -6744,6 +12170,7 @@ impl crate::sealed::RegSpec for P7Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P7%s Pin Function Control Register"]
 pub type P7Pfs = crate::RegValueT<P7Pfs_SPEC>;
 
 impl NoBitfieldReg<P7Pfs_SPEC> for P7Pfs {}
@@ -6761,6 +12188,7 @@ impl crate::sealed::RegSpec for P7PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P7%s Pin Function Control Register"]
 pub type P7PfsHa = crate::RegValueT<P7PfsHa_SPEC>;
 
 impl NoBitfieldReg<P7PfsHa_SPEC> for P7PfsHa {}
@@ -6778,6 +12206,7 @@ impl crate::sealed::RegSpec for P7PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P7%s Pin Function Control Register"]
 pub type P7PfsBy = crate::RegValueT<P7PfsBy_SPEC>;
 
 impl NoBitfieldReg<P7PfsBy_SPEC> for P7PfsBy {}
@@ -6795,6 +12224,7 @@ impl crate::sealed::RegSpec for P80Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P80%s Pin Function Control Register"]
 pub type P80Pfs = crate::RegValueT<P80Pfs_SPEC>;
 
 impl NoBitfieldReg<P80Pfs_SPEC> for P80Pfs {}
@@ -6812,6 +12242,7 @@ impl crate::sealed::RegSpec for P80PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P80%s Pin Function Control Register"]
 pub type P80PfsHa = crate::RegValueT<P80PfsHa_SPEC>;
 
 impl NoBitfieldReg<P80PfsHa_SPEC> for P80PfsHa {}
@@ -6829,6 +12260,7 @@ impl crate::sealed::RegSpec for P80PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P80%s Pin Function Control Register"]
 pub type P80PfsBy = crate::RegValueT<P80PfsBy_SPEC>;
 
 impl NoBitfieldReg<P80PfsBy_SPEC> for P80PfsBy {}
@@ -6846,6 +12278,7 @@ impl crate::sealed::RegSpec for P8Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P8%s Pin Function Control Register"]
 pub type P8Pfs = crate::RegValueT<P8Pfs_SPEC>;
 
 impl NoBitfieldReg<P8Pfs_SPEC> for P8Pfs {}
@@ -6863,6 +12296,7 @@ impl crate::sealed::RegSpec for P8PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P8%s Pin Function Control Register"]
 pub type P8PfsHa = crate::RegValueT<P8PfsHa_SPEC>;
 
 impl NoBitfieldReg<P8PfsHa_SPEC> for P8PfsHa {}
@@ -6880,6 +12314,7 @@ impl crate::sealed::RegSpec for P8PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P8%s Pin Function Control Register"]
 pub type P8PfsBy = crate::RegValueT<P8PfsBy_SPEC>;
 
 impl NoBitfieldReg<P8PfsBy_SPEC> for P8PfsBy {}
@@ -6897,6 +12332,7 @@ impl crate::sealed::RegSpec for P90Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P90%s Pin Function Control Register"]
 pub type P90Pfs = crate::RegValueT<P90Pfs_SPEC>;
 
 impl NoBitfieldReg<P90Pfs_SPEC> for P90Pfs {}
@@ -6914,6 +12350,7 @@ impl crate::sealed::RegSpec for P90PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P90%s Pin Function Control Register"]
 pub type P90PfsHa = crate::RegValueT<P90PfsHa_SPEC>;
 
 impl NoBitfieldReg<P90PfsHa_SPEC> for P90PfsHa {}
@@ -6931,6 +12368,7 @@ impl crate::sealed::RegSpec for P90PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P90%s Pin Function Control Register"]
 pub type P90PfsBy = crate::RegValueT<P90PfsBy_SPEC>;
 
 impl NoBitfieldReg<P90PfsBy_SPEC> for P90PfsBy {}
@@ -6948,6 +12386,7 @@ impl crate::sealed::RegSpec for P9Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "P9%s Pin Function Control Register"]
 pub type P9Pfs = crate::RegValueT<P9Pfs_SPEC>;
 
 impl NoBitfieldReg<P9Pfs_SPEC> for P9Pfs {}
@@ -6965,6 +12404,7 @@ impl crate::sealed::RegSpec for P9PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P9%s Pin Function Control Register"]
 pub type P9PfsHa = crate::RegValueT<P9PfsHa_SPEC>;
 
 impl NoBitfieldReg<P9PfsHa_SPEC> for P9PfsHa {}
@@ -6982,6 +12422,7 @@ impl crate::sealed::RegSpec for P9PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "P9%s Pin Function Control Register"]
 pub type P9PfsBy = crate::RegValueT<P9PfsBy_SPEC>;
 
 impl NoBitfieldReg<P9PfsBy_SPEC> for P9PfsBy {}
@@ -6999,6 +12440,7 @@ impl crate::sealed::RegSpec for Pa0Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "PA0%s Pin Function Control Register"]
 pub type Pa0Pfs = crate::RegValueT<Pa0Pfs_SPEC>;
 
 impl NoBitfieldReg<Pa0Pfs_SPEC> for Pa0Pfs {}
@@ -7016,6 +12458,7 @@ impl crate::sealed::RegSpec for Pa0PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "PA0%s Pin Function Control Register"]
 pub type Pa0PfsHa = crate::RegValueT<Pa0PfsHa_SPEC>;
 
 impl NoBitfieldReg<Pa0PfsHa_SPEC> for Pa0PfsHa {}
@@ -7033,6 +12476,7 @@ impl crate::sealed::RegSpec for Pa0PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "PA0%s Pin Function Control Register"]
 pub type Pa0PfsBy = crate::RegValueT<Pa0PfsBy_SPEC>;
 
 impl NoBitfieldReg<Pa0PfsBy_SPEC> for Pa0PfsBy {}
@@ -7050,6 +12494,7 @@ impl crate::sealed::RegSpec for Papfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "PA%s Pin Function Control Register"]
 pub type Papfs = crate::RegValueT<Papfs_SPEC>;
 
 impl NoBitfieldReg<Papfs_SPEC> for Papfs {}
@@ -7067,6 +12512,7 @@ impl crate::sealed::RegSpec for PapfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "PA%s Pin Function Control Register"]
 pub type PapfsHa = crate::RegValueT<PapfsHa_SPEC>;
 
 impl NoBitfieldReg<PapfsHa_SPEC> for PapfsHa {}
@@ -7084,6 +12530,7 @@ impl crate::sealed::RegSpec for PapfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "PA%s Pin Function Control Register"]
 pub type PapfsBy = crate::RegValueT<PapfsBy_SPEC>;
 
 impl NoBitfieldReg<PapfsBy_SPEC> for PapfsBy {}
@@ -7101,6 +12548,7 @@ impl crate::sealed::RegSpec for Pb0Pfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "PB0%s Pin Function Control Register"]
 pub type Pb0Pfs = crate::RegValueT<Pb0Pfs_SPEC>;
 
 impl NoBitfieldReg<Pb0Pfs_SPEC> for Pb0Pfs {}
@@ -7118,6 +12566,7 @@ impl crate::sealed::RegSpec for Pb0PfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "PB0%s Pin Function Control Register"]
 pub type Pb0PfsHa = crate::RegValueT<Pb0PfsHa_SPEC>;
 
 impl NoBitfieldReg<Pb0PfsHa_SPEC> for Pb0PfsHa {}
@@ -7135,6 +12584,7 @@ impl crate::sealed::RegSpec for Pb0PfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "PB0%s Pin Function Control Register"]
 pub type Pb0PfsBy = crate::RegValueT<Pb0PfsBy_SPEC>;
 
 impl NoBitfieldReg<Pb0PfsBy_SPEC> for Pb0PfsBy {}
@@ -7152,6 +12602,7 @@ impl crate::sealed::RegSpec for Pbpfs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "PB%s Pin Function Control Register"]
 pub type Pbpfs = crate::RegValueT<Pbpfs_SPEC>;
 
 impl NoBitfieldReg<Pbpfs_SPEC> for Pbpfs {}
@@ -7169,6 +12620,7 @@ impl crate::sealed::RegSpec for PbpfsHa_SPEC {
     type DataType = u16;
 }
 
+#[doc = "PB%s Pin Function Control Register"]
 pub type PbpfsHa = crate::RegValueT<PbpfsHa_SPEC>;
 
 impl NoBitfieldReg<PbpfsHa_SPEC> for PbpfsHa {}
@@ -7186,6 +12638,7 @@ impl crate::sealed::RegSpec for PbpfsBy_SPEC {
     type DataType = u8;
 }
 
+#[doc = "PB%s Pin Function Control Register"]
 pub type PbpfsBy = crate::RegValueT<PbpfsBy_SPEC>;
 
 impl NoBitfieldReg<PbpfsBy_SPEC> for PbpfsBy {}
@@ -7203,9 +12656,11 @@ impl crate::sealed::RegSpec for Pfenet_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Ethernet Control Register"]
 pub type Pfenet = crate::RegValueT<Pfenet_SPEC>;
 
 impl Pfenet {
+    #[doc = "Ethernet Mode Setting ch0"]
     #[inline(always)]
     pub fn phymode0(
         self,
@@ -7231,6 +12686,7 @@ impl Pfenet {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -7250,8 +12706,10 @@ pub mod pfenet {
     pub struct Phymode0_SPEC;
     pub type Phymode0 = crate::EnumBitfieldStruct<u8, Phymode0_SPEC>;
     impl Phymode0 {
+        #[doc = "RMII mode (ETHERC channel 0)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "MII mode (ETHERC channel 0)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7262,9 +12720,11 @@ impl crate::sealed::RegSpec for PwprNs_SPEC {
     type DataType = u8;
 }
 
+#[doc = "NonSecure Write-Protect Register"]
 pub type PwprNs = crate::RegValueT<PwprNs_SPEC>;
 
 impl PwprNs {
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -7272,6 +12732,7 @@ impl PwprNs {
         crate::common::RegisterField::<0,0x3f,1,0,u8,u8,PwprNs_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "PFS Register Write Enable"]
     #[inline(always)]
     pub fn pfswe(
         self,
@@ -7297,6 +12758,7 @@ impl PwprNs {
         >::from_register(self, 0)
     }
 
+    #[doc = "PFSWE Bit Write Disable"]
     #[inline(always)]
     pub fn b0wi(
         self,
@@ -7334,16 +12796,20 @@ pub mod pwpr_ns {
     pub struct Pfswe_SPEC;
     pub type Pfswe = crate::EnumBitfieldStruct<u8, Pfswe_SPEC>;
     impl Pfswe {
+        #[doc = "Writing to the PFS register is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Writing to the PFS register is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct B0Wi_SPEC;
     pub type B0Wi = crate::EnumBitfieldStruct<u8, B0Wi_SPEC>;
     impl B0Wi {
+        #[doc = "Writing to the PFSWE bit is enabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Writing to the PFSWE bit is disabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7354,9 +12820,11 @@ impl crate::sealed::RegSpec for PwprS_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Secure Write Protect Register"]
 pub type PwprS = crate::RegValueT<PwprS_SPEC>;
 
 impl PwprS {
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -7364,6 +12832,7 @@ impl PwprS {
         crate::common::RegisterField::<0,0x3f,1,0,u8,u8,PwprS_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "PmnPFS Register Write Enable"]
     #[inline(always)]
     pub fn pfswe(
         self,
@@ -7389,6 +12858,7 @@ impl PwprS {
         >::from_register(self, 0)
     }
 
+    #[doc = "PFSWE Bit Write Disable"]
     #[inline(always)]
     pub fn b0wi(
         self,
@@ -7426,16 +12896,20 @@ pub mod pwpr_s {
     pub struct Pfswe_SPEC;
     pub type Pfswe = crate::EnumBitfieldStruct<u8, Pfswe_SPEC>;
     impl Pfswe {
+        #[doc = "Disable writes to the PmnPFS register"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable writes to the PmnPFS register."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct B0Wi_SPEC;
     pub type B0Wi = crate::EnumBitfieldStruct<u8, B0Wi_SPEC>;
     impl B0Wi {
+        #[doc = "Enable writes the PFSWE bit"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Disable writes to the PFSWE bit."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7446,9 +12920,11 @@ impl crate::sealed::RegSpec for Pfi3C_SPEC {
     type DataType = u8;
 }
 
+#[doc = "I3C Control Register"]
 pub type Pfi3C = crate::RegValueT<Pfi3C_SPEC>;
 
 impl Pfi3C {
+    #[doc = "RI3C I3C Mode slope control setting bit"]
     #[inline(always)]
     pub fn i3cslope0(
         self,
@@ -7474,6 +12950,7 @@ impl Pfi3C {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -7493,8 +12970,10 @@ pub mod pfi3c {
     pub struct I3Cslope0_SPEC;
     pub type I3Cslope0 = crate::EnumBitfieldStruct<u8, I3Cslope0_SPEC>;
     impl I3Cslope0 {
+        #[doc = "I3C mode slope control disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I3C mode slope control enable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7505,9 +12984,11 @@ impl crate::sealed::RegSpec for P0Sar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port Security Attribute register 0"]
 pub type P0Sar = crate::RegValueT<P0Sar_SPEC>;
 
 impl P0Sar {
+    #[doc = "P000 Security Attribute"]
     #[inline(always)]
     pub fn p000sa(
         self,
@@ -7533,6 +13014,7 @@ impl P0Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P001 Security Attribute"]
     #[inline(always)]
     pub fn p001sa(
         self,
@@ -7558,6 +13040,7 @@ impl P0Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P002 Security Attribute"]
     #[inline(always)]
     pub fn p002sa(
         self,
@@ -7583,6 +13066,7 @@ impl P0Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P003 Security Attribute"]
     #[inline(always)]
     pub fn p003sa(
         self,
@@ -7608,6 +13092,7 @@ impl P0Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P004 Security Attribute"]
     #[inline(always)]
     pub fn p004sa(
         self,
@@ -7633,6 +13118,7 @@ impl P0Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P005 Security Attribute"]
     #[inline(always)]
     pub fn p005sa(
         self,
@@ -7658,6 +13144,7 @@ impl P0Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P006 Security Attribute"]
     #[inline(always)]
     pub fn p006sa(
         self,
@@ -7683,6 +13170,7 @@ impl P0Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P007 Security Attribute"]
     #[inline(always)]
     pub fn p007sa(
         self,
@@ -7708,6 +13196,7 @@ impl P0Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P008 Security Attribute"]
     #[inline(always)]
     pub fn p008sa(
         self,
@@ -7733,6 +13222,7 @@ impl P0Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P009 Security Attribute"]
     #[inline(always)]
     pub fn p009sa(
         self,
@@ -7758,6 +13248,7 @@ impl P0Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P010 Security Attribute"]
     #[inline(always)]
     pub fn p010sa(
         self,
@@ -7783,6 +13274,7 @@ impl P0Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P011 Security Attribute"]
     #[inline(always)]
     pub fn p011sa(
         self,
@@ -7808,6 +13300,7 @@ impl P0Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P012 Security Attribute"]
     #[inline(always)]
     pub fn p012sa(
         self,
@@ -7833,6 +13326,7 @@ impl P0Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P013 Security Attribute"]
     #[inline(always)]
     pub fn p013sa(
         self,
@@ -7858,6 +13352,7 @@ impl P0Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P014 Security Attribute"]
     #[inline(always)]
     pub fn p014sa(
         self,
@@ -7883,6 +13378,7 @@ impl P0Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P015 Security Attribute"]
     #[inline(always)]
     pub fn p015sa(
         self,
@@ -7920,128 +13416,160 @@ pub mod p0sar {
     pub struct P000Sa_SPEC;
     pub type P000Sa = crate::EnumBitfieldStruct<u8, P000Sa_SPEC>;
     impl P000Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P001Sa_SPEC;
     pub type P001Sa = crate::EnumBitfieldStruct<u8, P001Sa_SPEC>;
     impl P001Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P002Sa_SPEC;
     pub type P002Sa = crate::EnumBitfieldStruct<u8, P002Sa_SPEC>;
     impl P002Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P003Sa_SPEC;
     pub type P003Sa = crate::EnumBitfieldStruct<u8, P003Sa_SPEC>;
     impl P003Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P004Sa_SPEC;
     pub type P004Sa = crate::EnumBitfieldStruct<u8, P004Sa_SPEC>;
     impl P004Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P005Sa_SPEC;
     pub type P005Sa = crate::EnumBitfieldStruct<u8, P005Sa_SPEC>;
     impl P005Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P006Sa_SPEC;
     pub type P006Sa = crate::EnumBitfieldStruct<u8, P006Sa_SPEC>;
     impl P006Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P007Sa_SPEC;
     pub type P007Sa = crate::EnumBitfieldStruct<u8, P007Sa_SPEC>;
     impl P007Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P008Sa_SPEC;
     pub type P008Sa = crate::EnumBitfieldStruct<u8, P008Sa_SPEC>;
     impl P008Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P009Sa_SPEC;
     pub type P009Sa = crate::EnumBitfieldStruct<u8, P009Sa_SPEC>;
     impl P009Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P010Sa_SPEC;
     pub type P010Sa = crate::EnumBitfieldStruct<u8, P010Sa_SPEC>;
     impl P010Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P011Sa_SPEC;
     pub type P011Sa = crate::EnumBitfieldStruct<u8, P011Sa_SPEC>;
     impl P011Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P012Sa_SPEC;
     pub type P012Sa = crate::EnumBitfieldStruct<u8, P012Sa_SPEC>;
     impl P012Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P013Sa_SPEC;
     pub type P013Sa = crate::EnumBitfieldStruct<u8, P013Sa_SPEC>;
     impl P013Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P014Sa_SPEC;
     pub type P014Sa = crate::EnumBitfieldStruct<u8, P014Sa_SPEC>;
     impl P014Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P015Sa_SPEC;
     pub type P015Sa = crate::EnumBitfieldStruct<u8, P015Sa_SPEC>;
     impl P015Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8052,9 +13580,11 @@ impl crate::sealed::RegSpec for P1Sar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port Security Attribute register 1"]
 pub type P1Sar = crate::RegValueT<P1Sar_SPEC>;
 
 impl P1Sar {
+    #[doc = "P100 Security Attribute"]
     #[inline(always)]
     pub fn p100sa(
         self,
@@ -8080,6 +13610,7 @@ impl P1Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P101 Security Attribute"]
     #[inline(always)]
     pub fn p101sa(
         self,
@@ -8105,6 +13636,7 @@ impl P1Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P102 Security Attribute"]
     #[inline(always)]
     pub fn p102sa(
         self,
@@ -8130,6 +13662,7 @@ impl P1Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P103 Security Attribute"]
     #[inline(always)]
     pub fn p103sa(
         self,
@@ -8155,6 +13688,7 @@ impl P1Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P104 Security Attribute"]
     #[inline(always)]
     pub fn p104sa(
         self,
@@ -8180,6 +13714,7 @@ impl P1Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P105 Security Attribute"]
     #[inline(always)]
     pub fn p105sa(
         self,
@@ -8205,6 +13740,7 @@ impl P1Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P106 Security Attribute"]
     #[inline(always)]
     pub fn p106sa(
         self,
@@ -8230,6 +13766,7 @@ impl P1Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P107 Security Attribute"]
     #[inline(always)]
     pub fn p107sa(
         self,
@@ -8255,6 +13792,7 @@ impl P1Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P108 Security Attribute"]
     #[inline(always)]
     pub fn p108sa(
         self,
@@ -8280,6 +13818,7 @@ impl P1Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P109 Security Attribute"]
     #[inline(always)]
     pub fn p109sa(
         self,
@@ -8305,6 +13844,7 @@ impl P1Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P110 Security Attribute"]
     #[inline(always)]
     pub fn p110sa(
         self,
@@ -8330,6 +13870,7 @@ impl P1Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P111 Security Attribute"]
     #[inline(always)]
     pub fn p111sa(
         self,
@@ -8355,6 +13896,7 @@ impl P1Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P112 Security Attribute"]
     #[inline(always)]
     pub fn p112sa(
         self,
@@ -8380,6 +13922,7 @@ impl P1Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P113 Security Attribute"]
     #[inline(always)]
     pub fn p113sa(
         self,
@@ -8405,6 +13948,7 @@ impl P1Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P114 Security Attribute"]
     #[inline(always)]
     pub fn p114sa(
         self,
@@ -8430,6 +13974,7 @@ impl P1Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P115 Security Attribute"]
     #[inline(always)]
     pub fn p115sa(
         self,
@@ -8467,128 +14012,160 @@ pub mod p1sar {
     pub struct P100Sa_SPEC;
     pub type P100Sa = crate::EnumBitfieldStruct<u8, P100Sa_SPEC>;
     impl P100Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P101Sa_SPEC;
     pub type P101Sa = crate::EnumBitfieldStruct<u8, P101Sa_SPEC>;
     impl P101Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P102Sa_SPEC;
     pub type P102Sa = crate::EnumBitfieldStruct<u8, P102Sa_SPEC>;
     impl P102Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P103Sa_SPEC;
     pub type P103Sa = crate::EnumBitfieldStruct<u8, P103Sa_SPEC>;
     impl P103Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P104Sa_SPEC;
     pub type P104Sa = crate::EnumBitfieldStruct<u8, P104Sa_SPEC>;
     impl P104Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P105Sa_SPEC;
     pub type P105Sa = crate::EnumBitfieldStruct<u8, P105Sa_SPEC>;
     impl P105Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P106Sa_SPEC;
     pub type P106Sa = crate::EnumBitfieldStruct<u8, P106Sa_SPEC>;
     impl P106Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P107Sa_SPEC;
     pub type P107Sa = crate::EnumBitfieldStruct<u8, P107Sa_SPEC>;
     impl P107Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P108Sa_SPEC;
     pub type P108Sa = crate::EnumBitfieldStruct<u8, P108Sa_SPEC>;
     impl P108Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P109Sa_SPEC;
     pub type P109Sa = crate::EnumBitfieldStruct<u8, P109Sa_SPEC>;
     impl P109Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P110Sa_SPEC;
     pub type P110Sa = crate::EnumBitfieldStruct<u8, P110Sa_SPEC>;
     impl P110Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P111Sa_SPEC;
     pub type P111Sa = crate::EnumBitfieldStruct<u8, P111Sa_SPEC>;
     impl P111Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P112Sa_SPEC;
     pub type P112Sa = crate::EnumBitfieldStruct<u8, P112Sa_SPEC>;
     impl P112Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P113Sa_SPEC;
     pub type P113Sa = crate::EnumBitfieldStruct<u8, P113Sa_SPEC>;
     impl P113Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P114Sa_SPEC;
     pub type P114Sa = crate::EnumBitfieldStruct<u8, P114Sa_SPEC>;
     impl P114Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P115Sa_SPEC;
     pub type P115Sa = crate::EnumBitfieldStruct<u8, P115Sa_SPEC>;
     impl P115Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8599,9 +14176,11 @@ impl crate::sealed::RegSpec for P2Sar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port Security Attribute register 1"]
 pub type P2Sar = crate::RegValueT<P2Sar_SPEC>;
 
 impl P2Sar {
+    #[doc = "P200 Security Attribute"]
     #[inline(always)]
     pub fn p200sa(
         self,
@@ -8627,6 +14206,7 @@ impl P2Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P201 Security Attribute"]
     #[inline(always)]
     pub fn p201sa(
         self,
@@ -8652,6 +14232,7 @@ impl P2Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P202 Security Attribute"]
     #[inline(always)]
     pub fn p202sa(
         self,
@@ -8677,6 +14258,7 @@ impl P2Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P203 Security Attribute"]
     #[inline(always)]
     pub fn p203sa(
         self,
@@ -8702,6 +14284,7 @@ impl P2Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P204 Security Attribute"]
     #[inline(always)]
     pub fn p204sa(
         self,
@@ -8727,6 +14310,7 @@ impl P2Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P205 Security Attribute"]
     #[inline(always)]
     pub fn p205sa(
         self,
@@ -8752,6 +14336,7 @@ impl P2Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P206 Security Attribute"]
     #[inline(always)]
     pub fn p206sa(
         self,
@@ -8777,6 +14362,7 @@ impl P2Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P207 Security Attribute"]
     #[inline(always)]
     pub fn p207sa(
         self,
@@ -8802,6 +14388,7 @@ impl P2Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P208 Security Attribute"]
     #[inline(always)]
     pub fn p208sa(
         self,
@@ -8827,6 +14414,7 @@ impl P2Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P209 Security Attribute"]
     #[inline(always)]
     pub fn p209sa(
         self,
@@ -8852,6 +14440,7 @@ impl P2Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P210 Security Attribute"]
     #[inline(always)]
     pub fn p210sa(
         self,
@@ -8877,6 +14466,7 @@ impl P2Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P211 Security Attribute"]
     #[inline(always)]
     pub fn p211sa(
         self,
@@ -8902,6 +14492,7 @@ impl P2Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P212 Security Attribute"]
     #[inline(always)]
     pub fn p212sa(
         self,
@@ -8927,6 +14518,7 @@ impl P2Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P213 Security Attribute"]
     #[inline(always)]
     pub fn p213sa(
         self,
@@ -8952,6 +14544,7 @@ impl P2Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P214 Security Attribute"]
     #[inline(always)]
     pub fn p214sa(
         self,
@@ -8977,6 +14570,7 @@ impl P2Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P215 Security Attribute"]
     #[inline(always)]
     pub fn p215sa(
         self,
@@ -9014,128 +14608,160 @@ pub mod p2sar {
     pub struct P200Sa_SPEC;
     pub type P200Sa = crate::EnumBitfieldStruct<u8, P200Sa_SPEC>;
     impl P200Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P201Sa_SPEC;
     pub type P201Sa = crate::EnumBitfieldStruct<u8, P201Sa_SPEC>;
     impl P201Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P202Sa_SPEC;
     pub type P202Sa = crate::EnumBitfieldStruct<u8, P202Sa_SPEC>;
     impl P202Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P203Sa_SPEC;
     pub type P203Sa = crate::EnumBitfieldStruct<u8, P203Sa_SPEC>;
     impl P203Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P204Sa_SPEC;
     pub type P204Sa = crate::EnumBitfieldStruct<u8, P204Sa_SPEC>;
     impl P204Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P205Sa_SPEC;
     pub type P205Sa = crate::EnumBitfieldStruct<u8, P205Sa_SPEC>;
     impl P205Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P206Sa_SPEC;
     pub type P206Sa = crate::EnumBitfieldStruct<u8, P206Sa_SPEC>;
     impl P206Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P207Sa_SPEC;
     pub type P207Sa = crate::EnumBitfieldStruct<u8, P207Sa_SPEC>;
     impl P207Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P208Sa_SPEC;
     pub type P208Sa = crate::EnumBitfieldStruct<u8, P208Sa_SPEC>;
     impl P208Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P209Sa_SPEC;
     pub type P209Sa = crate::EnumBitfieldStruct<u8, P209Sa_SPEC>;
     impl P209Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P210Sa_SPEC;
     pub type P210Sa = crate::EnumBitfieldStruct<u8, P210Sa_SPEC>;
     impl P210Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P211Sa_SPEC;
     pub type P211Sa = crate::EnumBitfieldStruct<u8, P211Sa_SPEC>;
     impl P211Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P212Sa_SPEC;
     pub type P212Sa = crate::EnumBitfieldStruct<u8, P212Sa_SPEC>;
     impl P212Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P213Sa_SPEC;
     pub type P213Sa = crate::EnumBitfieldStruct<u8, P213Sa_SPEC>;
     impl P213Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P214Sa_SPEC;
     pub type P214Sa = crate::EnumBitfieldStruct<u8, P214Sa_SPEC>;
     impl P214Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P215Sa_SPEC;
     pub type P215Sa = crate::EnumBitfieldStruct<u8, P215Sa_SPEC>;
     impl P215Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -9146,9 +14772,11 @@ impl crate::sealed::RegSpec for P3Sar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port Security Attribute register 1"]
 pub type P3Sar = crate::RegValueT<P3Sar_SPEC>;
 
 impl P3Sar {
+    #[doc = "P300 Security Attribute"]
     #[inline(always)]
     pub fn p300sa(
         self,
@@ -9174,6 +14802,7 @@ impl P3Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P301 Security Attribute"]
     #[inline(always)]
     pub fn p301sa(
         self,
@@ -9199,6 +14828,7 @@ impl P3Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P302 Security Attribute"]
     #[inline(always)]
     pub fn p302sa(
         self,
@@ -9224,6 +14854,7 @@ impl P3Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P303 Security Attribute"]
     #[inline(always)]
     pub fn p303sa(
         self,
@@ -9249,6 +14880,7 @@ impl P3Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P304 Security Attribute"]
     #[inline(always)]
     pub fn p304sa(
         self,
@@ -9274,6 +14906,7 @@ impl P3Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P305 Security Attribute"]
     #[inline(always)]
     pub fn p305sa(
         self,
@@ -9299,6 +14932,7 @@ impl P3Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P306 Security Attribute"]
     #[inline(always)]
     pub fn p306sa(
         self,
@@ -9324,6 +14958,7 @@ impl P3Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P307 Security Attribute"]
     #[inline(always)]
     pub fn p307sa(
         self,
@@ -9349,6 +14984,7 @@ impl P3Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P308 Security Attribute"]
     #[inline(always)]
     pub fn p308sa(
         self,
@@ -9374,6 +15010,7 @@ impl P3Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P309 Security Attribute"]
     #[inline(always)]
     pub fn p309sa(
         self,
@@ -9399,6 +15036,7 @@ impl P3Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P310 Security Attribute"]
     #[inline(always)]
     pub fn p310sa(
         self,
@@ -9424,6 +15062,7 @@ impl P3Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P311 Security Attribute"]
     #[inline(always)]
     pub fn p311sa(
         self,
@@ -9449,6 +15088,7 @@ impl P3Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P312 Security Attribute"]
     #[inline(always)]
     pub fn p312sa(
         self,
@@ -9474,6 +15114,7 @@ impl P3Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P313 Security Attribute"]
     #[inline(always)]
     pub fn p313sa(
         self,
@@ -9499,6 +15140,7 @@ impl P3Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P314 Security Attribute"]
     #[inline(always)]
     pub fn p314sa(
         self,
@@ -9524,6 +15166,7 @@ impl P3Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P315 Security Attribute"]
     #[inline(always)]
     pub fn p315sa(
         self,
@@ -9561,128 +15204,160 @@ pub mod p3sar {
     pub struct P300Sa_SPEC;
     pub type P300Sa = crate::EnumBitfieldStruct<u8, P300Sa_SPEC>;
     impl P300Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P301Sa_SPEC;
     pub type P301Sa = crate::EnumBitfieldStruct<u8, P301Sa_SPEC>;
     impl P301Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P302Sa_SPEC;
     pub type P302Sa = crate::EnumBitfieldStruct<u8, P302Sa_SPEC>;
     impl P302Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P303Sa_SPEC;
     pub type P303Sa = crate::EnumBitfieldStruct<u8, P303Sa_SPEC>;
     impl P303Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P304Sa_SPEC;
     pub type P304Sa = crate::EnumBitfieldStruct<u8, P304Sa_SPEC>;
     impl P304Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P305Sa_SPEC;
     pub type P305Sa = crate::EnumBitfieldStruct<u8, P305Sa_SPEC>;
     impl P305Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P306Sa_SPEC;
     pub type P306Sa = crate::EnumBitfieldStruct<u8, P306Sa_SPEC>;
     impl P306Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P307Sa_SPEC;
     pub type P307Sa = crate::EnumBitfieldStruct<u8, P307Sa_SPEC>;
     impl P307Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P308Sa_SPEC;
     pub type P308Sa = crate::EnumBitfieldStruct<u8, P308Sa_SPEC>;
     impl P308Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P309Sa_SPEC;
     pub type P309Sa = crate::EnumBitfieldStruct<u8, P309Sa_SPEC>;
     impl P309Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P310Sa_SPEC;
     pub type P310Sa = crate::EnumBitfieldStruct<u8, P310Sa_SPEC>;
     impl P310Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P311Sa_SPEC;
     pub type P311Sa = crate::EnumBitfieldStruct<u8, P311Sa_SPEC>;
     impl P311Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P312Sa_SPEC;
     pub type P312Sa = crate::EnumBitfieldStruct<u8, P312Sa_SPEC>;
     impl P312Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P313Sa_SPEC;
     pub type P313Sa = crate::EnumBitfieldStruct<u8, P313Sa_SPEC>;
     impl P313Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P314Sa_SPEC;
     pub type P314Sa = crate::EnumBitfieldStruct<u8, P314Sa_SPEC>;
     impl P314Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P315Sa_SPEC;
     pub type P315Sa = crate::EnumBitfieldStruct<u8, P315Sa_SPEC>;
     impl P315Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -9693,9 +15368,11 @@ impl crate::sealed::RegSpec for P4Sar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port Security Attribute register 1"]
 pub type P4Sar = crate::RegValueT<P4Sar_SPEC>;
 
 impl P4Sar {
+    #[doc = "P400 Security Attribute"]
     #[inline(always)]
     pub fn p400sa(
         self,
@@ -9721,6 +15398,7 @@ impl P4Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P401 Security Attribute"]
     #[inline(always)]
     pub fn p401sa(
         self,
@@ -9746,6 +15424,7 @@ impl P4Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P402 Security Attribute"]
     #[inline(always)]
     pub fn p402sa(
         self,
@@ -9771,6 +15450,7 @@ impl P4Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P403 Security Attribute"]
     #[inline(always)]
     pub fn p403sa(
         self,
@@ -9796,6 +15476,7 @@ impl P4Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P404 Security Attribute"]
     #[inline(always)]
     pub fn p404sa(
         self,
@@ -9821,6 +15502,7 @@ impl P4Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P405 Security Attribute"]
     #[inline(always)]
     pub fn p405sa(
         self,
@@ -9846,6 +15528,7 @@ impl P4Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P406 Security Attribute"]
     #[inline(always)]
     pub fn p406sa(
         self,
@@ -9871,6 +15554,7 @@ impl P4Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P407 Security Attribute"]
     #[inline(always)]
     pub fn p407sa(
         self,
@@ -9896,6 +15580,7 @@ impl P4Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P408 Security Attribute"]
     #[inline(always)]
     pub fn p408sa(
         self,
@@ -9921,6 +15606,7 @@ impl P4Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P409 Security Attribute"]
     #[inline(always)]
     pub fn p409sa(
         self,
@@ -9946,6 +15632,7 @@ impl P4Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P410 Security Attribute"]
     #[inline(always)]
     pub fn p410sa(
         self,
@@ -9971,6 +15658,7 @@ impl P4Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P411 Security Attribute"]
     #[inline(always)]
     pub fn p411sa(
         self,
@@ -9996,6 +15684,7 @@ impl P4Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P412 Security Attribute"]
     #[inline(always)]
     pub fn p412sa(
         self,
@@ -10021,6 +15710,7 @@ impl P4Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P413 Security Attribute"]
     #[inline(always)]
     pub fn p413sa(
         self,
@@ -10046,6 +15736,7 @@ impl P4Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P414 Security Attribute"]
     #[inline(always)]
     pub fn p414sa(
         self,
@@ -10071,6 +15762,7 @@ impl P4Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P415 Security Attribute"]
     #[inline(always)]
     pub fn p415sa(
         self,
@@ -10108,128 +15800,160 @@ pub mod p4sar {
     pub struct P400Sa_SPEC;
     pub type P400Sa = crate::EnumBitfieldStruct<u8, P400Sa_SPEC>;
     impl P400Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P401Sa_SPEC;
     pub type P401Sa = crate::EnumBitfieldStruct<u8, P401Sa_SPEC>;
     impl P401Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P402Sa_SPEC;
     pub type P402Sa = crate::EnumBitfieldStruct<u8, P402Sa_SPEC>;
     impl P402Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P403Sa_SPEC;
     pub type P403Sa = crate::EnumBitfieldStruct<u8, P403Sa_SPEC>;
     impl P403Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P404Sa_SPEC;
     pub type P404Sa = crate::EnumBitfieldStruct<u8, P404Sa_SPEC>;
     impl P404Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P405Sa_SPEC;
     pub type P405Sa = crate::EnumBitfieldStruct<u8, P405Sa_SPEC>;
     impl P405Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P406Sa_SPEC;
     pub type P406Sa = crate::EnumBitfieldStruct<u8, P406Sa_SPEC>;
     impl P406Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P407Sa_SPEC;
     pub type P407Sa = crate::EnumBitfieldStruct<u8, P407Sa_SPEC>;
     impl P407Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P408Sa_SPEC;
     pub type P408Sa = crate::EnumBitfieldStruct<u8, P408Sa_SPEC>;
     impl P408Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P409Sa_SPEC;
     pub type P409Sa = crate::EnumBitfieldStruct<u8, P409Sa_SPEC>;
     impl P409Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P410Sa_SPEC;
     pub type P410Sa = crate::EnumBitfieldStruct<u8, P410Sa_SPEC>;
     impl P410Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P411Sa_SPEC;
     pub type P411Sa = crate::EnumBitfieldStruct<u8, P411Sa_SPEC>;
     impl P411Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P412Sa_SPEC;
     pub type P412Sa = crate::EnumBitfieldStruct<u8, P412Sa_SPEC>;
     impl P412Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P413Sa_SPEC;
     pub type P413Sa = crate::EnumBitfieldStruct<u8, P413Sa_SPEC>;
     impl P413Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P414Sa_SPEC;
     pub type P414Sa = crate::EnumBitfieldStruct<u8, P414Sa_SPEC>;
     impl P414Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P415Sa_SPEC;
     pub type P415Sa = crate::EnumBitfieldStruct<u8, P415Sa_SPEC>;
     impl P415Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10240,9 +15964,11 @@ impl crate::sealed::RegSpec for P5Sar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port Security Attribute register 1"]
 pub type P5Sar = crate::RegValueT<P5Sar_SPEC>;
 
 impl P5Sar {
+    #[doc = "P500 Security Attribute"]
     #[inline(always)]
     pub fn p500sa(
         self,
@@ -10268,6 +15994,7 @@ impl P5Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P501 Security Attribute"]
     #[inline(always)]
     pub fn p501sa(
         self,
@@ -10293,6 +16020,7 @@ impl P5Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P502 Security Attribute"]
     #[inline(always)]
     pub fn p502sa(
         self,
@@ -10318,6 +16046,7 @@ impl P5Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P503 Security Attribute"]
     #[inline(always)]
     pub fn p503sa(
         self,
@@ -10343,6 +16072,7 @@ impl P5Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P504 Security Attribute"]
     #[inline(always)]
     pub fn p504sa(
         self,
@@ -10368,6 +16098,7 @@ impl P5Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P505 Security Attribute"]
     #[inline(always)]
     pub fn p505sa(
         self,
@@ -10393,6 +16124,7 @@ impl P5Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P506 Security Attribute"]
     #[inline(always)]
     pub fn p506sa(
         self,
@@ -10418,6 +16150,7 @@ impl P5Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P507 Security Attribute"]
     #[inline(always)]
     pub fn p507sa(
         self,
@@ -10443,6 +16176,7 @@ impl P5Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P508 Security Attribute"]
     #[inline(always)]
     pub fn p508sa(
         self,
@@ -10468,6 +16202,7 @@ impl P5Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P509 Security Attribute"]
     #[inline(always)]
     pub fn p509sa(
         self,
@@ -10493,6 +16228,7 @@ impl P5Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P510 Security Attribute"]
     #[inline(always)]
     pub fn p510sa(
         self,
@@ -10518,6 +16254,7 @@ impl P5Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P511 Security Attribute"]
     #[inline(always)]
     pub fn p511sa(
         self,
@@ -10543,6 +16280,7 @@ impl P5Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P512 Security Attribute"]
     #[inline(always)]
     pub fn p512sa(
         self,
@@ -10568,6 +16306,7 @@ impl P5Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P513 Security Attribute"]
     #[inline(always)]
     pub fn p513sa(
         self,
@@ -10593,6 +16332,7 @@ impl P5Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P514 Security Attribute"]
     #[inline(always)]
     pub fn p514sa(
         self,
@@ -10618,6 +16358,7 @@ impl P5Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P515 Security Attribute"]
     #[inline(always)]
     pub fn p515sa(
         self,
@@ -10655,128 +16396,160 @@ pub mod p5sar {
     pub struct P500Sa_SPEC;
     pub type P500Sa = crate::EnumBitfieldStruct<u8, P500Sa_SPEC>;
     impl P500Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P501Sa_SPEC;
     pub type P501Sa = crate::EnumBitfieldStruct<u8, P501Sa_SPEC>;
     impl P501Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P502Sa_SPEC;
     pub type P502Sa = crate::EnumBitfieldStruct<u8, P502Sa_SPEC>;
     impl P502Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P503Sa_SPEC;
     pub type P503Sa = crate::EnumBitfieldStruct<u8, P503Sa_SPEC>;
     impl P503Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P504Sa_SPEC;
     pub type P504Sa = crate::EnumBitfieldStruct<u8, P504Sa_SPEC>;
     impl P504Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P505Sa_SPEC;
     pub type P505Sa = crate::EnumBitfieldStruct<u8, P505Sa_SPEC>;
     impl P505Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P506Sa_SPEC;
     pub type P506Sa = crate::EnumBitfieldStruct<u8, P506Sa_SPEC>;
     impl P506Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P507Sa_SPEC;
     pub type P507Sa = crate::EnumBitfieldStruct<u8, P507Sa_SPEC>;
     impl P507Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P508Sa_SPEC;
     pub type P508Sa = crate::EnumBitfieldStruct<u8, P508Sa_SPEC>;
     impl P508Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P509Sa_SPEC;
     pub type P509Sa = crate::EnumBitfieldStruct<u8, P509Sa_SPEC>;
     impl P509Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P510Sa_SPEC;
     pub type P510Sa = crate::EnumBitfieldStruct<u8, P510Sa_SPEC>;
     impl P510Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P511Sa_SPEC;
     pub type P511Sa = crate::EnumBitfieldStruct<u8, P511Sa_SPEC>;
     impl P511Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P512Sa_SPEC;
     pub type P512Sa = crate::EnumBitfieldStruct<u8, P512Sa_SPEC>;
     impl P512Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P513Sa_SPEC;
     pub type P513Sa = crate::EnumBitfieldStruct<u8, P513Sa_SPEC>;
     impl P513Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P514Sa_SPEC;
     pub type P514Sa = crate::EnumBitfieldStruct<u8, P514Sa_SPEC>;
     impl P514Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P515Sa_SPEC;
     pub type P515Sa = crate::EnumBitfieldStruct<u8, P515Sa_SPEC>;
     impl P515Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10787,9 +16560,11 @@ impl crate::sealed::RegSpec for P6Sar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port Security Attribute register 1"]
 pub type P6Sar = crate::RegValueT<P6Sar_SPEC>;
 
 impl P6Sar {
+    #[doc = "P600 Security Attribute"]
     #[inline(always)]
     pub fn p600sa(
         self,
@@ -10815,6 +16590,7 @@ impl P6Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P601 Security Attribute"]
     #[inline(always)]
     pub fn p601sa(
         self,
@@ -10840,6 +16616,7 @@ impl P6Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P602 Security Attribute"]
     #[inline(always)]
     pub fn p602sa(
         self,
@@ -10865,6 +16642,7 @@ impl P6Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P603 Security Attribute"]
     #[inline(always)]
     pub fn p603sa(
         self,
@@ -10890,6 +16668,7 @@ impl P6Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P604 Security Attribute"]
     #[inline(always)]
     pub fn p604sa(
         self,
@@ -10915,6 +16694,7 @@ impl P6Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P605 Security Attribute"]
     #[inline(always)]
     pub fn p605sa(
         self,
@@ -10940,6 +16720,7 @@ impl P6Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P606 Security Attribute"]
     #[inline(always)]
     pub fn p606sa(
         self,
@@ -10965,6 +16746,7 @@ impl P6Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P607 Security Attribute"]
     #[inline(always)]
     pub fn p607sa(
         self,
@@ -10990,6 +16772,7 @@ impl P6Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P608 Security Attribute"]
     #[inline(always)]
     pub fn p608sa(
         self,
@@ -11015,6 +16798,7 @@ impl P6Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P609 Security Attribute"]
     #[inline(always)]
     pub fn p609sa(
         self,
@@ -11040,6 +16824,7 @@ impl P6Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P610 Security Attribute"]
     #[inline(always)]
     pub fn p610sa(
         self,
@@ -11065,6 +16850,7 @@ impl P6Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P611 Security Attribute"]
     #[inline(always)]
     pub fn p611sa(
         self,
@@ -11090,6 +16876,7 @@ impl P6Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P612 Security Attribute"]
     #[inline(always)]
     pub fn p612sa(
         self,
@@ -11115,6 +16902,7 @@ impl P6Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P613 Security Attribute"]
     #[inline(always)]
     pub fn p613sa(
         self,
@@ -11140,6 +16928,7 @@ impl P6Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P614 Security Attribute"]
     #[inline(always)]
     pub fn p614sa(
         self,
@@ -11165,6 +16954,7 @@ impl P6Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P615 Security Attribute"]
     #[inline(always)]
     pub fn p615sa(
         self,
@@ -11202,128 +16992,160 @@ pub mod p6sar {
     pub struct P600Sa_SPEC;
     pub type P600Sa = crate::EnumBitfieldStruct<u8, P600Sa_SPEC>;
     impl P600Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P601Sa_SPEC;
     pub type P601Sa = crate::EnumBitfieldStruct<u8, P601Sa_SPEC>;
     impl P601Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P602Sa_SPEC;
     pub type P602Sa = crate::EnumBitfieldStruct<u8, P602Sa_SPEC>;
     impl P602Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P603Sa_SPEC;
     pub type P603Sa = crate::EnumBitfieldStruct<u8, P603Sa_SPEC>;
     impl P603Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P604Sa_SPEC;
     pub type P604Sa = crate::EnumBitfieldStruct<u8, P604Sa_SPEC>;
     impl P604Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P605Sa_SPEC;
     pub type P605Sa = crate::EnumBitfieldStruct<u8, P605Sa_SPEC>;
     impl P605Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P606Sa_SPEC;
     pub type P606Sa = crate::EnumBitfieldStruct<u8, P606Sa_SPEC>;
     impl P606Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P607Sa_SPEC;
     pub type P607Sa = crate::EnumBitfieldStruct<u8, P607Sa_SPEC>;
     impl P607Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P608Sa_SPEC;
     pub type P608Sa = crate::EnumBitfieldStruct<u8, P608Sa_SPEC>;
     impl P608Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P609Sa_SPEC;
     pub type P609Sa = crate::EnumBitfieldStruct<u8, P609Sa_SPEC>;
     impl P609Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P610Sa_SPEC;
     pub type P610Sa = crate::EnumBitfieldStruct<u8, P610Sa_SPEC>;
     impl P610Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P611Sa_SPEC;
     pub type P611Sa = crate::EnumBitfieldStruct<u8, P611Sa_SPEC>;
     impl P611Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P612Sa_SPEC;
     pub type P612Sa = crate::EnumBitfieldStruct<u8, P612Sa_SPEC>;
     impl P612Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P613Sa_SPEC;
     pub type P613Sa = crate::EnumBitfieldStruct<u8, P613Sa_SPEC>;
     impl P613Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P614Sa_SPEC;
     pub type P614Sa = crate::EnumBitfieldStruct<u8, P614Sa_SPEC>;
     impl P614Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P615Sa_SPEC;
     pub type P615Sa = crate::EnumBitfieldStruct<u8, P615Sa_SPEC>;
     impl P615Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -11334,9 +17156,11 @@ impl crate::sealed::RegSpec for P7Sar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port Security Attribute register 1"]
 pub type P7Sar = crate::RegValueT<P7Sar_SPEC>;
 
 impl P7Sar {
+    #[doc = "P700 Security Attribute"]
     #[inline(always)]
     pub fn p700sa(
         self,
@@ -11362,6 +17186,7 @@ impl P7Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P701 Security Attribute"]
     #[inline(always)]
     pub fn p701sa(
         self,
@@ -11387,6 +17212,7 @@ impl P7Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P702 Security Attribute"]
     #[inline(always)]
     pub fn p702sa(
         self,
@@ -11412,6 +17238,7 @@ impl P7Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P703 Security Attribute"]
     #[inline(always)]
     pub fn p703sa(
         self,
@@ -11437,6 +17264,7 @@ impl P7Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P704 Security Attribute"]
     #[inline(always)]
     pub fn p704sa(
         self,
@@ -11462,6 +17290,7 @@ impl P7Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P705 Security Attribute"]
     #[inline(always)]
     pub fn p705sa(
         self,
@@ -11487,6 +17316,7 @@ impl P7Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P706 Security Attribute"]
     #[inline(always)]
     pub fn p706sa(
         self,
@@ -11512,6 +17342,7 @@ impl P7Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P707 Security Attribute"]
     #[inline(always)]
     pub fn p707sa(
         self,
@@ -11537,6 +17368,7 @@ impl P7Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P708 Security Attribute"]
     #[inline(always)]
     pub fn p708sa(
         self,
@@ -11562,6 +17394,7 @@ impl P7Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P709 Security Attribute"]
     #[inline(always)]
     pub fn p709sa(
         self,
@@ -11587,6 +17420,7 @@ impl P7Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P710 Security Attribute"]
     #[inline(always)]
     pub fn p710sa(
         self,
@@ -11612,6 +17446,7 @@ impl P7Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P711 Security Attribute"]
     #[inline(always)]
     pub fn p711sa(
         self,
@@ -11637,6 +17472,7 @@ impl P7Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P712 Security Attribute"]
     #[inline(always)]
     pub fn p712sa(
         self,
@@ -11662,6 +17498,7 @@ impl P7Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P713 Security Attribute"]
     #[inline(always)]
     pub fn p713sa(
         self,
@@ -11687,6 +17524,7 @@ impl P7Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P714 Security Attribute"]
     #[inline(always)]
     pub fn p714sa(
         self,
@@ -11712,6 +17550,7 @@ impl P7Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P715 Security Attribute"]
     #[inline(always)]
     pub fn p715sa(
         self,
@@ -11749,128 +17588,160 @@ pub mod p7sar {
     pub struct P700Sa_SPEC;
     pub type P700Sa = crate::EnumBitfieldStruct<u8, P700Sa_SPEC>;
     impl P700Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P701Sa_SPEC;
     pub type P701Sa = crate::EnumBitfieldStruct<u8, P701Sa_SPEC>;
     impl P701Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P702Sa_SPEC;
     pub type P702Sa = crate::EnumBitfieldStruct<u8, P702Sa_SPEC>;
     impl P702Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P703Sa_SPEC;
     pub type P703Sa = crate::EnumBitfieldStruct<u8, P703Sa_SPEC>;
     impl P703Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P704Sa_SPEC;
     pub type P704Sa = crate::EnumBitfieldStruct<u8, P704Sa_SPEC>;
     impl P704Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P705Sa_SPEC;
     pub type P705Sa = crate::EnumBitfieldStruct<u8, P705Sa_SPEC>;
     impl P705Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P706Sa_SPEC;
     pub type P706Sa = crate::EnumBitfieldStruct<u8, P706Sa_SPEC>;
     impl P706Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P707Sa_SPEC;
     pub type P707Sa = crate::EnumBitfieldStruct<u8, P707Sa_SPEC>;
     impl P707Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P708Sa_SPEC;
     pub type P708Sa = crate::EnumBitfieldStruct<u8, P708Sa_SPEC>;
     impl P708Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P709Sa_SPEC;
     pub type P709Sa = crate::EnumBitfieldStruct<u8, P709Sa_SPEC>;
     impl P709Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P710Sa_SPEC;
     pub type P710Sa = crate::EnumBitfieldStruct<u8, P710Sa_SPEC>;
     impl P710Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P711Sa_SPEC;
     pub type P711Sa = crate::EnumBitfieldStruct<u8, P711Sa_SPEC>;
     impl P711Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P712Sa_SPEC;
     pub type P712Sa = crate::EnumBitfieldStruct<u8, P712Sa_SPEC>;
     impl P712Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P713Sa_SPEC;
     pub type P713Sa = crate::EnumBitfieldStruct<u8, P713Sa_SPEC>;
     impl P713Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P714Sa_SPEC;
     pub type P714Sa = crate::EnumBitfieldStruct<u8, P714Sa_SPEC>;
     impl P714Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P715Sa_SPEC;
     pub type P715Sa = crate::EnumBitfieldStruct<u8, P715Sa_SPEC>;
     impl P715Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -11881,9 +17752,11 @@ impl crate::sealed::RegSpec for P8Sar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port Security Attribute register 1"]
 pub type P8Sar = crate::RegValueT<P8Sar_SPEC>;
 
 impl P8Sar {
+    #[doc = "P800 Security Attribute"]
     #[inline(always)]
     pub fn p800sa(
         self,
@@ -11909,6 +17782,7 @@ impl P8Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P801 Security Attribute"]
     #[inline(always)]
     pub fn p801sa(
         self,
@@ -11934,6 +17808,7 @@ impl P8Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P802 Security Attribute"]
     #[inline(always)]
     pub fn p802sa(
         self,
@@ -11959,6 +17834,7 @@ impl P8Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P803 Security Attribute"]
     #[inline(always)]
     pub fn p803sa(
         self,
@@ -11984,6 +17860,7 @@ impl P8Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P804 Security Attribute"]
     #[inline(always)]
     pub fn p804sa(
         self,
@@ -12009,6 +17886,7 @@ impl P8Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P805 Security Attribute"]
     #[inline(always)]
     pub fn p805sa(
         self,
@@ -12034,6 +17912,7 @@ impl P8Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P806 Security Attribute"]
     #[inline(always)]
     pub fn p806sa(
         self,
@@ -12059,6 +17938,7 @@ impl P8Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P807 Security Attribute"]
     #[inline(always)]
     pub fn p807sa(
         self,
@@ -12084,6 +17964,7 @@ impl P8Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P808 Security Attribute"]
     #[inline(always)]
     pub fn p808sa(
         self,
@@ -12109,6 +17990,7 @@ impl P8Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P809 Security Attribute"]
     #[inline(always)]
     pub fn p809sa(
         self,
@@ -12134,6 +18016,7 @@ impl P8Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P810 Security Attribute"]
     #[inline(always)]
     pub fn p810sa(
         self,
@@ -12159,6 +18042,7 @@ impl P8Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P811 Security Attribute"]
     #[inline(always)]
     pub fn p811sa(
         self,
@@ -12184,6 +18068,7 @@ impl P8Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P812 Security Attribute"]
     #[inline(always)]
     pub fn p812sa(
         self,
@@ -12209,6 +18094,7 @@ impl P8Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P813 Security Attribute"]
     #[inline(always)]
     pub fn p813sa(
         self,
@@ -12234,6 +18120,7 @@ impl P8Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P814 Security Attribute"]
     #[inline(always)]
     pub fn p814sa(
         self,
@@ -12259,6 +18146,7 @@ impl P8Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P815 Security Attribute"]
     #[inline(always)]
     pub fn p815sa(
         self,
@@ -12296,128 +18184,160 @@ pub mod p8sar {
     pub struct P800Sa_SPEC;
     pub type P800Sa = crate::EnumBitfieldStruct<u8, P800Sa_SPEC>;
     impl P800Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P801Sa_SPEC;
     pub type P801Sa = crate::EnumBitfieldStruct<u8, P801Sa_SPEC>;
     impl P801Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P802Sa_SPEC;
     pub type P802Sa = crate::EnumBitfieldStruct<u8, P802Sa_SPEC>;
     impl P802Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P803Sa_SPEC;
     pub type P803Sa = crate::EnumBitfieldStruct<u8, P803Sa_SPEC>;
     impl P803Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P804Sa_SPEC;
     pub type P804Sa = crate::EnumBitfieldStruct<u8, P804Sa_SPEC>;
     impl P804Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P805Sa_SPEC;
     pub type P805Sa = crate::EnumBitfieldStruct<u8, P805Sa_SPEC>;
     impl P805Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P806Sa_SPEC;
     pub type P806Sa = crate::EnumBitfieldStruct<u8, P806Sa_SPEC>;
     impl P806Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P807Sa_SPEC;
     pub type P807Sa = crate::EnumBitfieldStruct<u8, P807Sa_SPEC>;
     impl P807Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P808Sa_SPEC;
     pub type P808Sa = crate::EnumBitfieldStruct<u8, P808Sa_SPEC>;
     impl P808Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P809Sa_SPEC;
     pub type P809Sa = crate::EnumBitfieldStruct<u8, P809Sa_SPEC>;
     impl P809Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P810Sa_SPEC;
     pub type P810Sa = crate::EnumBitfieldStruct<u8, P810Sa_SPEC>;
     impl P810Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P811Sa_SPEC;
     pub type P811Sa = crate::EnumBitfieldStruct<u8, P811Sa_SPEC>;
     impl P811Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P812Sa_SPEC;
     pub type P812Sa = crate::EnumBitfieldStruct<u8, P812Sa_SPEC>;
     impl P812Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P813Sa_SPEC;
     pub type P813Sa = crate::EnumBitfieldStruct<u8, P813Sa_SPEC>;
     impl P813Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P814Sa_SPEC;
     pub type P814Sa = crate::EnumBitfieldStruct<u8, P814Sa_SPEC>;
     impl P814Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P815Sa_SPEC;
     pub type P815Sa = crate::EnumBitfieldStruct<u8, P815Sa_SPEC>;
     impl P815Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12428,9 +18348,11 @@ impl crate::sealed::RegSpec for P9Sar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port Security Attribute register 1"]
 pub type P9Sar = crate::RegValueT<P9Sar_SPEC>;
 
 impl P9Sar {
+    #[doc = "P900 Security Attribute"]
     #[inline(always)]
     pub fn p900sa(
         self,
@@ -12456,6 +18378,7 @@ impl P9Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P901 Security Attribute"]
     #[inline(always)]
     pub fn p901sa(
         self,
@@ -12481,6 +18404,7 @@ impl P9Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P902 Security Attribute"]
     #[inline(always)]
     pub fn p902sa(
         self,
@@ -12506,6 +18430,7 @@ impl P9Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P903 Security Attribute"]
     #[inline(always)]
     pub fn p903sa(
         self,
@@ -12531,6 +18456,7 @@ impl P9Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P904 Security Attribute"]
     #[inline(always)]
     pub fn p904sa(
         self,
@@ -12556,6 +18482,7 @@ impl P9Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P905 Security Attribute"]
     #[inline(always)]
     pub fn p905sa(
         self,
@@ -12581,6 +18508,7 @@ impl P9Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P906 Security Attribute"]
     #[inline(always)]
     pub fn p906sa(
         self,
@@ -12606,6 +18534,7 @@ impl P9Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P907 Security Attribute"]
     #[inline(always)]
     pub fn p907sa(
         self,
@@ -12631,6 +18560,7 @@ impl P9Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P908 Security Attribute"]
     #[inline(always)]
     pub fn p908sa(
         self,
@@ -12656,6 +18586,7 @@ impl P9Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P909 Security Attribute"]
     #[inline(always)]
     pub fn p909sa(
         self,
@@ -12681,6 +18612,7 @@ impl P9Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P910 Security Attribute"]
     #[inline(always)]
     pub fn p910sa(
         self,
@@ -12706,6 +18638,7 @@ impl P9Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P911 Security Attribute"]
     #[inline(always)]
     pub fn p911sa(
         self,
@@ -12731,6 +18664,7 @@ impl P9Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P912 Security Attribute"]
     #[inline(always)]
     pub fn p912sa(
         self,
@@ -12756,6 +18690,7 @@ impl P9Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P913 Security Attribute"]
     #[inline(always)]
     pub fn p913sa(
         self,
@@ -12781,6 +18716,7 @@ impl P9Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P914 Security Attribute"]
     #[inline(always)]
     pub fn p914sa(
         self,
@@ -12806,6 +18742,7 @@ impl P9Sar {
         >::from_register(self, 0)
     }
 
+    #[doc = "P915 Security Attribute"]
     #[inline(always)]
     pub fn p915sa(
         self,
@@ -12843,128 +18780,160 @@ pub mod p9sar {
     pub struct P900Sa_SPEC;
     pub type P900Sa = crate::EnumBitfieldStruct<u8, P900Sa_SPEC>;
     impl P900Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P901Sa_SPEC;
     pub type P901Sa = crate::EnumBitfieldStruct<u8, P901Sa_SPEC>;
     impl P901Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P902Sa_SPEC;
     pub type P902Sa = crate::EnumBitfieldStruct<u8, P902Sa_SPEC>;
     impl P902Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P903Sa_SPEC;
     pub type P903Sa = crate::EnumBitfieldStruct<u8, P903Sa_SPEC>;
     impl P903Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P904Sa_SPEC;
     pub type P904Sa = crate::EnumBitfieldStruct<u8, P904Sa_SPEC>;
     impl P904Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P905Sa_SPEC;
     pub type P905Sa = crate::EnumBitfieldStruct<u8, P905Sa_SPEC>;
     impl P905Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P906Sa_SPEC;
     pub type P906Sa = crate::EnumBitfieldStruct<u8, P906Sa_SPEC>;
     impl P906Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P907Sa_SPEC;
     pub type P907Sa = crate::EnumBitfieldStruct<u8, P907Sa_SPEC>;
     impl P907Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P908Sa_SPEC;
     pub type P908Sa = crate::EnumBitfieldStruct<u8, P908Sa_SPEC>;
     impl P908Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P909Sa_SPEC;
     pub type P909Sa = crate::EnumBitfieldStruct<u8, P909Sa_SPEC>;
     impl P909Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P910Sa_SPEC;
     pub type P910Sa = crate::EnumBitfieldStruct<u8, P910Sa_SPEC>;
     impl P910Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P911Sa_SPEC;
     pub type P911Sa = crate::EnumBitfieldStruct<u8, P911Sa_SPEC>;
     impl P911Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P912Sa_SPEC;
     pub type P912Sa = crate::EnumBitfieldStruct<u8, P912Sa_SPEC>;
     impl P912Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P913Sa_SPEC;
     pub type P913Sa = crate::EnumBitfieldStruct<u8, P913Sa_SPEC>;
     impl P913Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P914Sa_SPEC;
     pub type P914Sa = crate::EnumBitfieldStruct<u8, P914Sa_SPEC>;
     impl P914Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P915Sa_SPEC;
     pub type P915Sa = crate::EnumBitfieldStruct<u8, P915Sa_SPEC>;
     impl P915Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12975,9 +18944,11 @@ impl crate::sealed::RegSpec for Pasar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port Security Attribute register 1"]
 pub type Pasar = crate::RegValueT<Pasar_SPEC>;
 
 impl Pasar {
+    #[doc = "PA00 Security Attribute"]
     #[inline(always)]
     pub fn pa00sa(
         self,
@@ -13003,6 +18974,7 @@ impl Pasar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PA01 Security Attribute"]
     #[inline(always)]
     pub fn pa01sa(
         self,
@@ -13028,6 +19000,7 @@ impl Pasar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PA02 Security Attribute"]
     #[inline(always)]
     pub fn pa02sa(
         self,
@@ -13053,6 +19026,7 @@ impl Pasar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PA03 Security Attribute"]
     #[inline(always)]
     pub fn pa03sa(
         self,
@@ -13078,6 +19052,7 @@ impl Pasar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PA04 Security Attribute"]
     #[inline(always)]
     pub fn pa04sa(
         self,
@@ -13103,6 +19078,7 @@ impl Pasar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PA05 Security Attribute"]
     #[inline(always)]
     pub fn pa05sa(
         self,
@@ -13128,6 +19104,7 @@ impl Pasar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PA06 Security Attribute"]
     #[inline(always)]
     pub fn pa06sa(
         self,
@@ -13153,6 +19130,7 @@ impl Pasar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PA07 Security Attribute"]
     #[inline(always)]
     pub fn pa07sa(
         self,
@@ -13178,6 +19156,7 @@ impl Pasar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PA08 Security Attribute"]
     #[inline(always)]
     pub fn pa08sa(
         self,
@@ -13203,6 +19182,7 @@ impl Pasar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PA09 Security Attribute"]
     #[inline(always)]
     pub fn pa09sa(
         self,
@@ -13228,6 +19208,7 @@ impl Pasar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PA10 Security Attribute"]
     #[inline(always)]
     pub fn pa10sa(
         self,
@@ -13253,6 +19234,7 @@ impl Pasar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PA11 Security Attribute"]
     #[inline(always)]
     pub fn pa11sa(
         self,
@@ -13278,6 +19260,7 @@ impl Pasar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PA12 Security Attribute"]
     #[inline(always)]
     pub fn pa12sa(
         self,
@@ -13303,6 +19286,7 @@ impl Pasar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PA13 Security Attribute"]
     #[inline(always)]
     pub fn pa13sa(
         self,
@@ -13328,6 +19312,7 @@ impl Pasar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PA14 Security Attribute"]
     #[inline(always)]
     pub fn pa14sa(
         self,
@@ -13353,6 +19338,7 @@ impl Pasar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PA15 Security Attribute"]
     #[inline(always)]
     pub fn pa15sa(
         self,
@@ -13390,128 +19376,160 @@ pub mod pasar {
     pub struct Pa00Sa_SPEC;
     pub type Pa00Sa = crate::EnumBitfieldStruct<u8, Pa00Sa_SPEC>;
     impl Pa00Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pa01Sa_SPEC;
     pub type Pa01Sa = crate::EnumBitfieldStruct<u8, Pa01Sa_SPEC>;
     impl Pa01Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pa02Sa_SPEC;
     pub type Pa02Sa = crate::EnumBitfieldStruct<u8, Pa02Sa_SPEC>;
     impl Pa02Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pa03Sa_SPEC;
     pub type Pa03Sa = crate::EnumBitfieldStruct<u8, Pa03Sa_SPEC>;
     impl Pa03Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pa04Sa_SPEC;
     pub type Pa04Sa = crate::EnumBitfieldStruct<u8, Pa04Sa_SPEC>;
     impl Pa04Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pa05Sa_SPEC;
     pub type Pa05Sa = crate::EnumBitfieldStruct<u8, Pa05Sa_SPEC>;
     impl Pa05Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pa06Sa_SPEC;
     pub type Pa06Sa = crate::EnumBitfieldStruct<u8, Pa06Sa_SPEC>;
     impl Pa06Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pa07Sa_SPEC;
     pub type Pa07Sa = crate::EnumBitfieldStruct<u8, Pa07Sa_SPEC>;
     impl Pa07Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pa08Sa_SPEC;
     pub type Pa08Sa = crate::EnumBitfieldStruct<u8, Pa08Sa_SPEC>;
     impl Pa08Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pa09Sa_SPEC;
     pub type Pa09Sa = crate::EnumBitfieldStruct<u8, Pa09Sa_SPEC>;
     impl Pa09Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pa10Sa_SPEC;
     pub type Pa10Sa = crate::EnumBitfieldStruct<u8, Pa10Sa_SPEC>;
     impl Pa10Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pa11Sa_SPEC;
     pub type Pa11Sa = crate::EnumBitfieldStruct<u8, Pa11Sa_SPEC>;
     impl Pa11Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pa12Sa_SPEC;
     pub type Pa12Sa = crate::EnumBitfieldStruct<u8, Pa12Sa_SPEC>;
     impl Pa12Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pa13Sa_SPEC;
     pub type Pa13Sa = crate::EnumBitfieldStruct<u8, Pa13Sa_SPEC>;
     impl Pa13Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pa14Sa_SPEC;
     pub type Pa14Sa = crate::EnumBitfieldStruct<u8, Pa14Sa_SPEC>;
     impl Pa14Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pa15Sa_SPEC;
     pub type Pa15Sa = crate::EnumBitfieldStruct<u8, Pa15Sa_SPEC>;
     impl Pa15Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -13522,9 +19540,11 @@ impl crate::sealed::RegSpec for Pbsar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port Security Attribute register 1"]
 pub type Pbsar = crate::RegValueT<Pbsar_SPEC>;
 
 impl Pbsar {
+    #[doc = "PB00 Security Attribute"]
     #[inline(always)]
     pub fn pb00sa(
         self,
@@ -13550,6 +19570,7 @@ impl Pbsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB01 Security Attribute"]
     #[inline(always)]
     pub fn pb01sa(
         self,
@@ -13575,6 +19596,7 @@ impl Pbsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB02 Security Attribute"]
     #[inline(always)]
     pub fn pb02sa(
         self,
@@ -13600,6 +19622,7 @@ impl Pbsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB03 Security Attribute"]
     #[inline(always)]
     pub fn pb03sa(
         self,
@@ -13625,6 +19648,7 @@ impl Pbsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB04 Security Attribute"]
     #[inline(always)]
     pub fn pb04sa(
         self,
@@ -13650,6 +19674,7 @@ impl Pbsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB05 Security Attribute"]
     #[inline(always)]
     pub fn pb05sa(
         self,
@@ -13675,6 +19700,7 @@ impl Pbsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB06 Security Attribute"]
     #[inline(always)]
     pub fn pb06sa(
         self,
@@ -13700,6 +19726,7 @@ impl Pbsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB07 Security Attribute"]
     #[inline(always)]
     pub fn pb07sa(
         self,
@@ -13725,6 +19752,7 @@ impl Pbsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB08 Security Attribute"]
     #[inline(always)]
     pub fn pb08sa(
         self,
@@ -13750,6 +19778,7 @@ impl Pbsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB09 Security Attribute"]
     #[inline(always)]
     pub fn pb09sa(
         self,
@@ -13775,6 +19804,7 @@ impl Pbsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB10 Security Attribute"]
     #[inline(always)]
     pub fn pb10sa(
         self,
@@ -13800,6 +19830,7 @@ impl Pbsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB11 Security Attribute"]
     #[inline(always)]
     pub fn pb11sa(
         self,
@@ -13825,6 +19856,7 @@ impl Pbsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB12 Security Attribute"]
     #[inline(always)]
     pub fn pb12sa(
         self,
@@ -13850,6 +19882,7 @@ impl Pbsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB13 Security Attribute"]
     #[inline(always)]
     pub fn pb13sa(
         self,
@@ -13875,6 +19908,7 @@ impl Pbsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB14 Security Attribute"]
     #[inline(always)]
     pub fn pb14sa(
         self,
@@ -13900,6 +19934,7 @@ impl Pbsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB15 Security Attribute"]
     #[inline(always)]
     pub fn pb15sa(
         self,
@@ -13937,128 +19972,160 @@ pub mod pbsar {
     pub struct Pb00Sa_SPEC;
     pub type Pb00Sa = crate::EnumBitfieldStruct<u8, Pb00Sa_SPEC>;
     impl Pb00Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb01Sa_SPEC;
     pub type Pb01Sa = crate::EnumBitfieldStruct<u8, Pb01Sa_SPEC>;
     impl Pb01Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb02Sa_SPEC;
     pub type Pb02Sa = crate::EnumBitfieldStruct<u8, Pb02Sa_SPEC>;
     impl Pb02Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb03Sa_SPEC;
     pub type Pb03Sa = crate::EnumBitfieldStruct<u8, Pb03Sa_SPEC>;
     impl Pb03Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb04Sa_SPEC;
     pub type Pb04Sa = crate::EnumBitfieldStruct<u8, Pb04Sa_SPEC>;
     impl Pb04Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb05Sa_SPEC;
     pub type Pb05Sa = crate::EnumBitfieldStruct<u8, Pb05Sa_SPEC>;
     impl Pb05Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb06Sa_SPEC;
     pub type Pb06Sa = crate::EnumBitfieldStruct<u8, Pb06Sa_SPEC>;
     impl Pb06Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb07Sa_SPEC;
     pub type Pb07Sa = crate::EnumBitfieldStruct<u8, Pb07Sa_SPEC>;
     impl Pb07Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb08Sa_SPEC;
     pub type Pb08Sa = crate::EnumBitfieldStruct<u8, Pb08Sa_SPEC>;
     impl Pb08Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb09Sa_SPEC;
     pub type Pb09Sa = crate::EnumBitfieldStruct<u8, Pb09Sa_SPEC>;
     impl Pb09Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb10Sa_SPEC;
     pub type Pb10Sa = crate::EnumBitfieldStruct<u8, Pb10Sa_SPEC>;
     impl Pb10Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb11Sa_SPEC;
     pub type Pb11Sa = crate::EnumBitfieldStruct<u8, Pb11Sa_SPEC>;
     impl Pb11Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb12Sa_SPEC;
     pub type Pb12Sa = crate::EnumBitfieldStruct<u8, Pb12Sa_SPEC>;
     impl Pb12Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb13Sa_SPEC;
     pub type Pb13Sa = crate::EnumBitfieldStruct<u8, Pb13Sa_SPEC>;
     impl Pb13Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb14Sa_SPEC;
     pub type Pb14Sa = crate::EnumBitfieldStruct<u8, Pb14Sa_SPEC>;
     impl Pb14Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb15Sa_SPEC;
     pub type Pb15Sa = crate::EnumBitfieldStruct<u8, Pb15Sa_SPEC>;
     impl Pb15Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -14069,9 +20136,11 @@ impl crate::sealed::RegSpec for Pcsar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port Security Attribute register 1"]
 pub type Pcsar = crate::RegValueT<Pcsar_SPEC>;
 
 impl Pcsar {
+    #[doc = "PB00 Security Attribute"]
     #[inline(always)]
     pub fn pb00sa(
         self,
@@ -14097,6 +20166,7 @@ impl Pcsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB01 Security Attribute"]
     #[inline(always)]
     pub fn pb01sa(
         self,
@@ -14122,6 +20192,7 @@ impl Pcsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB02 Security Attribute"]
     #[inline(always)]
     pub fn pb02sa(
         self,
@@ -14147,6 +20218,7 @@ impl Pcsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB03 Security Attribute"]
     #[inline(always)]
     pub fn pb03sa(
         self,
@@ -14172,6 +20244,7 @@ impl Pcsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB04 Security Attribute"]
     #[inline(always)]
     pub fn pb04sa(
         self,
@@ -14197,6 +20270,7 @@ impl Pcsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB05 Security Attribute"]
     #[inline(always)]
     pub fn pb05sa(
         self,
@@ -14222,6 +20296,7 @@ impl Pcsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB06 Security Attribute"]
     #[inline(always)]
     pub fn pb06sa(
         self,
@@ -14247,6 +20322,7 @@ impl Pcsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB07 Security Attribute"]
     #[inline(always)]
     pub fn pb07sa(
         self,
@@ -14272,6 +20348,7 @@ impl Pcsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB08 Security Attribute"]
     #[inline(always)]
     pub fn pb08sa(
         self,
@@ -14297,6 +20374,7 @@ impl Pcsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB09 Security Attribute"]
     #[inline(always)]
     pub fn pb09sa(
         self,
@@ -14322,6 +20400,7 @@ impl Pcsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB10 Security Attribute"]
     #[inline(always)]
     pub fn pb10sa(
         self,
@@ -14347,6 +20426,7 @@ impl Pcsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB11 Security Attribute"]
     #[inline(always)]
     pub fn pb11sa(
         self,
@@ -14372,6 +20452,7 @@ impl Pcsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB12 Security Attribute"]
     #[inline(always)]
     pub fn pb12sa(
         self,
@@ -14397,6 +20478,7 @@ impl Pcsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB13 Security Attribute"]
     #[inline(always)]
     pub fn pb13sa(
         self,
@@ -14422,6 +20504,7 @@ impl Pcsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB14 Security Attribute"]
     #[inline(always)]
     pub fn pb14sa(
         self,
@@ -14447,6 +20530,7 @@ impl Pcsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PB15 Security Attribute"]
     #[inline(always)]
     pub fn pb15sa(
         self,
@@ -14484,128 +20568,160 @@ pub mod pcsar {
     pub struct Pb00Sa_SPEC;
     pub type Pb00Sa = crate::EnumBitfieldStruct<u8, Pb00Sa_SPEC>;
     impl Pb00Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb01Sa_SPEC;
     pub type Pb01Sa = crate::EnumBitfieldStruct<u8, Pb01Sa_SPEC>;
     impl Pb01Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb02Sa_SPEC;
     pub type Pb02Sa = crate::EnumBitfieldStruct<u8, Pb02Sa_SPEC>;
     impl Pb02Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb03Sa_SPEC;
     pub type Pb03Sa = crate::EnumBitfieldStruct<u8, Pb03Sa_SPEC>;
     impl Pb03Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb04Sa_SPEC;
     pub type Pb04Sa = crate::EnumBitfieldStruct<u8, Pb04Sa_SPEC>;
     impl Pb04Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb05Sa_SPEC;
     pub type Pb05Sa = crate::EnumBitfieldStruct<u8, Pb05Sa_SPEC>;
     impl Pb05Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb06Sa_SPEC;
     pub type Pb06Sa = crate::EnumBitfieldStruct<u8, Pb06Sa_SPEC>;
     impl Pb06Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb07Sa_SPEC;
     pub type Pb07Sa = crate::EnumBitfieldStruct<u8, Pb07Sa_SPEC>;
     impl Pb07Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb08Sa_SPEC;
     pub type Pb08Sa = crate::EnumBitfieldStruct<u8, Pb08Sa_SPEC>;
     impl Pb08Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb09Sa_SPEC;
     pub type Pb09Sa = crate::EnumBitfieldStruct<u8, Pb09Sa_SPEC>;
     impl Pb09Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb10Sa_SPEC;
     pub type Pb10Sa = crate::EnumBitfieldStruct<u8, Pb10Sa_SPEC>;
     impl Pb10Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb11Sa_SPEC;
     pub type Pb11Sa = crate::EnumBitfieldStruct<u8, Pb11Sa_SPEC>;
     impl Pb11Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb12Sa_SPEC;
     pub type Pb12Sa = crate::EnumBitfieldStruct<u8, Pb12Sa_SPEC>;
     impl Pb12Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb13Sa_SPEC;
     pub type Pb13Sa = crate::EnumBitfieldStruct<u8, Pb13Sa_SPEC>;
     impl Pb13Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb14Sa_SPEC;
     pub type Pb14Sa = crate::EnumBitfieldStruct<u8, Pb14Sa_SPEC>;
     impl Pb14Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pb15Sa_SPEC;
     pub type Pb15Sa = crate::EnumBitfieldStruct<u8, Pb15Sa_SPEC>;
     impl Pb15Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -14616,9 +20732,11 @@ impl crate::sealed::RegSpec for Pdsar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port Security Attribute register 1"]
 pub type Pdsar = crate::RegValueT<Pdsar_SPEC>;
 
 impl Pdsar {
+    #[doc = "PC00 Security Attribute"]
     #[inline(always)]
     pub fn pc00sa(
         self,
@@ -14644,6 +20762,7 @@ impl Pdsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PC01 Security Attribute"]
     #[inline(always)]
     pub fn pc01sa(
         self,
@@ -14669,6 +20788,7 @@ impl Pdsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PC02 Security Attribute"]
     #[inline(always)]
     pub fn pc02sa(
         self,
@@ -14694,6 +20814,7 @@ impl Pdsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PC03 Security Attribute"]
     #[inline(always)]
     pub fn pc03sa(
         self,
@@ -14719,6 +20840,7 @@ impl Pdsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PC04 Security Attribute"]
     #[inline(always)]
     pub fn pc04sa(
         self,
@@ -14744,6 +20866,7 @@ impl Pdsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PC05 Security Attribute"]
     #[inline(always)]
     pub fn pc05sa(
         self,
@@ -14769,6 +20892,7 @@ impl Pdsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PC06 Security Attribute"]
     #[inline(always)]
     pub fn pc06sa(
         self,
@@ -14794,6 +20918,7 @@ impl Pdsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PC07 Security Attribute"]
     #[inline(always)]
     pub fn pc07sa(
         self,
@@ -14819,6 +20944,7 @@ impl Pdsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PC08 Security Attribute"]
     #[inline(always)]
     pub fn pc08sa(
         self,
@@ -14844,6 +20970,7 @@ impl Pdsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PC09 Security Attribute"]
     #[inline(always)]
     pub fn pc09sa(
         self,
@@ -14869,6 +20996,7 @@ impl Pdsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PC10 Security Attribute"]
     #[inline(always)]
     pub fn pc10sa(
         self,
@@ -14894,6 +21022,7 @@ impl Pdsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PC11 Security Attribute"]
     #[inline(always)]
     pub fn pc11sa(
         self,
@@ -14919,6 +21048,7 @@ impl Pdsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PC12 Security Attribute"]
     #[inline(always)]
     pub fn pc12sa(
         self,
@@ -14944,6 +21074,7 @@ impl Pdsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PC13 Security Attribute"]
     #[inline(always)]
     pub fn pc13sa(
         self,
@@ -14969,6 +21100,7 @@ impl Pdsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PC14 Security Attribute"]
     #[inline(always)]
     pub fn pc14sa(
         self,
@@ -14994,6 +21126,7 @@ impl Pdsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PC15 Security Attribute"]
     #[inline(always)]
     pub fn pc15sa(
         self,
@@ -15031,128 +21164,160 @@ pub mod pdsar {
     pub struct Pc00Sa_SPEC;
     pub type Pc00Sa = crate::EnumBitfieldStruct<u8, Pc00Sa_SPEC>;
     impl Pc00Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pc01Sa_SPEC;
     pub type Pc01Sa = crate::EnumBitfieldStruct<u8, Pc01Sa_SPEC>;
     impl Pc01Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pc02Sa_SPEC;
     pub type Pc02Sa = crate::EnumBitfieldStruct<u8, Pc02Sa_SPEC>;
     impl Pc02Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pc03Sa_SPEC;
     pub type Pc03Sa = crate::EnumBitfieldStruct<u8, Pc03Sa_SPEC>;
     impl Pc03Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pc04Sa_SPEC;
     pub type Pc04Sa = crate::EnumBitfieldStruct<u8, Pc04Sa_SPEC>;
     impl Pc04Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pc05Sa_SPEC;
     pub type Pc05Sa = crate::EnumBitfieldStruct<u8, Pc05Sa_SPEC>;
     impl Pc05Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pc06Sa_SPEC;
     pub type Pc06Sa = crate::EnumBitfieldStruct<u8, Pc06Sa_SPEC>;
     impl Pc06Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pc07Sa_SPEC;
     pub type Pc07Sa = crate::EnumBitfieldStruct<u8, Pc07Sa_SPEC>;
     impl Pc07Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pc08Sa_SPEC;
     pub type Pc08Sa = crate::EnumBitfieldStruct<u8, Pc08Sa_SPEC>;
     impl Pc08Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pc09Sa_SPEC;
     pub type Pc09Sa = crate::EnumBitfieldStruct<u8, Pc09Sa_SPEC>;
     impl Pc09Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pc10Sa_SPEC;
     pub type Pc10Sa = crate::EnumBitfieldStruct<u8, Pc10Sa_SPEC>;
     impl Pc10Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pc11Sa_SPEC;
     pub type Pc11Sa = crate::EnumBitfieldStruct<u8, Pc11Sa_SPEC>;
     impl Pc11Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pc12Sa_SPEC;
     pub type Pc12Sa = crate::EnumBitfieldStruct<u8, Pc12Sa_SPEC>;
     impl Pc12Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pc13Sa_SPEC;
     pub type Pc13Sa = crate::EnumBitfieldStruct<u8, Pc13Sa_SPEC>;
     impl Pc13Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pc14Sa_SPEC;
     pub type Pc14Sa = crate::EnumBitfieldStruct<u8, Pc14Sa_SPEC>;
     impl Pc14Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pc15Sa_SPEC;
     pub type Pc15Sa = crate::EnumBitfieldStruct<u8, Pc15Sa_SPEC>;
     impl Pc15Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -15163,9 +21328,11 @@ impl crate::sealed::RegSpec for Pesar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port Security Attribute register 1"]
 pub type Pesar = crate::RegValueT<Pesar_SPEC>;
 
 impl Pesar {
+    #[doc = "PD00 Security Attribute"]
     #[inline(always)]
     pub fn pd00sa(
         self,
@@ -15191,6 +21358,7 @@ impl Pesar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PD01 Security Attribute"]
     #[inline(always)]
     pub fn pd01sa(
         self,
@@ -15216,6 +21384,7 @@ impl Pesar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PD02 Security Attribute"]
     #[inline(always)]
     pub fn pd02sa(
         self,
@@ -15241,6 +21410,7 @@ impl Pesar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PD03 Security Attribute"]
     #[inline(always)]
     pub fn pd03sa(
         self,
@@ -15266,6 +21436,7 @@ impl Pesar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PD04 Security Attribute"]
     #[inline(always)]
     pub fn pd04sa(
         self,
@@ -15291,6 +21462,7 @@ impl Pesar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PD05 Security Attribute"]
     #[inline(always)]
     pub fn pd05sa(
         self,
@@ -15316,6 +21488,7 @@ impl Pesar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PD06 Security Attribute"]
     #[inline(always)]
     pub fn pd06sa(
         self,
@@ -15341,6 +21514,7 @@ impl Pesar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PD07 Security Attribute"]
     #[inline(always)]
     pub fn pd07sa(
         self,
@@ -15366,6 +21540,7 @@ impl Pesar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PD08 Security Attribute"]
     #[inline(always)]
     pub fn pd08sa(
         self,
@@ -15391,6 +21566,7 @@ impl Pesar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PD09 Security Attribute"]
     #[inline(always)]
     pub fn pd09sa(
         self,
@@ -15416,6 +21592,7 @@ impl Pesar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PD10 Security Attribute"]
     #[inline(always)]
     pub fn pd10sa(
         self,
@@ -15441,6 +21618,7 @@ impl Pesar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PD11 Security Attribute"]
     #[inline(always)]
     pub fn pd11sa(
         self,
@@ -15466,6 +21644,7 @@ impl Pesar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PD12 Security Attribute"]
     #[inline(always)]
     pub fn pd12sa(
         self,
@@ -15491,6 +21670,7 @@ impl Pesar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PD13 Security Attribute"]
     #[inline(always)]
     pub fn pd13sa(
         self,
@@ -15516,6 +21696,7 @@ impl Pesar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PD14 Security Attribute"]
     #[inline(always)]
     pub fn pd14sa(
         self,
@@ -15541,6 +21722,7 @@ impl Pesar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PD15 Security Attribute"]
     #[inline(always)]
     pub fn pd15sa(
         self,
@@ -15578,128 +21760,160 @@ pub mod pesar {
     pub struct Pd00Sa_SPEC;
     pub type Pd00Sa = crate::EnumBitfieldStruct<u8, Pd00Sa_SPEC>;
     impl Pd00Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pd01Sa_SPEC;
     pub type Pd01Sa = crate::EnumBitfieldStruct<u8, Pd01Sa_SPEC>;
     impl Pd01Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pd02Sa_SPEC;
     pub type Pd02Sa = crate::EnumBitfieldStruct<u8, Pd02Sa_SPEC>;
     impl Pd02Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pd03Sa_SPEC;
     pub type Pd03Sa = crate::EnumBitfieldStruct<u8, Pd03Sa_SPEC>;
     impl Pd03Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pd04Sa_SPEC;
     pub type Pd04Sa = crate::EnumBitfieldStruct<u8, Pd04Sa_SPEC>;
     impl Pd04Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pd05Sa_SPEC;
     pub type Pd05Sa = crate::EnumBitfieldStruct<u8, Pd05Sa_SPEC>;
     impl Pd05Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pd06Sa_SPEC;
     pub type Pd06Sa = crate::EnumBitfieldStruct<u8, Pd06Sa_SPEC>;
     impl Pd06Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pd07Sa_SPEC;
     pub type Pd07Sa = crate::EnumBitfieldStruct<u8, Pd07Sa_SPEC>;
     impl Pd07Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pd08Sa_SPEC;
     pub type Pd08Sa = crate::EnumBitfieldStruct<u8, Pd08Sa_SPEC>;
     impl Pd08Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pd09Sa_SPEC;
     pub type Pd09Sa = crate::EnumBitfieldStruct<u8, Pd09Sa_SPEC>;
     impl Pd09Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pd10Sa_SPEC;
     pub type Pd10Sa = crate::EnumBitfieldStruct<u8, Pd10Sa_SPEC>;
     impl Pd10Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pd11Sa_SPEC;
     pub type Pd11Sa = crate::EnumBitfieldStruct<u8, Pd11Sa_SPEC>;
     impl Pd11Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pd12Sa_SPEC;
     pub type Pd12Sa = crate::EnumBitfieldStruct<u8, Pd12Sa_SPEC>;
     impl Pd12Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pd13Sa_SPEC;
     pub type Pd13Sa = crate::EnumBitfieldStruct<u8, Pd13Sa_SPEC>;
     impl Pd13Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pd14Sa_SPEC;
     pub type Pd14Sa = crate::EnumBitfieldStruct<u8, Pd14Sa_SPEC>;
     impl Pd14Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pd15Sa_SPEC;
     pub type Pd15Sa = crate::EnumBitfieldStruct<u8, Pd15Sa_SPEC>;
     impl Pd15Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -15710,9 +21924,11 @@ impl crate::sealed::RegSpec for Pfsar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port Security Attribute register 1"]
 pub type Pfsar = crate::RegValueT<Pfsar_SPEC>;
 
 impl Pfsar {
+    #[doc = "PE00 Security Attribute"]
     #[inline(always)]
     pub fn pe00sa(
         self,
@@ -15738,6 +21954,7 @@ impl Pfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PE01 Security Attribute"]
     #[inline(always)]
     pub fn pe01sa(
         self,
@@ -15763,6 +21980,7 @@ impl Pfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PE02 Security Attribute"]
     #[inline(always)]
     pub fn pe02sa(
         self,
@@ -15788,6 +22006,7 @@ impl Pfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PE03 Security Attribute"]
     #[inline(always)]
     pub fn pe03sa(
         self,
@@ -15813,6 +22032,7 @@ impl Pfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PE04 Security Attribute"]
     #[inline(always)]
     pub fn pe04sa(
         self,
@@ -15838,6 +22058,7 @@ impl Pfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PE05 Security Attribute"]
     #[inline(always)]
     pub fn pe05sa(
         self,
@@ -15863,6 +22084,7 @@ impl Pfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PE06 Security Attribute"]
     #[inline(always)]
     pub fn pe06sa(
         self,
@@ -15888,6 +22110,7 @@ impl Pfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PE07 Security Attribute"]
     #[inline(always)]
     pub fn pe07sa(
         self,
@@ -15913,6 +22136,7 @@ impl Pfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PE08 Security Attribute"]
     #[inline(always)]
     pub fn pe08sa(
         self,
@@ -15938,6 +22162,7 @@ impl Pfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PE09 Security Attribute"]
     #[inline(always)]
     pub fn pe09sa(
         self,
@@ -15963,6 +22188,7 @@ impl Pfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PE10 Security Attribute"]
     #[inline(always)]
     pub fn pe10sa(
         self,
@@ -15988,6 +22214,7 @@ impl Pfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PE11 Security Attribute"]
     #[inline(always)]
     pub fn pe11sa(
         self,
@@ -16013,6 +22240,7 @@ impl Pfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PE12 Security Attribute"]
     #[inline(always)]
     pub fn pe12sa(
         self,
@@ -16038,6 +22266,7 @@ impl Pfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PE13 Security Attribute"]
     #[inline(always)]
     pub fn pe13sa(
         self,
@@ -16063,6 +22292,7 @@ impl Pfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PE14 Security Attribute"]
     #[inline(always)]
     pub fn pe14sa(
         self,
@@ -16088,6 +22318,7 @@ impl Pfsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PE15 Security Attribute"]
     #[inline(always)]
     pub fn pe15sa(
         self,
@@ -16125,128 +22356,160 @@ pub mod pfsar {
     pub struct Pe00Sa_SPEC;
     pub type Pe00Sa = crate::EnumBitfieldStruct<u8, Pe00Sa_SPEC>;
     impl Pe00Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pe01Sa_SPEC;
     pub type Pe01Sa = crate::EnumBitfieldStruct<u8, Pe01Sa_SPEC>;
     impl Pe01Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pe02Sa_SPEC;
     pub type Pe02Sa = crate::EnumBitfieldStruct<u8, Pe02Sa_SPEC>;
     impl Pe02Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pe03Sa_SPEC;
     pub type Pe03Sa = crate::EnumBitfieldStruct<u8, Pe03Sa_SPEC>;
     impl Pe03Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pe04Sa_SPEC;
     pub type Pe04Sa = crate::EnumBitfieldStruct<u8, Pe04Sa_SPEC>;
     impl Pe04Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pe05Sa_SPEC;
     pub type Pe05Sa = crate::EnumBitfieldStruct<u8, Pe05Sa_SPEC>;
     impl Pe05Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pe06Sa_SPEC;
     pub type Pe06Sa = crate::EnumBitfieldStruct<u8, Pe06Sa_SPEC>;
     impl Pe06Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pe07Sa_SPEC;
     pub type Pe07Sa = crate::EnumBitfieldStruct<u8, Pe07Sa_SPEC>;
     impl Pe07Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pe08Sa_SPEC;
     pub type Pe08Sa = crate::EnumBitfieldStruct<u8, Pe08Sa_SPEC>;
     impl Pe08Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pe09Sa_SPEC;
     pub type Pe09Sa = crate::EnumBitfieldStruct<u8, Pe09Sa_SPEC>;
     impl Pe09Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pe10Sa_SPEC;
     pub type Pe10Sa = crate::EnumBitfieldStruct<u8, Pe10Sa_SPEC>;
     impl Pe10Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pe11Sa_SPEC;
     pub type Pe11Sa = crate::EnumBitfieldStruct<u8, Pe11Sa_SPEC>;
     impl Pe11Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pe12Sa_SPEC;
     pub type Pe12Sa = crate::EnumBitfieldStruct<u8, Pe12Sa_SPEC>;
     impl Pe12Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pe13Sa_SPEC;
     pub type Pe13Sa = crate::EnumBitfieldStruct<u8, Pe13Sa_SPEC>;
     impl Pe13Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pe14Sa_SPEC;
     pub type Pe14Sa = crate::EnumBitfieldStruct<u8, Pe14Sa_SPEC>;
     impl Pe14Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pe15Sa_SPEC;
     pub type Pe15Sa = crate::EnumBitfieldStruct<u8, Pe15Sa_SPEC>;
     impl Pe15Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -16257,9 +22520,11 @@ impl crate::sealed::RegSpec for Pgsar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port Security Attribute register 1"]
 pub type Pgsar = crate::RegValueT<Pgsar_SPEC>;
 
 impl Pgsar {
+    #[doc = "PG00 Security Attribute"]
     #[inline(always)]
     pub fn pg00sa(
         self,
@@ -16285,6 +22550,7 @@ impl Pgsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PG01 Security Attribute"]
     #[inline(always)]
     pub fn pg01sa(
         self,
@@ -16310,6 +22576,7 @@ impl Pgsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PG02 Security Attribute"]
     #[inline(always)]
     pub fn pg02sa(
         self,
@@ -16335,6 +22602,7 @@ impl Pgsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PG03 Security Attribute"]
     #[inline(always)]
     pub fn pg03sa(
         self,
@@ -16360,6 +22628,7 @@ impl Pgsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PG04 Security Attribute"]
     #[inline(always)]
     pub fn pg04sa(
         self,
@@ -16385,6 +22654,7 @@ impl Pgsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PG05 Security Attribute"]
     #[inline(always)]
     pub fn pg05sa(
         self,
@@ -16410,6 +22680,7 @@ impl Pgsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PG06 Security Attribute"]
     #[inline(always)]
     pub fn pg06sa(
         self,
@@ -16435,6 +22706,7 @@ impl Pgsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PG07 Security Attribute"]
     #[inline(always)]
     pub fn pg07sa(
         self,
@@ -16460,6 +22732,7 @@ impl Pgsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PG08 Security Attribute"]
     #[inline(always)]
     pub fn pg08sa(
         self,
@@ -16485,6 +22758,7 @@ impl Pgsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PG09 Security Attribute"]
     #[inline(always)]
     pub fn pg09sa(
         self,
@@ -16510,6 +22784,7 @@ impl Pgsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PG10 Security Attribute"]
     #[inline(always)]
     pub fn pg10sa(
         self,
@@ -16535,6 +22810,7 @@ impl Pgsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PG11 Security Attribute"]
     #[inline(always)]
     pub fn pg11sa(
         self,
@@ -16560,6 +22836,7 @@ impl Pgsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PG12 Security Attribute"]
     #[inline(always)]
     pub fn pg12sa(
         self,
@@ -16585,6 +22862,7 @@ impl Pgsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PG13 Security Attribute"]
     #[inline(always)]
     pub fn pg13sa(
         self,
@@ -16610,6 +22888,7 @@ impl Pgsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PG14 Security Attribute"]
     #[inline(always)]
     pub fn pg14sa(
         self,
@@ -16635,6 +22914,7 @@ impl Pgsar {
         >::from_register(self, 0)
     }
 
+    #[doc = "PG15 Security Attribute"]
     #[inline(always)]
     pub fn pg15sa(
         self,
@@ -16672,128 +22952,160 @@ pub mod pgsar {
     pub struct Pg00Sa_SPEC;
     pub type Pg00Sa = crate::EnumBitfieldStruct<u8, Pg00Sa_SPEC>;
     impl Pg00Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pg01Sa_SPEC;
     pub type Pg01Sa = crate::EnumBitfieldStruct<u8, Pg01Sa_SPEC>;
     impl Pg01Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pg02Sa_SPEC;
     pub type Pg02Sa = crate::EnumBitfieldStruct<u8, Pg02Sa_SPEC>;
     impl Pg02Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pg03Sa_SPEC;
     pub type Pg03Sa = crate::EnumBitfieldStruct<u8, Pg03Sa_SPEC>;
     impl Pg03Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pg04Sa_SPEC;
     pub type Pg04Sa = crate::EnumBitfieldStruct<u8, Pg04Sa_SPEC>;
     impl Pg04Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pg05Sa_SPEC;
     pub type Pg05Sa = crate::EnumBitfieldStruct<u8, Pg05Sa_SPEC>;
     impl Pg05Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pg06Sa_SPEC;
     pub type Pg06Sa = crate::EnumBitfieldStruct<u8, Pg06Sa_SPEC>;
     impl Pg06Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pg07Sa_SPEC;
     pub type Pg07Sa = crate::EnumBitfieldStruct<u8, Pg07Sa_SPEC>;
     impl Pg07Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pg08Sa_SPEC;
     pub type Pg08Sa = crate::EnumBitfieldStruct<u8, Pg08Sa_SPEC>;
     impl Pg08Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pg09Sa_SPEC;
     pub type Pg09Sa = crate::EnumBitfieldStruct<u8, Pg09Sa_SPEC>;
     impl Pg09Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pg10Sa_SPEC;
     pub type Pg10Sa = crate::EnumBitfieldStruct<u8, Pg10Sa_SPEC>;
     impl Pg10Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pg11Sa_SPEC;
     pub type Pg11Sa = crate::EnumBitfieldStruct<u8, Pg11Sa_SPEC>;
     impl Pg11Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pg12Sa_SPEC;
     pub type Pg12Sa = crate::EnumBitfieldStruct<u8, Pg12Sa_SPEC>;
     impl Pg12Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pg13Sa_SPEC;
     pub type Pg13Sa = crate::EnumBitfieldStruct<u8, Pg13Sa_SPEC>;
     impl Pg13Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pg14Sa_SPEC;
     pub type Pg14Sa = crate::EnumBitfieldStruct<u8, Pg14Sa_SPEC>;
     impl Pg14Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pg15Sa_SPEC;
     pub type Pg15Sa = crate::EnumBitfieldStruct<u8, Pg15Sa_SPEC>;
     impl Pg15Sa {
+        #[doc = "Security Attribution is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Security Attribution is 1."]
         pub const _1: Self = Self::new(1);
     }
 }

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.40.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:21:24 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:39 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Acmphs0 {
         self.ptr
     }
 
+    #[doc = "Comparator Control Register"]
     #[inline(always)]
     pub const fn cmpctl(
         &self,
@@ -45,6 +46,7 @@ impl super::Acmphs0 {
         }
     }
 
+    #[doc = "Comparator Input Select Register"]
     #[inline(always)]
     pub const fn cmpsel0(
         &self,
@@ -56,6 +58,7 @@ impl super::Acmphs0 {
         }
     }
 
+    #[doc = "Comparator Reference Voltage Select Register"]
     #[inline(always)]
     pub const fn cmpsel1(
         &self,
@@ -67,6 +70,7 @@ impl super::Acmphs0 {
         }
     }
 
+    #[doc = "Comparator Output Monitor Register"]
     #[inline(always)]
     pub const fn cmpmon(&self) -> &'static crate::common::Reg<self::Cmpmon_SPEC, crate::common::R> {
         unsafe {
@@ -76,6 +80,7 @@ impl super::Acmphs0 {
         }
     }
 
+    #[doc = "Comparator Output Control Register"]
     #[inline(always)]
     pub const fn cpioc(&self) -> &'static crate::common::Reg<self::Cpioc_SPEC, crate::common::RW> {
         unsafe {
@@ -92,9 +97,11 @@ impl crate::sealed::RegSpec for Cmpctl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Comparator Control Register"]
 pub type Cmpctl = crate::RegValueT<Cmpctl_SPEC>;
 
 impl Cmpctl {
+    #[doc = "Comparator Output Polarity Selection"]
     #[inline(always)]
     pub fn cinv(
         self,
@@ -120,6 +127,7 @@ impl Cmpctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Comparator Output Enable"]
     #[inline(always)]
     pub fn coe(
         self,
@@ -145,6 +153,7 @@ impl Cmpctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Valid Edge (Edge Selector)"]
     #[inline(always)]
     pub fn ceg(
         self,
@@ -170,6 +179,7 @@ impl Cmpctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Noise Filter Selection"]
     #[inline(always)]
     pub fn cdfs(
         self,
@@ -195,6 +205,7 @@ impl Cmpctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Comparator Operation Control"]
     #[inline(always)]
     pub fn hcmpon(
         self,
@@ -232,48 +243,62 @@ pub mod cmpctl {
     pub struct Cinv_SPEC;
     pub type Cinv = crate::EnumBitfieldStruct<u8, Cinv_SPEC>;
     impl Cinv {
+        #[doc = "Do not invert comparator output"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Invert comparator output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Coe_SPEC;
     pub type Coe = crate::EnumBitfieldStruct<u8, Coe_SPEC>;
     impl Coe {
+        #[doc = "Disable comparator output (output signal is low level)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable comparator output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ceg_SPEC;
     pub type Ceg = crate::EnumBitfieldStruct<u8, Ceg_SPEC>;
     impl Ceg {
+        #[doc = "Do not detect edge"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Detect rising edge"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Detect falling edge"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Detect both edges"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdfs_SPEC;
     pub type Cdfs = crate::EnumBitfieldStruct<u8, Cdfs_SPEC>;
     impl Cdfs {
+        #[doc = "Do not use noise filter"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Use noise filter sampling frequency of PCLKB/23"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Use noise filter sampling frequency of PCLKB/24"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Use noise filter sampling frequency of PCLKB/25"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hcmpon_SPEC;
     pub type Hcmpon = crate::EnumBitfieldStruct<u8, Hcmpon_SPEC>;
     impl Hcmpon {
+        #[doc = "Stop operation (comparator outputs a low-level signal)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable operation (enables input to the comparator pins)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -284,9 +309,11 @@ impl crate::sealed::RegSpec for Cmpsel0_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Comparator Input Select Register"]
 pub type Cmpsel0 = crate::RegValueT<Cmpsel0_SPEC>;
 
 impl Cmpsel0 {
+    #[doc = "Comparator Input Selection"]
     #[inline(always)]
     pub fn cmpsel(
         self,
@@ -324,16 +351,22 @@ pub mod cmpsel0 {
     pub struct Cmpsel_SPEC;
     pub type Cmpsel = crate::EnumBitfieldStruct<u8, Cmpsel_SPEC>;
     impl Cmpsel {
+        #[doc = "Do not input"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Select IVCMP0"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Setting prohibited"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Select IVCMP2"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Select IVCMP3"]
         pub const _0_X_8: Self = Self::new(8);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -344,9 +377,11 @@ impl crate::sealed::RegSpec for Cmpsel1_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Comparator Reference Voltage Select Register"]
 pub type Cmpsel1 = crate::RegValueT<Cmpsel1_SPEC>;
 
 impl Cmpsel1 {
+    #[doc = "Reference Voltage Selection"]
     #[inline(always)]
     pub fn crvs(
         self,
@@ -384,16 +419,22 @@ pub mod cmpsel1 {
     pub struct Crvs_SPEC;
     pub type Crvs = crate::EnumBitfieldStruct<u8, Crvs_SPEC>;
     impl Crvs {
+        #[doc = "Do not input"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Select IVREF0"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Select IVREF1"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Select IVREF2"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Select IVREF3"]
         pub const _0_X_8: Self = Self::new(8);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -404,9 +445,11 @@ impl crate::sealed::RegSpec for Cmpmon_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Comparator Output Monitor Register"]
 pub type Cmpmon = crate::RegValueT<Cmpmon_SPEC>;
 
 impl Cmpmon {
+    #[doc = "Comparator Output Monitor"]
     #[inline(always)]
     pub fn cmpmon(
         self,
@@ -444,8 +487,10 @@ pub mod cmpmon {
     pub struct Cmpmon_SPEC;
     pub type Cmpmon = crate::EnumBitfieldStruct<u8, Cmpmon_SPEC>;
     impl Cmpmon {
+        #[doc = "Comparator output is low"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Comparator output is high"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -456,9 +501,11 @@ impl crate::sealed::RegSpec for Cpioc_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Comparator Output Control Register"]
 pub type Cpioc = crate::RegValueT<Cpioc_SPEC>;
 
 impl Cpioc {
+    #[doc = "Comparator Output Selection"]
     #[inline(always)]
     pub fn cpoe(
         self,
@@ -496,8 +543,10 @@ pub mod cpioc {
     pub struct Cpoe_SPEC;
     pub type Cpoe = crate::EnumBitfieldStruct<u8, Cpoe_SPEC>;
     impl Cpoe {
+        #[doc = "Disable CMPOUTn pin output of the comparator (output signal is low fixed)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable CMPOUTn pin output of the comparator"]
         pub const _1: Self = Self::new(1);
     }
 }

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:23:25 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Tsd {
         self.ptr
     }
 
+    #[doc = "Temperature Sensor Calibration Data Register"]
     #[inline(always)]
     pub const fn tscdr(&self) -> &'static crate::common::Reg<self::Tscdr_SPEC, crate::common::R> {
         unsafe {
@@ -50,9 +51,11 @@ impl crate::sealed::RegSpec for Tscdr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Temperature Sensor Calibration Data Register"]
 pub type Tscdr = crate::RegValueT<Tscdr_SPEC>;
 
 impl Tscdr {
+    #[doc = "Temperature sensor calibration data is a digital value obtained using the 12-bit A/D converter unit 0 to convert the voltage output by the temperature sensor under the condition Ta = Tj = 127°C and AVCC0 = 3.3 V."]
     #[inline(always)]
     pub fn tscd(
         self,
@@ -60,6 +63,7 @@ impl Tscdr {
         crate::common::RegisterField::<0,0xfff,1,0,u16,u16,Tscdr_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,

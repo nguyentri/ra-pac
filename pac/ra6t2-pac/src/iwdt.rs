@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.40.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:21:24 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:39 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Iwdt {
         self.ptr
     }
 
+    #[doc = "IWDT Refresh Register"]
     #[inline(always)]
     pub const fn iwdtrr(
         &self,
@@ -45,6 +46,7 @@ impl super::Iwdt {
         }
     }
 
+    #[doc = "IWDT Status Register"]
     #[inline(always)]
     pub const fn iwdtsr(
         &self,
@@ -63,6 +65,7 @@ impl crate::sealed::RegSpec for Iwdtrr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "IWDT Refresh Register"]
 pub type Iwdtrr = crate::RegValueT<Iwdtrr_SPEC>;
 
 impl NoBitfieldReg<Iwdtrr_SPEC> for Iwdtrr {}
@@ -80,9 +83,11 @@ impl crate::sealed::RegSpec for Iwdtsr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "IWDT Status Register"]
 pub type Iwdtsr = crate::RegValueT<Iwdtsr_SPEC>;
 
 impl Iwdtsr {
+    #[doc = "Down-counter Value"]
     #[inline(always)]
     pub fn cntval(
         self,
@@ -91,6 +96,7 @@ impl Iwdtsr {
         crate::common::RegisterField::<0,0x3fff,1,0,u16,u16,Iwdtsr_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Underflow Flag"]
     #[inline(always)]
     pub fn undff(
         self,
@@ -116,6 +122,7 @@ impl Iwdtsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Refresh Error Flag"]
     #[inline(always)]
     pub fn refef(
         self,
@@ -153,16 +160,20 @@ pub mod iwdtsr {
     pub struct Undff_SPEC;
     pub type Undff = crate::EnumBitfieldStruct<u8, Undff_SPEC>;
     impl Undff {
+        #[doc = "No underflow occurred"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Underflow occurred"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Refef_SPEC;
     pub type Refef = crate::EnumBitfieldStruct<u8, Refef_SPEC>;
     impl Refef {
+        #[doc = "No refresh error occurred"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Refresh error occurred"]
         pub const _1: Self = Self::new(1);
     }
 }

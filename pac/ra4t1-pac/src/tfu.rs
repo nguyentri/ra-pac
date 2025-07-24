@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:19:04 +0000
+// Generated from SVD 1.20.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:50:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Tfu {
         self.ptr
     }
 
+    #[doc = "Trigonometric Status Register"]
     #[inline(always)]
     pub const fn trgsts(&self) -> &'static crate::common::Reg<self::Trgsts_SPEC, crate::common::R> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Tfu {
         }
     }
 
+    #[doc = "Sine Cosine Data Register 0"]
     #[inline(always)]
     pub const fn scdt0(&self) -> &'static crate::common::Reg<self::Scdt0_SPEC, crate::common::RW> {
         unsafe {
@@ -52,6 +54,7 @@ impl super::Tfu {
         }
     }
 
+    #[doc = "Sine Cosine Data Register 1"]
     #[inline(always)]
     pub const fn scdt1(&self) -> &'static crate::common::Reg<self::Scdt1_SPEC, crate::common::RW> {
         unsafe {
@@ -61,6 +64,7 @@ impl super::Tfu {
         }
     }
 
+    #[doc = "Arctangent Data Register 0"]
     #[inline(always)]
     pub const fn atdt0(&self) -> &'static crate::common::Reg<self::Atdt0_SPEC, crate::common::RW> {
         unsafe {
@@ -70,6 +74,7 @@ impl super::Tfu {
         }
     }
 
+    #[doc = "Arctangent Data Register 1"]
     #[inline(always)]
     pub const fn atdt1(&self) -> &'static crate::common::Reg<self::Atdt1_SPEC, crate::common::RW> {
         unsafe {
@@ -86,9 +91,11 @@ impl crate::sealed::RegSpec for Trgsts_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Trigonometric Status Register"]
 pub type Trgsts = crate::RegValueT<Trgsts_SPEC>;
 
 impl Trgsts {
+    #[doc = "Calculation in progress flag"]
     #[inline(always)]
     pub fn bsyf(
         self,
@@ -114,6 +121,7 @@ impl Trgsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Input error flag"]
     #[inline(always)]
     pub fn errf(
         self,
@@ -151,16 +159,20 @@ pub mod trgsts {
     pub struct Bsyf_SPEC;
     pub type Bsyf = crate::EnumBitfieldStruct<u8, Bsyf_SPEC>;
     impl Bsyf {
+        #[doc = "No calculating"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Calculating"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Errf_SPEC;
     pub type Errf = crate::EnumBitfieldStruct<u8, Errf_SPEC>;
     impl Errf {
+        #[doc = "No input error occurred"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Input error occurred"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -171,9 +183,11 @@ impl crate::sealed::RegSpec for Scdt0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Sine Cosine Data Register 0"]
 pub type Scdt0 = crate::RegValueT<Scdt0_SPEC>;
 
 impl Scdt0 {
+    #[doc = "Sine Cosine Data Register 0 (single-precision floating-point)"]
     #[inline(always)]
     pub fn scdt0(
         self,
@@ -196,9 +210,11 @@ impl crate::sealed::RegSpec for Scdt1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Sine Cosine Data Register 1"]
 pub type Scdt1 = crate::RegValueT<Scdt1_SPEC>;
 
 impl Scdt1 {
+    #[doc = "Sine Cosine Data Register 1 (single-precision floating-point)"]
     #[inline(always)]
     pub fn scdt1(
         self,
@@ -221,9 +237,11 @@ impl crate::sealed::RegSpec for Atdt0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Arctangent Data Register 0"]
 pub type Atdt0 = crate::RegValueT<Atdt0_SPEC>;
 
 impl Atdt0 {
+    #[doc = "Arctangent Data Register 0 (single-precision floating-point)"]
     #[inline(always)]
     pub fn atdt0(
         self,
@@ -246,9 +264,11 @@ impl crate::sealed::RegSpec for Atdt1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Arctangent Data Register 1"]
 pub type Atdt1 = crate::RegValueT<Atdt1_SPEC>;
 
 impl Atdt1 {
+    #[doc = "Arctangent Data Register 1 (single-precision floating-point)"]
     #[inline(always)]
     pub fn atdt1(
         self,

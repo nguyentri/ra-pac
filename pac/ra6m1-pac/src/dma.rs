@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:19:53 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:01 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Dma {
         self.ptr
     }
 
+    #[doc = "DMA  Module Activation Register"]
     #[inline(always)]
     pub const fn dmast(&self) -> &'static crate::common::Reg<self::Dmast_SPEC, crate::common::RW> {
         unsafe {
@@ -50,9 +51,11 @@ impl crate::sealed::RegSpec for Dmast_SPEC {
     type DataType = u8;
 }
 
+#[doc = "DMA  Module Activation Register"]
 pub type Dmast = crate::RegValueT<Dmast_SPEC>;
 
 impl Dmast {
+    #[doc = "DMAC Operation Enable"]
     #[inline(always)]
     pub fn dmst(
         self,
@@ -90,8 +93,10 @@ pub mod dmast {
     pub struct Dmst_SPEC;
     pub type Dmst = crate::EnumBitfieldStruct<u8, Dmst_SPEC>;
     impl Dmst {
+        #[doc = "DMAC activation is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMAC activation is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }

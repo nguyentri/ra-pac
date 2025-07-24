@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.10.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:47 +0000
+// Generated from SVD 1.10.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:59 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Tau {
         self.ptr
     }
 
+    #[doc = "Timer Data Register 00"]
     #[inline(always)]
     pub const fn tdr00(&self) -> &'static crate::common::Reg<self::Tdr00_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Data Register 01"]
     #[inline(always)]
     pub const fn tdr01(&self) -> &'static crate::common::Reg<self::Tdr01_SPEC, crate::common::RW> {
         unsafe {
@@ -52,6 +54,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Data Register 01"]
     #[inline(always)]
     pub const fn tdr01l(
         &self,
@@ -63,6 +66,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Data Register 01"]
     #[inline(always)]
     pub const fn tdr01h(
         &self,
@@ -74,6 +78,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Data Register 02"]
     #[inline(always)]
     pub const fn tdr02(&self) -> &'static crate::common::Reg<self::Tdr02_SPEC, crate::common::RW> {
         unsafe {
@@ -83,6 +88,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Data Register 03"]
     #[inline(always)]
     pub const fn tdr03(&self) -> &'static crate::common::Reg<self::Tdr03_SPEC, crate::common::RW> {
         unsafe {
@@ -92,6 +98,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Data Register 03"]
     #[inline(always)]
     pub const fn tdr03l(
         &self,
@@ -103,6 +110,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Data Register 03"]
     #[inline(always)]
     pub const fn tdr03h(
         &self,
@@ -114,6 +122,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Data Register 04"]
     #[inline(always)]
     pub const fn tdr04(&self) -> &'static crate::common::Reg<self::Tdr04_SPEC, crate::common::RW> {
         unsafe {
@@ -123,6 +132,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Data Register 05"]
     #[inline(always)]
     pub const fn tdr05(&self) -> &'static crate::common::Reg<self::Tdr05_SPEC, crate::common::RW> {
         unsafe {
@@ -132,6 +142,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Data Register 06"]
     #[inline(always)]
     pub const fn tdr06(&self) -> &'static crate::common::Reg<self::Tdr06_SPEC, crate::common::RW> {
         unsafe {
@@ -141,6 +152,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Data Register 07"]
     #[inline(always)]
     pub const fn tdr07(&self) -> &'static crate::common::Reg<self::Tdr07_SPEC, crate::common::RW> {
         unsafe {
@@ -150,6 +162,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Counter Register 0%s"]
     #[inline(always)]
     pub const fn tcr0(
         &self,
@@ -162,7 +175,72 @@ impl super::Tau {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x100usize))
         }
     }
+    #[inline(always)]
+    pub const fn tcr00(&self) -> &'static crate::common::Reg<self::Tcr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Tcr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x100usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn tcr01(&self) -> &'static crate::common::Reg<self::Tcr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Tcr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x102usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn tcr02(&self) -> &'static crate::common::Reg<self::Tcr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Tcr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x104usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn tcr03(&self) -> &'static crate::common::Reg<self::Tcr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Tcr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x106usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn tcr04(&self) -> &'static crate::common::Reg<self::Tcr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Tcr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x108usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn tcr05(&self) -> &'static crate::common::Reg<self::Tcr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Tcr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x10ausize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn tcr06(&self) -> &'static crate::common::Reg<self::Tcr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Tcr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x10cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn tcr07(&self) -> &'static crate::common::Reg<self::Tcr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Tcr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x10eusize),
+            )
+        }
+    }
 
+    #[doc = "Timer Mode Register 00"]
     #[inline(always)]
     pub const fn tmr00(&self) -> &'static crate::common::Reg<self::Tmr00_SPEC, crate::common::RW> {
         unsafe {
@@ -172,6 +250,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Mode Register 01"]
     #[inline(always)]
     pub const fn tmr01(&self) -> &'static crate::common::Reg<self::Tmr01_SPEC, crate::common::RW> {
         unsafe {
@@ -181,6 +260,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Mode Register 02"]
     #[inline(always)]
     pub const fn tmr02(&self) -> &'static crate::common::Reg<self::Tmr02_SPEC, crate::common::RW> {
         unsafe {
@@ -190,6 +270,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Mode Register 03"]
     #[inline(always)]
     pub const fn tmr03(&self) -> &'static crate::common::Reg<self::Tmr03_SPEC, crate::common::RW> {
         unsafe {
@@ -199,6 +280,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Mode Register 04"]
     #[inline(always)]
     pub const fn tmr04(&self) -> &'static crate::common::Reg<self::Tmr04_SPEC, crate::common::RW> {
         unsafe {
@@ -208,6 +290,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Mode Register 05"]
     #[inline(always)]
     pub const fn tmr05(&self) -> &'static crate::common::Reg<self::Tmr05_SPEC, crate::common::RW> {
         unsafe {
@@ -217,6 +300,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Mode Register 06"]
     #[inline(always)]
     pub const fn tmr06(&self) -> &'static crate::common::Reg<self::Tmr06_SPEC, crate::common::RW> {
         unsafe {
@@ -226,6 +310,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Mode Register 07"]
     #[inline(always)]
     pub const fn tmr07(&self) -> &'static crate::common::Reg<self::Tmr07_SPEC, crate::common::RW> {
         unsafe {
@@ -235,6 +320,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Status Register 0%s"]
     #[inline(always)]
     pub const fn tsr0(
         &self,
@@ -247,7 +333,72 @@ impl super::Tau {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x120usize))
         }
     }
+    #[inline(always)]
+    pub const fn tsr00(&self) -> &'static crate::common::Reg<self::Tsr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Tsr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x120usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn tsr01(&self) -> &'static crate::common::Reg<self::Tsr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Tsr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x122usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn tsr02(&self) -> &'static crate::common::Reg<self::Tsr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Tsr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x124usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn tsr03(&self) -> &'static crate::common::Reg<self::Tsr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Tsr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x126usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn tsr04(&self) -> &'static crate::common::Reg<self::Tsr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Tsr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x128usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn tsr05(&self) -> &'static crate::common::Reg<self::Tsr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Tsr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x12ausize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn tsr06(&self) -> &'static crate::common::Reg<self::Tsr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Tsr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x12cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn tsr07(&self) -> &'static crate::common::Reg<self::Tsr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Tsr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x12eusize),
+            )
+        }
+    }
 
+    #[doc = "Timer Channel Enable Status Register 0"]
     #[inline(always)]
     pub const fn te0(&self) -> &'static crate::common::Reg<self::Te0_SPEC, crate::common::R> {
         unsafe {
@@ -257,6 +408,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Channel Start Register 0"]
     #[inline(always)]
     pub const fn ts0(&self) -> &'static crate::common::Reg<self::Ts0_SPEC, crate::common::RW> {
         unsafe {
@@ -266,6 +418,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Channel Stop Register 0"]
     #[inline(always)]
     pub const fn tt0(&self) -> &'static crate::common::Reg<self::Tt0_SPEC, crate::common::RW> {
         unsafe {
@@ -275,6 +428,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Clock Select Register 0"]
     #[inline(always)]
     pub const fn tps0(&self) -> &'static crate::common::Reg<self::Tps0_SPEC, crate::common::RW> {
         unsafe {
@@ -284,6 +438,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Output Register 0"]
     #[inline(always)]
     pub const fn to0(&self) -> &'static crate::common::Reg<self::To0_SPEC, crate::common::RW> {
         unsafe {
@@ -293,6 +448,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Output Enable Register 0"]
     #[inline(always)]
     pub const fn toe0(&self) -> &'static crate::common::Reg<self::Toe0_SPEC, crate::common::RW> {
         unsafe {
@@ -302,6 +458,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Output Level Register 0"]
     #[inline(always)]
     pub const fn tol0(&self) -> &'static crate::common::Reg<self::Tol0_SPEC, crate::common::RW> {
         unsafe {
@@ -311,6 +468,7 @@ impl super::Tau {
         }
     }
 
+    #[doc = "Timer Output Mode Register 0"]
     #[inline(always)]
     pub const fn tom0(&self) -> &'static crate::common::Reg<self::Tom0_SPEC, crate::common::RW> {
         unsafe {
@@ -327,6 +485,7 @@ impl crate::sealed::RegSpec for Tdr00_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Data Register 00"]
 pub type Tdr00 = crate::RegValueT<Tdr00_SPEC>;
 
 impl NoBitfieldReg<Tdr00_SPEC> for Tdr00 {}
@@ -344,6 +503,7 @@ impl crate::sealed::RegSpec for Tdr01_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Data Register 01"]
 pub type Tdr01 = crate::RegValueT<Tdr01_SPEC>;
 
 impl NoBitfieldReg<Tdr01_SPEC> for Tdr01 {}
@@ -361,6 +521,7 @@ impl crate::sealed::RegSpec for Tdr01L_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Timer Data Register 01"]
 pub type Tdr01L = crate::RegValueT<Tdr01L_SPEC>;
 
 impl NoBitfieldReg<Tdr01L_SPEC> for Tdr01L {}
@@ -378,6 +539,7 @@ impl crate::sealed::RegSpec for Tdr01H_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Timer Data Register 01"]
 pub type Tdr01H = crate::RegValueT<Tdr01H_SPEC>;
 
 impl NoBitfieldReg<Tdr01H_SPEC> for Tdr01H {}
@@ -395,6 +557,7 @@ impl crate::sealed::RegSpec for Tdr02_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Data Register 02"]
 pub type Tdr02 = crate::RegValueT<Tdr02_SPEC>;
 
 impl NoBitfieldReg<Tdr02_SPEC> for Tdr02 {}
@@ -412,6 +575,7 @@ impl crate::sealed::RegSpec for Tdr03_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Data Register 03"]
 pub type Tdr03 = crate::RegValueT<Tdr03_SPEC>;
 
 impl NoBitfieldReg<Tdr03_SPEC> for Tdr03 {}
@@ -429,6 +593,7 @@ impl crate::sealed::RegSpec for Tdr03L_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Timer Data Register 03"]
 pub type Tdr03L = crate::RegValueT<Tdr03L_SPEC>;
 
 impl NoBitfieldReg<Tdr03L_SPEC> for Tdr03L {}
@@ -446,6 +611,7 @@ impl crate::sealed::RegSpec for Tdr03H_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Timer Data Register 03"]
 pub type Tdr03H = crate::RegValueT<Tdr03H_SPEC>;
 
 impl NoBitfieldReg<Tdr03H_SPEC> for Tdr03H {}
@@ -463,6 +629,7 @@ impl crate::sealed::RegSpec for Tdr04_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Data Register 04"]
 pub type Tdr04 = crate::RegValueT<Tdr04_SPEC>;
 
 impl NoBitfieldReg<Tdr04_SPEC> for Tdr04 {}
@@ -480,6 +647,7 @@ impl crate::sealed::RegSpec for Tdr05_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Data Register 05"]
 pub type Tdr05 = crate::RegValueT<Tdr05_SPEC>;
 
 impl NoBitfieldReg<Tdr05_SPEC> for Tdr05 {}
@@ -497,6 +665,7 @@ impl crate::sealed::RegSpec for Tdr06_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Data Register 06"]
 pub type Tdr06 = crate::RegValueT<Tdr06_SPEC>;
 
 impl NoBitfieldReg<Tdr06_SPEC> for Tdr06 {}
@@ -514,6 +683,7 @@ impl crate::sealed::RegSpec for Tdr07_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Data Register 07"]
 pub type Tdr07 = crate::RegValueT<Tdr07_SPEC>;
 
 impl NoBitfieldReg<Tdr07_SPEC> for Tdr07 {}
@@ -531,6 +701,7 @@ impl crate::sealed::RegSpec for Tcr0_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Counter Register 0%s"]
 pub type Tcr0 = crate::RegValueT<Tcr0_SPEC>;
 
 impl NoBitfieldReg<Tcr0_SPEC> for Tcr0 {}
@@ -548,9 +719,11 @@ impl crate::sealed::RegSpec for Tmr00_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Mode Register 00"]
 pub type Tmr00 = crate::RegValueT<Tmr00_SPEC>;
 
 impl Tmr00 {
+    #[doc = "Setting of Starting Count and Interrupt"]
     #[inline(always)]
     pub fn opirq(self) -> crate::common::RegisterFieldBool<0, 1, 0, Tmr00_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<0, 1, 0, Tmr00_SPEC, crate::common::RW>::from_register(
@@ -558,6 +731,7 @@ impl Tmr00 {
         )
     }
 
+    #[doc = "Selection of Operation Mode at Channel n"]
     #[inline(always)]
     pub fn md(
         self,
@@ -583,6 +757,7 @@ impl Tmr00 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of TI0n Pin Input Valid Edge"]
     #[inline(always)]
     pub fn cis(
         self,
@@ -608,6 +783,7 @@ impl Tmr00 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Setting of Start Trigger or Capture Trigger of Channel n"]
     #[inline(always)]
     pub fn sts(
         self,
@@ -633,6 +809,7 @@ impl Tmr00 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Counter Clock (fTCLK) of Channel n"]
     #[inline(always)]
     pub fn ccs(
         self,
@@ -658,6 +835,7 @@ impl Tmr00 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Operation Clock (fMCK) of Channel n"]
     #[inline(always)]
     pub fn cks(
         self,
@@ -695,62 +873,83 @@ pub mod tmr00 {
     pub struct Md_SPEC;
     pub type Md = crate::EnumBitfieldStruct<u8, Md_SPEC>;
     impl Md {
+        #[doc = "Interval timer mode"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Capture mode"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Event counter mode"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "One-count mode"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Capture and one-count mode"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cis_SPEC;
     pub type Cis = crate::EnumBitfieldStruct<u8, Cis_SPEC>;
     impl Cis {
+        #[doc = "Falling edge"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Rising edge"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Both edges (when low-level width is measured) Start trigger: Falling edge, Capture trigger: Rising edge"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Both edges (when high-level width is measured)  Start trigger: Rising edge, Capture trigger: Falling edge"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sts_SPEC;
     pub type Sts = crate::EnumBitfieldStruct<u8, Sts_SPEC>;
     impl Sts {
+        #[doc = "Only software trigger start is valid (other trigger sources are unselected)."]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Valid edge of the TI0n pin input is used as both the start trigger and capture trigger."]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "Both the edges of the TI0n pin input are used as a start trigger and a capture trigger."]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Interrupt signal of the master channel is used (when the channel is used as a slave channel with the simultaneous channel operation function)."]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ccs_SPEC;
     pub type Ccs = crate::EnumBitfieldStruct<u8, Ccs_SPEC>;
     impl Ccs {
+        #[doc = "Operating clock (fMCK)specified by the CKS\\[1:0\\] bits"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Valid edge of input signal input from the TI0n pin. In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cks_SPEC;
     pub type Cks = crate::EnumBitfieldStruct<u8, Cks_SPEC>;
     impl Cks {
+        #[doc = "Operation clock CK00 set by timer clock select register 0 (TPS0)"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Operation clock CK02 set by timer clock select register 0 (TPS0)"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Operation clock CK01 set by timer clock select register 0 (TPS0)"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Operation clock CK03 set by timer clock select register 0 (TPS0)"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -761,9 +960,11 @@ impl crate::sealed::RegSpec for Tmr01_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Mode Register 01"]
 pub type Tmr01 = crate::RegValueT<Tmr01_SPEC>;
 
 impl Tmr01 {
+    #[doc = "Setting of Starting Count and Interrupt"]
     #[inline(always)]
     pub fn opirq(self) -> crate::common::RegisterFieldBool<0, 1, 0, Tmr01_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<0, 1, 0, Tmr01_SPEC, crate::common::RW>::from_register(
@@ -771,6 +972,7 @@ impl Tmr01 {
         )
     }
 
+    #[doc = "Selection of Operation Mode at Channel n"]
     #[inline(always)]
     pub fn md(
         self,
@@ -796,6 +998,7 @@ impl Tmr01 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of TI0n Pin Input Valid Edge"]
     #[inline(always)]
     pub fn cis(
         self,
@@ -821,6 +1024,7 @@ impl Tmr01 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Setting of Start Trigger or Capture Trigger of Channel n"]
     #[inline(always)]
     pub fn sts(
         self,
@@ -846,6 +1050,7 @@ impl Tmr01 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of 8 or 16-bit Timer Operation for Channels 1 and 3"]
     #[inline(always)]
     pub fn split(
         self,
@@ -871,6 +1076,7 @@ impl Tmr01 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Counter Clock (fTCLK) of Channel n"]
     #[inline(always)]
     pub fn ccs(
         self,
@@ -896,6 +1102,7 @@ impl Tmr01 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Operation Clock (fMCK) of Channel n"]
     #[inline(always)]
     pub fn cks(
         self,
@@ -933,70 +1140,93 @@ pub mod tmr01 {
     pub struct Md_SPEC;
     pub type Md = crate::EnumBitfieldStruct<u8, Md_SPEC>;
     impl Md {
+        #[doc = "Interval timer mode"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Capture mode"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Event counter mode"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "One-count mode"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Capture & one-count mode"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cis_SPEC;
     pub type Cis = crate::EnumBitfieldStruct<u8, Cis_SPEC>;
     impl Cis {
+        #[doc = "Falling edge"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Rising edge"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Both edges (when low-level width is measured) Start trigger: Falling edge, Capture trigger: Rising edge"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Both edges (when high-level width is measured) Start trigger: Rising edge, Capture trigger: Falling edge"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sts_SPEC;
     pub type Sts = crate::EnumBitfieldStruct<u8, Sts_SPEC>;
     impl Sts {
+        #[doc = "Only software trigger start is valid (other trigger sources are unselected)."]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Valid edge of the Ti0n pin input is used as both the start trigger and capture trigger."]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "Both the edges of the Ti0n pin input are used as a start trigger and a capture trigger."]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Interrupt signal of the master channel is used (when the channel is used as a slave channel with the simultaneous channel operation function)."]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Split_SPEC;
     pub type Split = crate::EnumBitfieldStruct<u8, Split_SPEC>;
     impl Split {
+        #[doc = "Operates as 16-bit timer (Operates in independent channel operation function or as slave channel in simultaneous channel operation function.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Operates as 8-bit timer"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ccs_SPEC;
     pub type Ccs = crate::EnumBitfieldStruct<u8, Ccs_SPEC>;
     impl Ccs {
+        #[doc = "Operating clock (fMCK) specified by the CKS\\[1:0\\] bits"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Valid edge of input signal input from the Ti0n pin In the case of unit 0: In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cks_SPEC;
     pub type Cks = crate::EnumBitfieldStruct<u8, Cks_SPEC>;
     impl Cks {
+        #[doc = "Operation clock CK00 set by timer clock select register 0 (TPS0)"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Operation clock CK02 set by timer clock select register 0 (TPS0)"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Operation clock CK01 set by timer clock select register 0 (TPS0)"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Operation clock CK03 set by timer clock select register 0 (TPS0)"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -1007,9 +1237,11 @@ impl crate::sealed::RegSpec for Tmr02_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Mode Register 02"]
 pub type Tmr02 = crate::RegValueT<Tmr02_SPEC>;
 
 impl Tmr02 {
+    #[doc = "Setting of Starting Count and Interrupt"]
     #[inline(always)]
     pub fn opirq(self) -> crate::common::RegisterFieldBool<0, 1, 0, Tmr02_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<0, 1, 0, Tmr02_SPEC, crate::common::RW>::from_register(
@@ -1017,6 +1249,7 @@ impl Tmr02 {
         )
     }
 
+    #[doc = "Selection of Operation Mode at Channel n"]
     #[inline(always)]
     pub fn md(
         self,
@@ -1042,6 +1275,7 @@ impl Tmr02 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of TI0n Pin Input Valid Edge"]
     #[inline(always)]
     pub fn cis(
         self,
@@ -1067,6 +1301,7 @@ impl Tmr02 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Setting of Start Trigger or Capture Trigger of Channel n"]
     #[inline(always)]
     pub fn sts(
         self,
@@ -1092,6 +1327,7 @@ impl Tmr02 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection Between Using Channel n Independently or Simultaneously with Another Channel (as a Slave or Master)"]
     #[inline(always)]
     pub fn master(
         self,
@@ -1117,6 +1353,7 @@ impl Tmr02 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Counter Clock (fTCLK) of Channel n"]
     #[inline(always)]
     pub fn ccs(
         self,
@@ -1142,6 +1379,7 @@ impl Tmr02 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Operation Clock (fMCK) of Channel n"]
     #[inline(always)]
     pub fn cks(
         self,
@@ -1179,70 +1417,93 @@ pub mod tmr02 {
     pub struct Md_SPEC;
     pub type Md = crate::EnumBitfieldStruct<u8, Md_SPEC>;
     impl Md {
+        #[doc = "Interval timer mode"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Capture mode"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Event counter mode"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "One-count mode"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Capture and one-count mode"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cis_SPEC;
     pub type Cis = crate::EnumBitfieldStruct<u8, Cis_SPEC>;
     impl Cis {
+        #[doc = "Falling edge"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Rising edge"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Both edges (when low-level width is measured) Start trigger: Falling edge, Capture trigger: Rising edge"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Both edges (when high-level width is measured)  Start trigger: Rising edge, Capture trigger: Falling edge"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sts_SPEC;
     pub type Sts = crate::EnumBitfieldStruct<u8, Sts_SPEC>;
     impl Sts {
+        #[doc = "Only software trigger start is valid (other trigger sources are unselected)."]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Valid edge of the TI0n pin input is used as both the start trigger and capture trigger."]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "Both the edges of the TI0n pin input are used as a start trigger and a capture trigger."]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Interrupt signal of the master channel is used (when the channel is used as a slave channel with the simultaneous channel operation function)."]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Master_SPEC;
     pub type Master = crate::EnumBitfieldStruct<u8, Master_SPEC>;
     impl Master {
+        #[doc = "Operates in independent channel operation function or as slave channel in simultaneous channel operation function."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Operates as master channel in simultaneous channel operation function."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ccs_SPEC;
     pub type Ccs = crate::EnumBitfieldStruct<u8, Ccs_SPEC>;
     impl Ccs {
+        #[doc = "Operating clock (fMCK)specified by the CKS\\[1:0\\] bits"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Valid edge of input signal input from the TI0n pin. In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cks_SPEC;
     pub type Cks = crate::EnumBitfieldStruct<u8, Cks_SPEC>;
     impl Cks {
+        #[doc = "Operation clock CK00 set by timer clock select register 0 (TPS0)"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Operation clock CK02 set by timer clock select register 0 (TPS0)"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Operation clock CK01 set by timer clock select register 0 (TPS0)"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Operation clock CK03 set by timer clock select register 0 (TPS0)"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -1253,9 +1514,11 @@ impl crate::sealed::RegSpec for Tmr03_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Mode Register 03"]
 pub type Tmr03 = crate::RegValueT<Tmr03_SPEC>;
 
 impl Tmr03 {
+    #[doc = "Setting of Starting Count and Interrupt"]
     #[inline(always)]
     pub fn opirq(self) -> crate::common::RegisterFieldBool<0, 1, 0, Tmr03_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<0, 1, 0, Tmr03_SPEC, crate::common::RW>::from_register(
@@ -1263,6 +1526,7 @@ impl Tmr03 {
         )
     }
 
+    #[doc = "Selection of Operation Mode at Channel n"]
     #[inline(always)]
     pub fn md(
         self,
@@ -1288,6 +1552,7 @@ impl Tmr03 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of TI0n Pin Input Valid Edge"]
     #[inline(always)]
     pub fn cis(
         self,
@@ -1313,6 +1578,7 @@ impl Tmr03 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Setting of Start Trigger or Capture Trigger of Channel n"]
     #[inline(always)]
     pub fn sts(
         self,
@@ -1338,6 +1604,7 @@ impl Tmr03 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of 8 or 16-bit Timer Operation for Channels 1 and 3"]
     #[inline(always)]
     pub fn split(
         self,
@@ -1363,6 +1630,7 @@ impl Tmr03 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Counter Clock (fTCLK) of Channel n"]
     #[inline(always)]
     pub fn ccs(
         self,
@@ -1388,6 +1656,7 @@ impl Tmr03 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Operation Clock (fMCK) of Channel n"]
     #[inline(always)]
     pub fn cks(
         self,
@@ -1425,70 +1694,93 @@ pub mod tmr03 {
     pub struct Md_SPEC;
     pub type Md = crate::EnumBitfieldStruct<u8, Md_SPEC>;
     impl Md {
+        #[doc = "Interval timer mode"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Capture mode"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Event counter mode"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "One-count mode"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Capture & one-count mode"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cis_SPEC;
     pub type Cis = crate::EnumBitfieldStruct<u8, Cis_SPEC>;
     impl Cis {
+        #[doc = "Falling edge"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Rising edge"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Both edges (when low-level width is measured) Start trigger: Falling edge, Capture trigger: Rising edge"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Both edges (when high-level width is measured) Start trigger: Rising edge, Capture trigger: Falling edge"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sts_SPEC;
     pub type Sts = crate::EnumBitfieldStruct<u8, Sts_SPEC>;
     impl Sts {
+        #[doc = "Only software trigger start is valid (other trigger sources are unselected)."]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Valid edge of the Ti0n pin input is used as both the start trigger and capture trigger."]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "Both the edges of the Ti0n pin input are used as a start trigger and a capture trigger."]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Interrupt signal of the master channel is used (when the channel is used as a slave channel with the simultaneous channel operation function)."]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Split_SPEC;
     pub type Split = crate::EnumBitfieldStruct<u8, Split_SPEC>;
     impl Split {
+        #[doc = "Operates as 16-bit timer (Operates in independent channel operation function or as slave channel in simultaneous channel operation function.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Operates as 8-bit timer"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ccs_SPEC;
     pub type Ccs = crate::EnumBitfieldStruct<u8, Ccs_SPEC>;
     impl Ccs {
+        #[doc = "Operating clock (fMCK) specified by the CKS\\[1:0\\] bits"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Valid edge of input signal input from the Ti0n pin In the case of unit 0: In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cks_SPEC;
     pub type Cks = crate::EnumBitfieldStruct<u8, Cks_SPEC>;
     impl Cks {
+        #[doc = "Operation clock CK00 set by timer clock select register 0 (TPS0)"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Operation clock CK02 set by timer clock select register 0 (TPS0)"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Operation clock CK01 set by timer clock select register 0 (TPS0)"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Operation clock CK03 set by timer clock select register 0 (TPS0)"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -1499,9 +1791,11 @@ impl crate::sealed::RegSpec for Tmr04_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Mode Register 04"]
 pub type Tmr04 = crate::RegValueT<Tmr04_SPEC>;
 
 impl Tmr04 {
+    #[doc = "Setting of Starting Count and Interrupt"]
     #[inline(always)]
     pub fn opirq(self) -> crate::common::RegisterFieldBool<0, 1, 0, Tmr04_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<0, 1, 0, Tmr04_SPEC, crate::common::RW>::from_register(
@@ -1509,6 +1803,7 @@ impl Tmr04 {
         )
     }
 
+    #[doc = "Selection of Operation Mode at Channel n"]
     #[inline(always)]
     pub fn md(
         self,
@@ -1534,6 +1829,7 @@ impl Tmr04 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of TI0n Pin Input Valid Edge"]
     #[inline(always)]
     pub fn cis(
         self,
@@ -1559,6 +1855,7 @@ impl Tmr04 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Setting of Start Trigger or Capture Trigger of Channel n"]
     #[inline(always)]
     pub fn sts(
         self,
@@ -1584,6 +1881,7 @@ impl Tmr04 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection Between Using Channel n Independently or Simultaneously with Another Channel (as a Slave or Master)"]
     #[inline(always)]
     pub fn master(
         self,
@@ -1609,6 +1907,7 @@ impl Tmr04 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Counter Clock (fTCLK) of Channel n"]
     #[inline(always)]
     pub fn ccs(
         self,
@@ -1634,6 +1933,7 @@ impl Tmr04 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Operation Clock (fMCK) of Channel n"]
     #[inline(always)]
     pub fn cks(
         self,
@@ -1671,70 +1971,93 @@ pub mod tmr04 {
     pub struct Md_SPEC;
     pub type Md = crate::EnumBitfieldStruct<u8, Md_SPEC>;
     impl Md {
+        #[doc = "Interval timer mode"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Capture mode"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Event counter mode"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "One-count mode"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Capture and one-count mode"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cis_SPEC;
     pub type Cis = crate::EnumBitfieldStruct<u8, Cis_SPEC>;
     impl Cis {
+        #[doc = "Falling edge"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Rising edge"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Both edges (when low-level width is measured) Start trigger: Falling edge, Capture trigger: Rising edge"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Both edges (when high-level width is measured)  Start trigger: Rising edge, Capture trigger: Falling edge"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sts_SPEC;
     pub type Sts = crate::EnumBitfieldStruct<u8, Sts_SPEC>;
     impl Sts {
+        #[doc = "Only software trigger start is valid (other trigger sources are unselected)."]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Valid edge of the TI0n pin input is used as both the start trigger and capture trigger."]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "Both the edges of the TI0n pin input are used as a start trigger and a capture trigger."]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Interrupt signal of the master channel is used (when the channel is used as a slave channel with the simultaneous channel operation function)."]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Master_SPEC;
     pub type Master = crate::EnumBitfieldStruct<u8, Master_SPEC>;
     impl Master {
+        #[doc = "Operates in independent channel operation function or as slave channel in simultaneous channel operation function."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Operates as master channel in simultaneous channel operation function."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ccs_SPEC;
     pub type Ccs = crate::EnumBitfieldStruct<u8, Ccs_SPEC>;
     impl Ccs {
+        #[doc = "Operating clock (fMCK)specified by the CKS\\[1:0\\] bits"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Valid edge of input signal input from the TI0n pin. In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cks_SPEC;
     pub type Cks = crate::EnumBitfieldStruct<u8, Cks_SPEC>;
     impl Cks {
+        #[doc = "Operation clock CK00 set by timer clock select register 0 (TPS0)"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Operation clock CK02 set by timer clock select register 0 (TPS0)"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Operation clock CK01 set by timer clock select register 0 (TPS0)"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Operation clock CK03 set by timer clock select register 0 (TPS0)"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -1745,9 +2068,11 @@ impl crate::sealed::RegSpec for Tmr05_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Mode Register 05"]
 pub type Tmr05 = crate::RegValueT<Tmr05_SPEC>;
 
 impl Tmr05 {
+    #[doc = "Setting of Starting Count and Interrupt"]
     #[inline(always)]
     pub fn opirq(self) -> crate::common::RegisterFieldBool<0, 1, 0, Tmr05_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<0, 1, 0, Tmr05_SPEC, crate::common::RW>::from_register(
@@ -1755,6 +2080,7 @@ impl Tmr05 {
         )
     }
 
+    #[doc = "Selection of Operation Mode at Channel n"]
     #[inline(always)]
     pub fn md(
         self,
@@ -1780,6 +2106,7 @@ impl Tmr05 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of TI0n Pin Input Valid Edge"]
     #[inline(always)]
     pub fn cis(
         self,
@@ -1805,6 +2132,7 @@ impl Tmr05 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Setting of Start Trigger or Capture Trigger of Channel n"]
     #[inline(always)]
     pub fn sts(
         self,
@@ -1830,6 +2158,7 @@ impl Tmr05 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Counter Clock (fTCLK) of Channel n"]
     #[inline(always)]
     pub fn ccs(
         self,
@@ -1855,6 +2184,7 @@ impl Tmr05 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Operation Clock (fMCK) of Channel n"]
     #[inline(always)]
     pub fn cks(
         self,
@@ -1892,62 +2222,83 @@ pub mod tmr05 {
     pub struct Md_SPEC;
     pub type Md = crate::EnumBitfieldStruct<u8, Md_SPEC>;
     impl Md {
+        #[doc = "Interval timer mode"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Capture mode"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Event counter mode"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "One-count mode"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Capture and one-count mode"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cis_SPEC;
     pub type Cis = crate::EnumBitfieldStruct<u8, Cis_SPEC>;
     impl Cis {
+        #[doc = "Falling edge"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Rising edge"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Both edges (when low-level width is measured) Start trigger: Falling edge, Capture trigger: Rising edge"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Both edges (when high-level width is measured)  Start trigger: Rising edge, Capture trigger: Falling edge"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sts_SPEC;
     pub type Sts = crate::EnumBitfieldStruct<u8, Sts_SPEC>;
     impl Sts {
+        #[doc = "Only software trigger start is valid (other trigger sources are unselected)."]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Valid edge of the TI0n pin input is used as both the start trigger and capture trigger."]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "Both the edges of the TI0n pin input are used as a start trigger and a capture trigger."]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Interrupt signal of the master channel is used (when the channel is used as a slave channel with the simultaneous channel operation function)."]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ccs_SPEC;
     pub type Ccs = crate::EnumBitfieldStruct<u8, Ccs_SPEC>;
     impl Ccs {
+        #[doc = "Operating clock (fMCK)specified by the CKS\\[1:0\\] bits"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Valid edge of input signal input from the TI0n pin. In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cks_SPEC;
     pub type Cks = crate::EnumBitfieldStruct<u8, Cks_SPEC>;
     impl Cks {
+        #[doc = "Operation clock CK00 set by timer clock select register 0 (TPS0)"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Operation clock CK02 set by timer clock select register 0 (TPS0)"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Operation clock CK01 set by timer clock select register 0 (TPS0)"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Operation clock CK03 set by timer clock select register 0 (TPS0)"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -1958,9 +2309,11 @@ impl crate::sealed::RegSpec for Tmr06_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Mode Register 06"]
 pub type Tmr06 = crate::RegValueT<Tmr06_SPEC>;
 
 impl Tmr06 {
+    #[doc = "Setting of Starting Count and Interrupt"]
     #[inline(always)]
     pub fn opirq(self) -> crate::common::RegisterFieldBool<0, 1, 0, Tmr06_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<0, 1, 0, Tmr06_SPEC, crate::common::RW>::from_register(
@@ -1968,6 +2321,7 @@ impl Tmr06 {
         )
     }
 
+    #[doc = "Selection of Operation Mode at Channel n"]
     #[inline(always)]
     pub fn md(
         self,
@@ -1993,6 +2347,7 @@ impl Tmr06 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of TI0n Pin Input Valid Edge"]
     #[inline(always)]
     pub fn cis(
         self,
@@ -2018,6 +2373,7 @@ impl Tmr06 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Setting of Start Trigger or Capture Trigger of Channel n"]
     #[inline(always)]
     pub fn sts(
         self,
@@ -2043,6 +2399,7 @@ impl Tmr06 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection Between Using Channel n Independently or Simultaneously with Another Channel (as a Slave or Master)"]
     #[inline(always)]
     pub fn master(
         self,
@@ -2068,6 +2425,7 @@ impl Tmr06 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Counter Clock (fTCLK) of Channel n"]
     #[inline(always)]
     pub fn ccs(
         self,
@@ -2093,6 +2451,7 @@ impl Tmr06 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Operation Clock (fMCK) of Channel n"]
     #[inline(always)]
     pub fn cks(
         self,
@@ -2130,70 +2489,93 @@ pub mod tmr06 {
     pub struct Md_SPEC;
     pub type Md = crate::EnumBitfieldStruct<u8, Md_SPEC>;
     impl Md {
+        #[doc = "Interval timer mode"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Capture mode"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Event counter mode"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "One-count mode"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Capture and one-count mode"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cis_SPEC;
     pub type Cis = crate::EnumBitfieldStruct<u8, Cis_SPEC>;
     impl Cis {
+        #[doc = "Falling edge"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Rising edge"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Both edges (when low-level width is measured) Start trigger: Falling edge, Capture trigger: Rising edge"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Both edges (when high-level width is measured)  Start trigger: Rising edge, Capture trigger: Falling edge"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sts_SPEC;
     pub type Sts = crate::EnumBitfieldStruct<u8, Sts_SPEC>;
     impl Sts {
+        #[doc = "Only software trigger start is valid (other trigger sources are unselected)."]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Valid edge of the TI0n pin input is used as both the start trigger and capture trigger."]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "Both the edges of the TI0n pin input are used as a start trigger and a capture trigger."]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Interrupt signal of the master channel is used (when the channel is used as a slave channel with the simultaneous channel operation function)."]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Master_SPEC;
     pub type Master = crate::EnumBitfieldStruct<u8, Master_SPEC>;
     impl Master {
+        #[doc = "Operates in independent channel operation function or as slave channel in simultaneous channel operation function."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Operates as master channel in simultaneous channel operation function."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ccs_SPEC;
     pub type Ccs = crate::EnumBitfieldStruct<u8, Ccs_SPEC>;
     impl Ccs {
+        #[doc = "Operating clock (fMCK)specified by the CKS\\[1:0\\] bits"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Valid edge of input signal input from the TI0n pin. In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cks_SPEC;
     pub type Cks = crate::EnumBitfieldStruct<u8, Cks_SPEC>;
     impl Cks {
+        #[doc = "Operation clock CK00 set by timer clock select register 0 (TPS0)"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Operation clock CK02 set by timer clock select register 0 (TPS0)"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Operation clock CK01 set by timer clock select register 0 (TPS0)"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Operation clock CK03 set by timer clock select register 0 (TPS0)"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -2204,9 +2586,11 @@ impl crate::sealed::RegSpec for Tmr07_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Mode Register 07"]
 pub type Tmr07 = crate::RegValueT<Tmr07_SPEC>;
 
 impl Tmr07 {
+    #[doc = "Setting of Starting Count and Interrupt"]
     #[inline(always)]
     pub fn opirq(self) -> crate::common::RegisterFieldBool<0, 1, 0, Tmr07_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<0, 1, 0, Tmr07_SPEC, crate::common::RW>::from_register(
@@ -2214,6 +2598,7 @@ impl Tmr07 {
         )
     }
 
+    #[doc = "Selection of Operation Mode at Channel n"]
     #[inline(always)]
     pub fn md(
         self,
@@ -2239,6 +2624,7 @@ impl Tmr07 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of TI0n Pin Input Valid Edge"]
     #[inline(always)]
     pub fn cis(
         self,
@@ -2264,6 +2650,7 @@ impl Tmr07 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Setting of Start Trigger or Capture Trigger of Channel n"]
     #[inline(always)]
     pub fn sts(
         self,
@@ -2289,6 +2676,7 @@ impl Tmr07 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Counter Clock (fTCLK) of Channel n"]
     #[inline(always)]
     pub fn ccs(
         self,
@@ -2314,6 +2702,7 @@ impl Tmr07 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Operation Clock (fMCK) of Channel n"]
     #[inline(always)]
     pub fn cks(
         self,
@@ -2351,62 +2740,83 @@ pub mod tmr07 {
     pub struct Md_SPEC;
     pub type Md = crate::EnumBitfieldStruct<u8, Md_SPEC>;
     impl Md {
+        #[doc = "Interval timer mode"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Capture mode"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Event counter mode"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "One-count mode"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Capture and one-count mode"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cis_SPEC;
     pub type Cis = crate::EnumBitfieldStruct<u8, Cis_SPEC>;
     impl Cis {
+        #[doc = "Falling edge"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Rising edge"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Both edges (when low-level width is measured) Start trigger: Falling edge, Capture trigger: Rising edge"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Both edges (when high-level width is measured)  Start trigger: Rising edge, Capture trigger: Falling edge"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sts_SPEC;
     pub type Sts = crate::EnumBitfieldStruct<u8, Sts_SPEC>;
     impl Sts {
+        #[doc = "Only software trigger start is valid (other trigger sources are unselected)."]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Valid edge of the TI0n pin input is used as both the start trigger and capture trigger."]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "Both the edges of the TI0n pin input are used as a start trigger and a capture trigger."]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Interrupt signal of the master channel is used (when the channel is used as a slave channel with the simultaneous channel operation function)."]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ccs_SPEC;
     pub type Ccs = crate::EnumBitfieldStruct<u8, Ccs_SPEC>;
     impl Ccs {
+        #[doc = "Operating clock (fMCK)specified by the CKS\\[1:0\\] bits"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Valid edge of input signal input from the TI0n pin. In channel 5, valid edge of input signal selected by the TIS0 registerIn channel 7, valid edge of input signal selected by the ISC register"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cks_SPEC;
     pub type Cks = crate::EnumBitfieldStruct<u8, Cks_SPEC>;
     impl Cks {
+        #[doc = "Operation clock CK00 set by timer clock select register 0 (TPS0)"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Operation clock CK02 set by timer clock select register 0 (TPS0)"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Operation clock CK01 set by timer clock select register 0 (TPS0)"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Operation clock CK03 set by timer clock select register 0 (TPS0)"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -2417,9 +2827,11 @@ impl crate::sealed::RegSpec for Tsr0_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Status Register 0%s"]
 pub type Tsr0 = crate::RegValueT<Tsr0_SPEC>;
 
 impl Tsr0 {
+    #[doc = "Counter Overflow State of Channel n"]
     #[inline(always)]
     pub fn ovf(
         self,
@@ -2449,8 +2861,10 @@ pub mod tsr0 {
     pub struct Ovf_SPEC;
     pub type Ovf = crate::EnumBitfieldStruct<u8, Ovf_SPEC>;
     impl Ovf {
+        #[doc = "Overflow does not occur"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Overflow occurs"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2461,9 +2875,11 @@ impl crate::sealed::RegSpec for Te0_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Channel Enable Status Register 0"]
 pub type Te0 = crate::RegValueT<Te0_SPEC>;
 
 impl Te0 {
+    #[doc = "Indication of Operation Enabled or Stopped State of Channel n"]
     #[inline(always)]
     pub fn te(
         self,
@@ -2472,6 +2888,7 @@ impl Te0 {
         crate::common::RegisterField::<0,0xff,1,0,te0::Te,te0::Te,Te0_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Indication of whether Operation of the Higher 8-bit Timer is Enabled or Stopped when Channel 1 is in the 8-bit Timer Mode"]
     #[inline(always)]
     pub fn teh1(
         self,
@@ -2480,6 +2897,7 @@ impl Te0 {
         crate::common::RegisterField::<9,0x1,1,0,te0::Teh1,te0::Teh1,Te0_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Indication of whether Operation of the Higher 8-bit Timer is Enabled or Stopped when Channel 3 is in the 8-bit Timer Mode"]
     #[inline(always)]
     pub fn teh3(
         self,
@@ -2509,24 +2927,30 @@ pub mod te0 {
     pub struct Te_SPEC;
     pub type Te = crate::EnumBitfieldStruct<u8, Te_SPEC>;
     impl Te {
+        #[doc = "Operation is stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Operation is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Teh1_SPEC;
     pub type Teh1 = crate::EnumBitfieldStruct<u8, Teh1_SPEC>;
     impl Teh1 {
+        #[doc = "Operation is stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Operation is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Teh3_SPEC;
     pub type Teh3 = crate::EnumBitfieldStruct<u8, Teh3_SPEC>;
     impl Teh3 {
+        #[doc = "Operation is stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Operation is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2537,9 +2961,11 @@ impl crate::sealed::RegSpec for Ts0_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Channel Start Register 0"]
 pub type Ts0 = crate::RegValueT<Ts0_SPEC>;
 
 impl Ts0 {
+    #[doc = "Operation Enable (Start) Trigger of Channel n"]
     #[inline(always)]
     pub fn ts(
         self,
@@ -2548,6 +2974,7 @@ impl Ts0 {
         crate::common::RegisterField::<0,0xff,1,0,ts0::Ts,ts0::Ts,Ts0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Trigger to Enable Operation (Start Operation) of the Higher 8-bit Timer when Channel 1 is in the 8-bit Timer Mode"]
     #[inline(always)]
     pub fn tsh1(
         self,
@@ -2565,6 +2992,7 @@ impl Ts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Trigger to Enable Operation (Start Operation) of the Higher 8-bit Timer when Channel 3 is in the 8-bit Timer Mode"]
     #[inline(always)]
     pub fn tsh3(
         self,
@@ -2602,24 +3030,30 @@ pub mod ts0 {
     pub struct Ts_SPEC;
     pub type Ts = crate::EnumBitfieldStruct<u8, Ts_SPEC>;
     impl Ts {
+        #[doc = "No trigger operation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The TE0.TE\\[n\\] bit is set to 1 and the count operation becomes enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tsh1_SPEC;
     pub type Tsh1 = crate::EnumBitfieldStruct<u8, Tsh1_SPEC>;
     impl Tsh1 {
+        #[doc = "No trigger operation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The TE0.TEH1 bit is set to 1 and the count operation becomes enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tsh3_SPEC;
     pub type Tsh3 = crate::EnumBitfieldStruct<u8, Tsh3_SPEC>;
     impl Tsh3 {
+        #[doc = "No trigger operation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The TE0.TEH3 bit is set to 1 and the count operation becomes enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2630,9 +3064,11 @@ impl crate::sealed::RegSpec for Tt0_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Channel Stop Register 0"]
 pub type Tt0 = crate::RegValueT<Tt0_SPEC>;
 
 impl Tt0 {
+    #[doc = "Operation Stop Trigger of Channel n"]
     #[inline(always)]
     pub fn tt(
         self,
@@ -2641,6 +3077,7 @@ impl Tt0 {
         crate::common::RegisterField::<0,0xff,1,0,tt0::Tt,tt0::Tt,Tt0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Trigger to Stop Operation of the Higher 8-bit Timer when Channel 1 is in the 8-bit Timer Mode"]
     #[inline(always)]
     pub fn tth1(
         self,
@@ -2658,6 +3095,7 @@ impl Tt0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Trigger to Stop Operation of the Higher 8-bit Timer when Channel 3 is in the 8-bit Timer Mode"]
     #[inline(always)]
     pub fn tth3(
         self,
@@ -2695,24 +3133,30 @@ pub mod tt0 {
     pub struct Tt_SPEC;
     pub type Tt = crate::EnumBitfieldStruct<u8, Tt_SPEC>;
     impl Tt {
+        #[doc = "No trigger operation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The TE0.TE\\[n\\] bit is cleared to 0 and the count operation is stopped"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tth1_SPEC;
     pub type Tth1 = crate::EnumBitfieldStruct<u8, Tth1_SPEC>;
     impl Tth1 {
+        #[doc = "No trigger operation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The TE0.TEH1 bit is cleared to 0 and the count operation is stopped"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tth3_SPEC;
     pub type Tth3 = crate::EnumBitfieldStruct<u8, Tth3_SPEC>;
     impl Tth3 {
+        #[doc = "No trigger operation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The TE0.TEH3 bit is cleared to 0 and the count operation is stopped"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2723,9 +3167,11 @@ impl crate::sealed::RegSpec for Tps0_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Clock Select Register 0"]
 pub type Tps0 = crate::RegValueT<Tps0_SPEC>;
 
 impl Tps0 {
+    #[doc = "Selection of Operation Clock (CK00)"]
     #[inline(always)]
     pub fn prs0(
         self,
@@ -2751,6 +3197,7 @@ impl Tps0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Operation Clock (CK01)"]
     #[inline(always)]
     pub fn prs1(
         self,
@@ -2776,6 +3223,7 @@ impl Tps0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Operation Clock (CK02)"]
     #[inline(always)]
     pub fn prs2(
         self,
@@ -2801,6 +3249,7 @@ impl Tps0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selection of Operation Clock (CK03)"]
     #[inline(always)]
     pub fn prs3(
         self,
@@ -2838,96 +3287,136 @@ pub mod tps0 {
     pub struct Prs0_SPEC;
     pub type Prs0 = crate::EnumBitfieldStruct<u8, Prs0_SPEC>;
     impl Prs0 {
+        #[doc = "PCLKB"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "PCLKB/2"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "PCLKB/22"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "PCLKB/23"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "PCLKB/24"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "PCLKB/25"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "PCLKB/26"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "PCLKB/27"]
         pub const _0_X_7: Self = Self::new(7);
 
+        #[doc = "PCLKB/28"]
         pub const _0_X_8: Self = Self::new(8);
 
+        #[doc = "PCLKB/29"]
         pub const _0_X_9: Self = Self::new(9);
 
+        #[doc = "PCLKB/210"]
         pub const _0_X_A: Self = Self::new(10);
 
+        #[doc = "PCLKB/211"]
         pub const _0_X_B: Self = Self::new(11);
 
+        #[doc = "PCLKB/212"]
         pub const _0_X_C: Self = Self::new(12);
 
+        #[doc = "PCLKB/213"]
         pub const _0_X_D: Self = Self::new(13);
 
+        #[doc = "PCLKB/214"]
         pub const _0_X_E: Self = Self::new(14);
 
+        #[doc = "PCLKB/215"]
         pub const _0_X_F: Self = Self::new(15);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Prs1_SPEC;
     pub type Prs1 = crate::EnumBitfieldStruct<u8, Prs1_SPEC>;
     impl Prs1 {
+        #[doc = "PCLKB"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "PCLKB/2"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "PCLKB/22"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "PCLKB/23"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "PCLKB/24"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "PCLKB/25"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "PCLKB/26"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "PCLKB/27"]
         pub const _0_X_7: Self = Self::new(7);
 
+        #[doc = "PCLKB/28"]
         pub const _0_X_8: Self = Self::new(8);
 
+        #[doc = "PCLKB/29"]
         pub const _0_X_9: Self = Self::new(9);
 
+        #[doc = "PCLKB/210"]
         pub const _0_X_A: Self = Self::new(10);
 
+        #[doc = "PCLKB/211"]
         pub const _0_X_B: Self = Self::new(11);
 
+        #[doc = "PCLKB/212"]
         pub const _0_X_C: Self = Self::new(12);
 
+        #[doc = "PCLKB/213"]
         pub const _0_X_D: Self = Self::new(13);
 
+        #[doc = "PCLKB/214"]
         pub const _0_X_E: Self = Self::new(14);
 
+        #[doc = "PCLKB/215"]
         pub const _0_X_F: Self = Self::new(15);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Prs2_SPEC;
     pub type Prs2 = crate::EnumBitfieldStruct<u8, Prs2_SPEC>;
     impl Prs2 {
+        #[doc = "PCLKB/2"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "PCLKB/22"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "PCLKB/24"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "PCLKB/26"]
         pub const _0_X_3: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Prs3_SPEC;
     pub type Prs3 = crate::EnumBitfieldStruct<u8, Prs3_SPEC>;
     impl Prs3 {
+        #[doc = "PCLKB/28"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "PCLKB/210"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "PCLKB/212"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "PCLKB/214"]
         pub const _0_X_3: Self = Self::new(3);
     }
 }
@@ -2938,9 +3427,11 @@ impl crate::sealed::RegSpec for To0_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Output Register 0"]
 pub type To0 = crate::RegValueT<To0_SPEC>;
 
 impl To0 {
+    #[doc = "Timer Output of Channel n"]
     #[inline(always)]
     pub fn to(
         self,
@@ -2961,8 +3452,10 @@ pub mod to0 {
     pub struct To_SPEC;
     pub type To = crate::EnumBitfieldStruct<u8, To_SPEC>;
     impl To {
+        #[doc = "Timer output value is 0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Timer output value is 1"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2973,9 +3466,11 @@ impl crate::sealed::RegSpec for Toe0_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Output Enable Register 0"]
 pub type Toe0 = crate::RegValueT<Toe0_SPEC>;
 
 impl Toe0 {
+    #[doc = "Enabling or Disabling Timer Output for Channel n"]
     #[inline(always)]
     pub fn toe(
         self,
@@ -3013,8 +3508,10 @@ pub mod toe0 {
     pub struct Toe_SPEC;
     pub type Toe = crate::EnumBitfieldStruct<u8, Toe_SPEC>;
     impl Toe {
+        #[doc = "Disables timer output."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables timer output."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3025,9 +3522,11 @@ impl crate::sealed::RegSpec for Tol0_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Output Level Register 0"]
 pub type Tol0 = crate::RegValueT<Tol0_SPEC>;
 
 impl Tol0 {
+    #[doc = "Control of Timer Output of Channel n"]
     #[inline(always)]
     pub fn tol(
         self,
@@ -3065,8 +3564,10 @@ pub mod tol0 {
     pub struct Tol_SPEC;
     pub type Tol = crate::EnumBitfieldStruct<u8, Tol_SPEC>;
     impl Tol {
+        #[doc = "Positive logic output (active-high)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Negative logic output (active-low)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3077,9 +3578,11 @@ impl crate::sealed::RegSpec for Tom0_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer Output Mode Register 0"]
 pub type Tom0 = crate::RegValueT<Tom0_SPEC>;
 
 impl Tom0 {
+    #[doc = "Control of Timer Output Mode of Channel n"]
     #[inline(always)]
     pub fn tom(
         self,
@@ -3117,8 +3620,10 @@ pub mod tom0 {
     pub struct Tom_SPEC;
     pub type Tom = crate::EnumBitfieldStruct<u8, Tom_SPEC>;
     impl Tom {
+        #[doc = "Master channel output mode (to produce toggled output by timer interrupt request signal (TAU0_TMI0n))"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave channel output mode (output is set by the timer interrupt request signal (TAU0_TMI0n) of the master channel, and reset by the timer interrupt request signal (TAU0_TMI0p) of the slave channel)"]
         pub const _1: Self = Self::new(1);
     }
 }

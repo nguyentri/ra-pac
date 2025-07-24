@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.10.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:47 +0000
+// Generated from SVD 1.10.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:59 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Icu {
         self.ptr
     }
 
+    #[doc = "IRQ Control Register %s"]
     #[inline(always)]
     pub const fn irqcr(
         &self,
@@ -46,7 +47,56 @@ impl super::Icu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x0usize))
         }
     }
+    #[inline(always)]
+    pub const fn irqcr0(&self) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn irqcr1(&self) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn irqcr2(&self) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn irqcr3(&self) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn irqcr4(&self) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn irqcr5(&self) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x5usize),
+            )
+        }
+    }
 
+    #[doc = "NMI Pin Interrupt Control Register"]
     #[inline(always)]
     pub const fn nmicr(&self) -> &'static crate::common::Reg<self::Nmicr_SPEC, crate::common::RW> {
         unsafe {
@@ -56,6 +106,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "Non-maskable Interrupt Enable Register"]
     #[inline(always)]
     pub const fn nmier(&self) -> &'static crate::common::Reg<self::Nmier_SPEC, crate::common::RW> {
         unsafe {
@@ -65,6 +116,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "Non-maskable Interrupt Status Clear Register"]
     #[inline(always)]
     pub const fn nmiclr(
         &self,
@@ -76,6 +128,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "Non-maskable Interrupt Status Register"]
     #[inline(always)]
     pub const fn nmisr(&self) -> &'static crate::common::Reg<self::Nmisr_SPEC, crate::common::R> {
         unsafe {
@@ -85,6 +138,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "DTC Enable Status Register 0"]
     #[inline(always)]
     pub const fn dtcenst0(
         &self,
@@ -96,6 +150,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "DTC Enable Status Register 1"]
     #[inline(always)]
     pub const fn dtcenst1(
         &self,
@@ -107,6 +162,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "DTC Enable Set Register 0"]
     #[inline(always)]
     pub const fn dtcenset0(
         &self,
@@ -118,6 +174,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "DTC Enable Set Register 1"]
     #[inline(always)]
     pub const fn dtcenset1(
         &self,
@@ -129,6 +186,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "DTC Enable Clear Register 0"]
     #[inline(always)]
     pub const fn dtcenclr0(
         &self,
@@ -140,6 +198,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "DTC Enable Clear Register 1"]
     #[inline(always)]
     pub const fn dtcenclr1(
         &self,
@@ -151,6 +210,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "Interrupt Request Flag Monitor Register 0"]
     #[inline(always)]
     pub const fn intflag0(
         &self,
@@ -162,6 +222,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "Interrupt Request Flag Monitor Register 1"]
     #[inline(always)]
     pub const fn intflag1(
         &self,
@@ -173,6 +234,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "Software Standby/Snooze End Control Register 0"]
     #[inline(always)]
     pub const fn sbyedcr0(
         &self,
@@ -184,6 +246,7 @@ impl super::Icu {
         }
     }
 
+    #[doc = "Software Standby/Snooze End Control Register 1"]
     #[inline(always)]
     pub const fn sbyedcr1(
         &self,
@@ -202,9 +265,11 @@ impl crate::sealed::RegSpec for Irqcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "IRQ Control Register %s"]
 pub type Irqcr = crate::RegValueT<Irqcr_SPEC>;
 
 impl Irqcr {
+    #[doc = "IRQi Detection Sense Select"]
     #[inline(always)]
     pub fn irqmd(
         self,
@@ -242,12 +307,16 @@ pub mod irqcr {
     pub struct Irqmd_SPEC;
     pub type Irqmd = crate::EnumBitfieldStruct<u8, Irqmd_SPEC>;
     impl Irqmd {
+        #[doc = "Falling edge"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Rising edge"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Rising and falling edges"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Setting prohibited"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -258,9 +327,11 @@ impl crate::sealed::RegSpec for Nmicr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "NMI Pin Interrupt Control Register"]
 pub type Nmicr = crate::RegValueT<Nmicr_SPEC>;
 
 impl Nmicr {
+    #[doc = "NMI Detection Set"]
     #[inline(always)]
     pub fn nmimd(
         self,
@@ -298,8 +369,10 @@ pub mod nmicr {
     pub struct Nmimd_SPEC;
     pub type Nmimd = crate::EnumBitfieldStruct<u8, Nmimd_SPEC>;
     impl Nmimd {
+        #[doc = "Falling edge"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Rising edge"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -310,9 +383,11 @@ impl crate::sealed::RegSpec for Nmier_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Non-maskable Interrupt Enable Register"]
 pub type Nmier = crate::RegValueT<Nmier_SPEC>;
 
 impl Nmier {
+    #[doc = "IWDT Underflow/Refresh Error Interrupt Enable"]
     #[inline(always)]
     pub fn iwdten(
         self,
@@ -338,6 +413,7 @@ impl Nmier {
         >::from_register(self, 0)
     }
 
+    #[doc = "Voltage Monitor 1 Interrupt Enable"]
     #[inline(always)]
     pub fn lvd1en(
         self,
@@ -363,6 +439,7 @@ impl Nmier {
         >::from_register(self, 0)
     }
 
+    #[doc = "NMI Pin Interrupt Enable"]
     #[inline(always)]
     pub fn nmien(
         self,
@@ -388,6 +465,7 @@ impl Nmier {
         >::from_register(self, 0)
     }
 
+    #[doc = "SRAM Parity Error Interrupt Enable"]
     #[inline(always)]
     pub fn rpeen(
         self,
@@ -425,32 +503,40 @@ pub mod nmier {
     pub struct Iwdten_SPEC;
     pub type Iwdten = crate::EnumBitfieldStruct<u8, Iwdten_SPEC>;
     impl Iwdten {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lvd1En_SPEC;
     pub type Lvd1En = crate::EnumBitfieldStruct<u8, Lvd1En_SPEC>;
     impl Lvd1En {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nmien_SPEC;
     pub type Nmien = crate::EnumBitfieldStruct<u8, Nmien_SPEC>;
     impl Nmien {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rpeen_SPEC;
     pub type Rpeen = crate::EnumBitfieldStruct<u8, Rpeen_SPEC>;
     impl Rpeen {
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -461,9 +547,11 @@ impl crate::sealed::RegSpec for Nmiclr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Non-maskable Interrupt Status Clear Register"]
 pub type Nmiclr = crate::RegValueT<Nmiclr_SPEC>;
 
 impl Nmiclr {
+    #[doc = "IWDT Underflow/Refresh Error Interrupt Status Flag Clear"]
     #[inline(always)]
     pub fn iwdtclr(
         self,
@@ -489,6 +577,7 @@ impl Nmiclr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Voltage Monitor 1 Interrupt Status Flag Clear"]
     #[inline(always)]
     pub fn lvd1clr(
         self,
@@ -514,6 +603,7 @@ impl Nmiclr {
         >::from_register(self, 0)
     }
 
+    #[doc = "NMI Pin Interrupt Status Flag Clear"]
     #[inline(always)]
     pub fn nmiclr(
         self,
@@ -539,6 +629,7 @@ impl Nmiclr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SRAM Parity Error Interrupt Status Flag Clear"]
     #[inline(always)]
     pub fn rpeclr(
         self,
@@ -576,32 +667,40 @@ pub mod nmiclr {
     pub struct Iwdtclr_SPEC;
     pub type Iwdtclr = crate::EnumBitfieldStruct<u8, Iwdtclr_SPEC>;
     impl Iwdtclr {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear the NMISR.IWDTST flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lvd1Clr_SPEC;
     pub type Lvd1Clr = crate::EnumBitfieldStruct<u8, Lvd1Clr_SPEC>;
     impl Lvd1Clr {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear the NMISR.LVD1ST flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nmiclr_SPEC;
     pub type Nmiclr = crate::EnumBitfieldStruct<u8, Nmiclr_SPEC>;
     impl Nmiclr {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear the NMISR.NMIST flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rpeclr_SPEC;
     pub type Rpeclr = crate::EnumBitfieldStruct<u8, Rpeclr_SPEC>;
     impl Rpeclr {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear the NMISR.RPEST flag"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -612,9 +711,11 @@ impl crate::sealed::RegSpec for Nmisr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Non-maskable Interrupt Status Register"]
 pub type Nmisr = crate::RegValueT<Nmisr_SPEC>;
 
 impl Nmisr {
+    #[doc = "IWDT Underflow/Refresh Error Interrupt Status Flag"]
     #[inline(always)]
     pub fn iwdtst(
         self,
@@ -640,6 +741,7 @@ impl Nmisr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Voltage Monitor 1 Interrupt Status Flag"]
     #[inline(always)]
     pub fn lvd1st(
         self,
@@ -665,6 +767,7 @@ impl Nmisr {
         >::from_register(self, 0)
     }
 
+    #[doc = "NMI Pin Interrupt Status Flag"]
     #[inline(always)]
     pub fn nmist(
         self,
@@ -690,6 +793,7 @@ impl Nmisr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SRAM Parity Error Interrupt Status Flag"]
     #[inline(always)]
     pub fn rpest(
         self,
@@ -727,32 +831,40 @@ pub mod nmisr {
     pub struct Iwdtst_SPEC;
     pub type Iwdtst = crate::EnumBitfieldStruct<u8, Iwdtst_SPEC>;
     impl Iwdtst {
+        #[doc = "Interrupt not requested"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt requested"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lvd1St_SPEC;
     pub type Lvd1St = crate::EnumBitfieldStruct<u8, Lvd1St_SPEC>;
     impl Lvd1St {
+        #[doc = "Interrupt not requested"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt requested"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nmist_SPEC;
     pub type Nmist = crate::EnumBitfieldStruct<u8, Nmist_SPEC>;
     impl Nmist {
+        #[doc = "Interrupt not requested"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt requested"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rpest_SPEC;
     pub type Rpest = crate::EnumBitfieldStruct<u8, Rpest_SPEC>;
     impl Rpest {
+        #[doc = "Interrupt not requested"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt requested"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -763,9 +875,11 @@ impl crate::sealed::RegSpec for Dtcenst0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DTC Enable Status Register 0"]
 pub type Dtcenst0 = crate::RegValueT<Dtcenst0_SPEC>;
 
 impl Dtcenst0 {
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st1(
         self,
@@ -791,6 +905,7 @@ impl Dtcenst0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st2(
         self,
@@ -816,6 +931,7 @@ impl Dtcenst0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st3(
         self,
@@ -841,6 +957,7 @@ impl Dtcenst0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st4(
         self,
@@ -866,6 +983,7 @@ impl Dtcenst0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st5(
         self,
@@ -891,6 +1009,7 @@ impl Dtcenst0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st6(
         self,
@@ -916,6 +1035,7 @@ impl Dtcenst0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st7(
         self,
@@ -941,6 +1061,7 @@ impl Dtcenst0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st12(
         self,
@@ -966,6 +1087,7 @@ impl Dtcenst0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st13(
         self,
@@ -991,6 +1113,7 @@ impl Dtcenst0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st15(
         self,
@@ -1016,6 +1139,7 @@ impl Dtcenst0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st16(
         self,
@@ -1041,6 +1165,7 @@ impl Dtcenst0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st18(
         self,
@@ -1066,6 +1191,7 @@ impl Dtcenst0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st19(
         self,
@@ -1091,6 +1217,7 @@ impl Dtcenst0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st22(
         self,
@@ -1116,6 +1243,7 @@ impl Dtcenst0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st23(
         self,
@@ -1141,6 +1269,7 @@ impl Dtcenst0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st27(
         self,
@@ -1166,6 +1295,7 @@ impl Dtcenst0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st28(
         self,
@@ -1191,6 +1321,7 @@ impl Dtcenst0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st29(
         self,
@@ -1216,6 +1347,7 @@ impl Dtcenst0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st30(
         self,
@@ -1241,6 +1373,7 @@ impl Dtcenst0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st31(
         self,
@@ -1278,160 +1411,200 @@ pub mod dtcenst0 {
     pub struct St1_SPEC;
     pub type St1 = crate::EnumBitfieldStruct<u8, St1_SPEC>;
     impl St1 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St2_SPEC;
     pub type St2 = crate::EnumBitfieldStruct<u8, St2_SPEC>;
     impl St2 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St3_SPEC;
     pub type St3 = crate::EnumBitfieldStruct<u8, St3_SPEC>;
     impl St3 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St4_SPEC;
     pub type St4 = crate::EnumBitfieldStruct<u8, St4_SPEC>;
     impl St4 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St5_SPEC;
     pub type St5 = crate::EnumBitfieldStruct<u8, St5_SPEC>;
     impl St5 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St6_SPEC;
     pub type St6 = crate::EnumBitfieldStruct<u8, St6_SPEC>;
     impl St6 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St7_SPEC;
     pub type St7 = crate::EnumBitfieldStruct<u8, St7_SPEC>;
     impl St7 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St12_SPEC;
     pub type St12 = crate::EnumBitfieldStruct<u8, St12_SPEC>;
     impl St12 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St13_SPEC;
     pub type St13 = crate::EnumBitfieldStruct<u8, St13_SPEC>;
     impl St13 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St15_SPEC;
     pub type St15 = crate::EnumBitfieldStruct<u8, St15_SPEC>;
     impl St15 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St16_SPEC;
     pub type St16 = crate::EnumBitfieldStruct<u8, St16_SPEC>;
     impl St16 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St18_SPEC;
     pub type St18 = crate::EnumBitfieldStruct<u8, St18_SPEC>;
     impl St18 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St19_SPEC;
     pub type St19 = crate::EnumBitfieldStruct<u8, St19_SPEC>;
     impl St19 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St22_SPEC;
     pub type St22 = crate::EnumBitfieldStruct<u8, St22_SPEC>;
     impl St22 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St23_SPEC;
     pub type St23 = crate::EnumBitfieldStruct<u8, St23_SPEC>;
     impl St23 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St27_SPEC;
     pub type St27 = crate::EnumBitfieldStruct<u8, St27_SPEC>;
     impl St27 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St28_SPEC;
     pub type St28 = crate::EnumBitfieldStruct<u8, St28_SPEC>;
     impl St28 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St29_SPEC;
     pub type St29 = crate::EnumBitfieldStruct<u8, St29_SPEC>;
     impl St29 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St30_SPEC;
     pub type St30 = crate::EnumBitfieldStruct<u8, St30_SPEC>;
     impl St30 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St31_SPEC;
     pub type St31 = crate::EnumBitfieldStruct<u8, St31_SPEC>;
     impl St31 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1442,9 +1615,11 @@ impl crate::sealed::RegSpec for Dtcenst1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DTC Enable Status Register 1"]
 pub type Dtcenst1 = crate::RegValueT<Dtcenst1_SPEC>;
 
 impl Dtcenst1 {
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st32(
         self,
@@ -1470,6 +1645,7 @@ impl Dtcenst1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st33(
         self,
@@ -1495,6 +1671,7 @@ impl Dtcenst1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st34(
         self,
@@ -1520,6 +1697,7 @@ impl Dtcenst1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st35(
         self,
@@ -1545,6 +1723,7 @@ impl Dtcenst1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st36(
         self,
@@ -1570,6 +1749,7 @@ impl Dtcenst1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st37(
         self,
@@ -1595,6 +1775,7 @@ impl Dtcenst1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st38(
         self,
@@ -1620,6 +1801,7 @@ impl Dtcenst1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st40(
         self,
@@ -1645,6 +1827,7 @@ impl Dtcenst1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Status by Event Number i"]
     #[inline(always)]
     pub fn st41(
         self,
@@ -1682,72 +1865,90 @@ pub mod dtcenst1 {
     pub struct St32_SPEC;
     pub type St32 = crate::EnumBitfieldStruct<u8, St32_SPEC>;
     impl St32 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St33_SPEC;
     pub type St33 = crate::EnumBitfieldStruct<u8, St33_SPEC>;
     impl St33 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St34_SPEC;
     pub type St34 = crate::EnumBitfieldStruct<u8, St34_SPEC>;
     impl St34 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St35_SPEC;
     pub type St35 = crate::EnumBitfieldStruct<u8, St35_SPEC>;
     impl St35 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St36_SPEC;
     pub type St36 = crate::EnumBitfieldStruct<u8, St36_SPEC>;
     impl St36 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St37_SPEC;
     pub type St37 = crate::EnumBitfieldStruct<u8, St37_SPEC>;
     impl St37 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St38_SPEC;
     pub type St38 = crate::EnumBitfieldStruct<u8, St38_SPEC>;
     impl St38 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St40_SPEC;
     pub type St40 = crate::EnumBitfieldStruct<u8, St40_SPEC>;
     impl St40 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St41_SPEC;
     pub type St41 = crate::EnumBitfieldStruct<u8, St41_SPEC>;
     impl St41 {
+        #[doc = "DTC Disable by Event number i"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1758,9 +1959,11 @@ impl crate::sealed::RegSpec for Dtcenset0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DTC Enable Set Register 0"]
 pub type Dtcenset0 = crate::RegValueT<Dtcenset0_SPEC>;
 
 impl Dtcenset0 {
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set1(
         self,
@@ -1786,6 +1989,7 @@ impl Dtcenset0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set2(
         self,
@@ -1811,6 +2015,7 @@ impl Dtcenset0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set3(
         self,
@@ -1836,6 +2041,7 @@ impl Dtcenset0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set4(
         self,
@@ -1861,6 +2067,7 @@ impl Dtcenset0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set5(
         self,
@@ -1886,6 +2093,7 @@ impl Dtcenset0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set6(
         self,
@@ -1911,6 +2119,7 @@ impl Dtcenset0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set7(
         self,
@@ -1936,6 +2145,7 @@ impl Dtcenset0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set12(
         self,
@@ -1961,6 +2171,7 @@ impl Dtcenset0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set13(
         self,
@@ -1986,6 +2197,7 @@ impl Dtcenset0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set15(
         self,
@@ -2011,6 +2223,7 @@ impl Dtcenset0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set16(
         self,
@@ -2036,6 +2249,7 @@ impl Dtcenset0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set18(
         self,
@@ -2061,6 +2275,7 @@ impl Dtcenset0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set19(
         self,
@@ -2086,6 +2301,7 @@ impl Dtcenset0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set22(
         self,
@@ -2111,6 +2327,7 @@ impl Dtcenset0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set23(
         self,
@@ -2136,6 +2353,7 @@ impl Dtcenset0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set27(
         self,
@@ -2161,6 +2379,7 @@ impl Dtcenset0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set28(
         self,
@@ -2186,6 +2405,7 @@ impl Dtcenset0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set29(
         self,
@@ -2211,6 +2431,7 @@ impl Dtcenset0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set30(
         self,
@@ -2236,6 +2457,7 @@ impl Dtcenset0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set31(
         self,
@@ -2273,160 +2495,200 @@ pub mod dtcenset0 {
     pub struct Set1_SPEC;
     pub type Set1 = crate::EnumBitfieldStruct<u8, Set1_SPEC>;
     impl Set1 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set2_SPEC;
     pub type Set2 = crate::EnumBitfieldStruct<u8, Set2_SPEC>;
     impl Set2 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set3_SPEC;
     pub type Set3 = crate::EnumBitfieldStruct<u8, Set3_SPEC>;
     impl Set3 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set4_SPEC;
     pub type Set4 = crate::EnumBitfieldStruct<u8, Set4_SPEC>;
     impl Set4 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set5_SPEC;
     pub type Set5 = crate::EnumBitfieldStruct<u8, Set5_SPEC>;
     impl Set5 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set6_SPEC;
     pub type Set6 = crate::EnumBitfieldStruct<u8, Set6_SPEC>;
     impl Set6 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set7_SPEC;
     pub type Set7 = crate::EnumBitfieldStruct<u8, Set7_SPEC>;
     impl Set7 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set12_SPEC;
     pub type Set12 = crate::EnumBitfieldStruct<u8, Set12_SPEC>;
     impl Set12 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set13_SPEC;
     pub type Set13 = crate::EnumBitfieldStruct<u8, Set13_SPEC>;
     impl Set13 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set15_SPEC;
     pub type Set15 = crate::EnumBitfieldStruct<u8, Set15_SPEC>;
     impl Set15 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set16_SPEC;
     pub type Set16 = crate::EnumBitfieldStruct<u8, Set16_SPEC>;
     impl Set16 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set18_SPEC;
     pub type Set18 = crate::EnumBitfieldStruct<u8, Set18_SPEC>;
     impl Set18 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set19_SPEC;
     pub type Set19 = crate::EnumBitfieldStruct<u8, Set19_SPEC>;
     impl Set19 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set22_SPEC;
     pub type Set22 = crate::EnumBitfieldStruct<u8, Set22_SPEC>;
     impl Set22 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set23_SPEC;
     pub type Set23 = crate::EnumBitfieldStruct<u8, Set23_SPEC>;
     impl Set23 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set27_SPEC;
     pub type Set27 = crate::EnumBitfieldStruct<u8, Set27_SPEC>;
     impl Set27 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set28_SPEC;
     pub type Set28 = crate::EnumBitfieldStruct<u8, Set28_SPEC>;
     impl Set28 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set29_SPEC;
     pub type Set29 = crate::EnumBitfieldStruct<u8, Set29_SPEC>;
     impl Set29 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set30_SPEC;
     pub type Set30 = crate::EnumBitfieldStruct<u8, Set30_SPEC>;
     impl Set30 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set31_SPEC;
     pub type Set31 = crate::EnumBitfieldStruct<u8, Set31_SPEC>;
     impl Set31 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2437,9 +2699,11 @@ impl crate::sealed::RegSpec for Dtcenset1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DTC Enable Set Register 1"]
 pub type Dtcenset1 = crate::RegValueT<Dtcenset1_SPEC>;
 
 impl Dtcenset1 {
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set32(
         self,
@@ -2465,6 +2729,7 @@ impl Dtcenset1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set33(
         self,
@@ -2490,6 +2755,7 @@ impl Dtcenset1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set34(
         self,
@@ -2515,6 +2781,7 @@ impl Dtcenset1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set35(
         self,
@@ -2540,6 +2807,7 @@ impl Dtcenset1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set36(
         self,
@@ -2565,6 +2833,7 @@ impl Dtcenset1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set37(
         self,
@@ -2590,6 +2859,7 @@ impl Dtcenset1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set38(
         self,
@@ -2615,6 +2885,7 @@ impl Dtcenset1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set40(
         self,
@@ -2640,6 +2911,7 @@ impl Dtcenset1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Set by Event Number i"]
     #[inline(always)]
     pub fn set41(
         self,
@@ -2677,72 +2949,90 @@ pub mod dtcenset1 {
     pub struct Set32_SPEC;
     pub type Set32 = crate::EnumBitfieldStruct<u8, Set32_SPEC>;
     impl Set32 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set33_SPEC;
     pub type Set33 = crate::EnumBitfieldStruct<u8, Set33_SPEC>;
     impl Set33 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set34_SPEC;
     pub type Set34 = crate::EnumBitfieldStruct<u8, Set34_SPEC>;
     impl Set34 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set35_SPEC;
     pub type Set35 = crate::EnumBitfieldStruct<u8, Set35_SPEC>;
     impl Set35 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set36_SPEC;
     pub type Set36 = crate::EnumBitfieldStruct<u8, Set36_SPEC>;
     impl Set36 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set37_SPEC;
     pub type Set37 = crate::EnumBitfieldStruct<u8, Set37_SPEC>;
     impl Set37 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set38_SPEC;
     pub type Set38 = crate::EnumBitfieldStruct<u8, Set38_SPEC>;
     impl Set38 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set40_SPEC;
     pub type Set40 = crate::EnumBitfieldStruct<u8, Set40_SPEC>;
     impl Set40 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Set41_SPEC;
     pub type Set41 = crate::EnumBitfieldStruct<u8, Set41_SPEC>;
     impl Set41 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Enable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2753,9 +3043,11 @@ impl crate::sealed::RegSpec for Dtcenclr0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DTC Enable Clear Register 0"]
 pub type Dtcenclr0 = crate::RegValueT<Dtcenclr0_SPEC>;
 
 impl Dtcenclr0 {
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr1(
         self,
@@ -2781,6 +3073,7 @@ impl Dtcenclr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr2(
         self,
@@ -2806,6 +3099,7 @@ impl Dtcenclr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr3(
         self,
@@ -2831,6 +3125,7 @@ impl Dtcenclr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr4(
         self,
@@ -2856,6 +3151,7 @@ impl Dtcenclr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr5(
         self,
@@ -2881,6 +3177,7 @@ impl Dtcenclr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr6(
         self,
@@ -2906,6 +3203,7 @@ impl Dtcenclr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr7(
         self,
@@ -2931,6 +3229,7 @@ impl Dtcenclr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr12(
         self,
@@ -2956,6 +3255,7 @@ impl Dtcenclr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr13(
         self,
@@ -2981,6 +3281,7 @@ impl Dtcenclr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr15(
         self,
@@ -3006,6 +3307,7 @@ impl Dtcenclr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr16(
         self,
@@ -3031,6 +3333,7 @@ impl Dtcenclr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr18(
         self,
@@ -3056,6 +3359,7 @@ impl Dtcenclr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr19(
         self,
@@ -3081,6 +3385,7 @@ impl Dtcenclr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr22(
         self,
@@ -3106,6 +3411,7 @@ impl Dtcenclr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr23(
         self,
@@ -3131,6 +3437,7 @@ impl Dtcenclr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr27(
         self,
@@ -3156,6 +3463,7 @@ impl Dtcenclr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr28(
         self,
@@ -3181,6 +3489,7 @@ impl Dtcenclr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr29(
         self,
@@ -3206,6 +3515,7 @@ impl Dtcenclr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr30(
         self,
@@ -3231,6 +3541,7 @@ impl Dtcenclr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr31(
         self,
@@ -3268,160 +3579,200 @@ pub mod dtcenclr0 {
     pub struct Clr1_SPEC;
     pub type Clr1 = crate::EnumBitfieldStruct<u8, Clr1_SPEC>;
     impl Clr1 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr2_SPEC;
     pub type Clr2 = crate::EnumBitfieldStruct<u8, Clr2_SPEC>;
     impl Clr2 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr3_SPEC;
     pub type Clr3 = crate::EnumBitfieldStruct<u8, Clr3_SPEC>;
     impl Clr3 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr4_SPEC;
     pub type Clr4 = crate::EnumBitfieldStruct<u8, Clr4_SPEC>;
     impl Clr4 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr5_SPEC;
     pub type Clr5 = crate::EnumBitfieldStruct<u8, Clr5_SPEC>;
     impl Clr5 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr6_SPEC;
     pub type Clr6 = crate::EnumBitfieldStruct<u8, Clr6_SPEC>;
     impl Clr6 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr7_SPEC;
     pub type Clr7 = crate::EnumBitfieldStruct<u8, Clr7_SPEC>;
     impl Clr7 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr12_SPEC;
     pub type Clr12 = crate::EnumBitfieldStruct<u8, Clr12_SPEC>;
     impl Clr12 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr13_SPEC;
     pub type Clr13 = crate::EnumBitfieldStruct<u8, Clr13_SPEC>;
     impl Clr13 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr15_SPEC;
     pub type Clr15 = crate::EnumBitfieldStruct<u8, Clr15_SPEC>;
     impl Clr15 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr16_SPEC;
     pub type Clr16 = crate::EnumBitfieldStruct<u8, Clr16_SPEC>;
     impl Clr16 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr18_SPEC;
     pub type Clr18 = crate::EnumBitfieldStruct<u8, Clr18_SPEC>;
     impl Clr18 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr19_SPEC;
     pub type Clr19 = crate::EnumBitfieldStruct<u8, Clr19_SPEC>;
     impl Clr19 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr22_SPEC;
     pub type Clr22 = crate::EnumBitfieldStruct<u8, Clr22_SPEC>;
     impl Clr22 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr23_SPEC;
     pub type Clr23 = crate::EnumBitfieldStruct<u8, Clr23_SPEC>;
     impl Clr23 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr27_SPEC;
     pub type Clr27 = crate::EnumBitfieldStruct<u8, Clr27_SPEC>;
     impl Clr27 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr28_SPEC;
     pub type Clr28 = crate::EnumBitfieldStruct<u8, Clr28_SPEC>;
     impl Clr28 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr29_SPEC;
     pub type Clr29 = crate::EnumBitfieldStruct<u8, Clr29_SPEC>;
     impl Clr29 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr30_SPEC;
     pub type Clr30 = crate::EnumBitfieldStruct<u8, Clr30_SPEC>;
     impl Clr30 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr31_SPEC;
     pub type Clr31 = crate::EnumBitfieldStruct<u8, Clr31_SPEC>;
     impl Clr31 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3432,9 +3783,11 @@ impl crate::sealed::RegSpec for Dtcenclr1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DTC Enable Clear Register 1"]
 pub type Dtcenclr1 = crate::RegValueT<Dtcenclr1_SPEC>;
 
 impl Dtcenclr1 {
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr32(
         self,
@@ -3460,6 +3813,7 @@ impl Dtcenclr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr33(
         self,
@@ -3485,6 +3839,7 @@ impl Dtcenclr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr34(
         self,
@@ -3510,6 +3865,7 @@ impl Dtcenclr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr35(
         self,
@@ -3535,6 +3891,7 @@ impl Dtcenclr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr36(
         self,
@@ -3560,6 +3917,7 @@ impl Dtcenclr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr37(
         self,
@@ -3585,6 +3943,7 @@ impl Dtcenclr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr38(
         self,
@@ -3610,6 +3969,7 @@ impl Dtcenclr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr40(
         self,
@@ -3635,6 +3995,7 @@ impl Dtcenclr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Enable Clear by Event Number i"]
     #[inline(always)]
     pub fn clr41(
         self,
@@ -3672,72 +4033,90 @@ pub mod dtcenclr1 {
     pub struct Clr32_SPEC;
     pub type Clr32 = crate::EnumBitfieldStruct<u8, Clr32_SPEC>;
     impl Clr32 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr33_SPEC;
     pub type Clr33 = crate::EnumBitfieldStruct<u8, Clr33_SPEC>;
     impl Clr33 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr34_SPEC;
     pub type Clr34 = crate::EnumBitfieldStruct<u8, Clr34_SPEC>;
     impl Clr34 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr35_SPEC;
     pub type Clr35 = crate::EnumBitfieldStruct<u8, Clr35_SPEC>;
     impl Clr35 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr36_SPEC;
     pub type Clr36 = crate::EnumBitfieldStruct<u8, Clr36_SPEC>;
     impl Clr36 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr37_SPEC;
     pub type Clr37 = crate::EnumBitfieldStruct<u8, Clr37_SPEC>;
     impl Clr37 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr38_SPEC;
     pub type Clr38 = crate::EnumBitfieldStruct<u8, Clr38_SPEC>;
     impl Clr38 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr40_SPEC;
     pub type Clr40 = crate::EnumBitfieldStruct<u8, Clr40_SPEC>;
     impl Clr40 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clr41_SPEC;
     pub type Clr41 = crate::EnumBitfieldStruct<u8, Clr41_SPEC>;
     impl Clr41 {
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC Disable by Event number i"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3748,9 +4127,11 @@ impl crate::sealed::RegSpec for Intflag0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Interrupt Request Flag Monitor Register 0"]
 pub type Intflag0 = crate::RegValueT<Intflag0_SPEC>;
 
 impl Intflag0 {
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if0(
         self,
@@ -3776,6 +4157,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if1(
         self,
@@ -3801,6 +4183,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if2(
         self,
@@ -3826,6 +4209,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if3(
         self,
@@ -3851,6 +4235,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if4(
         self,
@@ -3876,6 +4261,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if5(
         self,
@@ -3901,6 +4287,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if6(
         self,
@@ -3926,6 +4313,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if7(
         self,
@@ -3951,6 +4339,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if10(
         self,
@@ -3976,6 +4365,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if11(
         self,
@@ -4001,6 +4391,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if12(
         self,
@@ -4026,6 +4417,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if13(
         self,
@@ -4051,6 +4443,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if14(
         self,
@@ -4076,6 +4469,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if15(
         self,
@@ -4101,6 +4495,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if16(
         self,
@@ -4126,6 +4521,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if17(
         self,
@@ -4151,6 +4547,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if18(
         self,
@@ -4176,6 +4573,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if19(
         self,
@@ -4201,6 +4599,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if20(
         self,
@@ -4226,6 +4625,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if21(
         self,
@@ -4251,6 +4651,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if22(
         self,
@@ -4276,6 +4677,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if23(
         self,
@@ -4301,6 +4703,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if24(
         self,
@@ -4326,6 +4729,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if25(
         self,
@@ -4351,6 +4755,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if26(
         self,
@@ -4376,6 +4781,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if27(
         self,
@@ -4401,6 +4807,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if28(
         self,
@@ -4426,6 +4833,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if29(
         self,
@@ -4451,6 +4859,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if30(
         self,
@@ -4476,6 +4885,7 @@ impl Intflag0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if31(
         self,
@@ -4513,240 +4923,300 @@ pub mod intflag0 {
     pub struct If0_SPEC;
     pub type If0 = crate::EnumBitfieldStruct<u8, If0_SPEC>;
     impl If0 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If1_SPEC;
     pub type If1 = crate::EnumBitfieldStruct<u8, If1_SPEC>;
     impl If1 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If2_SPEC;
     pub type If2 = crate::EnumBitfieldStruct<u8, If2_SPEC>;
     impl If2 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If3_SPEC;
     pub type If3 = crate::EnumBitfieldStruct<u8, If3_SPEC>;
     impl If3 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If4_SPEC;
     pub type If4 = crate::EnumBitfieldStruct<u8, If4_SPEC>;
     impl If4 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If5_SPEC;
     pub type If5 = crate::EnumBitfieldStruct<u8, If5_SPEC>;
     impl If5 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If6_SPEC;
     pub type If6 = crate::EnumBitfieldStruct<u8, If6_SPEC>;
     impl If6 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If7_SPEC;
     pub type If7 = crate::EnumBitfieldStruct<u8, If7_SPEC>;
     impl If7 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If10_SPEC;
     pub type If10 = crate::EnumBitfieldStruct<u8, If10_SPEC>;
     impl If10 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If11_SPEC;
     pub type If11 = crate::EnumBitfieldStruct<u8, If11_SPEC>;
     impl If11 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If12_SPEC;
     pub type If12 = crate::EnumBitfieldStruct<u8, If12_SPEC>;
     impl If12 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If13_SPEC;
     pub type If13 = crate::EnumBitfieldStruct<u8, If13_SPEC>;
     impl If13 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If14_SPEC;
     pub type If14 = crate::EnumBitfieldStruct<u8, If14_SPEC>;
     impl If14 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If15_SPEC;
     pub type If15 = crate::EnumBitfieldStruct<u8, If15_SPEC>;
     impl If15 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If16_SPEC;
     pub type If16 = crate::EnumBitfieldStruct<u8, If16_SPEC>;
     impl If16 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If17_SPEC;
     pub type If17 = crate::EnumBitfieldStruct<u8, If17_SPEC>;
     impl If17 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If18_SPEC;
     pub type If18 = crate::EnumBitfieldStruct<u8, If18_SPEC>;
     impl If18 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If19_SPEC;
     pub type If19 = crate::EnumBitfieldStruct<u8, If19_SPEC>;
     impl If19 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If20_SPEC;
     pub type If20 = crate::EnumBitfieldStruct<u8, If20_SPEC>;
     impl If20 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If21_SPEC;
     pub type If21 = crate::EnumBitfieldStruct<u8, If21_SPEC>;
     impl If21 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If22_SPEC;
     pub type If22 = crate::EnumBitfieldStruct<u8, If22_SPEC>;
     impl If22 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If23_SPEC;
     pub type If23 = crate::EnumBitfieldStruct<u8, If23_SPEC>;
     impl If23 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If24_SPEC;
     pub type If24 = crate::EnumBitfieldStruct<u8, If24_SPEC>;
     impl If24 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If25_SPEC;
     pub type If25 = crate::EnumBitfieldStruct<u8, If25_SPEC>;
     impl If25 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If26_SPEC;
     pub type If26 = crate::EnumBitfieldStruct<u8, If26_SPEC>;
     impl If26 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If27_SPEC;
     pub type If27 = crate::EnumBitfieldStruct<u8, If27_SPEC>;
     impl If27 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If28_SPEC;
     pub type If28 = crate::EnumBitfieldStruct<u8, If28_SPEC>;
     impl If28 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If29_SPEC;
     pub type If29 = crate::EnumBitfieldStruct<u8, If29_SPEC>;
     impl If29 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If30_SPEC;
     pub type If30 = crate::EnumBitfieldStruct<u8, If30_SPEC>;
     impl If30 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If31_SPEC;
     pub type If31 = crate::EnumBitfieldStruct<u8, If31_SPEC>;
     impl If31 {
+        #[doc = "Interrupt request of event number i is not being accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt request of event number i is being accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4757,9 +5227,11 @@ impl crate::sealed::RegSpec for Intflag1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Interrupt Request Flag Monitor Register 1"]
 pub type Intflag1 = crate::RegValueT<Intflag1_SPEC>;
 
 impl Intflag1 {
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if32(
         self,
@@ -4785,6 +5257,7 @@ impl Intflag1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if33(
         self,
@@ -4810,6 +5283,7 @@ impl Intflag1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if34(
         self,
@@ -4835,6 +5309,7 @@ impl Intflag1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if35(
         self,
@@ -4860,6 +5335,7 @@ impl Intflag1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if36(
         self,
@@ -4885,6 +5361,7 @@ impl Intflag1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if37(
         self,
@@ -4910,6 +5387,7 @@ impl Intflag1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if38(
         self,
@@ -4935,6 +5413,7 @@ impl Intflag1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if39(
         self,
@@ -4960,6 +5439,7 @@ impl Intflag1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if40(
         self,
@@ -4985,6 +5465,7 @@ impl Intflag1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interrupt Request Flag Monitor"]
     #[inline(always)]
     pub fn if41(
         self,
@@ -5022,80 +5503,100 @@ pub mod intflag1 {
     pub struct If32_SPEC;
     pub type If32 = crate::EnumBitfieldStruct<u8, If32_SPEC>;
     impl If32 {
+        #[doc = "Interrupt source of event number i is not accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt source of event number i is accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If33_SPEC;
     pub type If33 = crate::EnumBitfieldStruct<u8, If33_SPEC>;
     impl If33 {
+        #[doc = "Interrupt source of event number i is not accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt source of event number i is accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If34_SPEC;
     pub type If34 = crate::EnumBitfieldStruct<u8, If34_SPEC>;
     impl If34 {
+        #[doc = "Interrupt source of event number i is not accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt source of event number i is accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If35_SPEC;
     pub type If35 = crate::EnumBitfieldStruct<u8, If35_SPEC>;
     impl If35 {
+        #[doc = "Interrupt source of event number i is not accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt source of event number i is accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If36_SPEC;
     pub type If36 = crate::EnumBitfieldStruct<u8, If36_SPEC>;
     impl If36 {
+        #[doc = "Interrupt source of event number i is not accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt source of event number i is accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If37_SPEC;
     pub type If37 = crate::EnumBitfieldStruct<u8, If37_SPEC>;
     impl If37 {
+        #[doc = "Interrupt source of event number i is not accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt source of event number i is accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If38_SPEC;
     pub type If38 = crate::EnumBitfieldStruct<u8, If38_SPEC>;
     impl If38 {
+        #[doc = "Interrupt source of event number i is not accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt source of event number i is accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If39_SPEC;
     pub type If39 = crate::EnumBitfieldStruct<u8, If39_SPEC>;
     impl If39 {
+        #[doc = "Interrupt source of event number i is not accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt source of event number i is accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If40_SPEC;
     pub type If40 = crate::EnumBitfieldStruct<u8, If40_SPEC>;
     impl If40 {
+        #[doc = "Interrupt source of event number i is not accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt source of event number i is accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct If41_SPEC;
     pub type If41 = crate::EnumBitfieldStruct<u8, If41_SPEC>;
     impl If41 {
+        #[doc = "Interrupt source of event number i is not accepted by the ICU"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt source of event number i is accepted by the ICU"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5106,9 +5607,11 @@ impl crate::sealed::RegSpec for Sbyedcr0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Software Standby/Snooze End Control Register 0"]
 pub type Sbyedcr0 = crate::RegValueT<Sbyedcr0_SPEC>;
 
 impl Sbyedcr0 {
+    #[doc = "IWDT Interrupt Software Standby/Snooze Mode Returns Enable"]
     #[inline(always)]
     pub fn iwdted(
         self,
@@ -5134,6 +5637,7 @@ impl Sbyedcr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "LVD1 Interrupt Software Standby/Snooze Mode Returns Enable"]
     #[inline(always)]
     pub fn lvd1ed(
         self,
@@ -5309,6 +5813,7 @@ impl Sbyedcr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "DTC Transfer Complete Interrupt Snooze Mode Returns Enable"]
     #[inline(always)]
     pub fn dtced(
         self,
@@ -5334,6 +5839,7 @@ impl Sbyedcr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI00 Transfer End or Buffer Empty Interrupt Snooze Mode Returns Enable"]
     #[inline(always)]
     pub fn spi00rxed(
         self,
@@ -5359,6 +5865,7 @@ impl Sbyedcr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "UART0 Reception Communication Error Occurrence Interrupt Snooze Mode Returns Enable"]
     #[inline(always)]
     pub fn uart0erred(
         self,
@@ -5384,6 +5891,7 @@ impl Sbyedcr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "IICA0 Address Match Interrupt Software Standby/Snooze Mode Returns Enable"]
     #[inline(always)]
     pub fn iica0ed(
         self,
@@ -5409,6 +5917,7 @@ impl Sbyedcr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "UART0 Reception Transfer End Interrupt Snooze Mode Returns Enable"]
     #[inline(always)]
     pub fn uart0rxed(
         self,
@@ -5434,6 +5943,7 @@ impl Sbyedcr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "End of A/D Conversion Interrupt Snooze Mode Returns Enable"]
     #[inline(always)]
     pub fn adc12ed(
         self,
@@ -5471,112 +5981,140 @@ pub mod sbyedcr0 {
     pub struct Iwdted_SPEC;
     pub type Iwdted = crate::EnumBitfieldStruct<u8, Iwdted_SPEC>;
     impl Iwdted {
+        #[doc = "Software Standby/Snooze Mode returns by IWDT interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software Standby/Snooze Mode returns by IWDT interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lvd1Ed_SPEC;
     pub type Lvd1Ed = crate::EnumBitfieldStruct<u8, Lvd1Ed_SPEC>;
     impl Lvd1Ed {
+        #[doc = "Software Standby/Snooze Mode returns by LVD1 interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software Standby/Snooze Mode returns by LVD1 interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irq0Ed_SPEC;
     pub type Irq0Ed = crate::EnumBitfieldStruct<u8, Irq0Ed_SPEC>;
     impl Irq0Ed {
+        #[doc = "Software Standby/Snooze mode returns by IRQ0 interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software Standby/Snooze mode returns by IRQ0 interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irq1Ed_SPEC;
     pub type Irq1Ed = crate::EnumBitfieldStruct<u8, Irq1Ed_SPEC>;
     impl Irq1Ed {
+        #[doc = "Software Standby/Snooze mode returns by IRQ1 interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software Standby/Snooze mode returns by IRQ1 interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irq2Ed_SPEC;
     pub type Irq2Ed = crate::EnumBitfieldStruct<u8, Irq2Ed_SPEC>;
     impl Irq2Ed {
+        #[doc = "Software Standby/Snooze mode returns by IRQ2 interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software Standby/Snooze mode returns by IRQ2 interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irq3Ed_SPEC;
     pub type Irq3Ed = crate::EnumBitfieldStruct<u8, Irq3Ed_SPEC>;
     impl Irq3Ed {
+        #[doc = "Software Standby/Snooze mode returns by IRQ3 interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software Standby/Snooze mode returns by IRQ3 interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irq4Ed_SPEC;
     pub type Irq4Ed = crate::EnumBitfieldStruct<u8, Irq4Ed_SPEC>;
     impl Irq4Ed {
+        #[doc = "Software Standby/Snooze mode returns by IRQ4 interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software Standby/Snooze mode returns by IRQ4 interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irq5Ed_SPEC;
     pub type Irq5Ed = crate::EnumBitfieldStruct<u8, Irq5Ed_SPEC>;
     impl Irq5Ed {
+        #[doc = "Software Standby/Snooze mode returns by IRQ5 interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software Standby/Snooze mode returns by IRQ5 interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dtced_SPEC;
     pub type Dtced = crate::EnumBitfieldStruct<u8, Dtced_SPEC>;
     impl Dtced {
+        #[doc = "Snooze Mode returns by DTC transfer complete interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Snooze Mode returns by DTC transfer complete interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spi00Rxed_SPEC;
     pub type Spi00Rxed = crate::EnumBitfieldStruct<u8, Spi00Rxed_SPEC>;
     impl Spi00Rxed {
+        #[doc = "Snooze Mode returns by SPI00 transfer end or buffer empty interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Snooze Mode returns by SPI00 transfer end or buffer empty interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uart0Erred_SPEC;
     pub type Uart0Erred = crate::EnumBitfieldStruct<u8, Uart0Erred_SPEC>;
     impl Uart0Erred {
+        #[doc = "Snooze Mode returns by UART0 reception communication error occurrence interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Snooze Mode returns by UART0 reception communication error occurrence interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Iica0Ed_SPEC;
     pub type Iica0Ed = crate::EnumBitfieldStruct<u8, Iica0Ed_SPEC>;
     impl Iica0Ed {
+        #[doc = "Software Standby/Snooze Mode returns by IICA0 address match interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software Standby/Snooze Mode returns by IICA0 address match interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uart0Rxed_SPEC;
     pub type Uart0Rxed = crate::EnumBitfieldStruct<u8, Uart0Rxed_SPEC>;
     impl Uart0Rxed {
+        #[doc = "Snooze Mode returns by UART0 reception transfer end interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Snooze Mode returns by UART0 reception transfer end interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Adc12Ed_SPEC;
     pub type Adc12Ed = crate::EnumBitfieldStruct<u8, Adc12Ed_SPEC>;
     impl Adc12Ed {
+        #[doc = "Snooze Mode returns by End of A/D conversion interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Snooze Mode returns by End of A/D conversion interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5587,9 +6125,11 @@ impl crate::sealed::RegSpec for Sbyedcr1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Software Standby/Snooze End Control Register 1"]
 pub type Sbyedcr1 = crate::RegValueT<Sbyedcr1_SPEC>;
 
 impl Sbyedcr1 {
+    #[doc = "RTC Interrupt Software Standby/Snooze Mode Returns Enable"]
     #[inline(always)]
     pub fn rtced(
         self,
@@ -5615,6 +6155,7 @@ impl Sbyedcr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interval Signal of 32-bit Interval Timer Interrupt Software Standby/Snooze Mode Returns Enable"]
     #[inline(always)]
     pub fn itled(
         self,
@@ -5640,6 +6181,7 @@ impl Sbyedcr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "UARTA0 Reception Communication Error Interrupt Software Standby/Snooze Mode Returns Enable"]
     #[inline(always)]
     pub fn ure0ed(
         self,
@@ -5665,6 +6207,7 @@ impl Sbyedcr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "UARTA0 Transmission Transfer End or Buffer Empty Interrupt Software Standby/Snooze Mode Returns Enable"]
     #[inline(always)]
     pub fn ut0ed(
         self,
@@ -5690,6 +6233,7 @@ impl Sbyedcr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "UARTA0 Reception Transfer End Interrupt Software Standby/Snooze Mode Returns Enable"]
     #[inline(always)]
     pub fn ur0ed(
         self,
@@ -5727,40 +6271,50 @@ pub mod sbyedcr1 {
     pub struct Rtced_SPEC;
     pub type Rtced = crate::EnumBitfieldStruct<u8, Rtced_SPEC>;
     impl Rtced {
+        #[doc = "Software Standby/Snooze Mode returns by RTC interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software Standby/Snooze Mode returns by RTC interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Itled_SPEC;
     pub type Itled = crate::EnumBitfieldStruct<u8, Itled_SPEC>;
     impl Itled {
+        #[doc = "Software Standby/Snooze Mode returns by Interval signal of 32-bit interval timer interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software Standby/Snooze Mode returns by Interval signal of 32-bit interval timer interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ure0Ed_SPEC;
     pub type Ure0Ed = crate::EnumBitfieldStruct<u8, Ure0Ed_SPEC>;
     impl Ure0Ed {
+        #[doc = "Software Standby/Snooze Mode returns by UARTA0 reception communication error interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software Standby/Snooze Mode returns by UARTA0 reception communication error interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ut0Ed_SPEC;
     pub type Ut0Ed = crate::EnumBitfieldStruct<u8, Ut0Ed_SPEC>;
     impl Ut0Ed {
+        #[doc = "Software Standby/Snooze Mode returns by UARTA0 transmission transfer end or buffer empty interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software Standby/Snooze Mode returns by UARTA0 transmission transfer end or buffer empty interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ur0Ed_SPEC;
     pub type Ur0Ed = crate::EnumBitfieldStruct<u8, Ur0Ed_SPEC>;
     impl Ur0Ed {
+        #[doc = "Software Standby/Snooze Mode returns by UARTA0 reception transfer end interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software Standby/Snooze Mode returns by UARTA0 reception transfer end interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
 }

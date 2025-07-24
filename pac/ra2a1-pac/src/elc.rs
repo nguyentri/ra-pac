@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.1, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:53 +0000
+// Generated from SVD 1.1, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:11 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Elc {
         self.ptr
     }
 
+    #[doc = "Event Link Controller Register"]
     #[inline(always)]
     pub const fn elcr(&self) -> &'static crate::common::Reg<self::Elcr_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Elc {
         }
     }
 
+    #[doc = "Event Link Software Event Generation Register %s"]
     #[inline(always)]
     pub const fn elsegr(
         &self,
@@ -55,7 +57,28 @@ impl super::Elc {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2usize))
         }
     }
+    #[inline(always)]
+    pub const fn elsegr0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Elsegr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsegr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsegr1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Elsegr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsegr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x4usize),
+            )
+        }
+    }
 
+    #[doc = "Event Link Setting Register 12"]
     #[inline(always)]
     pub const fn elsr12(
         &self,
@@ -67,6 +90,7 @@ impl super::Elc {
         }
     }
 
+    #[doc = "Event Link Setting Register %s"]
     #[inline(always)]
     pub const fn elsr(
         &self,
@@ -79,7 +103,32 @@ impl super::Elc {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x58usize))
         }
     }
+    #[inline(always)]
+    pub const fn elsr18(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x58usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr19(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x5cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr20(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x60usize),
+            )
+        }
+    }
 
+    #[doc = "Event Link Setting Register 22"]
     #[inline(always)]
     pub const fn elsr22(
         &self,
@@ -98,9 +147,11 @@ impl crate::sealed::RegSpec for Elcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Event Link Controller Register"]
 pub type Elcr = crate::RegValueT<Elcr_SPEC>;
 
 impl Elcr {
+    #[doc = "All Event Link Enable"]
     #[inline(always)]
     pub fn elcon(
         self,
@@ -126,6 +177,7 @@ impl Elcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -145,8 +197,10 @@ pub mod elcr {
     pub struct Elcon_SPEC;
     pub type Elcon = crate::EnumBitfieldStruct<u8, Elcon_SPEC>;
     impl Elcon {
+        #[doc = "ELC function is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "ELC function is  enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -157,9 +211,11 @@ impl crate::sealed::RegSpec for Elsegr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Event Link Software Event Generation Register %s"]
 pub type Elsegr = crate::RegValueT<Elsegr_SPEC>;
 
 impl Elsegr {
+    #[doc = "ELSEGR Register Write Disable"]
     #[inline(always)]
     pub fn wi(
         self,
@@ -185,6 +241,7 @@ impl Elsegr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SEG Bit Write Enable"]
     #[inline(always)]
     pub fn we(
         self,
@@ -210,6 +267,7 @@ impl Elsegr {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -217,6 +275,7 @@ impl Elsegr {
         crate::common::RegisterField::<1,0x1f,1,0,u8,u8,Elsegr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Software Event Generation"]
     #[inline(always)]
     pub fn seg(
         self,
@@ -254,24 +313,30 @@ pub mod elsegr {
     pub struct Wi_SPEC;
     pub type Wi = crate::EnumBitfieldStruct<u8, Wi_SPEC>;
     impl Wi {
+        #[doc = "Write to ELSEGR register is enabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Write to ELSEGR register is disabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct We_SPEC;
     pub type We = crate::EnumBitfieldStruct<u8, We_SPEC>;
     impl We {
+        #[doc = "Write to SEG bit is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Write to SEG bit is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Seg_SPEC;
     pub type Seg = crate::EnumBitfieldStruct<u8, Seg_SPEC>;
     impl Seg {
+        #[doc = "Normal operation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software event is generated."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -282,9 +347,11 @@ impl crate::sealed::RegSpec for Elsr12_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Event Link Setting Register 12"]
 pub type Elsr12 = crate::RegValueT<Elsr12_SPEC>;
 
 impl Elsr12 {
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -292,6 +359,7 @@ impl Elsr12 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Elsr12_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Event Link Select"]
     #[inline(always)]
     pub fn els(
         self,
@@ -329,8 +397,10 @@ pub mod elsr12 {
     pub struct Els_SPEC;
     pub type Els = crate::EnumBitfieldStruct<u8, Els_SPEC>;
     impl Els {
+        #[doc = "Event output to the corresponding peripheral module is disabled."]
         pub const _0_X_000: Self = Self::new(0);
 
+        #[doc = "Set the number for the event signal to be linked."]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -341,9 +411,11 @@ impl crate::sealed::RegSpec for Elsr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Event Link Setting Register %s"]
 pub type Elsr = crate::RegValueT<Elsr_SPEC>;
 
 impl Elsr {
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -351,6 +423,7 @@ impl Elsr {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Elsr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Event Link Select"]
     #[inline(always)]
     pub fn els(
         self,
@@ -388,8 +461,10 @@ pub mod elsr {
     pub struct Els_SPEC;
     pub type Els = crate::EnumBitfieldStruct<u8, Els_SPEC>;
     impl Els {
+        #[doc = "Event output to the corresponding peripheral module is disabled."]
         pub const _0_X_000: Self = Self::new(0);
 
+        #[doc = "Set the number for the event signal to be linked."]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -400,9 +475,11 @@ impl crate::sealed::RegSpec for Elsr22_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Event Link Setting Register 22"]
 pub type Elsr22 = crate::RegValueT<Elsr22_SPEC>;
 
 impl Elsr22 {
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -410,6 +487,7 @@ impl Elsr22 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Elsr22_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Event Link Select"]
     #[inline(always)]
     pub fn els(
         self,
@@ -447,8 +525,10 @@ pub mod elsr22 {
     pub struct Els_SPEC;
     pub type Els = crate::EnumBitfieldStruct<u8, Els_SPEC>;
     impl Els {
+        #[doc = "Event output to the corresponding peripheral module is disabled."]
         pub const _0_X_000: Self = Self::new(0);
 
+        #[doc = "Set the number for the event signal to be linked."]
         pub const OTHERS: Self = Self::new(0);
     }
 }

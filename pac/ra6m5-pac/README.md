@@ -3,7 +3,7 @@
 
 This is the Peripheral Access Crate (PAC) for the RA6M5 device series.
 
-The crate is automatically generated from the device SVD file in the [packs](https://www.keil.arm.com/packs) using [sdv2pac](https://github.com/Infineon/svd2pac).
+The crate is generated from the device SVD file in the [packs](https://www.keil.arm.com/packs) using [sdv2pac](https://github.com/Infineon/svd2pac).
 
 ## Overview
 
@@ -15,7 +15,7 @@ Include this crate in your `Cargo.toml`:
 
 ```toml
 [dependencies]
- ra6m5-pac = "0.1.0"
+ ra6m5-pac = "0.2.0"
 ```
 
 ## License

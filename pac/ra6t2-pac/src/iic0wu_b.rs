@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.40.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:21:24 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:39 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Iic0WuB {
         self.ptr
     }
 
+    #[doc = "Wake Up Unit Control Register"]
     #[inline(always)]
     pub const fn wuctl(&self) -> &'static crate::common::Reg<self::Wuctl_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Iic0WuB {
         }
     }
 
+    #[doc = "Wake Up Unit Operating Status Register"]
     #[inline(always)]
     pub const fn wust(&self) -> &'static crate::common::Reg<self::Wust_SPEC, crate::common::R> {
         unsafe {
@@ -59,9 +61,11 @@ impl crate::sealed::RegSpec for Wuctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Wake Up Unit Control Register"]
 pub type Wuctl = crate::RegValueT<Wuctl_SPEC>;
 
 impl Wuctl {
+    #[doc = "Wake-Up Acknowledge Selection"]
     #[inline(always)]
     pub fn wuacks(
         self,
@@ -71,6 +75,7 @@ impl Wuctl {
         )
     }
 
+    #[doc = "Wake-Up Analog Noise Filter Selection"]
     #[inline(always)]
     pub fn wuanfs(
         self,
@@ -96,6 +101,7 @@ impl Wuctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake-Up function PCLKA Synchronous Enable"]
     #[inline(always)]
     pub fn wufsyne(
         self,
@@ -121,6 +127,7 @@ impl Wuctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake-Up function Enable"]
     #[inline(always)]
     pub fn wufe(
         self,
@@ -158,24 +165,30 @@ pub mod wuctl {
     pub struct Wuanfs_SPEC;
     pub type Wuanfs = crate::EnumBitfieldStruct<u8, Wuanfs_SPEC>;
     impl Wuanfs {
+        #[doc = "Do not add the Wake Up analog filter."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Add the Wake Up analog filter."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wufsyne_SPEC;
     pub type Wufsyne = crate::EnumBitfieldStruct<u8, Wufsyne_SPEC>;
     impl Wufsyne {
+        #[doc = "IIC asynchronous circuit enable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IIC synchronous circuit enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wufe_SPEC;
     pub type Wufe = crate::EnumBitfieldStruct<u8, Wufe_SPEC>;
     impl Wufe {
+        #[doc = "Wake-up function disables"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Wake-up function enables"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -186,9 +199,11 @@ impl crate::sealed::RegSpec for Wust_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Wake Up Unit Operating Status Register"]
 pub type Wust = crate::RegValueT<Wust_SPEC>;
 
 impl Wust {
+    #[doc = "Wake-up function asynchronous operation status flag"]
     #[inline(always)]
     pub fn wuasynf(
         self,
@@ -226,8 +241,10 @@ pub mod wust {
     pub struct Wuasynf_SPEC;
     pub type Wuasynf = crate::EnumBitfieldStruct<u8, Wuasynf_SPEC>;
     impl Wuasynf {
+        #[doc = "IIC synchronous circuit enable condition."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IIC asynchronous circuit enable condition."]
         pub const _1: Self = Self::new(1);
     }
 }

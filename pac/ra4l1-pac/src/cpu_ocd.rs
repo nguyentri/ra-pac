@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 0.90.02, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:18:12 +0000
+// Generated from SVD 1.20.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:48:57 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::CpuOcd {
         self.ptr
     }
 
+    #[doc = "MCU Status Register"]
     #[inline(always)]
     pub const fn mcustat(
         &self,
@@ -45,6 +46,7 @@ impl super::CpuOcd {
         }
     }
 
+    #[doc = "MCU Control Register"]
     #[inline(always)]
     pub const fn mcuctrl(
         &self,
@@ -63,9 +65,11 @@ impl crate::sealed::RegSpec for Mcustat_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MCU Status Register"]
 pub type Mcustat = crate::RegValueT<Mcustat_SPEC>;
 
 impl Mcustat {
+    #[doc = "Sleep mode status"]
     #[inline(always)]
     pub fn cpusleep(
         self,
@@ -91,6 +95,7 @@ impl Mcustat {
         >::from_register(self, 0)
     }
 
+    #[doc = "CPU clock status"]
     #[inline(always)]
     pub fn cpustopclk(
         self,
@@ -116,6 +121,7 @@ impl Mcustat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Debugger status"]
     #[inline(always)]
     pub fn dbgfuncen(
         self,
@@ -141,6 +147,7 @@ impl Mcustat {
         >::from_register(self, 0)
     }
 
+    #[doc = "Secure Debug status"]
     #[inline(always)]
     pub fn secdbg(
         self,
@@ -178,32 +185,40 @@ pub mod mcustat {
     pub struct Cpusleep_SPEC;
     pub type Cpusleep = crate::EnumBitfieldStruct<u8, Cpusleep_SPEC>;
     impl Cpusleep {
+        #[doc = "CPU is not in Sleep mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CPU in Sleep mode"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cpustopclk_SPEC;
     pub type Cpustopclk = crate::EnumBitfieldStruct<u8, Cpustopclk_SPEC>;
     impl Cpustopclk {
+        #[doc = "CPU clock is not stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CPU clock is stopped"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dbgfuncen_SPEC;
     pub type Dbgfuncen = crate::EnumBitfieldStruct<u8, Dbgfuncen_SPEC>;
     impl Dbgfuncen {
+        #[doc = "Debugger connection is not available"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Debugger function is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Secdbg_SPEC;
     pub type Secdbg = crate::EnumBitfieldStruct<u8, Secdbg_SPEC>;
     impl Secdbg {
+        #[doc = "Secure Debug is not available"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Secure Debug is available"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -214,9 +229,11 @@ impl crate::sealed::RegSpec for Mcuctrl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MCU Control Register"]
 pub type Mcuctrl = crate::RegValueT<Mcuctrl_SPEC>;
 
 impl Mcuctrl {
+    #[doc = "Debug Interrupt Request"]
     #[inline(always)]
     pub fn dbirq(
         self,
@@ -242,6 +259,7 @@ impl Mcuctrl {
         >::from_register(self, 0)
     }
 
+    #[doc = "CPU Wait Setting"]
     #[inline(always)]
     pub fn cpuwait(
         self,
@@ -279,16 +297,20 @@ pub mod mcuctrl {
     pub struct Dbirq_SPEC;
     pub type Dbirq = crate::EnumBitfieldStruct<u8, Dbirq_SPEC>;
     impl Dbirq {
+        #[doc = "Debug interrupt not requested"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Debug interrupt requested"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cpuwait_SPEC;
     pub type Cpuwait = crate::EnumBitfieldStruct<u8, Cpuwait_SPEC>;
     impl Cpuwait {
+        #[doc = "Clear CPUWAIT to low"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Set CPUWAIT to high"]
         pub const _1: Self = Self::new(1);
     }
 }

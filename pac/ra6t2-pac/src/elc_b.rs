@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.40.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:21:24 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:39 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::ElcB {
         self.ptr
     }
 
+    #[doc = "Event Link Controller Register"]
     #[inline(always)]
     pub const fn elcr(&self) -> &'static crate::common::Reg<self::Elcr_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::ElcB {
         }
     }
 
+    #[doc = "Event Link Software Event Generation Register %s"]
     #[inline(always)]
     pub const fn elsegr(
         &self,
@@ -55,7 +57,28 @@ impl super::ElcB {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x4usize))
         }
     }
+    #[inline(always)]
+    pub const fn elsegr0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Elsegr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsegr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsegr1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Elsegr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsegr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8usize),
+            )
+        }
+    }
 
+    #[doc = "Event Link Setting Register %s"]
     #[inline(always)]
     pub const fn elsr(
         &self,
@@ -68,7 +91,24 @@ impl super::ElcB {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x90usize))
         }
     }
+    #[inline(always)]
+    pub const fn elsr28(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x90usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn elsr29(&self) -> &'static crate::common::Reg<self::Elsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Elsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x94usize),
+            )
+        }
+    }
 
+    #[doc = "Event Link Controller Security Attribution Register A"]
     #[inline(always)]
     pub const fn elcsara(
         &self,
@@ -80,6 +120,7 @@ impl super::ElcB {
         }
     }
 
+    #[doc = "Event Link Controller Security Attribution Register B"]
     #[inline(always)]
     pub const fn elcsarb(
         &self,
@@ -98,9 +139,11 @@ impl crate::sealed::RegSpec for Elcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Event Link Controller Register"]
 pub type Elcr = crate::RegValueT<Elcr_SPEC>;
 
 impl Elcr {
+    #[doc = "All Event Link Enable"]
     #[inline(always)]
     pub fn elcon(
         self,
@@ -138,8 +181,10 @@ pub mod elcr {
     pub struct Elcon_SPEC;
     pub type Elcon = crate::EnumBitfieldStruct<u8, Elcon_SPEC>;
     impl Elcon {
+        #[doc = "ELC function is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "ELC function is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -150,9 +195,11 @@ impl crate::sealed::RegSpec for Elsegr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Event Link Software Event Generation Register %s"]
 pub type Elsegr = crate::RegValueT<Elsegr_SPEC>;
 
 impl Elsegr {
+    #[doc = "Software Event Generation"]
     #[inline(always)]
     pub fn seg(
         self,
@@ -178,6 +225,7 @@ impl Elsegr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SEG Bit Write Enable"]
     #[inline(always)]
     pub fn we(
         self,
@@ -203,6 +251,7 @@ impl Elsegr {
         >::from_register(self, 0)
     }
 
+    #[doc = "ELSEGR Register Write Disable"]
     #[inline(always)]
     pub fn wi(
         self,
@@ -240,24 +289,30 @@ pub mod elsegr {
     pub struct Seg_SPEC;
     pub type Seg = crate::EnumBitfieldStruct<u8, Seg_SPEC>;
     impl Seg {
+        #[doc = "Normal operation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software event is generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct We_SPEC;
     pub type We = crate::EnumBitfieldStruct<u8, We_SPEC>;
     impl We {
+        #[doc = "Write to SEG bit disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Write to SEG bit enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wi_SPEC;
     pub type Wi = crate::EnumBitfieldStruct<u8, Wi_SPEC>;
     impl Wi {
+        #[doc = "Write to ELSEGR register enabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Write to ELSEGR register disabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -268,9 +323,11 @@ impl crate::sealed::RegSpec for Elsr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Event Link Setting Register %s"]
 pub type Elsr = crate::RegValueT<Elsr_SPEC>;
 
 impl Elsr {
+    #[doc = "Event Link Select"]
     #[inline(always)]
     pub fn els(
         self,
@@ -292,9 +349,11 @@ impl crate::sealed::RegSpec for Elcsara_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Event Link Controller Security Attribution Register A"]
 pub type Elcsara = crate::RegValueT<Elcsara_SPEC>;
 
 impl Elcsara {
+    #[doc = "Event Link Controller Register Security Attribution"]
     #[inline(always)]
     pub fn elcr(
         self,
@@ -320,6 +379,7 @@ impl Elcsara {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Software Event Generation Register 0 Security Attribution"]
     #[inline(always)]
     pub fn elsegr0(
         self,
@@ -345,6 +405,7 @@ impl Elcsara {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Software Event Generation Register 1 Security Attribution"]
     #[inline(always)]
     pub fn elsegr1(
         self,
@@ -382,24 +443,30 @@ pub mod elcsara {
     pub struct Elcr_SPEC;
     pub type Elcr = crate::EnumBitfieldStruct<u8, Elcr_SPEC>;
     impl Elcr {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsegr0_SPEC;
     pub type Elsegr0 = crate::EnumBitfieldStruct<u8, Elsegr0_SPEC>;
     impl Elsegr0 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsegr1_SPEC;
     pub type Elsegr1 = crate::EnumBitfieldStruct<u8, Elsegr1_SPEC>;
     impl Elsegr1 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -410,9 +477,11 @@ impl crate::sealed::RegSpec for Elcsarb_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Event Link Controller Security Attribution Register B"]
 pub type Elcsarb = crate::RegValueT<Elcsarb_SPEC>;
 
 impl Elcsarb {
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr0(
         self,
@@ -438,6 +507,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr1(
         self,
@@ -463,6 +533,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr2(
         self,
@@ -488,6 +559,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr3(
         self,
@@ -513,6 +585,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr4(
         self,
@@ -538,6 +611,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr5(
         self,
@@ -563,6 +637,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr6(
         self,
@@ -588,6 +663,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr7(
         self,
@@ -613,6 +689,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr12(
         self,
@@ -638,6 +715,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr13(
         self,
@@ -663,6 +741,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr14(
         self,
@@ -688,6 +767,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr15(
         self,
@@ -713,6 +793,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr16(
         self,
@@ -738,6 +819,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr17(
         self,
@@ -763,6 +845,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr19(
         self,
@@ -788,6 +871,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr20(
         self,
@@ -813,6 +897,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr21(
         self,
@@ -838,6 +923,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr22(
         self,
@@ -863,6 +949,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr23(
         self,
@@ -888,6 +975,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr24(
         self,
@@ -913,6 +1001,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr28(
         self,
@@ -938,6 +1027,7 @@ impl Elcsarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "Event Link Setting Register n Security Attribution"]
     #[inline(always)]
     pub fn elsr29(
         self,
@@ -975,176 +1065,220 @@ pub mod elcsarb {
     pub struct Elsr0_SPEC;
     pub type Elsr0 = crate::EnumBitfieldStruct<u8, Elsr0_SPEC>;
     impl Elsr0 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr1_SPEC;
     pub type Elsr1 = crate::EnumBitfieldStruct<u8, Elsr1_SPEC>;
     impl Elsr1 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr2_SPEC;
     pub type Elsr2 = crate::EnumBitfieldStruct<u8, Elsr2_SPEC>;
     impl Elsr2 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr3_SPEC;
     pub type Elsr3 = crate::EnumBitfieldStruct<u8, Elsr3_SPEC>;
     impl Elsr3 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr4_SPEC;
     pub type Elsr4 = crate::EnumBitfieldStruct<u8, Elsr4_SPEC>;
     impl Elsr4 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr5_SPEC;
     pub type Elsr5 = crate::EnumBitfieldStruct<u8, Elsr5_SPEC>;
     impl Elsr5 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr6_SPEC;
     pub type Elsr6 = crate::EnumBitfieldStruct<u8, Elsr6_SPEC>;
     impl Elsr6 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr7_SPEC;
     pub type Elsr7 = crate::EnumBitfieldStruct<u8, Elsr7_SPEC>;
     impl Elsr7 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr12_SPEC;
     pub type Elsr12 = crate::EnumBitfieldStruct<u8, Elsr12_SPEC>;
     impl Elsr12 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr13_SPEC;
     pub type Elsr13 = crate::EnumBitfieldStruct<u8, Elsr13_SPEC>;
     impl Elsr13 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr14_SPEC;
     pub type Elsr14 = crate::EnumBitfieldStruct<u8, Elsr14_SPEC>;
     impl Elsr14 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr15_SPEC;
     pub type Elsr15 = crate::EnumBitfieldStruct<u8, Elsr15_SPEC>;
     impl Elsr15 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr16_SPEC;
     pub type Elsr16 = crate::EnumBitfieldStruct<u8, Elsr16_SPEC>;
     impl Elsr16 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr17_SPEC;
     pub type Elsr17 = crate::EnumBitfieldStruct<u8, Elsr17_SPEC>;
     impl Elsr17 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr19_SPEC;
     pub type Elsr19 = crate::EnumBitfieldStruct<u8, Elsr19_SPEC>;
     impl Elsr19 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr20_SPEC;
     pub type Elsr20 = crate::EnumBitfieldStruct<u8, Elsr20_SPEC>;
     impl Elsr20 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr21_SPEC;
     pub type Elsr21 = crate::EnumBitfieldStruct<u8, Elsr21_SPEC>;
     impl Elsr21 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr22_SPEC;
     pub type Elsr22 = crate::EnumBitfieldStruct<u8, Elsr22_SPEC>;
     impl Elsr22 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr23_SPEC;
     pub type Elsr23 = crate::EnumBitfieldStruct<u8, Elsr23_SPEC>;
     impl Elsr23 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr24_SPEC;
     pub type Elsr24 = crate::EnumBitfieldStruct<u8, Elsr24_SPEC>;
     impl Elsr24 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr28_SPEC;
     pub type Elsr28 = crate::EnumBitfieldStruct<u8, Elsr28_SPEC>;
     impl Elsr28 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Elsr29_SPEC;
     pub type Elsr29 = crate::EnumBitfieldStruct<u8, Elsr29_SPEC>;
     impl Elsr29 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
 }

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.10.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:47 +0000
+// Generated from SVD 1.10.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:59 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Sysc {
         self.ptr
     }
 
+    #[doc = "Clock Operation Mode Control Register"]
     #[inline(always)]
     pub const fn cmc(&self) -> &'static crate::common::Reg<self::Cmc_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Sub-clock Oscillator Margin Check Register"]
     #[inline(always)]
     pub const fn somrg(&self) -> &'static crate::common::Reg<self::Somrg_SPEC, crate::common::RW> {
         unsafe {
@@ -52,6 +54,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Middle-speed On-chip Oscillator Trimming Register"]
     #[inline(always)]
     pub const fn miotrm(
         &self,
@@ -63,6 +66,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Low-speed On-chip Oscillator Trimming Register"]
     #[inline(always)]
     pub const fn liotrm(
         &self,
@@ -74,6 +78,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "High-speed On-chip Oscillator Control Register"]
     #[inline(always)]
     pub const fn hococr(
         &self,
@@ -85,6 +90,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Middle-speed On-chip Oscillator Control Register"]
     #[inline(always)]
     pub const fn mococr(
         &self,
@@ -96,6 +102,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Low-speed On-chip Oscillator Control Register"]
     #[inline(always)]
     pub const fn lococr(
         &self,
@@ -107,6 +114,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Main Clock Oscillator Control Register"]
     #[inline(always)]
     pub const fn mosccr(
         &self,
@@ -118,6 +126,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Sub-clock Oscillator Control Register"]
     #[inline(always)]
     pub const fn sosccr(
         &self,
@@ -129,6 +138,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Oscillation Stabilization Time Counter Status Register"]
     #[inline(always)]
     pub const fn ostc(&self) -> &'static crate::common::Reg<self::Ostc_SPEC, crate::common::R> {
         unsafe {
@@ -138,6 +148,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Oscillation Stabilization Time Select Register"]
     #[inline(always)]
     pub const fn osts(&self) -> &'static crate::common::Reg<self::Osts_SPEC, crate::common::RW> {
         unsafe {
@@ -147,6 +158,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Oscillation Stabilization Flag Register"]
     #[inline(always)]
     pub const fn oscsf(&self) -> &'static crate::common::Reg<self::Oscsf_SPEC, crate::common::R> {
         unsafe {
@@ -156,6 +168,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "High-speed On-chip Oscillator Frequency Select Register"]
     #[inline(always)]
     pub const fn hocodiv(
         &self,
@@ -167,6 +180,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Middle-speed On-chip Oscillator Frequency Select Register"]
     #[inline(always)]
     pub const fn mocodiv(
         &self,
@@ -178,6 +192,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "MOSC Clock Division Register"]
     #[inline(always)]
     pub const fn moscdiv(
         &self,
@@ -189,6 +204,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "FOCO Clock Source Control Register"]
     #[inline(always)]
     pub const fn focoscr(
         &self,
@@ -200,6 +216,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "FMAIN Clock Source Control Register"]
     #[inline(always)]
     pub const fn fmainscr(
         &self,
@@ -211,6 +228,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "FSUB Clock Source Control Register"]
     #[inline(always)]
     pub const fn fsubscr(
         &self,
@@ -222,6 +240,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "ICLK Clock Source Control Register"]
     #[inline(always)]
     pub const fn iclkscr(
         &self,
@@ -233,6 +252,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Subsystem Clock Supply Mode Control Register"]
     #[inline(always)]
     pub const fn osmc(&self) -> &'static crate::common::Reg<self::Osmc_SPEC, crate::common::RW> {
         unsafe {
@@ -242,6 +262,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Reset Status Flag Register"]
     #[inline(always)]
     pub const fn resf(&self) -> &'static crate::common::Reg<self::Resf_SPEC, crate::common::R> {
         unsafe {
@@ -251,6 +272,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Power-On Reset Status Register"]
     #[inline(always)]
     pub const fn porsr(&self) -> &'static crate::common::Reg<self::Porsr_SPEC, crate::common::RW> {
         unsafe {
@@ -260,6 +282,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Voltage Monitor 1 Circuit Control Register"]
     #[inline(always)]
     pub const fn lvd1cr(
         &self,
@@ -271,6 +294,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Voltage Monitor 1 Circuit Mask Register"]
     #[inline(always)]
     pub const fn lvd1mkr(
         &self,
@@ -282,6 +306,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Voltage Monitor 1 Circuit Status Register"]
     #[inline(always)]
     pub const fn lvd1sr(
         &self,
@@ -293,6 +318,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Standby Control Register"]
     #[inline(always)]
     pub const fn sbycr(&self) -> &'static crate::common::Reg<self::Sbycr_SPEC, crate::common::RW> {
         unsafe {
@@ -302,6 +328,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Power Save Memory Control Register"]
     #[inline(always)]
     pub const fn psmcr(&self) -> &'static crate::common::Reg<self::Psmcr_SPEC, crate::common::RW> {
         unsafe {
@@ -311,6 +338,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "System Control OCD Control Register"]
     #[inline(always)]
     pub const fn syocdcr(
         &self,
@@ -322,6 +350,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Protect Register"]
     #[inline(always)]
     pub const fn prcr(&self) -> &'static crate::common::Reg<self::Prcr_SPEC, crate::common::RW> {
         unsafe {
@@ -331,6 +360,7 @@ impl super::Sysc {
         }
     }
 
+    #[doc = "Module Stop Control Register A"]
     #[inline(always)]
     pub const fn mstpcra(
         &self,
@@ -349,9 +379,11 @@ impl crate::sealed::RegSpec for Cmc_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Clock Operation Mode Control Register"]
 pub type Cmc = crate::RegValueT<Cmc_SPEC>;
 
 impl Cmc {
+    #[doc = "Main Clock Oscillator Drive Capability Switching"]
     #[inline(always)]
     pub fn modrv(
         self,
@@ -377,6 +409,7 @@ impl Cmc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Sub-Clock Oscillator Drive Capability Switching"]
     #[inline(always)]
     pub fn sodrv(
         self,
@@ -402,6 +435,7 @@ impl Cmc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Selecting Clock Oscillator"]
     #[inline(always)]
     pub fn xtsel(
         self,
@@ -427,6 +461,7 @@ impl Cmc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Sub Clock Oscillator Switching"]
     #[inline(always)]
     pub fn sosel(
         self,
@@ -452,6 +487,7 @@ impl Cmc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Main Clock Oscillator Switching"]
     #[inline(always)]
     pub fn mosel(
         self,
@@ -489,46 +525,59 @@ pub mod cmc {
     pub struct Modrv_SPEC;
     pub type Modrv = crate::EnumBitfieldStruct<u8, Modrv_SPEC>;
     impl Modrv {
+        #[doc = "1 MHz to 10 MHz"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "10 MHz to 20 MHz"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sodrv_SPEC;
     pub type Sodrv = crate::EnumBitfieldStruct<u8, Sodrv_SPEC>;
     impl Sodrv {
+        #[doc = "Low Power Mode 1"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Normal Mode"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Low Power Mode 2"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Low Power Mode 3"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Xtsel_SPEC;
     pub type Xtsel = crate::EnumBitfieldStruct<u8, Xtsel_SPEC>;
     impl Xtsel {
+        #[doc = "Select MOSEL Contents"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Select SOSEL Contents"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sosel_SPEC;
     pub type Sosel = crate::EnumBitfieldStruct<u8, Sosel_SPEC>;
     impl Sosel {
+        #[doc = "Port mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Resonator"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mosel_SPEC;
     pub type Mosel = crate::EnumBitfieldStruct<u8, Mosel_SPEC>;
     impl Mosel {
+        #[doc = "Resonator"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "External clock input mode"]
         pub const _11: Self = Self::new(3);
 
+        #[doc = "Port mode"]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -539,9 +588,11 @@ impl crate::sealed::RegSpec for Somrg_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Sub-clock Oscillator Margin Check Register"]
 pub type Somrg = crate::RegValueT<Somrg_SPEC>;
 
 impl Somrg {
+    #[doc = "Sub Clock Oscillator Margin Check Switching"]
     #[inline(always)]
     pub fn soscmrg(
         self,
@@ -579,12 +630,16 @@ pub mod somrg {
     pub struct Soscmrg_SPEC;
     pub type Soscmrg = crate::EnumBitfieldStruct<u8, Soscmrg_SPEC>;
     impl Soscmrg {
+        #[doc = "Normal Current"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Lower Margin check"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Upper Margin check"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Setting prohibited"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -595,9 +650,11 @@ impl crate::sealed::RegSpec for Miotrm_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Middle-speed On-chip Oscillator Trimming Register"]
 pub type Miotrm = crate::RegValueT<Miotrm_SPEC>;
 
 impl Miotrm {
+    #[doc = "MOCO User Trimming"]
     #[inline(always)]
     pub fn miotrm(
         self,
@@ -619,9 +676,11 @@ impl crate::sealed::RegSpec for Liotrm_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Low-speed On-chip Oscillator Trimming Register"]
 pub type Liotrm = crate::RegValueT<Liotrm_SPEC>;
 
 impl Liotrm {
+    #[doc = "LOCO User Trimming"]
     #[inline(always)]
     pub fn liotrm(
         self,
@@ -643,9 +702,11 @@ impl crate::sealed::RegSpec for Hococr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High-speed On-chip Oscillator Control Register"]
 pub type Hococr = crate::RegValueT<Hococr_SPEC>;
 
 impl Hococr {
+    #[doc = "HOCO Stop"]
     #[inline(always)]
     pub fn hcstp(
         self,
@@ -683,8 +744,10 @@ pub mod hococr {
     pub struct Hcstp_SPEC;
     pub type Hcstp = crate::EnumBitfieldStruct<u8, Hcstp_SPEC>;
     impl Hcstp {
+        #[doc = "Operate the HOCO clock"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stop the HOCO clock"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -695,9 +758,11 @@ impl crate::sealed::RegSpec for Mococr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Middle-speed On-chip Oscillator Control Register"]
 pub type Mococr = crate::RegValueT<Mococr_SPEC>;
 
 impl Mococr {
+    #[doc = "MOCO Stop"]
     #[inline(always)]
     pub fn mcstp(
         self,
@@ -735,8 +800,10 @@ pub mod mococr {
     pub struct Mcstp_SPEC;
     pub type Mcstp = crate::EnumBitfieldStruct<u8, Mcstp_SPEC>;
     impl Mcstp {
+        #[doc = "MOCO clock is operating"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "MOCO clock is stopped"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -747,9 +814,11 @@ impl crate::sealed::RegSpec for Lococr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Low-speed On-chip Oscillator Control Register"]
 pub type Lococr = crate::RegValueT<Lococr_SPEC>;
 
 impl Lococr {
+    #[doc = "LOCO Stop"]
     #[inline(always)]
     pub fn lcstp(
         self,
@@ -787,8 +856,10 @@ pub mod lococr {
     pub struct Lcstp_SPEC;
     pub type Lcstp = crate::EnumBitfieldStruct<u8, Lcstp_SPEC>;
     impl Lcstp {
+        #[doc = "Operate the LOCO clock"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stop the LOCO clock"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -799,9 +870,11 @@ impl crate::sealed::RegSpec for Mosccr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Main Clock Oscillator Control Register"]
 pub type Mosccr = crate::RegValueT<Mosccr_SPEC>;
 
 impl Mosccr {
+    #[doc = "Main Clock Oscillator Stop"]
     #[inline(always)]
     pub fn mostp(
         self,
@@ -839,8 +912,10 @@ pub mod mosccr {
     pub struct Mostp_SPEC;
     pub type Mostp = crate::EnumBitfieldStruct<u8, Mostp_SPEC>;
     impl Mostp {
+        #[doc = "Operate the main clock oscillator"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stop the main clock oscillator"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -851,9 +926,11 @@ impl crate::sealed::RegSpec for Sosccr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Sub-clock Oscillator Control Register"]
 pub type Sosccr = crate::RegValueT<Sosccr_SPEC>;
 
 impl Sosccr {
+    #[doc = "Sub Clock Oscillator Stop"]
     #[inline(always)]
     pub fn sostp(
         self,
@@ -891,8 +968,10 @@ pub mod sosccr {
     pub struct Sostp_SPEC;
     pub type Sostp = crate::EnumBitfieldStruct<u8, Sostp_SPEC>;
     impl Sostp {
+        #[doc = "Operate the sub-clock oscillator"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stop the sub-clock oscillator"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -903,9 +982,11 @@ impl crate::sealed::RegSpec for Ostc_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Oscillation Stabilization Time Counter Status Register"]
 pub type Ostc = crate::RegValueT<Ostc_SPEC>;
 
 impl Ostc {
+    #[doc = "Selection of the Oscillation Stabilization Time"]
     #[inline(always)]
     pub fn most(
         self,
@@ -943,22 +1024,31 @@ pub mod ostc {
     pub struct Most_SPEC;
     pub type Most = crate::EnumBitfieldStruct<u8, Most_SPEC>;
     impl Most {
+        #[doc = "Less than 28/fMOSC"]
         pub const _0_X_00: Self = Self::new(0);
 
+        #[doc = "28/fMOSC min"]
         pub const _0_X_80: Self = Self::new(128);
 
+        #[doc = "29/fMOSC min"]
         pub const _0_X_C_0: Self = Self::new(192);
 
+        #[doc = "210/fMOSC min"]
         pub const _0_X_E_0: Self = Self::new(224);
 
+        #[doc = "211/fMOSC min"]
         pub const _0_X_F_0: Self = Self::new(240);
 
+        #[doc = "213/fMOSC min"]
         pub const _0_X_F_8: Self = Self::new(248);
 
+        #[doc = "215/fMOSC min"]
         pub const _0_X_FC: Self = Self::new(252);
 
+        #[doc = "217/fMOSC min"]
         pub const _0_X_FE: Self = Self::new(254);
 
+        #[doc = "218/fMOSC min"]
         pub const _0_X_FF: Self = Self::new(255);
     }
 }
@@ -969,9 +1059,11 @@ impl crate::sealed::RegSpec for Osts_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Oscillation Stabilization Time Select Register"]
 pub type Osts = crate::RegValueT<Osts_SPEC>;
 
 impl Osts {
+    #[doc = "Selection of the Oscillation Stabilization Time"]
     #[inline(always)]
     pub fn ostsb(
         self,
@@ -1009,20 +1101,28 @@ pub mod osts {
     pub struct Ostsb_SPEC;
     pub type Ostsb = crate::EnumBitfieldStruct<u8, Ostsb_SPEC>;
     impl Ostsb {
+        #[doc = "28/fMOSC"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "29/fMOSC"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "210/fMOSC"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "211/fMOSC"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "213/fMOSC"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "215/fMOSC"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "217/fMOSC"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "218/fMOSC"]
         pub const _111: Self = Self::new(7);
     }
 }
@@ -1033,9 +1133,11 @@ impl crate::sealed::RegSpec for Oscsf_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Oscillation Stabilization Flag Register"]
 pub type Oscsf = crate::RegValueT<Oscsf_SPEC>;
 
 impl Oscsf {
+    #[doc = "HOCO Clock Oscillation Stabilization Flag"]
     #[inline(always)]
     pub fn hocosf(
         self,
@@ -1073,8 +1175,10 @@ pub mod oscsf {
     pub struct Hocosf_SPEC;
     pub type Hocosf = crate::EnumBitfieldStruct<u8, Hocosf_SPEC>;
     impl Hocosf {
+        #[doc = "The HOCO clock is being started at high speed and waiting for the precision of its oscillation to become stable is in progress."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The HOCO clock is operating with high precision."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1085,9 +1189,11 @@ impl crate::sealed::RegSpec for Hocodiv_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High-speed On-chip Oscillator Frequency Select Register"]
 pub type Hocodiv = crate::RegValueT<Hocodiv_SPEC>;
 
 impl Hocodiv {
+    #[doc = "High-speed On-chip Oscillator Clock Division Ratio"]
     #[inline(always)]
     pub fn div(
         self,
@@ -1125,18 +1231,25 @@ pub mod hocodiv {
     pub struct Div_SPEC;
     pub type Div = crate::EnumBitfieldStruct<u8, Div_SPEC>;
     impl Div {
+        #[doc = "× 1/1"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "× 1/2"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "× 1/4"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "× 1/8"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "× 1/16"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "× 1/32"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -1147,9 +1260,11 @@ impl crate::sealed::RegSpec for Mocodiv_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Middle-speed On-chip Oscillator Frequency Select Register"]
 pub type Mocodiv = crate::RegValueT<Mocodiv_SPEC>;
 
 impl Mocodiv {
+    #[doc = "Selection of the Middle-speed On-chip Oscillator Clock Frequency"]
     #[inline(always)]
     pub fn div(
         self,
@@ -1187,12 +1302,16 @@ pub mod mocodiv {
     pub struct Div_SPEC;
     pub type Div = crate::EnumBitfieldStruct<u8, Div_SPEC>;
     impl Div {
+        #[doc = "× 1/1"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "× 1/2"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "× 1/4"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -1203,9 +1322,11 @@ impl crate::sealed::RegSpec for Moscdiv_SPEC {
     type DataType = u8;
 }
 
+#[doc = "MOSC Clock Division Register"]
 pub type Moscdiv = crate::RegValueT<Moscdiv_SPEC>;
 
 impl Moscdiv {
+    #[doc = "Selection Division Ratio for the MOSC Clock"]
     #[inline(always)]
     pub fn div(
         self,
@@ -1243,16 +1364,22 @@ pub mod moscdiv {
     pub struct Div_SPEC;
     pub type Div = crate::EnumBitfieldStruct<u8, Div_SPEC>;
     impl Div {
+        #[doc = "× 1/1"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "× 1/2"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "× 1/4"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "× 1/8"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "× 1/16"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -1263,9 +1390,11 @@ impl crate::sealed::RegSpec for Focoscr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "FOCO Clock Source Control Register"]
 pub type Focoscr = crate::RegValueT<Focoscr_SPEC>;
 
 impl Focoscr {
+    #[doc = "FOCO Clock Source Select"]
     #[inline(always)]
     pub fn cksel(
         self,
@@ -1291,6 +1420,7 @@ impl Focoscr {
         >::from_register(self, 0)
     }
 
+    #[doc = "FOCO Clock Source Status"]
     #[inline(always)]
     pub fn ckst(
         self,
@@ -1328,16 +1458,20 @@ pub mod focoscr {
     pub struct Cksel_SPEC;
     pub type Cksel = crate::EnumBitfieldStruct<u8, Cksel_SPEC>;
     impl Cksel {
+        #[doc = "HOCO"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "MOCO"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ckst_SPEC;
     pub type Ckst = crate::EnumBitfieldStruct<u8, Ckst_SPEC>;
     impl Ckst {
+        #[doc = "HOCO"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "MOCO"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1348,9 +1482,11 @@ impl crate::sealed::RegSpec for Fmainscr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "FMAIN Clock Source Control Register"]
 pub type Fmainscr = crate::RegValueT<Fmainscr_SPEC>;
 
 impl Fmainscr {
+    #[doc = "FMAIN Clock Source Select"]
     #[inline(always)]
     pub fn cksel(
         self,
@@ -1376,6 +1512,7 @@ impl Fmainscr {
         >::from_register(self, 0)
     }
 
+    #[doc = "FMAIN Clock Source Status"]
     #[inline(always)]
     pub fn ckst(
         self,
@@ -1413,16 +1550,20 @@ pub mod fmainscr {
     pub struct Cksel_SPEC;
     pub type Cksel = crate::EnumBitfieldStruct<u8, Cksel_SPEC>;
     impl Cksel {
+        #[doc = "FOCO"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "MOSC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ckst_SPEC;
     pub type Ckst = crate::EnumBitfieldStruct<u8, Ckst_SPEC>;
     impl Ckst {
+        #[doc = "FOCO"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "MOSC"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1433,9 +1574,11 @@ impl crate::sealed::RegSpec for Fsubscr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "FSUB Clock Source Control Register"]
 pub type Fsubscr = crate::RegValueT<Fsubscr_SPEC>;
 
 impl Fsubscr {
+    #[doc = "FSUB Clock Source Select"]
     #[inline(always)]
     pub fn cksel(
         self,
@@ -1473,8 +1616,10 @@ pub mod fsubscr {
     pub struct Cksel_SPEC;
     pub type Cksel = crate::EnumBitfieldStruct<u8, Cksel_SPEC>;
     impl Cksel {
+        #[doc = "SOSC"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "LOCO"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1485,9 +1630,11 @@ impl crate::sealed::RegSpec for Iclkscr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "ICLK Clock Source Control Register"]
 pub type Iclkscr = crate::RegValueT<Iclkscr_SPEC>;
 
 impl Iclkscr {
+    #[doc = "ICLK Clock Source Select"]
     #[inline(always)]
     pub fn cksel(
         self,
@@ -1513,6 +1660,7 @@ impl Iclkscr {
         >::from_register(self, 0)
     }
 
+    #[doc = "ICLK Clock Source Status"]
     #[inline(always)]
     pub fn ckst(
         self,
@@ -1550,16 +1698,20 @@ pub mod iclkscr {
     pub struct Cksel_SPEC;
     pub type Cksel = crate::EnumBitfieldStruct<u8, Cksel_SPEC>;
     impl Cksel {
+        #[doc = "FMAIN"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FSUB"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ckst_SPEC;
     pub type Ckst = crate::EnumBitfieldStruct<u8, Ckst_SPEC>;
     impl Ckst {
+        #[doc = "FMAIN"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FSUB"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1570,9 +1722,11 @@ impl crate::sealed::RegSpec for Osmc_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Subsystem Clock Supply Mode Control Register"]
 pub type Osmc = crate::RegValueT<Osmc_SPEC>;
 
 impl Osmc {
+    #[doc = "Selection of the Operating clock source for the Realtime Clock, 32-bit Interval Timer, Serial Interface UARTA"]
     #[inline(always)]
     pub fn wutmmck0(
         self,
@@ -1610,8 +1764,10 @@ pub mod osmc {
     pub struct Wutmmck0_SPEC;
     pub type Wutmmck0 = crate::EnumBitfieldStruct<u8, Wutmmck0_SPEC>;
     impl Wutmmck0 {
+        #[doc = "SOSC"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "LOCO"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1622,9 +1778,11 @@ impl crate::sealed::RegSpec for Resf_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Reset Status Flag Register"]
 pub type Resf = crate::RegValueT<Resf_SPEC>;
 
 impl Resf {
+    #[doc = "Internal Reset Request by Voltage Detector (LVD0 or LVD1)"]
     #[inline(always)]
     pub fn lvirf(
         self,
@@ -1650,6 +1808,7 @@ impl Resf {
         >::from_register(self, 0)
     }
 
+    #[doc = "Internal Reset Request by RAM Parity Error"]
     #[inline(always)]
     pub fn rperf(
         self,
@@ -1675,6 +1834,7 @@ impl Resf {
         >::from_register(self, 0)
     }
 
+    #[doc = "Internal Reset Request by Independent Watchdog Timer (IWDT)"]
     #[inline(always)]
     pub fn iwdtrf(
         self,
@@ -1700,6 +1860,7 @@ impl Resf {
         >::from_register(self, 0)
     }
 
+    #[doc = "Internal Reset Request by Software Reset"]
     #[inline(always)]
     pub fn swrf(
         self,
@@ -1737,32 +1898,40 @@ pub mod resf {
     pub struct Lvirf_SPEC;
     pub type Lvirf = crate::EnumBitfieldStruct<u8, Lvirf_SPEC>;
     impl Lvirf {
+        #[doc = "Internal reset request is not generated, or the RESF register is cleared."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Internal reset request is generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rperf_SPEC;
     pub type Rperf = crate::EnumBitfieldStruct<u8, Rperf_SPEC>;
     impl Rperf {
+        #[doc = "Internal reset request is not generated, or the RESF register is cleared."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Internal reset request is generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Iwdtrf_SPEC;
     pub type Iwdtrf = crate::EnumBitfieldStruct<u8, Iwdtrf_SPEC>;
     impl Iwdtrf {
+        #[doc = "Internal reset request is not generated, or the RESF register is cleared."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Internal reset request is generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Swrf_SPEC;
     pub type Swrf = crate::EnumBitfieldStruct<u8, Swrf_SPEC>;
     impl Swrf {
+        #[doc = "Internal reset request is not generated, or the RESF register is cleared."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Internal reset request is generated."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1773,9 +1942,11 @@ impl crate::sealed::RegSpec for Porsr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Power-On Reset Status Register"]
 pub type Porsr = crate::RegValueT<Porsr_SPEC>;
 
 impl Porsr {
+    #[doc = "Checking Occurrence of Power-on Reset"]
     #[inline(always)]
     pub fn porf(
         self,
@@ -1813,8 +1984,10 @@ pub mod porsr {
     pub struct Porf_SPEC;
     pub type Porf = crate::EnumBitfieldStruct<u8, Porf_SPEC>;
     impl Porf {
+        #[doc = "A value 1 has not been written, or a power-on reset has occurred."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "No power-on reset has occurred."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1825,9 +1998,11 @@ impl crate::sealed::RegSpec for Lvd1Cr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Voltage Monitor 1 Circuit Control Register"]
 pub type Lvd1Cr = crate::RegValueT<Lvd1Cr_SPEC>;
 
 impl Lvd1Cr {
+    #[doc = "Voltage Detection 1 Level Select"]
     #[inline(always)]
     pub fn lvd1v(
         self,
@@ -1853,6 +2028,7 @@ impl Lvd1Cr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Voltage Monitor 1 Interrupt Type Select"]
     #[inline(always)]
     pub fn irqsel(
         self,
@@ -1878,6 +2054,7 @@ impl Lvd1Cr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Operation mode of LVD1"]
     #[inline(always)]
     pub fn lvd1sel(
         self,
@@ -1903,6 +2080,7 @@ impl Lvd1Cr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Enabling Operation of LVD1"]
     #[inline(always)]
     pub fn lvd1en(
         self,
@@ -1940,66 +2118,91 @@ pub mod lvd1cr {
     pub struct Lvd1V_SPEC;
     pub type Lvd1V = crate::EnumBitfieldStruct<u8, Lvd1V_SPEC>;
     impl Lvd1V {
+        #[doc = "Vdet1_0"]
         pub const _0_X_0_E: Self = Self::new(14);
 
+        #[doc = "Vdet1_1"]
         pub const _0_X_0_F: Self = Self::new(15);
 
+        #[doc = "Vdet1_2"]
         pub const _0_X_10: Self = Self::new(16);
 
+        #[doc = "Vdet1_3"]
         pub const _0_X_11: Self = Self::new(17);
 
+        #[doc = "Vdet1_4"]
         pub const _0_X_12: Self = Self::new(18);
 
+        #[doc = "Vdet1_5"]
         pub const _0_X_13: Self = Self::new(19);
 
+        #[doc = "Vdet1_6"]
         pub const _0_X_14: Self = Self::new(20);
 
+        #[doc = "Vdet1_7"]
         pub const _0_X_15: Self = Self::new(21);
 
+        #[doc = "Vdet1_8"]
         pub const _0_X_16: Self = Self::new(22);
 
+        #[doc = "Vdet1_9"]
         pub const _0_X_17: Self = Self::new(23);
 
+        #[doc = "Vdet1_A"]
         pub const _0_X_18: Self = Self::new(24);
 
+        #[doc = "Vdet1_B"]
         pub const _0_X_19: Self = Self::new(25);
 
+        #[doc = "Vdet1_C"]
         pub const _0_X_1_A: Self = Self::new(26);
 
+        #[doc = "Vdet1_D"]
         pub const _0_X_1_B: Self = Self::new(27);
 
+        #[doc = "Vdet1_E"]
         pub const _0_X_1_C: Self = Self::new(28);
 
+        #[doc = "Vdet1_F"]
         pub const _0_X_1_D: Self = Self::new(29);
 
+        #[doc = "Vdet1_10"]
         pub const _0_X_1_E: Self = Self::new(30);
 
+        #[doc = "Vdet1_11"]
         pub const _0_X_1_F: Self = Self::new(31);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Irqsel_SPEC;
     pub type Irqsel = crate::EnumBitfieldStruct<u8, Irqsel_SPEC>;
     impl Irqsel {
+        #[doc = "Non-maskable interrupt"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Maskable interrupt"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lvd1Sel_SPEC;
     pub type Lvd1Sel = crate::EnumBitfieldStruct<u8, Lvd1Sel_SPEC>;
     impl Lvd1Sel {
+        #[doc = "Interrupt mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Reset mode"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lvd1En_SPEC;
     pub type Lvd1En = crate::EnumBitfieldStruct<u8, Lvd1En_SPEC>;
     impl Lvd1En {
+        #[doc = "Operation stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Operation enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2010,9 +2213,11 @@ impl crate::sealed::RegSpec for Lvd1Mkr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Voltage Monitor 1 Circuit Mask Register"]
 pub type Lvd1Mkr = crate::RegValueT<Lvd1Mkr_SPEC>;
 
 impl Lvd1Mkr {
+    #[doc = "Specification of Whether to Enable or Disable Rewriting th LVD1CR Register"]
     #[inline(always)]
     pub fn mk(
         self,
@@ -2050,8 +2255,10 @@ pub mod lvd1mkr {
     pub struct Mk_SPEC;
     pub type Mk = crate::EnumBitfieldStruct<u8, Mk_SPEC>;
     impl Mk {
+        #[doc = "Rewriting of the LVD1CR register is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Rewriting of the LVD1CR register is enabled (reset and interrupt generation by LVD1 are masked)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2062,9 +2269,11 @@ impl crate::sealed::RegSpec for Lvd1Sr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Voltage Monitor 1 Circuit Status Register"]
 pub type Lvd1Sr = crate::RegValueT<Lvd1Sr_SPEC>;
 
 impl Lvd1Sr {
+    #[doc = "Voltage Monitor 1 Voltage Variation Detection Flag"]
     #[inline(always)]
     pub fn det(
         self,
@@ -2090,6 +2299,7 @@ impl Lvd1Sr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Voltage Monitor 1 Signal Monitor Flag"]
     #[inline(always)]
     pub fn mon(
         self,
@@ -2127,16 +2337,20 @@ pub mod lvd1sr {
     pub struct Det_SPEC;
     pub type Det = crate::EnumBitfieldStruct<u8, Det_SPEC>;
     impl Det {
+        #[doc = "Not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Vdet1 crossing is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mon_SPEC;
     pub type Mon = crate::EnumBitfieldStruct<u8, Mon_SPEC>;
     impl Mon {
+        #[doc = "VCC < Vdet1"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "VCC ≥ Vdet1 or MON is disabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2147,9 +2361,11 @@ impl crate::sealed::RegSpec for Sbycr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Standby Control Register"]
 pub type Sbycr = crate::RegValueT<Sbycr_SPEC>;
 
 impl Sbycr {
+    #[doc = "Flash Mode in Sleep Mode or in Snooze Mode"]
     #[inline(always)]
     pub fn flstp(
         self,
@@ -2175,6 +2391,7 @@ impl Sbycr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Setting for Starting the High-speed On-chip Oscillator at the times of release from Software Standby Mode and of Transitions to Snooze Mode"]
     #[inline(always)]
     pub fn fwkup(
         self,
@@ -2200,6 +2417,7 @@ impl Sbycr {
         >::from_register(self, 0)
     }
 
+    #[doc = "SOSC Setting in Software Standby Mode or in Snooze Mode"]
     #[inline(always)]
     pub fn rtclpc(
         self,
@@ -2225,6 +2443,7 @@ impl Sbycr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Software Standby Mode Select"]
     #[inline(always)]
     pub fn ssby(
         self,
@@ -2262,32 +2481,40 @@ pub mod sbycr {
     pub struct Flstp_SPEC;
     pub type Flstp = crate::EnumBitfieldStruct<u8, Flstp_SPEC>;
     impl Flstp {
+        #[doc = "Flash active"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Flash stop"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Fwkup_SPEC;
     pub type Fwkup = crate::EnumBitfieldStruct<u8, Fwkup_SPEC>;
     impl Fwkup {
+        #[doc = "Starting of the high-speed on-chip oscillator is at normal speed"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Starting of the high-speed on-chip oscillator is at high speed"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rtclpc_SPEC;
     pub type Rtclpc = crate::EnumBitfieldStruct<u8, Rtclpc_SPEC>;
     impl Rtclpc {
+        #[doc = "Enables supply of SOSC clock to peripheral functions"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stops supply SOSC clock to peripheral functions other than the Realtime clock"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ssby_SPEC;
     pub type Ssby = crate::EnumBitfieldStruct<u8, Ssby_SPEC>;
     impl Ssby {
+        #[doc = "Sleep mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Software Standby mode."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2298,9 +2525,11 @@ impl crate::sealed::RegSpec for Psmcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Power Save Memory Control Register"]
 pub type Psmcr = crate::RegValueT<Psmcr_SPEC>;
 
 impl Psmcr {
+    #[doc = "Operating Mode of the RAM"]
     #[inline(always)]
     pub fn ramsd(
         self,
@@ -2338,12 +2567,16 @@ pub mod psmcr {
     pub struct Ramsd_SPEC;
     pub type Ramsd = crate::EnumBitfieldStruct<u8, Ramsd_SPEC>;
     impl Ramsd {
+        #[doc = "Normal mode (continues to operate)"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Setting prohibited"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Standby mode"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Shutdown mode"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -2354,9 +2587,11 @@ impl crate::sealed::RegSpec for Syocdcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "System Control OCD Control Register"]
 pub type Syocdcr = crate::RegValueT<Syocdcr_SPEC>;
 
 impl Syocdcr {
+    #[doc = "Debugger Enable bit"]
     #[inline(always)]
     pub fn dbgen(
         self,
@@ -2394,8 +2629,10 @@ pub mod syocdcr {
     pub struct Dbgen_SPEC;
     pub type Dbgen = crate::EnumBitfieldStruct<u8, Dbgen_SPEC>;
     impl Dbgen {
+        #[doc = "On-chip debugger is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "On-chip debugger is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2406,9 +2643,11 @@ impl crate::sealed::RegSpec for Prcr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Protect Register"]
 pub type Prcr = crate::RegValueT<Prcr_SPEC>;
 
 impl Prcr {
+    #[doc = "Enable writing to the registers related to the clock generation circuit"]
     #[inline(always)]
     pub fn prc0(
         self,
@@ -2434,6 +2673,7 @@ impl Prcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Enable writing to the registers related to the low power modes"]
     #[inline(always)]
     pub fn prc1(
         self,
@@ -2459,6 +2699,7 @@ impl Prcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Enable writing to the registers related to the LVD"]
     #[inline(always)]
     pub fn prc3(
         self,
@@ -2484,6 +2725,7 @@ impl Prcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "PRC Key Code"]
     #[inline(always)]
     pub fn prkey(
         self,
@@ -2503,24 +2745,30 @@ pub mod prcr {
     pub struct Prc0_SPEC;
     pub type Prc0 = crate::EnumBitfieldStruct<u8, Prc0_SPEC>;
     impl Prc0 {
+        #[doc = "Disable writes"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable writes"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Prc1_SPEC;
     pub type Prc1 = crate::EnumBitfieldStruct<u8, Prc1_SPEC>;
     impl Prc1 {
+        #[doc = "Disable writes"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable writes"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Prc3_SPEC;
     pub type Prc3 = crate::EnumBitfieldStruct<u8, Prc3_SPEC>;
     impl Prc3 {
+        #[doc = "Disable writes"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable writes"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2531,9 +2779,11 @@ impl crate::sealed::RegSpec for Mstpcra_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Module Stop Control Register A"]
 pub type Mstpcra = crate::RegValueT<Mstpcra_SPEC>;
 
 impl Mstpcra {
+    #[doc = "DTC Module Stop"]
     #[inline(always)]
     pub fn mstpa22(
         self,
@@ -2571,8 +2821,10 @@ pub mod mstpcra {
     pub struct Mstpa22_SPEC;
     pub type Mstpa22 = crate::EnumBitfieldStruct<u8, Mstpa22_SPEC>;
     impl Mstpa22 {
+        #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enter the module-stop state"]
         pub const _1: Self = Self::new(1);
     }
 }

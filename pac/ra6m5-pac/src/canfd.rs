@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.30.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:20:54 +0000
+// Generated from SVD 1.41.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:06 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Canfd {
         self.ptr
     }
 
+    #[doc = "Channel %s Nominal Bitrate Configuration Register"]
     #[inline(always)]
     pub const fn cfdcncfg(
         &self,
@@ -46,7 +47,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x0usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdc0ncfg(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcncfg_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcncfg_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdc1ncfg(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcncfg_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcncfg_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x10usize),
+            )
+        }
+    }
 
+    #[doc = "Channel %s Control Registers"]
     #[inline(always)]
     pub const fn cfdcctr(
         &self,
@@ -59,7 +81,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x4usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdc0ctr(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdc1ctr(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x14usize),
+            )
+        }
+    }
 
+    #[doc = "Channel %s Status Registers"]
     #[inline(always)]
     pub const fn cfdcsts(
         &self,
@@ -72,7 +115,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x8usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdc0sts(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdc1sts(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18usize),
+            )
+        }
+    }
 
+    #[doc = "Channel %s Error Flag Registers"]
     #[inline(always)]
     pub const fn cfdcerfl(
         &self,
@@ -85,7 +149,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xcusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdc0erfl(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcerfl_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcerfl_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdc1erfl(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcerfl_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcerfl_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1cusize),
+            )
+        }
+    }
 
+    #[doc = "Global Configuration Register"]
     #[inline(always)]
     pub const fn cfdgcfg(
         &self,
@@ -97,6 +182,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "Global Control Register"]
     #[inline(always)]
     pub const fn cfdgctr(
         &self,
@@ -108,6 +194,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "Global Status Register"]
     #[inline(always)]
     pub const fn cfdgsts(
         &self,
@@ -119,6 +206,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "Global Error Flag Register"]
     #[inline(always)]
     pub const fn cfdgerfl(
         &self,
@@ -130,6 +218,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "Global Timestamp Counter Register"]
     #[inline(always)]
     pub const fn cfdgtsc(
         &self,
@@ -141,6 +230,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "Global Acceptance Filter List Entry Control Register"]
     #[inline(always)]
     pub const fn cfdgaflectr(
         &self,
@@ -152,6 +242,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "Global Acceptance Filter List Configuration Register 0"]
     #[inline(always)]
     pub const fn cfdgaflcfg0(
         &self,
@@ -163,6 +254,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "RX Message Buffer Number Register"]
     #[inline(always)]
     pub const fn cfdrmnb(
         &self,
@@ -174,6 +266,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "RX Message Buffer New Data Register 0"]
     #[inline(always)]
     pub const fn cfdrmnd0(
         &self,
@@ -185,6 +278,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "RX FIFO Configuration/Control Registers %s"]
     #[inline(always)]
     pub const fn cfdrfcc(
         &self,
@@ -197,7 +291,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xc0usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfcc0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfcc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfcc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xc0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfcc1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfcc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfcc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xc4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfcc2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfcc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfcc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xc8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfcc3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfcc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfcc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xccusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfcc4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfcc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfcc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xd0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfcc5(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfcc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfcc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xd4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfcc6(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfcc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfcc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xd8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfcc7(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfcc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfcc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xdcusize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Status Registers %s"]
     #[inline(always)]
     pub const fn cfdrfsts(
         &self,
@@ -210,7 +385,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xe0usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfsts0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfsts1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfsts2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfsts3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xecusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfsts4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xf0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfsts5(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xf4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfsts6(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xf8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfsts7(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xfcusize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Pointer Control Registers %s"]
     #[inline(always)]
     pub const fn cfdrfpctr(
         &self,
@@ -223,7 +479,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x100usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfpctr0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfpctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfpctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x100usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfpctr1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfpctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfpctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x104usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfpctr2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfpctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfpctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x108usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfpctr3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfpctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfpctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x10cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfpctr4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfpctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfpctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x110usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfpctr5(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfpctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfpctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x114usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfpctr6(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfpctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfpctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x118usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfpctr7(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfpctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfpctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11cusize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Configuration/Control Registers %s"]
     #[inline(always)]
     pub const fn cfdcfcc(
         &self,
@@ -236,7 +573,68 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x120usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfcc0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfcc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfcc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x120usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfcc1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfcc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfcc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x124usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfcc2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfcc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfcc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x128usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfcc3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfcc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfcc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x12cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfcc4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfcc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfcc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x130usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfcc5(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfcc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfcc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x134usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Configuration/Control Enhancement Registers %s"]
     #[inline(always)]
     pub const fn cfdcfcce(
         &self,
@@ -249,7 +647,68 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x180usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfcce0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfcce_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfcce_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x180usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfcce1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfcce_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfcce_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x184usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfcce2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfcce_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfcce_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x188usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfcce3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfcce_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfcce_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfcce4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfcce_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfcce_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x190usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfcce5(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfcce_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfcce_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x194usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Status Registers %s"]
     #[inline(always)]
     pub const fn cfdcfsts(
         &self,
@@ -262,7 +721,68 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1e0usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfsts0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1e0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfsts1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1e4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfsts2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1e8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfsts3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1ecusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfsts4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1f0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfsts5(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1f4usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Pointer Control Registers %s"]
     #[inline(always)]
     pub const fn cfdcfpctr(
         &self,
@@ -275,7 +795,68 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x240usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfpctr0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfpctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfpctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x240usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfpctr1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfpctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfpctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x244usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfpctr2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfpctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfpctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x248usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfpctr3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfpctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfpctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x24cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfpctr4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfpctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfpctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x250usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfpctr5(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfpctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfpctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x254usize),
+            )
+        }
+    }
 
+    #[doc = "FIFO Empty Status Register"]
     #[inline(always)]
     pub const fn cfdfests(
         &self,
@@ -287,6 +868,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "FIFO Full Status Register"]
     #[inline(always)]
     pub const fn cfdffsts(
         &self,
@@ -298,6 +880,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "FIFO Message Lost Status Register"]
     #[inline(always)]
     pub const fn cfdfmsts(
         &self,
@@ -309,6 +892,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "RX FIFO Interrupt Flag Status Register"]
     #[inline(always)]
     pub const fn cfdrfists(
         &self,
@@ -320,6 +904,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "Common FIFO RX Interrupt Flag Status Register"]
     #[inline(always)]
     pub const fn cfdcfrists(
         &self,
@@ -331,6 +916,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "Common FIFO TX Interrupt Flag Status Register"]
     #[inline(always)]
     pub const fn cfdcftists(
         &self,
@@ -342,6 +928,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "Common FIFO One Frame RX Interrupt Flag Status Register"]
     #[inline(always)]
     pub const fn cfdcfofrists(
         &self,
@@ -353,6 +940,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "Common FIFO One Frame TX Interrupt Flag Status Register"]
     #[inline(always)]
     pub const fn cfdcfoftists(
         &self,
@@ -364,6 +952,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "Common FIFO Message Over Write Status Register"]
     #[inline(always)]
     pub const fn cfdcfmowsts(
         &self,
@@ -375,6 +964,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "FIFO FDC Full Status Register"]
     #[inline(always)]
     pub const fn cfdfffsts(
         &self,
@@ -386,6 +976,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "TX Message Buffer Control Registers %s"]
     #[inline(always)]
     pub const fn cfdtmc(
         &self,
@@ -398,7 +989,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x330usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmc96(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x330usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmc97(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x331usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmc98(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x332usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmc99(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x333usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmc100(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x334usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmc101(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x335usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmc102(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x336usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmc103(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x337usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Status Registers %s"]
     #[inline(always)]
     pub const fn cfdtmsts(
         &self,
@@ -411,7 +1083,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x830usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmsts96(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x830usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmsts97(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x831usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmsts98(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x832usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmsts99(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x833usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmsts100(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x834usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmsts101(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x835usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmsts102(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x836usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmsts103(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x837usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Transmission Request Status Register %s"]
     #[inline(always)]
     pub const fn cfdtmtrsts(
         &self,
@@ -424,7 +1177,48 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xcd0usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmtrsts0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmtrsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmtrsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0xcd0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmtrsts1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmtrsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmtrsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0xcd4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmtrsts2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmtrsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmtrsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0xcd8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmtrsts3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmtrsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmtrsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0xcdcusize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Transmission Abort Request Status Register %s"]
     #[inline(always)]
     pub const fn cfdtmtarsts(
         &self,
@@ -437,7 +1231,48 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xd70usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmtarsts0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmtarsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmtarsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0xd70usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmtarsts1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmtarsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmtarsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0xd74usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmtarsts2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmtarsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmtarsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0xd78usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmtarsts3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmtarsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmtarsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0xd7cusize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Transmission Completion Status Register %s"]
     #[inline(always)]
     pub const fn cfdtmtcsts(
         &self,
@@ -450,7 +1285,48 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xe10usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmtcsts0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmtcsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmtcsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe10usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmtcsts1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmtcsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmtcsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe14usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmtcsts2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmtcsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmtcsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe18usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmtcsts3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmtcsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmtcsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe1cusize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Transmission Abort Status Register %s"]
     #[inline(always)]
     pub const fn cfdtmtasts(
         &self,
@@ -463,7 +1339,48 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xeb0usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmtasts0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmtasts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmtasts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0xeb0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmtasts1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmtasts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmtasts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0xeb4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmtasts2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmtasts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmtasts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0xeb8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmtasts3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmtasts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmtasts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0xebcusize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Interrupt Enable Configuration Register %s"]
     #[inline(always)]
     pub const fn cfdtmiec(
         &self,
@@ -476,7 +1393,48 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xf50usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmiec0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmiec_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmiec_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xf50usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmiec1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmiec_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmiec_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xf54usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmiec2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmiec_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmiec_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xf58usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmiec3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmiec_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmiec_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xf5cusize),
+            )
+        }
+    }
 
+    #[doc = "TX Queue Configuration/Control Registers 0%s"]
     #[inline(always)]
     pub const fn cfdtxqcc0(
         &self,
@@ -489,7 +1447,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1000usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtxqcc00(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqcc0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqcc0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1000usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtxqcc01(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqcc0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqcc0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1004usize),
+            )
+        }
+    }
 
+    #[doc = "TX Queue Status Registers 0%s"]
     #[inline(always)]
     pub const fn cfdtxqsts0(
         &self,
@@ -502,7 +1481,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1020usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtxqsts00(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqsts0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqsts0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1020usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtxqsts01(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqsts0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqsts0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1024usize),
+            )
+        }
+    }
 
+    #[doc = "TX Queue Pointer Control Registers 0%s"]
     #[inline(always)]
     pub const fn cfdtxqpctr0(
         &self,
@@ -515,7 +1515,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1040usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtxqpctr00(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqpctr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqpctr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1040usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtxqpctr01(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqpctr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqpctr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1044usize),
+            )
+        }
+    }
 
+    #[doc = "TX Queue Configuration/Control Registers 1%s"]
     #[inline(always)]
     pub const fn cfdtxqcc1(
         &self,
@@ -528,7 +1549,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1060usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtxqcc10(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqcc1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqcc1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1060usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtxqcc11(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqcc1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqcc1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1064usize),
+            )
+        }
+    }
 
+    #[doc = "TX Queue Status Registers 1%s"]
     #[inline(always)]
     pub const fn cfdtxqsts1(
         &self,
@@ -541,7 +1583,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1080usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtxqsts10(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqsts1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqsts1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1080usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtxqsts11(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqsts1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqsts1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1084usize),
+            )
+        }
+    }
 
+    #[doc = "TX Queue Pointer Control Registers 1%s"]
     #[inline(always)]
     pub const fn cfdtxqpctr1(
         &self,
@@ -554,7 +1617,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x10a0usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtxqpctr10(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqpctr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqpctr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x10a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtxqpctr11(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqpctr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqpctr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x10a4usize),
+            )
+        }
+    }
 
+    #[doc = "TX Queue Configuration/Control Registers 2%s"]
     #[inline(always)]
     pub const fn cfdtxqcc2(
         &self,
@@ -567,7 +1651,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x10c0usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtxqcc20(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqcc2_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqcc2_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x10c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtxqcc21(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqcc2_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqcc2_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x10c4usize),
+            )
+        }
+    }
 
+    #[doc = "TX Queue Status Registers 2%s"]
     #[inline(always)]
     pub const fn cfdtxqsts2(
         &self,
@@ -580,7 +1685,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x10e0usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtxqsts20(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqsts2_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqsts2_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x10e0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtxqsts21(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqsts2_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqsts2_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x10e4usize),
+            )
+        }
+    }
 
+    #[doc = "TX Queue Pointer Control Registers 2%s"]
     #[inline(always)]
     pub const fn cfdtxqpctr2(
         &self,
@@ -593,7 +1719,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1100usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtxqpctr20(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqpctr2_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqpctr2_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1100usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtxqpctr21(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqpctr2_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqpctr2_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1104usize),
+            )
+        }
+    }
 
+    #[doc = "TX Queue Configuration/Control Registers 3%s"]
     #[inline(always)]
     pub const fn cfdtxqcc3(
         &self,
@@ -606,7 +1753,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1120usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtxqcc30(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqcc3_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqcc3_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1120usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtxqcc31(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqcc3_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqcc3_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1124usize),
+            )
+        }
+    }
 
+    #[doc = "TX Queue Status Registers 3%s"]
     #[inline(always)]
     pub const fn cfdtxqsts3(
         &self,
@@ -619,7 +1787,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1140usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtxqsts30(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqsts3_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqsts3_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1140usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtxqsts31(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqsts3_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqsts3_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1144usize),
+            )
+        }
+    }
 
+    #[doc = "TX Queue Pointer Control Registers 3%s"]
     #[inline(always)]
     pub const fn cfdtxqpctr3(
         &self,
@@ -632,7 +1821,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1160usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtxqpctr30(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqpctr3_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqpctr3_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1160usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtxqpctr31(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtxqpctr3_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtxqpctr3_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1164usize),
+            )
+        }
+    }
 
+    #[doc = "TX Queue Empty Status Register"]
     #[inline(always)]
     pub const fn cfdtxqests(
         &self,
@@ -644,6 +1854,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "TX Queue Full Interrupt Status Register"]
     #[inline(always)]
     pub const fn cfdtxqfists(
         &self,
@@ -655,6 +1866,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "TX Queue Message Lost Status Register"]
     #[inline(always)]
     pub const fn cfdtxqmsts(
         &self,
@@ -666,6 +1878,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "TX Queue Interrupt Status Register"]
     #[inline(always)]
     pub const fn cfdtxqists(
         &self,
@@ -677,6 +1890,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "TX Queue One Frame TX Interrupt Status Register"]
     #[inline(always)]
     pub const fn cfdtxqoftists(
         &self,
@@ -688,6 +1902,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "TX Queue One Frame RX Interrupt Status Register"]
     #[inline(always)]
     pub const fn cfdtxqofrists(
         &self,
@@ -699,6 +1914,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "TX Queue Full Status Register"]
     #[inline(always)]
     pub const fn cfdtxqfsts(
         &self,
@@ -710,6 +1926,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "TX History List Configuration/Control Register %s"]
     #[inline(always)]
     pub const fn cfdthlcc(
         &self,
@@ -722,7 +1939,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1200usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdthlcc0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdthlcc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdthlcc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1200usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdthlcc1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdthlcc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdthlcc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1204usize),
+            )
+        }
+    }
 
+    #[doc = "TX History List Status Register %s"]
     #[inline(always)]
     pub const fn cfdthlsts(
         &self,
@@ -735,7 +1973,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1220usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdthlsts0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdthlsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdthlsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1220usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdthlsts1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdthlsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdthlsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1224usize),
+            )
+        }
+    }
 
+    #[doc = "TX History List Pointer Control Registers %s"]
     #[inline(always)]
     pub const fn cfdthlpctr(
         &self,
@@ -748,7 +2007,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1240usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdthlpctr0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdthlpctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdthlpctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1240usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdthlpctr1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdthlpctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdthlpctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1244usize),
+            )
+        }
+    }
 
+    #[doc = "Global TX Interrupt Status Register 0"]
     #[inline(always)]
     pub const fn cfdgtintsts0(
         &self,
@@ -760,6 +2040,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "Global Test Configuration Register"]
     #[inline(always)]
     pub const fn cfdgtstcfg(
         &self,
@@ -771,6 +2052,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "Global Test Control Register"]
     #[inline(always)]
     pub const fn cfdgtstctr(
         &self,
@@ -782,6 +2064,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "Global FD Configuration Register"]
     #[inline(always)]
     pub const fn cfdgfdcfg(
         &self,
@@ -793,6 +2076,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "Global Lock Key Register"]
     #[inline(always)]
     pub const fn cfdglockk(
         &self,
@@ -804,6 +2088,31 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "Global AFL Ignore Entry Register"]
+    #[inline(always)]
+    pub const fn cfdgaflignent(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflignent_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflignent_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(4900usize),
+            )
+        }
+    }
+
+    #[doc = "Global AFL Ignore Control Register"]
+    #[inline(always)]
+    pub const fn cfdgaflignctr(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflignctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflignctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(4904usize),
+            )
+        }
+    }
+
+    #[doc = "DMA Transfer Control Register"]
     #[inline(always)]
     pub const fn cfdcdtct(
         &self,
@@ -815,6 +2124,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "DMA Transfer Status Register"]
     #[inline(always)]
     pub const fn cfdcdtsts(
         &self,
@@ -826,6 +2136,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "DMA TX Transfer Control Register"]
     #[inline(always)]
     pub const fn cfdcdttct(
         &self,
@@ -837,6 +2148,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "DMA TX Transfer Status Register"]
     #[inline(always)]
     pub const fn cfdcdttsts(
         &self,
@@ -848,6 +2160,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "Global RX Interrupt Status Register %s"]
     #[inline(always)]
     pub const fn cfdgrintsts(
         &self,
@@ -860,7 +2173,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1350usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdgrintsts0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgrintsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgrintsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1350usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgrintsts1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgrintsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgrintsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1354usize),
+            )
+        }
+    }
 
+    #[doc = "Global SW reset Register"]
     #[inline(always)]
     pub const fn cfdgrstc(
         &self,
@@ -872,6 +2206,7 @@ impl super::Canfd {
         }
     }
 
+    #[doc = "Channel %s Data Bitrate Configuration Register"]
     #[inline(always)]
     pub const fn cfdcdcfg(
         &self,
@@ -884,7 +2219,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1400usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdc0dcfg(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcdcfg_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcdcfg_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1400usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdc1dcfg(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcdcfg_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcdcfg_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1420usize),
+            )
+        }
+    }
 
+    #[doc = "Channel %s CAN-FD Configuration Register"]
     #[inline(always)]
     pub const fn cfdcfdcfg(
         &self,
@@ -897,7 +2253,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1404usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdc0fdcfg(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdcfg_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdcfg_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1404usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdc1fdcfg(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdcfg_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdcfg_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1424usize),
+            )
+        }
+    }
 
+    #[doc = "Channel %s CANFD Control Register"]
     #[inline(always)]
     pub const fn cfdcfdctr(
         &self,
@@ -910,7 +2287,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1408usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdc0fdctr(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1408usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdc1fdctr(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdctr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1428usize),
+            )
+        }
+    }
 
+    #[doc = "Channel %s CANFD Status Register"]
     #[inline(always)]
     pub const fn cfdcfdsts(
         &self,
@@ -923,7 +2321,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x140cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdc0fdsts(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x140cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdc1fdsts(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x142cusize),
+            )
+        }
+    }
 
+    #[doc = "Channel %s CANFD CRC Register"]
     #[inline(always)]
     pub const fn cfdcfdcrc(
         &self,
@@ -936,7 +2355,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1410usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdc0fdcrc(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdcrc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdcrc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1410usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdc1fdcrc(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdcrc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdcrc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1430usize),
+            )
+        }
+    }
 
+    #[doc = "Channel %s Bus Load Control Register"]
     #[inline(always)]
     pub const fn cfdcblct(
         &self,
@@ -949,7 +2389,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1418usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdc0blct(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcblct_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcblct_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1418usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdc1blct(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcblct_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcblct_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1438usize),
+            )
+        }
+    }
 
+    #[doc = "Channel %s Bus Load Status Register"]
     #[inline(always)]
     pub const fn cfdcblsts(
         &self,
@@ -962,7 +2423,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x141cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdc0blsts(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcblsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcblsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x141cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdc1blsts(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcblsts_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcblsts_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x143cusize),
+            )
+        }
+    }
 
+    #[doc = "Global Acceptance Filter List ID Registers"]
     #[inline(always)]
     pub const fn cfdgaflid(
         &self,
@@ -975,7 +2457,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1800usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdgaflid1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflid_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflid_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1800usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflid2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflid_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflid_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1810usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflid3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflid_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflid_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1820usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflid4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflid_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflid_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1830usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflid5(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflid_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflid_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1840usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflid6(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflid_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflid_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1850usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflid7(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflid_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflid_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1860usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflid8(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflid_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflid_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1870usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflid9(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflid_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflid_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1880usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflid10(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflid_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflid_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1890usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflid11(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflid_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflid_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflid12(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflid_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflid_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflid13(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflid_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflid_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflid14(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflid_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflid_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18d0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflid15(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflid_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflid_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18e0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflid16(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflid_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflid_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18f0usize),
+            )
+        }
+    }
 
+    #[doc = "Global Acceptance Filter List Mask Registers"]
     #[inline(always)]
     pub const fn cfdgaflm(
         &self,
@@ -988,7 +2631,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1804usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdgaflm1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflm_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflm_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1804usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflm2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflm_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflm_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1814usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflm3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflm_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflm_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1824usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflm4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflm_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflm_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1834usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflm5(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflm_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflm_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1844usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflm6(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflm_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflm_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1854usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflm7(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflm_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflm_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1864usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflm8(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflm_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflm_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1874usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflm9(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflm_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflm_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1884usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflm10(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflm_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflm_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1894usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflm11(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflm_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflm_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflm12(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflm_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflm_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflm13(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflm_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflm_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflm14(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflm_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflm_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18d4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflm15(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflm_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflm_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18e4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflm16(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflm_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflm_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18f4usize),
+            )
+        }
+    }
 
+    #[doc = "Global Acceptance Filter List Pointer 0 Registers"]
     #[inline(always)]
     pub const fn cfdgaflp0(
         &self,
@@ -1001,7 +2805,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1808usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdgaflp01(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1808usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp02(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1818usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp03(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1828usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp04(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1838usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp05(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1848usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp06(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1858usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp07(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1868usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp08(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1878usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp09(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1888usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp010(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1898usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp011(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp012(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp013(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp014(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18d8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp015(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18e8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp016(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18f8usize),
+            )
+        }
+    }
 
+    #[doc = "Global Acceptance Filter List Pointer 1 Registers"]
     #[inline(always)]
     pub const fn cfdgaflp1(
         &self,
@@ -1014,7 +2979,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x180cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdgaflp11(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x180cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp12(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x181cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp13(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x182cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp14(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x183cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp15(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x184cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp16(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x185cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp17(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x186cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp18(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x187cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp19(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x188cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp110(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x189cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp111(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp112(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp113(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18ccusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp114(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18dcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp115(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18ecusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdgaflp116(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdgaflp1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdgaflp1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x18fcusize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer ID Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdrmid_0(
         &self,
@@ -1027,7 +3153,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2000usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmid0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2000usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2080usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2100usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid3_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2180usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid4_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2200usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid5_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2280usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid6_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2300usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid7_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2380usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid8_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2400usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid9_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2480usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2500usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2580usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2600usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid13_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2680usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid14_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2700usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid15_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2780usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Pointer Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdrmptr_0(
         &self,
@@ -1040,7 +3327,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2004usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmptr0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2004usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2084usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2104usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr3_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2184usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr4_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2204usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr5_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2284usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr6_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2304usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr7_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2384usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr8_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2404usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr9_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2484usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2504usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2584usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2604usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr13_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2684usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr14_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2704usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr15_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2784usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer CAN-FD Status Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdrmfdsts_0(
         &self,
@@ -1053,7 +3501,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2008usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmfdsts0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2008usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2088usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2108usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts3_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2188usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts4_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2208usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts5_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2288usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts6_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2308usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts7_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2388usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts8_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2408usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts9_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2488usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2508usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2588usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2608usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts13_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2688usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts14_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2708usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts15_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2788usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 0 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdrmdf0__0(
         &self,
@@ -1066,7 +3675,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x200cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf0_0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf00_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf00_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x200cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf00_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf00_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x208cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf00_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf00_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x210cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_3_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf00_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf00_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x218cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_4_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf00_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf00_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x220cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_5_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf00_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf00_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x228cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_6_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf00_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf00_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x230cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_7_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf00_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf00_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x238cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_8_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf00_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf00_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x240cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_9_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf00_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf00_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x248cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf00_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf00_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x250cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf00_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf00_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x258cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf00_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf00_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x260cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_13_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf00_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf00_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x268cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_14_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf00_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf00_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x270cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_15_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf00_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf00_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x278cusize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 1 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdrmdf1__0(
         &self,
@@ -1079,7 +3849,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2010usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf1_0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2010usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2090usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2110usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_3_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2190usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_4_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2210usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_5_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2290usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_6_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2310usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_7_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2390usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_8_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2410usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_9_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2490usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2510usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2590usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2610usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_13_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2690usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_14_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2710usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_15_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2790usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 2 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdrmdf2__0(
         &self,
@@ -1092,7 +4023,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2014usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf2_0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf20_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf20_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2014usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf20_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf20_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2094usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf20_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf20_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2114usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_3_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf20_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf20_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2194usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_4_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf20_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf20_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2214usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_5_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf20_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf20_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2294usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_6_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf20_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf20_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2314usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_7_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf20_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf20_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2394usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_8_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf20_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf20_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2414usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_9_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf20_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf20_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2494usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf20_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf20_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2514usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf20_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf20_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2594usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf20_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf20_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2614usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_13_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf20_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf20_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2694usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_14_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf20_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf20_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2714usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_15_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf20_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf20_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2794usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 3 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdrmdf3__0(
         &self,
@@ -1105,7 +4197,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2018usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf3_0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf30_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf30_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2018usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf30_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf30_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2098usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf30_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf30_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2118usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_3_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf30_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf30_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2198usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_4_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf30_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf30_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2218usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_5_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf30_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf30_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2298usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_6_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf30_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf30_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2318usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_7_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf30_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf30_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2398usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_8_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf30_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf30_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2418usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_9_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf30_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf30_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2498usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf30_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf30_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2518usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf30_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf30_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2598usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf30_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf30_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2618usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_13_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf30_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf30_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2698usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_14_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf30_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf30_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2718usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_15_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf30_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf30_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2798usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 4 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdrmdf4__0(
         &self,
@@ -1118,7 +4371,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x201cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf4_0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf40_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf40_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x201cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf40_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf40_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x209cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf40_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf40_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x211cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_3_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf40_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf40_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x219cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_4_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf40_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf40_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x221cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_5_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf40_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf40_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x229cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_6_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf40_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf40_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x231cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_7_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf40_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf40_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x239cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_8_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf40_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf40_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x241cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_9_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf40_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf40_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x249cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf40_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf40_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x251cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf40_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf40_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x259cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf40_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf40_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x261cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_13_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf40_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf40_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x269cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_14_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf40_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf40_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x271cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_15_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf40_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf40_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x279cusize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 5 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdrmdf5__0(
         &self,
@@ -1131,7 +4545,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2020usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf5_0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf50_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf50_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2020usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf50_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf50_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x20a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf50_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf50_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2120usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_3_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf50_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf50_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x21a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_4_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf50_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf50_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2220usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_5_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf50_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf50_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x22a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_6_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf50_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf50_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2320usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_7_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf50_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf50_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x23a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_8_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf50_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf50_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2420usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_9_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf50_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf50_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x24a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf50_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf50_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2520usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf50_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf50_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x25a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf50_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf50_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2620usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_13_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf50_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf50_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x26a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_14_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf50_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf50_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2720usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_15_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf50_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf50_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x27a0usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 6 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdrmdf6__0(
         &self,
@@ -1144,7 +4719,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2024usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf6_0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf60_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf60_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2024usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf60_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf60_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x20a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf60_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf60_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2124usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_3_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf60_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf60_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x21a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_4_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf60_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf60_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2224usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_5_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf60_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf60_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x22a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_6_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf60_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf60_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2324usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_7_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf60_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf60_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x23a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_8_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf60_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf60_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2424usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_9_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf60_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf60_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x24a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf60_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf60_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2524usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf60_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf60_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x25a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf60_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf60_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2624usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_13_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf60_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf60_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x26a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_14_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf60_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf60_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2724usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_15_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf60_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf60_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x27a4usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 7 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdrmdf7__0(
         &self,
@@ -1157,7 +4893,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2028usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf7_0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf70_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf70_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2028usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf70_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf70_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x20a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf70_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf70_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2128usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_3_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf70_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf70_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x21a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_4_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf70_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf70_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2228usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_5_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf70_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf70_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x22a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_6_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf70_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf70_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2328usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_7_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf70_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf70_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x23a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_8_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf70_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf70_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2428usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_9_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf70_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf70_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x24a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf70_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf70_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2528usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf70_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf70_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x25a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf70_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf70_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2628usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_13_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf70_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf70_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x26a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_14_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf70_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf70_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2728usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_15_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf70_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf70_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x27a8usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 8 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdrmdf8__0(
         &self,
@@ -1170,7 +5067,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x202cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf8_0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf80_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf80_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x202cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf80_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf80_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x20acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf80_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf80_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x212cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_3_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf80_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf80_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x21acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_4_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf80_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf80_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x222cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_5_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf80_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf80_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x22acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_6_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf80_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf80_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x232cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_7_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf80_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf80_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x23acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_8_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf80_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf80_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x242cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_9_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf80_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf80_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x24acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf80_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf80_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x252cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf80_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf80_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x25acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf80_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf80_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x262cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_13_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf80_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf80_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x26acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_14_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf80_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf80_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x272cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_15_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf80_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf80_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x27acusize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 9 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdrmdf9__0(
         &self,
@@ -1183,7 +5241,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2030usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf9_0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf90_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf90_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2030usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf90_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf90_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x20b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf90_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf90_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2130usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_3_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf90_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf90_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x21b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_4_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf90_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf90_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2230usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_5_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf90_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf90_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x22b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_6_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf90_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf90_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2330usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_7_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf90_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf90_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x23b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_8_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf90_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf90_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2430usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_9_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf90_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf90_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x24b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf90_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf90_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2530usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf90_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf90_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x25b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf90_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf90_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2630usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_13_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf90_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf90_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x26b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_14_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf90_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf90_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2730usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_15_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf90_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf90_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x27b0usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 10 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdrmdf10__0(
         &self,
@@ -1196,7 +5415,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2034usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf10_0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf100_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf100_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2034usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf100_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf100_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x20b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf100_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf100_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2134usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_3_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf100_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf100_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x21b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_4_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf100_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf100_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2234usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_5_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf100_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf100_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x22b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_6_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf100_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf100_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2334usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_7_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf100_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf100_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x23b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_8_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf100_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf100_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2434usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_9_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf100_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf100_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x24b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf100_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf100_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2534usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf100_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf100_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x25b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf100_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf100_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2634usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_13_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf100_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf100_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x26b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_14_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf100_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf100_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2734usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_15_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf100_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf100_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x27b4usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 11 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdrmdf11__0(
         &self,
@@ -1209,7 +5589,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2038usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf11_0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf110_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf110_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2038usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf110_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf110_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x20b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf110_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf110_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2138usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_3_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf110_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf110_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x21b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_4_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf110_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf110_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2238usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_5_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf110_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf110_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x22b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_6_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf110_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf110_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2338usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_7_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf110_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf110_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x23b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_8_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf110_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf110_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2438usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_9_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf110_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf110_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x24b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf110_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf110_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2538usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf110_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf110_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x25b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf110_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf110_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2638usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_13_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf110_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf110_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x26b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_14_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf110_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf110_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2738usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_15_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf110_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf110_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x27b8usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 12 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdrmdf12__0(
         &self,
@@ -1222,7 +5763,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x203cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf12_0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf120_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf120_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x203cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf120_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf120_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x20bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf120_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf120_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x213cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_3_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf120_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf120_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x21bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_4_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf120_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf120_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x223cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_5_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf120_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf120_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x22bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_6_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf120_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf120_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x233cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_7_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf120_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf120_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x23bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_8_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf120_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf120_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x243cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_9_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf120_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf120_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x24bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf120_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf120_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x253cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf120_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf120_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x25bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf120_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf120_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x263cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_13_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf120_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf120_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x26bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_14_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf120_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf120_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x273cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_15_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf120_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf120_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x27bcusize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 13 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdrmdf13__0(
         &self,
@@ -1235,7 +5937,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2040usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf13_0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf130_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf130_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2040usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf130_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf130_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x20c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf130_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf130_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2140usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_3_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf130_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf130_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x21c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_4_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf130_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf130_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2240usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_5_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf130_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf130_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x22c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_6_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf130_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf130_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2340usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_7_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf130_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf130_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x23c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_8_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf130_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf130_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2440usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_9_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf130_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf130_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x24c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf130_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf130_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2540usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf130_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf130_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x25c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf130_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf130_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2640usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_13_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf130_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf130_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x26c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_14_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf130_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf130_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2740usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_15_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf130_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf130_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x27c0usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 14 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdrmdf14__0(
         &self,
@@ -1248,7 +6111,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2044usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf14_0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf140_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf140_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2044usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf140_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf140_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x20c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf140_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf140_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2144usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_3_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf140_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf140_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x21c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_4_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf140_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf140_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2244usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_5_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf140_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf140_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x22c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_6_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf140_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf140_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2344usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_7_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf140_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf140_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x23c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_8_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf140_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf140_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2444usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_9_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf140_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf140_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x24c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf140_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf140_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2544usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf140_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf140_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x25c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf140_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf140_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2644usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_13_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf140_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf140_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x26c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_14_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf140_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf140_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2744usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_15_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf140_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf140_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x27c4usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 15 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdrmdf15__0(
         &self,
@@ -1261,7 +6285,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2048usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf15_0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf150_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf150_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2048usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf150_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf150_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x20c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf150_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf150_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2148usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_3_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf150_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf150_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x21c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_4_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf150_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf150_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2248usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_5_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf150_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf150_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x22c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_6_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf150_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf150_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2348usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_7_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf150_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf150_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x23c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_8_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf150_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf150_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2448usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_9_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf150_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf150_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x24c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf150_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf150_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2548usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf150_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf150_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x25c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf150_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf150_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2648usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_13_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf150_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf150_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x26c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_14_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf150_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf150_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2748usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_15_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf150_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf150_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x27c8usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer ID Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdrmid_1(
         &self,
@@ -1274,7 +6459,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2800usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmid0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2800usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2880usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2900usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid3_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2980usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid4_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a00usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid5_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a80usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid6_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b00usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid7_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b80usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid8_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c00usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid9_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c80usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d00usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d80usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e00usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid13_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e80usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid14_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f00usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmid15_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmid1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmid1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f80usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Pointer Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdrmptr_1(
         &self,
@@ -1287,7 +6633,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2804usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmptr0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2804usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2884usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2904usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr3_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2984usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr4_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a04usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr5_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a84usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr6_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b04usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr7_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b84usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr8_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c04usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr9_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c84usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d04usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d84usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e04usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr13_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e84usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr14_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f04usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmptr15_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmptr1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmptr1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f84usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer CAN-FD Status Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdrmfdsts_1(
         &self,
@@ -1300,7 +6807,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2808usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmfdsts0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2808usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2888usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2908usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts3_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2988usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts4_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a08usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts5_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a88usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts6_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b08usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts7_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b88usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts8_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c08usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts9_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c88usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d08usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d88usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e08usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts13_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e88usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts14_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f08usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmfdsts15_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmfdsts1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmfdsts1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f88usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 0 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdrmdf0__1(
         &self,
@@ -1313,7 +6981,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x280cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf0_0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf01_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf01_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x280cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf01_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf01_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x288cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf01_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf01_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x290cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_3_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf01_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf01_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x298cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_4_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf01_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf01_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a0cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_5_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf01_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf01_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a8cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_6_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf01_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf01_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b0cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_7_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf01_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf01_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b8cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_8_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf01_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf01_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c0cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_9_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf01_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf01_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c8cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf01_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf01_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d0cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf01_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf01_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d8cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf01_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf01_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e0cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_13_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf01_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf01_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e8cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_14_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf01_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf01_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f0cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf0_15_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf01_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf01_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f8cusize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 1 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdrmdf1__1(
         &self,
@@ -1326,7 +7155,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2810usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf1_0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2810usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2890usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2910usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_3_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2990usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_4_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a10usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_5_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a90usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_6_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b10usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_7_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b90usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_8_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c10usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_9_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c90usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d10usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d90usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e10usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_13_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e90usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_14_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f10usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf1_15_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f90usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 2 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdrmdf2__1(
         &self,
@@ -1339,7 +7329,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2814usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf2_0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf21_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf21_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2814usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf21_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf21_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2894usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf21_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf21_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2914usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_3_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf21_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf21_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2994usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_4_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf21_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf21_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a14usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_5_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf21_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf21_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a94usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_6_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf21_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf21_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b14usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_7_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf21_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf21_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b94usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_8_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf21_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf21_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c14usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_9_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf21_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf21_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c94usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf21_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf21_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d14usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf21_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf21_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d94usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf21_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf21_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e14usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_13_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf21_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf21_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e94usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_14_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf21_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf21_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f14usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf2_15_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf21_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf21_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f94usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 3 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdrmdf3__1(
         &self,
@@ -1352,7 +7503,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2818usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf3_0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf31_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf31_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2818usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf31_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf31_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2898usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf31_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf31_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2918usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_3_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf31_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf31_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2998usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_4_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf31_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf31_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a18usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_5_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf31_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf31_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a98usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_6_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf31_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf31_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b18usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_7_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf31_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf31_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b98usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_8_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf31_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf31_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c18usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_9_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf31_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf31_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c98usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf31_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf31_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d18usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf31_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf31_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d98usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf31_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf31_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e18usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_13_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf31_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf31_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e98usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_14_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf31_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf31_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f18usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf3_15_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf31_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf31_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f98usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 4 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdrmdf4__1(
         &self,
@@ -1365,7 +7677,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x281cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf4_0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf41_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf41_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x281cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf41_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf41_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x289cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf41_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf41_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x291cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_3_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf41_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf41_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x299cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_4_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf41_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf41_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a1cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_5_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf41_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf41_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a9cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_6_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf41_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf41_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b1cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_7_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf41_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf41_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b9cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_8_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf41_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf41_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c1cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_9_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf41_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf41_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c9cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf41_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf41_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d1cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf41_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf41_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d9cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf41_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf41_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e1cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_13_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf41_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf41_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e9cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_14_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf41_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf41_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f1cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf4_15_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf41_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf41_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f9cusize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 5 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdrmdf5__1(
         &self,
@@ -1378,7 +7851,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2820usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf5_0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf51_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf51_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2820usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf51_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf51_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x28a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf51_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf51_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2920usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_3_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf51_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf51_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x29a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_4_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf51_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf51_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a20usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_5_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf51_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf51_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2aa0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_6_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf51_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf51_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b20usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_7_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf51_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf51_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ba0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_8_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf51_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf51_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c20usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_9_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf51_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf51_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ca0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf51_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf51_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d20usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf51_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf51_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2da0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf51_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf51_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e20usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_13_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf51_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf51_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ea0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_14_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf51_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf51_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f20usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf5_15_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf51_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf51_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2fa0usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 6 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdrmdf6__1(
         &self,
@@ -1391,7 +8025,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2824usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf6_0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf61_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf61_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2824usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf61_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf61_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x28a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf61_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf61_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2924usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_3_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf61_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf61_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x29a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_4_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf61_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf61_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a24usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_5_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf61_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf61_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2aa4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_6_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf61_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf61_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b24usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_7_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf61_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf61_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ba4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_8_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf61_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf61_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c24usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_9_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf61_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf61_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ca4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf61_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf61_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d24usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf61_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf61_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2da4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf61_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf61_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e24usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_13_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf61_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf61_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ea4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_14_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf61_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf61_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f24usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf6_15_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf61_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf61_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2fa4usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 7 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdrmdf7__1(
         &self,
@@ -1404,7 +8199,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2828usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf7_0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf71_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf71_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2828usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf71_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf71_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x28a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf71_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf71_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2928usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_3_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf71_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf71_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x29a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_4_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf71_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf71_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a28usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_5_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf71_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf71_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2aa8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_6_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf71_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf71_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b28usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_7_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf71_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf71_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ba8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_8_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf71_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf71_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c28usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_9_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf71_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf71_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ca8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf71_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf71_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d28usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf71_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf71_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2da8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf71_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf71_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e28usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_13_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf71_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf71_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ea8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_14_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf71_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf71_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f28usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf7_15_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf71_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf71_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2fa8usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 8 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdrmdf8__1(
         &self,
@@ -1417,7 +8373,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x282cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf8_0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf81_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf81_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x282cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf81_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf81_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x28acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf81_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf81_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x292cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_3_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf81_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf81_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x29acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_4_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf81_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf81_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a2cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_5_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf81_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf81_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2aacusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_6_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf81_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf81_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b2cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_7_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf81_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf81_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2bacusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_8_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf81_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf81_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c2cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_9_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf81_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf81_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2cacusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf81_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf81_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d2cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf81_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf81_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2dacusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf81_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf81_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e2cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_13_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf81_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf81_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2eacusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_14_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf81_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf81_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f2cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf8_15_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf81_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf81_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2facusize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 9 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdrmdf9__1(
         &self,
@@ -1430,7 +8547,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2830usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf9_0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf91_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf91_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2830usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf91_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf91_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x28b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf91_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf91_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2930usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_3_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf91_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf91_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x29b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_4_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf91_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf91_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a30usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_5_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf91_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf91_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ab0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_6_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf91_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf91_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b30usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_7_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf91_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf91_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2bb0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_8_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf91_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf91_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c30usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_9_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf91_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf91_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2cb0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf91_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf91_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d30usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf91_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf91_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2db0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf91_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf91_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e30usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_13_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf91_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf91_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2eb0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_14_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf91_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf91_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f30usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf9_15_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf91_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf91_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2fb0usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 10 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdrmdf10__1(
         &self,
@@ -1443,7 +8721,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2834usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf10_0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf101_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf101_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2834usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf101_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf101_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x28b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf101_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf101_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2934usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_3_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf101_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf101_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x29b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_4_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf101_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf101_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a34usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_5_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf101_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf101_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ab4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_6_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf101_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf101_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b34usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_7_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf101_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf101_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2bb4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_8_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf101_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf101_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c34usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_9_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf101_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf101_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2cb4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf101_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf101_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d34usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf101_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf101_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2db4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf101_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf101_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e34usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_13_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf101_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf101_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2eb4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_14_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf101_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf101_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f34usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf10_15_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf101_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf101_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2fb4usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 11 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdrmdf11__1(
         &self,
@@ -1456,7 +8895,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2838usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf11_0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf111_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf111_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2838usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf111_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf111_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x28b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf111_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf111_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2938usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_3_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf111_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf111_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x29b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_4_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf111_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf111_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a38usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_5_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf111_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf111_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ab8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_6_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf111_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf111_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b38usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_7_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf111_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf111_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2bb8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_8_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf111_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf111_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c38usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_9_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf111_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf111_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2cb8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf111_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf111_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d38usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf111_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf111_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2db8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf111_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf111_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e38usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_13_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf111_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf111_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2eb8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_14_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf111_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf111_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f38usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf11_15_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf111_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf111_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2fb8usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 12 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdrmdf12__1(
         &self,
@@ -1469,7 +9069,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x283cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf12_0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf121_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf121_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x283cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf121_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf121_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x28bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf121_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf121_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x293cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_3_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf121_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf121_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x29bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_4_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf121_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf121_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a3cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_5_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf121_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf121_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2abcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_6_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf121_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf121_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b3cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_7_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf121_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf121_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2bbcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_8_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf121_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf121_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c3cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_9_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf121_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf121_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2cbcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf121_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf121_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d3cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf121_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf121_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2dbcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf121_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf121_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e3cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_13_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf121_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf121_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ebcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_14_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf121_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf121_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f3cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf12_15_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf121_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf121_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2fbcusize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 13 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdrmdf13__1(
         &self,
@@ -1482,7 +9243,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2840usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf13_0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf131_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf131_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2840usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf131_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf131_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x28c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf131_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf131_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2940usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_3_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf131_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf131_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x29c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_4_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf131_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf131_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a40usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_5_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf131_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf131_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ac0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_6_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf131_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf131_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b40usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_7_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf131_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf131_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2bc0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_8_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf131_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf131_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c40usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_9_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf131_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf131_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2cc0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf131_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf131_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d40usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf131_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf131_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2dc0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf131_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf131_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e40usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_13_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf131_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf131_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ec0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_14_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf131_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf131_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f40usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf13_15_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf131_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf131_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2fc0usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 14 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdrmdf14__1(
         &self,
@@ -1495,7 +9417,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2844usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf14_0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf141_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf141_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2844usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf141_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf141_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x28c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf141_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf141_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2944usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_3_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf141_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf141_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x29c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_4_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf141_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf141_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a44usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_5_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf141_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf141_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ac4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_6_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf141_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf141_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b44usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_7_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf141_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf141_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2bc4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_8_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf141_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf141_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c44usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_9_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf141_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf141_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2cc4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf141_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf141_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d44usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf141_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf141_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2dc4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf141_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf141_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e44usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_13_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf141_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf141_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ec4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_14_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf141_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf141_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f44usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf14_15_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf141_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf141_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2fc4usize),
+            )
+        }
+    }
 
+    #[doc = "RX Message Buffer Data Field 15 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdrmdf15__1(
         &self,
@@ -1508,7 +9591,168 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2848usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrmdf15_0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf151_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf151_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2848usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf151_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf151_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x28c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf151_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf151_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2948usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_3_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf151_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf151_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x29c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_4_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf151_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf151_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2a48usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_5_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf151_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf151_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ac8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_6_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf151_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf151_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2b48usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_7_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf151_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf151_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2bc8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_8_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf151_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf151_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2c48usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_9_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf151_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf151_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2cc8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf151_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf151_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2d48usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf151_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf151_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2dc8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf151_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf151_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2e48usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_13_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf151_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf151_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2ec8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_14_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf151_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf151_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2f48usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrmdf15_15_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrmdf151_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrmdf151_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2fc8usize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Access ID Register %s"]
     #[inline(always)]
     pub const fn cfdrfid(
         &self,
@@ -1521,7 +9765,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6000usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfid0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfid_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfid_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6000usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfid1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfid_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfid_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6080usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfid2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfid_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfid_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6100usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfid3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfid_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfid_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6180usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfid4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfid_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfid_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6200usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfid5(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfid_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfid_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6280usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfid6(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfid_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfid_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6300usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfid7(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfid_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfid_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6380usize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Access Pointer Register %s"]
     #[inline(always)]
     pub const fn cfdrfptr(
         &self,
@@ -1534,7 +9859,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6004usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfptr0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfptr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfptr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6004usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfptr1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfptr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfptr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6084usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfptr2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfptr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfptr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6104usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfptr3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfptr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfptr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6184usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfptr4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfptr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfptr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6204usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfptr5(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfptr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfptr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6284usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfptr6(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfptr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfptr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6304usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfptr7(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfptr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfptr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6384usize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Access CAN-FD Status Register %s"]
     #[inline(always)]
     pub const fn cfdrffdsts(
         &self,
@@ -1547,7 +9953,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6008usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrffdsts0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrffdsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrffdsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6008usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrffdsts1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrffdsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrffdsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6088usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrffdsts2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrffdsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrffdsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6108usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrffdsts3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrffdsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrffdsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6188usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrffdsts4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrffdsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrffdsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6208usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrffdsts5(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrffdsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrffdsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6288usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrffdsts6(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrffdsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrffdsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6308usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrffdsts7(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrffdsts_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrffdsts_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6388usize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Access Data Field 0 Register %s"]
     #[inline(always)]
     pub const fn cfdrfdf0(
         &self,
@@ -1560,7 +10047,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x600cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfdf00(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x600cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf01(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x608cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf02(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x610cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf03(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x618cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf04(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x620cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf05(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x628cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf06(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x630cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf07(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x638cusize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Access Data Field 1 Register %s"]
     #[inline(always)]
     pub const fn cfdrfdf1(
         &self,
@@ -1573,7 +10141,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6010usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfdf10(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6010usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf11(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6090usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf12(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6110usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf13(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6190usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf14(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6210usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf15(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6290usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf16(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6310usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf17(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf1_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf1_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6390usize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Access Data Field 2 Register %s"]
     #[inline(always)]
     pub const fn cfdrfdf2(
         &self,
@@ -1586,7 +10235,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6014usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfdf20(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf2_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf2_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6014usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf21(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf2_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf2_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6094usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf22(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf2_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf2_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6114usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf23(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf2_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf2_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6194usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf24(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf2_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf2_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6214usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf25(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf2_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf2_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6294usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf26(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf2_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf2_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6314usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf27(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf2_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf2_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6394usize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Access Data Field 3 Register %s"]
     #[inline(always)]
     pub const fn cfdrfdf3(
         &self,
@@ -1599,7 +10329,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6018usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfdf30(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf3_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf3_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6018usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf31(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf3_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf3_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6098usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf32(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf3_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf3_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6118usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf33(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf3_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf3_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6198usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf34(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf3_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf3_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6218usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf35(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf3_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf3_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6298usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf36(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf3_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf3_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6318usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf37(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf3_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf3_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6398usize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Access Data Field 4 Register %s"]
     #[inline(always)]
     pub const fn cfdrfdf4(
         &self,
@@ -1612,7 +10423,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x601cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfdf40(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf4_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf4_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x601cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf41(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf4_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf4_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x609cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf42(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf4_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf4_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x611cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf43(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf4_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf4_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x619cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf44(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf4_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf4_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x621cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf45(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf4_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf4_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x629cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf46(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf4_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf4_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x631cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf47(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf4_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf4_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x639cusize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Access Data Field 5 Register %s"]
     #[inline(always)]
     pub const fn cfdrfdf5(
         &self,
@@ -1625,7 +10517,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6020usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfdf50(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf5_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf5_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6020usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf51(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf5_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf5_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x60a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf52(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf5_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf5_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6120usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf53(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf5_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf5_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x61a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf54(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf5_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf5_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6220usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf55(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf5_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf5_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x62a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf56(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf5_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf5_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6320usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf57(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf5_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf5_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x63a0usize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Access Data Field 6 Register %s"]
     #[inline(always)]
     pub const fn cfdrfdf6(
         &self,
@@ -1638,7 +10611,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6024usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfdf60(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf6_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf6_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6024usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf61(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf6_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf6_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x60a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf62(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf6_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf6_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6124usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf63(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf6_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf6_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x61a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf64(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf6_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf6_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6224usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf65(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf6_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf6_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x62a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf66(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf6_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf6_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6324usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf67(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf6_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf6_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x63a4usize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Access Data Field 7 Register %s"]
     #[inline(always)]
     pub const fn cfdrfdf7(
         &self,
@@ -1651,7 +10705,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6028usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfdf70(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf7_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf7_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6028usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf71(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf7_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf7_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x60a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf72(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf7_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf7_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6128usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf73(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf7_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf7_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x61a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf74(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf7_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf7_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6228usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf75(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf7_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf7_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x62a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf76(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf7_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf7_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6328usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf77(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf7_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf7_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x63a8usize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Access Data Field 8 Register %s"]
     #[inline(always)]
     pub const fn cfdrfdf8(
         &self,
@@ -1664,7 +10799,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x602cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfdf80(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf8_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf8_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x602cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf81(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf8_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf8_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x60acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf82(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf8_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf8_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x612cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf83(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf8_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf8_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x61acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf84(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf8_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf8_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x622cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf85(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf8_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf8_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x62acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf86(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf8_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf8_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x632cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf87(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf8_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf8_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x63acusize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Access Data Field 9 Register %s"]
     #[inline(always)]
     pub const fn cfdrfdf9(
         &self,
@@ -1677,7 +10893,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6030usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfdf90(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf9_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf9_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6030usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf91(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf9_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf9_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x60b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf92(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf9_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf9_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6130usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf93(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf9_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf9_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x61b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf94(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf9_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf9_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6230usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf95(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf9_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf9_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x62b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf96(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf9_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf9_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6330usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf97(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf9_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf9_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x63b0usize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Access Data Field 10 Register %s"]
     #[inline(always)]
     pub const fn cfdrfdf10(
         &self,
@@ -1690,7 +10987,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6034usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfdf100(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6034usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf101(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x60b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf102(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6134usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf103(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x61b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf104(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6234usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf105(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x62b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf106(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6334usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf107(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf10_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf10_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x63b4usize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Access Data Field 11 Register %s"]
     #[inline(always)]
     pub const fn cfdrfdf11(
         &self,
@@ -1703,7 +11081,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6038usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfdf110(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6038usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf111(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x60b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf112(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6138usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf113(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x61b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf114(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6238usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf115(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x62b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf116(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6338usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf117(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf11_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf11_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x63b8usize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Access Data Field 12 Register %s"]
     #[inline(always)]
     pub const fn cfdrfdf12(
         &self,
@@ -1716,7 +11175,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x603cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfdf120(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf12_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf12_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x603cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf121(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf12_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf12_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x60bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf122(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf12_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf12_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x613cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf123(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf12_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf12_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x61bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf124(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf12_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf12_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x623cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf125(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf12_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf12_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x62bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf126(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf12_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf12_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x633cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf127(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf12_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf12_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x63bcusize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Access Data Field 13 Register %s"]
     #[inline(always)]
     pub const fn cfdrfdf13(
         &self,
@@ -1729,7 +11269,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6040usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfdf130(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf13_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf13_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6040usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf131(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf13_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf13_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x60c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf132(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf13_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf13_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6140usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf133(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf13_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf13_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x61c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf134(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf13_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf13_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6240usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf135(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf13_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf13_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x62c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf136(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf13_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf13_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6340usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf137(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf13_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf13_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x63c0usize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Access Data Field 14 Register %s"]
     #[inline(always)]
     pub const fn cfdrfdf14(
         &self,
@@ -1742,7 +11363,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6044usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfdf140(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf14_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf14_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6044usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf141(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf14_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf14_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x60c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf142(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf14_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf14_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6144usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf143(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf14_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf14_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x61c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf144(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf14_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf14_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6244usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf145(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf14_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf14_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x62c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf146(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf14_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf14_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6344usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf147(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf14_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf14_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x63c4usize),
+            )
+        }
+    }
 
+    #[doc = "RX FIFO Access Data Field 15 Register %s"]
     #[inline(always)]
     pub const fn cfdrfdf15(
         &self,
@@ -1755,7 +11457,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6048usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrfdf150(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf15_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf15_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6048usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf151(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf15_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf15_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x60c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf152(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf15_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf15_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6148usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf153(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf15_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf15_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x61c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf154(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf15_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf15_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6248usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf155(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf15_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf15_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x62c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf156(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf15_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf15_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6348usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrfdf157(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrfdf15_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrfdf15_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x63c8usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access ID Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdcfid_0(
         &self,
@@ -1768,7 +11551,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6400usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfid0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfid0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfid0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6400usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfid1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfid0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfid0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6480usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfid2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfid0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfid0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6500usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Pointer Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdcfptr_0(
         &self,
@@ -1781,7 +11595,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6404usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfptr0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfptr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfptr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6404usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfptr1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfptr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfptr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6484usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfptr2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfptr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfptr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6504usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access CAN-FD Control/Status Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdcffdcsts_0(
         &self,
@@ -1794,7 +11639,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6408usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcffdcsts0_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcffdcsts0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcffdcsts0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6408usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcffdcsts1_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcffdcsts0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcffdcsts0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6488usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcffdcsts2_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcffdcsts0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcffdcsts0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6508usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 0 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdcfdf0_0(
         &self,
@@ -1807,7 +11683,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x640cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf00_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf00_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf00_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x640cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf01_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf00_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf00_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x648cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf02_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf00_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf00_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x650cusize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 1 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdcfdf1_0(
         &self,
@@ -1820,7 +11727,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6410usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf10_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf10_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf10_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6410usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf11_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf10_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf10_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6490usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf12_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf10_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf10_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6510usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 2 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdcfdf2_0(
         &self,
@@ -1833,7 +11771,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6414usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf20_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf20_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf20_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6414usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf21_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf20_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf20_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6494usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf22_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf20_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf20_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6514usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 3 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdcfdf3_0(
         &self,
@@ -1846,7 +11815,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6418usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf30_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf30_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf30_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6418usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf31_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf30_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf30_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6498usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf30_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf30_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6518usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 4 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdcfdf4_0(
         &self,
@@ -1859,7 +11859,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x641cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf40_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf40_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf40_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x641cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf41_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf40_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf40_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x649cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf42_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf40_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf40_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x651cusize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 5 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdcfdf5_0(
         &self,
@@ -1872,7 +11903,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6420usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf50_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf50_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf50_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6420usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf51_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf50_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf50_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x64a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf52_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf50_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf50_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6520usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 6 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdcfdf6_0(
         &self,
@@ -1885,7 +11947,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6424usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf60_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf60_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf60_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6424usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf61_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf60_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf60_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x64a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf62_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf60_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf60_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6524usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 7 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdcfdf7_0(
         &self,
@@ -1898,7 +11991,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6428usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf70_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf70_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf70_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6428usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf71_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf70_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf70_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x64a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf72_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf70_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf70_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6528usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 8 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdcfdf8_0(
         &self,
@@ -1911,7 +12035,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x642cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf80_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf80_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf80_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x642cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf81_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf80_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf80_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x64acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf82_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf80_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf80_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x652cusize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 9 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdcfdf9_0(
         &self,
@@ -1924,7 +12079,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6430usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf90_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf90_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf90_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6430usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf91_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf90_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf90_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x64b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf92_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf90_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf90_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6530usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 10 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdcfdf10_0(
         &self,
@@ -1937,7 +12123,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6434usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf100_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf100_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf100_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6434usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf101_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf100_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf100_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x64b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf102_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf100_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf100_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6534usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 11 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdcfdf11_0(
         &self,
@@ -1950,7 +12167,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6438usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf110_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf110_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf110_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6438usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf111_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf110_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf110_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x64b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf112_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf110_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf110_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6538usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 12 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdcfdf12_0(
         &self,
@@ -1963,7 +12211,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x643cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf120_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf120_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf120_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x643cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf121_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf120_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf120_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x64bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf122_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf120_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf120_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x653cusize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 13 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdcfdf13_0(
         &self,
@@ -1976,7 +12255,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6440usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf130_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf130_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf130_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6440usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf131_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf130_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf130_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x64c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf132_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf130_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf130_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6540usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 14 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdcfdf14_0(
         &self,
@@ -1989,7 +12299,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6444usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf140_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf140_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf140_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6444usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf141_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf140_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf140_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x64c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf142_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf140_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf140_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6544usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 15 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdcfdf15_0(
         &self,
@@ -2002,7 +12343,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6448usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf150_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf150_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf150_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6448usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf151_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf150_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf150_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x64c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf152_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf150_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf150_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6548usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access ID Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdcfid_1(
         &self,
@@ -2015,7 +12387,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6580usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfid0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfid1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfid1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6580usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfid1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfid1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfid1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6600usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfid2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfid1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfid1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6680usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Pointer Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdcfptr_1(
         &self,
@@ -2028,7 +12431,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6584usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfptr0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfptr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfptr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6584usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfptr1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfptr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfptr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6604usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfptr2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfptr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfptr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6684usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access CAN-FD Control/Status Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdcffdcsts_1(
         &self,
@@ -2041,7 +12475,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6588usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcffdcsts0_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcffdcsts1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcffdcsts1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6588usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcffdcsts1_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcffdcsts1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcffdcsts1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6608usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcffdcsts2_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcffdcsts1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcffdcsts1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6688usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 0 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdcfdf0_1(
         &self,
@@ -2054,7 +12519,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x658cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf00_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf01_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf01_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x658cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf01_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf01_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf01_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x660cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf02_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf01_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf01_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x668cusize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 1 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdcfdf1_1(
         &self,
@@ -2067,7 +12563,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6590usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf10_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf11_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf11_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6590usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf11_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf11_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf11_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6610usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf12_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf11_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf11_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6690usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 2 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdcfdf2_1(
         &self,
@@ -2080,7 +12607,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6594usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf20_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf21_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf21_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6594usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf21_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf21_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf21_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6614usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf22_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf21_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf21_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6694usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 3 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdcfdf3_1(
         &self,
@@ -2093,7 +12651,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x6598usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf30_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf31_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf31_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6598usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf31_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf31_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf31_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6618usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf31_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf31_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6698usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 4 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdcfdf4_1(
         &self,
@@ -2106,7 +12695,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x659cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf40_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf41_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf41_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x659cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf41_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf41_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf41_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x661cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf42_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf41_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf41_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x669cusize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 5 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdcfdf5_1(
         &self,
@@ -2119,7 +12739,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x65a0usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf50_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf51_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf51_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x65a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf51_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf51_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf51_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6620usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf52_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf51_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf51_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x66a0usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 6 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdcfdf6_1(
         &self,
@@ -2132,7 +12783,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x65a4usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf60_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf61_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf61_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x65a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf61_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf61_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf61_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6624usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf62_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf61_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf61_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x66a4usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 7 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdcfdf7_1(
         &self,
@@ -2145,7 +12827,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x65a8usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf70_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf71_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf71_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x65a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf71_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf71_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf71_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6628usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf72_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf71_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf71_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x66a8usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 8 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdcfdf8_1(
         &self,
@@ -2158,7 +12871,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x65acusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf80_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf81_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf81_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x65acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf81_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf81_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf81_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x662cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf82_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf81_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf81_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x66acusize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 9 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdcfdf9_1(
         &self,
@@ -2171,7 +12915,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x65b0usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf90_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf91_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf91_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x65b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf91_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf91_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf91_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6630usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf92_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf91_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf91_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x66b0usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 10 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdcfdf10_1(
         &self,
@@ -2184,7 +12959,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x65b4usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf100_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf101_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf101_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x65b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf101_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf101_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf101_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6634usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf102_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf101_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf101_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x66b4usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 11 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdcfdf11_1(
         &self,
@@ -2197,7 +13003,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x65b8usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf110_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf111_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf111_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x65b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf111_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf111_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf111_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6638usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf112_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf111_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf111_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x66b8usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 12 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdcfdf12_1(
         &self,
@@ -2210,7 +13047,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x65bcusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf120_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf121_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf121_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x65bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf121_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf121_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf121_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x663cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf122_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf121_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf121_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x66bcusize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 13 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdcfdf13_1(
         &self,
@@ -2223,7 +13091,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x65c0usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf130_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf131_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf131_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x65c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf131_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf131_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf131_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6640usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf132_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf131_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf131_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x66c0usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 14 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdcfdf14_1(
         &self,
@@ -2236,7 +13135,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x65c4usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf140_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf141_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf141_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x65c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf141_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf141_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf141_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6644usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf142_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf141_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf141_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x66c4usize),
+            )
+        }
+    }
 
+    #[doc = "Common FIFO Access Data Field 15 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdcfdf15_1(
         &self,
@@ -2249,7 +13179,38 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x65c8usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdcfdf150_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf151_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf151_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x65c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf151_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf151_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf151_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6648usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdcfdf152_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdcfdf151_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdcfdf151_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x66c8usize),
+            )
+        }
+    }
 
+    #[doc = "TX History List Access Registers 0"]
     #[inline(always)]
     pub const fn cfdthlacc0(
         &self,
@@ -2262,7 +13223,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x8000usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdthlacc00(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdthlacc0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdthlacc0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8000usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdthlacc01(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdthlacc0_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Cfdthlacc0_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8008usize),
+            )
+        }
+    }
 
+    #[doc = "TX History List Access Registers 1"]
     #[inline(always)]
     pub const fn cfdthlacc1(
         &self,
@@ -2275,7 +13257,28 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x8004usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdthlacc10(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdthlacc1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdthlacc1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8004usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdthlacc11(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdthlacc1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdthlacc1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x800cusize),
+            )
+        }
+    }
 
+    #[doc = "RAM Test Page Access Registers %s"]
     #[inline(always)]
     pub const fn cfdrpgacc(
         &self,
@@ -2288,7 +13291,648 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x8400usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdrpgacc0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8400usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8404usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8408usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x840cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8410usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc5(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8414usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc6(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8418usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc7(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x841cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc8(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8420usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc9(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8424usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc10(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8428usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc11(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x842cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc12(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8430usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc13(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8434usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc14(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8438usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc15(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x843cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc16(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8440usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc17(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8444usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc18(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8448usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc19(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x844cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc20(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8450usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc21(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8454usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc22(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8458usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc23(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x845cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc24(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8460usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc25(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8464usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc26(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8468usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc27(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x846cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc28(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8470usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc29(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8474usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc30(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8478usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc31(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x847cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc32(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8480usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc33(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8484usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc34(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8488usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc35(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x848cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc36(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8490usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc37(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8494usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc38(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8498usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc39(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x849cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc40(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc41(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc42(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc43(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc44(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc45(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc46(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc47(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc48(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc49(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc50(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc51(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84ccusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc52(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84d0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc53(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84d4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc54(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84d8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc55(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84dcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc56(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84e0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc57(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84e4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc58(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84e8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc59(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84ecusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc60(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84f0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc61(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84f4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc62(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84f8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdrpgacc63(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdrpgacc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdrpgacc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84fcusize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer ID Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdtmid_0(
         &self,
@@ -2301,7 +13945,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x11000usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmid32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmid0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmid0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11000usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmid33_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmid0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmid0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11080usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmid34_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmid0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmid0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11100usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmid35_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmid0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmid0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11180usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmid36_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmid0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmid0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11200usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmid37_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmid0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmid0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11280usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmid38_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmid0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmid0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11300usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmid39_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmid0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmid0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11380usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Pointer Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdtmptr_0(
         &self,
@@ -2314,7 +14039,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x11004usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmptr32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmptr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmptr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11004usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmptr33_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmptr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmptr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11084usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmptr34_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmptr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmptr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11104usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmptr35_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmptr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmptr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11184usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmptr36_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmptr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmptr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11204usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmptr37_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmptr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmptr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11284usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmptr38_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmptr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmptr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11304usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmptr39_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmptr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmptr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11384usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer CANFD Control Register %s Channel i"]
     #[inline(always)]
     pub const fn cfdtmfdctr_0(
         &self,
@@ -2327,7 +14133,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x11008usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmfdctr32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmfdctr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmfdctr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11008usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmfdctr33_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmfdctr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmfdctr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11088usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmfdctr34_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmfdctr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmfdctr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11108usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmfdctr35_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmfdctr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmfdctr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11188usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmfdctr36_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmfdctr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmfdctr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11208usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmfdctr37_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmfdctr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmfdctr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11288usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmfdctr38_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmfdctr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmfdctr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11308usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmfdctr39_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmfdctr0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmfdctr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11388usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 0 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdtmdf0__0(
         &self,
@@ -2340,7 +14227,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1100cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf0_32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf00_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf00_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1100cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf0_33_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf00_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf00_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1108cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf0_34_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf00_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf00_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1110cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf0_35_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf00_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf00_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1118cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf0_36_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf00_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf00_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1120cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf0_37_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf00_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf00_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1128cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf0_38_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf00_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf00_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1130cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf0_39_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf00_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf00_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1138cusize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 1 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdtmdf1__0(
         &self,
@@ -2353,7 +14321,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x11010usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf1_32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf10_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf10_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11010usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf1_33_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf10_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf10_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11090usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf1_34_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf10_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf10_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11110usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf1_35_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf10_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf10_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11190usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf1_36_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf10_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf10_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11210usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf1_37_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf10_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf10_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11290usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf1_38_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf10_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf10_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11310usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf1_39_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf10_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf10_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11390usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 2 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdtmdf2__0(
         &self,
@@ -2366,7 +14415,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x11014usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf2_32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf20_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf20_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11014usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf2_33_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf20_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf20_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11094usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf2_34_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf20_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf20_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11114usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf2_35_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf20_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf20_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11194usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf2_36_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf20_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf20_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11214usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf2_37_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf20_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf20_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11294usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf2_38_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf20_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf20_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11314usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf2_39_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf20_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf20_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11394usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 3 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdtmdf3__0(
         &self,
@@ -2379,7 +14509,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x11018usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf3_32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf30_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf30_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11018usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf3_33_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf30_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf30_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11098usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf3_34_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf30_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf30_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11118usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf3_35_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf30_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf30_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11198usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf3_36_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf30_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf30_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11218usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf3_37_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf30_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf30_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11298usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf3_38_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf30_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf30_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11318usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf3_39_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf30_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf30_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11398usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 4 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdtmdf4__0(
         &self,
@@ -2392,7 +14603,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1101cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf4_32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf40_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf40_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1101cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf4_33_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf40_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf40_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1109cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf4_34_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf40_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf40_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1111cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf4_35_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf40_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf40_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1119cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf4_36_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf40_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf40_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1121cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf4_37_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf40_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf40_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1129cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf4_38_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf40_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf40_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1131cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf4_39_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf40_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf40_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1139cusize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 5 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdtmdf5__0(
         &self,
@@ -2405,7 +14697,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x11020usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf5_32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf50_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf50_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11020usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf5_33_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf50_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf50_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x110a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf5_34_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf50_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf50_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11120usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf5_35_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf50_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf50_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x111a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf5_36_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf50_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf50_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11220usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf5_37_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf50_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf50_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x112a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf5_38_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf50_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf50_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11320usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf5_39_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf50_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf50_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x113a0usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 6 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdtmdf6__0(
         &self,
@@ -2418,7 +14791,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x11024usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf6_32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf60_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf60_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11024usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf6_33_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf60_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf60_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x110a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf6_34_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf60_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf60_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11124usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf6_35_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf60_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf60_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x111a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf6_36_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf60_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf60_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11224usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf6_37_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf60_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf60_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x112a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf6_38_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf60_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf60_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11324usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf6_39_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf60_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf60_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x113a4usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 7 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdtmdf7__0(
         &self,
@@ -2431,7 +14885,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x11028usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf7_32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf70_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf70_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11028usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf7_33_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf70_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf70_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x110a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf7_34_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf70_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf70_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11128usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf7_35_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf70_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf70_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x111a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf7_36_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf70_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf70_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11228usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf7_37_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf70_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf70_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x112a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf7_38_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf70_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf70_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11328usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf7_39_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf70_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf70_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x113a8usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 8 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdtmdf8__0(
         &self,
@@ -2444,7 +14979,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1102cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf8_32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf80_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf80_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1102cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf8_33_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf80_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf80_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x110acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf8_34_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf80_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf80_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1112cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf8_35_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf80_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf80_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x111acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf8_36_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf80_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf80_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1122cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf8_37_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf80_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf80_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x112acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf8_38_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf80_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf80_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1132cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf8_39_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf80_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf80_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x113acusize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 9 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdtmdf9__0(
         &self,
@@ -2457,7 +15073,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x11030usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf9_32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf90_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf90_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11030usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf9_33_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf90_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf90_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x110b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf9_34_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf90_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf90_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11130usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf9_35_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf90_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf90_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x111b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf9_36_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf90_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf90_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11230usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf9_37_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf90_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf90_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x112b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf9_38_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf90_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf90_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11330usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf9_39_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf90_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf90_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x113b0usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 10 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdtmdf10__0(
         &self,
@@ -2470,7 +15167,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x11034usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf10_32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf100_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf100_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11034usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf10_33_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf100_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf100_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x110b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf10_34_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf100_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf100_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11134usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf10_35_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf100_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf100_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x111b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf10_36_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf100_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf100_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11234usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf10_37_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf100_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf100_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x112b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf10_38_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf100_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf100_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11334usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf10_39_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf100_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf100_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x113b4usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 11 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdtmdf11__0(
         &self,
@@ -2483,7 +15261,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x11038usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf11_32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf110_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf110_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11038usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf11_33_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf110_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf110_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x110b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf11_34_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf110_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf110_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11138usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf11_35_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf110_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf110_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x111b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf11_36_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf110_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf110_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11238usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf11_37_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf110_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf110_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x112b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf11_38_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf110_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf110_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11338usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf11_39_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf110_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf110_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x113b8usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 12 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdtmdf12__0(
         &self,
@@ -2496,7 +15355,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1103cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf12_32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf120_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf120_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1103cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf12_33_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf120_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf120_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x110bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf12_34_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf120_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf120_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1113cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf12_35_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf120_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf120_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x111bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf12_36_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf120_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf120_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1123cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf12_37_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf120_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf120_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x112bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf12_38_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf120_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf120_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1133cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf12_39_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf120_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf120_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x113bcusize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 13 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdtmdf13__0(
         &self,
@@ -2509,7 +15449,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x11040usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf13_32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf130_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf130_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11040usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf13_33_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf130_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf130_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x110c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf13_34_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf130_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf130_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11140usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf13_35_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf130_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf130_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x111c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf13_36_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf130_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf130_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11240usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf13_37_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf130_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf130_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x112c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf13_38_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf130_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf130_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11340usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf13_39_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf130_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf130_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x113c0usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 14 Register %s Channel 0"]
     #[inline(always)]
     pub const fn cfdtmdf14__0(
         &self,
@@ -2522,7 +15543,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x11044usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf14_32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf140_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf140_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11044usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf14_33_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf140_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf140_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x110c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf14_34_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf140_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf140_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11144usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf14_35_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf140_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf140_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x111c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf14_36_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf140_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf140_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11244usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf14_37_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf140_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf140_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x112c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf14_38_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf140_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf140_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11344usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf14_39_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf140_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf140_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x113c4usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field X Register 15 Channel 0"]
     #[inline(always)]
     pub const fn cfdtmdf15__0(
         &self,
@@ -2535,7 +15637,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x11048usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf15_32_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf150_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf150_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11048usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf15_33_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf150_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf150_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x110c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf15_34_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf150_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf150_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11148usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf15_35_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf150_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf150_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x111c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf15_36_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf150_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf150_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11248usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf15_37_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf150_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf150_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x112c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf15_38_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf150_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf150_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x11348usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf15_39_0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf150_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf150_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x113c8usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer ID Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdtmid_1(
         &self,
@@ -2548,7 +15731,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x13000usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmid32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmid1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmid1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13000usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmid33_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmid1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmid1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13080usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmid34_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmid1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmid1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13100usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmid35_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmid1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmid1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13180usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmid36_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmid1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmid1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13200usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmid37_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmid1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmid1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13280usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmid38_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmid1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmid1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13300usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmid39_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmid1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmid1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13380usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Pointer Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdtmptr_1(
         &self,
@@ -2561,7 +15825,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x13004usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmptr32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmptr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmptr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13004usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmptr33_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmptr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmptr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13084usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmptr34_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmptr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmptr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13104usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmptr35_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmptr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmptr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13184usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmptr36_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmptr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmptr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13204usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmptr37_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmptr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmptr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13284usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmptr38_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmptr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmptr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13304usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmptr39_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmptr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmptr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13384usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer CANFD Control Register %s Channel i"]
     #[inline(always)]
     pub const fn cfdtmfdctr_1(
         &self,
@@ -2574,7 +15919,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x13008usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmfdctr32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmfdctr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmfdctr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13008usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmfdctr33_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmfdctr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmfdctr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13088usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmfdctr34_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmfdctr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmfdctr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13108usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmfdctr35_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmfdctr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmfdctr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13188usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmfdctr36_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmfdctr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmfdctr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13208usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmfdctr37_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmfdctr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmfdctr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13288usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmfdctr38_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmfdctr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmfdctr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13308usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmfdctr39_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmfdctr1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmfdctr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13388usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 0 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdtmdf0__1(
         &self,
@@ -2587,7 +16013,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1300cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf0_32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf01_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf01_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1300cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf0_33_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf01_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf01_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1308cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf0_34_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf01_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf01_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1310cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf0_35_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf01_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf01_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1318cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf0_36_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf01_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf01_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1320cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf0_37_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf01_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf01_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1328cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf0_38_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf01_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf01_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1330cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf0_39_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf01_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf01_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1338cusize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 1 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdtmdf1__1(
         &self,
@@ -2600,7 +16107,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x13010usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf1_32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf11_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf11_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13010usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf1_33_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf11_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf11_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13090usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf1_34_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf11_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf11_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13110usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf1_35_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf11_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf11_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13190usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf1_36_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf11_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf11_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13210usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf1_37_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf11_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf11_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13290usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf1_38_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf11_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf11_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13310usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf1_39_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf11_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf11_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13390usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 2 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdtmdf2__1(
         &self,
@@ -2613,7 +16201,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x13014usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf2_32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf21_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf21_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13014usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf2_33_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf21_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf21_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13094usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf2_34_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf21_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf21_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13114usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf2_35_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf21_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf21_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13194usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf2_36_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf21_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf21_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13214usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf2_37_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf21_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf21_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13294usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf2_38_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf21_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf21_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13314usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf2_39_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf21_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf21_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13394usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 3 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdtmdf3__1(
         &self,
@@ -2626,7 +16295,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x13018usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf3_32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf31_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf31_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13018usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf3_33_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf31_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf31_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13098usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf3_34_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf31_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf31_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13118usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf3_35_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf31_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf31_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13198usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf3_36_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf31_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf31_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13218usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf3_37_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf31_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf31_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13298usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf3_38_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf31_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf31_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13318usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf3_39_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf31_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf31_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13398usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 4 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdtmdf4__1(
         &self,
@@ -2639,7 +16389,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1301cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf4_32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf41_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf41_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1301cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf4_33_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf41_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf41_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1309cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf4_34_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf41_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf41_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1311cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf4_35_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf41_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf41_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1319cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf4_36_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf41_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf41_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1321cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf4_37_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf41_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf41_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1329cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf4_38_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf41_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf41_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1331cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf4_39_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf41_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf41_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1339cusize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 5 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdtmdf5__1(
         &self,
@@ -2652,7 +16483,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x13020usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf5_32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf51_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf51_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13020usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf5_33_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf51_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf51_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x130a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf5_34_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf51_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf51_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13120usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf5_35_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf51_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf51_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x131a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf5_36_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf51_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf51_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13220usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf5_37_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf51_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf51_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x132a0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf5_38_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf51_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf51_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13320usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf5_39_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf51_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf51_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x133a0usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 6 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdtmdf6__1(
         &self,
@@ -2665,7 +16577,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x13024usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf6_32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf61_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf61_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13024usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf6_33_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf61_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf61_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x130a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf6_34_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf61_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf61_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13124usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf6_35_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf61_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf61_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x131a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf6_36_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf61_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf61_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13224usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf6_37_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf61_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf61_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x132a4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf6_38_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf61_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf61_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13324usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf6_39_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf61_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf61_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x133a4usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 7 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdtmdf7__1(
         &self,
@@ -2678,7 +16671,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x13028usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf7_32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf71_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf71_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13028usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf7_33_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf71_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf71_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x130a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf7_34_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf71_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf71_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13128usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf7_35_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf71_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf71_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x131a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf7_36_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf71_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf71_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13228usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf7_37_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf71_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf71_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x132a8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf7_38_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf71_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf71_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13328usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf7_39_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf71_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf71_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x133a8usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 8 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdtmdf8__1(
         &self,
@@ -2691,7 +16765,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1302cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf8_32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf81_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf81_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1302cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf8_33_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf81_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf81_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x130acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf8_34_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf81_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf81_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1312cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf8_35_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf81_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf81_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x131acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf8_36_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf81_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf81_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1322cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf8_37_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf81_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf81_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x132acusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf8_38_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf81_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf81_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1332cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf8_39_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf81_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf81_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x133acusize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 9 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdtmdf9__1(
         &self,
@@ -2704,7 +16859,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x13030usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf9_32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf91_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf91_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13030usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf9_33_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf91_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf91_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x130b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf9_34_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf91_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf91_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13130usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf9_35_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf91_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf91_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x131b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf9_36_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf91_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf91_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13230usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf9_37_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf91_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf91_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x132b0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf9_38_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf91_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf91_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13330usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf9_39_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf91_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf91_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x133b0usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 10 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdtmdf10__1(
         &self,
@@ -2717,7 +16953,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x13034usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf10_32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf101_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf101_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13034usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf10_33_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf101_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf101_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x130b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf10_34_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf101_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf101_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13134usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf10_35_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf101_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf101_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x131b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf10_36_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf101_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf101_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13234usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf10_37_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf101_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf101_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x132b4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf10_38_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf101_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf101_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13334usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf10_39_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf101_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf101_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x133b4usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 11 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdtmdf11__1(
         &self,
@@ -2730,7 +17047,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x13038usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf11_32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf111_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf111_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13038usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf11_33_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf111_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf111_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x130b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf11_34_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf111_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf111_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13138usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf11_35_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf111_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf111_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x131b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf11_36_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf111_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf111_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13238usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf11_37_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf111_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf111_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x132b8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf11_38_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf111_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf111_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13338usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf11_39_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf111_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf111_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x133b8usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 12 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdtmdf12__1(
         &self,
@@ -2743,7 +17141,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1303cusize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf12_32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf121_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf121_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1303cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf12_33_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf121_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf121_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x130bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf12_34_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf121_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf121_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1313cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf12_35_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf121_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf121_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x131bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf12_36_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf121_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf121_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1323cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf12_37_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf121_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf121_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x132bcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf12_38_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf121_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf121_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1333cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf12_39_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf121_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf121_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x133bcusize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 13 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdtmdf13__1(
         &self,
@@ -2756,7 +17235,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x13040usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf13_32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf131_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf131_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13040usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf13_33_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf131_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf131_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x130c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf13_34_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf131_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf131_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13140usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf13_35_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf131_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf131_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x131c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf13_36_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf131_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf131_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13240usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf13_37_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf131_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf131_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x132c0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf13_38_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf131_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf131_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13340usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf13_39_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf131_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf131_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x133c0usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field 14 Register %s Channel 1"]
     #[inline(always)]
     pub const fn cfdtmdf14__1(
         &self,
@@ -2769,7 +17329,88 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x13044usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf14_32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf141_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf141_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13044usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf14_33_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf141_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf141_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x130c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf14_34_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf141_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf141_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13144usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf14_35_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf141_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf141_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x131c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf14_36_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf141_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf141_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13244usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf14_37_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf141_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf141_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x132c4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf14_38_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf141_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf141_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13344usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf14_39_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf141_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf141_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x133c4usize),
+            )
+        }
+    }
 
+    #[doc = "TX Message Buffer Data Field X Register 15 Channel 1"]
     #[inline(always)]
     pub const fn cfdtmdf15__1(
         &self,
@@ -2782,6 +17423,86 @@ impl super::Canfd {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x13048usize))
         }
     }
+    #[inline(always)]
+    pub const fn cfdtmdf15_32_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf151_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf151_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13048usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf15_33_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf151_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf151_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x130c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf15_34_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf151_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf151_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13148usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf15_35_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf151_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf151_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x131c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf15_36_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf151_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf151_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13248usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf15_37_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf151_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf151_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x132c8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf15_38_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf151_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf151_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13348usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn cfdtmdf15_39_1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Cfdtmdf151_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Cfdtmdf151_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x133c8usize),
+            )
+        }
+    }
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -2790,9 +17511,11 @@ impl crate::sealed::RegSpec for Cfdcncfg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Channel %s Nominal Bitrate Configuration Register"]
 pub type Cfdcncfg = crate::RegValueT<Cfdcncfg_SPEC>;
 
 impl Cfdcncfg {
+    #[doc = "Channel Nominal Baud Rate Prescaler"]
     #[inline(always)]
     pub fn nbrp(
         self,
@@ -2801,6 +17524,7 @@ impl Cfdcncfg {
         crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,Cfdcncfg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Resynchronization Jump Width"]
     #[inline(always)]
     pub fn nsjw(
         self,
@@ -2809,6 +17533,7 @@ impl Cfdcncfg {
         crate::common::RegisterField::<10,0x7f,1,0,u8,u8,Cfdcncfg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Timing Segment 1"]
     #[inline(always)]
     pub fn ntseg1(
         self,
@@ -2817,6 +17542,7 @@ impl Cfdcncfg {
         crate::common::RegisterField::<17,0xff,1,0,u8,u8,Cfdcncfg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Timing Segment 2"]
     #[inline(always)]
     pub fn ntseg2(
         self,
@@ -2839,9 +17565,11 @@ impl crate::sealed::RegSpec for Cfdcctr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Channel %s Control Registers"]
 pub type Cfdcctr = crate::RegValueT<Cfdcctr_SPEC>;
 
 impl Cfdcctr {
+    #[doc = "Channel Mode Control"]
     #[inline(always)]
     pub fn chmdc(
         self,
@@ -2867,6 +17595,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Channel Sleep Request"]
     #[inline(always)]
     pub fn cslpr(
         self,
@@ -2892,6 +17621,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Return from Bus-Off"]
     #[inline(always)]
     pub fn rtbo(
         self,
@@ -2917,6 +17647,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus Error Interrupt Enable"]
     #[inline(always)]
     pub fn beie(
         self,
@@ -2942,6 +17673,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Error Warning Interrupt Enable"]
     #[inline(always)]
     pub fn ewie(
         self,
@@ -2967,6 +17699,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Error Passive Interrupt Enable"]
     #[inline(always)]
     pub fn epie(
         self,
@@ -2992,6 +17725,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus-Off Entry Interrupt Enable"]
     #[inline(always)]
     pub fn boeie(
         self,
@@ -3017,6 +17751,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus-Off Recovery Interrupt Enable"]
     #[inline(always)]
     pub fn borie(
         self,
@@ -3042,6 +17777,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Overload Interrupt Enable"]
     #[inline(always)]
     pub fn olie(
         self,
@@ -3067,6 +17803,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus Lock Interrupt Enable"]
     #[inline(always)]
     pub fn blie(
         self,
@@ -3092,6 +17829,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Arbitration Lost Interrupt Enable"]
     #[inline(always)]
     pub fn alie(
         self,
@@ -3117,6 +17855,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transmission Abort Interrupt Enable"]
     #[inline(always)]
     pub fn taie(
         self,
@@ -3142,6 +17881,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Error Occurrence Counter Overflow Interrupt Enable"]
     #[inline(always)]
     pub fn eocoie(
         self,
@@ -3167,6 +17907,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Successful Occurrence Counter Overflow Interrupt Enable"]
     #[inline(always)]
     pub fn socoie(
         self,
@@ -3192,6 +17933,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transceiver Delay Compensation Violation Interrupt Enable"]
     #[inline(always)]
     pub fn tdcvfie(
         self,
@@ -3217,6 +17959,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Channel Bus-Off Mode"]
     #[inline(always)]
     pub fn bom(
         self,
@@ -3242,6 +17985,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Channel Error Display"]
     #[inline(always)]
     pub fn errd(
         self,
@@ -3267,6 +18011,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Channel Test Mode Enable"]
     #[inline(always)]
     pub fn ctme(
         self,
@@ -3292,6 +18037,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Channel Test Mode Select"]
     #[inline(always)]
     pub fn ctms(
         self,
@@ -3317,6 +18063,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "CRC Error Test"]
     #[inline(always)]
     pub fn crct(
         self,
@@ -3342,6 +18089,7 @@ impl Cfdcctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Restricted Operation Mode"]
     #[inline(always)]
     pub fn rom(
         self,
@@ -3379,180 +18127,228 @@ pub mod cfdcctr {
     pub struct Chmdc_SPEC;
     pub type Chmdc = crate::EnumBitfieldStruct<u8, Chmdc_SPEC>;
     impl Chmdc {
+        #[doc = "Channel operation mode request"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Channel reset request"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Channel halt request"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Keep current value"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cslpr_SPEC;
     pub type Cslpr = crate::EnumBitfieldStruct<u8, Cslpr_SPEC>;
     impl Cslpr {
+        #[doc = "Channel sleep request disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel sleep request enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rtbo_SPEC;
     pub type Rtbo = crate::EnumBitfieldStruct<u8, Rtbo_SPEC>;
     impl Rtbo {
+        #[doc = "Channel is not forced to return from bus-off"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel is forced to return from bus-off"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Beie_SPEC;
     pub type Beie = crate::EnumBitfieldStruct<u8, Beie_SPEC>;
     impl Beie {
+        #[doc = "Bus error interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus error interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ewie_SPEC;
     pub type Ewie = crate::EnumBitfieldStruct<u8, Ewie_SPEC>;
     impl Ewie {
+        #[doc = "Error warning interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Error warning interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Epie_SPEC;
     pub type Epie = crate::EnumBitfieldStruct<u8, Epie_SPEC>;
     impl Epie {
+        #[doc = "Error passive interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Error passive interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Boeie_SPEC;
     pub type Boeie = crate::EnumBitfieldStruct<u8, Boeie_SPEC>;
     impl Boeie {
+        #[doc = "Bus-off entry interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus-off entry interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Borie_SPEC;
     pub type Borie = crate::EnumBitfieldStruct<u8, Borie_SPEC>;
     impl Borie {
+        #[doc = "Bus-off recovery interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus-off recovery interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Olie_SPEC;
     pub type Olie = crate::EnumBitfieldStruct<u8, Olie_SPEC>;
     impl Olie {
+        #[doc = "Overload interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Overload interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Blie_SPEC;
     pub type Blie = crate::EnumBitfieldStruct<u8, Blie_SPEC>;
     impl Blie {
+        #[doc = "Bus lock interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus lock interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Alie_SPEC;
     pub type Alie = crate::EnumBitfieldStruct<u8, Alie_SPEC>;
     impl Alie {
+        #[doc = "Arbitration lost interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Arbitration lost interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Taie_SPEC;
     pub type Taie = crate::EnumBitfieldStruct<u8, Taie_SPEC>;
     impl Taie {
+        #[doc = "TX abort interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX abort interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eocoie_SPEC;
     pub type Eocoie = crate::EnumBitfieldStruct<u8, Eocoie_SPEC>;
     impl Eocoie {
+        #[doc = "Error occurrence counter overflow interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Error occurrence counter overflow interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Socoie_SPEC;
     pub type Socoie = crate::EnumBitfieldStruct<u8, Socoie_SPEC>;
     impl Socoie {
+        #[doc = "Successful occurrence counter overflow interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Successful occurrence counter overflow interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tdcvfie_SPEC;
     pub type Tdcvfie = crate::EnumBitfieldStruct<u8, Tdcvfie_SPEC>;
     impl Tdcvfie {
+        #[doc = "Transceiver delay compensation violation interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transceiver delay compensation violation interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bom_SPEC;
     pub type Bom = crate::EnumBitfieldStruct<u8, Bom_SPEC>;
     impl Bom {
+        #[doc = "Normal mode (comply with ISO 11898-1)"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Entry to Halt mode automatically at bus-off start"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Entry to Halt mode automatically at bus-off end"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Entry to Halt mode (during bus-off recovery period) by software"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Errd_SPEC;
     pub type Errd = crate::EnumBitfieldStruct<u8, Errd_SPEC>;
     impl Errd {
+        #[doc = "Only the first set of error codes displayed"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Accumulated error codes displayed"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ctme_SPEC;
     pub type Ctme = crate::EnumBitfieldStruct<u8, Ctme_SPEC>;
     impl Ctme {
+        #[doc = "Channel test mode disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel test mode enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ctms_SPEC;
     pub type Ctms = crate::EnumBitfieldStruct<u8, Ctms_SPEC>;
     impl Ctms {
+        #[doc = "Basic test mode"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Listen-only mode"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Self-test mode 0 (External loopback mode)"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Self-test mode 1 (Internal loopback mode)"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Crct_SPEC;
     pub type Crct = crate::EnumBitfieldStruct<u8, Crct_SPEC>;
     impl Crct {
+        #[doc = "First data bit of reception stream not inverted"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "First data bit of reception stream inverted"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rom_SPEC;
     pub type Rom = crate::EnumBitfieldStruct<u8, Rom_SPEC>;
     impl Rom {
+        #[doc = "Restricted operation mode disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Restricted operation mode enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3563,9 +18359,11 @@ impl crate::sealed::RegSpec for Cfdcsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Channel %s Status Registers"]
 pub type Cfdcsts = crate::RegValueT<Cfdcsts_SPEC>;
 
 impl Cfdcsts {
+    #[doc = "Channel Reset Status"]
     #[inline(always)]
     pub fn crststs(
         self,
@@ -3591,6 +18389,7 @@ impl Cfdcsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Channel Halt Status"]
     #[inline(always)]
     pub fn chltsts(
         self,
@@ -3616,6 +18415,7 @@ impl Cfdcsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Channel Sleep Status"]
     #[inline(always)]
     pub fn cslpsts(
         self,
@@ -3641,6 +18441,7 @@ impl Cfdcsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Channel Error Passive Status"]
     #[inline(always)]
     pub fn epsts(
         self,
@@ -3666,6 +18467,7 @@ impl Cfdcsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Channel Bus-Off Status"]
     #[inline(always)]
     pub fn bosts(
         self,
@@ -3691,6 +18493,7 @@ impl Cfdcsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Channel Transmit Status"]
     #[inline(always)]
     pub fn trmsts(
         self,
@@ -3716,6 +18519,7 @@ impl Cfdcsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Channel Receive Status"]
     #[inline(always)]
     pub fn recsts(
         self,
@@ -3741,6 +18545,7 @@ impl Cfdcsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Channel Communication Status"]
     #[inline(always)]
     pub fn comsts(
         self,
@@ -3766,6 +18571,7 @@ impl Cfdcsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Error State Indication Flag"]
     #[inline(always)]
     pub fn esif(
         self,
@@ -3791,6 +18597,7 @@ impl Cfdcsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Reception Error Count"]
     #[inline(always)]
     pub fn rec(
         self,
@@ -3798,6 +18605,7 @@ impl Cfdcsts {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcsts_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Transmission Error Count"]
     #[inline(always)]
     pub fn tec(
         self,
@@ -3817,72 +18625,90 @@ pub mod cfdcsts {
     pub struct Crststs_SPEC;
     pub type Crststs = crate::EnumBitfieldStruct<u8, Crststs_SPEC>;
     impl Crststs {
+        #[doc = "Channel not in Reset mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel in Reset mode"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Chltsts_SPEC;
     pub type Chltsts = crate::EnumBitfieldStruct<u8, Chltsts_SPEC>;
     impl Chltsts {
+        #[doc = "Channel not in Halt mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel in Halt mode"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cslpsts_SPEC;
     pub type Cslpsts = crate::EnumBitfieldStruct<u8, Cslpsts_SPEC>;
     impl Cslpsts {
+        #[doc = "Channel not in Sleep mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel in Sleep mode"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Epsts_SPEC;
     pub type Epsts = crate::EnumBitfieldStruct<u8, Epsts_SPEC>;
     impl Epsts {
+        #[doc = "Channel not in error passive state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel in error passive state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bosts_SPEC;
     pub type Bosts = crate::EnumBitfieldStruct<u8, Bosts_SPEC>;
     impl Bosts {
+        #[doc = "Channel not in bus-off state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel in bus-off state"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Trmsts_SPEC;
     pub type Trmsts = crate::EnumBitfieldStruct<u8, Trmsts_SPEC>;
     impl Trmsts {
+        #[doc = "Channel is not transmitting"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel is transmitting"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Recsts_SPEC;
     pub type Recsts = crate::EnumBitfieldStruct<u8, Recsts_SPEC>;
     impl Recsts {
+        #[doc = "Channel is not receiving"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel is receiving"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Comsts_SPEC;
     pub type Comsts = crate::EnumBitfieldStruct<u8, Comsts_SPEC>;
     impl Comsts {
+        #[doc = "Channel is not ready for communication"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel is ready for communication"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Esif_SPEC;
     pub type Esif = crate::EnumBitfieldStruct<u8, Esif_SPEC>;
     impl Esif {
+        #[doc = "No CANFD message has been received when the ESI flag was set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "At least one CANFD message was received when the ESI flag was set"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3893,9 +18719,11 @@ impl crate::sealed::RegSpec for Cfdcerfl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Channel %s Error Flag Registers"]
 pub type Cfdcerfl = crate::RegValueT<Cfdcerfl_SPEC>;
 
 impl Cfdcerfl {
+    #[doc = "Bus Error Flag"]
     #[inline(always)]
     pub fn bef(
         self,
@@ -3921,6 +18749,7 @@ impl Cfdcerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Error Warning Flag"]
     #[inline(always)]
     pub fn ewf(
         self,
@@ -3946,6 +18775,7 @@ impl Cfdcerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Error Passive Flag"]
     #[inline(always)]
     pub fn epf(
         self,
@@ -3971,6 +18801,7 @@ impl Cfdcerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus-Off Entry Flag"]
     #[inline(always)]
     pub fn boef(
         self,
@@ -3996,6 +18827,7 @@ impl Cfdcerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus-Off Recovery Flag"]
     #[inline(always)]
     pub fn borf(
         self,
@@ -4021,6 +18853,7 @@ impl Cfdcerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Overload Flag"]
     #[inline(always)]
     pub fn ovlf(
         self,
@@ -4046,6 +18879,7 @@ impl Cfdcerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus Lock Flag"]
     #[inline(always)]
     pub fn blf(
         self,
@@ -4071,6 +18905,7 @@ impl Cfdcerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Arbitration Lost Flag"]
     #[inline(always)]
     pub fn alf(
         self,
@@ -4096,6 +18931,7 @@ impl Cfdcerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Stuff Error"]
     #[inline(always)]
     pub fn serr(
         self,
@@ -4121,6 +18957,7 @@ impl Cfdcerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Form Error"]
     #[inline(always)]
     pub fn ferr(
         self,
@@ -4146,6 +18983,7 @@ impl Cfdcerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Acknowledge Error"]
     #[inline(always)]
     pub fn aerr(
         self,
@@ -4171,6 +19009,7 @@ impl Cfdcerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "CRC Error"]
     #[inline(always)]
     pub fn cerr(
         self,
@@ -4196,6 +19035,7 @@ impl Cfdcerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bit 1 Error"]
     #[inline(always)]
     pub fn b1err(
         self,
@@ -4221,6 +19061,7 @@ impl Cfdcerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bit 0 Error"]
     #[inline(always)]
     pub fn b0err(
         self,
@@ -4246,6 +19087,7 @@ impl Cfdcerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Acknowledge Delimiter Error"]
     #[inline(always)]
     pub fn aderr(
         self,
@@ -4271,6 +19113,7 @@ impl Cfdcerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "CRC Register value"]
     #[inline(always)]
     pub fn crcreg(
         self,
@@ -4291,120 +19134,150 @@ pub mod cfdcerfl {
     pub struct Bef_SPEC;
     pub type Bef = crate::EnumBitfieldStruct<u8, Bef_SPEC>;
     impl Bef {
+        #[doc = "Channel bus error not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel bus error detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ewf_SPEC;
     pub type Ewf = crate::EnumBitfieldStruct<u8, Ewf_SPEC>;
     impl Ewf {
+        #[doc = "Channel error warning not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel error warning detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Epf_SPEC;
     pub type Epf = crate::EnumBitfieldStruct<u8, Epf_SPEC>;
     impl Epf {
+        #[doc = "Channel error passive not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel error passive detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Boef_SPEC;
     pub type Boef = crate::EnumBitfieldStruct<u8, Boef_SPEC>;
     impl Boef {
+        #[doc = "Channel bus-off entry not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel bus-off entry detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Borf_SPEC;
     pub type Borf = crate::EnumBitfieldStruct<u8, Borf_SPEC>;
     impl Borf {
+        #[doc = "Channel bus-off recovery not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel bus-off recovery detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ovlf_SPEC;
     pub type Ovlf = crate::EnumBitfieldStruct<u8, Ovlf_SPEC>;
     impl Ovlf {
+        #[doc = "Channel overload not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel overload detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Blf_SPEC;
     pub type Blf = crate::EnumBitfieldStruct<u8, Blf_SPEC>;
     impl Blf {
+        #[doc = "Channel bus lock not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel bus lock detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Alf_SPEC;
     pub type Alf = crate::EnumBitfieldStruct<u8, Alf_SPEC>;
     impl Alf {
+        #[doc = "Channel arbitration lost not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel arbitration lost detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Serr_SPEC;
     pub type Serr = crate::EnumBitfieldStruct<u8, Serr_SPEC>;
     impl Serr {
+        #[doc = "Channel stuff error not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel stuff error detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ferr_SPEC;
     pub type Ferr = crate::EnumBitfieldStruct<u8, Ferr_SPEC>;
     impl Ferr {
+        #[doc = "Channel form error not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel form error detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aerr_SPEC;
     pub type Aerr = crate::EnumBitfieldStruct<u8, Aerr_SPEC>;
     impl Aerr {
+        #[doc = "Channel acknowledge error not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel acknowledge error detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cerr_SPEC;
     pub type Cerr = crate::EnumBitfieldStruct<u8, Cerr_SPEC>;
     impl Cerr {
+        #[doc = "Channel CRC error not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel CRC error detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct B1Err_SPEC;
     pub type B1Err = crate::EnumBitfieldStruct<u8, B1Err_SPEC>;
     impl B1Err {
+        #[doc = "Channel bit 1 error not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel bit 1 error detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct B0Err_SPEC;
     pub type B0Err = crate::EnumBitfieldStruct<u8, B0Err_SPEC>;
     impl B0Err {
+        #[doc = "Channel bit 0 error not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel bit 0 error detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aderr_SPEC;
     pub type Aderr = crate::EnumBitfieldStruct<u8, Aderr_SPEC>;
     impl Aderr {
+        #[doc = "Channel acknowledge delimiter error not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel acknowledge delimiter error detected"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4415,9 +19288,11 @@ impl crate::sealed::RegSpec for Cfdgcfg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Global Configuration Register"]
 pub type Cfdgcfg = crate::RegValueT<Cfdgcfg_SPEC>;
 
 impl Cfdgcfg {
+    #[doc = "Transmission Priority"]
     #[inline(always)]
     pub fn tpri(
         self,
@@ -4443,6 +19318,7 @@ impl Cfdgcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "DLC Check Enable"]
     #[inline(always)]
     pub fn dce(
         self,
@@ -4468,6 +19344,7 @@ impl Cfdgcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "DLC Replacement Enable"]
     #[inline(always)]
     pub fn dre(
         self,
@@ -4493,6 +19370,7 @@ impl Cfdgcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Mirror Mode Enable"]
     #[inline(always)]
     pub fn mme(
         self,
@@ -4518,6 +19396,7 @@ impl Cfdgcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Data Link Controller Clock Select"]
     #[inline(always)]
     pub fn dcs(
         self,
@@ -4543,6 +19422,7 @@ impl Cfdgcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "CAN-FD Message Payload Overflow Configuration"]
     #[inline(always)]
     pub fn cmpoc(
         self,
@@ -4568,6 +19448,7 @@ impl Cfdgcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timestamp Prescaler"]
     #[inline(always)]
     pub fn tsp(
         self,
@@ -4575,6 +19456,7 @@ impl Cfdgcfg {
         crate::common::RegisterField::<8,0xf,1,0,u8,u8,Cfdgcfg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Timestamp Source Select"]
     #[inline(always)]
     pub fn tsss(
         self,
@@ -4600,6 +19482,7 @@ impl Cfdgcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timestamp Bit Time Channel Select"]
     #[inline(always)]
     pub fn tsbtcs(
         self,
@@ -4625,6 +19508,7 @@ impl Cfdgcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Interval Timer Reference Clock Prescaler"]
     #[inline(always)]
     pub fn itrcp(
         self,
@@ -4645,66 +19529,83 @@ pub mod cfdgcfg {
     pub struct Tpri_SPEC;
     pub type Tpri = crate::EnumBitfieldStruct<u8, Tpri_SPEC>;
     impl Tpri {
+        #[doc = "ID priority"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Message buffer number priority"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dce_SPEC;
     pub type Dce = crate::EnumBitfieldStruct<u8, Dce_SPEC>;
     impl Dce {
+        #[doc = "DLC check disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DLC check enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dre_SPEC;
     pub type Dre = crate::EnumBitfieldStruct<u8, Dre_SPEC>;
     impl Dre {
+        #[doc = "DLC replacement disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DLC replacement enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mme_SPEC;
     pub type Mme = crate::EnumBitfieldStruct<u8, Mme_SPEC>;
     impl Mme {
+        #[doc = "Mirror mode disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Mirror mode enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dcs_SPEC;
     pub type Dcs = crate::EnumBitfieldStruct<u8, Dcs_SPEC>;
     impl Dcs {
+        #[doc = "Internal clean clock"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "External clock source connected to CANMCLK pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpoc_SPEC;
     pub type Cmpoc = crate::EnumBitfieldStruct<u8, Cmpoc_SPEC>;
     impl Cmpoc {
+        #[doc = "Message is rejected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Message payload is cut to fit to configured message size"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tsss_SPEC;
     pub type Tsss = crate::EnumBitfieldStruct<u8, Tsss_SPEC>;
     impl Tsss {
+        #[doc = "Source clock for timestamp counter is peripheral clock"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Source clock for timestamp counter is bit time clock"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tsbtcs_SPEC;
     pub type Tsbtcs = crate::EnumBitfieldStruct<u8, Tsbtcs_SPEC>;
     impl Tsbtcs {
+        #[doc = "Select clock from channel 0"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Select clock from channel 1"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -4715,9 +19616,11 @@ impl crate::sealed::RegSpec for Cfdgctr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Global Control Register"]
 pub type Cfdgctr = crate::RegValueT<Cfdgctr_SPEC>;
 
 impl Cfdgctr {
+    #[doc = "Global Mode Control"]
     #[inline(always)]
     pub fn gmdc(
         self,
@@ -4743,6 +19646,7 @@ impl Cfdgctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Global Sleep Request"]
     #[inline(always)]
     pub fn gslpr(
         self,
@@ -4768,6 +19672,7 @@ impl Cfdgctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "DLC Check Interrupt Enable"]
     #[inline(always)]
     pub fn deie(
         self,
@@ -4793,6 +19698,7 @@ impl Cfdgctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Message Lost Error Interrupt Enable"]
     #[inline(always)]
     pub fn meie(
         self,
@@ -4818,6 +19724,7 @@ impl Cfdgctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX History List Entry Lost Interrupt Enable"]
     #[inline(always)]
     pub fn thleie(
         self,
@@ -4843,6 +19750,7 @@ impl Cfdgctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "CANFD Message Payload Overflow Flag Interrupt Enable"]
     #[inline(always)]
     pub fn cmpofie(
         self,
@@ -4868,6 +19776,7 @@ impl Cfdgctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "TXQ Message Lost Error Interrupt Enable"]
     #[inline(always)]
     pub fn qmeie(
         self,
@@ -4893,6 +19802,7 @@ impl Cfdgctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "GW FIFO Message Overwrite Error Interrupt Enable"]
     #[inline(always)]
     pub fn moweie(
         self,
@@ -4918,6 +19828,7 @@ impl Cfdgctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timestamp Reset"]
     #[inline(always)]
     pub fn tsrst(
         self,
@@ -4955,76 +19866,96 @@ pub mod cfdgctr {
     pub struct Gmdc_SPEC;
     pub type Gmdc = crate::EnumBitfieldStruct<u8, Gmdc_SPEC>;
     impl Gmdc {
+        #[doc = "Global operation mode request"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Global reset mode request"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Global halt mode request"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Keep current value"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Gslpr_SPEC;
     pub type Gslpr = crate::EnumBitfieldStruct<u8, Gslpr_SPEC>;
     impl Gslpr {
+        #[doc = "Global sleep request disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Global sleep request enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Deie_SPEC;
     pub type Deie = crate::EnumBitfieldStruct<u8, Deie_SPEC>;
     impl Deie {
+        #[doc = "DLC check interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DLC check interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Meie_SPEC;
     pub type Meie = crate::EnumBitfieldStruct<u8, Meie_SPEC>;
     impl Meie {
+        #[doc = "Message lost error interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Message lost error interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Thleie_SPEC;
     pub type Thleie = crate::EnumBitfieldStruct<u8, Thleie_SPEC>;
     impl Thleie {
+        #[doc = "TX history list entry lost interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX history list entry lost interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpofie_SPEC;
     pub type Cmpofie = crate::EnumBitfieldStruct<u8, Cmpofie_SPEC>;
     impl Cmpofie {
+        #[doc = "CANFD message payload overflow flag interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CANFD message payload overflow flag interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Qmeie_SPEC;
     pub type Qmeie = crate::EnumBitfieldStruct<u8, Qmeie_SPEC>;
     impl Qmeie {
+        #[doc = "TXQ message lost error interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TXQ message lost error interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Moweie_SPEC;
     pub type Moweie = crate::EnumBitfieldStruct<u8, Moweie_SPEC>;
     impl Moweie {
+        #[doc = "GW FIFO message overwrite error interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "GW FIFO message overwrite error interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tsrst_SPEC;
     pub type Tsrst = crate::EnumBitfieldStruct<u8, Tsrst_SPEC>;
     impl Tsrst {
+        #[doc = "Timestamp not reset"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Timestamp reset"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5035,9 +19966,11 @@ impl crate::sealed::RegSpec for Cfdgsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Global Status Register"]
 pub type Cfdgsts = crate::RegValueT<Cfdgsts_SPEC>;
 
 impl Cfdgsts {
+    #[doc = "Global Reset Status"]
     #[inline(always)]
     pub fn grststs(
         self,
@@ -5063,6 +19996,7 @@ impl Cfdgsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Global Halt Status"]
     #[inline(always)]
     pub fn ghltsts(
         self,
@@ -5088,6 +20022,7 @@ impl Cfdgsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Global Sleep Status"]
     #[inline(always)]
     pub fn gslpsts(
         self,
@@ -5113,6 +20048,7 @@ impl Cfdgsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Global RAM Initialization"]
     #[inline(always)]
     pub fn graminit(
         self,
@@ -5150,32 +20086,40 @@ pub mod cfdgsts {
     pub struct Grststs_SPEC;
     pub type Grststs = crate::EnumBitfieldStruct<u8, Grststs_SPEC>;
     impl Grststs {
+        #[doc = "Not in Reset mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "In Reset mode"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ghltsts_SPEC;
     pub type Ghltsts = crate::EnumBitfieldStruct<u8, Ghltsts_SPEC>;
     impl Ghltsts {
+        #[doc = "Not in Halt mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "In Halt mode"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Gslpsts_SPEC;
     pub type Gslpsts = crate::EnumBitfieldStruct<u8, Gslpsts_SPEC>;
     impl Gslpsts {
+        #[doc = "Not in Sleep mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "In Sleep mode"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Graminit_SPEC;
     pub type Graminit = crate::EnumBitfieldStruct<u8, Graminit_SPEC>;
     impl Graminit {
+        #[doc = "RAM initialization is complete"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RAM initialization is ongoing"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5186,9 +20130,11 @@ impl crate::sealed::RegSpec for Cfdgerfl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Global Error Flag Register"]
 pub type Cfdgerfl = crate::RegValueT<Cfdgerfl_SPEC>;
 
 impl Cfdgerfl {
+    #[doc = "DLC Error Flag"]
     #[inline(always)]
     pub fn def(
         self,
@@ -5214,6 +20160,7 @@ impl Cfdgerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Message Lost Error Status"]
     #[inline(always)]
     pub fn mes(
         self,
@@ -5239,6 +20186,7 @@ impl Cfdgerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX History List Entry Lost Error Status"]
     #[inline(always)]
     pub fn thles(
         self,
@@ -5264,6 +20212,7 @@ impl Cfdgerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "CANFD Message Payload Overflow Flag"]
     #[inline(always)]
     pub fn cmpof(
         self,
@@ -5289,6 +20238,7 @@ impl Cfdgerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "TXQ Message Lost Error Status"]
     #[inline(always)]
     pub fn qmes(
         self,
@@ -5314,6 +20264,7 @@ impl Cfdgerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "ECC Error Flag for Channel 0"]
     #[inline(always)]
     pub fn eef0(
         self,
@@ -5339,6 +20290,7 @@ impl Cfdgerfl {
         >::from_register(self, 0)
     }
 
+    #[doc = "ECC Error Flag for Channel 1"]
     #[inline(always)]
     pub fn eef1(
         self,
@@ -5376,56 +20328,70 @@ pub mod cfdgerfl {
     pub struct Def_SPEC;
     pub type Def = crate::EnumBitfieldStruct<u8, Def_SPEC>;
     impl Def {
+        #[doc = "DLC error not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DLC error detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mes_SPEC;
     pub type Mes = crate::EnumBitfieldStruct<u8, Mes_SPEC>;
     impl Mes {
+        #[doc = "Message lost error not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Message lost error detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Thles_SPEC;
     pub type Thles = crate::EnumBitfieldStruct<u8, Thles_SPEC>;
     impl Thles {
+        #[doc = "TX history list entry lost error not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX history list entry lost error detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpof_SPEC;
     pub type Cmpof = crate::EnumBitfieldStruct<u8, Cmpof_SPEC>;
     impl Cmpof {
+        #[doc = "CANFD message payload overflow not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CANFD message payload overflow detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Qmes_SPEC;
     pub type Qmes = crate::EnumBitfieldStruct<u8, Qmes_SPEC>;
     impl Qmes {
+        #[doc = "TXQ message lost error not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TXQ message lost error detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eef0_SPEC;
     pub type Eef0 = crate::EnumBitfieldStruct<u8, Eef0_SPEC>;
     impl Eef0 {
+        #[doc = "ECC error not detected during TX-SCAN"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "ECC error detected during TX-SCAN"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eef1_SPEC;
     pub type Eef1 = crate::EnumBitfieldStruct<u8, Eef1_SPEC>;
     impl Eef1 {
+        #[doc = "ECC error not detected during TX-SCAN"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "ECC error detected during TX-SCAN"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5436,9 +20402,11 @@ impl crate::sealed::RegSpec for Cfdgtsc_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Global Timestamp Counter Register"]
 pub type Cfdgtsc = crate::RegValueT<Cfdgtsc_SPEC>;
 
 impl Cfdgtsc {
+    #[doc = "Timestamp value"]
     #[inline(always)]
     pub fn ts(
         self,
@@ -5461,9 +20429,11 @@ impl crate::sealed::RegSpec for Cfdgaflectr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Global Acceptance Filter List Entry Control Register"]
 pub type Cfdgaflectr = crate::RegValueT<Cfdgaflectr_SPEC>;
 
 impl Cfdgaflectr {
+    #[doc = "Acceptance Filter List Page Number"]
     #[inline(always)]
     pub fn aflpn(
         self,
@@ -5472,6 +20442,7 @@ impl Cfdgaflectr {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Cfdgaflectr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Acceptance Filter List Data Access Enable"]
     #[inline(always)]
     pub fn afldae(
         self,
@@ -5509,8 +20480,10 @@ pub mod cfdgaflectr {
     pub struct Afldae_SPEC;
     pub type Afldae = crate::EnumBitfieldStruct<u8, Afldae_SPEC>;
     impl Afldae {
+        #[doc = "Acceptance Filter List data access disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Acceptance Filter List data access enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5521,9 +20494,11 @@ impl crate::sealed::RegSpec for Cfdgaflcfg0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Global Acceptance Filter List Configuration Register 0"]
 pub type Cfdgaflcfg0 = crate::RegValueT<Cfdgaflcfg0_SPEC>;
 
 impl Cfdgaflcfg0 {
+    #[doc = "Rule Number for Channel 1"]
     #[inline(always)]
     pub fn rnc1(
         self,
@@ -5532,6 +20507,7 @@ impl Cfdgaflcfg0 {
         crate::common::RegisterField::<0,0x1ff,1,0,u16,u16,Cfdgaflcfg0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Rule Number for Channel 0"]
     #[inline(always)]
     pub fn rnc0(
         self,
@@ -5554,9 +20530,11 @@ impl crate::sealed::RegSpec for Cfdrmnb_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Number Register"]
 pub type Cfdrmnb = crate::RegValueT<Cfdrmnb_SPEC>;
 
 impl Cfdrmnb {
+    #[doc = "Number of RX Message Buffers"]
     #[inline(always)]
     pub fn nrxmb(
         self,
@@ -5564,6 +20542,7 @@ impl Cfdrmnb {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmnb_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Reception Message Buffer Payload Data Size"]
     #[inline(always)]
     pub fn rmpls(
         self,
@@ -5601,20 +20580,28 @@ pub mod cfdrmnb {
     pub struct Rmpls_SPEC;
     pub type Rmpls = crate::EnumBitfieldStruct<u8, Rmpls_SPEC>;
     impl Rmpls {
+        #[doc = "8 bytes"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "12 bytes"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "16 bytes"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "20 bytes"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "24 bytes"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "32 bytes"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "48 bytes"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "64 bytes"]
         pub const _111: Self = Self::new(7);
     }
 }
@@ -5625,9 +20612,11 @@ impl crate::sealed::RegSpec for Cfdrmnd0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer New Data Register 0"]
 pub type Cfdrmnd0 = crate::RegValueT<Cfdrmnd0_SPEC>;
 
 impl Cfdrmnd0 {
+    #[doc = "RX Message Buffer New Data Status"]
     #[inline(always)]
     pub fn rmns(
         self,
@@ -5665,8 +20654,10 @@ pub mod cfdrmnd0 {
     pub struct Rmns_SPEC;
     pub type Rmns = crate::EnumBitfieldStruct<u8, Rmns_SPEC>;
     impl Rmns {
+        #[doc = "New data not stored in corresponding RX message buffer"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "New data stored in corresponding RX message buffer"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5677,9 +20668,11 @@ impl crate::sealed::RegSpec for Cfdrfcc_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Configuration/Control Registers %s"]
 pub type Cfdrfcc = crate::RegValueT<Cfdrfcc_SPEC>;
 
 impl Cfdrfcc {
+    #[doc = "RX FIFO Enable"]
     #[inline(always)]
     pub fn rfe(
         self,
@@ -5705,6 +20698,7 @@ impl Cfdrfcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "RX FIFO Interrupt Enable"]
     #[inline(always)]
     pub fn rfie(
         self,
@@ -5730,6 +20724,7 @@ impl Cfdrfcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Rx FIFO Payload Data Size Configuration"]
     #[inline(always)]
     pub fn rfpls(
         self,
@@ -5755,6 +20750,7 @@ impl Cfdrfcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "RX FIFO Depth Configuration"]
     #[inline(always)]
     pub fn rfdc(
         self,
@@ -5780,6 +20776,7 @@ impl Cfdrfcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "RX FIFO Interrupt Mode"]
     #[inline(always)]
     pub fn rfim(
         self,
@@ -5805,6 +20802,7 @@ impl Cfdrfcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "RX FIFO Interrupt Generation Counter Value"]
     #[inline(always)]
     pub fn rfigcv(
         self,
@@ -5830,6 +20828,7 @@ impl Cfdrfcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "RX FIFO Full Interrupt Enable"]
     #[inline(always)]
     pub fn rffie(
         self,
@@ -5867,92 +20866,124 @@ pub mod cfdrfcc {
     pub struct Rfe_SPEC;
     pub type Rfe = crate::EnumBitfieldStruct<u8, Rfe_SPEC>;
     impl Rfe {
+        #[doc = "FIFO disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FIFO enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfie_SPEC;
     pub type Rfie = crate::EnumBitfieldStruct<u8, Rfie_SPEC>;
     impl Rfie {
+        #[doc = "FIFO interrupt generation disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FIFO interrupt generation enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfpls_SPEC;
     pub type Rfpls = crate::EnumBitfieldStruct<u8, Rfpls_SPEC>;
     impl Rfpls {
+        #[doc = "8 bytes"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "12 bytes"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "16 bytes"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "20 bytes"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "24 bytes"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "32 bytes"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "48 bytes"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "64 bytes"]
         pub const _111: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfdc_SPEC;
     pub type Rfdc = crate::EnumBitfieldStruct<u8, Rfdc_SPEC>;
     impl Rfdc {
+        #[doc = "FIFO Depth = 0 message"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "FIFO Depth = 4 messages"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "FIFO Depth = 8 messages"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "FIFO Depth = 16 messages"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "FIFO Depth = 32 messages"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "FIFO Depth = 48 messages"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "FIFO Depth = 64 messages"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "FIFO Depth = 128 messages"]
         pub const _111: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfim_SPEC;
     pub type Rfim = crate::EnumBitfieldStruct<u8, Rfim_SPEC>;
     impl Rfim {
+        #[doc = "Interrupt generated when RX FIFO counter reaches RFIGCV value from values smaller than RFIGCV"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt generated at the end of every received message storage"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfigcv_SPEC;
     pub type Rfigcv = crate::EnumBitfieldStruct<u8, Rfigcv_SPEC>;
     impl Rfigcv {
+        #[doc = "Interrupt generated when FIFO is 1/8th full"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Interrupt generated when FIFO is 1/4th full"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "Interrupt generated when FIFO is 3/8th full"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Interrupt generated when FIFO is 1/2 full"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "Interrupt generated when FIFO is 5/8th full"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Interrupt generated when FIFO is 3/4th full"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "Interrupt generated when FIFO is 7/8th full"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Interrupt generated when FIFO is full"]
         pub const _111: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rffie_SPEC;
     pub type Rffie = crate::EnumBitfieldStruct<u8, Rffie_SPEC>;
     impl Rffie {
+        #[doc = "FIFO interrupt generation disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FIFO interrupt generation enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5963,9 +20994,11 @@ impl crate::sealed::RegSpec for Cfdrfsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Status Registers %s"]
 pub type Cfdrfsts = crate::RegValueT<Cfdrfsts_SPEC>;
 
 impl Cfdrfsts {
+    #[doc = "RX FIFO Empty"]
     #[inline(always)]
     pub fn rfemp(
         self,
@@ -5991,6 +21024,7 @@ impl Cfdrfsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "RX FIFO Full"]
     #[inline(always)]
     pub fn rffll(
         self,
@@ -6016,6 +21050,7 @@ impl Cfdrfsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "RX FIFO Message Lost"]
     #[inline(always)]
     pub fn rfmlt(
         self,
@@ -6041,6 +21076,7 @@ impl Cfdrfsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "RX FIFO Interrupt Flag"]
     #[inline(always)]
     pub fn rfif(
         self,
@@ -6066,6 +21102,7 @@ impl Cfdrfsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "RX FIFO Message Count"]
     #[inline(always)]
     pub fn rfmc(
         self,
@@ -6073,6 +21110,7 @@ impl Cfdrfsts {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrfsts_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Full Interrupt Flag"]
     #[inline(always)]
     pub fn rffif(
         self,
@@ -6110,40 +21148,50 @@ pub mod cfdrfsts {
     pub struct Rfemp_SPEC;
     pub type Rfemp = crate::EnumBitfieldStruct<u8, Rfemp_SPEC>;
     impl Rfemp {
+        #[doc = "FIFO not empty"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FIFO empty"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rffll_SPEC;
     pub type Rffll = crate::EnumBitfieldStruct<u8, Rffll_SPEC>;
     impl Rffll {
+        #[doc = "FIFO not full"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FIFO full"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfmlt_SPEC;
     pub type Rfmlt = crate::EnumBitfieldStruct<u8, Rfmlt_SPEC>;
     impl Rfmlt {
+        #[doc = "No message lost in FIFO"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FIFO message lost"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfif_SPEC;
     pub type Rfif = crate::EnumBitfieldStruct<u8, Rfif_SPEC>;
     impl Rfif {
+        #[doc = "FIFO interrupt condition not satisfied"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FIFO interrupt condition satisfied"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rffif_SPEC;
     pub type Rffif = crate::EnumBitfieldStruct<u8, Rffif_SPEC>;
     impl Rffif {
+        #[doc = "FIFO full interrupt condition not satisfied"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FIFO full interrupt condition satisfied"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6154,9 +21202,11 @@ impl crate::sealed::RegSpec for Cfdrfpctr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Pointer Control Registers %s"]
 pub type Cfdrfpctr = crate::RegValueT<Cfdrfpctr_SPEC>;
 
 impl Cfdrfpctr {
+    #[doc = "RX FIFO Pointer Control"]
     #[inline(always)]
     pub fn rfpc(
         self,
@@ -6178,9 +21228,11 @@ impl crate::sealed::RegSpec for Cfdcfcc_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Configuration/Control Registers %s"]
 pub type Cfdcfcc = crate::RegValueT<Cfdcfcc_SPEC>;
 
 impl Cfdcfcc {
+    #[doc = "Common FIFO Enable"]
     #[inline(always)]
     pub fn cfe(
         self,
@@ -6206,6 +21258,7 @@ impl Cfdcfcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO RX Interrupt Enable"]
     #[inline(always)]
     pub fn cfrxie(
         self,
@@ -6231,6 +21284,7 @@ impl Cfdcfcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO TX Interrupt Enable"]
     #[inline(always)]
     pub fn cftxie(
         self,
@@ -6256,6 +21310,7 @@ impl Cfdcfcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO Payload Data Size Configuration"]
     #[inline(always)]
     pub fn cfpls(
         self,
@@ -6281,6 +21336,7 @@ impl Cfdcfcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO Mode"]
     #[inline(always)]
     pub fn cfm(
         self,
@@ -6306,6 +21362,7 @@ impl Cfdcfcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO Interval Timer Source Select"]
     #[inline(always)]
     pub fn cfitss(
         self,
@@ -6331,6 +21388,7 @@ impl Cfdcfcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO Interval Timer Resolution"]
     #[inline(always)]
     pub fn cfitr(
         self,
@@ -6356,6 +21414,7 @@ impl Cfdcfcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO Interrupt Mode"]
     #[inline(always)]
     pub fn cfim(
         self,
@@ -6381,6 +21440,7 @@ impl Cfdcfcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO Interrupt Generation Counter Value"]
     #[inline(always)]
     pub fn cfigcv(
         self,
@@ -6406,6 +21466,7 @@ impl Cfdcfcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO TX Message Buffer Link"]
     #[inline(always)]
     pub fn cftml(
         self,
@@ -6413,6 +21474,7 @@ impl Cfdcfcc {
         crate::common::RegisterField::<16,0x1f,1,0,u8,u8,Cfdcfcc_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Depth Configuration"]
     #[inline(always)]
     pub fn cfdc(
         self,
@@ -6438,6 +21500,7 @@ impl Cfdcfcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO Interval Transmission Time"]
     #[inline(always)]
     pub fn cfitt(
         self,
@@ -6457,120 +21520,160 @@ pub mod cfdcfcc {
     pub struct Cfe_SPEC;
     pub type Cfe = crate::EnumBitfieldStruct<u8, Cfe_SPEC>;
     impl Cfe {
+        #[doc = "FIFO disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FIFO enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfrxie_SPEC;
     pub type Cfrxie = crate::EnumBitfieldStruct<u8, Cfrxie_SPEC>;
     impl Cfrxie {
+        #[doc = "FIFO interrupt generation disabled for Frame RX"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FIFO interrupt generation enabled for Frame RX"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cftxie_SPEC;
     pub type Cftxie = crate::EnumBitfieldStruct<u8, Cftxie_SPEC>;
     impl Cftxie {
+        #[doc = "FIFO interrupt generation disabled for Frame TX"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FIFO interrupt generation enabled for Frame TX"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfpls_SPEC;
     pub type Cfpls = crate::EnumBitfieldStruct<u8, Cfpls_SPEC>;
     impl Cfpls {
+        #[doc = "8 bytes"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "12 bytes"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "16 bytes"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "20 bytes"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "24 bytes"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "32 bytes"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "48 bytes"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "64 bytes"]
         pub const _111: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfm_SPEC;
     pub type Cfm = crate::EnumBitfieldStruct<u8, Cfm_SPEC>;
     impl Cfm {
+        #[doc = "RX FIFO mode"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "TX FIFO mode"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "CAN – CAN GW FIFO mode"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Reserved"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfitss_SPEC;
     pub type Cfitss = crate::EnumBitfieldStruct<u8, Cfitss_SPEC>;
     impl Cfitss {
+        #[doc = "Reference clock (× 1 / × 10 period)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bit time clock of related channel (FIFO is linked to fixed channel)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfitr_SPEC;
     pub type Cfitr = crate::EnumBitfieldStruct<u8, Cfitr_SPEC>;
     impl Cfitr {
+        #[doc = "Reference clock period × 1"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Reference clock period × 10"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfim_SPEC;
     pub type Cfim = crate::EnumBitfieldStruct<u8, Cfim_SPEC>;
     impl Cfim {
+        #[doc = "RX FIFO mode: RX interrupt generated when Common FIFO counter reaches CFIGCV value from a lower value TX FIFO mode: TX interrupt generated when Common FIFO transmits the last message successfully GW FIFO mode: For RX interrupt flag: Interrupt generated when FIFO counter increments and reaches the value configured in CFIGCV For TX interrupt flag: Interrupt generated when FIFO transmits the last message successfully"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RX FIFO mode: RX interrupt generated at the end of every received message storage TX FIFO mode: interrupt generated for every successfully transmitted message GW FIFO mode: For RX interrupt flag: Interrupt generated when a message is stored in the FIFO For TX interrupt flag: Interrupt generated when a message is successfully transmitted from the FIFO"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfigcv_SPEC;
     pub type Cfigcv = crate::EnumBitfieldStruct<u8, Cfigcv_SPEC>;
     impl Cfigcv {
+        #[doc = "Interrupt generated when FIFO is 1/8th full"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Interrupt generated when FIFO is 1/4th full"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "Interrupt generated when FIFO is 3/8th full"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Interrupt generated when FIFO is 1/2 full"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "Interrupt generated when FIFO is 5/8th full"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Interrupt generated when FIFO is 3/4th full"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "Interrupt generated when FIFO is 7/8th full"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Interrupt generated when FIFO is full"]
         pub const _111: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfdc_SPEC;
     pub type Cfdc = crate::EnumBitfieldStruct<u8, Cfdc_SPEC>;
     impl Cfdc {
+        #[doc = "FIFO Depth = 0 messages"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "FIFO Depth = 4 messages"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "FIFO Depth = 8 messages"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "FIFO Depth = 16 messages"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "FIFO Depth = 32 messages"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "FIFO Depth = 48 messages"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "FIFO Depth = 64 messages"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "FIFO Depth = 128 messages"]
         pub const _111: Self = Self::new(7);
     }
 }
@@ -6581,9 +21684,11 @@ impl crate::sealed::RegSpec for Cfdcfcce_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Configuration/Control Enhancement Registers %s"]
 pub type Cfdcfcce = crate::RegValueT<Cfdcfcce_SPEC>;
 
 impl Cfdcfcce {
+    #[doc = "Common FIFO Full Interrupt Enable"]
     #[inline(always)]
     pub fn cffie(
         self,
@@ -6609,6 +21714,7 @@ impl Cfdcfcce {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO One Frame Reception Interrupt Enable"]
     #[inline(always)]
     pub fn cfofrxie(
         self,
@@ -6634,6 +21740,7 @@ impl Cfdcfcce {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO One Frame Transmission Interrupt Enable"]
     #[inline(always)]
     pub fn cfoftxie(
         self,
@@ -6659,6 +21766,7 @@ impl Cfdcfcce {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO Message Overwrite Mode"]
     #[inline(always)]
     pub fn cfmowm(
         self,
@@ -6684,6 +21792,7 @@ impl Cfdcfcce {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO Buffering Mode Enable"]
     #[inline(always)]
     pub fn cfbme(
         self,
@@ -6721,40 +21830,50 @@ pub mod cfdcfcce {
     pub struct Cffie_SPEC;
     pub type Cffie = crate::EnumBitfieldStruct<u8, Cffie_SPEC>;
     impl Cffie {
+        #[doc = "FIFO Interrupt generation disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FIFO Interrupt generation enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfofrxie_SPEC;
     pub type Cfofrxie = crate::EnumBitfieldStruct<u8, Cfofrxie_SPEC>;
     impl Cfofrxie {
+        #[doc = "One Frame RX interrupt generation disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "One Frame RX interrupt generation enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfoftxie_SPEC;
     pub type Cfoftxie = crate::EnumBitfieldStruct<u8, Cfoftxie_SPEC>;
     impl Cfoftxie {
+        #[doc = "One Frame TX interrupt generation disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "One Frame TX interrupt generation enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfmowm_SPEC;
     pub type Cfmowm = crate::EnumBitfieldStruct<u8, Cfmowm_SPEC>;
     impl Cfmowm {
+        #[doc = "Message discarded mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Message overwrite mode"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfbme_SPEC;
     pub type Cfbme = crate::EnumBitfieldStruct<u8, Cfbme_SPEC>;
     impl Cfbme {
+        #[doc = "Transmission from Common FIFO"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transmission halt from Common FIFO"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6765,9 +21884,11 @@ impl crate::sealed::RegSpec for Cfdcfsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Status Registers %s"]
 pub type Cfdcfsts = crate::RegValueT<Cfdcfsts_SPEC>;
 
 impl Cfdcfsts {
+    #[doc = "Common FIFO Empty"]
     #[inline(always)]
     pub fn cfemp(
         self,
@@ -6793,6 +21914,7 @@ impl Cfdcfsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO Full"]
     #[inline(always)]
     pub fn cffll(
         self,
@@ -6818,6 +21940,7 @@ impl Cfdcfsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO Message Lost"]
     #[inline(always)]
     pub fn cfmlt(
         self,
@@ -6843,6 +21966,7 @@ impl Cfdcfsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common RX FIFO Interrupt Flag"]
     #[inline(always)]
     pub fn cfrxif(
         self,
@@ -6868,6 +21992,7 @@ impl Cfdcfsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common TX FIFO Interrupt Flag"]
     #[inline(always)]
     pub fn cftxif(
         self,
@@ -6893,6 +22018,7 @@ impl Cfdcfsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO Message Count"]
     #[inline(always)]
     pub fn cfmc(
         self,
@@ -6900,6 +22026,7 @@ impl Cfdcfsts {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfsts_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Full Interrupt Flag"]
     #[inline(always)]
     pub fn cffif(
         self,
@@ -6925,6 +22052,7 @@ impl Cfdcfsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO One Frame Reception Interrupt Flag"]
     #[inline(always)]
     pub fn cfofrxif(
         self,
@@ -6932,6 +22060,7 @@ impl Cfdcfsts {
         crate::common::RegisterFieldBool::<17,1,0,Cfdcfsts_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO One Frame Transmission Interrupt Flag"]
     #[inline(always)]
     pub fn cfoftxif(
         self,
@@ -6939,6 +22068,7 @@ impl Cfdcfsts {
         crate::common::RegisterFieldBool::<18,1,0,Cfdcfsts_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Message Overwrite"]
     #[inline(always)]
     pub fn cfmow(
         self,
@@ -6976,56 +22106,70 @@ pub mod cfdcfsts {
     pub struct Cfemp_SPEC;
     pub type Cfemp = crate::EnumBitfieldStruct<u8, Cfemp_SPEC>;
     impl Cfemp {
+        #[doc = "FIFO not empty"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FIFO empty"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cffll_SPEC;
     pub type Cffll = crate::EnumBitfieldStruct<u8, Cffll_SPEC>;
     impl Cffll {
+        #[doc = "FIFO not full"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FIFO full"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfmlt_SPEC;
     pub type Cfmlt = crate::EnumBitfieldStruct<u8, Cfmlt_SPEC>;
     impl Cfmlt {
+        #[doc = "Number of message lost in FIFO"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FIFO message lost"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfrxif_SPEC;
     pub type Cfrxif = crate::EnumBitfieldStruct<u8, Cfrxif_SPEC>;
     impl Cfrxif {
+        #[doc = "FIFO interrupt condition not satisfied after frame reception"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FIFO interrupt condition satisfied after frame reception"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cftxif_SPEC;
     pub type Cftxif = crate::EnumBitfieldStruct<u8, Cftxif_SPEC>;
     impl Cftxif {
+        #[doc = "FIFO interrupt condition not satisfied after frame transmission"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FIFO Interrupt condition satisfied after frame transmission"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cffif_SPEC;
     pub type Cffif = crate::EnumBitfieldStruct<u8, Cffif_SPEC>;
     impl Cffif {
+        #[doc = "Interrupt condition not satisfied for FIFO full interrupt"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt condition satisfied for FIFO full interrupt"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfmow_SPEC;
     pub type Cfmow = crate::EnumBitfieldStruct<u8, Cfmow_SPEC>;
     impl Cfmow {
+        #[doc = "No message overwrite occurred in FIFO"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Message overwrite occurred in FIFO"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7036,9 +22180,11 @@ impl crate::sealed::RegSpec for Cfdcfpctr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Pointer Control Registers %s"]
 pub type Cfdcfpctr = crate::RegValueT<Cfdcfpctr_SPEC>;
 
 impl Cfdcfpctr {
+    #[doc = "Common FIFO Pointer Control"]
     #[inline(always)]
     pub fn cfpc(
         self,
@@ -7060,9 +22206,11 @@ impl crate::sealed::RegSpec for Cfdfests_SPEC {
     type DataType = u32;
 }
 
+#[doc = "FIFO Empty Status Register"]
 pub type Cfdfests = crate::RegValueT<Cfdfests_SPEC>;
 
 impl Cfdfests {
+    #[doc = "RX FIFO Empty Status"]
     #[inline(always)]
     pub fn rfxemp(
         self,
@@ -7088,6 +22236,7 @@ impl Cfdfests {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO Empty Status"]
     #[inline(always)]
     pub fn cfxemp(
         self,
@@ -7125,16 +22274,20 @@ pub mod cfdfests {
     pub struct Rfxemp_SPEC;
     pub type Rfxemp = crate::EnumBitfieldStruct<u8, Rfxemp_SPEC>;
     impl Rfxemp {
+        #[doc = "Corresponding FIFO not empty"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding FIFO empty"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfxemp_SPEC;
     pub type Cfxemp = crate::EnumBitfieldStruct<u8, Cfxemp_SPEC>;
     impl Cfxemp {
+        #[doc = "Corresponding FIFO not empty"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding FIFO empty"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7145,9 +22298,11 @@ impl crate::sealed::RegSpec for Cfdffsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "FIFO Full Status Register"]
 pub type Cfdffsts = crate::RegValueT<Cfdffsts_SPEC>;
 
 impl Cfdffsts {
+    #[doc = "RX FIFO Full Status"]
     #[inline(always)]
     pub fn rfxfll(
         self,
@@ -7173,6 +22328,7 @@ impl Cfdffsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO Full Status"]
     #[inline(always)]
     pub fn cfxfll(
         self,
@@ -7210,16 +22366,20 @@ pub mod cfdffsts {
     pub struct Rfxfll_SPEC;
     pub type Rfxfll = crate::EnumBitfieldStruct<u8, Rfxfll_SPEC>;
     impl Rfxfll {
+        #[doc = "Corresponding FIFO not full"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding FIFO full"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfxfll_SPEC;
     pub type Cfxfll = crate::EnumBitfieldStruct<u8, Cfxfll_SPEC>;
     impl Cfxfll {
+        #[doc = "Corresponding FIFO not full"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding FIFO full"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7230,9 +22390,11 @@ impl crate::sealed::RegSpec for Cfdfmsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "FIFO Message Lost Status Register"]
 pub type Cfdfmsts = crate::RegValueT<Cfdfmsts_SPEC>;
 
 impl Cfdfmsts {
+    #[doc = "RX FIFO Message Lost Status"]
     #[inline(always)]
     pub fn rfxmlt(
         self,
@@ -7258,6 +22420,7 @@ impl Cfdfmsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO Message Lost Status"]
     #[inline(always)]
     pub fn cfxmlt(
         self,
@@ -7295,16 +22458,20 @@ pub mod cfdfmsts {
     pub struct Rfxmlt_SPEC;
     pub type Rfxmlt = crate::EnumBitfieldStruct<u8, Rfxmlt_SPEC>;
     impl Rfxmlt {
+        #[doc = "Corresponding FIFO Message Lost flag not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding FIFO Message Lost flag set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfxmlt_SPEC;
     pub type Cfxmlt = crate::EnumBitfieldStruct<u8, Cfxmlt_SPEC>;
     impl Cfxmlt {
+        #[doc = "Corresponding FIFO Message Lost flag not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding FIFO Message Lost flag set"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7315,9 +22482,11 @@ impl crate::sealed::RegSpec for Cfdrfists_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Interrupt Flag Status Register"]
 pub type Cfdrfists = crate::RegValueT<Cfdrfists_SPEC>;
 
 impl Cfdrfists {
+    #[doc = "RX FIFO\\[x\\] Interrupt Flag Status"]
     #[inline(always)]
     pub fn rfxif(
         self,
@@ -7343,6 +22512,7 @@ impl Cfdrfists {
         >::from_register(self, 0)
     }
 
+    #[doc = "RX FIFO\\[x\\] Interrupt Full Flag Status"]
     #[inline(always)]
     pub fn rfxffll(
         self,
@@ -7380,16 +22550,20 @@ pub mod cfdrfists {
     pub struct Rfxif_SPEC;
     pub type Rfxif = crate::EnumBitfieldStruct<u8, Rfxif_SPEC>;
     impl Rfxif {
+        #[doc = "Corresponding RX FIFO Interrupt flag not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding RX FIFO Interrupt flag set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfxffll_SPEC;
     pub type Rfxffll = crate::EnumBitfieldStruct<u8, Rfxffll_SPEC>;
     impl Rfxffll {
+        #[doc = "Corresponding RX FIFO Interrupt Full flag not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding RX FIFO Interrupt Full flag set"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7400,9 +22574,11 @@ impl crate::sealed::RegSpec for Cfdcfrists_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO RX Interrupt Flag Status Register"]
 pub type Cfdcfrists = crate::RegValueT<Cfdcfrists_SPEC>;
 
 impl Cfdcfrists {
+    #[doc = "Common FIFO RX Interrupt Flag Status"]
     #[inline(always)]
     pub fn cfxrxif(
         self,
@@ -7440,8 +22616,10 @@ pub mod cfdcfrists {
     pub struct Cfxrxif_SPEC;
     pub type Cfxrxif = crate::EnumBitfieldStruct<u8, Cfxrxif_SPEC>;
     impl Cfxrxif {
+        #[doc = "Corresponding Common FIFO RX Interrupt flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding Common FIFO RX Interrupt flag is set"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7452,9 +22630,11 @@ impl crate::sealed::RegSpec for Cfdcftists_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO TX Interrupt Flag Status Register"]
 pub type Cfdcftists = crate::RegValueT<Cfdcftists_SPEC>;
 
 impl Cfdcftists {
+    #[doc = "Common FIFO \\[x\\] TX Interrupt Flag Status"]
     #[inline(always)]
     pub fn cfxtxif(
         self,
@@ -7492,8 +22672,10 @@ pub mod cfdcftists {
     pub struct Cfxtxif_SPEC;
     pub type Cfxtxif = crate::EnumBitfieldStruct<u8, Cfxtxif_SPEC>;
     impl Cfxtxif {
+        #[doc = "Corresponding Common FIFO TX Interrupt flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding Common FIFO TX Interrupt flag is set"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7504,9 +22686,11 @@ impl crate::sealed::RegSpec for Cfdcfofrists_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO One Frame RX Interrupt Flag Status Register"]
 pub type Cfdcfofrists = crate::RegValueT<Cfdcfofrists_SPEC>;
 
 impl Cfdcfofrists {
+    #[doc = "Common FIFO One Frame RX Interrupt Flag Status"]
     #[inline(always)]
     pub fn cfxofrxif(
         self,
@@ -7544,8 +22728,10 @@ pub mod cfdcfofrists {
     pub struct Cfxofrxif_SPEC;
     pub type Cfxofrxif = crate::EnumBitfieldStruct<u8, Cfxofrxif_SPEC>;
     impl Cfxofrxif {
+        #[doc = "Corresponding Common FIFO One Frame RX Interrupt flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding Common FIFO One Frame RX Interrupt flag is set"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7556,9 +22742,11 @@ impl crate::sealed::RegSpec for Cfdcfoftists_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO One Frame TX Interrupt Flag Status Register"]
 pub type Cfdcfoftists = crate::RegValueT<Cfdcfoftists_SPEC>;
 
 impl Cfdcfoftists {
+    #[doc = "Common FIFO One Frame TX Interrupt Flag Status"]
     #[inline(always)]
     pub fn cfxoftxif(
         self,
@@ -7596,8 +22784,10 @@ pub mod cfdcfoftists {
     pub struct Cfxoftxif_SPEC;
     pub type Cfxoftxif = crate::EnumBitfieldStruct<u8, Cfxoftxif_SPEC>;
     impl Cfxoftxif {
+        #[doc = "Corresponding Common FIFO One Frame TX Interrupt flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding Common FIFO One Frame TX Interrupt flag is set"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7608,9 +22798,11 @@ impl crate::sealed::RegSpec for Cfdcfmowsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Message Over Write Status Register"]
 pub type Cfdcfmowsts = crate::RegValueT<Cfdcfmowsts_SPEC>;
 
 impl Cfdcfmowsts {
+    #[doc = "Common FIFO Massage Overwrite Status"]
     #[inline(always)]
     pub fn cfxmow(
         self,
@@ -7648,8 +22840,10 @@ pub mod cfdcfmowsts {
     pub struct Cfxmow_SPEC;
     pub type Cfxmow = crate::EnumBitfieldStruct<u8, Cfxmow_SPEC>;
     impl Cfxmow {
+        #[doc = "Corresponding FIFO Overwrite flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding FIFO Overwrite flag is set"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7660,9 +22854,11 @@ impl crate::sealed::RegSpec for Cfdfffsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "FIFO FDC Full Status Register"]
 pub type Cfdfffsts = crate::RegValueT<Cfdfffsts_SPEC>;
 
 impl Cfdfffsts {
+    #[doc = "RX FIFO FDC Level Full Status"]
     #[inline(always)]
     pub fn rfxffll(
         self,
@@ -7688,6 +22884,7 @@ impl Cfdfffsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "COMMON FIFO FDC Level Full Status"]
     #[inline(always)]
     pub fn cfxffll(
         self,
@@ -7725,16 +22922,20 @@ pub mod cfdfffsts {
     pub struct Rfxffll_SPEC;
     pub type Rfxffll = crate::EnumBitfieldStruct<u8, Rfxffll_SPEC>;
     impl Rfxffll {
+        #[doc = "Corresponding FIFO full interrupt not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding FIFO full interrupt is set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfxffll_SPEC;
     pub type Cfxffll = crate::EnumBitfieldStruct<u8, Cfxffll_SPEC>;
     impl Cfxffll {
+        #[doc = "Corresponding FIFO full interrupt not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding FIFO full interrupt is set"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7745,9 +22946,11 @@ impl crate::sealed::RegSpec for Cfdtmc_SPEC {
     type DataType = u8;
 }
 
+#[doc = "TX Message Buffer Control Registers %s"]
 pub type Cfdtmc = crate::RegValueT<Cfdtmc_SPEC>;
 
 impl Cfdtmc {
+    #[doc = "TX Message Buffer Transmission Request"]
     #[inline(always)]
     pub fn tmtr(
         self,
@@ -7773,6 +22976,7 @@ impl Cfdtmc {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Message Buffer Transmission Abort Request"]
     #[inline(always)]
     pub fn tmtar(
         self,
@@ -7798,6 +23002,7 @@ impl Cfdtmc {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Message Buffer One-shot Mode"]
     #[inline(always)]
     pub fn tmom(
         self,
@@ -7835,24 +23040,30 @@ pub mod cfdtmc {
     pub struct Tmtr_SPEC;
     pub type Tmtr = crate::EnumBitfieldStruct<u8, Tmtr_SPEC>;
     impl Tmtr {
+        #[doc = "TX Message buffer transmission not requested"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX message buffer transmission requested"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tmtar_SPEC;
     pub type Tmtar = crate::EnumBitfieldStruct<u8, Tmtar_SPEC>;
     impl Tmtar {
+        #[doc = "TX message buffer transmission request abort not requested"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX message buffer transmission request abort requested"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tmom_SPEC;
     pub type Tmom = crate::EnumBitfieldStruct<u8, Tmom_SPEC>;
     impl Tmom {
+        #[doc = "TX message buffer not configured in one-shot mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX message buffer configured in one-shot mode"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7863,9 +23074,11 @@ impl crate::sealed::RegSpec for Cfdtmsts_SPEC {
     type DataType = u8;
 }
 
+#[doc = "TX Message Buffer Status Registers %s"]
 pub type Cfdtmsts = crate::RegValueT<Cfdtmsts_SPEC>;
 
 impl Cfdtmsts {
+    #[doc = "TX Message Buffer Transmission Status"]
     #[inline(always)]
     pub fn tmtsts(
         self,
@@ -7891,6 +23104,7 @@ impl Cfdtmsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Message Buffer Transmission Result Flag"]
     #[inline(always)]
     pub fn tmtrf(
         self,
@@ -7916,6 +23130,7 @@ impl Cfdtmsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Message Buffer Transmission Request Mirrored"]
     #[inline(always)]
     pub fn tmtrm(
         self,
@@ -7941,6 +23156,7 @@ impl Cfdtmsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Message Buffer Transmission Abort Request Mirrored"]
     #[inline(always)]
     pub fn tmtarm(
         self,
@@ -7978,36 +23194,46 @@ pub mod cfdtmsts {
     pub struct Tmtsts_SPEC;
     pub type Tmtsts = crate::EnumBitfieldStruct<u8, Tmtsts_SPEC>;
     impl Tmtsts {
+        #[doc = "No on-going transmission"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "On-going transmission"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tmtrf_SPEC;
     pub type Tmtrf = crate::EnumBitfieldStruct<u8, Tmtrf_SPEC>;
     impl Tmtrf {
+        #[doc = "No result"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Transmission aborted from the TX message buffer"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Transmission successful from the TX message buffer and transmission abort was not requested"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Transmission successful from the TX message buffer and transmission abort was requested"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tmtrm_SPEC;
     pub type Tmtrm = crate::EnumBitfieldStruct<u8, Tmtrm_SPEC>;
     impl Tmtrm {
+        #[doc = "TX message buffer transmission not requested"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX message buffer transmission requested"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tmtarm_SPEC;
     pub type Tmtarm = crate::EnumBitfieldStruct<u8, Tmtarm_SPEC>;
     impl Tmtarm {
+        #[doc = "TX message buffer transmission request abort not requested"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX message buffer transmission request abort requested"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8018,9 +23244,11 @@ impl crate::sealed::RegSpec for Cfdtmtrsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Transmission Request Status Register %s"]
 pub type Cfdtmtrsts = crate::RegValueT<Cfdtmtrsts_SPEC>;
 
 impl Cfdtmtrsts {
+    #[doc = "TX Message Buffer Transmission Request Status"]
     #[inline(always)]
     pub fn cfdtmtrsts(
         self,
@@ -8058,8 +23286,10 @@ pub mod cfdtmtrsts {
     pub struct Cfdtmtrsts_SPEC;
     pub type Cfdtmtrsts = crate::EnumBitfieldStruct<u8, Cfdtmtrsts_SPEC>;
     impl Cfdtmtrsts {
+        #[doc = "Transmission not requested for corresponding TX message buffer"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transmission requested for corresponding TX message buffer"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8070,9 +23300,11 @@ impl crate::sealed::RegSpec for Cfdtmtarsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Transmission Abort Request Status Register %s"]
 pub type Cfdtmtarsts = crate::RegValueT<Cfdtmtarsts_SPEC>;
 
 impl Cfdtmtarsts {
+    #[doc = "TX Message Buffer Transmission Abort Request Status"]
     #[inline(always)]
     pub fn cfdtmtarsts(
         self,
@@ -8110,8 +23342,10 @@ pub mod cfdtmtarsts {
     pub struct Cfdtmtarsts_SPEC;
     pub type Cfdtmtarsts = crate::EnumBitfieldStruct<u8, Cfdtmtarsts_SPEC>;
     impl Cfdtmtarsts {
+        #[doc = "Transmission abort not requested for corresponding TX message buffer"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transmission abort requested for corresponding TX message buffer"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8122,9 +23356,11 @@ impl crate::sealed::RegSpec for Cfdtmtcsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Transmission Completion Status Register %s"]
 pub type Cfdtmtcsts = crate::RegValueT<Cfdtmtcsts_SPEC>;
 
 impl Cfdtmtcsts {
+    #[doc = "TX Message Buffer Transmission Completion Status"]
     #[inline(always)]
     pub fn cfdtmtcsts(
         self,
@@ -8162,8 +23398,10 @@ pub mod cfdtmtcsts {
     pub struct Cfdtmtcsts_SPEC;
     pub type Cfdtmtcsts = crate::EnumBitfieldStruct<u8, Cfdtmtcsts_SPEC>;
     impl Cfdtmtcsts {
+        #[doc = "Transmission not complete for corresponding TX message buffer"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transmission completed for corresponding TX message buffer"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8174,9 +23412,11 @@ impl crate::sealed::RegSpec for Cfdtmtasts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Transmission Abort Status Register %s"]
 pub type Cfdtmtasts = crate::RegValueT<Cfdtmtasts_SPEC>;
 
 impl Cfdtmtasts {
+    #[doc = "TX Message Buffer Transmission Abort Status"]
     #[inline(always)]
     pub fn cfdtmtasts(
         self,
@@ -8214,8 +23454,10 @@ pub mod cfdtmtasts {
     pub struct Cfdtmtasts_SPEC;
     pub type Cfdtmtasts = crate::EnumBitfieldStruct<u8, Cfdtmtasts_SPEC>;
     impl Cfdtmtasts {
+        #[doc = "Transmission not aborted for corresponding TX message buffer"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transmission aborted for corresponding TX message buffer"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8226,9 +23468,11 @@ impl crate::sealed::RegSpec for Cfdtmiec_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Interrupt Enable Configuration Register %s"]
 pub type Cfdtmiec = crate::RegValueT<Cfdtmiec_SPEC>;
 
 impl Cfdtmiec {
+    #[doc = "TX Message Buffer Interrupt Enable"]
     #[inline(always)]
     pub fn tmie(
         self,
@@ -8266,8 +23510,10 @@ pub mod cfdtmiec {
     pub struct Tmie_SPEC;
     pub type Tmie = crate::EnumBitfieldStruct<u8, Tmie_SPEC>;
     impl Tmie {
+        #[doc = "TX message buffer interrupt disabled for corresponding TX message buffer"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX message buffer interrupt enabled for corresponding TX message buffer"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8278,9 +23524,11 @@ impl crate::sealed::RegSpec for Cfdtxqcc0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Queue Configuration/Control Registers 0%s"]
 pub type Cfdtxqcc0 = crate::RegValueT<Cfdtxqcc0_SPEC>;
 
 impl Cfdtxqcc0 {
+    #[doc = "TX Queue Enable"]
     #[inline(always)]
     pub fn txqe(
         self,
@@ -8306,6 +23554,7 @@ impl Cfdtxqcc0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Gateway Mode Enable"]
     #[inline(always)]
     pub fn txqgwe(
         self,
@@ -8331,6 +23580,7 @@ impl Cfdtxqcc0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue TX Interrupt Enable"]
     #[inline(always)]
     pub fn txqtxie(
         self,
@@ -8356,6 +23606,7 @@ impl Cfdtxqcc0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Interrupt Mode"]
     #[inline(always)]
     pub fn txqim(
         self,
@@ -8381,6 +23632,7 @@ impl Cfdtxqcc0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Depth Configuration"]
     #[inline(always)]
     pub fn txqdc(
         self,
@@ -8389,6 +23641,7 @@ impl Cfdtxqcc0 {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,Cfdtxqcc0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TXQ Full Interrupt Enable"]
     #[inline(always)]
     pub fn txqfie(
         self,
@@ -8414,6 +23667,7 @@ impl Cfdtxqcc0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TXQ One Frame Reception Interrupt Enable"]
     #[inline(always)]
     pub fn txqofrxie(
         self,
@@ -8439,6 +23693,7 @@ impl Cfdtxqcc0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TXQ One Frame Transmission Interrupt Enable"]
     #[inline(always)]
     pub fn txqoftxie(
         self,
@@ -8476,56 +23731,70 @@ pub mod cfdtxqcc0 {
     pub struct Txqe_SPEC;
     pub type Txqe = crate::EnumBitfieldStruct<u8, Txqe_SPEC>;
     impl Txqe {
+        #[doc = "TX Queue disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqgwe_SPEC;
     pub type Txqgwe = crate::EnumBitfieldStruct<u8, Txqgwe_SPEC>;
     impl Txqgwe {
+        #[doc = "TX Queue GW mode disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue GW mode enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqtxie_SPEC;
     pub type Txqtxie = crate::EnumBitfieldStruct<u8, Txqtxie_SPEC>;
     impl Txqtxie {
+        #[doc = "TX Queue TX interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue TX interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqim_SPEC;
     pub type Txqim = crate::EnumBitfieldStruct<u8, Txqim_SPEC>;
     impl Txqim {
+        #[doc = "When the last message is successfully transmitted"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "At every successful transmission"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqfie_SPEC;
     pub type Txqfie = crate::EnumBitfieldStruct<u8, Txqfie_SPEC>;
     impl Txqfie {
+        #[doc = "TX Queue full interrupt generation disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue full interrupt generation enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqofrxie_SPEC;
     pub type Txqofrxie = crate::EnumBitfieldStruct<u8, Txqofrxie_SPEC>;
     impl Txqofrxie {
+        #[doc = "One Frame RX interrupt generation disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "One Frame RX interrupt generation enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqoftxie_SPEC;
     pub type Txqoftxie = crate::EnumBitfieldStruct<u8, Txqoftxie_SPEC>;
     impl Txqoftxie {
+        #[doc = "One Frame TX interrupt generation disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "One Frame TX interrupt generation enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8536,9 +23805,11 @@ impl crate::sealed::RegSpec for Cfdtxqsts0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Queue Status Registers 0%s"]
 pub type Cfdtxqsts0 = crate::RegValueT<Cfdtxqsts0_SPEC>;
 
 impl Cfdtxqsts0 {
+    #[doc = "TX Queue Empty"]
     #[inline(always)]
     pub fn txqemp(
         self,
@@ -8564,6 +23835,7 @@ impl Cfdtxqsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Full"]
     #[inline(always)]
     pub fn txqfll(
         self,
@@ -8589,6 +23861,7 @@ impl Cfdtxqsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue TX Interrupt Flag"]
     #[inline(always)]
     pub fn txqtxif(
         self,
@@ -8614,6 +23887,7 @@ impl Cfdtxqsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Message Count"]
     #[inline(always)]
     pub fn txqmc(
         self,
@@ -8622,6 +23896,7 @@ impl Cfdtxqsts0 {
         crate::common::RegisterField::<8,0x3f,1,0,u8,u8,Cfdtxqsts0_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "TXQ Full Interrupt Flag"]
     #[inline(always)]
     pub fn txqfif(
         self,
@@ -8629,6 +23904,7 @@ impl Cfdtxqsts0 {
         crate::common::RegisterFieldBool::<16,1,0,Cfdtxqsts0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TXQ One Frame Reception Interrupt Flag"]
     #[inline(always)]
     pub fn txqofrxif(
         self,
@@ -8636,6 +23912,7 @@ impl Cfdtxqsts0 {
         crate::common::RegisterFieldBool::<17,1,0,Cfdtxqsts0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TXQ One Frame Transmission Interrupt Flag"]
     #[inline(always)]
     pub fn txqoftxif(
         self,
@@ -8643,6 +23920,7 @@ impl Cfdtxqsts0 {
         crate::common::RegisterFieldBool::<18,1,0,Cfdtxqsts0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TXQ Message Lost"]
     #[inline(always)]
     pub fn txqmlt(
         self,
@@ -8680,32 +23958,40 @@ pub mod cfdtxqsts0 {
     pub struct Txqemp_SPEC;
     pub type Txqemp = crate::EnumBitfieldStruct<u8, Txqemp_SPEC>;
     impl Txqemp {
+        #[doc = "TX Queue not empty"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue empty"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqfll_SPEC;
     pub type Txqfll = crate::EnumBitfieldStruct<u8, Txqfll_SPEC>;
     impl Txqfll {
+        #[doc = "TX Queue not full"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue full"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqtxif_SPEC;
     pub type Txqtxif = crate::EnumBitfieldStruct<u8, Txqtxif_SPEC>;
     impl Txqtxif {
+        #[doc = "TX Queue interrupt condition not satisfied after a frame TX"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue interrupt condition satisfied after a frame TX"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqmlt_SPEC;
     pub type Txqmlt = crate::EnumBitfieldStruct<u8, Txqmlt_SPEC>;
     impl Txqmlt {
+        #[doc = "No message lost in TXQ"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TXQ message lost"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8716,9 +24002,11 @@ impl crate::sealed::RegSpec for Cfdtxqpctr0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Queue Pointer Control Registers 0%s"]
 pub type Cfdtxqpctr0 = crate::RegValueT<Cfdtxqpctr0_SPEC>;
 
 impl Cfdtxqpctr0 {
+    #[doc = "TX Queue Pointer Control"]
     #[inline(always)]
     pub fn txqpc(
         self,
@@ -8741,9 +24029,11 @@ impl crate::sealed::RegSpec for Cfdtxqcc1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Queue Configuration/Control Registers 1%s"]
 pub type Cfdtxqcc1 = crate::RegValueT<Cfdtxqcc1_SPEC>;
 
 impl Cfdtxqcc1 {
+    #[doc = "TX Queue Enable"]
     #[inline(always)]
     pub fn txqe(
         self,
@@ -8769,6 +24059,7 @@ impl Cfdtxqcc1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Gateway Mode Enable"]
     #[inline(always)]
     pub fn txqgwe(
         self,
@@ -8794,6 +24085,7 @@ impl Cfdtxqcc1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue TX Interrupt Enable"]
     #[inline(always)]
     pub fn txqtxie(
         self,
@@ -8819,6 +24111,7 @@ impl Cfdtxqcc1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Interrupt Mode"]
     #[inline(always)]
     pub fn txqim(
         self,
@@ -8844,6 +24137,7 @@ impl Cfdtxqcc1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Depth Configuration"]
     #[inline(always)]
     pub fn txqdc(
         self,
@@ -8852,6 +24146,7 @@ impl Cfdtxqcc1 {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,Cfdtxqcc1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TXQ Full Interrupt Enable"]
     #[inline(always)]
     pub fn txqfie(
         self,
@@ -8877,6 +24172,7 @@ impl Cfdtxqcc1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TXQ One Frame Reception Interrupt Enable"]
     #[inline(always)]
     pub fn txqofrxie(
         self,
@@ -8902,6 +24198,7 @@ impl Cfdtxqcc1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TXQ One Frame Transmission Interrupt Enable"]
     #[inline(always)]
     pub fn txqoftxie(
         self,
@@ -8939,56 +24236,70 @@ pub mod cfdtxqcc1 {
     pub struct Txqe_SPEC;
     pub type Txqe = crate::EnumBitfieldStruct<u8, Txqe_SPEC>;
     impl Txqe {
+        #[doc = "TX Queue disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqgwe_SPEC;
     pub type Txqgwe = crate::EnumBitfieldStruct<u8, Txqgwe_SPEC>;
     impl Txqgwe {
+        #[doc = "TX Queue GW mode disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue GW mode enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqtxie_SPEC;
     pub type Txqtxie = crate::EnumBitfieldStruct<u8, Txqtxie_SPEC>;
     impl Txqtxie {
+        #[doc = "TX Queue TX interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue TX interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqim_SPEC;
     pub type Txqim = crate::EnumBitfieldStruct<u8, Txqim_SPEC>;
     impl Txqim {
+        #[doc = "When the last message is successfully transmitted"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "At every successful transmission"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqfie_SPEC;
     pub type Txqfie = crate::EnumBitfieldStruct<u8, Txqfie_SPEC>;
     impl Txqfie {
+        #[doc = "TX Queue full interrupt generation disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue full interrupt generation enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqofrxie_SPEC;
     pub type Txqofrxie = crate::EnumBitfieldStruct<u8, Txqofrxie_SPEC>;
     impl Txqofrxie {
+        #[doc = "One Frame RX interrupt generation disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "One Frame RX interrupt generation enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqoftxie_SPEC;
     pub type Txqoftxie = crate::EnumBitfieldStruct<u8, Txqoftxie_SPEC>;
     impl Txqoftxie {
+        #[doc = "One Frame TX interrupt generation disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "One Frame TX interrupt generation enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8999,9 +24310,11 @@ impl crate::sealed::RegSpec for Cfdtxqsts1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Queue Status Registers 1%s"]
 pub type Cfdtxqsts1 = crate::RegValueT<Cfdtxqsts1_SPEC>;
 
 impl Cfdtxqsts1 {
+    #[doc = "TX Queue Empty"]
     #[inline(always)]
     pub fn txqemp(
         self,
@@ -9027,6 +24340,7 @@ impl Cfdtxqsts1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Full"]
     #[inline(always)]
     pub fn txqfll(
         self,
@@ -9052,6 +24366,7 @@ impl Cfdtxqsts1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue TX Interrupt Flag"]
     #[inline(always)]
     pub fn txqtxif(
         self,
@@ -9077,6 +24392,7 @@ impl Cfdtxqsts1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Message Count"]
     #[inline(always)]
     pub fn txqmc(
         self,
@@ -9085,6 +24401,7 @@ impl Cfdtxqsts1 {
         crate::common::RegisterField::<8,0x3f,1,0,u8,u8,Cfdtxqsts1_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "TXQ Full Interrupt Flag"]
     #[inline(always)]
     pub fn txqfif(
         self,
@@ -9092,6 +24409,7 @@ impl Cfdtxqsts1 {
         crate::common::RegisterFieldBool::<16,1,0,Cfdtxqsts1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TXQ One Frame Reception Interrupt Flag"]
     #[inline(always)]
     pub fn txqofrxif(
         self,
@@ -9099,6 +24417,7 @@ impl Cfdtxqsts1 {
         crate::common::RegisterFieldBool::<17,1,0,Cfdtxqsts1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TXQ One Frame Transmission Interrupt Flag"]
     #[inline(always)]
     pub fn txqoftxif(
         self,
@@ -9106,6 +24425,7 @@ impl Cfdtxqsts1 {
         crate::common::RegisterFieldBool::<18,1,0,Cfdtxqsts1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TXQ Message Lost"]
     #[inline(always)]
     pub fn txqmlt(
         self,
@@ -9143,32 +24463,40 @@ pub mod cfdtxqsts1 {
     pub struct Txqemp_SPEC;
     pub type Txqemp = crate::EnumBitfieldStruct<u8, Txqemp_SPEC>;
     impl Txqemp {
+        #[doc = "TX Queue not empty"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue empty"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqfll_SPEC;
     pub type Txqfll = crate::EnumBitfieldStruct<u8, Txqfll_SPEC>;
     impl Txqfll {
+        #[doc = "TX Queue not full"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue full"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqtxif_SPEC;
     pub type Txqtxif = crate::EnumBitfieldStruct<u8, Txqtxif_SPEC>;
     impl Txqtxif {
+        #[doc = "TX Queue interrupt condition not satisfied after a frame TX"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue interrupt condition satisfied after a frame TX"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqmlt_SPEC;
     pub type Txqmlt = crate::EnumBitfieldStruct<u8, Txqmlt_SPEC>;
     impl Txqmlt {
+        #[doc = "No message lost in TXQ"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TXQ message lost"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -9179,9 +24507,11 @@ impl crate::sealed::RegSpec for Cfdtxqpctr1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Queue Pointer Control Registers 1%s"]
 pub type Cfdtxqpctr1 = crate::RegValueT<Cfdtxqpctr1_SPEC>;
 
 impl Cfdtxqpctr1 {
+    #[doc = "TX Queue Pointer Control"]
     #[inline(always)]
     pub fn txqpc(
         self,
@@ -9204,9 +24534,11 @@ impl crate::sealed::RegSpec for Cfdtxqcc2_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Queue Configuration/Control Registers 2%s"]
 pub type Cfdtxqcc2 = crate::RegValueT<Cfdtxqcc2_SPEC>;
 
 impl Cfdtxqcc2 {
+    #[doc = "TX Queue Enable"]
     #[inline(always)]
     pub fn txqe(
         self,
@@ -9232,6 +24564,7 @@ impl Cfdtxqcc2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Gateway Mode Enable"]
     #[inline(always)]
     pub fn txqgwe(
         self,
@@ -9257,6 +24590,7 @@ impl Cfdtxqcc2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue TX Interrupt Enable"]
     #[inline(always)]
     pub fn txqtxie(
         self,
@@ -9282,6 +24616,7 @@ impl Cfdtxqcc2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Interrupt Mode"]
     #[inline(always)]
     pub fn txqim(
         self,
@@ -9307,6 +24642,7 @@ impl Cfdtxqcc2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Depth Configuration"]
     #[inline(always)]
     pub fn txqdc(
         self,
@@ -9315,6 +24651,7 @@ impl Cfdtxqcc2 {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,Cfdtxqcc2_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TXQ Full Interrupt Enable"]
     #[inline(always)]
     pub fn txqfie(
         self,
@@ -9340,6 +24677,7 @@ impl Cfdtxqcc2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TXQ One Frame Reception Interrupt Enable"]
     #[inline(always)]
     pub fn txqofrxie(
         self,
@@ -9365,6 +24703,7 @@ impl Cfdtxqcc2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TXQ One Frame Transmission Interrupt Enable"]
     #[inline(always)]
     pub fn txqoftxie(
         self,
@@ -9402,56 +24741,70 @@ pub mod cfdtxqcc2 {
     pub struct Txqe_SPEC;
     pub type Txqe = crate::EnumBitfieldStruct<u8, Txqe_SPEC>;
     impl Txqe {
+        #[doc = "TX Queue disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqgwe_SPEC;
     pub type Txqgwe = crate::EnumBitfieldStruct<u8, Txqgwe_SPEC>;
     impl Txqgwe {
+        #[doc = "TX Queue GW mode disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue GW mode enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqtxie_SPEC;
     pub type Txqtxie = crate::EnumBitfieldStruct<u8, Txqtxie_SPEC>;
     impl Txqtxie {
+        #[doc = "TX Queue TX interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue TX interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqim_SPEC;
     pub type Txqim = crate::EnumBitfieldStruct<u8, Txqim_SPEC>;
     impl Txqim {
+        #[doc = "When the last message is successfully transmitted"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "At every successful transmission"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqfie_SPEC;
     pub type Txqfie = crate::EnumBitfieldStruct<u8, Txqfie_SPEC>;
     impl Txqfie {
+        #[doc = "TX Queue full interrupt generation disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue full interrupt generation enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqofrxie_SPEC;
     pub type Txqofrxie = crate::EnumBitfieldStruct<u8, Txqofrxie_SPEC>;
     impl Txqofrxie {
+        #[doc = "One Frame RX interrupt generation disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "One Frame RX interrupt generation enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqoftxie_SPEC;
     pub type Txqoftxie = crate::EnumBitfieldStruct<u8, Txqoftxie_SPEC>;
     impl Txqoftxie {
+        #[doc = "One Frame TX interrupt generation disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "One Frame TX interrupt generation enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -9462,9 +24815,11 @@ impl crate::sealed::RegSpec for Cfdtxqsts2_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Queue Status Registers 2%s"]
 pub type Cfdtxqsts2 = crate::RegValueT<Cfdtxqsts2_SPEC>;
 
 impl Cfdtxqsts2 {
+    #[doc = "TX Queue Empty"]
     #[inline(always)]
     pub fn txqemp(
         self,
@@ -9490,6 +24845,7 @@ impl Cfdtxqsts2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Full"]
     #[inline(always)]
     pub fn txqfll(
         self,
@@ -9515,6 +24871,7 @@ impl Cfdtxqsts2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue TX Interrupt Flag"]
     #[inline(always)]
     pub fn txqtxif(
         self,
@@ -9540,6 +24897,7 @@ impl Cfdtxqsts2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Message Count"]
     #[inline(always)]
     pub fn txqmc(
         self,
@@ -9548,6 +24906,7 @@ impl Cfdtxqsts2 {
         crate::common::RegisterField::<8,0x3f,1,0,u8,u8,Cfdtxqsts2_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "TXQ Full Interrupt Flag"]
     #[inline(always)]
     pub fn txqfif(
         self,
@@ -9555,6 +24914,7 @@ impl Cfdtxqsts2 {
         crate::common::RegisterFieldBool::<16,1,0,Cfdtxqsts2_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TXQ One Frame Reception Interrupt Flag"]
     #[inline(always)]
     pub fn txqofrxif(
         self,
@@ -9562,6 +24922,7 @@ impl Cfdtxqsts2 {
         crate::common::RegisterFieldBool::<17,1,0,Cfdtxqsts2_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TXQ One Frame Transmission Interrupt Flag"]
     #[inline(always)]
     pub fn txqoftxif(
         self,
@@ -9569,6 +24930,7 @@ impl Cfdtxqsts2 {
         crate::common::RegisterFieldBool::<18,1,0,Cfdtxqsts2_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TXQ Message Lost"]
     #[inline(always)]
     pub fn txqmlt(
         self,
@@ -9606,32 +24968,40 @@ pub mod cfdtxqsts2 {
     pub struct Txqemp_SPEC;
     pub type Txqemp = crate::EnumBitfieldStruct<u8, Txqemp_SPEC>;
     impl Txqemp {
+        #[doc = "TX Queue not empty"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue empty"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqfll_SPEC;
     pub type Txqfll = crate::EnumBitfieldStruct<u8, Txqfll_SPEC>;
     impl Txqfll {
+        #[doc = "TX Queue not full"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue full"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqtxif_SPEC;
     pub type Txqtxif = crate::EnumBitfieldStruct<u8, Txqtxif_SPEC>;
     impl Txqtxif {
+        #[doc = "TX Queue interrupt condition not satisfied after a frame TX"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue interrupt condition satisfied after a frame TX"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqmlt_SPEC;
     pub type Txqmlt = crate::EnumBitfieldStruct<u8, Txqmlt_SPEC>;
     impl Txqmlt {
+        #[doc = "No message lost in TXQ"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TXQ message lost"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -9642,9 +25012,11 @@ impl crate::sealed::RegSpec for Cfdtxqpctr2_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Queue Pointer Control Registers 2%s"]
 pub type Cfdtxqpctr2 = crate::RegValueT<Cfdtxqpctr2_SPEC>;
 
 impl Cfdtxqpctr2 {
+    #[doc = "TX Queue Pointer Control"]
     #[inline(always)]
     pub fn txqpc(
         self,
@@ -9667,9 +25039,11 @@ impl crate::sealed::RegSpec for Cfdtxqcc3_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Queue Configuration/Control Registers 3%s"]
 pub type Cfdtxqcc3 = crate::RegValueT<Cfdtxqcc3_SPEC>;
 
 impl Cfdtxqcc3 {
+    #[doc = "TX Queue Enable"]
     #[inline(always)]
     pub fn txqe(
         self,
@@ -9695,6 +25069,7 @@ impl Cfdtxqcc3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue TX Interrupt Enable"]
     #[inline(always)]
     pub fn txqtxie(
         self,
@@ -9720,6 +25095,7 @@ impl Cfdtxqcc3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Interrupt Mode"]
     #[inline(always)]
     pub fn txqim(
         self,
@@ -9745,6 +25121,7 @@ impl Cfdtxqcc3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Depth Configuration"]
     #[inline(always)]
     pub fn txqdc(
         self,
@@ -9753,6 +25130,7 @@ impl Cfdtxqcc3 {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,Cfdtxqcc3_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TXQ One Frame Transmission Interrupt Enable"]
     #[inline(always)]
     pub fn txqoftxie(
         self,
@@ -9790,32 +25168,40 @@ pub mod cfdtxqcc3 {
     pub struct Txqe_SPEC;
     pub type Txqe = crate::EnumBitfieldStruct<u8, Txqe_SPEC>;
     impl Txqe {
+        #[doc = "TX Queue disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqtxie_SPEC;
     pub type Txqtxie = crate::EnumBitfieldStruct<u8, Txqtxie_SPEC>;
     impl Txqtxie {
+        #[doc = "TX Queue TX interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue TX interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqim_SPEC;
     pub type Txqim = crate::EnumBitfieldStruct<u8, Txqim_SPEC>;
     impl Txqim {
+        #[doc = "When the last message is successfully transmitted"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "At every successful transmission"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqoftxie_SPEC;
     pub type Txqoftxie = crate::EnumBitfieldStruct<u8, Txqoftxie_SPEC>;
     impl Txqoftxie {
+        #[doc = "One Frame TX interrupt generation disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "One Frame TX interrupt generation enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -9826,9 +25212,11 @@ impl crate::sealed::RegSpec for Cfdtxqsts3_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Queue Status Registers 3%s"]
 pub type Cfdtxqsts3 = crate::RegValueT<Cfdtxqsts3_SPEC>;
 
 impl Cfdtxqsts3 {
+    #[doc = "TX Queue Empty"]
     #[inline(always)]
     pub fn txqemp(
         self,
@@ -9854,6 +25242,7 @@ impl Cfdtxqsts3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Full"]
     #[inline(always)]
     pub fn txqfll(
         self,
@@ -9879,6 +25268,7 @@ impl Cfdtxqsts3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue TX Interrupt Flag"]
     #[inline(always)]
     pub fn txqtxif(
         self,
@@ -9904,6 +25294,7 @@ impl Cfdtxqsts3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Message Count"]
     #[inline(always)]
     pub fn txqmc(
         self,
@@ -9912,6 +25303,7 @@ impl Cfdtxqsts3 {
         crate::common::RegisterField::<8,0x3f,1,0,u8,u8,Cfdtxqsts3_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "TXQ One Frame Transmission Interrupt Flag"]
     #[inline(always)]
     pub fn txqoftxif(
         self,
@@ -9931,24 +25323,30 @@ pub mod cfdtxqsts3 {
     pub struct Txqemp_SPEC;
     pub type Txqemp = crate::EnumBitfieldStruct<u8, Txqemp_SPEC>;
     impl Txqemp {
+        #[doc = "TX Queue not empty"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue empty"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqfll_SPEC;
     pub type Txqfll = crate::EnumBitfieldStruct<u8, Txqfll_SPEC>;
     impl Txqfll {
+        #[doc = "TX Queue not full"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue full"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txqtxif_SPEC;
     pub type Txqtxif = crate::EnumBitfieldStruct<u8, Txqtxif_SPEC>;
     impl Txqtxif {
+        #[doc = "TX Queue interrupt condition not satisfied after a frame TX"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX Queue interrupt condition satisfied after a frame TX"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -9959,9 +25357,11 @@ impl crate::sealed::RegSpec for Cfdtxqpctr3_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Queue Pointer Control Registers 3%s"]
 pub type Cfdtxqpctr3 = crate::RegValueT<Cfdtxqpctr3_SPEC>;
 
 impl Cfdtxqpctr3 {
+    #[doc = "TX Queue Pointer Control"]
     #[inline(always)]
     pub fn txqpc(
         self,
@@ -9984,9 +25384,11 @@ impl crate::sealed::RegSpec for Cfdtxqests_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Queue Empty Status Register"]
 pub type Cfdtxqests = crate::RegValueT<Cfdtxqests_SPEC>;
 
 impl Cfdtxqests {
+    #[doc = "TXQ Empty Status"]
     #[inline(always)]
     pub fn txqxemp(
         self,
@@ -10024,8 +25426,10 @@ pub mod cfdtxqests {
     pub struct TxQxEmp_SPEC;
     pub type TxQxEmp = crate::EnumBitfieldStruct<u8, TxQxEmp_SPEC>;
     impl TxQxEmp {
+        #[doc = "TXQ not empty"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TXQ empty"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10036,9 +25440,11 @@ impl crate::sealed::RegSpec for Cfdtxqfists_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Queue Full Interrupt Status Register"]
 pub type Cfdtxqfists = crate::RegValueT<Cfdtxqfists_SPEC>;
 
 impl Cfdtxqfists {
+    #[doc = "TXQ Full Interrupt Status for Channel 0"]
     #[inline(always)]
     pub fn txq0full(
         self,
@@ -10064,6 +25470,7 @@ impl Cfdtxqfists {
         >::from_register(self, 0)
     }
 
+    #[doc = "TXQ Full Interrupt Status for Channel 1"]
     #[inline(always)]
     pub fn txq1full(
         self,
@@ -10101,16 +25508,20 @@ pub mod cfdtxqfists {
     pub struct Txq0Full_SPEC;
     pub type Txq0Full = crate::EnumBitfieldStruct<u8, Txq0Full_SPEC>;
     impl Txq0Full {
+        #[doc = "TXQ full interrupt is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TXQ full interrupt is set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txq1Full_SPEC;
     pub type Txq1Full = crate::EnumBitfieldStruct<u8, Txq1Full_SPEC>;
     impl Txq1Full {
+        #[doc = "TXQ full interrupt is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TXQ full interrupt is set"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10121,9 +25532,11 @@ impl crate::sealed::RegSpec for Cfdtxqmsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Queue Message Lost Status Register"]
 pub type Cfdtxqmsts = crate::RegValueT<Cfdtxqmsts_SPEC>;
 
 impl Cfdtxqmsts {
+    #[doc = "TXQ Message Lost Status for Channel 0"]
     #[inline(always)]
     pub fn txq0ml(
         self,
@@ -10149,6 +25562,7 @@ impl Cfdtxqmsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "TXQ Message Lost Status for Channel 1"]
     #[inline(always)]
     pub fn txq1ml(
         self,
@@ -10186,16 +25600,20 @@ pub mod cfdtxqmsts {
     pub struct Txq0Ml_SPEC;
     pub type Txq0Ml = crate::EnumBitfieldStruct<u8, Txq0Ml_SPEC>;
     impl Txq0Ml {
+        #[doc = "TXQ message lost flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TXQ message lost flag is set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txq1Ml_SPEC;
     pub type Txq1Ml = crate::EnumBitfieldStruct<u8, Txq1Ml_SPEC>;
     impl Txq1Ml {
+        #[doc = "TXQ message lost flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TXQ message lost flag is set"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10206,9 +25624,11 @@ impl crate::sealed::RegSpec for Cfdtxqists_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Queue Interrupt Status Register"]
 pub type Cfdtxqists = crate::RegValueT<Cfdtxqists_SPEC>;
 
 impl Cfdtxqists {
+    #[doc = "TXQ Interrupt Status Flag for Channel 0"]
     #[inline(always)]
     pub fn txq0isf(
         self,
@@ -10234,6 +25654,7 @@ impl Cfdtxqists {
         >::from_register(self, 0)
     }
 
+    #[doc = "TXQ Interrupt Status Flag for Channel 1"]
     #[inline(always)]
     pub fn txq1isf(
         self,
@@ -10271,16 +25692,20 @@ pub mod cfdtxqists {
     pub struct Txq0Isf_SPEC;
     pub type Txq0Isf = crate::EnumBitfieldStruct<u8, Txq0Isf_SPEC>;
     impl Txq0Isf {
+        #[doc = "TXQ Interrupt flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TXQ Interrupt flag is set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txq1Isf_SPEC;
     pub type Txq1Isf = crate::EnumBitfieldStruct<u8, Txq1Isf_SPEC>;
     impl Txq1Isf {
+        #[doc = "TXQ Interrupt flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TXQ Interrupt flag is set"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10291,9 +25716,11 @@ impl crate::sealed::RegSpec for Cfdtxqoftists_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Queue One Frame TX Interrupt Status Register"]
 pub type Cfdtxqoftists = crate::RegValueT<Cfdtxqoftists_SPEC>;
 
 impl Cfdtxqoftists {
+    #[doc = "TXQ One Frame TX Interrupt Status Flag for Channel 0"]
     #[inline(always)]
     pub fn txq0oftisf(
         self,
@@ -10319,6 +25746,7 @@ impl Cfdtxqoftists {
         >::from_register(self, 0)
     }
 
+    #[doc = "TXQ One Frame TX Interrupt Status Flag for Channel 1"]
     #[inline(always)]
     pub fn txq1oftisf(
         self,
@@ -10356,16 +25784,20 @@ pub mod cfdtxqoftists {
     pub struct Txq0Oftisf_SPEC;
     pub type Txq0Oftisf = crate::EnumBitfieldStruct<u8, Txq0Oftisf_SPEC>;
     impl Txq0Oftisf {
+        #[doc = "TXQ One Frame TX Interrupt flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TXQ One Frame TX Interrupt flag is set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txq1Oftisf_SPEC;
     pub type Txq1Oftisf = crate::EnumBitfieldStruct<u8, Txq1Oftisf_SPEC>;
     impl Txq1Oftisf {
+        #[doc = "TXQ One Frame TX Interrupt flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TXQ One Frame TX Interrupt flag is set"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10376,9 +25808,11 @@ impl crate::sealed::RegSpec for Cfdtxqofrists_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Queue One Frame RX Interrupt Status Register"]
 pub type Cfdtxqofrists = crate::RegValueT<Cfdtxqofrists_SPEC>;
 
 impl Cfdtxqofrists {
+    #[doc = "TXQ One Frame RX Interrupt Status Flag"]
     #[inline(always)]
     pub fn txq0ofrisf(
         self,
@@ -10404,6 +25838,7 @@ impl Cfdtxqofrists {
         >::from_register(self, 0)
     }
 
+    #[doc = "TXQ One Frame RX Interrupt Status Flag"]
     #[inline(always)]
     pub fn txq1ofrisf(
         self,
@@ -10441,16 +25876,20 @@ pub mod cfdtxqofrists {
     pub struct Txq0Ofrisf_SPEC;
     pub type Txq0Ofrisf = crate::EnumBitfieldStruct<u8, Txq0Ofrisf_SPEC>;
     impl Txq0Ofrisf {
+        #[doc = "TXQ One Frame RX Interrupt flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TXQ One Frame RX Interrupt flag is set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txq1Ofrisf_SPEC;
     pub type Txq1Ofrisf = crate::EnumBitfieldStruct<u8, Txq1Ofrisf_SPEC>;
     impl Txq1Ofrisf {
+        #[doc = "TXQ One Frame RX Interrupt flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TXQ One Frame RX Interrupt flag is set"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10461,9 +25900,11 @@ impl crate::sealed::RegSpec for Cfdtxqfsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Queue Full Status Register"]
 pub type Cfdtxqfsts = crate::RegValueT<Cfdtxqfsts_SPEC>;
 
 impl Cfdtxqfsts {
+    #[doc = "TXQ Full Status Flag for Channel 0"]
     #[inline(always)]
     pub fn txq0fsf(
         self,
@@ -10489,6 +25930,7 @@ impl Cfdtxqfsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "TXQ Full Status Flag for Channel 1"]
     #[inline(always)]
     pub fn txq1fsf(
         self,
@@ -10526,16 +25968,20 @@ pub mod cfdtxqfsts {
     pub struct Txq0Fsf_SPEC;
     pub type Txq0Fsf = crate::EnumBitfieldStruct<u8, Txq0Fsf_SPEC>;
     impl Txq0Fsf {
+        #[doc = "TXQ Full flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TXQ Full flag is set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txq1Fsf_SPEC;
     pub type Txq1Fsf = crate::EnumBitfieldStruct<u8, Txq1Fsf_SPEC>;
     impl Txq1Fsf {
+        #[doc = "TXQ Full flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TXQ Full flag is set"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10546,9 +25992,11 @@ impl crate::sealed::RegSpec for Cfdthlcc_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX History List Configuration/Control Register %s"]
 pub type Cfdthlcc = crate::RegValueT<Cfdthlcc_SPEC>;
 
 impl Cfdthlcc {
+    #[doc = "TX History List Enable"]
     #[inline(always)]
     pub fn thle(
         self,
@@ -10574,6 +26022,7 @@ impl Cfdthlcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX History List Interrupt Enable"]
     #[inline(always)]
     pub fn thlie(
         self,
@@ -10599,6 +26048,7 @@ impl Cfdthlcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX History List Interrupt Mode"]
     #[inline(always)]
     pub fn thlim(
         self,
@@ -10624,6 +26074,7 @@ impl Cfdthlcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX History List Dedicated TX Enable"]
     #[inline(always)]
     pub fn thldte(
         self,
@@ -10649,6 +26100,7 @@ impl Cfdthlcc {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX History List Dedicated Gateway Enable"]
     #[inline(always)]
     pub fn thldge(
         self,
@@ -10686,40 +26138,50 @@ pub mod cfdthlcc {
     pub struct Thle_SPEC;
     pub type Thle = crate::EnumBitfieldStruct<u8, Thle_SPEC>;
     impl Thle {
+        #[doc = "TX History List disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX History List enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Thlie_SPEC;
     pub type Thlie = crate::EnumBitfieldStruct<u8, Thlie_SPEC>;
     impl Thlie {
+        #[doc = "TX History List Interrupt disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX History List Interrupt enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Thlim_SPEC;
     pub type Thlim = crate::EnumBitfieldStruct<u8, Thlim_SPEC>;
     impl Thlim {
+        #[doc = "Interrupt generated if TX History List level reaches ¾ of the TX History List depth"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt generated for every successfully stored entry"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Thldte_SPEC;
     pub type Thldte = crate::EnumBitfieldStruct<u8, Thldte_SPEC>;
     impl Thldte {
+        #[doc = "TX FIFO + TX Queue"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Flat TX MB + TX FIFO + TX Queue"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Thldge_SPEC;
     pub type Thldge = crate::EnumBitfieldStruct<u8, Thldge_SPEC>;
     impl Thldge {
+        #[doc = "Not dedicated Gateway FIFO + Gateway TX Queue"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Dedicated Gateway FIFO + Gateway TX Queue"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10730,9 +26192,11 @@ impl crate::sealed::RegSpec for Cfdthlsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX History List Status Register %s"]
 pub type Cfdthlsts = crate::RegValueT<Cfdthlsts_SPEC>;
 
 impl Cfdthlsts {
+    #[doc = "TX History List Empty"]
     #[inline(always)]
     pub fn thlemp(
         self,
@@ -10758,6 +26222,7 @@ impl Cfdthlsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX History List Full"]
     #[inline(always)]
     pub fn thlfll(
         self,
@@ -10783,6 +26248,7 @@ impl Cfdthlsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX History List Entry Lost"]
     #[inline(always)]
     pub fn thlelt(
         self,
@@ -10808,6 +26274,7 @@ impl Cfdthlsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX History List Interrupt Flag"]
     #[inline(always)]
     pub fn thlif(
         self,
@@ -10833,6 +26300,7 @@ impl Cfdthlsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX History List Message Count"]
     #[inline(always)]
     pub fn thlmc(
         self,
@@ -10852,32 +26320,40 @@ pub mod cfdthlsts {
     pub struct Thlemp_SPEC;
     pub type Thlemp = crate::EnumBitfieldStruct<u8, Thlemp_SPEC>;
     impl Thlemp {
+        #[doc = "TX History List not empty"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX History List empty"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Thlfll_SPEC;
     pub type Thlfll = crate::EnumBitfieldStruct<u8, Thlfll_SPEC>;
     impl Thlfll {
+        #[doc = "TX History List not full"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX History List full"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Thlelt_SPEC;
     pub type Thlelt = crate::EnumBitfieldStruct<u8, Thlelt_SPEC>;
     impl Thlelt {
+        #[doc = "No entry lost in TX History List"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX History List entry Lost"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Thlif_SPEC;
     pub type Thlif = crate::EnumBitfieldStruct<u8, Thlif_SPEC>;
     impl Thlif {
+        #[doc = "TX History List interrupt condition not satisfied"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "TX History List interrupt condition satisfied"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10888,9 +26364,11 @@ impl crate::sealed::RegSpec for Cfdthlpctr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX History List Pointer Control Registers %s"]
 pub type Cfdthlpctr = crate::RegValueT<Cfdthlpctr_SPEC>;
 
 impl Cfdthlpctr {
+    #[doc = "TX History List Pointer Control"]
     #[inline(always)]
     pub fn thlpc(
         self,
@@ -10913,9 +26391,11 @@ impl crate::sealed::RegSpec for Cfdgtintsts0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Global TX Interrupt Status Register 0"]
 pub type Cfdgtintsts0 = crate::RegValueT<Cfdgtintsts0_SPEC>;
 
 impl Cfdgtintsts0 {
+    #[doc = "TX Successful Interrupt Flag Channel 0"]
     #[inline(always)]
     pub fn tsif0(
         self,
@@ -10941,6 +26421,7 @@ impl Cfdgtintsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Abort Interrupt Flag Channel 0"]
     #[inline(always)]
     pub fn tai0(
         self,
@@ -10966,6 +26447,7 @@ impl Cfdgtintsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Interrupt Flag Channel 0"]
     #[inline(always)]
     pub fn tqif0(
         self,
@@ -10991,6 +26473,7 @@ impl Cfdgtintsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "COM FIFO TX/GW Mode Interrupt Flag Channel 0"]
     #[inline(always)]
     pub fn cftif0(
         self,
@@ -11016,6 +26499,7 @@ impl Cfdgtintsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX History List Interrupt Channel 0"]
     #[inline(always)]
     pub fn thif0(
         self,
@@ -11041,6 +26525,7 @@ impl Cfdgtintsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue One Frame Transmission Interrupt Flag Channel 0"]
     #[inline(always)]
     pub fn tqofifo(
         self,
@@ -11066,6 +26551,7 @@ impl Cfdgtintsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "COM FIFO One Frame Transmission Interrupt Flag Channel 0"]
     #[inline(always)]
     pub fn cfotifo(
         self,
@@ -11091,6 +26577,7 @@ impl Cfdgtintsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Successful Interrupt Flag Channel 1"]
     #[inline(always)]
     pub fn tsif1(
         self,
@@ -11116,6 +26603,7 @@ impl Cfdgtintsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Abort Interrupt Flag Channel 1"]
     #[inline(always)]
     pub fn taif1(
         self,
@@ -11141,6 +26629,7 @@ impl Cfdgtintsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue Interrupt Flag Channel 1"]
     #[inline(always)]
     pub fn tqif1(
         self,
@@ -11166,6 +26655,7 @@ impl Cfdgtintsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "COM FIFO TX/GW Mode Interrupt Flag Channel 1"]
     #[inline(always)]
     pub fn cftif1(
         self,
@@ -11191,6 +26681,7 @@ impl Cfdgtintsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX History List Interrupt Channel 1"]
     #[inline(always)]
     pub fn thif1(
         self,
@@ -11216,6 +26707,7 @@ impl Cfdgtintsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Queue One Frame Transmission Interrupt Flag Channel 1"]
     #[inline(always)]
     pub fn tqofif1(
         self,
@@ -11241,6 +26733,7 @@ impl Cfdgtintsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "COM FIFO One Frame Transmission Interrupt Flag Channel 1"]
     #[inline(always)]
     pub fn cfotif1(
         self,
@@ -11278,112 +26771,140 @@ pub mod cfdgtintsts0 {
     pub struct Tsif0_SPEC;
     pub type Tsif0 = crate::EnumBitfieldStruct<u8, Tsif0_SPEC>;
     impl Tsif0 {
+        #[doc = "Channel n TX Successful Interrupt flag not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel n TX Successful Interrupt flag set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tai0_SPEC;
     pub type Tai0 = crate::EnumBitfieldStruct<u8, Tai0_SPEC>;
     impl Tai0 {
+        #[doc = "Channel n TX Abort Interrupt flag not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel n TX Abort Interrupt flag set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tqif0_SPEC;
     pub type Tqif0 = crate::EnumBitfieldStruct<u8, Tqif0_SPEC>;
     impl Tqif0 {
+        #[doc = "Channel n TX Queue Interrupt flag not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel n TX Queue Interrupt flag set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cftif0_SPEC;
     pub type Cftif0 = crate::EnumBitfieldStruct<u8, Cftif0_SPEC>;
     impl Cftif0 {
+        #[doc = "Channel n COM FIFO TX/GW Mode Interrupt flag not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel n COM FIFO TX/GW Mode Interrupt flag set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Thif0_SPEC;
     pub type Thif0 = crate::EnumBitfieldStruct<u8, Thif0_SPEC>;
     impl Thif0 {
+        #[doc = "Channel n TX History List Interrupt flag not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel n TX History List Interrupt flag set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tqofifo_SPEC;
     pub type Tqofifo = crate::EnumBitfieldStruct<u8, Tqofifo_SPEC>;
     impl Tqofifo {
+        #[doc = "Channel n TX Queue One Frame Transmission Interrupt flag not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel n TX Queue One Frame Transmission Interrupt flag set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfotifo_SPEC;
     pub type Cfotifo = crate::EnumBitfieldStruct<u8, Cfotifo_SPEC>;
     impl Cfotifo {
+        #[doc = "Channel n COM FIFO One Frame Transmission Interrupt flag not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel n COM FIFO One Frame Transmission Interrupt flag set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tsif1_SPEC;
     pub type Tsif1 = crate::EnumBitfieldStruct<u8, Tsif1_SPEC>;
     impl Tsif1 {
+        #[doc = "Channel n TX Successful Interrupt flag not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel n TX Successful Interrupt flag set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Taif1_SPEC;
     pub type Taif1 = crate::EnumBitfieldStruct<u8, Taif1_SPEC>;
     impl Taif1 {
+        #[doc = "Channel n TX Abort Interrupt flag not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel n TX Abort Interrupt flag set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tqif1_SPEC;
     pub type Tqif1 = crate::EnumBitfieldStruct<u8, Tqif1_SPEC>;
     impl Tqif1 {
+        #[doc = "Channel n TX Queue Interrupt flag not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel n TX Queue Interrupt flag set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cftif1_SPEC;
     pub type Cftif1 = crate::EnumBitfieldStruct<u8, Cftif1_SPEC>;
     impl Cftif1 {
+        #[doc = "Channel n COM FIFO TX/GW Mode Interrupt flag not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel n COM FIFO TX/GW Mode Interrupt flag set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Thif1_SPEC;
     pub type Thif1 = crate::EnumBitfieldStruct<u8, Thif1_SPEC>;
     impl Thif1 {
+        #[doc = "Channel n TX History List Interrupt flag not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel n TX History List Interrupt flag set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tqofif1_SPEC;
     pub type Tqofif1 = crate::EnumBitfieldStruct<u8, Tqofif1_SPEC>;
     impl Tqofif1 {
+        #[doc = "Channel n TX Queue One Frame Transmission Interrupt flag not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel n TX Queue One Frame Transmission Interrupt flag set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfotif1_SPEC;
     pub type Cfotif1 = crate::EnumBitfieldStruct<u8, Cfotif1_SPEC>;
     impl Cfotif1 {
+        #[doc = "Channel n COM FIFO One Frame Transmission Interrupt flag not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel n COM FIFO One Frame Transmission Interrupt flag set"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -11394,9 +26915,11 @@ impl crate::sealed::RegSpec for Cfdgtstcfg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Global Test Configuration Register"]
 pub type Cfdgtstcfg = crate::RegValueT<Cfdgtstcfg_SPEC>;
 
 impl Cfdgtstcfg {
+    #[doc = "Channel n Internal CAN Bus Communication Test Mode Enable"]
     #[inline(always)]
     pub fn icbce(
         self,
@@ -11422,6 +26945,7 @@ impl Cfdgtstcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "RAM Test Mode Page Select"]
     #[inline(always)]
     pub fn rtmps(
         self,
@@ -11442,8 +26966,10 @@ pub mod cfdgtstcfg {
     pub struct Icbce_SPEC;
     pub type Icbce = crate::EnumBitfieldStruct<u8, Icbce_SPEC>;
     impl Icbce {
+        #[doc = "Channel n internal CAN bus communication disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Channel n internal CAN bus communication enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -11454,9 +26980,11 @@ impl crate::sealed::RegSpec for Cfdgtstctr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Global Test Control Register"]
 pub type Cfdgtstctr = crate::RegValueT<Cfdgtstctr_SPEC>;
 
 impl Cfdgtstctr {
+    #[doc = "Internal CAN Bus Communication Test Mode Enable"]
     #[inline(always)]
     pub fn icbctme(
         self,
@@ -11482,6 +27010,7 @@ impl Cfdgtstctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "RAM Test Mode Enable"]
     #[inline(always)]
     pub fn rtme(
         self,
@@ -11519,16 +27048,20 @@ pub mod cfdgtstctr {
     pub struct Icbctme_SPEC;
     pub type Icbctme = crate::EnumBitfieldStruct<u8, Icbctme_SPEC>;
     impl Icbctme {
+        #[doc = "Internal CAN Bus Communication test mode disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Internal CAN Bus Communication test mode enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rtme_SPEC;
     pub type Rtme = crate::EnumBitfieldStruct<u8, Rtme_SPEC>;
     impl Rtme {
+        #[doc = "RAM test mode disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RAM test mode enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -11539,9 +27072,11 @@ impl crate::sealed::RegSpec for Cfdgfdcfg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Global FD Configuration Register"]
 pub type Cfdgfdcfg = crate::RegValueT<Cfdgfdcfg_SPEC>;
 
 impl Cfdgfdcfg {
+    #[doc = "RES Bit Protocol Exception Disable"]
     #[inline(always)]
     pub fn rped(
         self,
@@ -11567,6 +27102,7 @@ impl Cfdgfdcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timestamp Capture Configuration"]
     #[inline(always)]
     pub fn tsccfg(
         self,
@@ -11604,20 +27140,26 @@ pub mod cfdgfdcfg {
     pub struct Rped_SPEC;
     pub type Rped = crate::EnumBitfieldStruct<u8, Rped_SPEC>;
     impl Rped {
+        #[doc = "Protocol exception event detection enabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Protocol exception event detection disabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tsccfg_SPEC;
     pub type Tsccfg = crate::EnumBitfieldStruct<u8, Tsccfg_SPEC>;
     impl Tsccfg {
+        #[doc = "Timestamp capture at the sample point of SOF (start of frame)"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Timestamp capture at frame valid indication"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Timestamp capture at the sample point of RES bit"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Reserved"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -11628,9 +27170,11 @@ impl crate::sealed::RegSpec for Cfdglockk_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Global Lock Key Register"]
 pub type Cfdglockk = crate::RegValueT<Cfdglockk_SPEC>;
 
 impl Cfdglockk {
+    #[doc = "Lock Key"]
     #[inline(always)]
     pub fn lock(
         self,
@@ -11648,14 +27192,116 @@ impl ::core::default::Default for Cfdglockk {
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Cfdgaflignent_SPEC;
+impl crate::sealed::RegSpec for Cfdgaflignent_SPEC {
+    type DataType = u32;
+}
+
+#[doc = "Global AFL Ignore Entry Register"]
+pub type Cfdgaflignent = crate::RegValueT<Cfdgaflignent_SPEC>;
+
+impl Cfdgaflignent {
+    #[doc = "Ignore Rule Number"]
+    #[inline(always)]
+    pub fn irn(
+        self,
+    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, Cfdgaflignent_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdgaflignent_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "Ignore Channel Number"]
+    #[inline(always)]
+    pub fn icn(
+        self,
+    ) -> crate::common::RegisterFieldBool<16, 1, 0, Cfdgaflignent_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<16,1,0,Cfdgaflignent_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
+impl ::core::default::Default for Cfdgaflignent {
+    #[inline(always)]
+    fn default() -> Cfdgaflignent {
+        <crate::RegValueT<Cfdgaflignent_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Cfdgaflignctr_SPEC;
+impl crate::sealed::RegSpec for Cfdgaflignctr_SPEC {
+    type DataType = u32;
+}
+
+#[doc = "Global AFL Ignore Control Register"]
+pub type Cfdgaflignctr = crate::RegValueT<Cfdgaflignctr_SPEC>;
+
+impl Cfdgaflignctr {
+    #[doc = "Ignore Entry Enable"]
+    #[inline(always)]
+    pub fn iren(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0x1,
+        1,
+        0,
+        cfdgaflignctr::Iren,
+        cfdgaflignctr::Iren,
+        Cfdgaflignctr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x1,
+            1,
+            0,
+            cfdgaflignctr::Iren,
+            cfdgaflignctr::Iren,
+            Cfdgaflignctr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Key Code"]
+    #[inline(always)]
+    pub fn key(
+        self,
+    ) -> crate::common::RegisterField<8, 0xff, 1, 0, u8, u8, Cfdgaflignctr_SPEC, crate::common::W>
+    {
+        crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdgaflignctr_SPEC,crate::common::W>::from_register(self,0)
+    }
+}
+impl ::core::default::Default for Cfdgaflignctr {
+    #[inline(always)]
+    fn default() -> Cfdgaflignctr {
+        <crate::RegValueT<Cfdgaflignctr_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+pub mod cfdgaflignctr {
+
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Iren_SPEC;
+    pub type Iren = crate::EnumBitfieldStruct<u8, Iren_SPEC>;
+    impl Iren {
+        #[doc = "AFL entry number is not ignored"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AFL entry number is ignored"]
+        pub const _1: Self = Self::new(1);
+    }
+}
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cfdcdtct_SPEC;
 impl crate::sealed::RegSpec for Cfdcdtct_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DMA Transfer Control Register"]
 pub type Cfdcdtct = crate::RegValueT<Cfdcdtct_SPEC>;
 
 impl Cfdcdtct {
+    #[doc = "DMA Transfer Enable for RXFIFO 0"]
     #[inline(always)]
     pub fn rfdmae0(
         self,
@@ -11681,6 +27327,7 @@ impl Cfdcdtct {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Transfer Enable for RXFIFO 1"]
     #[inline(always)]
     pub fn rfdmae1(
         self,
@@ -11706,6 +27353,7 @@ impl Cfdcdtct {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Transfer Enable for RXFIFO 2"]
     #[inline(always)]
     pub fn rfdmae2(
         self,
@@ -11731,6 +27379,7 @@ impl Cfdcdtct {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Transfer Enable for RXFIFO 3"]
     #[inline(always)]
     pub fn rfdmae3(
         self,
@@ -11756,6 +27405,7 @@ impl Cfdcdtct {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Transfer Enable for RXFIFO 4"]
     #[inline(always)]
     pub fn rfdmae4(
         self,
@@ -11781,6 +27431,7 @@ impl Cfdcdtct {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Transfer Enable for RXFIFO 5"]
     #[inline(always)]
     pub fn rfdmae5(
         self,
@@ -11806,6 +27457,7 @@ impl Cfdcdtct {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Transfer Enable for RXFIFO 6"]
     #[inline(always)]
     pub fn rfdmae6(
         self,
@@ -11831,6 +27483,7 @@ impl Cfdcdtct {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Transfer Enable for RXFIFO 7"]
     #[inline(always)]
     pub fn rfdmae7(
         self,
@@ -11856,6 +27509,7 @@ impl Cfdcdtct {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Transfer Enable for Common FIFO 0 of Channel 0"]
     #[inline(always)]
     pub fn cfdmae0(
         self,
@@ -11881,6 +27535,7 @@ impl Cfdcdtct {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Transfer Enable for Common FIFO 0 of Channel 1"]
     #[inline(always)]
     pub fn cfdmae1(
         self,
@@ -11918,80 +27573,100 @@ pub mod cfdcdtct {
     pub struct Rfdmae0_SPEC;
     pub type Rfdmae0 = crate::EnumBitfieldStruct<u8, Rfdmae0_SPEC>;
     impl Rfdmae0 {
+        #[doc = "DMA transfer request disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer request enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfdmae1_SPEC;
     pub type Rfdmae1 = crate::EnumBitfieldStruct<u8, Rfdmae1_SPEC>;
     impl Rfdmae1 {
+        #[doc = "DMA transfer request disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer request enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfdmae2_SPEC;
     pub type Rfdmae2 = crate::EnumBitfieldStruct<u8, Rfdmae2_SPEC>;
     impl Rfdmae2 {
+        #[doc = "DMA transfer request disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer request enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfdmae3_SPEC;
     pub type Rfdmae3 = crate::EnumBitfieldStruct<u8, Rfdmae3_SPEC>;
     impl Rfdmae3 {
+        #[doc = "DMA transfer request disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer request enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfdmae4_SPEC;
     pub type Rfdmae4 = crate::EnumBitfieldStruct<u8, Rfdmae4_SPEC>;
     impl Rfdmae4 {
+        #[doc = "DMA transfer request disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer request enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfdmae5_SPEC;
     pub type Rfdmae5 = crate::EnumBitfieldStruct<u8, Rfdmae5_SPEC>;
     impl Rfdmae5 {
+        #[doc = "DMA transfer request disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer request enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfdmae6_SPEC;
     pub type Rfdmae6 = crate::EnumBitfieldStruct<u8, Rfdmae6_SPEC>;
     impl Rfdmae6 {
+        #[doc = "DMA transfer request disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer request enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfdmae7_SPEC;
     pub type Rfdmae7 = crate::EnumBitfieldStruct<u8, Rfdmae7_SPEC>;
     impl Rfdmae7 {
+        #[doc = "DMA transfer request disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer request enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfdmae0_SPEC;
     pub type Cfdmae0 = crate::EnumBitfieldStruct<u8, Cfdmae0_SPEC>;
     impl Cfdmae0 {
+        #[doc = "DMA transfer request disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer request enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfdmae1_SPEC;
     pub type Cfdmae1 = crate::EnumBitfieldStruct<u8, Cfdmae1_SPEC>;
     impl Cfdmae1 {
+        #[doc = "DMA transfer request disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer request enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12002,9 +27677,11 @@ impl crate::sealed::RegSpec for Cfdcdtsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DMA Transfer Status Register"]
 pub type Cfdcdtsts = crate::RegValueT<Cfdcdtsts_SPEC>;
 
 impl Cfdcdtsts {
+    #[doc = "DMA Transfer Status for RX FIFO 0"]
     #[inline(always)]
     pub fn rfdmasts0(
         self,
@@ -12030,6 +27707,7 @@ impl Cfdcdtsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Transfer Status for RX FIFO 1"]
     #[inline(always)]
     pub fn rfdmasts1(
         self,
@@ -12055,6 +27733,7 @@ impl Cfdcdtsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Transfer Status for RX FIFO 2"]
     #[inline(always)]
     pub fn rfdmasts2(
         self,
@@ -12080,6 +27759,7 @@ impl Cfdcdtsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Transfer Status for RX FIFO 3"]
     #[inline(always)]
     pub fn rfdmasts3(
         self,
@@ -12105,6 +27785,7 @@ impl Cfdcdtsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Transfer Status for RX FIFO 4"]
     #[inline(always)]
     pub fn rfdmasts4(
         self,
@@ -12130,6 +27811,7 @@ impl Cfdcdtsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Transfer Status for RX FIFO 5"]
     #[inline(always)]
     pub fn rfdmasts5(
         self,
@@ -12155,6 +27837,7 @@ impl Cfdcdtsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Transfer Status for RX FIFO 6"]
     #[inline(always)]
     pub fn rfdmasts6(
         self,
@@ -12180,6 +27863,7 @@ impl Cfdcdtsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Transfer Status for RX FIFO 7"]
     #[inline(always)]
     pub fn rfdmasts7(
         self,
@@ -12205,6 +27889,7 @@ impl Cfdcdtsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Transfer Status only for Common FIFO 0 of Channel 0"]
     #[inline(always)]
     pub fn cfdmasts0(
         self,
@@ -12230,6 +27915,7 @@ impl Cfdcdtsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA Transfer Status only for Common FIFO 0 of Channel 1"]
     #[inline(always)]
     pub fn cfdmasts1(
         self,
@@ -12267,80 +27953,100 @@ pub mod cfdcdtsts {
     pub struct Rfdmasts0_SPEC;
     pub type Rfdmasts0 = crate::EnumBitfieldStruct<u8, Rfdmasts0_SPEC>;
     impl Rfdmasts0 {
+        #[doc = "DMA transfer stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer on going"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfdmasts1_SPEC;
     pub type Rfdmasts1 = crate::EnumBitfieldStruct<u8, Rfdmasts1_SPEC>;
     impl Rfdmasts1 {
+        #[doc = "DMA transfer stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer on going"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfdmasts2_SPEC;
     pub type Rfdmasts2 = crate::EnumBitfieldStruct<u8, Rfdmasts2_SPEC>;
     impl Rfdmasts2 {
+        #[doc = "DMA transfer stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer on going"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfdmasts3_SPEC;
     pub type Rfdmasts3 = crate::EnumBitfieldStruct<u8, Rfdmasts3_SPEC>;
     impl Rfdmasts3 {
+        #[doc = "DMA transfer stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer on going"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfdmasts4_SPEC;
     pub type Rfdmasts4 = crate::EnumBitfieldStruct<u8, Rfdmasts4_SPEC>;
     impl Rfdmasts4 {
+        #[doc = "DMA transfer stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer on going"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfdmasts5_SPEC;
     pub type Rfdmasts5 = crate::EnumBitfieldStruct<u8, Rfdmasts5_SPEC>;
     impl Rfdmasts5 {
+        #[doc = "DMA transfer stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer on going"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfdmasts6_SPEC;
     pub type Rfdmasts6 = crate::EnumBitfieldStruct<u8, Rfdmasts6_SPEC>;
     impl Rfdmasts6 {
+        #[doc = "DMA transfer stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer on going"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfdmasts7_SPEC;
     pub type Rfdmasts7 = crate::EnumBitfieldStruct<u8, Rfdmasts7_SPEC>;
     impl Rfdmasts7 {
+        #[doc = "DMA transfer stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer on going"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfdmasts0_SPEC;
     pub type Cfdmasts0 = crate::EnumBitfieldStruct<u8, Cfdmasts0_SPEC>;
     impl Cfdmasts0 {
+        #[doc = "DMA transfer stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer on going"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfdmasts1_SPEC;
     pub type Cfdmasts1 = crate::EnumBitfieldStruct<u8, Cfdmasts1_SPEC>;
     impl Cfdmasts1 {
+        #[doc = "DMA transfer stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer on going"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12351,9 +28057,11 @@ impl crate::sealed::RegSpec for Cfdcdttct_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DMA TX Transfer Control Register"]
 pub type Cfdcdttct = crate::RegValueT<Cfdcdttct_SPEC>;
 
 impl Cfdcdttct {
+    #[doc = "DMA TX Transfer Enable for TXQ 0 of Channel 0"]
     #[inline(always)]
     pub fn tq0dmae0(
         self,
@@ -12379,6 +28087,7 @@ impl Cfdcdttct {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA TX Transfer Enable for TXQ 0 of Channel 1"]
     #[inline(always)]
     pub fn tq0dmae1(
         self,
@@ -12404,6 +28113,7 @@ impl Cfdcdttct {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA TX Transfer Enable for TXQ 3 of Channel 0"]
     #[inline(always)]
     pub fn tq3dmae0(
         self,
@@ -12429,6 +28139,7 @@ impl Cfdcdttct {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA TX Transfer Enable for TXQ 3 of Channel 1"]
     #[inline(always)]
     pub fn tq3dmae1(
         self,
@@ -12454,6 +28165,7 @@ impl Cfdcdttct {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA TX Transfer Enable for Common FIFO 2 of Channel 0"]
     #[inline(always)]
     pub fn cfdmae0(
         self,
@@ -12479,6 +28191,7 @@ impl Cfdcdttct {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA TX Transfer Enable for Common FIFO 2 of Channel 1"]
     #[inline(always)]
     pub fn cfdmae1(
         self,
@@ -12516,48 +28229,60 @@ pub mod cfdcdttct {
     pub struct Tq0Dmae0_SPEC;
     pub type Tq0Dmae0 = crate::EnumBitfieldStruct<u8, Tq0Dmae0_SPEC>;
     impl Tq0Dmae0 {
+        #[doc = "DMA TX transfer request disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA TX transfer request enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tq0Dmae1_SPEC;
     pub type Tq0Dmae1 = crate::EnumBitfieldStruct<u8, Tq0Dmae1_SPEC>;
     impl Tq0Dmae1 {
+        #[doc = "DMA TX transfer request disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA TX transfer request enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tq3Dmae0_SPEC;
     pub type Tq3Dmae0 = crate::EnumBitfieldStruct<u8, Tq3Dmae0_SPEC>;
     impl Tq3Dmae0 {
+        #[doc = "DMA TX transfer request disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA TX transfer request enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tq3Dmae1_SPEC;
     pub type Tq3Dmae1 = crate::EnumBitfieldStruct<u8, Tq3Dmae1_SPEC>;
     impl Tq3Dmae1 {
+        #[doc = "DMA TX transfer request disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA TX transfer request enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfdmae0_SPEC;
     pub type Cfdmae0 = crate::EnumBitfieldStruct<u8, Cfdmae0_SPEC>;
     impl Cfdmae0 {
+        #[doc = "DMA TX transfer request disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA TX transfer request enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfdmae1_SPEC;
     pub type Cfdmae1 = crate::EnumBitfieldStruct<u8, Cfdmae1_SPEC>;
     impl Cfdmae1 {
+        #[doc = "DMA TX transfer request disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA TX transfer request enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12568,9 +28293,11 @@ impl crate::sealed::RegSpec for Cfdcdttsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DMA TX Transfer Status Register"]
 pub type Cfdcdttsts = crate::RegValueT<Cfdcdttsts_SPEC>;
 
 impl Cfdcdttsts {
+    #[doc = "DMA TX Transfer Status for TXQ0 of Channel 0"]
     #[inline(always)]
     pub fn tq0dmasts0(
         self,
@@ -12596,6 +28323,7 @@ impl Cfdcdttsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA TX Transfer Status for TXQ0 of Channel 1"]
     #[inline(always)]
     pub fn tq0dmasts1(
         self,
@@ -12621,6 +28349,7 @@ impl Cfdcdttsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA TX Transfer Status for TXQ3 of Channel 0"]
     #[inline(always)]
     pub fn tq3dmasts0(
         self,
@@ -12646,6 +28375,7 @@ impl Cfdcdttsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA TX Transfer Status for TXQ3 of Channel 1"]
     #[inline(always)]
     pub fn tq3dmasts1(
         self,
@@ -12671,6 +28401,7 @@ impl Cfdcdttsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA TX Transfer Status only for Common FIFO 2 of Channel 0"]
     #[inline(always)]
     pub fn cfdmasts0(
         self,
@@ -12696,6 +28427,7 @@ impl Cfdcdttsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMA TX Transfer Status only for Common FIFO 2 of Channel 1"]
     #[inline(always)]
     pub fn cfdmasts1(
         self,
@@ -12733,48 +28465,60 @@ pub mod cfdcdttsts {
     pub struct Tq0Dmasts0_SPEC;
     pub type Tq0Dmasts0 = crate::EnumBitfieldStruct<u8, Tq0Dmasts0_SPEC>;
     impl Tq0Dmasts0 {
+        #[doc = "DMA transfer stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tq0Dmasts1_SPEC;
     pub type Tq0Dmasts1 = crate::EnumBitfieldStruct<u8, Tq0Dmasts1_SPEC>;
     impl Tq0Dmasts1 {
+        #[doc = "DMA transfer stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tq3Dmasts0_SPEC;
     pub type Tq3Dmasts0 = crate::EnumBitfieldStruct<u8, Tq3Dmasts0_SPEC>;
     impl Tq3Dmasts0 {
+        #[doc = "DMA transfer stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tq3Dmasts1_SPEC;
     pub type Tq3Dmasts1 = crate::EnumBitfieldStruct<u8, Tq3Dmasts1_SPEC>;
     impl Tq3Dmasts1 {
+        #[doc = "DMA transfer stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfdmasts0_SPEC;
     pub type Cfdmasts0 = crate::EnumBitfieldStruct<u8, Cfdmasts0_SPEC>;
     impl Cfdmasts0 {
+        #[doc = "DMA transfer stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfdmasts1_SPEC;
     pub type Cfdmasts1 = crate::EnumBitfieldStruct<u8, Cfdmasts1_SPEC>;
     impl Cfdmasts1 {
+        #[doc = "DMA transfer stopped"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12785,9 +28529,11 @@ impl crate::sealed::RegSpec for Cfdgrintsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Global RX Interrupt Status Register %s"]
 pub type Cfdgrintsts = crate::RegValueT<Cfdgrintsts_SPEC>;
 
 impl Cfdgrintsts {
+    #[doc = "TXQ Full Interrupt Flag Channel n (n = 0, 1)"]
     #[inline(always)]
     pub fn qfif(
         self,
@@ -12813,6 +28559,7 @@ impl Cfdgrintsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "TXQ One Frame RX Interrupt Flag Channel n (n = 0, 1)"]
     #[inline(always)]
     pub fn qofrif(
         self,
@@ -12838,6 +28585,7 @@ impl Cfdgrintsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO RX Interrupt Flag Channel n (n = 0, 1)"]
     #[inline(always)]
     pub fn cfrif(
         self,
@@ -12863,6 +28611,7 @@ impl Cfdgrintsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO FDC Level Full Interrupt Flag Channel n (n = 0, 1)"]
     #[inline(always)]
     pub fn cfrfif(
         self,
@@ -12888,6 +28637,7 @@ impl Cfdgrintsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO One Frame RX Interrupt Flag Channel n (n = 0, 1)"]
     #[inline(always)]
     pub fn cfofrif(
         self,
@@ -12925,40 +28675,50 @@ pub mod cfdgrintsts {
     pub struct Qfif_SPEC;
     pub type Qfif = crate::EnumBitfieldStruct<u8, Qfif_SPEC>;
     impl Qfif {
+        #[doc = "Corresponding TXQ Full Interrupt flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding TXQ Full Interrupt flag is set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Qofrif_SPEC;
     pub type Qofrif = crate::EnumBitfieldStruct<u8, Qofrif_SPEC>;
     impl Qofrif {
+        #[doc = "Corresponding TXQ One Frame RX Interrupt flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding TXQ One Frame RX Interrupt flag is set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfrif_SPEC;
     pub type Cfrif = crate::EnumBitfieldStruct<u8, Cfrif_SPEC>;
     impl Cfrif {
+        #[doc = "Corresponding Common FIFO RX Interrupt flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding Common FIFO RX Interrupt flag is set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfrfif_SPEC;
     pub type Cfrfif = crate::EnumBitfieldStruct<u8, Cfrfif_SPEC>;
     impl Cfrfif {
+        #[doc = "Corresponding Common FIFO Full Interrupt flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding Common FIFO Full Interrupt flag is set"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfofrif_SPEC;
     pub type Cfofrif = crate::EnumBitfieldStruct<u8, Cfofrif_SPEC>;
     impl Cfofrif {
+        #[doc = "Corresponding Common FIFO One Frame RX Interrupt flag is not set"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Corresponding Common FIFO One Frame RX Interrupt flag is set"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12969,9 +28729,11 @@ impl crate::sealed::RegSpec for Cfdgrstc_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Global SW reset Register"]
 pub type Cfdgrstc = crate::RegValueT<Cfdgrstc_SPEC>;
 
 impl Cfdgrstc {
+    #[doc = "SW Reset"]
     #[inline(always)]
     pub fn srst(
         self,
@@ -12997,6 +28759,7 @@ impl Cfdgrstc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -13016,8 +28779,10 @@ pub mod cfdgrstc {
     pub struct Srst_SPEC;
     pub type Srst = crate::EnumBitfieldStruct<u8, Srst_SPEC>;
     impl Srst {
+        #[doc = "Normal state"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "SW reset state"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -13028,9 +28793,11 @@ impl crate::sealed::RegSpec for Cfdcdcfg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Channel %s Data Bitrate Configuration Register"]
 pub type Cfdcdcfg = crate::RegValueT<Cfdcdcfg_SPEC>;
 
 impl Cfdcdcfg {
+    #[doc = "Channel Data Baud Rate Prescaler"]
     #[inline(always)]
     pub fn dbrp(
         self,
@@ -13038,6 +28805,7 @@ impl Cfdcdcfg {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcdcfg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Timing Segment 1"]
     #[inline(always)]
     pub fn dtseg1(
         self,
@@ -13045,6 +28813,7 @@ impl Cfdcdcfg {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,Cfdcdcfg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Timing Segment 2"]
     #[inline(always)]
     pub fn dtseg2(
         self,
@@ -13052,6 +28821,7 @@ impl Cfdcdcfg {
         crate::common::RegisterField::<16,0xf,1,0,u8,u8,Cfdcdcfg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Resynchronization Jump Width"]
     #[inline(always)]
     pub fn dsjw(
         self,
@@ -13073,9 +28843,11 @@ impl crate::sealed::RegSpec for Cfdcfdcfg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Channel %s CAN-FD Configuration Register"]
 pub type Cfdcfdcfg = crate::RegValueT<Cfdcfdcfg_SPEC>;
 
 impl Cfdcfdcfg {
+    #[doc = "Error Occurrence Counter Configuration"]
     #[inline(always)]
     pub fn eoccfg(
         self,
@@ -13101,6 +28873,7 @@ impl Cfdcfdcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transceiver Delay Compensation Offset Configuration"]
     #[inline(always)]
     pub fn tdcoc(
         self,
@@ -13126,6 +28899,7 @@ impl Cfdcfdcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transceiver Delay Compensation Enable"]
     #[inline(always)]
     pub fn tdce(
         self,
@@ -13151,6 +28925,7 @@ impl Cfdcfdcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Error State Indication Configuration"]
     #[inline(always)]
     pub fn esic(
         self,
@@ -13176,6 +28951,7 @@ impl Cfdcfdcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transceiver Delay Compensation Offset"]
     #[inline(always)]
     pub fn tdco(
         self,
@@ -13184,6 +28960,7 @@ impl Cfdcfdcfg {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdcfg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "CAN2.0, CAN-FD Multi-Gateway Enable"]
     #[inline(always)]
     pub fn gwen(
         self,
@@ -13209,6 +28986,7 @@ impl Cfdcfdcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Gateway FDF Configuration Bit"]
     #[inline(always)]
     pub fn gwfdf(
         self,
@@ -13234,6 +29012,7 @@ impl Cfdcfdcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Gateway BRS Configuration Bit"]
     #[inline(always)]
     pub fn gwbrs(
         self,
@@ -13259,6 +29038,7 @@ impl Cfdcfdcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "FD-Only Enable"]
     #[inline(always)]
     pub fn fdoe(
         self,
@@ -13284,6 +29064,7 @@ impl Cfdcfdcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "RX Edge Filter Enable"]
     #[inline(always)]
     pub fn refe(
         self,
@@ -13309,6 +29090,7 @@ impl Cfdcfdcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Classical CAN Enable"]
     #[inline(always)]
     pub fn cloe(
         self,
@@ -13334,6 +29116,7 @@ impl Cfdcfdcfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "CAN-FD Frame Distinction Enable"]
     #[inline(always)]
     pub fn cfdte(
         self,
@@ -13371,100 +29154,128 @@ pub mod cfdcfdcfg {
     pub struct Eoccfg_SPEC;
     pub type Eoccfg = crate::EnumBitfieldStruct<u8, Eoccfg_SPEC>;
     impl Eoccfg {
+        #[doc = "All transmitter or receiver CAN frames"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "All transmitter CAN frames"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "All receiver CAN frames"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Reserved"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "Only transmitter or receiver CAN-FD data-phase (fast bits)"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Only transmitter CAN-FD data-phase (fast bits)"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "Only receiver CAN-FD data-phase (fast bits)"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Reserved"]
         pub const _111: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tdcoc_SPEC;
     pub type Tdcoc = crate::EnumBitfieldStruct<u8, Tdcoc_SPEC>;
     impl Tdcoc {
+        #[doc = "Measured + offset"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Offset-only"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tdce_SPEC;
     pub type Tdce = crate::EnumBitfieldStruct<u8, Tdce_SPEC>;
     impl Tdce {
+        #[doc = "Transceiver delay compensation disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transceiver delay compensation enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Esic_SPEC;
     pub type Esic = crate::EnumBitfieldStruct<u8, Esic_SPEC>;
     impl Esic {
+        #[doc = "The ESI bit in the frame represents the error state of the node itself"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The ESI bit in the frame represents the error state of the message buffer if the node itself is not in error passive. If the node is in error passive, then the ESI bit is driven by the node itself."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Gwen_SPEC;
     pub type Gwen = crate::EnumBitfieldStruct<u8, Gwen_SPEC>;
     impl Gwen {
+        #[doc = "Multi-gateway disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Multi-gateway enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Gwfdf_SPEC;
     pub type Gwfdf = crate::EnumBitfieldStruct<u8, Gwfdf_SPEC>;
     impl Gwfdf {
+        #[doc = "Gateway frame is transmitted as Classical CAN frame"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Gateway frame is transmitted as CAN-FD frame"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Gwbrs_SPEC;
     pub type Gwbrs = crate::EnumBitfieldStruct<u8, Gwbrs_SPEC>;
     impl Gwbrs {
+        #[doc = "Gateway frame is transmitted with BRS = 0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Gateway frame is transmitted with BRS = 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Fdoe_SPEC;
     pub type Fdoe = crate::EnumBitfieldStruct<u8, Fdoe_SPEC>;
     impl Fdoe {
+        #[doc = "FD-only mode disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FD-only mode enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Refe_SPEC;
     pub type Refe = crate::EnumBitfieldStruct<u8, Refe_SPEC>;
     impl Refe {
+        #[doc = "RX edge filter disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RX edge filter enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cloe_SPEC;
     pub type Cloe = crate::EnumBitfieldStruct<u8, Cloe_SPEC>;
     impl Cloe {
+        #[doc = "Classical CAN mode disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Classical CAN mode enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfdte_SPEC;
     pub type Cfdte = crate::EnumBitfieldStruct<u8, Cfdte_SPEC>;
     impl Cfdte {
+        #[doc = "CAN-FD frame distinction disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CAN-FD frame distinction enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -13475,9 +29286,11 @@ impl crate::sealed::RegSpec for Cfdcfdctr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Channel %s CANFD Control Register"]
 pub type Cfdcfdctr = crate::RegValueT<Cfdcfdctr_SPEC>;
 
 impl Cfdcfdctr {
+    #[doc = "Error Occurrence Counter Clear"]
     #[inline(always)]
     pub fn eocclr(
         self,
@@ -13503,6 +29316,7 @@ impl Cfdcfdctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Successful Occurrence Counter Clear"]
     #[inline(always)]
     pub fn socclr(
         self,
@@ -13540,16 +29354,20 @@ pub mod cfdcfdctr {
     pub struct Eocclr_SPEC;
     pub type Eocclr = crate::EnumBitfieldStruct<u8, Eocclr_SPEC>;
     impl Eocclr {
+        #[doc = "No error occurrence counter clear"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear error occurrence counter"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Socclr_SPEC;
     pub type Socclr = crate::EnumBitfieldStruct<u8, Socclr_SPEC>;
     impl Socclr {
+        #[doc = "No successful occurrence counter clear"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear successful occurrence counter"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -13560,9 +29378,11 @@ impl crate::sealed::RegSpec for Cfdcfdsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Channel %s CANFD Status Register"]
 pub type Cfdcfdsts = crate::RegValueT<Cfdcfdsts_SPEC>;
 
 impl Cfdcfdsts {
+    #[doc = "Transceiver Delay Compensation Result"]
     #[inline(always)]
     pub fn tdcr(
         self,
@@ -13570,6 +29390,7 @@ impl Cfdcfdsts {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdsts_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Error Occurrence Counter Overflow"]
     #[inline(always)]
     pub fn eoco(
         self,
@@ -13595,6 +29416,7 @@ impl Cfdcfdsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Successful Occurrence Counter Overflow"]
     #[inline(always)]
     pub fn soco(
         self,
@@ -13620,6 +29442,7 @@ impl Cfdcfdsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transceiver Delay Compensation Violation Flag"]
     #[inline(always)]
     pub fn tdcvf(
         self,
@@ -13645,6 +29468,7 @@ impl Cfdcfdsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Error Occurrence Counter"]
     #[inline(always)]
     pub fn eoc(
         self,
@@ -13653,6 +29477,7 @@ impl Cfdcfdsts {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdsts_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Successful occurrence counter"]
     #[inline(always)]
     pub fn soc(
         self,
@@ -13673,24 +29498,30 @@ pub mod cfdcfdsts {
     pub struct Eoco_SPEC;
     pub type Eoco = crate::EnumBitfieldStruct<u8, Eoco_SPEC>;
     impl Eoco {
+        #[doc = "Error occurrence counter has not overflowed"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Error occurrence counter has overflowed"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Soco_SPEC;
     pub type Soco = crate::EnumBitfieldStruct<u8, Soco_SPEC>;
     impl Soco {
+        #[doc = "Successful occurrence counter has not overflowed"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Successful occurrence counter has overflowed"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tdcvf_SPEC;
     pub type Tdcvf = crate::EnumBitfieldStruct<u8, Tdcvf_SPEC>;
     impl Tdcvf {
+        #[doc = "Transceiver delay compensation violation has not occurred"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transceiver delay compensation violation has occurred"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -13701,9 +29532,11 @@ impl crate::sealed::RegSpec for Cfdcfdcrc_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Channel %s CANFD CRC Register"]
 pub type Cfdcfdcrc = crate::RegValueT<Cfdcfdcrc_SPEC>;
 
 impl Cfdcfdcrc {
+    #[doc = "CRC Register value"]
     #[inline(always)]
     pub fn crcreg(
         self,
@@ -13712,6 +29545,7 @@ impl Cfdcfdcrc {
         crate::common::RegisterField::<0,0x1fffff,1,0,u32,u32,Cfdcfdcrc_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Stuff bit count"]
     #[inline(always)]
     pub fn scnt(
         self,
@@ -13733,9 +29567,11 @@ impl crate::sealed::RegSpec for Cfdcblct_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Channel %s Bus Load Control Register"]
 pub type Cfdcblct = crate::RegValueT<Cfdcblct_SPEC>;
 
 impl Cfdcblct {
+    #[doc = "Bus Load Counter Enable"]
     #[inline(always)]
     pub fn blce(
         self,
@@ -13761,6 +29597,7 @@ impl Cfdcblct {
         >::from_register(self, 0)
     }
 
+    #[doc = "BUS Load Counter Load"]
     #[inline(always)]
     pub fn blcld(
         self,
@@ -13782,8 +29619,10 @@ pub mod cfdcblct {
     pub struct Blce_SPEC;
     pub type Blce = crate::EnumBitfieldStruct<u8, Blce_SPEC>;
     impl Blce {
+        #[doc = "Bus load counter disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus load counter enable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -13794,9 +29633,11 @@ impl crate::sealed::RegSpec for Cfdcblsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Channel %s Bus Load Status Register"]
 pub type Cfdcblsts = crate::RegValueT<Cfdcblsts_SPEC>;
 
 impl Cfdcblsts {
+    #[doc = "Bus Load Counter"]
     #[inline(always)]
     pub fn blc(
         self,
@@ -13828,9 +29669,11 @@ impl crate::sealed::RegSpec for Cfdgaflid_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Global Acceptance Filter List ID Registers"]
 pub type Cfdgaflid = crate::RegValueT<Cfdgaflid_SPEC>;
 
 impl Cfdgaflid {
+    #[doc = "Global Acceptance Filter List Entry ID Field"]
     #[inline(always)]
     pub fn gaflid(
         self,
@@ -13856,6 +29699,7 @@ impl Cfdgaflid {
         >::from_register(self, 0)
     }
 
+    #[doc = "Global Acceptance Filter List Entry Loopback Configuration"]
     #[inline(always)]
     pub fn gafllb(
         self,
@@ -13881,6 +29725,7 @@ impl Cfdgaflid {
         >::from_register(self, 0)
     }
 
+    #[doc = "Global Acceptance Filter List Entry RTR Field"]
     #[inline(always)]
     pub fn gaflrtr(
         self,
@@ -13906,6 +29751,7 @@ impl Cfdgaflid {
         >::from_register(self, 0)
     }
 
+    #[doc = "Global Acceptance Filter List Entry IDE Field"]
     #[inline(always)]
     pub fn gaflide(
         self,
@@ -13943,24 +29789,30 @@ pub mod cfdgaflid {
     pub struct Gafllb_SPEC;
     pub type Gafllb = crate::EnumBitfieldStruct<u8, Gafllb_SPEC>;
     impl Gafllb {
+        #[doc = "Global Acceptance Filter List entry ID for acceptance filtering with attribute RX"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Global Acceptance Filter List entry ID for acceptance filtering with attribute TX"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Gaflrtr_SPEC;
     pub type Gaflrtr = crate::EnumBitfieldStruct<u8, Gaflrtr_SPEC>;
     impl Gaflrtr {
+        #[doc = "Data frame"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Remote frame"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Gaflide_SPEC;
     pub type Gaflide = crate::EnumBitfieldStruct<u8, Gaflide_SPEC>;
     impl Gaflide {
+        #[doc = "Standard identifier of rule entry ID is valid for acceptance filtering"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Extended identifier of rule entry ID is valid for acceptance filtering"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -13971,9 +29823,11 @@ impl crate::sealed::RegSpec for Cfdgaflm_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Global Acceptance Filter List Mask Registers"]
 pub type Cfdgaflm = crate::RegValueT<Cfdgaflm_SPEC>;
 
 impl Cfdgaflm {
+    #[doc = "Global Acceptance Filter List ID Mask Field"]
     #[inline(always)]
     pub fn gaflidm(
         self,
@@ -13991,6 +29845,7 @@ impl Cfdgaflm {
         >::from_register(self, 0)
     }
 
+    #[doc = "Global Acceptance Filter List Information Label 1"]
     #[inline(always)]
     pub fn gaflifl1(
         self,
@@ -13998,6 +29853,7 @@ impl Cfdgaflm {
         crate::common::RegisterFieldBool::<29,1,0,Cfdgaflm_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Global Acceptance Filter List Entry RTR Mask"]
     #[inline(always)]
     pub fn gaflrtrm(
         self,
@@ -14023,6 +29879,7 @@ impl Cfdgaflm {
         >::from_register(self, 0)
     }
 
+    #[doc = "Global Acceptance Filter List IDE Mask"]
     #[inline(always)]
     pub fn gaflidem(
         self,
@@ -14060,16 +29917,20 @@ pub mod cfdgaflm {
     pub struct Gaflrtrm_SPEC;
     pub type Gaflrtrm = crate::EnumBitfieldStruct<u8, Gaflrtrm_SPEC>;
     impl Gaflrtrm {
+        #[doc = "RTR bit is not used for ID matching"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RTR bit is used for ID matching"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Gaflidem_SPEC;
     pub type Gaflidem = crate::EnumBitfieldStruct<u8, Gaflidem_SPEC>;
     impl Gaflidem {
+        #[doc = "IDE bit is not used for ID matching"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IDE bit is used for ID matching"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -14080,9 +29941,11 @@ impl crate::sealed::RegSpec for Cfdgaflp0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Global Acceptance Filter List Pointer 0 Registers"]
 pub type Cfdgaflp0 = crate::RegValueT<Cfdgaflp0_SPEC>;
 
 impl Cfdgaflp0 {
+    #[doc = "Global Acceptance Filter List DLC Field"]
     #[inline(always)]
     pub fn gafldlc(
         self,
@@ -14090,6 +29953,7 @@ impl Cfdgaflp0 {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Cfdgaflp0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Global Acceptance Filter List Select Routing Destination 0"]
     #[inline(always)]
     pub fn gaflsrd0(
         self,
@@ -14115,6 +29979,7 @@ impl Cfdgaflp0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Global Acceptance Filter List Select Routing Destination 1"]
     #[inline(always)]
     pub fn gaflsrd1(
         self,
@@ -14140,6 +30005,7 @@ impl Cfdgaflp0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Global Acceptance Filter List Select Routing Destination 2"]
     #[inline(always)]
     pub fn gaflsrd2(
         self,
@@ -14165,6 +30031,7 @@ impl Cfdgaflp0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Global Acceptance Filter List Information Label 0"]
     #[inline(always)]
     pub fn gaflifl0(
         self,
@@ -14172,6 +30039,7 @@ impl Cfdgaflp0 {
         crate::common::RegisterFieldBool::<7,1,0,Cfdgaflp0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Global Acceptance Filter List RX Message Buffer Direction Pointer"]
     #[inline(always)]
     pub fn gaflrmdp(
         self,
@@ -14180,6 +30048,7 @@ impl Cfdgaflp0 {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,Cfdgaflp0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Global Acceptance Filter List RX Message Buffer Valid"]
     #[inline(always)]
     pub fn gaflrmv(
         self,
@@ -14205,6 +30074,7 @@ impl Cfdgaflp0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Global Acceptance Filter List Pointer"]
     #[inline(always)]
     pub fn gaflptr(
         self,
@@ -14225,32 +30095,40 @@ pub mod cfdgaflp0 {
     pub struct Gaflsrd0_SPEC;
     pub type Gaflsrd0 = crate::EnumBitfieldStruct<u8, Gaflsrd0_SPEC>;
     impl Gaflsrd0 {
+        #[doc = "Routing target is CFIFO0"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Routing target is TX Queue 0 instead of CFIFO0"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Gaflsrd1_SPEC;
     pub type Gaflsrd1 = crate::EnumBitfieldStruct<u8, Gaflsrd1_SPEC>;
     impl Gaflsrd1 {
+        #[doc = "Routing target is CFIFO1"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Routing target is TX Queue 1 instead of CFIFO1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Gaflsrd2_SPEC;
     pub type Gaflsrd2 = crate::EnumBitfieldStruct<u8, Gaflsrd2_SPEC>;
     impl Gaflsrd2 {
+        #[doc = "Routing target is CFIFO2"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Routing target is TX Queue 2 instead of CFIFO2"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Gaflrmv_SPEC;
     pub type Gaflrmv = crate::EnumBitfieldStruct<u8, Gaflrmv_SPEC>;
     impl Gaflrmv {
+        #[doc = "Single message buffer direction pointer is invalid"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Single message buffer direction pointer is valid"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -14261,9 +30139,11 @@ impl crate::sealed::RegSpec for Cfdgaflp1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Global Acceptance Filter List Pointer 1 Registers"]
 pub type Cfdgaflp1 = crate::RegValueT<Cfdgaflp1_SPEC>;
 
 impl Cfdgaflp1 {
+    #[doc = "Global Acceptance Filter List FIFO Direction Pointer"]
     #[inline(always)]
     pub fn gaflfdp(
         self,
@@ -14286,9 +30166,11 @@ impl crate::sealed::RegSpec for Cfdrmid0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer ID Register %s Channel 0"]
 pub type Cfdrmid0 = crate::RegValueT<Cfdrmid0_SPEC>;
 
 impl Cfdrmid0 {
+    #[doc = "RX Message Buffer ID Field"]
     #[inline(always)]
     pub fn rmid(
         self,
@@ -14297,6 +30179,7 @@ impl Cfdrmid0 {
         crate::common::RegisterField::<0,0x1fffffff,1,0,u32,u32,Cfdrmid0_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer RTR Bit"]
     #[inline(always)]
     pub fn rmrtr(
         self,
@@ -14322,6 +30205,7 @@ impl Cfdrmid0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RX Message Buffer IDE Bit"]
     #[inline(always)]
     pub fn rmide(
         self,
@@ -14359,16 +30243,20 @@ pub mod cfdrmid_0 {
     pub struct Rmrtr_SPEC;
     pub type Rmrtr = crate::EnumBitfieldStruct<u8, Rmrtr_SPEC>;
     impl Rmrtr {
+        #[doc = "Data frame"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Remote frame"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rmide_SPEC;
     pub type Rmide = crate::EnumBitfieldStruct<u8, Rmide_SPEC>;
     impl Rmide {
+        #[doc = "STD-ID is stored"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "EXT-ID is stored"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -14379,9 +30267,11 @@ impl crate::sealed::RegSpec for Cfdrmptr0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Pointer Register %s Channel 0"]
 pub type Cfdrmptr0 = crate::RegValueT<Cfdrmptr0_SPEC>;
 
 impl Cfdrmptr0 {
+    #[doc = "RX Message Buffer Timestamp Field"]
     #[inline(always)]
     pub fn rmts(
         self,
@@ -14390,6 +30280,7 @@ impl Cfdrmptr0 {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Cfdrmptr0_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer DLC Field"]
     #[inline(always)]
     pub fn rmdlc(
         self,
@@ -14411,9 +30302,11 @@ impl crate::sealed::RegSpec for Cfdrmfdsts0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer CAN-FD Status Register %s Channel 0"]
 pub type Cfdrmfdsts0 = crate::RegValueT<Cfdrmfdsts0_SPEC>;
 
 impl Cfdrmfdsts0 {
+    #[doc = "Error State Indicator bit"]
     #[inline(always)]
     pub fn rmesi(
         self,
@@ -14439,6 +30332,7 @@ impl Cfdrmfdsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bit Rate Switch bit"]
     #[inline(always)]
     pub fn rmbrs(
         self,
@@ -14464,6 +30358,7 @@ impl Cfdrmfdsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "CAN FD Format bit"]
     #[inline(always)]
     pub fn rmfdf(
         self,
@@ -14489,6 +30384,7 @@ impl Cfdrmfdsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RX Message Buffer Information Label Field"]
     #[inline(always)]
     pub fn rmifl(
         self,
@@ -14497,6 +30393,7 @@ impl Cfdrmfdsts0 {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,Cfdrmfdsts0_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Pointer Field"]
     #[inline(always)]
     pub fn rmptr(
         self,
@@ -14517,24 +30414,30 @@ pub mod cfdrmfdsts_0 {
     pub struct Rmesi_SPEC;
     pub type Rmesi = crate::EnumBitfieldStruct<u8, Rmesi_SPEC>;
     impl Rmesi {
+        #[doc = "CAN-FD frame received from error active node"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CAN-FD frame received from error passive node"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rmbrs_SPEC;
     pub type Rmbrs = crate::EnumBitfieldStruct<u8, Rmbrs_SPEC>;
     impl Rmbrs {
+        #[doc = "CAN-FD frame received with no bit rate switch"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CAN-FD frame received with bit rate switch"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rmfdf_SPEC;
     pub type Rmfdf = crate::EnumBitfieldStruct<u8, Rmfdf_SPEC>;
     impl Rmfdf {
+        #[doc = "Non CAN-FD frame received"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CAN-FD frame received"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -14545,9 +30448,11 @@ impl crate::sealed::RegSpec for Cfdrmdf00_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 0 Register %s Channel 0"]
 pub type Cfdrmdf00 = crate::RegValueT<Cfdrmdf00_SPEC>;
 
 impl Cfdrmdf00 {
+    #[doc = "RX Message Buffer Data Byte 0"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -14555,6 +30460,7 @@ impl Cfdrmdf00 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf00_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 1"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -14562,6 +30468,7 @@ impl Cfdrmdf00 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf00_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 2"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -14570,6 +30477,7 @@ impl Cfdrmdf00 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf00_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 3"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -14592,9 +30500,11 @@ impl crate::sealed::RegSpec for Cfdrmdf10_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 1 Register %s Channel 0"]
 pub type Cfdrmdf10 = crate::RegValueT<Cfdrmdf10_SPEC>;
 
 impl Cfdrmdf10 {
+    #[doc = "RX Message Buffer Data Byte 4"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -14602,6 +30512,7 @@ impl Cfdrmdf10 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf10_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 5"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -14609,6 +30520,7 @@ impl Cfdrmdf10 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf10_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 6"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -14617,6 +30529,7 @@ impl Cfdrmdf10 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf10_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 7"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -14639,9 +30552,11 @@ impl crate::sealed::RegSpec for Cfdrmdf20_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 2 Register %s Channel 0"]
 pub type Cfdrmdf20 = crate::RegValueT<Cfdrmdf20_SPEC>;
 
 impl Cfdrmdf20 {
+    #[doc = "RX Message Buffer Data Byte 8"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -14649,6 +30564,7 @@ impl Cfdrmdf20 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf20_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 9"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -14656,6 +30572,7 @@ impl Cfdrmdf20 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf20_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 10"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -14664,6 +30581,7 @@ impl Cfdrmdf20 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf20_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 11"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -14686,9 +30604,11 @@ impl crate::sealed::RegSpec for Cfdrmdf30_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 3 Register %s Channel 0"]
 pub type Cfdrmdf30 = crate::RegValueT<Cfdrmdf30_SPEC>;
 
 impl Cfdrmdf30 {
+    #[doc = "RX Message Buffer Data Byte 12"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -14696,6 +30616,7 @@ impl Cfdrmdf30 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf30_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 13"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -14703,6 +30624,7 @@ impl Cfdrmdf30 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf30_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 14"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -14711,6 +30633,7 @@ impl Cfdrmdf30 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf30_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 15"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -14733,9 +30656,11 @@ impl crate::sealed::RegSpec for Cfdrmdf40_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 4 Register %s Channel 0"]
 pub type Cfdrmdf40 = crate::RegValueT<Cfdrmdf40_SPEC>;
 
 impl Cfdrmdf40 {
+    #[doc = "RX Message Buffer Data Byte 16"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -14743,6 +30668,7 @@ impl Cfdrmdf40 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf40_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 17"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -14750,6 +30676,7 @@ impl Cfdrmdf40 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf40_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 18"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -14758,6 +30685,7 @@ impl Cfdrmdf40 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf40_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 19"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -14780,9 +30708,11 @@ impl crate::sealed::RegSpec for Cfdrmdf50_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 5 Register %s Channel 0"]
 pub type Cfdrmdf50 = crate::RegValueT<Cfdrmdf50_SPEC>;
 
 impl Cfdrmdf50 {
+    #[doc = "RX Message Buffer Data Byte 20"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -14790,6 +30720,7 @@ impl Cfdrmdf50 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf50_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 21"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -14797,6 +30728,7 @@ impl Cfdrmdf50 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf50_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 22"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -14805,6 +30737,7 @@ impl Cfdrmdf50 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf50_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 23"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -14827,9 +30760,11 @@ impl crate::sealed::RegSpec for Cfdrmdf60_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 6 Register %s Channel 0"]
 pub type Cfdrmdf60 = crate::RegValueT<Cfdrmdf60_SPEC>;
 
 impl Cfdrmdf60 {
+    #[doc = "RX Message Buffer Data Byte 24"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -14837,6 +30772,7 @@ impl Cfdrmdf60 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf60_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 25"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -14844,6 +30780,7 @@ impl Cfdrmdf60 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf60_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 26"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -14852,6 +30789,7 @@ impl Cfdrmdf60 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf60_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 27"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -14874,9 +30812,11 @@ impl crate::sealed::RegSpec for Cfdrmdf70_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 7 Register %s Channel 0"]
 pub type Cfdrmdf70 = crate::RegValueT<Cfdrmdf70_SPEC>;
 
 impl Cfdrmdf70 {
+    #[doc = "RX Message Buffer Data Byte 27"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -14884,6 +30824,7 @@ impl Cfdrmdf70 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf70_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 28"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -14891,6 +30832,7 @@ impl Cfdrmdf70 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf70_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 29"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -14899,6 +30841,7 @@ impl Cfdrmdf70 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf70_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 30"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -14921,9 +30864,11 @@ impl crate::sealed::RegSpec for Cfdrmdf80_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 8 Register %s Channel 0"]
 pub type Cfdrmdf80 = crate::RegValueT<Cfdrmdf80_SPEC>;
 
 impl Cfdrmdf80 {
+    #[doc = "RX Message Buffer Data Byte (p * 4)"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -14931,6 +30876,7 @@ impl Cfdrmdf80 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf80_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte ((p * 4) + 1)"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -14938,6 +30884,7 @@ impl Cfdrmdf80 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf80_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte ((p * 4) + 2)"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -14946,6 +30893,7 @@ impl Cfdrmdf80 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf80_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte ((p * 4) + 3)"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -14968,9 +30916,11 @@ impl crate::sealed::RegSpec for Cfdrmdf90_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 9 Register %s Channel 0"]
 pub type Cfdrmdf90 = crate::RegValueT<Cfdrmdf90_SPEC>;
 
 impl Cfdrmdf90 {
+    #[doc = "RX Message Buffer Data Byte 36"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -14978,6 +30928,7 @@ impl Cfdrmdf90 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf90_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 37"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -14985,6 +30936,7 @@ impl Cfdrmdf90 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf90_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 38"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -14993,6 +30945,7 @@ impl Cfdrmdf90 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf90_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 39"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -15015,9 +30968,11 @@ impl crate::sealed::RegSpec for Cfdrmdf100_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 10 Register %s Channel 0"]
 pub type Cfdrmdf100 = crate::RegValueT<Cfdrmdf100_SPEC>;
 
 impl Cfdrmdf100 {
+    #[doc = "RX Message Buffer Data Byte 40"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -15026,6 +30981,7 @@ impl Cfdrmdf100 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf100_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 41"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -15034,6 +30990,7 @@ impl Cfdrmdf100 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf100_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 42"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -15042,6 +30999,7 @@ impl Cfdrmdf100 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf100_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 43"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -15064,9 +31022,11 @@ impl crate::sealed::RegSpec for Cfdrmdf110_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 11 Register %s Channel 0"]
 pub type Cfdrmdf110 = crate::RegValueT<Cfdrmdf110_SPEC>;
 
 impl Cfdrmdf110 {
+    #[doc = "RX Message Buffer Data Byte 44"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -15075,6 +31035,7 @@ impl Cfdrmdf110 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf110_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 45"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -15083,6 +31044,7 @@ impl Cfdrmdf110 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf110_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 46"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -15091,6 +31053,7 @@ impl Cfdrmdf110 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf110_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 47"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -15113,9 +31076,11 @@ impl crate::sealed::RegSpec for Cfdrmdf120_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 12 Register %s Channel 0"]
 pub type Cfdrmdf120 = crate::RegValueT<Cfdrmdf120_SPEC>;
 
 impl Cfdrmdf120 {
+    #[doc = "RX Message Buffer Data Byte 48"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -15124,6 +31089,7 @@ impl Cfdrmdf120 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf120_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 49"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -15132,6 +31098,7 @@ impl Cfdrmdf120 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf120_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 50"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -15140,6 +31107,7 @@ impl Cfdrmdf120 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf120_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 51"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -15162,9 +31130,11 @@ impl crate::sealed::RegSpec for Cfdrmdf130_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 13 Register %s Channel 0"]
 pub type Cfdrmdf130 = crate::RegValueT<Cfdrmdf130_SPEC>;
 
 impl Cfdrmdf130 {
+    #[doc = "RX Message Buffer Data Byte 52"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -15173,6 +31143,7 @@ impl Cfdrmdf130 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf130_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 53"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -15181,6 +31152,7 @@ impl Cfdrmdf130 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf130_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 54"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -15189,6 +31161,7 @@ impl Cfdrmdf130 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf130_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 55"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -15211,9 +31184,11 @@ impl crate::sealed::RegSpec for Cfdrmdf140_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 14 Register %s Channel 0"]
 pub type Cfdrmdf140 = crate::RegValueT<Cfdrmdf140_SPEC>;
 
 impl Cfdrmdf140 {
+    #[doc = "RX Message Buffer Data Byte 56"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -15222,6 +31197,7 @@ impl Cfdrmdf140 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf140_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 57"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -15230,6 +31206,7 @@ impl Cfdrmdf140 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf140_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 58"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -15238,6 +31215,7 @@ impl Cfdrmdf140 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf140_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 59"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -15260,9 +31238,11 @@ impl crate::sealed::RegSpec for Cfdrmdf150_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 15 Register %s Channel 0"]
 pub type Cfdrmdf150 = crate::RegValueT<Cfdrmdf150_SPEC>;
 
 impl Cfdrmdf150 {
+    #[doc = "RX Message Buffer Data Byte 60"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -15271,6 +31251,7 @@ impl Cfdrmdf150 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf150_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 61"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -15279,6 +31260,7 @@ impl Cfdrmdf150 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf150_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 62"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -15287,6 +31269,7 @@ impl Cfdrmdf150 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf150_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 63"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -15309,9 +31292,11 @@ impl crate::sealed::RegSpec for Cfdrmid1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer ID Register %s Channel 1"]
 pub type Cfdrmid1 = crate::RegValueT<Cfdrmid1_SPEC>;
 
 impl Cfdrmid1 {
+    #[doc = "RX Message Buffer ID Field"]
     #[inline(always)]
     pub fn rmid(
         self,
@@ -15320,6 +31305,7 @@ impl Cfdrmid1 {
         crate::common::RegisterField::<0,0x1fffffff,1,0,u32,u32,Cfdrmid1_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer RTR Bit"]
     #[inline(always)]
     pub fn rmrtr(
         self,
@@ -15345,6 +31331,7 @@ impl Cfdrmid1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RX Message Buffer IDE Bit"]
     #[inline(always)]
     pub fn rmide(
         self,
@@ -15382,16 +31369,20 @@ pub mod cfdrmid_1 {
     pub struct Rmrtr_SPEC;
     pub type Rmrtr = crate::EnumBitfieldStruct<u8, Rmrtr_SPEC>;
     impl Rmrtr {
+        #[doc = "Data frame"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Remote frame"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rmide_SPEC;
     pub type Rmide = crate::EnumBitfieldStruct<u8, Rmide_SPEC>;
     impl Rmide {
+        #[doc = "STD-ID is stored"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "EXT-ID is stored"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -15402,9 +31393,11 @@ impl crate::sealed::RegSpec for Cfdrmptr1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Pointer Register %s Channel 1"]
 pub type Cfdrmptr1 = crate::RegValueT<Cfdrmptr1_SPEC>;
 
 impl Cfdrmptr1 {
+    #[doc = "RX Message Buffer Timestamp Field"]
     #[inline(always)]
     pub fn rmts(
         self,
@@ -15413,6 +31406,7 @@ impl Cfdrmptr1 {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Cfdrmptr1_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer DLC Field"]
     #[inline(always)]
     pub fn rmdlc(
         self,
@@ -15434,9 +31428,11 @@ impl crate::sealed::RegSpec for Cfdrmfdsts1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer CAN-FD Status Register %s Channel 1"]
 pub type Cfdrmfdsts1 = crate::RegValueT<Cfdrmfdsts1_SPEC>;
 
 impl Cfdrmfdsts1 {
+    #[doc = "Error State Indicator bit"]
     #[inline(always)]
     pub fn rmesi(
         self,
@@ -15462,6 +31458,7 @@ impl Cfdrmfdsts1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bit Rate Switch bit"]
     #[inline(always)]
     pub fn rmbrs(
         self,
@@ -15487,6 +31484,7 @@ impl Cfdrmfdsts1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "CAN FD Format bit"]
     #[inline(always)]
     pub fn rmfdf(
         self,
@@ -15512,6 +31510,7 @@ impl Cfdrmfdsts1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RX Message Buffer Information Label Field"]
     #[inline(always)]
     pub fn rmifl(
         self,
@@ -15520,6 +31519,7 @@ impl Cfdrmfdsts1 {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,Cfdrmfdsts1_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Pointer Field"]
     #[inline(always)]
     pub fn rmptr(
         self,
@@ -15540,24 +31540,30 @@ pub mod cfdrmfdsts_1 {
     pub struct Rmesi_SPEC;
     pub type Rmesi = crate::EnumBitfieldStruct<u8, Rmesi_SPEC>;
     impl Rmesi {
+        #[doc = "CAN-FD frame received from error active node"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CAN-FD frame received from error passive node"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rmbrs_SPEC;
     pub type Rmbrs = crate::EnumBitfieldStruct<u8, Rmbrs_SPEC>;
     impl Rmbrs {
+        #[doc = "CAN-FD frame received with no bit rate switch"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CAN-FD frame received with bit rate switch"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rmfdf_SPEC;
     pub type Rmfdf = crate::EnumBitfieldStruct<u8, Rmfdf_SPEC>;
     impl Rmfdf {
+        #[doc = "Non CAN-FD frame received"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CAN-FD frame received"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -15568,9 +31574,11 @@ impl crate::sealed::RegSpec for Cfdrmdf01_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 0 Register %s Channel 1"]
 pub type Cfdrmdf01 = crate::RegValueT<Cfdrmdf01_SPEC>;
 
 impl Cfdrmdf01 {
+    #[doc = "RX Message Buffer Data Byte 0"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -15578,6 +31586,7 @@ impl Cfdrmdf01 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf01_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 1"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -15585,6 +31594,7 @@ impl Cfdrmdf01 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf01_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 2"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -15593,6 +31603,7 @@ impl Cfdrmdf01 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf01_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 3"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -15615,9 +31626,11 @@ impl crate::sealed::RegSpec for Cfdrmdf11_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 1 Register %s Channel 1"]
 pub type Cfdrmdf11 = crate::RegValueT<Cfdrmdf11_SPEC>;
 
 impl Cfdrmdf11 {
+    #[doc = "RX Message Buffer Data Byte 4"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -15625,6 +31638,7 @@ impl Cfdrmdf11 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf11_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 5"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -15632,6 +31646,7 @@ impl Cfdrmdf11 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf11_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 6"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -15640,6 +31655,7 @@ impl Cfdrmdf11 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf11_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 7"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -15662,9 +31678,11 @@ impl crate::sealed::RegSpec for Cfdrmdf21_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 2 Register %s Channel 1"]
 pub type Cfdrmdf21 = crate::RegValueT<Cfdrmdf21_SPEC>;
 
 impl Cfdrmdf21 {
+    #[doc = "RX Message Buffer Data Byte 8"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -15672,6 +31690,7 @@ impl Cfdrmdf21 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf21_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 9"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -15679,6 +31698,7 @@ impl Cfdrmdf21 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf21_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 10"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -15687,6 +31707,7 @@ impl Cfdrmdf21 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf21_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 11"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -15709,9 +31730,11 @@ impl crate::sealed::RegSpec for Cfdrmdf31_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 3 Register %s Channel 1"]
 pub type Cfdrmdf31 = crate::RegValueT<Cfdrmdf31_SPEC>;
 
 impl Cfdrmdf31 {
+    #[doc = "RX Message Buffer Data Byte 12"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -15719,6 +31742,7 @@ impl Cfdrmdf31 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf31_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 13"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -15726,6 +31750,7 @@ impl Cfdrmdf31 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf31_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 14"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -15734,6 +31759,7 @@ impl Cfdrmdf31 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf31_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 15"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -15756,9 +31782,11 @@ impl crate::sealed::RegSpec for Cfdrmdf41_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 4 Register %s Channel 1"]
 pub type Cfdrmdf41 = crate::RegValueT<Cfdrmdf41_SPEC>;
 
 impl Cfdrmdf41 {
+    #[doc = "RX Message Buffer Data Byte 16"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -15766,6 +31794,7 @@ impl Cfdrmdf41 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf41_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 17"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -15773,6 +31802,7 @@ impl Cfdrmdf41 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf41_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 18"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -15781,6 +31811,7 @@ impl Cfdrmdf41 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf41_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 19"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -15803,9 +31834,11 @@ impl crate::sealed::RegSpec for Cfdrmdf51_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 5 Register %s Channel 1"]
 pub type Cfdrmdf51 = crate::RegValueT<Cfdrmdf51_SPEC>;
 
 impl Cfdrmdf51 {
+    #[doc = "RX Message Buffer Data Byte 20"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -15813,6 +31846,7 @@ impl Cfdrmdf51 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf51_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 21"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -15820,6 +31854,7 @@ impl Cfdrmdf51 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf51_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 22"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -15828,6 +31863,7 @@ impl Cfdrmdf51 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf51_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 23"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -15850,9 +31886,11 @@ impl crate::sealed::RegSpec for Cfdrmdf61_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 6 Register %s Channel 1"]
 pub type Cfdrmdf61 = crate::RegValueT<Cfdrmdf61_SPEC>;
 
 impl Cfdrmdf61 {
+    #[doc = "RX Message Buffer Data Byte 24"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -15860,6 +31898,7 @@ impl Cfdrmdf61 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf61_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 25"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -15867,6 +31906,7 @@ impl Cfdrmdf61 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf61_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 26"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -15875,6 +31915,7 @@ impl Cfdrmdf61 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf61_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 27"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -15897,9 +31938,11 @@ impl crate::sealed::RegSpec for Cfdrmdf71_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 7 Register %s Channel 1"]
 pub type Cfdrmdf71 = crate::RegValueT<Cfdrmdf71_SPEC>;
 
 impl Cfdrmdf71 {
+    #[doc = "RX Message Buffer Data Byte 27"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -15907,6 +31950,7 @@ impl Cfdrmdf71 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf71_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 28"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -15914,6 +31958,7 @@ impl Cfdrmdf71 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf71_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 29"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -15922,6 +31967,7 @@ impl Cfdrmdf71 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf71_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 30"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -15944,9 +31990,11 @@ impl crate::sealed::RegSpec for Cfdrmdf81_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 8 Register %s Channel 1"]
 pub type Cfdrmdf81 = crate::RegValueT<Cfdrmdf81_SPEC>;
 
 impl Cfdrmdf81 {
+    #[doc = "RX Message Buffer Data Byte (p * 4)"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -15954,6 +32002,7 @@ impl Cfdrmdf81 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf81_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte ((p * 4) + 1)"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -15961,6 +32010,7 @@ impl Cfdrmdf81 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf81_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte ((p * 4) + 2)"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -15969,6 +32019,7 @@ impl Cfdrmdf81 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf81_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte ((p * 4) + 3)"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -15991,9 +32042,11 @@ impl crate::sealed::RegSpec for Cfdrmdf91_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 9 Register %s Channel 1"]
 pub type Cfdrmdf91 = crate::RegValueT<Cfdrmdf91_SPEC>;
 
 impl Cfdrmdf91 {
+    #[doc = "RX Message Buffer Data Byte 36"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -16001,6 +32054,7 @@ impl Cfdrmdf91 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf91_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 37"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -16008,6 +32062,7 @@ impl Cfdrmdf91 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf91_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 38"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -16016,6 +32071,7 @@ impl Cfdrmdf91 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf91_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 39"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -16038,9 +32094,11 @@ impl crate::sealed::RegSpec for Cfdrmdf101_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 10 Register %s Channel 1"]
 pub type Cfdrmdf101 = crate::RegValueT<Cfdrmdf101_SPEC>;
 
 impl Cfdrmdf101 {
+    #[doc = "RX Message Buffer Data Byte 40"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -16049,6 +32107,7 @@ impl Cfdrmdf101 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf101_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 41"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -16057,6 +32116,7 @@ impl Cfdrmdf101 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf101_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 42"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -16065,6 +32125,7 @@ impl Cfdrmdf101 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf101_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 43"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -16087,9 +32148,11 @@ impl crate::sealed::RegSpec for Cfdrmdf111_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 11 Register %s Channel 1"]
 pub type Cfdrmdf111 = crate::RegValueT<Cfdrmdf111_SPEC>;
 
 impl Cfdrmdf111 {
+    #[doc = "RX Message Buffer Data Byte 44"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -16098,6 +32161,7 @@ impl Cfdrmdf111 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf111_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 45"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -16106,6 +32170,7 @@ impl Cfdrmdf111 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf111_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 46"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -16114,6 +32179,7 @@ impl Cfdrmdf111 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf111_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 47"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -16136,9 +32202,11 @@ impl crate::sealed::RegSpec for Cfdrmdf121_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 12 Register %s Channel 1"]
 pub type Cfdrmdf121 = crate::RegValueT<Cfdrmdf121_SPEC>;
 
 impl Cfdrmdf121 {
+    #[doc = "RX Message Buffer Data Byte 48"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -16147,6 +32215,7 @@ impl Cfdrmdf121 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf121_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 49"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -16155,6 +32224,7 @@ impl Cfdrmdf121 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf121_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 50"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -16163,6 +32233,7 @@ impl Cfdrmdf121 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf121_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 51"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -16185,9 +32256,11 @@ impl crate::sealed::RegSpec for Cfdrmdf131_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 13 Register %s Channel 1"]
 pub type Cfdrmdf131 = crate::RegValueT<Cfdrmdf131_SPEC>;
 
 impl Cfdrmdf131 {
+    #[doc = "RX Message Buffer Data Byte 52"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -16196,6 +32269,7 @@ impl Cfdrmdf131 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf131_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 53"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -16204,6 +32278,7 @@ impl Cfdrmdf131 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf131_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 54"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -16212,6 +32287,7 @@ impl Cfdrmdf131 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf131_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 55"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -16234,9 +32310,11 @@ impl crate::sealed::RegSpec for Cfdrmdf141_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 14 Register %s Channel 1"]
 pub type Cfdrmdf141 = crate::RegValueT<Cfdrmdf141_SPEC>;
 
 impl Cfdrmdf141 {
+    #[doc = "RX Message Buffer Data Byte 56"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -16245,6 +32323,7 @@ impl Cfdrmdf141 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf141_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 57"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -16253,6 +32332,7 @@ impl Cfdrmdf141 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf141_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 58"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -16261,6 +32341,7 @@ impl Cfdrmdf141 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf141_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 59"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -16283,9 +32364,11 @@ impl crate::sealed::RegSpec for Cfdrmdf151_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX Message Buffer Data Field 15 Register %s Channel 1"]
 pub type Cfdrmdf151 = crate::RegValueT<Cfdrmdf151_SPEC>;
 
 impl Cfdrmdf151 {
+    #[doc = "RX Message Buffer Data Byte 60"]
     #[inline(always)]
     pub fn rmdb_ll(
         self,
@@ -16294,6 +32377,7 @@ impl Cfdrmdf151 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrmdf151_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 61"]
     #[inline(always)]
     pub fn rmdb_lh(
         self,
@@ -16302,6 +32386,7 @@ impl Cfdrmdf151 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrmdf151_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 62"]
     #[inline(always)]
     pub fn rmdb_hl(
         self,
@@ -16310,6 +32395,7 @@ impl Cfdrmdf151 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrmdf151_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX Message Buffer Data Byte 63"]
     #[inline(always)]
     pub fn rmdb_hh(
         self,
@@ -16332,9 +32418,11 @@ impl crate::sealed::RegSpec for Cfdrfid_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Access ID Register %s"]
 pub type Cfdrfid = crate::RegValueT<Cfdrfid_SPEC>;
 
 impl Cfdrfid {
+    #[doc = "RX FIFO Buffer ID Field"]
     #[inline(always)]
     pub fn rfid(
         self,
@@ -16343,6 +32431,7 @@ impl Cfdrfid {
         crate::common::RegisterField::<0,0x1fffffff,1,0,u32,u32,Cfdrfid_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer RTR bit"]
     #[inline(always)]
     pub fn rfrtr(
         self,
@@ -16368,6 +32457,7 @@ impl Cfdrfid {
         >::from_register(self, 0)
     }
 
+    #[doc = "RX FIFO Buffer IDE bit"]
     #[inline(always)]
     pub fn rfide(
         self,
@@ -16405,16 +32495,20 @@ pub mod cfdrfid {
     pub struct Rfrtr_SPEC;
     pub type Rfrtr = crate::EnumBitfieldStruct<u8, Rfrtr_SPEC>;
     impl Rfrtr {
+        #[doc = "Data frame"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Remote frame"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfide_SPEC;
     pub type Rfide = crate::EnumBitfieldStruct<u8, Rfide_SPEC>;
     impl Rfide {
+        #[doc = "STD-ID has been received"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "EXT-ID has been received"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -16425,9 +32519,11 @@ impl crate::sealed::RegSpec for Cfdrfptr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Access Pointer Register %s"]
 pub type Cfdrfptr = crate::RegValueT<Cfdrfptr_SPEC>;
 
 impl Cfdrfptr {
+    #[doc = "RX FIFO Timestamp Value"]
     #[inline(always)]
     pub fn rfts(
         self,
@@ -16436,6 +32532,7 @@ impl Cfdrfptr {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Cfdrfptr_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer DLC Field"]
     #[inline(always)]
     pub fn rfdlc(
         self,
@@ -16457,9 +32554,11 @@ impl crate::sealed::RegSpec for Cfdrffdsts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Access CAN-FD Status Register %s"]
 pub type Cfdrffdsts = crate::RegValueT<Cfdrffdsts_SPEC>;
 
 impl Cfdrffdsts {
+    #[doc = "Error State Indicator bit"]
     #[inline(always)]
     pub fn rfesi(
         self,
@@ -16485,6 +32584,7 @@ impl Cfdrffdsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bit Rate Switch bit"]
     #[inline(always)]
     pub fn rfbrs(
         self,
@@ -16510,6 +32610,7 @@ impl Cfdrffdsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "CAN FD Format bit"]
     #[inline(always)]
     pub fn rffdf(
         self,
@@ -16535,6 +32636,7 @@ impl Cfdrffdsts {
         >::from_register(self, 0)
     }
 
+    #[doc = "RX FIFO Buffer Information Label Field"]
     #[inline(always)]
     pub fn rfifl(
         self,
@@ -16542,6 +32644,7 @@ impl Cfdrffdsts {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,Cfdrffdsts_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Pointer Field"]
     #[inline(always)]
     pub fn cfdrfptr(
         self,
@@ -16562,24 +32665,30 @@ pub mod cfdrffdsts {
     pub struct Rfesi_SPEC;
     pub type Rfesi = crate::EnumBitfieldStruct<u8, Rfesi_SPEC>;
     impl Rfesi {
+        #[doc = "CAN-FD frame received from error active node"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CAN-FD frame received from error passive node"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfbrs_SPEC;
     pub type Rfbrs = crate::EnumBitfieldStruct<u8, Rfbrs_SPEC>;
     impl Rfbrs {
+        #[doc = "CAN-FD frame received with no bit rate switch"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CAN-FD frame received with bit rate switch"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rffdf_SPEC;
     pub type Rffdf = crate::EnumBitfieldStruct<u8, Rffdf_SPEC>;
     impl Rffdf {
+        #[doc = "Non CAN-FD frame received"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CAN-FD frame received"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -16590,9 +32699,11 @@ impl crate::sealed::RegSpec for Cfdrfdf0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Access Data Field 0 Register %s"]
 pub type Cfdrfdf0 = crate::RegValueT<Cfdrfdf0_SPEC>;
 
 impl Cfdrfdf0 {
+    #[doc = "RX FIFO Buffer Data Byte 0"]
     #[inline(always)]
     pub fn rfdb_ll(
         self,
@@ -16600,6 +32711,7 @@ impl Cfdrfdf0 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrfdf0_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 1"]
     #[inline(always)]
     pub fn rfdb_lh(
         self,
@@ -16607,6 +32719,7 @@ impl Cfdrfdf0 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrfdf0_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 2"]
     #[inline(always)]
     pub fn rfdb_hl(
         self,
@@ -16614,6 +32727,7 @@ impl Cfdrfdf0 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrfdf0_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 3"]
     #[inline(always)]
     pub fn rfdb_hh(
         self,
@@ -16635,9 +32749,11 @@ impl crate::sealed::RegSpec for Cfdrfdf1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Access Data Field 1 Register %s"]
 pub type Cfdrfdf1 = crate::RegValueT<Cfdrfdf1_SPEC>;
 
 impl Cfdrfdf1 {
+    #[doc = "RX FIFO Buffer Data Byte 4"]
     #[inline(always)]
     pub fn rfdb_ll(
         self,
@@ -16645,6 +32761,7 @@ impl Cfdrfdf1 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrfdf1_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 5"]
     #[inline(always)]
     pub fn rfdb_lh(
         self,
@@ -16652,6 +32769,7 @@ impl Cfdrfdf1 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrfdf1_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 6"]
     #[inline(always)]
     pub fn rfdb_hl(
         self,
@@ -16659,6 +32777,7 @@ impl Cfdrfdf1 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrfdf1_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 7"]
     #[inline(always)]
     pub fn rfdb_hh(
         self,
@@ -16680,9 +32799,11 @@ impl crate::sealed::RegSpec for Cfdrfdf2_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Access Data Field 2 Register %s"]
 pub type Cfdrfdf2 = crate::RegValueT<Cfdrfdf2_SPEC>;
 
 impl Cfdrfdf2 {
+    #[doc = "RX FIFO Buffer Data Byte 8"]
     #[inline(always)]
     pub fn rfdb_ll(
         self,
@@ -16690,6 +32811,7 @@ impl Cfdrfdf2 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrfdf2_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 9"]
     #[inline(always)]
     pub fn rfdb_lh(
         self,
@@ -16697,6 +32819,7 @@ impl Cfdrfdf2 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrfdf2_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 10"]
     #[inline(always)]
     pub fn rfdb_hl(
         self,
@@ -16704,6 +32827,7 @@ impl Cfdrfdf2 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrfdf2_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 11"]
     #[inline(always)]
     pub fn rfdb_hh(
         self,
@@ -16725,9 +32849,11 @@ impl crate::sealed::RegSpec for Cfdrfdf3_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Access Data Field 3 Register %s"]
 pub type Cfdrfdf3 = crate::RegValueT<Cfdrfdf3_SPEC>;
 
 impl Cfdrfdf3 {
+    #[doc = "RX FIFO Buffer Data Byte 12"]
     #[inline(always)]
     pub fn rfdb_ll(
         self,
@@ -16735,6 +32861,7 @@ impl Cfdrfdf3 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrfdf3_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 13"]
     #[inline(always)]
     pub fn rfdb_lh(
         self,
@@ -16742,6 +32869,7 @@ impl Cfdrfdf3 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrfdf3_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 14"]
     #[inline(always)]
     pub fn rfdb_hl(
         self,
@@ -16749,6 +32877,7 @@ impl Cfdrfdf3 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrfdf3_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 15"]
     #[inline(always)]
     pub fn rfdb_hh(
         self,
@@ -16770,9 +32899,11 @@ impl crate::sealed::RegSpec for Cfdrfdf4_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Access Data Field 4 Register %s"]
 pub type Cfdrfdf4 = crate::RegValueT<Cfdrfdf4_SPEC>;
 
 impl Cfdrfdf4 {
+    #[doc = "RX FIFO Buffer Data Byte 16"]
     #[inline(always)]
     pub fn rfdb_ll(
         self,
@@ -16780,6 +32911,7 @@ impl Cfdrfdf4 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrfdf4_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 17"]
     #[inline(always)]
     pub fn rfdb_lh(
         self,
@@ -16787,6 +32919,7 @@ impl Cfdrfdf4 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrfdf4_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 18"]
     #[inline(always)]
     pub fn rfdb_hl(
         self,
@@ -16794,6 +32927,7 @@ impl Cfdrfdf4 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrfdf4_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 19"]
     #[inline(always)]
     pub fn rfdb_hh(
         self,
@@ -16815,9 +32949,11 @@ impl crate::sealed::RegSpec for Cfdrfdf5_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Access Data Field 5 Register %s"]
 pub type Cfdrfdf5 = crate::RegValueT<Cfdrfdf5_SPEC>;
 
 impl Cfdrfdf5 {
+    #[doc = "RX FIFO Buffer Data Byte 20"]
     #[inline(always)]
     pub fn rfdb_ll(
         self,
@@ -16825,6 +32961,7 @@ impl Cfdrfdf5 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrfdf5_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 21"]
     #[inline(always)]
     pub fn rfdb_lh(
         self,
@@ -16832,6 +32969,7 @@ impl Cfdrfdf5 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrfdf5_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 22"]
     #[inline(always)]
     pub fn rfdb_hl(
         self,
@@ -16839,6 +32977,7 @@ impl Cfdrfdf5 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrfdf5_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 23"]
     #[inline(always)]
     pub fn rfdb_hh(
         self,
@@ -16860,9 +32999,11 @@ impl crate::sealed::RegSpec for Cfdrfdf6_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Access Data Field 6 Register %s"]
 pub type Cfdrfdf6 = crate::RegValueT<Cfdrfdf6_SPEC>;
 
 impl Cfdrfdf6 {
+    #[doc = "RX FIFO Buffer Data Byte 24"]
     #[inline(always)]
     pub fn rfdb_ll(
         self,
@@ -16870,6 +33011,7 @@ impl Cfdrfdf6 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrfdf6_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 25"]
     #[inline(always)]
     pub fn rfdb_lh(
         self,
@@ -16877,6 +33019,7 @@ impl Cfdrfdf6 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrfdf6_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 26"]
     #[inline(always)]
     pub fn rfdb_hl(
         self,
@@ -16884,6 +33027,7 @@ impl Cfdrfdf6 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrfdf6_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 27"]
     #[inline(always)]
     pub fn rfdb_hh(
         self,
@@ -16905,9 +33049,11 @@ impl crate::sealed::RegSpec for Cfdrfdf7_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Access Data Field 7 Register %s"]
 pub type Cfdrfdf7 = crate::RegValueT<Cfdrfdf7_SPEC>;
 
 impl Cfdrfdf7 {
+    #[doc = "RX FIFO Buffer Data Byte 28"]
     #[inline(always)]
     pub fn rfdb_ll(
         self,
@@ -16915,6 +33061,7 @@ impl Cfdrfdf7 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrfdf7_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 29"]
     #[inline(always)]
     pub fn rfdb_lh(
         self,
@@ -16922,6 +33069,7 @@ impl Cfdrfdf7 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrfdf7_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 30"]
     #[inline(always)]
     pub fn rfdb_hl(
         self,
@@ -16929,6 +33077,7 @@ impl Cfdrfdf7 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrfdf7_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 31"]
     #[inline(always)]
     pub fn rfdb_hh(
         self,
@@ -16950,9 +33099,11 @@ impl crate::sealed::RegSpec for Cfdrfdf8_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Access Data Field 8 Register %s"]
 pub type Cfdrfdf8 = crate::RegValueT<Cfdrfdf8_SPEC>;
 
 impl Cfdrfdf8 {
+    #[doc = "RX FIFO Buffer Data Byte 32"]
     #[inline(always)]
     pub fn rfdb_ll(
         self,
@@ -16960,6 +33111,7 @@ impl Cfdrfdf8 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrfdf8_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 33"]
     #[inline(always)]
     pub fn rfdb_lh(
         self,
@@ -16967,6 +33119,7 @@ impl Cfdrfdf8 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrfdf8_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 34"]
     #[inline(always)]
     pub fn rfdb_hl(
         self,
@@ -16974,6 +33127,7 @@ impl Cfdrfdf8 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrfdf8_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 35"]
     #[inline(always)]
     pub fn rfdb_hh(
         self,
@@ -16995,9 +33149,11 @@ impl crate::sealed::RegSpec for Cfdrfdf9_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Access Data Field 9 Register %s"]
 pub type Cfdrfdf9 = crate::RegValueT<Cfdrfdf9_SPEC>;
 
 impl Cfdrfdf9 {
+    #[doc = "RX FIFO Buffer Data Byte 36"]
     #[inline(always)]
     pub fn rfdb_ll(
         self,
@@ -17005,6 +33161,7 @@ impl Cfdrfdf9 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrfdf9_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 37"]
     #[inline(always)]
     pub fn rfdb_lh(
         self,
@@ -17012,6 +33169,7 @@ impl Cfdrfdf9 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrfdf9_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 38"]
     #[inline(always)]
     pub fn rfdb_hl(
         self,
@@ -17019,6 +33177,7 @@ impl Cfdrfdf9 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrfdf9_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 39"]
     #[inline(always)]
     pub fn rfdb_hh(
         self,
@@ -17040,9 +33199,11 @@ impl crate::sealed::RegSpec for Cfdrfdf10_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Access Data Field 10 Register %s"]
 pub type Cfdrfdf10 = crate::RegValueT<Cfdrfdf10_SPEC>;
 
 impl Cfdrfdf10 {
+    #[doc = "RX FIFO Buffer Data Byte 40"]
     #[inline(always)]
     pub fn rfdb_ll(
         self,
@@ -17050,6 +33211,7 @@ impl Cfdrfdf10 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrfdf10_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 41"]
     #[inline(always)]
     pub fn rfdb_lh(
         self,
@@ -17057,6 +33219,7 @@ impl Cfdrfdf10 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrfdf10_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 42"]
     #[inline(always)]
     pub fn rfdb_hl(
         self,
@@ -17065,6 +33228,7 @@ impl Cfdrfdf10 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrfdf10_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 43"]
     #[inline(always)]
     pub fn rfdb_hh(
         self,
@@ -17087,9 +33251,11 @@ impl crate::sealed::RegSpec for Cfdrfdf11_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Access Data Field 11 Register %s"]
 pub type Cfdrfdf11 = crate::RegValueT<Cfdrfdf11_SPEC>;
 
 impl Cfdrfdf11 {
+    #[doc = "RX FIFO Buffer Data Byte 44"]
     #[inline(always)]
     pub fn rfdb_ll(
         self,
@@ -17097,6 +33263,7 @@ impl Cfdrfdf11 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrfdf11_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 45"]
     #[inline(always)]
     pub fn rfdb_lh(
         self,
@@ -17104,6 +33271,7 @@ impl Cfdrfdf11 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrfdf11_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 46"]
     #[inline(always)]
     pub fn rfdb_hl(
         self,
@@ -17112,6 +33280,7 @@ impl Cfdrfdf11 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrfdf11_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 47"]
     #[inline(always)]
     pub fn rfdb_hh(
         self,
@@ -17134,9 +33303,11 @@ impl crate::sealed::RegSpec for Cfdrfdf12_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Access Data Field 12 Register %s"]
 pub type Cfdrfdf12 = crate::RegValueT<Cfdrfdf12_SPEC>;
 
 impl Cfdrfdf12 {
+    #[doc = "RX FIFO Buffer Data Byte 48"]
     #[inline(always)]
     pub fn rfdb_ll(
         self,
@@ -17144,6 +33315,7 @@ impl Cfdrfdf12 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrfdf12_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 49"]
     #[inline(always)]
     pub fn rfdb_lh(
         self,
@@ -17151,6 +33323,7 @@ impl Cfdrfdf12 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrfdf12_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 50"]
     #[inline(always)]
     pub fn rfdb_hl(
         self,
@@ -17159,6 +33332,7 @@ impl Cfdrfdf12 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrfdf12_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 51"]
     #[inline(always)]
     pub fn rfdb_hh(
         self,
@@ -17181,9 +33355,11 @@ impl crate::sealed::RegSpec for Cfdrfdf13_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Access Data Field 13 Register %s"]
 pub type Cfdrfdf13 = crate::RegValueT<Cfdrfdf13_SPEC>;
 
 impl Cfdrfdf13 {
+    #[doc = "RX FIFO Buffer Data Byte 52"]
     #[inline(always)]
     pub fn rfdb_ll(
         self,
@@ -17191,6 +33367,7 @@ impl Cfdrfdf13 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrfdf13_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 53"]
     #[inline(always)]
     pub fn rfdb_lh(
         self,
@@ -17198,6 +33375,7 @@ impl Cfdrfdf13 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrfdf13_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 54"]
     #[inline(always)]
     pub fn rfdb_hl(
         self,
@@ -17206,6 +33384,7 @@ impl Cfdrfdf13 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrfdf13_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 55"]
     #[inline(always)]
     pub fn rfdb_hh(
         self,
@@ -17228,9 +33407,11 @@ impl crate::sealed::RegSpec for Cfdrfdf14_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Access Data Field 14 Register %s"]
 pub type Cfdrfdf14 = crate::RegValueT<Cfdrfdf14_SPEC>;
 
 impl Cfdrfdf14 {
+    #[doc = "RX FIFO Buffer Data Byte 56"]
     #[inline(always)]
     pub fn rfdb_ll(
         self,
@@ -17238,6 +33419,7 @@ impl Cfdrfdf14 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrfdf14_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 57"]
     #[inline(always)]
     pub fn rfdb_lh(
         self,
@@ -17245,6 +33427,7 @@ impl Cfdrfdf14 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrfdf14_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 58"]
     #[inline(always)]
     pub fn rfdb_hl(
         self,
@@ -17253,6 +33436,7 @@ impl Cfdrfdf14 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrfdf14_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 59"]
     #[inline(always)]
     pub fn rfdb_hh(
         self,
@@ -17275,9 +33459,11 @@ impl crate::sealed::RegSpec for Cfdrfdf15_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RX FIFO Access Data Field 15 Register %s"]
 pub type Cfdrfdf15 = crate::RegValueT<Cfdrfdf15_SPEC>;
 
 impl Cfdrfdf15 {
+    #[doc = "RX FIFO Buffer Data Byte 60"]
     #[inline(always)]
     pub fn rfdb_ll(
         self,
@@ -17285,6 +33471,7 @@ impl Cfdrfdf15 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdrfdf15_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 61"]
     #[inline(always)]
     pub fn rfdb_lh(
         self,
@@ -17292,6 +33479,7 @@ impl Cfdrfdf15 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdrfdf15_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 62"]
     #[inline(always)]
     pub fn rfdb_hl(
         self,
@@ -17300,6 +33488,7 @@ impl Cfdrfdf15 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdrfdf15_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "RX FIFO Buffer Data Byte 63"]
     #[inline(always)]
     pub fn rfdb_hh(
         self,
@@ -17322,9 +33511,11 @@ impl crate::sealed::RegSpec for Cfdcfid0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access ID Register %s Channel 0"]
 pub type Cfdcfid0 = crate::RegValueT<Cfdcfid0_SPEC>;
 
 impl Cfdcfid0 {
+    #[doc = "Common FIFO Buffer ID Field"]
     #[inline(always)]
     pub fn cfid(
         self,
@@ -17342,6 +33533,7 @@ impl Cfdcfid0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "THL Entry Enable"]
     #[inline(always)]
     pub fn thlen(
         self,
@@ -17367,6 +33559,7 @@ impl Cfdcfid0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO Buffer RTR bit"]
     #[inline(always)]
     pub fn cfrtr(
         self,
@@ -17392,6 +33585,7 @@ impl Cfdcfid0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO Buffer IDE bit"]
     #[inline(always)]
     pub fn cfide(
         self,
@@ -17429,24 +33623,30 @@ pub mod cfdcfid_0 {
     pub struct Thlen_SPEC;
     pub type Thlen = crate::EnumBitfieldStruct<u8, Thlen_SPEC>;
     impl Thlen {
+        #[doc = "Entry is not to be stored in THL after successful TX"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Entry is to be stored in THL after successful TX"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfrtr_SPEC;
     pub type Cfrtr = crate::EnumBitfieldStruct<u8, Cfrtr_SPEC>;
     impl Cfrtr {
+        #[doc = "Data frame"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Remote frame"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfide_SPEC;
     pub type Cfide = crate::EnumBitfieldStruct<u8, Cfide_SPEC>;
     impl Cfide {
+        #[doc = "STD-ID is to be transmitted or has been received"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "EXT-ID is to be transmitted or has been received"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -17457,9 +33657,11 @@ impl crate::sealed::RegSpec for Cfdcfptr0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Pointer Register %s Channel 0"]
 pub type Cfdcfptr0 = crate::RegValueT<Cfdcfptr0_SPEC>;
 
 impl Cfdcfptr0 {
+    #[doc = "Common FIFO Timestamp Value"]
     #[inline(always)]
     pub fn cfts(
         self,
@@ -17468,6 +33670,7 @@ impl Cfdcfptr0 {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Cfdcfptr0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer DLC Field"]
     #[inline(always)]
     pub fn cfdlc(
         self,
@@ -17490,9 +33693,11 @@ impl crate::sealed::RegSpec for Cfdcffdcsts0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access CAN-FD Control/Status Register %s Channel 0"]
 pub type Cfdcffdcsts0 = crate::RegValueT<Cfdcffdcsts0_SPEC>;
 
 impl Cfdcffdcsts0 {
+    #[doc = "Error State Indicator bit"]
     #[inline(always)]
     pub fn cfesi(
         self,
@@ -17518,6 +33723,7 @@ impl Cfdcffdcsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bit Rate Switch bit"]
     #[inline(always)]
     pub fn cfbrs(
         self,
@@ -17543,6 +33749,7 @@ impl Cfdcffdcsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "CAN FD Format bit"]
     #[inline(always)]
     pub fn cffdf(
         self,
@@ -17568,6 +33775,7 @@ impl Cfdcffdcsts0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "COMMON FIFO Buffer Information Label Field"]
     #[inline(always)]
     pub fn cfifl(
         self,
@@ -17576,6 +33784,7 @@ impl Cfdcffdcsts0 {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,Cfdcffdcsts0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Pointer Field"]
     #[inline(always)]
     pub fn cfptr(
         self,
@@ -17613,24 +33822,30 @@ pub mod cfdcffdcsts_0 {
     pub struct Cfesi_SPEC;
     pub type Cfesi = crate::EnumBitfieldStruct<u8, Cfesi_SPEC>;
     impl Cfesi {
+        #[doc = "CAN-FD frame received or to transmit by error active node"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CAN-FD frame received or to transmit by error passive node"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfbrs_SPEC;
     pub type Cfbrs = crate::EnumBitfieldStruct<u8, Cfbrs_SPEC>;
     impl Cfbrs {
+        #[doc = "CAN-FD frame received or to transmit with no bit rate switch"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CAN-FD frame received or to transmit with bit rate switch"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cffdf_SPEC;
     pub type Cffdf = crate::EnumBitfieldStruct<u8, Cffdf_SPEC>;
     impl Cffdf {
+        #[doc = "Non CAN-FD frame received or to transmit"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CAN-FD frame received or to transmit"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -17641,9 +33856,11 @@ impl crate::sealed::RegSpec for Cfdcfdf00_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 0 Register %s Channel 0"]
 pub type Cfdcfdf00 = crate::RegValueT<Cfdcfdf00_SPEC>;
 
 impl Cfdcfdf00 {
+    #[doc = "Common FIFO Buffer Data Bytes 0"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -17652,6 +33869,7 @@ impl Cfdcfdf00 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf00_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 1"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -17660,6 +33878,7 @@ impl Cfdcfdf00 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf00_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 2"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -17668,6 +33887,7 @@ impl Cfdcfdf00 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf00_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 3"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -17690,9 +33910,11 @@ impl crate::sealed::RegSpec for Cfdcfdf10_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 1 Register %s Channel 0"]
 pub type Cfdcfdf10 = crate::RegValueT<Cfdcfdf10_SPEC>;
 
 impl Cfdcfdf10 {
+    #[doc = "Common FIFO Buffer Data Bytes 4"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -17701,6 +33923,7 @@ impl Cfdcfdf10 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf10_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 5"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -17709,6 +33932,7 @@ impl Cfdcfdf10 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf10_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 6"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -17717,6 +33941,7 @@ impl Cfdcfdf10 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf10_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 7"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -17739,9 +33964,11 @@ impl crate::sealed::RegSpec for Cfdcfdf20_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 2 Register %s Channel 0"]
 pub type Cfdcfdf20 = crate::RegValueT<Cfdcfdf20_SPEC>;
 
 impl Cfdcfdf20 {
+    #[doc = "Common FIFO Buffer Data Bytes 8"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -17750,6 +33977,7 @@ impl Cfdcfdf20 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf20_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 9"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -17758,6 +33986,7 @@ impl Cfdcfdf20 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf20_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 10"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -17766,6 +33995,7 @@ impl Cfdcfdf20 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf20_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 11"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -17788,9 +34018,11 @@ impl crate::sealed::RegSpec for Cfdcfdf30_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 3 Register %s Channel 0"]
 pub type Cfdcfdf30 = crate::RegValueT<Cfdcfdf30_SPEC>;
 
 impl Cfdcfdf30 {
+    #[doc = "Common FIFO Buffer Data Bytes 12"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -17799,6 +34031,7 @@ impl Cfdcfdf30 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf30_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 13"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -17807,6 +34040,7 @@ impl Cfdcfdf30 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf30_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 14"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -17815,6 +34049,7 @@ impl Cfdcfdf30 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf30_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 15"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -17837,9 +34072,11 @@ impl crate::sealed::RegSpec for Cfdcfdf40_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 4 Register %s Channel 0"]
 pub type Cfdcfdf40 = crate::RegValueT<Cfdcfdf40_SPEC>;
 
 impl Cfdcfdf40 {
+    #[doc = "Common FIFO Buffer Data Bytes 16"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -17848,6 +34085,7 @@ impl Cfdcfdf40 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf40_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 17"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -17856,6 +34094,7 @@ impl Cfdcfdf40 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf40_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 18"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -17864,6 +34103,7 @@ impl Cfdcfdf40 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf40_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 19"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -17886,9 +34126,11 @@ impl crate::sealed::RegSpec for Cfdcfdf50_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 5 Register %s Channel 0"]
 pub type Cfdcfdf50 = crate::RegValueT<Cfdcfdf50_SPEC>;
 
 impl Cfdcfdf50 {
+    #[doc = "Common FIFO Buffer Data Bytes 20"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -17897,6 +34139,7 @@ impl Cfdcfdf50 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf50_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 21"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -17905,6 +34148,7 @@ impl Cfdcfdf50 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf50_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 22"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -17913,6 +34157,7 @@ impl Cfdcfdf50 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf50_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 23"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -17935,9 +34180,11 @@ impl crate::sealed::RegSpec for Cfdcfdf60_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 6 Register %s Channel 0"]
 pub type Cfdcfdf60 = crate::RegValueT<Cfdcfdf60_SPEC>;
 
 impl Cfdcfdf60 {
+    #[doc = "Common FIFO Buffer Data Bytes 24"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -17946,6 +34193,7 @@ impl Cfdcfdf60 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf60_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 25"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -17954,6 +34202,7 @@ impl Cfdcfdf60 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf60_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 26"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -17962,6 +34211,7 @@ impl Cfdcfdf60 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf60_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 27"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -17984,9 +34234,11 @@ impl crate::sealed::RegSpec for Cfdcfdf70_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 7 Register %s Channel 0"]
 pub type Cfdcfdf70 = crate::RegValueT<Cfdcfdf70_SPEC>;
 
 impl Cfdcfdf70 {
+    #[doc = "Common FIFO Buffer Data Bytes 28"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -17995,6 +34247,7 @@ impl Cfdcfdf70 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf70_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 29"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -18003,6 +34256,7 @@ impl Cfdcfdf70 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf70_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 30"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -18011,6 +34265,7 @@ impl Cfdcfdf70 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf70_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 31"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -18033,9 +34288,11 @@ impl crate::sealed::RegSpec for Cfdcfdf80_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 8 Register %s Channel 0"]
 pub type Cfdcfdf80 = crate::RegValueT<Cfdcfdf80_SPEC>;
 
 impl Cfdcfdf80 {
+    #[doc = "Common FIFO Buffer Data Bytes 32"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -18044,6 +34301,7 @@ impl Cfdcfdf80 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf80_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 33"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -18052,6 +34310,7 @@ impl Cfdcfdf80 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf80_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 34"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -18060,6 +34319,7 @@ impl Cfdcfdf80 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf80_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 35"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -18082,9 +34342,11 @@ impl crate::sealed::RegSpec for Cfdcfdf90_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 9 Register %s Channel 0"]
 pub type Cfdcfdf90 = crate::RegValueT<Cfdcfdf90_SPEC>;
 
 impl Cfdcfdf90 {
+    #[doc = "Common FIFO Buffer Data Bytes 36"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -18093,6 +34355,7 @@ impl Cfdcfdf90 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf90_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 37"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -18101,6 +34364,7 @@ impl Cfdcfdf90 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf90_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 38"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -18109,6 +34373,7 @@ impl Cfdcfdf90 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf90_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 39"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -18131,9 +34396,11 @@ impl crate::sealed::RegSpec for Cfdcfdf100_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 10 Register %s Channel 0"]
 pub type Cfdcfdf100 = crate::RegValueT<Cfdcfdf100_SPEC>;
 
 impl Cfdcfdf100 {
+    #[doc = "Common FIFO Buffer Data Bytes 40"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -18142,6 +34409,7 @@ impl Cfdcfdf100 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf100_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 41"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -18150,6 +34418,7 @@ impl Cfdcfdf100 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf100_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 42"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -18158,6 +34427,7 @@ impl Cfdcfdf100 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf100_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 43"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -18180,9 +34450,11 @@ impl crate::sealed::RegSpec for Cfdcfdf110_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 11 Register %s Channel 0"]
 pub type Cfdcfdf110 = crate::RegValueT<Cfdcfdf110_SPEC>;
 
 impl Cfdcfdf110 {
+    #[doc = "Common FIFO Buffer Data Bytes 44"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -18191,6 +34463,7 @@ impl Cfdcfdf110 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf110_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 45"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -18199,6 +34472,7 @@ impl Cfdcfdf110 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf110_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 46"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -18207,6 +34481,7 @@ impl Cfdcfdf110 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf110_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 47"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -18229,9 +34504,11 @@ impl crate::sealed::RegSpec for Cfdcfdf120_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 12 Register %s Channel 0"]
 pub type Cfdcfdf120 = crate::RegValueT<Cfdcfdf120_SPEC>;
 
 impl Cfdcfdf120 {
+    #[doc = "Common FIFO Buffer Data Bytes 48"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -18240,6 +34517,7 @@ impl Cfdcfdf120 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf120_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 49"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -18248,6 +34526,7 @@ impl Cfdcfdf120 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf120_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 50"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -18256,6 +34535,7 @@ impl Cfdcfdf120 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf120_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 51"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -18278,9 +34558,11 @@ impl crate::sealed::RegSpec for Cfdcfdf130_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 13 Register %s Channel 0"]
 pub type Cfdcfdf130 = crate::RegValueT<Cfdcfdf130_SPEC>;
 
 impl Cfdcfdf130 {
+    #[doc = "Common FIFO Buffer Data Bytes 52"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -18289,6 +34571,7 @@ impl Cfdcfdf130 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf130_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 53"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -18297,6 +34580,7 @@ impl Cfdcfdf130 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf130_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 54"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -18305,6 +34589,7 @@ impl Cfdcfdf130 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf130_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 55"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -18327,9 +34612,11 @@ impl crate::sealed::RegSpec for Cfdcfdf140_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 14 Register %s Channel 0"]
 pub type Cfdcfdf140 = crate::RegValueT<Cfdcfdf140_SPEC>;
 
 impl Cfdcfdf140 {
+    #[doc = "Common FIFO Buffer Data Bytes 56"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -18338,6 +34625,7 @@ impl Cfdcfdf140 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf140_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 57"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -18346,6 +34634,7 @@ impl Cfdcfdf140 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf140_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 58"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -18354,6 +34643,7 @@ impl Cfdcfdf140 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf140_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 59"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -18376,9 +34666,11 @@ impl crate::sealed::RegSpec for Cfdcfdf150_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 15 Register %s Channel 0"]
 pub type Cfdcfdf150 = crate::RegValueT<Cfdcfdf150_SPEC>;
 
 impl Cfdcfdf150 {
+    #[doc = "Common FIFO Buffer Data Bytes 60"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -18387,6 +34679,7 @@ impl Cfdcfdf150 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf150_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 61"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -18395,6 +34688,7 @@ impl Cfdcfdf150 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf150_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 62"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -18403,6 +34697,7 @@ impl Cfdcfdf150 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf150_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 63"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -18425,9 +34720,11 @@ impl crate::sealed::RegSpec for Cfdcfid1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access ID Register %s Channel 1"]
 pub type Cfdcfid1 = crate::RegValueT<Cfdcfid1_SPEC>;
 
 impl Cfdcfid1 {
+    #[doc = "Common FIFO Buffer ID Field"]
     #[inline(always)]
     pub fn cfid(
         self,
@@ -18445,6 +34742,7 @@ impl Cfdcfid1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "THL Entry Enable"]
     #[inline(always)]
     pub fn thlen(
         self,
@@ -18470,6 +34768,7 @@ impl Cfdcfid1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO Buffer RTR bit"]
     #[inline(always)]
     pub fn cfrtr(
         self,
@@ -18495,6 +34794,7 @@ impl Cfdcfid1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Common FIFO Buffer IDE bit"]
     #[inline(always)]
     pub fn cfide(
         self,
@@ -18532,24 +34832,30 @@ pub mod cfdcfid_1 {
     pub struct Thlen_SPEC;
     pub type Thlen = crate::EnumBitfieldStruct<u8, Thlen_SPEC>;
     impl Thlen {
+        #[doc = "Entry is not to be stored in THL after successful TX"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Entry is to be stored in THL after successful TX"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfrtr_SPEC;
     pub type Cfrtr = crate::EnumBitfieldStruct<u8, Cfrtr_SPEC>;
     impl Cfrtr {
+        #[doc = "Data frame"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Remote frame"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfide_SPEC;
     pub type Cfide = crate::EnumBitfieldStruct<u8, Cfide_SPEC>;
     impl Cfide {
+        #[doc = "STD-ID is to be transmitted or has been received"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "EXT-ID is to be transmitted or has been received"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -18560,9 +34866,11 @@ impl crate::sealed::RegSpec for Cfdcfptr1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Pointer Register %s Channel 1"]
 pub type Cfdcfptr1 = crate::RegValueT<Cfdcfptr1_SPEC>;
 
 impl Cfdcfptr1 {
+    #[doc = "Common FIFO Timestamp Value"]
     #[inline(always)]
     pub fn cfts(
         self,
@@ -18571,6 +34879,7 @@ impl Cfdcfptr1 {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Cfdcfptr1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer DLC Field"]
     #[inline(always)]
     pub fn cfdlc(
         self,
@@ -18593,9 +34902,11 @@ impl crate::sealed::RegSpec for Cfdcffdcsts1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access CAN-FD Control/Status Register %s Channel 1"]
 pub type Cfdcffdcsts1 = crate::RegValueT<Cfdcffdcsts1_SPEC>;
 
 impl Cfdcffdcsts1 {
+    #[doc = "Error State Indicator bit"]
     #[inline(always)]
     pub fn cfesi(
         self,
@@ -18621,6 +34932,7 @@ impl Cfdcffdcsts1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bit Rate Switch bit"]
     #[inline(always)]
     pub fn cfbrs(
         self,
@@ -18646,6 +34958,7 @@ impl Cfdcffdcsts1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "CAN FD Format bit"]
     #[inline(always)]
     pub fn cffdf(
         self,
@@ -18671,6 +34984,7 @@ impl Cfdcffdcsts1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "COMMON FIFO Buffer Information Label Field"]
     #[inline(always)]
     pub fn cfifl(
         self,
@@ -18679,6 +34993,7 @@ impl Cfdcffdcsts1 {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,Cfdcffdcsts1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Pointer Field"]
     #[inline(always)]
     pub fn cfptr(
         self,
@@ -18716,24 +35031,30 @@ pub mod cfdcffdcsts_1 {
     pub struct Cfesi_SPEC;
     pub type Cfesi = crate::EnumBitfieldStruct<u8, Cfesi_SPEC>;
     impl Cfesi {
+        #[doc = "CAN-FD frame received or to transmit by error active node"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CAN-FD frame received or to transmit by error passive node"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cfbrs_SPEC;
     pub type Cfbrs = crate::EnumBitfieldStruct<u8, Cfbrs_SPEC>;
     impl Cfbrs {
+        #[doc = "CAN-FD frame received or to transmit with no bit rate switch"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CAN-FD frame received or to transmit with bit rate switch"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cffdf_SPEC;
     pub type Cffdf = crate::EnumBitfieldStruct<u8, Cffdf_SPEC>;
     impl Cffdf {
+        #[doc = "Non CAN-FD frame received or to transmit"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CAN-FD frame received or to transmit"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -18744,9 +35065,11 @@ impl crate::sealed::RegSpec for Cfdcfdf01_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 0 Register %s Channel 1"]
 pub type Cfdcfdf01 = crate::RegValueT<Cfdcfdf01_SPEC>;
 
 impl Cfdcfdf01 {
+    #[doc = "Common FIFO Buffer Data Bytes 0"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -18755,6 +35078,7 @@ impl Cfdcfdf01 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf01_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 1"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -18763,6 +35087,7 @@ impl Cfdcfdf01 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf01_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 2"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -18771,6 +35096,7 @@ impl Cfdcfdf01 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf01_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 3"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -18793,9 +35119,11 @@ impl crate::sealed::RegSpec for Cfdcfdf11_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 1 Register %s Channel 1"]
 pub type Cfdcfdf11 = crate::RegValueT<Cfdcfdf11_SPEC>;
 
 impl Cfdcfdf11 {
+    #[doc = "Common FIFO Buffer Data Bytes 4"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -18804,6 +35132,7 @@ impl Cfdcfdf11 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf11_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 5"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -18812,6 +35141,7 @@ impl Cfdcfdf11 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf11_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 6"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -18820,6 +35150,7 @@ impl Cfdcfdf11 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf11_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 7"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -18842,9 +35173,11 @@ impl crate::sealed::RegSpec for Cfdcfdf21_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 2 Register %s Channel 1"]
 pub type Cfdcfdf21 = crate::RegValueT<Cfdcfdf21_SPEC>;
 
 impl Cfdcfdf21 {
+    #[doc = "Common FIFO Buffer Data Bytes 8"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -18853,6 +35186,7 @@ impl Cfdcfdf21 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf21_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 9"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -18861,6 +35195,7 @@ impl Cfdcfdf21 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf21_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 10"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -18869,6 +35204,7 @@ impl Cfdcfdf21 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf21_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 11"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -18891,9 +35227,11 @@ impl crate::sealed::RegSpec for Cfdcfdf31_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 3 Register %s Channel 1"]
 pub type Cfdcfdf31 = crate::RegValueT<Cfdcfdf31_SPEC>;
 
 impl Cfdcfdf31 {
+    #[doc = "Common FIFO Buffer Data Bytes 12"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -18902,6 +35240,7 @@ impl Cfdcfdf31 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf31_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 13"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -18910,6 +35249,7 @@ impl Cfdcfdf31 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf31_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 14"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -18918,6 +35258,7 @@ impl Cfdcfdf31 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf31_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 15"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -18940,9 +35281,11 @@ impl crate::sealed::RegSpec for Cfdcfdf41_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 4 Register %s Channel 1"]
 pub type Cfdcfdf41 = crate::RegValueT<Cfdcfdf41_SPEC>;
 
 impl Cfdcfdf41 {
+    #[doc = "Common FIFO Buffer Data Bytes 16"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -18951,6 +35294,7 @@ impl Cfdcfdf41 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf41_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 17"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -18959,6 +35303,7 @@ impl Cfdcfdf41 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf41_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 18"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -18967,6 +35312,7 @@ impl Cfdcfdf41 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf41_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 19"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -18989,9 +35335,11 @@ impl crate::sealed::RegSpec for Cfdcfdf51_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 5 Register %s Channel 1"]
 pub type Cfdcfdf51 = crate::RegValueT<Cfdcfdf51_SPEC>;
 
 impl Cfdcfdf51 {
+    #[doc = "Common FIFO Buffer Data Bytes 20"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -19000,6 +35348,7 @@ impl Cfdcfdf51 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf51_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 21"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -19008,6 +35357,7 @@ impl Cfdcfdf51 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf51_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 22"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -19016,6 +35366,7 @@ impl Cfdcfdf51 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf51_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 23"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -19038,9 +35389,11 @@ impl crate::sealed::RegSpec for Cfdcfdf61_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 6 Register %s Channel 1"]
 pub type Cfdcfdf61 = crate::RegValueT<Cfdcfdf61_SPEC>;
 
 impl Cfdcfdf61 {
+    #[doc = "Common FIFO Buffer Data Bytes 24"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -19049,6 +35402,7 @@ impl Cfdcfdf61 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf61_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 25"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -19057,6 +35411,7 @@ impl Cfdcfdf61 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf61_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 26"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -19065,6 +35420,7 @@ impl Cfdcfdf61 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf61_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 27"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -19087,9 +35443,11 @@ impl crate::sealed::RegSpec for Cfdcfdf71_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 7 Register %s Channel 1"]
 pub type Cfdcfdf71 = crate::RegValueT<Cfdcfdf71_SPEC>;
 
 impl Cfdcfdf71 {
+    #[doc = "Common FIFO Buffer Data Bytes 28"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -19098,6 +35456,7 @@ impl Cfdcfdf71 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf71_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 29"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -19106,6 +35465,7 @@ impl Cfdcfdf71 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf71_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 30"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -19114,6 +35474,7 @@ impl Cfdcfdf71 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf71_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 31"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -19136,9 +35497,11 @@ impl crate::sealed::RegSpec for Cfdcfdf81_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 8 Register %s Channel 1"]
 pub type Cfdcfdf81 = crate::RegValueT<Cfdcfdf81_SPEC>;
 
 impl Cfdcfdf81 {
+    #[doc = "Common FIFO Buffer Data Bytes 32"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -19147,6 +35510,7 @@ impl Cfdcfdf81 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf81_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 33"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -19155,6 +35519,7 @@ impl Cfdcfdf81 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf81_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 34"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -19163,6 +35528,7 @@ impl Cfdcfdf81 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf81_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 35"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -19185,9 +35551,11 @@ impl crate::sealed::RegSpec for Cfdcfdf91_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 9 Register %s Channel 1"]
 pub type Cfdcfdf91 = crate::RegValueT<Cfdcfdf91_SPEC>;
 
 impl Cfdcfdf91 {
+    #[doc = "Common FIFO Buffer Data Bytes 36"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -19196,6 +35564,7 @@ impl Cfdcfdf91 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf91_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 37"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -19204,6 +35573,7 @@ impl Cfdcfdf91 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf91_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 38"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -19212,6 +35582,7 @@ impl Cfdcfdf91 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf91_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 39"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -19234,9 +35605,11 @@ impl crate::sealed::RegSpec for Cfdcfdf101_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 10 Register %s Channel 1"]
 pub type Cfdcfdf101 = crate::RegValueT<Cfdcfdf101_SPEC>;
 
 impl Cfdcfdf101 {
+    #[doc = "Common FIFO Buffer Data Bytes 40"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -19245,6 +35618,7 @@ impl Cfdcfdf101 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf101_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 41"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -19253,6 +35627,7 @@ impl Cfdcfdf101 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf101_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 42"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -19261,6 +35636,7 @@ impl Cfdcfdf101 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf101_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 43"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -19283,9 +35659,11 @@ impl crate::sealed::RegSpec for Cfdcfdf111_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 11 Register %s Channel 1"]
 pub type Cfdcfdf111 = crate::RegValueT<Cfdcfdf111_SPEC>;
 
 impl Cfdcfdf111 {
+    #[doc = "Common FIFO Buffer Data Bytes 44"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -19294,6 +35672,7 @@ impl Cfdcfdf111 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf111_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 45"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -19302,6 +35681,7 @@ impl Cfdcfdf111 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf111_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 46"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -19310,6 +35690,7 @@ impl Cfdcfdf111 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf111_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 47"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -19332,9 +35713,11 @@ impl crate::sealed::RegSpec for Cfdcfdf121_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 12 Register %s Channel 1"]
 pub type Cfdcfdf121 = crate::RegValueT<Cfdcfdf121_SPEC>;
 
 impl Cfdcfdf121 {
+    #[doc = "Common FIFO Buffer Data Bytes 48"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -19343,6 +35726,7 @@ impl Cfdcfdf121 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf121_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 49"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -19351,6 +35735,7 @@ impl Cfdcfdf121 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf121_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 50"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -19359,6 +35744,7 @@ impl Cfdcfdf121 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf121_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 51"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -19381,9 +35767,11 @@ impl crate::sealed::RegSpec for Cfdcfdf131_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 13 Register %s Channel 1"]
 pub type Cfdcfdf131 = crate::RegValueT<Cfdcfdf131_SPEC>;
 
 impl Cfdcfdf131 {
+    #[doc = "Common FIFO Buffer Data Bytes 52"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -19392,6 +35780,7 @@ impl Cfdcfdf131 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf131_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 53"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -19400,6 +35789,7 @@ impl Cfdcfdf131 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf131_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 54"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -19408,6 +35798,7 @@ impl Cfdcfdf131 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf131_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 55"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -19430,9 +35821,11 @@ impl crate::sealed::RegSpec for Cfdcfdf141_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 14 Register %s Channel 1"]
 pub type Cfdcfdf141 = crate::RegValueT<Cfdcfdf141_SPEC>;
 
 impl Cfdcfdf141 {
+    #[doc = "Common FIFO Buffer Data Bytes 56"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -19441,6 +35834,7 @@ impl Cfdcfdf141 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf141_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 57"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -19449,6 +35843,7 @@ impl Cfdcfdf141 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf141_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 58"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -19457,6 +35852,7 @@ impl Cfdcfdf141 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf141_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 59"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -19479,9 +35875,11 @@ impl crate::sealed::RegSpec for Cfdcfdf151_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Common FIFO Access Data Field 15 Register %s Channel 1"]
 pub type Cfdcfdf151 = crate::RegValueT<Cfdcfdf151_SPEC>;
 
 impl Cfdcfdf151 {
+    #[doc = "Common FIFO Buffer Data Bytes 60"]
     #[inline(always)]
     pub fn cfdb_ll(
         self,
@@ -19490,6 +35888,7 @@ impl Cfdcfdf151 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdcfdf151_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 61"]
     #[inline(always)]
     pub fn cfdb_lh(
         self,
@@ -19498,6 +35897,7 @@ impl Cfdcfdf151 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdcfdf151_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 62"]
     #[inline(always)]
     pub fn cfdb_hl(
         self,
@@ -19506,6 +35906,7 @@ impl Cfdcfdf151 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdcfdf151_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Common FIFO Buffer Data Bytes 63"]
     #[inline(always)]
     pub fn cfdb_hh(
         self,
@@ -19528,9 +35929,11 @@ impl crate::sealed::RegSpec for Cfdthlacc0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX History List Access Registers 0"]
 pub type Cfdthlacc0 = crate::RegValueT<Cfdthlacc0_SPEC>;
 
 impl Cfdthlacc0 {
+    #[doc = "Buffer Type"]
     #[inline(always)]
     pub fn bt(
         self,
@@ -19556,6 +35959,7 @@ impl Cfdthlacc0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Buffer Number"]
     #[inline(always)]
     pub fn bn(
         self,
@@ -19564,6 +35968,7 @@ impl Cfdthlacc0 {
         crate::common::RegisterField::<3,0x7f,1,0,u8,u8,Cfdthlacc0_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Transmit Gateway Buffer Indication"]
     #[inline(always)]
     pub fn tgw(
         self,
@@ -19589,6 +35994,7 @@ impl Cfdthlacc0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transmit Timestamp"]
     #[inline(always)]
     pub fn tmts(
         self,
@@ -19609,18 +36015,23 @@ pub mod cfdthlacc0 {
     pub struct Bt_SPEC;
     pub type Bt = crate::EnumBitfieldStruct<u8, Bt_SPEC>;
     impl Bt {
+        #[doc = "Flat TX message buffer"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "TX FIFO message buffer number and gateway FIFO message number"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "TX Queue message buffer number"]
         pub const _100: Self = Self::new(4);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tgw_SPEC;
     pub type Tgw = crate::EnumBitfieldStruct<u8, Tgw_SPEC>;
     impl Tgw {
+        #[doc = "No transmission from gateway"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transmission from gateway"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -19631,9 +36042,11 @@ impl crate::sealed::RegSpec for Cfdthlacc1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX History List Access Registers 1"]
 pub type Cfdthlacc1 = crate::RegValueT<Cfdthlacc1_SPEC>;
 
 impl Cfdthlacc1 {
+    #[doc = "Transmit ID"]
     #[inline(always)]
     pub fn tid(
         self,
@@ -19642,6 +36055,7 @@ impl Cfdthlacc1 {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Cfdthlacc1_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Transmit Information Label"]
     #[inline(always)]
     pub fn tifl(
         self,
@@ -19664,9 +36078,11 @@ impl crate::sealed::RegSpec for Cfdrpgacc_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RAM Test Page Access Registers %s"]
 pub type Cfdrpgacc = crate::RegValueT<Cfdrpgacc_SPEC>;
 
 impl Cfdrpgacc {
+    #[doc = "RAM Data Test Access"]
     #[inline(always)]
     pub fn rdta(
         self,
@@ -19706,9 +36122,11 @@ impl crate::sealed::RegSpec for Cfdtmid0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer ID Register %s Channel 0"]
 pub type Cfdtmid0 = crate::RegValueT<Cfdtmid0_SPEC>;
 
 impl Cfdtmid0 {
+    #[doc = "TX Message Buffer ID Field"]
     #[inline(always)]
     pub fn tmid(
         self,
@@ -19726,6 +36144,7 @@ impl Cfdtmid0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Tx History List Entry"]
     #[inline(always)]
     pub fn thlen(
         self,
@@ -19751,6 +36170,7 @@ impl Cfdtmid0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Message Buffer RTR bit"]
     #[inline(always)]
     pub fn tmrtr(
         self,
@@ -19776,6 +36196,7 @@ impl Cfdtmid0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Message Buffer IDE bit"]
     #[inline(always)]
     pub fn tmide(
         self,
@@ -19813,24 +36234,30 @@ pub mod cfdtmid_0 {
     pub struct Thlen_SPEC;
     pub type Thlen = crate::EnumBitfieldStruct<u8, Thlen_SPEC>;
     impl Thlen {
+        #[doc = "Entry not stored in THL after successful TX"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Entry stored in THL after successful TX"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tmrtr_SPEC;
     pub type Tmrtr = crate::EnumBitfieldStruct<u8, Tmrtr_SPEC>;
     impl Tmrtr {
+        #[doc = "Data frame"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Remote frame"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tmide_SPEC;
     pub type Tmide = crate::EnumBitfieldStruct<u8, Tmide_SPEC>;
     impl Tmide {
+        #[doc = "STD-ID is transmitted"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "EXT-ID is transmitted"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -19841,9 +36268,11 @@ impl crate::sealed::RegSpec for Cfdtmptr0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Pointer Register %s Channel 0"]
 pub type Cfdtmptr0 = crate::RegValueT<Cfdtmptr0_SPEC>;
 
 impl Cfdtmptr0 {
+    #[doc = "TX Message Buffer DLC Field"]
     #[inline(always)]
     pub fn tmdlc(
         self,
@@ -19866,9 +36295,11 @@ impl crate::sealed::RegSpec for Cfdtmfdctr0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer CANFD Control Register %s Channel i"]
 pub type Cfdtmfdctr0 = crate::RegValueT<Cfdtmfdctr0_SPEC>;
 
 impl Cfdtmfdctr0 {
+    #[doc = "Error State Indicator bit"]
     #[inline(always)]
     pub fn tmesi(
         self,
@@ -19894,6 +36325,7 @@ impl Cfdtmfdctr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bit Rate Switch bit"]
     #[inline(always)]
     pub fn tmbrs(
         self,
@@ -19919,6 +36351,7 @@ impl Cfdtmfdctr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "CAN FD Format bit"]
     #[inline(always)]
     pub fn tmfdf(
         self,
@@ -19944,6 +36377,7 @@ impl Cfdtmfdctr0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Message Buffer Information Label Field"]
     #[inline(always)]
     pub fn tmifl(
         self,
@@ -19952,6 +36386,7 @@ impl Cfdtmfdctr0 {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,Cfdtmfdctr0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Pointer Field"]
     #[inline(always)]
     pub fn tmptr(
         self,
@@ -19981,24 +36416,30 @@ pub mod cfdtmfdctr_0 {
     pub struct Tmesi_SPEC;
     pub type Tmesi = crate::EnumBitfieldStruct<u8, Tmesi_SPEC>;
     impl Tmesi {
+        #[doc = "CANFD frame to transmit by error active node"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CANFD frame to transmit by error passive node"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tmbrs_SPEC;
     pub type Tmbrs = crate::EnumBitfieldStruct<u8, Tmbrs_SPEC>;
     impl Tmbrs {
+        #[doc = "CANFD frame to transmit with no bit rate switch"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CANFD frame to transmit with bit rate switch"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tmfdf_SPEC;
     pub type Tmfdf = crate::EnumBitfieldStruct<u8, Tmfdf_SPEC>;
     impl Tmfdf {
+        #[doc = "Non CANFD frame to transmit"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CANFD frame to transmit"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -20009,9 +36450,11 @@ impl crate::sealed::RegSpec for Cfdtmdf00_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 0 Register %s Channel 0"]
 pub type Cfdtmdf00 = crate::RegValueT<Cfdtmdf00_SPEC>;
 
 impl Cfdtmdf00 {
+    #[doc = "TX Message Buffer Data Byte 0"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -20020,6 +36463,7 @@ impl Cfdtmdf00 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf00_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 1"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -20028,6 +36472,7 @@ impl Cfdtmdf00 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf00_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 2"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -20036,6 +36481,7 @@ impl Cfdtmdf00 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf00_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 3"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -20058,9 +36504,11 @@ impl crate::sealed::RegSpec for Cfdtmdf10_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 1 Register %s Channel 0"]
 pub type Cfdtmdf10 = crate::RegValueT<Cfdtmdf10_SPEC>;
 
 impl Cfdtmdf10 {
+    #[doc = "TX Message Buffer Data Byte 4"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -20069,6 +36517,7 @@ impl Cfdtmdf10 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf10_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 5"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -20077,6 +36526,7 @@ impl Cfdtmdf10 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf10_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 6"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -20085,6 +36535,7 @@ impl Cfdtmdf10 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf10_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 7"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -20107,9 +36558,11 @@ impl crate::sealed::RegSpec for Cfdtmdf20_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 2 Register %s Channel 0"]
 pub type Cfdtmdf20 = crate::RegValueT<Cfdtmdf20_SPEC>;
 
 impl Cfdtmdf20 {
+    #[doc = "TX Message Buffer Data Byte 8"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -20118,6 +36571,7 @@ impl Cfdtmdf20 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf20_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 9"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -20126,6 +36580,7 @@ impl Cfdtmdf20 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf20_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 10"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -20134,6 +36589,7 @@ impl Cfdtmdf20 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf20_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 11"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -20156,9 +36612,11 @@ impl crate::sealed::RegSpec for Cfdtmdf30_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 3 Register %s Channel 0"]
 pub type Cfdtmdf30 = crate::RegValueT<Cfdtmdf30_SPEC>;
 
 impl Cfdtmdf30 {
+    #[doc = "TX Message Buffer Data Byte 12"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -20167,6 +36625,7 @@ impl Cfdtmdf30 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf30_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 12"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -20175,6 +36634,7 @@ impl Cfdtmdf30 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf30_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 12"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -20183,6 +36643,7 @@ impl Cfdtmdf30 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf30_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 12"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -20205,9 +36666,11 @@ impl crate::sealed::RegSpec for Cfdtmdf40_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 4 Register %s Channel 0"]
 pub type Cfdtmdf40 = crate::RegValueT<Cfdtmdf40_SPEC>;
 
 impl Cfdtmdf40 {
+    #[doc = "TX Message Buffer Data Byte 16"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -20216,6 +36679,7 @@ impl Cfdtmdf40 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf40_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 17"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -20224,6 +36688,7 @@ impl Cfdtmdf40 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf40_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 18"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -20232,6 +36697,7 @@ impl Cfdtmdf40 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf40_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 19"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -20254,9 +36720,11 @@ impl crate::sealed::RegSpec for Cfdtmdf50_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 5 Register %s Channel 0"]
 pub type Cfdtmdf50 = crate::RegValueT<Cfdtmdf50_SPEC>;
 
 impl Cfdtmdf50 {
+    #[doc = "TX Message Buffer Data Byte 20"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -20265,6 +36733,7 @@ impl Cfdtmdf50 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf50_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 21"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -20273,6 +36742,7 @@ impl Cfdtmdf50 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf50_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 22"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -20281,6 +36751,7 @@ impl Cfdtmdf50 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf50_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 23"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -20303,9 +36774,11 @@ impl crate::sealed::RegSpec for Cfdtmdf60_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 6 Register %s Channel 0"]
 pub type Cfdtmdf60 = crate::RegValueT<Cfdtmdf60_SPEC>;
 
 impl Cfdtmdf60 {
+    #[doc = "TX Message Buffer Data Byte 24"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -20314,6 +36787,7 @@ impl Cfdtmdf60 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf60_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 25"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -20322,6 +36796,7 @@ impl Cfdtmdf60 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf60_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 26"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -20330,6 +36805,7 @@ impl Cfdtmdf60 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf60_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 27"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -20352,9 +36828,11 @@ impl crate::sealed::RegSpec for Cfdtmdf70_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 7 Register %s Channel 0"]
 pub type Cfdtmdf70 = crate::RegValueT<Cfdtmdf70_SPEC>;
 
 impl Cfdtmdf70 {
+    #[doc = "TX Message Buffer Data Byte 28"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -20363,6 +36841,7 @@ impl Cfdtmdf70 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf70_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte29"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -20371,6 +36850,7 @@ impl Cfdtmdf70 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf70_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 30"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -20379,6 +36859,7 @@ impl Cfdtmdf70 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf70_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 31"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -20401,9 +36882,11 @@ impl crate::sealed::RegSpec for Cfdtmdf80_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 8 Register %s Channel 0"]
 pub type Cfdtmdf80 = crate::RegValueT<Cfdtmdf80_SPEC>;
 
 impl Cfdtmdf80 {
+    #[doc = "TX Message Buffer Data Byte 32"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -20412,6 +36895,7 @@ impl Cfdtmdf80 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf80_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 33"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -20420,6 +36904,7 @@ impl Cfdtmdf80 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf80_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 34"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -20428,6 +36913,7 @@ impl Cfdtmdf80 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf80_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 35"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -20450,9 +36936,11 @@ impl crate::sealed::RegSpec for Cfdtmdf90_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 9 Register %s Channel 0"]
 pub type Cfdtmdf90 = crate::RegValueT<Cfdtmdf90_SPEC>;
 
 impl Cfdtmdf90 {
+    #[doc = "TX Message Buffer Data Byte 36"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -20461,6 +36949,7 @@ impl Cfdtmdf90 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf90_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 37"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -20469,6 +36958,7 @@ impl Cfdtmdf90 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf90_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 38"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -20477,6 +36967,7 @@ impl Cfdtmdf90 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf90_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 39"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -20499,9 +36990,11 @@ impl crate::sealed::RegSpec for Cfdtmdf100_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 10 Register %s Channel 0"]
 pub type Cfdtmdf100 = crate::RegValueT<Cfdtmdf100_SPEC>;
 
 impl Cfdtmdf100 {
+    #[doc = "TX Message Buffer Data Byte 40"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -20510,6 +37003,7 @@ impl Cfdtmdf100 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf100_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 41"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -20518,6 +37012,7 @@ impl Cfdtmdf100 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf100_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 42"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -20526,6 +37021,7 @@ impl Cfdtmdf100 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf100_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 43"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -20548,9 +37044,11 @@ impl crate::sealed::RegSpec for Cfdtmdf110_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 11 Register %s Channel 0"]
 pub type Cfdtmdf110 = crate::RegValueT<Cfdtmdf110_SPEC>;
 
 impl Cfdtmdf110 {
+    #[doc = "TX Message Buffer Data Byte 44"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -20559,6 +37057,7 @@ impl Cfdtmdf110 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf110_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 45"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -20567,6 +37066,7 @@ impl Cfdtmdf110 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf110_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 46"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -20575,6 +37075,7 @@ impl Cfdtmdf110 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf110_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 47"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -20597,9 +37098,11 @@ impl crate::sealed::RegSpec for Cfdtmdf120_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 12 Register %s Channel 0"]
 pub type Cfdtmdf120 = crate::RegValueT<Cfdtmdf120_SPEC>;
 
 impl Cfdtmdf120 {
+    #[doc = "TX Message Buffer Data Byte 48"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -20608,6 +37111,7 @@ impl Cfdtmdf120 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf120_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 49"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -20616,6 +37120,7 @@ impl Cfdtmdf120 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf120_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 50"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -20624,6 +37129,7 @@ impl Cfdtmdf120 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf120_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 51"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -20646,9 +37152,11 @@ impl crate::sealed::RegSpec for Cfdtmdf130_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 13 Register %s Channel 0"]
 pub type Cfdtmdf130 = crate::RegValueT<Cfdtmdf130_SPEC>;
 
 impl Cfdtmdf130 {
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -20657,6 +37165,7 @@ impl Cfdtmdf130 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf130_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -20665,6 +37174,7 @@ impl Cfdtmdf130 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf130_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -20673,6 +37183,7 @@ impl Cfdtmdf130 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf130_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -20695,9 +37206,11 @@ impl crate::sealed::RegSpec for Cfdtmdf140_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 14 Register %s Channel 0"]
 pub type Cfdtmdf140 = crate::RegValueT<Cfdtmdf140_SPEC>;
 
 impl Cfdtmdf140 {
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -20706,6 +37219,7 @@ impl Cfdtmdf140 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf140_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -20714,6 +37228,7 @@ impl Cfdtmdf140 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf140_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -20722,6 +37237,7 @@ impl Cfdtmdf140 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf140_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -20744,9 +37260,11 @@ impl crate::sealed::RegSpec for Cfdtmdf150_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field X Register 15 Channel 0"]
 pub type Cfdtmdf150 = crate::RegValueT<Cfdtmdf150_SPEC>;
 
 impl Cfdtmdf150 {
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -20755,6 +37273,7 @@ impl Cfdtmdf150 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf150_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -20763,6 +37282,7 @@ impl Cfdtmdf150 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf150_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -20771,6 +37291,7 @@ impl Cfdtmdf150 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf150_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -20793,9 +37314,11 @@ impl crate::sealed::RegSpec for Cfdtmid1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer ID Register %s Channel 1"]
 pub type Cfdtmid1 = crate::RegValueT<Cfdtmid1_SPEC>;
 
 impl Cfdtmid1 {
+    #[doc = "TX Message Buffer ID Field"]
     #[inline(always)]
     pub fn tmid(
         self,
@@ -20813,6 +37336,7 @@ impl Cfdtmid1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Tx History List Entry"]
     #[inline(always)]
     pub fn thlen(
         self,
@@ -20838,6 +37362,7 @@ impl Cfdtmid1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Message Buffer RTR bit"]
     #[inline(always)]
     pub fn tmrtr(
         self,
@@ -20863,6 +37388,7 @@ impl Cfdtmid1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Message Buffer IDE bit"]
     #[inline(always)]
     pub fn tmide(
         self,
@@ -20900,24 +37426,30 @@ pub mod cfdtmid_1 {
     pub struct Thlen_SPEC;
     pub type Thlen = crate::EnumBitfieldStruct<u8, Thlen_SPEC>;
     impl Thlen {
+        #[doc = "Entry not stored in THL after successful TX"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Entry stored in THL after successful TX"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tmrtr_SPEC;
     pub type Tmrtr = crate::EnumBitfieldStruct<u8, Tmrtr_SPEC>;
     impl Tmrtr {
+        #[doc = "Data frame"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Remote frame"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tmide_SPEC;
     pub type Tmide = crate::EnumBitfieldStruct<u8, Tmide_SPEC>;
     impl Tmide {
+        #[doc = "STD-ID is transmitted"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "EXT-ID is transmitted"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -20928,9 +37460,11 @@ impl crate::sealed::RegSpec for Cfdtmptr1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Pointer Register %s Channel 1"]
 pub type Cfdtmptr1 = crate::RegValueT<Cfdtmptr1_SPEC>;
 
 impl Cfdtmptr1 {
+    #[doc = "TX Message Buffer DLC Field"]
     #[inline(always)]
     pub fn tmdlc(
         self,
@@ -20953,9 +37487,11 @@ impl crate::sealed::RegSpec for Cfdtmfdctr1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer CANFD Control Register %s Channel i"]
 pub type Cfdtmfdctr1 = crate::RegValueT<Cfdtmfdctr1_SPEC>;
 
 impl Cfdtmfdctr1 {
+    #[doc = "Error State Indicator bit"]
     #[inline(always)]
     pub fn tmesi(
         self,
@@ -20981,6 +37517,7 @@ impl Cfdtmfdctr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bit Rate Switch bit"]
     #[inline(always)]
     pub fn tmbrs(
         self,
@@ -21006,6 +37543,7 @@ impl Cfdtmfdctr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "CAN FD Format bit"]
     #[inline(always)]
     pub fn tmfdf(
         self,
@@ -21031,6 +37569,7 @@ impl Cfdtmfdctr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "TX Message Buffer Information Label Field"]
     #[inline(always)]
     pub fn tmifl(
         self,
@@ -21039,6 +37578,7 @@ impl Cfdtmfdctr1 {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,Cfdtmfdctr1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Pointer Field"]
     #[inline(always)]
     pub fn tmptr(
         self,
@@ -21068,24 +37608,30 @@ pub mod cfdtmfdctr_1 {
     pub struct Tmesi_SPEC;
     pub type Tmesi = crate::EnumBitfieldStruct<u8, Tmesi_SPEC>;
     impl Tmesi {
+        #[doc = "CANFD frame to transmit by error active node"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CANFD frame to transmit by error passive node"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tmbrs_SPEC;
     pub type Tmbrs = crate::EnumBitfieldStruct<u8, Tmbrs_SPEC>;
     impl Tmbrs {
+        #[doc = "CANFD frame to transmit with no bit rate switch"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CANFD frame to transmit with bit rate switch"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tmfdf_SPEC;
     pub type Tmfdf = crate::EnumBitfieldStruct<u8, Tmfdf_SPEC>;
     impl Tmfdf {
+        #[doc = "Non CANFD frame to transmit"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "CANFD frame to transmit"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -21096,9 +37642,11 @@ impl crate::sealed::RegSpec for Cfdtmdf01_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 0 Register %s Channel 1"]
 pub type Cfdtmdf01 = crate::RegValueT<Cfdtmdf01_SPEC>;
 
 impl Cfdtmdf01 {
+    #[doc = "TX Message Buffer Data Byte 0"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -21107,6 +37655,7 @@ impl Cfdtmdf01 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf01_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 1"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -21115,6 +37664,7 @@ impl Cfdtmdf01 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf01_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 2"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -21123,6 +37673,7 @@ impl Cfdtmdf01 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf01_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 3"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -21145,9 +37696,11 @@ impl crate::sealed::RegSpec for Cfdtmdf11_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 1 Register %s Channel 1"]
 pub type Cfdtmdf11 = crate::RegValueT<Cfdtmdf11_SPEC>;
 
 impl Cfdtmdf11 {
+    #[doc = "TX Message Buffer Data Byte 4"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -21156,6 +37709,7 @@ impl Cfdtmdf11 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf11_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 5"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -21164,6 +37718,7 @@ impl Cfdtmdf11 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf11_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 6"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -21172,6 +37727,7 @@ impl Cfdtmdf11 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf11_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 7"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -21194,9 +37750,11 @@ impl crate::sealed::RegSpec for Cfdtmdf21_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 2 Register %s Channel 1"]
 pub type Cfdtmdf21 = crate::RegValueT<Cfdtmdf21_SPEC>;
 
 impl Cfdtmdf21 {
+    #[doc = "TX Message Buffer Data Byte 8"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -21205,6 +37763,7 @@ impl Cfdtmdf21 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf21_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 9"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -21213,6 +37772,7 @@ impl Cfdtmdf21 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf21_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 10"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -21221,6 +37781,7 @@ impl Cfdtmdf21 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf21_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 11"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -21243,9 +37804,11 @@ impl crate::sealed::RegSpec for Cfdtmdf31_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 3 Register %s Channel 1"]
 pub type Cfdtmdf31 = crate::RegValueT<Cfdtmdf31_SPEC>;
 
 impl Cfdtmdf31 {
+    #[doc = "TX Message Buffer Data Byte 12"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -21254,6 +37817,7 @@ impl Cfdtmdf31 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf31_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 12"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -21262,6 +37826,7 @@ impl Cfdtmdf31 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf31_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 12"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -21270,6 +37835,7 @@ impl Cfdtmdf31 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf31_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 12"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -21292,9 +37858,11 @@ impl crate::sealed::RegSpec for Cfdtmdf41_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 4 Register %s Channel 1"]
 pub type Cfdtmdf41 = crate::RegValueT<Cfdtmdf41_SPEC>;
 
 impl Cfdtmdf41 {
+    #[doc = "TX Message Buffer Data Byte 16"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -21303,6 +37871,7 @@ impl Cfdtmdf41 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf41_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 17"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -21311,6 +37880,7 @@ impl Cfdtmdf41 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf41_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 18"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -21319,6 +37889,7 @@ impl Cfdtmdf41 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf41_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 19"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -21341,9 +37912,11 @@ impl crate::sealed::RegSpec for Cfdtmdf51_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 5 Register %s Channel 1"]
 pub type Cfdtmdf51 = crate::RegValueT<Cfdtmdf51_SPEC>;
 
 impl Cfdtmdf51 {
+    #[doc = "TX Message Buffer Data Byte 20"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -21352,6 +37925,7 @@ impl Cfdtmdf51 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf51_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 21"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -21360,6 +37934,7 @@ impl Cfdtmdf51 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf51_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 22"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -21368,6 +37943,7 @@ impl Cfdtmdf51 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf51_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 23"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -21390,9 +37966,11 @@ impl crate::sealed::RegSpec for Cfdtmdf61_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 6 Register %s Channel 1"]
 pub type Cfdtmdf61 = crate::RegValueT<Cfdtmdf61_SPEC>;
 
 impl Cfdtmdf61 {
+    #[doc = "TX Message Buffer Data Byte 24"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -21401,6 +37979,7 @@ impl Cfdtmdf61 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf61_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 25"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -21409,6 +37988,7 @@ impl Cfdtmdf61 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf61_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 26"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -21417,6 +37997,7 @@ impl Cfdtmdf61 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf61_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 27"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -21439,9 +38020,11 @@ impl crate::sealed::RegSpec for Cfdtmdf71_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 7 Register %s Channel 1"]
 pub type Cfdtmdf71 = crate::RegValueT<Cfdtmdf71_SPEC>;
 
 impl Cfdtmdf71 {
+    #[doc = "TX Message Buffer Data Byte 28"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -21450,6 +38033,7 @@ impl Cfdtmdf71 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf71_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte29"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -21458,6 +38042,7 @@ impl Cfdtmdf71 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf71_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 30"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -21466,6 +38051,7 @@ impl Cfdtmdf71 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf71_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 31"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -21488,9 +38074,11 @@ impl crate::sealed::RegSpec for Cfdtmdf81_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 8 Register %s Channel 1"]
 pub type Cfdtmdf81 = crate::RegValueT<Cfdtmdf81_SPEC>;
 
 impl Cfdtmdf81 {
+    #[doc = "TX Message Buffer Data Byte 32"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -21499,6 +38087,7 @@ impl Cfdtmdf81 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf81_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 33"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -21507,6 +38096,7 @@ impl Cfdtmdf81 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf81_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 34"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -21515,6 +38105,7 @@ impl Cfdtmdf81 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf81_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 35"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -21537,9 +38128,11 @@ impl crate::sealed::RegSpec for Cfdtmdf91_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 9 Register %s Channel 1"]
 pub type Cfdtmdf91 = crate::RegValueT<Cfdtmdf91_SPEC>;
 
 impl Cfdtmdf91 {
+    #[doc = "TX Message Buffer Data Byte 36"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -21548,6 +38141,7 @@ impl Cfdtmdf91 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf91_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 37"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -21556,6 +38150,7 @@ impl Cfdtmdf91 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf91_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 38"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -21564,6 +38159,7 @@ impl Cfdtmdf91 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf91_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 39"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -21586,9 +38182,11 @@ impl crate::sealed::RegSpec for Cfdtmdf101_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 10 Register %s Channel 1"]
 pub type Cfdtmdf101 = crate::RegValueT<Cfdtmdf101_SPEC>;
 
 impl Cfdtmdf101 {
+    #[doc = "TX Message Buffer Data Byte 40"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -21597,6 +38195,7 @@ impl Cfdtmdf101 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf101_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 41"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -21605,6 +38204,7 @@ impl Cfdtmdf101 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf101_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 42"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -21613,6 +38213,7 @@ impl Cfdtmdf101 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf101_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 43"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -21635,9 +38236,11 @@ impl crate::sealed::RegSpec for Cfdtmdf111_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 11 Register %s Channel 1"]
 pub type Cfdtmdf111 = crate::RegValueT<Cfdtmdf111_SPEC>;
 
 impl Cfdtmdf111 {
+    #[doc = "TX Message Buffer Data Byte 44"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -21646,6 +38249,7 @@ impl Cfdtmdf111 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf111_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 45"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -21654,6 +38258,7 @@ impl Cfdtmdf111 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf111_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 46"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -21662,6 +38267,7 @@ impl Cfdtmdf111 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf111_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 47"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -21684,9 +38290,11 @@ impl crate::sealed::RegSpec for Cfdtmdf121_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 12 Register %s Channel 1"]
 pub type Cfdtmdf121 = crate::RegValueT<Cfdtmdf121_SPEC>;
 
 impl Cfdtmdf121 {
+    #[doc = "TX Message Buffer Data Byte 48"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -21695,6 +38303,7 @@ impl Cfdtmdf121 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf121_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 49"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -21703,6 +38312,7 @@ impl Cfdtmdf121 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf121_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 50"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -21711,6 +38321,7 @@ impl Cfdtmdf121 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf121_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte 51"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -21733,9 +38344,11 @@ impl crate::sealed::RegSpec for Cfdtmdf131_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 13 Register %s Channel 1"]
 pub type Cfdtmdf131 = crate::RegValueT<Cfdtmdf131_SPEC>;
 
 impl Cfdtmdf131 {
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -21744,6 +38357,7 @@ impl Cfdtmdf131 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf131_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -21752,6 +38366,7 @@ impl Cfdtmdf131 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf131_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -21760,6 +38375,7 @@ impl Cfdtmdf131 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf131_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -21782,9 +38398,11 @@ impl crate::sealed::RegSpec for Cfdtmdf141_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field 14 Register %s Channel 1"]
 pub type Cfdtmdf141 = crate::RegValueT<Cfdtmdf141_SPEC>;
 
 impl Cfdtmdf141 {
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -21793,6 +38411,7 @@ impl Cfdtmdf141 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf141_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -21801,6 +38420,7 @@ impl Cfdtmdf141 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf141_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -21809,6 +38429,7 @@ impl Cfdtmdf141 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf141_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,
@@ -21831,9 +38452,11 @@ impl crate::sealed::RegSpec for Cfdtmdf151_SPEC {
     type DataType = u32;
 }
 
+#[doc = "TX Message Buffer Data Field X Register 15 Channel 1"]
 pub type Cfdtmdf151 = crate::RegValueT<Cfdtmdf151_SPEC>;
 
 impl Cfdtmdf151 {
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_ll(
         self,
@@ -21842,6 +38465,7 @@ impl Cfdtmdf151 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfdtmdf151_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_lh(
         self,
@@ -21850,6 +38474,7 @@ impl Cfdtmdf151 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cfdtmdf151_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_hl(
         self,
@@ -21858,6 +38483,7 @@ impl Cfdtmdf151 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cfdtmdf151_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TX Message Buffer Data Byte X"]
     #[inline(always)]
     pub fn tmdb_hh(
         self,

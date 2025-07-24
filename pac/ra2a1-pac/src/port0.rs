@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.1, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:53 +0000
+// Generated from SVD 1.1, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:11 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Port0 {
         self.ptr
     }
 
+    #[doc = "Port Control Register 1"]
     #[inline(always)]
     pub const fn pcntr1(
         &self,
@@ -45,6 +46,7 @@ impl super::Port0 {
         }
     }
 
+    #[doc = "Output data register"]
     #[inline(always)]
     pub const fn podr(&self) -> &'static crate::common::Reg<self::Podr_SPEC, crate::common::RW> {
         unsafe {
@@ -54,6 +56,7 @@ impl super::Port0 {
         }
     }
 
+    #[doc = "Direction register"]
     #[inline(always)]
     pub const fn pdr(&self) -> &'static crate::common::Reg<self::Pdr_SPEC, crate::common::RW> {
         unsafe {
@@ -63,6 +66,7 @@ impl super::Port0 {
         }
     }
 
+    #[doc = "Port Control Register 2"]
     #[inline(always)]
     pub const fn pcntr2(&self) -> &'static crate::common::Reg<self::Pcntr2_SPEC, crate::common::R> {
         unsafe {
@@ -72,6 +76,7 @@ impl super::Port0 {
         }
     }
 
+    #[doc = "Input data register"]
     #[inline(always)]
     pub const fn pidr(&self) -> &'static crate::common::Reg<self::Pidr_SPEC, crate::common::R> {
         unsafe {
@@ -81,6 +86,7 @@ impl super::Port0 {
         }
     }
 
+    #[doc = "Port Control Register 3"]
     #[inline(always)]
     pub const fn pcntr3(&self) -> &'static crate::common::Reg<self::Pcntr3_SPEC, crate::common::W> {
         unsafe {
@@ -90,6 +96,7 @@ impl super::Port0 {
         }
     }
 
+    #[doc = "Output reset register"]
     #[inline(always)]
     pub const fn porr(&self) -> &'static crate::common::Reg<self::Porr_SPEC, crate::common::W> {
         unsafe {
@@ -99,6 +106,7 @@ impl super::Port0 {
         }
     }
 
+    #[doc = "Output set register"]
     #[inline(always)]
     pub const fn posr(&self) -> &'static crate::common::Reg<self::Posr_SPEC, crate::common::W> {
         unsafe {
@@ -115,6 +123,7 @@ impl crate::sealed::RegSpec for Pcntr1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Port Control Register 1"]
 pub type Pcntr1 = crate::RegValueT<Pcntr1_SPEC>;
 
 impl NoBitfieldReg<Pcntr1_SPEC> for Pcntr1 {}
@@ -132,6 +141,7 @@ impl crate::sealed::RegSpec for Podr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Output data register"]
 pub type Podr = crate::RegValueT<Podr_SPEC>;
 
 impl NoBitfieldReg<Podr_SPEC> for Podr {}
@@ -149,6 +159,7 @@ impl crate::sealed::RegSpec for Pdr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Direction register"]
 pub type Pdr = crate::RegValueT<Pdr_SPEC>;
 
 impl NoBitfieldReg<Pdr_SPEC> for Pdr {}
@@ -166,6 +177,7 @@ impl crate::sealed::RegSpec for Pcntr2_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Port Control Register 2"]
 pub type Pcntr2 = crate::RegValueT<Pcntr2_SPEC>;
 
 impl NoBitfieldReg<Pcntr2_SPEC> for Pcntr2 {}
@@ -183,6 +195,7 @@ impl crate::sealed::RegSpec for Pidr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Input data register"]
 pub type Pidr = crate::RegValueT<Pidr_SPEC>;
 
 impl NoBitfieldReg<Pidr_SPEC> for Pidr {}
@@ -200,6 +213,7 @@ impl crate::sealed::RegSpec for Pcntr3_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Port Control Register 3"]
 pub type Pcntr3 = crate::RegValueT<Pcntr3_SPEC>;
 
 impl NoBitfieldReg<Pcntr3_SPEC> for Pcntr3 {}
@@ -217,6 +231,7 @@ impl crate::sealed::RegSpec for Porr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Output reset register"]
 pub type Porr = crate::RegValueT<Porr_SPEC>;
 
 impl NoBitfieldReg<Porr_SPEC> for Porr {}
@@ -234,6 +249,7 @@ impl crate::sealed::RegSpec for Posr_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Output set register"]
 pub type Posr = crate::RegValueT<Posr_SPEC>;
 
 impl NoBitfieldReg<Posr_SPEC> for Posr {}

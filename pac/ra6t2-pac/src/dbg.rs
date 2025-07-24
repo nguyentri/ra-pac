@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.40.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:21:24 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:39 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Dbg {
         self.ptr
     }
 
+    #[doc = "Debug Status Register"]
     #[inline(always)]
     pub const fn dbgstr(&self) -> &'static crate::common::Reg<self::Dbgstr_SPEC, crate::common::R> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Dbg {
         }
     }
 
+    #[doc = "Debug Stop Control Register"]
     #[inline(always)]
     pub const fn dbgstopcr(
         &self,
@@ -61,9 +63,11 @@ impl crate::sealed::RegSpec for Dbgstr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Debug Status Register"]
 pub type Dbgstr = crate::RegValueT<Dbgstr_SPEC>;
 
 impl Dbgstr {
+    #[doc = "Debug power-up request"]
     #[inline(always)]
     pub fn cdbgpwrupreq(
         self,
@@ -89,6 +93,7 @@ impl Dbgstr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Debug power-up acknowledge"]
     #[inline(always)]
     pub fn cdbgpwrupack(
         self,
@@ -126,16 +131,20 @@ pub mod dbgstr {
     pub struct Cdbgpwrupreq_SPEC;
     pub type Cdbgpwrupreq = crate::EnumBitfieldStruct<u8, Cdbgpwrupreq_SPEC>;
     impl Cdbgpwrupreq {
+        #[doc = "OCD is not requesting debug power up"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "OCD is requesting debug power up"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdbgpwrupack_SPEC;
     pub type Cdbgpwrupack = crate::EnumBitfieldStruct<u8, Cdbgpwrupack_SPEC>;
     impl Cdbgpwrupack {
+        #[doc = "Debug power-up request is not acknowledged"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Debug power-up request is acknowledged"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -146,9 +155,11 @@ impl crate::sealed::RegSpec for Dbgstopcr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Debug Stop Control Register"]
 pub type Dbgstopcr = crate::RegValueT<Dbgstopcr_SPEC>;
 
 impl Dbgstopcr {
+    #[doc = "Mask bit for IWDT reset/interrupt in the OCD run mode"]
     #[inline(always)]
     pub fn dbgstop_iwdt(
         self,
@@ -174,6 +185,7 @@ impl Dbgstopcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Mask bit for WDT reset/interrupt in the OCD run mode"]
     #[inline(always)]
     pub fn dbgstop_wdt(
         self,
@@ -199,6 +211,7 @@ impl Dbgstopcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Mask bit for LVD0 reset"]
     #[inline(always)]
     pub fn dbgstop_lvd0(
         self,
@@ -224,6 +237,7 @@ impl Dbgstopcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Mask bit for LVD1 reset/interrupt"]
     #[inline(always)]
     pub fn dbgstop_lvd1(
         self,
@@ -249,6 +263,7 @@ impl Dbgstopcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Mask bit for LVD2 reset/interrupt"]
     #[inline(always)]
     pub fn dbgstop_lvd2(
         self,
@@ -274,6 +289,7 @@ impl Dbgstopcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Mask bit for SRAM parity error reset/interrupt"]
     #[inline(always)]
     pub fn dbgstop_rper(
         self,
@@ -299,6 +315,7 @@ impl Dbgstopcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Mask bit for SRAM ECC error reset/interrupt"]
     #[inline(always)]
     pub fn dbgstop_reccr(
         self,
@@ -324,6 +341,7 @@ impl Dbgstopcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Mask bit for Cache SRAM parity error reset/interrupt"]
     #[inline(always)]
     pub fn dbgstop_cper(
         self,
@@ -361,64 +379,80 @@ pub mod dbgstopcr {
     pub struct DbgstopIwdt_SPEC;
     pub type DbgstopIwdt = crate::EnumBitfieldStruct<u8, DbgstopIwdt_SPEC>;
     impl DbgstopIwdt {
+        #[doc = "Enable IWDT reset/interrupt"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Mask IWDT reset/interrupt and stop IWDT counter"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct DbgstopWdt_SPEC;
     pub type DbgstopWdt = crate::EnumBitfieldStruct<u8, DbgstopWdt_SPEC>;
     impl DbgstopWdt {
+        #[doc = "Enable WDT reset/interrupt"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Mask WDT reset/interrupt and stop WDT counter"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct DbgstopLvd0_SPEC;
     pub type DbgstopLvd0 = crate::EnumBitfieldStruct<u8, DbgstopLvd0_SPEC>;
     impl DbgstopLvd0 {
+        #[doc = "Enable LVD0 reset"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Mask LVD0 reset"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct DbgstopLvd1_SPEC;
     pub type DbgstopLvd1 = crate::EnumBitfieldStruct<u8, DbgstopLvd1_SPEC>;
     impl DbgstopLvd1 {
+        #[doc = "Enable LVD1 reset/interrupt"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Mask LVD1 reset/interrupt"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct DbgstopLvd2_SPEC;
     pub type DbgstopLvd2 = crate::EnumBitfieldStruct<u8, DbgstopLvd2_SPEC>;
     impl DbgstopLvd2 {
+        #[doc = "Enable LVD2 reset/interrupt"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Mask LVD2 reset/interrupt"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct DbgstopRper_SPEC;
     pub type DbgstopRper = crate::EnumBitfieldStruct<u8, DbgstopRper_SPEC>;
     impl DbgstopRper {
+        #[doc = "Enable SRAM parity error reset/interrupt"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Mask SRAM parity error reset/interrupt"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct DbgstopReccr_SPEC;
     pub type DbgstopReccr = crate::EnumBitfieldStruct<u8, DbgstopReccr_SPEC>;
     impl DbgstopReccr {
+        #[doc = "Enable SRAM ECC error reset/interrupt"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Mask SRAM ECC error reset/interrupt"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct DbgstopCper_SPEC;
     pub type DbgstopCper = crate::EnumBitfieldStruct<u8, DbgstopCper_SPEC>;
     impl DbgstopCper {
+        #[doc = "Enable Cache SRAM parity error reset/interrupt"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Mask Cache SRAM parity error reset/interrupt"]
         pub const _1: Self = Self::new(1);
     }
 }

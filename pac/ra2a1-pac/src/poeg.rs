@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.1, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:53 +0000
+// Generated from SVD 1.1, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:11 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Poeg {
         self.ptr
     }
 
+    #[doc = "POEG Group %s Setting Register"]
     #[inline(always)]
     pub const fn poegg(
         &self,
@@ -46,6 +47,22 @@ impl super::Poeg {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x0usize))
         }
     }
+    #[inline(always)]
+    pub const fn poegga(&self) -> &'static crate::common::Reg<self::Poegg_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Poegg_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn poeggb(&self) -> &'static crate::common::Reg<self::Poegg_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Poegg_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x100usize),
+            )
+        }
+    }
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -54,9 +71,11 @@ impl crate::sealed::RegSpec for Poegg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "POEG Group %s Setting Register"]
 pub type Poegg = crate::RegValueT<Poegg_SPEC>;
 
 impl Poegg {
+    #[doc = "Noise Filter Clock Select"]
     #[inline(always)]
     pub fn nfcs(
         self,
@@ -82,6 +101,7 @@ impl Poegg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Noise Filter Enable"]
     #[inline(always)]
     pub fn nfen(
         self,
@@ -107,6 +127,7 @@ impl Poegg {
         >::from_register(self, 0)
     }
 
+    #[doc = "GTETRG Input Reverse"]
     #[inline(always)]
     pub fn inv(
         self,
@@ -132,6 +153,7 @@ impl Poegg {
         >::from_register(self, 0)
     }
 
+    #[doc = "GTETRG Input Status Flag"]
     #[inline(always)]
     pub fn st(
         self,
@@ -157,6 +179,7 @@ impl Poegg {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMP_LP1 EnableNote: Can be modified only once after a reset."]
     #[inline(always)]
     pub fn cdre5(
         self,
@@ -182,6 +205,7 @@ impl Poegg {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACMP_LP0 EnableNote: Can be modified only once after a reset."]
     #[inline(always)]
     pub fn cdre4(
         self,
@@ -207,6 +231,7 @@ impl Poegg {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -214,6 +239,7 @@ impl Poegg {
         crate::common::RegisterField::<9,0x7,1,0,u8,u8,Poegg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "ACMP_HS0 EnableNote: Can be modified only once after a reset."]
     #[inline(always)]
     pub fn cdre0(
         self,
@@ -239,6 +265,7 @@ impl Poegg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Oscillation Stop Detection EnableNote: Can be modified only once after a reset."]
     #[inline(always)]
     pub fn ostpe(
         self,
@@ -264,6 +291,7 @@ impl Poegg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Real Time Overcurrent EnableNote: Can be modified only once after a reset."]
     #[inline(always)]
     pub fn ioce(
         self,
@@ -289,6 +317,7 @@ impl Poegg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Detection EnableNote: Can be modified only once after a reset."]
     #[inline(always)]
     pub fn pide(
         self,
@@ -314,6 +343,7 @@ impl Poegg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Software Stop Flag"]
     #[inline(always)]
     pub fn ssf(
         self,
@@ -339,6 +369,7 @@ impl Poegg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Oscillation Stop Detection Flag"]
     #[inline(always)]
     pub fn ostpf(
         self,
@@ -364,6 +395,7 @@ impl Poegg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Real Time Overcurrent Detection Flag"]
     #[inline(always)]
     pub fn iocf(
         self,
@@ -389,6 +421,7 @@ impl Poegg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Port Input Detection Flag"]
     #[inline(always)]
     pub fn pidf(
         self,
@@ -426,116 +459,146 @@ pub mod poegg {
     pub struct Nfcs_SPEC;
     pub type Nfcs = crate::EnumBitfieldStruct<u8, Nfcs_SPEC>;
     impl Nfcs {
+        #[doc = "Sampling GTETRG pin input level for three times in every PCLKB."]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Sampling GTETRG pin input level for three times in every PCLKB /8."]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Sampling GTETRG pin input level for three times in every PCLKB /32."]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Sampling GTETRG pin input level for three times in every PCLKB /128."]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfen_SPEC;
     pub type Nfen = crate::EnumBitfieldStruct<u8, Nfen_SPEC>;
     impl Nfen {
+        #[doc = "Filtering noise disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Filtering noise enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Inv_SPEC;
     pub type Inv = crate::EnumBitfieldStruct<u8, Inv_SPEC>;
     impl Inv {
+        #[doc = "GTETRG Input"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "GTETRG Input Reversed."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St_SPEC;
     pub type St = crate::EnumBitfieldStruct<u8, St_SPEC>;
     impl St {
+        #[doc = "GTETRG input after filtering is 0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "GTETRG input after filtering is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre5_SPEC;
     pub type Cdre5 = crate::EnumBitfieldStruct<u8, Cdre5_SPEC>;
     impl Cdre5 {
+        #[doc = "Disable output-disable request from ACMPLP1."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable output-disable request from ACMPLP1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre4_SPEC;
     pub type Cdre4 = crate::EnumBitfieldStruct<u8, Cdre4_SPEC>;
     impl Cdre4 {
+        #[doc = "Disable output-disable request from ACMPLP0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable output-disable request from ACMPLP0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre0_SPEC;
     pub type Cdre0 = crate::EnumBitfieldStruct<u8, Cdre0_SPEC>;
     impl Cdre0 {
+        #[doc = "Disable output-disable request from ACMPHS0."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable output-disable request from ACMPHS0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ostpe_SPEC;
     pub type Ostpe = crate::EnumBitfieldStruct<u8, Ostpe_SPEC>;
     impl Ostpe {
+        #[doc = "A output-disable request from the oscillation stop detection disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A output-disable request from the oscillation stop detection enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ioce_SPEC;
     pub type Ioce = crate::EnumBitfieldStruct<u8, Ioce_SPEC>;
     impl Ioce {
+        #[doc = "A output-disable request from GPT disable request or comparator interrupt disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A output-disable request from GPT disable request or comparator interrupt enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pide_SPEC;
     pub type Pide = crate::EnumBitfieldStruct<u8, Pide_SPEC>;
     impl Pide {
+        #[doc = "A output-disable request from the GTETRG pins disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A output-disable request from the GTETRG pins enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ssf_SPEC;
     pub type Ssf = crate::EnumBitfieldStruct<u8, Ssf_SPEC>;
     impl Ssf {
+        #[doc = "A output-disable request from software has not been generated."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A output-disable request from software has been generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ostpf_SPEC;
     pub type Ostpf = crate::EnumBitfieldStruct<u8, Ostpf_SPEC>;
     impl Ostpf {
+        #[doc = "A output-disable request from the oscillation stop detection has not been generated."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A output-disable request from the oscillation stop detection has been generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Iocf_SPEC;
     pub type Iocf = crate::EnumBitfieldStruct<u8, Iocf_SPEC>;
     impl Iocf {
+        #[doc = "No output-disable request from the GPT, the ACMPHS or the ACMPLP occurred."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Output-disable request from the GPT, the ACMPHS or the ACMPLP occurred."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidf_SPEC;
     pub type Pidf = crate::EnumBitfieldStruct<u8, Pidf_SPEC>;
     impl Pidf {
+        #[doc = "A output-disable request from the GTETRG pin has not been generated."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A output-disable request from the GTETRG pin has been generated."]
         pub const _1: Self = Self::new(1);
     }
 }

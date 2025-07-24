@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.00.01, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:22:22 +0000
+// Generated from SVD 1.00.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:56 +0000
 #![cfg_attr(not(feature = "tracing"), no_std)]
 #![allow(non_camel_case_types)]
 #![doc = "Arm Cortex-M85 based Microcontroller RA8E1 group"]
@@ -1543,205 +1543,399 @@ pub use self::Interrupt as interrupt;
 #[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
 #[cfg(feature = "rt")]
-extern "C" {
-    fn IEL0();
-    fn IEL1();
-    fn IEL2();
-    fn IEL3();
-    fn IEL4();
-    fn IEL5();
-    fn IEL6();
-    fn IEL7();
-    fn IEL8();
-    fn IEL9();
-    fn IEL10();
-    fn IEL11();
-    fn IEL12();
-    fn IEL13();
-    fn IEL14();
-    fn IEL15();
-    fn IEL16();
-    fn IEL17();
-    fn IEL18();
-    fn IEL19();
-    fn IEL20();
-    fn IEL21();
-    fn IEL22();
-    fn IEL23();
-    fn IEL24();
-    fn IEL25();
-    fn IEL26();
-    fn IEL27();
-    fn IEL28();
-    fn IEL29();
-    fn IEL30();
-    fn IEL31();
-    fn IEL32();
-    fn IEL33();
-    fn IEL34();
-    fn IEL35();
-    fn IEL36();
-    fn IEL37();
-    fn IEL38();
-    fn IEL39();
-    fn IEL40();
-    fn IEL41();
-    fn IEL42();
-    fn IEL43();
-    fn IEL44();
-    fn IEL45();
-    fn IEL46();
-    fn IEL47();
-    fn IEL48();
-    fn IEL49();
-    fn IEL50();
-    fn IEL51();
-    fn IEL52();
-    fn IEL53();
-    fn IEL54();
-    fn IEL55();
-    fn IEL56();
-    fn IEL57();
-    fn IEL58();
-    fn IEL59();
-    fn IEL60();
-    fn IEL61();
-    fn IEL62();
-    fn IEL63();
-    fn IEL64();
-    fn IEL65();
-    fn IEL66();
-    fn IEL67();
-    fn IEL68();
-    fn IEL69();
-    fn IEL70();
-    fn IEL71();
-    fn IEL72();
-    fn IEL73();
-    fn IEL74();
-    fn IEL75();
-    fn IEL76();
-    fn IEL77();
-    fn IEL78();
-    fn IEL79();
-    fn IEL80();
-    fn IEL81();
-    fn IEL82();
-    fn IEL83();
-    fn IEL84();
-    fn IEL85();
-    fn IEL86();
-    fn IEL87();
-    fn IEL88();
-    fn IEL89();
-    fn IEL90();
-    fn IEL91();
-    fn IEL92();
-    fn IEL93();
-    fn IEL94();
-    fn IEL95();
+pub mod interrupt_handlers {
+    unsafe extern "C" {
+        pub fn IEL0();
+        pub fn IEL1();
+        pub fn IEL2();
+        pub fn IEL3();
+        pub fn IEL4();
+        pub fn IEL5();
+        pub fn IEL6();
+        pub fn IEL7();
+        pub fn IEL8();
+        pub fn IEL9();
+        pub fn IEL10();
+        pub fn IEL11();
+        pub fn IEL12();
+        pub fn IEL13();
+        pub fn IEL14();
+        pub fn IEL15();
+        pub fn IEL16();
+        pub fn IEL17();
+        pub fn IEL18();
+        pub fn IEL19();
+        pub fn IEL20();
+        pub fn IEL21();
+        pub fn IEL22();
+        pub fn IEL23();
+        pub fn IEL24();
+        pub fn IEL25();
+        pub fn IEL26();
+        pub fn IEL27();
+        pub fn IEL28();
+        pub fn IEL29();
+        pub fn IEL30();
+        pub fn IEL31();
+        pub fn IEL32();
+        pub fn IEL33();
+        pub fn IEL34();
+        pub fn IEL35();
+        pub fn IEL36();
+        pub fn IEL37();
+        pub fn IEL38();
+        pub fn IEL39();
+        pub fn IEL40();
+        pub fn IEL41();
+        pub fn IEL42();
+        pub fn IEL43();
+        pub fn IEL44();
+        pub fn IEL45();
+        pub fn IEL46();
+        pub fn IEL47();
+        pub fn IEL48();
+        pub fn IEL49();
+        pub fn IEL50();
+        pub fn IEL51();
+        pub fn IEL52();
+        pub fn IEL53();
+        pub fn IEL54();
+        pub fn IEL55();
+        pub fn IEL56();
+        pub fn IEL57();
+        pub fn IEL58();
+        pub fn IEL59();
+        pub fn IEL60();
+        pub fn IEL61();
+        pub fn IEL62();
+        pub fn IEL63();
+        pub fn IEL64();
+        pub fn IEL65();
+        pub fn IEL66();
+        pub fn IEL67();
+        pub fn IEL68();
+        pub fn IEL69();
+        pub fn IEL70();
+        pub fn IEL71();
+        pub fn IEL72();
+        pub fn IEL73();
+        pub fn IEL74();
+        pub fn IEL75();
+        pub fn IEL76();
+        pub fn IEL77();
+        pub fn IEL78();
+        pub fn IEL79();
+        pub fn IEL80();
+        pub fn IEL81();
+        pub fn IEL82();
+        pub fn IEL83();
+        pub fn IEL84();
+        pub fn IEL85();
+        pub fn IEL86();
+        pub fn IEL87();
+        pub fn IEL88();
+        pub fn IEL89();
+        pub fn IEL90();
+        pub fn IEL91();
+        pub fn IEL92();
+        pub fn IEL93();
+        pub fn IEL94();
+        pub fn IEL95();
+    }
 }
 #[cfg(feature = "rt")]
 #[doc(hidden)]
-#[link_section = ".vector_table.interrupts"]
-#[no_mangle]
+#[unsafe(link_section = ".vector_table.interrupts")]
+#[unsafe(no_mangle)]
 pub static __INTERRUPTS: [Vector; 96] = [
-    Vector { _handler: IEL0 },
-    Vector { _handler: IEL1 },
-    Vector { _handler: IEL2 },
-    Vector { _handler: IEL3 },
-    Vector { _handler: IEL4 },
-    Vector { _handler: IEL5 },
-    Vector { _handler: IEL6 },
-    Vector { _handler: IEL7 },
-    Vector { _handler: IEL8 },
-    Vector { _handler: IEL9 },
-    Vector { _handler: IEL10 },
-    Vector { _handler: IEL11 },
-    Vector { _handler: IEL12 },
-    Vector { _handler: IEL13 },
-    Vector { _handler: IEL14 },
-    Vector { _handler: IEL15 },
-    Vector { _handler: IEL16 },
-    Vector { _handler: IEL17 },
-    Vector { _handler: IEL18 },
-    Vector { _handler: IEL19 },
-    Vector { _handler: IEL20 },
-    Vector { _handler: IEL21 },
-    Vector { _handler: IEL22 },
-    Vector { _handler: IEL23 },
-    Vector { _handler: IEL24 },
-    Vector { _handler: IEL25 },
-    Vector { _handler: IEL26 },
-    Vector { _handler: IEL27 },
-    Vector { _handler: IEL28 },
-    Vector { _handler: IEL29 },
-    Vector { _handler: IEL30 },
-    Vector { _handler: IEL31 },
-    Vector { _handler: IEL32 },
-    Vector { _handler: IEL33 },
-    Vector { _handler: IEL34 },
-    Vector { _handler: IEL35 },
-    Vector { _handler: IEL36 },
-    Vector { _handler: IEL37 },
-    Vector { _handler: IEL38 },
-    Vector { _handler: IEL39 },
-    Vector { _handler: IEL40 },
-    Vector { _handler: IEL41 },
-    Vector { _handler: IEL42 },
-    Vector { _handler: IEL43 },
-    Vector { _handler: IEL44 },
-    Vector { _handler: IEL45 },
-    Vector { _handler: IEL46 },
-    Vector { _handler: IEL47 },
-    Vector { _handler: IEL48 },
-    Vector { _handler: IEL49 },
-    Vector { _handler: IEL50 },
-    Vector { _handler: IEL51 },
-    Vector { _handler: IEL52 },
-    Vector { _handler: IEL53 },
-    Vector { _handler: IEL54 },
-    Vector { _handler: IEL55 },
-    Vector { _handler: IEL56 },
-    Vector { _handler: IEL57 },
-    Vector { _handler: IEL58 },
-    Vector { _handler: IEL59 },
-    Vector { _handler: IEL60 },
-    Vector { _handler: IEL61 },
-    Vector { _handler: IEL62 },
-    Vector { _handler: IEL63 },
-    Vector { _handler: IEL64 },
-    Vector { _handler: IEL65 },
-    Vector { _handler: IEL66 },
-    Vector { _handler: IEL67 },
-    Vector { _handler: IEL68 },
-    Vector { _handler: IEL69 },
-    Vector { _handler: IEL70 },
-    Vector { _handler: IEL71 },
-    Vector { _handler: IEL72 },
-    Vector { _handler: IEL73 },
-    Vector { _handler: IEL74 },
-    Vector { _handler: IEL75 },
-    Vector { _handler: IEL76 },
-    Vector { _handler: IEL77 },
-    Vector { _handler: IEL78 },
-    Vector { _handler: IEL79 },
-    Vector { _handler: IEL80 },
-    Vector { _handler: IEL81 },
-    Vector { _handler: IEL82 },
-    Vector { _handler: IEL83 },
-    Vector { _handler: IEL84 },
-    Vector { _handler: IEL85 },
-    Vector { _handler: IEL86 },
-    Vector { _handler: IEL87 },
-    Vector { _handler: IEL88 },
-    Vector { _handler: IEL89 },
-    Vector { _handler: IEL90 },
-    Vector { _handler: IEL91 },
-    Vector { _handler: IEL92 },
-    Vector { _handler: IEL93 },
-    Vector { _handler: IEL94 },
-    Vector { _handler: IEL95 },
+    Vector {
+        _handler: interrupt_handlers::IEL0,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL1,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL2,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL3,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL4,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL5,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL6,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL7,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL8,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL9,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL10,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL11,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL12,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL13,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL14,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL15,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL16,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL17,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL18,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL19,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL20,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL21,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL22,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL23,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL24,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL25,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL26,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL27,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL28,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL29,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL30,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL31,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL32,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL33,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL34,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL35,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL36,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL37,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL38,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL39,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL40,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL41,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL42,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL43,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL44,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL45,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL46,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL47,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL48,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL49,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL50,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL51,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL52,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL53,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL54,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL55,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL56,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL57,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL58,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL59,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL60,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL61,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL62,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL63,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL64,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL65,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL66,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL67,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL68,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL69,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL70,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL71,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL72,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL73,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL74,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL75,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL76,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL77,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL78,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL79,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL80,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL81,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL82,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL83,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL84,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL85,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL86,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL87,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL88,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL89,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL90,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL91,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL92,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL93,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL94,
+    },
+    Vector {
+        _handler: interrupt_handlers::IEL95,
+    },
 ];
 #[doc = "Enumeration of all the interrupts."]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
@@ -1749,194 +1943,289 @@ pub static __INTERRUPTS: [Vector; 96] = [
 pub enum Interrupt {
     #[doc = "ICU Interrupt 0"]
     IEL0 = 0,
+
     #[doc = "ICU Interrupt 1"]
     IEL1 = 1,
+
     #[doc = "ICU Interrupt 2"]
     IEL2 = 2,
+
     #[doc = "ICU Interrupt 3"]
     IEL3 = 3,
+
     #[doc = "ICU Interrupt 4"]
     IEL4 = 4,
+
     #[doc = "ICU Interrupt 5"]
     IEL5 = 5,
+
     #[doc = "ICU Interrupt 6"]
     IEL6 = 6,
+
     #[doc = "ICU Interrupt 7"]
     IEL7 = 7,
+
     #[doc = "ICU Interrupt 8"]
     IEL8 = 8,
+
     #[doc = "ICU Interrupt 9"]
     IEL9 = 9,
+
     #[doc = "ICU Interrupt 10"]
     IEL10 = 10,
+
     #[doc = "ICU Interrupt 11"]
     IEL11 = 11,
+
     #[doc = "ICU Interrupt 12"]
     IEL12 = 12,
+
     #[doc = "ICU Interrupt 13"]
     IEL13 = 13,
+
     #[doc = "ICU Interrupt 14"]
     IEL14 = 14,
+
     #[doc = "ICU Interrupt 15"]
     IEL15 = 15,
+
     #[doc = "ICU Interrupt 16"]
     IEL16 = 16,
+
     #[doc = "ICU Interrupt 17"]
     IEL17 = 17,
+
     #[doc = "ICU Interrupt 18"]
     IEL18 = 18,
+
     #[doc = "ICU Interrupt 19"]
     IEL19 = 19,
+
     #[doc = "ICU Interrupt 20"]
     IEL20 = 20,
+
     #[doc = "ICU Interrupt 21"]
     IEL21 = 21,
+
     #[doc = "ICU Interrupt 22"]
     IEL22 = 22,
+
     #[doc = "ICU Interrupt 23"]
     IEL23 = 23,
+
     #[doc = "ICU Interrupt 24"]
     IEL24 = 24,
+
     #[doc = "ICU Interrupt 25"]
     IEL25 = 25,
+
     #[doc = "ICU Interrupt 26"]
     IEL26 = 26,
+
     #[doc = "ICU Interrupt 27"]
     IEL27 = 27,
+
     #[doc = "ICU Interrupt 28"]
     IEL28 = 28,
+
     #[doc = "ICU Interrupt 29"]
     IEL29 = 29,
+
     #[doc = "ICU Interrupt 30"]
     IEL30 = 30,
+
     #[doc = "ICU Interrupt 31"]
     IEL31 = 31,
+
     #[doc = "ICU Interrupt 32"]
     IEL32 = 32,
+
     #[doc = "ICU Interrupt 33"]
     IEL33 = 33,
+
     #[doc = "ICU Interrupt 34"]
     IEL34 = 34,
+
     #[doc = "ICU Interrupt 35"]
     IEL35 = 35,
+
     #[doc = "ICU Interrupt 36"]
     IEL36 = 36,
+
     #[doc = "ICU Interrupt 37"]
     IEL37 = 37,
+
     #[doc = "ICU Interrupt 38"]
     IEL38 = 38,
+
     #[doc = "ICU Interrupt 39"]
     IEL39 = 39,
+
     #[doc = "ICU Interrupt 40"]
     IEL40 = 40,
+
     #[doc = "ICU Interrupt 41"]
     IEL41 = 41,
+
     #[doc = "ICU Interrupt 42"]
     IEL42 = 42,
+
     #[doc = "ICU Interrupt 43"]
     IEL43 = 43,
+
     #[doc = "ICU Interrupt 44"]
     IEL44 = 44,
+
     #[doc = "ICU Interrupt 45"]
     IEL45 = 45,
+
     #[doc = "ICU Interrupt 46"]
     IEL46 = 46,
+
     #[doc = "ICU Interrupt 47"]
     IEL47 = 47,
+
     #[doc = "ICU Interrupt 48"]
     IEL48 = 48,
+
     #[doc = "ICU Interrupt 49"]
     IEL49 = 49,
+
     #[doc = "ICU Interrupt 50"]
     IEL50 = 50,
+
     #[doc = "ICU Interrupt 51"]
     IEL51 = 51,
+
     #[doc = "ICU Interrupt 52"]
     IEL52 = 52,
+
     #[doc = "ICU Interrupt 53"]
     IEL53 = 53,
+
     #[doc = "ICU Interrupt 54"]
     IEL54 = 54,
+
     #[doc = "ICU Interrupt 55"]
     IEL55 = 55,
+
     #[doc = "ICU Interrupt 56"]
     IEL56 = 56,
+
     #[doc = "ICU Interrupt 57"]
     IEL57 = 57,
+
     #[doc = "ICU Interrupt 58"]
     IEL58 = 58,
+
     #[doc = "ICU Interrupt 59"]
     IEL59 = 59,
+
     #[doc = "ICU Interrupt 60"]
     IEL60 = 60,
+
     #[doc = "ICU Interrupt 61"]
     IEL61 = 61,
+
     #[doc = "ICU Interrupt 62"]
     IEL62 = 62,
+
     #[doc = "ICU Interrupt 63"]
     IEL63 = 63,
+
     #[doc = "ICU Interrupt 64"]
     IEL64 = 64,
+
     #[doc = "ICU Interrupt 65"]
     IEL65 = 65,
+
     #[doc = "ICU Interrupt 66"]
     IEL66 = 66,
+
     #[doc = "ICU Interrupt 67"]
     IEL67 = 67,
+
     #[doc = "ICU Interrupt 68"]
     IEL68 = 68,
+
     #[doc = "ICU Interrupt 69"]
     IEL69 = 69,
+
     #[doc = "ICU Interrupt 70"]
     IEL70 = 70,
+
     #[doc = "ICU Interrupt 71"]
     IEL71 = 71,
+
     #[doc = "ICU Interrupt 72"]
     IEL72 = 72,
+
     #[doc = "ICU Interrupt 73"]
     IEL73 = 73,
+
     #[doc = "ICU Interrupt 74"]
     IEL74 = 74,
+
     #[doc = "ICU Interrupt 75"]
     IEL75 = 75,
+
     #[doc = "ICU Interrupt 76"]
     IEL76 = 76,
+
     #[doc = "ICU Interrupt 77"]
     IEL77 = 77,
+
     #[doc = "ICU Interrupt 78"]
     IEL78 = 78,
+
     #[doc = "ICU Interrupt 79"]
     IEL79 = 79,
+
     #[doc = "ICU Interrupt 80"]
     IEL80 = 80,
+
     #[doc = "ICU Interrupt 81"]
     IEL81 = 81,
+
     #[doc = "ICU Interrupt 82"]
     IEL82 = 82,
+
     #[doc = "ICU Interrupt 83"]
     IEL83 = 83,
+
     #[doc = "ICU Interrupt 84"]
     IEL84 = 84,
+
     #[doc = "ICU Interrupt 85"]
     IEL85 = 85,
+
     #[doc = "ICU Interrupt 86"]
     IEL86 = 86,
+
     #[doc = "ICU Interrupt 87"]
     IEL87 = 87,
+
     #[doc = "ICU Interrupt 88"]
     IEL88 = 88,
+
     #[doc = "ICU Interrupt 89"]
     IEL89 = 89,
+
     #[doc = "ICU Interrupt 90"]
     IEL90 = 90,
+
     #[doc = "ICU Interrupt 91"]
     IEL91 = 91,
+
     #[doc = "ICU Interrupt 92"]
     IEL92 = 92,
+
     #[doc = "ICU Interrupt 93"]
     IEL93 = 93,
+
     #[doc = "ICU Interrupt 94"]
     IEL94 = 94,
+
     #[doc = "ICU Interrupt 95"]
     IEL95 = 95,
 }

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 0.90.02, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:18:12 +0000
+// Generated from SVD 1.20.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:48:57 +0000
 
 //! Contains perfect hash function that maps form raw addresses to
 //! a string containing the names of all registers that point to an address.
@@ -713,6 +713,9 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x4001e036u64 => "
       SYSC.hococr(),
     ",
+  0x4001e037u64 => "
+      SYSC.hococr2(),
+    ",
   0x4001e038u64 => "
       SYSC.mococr(),
     ",
@@ -1259,22 +1262,22 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x4001f943u64 => "
       PFS.p500pfs_by(),
     ",
-  0x4001fa00u64 => "
+  0x4001fa38u64 => "
       PFS.p8pfs()[0],
     ",
-  0x4001fa04u64 => "
+  0x4001fa3cu64 => "
       PFS.p8pfs()[1],
     ",
-  0x4001fa02u64 => "
+  0x4001fa3au64 => "
       PFS.p8pfs_ha()[0],
     ",
-  0x4001fa06u64 => "
+  0x4001fa3eu64 => "
       PFS.p8pfs_ha()[1],
     ",
-  0x4001fa03u64 => "
+  0x4001fa3bu64 => "
       PFS.p8pfs_by()[0],
     ",
-  0x4001fa07u64 => "
+  0x4001fa3fu64 => "
       PFS.p8pfs_by()[1],
     ",
   0x4001fd03u64 => "
@@ -3711,34 +3714,34 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       PSCU.dlmmon(),
     ",
   0x400e8000u64 => "
-      AGTW_B_0.agt(),
+      AGTW_0.agt(),
     ",
   0x400e8004u64 => "
-      AGTW_B_0.agtcma(),
+      AGTW_0.agtcma(),
     ",
   0x400e8008u64 => "
-      AGTW_B_0.agtcmb(),
+      AGTW_0.agtcmb(),
     ",
   0x400e800cu64 => "
-      AGTW_B_0.agtcr(),
+      AGTW_0.agtcr(),
     ",
   0x400e800du64 => "
-      AGTW_B_0.agtmr1(),
+      AGTW_0.agtmr1(),
     ",
   0x400e800eu64 => "
-      AGTW_B_0.agtmr2(),
+      AGTW_0.agtmr2(),
     ",
   0x400e8010u64 => "
-      AGTW_B_0.agtioc(),
+      AGTW_0.agtioc(),
     ",
   0x400e8011u64 => "
-      AGTW_B_0.agtisr(),
+      AGTW_0.agtisr(),
     ",
   0x400e8012u64 => "
-      AGTW_B_0.agtcmsr(),
+      AGTW_0.agtcmsr(),
     ",
   0x400e8013u64 => "
-      AGTW_B_0.agtiosel(),
+      AGTW_0.agtiosel(),
     ",
   0x400f4000u64 => "
       ACMPLP.compmdr(),

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:18:26 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:18 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Rtc {
         self.ptr
     }
 
+    #[doc = "64-Hz Counter"]
     #[inline(always)]
     pub const fn r64cnt(&self) -> &'static crate::common::Reg<self::R64Cnt_SPEC, crate::common::R> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Second Counter"]
     #[inline(always)]
     pub const fn rseccnt(
         &self,
@@ -54,6 +56,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Binary Counter 0"]
     #[inline(always)]
     pub const fn bcnt0(&self) -> &'static crate::common::Reg<self::Bcnt0_SPEC, crate::common::RW> {
         unsafe {
@@ -63,6 +66,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Minute Counter"]
     #[inline(always)]
     pub const fn rmincnt(
         &self,
@@ -74,6 +78,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Binary Counter 1"]
     #[inline(always)]
     pub const fn bcnt1(&self) -> &'static crate::common::Reg<self::Bcnt1_SPEC, crate::common::RW> {
         unsafe {
@@ -83,6 +88,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Hour Counter"]
     #[inline(always)]
     pub const fn rhrcnt(
         &self,
@@ -94,6 +100,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Binary Counter 2"]
     #[inline(always)]
     pub const fn bcnt2(&self) -> &'static crate::common::Reg<self::Bcnt2_SPEC, crate::common::RW> {
         unsafe {
@@ -103,6 +110,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Day-of-Week Counter"]
     #[inline(always)]
     pub const fn rwkcnt(
         &self,
@@ -114,6 +122,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Binary Counter 3"]
     #[inline(always)]
     pub const fn bcnt3(&self) -> &'static crate::common::Reg<self::Bcnt3_SPEC, crate::common::RW> {
         unsafe {
@@ -123,6 +132,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Day Counter"]
     #[inline(always)]
     pub const fn rdaycnt(
         &self,
@@ -134,6 +144,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Month Counter"]
     #[inline(always)]
     pub const fn rmoncnt(
         &self,
@@ -145,6 +156,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Year Counter"]
     #[inline(always)]
     pub const fn ryrcnt(
         &self,
@@ -156,6 +168,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Second Alarm Register"]
     #[inline(always)]
     pub const fn rsecar(
         &self,
@@ -167,6 +180,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Binary Counter 0 Alarm Register"]
     #[inline(always)]
     pub const fn bcnt0ar(
         &self,
@@ -178,6 +192,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Minute Alarm Register"]
     #[inline(always)]
     pub const fn rminar(
         &self,
@@ -189,6 +204,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Binary Counter 1 Alarm Register"]
     #[inline(always)]
     pub const fn bcnt1ar(
         &self,
@@ -200,6 +216,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Hour Alarm Register"]
     #[inline(always)]
     pub const fn rhrar(&self) -> &'static crate::common::Reg<self::Rhrar_SPEC, crate::common::RW> {
         unsafe {
@@ -209,6 +226,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Binary Counter 2 Alarm Register"]
     #[inline(always)]
     pub const fn bcnt2ar(
         &self,
@@ -220,6 +238,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Day-of-Week Alarm Register"]
     #[inline(always)]
     pub const fn rwkar(&self) -> &'static crate::common::Reg<self::Rwkar_SPEC, crate::common::RW> {
         unsafe {
@@ -229,6 +248,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Binary Counter 3 Alarm Register"]
     #[inline(always)]
     pub const fn bcnt3ar(
         &self,
@@ -240,6 +260,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Date Alarm Register"]
     #[inline(always)]
     pub const fn rdayar(
         &self,
@@ -251,6 +272,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Binary Counter 0 Alarm Enable Register"]
     #[inline(always)]
     pub const fn bcnt0aer(
         &self,
@@ -262,6 +284,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Month Alarm Register"]
     #[inline(always)]
     pub const fn rmonar(
         &self,
@@ -273,6 +296,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Binary Counter 1 Alarm Enable Register"]
     #[inline(always)]
     pub const fn bcnt1aer(
         &self,
@@ -284,6 +308,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Year Alarm Register"]
     #[inline(always)]
     pub const fn ryrar(&self) -> &'static crate::common::Reg<self::Ryrar_SPEC, crate::common::RW> {
         unsafe {
@@ -293,6 +318,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Binary Counter 2 Alarm Enable Register"]
     #[inline(always)]
     pub const fn bcnt2aer(
         &self,
@@ -304,6 +330,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Year Alarm Enable Register"]
     #[inline(always)]
     pub const fn ryraren(
         &self,
@@ -315,6 +342,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Binary Counter 3 Alarm Enable Register"]
     #[inline(always)]
     pub const fn bcnt3aer(
         &self,
@@ -326,6 +354,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "RTC Control Register 1"]
     #[inline(always)]
     pub const fn rcr1(&self) -> &'static crate::common::Reg<self::Rcr1_SPEC, crate::common::RW> {
         unsafe {
@@ -335,6 +364,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "RTC Control Register 2"]
     #[inline(always)]
     pub const fn rcr2(&self) -> &'static crate::common::Reg<self::Rcr2_SPEC, crate::common::RW> {
         unsafe {
@@ -344,6 +374,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "RTC Control Register 4"]
     #[inline(always)]
     pub const fn rcr4(&self) -> &'static crate::common::Reg<self::Rcr4_SPEC, crate::common::RW> {
         unsafe {
@@ -353,6 +384,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Frequency Register H"]
     #[inline(always)]
     pub const fn rfrh(&self) -> &'static crate::common::Reg<self::Rfrh_SPEC, crate::common::RW> {
         unsafe {
@@ -362,6 +394,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Frequency Register L"]
     #[inline(always)]
     pub const fn rfrl(&self) -> &'static crate::common::Reg<self::Rfrl_SPEC, crate::common::RW> {
         unsafe {
@@ -371,6 +404,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Time Error Adjustment Register"]
     #[inline(always)]
     pub const fn radj(&self) -> &'static crate::common::Reg<self::Radj_SPEC, crate::common::RW> {
         unsafe {
@@ -380,6 +414,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "Time Capture Control Register %s"]
     #[inline(always)]
     pub const fn rtccr(
         &self,
@@ -392,7 +427,32 @@ impl super::Rtc {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x40usize))
         }
     }
+    #[inline(always)]
+    pub const fn rtccr0(&self) -> &'static crate::common::Reg<self::Rtccr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Rtccr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x40usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn rtccr1(&self) -> &'static crate::common::Reg<self::Rtccr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Rtccr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x42usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn rtccr2(&self) -> &'static crate::common::Reg<self::Rtccr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Rtccr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x44usize),
+            )
+        }
+    }
 
+    #[doc = "Second Capture Register %s"]
     #[inline(always)]
     pub const fn rseccp(
         &self,
@@ -405,7 +465,38 @@ impl super::Rtc {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x52usize))
         }
     }
+    #[inline(always)]
+    pub const fn rseccp0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Rseccp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Rseccp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x52usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn rseccp1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Rseccp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Rseccp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x62usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn rseccp2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Rseccp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Rseccp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x72usize),
+            )
+        }
+    }
 
+    #[doc = "BCNT0 Capture Register %s"]
     #[inline(always)]
     pub const fn bcnt0cp(
         &self,
@@ -418,7 +509,38 @@ impl super::Rtc {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x52usize))
         }
     }
+    #[inline(always)]
+    pub const fn bcnt0cp0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcnt0Cp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Bcnt0Cp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x52usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bcnt0cp1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcnt0Cp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Bcnt0Cp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x62usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bcnt0cp2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcnt0Cp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Bcnt0Cp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x72usize),
+            )
+        }
+    }
 
+    #[doc = "Minute Capture Register %s"]
     #[inline(always)]
     pub const fn rmincp(
         &self,
@@ -431,7 +553,38 @@ impl super::Rtc {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x54usize))
         }
     }
+    #[inline(always)]
+    pub const fn rmincp0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Rmincp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Rmincp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x54usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn rmincp1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Rmincp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Rmincp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x64usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn rmincp2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Rmincp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Rmincp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x74usize),
+            )
+        }
+    }
 
+    #[doc = "BCNT1 Capture Register %s"]
     #[inline(always)]
     pub const fn bcnt1cp(
         &self,
@@ -444,7 +597,38 @@ impl super::Rtc {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x54usize))
         }
     }
+    #[inline(always)]
+    pub const fn bcnt1cp0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcnt1Cp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Bcnt1Cp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x54usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bcnt1cp1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcnt1Cp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Bcnt1Cp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x64usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bcnt1cp2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcnt1Cp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Bcnt1Cp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x74usize),
+            )
+        }
+    }
 
+    #[doc = "Hour Capture Register %s"]
     #[inline(always)]
     pub const fn rhrcp(
         &self,
@@ -457,7 +641,32 @@ impl super::Rtc {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x56usize))
         }
     }
+    #[inline(always)]
+    pub const fn rhrcp0(&self) -> &'static crate::common::Reg<self::Rhrcp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Rhrcp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x56usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn rhrcp1(&self) -> &'static crate::common::Reg<self::Rhrcp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Rhrcp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x66usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn rhrcp2(&self) -> &'static crate::common::Reg<self::Rhrcp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Rhrcp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x76usize),
+            )
+        }
+    }
 
+    #[doc = "BCNT2 Capture Register %s"]
     #[inline(always)]
     pub const fn bcnt2cp(
         &self,
@@ -470,7 +679,38 @@ impl super::Rtc {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x56usize))
         }
     }
+    #[inline(always)]
+    pub const fn bcnt2cp0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcnt2Cp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Bcnt2Cp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x56usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bcnt2cp1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcnt2Cp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Bcnt2Cp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x66usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bcnt2cp2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcnt2Cp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Bcnt2Cp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x76usize),
+            )
+        }
+    }
 
+    #[doc = "Date Capture Register %s"]
     #[inline(always)]
     pub const fn rdaycp(
         &self,
@@ -483,7 +723,38 @@ impl super::Rtc {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x5ausize))
         }
     }
+    #[inline(always)]
+    pub const fn rdaycp0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Rdaycp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Rdaycp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x5ausize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn rdaycp1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Rdaycp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Rdaycp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6ausize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn rdaycp2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Rdaycp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Rdaycp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x7ausize),
+            )
+        }
+    }
 
+    #[doc = "BCNT3 Capture Register %s"]
     #[inline(always)]
     pub const fn bcnt3cp(
         &self,
@@ -496,7 +767,38 @@ impl super::Rtc {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x5ausize))
         }
     }
+    #[inline(always)]
+    pub const fn bcnt3cp0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcnt3Cp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Bcnt3Cp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x5ausize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bcnt3cp1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcnt3Cp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Bcnt3Cp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6ausize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bcnt3cp2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcnt3Cp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Bcnt3Cp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x7ausize),
+            )
+        }
+    }
 
+    #[doc = "Month Capture Register %s"]
     #[inline(always)]
     pub const fn rmoncp(
         &self,
@@ -509,6 +811,36 @@ impl super::Rtc {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x5cusize))
         }
     }
+    #[inline(always)]
+    pub const fn rmoncp0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Rmoncp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Rmoncp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x5cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn rmoncp1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Rmoncp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Rmoncp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn rmoncp2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Rmoncp_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Rmoncp_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x7cusize),
+            )
+        }
+    }
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -517,9 +849,11 @@ impl crate::sealed::RegSpec for R64Cnt_SPEC {
     type DataType = u8;
 }
 
+#[doc = "64-Hz Counter"]
 pub type R64Cnt = crate::RegValueT<R64Cnt_SPEC>;
 
 impl R64Cnt {
+    #[doc = "1Hz"]
     #[inline(always)]
     pub fn f1hz(self) -> crate::common::RegisterFieldBool<6, 1, 0, R64Cnt_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<6, 1, 0, R64Cnt_SPEC, crate::common::R>::from_register(
@@ -527,6 +861,7 @@ impl R64Cnt {
         )
     }
 
+    #[doc = "2Hz"]
     #[inline(always)]
     pub fn f2hz(self) -> crate::common::RegisterFieldBool<5, 1, 0, R64Cnt_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<5, 1, 0, R64Cnt_SPEC, crate::common::R>::from_register(
@@ -534,6 +869,7 @@ impl R64Cnt {
         )
     }
 
+    #[doc = "4Hz"]
     #[inline(always)]
     pub fn f4hz(self) -> crate::common::RegisterFieldBool<4, 1, 0, R64Cnt_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<4, 1, 0, R64Cnt_SPEC, crate::common::R>::from_register(
@@ -541,6 +877,7 @@ impl R64Cnt {
         )
     }
 
+    #[doc = "8Hz"]
     #[inline(always)]
     pub fn f8hz(self) -> crate::common::RegisterFieldBool<3, 1, 0, R64Cnt_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<3, 1, 0, R64Cnt_SPEC, crate::common::R>::from_register(
@@ -548,6 +885,7 @@ impl R64Cnt {
         )
     }
 
+    #[doc = "16Hz"]
     #[inline(always)]
     pub fn f16hz(self) -> crate::common::RegisterFieldBool<2, 1, 0, R64Cnt_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<2, 1, 0, R64Cnt_SPEC, crate::common::R>::from_register(
@@ -555,6 +893,7 @@ impl R64Cnt {
         )
     }
 
+    #[doc = "32Hz"]
     #[inline(always)]
     pub fn f32hz(self) -> crate::common::RegisterFieldBool<1, 1, 0, R64Cnt_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<1, 1, 0, R64Cnt_SPEC, crate::common::R>::from_register(
@@ -562,6 +901,7 @@ impl R64Cnt {
         )
     }
 
+    #[doc = "64Hz"]
     #[inline(always)]
     pub fn f64hz(self) -> crate::common::RegisterFieldBool<0, 1, 0, R64Cnt_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<0, 1, 0, R64Cnt_SPEC, crate::common::R>::from_register(
@@ -583,9 +923,11 @@ impl crate::sealed::RegSpec for Rseccnt_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Second Counter"]
 pub type Rseccnt = crate::RegValueT<Rseccnt_SPEC>;
 
 impl Rseccnt {
+    #[doc = "10-Second Count \nCounts from 0 to 5 for 60-second counting."]
     #[inline(always)]
     pub fn sec10(
         self,
@@ -593,6 +935,7 @@ impl Rseccnt {
         crate::common::RegisterField::<4,0x7,1,0,u8,u8,Rseccnt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "1-Second Count \nCounts from 0 to 9 every second. When a carry is generated, 1 is added to the tens place."]
     #[inline(always)]
     pub fn sec1(
         self,
@@ -614,9 +957,11 @@ impl crate::sealed::RegSpec for Bcnt0_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Binary Counter 0"]
 pub type Bcnt0 = crate::RegValueT<Bcnt0_SPEC>;
 
 impl Bcnt0 {
+    #[doc = "The BCNT0 counter is a readable/writable 32-bit binary counter b7 to b0."]
     #[inline(always)]
     pub fn bcnt0(
         self,
@@ -638,9 +983,11 @@ impl crate::sealed::RegSpec for Rmincnt_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Minute Counter"]
 pub type Rmincnt = crate::RegValueT<Rmincnt_SPEC>;
 
 impl Rmincnt {
+    #[doc = "10-Minute Count \nCounts from 0 to 5 for 60-minute counting."]
     #[inline(always)]
     pub fn min10(
         self,
@@ -648,6 +995,7 @@ impl Rmincnt {
         crate::common::RegisterField::<4,0x7,1,0,u8,u8,Rmincnt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "1-Minute Count \nCounts from 0 to 9 every minute. When a carry is generated, 1 is added to the tens place."]
     #[inline(always)]
     pub fn min1(
         self,
@@ -669,9 +1017,11 @@ impl crate::sealed::RegSpec for Bcnt1_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Binary Counter 1"]
 pub type Bcnt1 = crate::RegValueT<Bcnt1_SPEC>;
 
 impl Bcnt1 {
+    #[doc = "The BCNT1 counter is a readable/writable 32-bit binary counter b15 to b8."]
     #[inline(always)]
     pub fn bcnt1(
         self,
@@ -693,9 +1043,11 @@ impl crate::sealed::RegSpec for Rhrcnt_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Hour Counter"]
 pub type Rhrcnt = crate::RegValueT<Rhrcnt_SPEC>;
 
 impl Rhrcnt {
+    #[doc = "Time Counter Setting for a.m./p.m."]
     #[inline(always)]
     pub fn pm(
         self,
@@ -721,6 +1073,7 @@ impl Rhrcnt {
         >::from_register(self, 0)
     }
 
+    #[doc = "10-Hour Count \nCounts from 0 to 2 once per carry from the ones place."]
     #[inline(always)]
     pub fn hr10(
         self,
@@ -728,6 +1081,7 @@ impl Rhrcnt {
         crate::common::RegisterField::<4,0x3,1,0,u8,u8,Rhrcnt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "1-Hour Count \nCounts from 0 to 9 once per hour. When a carry is generated, 1 is added to the tens place."]
     #[inline(always)]
     pub fn hr1(
         self,
@@ -747,8 +1101,10 @@ pub mod rhrcnt {
     pub struct Pm_SPEC;
     pub type Pm = crate::EnumBitfieldStruct<u8, Pm_SPEC>;
     impl Pm {
+        #[doc = "a.m."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "p.m."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -759,9 +1115,11 @@ impl crate::sealed::RegSpec for Bcnt2_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Binary Counter 2"]
 pub type Bcnt2 = crate::RegValueT<Bcnt2_SPEC>;
 
 impl Bcnt2 {
+    #[doc = "The BCNT2 counter is a readable/writable 32-bit binary counter b23 to b16."]
     #[inline(always)]
     pub fn bcnt2(
         self,
@@ -783,9 +1141,11 @@ impl crate::sealed::RegSpec for Rwkcnt_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Day-of-Week Counter"]
 pub type Rwkcnt = crate::RegValueT<Rwkcnt_SPEC>;
 
 impl Rwkcnt {
+    #[doc = "Day-of-Week Counting"]
     #[inline(always)]
     pub fn dayw(
         self,
@@ -823,20 +1183,28 @@ pub mod rwkcnt {
     pub struct Dayw_SPEC;
     pub type Dayw = crate::EnumBitfieldStruct<u8, Dayw_SPEC>;
     impl Dayw {
+        #[doc = "Sunday"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Monday"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "Tuesday"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Wednesday"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "Thursday"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Friday"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "Saturday"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting Prohibited"]
         pub const _111: Self = Self::new(7);
     }
 }
@@ -847,9 +1215,11 @@ impl crate::sealed::RegSpec for Bcnt3_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Binary Counter 3"]
 pub type Bcnt3 = crate::RegValueT<Bcnt3_SPEC>;
 
 impl Bcnt3 {
+    #[doc = "The BCNT3 counter is a readable/writable 32-bit binary counter b31 to b24."]
     #[inline(always)]
     pub fn bcnt3(
         self,
@@ -871,9 +1241,11 @@ impl crate::sealed::RegSpec for Rdaycnt_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Day Counter"]
 pub type Rdaycnt = crate::RegValueT<Rdaycnt_SPEC>;
 
 impl Rdaycnt {
+    #[doc = "10-Day Count \nCounts from 0 to 3 once per carry from the ones place."]
     #[inline(always)]
     pub fn date10(
         self,
@@ -881,6 +1253,7 @@ impl Rdaycnt {
         crate::common::RegisterField::<4,0x3,1,0,u8,u8,Rdaycnt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "1-Day Count \nCounts from 0 to 9 once per day. When a carry is generated, 1 is added to the tens place."]
     #[inline(always)]
     pub fn date1(
         self,
@@ -902,9 +1275,11 @@ impl crate::sealed::RegSpec for Rmoncnt_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Month Counter"]
 pub type Rmoncnt = crate::RegValueT<Rmoncnt_SPEC>;
 
 impl Rmoncnt {
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -912,6 +1287,7 @@ impl Rmoncnt {
         crate::common::RegisterField::<5,0x7,1,0,u8,u8,Rmoncnt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "10-Month Count \nCounts from 0 to 1 once per carry from the ones place."]
     #[inline(always)]
     pub fn mon10(
         self,
@@ -921,6 +1297,7 @@ impl Rmoncnt {
         )
     }
 
+    #[doc = "1-Month Count \nCounts from 0 to 9 once per month. When a carry is generated, 1 is added to the tens place."]
     #[inline(always)]
     pub fn mon1(
         self,
@@ -942,9 +1319,11 @@ impl crate::sealed::RegSpec for Ryrcnt_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Year Counter"]
 pub type Ryrcnt = crate::RegValueT<Ryrcnt_SPEC>;
 
 impl Ryrcnt {
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -952,6 +1331,7 @@ impl Ryrcnt {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Ryrcnt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "10-Year Count \nCounts from 0 to 9 once per carry from ones place. When a carry is generated in the tens place, 1 is added to the hundreds place."]
     #[inline(always)]
     pub fn yr10(
         self,
@@ -959,6 +1339,7 @@ impl Ryrcnt {
         crate::common::RegisterField::<4,0xf,1,0,u8,u8,Ryrcnt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "1-Year Count \nCounts from 0 to 9 once per year. When a carry is generated, 1 is added to the tens place."]
     #[inline(always)]
     pub fn yr1(
         self,
@@ -980,9 +1361,11 @@ impl crate::sealed::RegSpec for Rsecar_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Second Alarm Register"]
 pub type Rsecar = crate::RegValueT<Rsecar_SPEC>;
 
 impl Rsecar {
+    #[doc = "Compare enable"]
     #[inline(always)]
     pub fn enb(
         self,
@@ -1008,6 +1391,7 @@ impl Rsecar {
         >::from_register(self, 0)
     }
 
+    #[doc = "10-Seconds \nValue for the tens place of seconds"]
     #[inline(always)]
     pub fn sec10(
         self,
@@ -1015,6 +1399,7 @@ impl Rsecar {
         crate::common::RegisterField::<4,0x7,1,0,u8,u8,Rsecar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "1-Second \nValue for the ones place of seconds"]
     #[inline(always)]
     pub fn sec1(
         self,
@@ -1034,8 +1419,10 @@ pub mod rsecar {
     pub struct Enb_SPEC;
     pub type Enb = crate::EnumBitfieldStruct<u8, Enb_SPEC>;
     impl Enb {
+        #[doc = "The register value is not compared with the RSECCNT counter value."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The register value is compared with the RSECCNT counter value."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1046,9 +1433,11 @@ impl crate::sealed::RegSpec for Bcnt0Ar_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Binary Counter 0 Alarm Register"]
 pub type Bcnt0Ar = crate::RegValueT<Bcnt0Ar_SPEC>;
 
 impl Bcnt0Ar {
+    #[doc = "he BCNT0AR counter is a readable/writable alarm register corresponding to 32-bit binary counter b7 to b0."]
     #[inline(always)]
     pub fn bcnt0ar(
         self,
@@ -1070,9 +1459,11 @@ impl crate::sealed::RegSpec for Rminar_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Minute Alarm Register"]
 pub type Rminar = crate::RegValueT<Rminar_SPEC>;
 
 impl Rminar {
+    #[doc = "Compare enable"]
     #[inline(always)]
     pub fn enb(
         self,
@@ -1098,6 +1489,7 @@ impl Rminar {
         >::from_register(self, 0)
     }
 
+    #[doc = "10-Minute Count \nValue for the tens place of minutes"]
     #[inline(always)]
     pub fn min10(
         self,
@@ -1105,6 +1497,7 @@ impl Rminar {
         crate::common::RegisterField::<4,0x7,1,0,u8,u8,Rminar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "1-Minute Count \nValue for the ones place of minutes"]
     #[inline(always)]
     pub fn min1(
         self,
@@ -1124,8 +1517,10 @@ pub mod rminar {
     pub struct Enb_SPEC;
     pub type Enb = crate::EnumBitfieldStruct<u8, Enb_SPEC>;
     impl Enb {
+        #[doc = "The register value is not compared with the RMINCNT counter value."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The register value is compared with the RMINCNT counter value."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1136,9 +1531,11 @@ impl crate::sealed::RegSpec for Bcnt1Ar_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Binary Counter 1 Alarm Register"]
 pub type Bcnt1Ar = crate::RegValueT<Bcnt1Ar_SPEC>;
 
 impl Bcnt1Ar {
+    #[doc = "he BCNT1AR counter is a readable/writable alarm register corresponding to 32-bit binary counter b15 to b8."]
     #[inline(always)]
     pub fn bcnt1ar(
         self,
@@ -1160,9 +1557,11 @@ impl crate::sealed::RegSpec for Rhrar_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Hour Alarm Register"]
 pub type Rhrar = crate::RegValueT<Rhrar_SPEC>;
 
 impl Rhrar {
+    #[doc = "Compare enable"]
     #[inline(always)]
     pub fn enb(
         self,
@@ -1188,6 +1587,7 @@ impl Rhrar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Time Counter Setting for a.m./p.m."]
     #[inline(always)]
     pub fn pm(
         self,
@@ -1213,6 +1613,7 @@ impl Rhrar {
         >::from_register(self, 0)
     }
 
+    #[doc = "10-Hour Count \nValue for the tens place of hours"]
     #[inline(always)]
     pub fn hr10(
         self,
@@ -1220,6 +1621,7 @@ impl Rhrar {
         crate::common::RegisterField::<4,0x3,1,0,u8,u8,Rhrar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "1-Hour Count \nValue for the ones place of hours"]
     #[inline(always)]
     pub fn hr1(
         self,
@@ -1239,16 +1641,20 @@ pub mod rhrar {
     pub struct Enb_SPEC;
     pub type Enb = crate::EnumBitfieldStruct<u8, Enb_SPEC>;
     impl Enb {
+        #[doc = "The register value is not compared with the RHRCNT counter value."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The register value is compared with the RHRCNT counter value."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pm_SPEC;
     pub type Pm = crate::EnumBitfieldStruct<u8, Pm_SPEC>;
     impl Pm {
+        #[doc = "a.m."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "p.m."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1259,9 +1665,11 @@ impl crate::sealed::RegSpec for Bcnt2Ar_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Binary Counter 2 Alarm Register"]
 pub type Bcnt2Ar = crate::RegValueT<Bcnt2Ar_SPEC>;
 
 impl Bcnt2Ar {
+    #[doc = "The BCNT2AR counter is a readable/writable 32-bit binary counter b23 to b16."]
     #[inline(always)]
     pub fn bcnt2ar(
         self,
@@ -1283,9 +1691,11 @@ impl crate::sealed::RegSpec for Rwkar_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Day-of-Week Alarm Register"]
 pub type Rwkar = crate::RegValueT<Rwkar_SPEC>;
 
 impl Rwkar {
+    #[doc = "Compare enable"]
     #[inline(always)]
     pub fn enb(
         self,
@@ -1311,6 +1721,7 @@ impl Rwkar {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1318,6 +1729,7 @@ impl Rwkar {
         crate::common::RegisterField::<3,0xf,1,0,u8,u8,Rwkar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Day-of-Week Counting"]
     #[inline(always)]
     pub fn dayw(
         self,
@@ -1355,28 +1767,38 @@ pub mod rwkar {
     pub struct Enb_SPEC;
     pub type Enb = crate::EnumBitfieldStruct<u8, Enb_SPEC>;
     impl Enb {
+        #[doc = "The register value is not compared with the RWKCNT counter value."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The register value is compared with the RWKCNT counter value."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dayw_SPEC;
     pub type Dayw = crate::EnumBitfieldStruct<u8, Dayw_SPEC>;
     impl Dayw {
+        #[doc = "Sunday"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Monday"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "Tuesday"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Wednesday"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "Thursday"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "Friday"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "Saturday"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Setting Prohibited"]
         pub const _111: Self = Self::new(7);
     }
 }
@@ -1387,9 +1809,11 @@ impl crate::sealed::RegSpec for Bcnt3Ar_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Binary Counter 3 Alarm Register"]
 pub type Bcnt3Ar = crate::RegValueT<Bcnt3Ar_SPEC>;
 
 impl Bcnt3Ar {
+    #[doc = "The BCNT3AR counter is a readable/writable 32-bit binary counter b31 to b24."]
     #[inline(always)]
     pub fn bcnt3ar(
         self,
@@ -1411,9 +1835,11 @@ impl crate::sealed::RegSpec for Rdayar_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Date Alarm Register"]
 pub type Rdayar = crate::RegValueT<Rdayar_SPEC>;
 
 impl Rdayar {
+    #[doc = "Compare enable"]
     #[inline(always)]
     pub fn enb(
         self,
@@ -1439,6 +1865,7 @@ impl Rdayar {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1448,6 +1875,7 @@ impl Rdayar {
         )
     }
 
+    #[doc = "10 Days \nValue for the tens place of days"]
     #[inline(always)]
     pub fn date10(
         self,
@@ -1455,6 +1883,7 @@ impl Rdayar {
         crate::common::RegisterField::<4,0x3,1,0,u8,u8,Rdayar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "1 Day \nValue for the ones place of days"]
     #[inline(always)]
     pub fn date1(
         self,
@@ -1474,8 +1903,10 @@ pub mod rdayar {
     pub struct Enb_SPEC;
     pub type Enb = crate::EnumBitfieldStruct<u8, Enb_SPEC>;
     impl Enb {
+        #[doc = "The register value is not compared with the RDAYCNT counter value."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The register value is compared with the RDAYCNT counter value."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1486,9 +1917,11 @@ impl crate::sealed::RegSpec for Bcnt0Aer_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Binary Counter 0 Alarm Enable Register"]
 pub type Bcnt0Aer = crate::RegValueT<Bcnt0Aer_SPEC>;
 
 impl Bcnt0Aer {
+    #[doc = "The BCNT0AER register is a readable/writable register for setting the alarm enable corresponding to 32-bit binary counter b7 to b0."]
     #[inline(always)]
     pub fn enb(
         self,
@@ -1510,9 +1943,11 @@ impl crate::sealed::RegSpec for Rmonar_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Month Alarm Register"]
 pub type Rmonar = crate::RegValueT<Rmonar_SPEC>;
 
 impl Rmonar {
+    #[doc = "Compare enable"]
     #[inline(always)]
     pub fn enb(
         self,
@@ -1538,6 +1973,7 @@ impl Rmonar {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00. The write value should be 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1545,6 +1981,7 @@ impl Rmonar {
         crate::common::RegisterField::<5,0x3,1,0,u8,u8,Rmonar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "10 Months \nValue for the tens place of months"]
     #[inline(always)]
     pub fn mon10(
         self,
@@ -1554,6 +1991,7 @@ impl Rmonar {
         )
     }
 
+    #[doc = "1 Month \nValue for the ones place of months"]
     #[inline(always)]
     pub fn mon1(
         self,
@@ -1573,8 +2011,10 @@ pub mod rmonar {
     pub struct Enb_SPEC;
     pub type Enb = crate::EnumBitfieldStruct<u8, Enb_SPEC>;
     impl Enb {
+        #[doc = "The register value is not compared with the RMONCNT counter value."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The register value is compared with the RMONCNT counter value."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1585,9 +2025,11 @@ impl crate::sealed::RegSpec for Bcnt1Aer_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Binary Counter 1 Alarm Enable Register"]
 pub type Bcnt1Aer = crate::RegValueT<Bcnt1Aer_SPEC>;
 
 impl Bcnt1Aer {
+    #[doc = "The BCNT1AER register is a readable/writable register for setting the alarm enable corresponding to 32-bit binary counter b15 to b8."]
     #[inline(always)]
     pub fn enb(
         self,
@@ -1609,9 +2051,11 @@ impl crate::sealed::RegSpec for Ryrar_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Year Alarm Register"]
 pub type Ryrar = crate::RegValueT<Ryrar_SPEC>;
 
 impl Ryrar {
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1619,6 +2063,7 @@ impl Ryrar {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Ryrar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "10 Years \nValue for the tens place of years"]
     #[inline(always)]
     pub fn yr10(
         self,
@@ -1626,6 +2071,7 @@ impl Ryrar {
         crate::common::RegisterField::<4,0xf,1,0,u8,u8,Ryrar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "1 Year \nValue for the ones place of years"]
     #[inline(always)]
     pub fn yr1(
         self,
@@ -1647,9 +2093,11 @@ impl crate::sealed::RegSpec for Bcnt2Aer_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Binary Counter 2 Alarm Enable Register"]
 pub type Bcnt2Aer = crate::RegValueT<Bcnt2Aer_SPEC>;
 
 impl Bcnt2Aer {
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1657,6 +2105,7 @@ impl Bcnt2Aer {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Bcnt2Aer_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "The BCNT2AER register is a readable/writable register for setting the alarm enable corresponding to 32-bit binary counter b23 to b16."]
     #[inline(always)]
     pub fn enb(
         self,
@@ -1678,9 +2127,11 @@ impl crate::sealed::RegSpec for Ryraren_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Year Alarm Enable Register"]
 pub type Ryraren = crate::RegValueT<Ryraren_SPEC>;
 
 impl Ryraren {
+    #[doc = "Compare enable"]
     #[inline(always)]
     pub fn enb(
         self,
@@ -1706,6 +2157,7 @@ impl Ryraren {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1725,8 +2177,10 @@ pub mod ryraren {
     pub struct Enb_SPEC;
     pub type Enb = crate::EnumBitfieldStruct<u8, Enb_SPEC>;
     impl Enb {
+        #[doc = "The register value is not compared with the RYRCNT counter value."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The register value is compared with the RYRCNT counter value."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1737,9 +2191,11 @@ impl crate::sealed::RegSpec for Bcnt3Aer_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Binary Counter 3 Alarm Enable Register"]
 pub type Bcnt3Aer = crate::RegValueT<Bcnt3Aer_SPEC>;
 
 impl Bcnt3Aer {
+    #[doc = "The BCNT3AER register is a readable/writable register for setting the alarm enable corresponding to 32-bit binary counter b31 to b24."]
     #[inline(always)]
     pub fn enb(
         self,
@@ -1761,9 +2217,11 @@ impl crate::sealed::RegSpec for Rcr1_SPEC {
     type DataType = u8;
 }
 
+#[doc = "RTC Control Register 1"]
 pub type Rcr1 = crate::RegValueT<Rcr1_SPEC>;
 
 impl Rcr1 {
+    #[doc = "Periodic Interrupt Select"]
     #[inline(always)]
     pub fn pes(
         self,
@@ -1789,6 +2247,7 @@ impl Rcr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RTCOUT Output Select"]
     #[inline(always)]
     pub fn rtcos(
         self,
@@ -1814,6 +2273,7 @@ impl Rcr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Periodic Interrupt Enable"]
     #[inline(always)]
     pub fn pie(
         self,
@@ -1839,6 +2299,7 @@ impl Rcr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Carry Interrupt Enable"]
     #[inline(always)]
     pub fn cie(
         self,
@@ -1864,6 +2325,7 @@ impl Rcr1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Alarm Interrupt Enable"]
     #[inline(always)]
     pub fn aie(
         self,
@@ -1901,58 +2363,77 @@ pub mod rcr1 {
     pub struct Pes_SPEC;
     pub type Pes = crate::EnumBitfieldStruct<u8, Pes_SPEC>;
     impl Pes {
+        #[doc = "A periodic interrupt is generated every 1/256 second((RCR4.RCKSEL = 0)./A periodic interrupt is generated every 1/128 second((RCR4.RCKSEL = 1)."]
         pub const _0110: Self = Self::new(6);
 
+        #[doc = "A periodic interrupt is generated every 1/128 second."]
         pub const _0111: Self = Self::new(7);
 
+        #[doc = "A periodic interrupt is generated every 1/64 second."]
         pub const _1000: Self = Self::new(8);
 
+        #[doc = "A periodic interrupt is generated every 1/32 second."]
         pub const _1001: Self = Self::new(9);
 
+        #[doc = "A periodic interrupt is generated every 1/16 second."]
         pub const _1010: Self = Self::new(10);
 
+        #[doc = "A periodic interrupt is generated every 1/8 second."]
         pub const _1011: Self = Self::new(11);
 
+        #[doc = "A periodic interrupt is generated every 1/4 second."]
         pub const _1100: Self = Self::new(12);
 
+        #[doc = "A periodic interrupt is generated every 1/2 second."]
         pub const _1101: Self = Self::new(13);
 
+        #[doc = "A periodic interrupt is generated every 1 second."]
         pub const _1110: Self = Self::new(14);
 
+        #[doc = "A periodic interrupt is generated every 2 seconds."]
         pub const _1111: Self = Self::new(15);
 
+        #[doc = "No periodic interrupts are generated."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rtcos_SPEC;
     pub type Rtcos = crate::EnumBitfieldStruct<u8, Rtcos_SPEC>;
     impl Rtcos {
+        #[doc = "RTCOUT outputs 1 Hz."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RTCOUT outputs 64 Hz."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pie_SPEC;
     pub type Pie = crate::EnumBitfieldStruct<u8, Pie_SPEC>;
     impl Pie {
+        #[doc = "A periodic interrupt request is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A periodic interrupt request is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cie_SPEC;
     pub type Cie = crate::EnumBitfieldStruct<u8, Cie_SPEC>;
     impl Cie {
+        #[doc = "A carry interrupt request is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A carry interrupt request is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aie_SPEC;
     pub type Aie = crate::EnumBitfieldStruct<u8, Aie_SPEC>;
     impl Aie {
+        #[doc = "An alarm interrupt request is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "An alarm interrupt request is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1963,9 +2444,11 @@ impl crate::sealed::RegSpec for Rcr2_SPEC {
     type DataType = u8;
 }
 
+#[doc = "RTC Control Register 2"]
 pub type Rcr2 = crate::RegValueT<Rcr2_SPEC>;
 
 impl Rcr2 {
+    #[doc = "Count Mode Select"]
     #[inline(always)]
     pub fn cntmd(
         self,
@@ -1991,6 +2474,7 @@ impl Rcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Hours Mode"]
     #[inline(always)]
     pub fn hr24(
         self,
@@ -2016,6 +2500,7 @@ impl Rcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Automatic Adjustment Period Select \n(When the LOCO clock is selected, the setting of this bit is disabled.)"]
     #[inline(always)]
     pub fn aadjp(
         self,
@@ -2041,6 +2526,7 @@ impl Rcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Automatic Adjustment Enable \n(When the LOCO clock is selected, the setting of this bit is disabled.)"]
     #[inline(always)]
     pub fn aadje(
         self,
@@ -2066,6 +2552,7 @@ impl Rcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RTCOUT Output Enable"]
     #[inline(always)]
     pub fn rtcoe(
         self,
@@ -2091,6 +2578,7 @@ impl Rcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "30-Second Adjustment"]
     #[inline(always)]
     pub fn adj30(
         self,
@@ -2116,6 +2604,7 @@ impl Rcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "RTC Software Reset"]
     #[inline(always)]
     pub fn reset(
         self,
@@ -2141,6 +2630,7 @@ impl Rcr2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Start"]
     #[inline(always)]
     pub fn start(
         self,
@@ -2178,64 +2668,80 @@ pub mod rcr2 {
     pub struct Cntmd_SPEC;
     pub type Cntmd = crate::EnumBitfieldStruct<u8, Cntmd_SPEC>;
     impl Cntmd {
+        #[doc = "The calendar count mode."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The binary count mode."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hr24_SPEC;
     pub type Hr24 = crate::EnumBitfieldStruct<u8, Hr24_SPEC>;
     impl Hr24 {
+        #[doc = "The RTC operates in 12-hour mode."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The RTC operates in 24-hour mode."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aadjp_SPEC;
     pub type Aadjp = crate::EnumBitfieldStruct<u8, Aadjp_SPEC>;
     impl Aadjp {
+        #[doc = "The RADJ.ADJ\\[5:0\\] setting value is adjusted from the count value of the prescaler every minute."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The RADJ.ADJ\\[5:0\\] setting value is adjusted from the count value of the prescaler every 10 seconds."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aadje_SPEC;
     pub type Aadje = crate::EnumBitfieldStruct<u8, Aadje_SPEC>;
     impl Aadje {
+        #[doc = "Automatic adjustment is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Automatic adjustment is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rtcoe_SPEC;
     pub type Rtcoe = crate::EnumBitfieldStruct<u8, Rtcoe_SPEC>;
     impl Rtcoe {
+        #[doc = "RTCOUT output disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "RTCOUT output enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Adj30_SPEC;
     pub type Adj30 = crate::EnumBitfieldStruct<u8, Adj30_SPEC>;
     impl Adj30 {
+        #[doc = "Writing is invalid.(write) / In normal time operation, or 30-second adjustment has completed.(read)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "30-second adjustment is executed.(write) / During 30-second adjustment.(read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Reset_SPEC;
     pub type Reset = crate::EnumBitfieldStruct<u8, Reset_SPEC>;
     impl Reset {
+        #[doc = "Writing is invalid.(write) /  In normal time operation, or an RTC software reset has completed.(read)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The prescaler and the target registers for RTC software reset *1 are initialized.(write) / During an RTC software reset.(read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Start_SPEC;
     pub type Start = crate::EnumBitfieldStruct<u8, Start_SPEC>;
     impl Start {
+        #[doc = "Prescaler and time counter are stopped."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Prescaler and time counter operate normally."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2246,9 +2752,11 @@ impl crate::sealed::RegSpec for Rcr4_SPEC {
     type DataType = u8;
 }
 
+#[doc = "RTC Control Register 4"]
 pub type Rcr4 = crate::RegValueT<Rcr4_SPEC>;
 
 impl Rcr4 {
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2256,6 +2764,7 @@ impl Rcr4 {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Rcr4_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Count Source Select"]
     #[inline(always)]
     pub fn rcksel(
         self,
@@ -2293,8 +2802,10 @@ pub mod rcr4 {
     pub struct Rcksel_SPEC;
     pub type Rcksel = crate::EnumBitfieldStruct<u8, Rcksel_SPEC>;
     impl Rcksel {
+        #[doc = "Sub-clock oscillator is selected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "LOCO clock oscillator is selected."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2305,9 +2816,11 @@ impl crate::sealed::RegSpec for Rfrh_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Frequency Register H"]
 pub type Rfrh = crate::RegValueT<Rfrh_SPEC>;
 
 impl Rfrh {
+    #[doc = "These bits are read as 000000000000000. The write value should be 000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2315,6 +2828,7 @@ impl Rfrh {
         crate::common::RegisterField::<1,0x7fff,1,0,u16,u16,Rfrh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Frequency Comparison Value (b16) \nTo generate the operating clock from the LOCOclock, this bit sets the comparison value of the 128-Hz clock cycle."]
     #[inline(always)]
     pub fn rfc16(self) -> crate::common::RegisterFieldBool<0, 1, 0, Rfrh_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<0, 1, 0, Rfrh_SPEC, crate::common::RW>::from_register(
@@ -2336,9 +2850,11 @@ impl crate::sealed::RegSpec for Rfrl_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Frequency Register L"]
 pub type Rfrl = crate::RegValueT<Rfrl_SPEC>;
 
 impl Rfrl {
+    #[doc = "Frequency Comparison Value(b15-b0) \nTo generate the operating clock from the main clock, this bit sets the comparison value of the 128-Hz clock cycle."]
     #[inline(always)]
     pub fn rfc(
         self,
@@ -2360,9 +2876,11 @@ impl crate::sealed::RegSpec for Radj_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Time Error Adjustment Register"]
 pub type Radj = crate::RegValueT<Radj_SPEC>;
 
 impl Radj {
+    #[doc = "Plus-Minus"]
     #[inline(always)]
     pub fn pmadj(
         self,
@@ -2388,6 +2906,7 @@ impl Radj {
         >::from_register(self, 0)
     }
 
+    #[doc = "Adjustment Value \nThese bits specify the adjustment value from the prescaler."]
     #[inline(always)]
     pub fn adj(
         self,
@@ -2407,12 +2926,16 @@ pub mod radj {
     pub struct Pmadj_SPEC;
     pub type Pmadj = crate::EnumBitfieldStruct<u8, Pmadj_SPEC>;
     impl Pmadj {
+        #[doc = "Adjustment is not performed."]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Adjustment is performed by the addition to the prescaler."]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Adjustment is performed by the subtraction from the prescaler."]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Setting prohibited"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -2423,9 +2946,11 @@ impl crate::sealed::RegSpec for Rtccr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Time Capture Control Register %s"]
 pub type Rtccr = crate::RegValueT<Rtccr_SPEC>;
 
 impl Rtccr {
+    #[doc = "Time Capture Noise Filter Control"]
     #[inline(always)]
     pub fn tcnf(
         self,
@@ -2451,6 +2976,7 @@ impl Rtccr {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2460,6 +2986,7 @@ impl Rtccr {
         )
     }
 
+    #[doc = "Time Capture Status"]
     #[inline(always)]
     pub fn tcst(
         self,
@@ -2485,6 +3012,7 @@ impl Rtccr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Time Capture Control"]
     #[inline(always)]
     pub fn tcct(
         self,
@@ -2522,32 +3050,42 @@ pub mod rtccr {
     pub struct Tcnf_SPEC;
     pub type Tcnf = crate::EnumBitfieldStruct<u8, Tcnf_SPEC>;
     impl Tcnf {
+        #[doc = "The noise filter is off."]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Setting prohibited"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "The noise filter is on (count source)."]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "The noise filter is on (count source by divided by 32)."]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tcst_SPEC;
     pub type Tcst = crate::EnumBitfieldStruct<u8, Tcst_SPEC>;
     impl Tcst {
+        #[doc = "No event is detected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "An event is detected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tcct_SPEC;
     pub type Tcct = crate::EnumBitfieldStruct<u8, Tcct_SPEC>;
     impl Tcct {
+        #[doc = "No event is detected."]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Rising edge is detected."]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Falling edge is detected."]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Both edges are detected."]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -2558,9 +3096,11 @@ impl crate::sealed::RegSpec for Rseccp_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Second Capture Register %s"]
 pub type Rseccp = crate::RegValueT<Rseccp_SPEC>;
 
 impl Rseccp {
+    #[doc = "This bit is read as 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2570,6 +3110,7 @@ impl Rseccp {
         )
     }
 
+    #[doc = "10-Second Capture \nCapture value for the tens place of seconds"]
     #[inline(always)]
     pub fn sec10(
         self,
@@ -2577,6 +3118,7 @@ impl Rseccp {
         crate::common::RegisterField::<4,0x7,1,0,u8,u8,Rseccp_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "1-Second Capture \nCapture value for the ones place of seconds"]
     #[inline(always)]
     pub fn sec1(
         self,
@@ -2598,9 +3140,11 @@ impl crate::sealed::RegSpec for Bcnt0Cp_SPEC {
     type DataType = u8;
 }
 
+#[doc = "BCNT0 Capture Register %s"]
 pub type Bcnt0Cp = crate::RegValueT<Bcnt0Cp_SPEC>;
 
 impl Bcnt0Cp {
+    #[doc = "BCNT0CP is a read-only register that captures the BCNT0 value when a time capture event is detected."]
     #[inline(always)]
     pub fn bcnt0cp(
         self,
@@ -2622,9 +3166,11 @@ impl crate::sealed::RegSpec for Rmincp_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Minute Capture Register %s"]
 pub type Rmincp = crate::RegValueT<Rmincp_SPEC>;
 
 impl Rmincp {
+    #[doc = "This bit is read as 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2634,6 +3180,7 @@ impl Rmincp {
         )
     }
 
+    #[doc = "10-Minute Capture \nCapture value for the tens place of minutes"]
     #[inline(always)]
     pub fn min10(
         self,
@@ -2641,6 +3188,7 @@ impl Rmincp {
         crate::common::RegisterField::<4,0x7,1,0,u8,u8,Rmincp_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "1-Minute Capture \nCapture value for the ones place of minutes"]
     #[inline(always)]
     pub fn min1(
         self,
@@ -2662,9 +3210,11 @@ impl crate::sealed::RegSpec for Bcnt1Cp_SPEC {
     type DataType = u8;
 }
 
+#[doc = "BCNT1 Capture Register %s"]
 pub type Bcnt1Cp = crate::RegValueT<Bcnt1Cp_SPEC>;
 
 impl Bcnt1Cp {
+    #[doc = "BCNT1CP is a read-only register that captures the BCNT1 value when a time capture event is detected."]
     #[inline(always)]
     pub fn bcnt1cp(
         self,
@@ -2686,9 +3236,11 @@ impl crate::sealed::RegSpec for Rhrcp_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Hour Capture Register %s"]
 pub type Rhrcp = crate::RegValueT<Rhrcp_SPEC>;
 
 impl Rhrcp {
+    #[doc = "This bit is read as 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2698,6 +3250,7 @@ impl Rhrcp {
         )
     }
 
+    #[doc = "A.m./p.m. select for time counter setting."]
     #[inline(always)]
     pub fn pm(
         self,
@@ -2723,6 +3276,7 @@ impl Rhrcp {
         >::from_register(self, 0)
     }
 
+    #[doc = "10-Minute Capture \nCapture value for the tens place of minutes"]
     #[inline(always)]
     pub fn hr10(
         self,
@@ -2730,6 +3284,7 @@ impl Rhrcp {
         crate::common::RegisterField::<4,0x3,1,0,u8,u8,Rhrcp_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "1-Minute Capture \nCapture value for the ones place of minutes"]
     #[inline(always)]
     pub fn hr1(
         self,
@@ -2749,8 +3304,10 @@ pub mod rhrcp {
     pub struct Pm_SPEC;
     pub type Pm = crate::EnumBitfieldStruct<u8, Pm_SPEC>;
     impl Pm {
+        #[doc = "a.m."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "p.m."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2761,9 +3318,11 @@ impl crate::sealed::RegSpec for Bcnt2Cp_SPEC {
     type DataType = u8;
 }
 
+#[doc = "BCNT2 Capture Register %s"]
 pub type Bcnt2Cp = crate::RegValueT<Bcnt2Cp_SPEC>;
 
 impl Bcnt2Cp {
+    #[doc = "BCNT2CP is a read-only register that captures the BCNT2 value when a time capture event is detected."]
     #[inline(always)]
     pub fn bcnt2cp(
         self,
@@ -2785,9 +3344,11 @@ impl crate::sealed::RegSpec for Rdaycp_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Date Capture Register %s"]
 pub type Rdaycp = crate::RegValueT<Rdaycp_SPEC>;
 
 impl Rdaycp {
+    #[doc = "These bits are read as 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -2795,6 +3356,7 @@ impl Rdaycp {
         crate::common::RegisterField::<6,0x3,1,0,u8,u8,Rdaycp_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "10-Day Capture \nCapture value for the tens place of minutes"]
     #[inline(always)]
     pub fn date10(
         self,
@@ -2802,6 +3364,7 @@ impl Rdaycp {
         crate::common::RegisterField::<4,0x3,1,0,u8,u8,Rdaycp_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "1-Day Capture \nCapture value for the ones place of minutes"]
     #[inline(always)]
     pub fn date1(
         self,
@@ -2823,9 +3386,11 @@ impl crate::sealed::RegSpec for Bcnt3Cp_SPEC {
     type DataType = u8;
 }
 
+#[doc = "BCNT3 Capture Register %s"]
 pub type Bcnt3Cp = crate::RegValueT<Bcnt3Cp_SPEC>;
 
 impl Bcnt3Cp {
+    #[doc = "BCNT3CP is a read-only register that captures the BCNT3 value when a time capture event is detected."]
     #[inline(always)]
     pub fn bcnt3cp(
         self,
@@ -2847,9 +3412,11 @@ impl crate::sealed::RegSpec for Rmoncp_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Month Capture Register %s"]
 pub type Rmoncp = crate::RegValueT<Rmoncp_SPEC>;
 
 impl Rmoncp {
+    #[doc = "10-Month Capture \nCapture value for the tens place of months"]
     #[inline(always)]
     pub fn mon10(self) -> crate::common::RegisterFieldBool<4, 1, 0, Rmoncp_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<4, 1, 0, Rmoncp_SPEC, crate::common::R>::from_register(
@@ -2857,6 +3424,7 @@ impl Rmoncp {
         )
     }
 
+    #[doc = "1-Month Capture \nCapture value for the ones place of months"]
     #[inline(always)]
     pub fn mon1(
         self,

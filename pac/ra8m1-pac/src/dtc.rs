@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:23:25 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Dtc {
         self.ptr
     }
 
+    #[doc = "DTC Control Register"]
     #[inline(always)]
     pub const fn dtccr(&self) -> &'static crate::common::Reg<self::Dtccr_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Dtc {
         }
     }
 
+    #[doc = "DTC Control Register for Non Secure Region"]
     #[inline(always)]
     pub const fn dtccr_ns(
         &self,
@@ -54,6 +56,7 @@ impl super::Dtc {
         }
     }
 
+    #[doc = "DTC Vector Base Register"]
     #[inline(always)]
     pub const fn dtcvbr(
         &self,
@@ -65,6 +68,7 @@ impl super::Dtc {
         }
     }
 
+    #[doc = "DTC Vector Base Register for Non Secure Region"]
     #[inline(always)]
     pub const fn dtcvbr_ns(
         &self,
@@ -76,6 +80,7 @@ impl super::Dtc {
         }
     }
 
+    #[doc = "DTC Module Start Register"]
     #[inline(always)]
     pub const fn dtcst(&self) -> &'static crate::common::Reg<self::Dtcst_SPEC, crate::common::RW> {
         unsafe {
@@ -85,6 +90,7 @@ impl super::Dtc {
         }
     }
 
+    #[doc = "DTC Status Register"]
     #[inline(always)]
     pub const fn dtcsts(&self) -> &'static crate::common::Reg<self::Dtcsts_SPEC, crate::common::R> {
         unsafe {
@@ -94,6 +100,7 @@ impl super::Dtc {
         }
     }
 
+    #[doc = "DTC Control Register for Secure Region"]
     #[inline(always)]
     pub const fn dtccr_s(
         &self,
@@ -105,6 +112,7 @@ impl super::Dtc {
         }
     }
 
+    #[doc = "DTC Control Register for Secure Region"]
     #[inline(always)]
     pub const fn dtccr_sec(
         &self,
@@ -116,6 +124,7 @@ impl super::Dtc {
         }
     }
 
+    #[doc = "DTC Vector Base Register for secure Region"]
     #[inline(always)]
     pub const fn dtcvbr_s(
         &self,
@@ -127,6 +136,7 @@ impl super::Dtc {
         }
     }
 
+    #[doc = "DTC Vector Base Register for secure Region"]
     #[inline(always)]
     pub const fn dtcvbr_sec(
         &self,
@@ -138,6 +148,7 @@ impl super::Dtc {
         }
     }
 
+    #[doc = "DTC Error Vector Register"]
     #[inline(always)]
     pub const fn dtevr(&self) -> &'static crate::common::Reg<self::Dtevr_SPEC, crate::common::RW> {
         unsafe {
@@ -154,6 +165,7 @@ impl crate::sealed::RegSpec for Dtccr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "DTC Control Register"]
 pub type Dtccr = crate::RegValueT<Dtccr_SPEC>;
 
 impl NoBitfieldReg<Dtccr_SPEC> for Dtccr {}
@@ -171,9 +183,11 @@ impl crate::sealed::RegSpec for DtccrNs_SPEC {
     type DataType = u8;
 }
 
+#[doc = "DTC Control Register for Non Secure Region"]
 pub type DtccrNs = crate::RegValueT<DtccrNs_SPEC>;
 
 impl DtccrNs {
+    #[doc = "DTC Transfer Information Read Skip Enable."]
     #[inline(always)]
     pub fn rrs(
         self,
@@ -199,6 +213,7 @@ impl DtccrNs {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -218,8 +233,10 @@ pub mod dtccr_ns {
     pub struct Rrs_SPEC;
     pub type Rrs = crate::EnumBitfieldStruct<u8, Rrs_SPEC>;
     impl Rrs {
+        #[doc = "Do not skip transfer information read"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Skip transfer information read when vector numbers match"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -230,6 +247,7 @@ impl crate::sealed::RegSpec for Dtcvbr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DTC Vector Base Register"]
 pub type Dtcvbr = crate::RegValueT<Dtcvbr_SPEC>;
 
 impl NoBitfieldReg<Dtcvbr_SPEC> for Dtcvbr {}
@@ -247,9 +265,11 @@ impl crate::sealed::RegSpec for DtcvbrNs_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DTC Vector Base Register for Non Secure Region"]
 pub type DtcvbrNs = crate::RegValueT<DtcvbrNs_SPEC>;
 
 impl DtcvbrNs {
+    #[doc = "DTC Vector Base Address for non-secure region(Upper 22 bits)"]
     #[inline(always)]
     pub fn dtcvbr(
         self,
@@ -272,9 +292,11 @@ impl crate::sealed::RegSpec for Dtcst_SPEC {
     type DataType = u8;
 }
 
+#[doc = "DTC Module Start Register"]
 pub type Dtcst = crate::RegValueT<Dtcst_SPEC>;
 
 impl Dtcst {
+    #[doc = "DTC Module Start"]
     #[inline(always)]
     pub fn dtcst(
         self,
@@ -300,6 +322,7 @@ impl Dtcst {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -319,8 +342,10 @@ pub mod dtcst {
     pub struct Dtcst_SPEC;
     pub type Dtcst = crate::EnumBitfieldStruct<u8, Dtcst_SPEC>;
     impl Dtcst {
+        #[doc = "DTC module stop"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC module start"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -331,9 +356,11 @@ impl crate::sealed::RegSpec for Dtcsts_SPEC {
     type DataType = u16;
 }
 
+#[doc = "DTC Status Register"]
 pub type Dtcsts = crate::RegValueT<Dtcsts_SPEC>;
 
 impl Dtcsts {
+    #[doc = "DTC-Activating Vector Number MonitoringThese bits indicate the vector number for the activating source when DTC transfer is in progress.The value is only valid if DTC transfer is in progress (the value of the ACT flag is 1)"]
     #[inline(always)]
     pub fn vecn(
         self,
@@ -341,6 +368,7 @@ impl Dtcsts {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Dtcsts_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -348,6 +376,7 @@ impl Dtcsts {
         crate::common::RegisterField::<8,0x7f,1,0,u8,u8,Dtcsts_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "DTC Active Flag"]
     #[inline(always)]
     pub fn act(
         self,
@@ -385,8 +414,10 @@ pub mod dtcsts {
     pub struct Act_SPEC;
     pub type Act = crate::EnumBitfieldStruct<u8, Act_SPEC>;
     impl Act {
+        #[doc = "DTC transfer operation is not in progress."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DTC transfer operation is in progress."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -397,9 +428,11 @@ impl crate::sealed::RegSpec for DtccrS_SPEC {
     type DataType = u8;
 }
 
+#[doc = "DTC Control Register for Secure Region"]
 pub type DtccrS = crate::RegValueT<DtccrS_SPEC>;
 
 impl DtccrS {
+    #[doc = "DTC Transfer Information Read Skip Enable for secure"]
     #[inline(always)]
     pub fn rrss(
         self,
@@ -425,6 +458,7 @@ impl DtccrS {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -444,8 +478,10 @@ pub mod dtccr_s {
     pub struct Rrss_SPEC;
     pub type Rrss = crate::EnumBitfieldStruct<u8, Rrss_SPEC>;
     impl Rrss {
+        #[doc = "Transfer information read is not skipped."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transfer information read is skipped when vector numbers match."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -456,6 +492,7 @@ impl crate::sealed::RegSpec for DtccrSec_SPEC {
     type DataType = u8;
 }
 
+#[doc = "DTC Control Register for Secure Region"]
 pub type DtccrSec = crate::RegValueT<DtccrSec_SPEC>;
 
 impl NoBitfieldReg<DtccrSec_SPEC> for DtccrSec {}
@@ -473,9 +510,11 @@ impl crate::sealed::RegSpec for DtcvbrS_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DTC Vector Base Register for secure Region"]
 pub type DtcvbrS = crate::RegValueT<DtcvbrS_SPEC>;
 
 impl DtcvbrS {
+    #[doc = "These bits are read as 0000000000. The write value should be 0000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -484,6 +523,7 @@ impl DtcvbrS {
         crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,DtcvbrS_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "DTC Vector Base Address for secure region(Upper 22 bits)"]
     #[inline(always)]
     pub fn dtcvbrs(
         self,
@@ -506,6 +546,7 @@ impl crate::sealed::RegSpec for DtcvbrSec_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DTC Vector Base Register for secure Region"]
 pub type DtcvbrSec = crate::RegValueT<DtcvbrSec_SPEC>;
 
 impl NoBitfieldReg<DtcvbrSec_SPEC> for DtcvbrSec {}
@@ -523,9 +564,11 @@ impl crate::sealed::RegSpec for Dtevr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DTC Error Vector Register"]
 pub type Dtevr = crate::RegValueT<Dtevr_SPEC>;
 
 impl Dtevr {
+    #[doc = "DTC Error Vector Number"]
     #[inline(always)]
     pub fn dtev(
         self,
@@ -533,6 +576,7 @@ impl Dtevr {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Dtevr_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "DTC Error Vector Number SA Monitor"]
     #[inline(always)]
     pub fn dtevsam(
         self,
@@ -542,6 +586,7 @@ impl Dtevr {
         )
     }
 
+    #[doc = "DTC Error Status Flag"]
     #[inline(always)]
     pub fn dtesta(
         self,
@@ -567,6 +612,7 @@ impl Dtevr {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000000. The write value should be 000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -587,8 +633,10 @@ pub mod dtevr {
     pub struct Dtesta_SPEC;
     pub type Dtesta = crate::EnumBitfieldStruct<u8, Dtesta_SPEC>;
     impl Dtesta {
+        #[doc = "Not DTC transfer error occurred"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer error occurred"]
         pub const _1: Self = Self::new(1);
     }
 }

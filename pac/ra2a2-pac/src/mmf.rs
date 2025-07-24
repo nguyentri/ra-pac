@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:17:03 +0000
+// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:19 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Mmf {
         self.ptr
     }
 
+    #[doc = "MemMirror Special Function Register"]
     #[inline(always)]
     pub const fn mmsfr(&self) -> &'static crate::common::Reg<self::Mmsfr_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Mmf {
         }
     }
 
+    #[doc = "MemMirror Enable Register"]
     #[inline(always)]
     pub const fn mmen(&self) -> &'static crate::common::Reg<self::Mmen_SPEC, crate::common::RW> {
         unsafe {
@@ -59,9 +61,11 @@ impl crate::sealed::RegSpec for Mmsfr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MemMirror Special Function Register"]
 pub type Mmsfr = crate::RegValueT<Mmsfr_SPEC>;
 
 impl Mmsfr {
+    #[doc = "Memory Mirror Address"]
     #[inline(always)]
     pub fn memmiraddr(
         self,
@@ -70,6 +74,7 @@ impl Mmsfr {
         crate::common::RegisterField::<7,0xffff,1,0,u16,u16,Mmsfr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "MMSFR Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -91,9 +96,11 @@ impl crate::sealed::RegSpec for Mmen_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MemMirror Enable Register"]
 pub type Mmen = crate::RegValueT<Mmen_SPEC>;
 
 impl Mmen {
+    #[doc = "Memory Mirror Function Enable"]
     #[inline(always)]
     pub fn en(
         self,
@@ -102,6 +109,7 @@ impl Mmen {
         crate::common::RegisterField::<0,0x1,1,0,mmen::En,mmen::En,Mmen_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "MMEN Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -121,8 +129,10 @@ pub mod mmen {
     pub struct En_SPEC;
     pub type En = crate::EnumBitfieldStruct<u8, En_SPEC>;
     impl En {
+        #[doc = "Disable MMF"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable MMF"]
         pub const _1: Self = Self::new(1);
     }
 }

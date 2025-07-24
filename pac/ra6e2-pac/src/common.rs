@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.30.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:19:41 +0000
+// Generated from SVD 1.30.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:50:47 +0000
 
 use core::convert::From;
 use core::marker::PhantomData;
@@ -250,8 +250,10 @@ where
     T: RegSpec,
     A: Access,
 {
+    #[allow(dead_code)]
     #[inline(always)]
     #[must_use]
+    #[allow(dead_code)]
     pub(crate) const fn from_ptr(ptr: *mut u8) -> &'static Self {
         unsafe { &*(ptr as *const Self) }
     }
@@ -808,8 +810,10 @@ impl<T: Sized, const DIM: usize, const DIM_INCREMENT: usize>
         unsafe { &*(self.as_ptr().add(index * DIM_INCREMENT) as *const _) }
     }
 
+    #[allow(dead_code)]
     #[inline(always)]
-    pub(crate) const unsafe fn from_ptr(ptr: *mut u8) -> &'static Self {
+    #[allow(dead_code)]
+      pub(crate) const unsafe fn from_ptr(ptr: *mut u8) -> &'static Self {
         unsafe { &*(ptr as *const Self) }
     }
 

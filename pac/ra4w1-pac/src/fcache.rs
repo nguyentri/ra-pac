@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.0, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:19:15 +0000
+// Generated from SVD 1.0, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:50:19 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Fcache {
         self.ptr
     }
 
+    #[doc = "Flash Cache Enable Register"]
     #[inline(always)]
     pub const fn fcachee(
         &self,
@@ -45,6 +46,7 @@ impl super::Fcache {
         }
     }
 
+    #[doc = "Flash Cache Invalidate Register"]
     #[inline(always)]
     pub const fn fcacheiv(
         &self,
@@ -56,6 +58,7 @@ impl super::Fcache {
         }
     }
 
+    #[doc = "Flash Wait Cycle Register"]
     #[inline(always)]
     pub const fn flwt(&self) -> &'static crate::common::Reg<self::Flwt_SPEC, crate::common::RW> {
         unsafe {
@@ -72,9 +75,11 @@ impl crate::sealed::RegSpec for Fcachee_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Flash Cache Enable Register"]
 pub type Fcachee = crate::RegValueT<Fcachee_SPEC>;
 
 impl Fcachee {
+    #[doc = "These bits are read as 000000000000000. The write value should be 000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -83,6 +88,7 @@ impl Fcachee {
         crate::common::RegisterField::<1,0x7fff,1,0,u16,u16,Fcachee_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "FCACHE Enable"]
     #[inline(always)]
     pub fn fcacheen(
         self,
@@ -120,8 +126,10 @@ pub mod fcachee {
     pub struct Fcacheen_SPEC;
     pub type Fcacheen = crate::EnumBitfieldStruct<u8, Fcacheen_SPEC>;
     impl Fcacheen {
+        #[doc = "FCACHE is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "FCACHE is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -132,9 +140,11 @@ impl crate::sealed::RegSpec for Fcacheiv_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Flash Cache Invalidate Register"]
 pub type Fcacheiv = crate::RegValueT<Fcacheiv_SPEC>;
 
 impl Fcacheiv {
+    #[doc = "These bits are read as 000000000000000. The write value should be 000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -143,6 +153,7 @@ impl Fcacheiv {
         crate::common::RegisterField::<1,0x7fff,1,0,u16,u16,Fcacheiv_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "FCACHE Invalidation"]
     #[inline(always)]
     pub fn fcacheiv(
         self,
@@ -180,8 +191,10 @@ pub mod fcacheiv {
     pub struct Fcacheiv_SPEC;
     pub type Fcacheiv = crate::EnumBitfieldStruct<u8, Fcacheiv_SPEC>;
     impl Fcacheiv {
+        #[doc = "(Read)not in progress / (Write) no effect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "(Read)in progress /(Write)  Starting Cache Invalidation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -192,9 +205,11 @@ impl crate::sealed::RegSpec for Flwt_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Flash Wait Cycle Register"]
 pub type Flwt = crate::RegValueT<Flwt_SPEC>;
 
 impl Flwt {
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -202,6 +217,7 @@ impl Flwt {
         crate::common::RegisterField::<3,0x1f,1,0,u8,u8,Flwt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits represent the ratio of the CPU clock period to the Flash memory access time."]
     #[inline(always)]
     pub fn flwt(
         self,
@@ -239,8 +255,10 @@ pub mod flwt {
     pub struct Flwt_SPEC;
     pub type Flwt = crate::EnumBitfieldStruct<u8, Flwt_SPEC>;
     impl Flwt {
+        #[doc = "zero wait"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Setting prohibited"]
         pub const OTHERS: Self = Self::new(0);
     }
 }

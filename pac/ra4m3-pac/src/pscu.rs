@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.40.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:18:50 +0000
+// Generated from SVD 1.50.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:54 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Pscu {
         self.ptr
     }
 
+    #[doc = "Peripheral Security Attribution Register B"]
     #[inline(always)]
     pub const fn psarb(&self) -> &'static crate::common::Reg<self::Psarb_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Peripheral Security Attribution Register C"]
     #[inline(always)]
     pub const fn psarc(&self) -> &'static crate::common::Reg<self::Psarc_SPEC, crate::common::RW> {
         unsafe {
@@ -52,6 +54,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Peripheral Security Attribution Register D"]
     #[inline(always)]
     pub const fn psard(&self) -> &'static crate::common::Reg<self::Psard_SPEC, crate::common::RW> {
         unsafe {
@@ -61,6 +64,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Peripheral Security Attribution Register E"]
     #[inline(always)]
     pub const fn psare(&self) -> &'static crate::common::Reg<self::Psare_SPEC, crate::common::RW> {
         unsafe {
@@ -70,6 +74,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Module Stop Security Attribution Register"]
     #[inline(always)]
     pub const fn mssar(&self) -> &'static crate::common::Reg<self::Mssar_SPEC, crate::common::RW> {
         unsafe {
@@ -79,6 +84,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Code Flash Security Attribution Monitor Register A"]
     #[inline(always)]
     pub const fn cfsamona(
         &self,
@@ -90,6 +96,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Code Flash Security Attribution Monitor Register B"]
     #[inline(always)]
     pub const fn cfsamonb(
         &self,
@@ -101,6 +108,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Data Flash Security Attribution Monitor Register"]
     #[inline(always)]
     pub const fn dfsamon(
         &self,
@@ -112,6 +120,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "SRAM Security Attribution Monitor Register A"]
     #[inline(always)]
     pub const fn ssamona(
         &self,
@@ -123,6 +132,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "SRAM Security Attribution Monitor Register B"]
     #[inline(always)]
     pub const fn ssamonb(
         &self,
@@ -134,6 +144,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Device Lifecycle Management State Monitor Register"]
     #[inline(always)]
     pub const fn dlmmon(&self) -> &'static crate::common::Reg<self::Dlmmon_SPEC, crate::common::R> {
         unsafe {
@@ -150,9 +161,11 @@ impl crate::sealed::RegSpec for Psarb_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Peripheral Security Attribution Register B"]
 pub type Psarb = crate::RegValueT<Psarb_SPEC>;
 
 impl Psarb {
+    #[doc = "CAN1 and the MSTPCRB.MSTPB1 bit security attribution"]
     #[inline(always)]
     pub fn psarb1(
         self,
@@ -178,6 +191,7 @@ impl Psarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "CAN0 and the MSTPCRB.MSTPB2 bit security attribution"]
     #[inline(always)]
     pub fn psarb2(
         self,
@@ -203,6 +217,7 @@ impl Psarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "QSPI and the MSTPCRB.MSTPB6 bit security attribution"]
     #[inline(always)]
     pub fn psarb6(self) -> crate::common::RegisterFieldBool<6, 1, 0, Psarb_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<6, 1, 0, Psarb_SPEC, crate::common::R>::from_register(
@@ -210,6 +225,7 @@ impl Psarb {
         )
     }
 
+    #[doc = "IIC1 and the MSTPCRB.MSTPB8 bit security attribution"]
     #[inline(always)]
     pub fn psarb8(
         self,
@@ -235,6 +251,7 @@ impl Psarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "IIC0 and the MSTPCRB.MSTPB9 bit security attribution"]
     #[inline(always)]
     pub fn psarb9(
         self,
@@ -260,6 +277,7 @@ impl Psarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "USBFS and the MSTPCRB.MSTPB11 bit security attribution"]
     #[inline(always)]
     pub fn psarb11(
         self,
@@ -285,6 +303,7 @@ impl Psarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "SPI0 and the MSTPCRB.MSTPB19 bit security attribution"]
     #[inline(always)]
     pub fn psarb19(
         self,
@@ -310,6 +329,7 @@ impl Psarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "SCI9 and the MSTPCRB.MSTPB22 bit security attribution"]
     #[inline(always)]
     pub fn psarb22(
         self,
@@ -335,6 +355,7 @@ impl Psarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "SCI4 and the MSTPCRB.MSTPB27 bit security attribution"]
     #[inline(always)]
     pub fn psarb27(
         self,
@@ -360,6 +381,7 @@ impl Psarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "SCI3 and the MSTPCRB.MSTPB28 bit security attribution"]
     #[inline(always)]
     pub fn psarb28(
         self,
@@ -385,6 +407,7 @@ impl Psarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "SCI2 and the MSTPCRB.MSTPB29 bit security attribution"]
     #[inline(always)]
     pub fn psarb29(
         self,
@@ -410,6 +433,7 @@ impl Psarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "SCI1 and the MSTPCRB.MSTPB30 bit security attribution"]
     #[inline(always)]
     pub fn psarb30(
         self,
@@ -435,6 +459,7 @@ impl Psarb {
         >::from_register(self, 0)
     }
 
+    #[doc = "SCI0 and the MSTPCRB.MSTPB31 bit security attribution"]
     #[inline(always)]
     pub fn psarb31(
         self,
@@ -472,96 +497,120 @@ pub mod psarb {
     pub struct Psarb1_SPEC;
     pub type Psarb1 = crate::EnumBitfieldStruct<u8, Psarb1_SPEC>;
     impl Psarb1 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psarb2_SPEC;
     pub type Psarb2 = crate::EnumBitfieldStruct<u8, Psarb2_SPEC>;
     impl Psarb2 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psarb8_SPEC;
     pub type Psarb8 = crate::EnumBitfieldStruct<u8, Psarb8_SPEC>;
     impl Psarb8 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psarb9_SPEC;
     pub type Psarb9 = crate::EnumBitfieldStruct<u8, Psarb9_SPEC>;
     impl Psarb9 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psarb11_SPEC;
     pub type Psarb11 = crate::EnumBitfieldStruct<u8, Psarb11_SPEC>;
     impl Psarb11 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psarb19_SPEC;
     pub type Psarb19 = crate::EnumBitfieldStruct<u8, Psarb19_SPEC>;
     impl Psarb19 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psarb22_SPEC;
     pub type Psarb22 = crate::EnumBitfieldStruct<u8, Psarb22_SPEC>;
     impl Psarb22 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psarb27_SPEC;
     pub type Psarb27 = crate::EnumBitfieldStruct<u8, Psarb27_SPEC>;
     impl Psarb27 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psarb28_SPEC;
     pub type Psarb28 = crate::EnumBitfieldStruct<u8, Psarb28_SPEC>;
     impl Psarb28 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psarb29_SPEC;
     pub type Psarb29 = crate::EnumBitfieldStruct<u8, Psarb29_SPEC>;
     impl Psarb29 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psarb30_SPEC;
     pub type Psarb30 = crate::EnumBitfieldStruct<u8, Psarb30_SPEC>;
     impl Psarb30 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psarb31_SPEC;
     pub type Psarb31 = crate::EnumBitfieldStruct<u8, Psarb31_SPEC>;
     impl Psarb31 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -572,9 +621,11 @@ impl crate::sealed::RegSpec for Psarc_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Peripheral Security Attribution Register C"]
 pub type Psarc = crate::RegValueT<Psarc_SPEC>;
 
 impl Psarc {
+    #[doc = "CAC and the MSTPCRC.MSTPC0 bit security attribution"]
     #[inline(always)]
     pub fn psarc0(
         self,
@@ -600,6 +651,7 @@ impl Psarc {
         >::from_register(self, 0)
     }
 
+    #[doc = "CRC and the MSTPCRC.MSTPC1 bit security attribution"]
     #[inline(always)]
     pub fn psarc1(
         self,
@@ -625,6 +677,7 @@ impl Psarc {
         >::from_register(self, 0)
     }
 
+    #[doc = "CTSU and the MSTPCRC.MSTPC3 bit security attribution"]
     #[inline(always)]
     pub fn psarc3(
         self,
@@ -650,6 +703,7 @@ impl Psarc {
         >::from_register(self, 0)
     }
 
+    #[doc = "SSIE0 and the MSTPCRC.MSTPC8 bit security attribution"]
     #[inline(always)]
     pub fn psarc8(
         self,
@@ -675,6 +729,7 @@ impl Psarc {
         >::from_register(self, 0)
     }
 
+    #[doc = "SDHI0 and the MSTPCRC.MSTPC12 bit security attribution"]
     #[inline(always)]
     pub fn psarc12(
         self,
@@ -700,6 +755,7 @@ impl Psarc {
         >::from_register(self, 0)
     }
 
+    #[doc = "DOC and the MSTPCRC.MSTPC13 bit security attribution"]
     #[inline(always)]
     pub fn psarc13(
         self,
@@ -725,6 +781,7 @@ impl Psarc {
         >::from_register(self, 0)
     }
 
+    #[doc = "SCE9 and the MSTPCRC.MSTPC31 bit security attribution"]
     #[inline(always)]
     pub fn psarc31(
         self,
@@ -762,56 +819,70 @@ pub mod psarc {
     pub struct Psarc0_SPEC;
     pub type Psarc0 = crate::EnumBitfieldStruct<u8, Psarc0_SPEC>;
     impl Psarc0 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psarc1_SPEC;
     pub type Psarc1 = crate::EnumBitfieldStruct<u8, Psarc1_SPEC>;
     impl Psarc1 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psarc3_SPEC;
     pub type Psarc3 = crate::EnumBitfieldStruct<u8, Psarc3_SPEC>;
     impl Psarc3 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psarc8_SPEC;
     pub type Psarc8 = crate::EnumBitfieldStruct<u8, Psarc8_SPEC>;
     impl Psarc8 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psarc12_SPEC;
     pub type Psarc12 = crate::EnumBitfieldStruct<u8, Psarc12_SPEC>;
     impl Psarc12 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psarc13_SPEC;
     pub type Psarc13 = crate::EnumBitfieldStruct<u8, Psarc13_SPEC>;
     impl Psarc13 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psarc31_SPEC;
     pub type Psarc31 = crate::EnumBitfieldStruct<u8, Psarc31_SPEC>;
     impl Psarc31 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -822,9 +893,11 @@ impl crate::sealed::RegSpec for Psard_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Peripheral Security Attribution Register D"]
 pub type Psard = crate::RegValueT<Psard_SPEC>;
 
 impl Psard {
+    #[doc = "AGT3 and the MSTPCRD.MSTPD0 bit security attribution"]
     #[inline(always)]
     pub fn psard0(
         self,
@@ -850,6 +923,7 @@ impl Psard {
         >::from_register(self, 0)
     }
 
+    #[doc = "AGT2 and the MSTPCRD.MSTPD1 bit security attribution"]
     #[inline(always)]
     pub fn psard1(
         self,
@@ -875,6 +949,7 @@ impl Psard {
         >::from_register(self, 0)
     }
 
+    #[doc = "AGT1 and the MSTPCRD.MSTPD2 bit security attribution"]
     #[inline(always)]
     pub fn psard2(
         self,
@@ -900,6 +975,7 @@ impl Psard {
         >::from_register(self, 0)
     }
 
+    #[doc = "AGT0 and the MSTPCRD.MSTPD3 bit security attribution"]
     #[inline(always)]
     pub fn psard3(
         self,
@@ -925,6 +1001,7 @@ impl Psard {
         >::from_register(self, 0)
     }
 
+    #[doc = "POEG Group D and the MSTPCRD.MSTPD11 bit security attribution"]
     #[inline(always)]
     pub fn psard11(
         self,
@@ -950,6 +1027,7 @@ impl Psard {
         >::from_register(self, 0)
     }
 
+    #[doc = "POEG Group C and the MSTPCRD.MSTPD12 bit security attribution"]
     #[inline(always)]
     pub fn psard12(
         self,
@@ -975,6 +1053,7 @@ impl Psard {
         >::from_register(self, 0)
     }
 
+    #[doc = "POEG Group B and the MSTPCRD.MSTPD13 bit security attribution"]
     #[inline(always)]
     pub fn psard13(
         self,
@@ -1000,6 +1079,7 @@ impl Psard {
         >::from_register(self, 0)
     }
 
+    #[doc = "POEG Group A and the MSTPCRD.MSTPD14 bit security attribution"]
     #[inline(always)]
     pub fn psard14(
         self,
@@ -1025,6 +1105,7 @@ impl Psard {
         >::from_register(self, 0)
     }
 
+    #[doc = "ADC121 and the MSTPCRD.MSTPD15 bit security attribution"]
     #[inline(always)]
     pub fn psard15(
         self,
@@ -1050,6 +1131,7 @@ impl Psard {
         >::from_register(self, 0)
     }
 
+    #[doc = "ADC120 and the MSTPCRD.MSTPD16 bit security attribution"]
     #[inline(always)]
     pub fn psard16(
         self,
@@ -1075,6 +1157,7 @@ impl Psard {
         >::from_register(self, 0)
     }
 
+    #[doc = "DAC12 and the MSTPCRD.MSTPD20 bit security attribution"]
     #[inline(always)]
     pub fn psard20(
         self,
@@ -1100,6 +1183,7 @@ impl Psard {
         >::from_register(self, 0)
     }
 
+    #[doc = "TSN and the MSTPCRD.MSTPD22 bit security attribution"]
     #[inline(always)]
     pub fn psard22(
         self,
@@ -1137,96 +1221,120 @@ pub mod psard {
     pub struct Psard0_SPEC;
     pub type Psard0 = crate::EnumBitfieldStruct<u8, Psard0_SPEC>;
     impl Psard0 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psard1_SPEC;
     pub type Psard1 = crate::EnumBitfieldStruct<u8, Psard1_SPEC>;
     impl Psard1 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psard2_SPEC;
     pub type Psard2 = crate::EnumBitfieldStruct<u8, Psard2_SPEC>;
     impl Psard2 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psard3_SPEC;
     pub type Psard3 = crate::EnumBitfieldStruct<u8, Psard3_SPEC>;
     impl Psard3 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psard11_SPEC;
     pub type Psard11 = crate::EnumBitfieldStruct<u8, Psard11_SPEC>;
     impl Psard11 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psard12_SPEC;
     pub type Psard12 = crate::EnumBitfieldStruct<u8, Psard12_SPEC>;
     impl Psard12 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psard13_SPEC;
     pub type Psard13 = crate::EnumBitfieldStruct<u8, Psard13_SPEC>;
     impl Psard13 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psard14_SPEC;
     pub type Psard14 = crate::EnumBitfieldStruct<u8, Psard14_SPEC>;
     impl Psard14 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psard15_SPEC;
     pub type Psard15 = crate::EnumBitfieldStruct<u8, Psard15_SPEC>;
     impl Psard15 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psard16_SPEC;
     pub type Psard16 = crate::EnumBitfieldStruct<u8, Psard16_SPEC>;
     impl Psard16 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psard20_SPEC;
     pub type Psard20 = crate::EnumBitfieldStruct<u8, Psard20_SPEC>;
     impl Psard20 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psard22_SPEC;
     pub type Psard22 = crate::EnumBitfieldStruct<u8, Psard22_SPEC>;
     impl Psard22 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1237,9 +1345,11 @@ impl crate::sealed::RegSpec for Psare_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Peripheral Security Attribution Register E"]
 pub type Psare = crate::RegValueT<Psare_SPEC>;
 
 impl Psare {
+    #[doc = "WDT security attribution"]
     #[inline(always)]
     pub fn psare0(
         self,
@@ -1265,6 +1375,7 @@ impl Psare {
         >::from_register(self, 0)
     }
 
+    #[doc = "IWDT security attribution"]
     #[inline(always)]
     pub fn psare1(
         self,
@@ -1290,6 +1401,7 @@ impl Psare {
         >::from_register(self, 0)
     }
 
+    #[doc = "RTC security attribution"]
     #[inline(always)]
     pub fn psare2(
         self,
@@ -1315,6 +1427,7 @@ impl Psare {
         >::from_register(self, 0)
     }
 
+    #[doc = "AGT5 and the MSTPCRE.MSTPE14 bit security attribution"]
     #[inline(always)]
     pub fn psare14(
         self,
@@ -1340,6 +1453,7 @@ impl Psare {
         >::from_register(self, 0)
     }
 
+    #[doc = "AGT4 and the MSTPCRE.MSTPE15 bit security attribution"]
     #[inline(always)]
     pub fn psare15(
         self,
@@ -1365,6 +1479,7 @@ impl Psare {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT7 and the MSTPCRE.MSTPE24 bit security attribution"]
     #[inline(always)]
     pub fn psare24(
         self,
@@ -1390,6 +1505,7 @@ impl Psare {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT6 and the MSTPCRE.MSTPE25 bit security attribution"]
     #[inline(always)]
     pub fn psare25(
         self,
@@ -1415,6 +1531,7 @@ impl Psare {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT5 and the MSTPCRE.MSTPE26 bit security attribution"]
     #[inline(always)]
     pub fn psare26(
         self,
@@ -1440,6 +1557,7 @@ impl Psare {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT4 and the MSTPCRE.MSTPE27 bit security attribution"]
     #[inline(always)]
     pub fn psare27(
         self,
@@ -1465,6 +1583,7 @@ impl Psare {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT3 and the MSTPCRE.MSTPE28 bit security attribution"]
     #[inline(always)]
     pub fn psare28(
         self,
@@ -1490,6 +1609,7 @@ impl Psare {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT2 and the MSTPCRE.MSTPE29 bit security attribution"]
     #[inline(always)]
     pub fn psare29(
         self,
@@ -1515,6 +1635,7 @@ impl Psare {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT1 and the MSTPCRE.MSTPE30 bit security attribution"]
     #[inline(always)]
     pub fn psare30(
         self,
@@ -1540,6 +1661,7 @@ impl Psare {
         >::from_register(self, 0)
     }
 
+    #[doc = "GPT0, GPT_OPS and the MSTPCRE.MSTPE31 bit security attribution"]
     #[inline(always)]
     pub fn psare31(
         self,
@@ -1577,104 +1699,130 @@ pub mod psare {
     pub struct Psare0_SPEC;
     pub type Psare0 = crate::EnumBitfieldStruct<u8, Psare0_SPEC>;
     impl Psare0 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psare1_SPEC;
     pub type Psare1 = crate::EnumBitfieldStruct<u8, Psare1_SPEC>;
     impl Psare1 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psare2_SPEC;
     pub type Psare2 = crate::EnumBitfieldStruct<u8, Psare2_SPEC>;
     impl Psare2 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psare14_SPEC;
     pub type Psare14 = crate::EnumBitfieldStruct<u8, Psare14_SPEC>;
     impl Psare14 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psare15_SPEC;
     pub type Psare15 = crate::EnumBitfieldStruct<u8, Psare15_SPEC>;
     impl Psare15 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psare24_SPEC;
     pub type Psare24 = crate::EnumBitfieldStruct<u8, Psare24_SPEC>;
     impl Psare24 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psare25_SPEC;
     pub type Psare25 = crate::EnumBitfieldStruct<u8, Psare25_SPEC>;
     impl Psare25 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psare26_SPEC;
     pub type Psare26 = crate::EnumBitfieldStruct<u8, Psare26_SPEC>;
     impl Psare26 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psare27_SPEC;
     pub type Psare27 = crate::EnumBitfieldStruct<u8, Psare27_SPEC>;
     impl Psare27 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psare28_SPEC;
     pub type Psare28 = crate::EnumBitfieldStruct<u8, Psare28_SPEC>;
     impl Psare28 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psare29_SPEC;
     pub type Psare29 = crate::EnumBitfieldStruct<u8, Psare29_SPEC>;
     impl Psare29 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psare30_SPEC;
     pub type Psare30 = crate::EnumBitfieldStruct<u8, Psare30_SPEC>;
     impl Psare30 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psare31_SPEC;
     pub type Psare31 = crate::EnumBitfieldStruct<u8, Psare31_SPEC>;
     impl Psare31 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1685,9 +1833,11 @@ impl crate::sealed::RegSpec for Mssar_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Module Stop Security Attribution Register"]
 pub type Mssar = crate::RegValueT<Mssar_SPEC>;
 
 impl Mssar {
+    #[doc = "The MSTPCRC.MSTPC14 bit security attribution"]
     #[inline(always)]
     pub fn mssar0(
         self,
@@ -1713,6 +1863,7 @@ impl Mssar {
         >::from_register(self, 0)
     }
 
+    #[doc = "The MSTPCRA.MSTPA22 bit security attribution"]
     #[inline(always)]
     pub fn mssar1(
         self,
@@ -1738,6 +1889,7 @@ impl Mssar {
         >::from_register(self, 0)
     }
 
+    #[doc = "The MSTPCRA.MSTPA7 bit security attribution"]
     #[inline(always)]
     pub fn mssar2(
         self,
@@ -1763,6 +1915,7 @@ impl Mssar {
         >::from_register(self, 0)
     }
 
+    #[doc = "The MSTPCRA.MSTPA0 bit security attribution"]
     #[inline(always)]
     pub fn mssar3(
         self,
@@ -1800,32 +1953,40 @@ pub mod mssar {
     pub struct Mssar0_SPEC;
     pub type Mssar0 = crate::EnumBitfieldStruct<u8, Mssar0_SPEC>;
     impl Mssar0 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mssar1_SPEC;
     pub type Mssar1 = crate::EnumBitfieldStruct<u8, Mssar1_SPEC>;
     impl Mssar1 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mssar2_SPEC;
     pub type Mssar2 = crate::EnumBitfieldStruct<u8, Mssar2_SPEC>;
     impl Mssar2 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mssar3_SPEC;
     pub type Mssar3 = crate::EnumBitfieldStruct<u8, Mssar3_SPEC>;
     impl Mssar3 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1836,9 +1997,11 @@ impl crate::sealed::RegSpec for Cfsamona_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Code Flash Security Attribution Monitor Register A"]
 pub type Cfsamona = crate::RegValueT<Cfsamona_SPEC>;
 
 impl Cfsamona {
+    #[doc = "Code Flash Secure area 2"]
     #[inline(always)]
     pub fn cfs2(
         self,
@@ -1861,9 +2024,11 @@ impl crate::sealed::RegSpec for Cfsamonb_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Code Flash Security Attribution Monitor Register B"]
 pub type Cfsamonb = crate::RegValueT<Cfsamonb_SPEC>;
 
 impl Cfsamonb {
+    #[doc = "Code Flash Secure area 1"]
     #[inline(always)]
     pub fn cfs1(
         self,
@@ -1886,9 +2051,11 @@ impl crate::sealed::RegSpec for Dfsamon_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Data Flash Security Attribution Monitor Register"]
 pub type Dfsamon = crate::RegValueT<Dfsamon_SPEC>;
 
 impl Dfsamon {
+    #[doc = "Data flash Secure area"]
     #[inline(always)]
     pub fn dfs(
         self,
@@ -1910,9 +2077,11 @@ impl crate::sealed::RegSpec for Ssamona_SPEC {
     type DataType = u32;
 }
 
+#[doc = "SRAM Security Attribution Monitor Register A"]
 pub type Ssamona = crate::RegValueT<Ssamona_SPEC>;
 
 impl Ssamona {
+    #[doc = "SRAM Secure area 2"]
     #[inline(always)]
     pub fn ss2(
         self,
@@ -1934,9 +2103,11 @@ impl crate::sealed::RegSpec for Ssamonb_SPEC {
     type DataType = u32;
 }
 
+#[doc = "SRAM Security Attribution Monitor Register B"]
 pub type Ssamonb = crate::RegValueT<Ssamonb_SPEC>;
 
 impl Ssamonb {
+    #[doc = "SRAM secure area 1"]
     #[inline(always)]
     pub fn ss1(
         self,
@@ -1959,9 +2130,11 @@ impl crate::sealed::RegSpec for Dlmmon_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Device Lifecycle Management State Monitor Register"]
 pub type Dlmmon = crate::RegValueT<Dlmmon_SPEC>;
 
 impl Dlmmon {
+    #[doc = "Device Lifecycle Management State Monitor"]
     #[inline(always)]
     pub fn dlmmon(
         self,
@@ -1999,22 +2172,31 @@ pub mod dlmmon {
     pub struct Dlmmon_SPEC;
     pub type Dlmmon = crate::EnumBitfieldStruct<u8, Dlmmon_SPEC>;
     impl Dlmmon {
+        #[doc = "CM"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "SSD"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "NSECSD"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "DPL"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "LCK_DBG"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "LCK_BOOT"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "RMA_REQ"]
         pub const _0_X_7: Self = Self::new(7);
 
+        #[doc = "RMA_ACK"]
         pub const _0_X_8: Self = Self::new(8);
 
+        #[doc = "Reserved"]
         pub const OTHERS: Self = Self::new(0);
     }
 }

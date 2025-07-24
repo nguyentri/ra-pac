@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:20:22 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:32 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::EptpcCfg {
         self.ptr
     }
 
+    #[doc = "EPTPC Reset Register"]
     #[inline(always)]
     pub const fn ptrstr(
         &self,
@@ -45,6 +46,7 @@ impl super::EptpcCfg {
         }
     }
 
+    #[doc = "STCA Clock Select Register"]
     #[inline(always)]
     pub const fn stcselr(
         &self,
@@ -56,6 +58,7 @@ impl super::EptpcCfg {
         }
     }
 
+    #[doc = "Bypass 1588 module Register"]
     #[inline(always)]
     pub const fn bypass(
         &self,
@@ -74,9 +77,11 @@ impl crate::sealed::RegSpec for Ptrstr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "EPTPC Reset Register"]
 pub type Ptrstr = crate::RegValueT<Ptrstr_SPEC>;
 
 impl Ptrstr {
+    #[doc = "EPTPC Software Reset"]
     #[inline(always)]
     pub fn reset(
         self,
@@ -114,8 +119,10 @@ pub mod ptrstr {
     pub struct Reset_SPEC;
     pub type Reset = crate::EnumBitfieldStruct<u8, Reset_SPEC>;
     impl Reset {
+        #[doc = "Do not reset the EPTPC"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Reset the EPTPC. Do not access the EPTPC-related registers other than this register while a software reset is being issued."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -126,9 +133,11 @@ impl crate::sealed::RegSpec for Stcselr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "STCA Clock Select Register"]
 pub type Stcselr = crate::RegValueT<Stcselr_SPEC>;
 
 impl Stcselr {
+    #[doc = "STCA Clock Select"]
     #[inline(always)]
     pub fn sclksel(
         self,
@@ -154,6 +163,7 @@ impl Stcselr {
         >::from_register(self, 0)
     }
 
+    #[doc = "PCLKA Clock Frequency Division"]
     #[inline(always)]
     pub fn sclkdiv(
         self,
@@ -191,28 +201,38 @@ pub mod stcselr {
     pub struct Sclksel_SPEC;
     pub type Sclksel = crate::EnumBitfieldStruct<u8, Sclksel_SPEC>;
     impl Sclksel {
+        #[doc = "PCLKA clock divided by 1 to 6"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "Input clock from the REF50CK0 pin"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "Settings other than above are prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sclkdiv_SPEC;
     pub type Sclkdiv = crate::EnumBitfieldStruct<u8, Sclkdiv_SPEC>;
     impl Sclkdiv {
+        #[doc = "1"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "1/2"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "1/3"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "1/4"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "1/5"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "1/6"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "Settings other than above are prohibited."]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -223,9 +243,11 @@ impl crate::sealed::RegSpec for Bypass_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bypass 1588 module Register"]
 pub type Bypass = crate::RegValueT<Bypass_SPEC>;
 
 impl Bypass {
+    #[doc = "Bypass 1588 module for Ether 0ch"]
     #[inline(always)]
     pub fn bypass0(
         self,
@@ -263,8 +285,10 @@ pub mod bypass {
     pub struct Bypass0_SPEC;
     pub type Bypass0 = crate::EnumBitfieldStruct<u8, Bypass0_SPEC>;
     impl Bypass0 {
+        #[doc = "to use 1588 module for Ether 0ch"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "to bypass 1588 module for Ether 0ch"]
         pub const _1: Self = Self::new(1);
     }
 }

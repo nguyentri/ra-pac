@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.00.01, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:22:22 +0000
+// Generated from SVD 1.00.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:56 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::TsdNs {
         self.ptr
     }
 
+    #[doc = "Temperature Sensor Calibration Data Register"]
     #[inline(always)]
     pub const fn tscdr(&self) -> &'static crate::common::Reg<self::Tscdr_SPEC, crate::common::R> {
         unsafe {
@@ -50,9 +51,11 @@ impl crate::sealed::RegSpec for Tscdr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Temperature Sensor Calibration Data Register"]
 pub type Tscdr = crate::RegValueT<Tscdr_SPEC>;
 
 impl Tscdr {
+    #[doc = "Temperature Sensor Calibration Data"]
     #[inline(always)]
     pub fn tscdr(
         self,

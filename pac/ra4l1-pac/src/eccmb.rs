@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 0.90.02, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:18:12 +0000
+// Generated from SVD 1.20.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:48:57 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Eccmb {
         self.ptr
     }
 
+    #[doc = "ECC Control Register"]
     #[inline(always)]
     pub const fn ec710ctl(
         &self,
@@ -45,6 +46,7 @@ impl super::Eccmb {
         }
     }
 
+    #[doc = "ECC Test Mode Control Register"]
     #[inline(always)]
     pub const fn ec710tmc(
         &self,
@@ -56,6 +58,7 @@ impl super::Eccmb {
         }
     }
 
+    #[doc = "ECC Test Substitute Data Register"]
     #[inline(always)]
     pub const fn ec710ted(
         &self,
@@ -67,6 +70,7 @@ impl super::Eccmb {
         }
     }
 
+    #[doc = "ECC Error Address Register"]
     #[inline(always)]
     pub const fn ec710ead0(
         &self,
@@ -85,9 +89,11 @@ impl crate::sealed::RegSpec for Ec710Ctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "ECC Control Register"]
 pub type Ec710Ctl = crate::RegValueT<Ec710Ctl_SPEC>;
 
 impl Ec710Ctl {
+    #[doc = "ECC Error Message Flag"]
     #[inline(always)]
     pub fn ecemf(
         self,
@@ -113,6 +119,7 @@ impl Ec710Ctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "1-bit ECC Error Detection and Correction Flag"]
     #[inline(always)]
     pub fn ecer1f(
         self,
@@ -138,6 +145,7 @@ impl Ec710Ctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "2-bit ECC Error Detection Flag"]
     #[inline(always)]
     pub fn ecer2f(
         self,
@@ -163,6 +171,7 @@ impl Ec710Ctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "1-bit ECC Error Detection Interrupt Control"]
     #[inline(always)]
     pub fn ec1edic(
         self,
@@ -188,6 +197,7 @@ impl Ec710Ctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "2-bit ECC Error Detection Interrupt Control"]
     #[inline(always)]
     pub fn ec2edic(
         self,
@@ -213,6 +223,7 @@ impl Ec710Ctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "1-bit ECC Error Correction Permission"]
     #[inline(always)]
     pub fn ec1ecp(
         self,
@@ -238,6 +249,7 @@ impl Ec710Ctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "ECC Error Detection Enable"]
     #[inline(always)]
     pub fn ecervf(
         self,
@@ -263,6 +275,7 @@ impl Ec710Ctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Accumulating ECC Error Detection and Correction Flag Clear"]
     #[inline(always)]
     pub fn ecer1c(
         self,
@@ -288,6 +301,7 @@ impl Ec710Ctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "2-bit ECC Error Detection Flag Clear"]
     #[inline(always)]
     pub fn ecer2c(
         self,
@@ -313,6 +327,7 @@ impl Ec710Ctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "ECC Overflow Detection Flag"]
     #[inline(always)]
     pub fn ecovff(
         self,
@@ -338,6 +353,7 @@ impl Ec710Ctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "ECC Error Detection Enable Access Control"]
     #[inline(always)]
     pub fn emca(
         self,
@@ -363,6 +379,7 @@ impl Ec710Ctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "1-bit ECC Error Address Detection Flag"]
     #[inline(always)]
     pub fn ecsedf0(
         self,
@@ -388,6 +405,7 @@ impl Ec710Ctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "2-bit ECC Error Address Detection Flag"]
     #[inline(always)]
     pub fn ecdedf0(
         self,
@@ -425,104 +443,130 @@ pub mod ec710ctl {
     pub struct Ecemf_SPEC;
     pub type Ecemf = crate::EnumBitfieldStruct<u8, Ecemf_SPEC>;
     impl Ecemf {
+        #[doc = "There is no bit error in the present RAM output data"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "There is a bit error in the present RAM output data"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ecer1F_SPEC;
     pub type Ecer1F = crate::EnumBitfieldStruct<u8, Ecer1F_SPEC>;
     impl Ecer1F {
+        #[doc = "After clearing this bit, 1-bit error correction has not detected and corrected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "1-bit error has detected and corrected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ecer2F_SPEC;
     pub type Ecer2F = crate::EnumBitfieldStruct<u8, Ecer2F_SPEC>;
     impl Ecer2F {
+        #[doc = "After clearing this bit, 2-bit error has not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "2-bit error has detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ec1Edic_SPEC;
     pub type Ec1Edic = crate::EnumBitfieldStruct<u8, Ec1Edic_SPEC>;
     impl Ec1Edic {
+        #[doc = "Disable 1-bit error detection interrupt request"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable 1-bit error detection interrupt request"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ec2Edic_SPEC;
     pub type Ec2Edic = crate::EnumBitfieldStruct<u8, Ec2Edic_SPEC>;
     impl Ec2Edic {
+        #[doc = "Disable 2-bit error detection interrupt request"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable 2-bit error detection interrupt request"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ec1Ecp_SPEC;
     pub type Ec1Ecp = crate::EnumBitfieldStruct<u8, Ec1Ecp_SPEC>;
     impl Ec1Ecp {
+        #[doc = "Enable error correction at 1-bit error detection"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Disable error correction at 1-bit error detection"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ecervf_SPEC;
     pub type Ecervf = crate::EnumBitfieldStruct<u8, Ecervf_SPEC>;
     impl Ecervf {
+        #[doc = "Disable error detection"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable error detection"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ecer1C_SPEC;
     pub type Ecer1C = crate::EnumBitfieldStruct<u8, Ecer1C_SPEC>;
     impl Ecer1C {
+        #[doc = "No clear flag"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear accumulating ECC error detection and correction flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ecer2C_SPEC;
     pub type Ecer2C = crate::EnumBitfieldStruct<u8, Ecer2C_SPEC>;
     impl Ecer2C {
+        #[doc = "No clear flag"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear 2-bit ECC error detection flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ecovff_SPEC;
     pub type Ecovff = crate::EnumBitfieldStruct<u8, Ecovff_SPEC>;
     impl Ecovff {
+        #[doc = "No clear flag"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Clear flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Emca_SPEC;
     pub type Emca = crate::EnumBitfieldStruct<u8, Emca_SPEC>;
     impl Emca {
+        #[doc = "Can write ECC Error Detection Control (ECERVF) bit"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Cannot write ECERVF bit"]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ecsedf0_SPEC;
     pub type Ecsedf0 = crate::EnumBitfieldStruct<u8, Ecsedf0_SPEC>;
     impl Ecsedf0 {
+        #[doc = "1-bit error has not occurred after reset or clearing ECER1F bit"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "1-bit error has occurred and the address was captured"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ecdedf0_SPEC;
     pub type Ecdedf0 = crate::EnumBitfieldStruct<u8, Ecdedf0_SPEC>;
     impl Ecdedf0 {
+        #[doc = "2-bit error has not occurred after reset or clearing ECER2F bit"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "2-bit error has occurred and the address was captured"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -533,9 +577,11 @@ impl crate::sealed::RegSpec for Ec710Tmc_SPEC {
     type DataType = u16;
 }
 
+#[doc = "ECC Test Mode Control Register"]
 pub type Ec710Tmc = crate::RegValueT<Ec710Tmc_SPEC>;
 
 impl Ec710Tmc {
+    #[doc = "ECC Decode Input Select"]
     #[inline(always)]
     pub fn ecdcs(
         self,
@@ -561,6 +607,7 @@ impl Ec710Tmc {
         >::from_register(self, 0)
     }
 
+    #[doc = "ECC Test Mode Control Enable"]
     #[inline(always)]
     pub fn ectmce(
         self,
@@ -586,6 +633,7 @@ impl Ec710Tmc {
         >::from_register(self, 0)
     }
 
+    #[doc = "ECC Test Mode Bit Access Control"]
     #[inline(always)]
     pub fn etma(
         self,
@@ -605,16 +653,20 @@ pub mod ec710tmc {
     pub struct Ecdcs_SPEC;
     pub type Ecdcs = crate::EnumBitfieldStruct<u8, Ecdcs_SPEC>;
     impl Ecdcs {
+        #[doc = "Input lower 32 bits of RAM output data to data area of decode circuit"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Input ECEDB31-0 in EC710TED register to data area of decode circuit"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ectmce_SPEC;
     pub type Ectmce = crate::EnumBitfieldStruct<u8, Ectmce_SPEC>;
     impl Ectmce {
+        #[doc = "The access to test mode register and bit is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The access to test mode register and bit is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -625,9 +677,11 @@ impl crate::sealed::RegSpec for Ec710Ted_SPEC {
     type DataType = u32;
 }
 
+#[doc = "ECC Test Substitute Data Register"]
 pub type Ec710Ted = crate::RegValueT<Ec710Ted_SPEC>;
 
 impl Ec710Ted {
+    #[doc = "ECC Test Substitute Data"]
     #[inline(always)]
     pub fn ecedb(
         self,
@@ -659,9 +713,11 @@ impl crate::sealed::RegSpec for Ec710Ead0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "ECC Error Address Register"]
 pub type Ec710Ead0 = crate::RegValueT<Ec710Ead0_SPEC>;
 
 impl Ec710Ead0 {
+    #[doc = "ECC Error Address"]
     #[inline(always)]
     pub fn ecead(
         self,

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:17:29 +0000
+// Generated from SVD 1.20.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:50 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Sram {
         self.ptr
     }
 
+    #[doc = "SRAM Parity Error Operation After Detection Register"]
     #[inline(always)]
     pub const fn parioad(
         &self,
@@ -45,6 +46,7 @@ impl super::Sram {
         }
     }
 
+    #[doc = "SRAM Protection Register"]
     #[inline(always)]
     pub const fn sramprcr(
         &self,
@@ -63,9 +65,11 @@ impl crate::sealed::RegSpec for Parioad_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SRAM Parity Error Operation After Detection Register"]
 pub type Parioad = crate::RegValueT<Parioad_SPEC>;
 
 impl Parioad {
+    #[doc = "Operation After Detection"]
     #[inline(always)]
     pub fn oad(
         self,
@@ -103,8 +107,10 @@ pub mod parioad {
     pub struct Oad_SPEC;
     pub type Oad = crate::EnumBitfieldStruct<u8, Oad_SPEC>;
     impl Oad {
+        #[doc = "Non-maskable interrupt"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Reset"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -115,9 +121,11 @@ impl crate::sealed::RegSpec for Sramprcr_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SRAM Protection Register"]
 pub type Sramprcr = crate::RegValueT<Sramprcr_SPEC>;
 
 impl Sramprcr {
+    #[doc = "Register Write Control"]
     #[inline(always)]
     pub fn sramprcr(
         self,
@@ -143,6 +151,7 @@ impl Sramprcr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Write Key Code"]
     #[inline(always)]
     pub fn kw(
         self,
@@ -162,8 +171,10 @@ pub mod sramprcr {
     pub struct Sramprcr_SPEC;
     pub type Sramprcr = crate::EnumBitfieldStruct<u8, Sramprcr_SPEC>;
     impl Sramprcr {
+        #[doc = "Disable writes to protected registers"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable writes to protected registers"]
         pub const _1: Self = Self::new(1);
     }
 }

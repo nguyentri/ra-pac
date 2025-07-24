@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:23:25 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::I3C {
         self.ptr
     }
 
+    #[doc = "Protocol Selection Register"]
     #[inline(always)]
     pub const fn prts(&self) -> &'static crate::common::Reg<self::Prts_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Protocol Selection Register"]
     #[inline(always)]
     pub const fn prts_ha_l(
         &self,
@@ -54,6 +56,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Protocol Selection Register"]
     #[inline(always)]
     pub const fn prts_by_ll(
         &self,
@@ -65,6 +68,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Control Register"]
     #[inline(always)]
     pub const fn bctl(&self) -> &'static crate::common::Reg<self::Bctl_SPEC, crate::common::RW> {
         unsafe {
@@ -74,6 +78,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Control Register"]
     #[inline(always)]
     pub const fn bctl_ha_l(
         &self,
@@ -85,6 +90,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Control Register"]
     #[inline(always)]
     pub const fn bctl_by_ll(
         &self,
@@ -96,6 +102,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Control Register"]
     #[inline(always)]
     pub const fn bctl_by_lh(
         &self,
@@ -107,6 +114,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Control Register"]
     #[inline(always)]
     pub const fn bctl_ha_h(
         &self,
@@ -118,6 +126,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Control Register"]
     #[inline(always)]
     pub const fn bctl_by_hh(
         &self,
@@ -129,6 +138,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Address Register"]
     #[inline(always)]
     pub const fn msdvad(
         &self,
@@ -140,6 +150,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Address Register"]
     #[inline(always)]
     pub const fn msdvad_ha_h(
         &self,
@@ -151,6 +162,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Address Register"]
     #[inline(always)]
     pub const fn msdvad_by_hl(
         &self,
@@ -162,6 +174,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Address Register"]
     #[inline(always)]
     pub const fn msdvad_by_hh(
         &self,
@@ -173,6 +186,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Reset Control Register"]
     #[inline(always)]
     pub const fn rstctl(
         &self,
@@ -184,6 +198,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Reset Control Register"]
     #[inline(always)]
     pub const fn rstctl_ha_l(
         &self,
@@ -195,6 +210,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Reset Control Register"]
     #[inline(always)]
     pub const fn rstctl_by_ll(
         &self,
@@ -206,6 +222,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Reset Control Register"]
     #[inline(always)]
     pub const fn rstctl_by_lh(
         &self,
@@ -217,6 +234,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Reset Control Register"]
     #[inline(always)]
     pub const fn rstctl_ha_h(
         &self,
@@ -228,6 +246,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Reset Control Register"]
     #[inline(always)]
     pub const fn rstctl_by_hl(
         &self,
@@ -239,6 +258,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Present State Register"]
     #[inline(always)]
     pub const fn prsst(&self) -> &'static crate::common::Reg<self::Prsst_SPEC, crate::common::RW> {
         unsafe {
@@ -248,6 +268,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Present State Register"]
     #[inline(always)]
     pub const fn prsst_ha_l(
         &self,
@@ -259,6 +280,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Present State Register"]
     #[inline(always)]
     pub const fn prsst_by_ll(
         &self,
@@ -270,6 +292,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Internal Status Register"]
     #[inline(always)]
     pub const fn inst(&self) -> &'static crate::common::Reg<self::Inst_SPEC, crate::common::RW> {
         unsafe {
@@ -279,6 +302,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Internal Status Register"]
     #[inline(always)]
     pub const fn inst_ha_l(
         &self,
@@ -290,6 +314,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Internal Status Register"]
     #[inline(always)]
     pub const fn inst_by_lh(
         &self,
@@ -301,6 +326,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Internal Status Enable Register"]
     #[inline(always)]
     pub const fn inste(&self) -> &'static crate::common::Reg<self::Inste_SPEC, crate::common::RW> {
         unsafe {
@@ -310,6 +336,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Internal Status Enable Register"]
     #[inline(always)]
     pub const fn inste_ha_l(
         &self,
@@ -321,6 +348,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Internal Status Enable Register"]
     #[inline(always)]
     pub const fn inste_by_lh(
         &self,
@@ -332,6 +360,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Internal Interrupt Enable Register"]
     #[inline(always)]
     pub const fn inie(&self) -> &'static crate::common::Reg<self::Inie_SPEC, crate::common::RW> {
         unsafe {
@@ -341,6 +370,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Internal Interrupt Enable Register"]
     #[inline(always)]
     pub const fn inie_ha_l(
         &self,
@@ -352,6 +382,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Internal Interrupt Enable Register"]
     #[inline(always)]
     pub const fn inie_by_lh(
         &self,
@@ -363,6 +394,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Internal Status Force Register"]
     #[inline(always)]
     pub const fn instfc(&self) -> &'static crate::common::Reg<self::Instfc_SPEC, crate::common::W> {
         unsafe {
@@ -372,6 +404,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Internal Status Force Register"]
     #[inline(always)]
     pub const fn instfc_ha_l(
         &self,
@@ -383,6 +416,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Internal Status Force Register"]
     #[inline(always)]
     pub const fn instfc_by_lh(
         &self,
@@ -394,6 +428,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Characteristic Table Register"]
     #[inline(always)]
     pub const fn dvct(&self) -> &'static crate::common::Reg<self::Dvct_SPEC, crate::common::R> {
         unsafe {
@@ -403,6 +438,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Characteristic Table Register"]
     #[inline(always)]
     pub const fn dvct_ha_h(
         &self,
@@ -414,6 +450,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Characteristic Table Register"]
     #[inline(always)]
     pub const fn dvct_by_hl(
         &self,
@@ -425,6 +462,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "IBI Notify Control Register"]
     #[inline(always)]
     pub const fn ibinctl(
         &self,
@@ -436,6 +474,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "IBI Notify Control Register"]
     #[inline(always)]
     pub const fn ibinctl_ha_l(
         &self,
@@ -447,6 +486,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "IBI Notify Control Register"]
     #[inline(always)]
     pub const fn ibinctl_by_ll(
         &self,
@@ -458,6 +498,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Function Control Register"]
     #[inline(always)]
     pub const fn bfctl(&self) -> &'static crate::common::Reg<self::Bfctl_SPEC, crate::common::RW> {
         unsafe {
@@ -467,6 +508,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Function Control Register"]
     #[inline(always)]
     pub const fn bfctl_ha_l(
         &self,
@@ -478,6 +520,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Function Control Register"]
     #[inline(always)]
     pub const fn bfctl_by_ll(
         &self,
@@ -489,6 +532,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Function Control Register"]
     #[inline(always)]
     pub const fn bfctl_by_lh(
         &self,
@@ -500,6 +544,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Control Register"]
     #[inline(always)]
     pub const fn svctl(&self) -> &'static crate::common::Reg<self::Svctl_SPEC, crate::common::RW> {
         unsafe {
@@ -509,6 +554,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Control Register"]
     #[inline(always)]
     pub const fn svctl_ha_l(
         &self,
@@ -520,6 +566,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Control Register"]
     #[inline(always)]
     pub const fn svctl_by_ll(
         &self,
@@ -531,6 +578,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Control Register"]
     #[inline(always)]
     pub const fn svctl_by_lh(
         &self,
@@ -542,6 +590,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Control Register"]
     #[inline(always)]
     pub const fn svctl_ha_h(
         &self,
@@ -553,6 +602,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Control Register"]
     #[inline(always)]
     pub const fn svctl_by_hl(
         &self,
@@ -564,6 +614,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Reference Clock Control Register"]
     #[inline(always)]
     pub const fn refckctl(
         &self,
@@ -575,6 +626,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Reference Clock Control Register"]
     #[inline(always)]
     pub const fn refckctl_ha_l(
         &self,
@@ -586,6 +638,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Reference Clock Control Register"]
     #[inline(always)]
     pub const fn refckctl_by_ll(
         &self,
@@ -597,6 +650,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Standard Bit Rate Register"]
     #[inline(always)]
     pub const fn stdbr(&self) -> &'static crate::common::Reg<self::Stdbr_SPEC, crate::common::RW> {
         unsafe {
@@ -606,6 +660,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Standard Bit Rate Register"]
     #[inline(always)]
     pub const fn stdbr_ha_l(
         &self,
@@ -617,6 +672,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Standard Bit Rate Register"]
     #[inline(always)]
     pub const fn stdbr_by_ll(
         &self,
@@ -628,6 +684,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Standard Bit Rate Register"]
     #[inline(always)]
     pub const fn stdbr_by_lh(
         &self,
@@ -639,6 +696,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Standard Bit Rate Register"]
     #[inline(always)]
     pub const fn stdbr_ha_h(
         &self,
@@ -650,6 +708,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Standard Bit Rate Register"]
     #[inline(always)]
     pub const fn stdbr_by_hl(
         &self,
@@ -661,6 +720,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Standard Bit Rate Register"]
     #[inline(always)]
     pub const fn stdbr_by_hh(
         &self,
@@ -672,6 +732,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Extended Bit Rate Register"]
     #[inline(always)]
     pub const fn extbr(&self) -> &'static crate::common::Reg<self::Extbr_SPEC, crate::common::RW> {
         unsafe {
@@ -681,6 +742,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Extended Bit Rate Register"]
     #[inline(always)]
     pub const fn extbr_ha_l(
         &self,
@@ -692,6 +754,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Extended Bit Rate Register"]
     #[inline(always)]
     pub const fn extbr_by_ll(
         &self,
@@ -703,6 +766,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Extended Bit Rate Register"]
     #[inline(always)]
     pub const fn extbr_by_lh(
         &self,
@@ -714,6 +778,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Extended Bit Rate Register"]
     #[inline(always)]
     pub const fn extbr_ha_h(
         &self,
@@ -725,6 +790,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Extended Bit Rate Register"]
     #[inline(always)]
     pub const fn extbr_by_hl(
         &self,
@@ -736,6 +802,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Extended Bit Rate Register"]
     #[inline(always)]
     pub const fn extbr_by_hh(
         &self,
@@ -747,6 +814,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Free Condition Detection Time Register"]
     #[inline(always)]
     pub const fn bfrecdt(
         &self,
@@ -758,6 +826,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Free Condition Detection Time Register"]
     #[inline(always)]
     pub const fn bfrecdt_ha_l(
         &self,
@@ -769,6 +838,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Free Condition Detection Time Register"]
     #[inline(always)]
     pub const fn bfrecdt_by_ll(
         &self,
@@ -780,6 +850,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Free Condition Detection Time Register"]
     #[inline(always)]
     pub const fn bfrecdt_by_lh(
         &self,
@@ -791,6 +862,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Available Condition Detection Time Register"]
     #[inline(always)]
     pub const fn bavlcdt(
         &self,
@@ -802,6 +874,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Available Condition Detection Time Register"]
     #[inline(always)]
     pub const fn bavlcdt_ha_l(
         &self,
@@ -813,6 +886,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Available Condition Detection Time Register"]
     #[inline(always)]
     pub const fn bavlcdt_by_ll(
         &self,
@@ -824,6 +898,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Available Condition Detection Time Register"]
     #[inline(always)]
     pub const fn bavlcdt_by_lh(
         &self,
@@ -835,6 +910,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Idle Condition Detection Time Register"]
     #[inline(always)]
     pub const fn bidlcdt(
         &self,
@@ -846,6 +922,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Idle Condition Detection Time Register"]
     #[inline(always)]
     pub const fn bidlcdt_ha_l(
         &self,
@@ -857,6 +934,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Idle Condition Detection Time Register"]
     #[inline(always)]
     pub const fn bidlcdt_by_ll(
         &self,
@@ -868,6 +946,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Idle Condition Detection Time Register"]
     #[inline(always)]
     pub const fn bidlcdt_by_lh(
         &self,
@@ -879,6 +958,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Idle Condition Detection Time Register"]
     #[inline(always)]
     pub const fn bidlcdt_ha_h(
         &self,
@@ -890,6 +970,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Idle Condition Detection Time Register"]
     #[inline(always)]
     pub const fn bidlcdt_by_hl(
         &self,
@@ -901,6 +982,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Output Control Register"]
     #[inline(always)]
     pub const fn outctl(
         &self,
@@ -912,6 +994,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Output Control Register"]
     #[inline(always)]
     pub const fn outctl_ha_l(
         &self,
@@ -923,6 +1006,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Output Control Register"]
     #[inline(always)]
     pub const fn outctl_by_ll(
         &self,
@@ -934,6 +1018,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Output Control Register"]
     #[inline(always)]
     pub const fn outctl_by_lh(
         &self,
@@ -945,6 +1030,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Input Control Register"]
     #[inline(always)]
     pub const fn inctl(&self) -> &'static crate::common::Reg<self::Inctl_SPEC, crate::common::RW> {
         unsafe {
@@ -954,6 +1040,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Input Control Register"]
     #[inline(always)]
     pub const fn inctl_ha_l(
         &self,
@@ -965,6 +1052,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Input Control Register"]
     #[inline(always)]
     pub const fn inctl_by_ll(
         &self,
@@ -976,6 +1064,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Timeout Control Register"]
     #[inline(always)]
     pub const fn tmoctl(
         &self,
@@ -987,6 +1076,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Timeout Control Register"]
     #[inline(always)]
     pub const fn tmoctl_ha_l(
         &self,
@@ -998,6 +1088,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Timeout Control Register"]
     #[inline(always)]
     pub const fn tmoctl_by_ll(
         &self,
@@ -1009,6 +1100,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Wake Up Unit Control Register"]
     #[inline(always)]
     pub const fn wuctl(&self) -> &'static crate::common::Reg<self::Wuctl_SPEC, crate::common::RW> {
         unsafe {
@@ -1018,6 +1110,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Wake Up Unit Control Register"]
     #[inline(always)]
     pub const fn wuctl_ha_l(
         &self,
@@ -1029,6 +1122,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Wake Up Unit Control Register"]
     #[inline(always)]
     pub const fn wuctl_by_ll(
         &self,
@@ -1040,6 +1134,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Acknowledge Control Register"]
     #[inline(always)]
     pub const fn ackctl(
         &self,
@@ -1051,6 +1146,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Acknowledge Control Register"]
     #[inline(always)]
     pub const fn ackctl_ha_l(
         &self,
@@ -1062,6 +1158,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Acknowledge Control Register"]
     #[inline(always)]
     pub const fn ackctl_by_ll(
         &self,
@@ -1073,6 +1170,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "SCL Stretch Control Register"]
     #[inline(always)]
     pub const fn scstrctl(
         &self,
@@ -1084,6 +1182,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "SCL Stretch Control Register"]
     #[inline(always)]
     pub const fn scstrctl_ha_l(
         &self,
@@ -1095,6 +1194,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "SCL Stretch Control Register"]
     #[inline(always)]
     pub const fn scstrctl_by_ll(
         &self,
@@ -1106,6 +1206,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "SCL Stalling Control Register"]
     #[inline(always)]
     pub const fn scstlctl(
         &self,
@@ -1117,6 +1218,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "SCL Stalling Control Register"]
     #[inline(always)]
     pub const fn scstlctl_ha_l(
         &self,
@@ -1128,6 +1230,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "SCL Stalling Control Register"]
     #[inline(always)]
     pub const fn scstlctl_by_ll(
         &self,
@@ -1139,6 +1242,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "SCL Stalling Control Register"]
     #[inline(always)]
     pub const fn scstlctl_by_lh(
         &self,
@@ -1150,6 +1254,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "SCL Stalling Control Register"]
     #[inline(always)]
     pub const fn scstlctl_ha_h(
         &self,
@@ -1161,6 +1266,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "SCL Stalling Control Register"]
     #[inline(always)]
     pub const fn scstlctl_by_hh(
         &self,
@@ -1172,6 +1278,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Transfer Data Length Register 0"]
     #[inline(always)]
     pub const fn svtdlg0(
         &self,
@@ -1183,6 +1290,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Transfer Data Length Register 0"]
     #[inline(always)]
     pub const fn svtdlg0_ha_h(
         &self,
@@ -1194,6 +1302,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Transfer Data Length Register 0"]
     #[inline(always)]
     pub const fn svtdlg0_by_hl(
         &self,
@@ -1205,6 +1314,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Transfer Data Length Register 0"]
     #[inline(always)]
     pub const fn svtdlg0_by_hh(
         &self,
@@ -1216,6 +1326,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Synchronous Timiming Control Register"]
     #[inline(always)]
     pub const fn stctl(&self) -> &'static crate::common::Reg<self::Stctl_SPEC, crate::common::RW> {
         unsafe {
@@ -1225,6 +1336,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Synchronous Timiming Control Register"]
     #[inline(always)]
     pub const fn stctl_ha_l(
         &self,
@@ -1236,6 +1348,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Synchronous Timiming Control Register"]
     #[inline(always)]
     pub const fn stctl_by_ll(
         &self,
@@ -1247,6 +1360,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Asynchronous Timimg Control Register"]
     #[inline(always)]
     pub const fn atctl(&self) -> &'static crate::common::Reg<self::Atctl_SPEC, crate::common::RW> {
         unsafe {
@@ -1256,6 +1370,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Asynchronous Timimg Control Register"]
     #[inline(always)]
     pub const fn atctl_ha_l(
         &self,
@@ -1267,6 +1382,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Asynchronous Timimg Control Register"]
     #[inline(always)]
     pub const fn atctl_by_ll(
         &self,
@@ -1278,6 +1394,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Asynchronous Timimg Control Register"]
     #[inline(always)]
     pub const fn atctl_by_lh(
         &self,
@@ -1289,6 +1406,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Asynchronous Timiming Trigger Register"]
     #[inline(always)]
     pub const fn attrg(&self) -> &'static crate::common::Reg<self::Attrg_SPEC, crate::common::W> {
         unsafe {
@@ -1298,6 +1416,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Asynchronous Timiming Trigger Register"]
     #[inline(always)]
     pub const fn attrg_ha_l(
         &self,
@@ -1309,6 +1428,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Asynchronous Timiming Trigger Register"]
     #[inline(always)]
     pub const fn attrg_by_ll(
         &self,
@@ -1320,6 +1440,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Asynchronous Timing Contorol Counter enable Register"]
     #[inline(always)]
     pub const fn atccnte(
         &self,
@@ -1331,6 +1452,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Asynchronous Timing Contorol Counter enable Register"]
     #[inline(always)]
     pub const fn atccnte_ha_l(
         &self,
@@ -1342,6 +1464,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Asynchronous Timing Contorol Counter enable Register"]
     #[inline(always)]
     pub const fn atccnte_by_ll(
         &self,
@@ -1353,6 +1476,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Condition Control Register"]
     #[inline(always)]
     pub const fn cndctl(
         &self,
@@ -1364,6 +1488,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Condition Control Register"]
     #[inline(always)]
     pub const fn cndctl_ha_l(
         &self,
@@ -1375,6 +1500,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Condition Control Register"]
     #[inline(always)]
     pub const fn cndctl_by_ll(
         &self,
@@ -1386,6 +1512,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Command Queue Port Register"]
     #[inline(always)]
     pub const fn ncmdqp(&self) -> &'static crate::common::Reg<self::Ncmdqp_SPEC, crate::common::W> {
         unsafe {
@@ -1395,6 +1522,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Response Queue Port Register"]
     #[inline(always)]
     pub const fn nrspqp(&self) -> &'static crate::common::Reg<self::Nrspqp_SPEC, crate::common::R> {
         unsafe {
@@ -1404,6 +1532,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Data Buffer Port Register 0"]
     #[inline(always)]
     pub const fn ntdtbp0(
         &self,
@@ -1415,6 +1544,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Data Buffer Port Register 0"]
     #[inline(always)]
     pub const fn ntdtbp0_by_ll(
         &self,
@@ -1426,6 +1556,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal IBI Queue Port Register"]
     #[inline(always)]
     pub const fn nibiqp(
         &self,
@@ -1437,6 +1568,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Receive Status Queue Port Register"]
     #[inline(always)]
     pub const fn nrsqp(&self) -> &'static crate::common::Reg<self::Nrsqp_SPEC, crate::common::R> {
         unsafe {
@@ -1446,6 +1578,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Command Queue Port Register"]
     #[inline(always)]
     pub const fn hcmdqp(&self) -> &'static crate::common::Reg<self::Hcmdqp_SPEC, crate::common::W> {
         unsafe {
@@ -1455,6 +1588,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Response Queue Port Register"]
     #[inline(always)]
     pub const fn hrspqp(&self) -> &'static crate::common::Reg<self::Hrspqp_SPEC, crate::common::R> {
         unsafe {
@@ -1464,6 +1598,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Data Buffer Port Register"]
     #[inline(always)]
     pub const fn htdtbp(
         &self,
@@ -1475,6 +1610,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Queue Threshold Control Register"]
     #[inline(always)]
     pub const fn nqthctl(
         &self,
@@ -1486,6 +1622,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Queue Threshold Control Register"]
     #[inline(always)]
     pub const fn nqthctl_ha_l(
         &self,
@@ -1497,6 +1634,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Queue Threshold Control Register"]
     #[inline(always)]
     pub const fn nqthctl_by_ll(
         &self,
@@ -1508,6 +1646,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Queue Threshold Control Register"]
     #[inline(always)]
     pub const fn nqthctl_by_lh(
         &self,
@@ -1519,6 +1658,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Queue Threshold Control Register"]
     #[inline(always)]
     pub const fn nqthctl_ha_h(
         &self,
@@ -1530,6 +1670,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Queue Threshold Control Register"]
     #[inline(always)]
     pub const fn nqthctl_by_hl(
         &self,
@@ -1541,6 +1682,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Queue Threshold Control Register"]
     #[inline(always)]
     pub const fn nqthctl_by_hh(
         &self,
@@ -1552,6 +1694,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Data Buffer Threshold Control Register 0"]
     #[inline(always)]
     pub const fn ntbthctl0(
         &self,
@@ -1563,6 +1706,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Data Buffer Threshold Control Register 0"]
     #[inline(always)]
     pub const fn ntbthctl0_ha_l(
         &self,
@@ -1574,6 +1718,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Data Buffer Threshold Control Register 0"]
     #[inline(always)]
     pub const fn ntbthctl0_by_ll(
         &self,
@@ -1585,6 +1730,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Data Buffer Threshold Control Register 0"]
     #[inline(always)]
     pub const fn ntbthctl0_by_lh(
         &self,
@@ -1596,6 +1742,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Data Buffer Threshold Control Register 0"]
     #[inline(always)]
     pub const fn ntbthctl0_ha_h(
         &self,
@@ -1607,6 +1754,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Data Buffer Threshold Control Register 0"]
     #[inline(always)]
     pub const fn ntbthctl0_by_hl(
         &self,
@@ -1618,6 +1766,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Data Buffer Threshold Control Register 0"]
     #[inline(always)]
     pub const fn ntbthctl0_by_hh(
         &self,
@@ -1629,6 +1778,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Receive Status Queue Threshold Control Register"]
     #[inline(always)]
     pub const fn nrqthctl(
         &self,
@@ -1640,6 +1790,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Receive Status Queue Threshold Control Register"]
     #[inline(always)]
     pub const fn nrqthctl_ha_l(
         &self,
@@ -1651,6 +1802,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Receive Status Queue Threshold Control Register"]
     #[inline(always)]
     pub const fn nrqthctl_by_ll(
         &self,
@@ -1662,6 +1814,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Queue Threshold Control Register"]
     #[inline(always)]
     pub const fn hqthctl(
         &self,
@@ -1673,6 +1826,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Queue Threshold Control Register"]
     #[inline(always)]
     pub const fn hqthctl_ha_l(
         &self,
@@ -1684,6 +1838,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Queue Threshold Control Register"]
     #[inline(always)]
     pub const fn hqthctl_by_ll(
         &self,
@@ -1695,6 +1850,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Queue Threshold Control Register"]
     #[inline(always)]
     pub const fn hqthctl_by_lh(
         &self,
@@ -1706,6 +1862,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Data Buffer Threshold Control Register"]
     #[inline(always)]
     pub const fn htbthctl(
         &self,
@@ -1717,6 +1874,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Data Buffer Threshold Control Register"]
     #[inline(always)]
     pub const fn htbthctl_ha_l(
         &self,
@@ -1728,6 +1886,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Data Buffer Threshold Control Register"]
     #[inline(always)]
     pub const fn htbthctl_by_ll(
         &self,
@@ -1739,6 +1898,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Data Buffer Threshold Control Register"]
     #[inline(always)]
     pub const fn htbthctl_by_lh(
         &self,
@@ -1750,6 +1910,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Data Buffer Threshold Control Register"]
     #[inline(always)]
     pub const fn htbthctl_ha_h(
         &self,
@@ -1761,6 +1922,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Data Buffer Threshold Control Register"]
     #[inline(always)]
     pub const fn htbthctl_by_hl(
         &self,
@@ -1772,6 +1934,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Data Buffer Threshold Control Register"]
     #[inline(always)]
     pub const fn htbthctl_by_hh(
         &self,
@@ -1783,6 +1946,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Register"]
     #[inline(always)]
     pub const fn bst(&self) -> &'static crate::common::Reg<self::Bst_SPEC, crate::common::RW> {
         unsafe {
@@ -1792,6 +1956,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Register"]
     #[inline(always)]
     pub const fn bst_ha_l(
         &self,
@@ -1803,6 +1968,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Register"]
     #[inline(always)]
     pub const fn bst_by_ll(
         &self,
@@ -1814,6 +1980,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Register"]
     #[inline(always)]
     pub const fn bst_by_lh(
         &self,
@@ -1825,6 +1992,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Register"]
     #[inline(always)]
     pub const fn bst_ha_h(
         &self,
@@ -1836,6 +2004,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Register"]
     #[inline(always)]
     pub const fn bst_by_hl(
         &self,
@@ -1847,6 +2016,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Register"]
     #[inline(always)]
     pub const fn bst_by_hh(
         &self,
@@ -1858,6 +2028,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Enable Register"]
     #[inline(always)]
     pub const fn bste(&self) -> &'static crate::common::Reg<self::Bste_SPEC, crate::common::RW> {
         unsafe {
@@ -1867,6 +2038,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Enable Register"]
     #[inline(always)]
     pub const fn bste_ha_l(
         &self,
@@ -1878,6 +2050,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Enable Register"]
     #[inline(always)]
     pub const fn bste_by_ll(
         &self,
@@ -1889,6 +2062,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Enable Register"]
     #[inline(always)]
     pub const fn bste_by_lh(
         &self,
@@ -1900,6 +2074,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Enable Register"]
     #[inline(always)]
     pub const fn bste_ha_h(
         &self,
@@ -1911,6 +2086,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Enable Register"]
     #[inline(always)]
     pub const fn bste_by_hl(
         &self,
@@ -1922,6 +2098,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Enable Register"]
     #[inline(always)]
     pub const fn bste_by_hh(
         &self,
@@ -1933,6 +2110,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Interrupt Enable Register"]
     #[inline(always)]
     pub const fn bie(&self) -> &'static crate::common::Reg<self::Bie_SPEC, crate::common::RW> {
         unsafe {
@@ -1942,6 +2120,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Interrupt Enable Register"]
     #[inline(always)]
     pub const fn bie_ha_l(
         &self,
@@ -1953,6 +2132,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Interrupt Enable Register"]
     #[inline(always)]
     pub const fn bie_by_ll(
         &self,
@@ -1964,6 +2144,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Interrupt Enable Register"]
     #[inline(always)]
     pub const fn bie_by_lh(
         &self,
@@ -1975,6 +2156,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Interrupt Enable Register"]
     #[inline(always)]
     pub const fn bie_ha_h(
         &self,
@@ -1986,6 +2168,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Interrupt Enable Register"]
     #[inline(always)]
     pub const fn bie_by_hl(
         &self,
@@ -1997,6 +2180,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Interrupt Enable Register"]
     #[inline(always)]
     pub const fn bie_by_hh(
         &self,
@@ -2008,6 +2192,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Force Register"]
     #[inline(always)]
     pub const fn bstfc(&self) -> &'static crate::common::Reg<self::Bstfc_SPEC, crate::common::W> {
         unsafe {
@@ -2017,6 +2202,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Force Register"]
     #[inline(always)]
     pub const fn bstfc_ha_l(
         &self,
@@ -2028,6 +2214,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Force Register"]
     #[inline(always)]
     pub const fn bstfc_by_ll(
         &self,
@@ -2039,6 +2226,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Force Register"]
     #[inline(always)]
     pub const fn bstfc_by_lh(
         &self,
@@ -2050,6 +2238,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Force Register"]
     #[inline(always)]
     pub const fn bstfc_ha_h(
         &self,
@@ -2061,6 +2250,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Force Register"]
     #[inline(always)]
     pub const fn bstfc_by_hl(
         &self,
@@ -2072,6 +2262,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Status Force Register"]
     #[inline(always)]
     pub const fn bstfc_by_hh(
         &self,
@@ -2083,6 +2274,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Status Register"]
     #[inline(always)]
     pub const fn ntst(&self) -> &'static crate::common::Reg<self::Ntst_SPEC, crate::common::RW> {
         unsafe {
@@ -2092,6 +2284,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Status Register"]
     #[inline(always)]
     pub const fn ntst_ha_l(
         &self,
@@ -2103,6 +2296,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Status Register"]
     #[inline(always)]
     pub const fn ntst_by_ll(
         &self,
@@ -2114,6 +2308,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Status Register"]
     #[inline(always)]
     pub const fn ntst_by_lh(
         &self,
@@ -2125,6 +2320,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Status Register"]
     #[inline(always)]
     pub const fn ntst_ha_h(
         &self,
@@ -2136,6 +2332,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Status Register"]
     #[inline(always)]
     pub const fn ntst_by_hl(
         &self,
@@ -2147,6 +2344,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Status Enable Register"]
     #[inline(always)]
     pub const fn ntste(&self) -> &'static crate::common::Reg<self::Ntste_SPEC, crate::common::RW> {
         unsafe {
@@ -2156,6 +2354,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Status Enable Register"]
     #[inline(always)]
     pub const fn ntste_ha_l(
         &self,
@@ -2167,6 +2366,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Status Enable Register"]
     #[inline(always)]
     pub const fn ntste_by_ll(
         &self,
@@ -2178,6 +2378,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Status Enable Register"]
     #[inline(always)]
     pub const fn ntste_by_lh(
         &self,
@@ -2189,6 +2390,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Status Enable Register"]
     #[inline(always)]
     pub const fn ntste_ha_h(
         &self,
@@ -2200,6 +2402,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Status Enable Register"]
     #[inline(always)]
     pub const fn ntste_by_hl(
         &self,
@@ -2211,6 +2414,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Interrupt Enable Register"]
     #[inline(always)]
     pub const fn ntie(&self) -> &'static crate::common::Reg<self::Ntie_SPEC, crate::common::RW> {
         unsafe {
@@ -2220,6 +2424,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Interrupt Enable Register"]
     #[inline(always)]
     pub const fn ntie_ha_l(
         &self,
@@ -2231,6 +2436,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Interrupt Enable Register"]
     #[inline(always)]
     pub const fn ntie_by_ll(
         &self,
@@ -2242,6 +2448,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Interrupt Enable Register"]
     #[inline(always)]
     pub const fn ntie_by_lh(
         &self,
@@ -2253,6 +2460,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Interrupt Enable Register"]
     #[inline(always)]
     pub const fn ntie_ha_h(
         &self,
@@ -2264,6 +2472,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Interrupt Enable Register"]
     #[inline(always)]
     pub const fn ntie_by_hl(
         &self,
@@ -2275,6 +2484,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Status Force Register"]
     #[inline(always)]
     pub const fn ntstfc(&self) -> &'static crate::common::Reg<self::Ntstfc_SPEC, crate::common::W> {
         unsafe {
@@ -2284,6 +2494,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Status Force Register"]
     #[inline(always)]
     pub const fn ntstfc_ha_l(
         &self,
@@ -2295,6 +2506,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Status Force Register"]
     #[inline(always)]
     pub const fn ntstfc_by_ll(
         &self,
@@ -2306,6 +2518,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Status Force Register"]
     #[inline(always)]
     pub const fn ntstfc_by_lh(
         &self,
@@ -2317,6 +2530,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Status Force Register"]
     #[inline(always)]
     pub const fn ntstfc_ha_h(
         &self,
@@ -2328,6 +2542,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Transfer Status Force Register"]
     #[inline(always)]
     pub const fn ntstfc_by_hl(
         &self,
@@ -2339,6 +2554,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Status Register"]
     #[inline(always)]
     pub const fn htst(&self) -> &'static crate::common::Reg<self::Htst_SPEC, crate::common::RW> {
         unsafe {
@@ -2348,6 +2564,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Status Register"]
     #[inline(always)]
     pub const fn htst_ha_l(
         &self,
@@ -2359,6 +2576,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Status Register"]
     #[inline(always)]
     pub const fn htst_by_ll(
         &self,
@@ -2370,6 +2588,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Status Register"]
     #[inline(always)]
     pub const fn htst_by_lh(
         &self,
@@ -2381,6 +2600,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Status Enable Register"]
     #[inline(always)]
     pub const fn htste(&self) -> &'static crate::common::Reg<self::Htste_SPEC, crate::common::RW> {
         unsafe {
@@ -2390,6 +2610,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Status Enable Register"]
     #[inline(always)]
     pub const fn htste_ha_l(
         &self,
@@ -2401,6 +2622,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Status Enable Register"]
     #[inline(always)]
     pub const fn htste_by_ll(
         &self,
@@ -2412,6 +2634,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Status Enable Register"]
     #[inline(always)]
     pub const fn htste_by_lh(
         &self,
@@ -2423,6 +2646,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Interrupt Enable Register"]
     #[inline(always)]
     pub const fn htie(&self) -> &'static crate::common::Reg<self::Htie_SPEC, crate::common::RW> {
         unsafe {
@@ -2432,6 +2656,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Interrupt Enable Register"]
     #[inline(always)]
     pub const fn htie_ha_l(
         &self,
@@ -2443,6 +2668,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Interrupt Enable Register"]
     #[inline(always)]
     pub const fn htie_by_ll(
         &self,
@@ -2454,6 +2680,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Interrupt Enable Register"]
     #[inline(always)]
     pub const fn htie_by_lh(
         &self,
@@ -2465,6 +2692,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Status Force Register"]
     #[inline(always)]
     pub const fn htstfc(&self) -> &'static crate::common::Reg<self::Htstfc_SPEC, crate::common::W> {
         unsafe {
@@ -2474,6 +2702,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Status Force Register"]
     #[inline(always)]
     pub const fn htstfc_ha_l(
         &self,
@@ -2485,6 +2714,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Status Force Register"]
     #[inline(always)]
     pub const fn htstfc_by_ll(
         &self,
@@ -2496,6 +2726,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Transfer Status Force Register"]
     #[inline(always)]
     pub const fn htstfc_by_lh(
         &self,
@@ -2507,6 +2738,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Condition Status Register"]
     #[inline(always)]
     pub const fn bcst(&self) -> &'static crate::common::Reg<self::Bcst_SPEC, crate::common::R> {
         unsafe {
@@ -2516,6 +2748,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Condition Status Register"]
     #[inline(always)]
     pub const fn bcst_ha_l(
         &self,
@@ -2527,6 +2760,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bus Condition Status Register"]
     #[inline(always)]
     pub const fn bcst_by_ll(
         &self,
@@ -2538,6 +2772,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Status Register"]
     #[inline(always)]
     pub const fn svst(&self) -> &'static crate::common::Reg<self::Svst_SPEC, crate::common::RW> {
         unsafe {
@@ -2547,6 +2782,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Status Register"]
     #[inline(always)]
     pub const fn svst_ha_l(
         &self,
@@ -2558,6 +2794,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Status Register"]
     #[inline(always)]
     pub const fn svst_by_ll(
         &self,
@@ -2569,6 +2806,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Status Register"]
     #[inline(always)]
     pub const fn svst_by_lh(
         &self,
@@ -2580,6 +2818,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Status Register"]
     #[inline(always)]
     pub const fn svst_ha_h(
         &self,
@@ -2591,6 +2830,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Status Register"]
     #[inline(always)]
     pub const fn svst_by_hl(
         &self,
@@ -2602,6 +2842,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Wake Up Unit Operating Status Register"]
     #[inline(always)]
     pub const fn wust(&self) -> &'static crate::common::Reg<self::Wust_SPEC, crate::common::R> {
         unsafe {
@@ -2611,6 +2852,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Wake Up Unit Operating Status Register"]
     #[inline(always)]
     pub const fn wust_ha_l(
         &self,
@@ -2622,6 +2864,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Wake Up Unit Operating Status Register"]
     #[inline(always)]
     pub const fn wust_by_ll(
         &self,
@@ -2633,6 +2876,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "MsyncCNT Counter Capture Register"]
     #[inline(always)]
     pub const fn mrccpt(&self) -> &'static crate::common::Reg<self::Mrccpt_SPEC, crate::common::R> {
         unsafe {
@@ -2642,6 +2886,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 0"]
     #[inline(always)]
     pub const fn datbas0(
         &self,
@@ -2653,6 +2898,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 0"]
     #[inline(always)]
     pub const fn datbas0_ha_l(
         &self,
@@ -2664,6 +2910,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 0"]
     #[inline(always)]
     pub const fn datbas0_by_ll(
         &self,
@@ -2675,6 +2922,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 0"]
     #[inline(always)]
     pub const fn datbas0_by_lh(
         &self,
@@ -2686,6 +2934,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 0"]
     #[inline(always)]
     pub const fn datbas0_ha_h(
         &self,
@@ -2697,6 +2946,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 0"]
     #[inline(always)]
     pub const fn datbas0_by_hl(
         &self,
@@ -2708,6 +2958,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 0"]
     #[inline(always)]
     pub const fn datbas0_by_hh(
         &self,
@@ -2719,6 +2970,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 1"]
     #[inline(always)]
     pub const fn datbas1(
         &self,
@@ -2730,6 +2982,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 1"]
     #[inline(always)]
     pub const fn datbas1_ha_l(
         &self,
@@ -2741,6 +2994,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 1"]
     #[inline(always)]
     pub const fn datbas1_by_ll(
         &self,
@@ -2752,6 +3006,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 1"]
     #[inline(always)]
     pub const fn datbas1_by_lh(
         &self,
@@ -2763,6 +3018,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 1"]
     #[inline(always)]
     pub const fn datbas1_ha_h(
         &self,
@@ -2774,6 +3030,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 1"]
     #[inline(always)]
     pub const fn datbas1_by_hl(
         &self,
@@ -2785,6 +3042,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 1"]
     #[inline(always)]
     pub const fn datbas1_by_hh(
         &self,
@@ -2796,6 +3054,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 2"]
     #[inline(always)]
     pub const fn datbas2(
         &self,
@@ -2807,6 +3066,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 2"]
     #[inline(always)]
     pub const fn datbas2_ha_l(
         &self,
@@ -2818,6 +3078,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 2"]
     #[inline(always)]
     pub const fn datbas2_by_ll(
         &self,
@@ -2829,6 +3090,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 2"]
     #[inline(always)]
     pub const fn datbas2_by_lh(
         &self,
@@ -2840,6 +3102,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 2"]
     #[inline(always)]
     pub const fn datbas2_ha_h(
         &self,
@@ -2851,6 +3114,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 2"]
     #[inline(always)]
     pub const fn datbas2_by_hl(
         &self,
@@ -2862,6 +3126,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 2"]
     #[inline(always)]
     pub const fn datbas2_by_hh(
         &self,
@@ -2873,6 +3138,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 3"]
     #[inline(always)]
     pub const fn datbas3(
         &self,
@@ -2884,6 +3150,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 3"]
     #[inline(always)]
     pub const fn datbas3_ha_l(
         &self,
@@ -2895,6 +3162,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 3"]
     #[inline(always)]
     pub const fn datbas3_by_ll(
         &self,
@@ -2906,6 +3174,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 3"]
     #[inline(always)]
     pub const fn datbas3_by_lh(
         &self,
@@ -2917,6 +3186,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 3"]
     #[inline(always)]
     pub const fn datbas3_ha_h(
         &self,
@@ -2928,6 +3198,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 3"]
     #[inline(always)]
     pub const fn datbas3_by_hl(
         &self,
@@ -2939,6 +3210,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 3"]
     #[inline(always)]
     pub const fn datbas3_by_hh(
         &self,
@@ -2950,6 +3222,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 4"]
     #[inline(always)]
     pub const fn datbas4(
         &self,
@@ -2961,6 +3234,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 4"]
     #[inline(always)]
     pub const fn datbas4_ha_l(
         &self,
@@ -2972,6 +3246,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 4"]
     #[inline(always)]
     pub const fn datbas4_by_ll(
         &self,
@@ -2983,6 +3258,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 4"]
     #[inline(always)]
     pub const fn datbas4_by_lh(
         &self,
@@ -2994,6 +3270,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 4"]
     #[inline(always)]
     pub const fn datbas4_ha_h(
         &self,
@@ -3005,6 +3282,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 4"]
     #[inline(always)]
     pub const fn datbas4_by_hl(
         &self,
@@ -3016,6 +3294,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 4"]
     #[inline(always)]
     pub const fn datbas4_by_hh(
         &self,
@@ -3027,6 +3306,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 5"]
     #[inline(always)]
     pub const fn datbas5(
         &self,
@@ -3038,6 +3318,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 5"]
     #[inline(always)]
     pub const fn datbas5_ha_l(
         &self,
@@ -3049,6 +3330,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 5"]
     #[inline(always)]
     pub const fn datbas5_by_ll(
         &self,
@@ -3060,6 +3342,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 5"]
     #[inline(always)]
     pub const fn datbas5_by_lh(
         &self,
@@ -3071,6 +3354,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 5"]
     #[inline(always)]
     pub const fn datbas5_ha_h(
         &self,
@@ -3082,6 +3366,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 5"]
     #[inline(always)]
     pub const fn datbas5_by_hl(
         &self,
@@ -3093,6 +3378,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 5"]
     #[inline(always)]
     pub const fn datbas5_by_hh(
         &self,
@@ -3104,6 +3390,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 6"]
     #[inline(always)]
     pub const fn datbas6(
         &self,
@@ -3115,6 +3402,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 6"]
     #[inline(always)]
     pub const fn datbas6_ha_l(
         &self,
@@ -3126,6 +3414,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 6"]
     #[inline(always)]
     pub const fn datbas6_by_ll(
         &self,
@@ -3137,6 +3426,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 6"]
     #[inline(always)]
     pub const fn datbas6_by_lh(
         &self,
@@ -3148,6 +3438,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 6"]
     #[inline(always)]
     pub const fn datbas6_ha_h(
         &self,
@@ -3159,6 +3450,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 6"]
     #[inline(always)]
     pub const fn datbas6_by_hl(
         &self,
@@ -3170,6 +3462,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 6"]
     #[inline(always)]
     pub const fn datbas6_by_hh(
         &self,
@@ -3181,6 +3474,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 7"]
     #[inline(always)]
     pub const fn datbas7(
         &self,
@@ -3192,6 +3486,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 7"]
     #[inline(always)]
     pub const fn datbas7_ha_l(
         &self,
@@ -3203,6 +3498,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 7"]
     #[inline(always)]
     pub const fn datbas7_by_ll(
         &self,
@@ -3214,6 +3510,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 7"]
     #[inline(always)]
     pub const fn datbas7_by_lh(
         &self,
@@ -3225,6 +3522,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 7"]
     #[inline(always)]
     pub const fn datbas7_ha_h(
         &self,
@@ -3236,6 +3534,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 7"]
     #[inline(always)]
     pub const fn datbas7_by_hl(
         &self,
@@ -3247,6 +3546,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Device Address Table Basic Register 7"]
     #[inline(always)]
     pub const fn datbas7_by_hh(
         &self,
@@ -3258,6 +3558,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Extended Device Address Table Basic Register"]
     #[inline(always)]
     pub const fn exdatbas(
         &self,
@@ -3269,6 +3570,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Extended Device Address Table Basic Register"]
     #[inline(always)]
     pub const fn exdatbas_ha_l(
         &self,
@@ -3280,6 +3582,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Extended Device Address Table Basic Register"]
     #[inline(always)]
     pub const fn exdatbas_by_ll(
         &self,
@@ -3291,6 +3594,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Extended Device Address Table Basic Register"]
     #[inline(always)]
     pub const fn exdatbas_by_lh(
         &self,
@@ -3302,6 +3606,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Extended Device Address Table Basic Register"]
     #[inline(always)]
     pub const fn exdatbas_ha_h(
         &self,
@@ -3313,6 +3618,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Extended Device Address Table Basic Register"]
     #[inline(always)]
     pub const fn exdatbas_by_hl(
         &self,
@@ -3324,6 +3630,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Extended Device Address Table Basic Register"]
     #[inline(always)]
     pub const fn exdatbas_by_hh(
         &self,
@@ -3335,6 +3642,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Table Basic Register 0"]
     #[inline(always)]
     pub const fn sdatbas0(
         &self,
@@ -3346,6 +3654,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Table Basic Register 0"]
     #[inline(always)]
     pub const fn sdatbas0_ha_l(
         &self,
@@ -3357,6 +3666,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Table Basic Register 0"]
     #[inline(always)]
     pub const fn sdatbas0_by_ll(
         &self,
@@ -3368,6 +3678,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Table Basic Register 0"]
     #[inline(always)]
     pub const fn sdatbas0_by_lh(
         &self,
@@ -3379,6 +3690,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Table Basic Register 0"]
     #[inline(always)]
     pub const fn sdatbas0_ha_h(
         &self,
@@ -3390,6 +3702,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Table Basic Register 0"]
     #[inline(always)]
     pub const fn sdatbas0_by_hl(
         &self,
@@ -3401,6 +3714,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Table Basic Register 1"]
     #[inline(always)]
     pub const fn sdatbas1(
         &self,
@@ -3412,6 +3726,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Table Basic Register 1"]
     #[inline(always)]
     pub const fn sdatbas1_ha_l(
         &self,
@@ -3423,6 +3738,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Table Basic Register 1"]
     #[inline(always)]
     pub const fn sdatbas1_by_ll(
         &self,
@@ -3434,6 +3750,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Table Basic Register 1"]
     #[inline(always)]
     pub const fn sdatbas1_by_lh(
         &self,
@@ -3445,6 +3762,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Table Basic Register 2"]
     #[inline(always)]
     pub const fn sdatbas2(
         &self,
@@ -3456,6 +3774,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Table Basic Register 2"]
     #[inline(always)]
     pub const fn sdatbas2_ha_l(
         &self,
@@ -3467,6 +3786,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Table Basic Register 2"]
     #[inline(always)]
     pub const fn sdatbas2_by_ll(
         &self,
@@ -3478,6 +3798,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Table Basic Register 2"]
     #[inline(always)]
     pub const fn sdatbas2_by_lh(
         &self,
@@ -3489,6 +3810,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 0"]
     #[inline(always)]
     pub const fn msdct0(
         &self,
@@ -3500,6 +3822,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 0"]
     #[inline(always)]
     pub const fn msdct0_ha_l(
         &self,
@@ -3511,6 +3834,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 0"]
     #[inline(always)]
     pub const fn msdct0_by_lh(
         &self,
@@ -3522,6 +3846,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 1"]
     #[inline(always)]
     pub const fn msdct1(
         &self,
@@ -3533,6 +3858,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 1"]
     #[inline(always)]
     pub const fn msdct1_ha_l(
         &self,
@@ -3544,6 +3870,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 1"]
     #[inline(always)]
     pub const fn msdct1_by_lh(
         &self,
@@ -3555,6 +3882,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 2"]
     #[inline(always)]
     pub const fn msdct2(
         &self,
@@ -3566,6 +3894,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 2"]
     #[inline(always)]
     pub const fn msdct2_ha_l(
         &self,
@@ -3577,6 +3906,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 2"]
     #[inline(always)]
     pub const fn msdct2_by_lh(
         &self,
@@ -3588,6 +3918,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 3"]
     #[inline(always)]
     pub const fn msdct3(
         &self,
@@ -3599,6 +3930,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 3"]
     #[inline(always)]
     pub const fn msdct3_ha_l(
         &self,
@@ -3610,6 +3942,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 3"]
     #[inline(always)]
     pub const fn msdct3_by_lh(
         &self,
@@ -3621,6 +3954,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 4"]
     #[inline(always)]
     pub const fn msdct4(
         &self,
@@ -3632,6 +3966,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 4"]
     #[inline(always)]
     pub const fn msdct4_ha_l(
         &self,
@@ -3643,6 +3978,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 4"]
     #[inline(always)]
     pub const fn msdct4_by_lh(
         &self,
@@ -3654,6 +3990,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 5"]
     #[inline(always)]
     pub const fn msdct5(
         &self,
@@ -3665,6 +4002,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 5"]
     #[inline(always)]
     pub const fn msdct5_ha_l(
         &self,
@@ -3676,6 +4014,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 5"]
     #[inline(always)]
     pub const fn msdct5_by_lh(
         &self,
@@ -3687,6 +4026,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 6"]
     #[inline(always)]
     pub const fn msdct6(
         &self,
@@ -3698,6 +4038,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 6"]
     #[inline(always)]
     pub const fn msdct6_ha_l(
         &self,
@@ -3709,6 +4050,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 6"]
     #[inline(always)]
     pub const fn msdct6_by_lh(
         &self,
@@ -3720,6 +4062,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 7"]
     #[inline(always)]
     pub const fn msdct7(
         &self,
@@ -3731,6 +4074,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 7"]
     #[inline(always)]
     pub const fn msdct7_ha_l(
         &self,
@@ -3742,6 +4086,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Device Characteristic Table Register 7"]
     #[inline(always)]
     pub const fn msdct7_by_lh(
         &self,
@@ -3753,6 +4098,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Characteristic Table Register"]
     #[inline(always)]
     pub const fn svdct(&self) -> &'static crate::common::Reg<self::Svdct_SPEC, crate::common::RW> {
         unsafe {
@@ -3762,6 +4108,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Characteristic Table Register"]
     #[inline(always)]
     pub const fn svdct_ha_l(
         &self,
@@ -3773,6 +4120,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Characteristic Table Register"]
     #[inline(always)]
     pub const fn svdct_by_ll(
         &self,
@@ -3784,6 +4132,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Characteristic Table Register"]
     #[inline(always)]
     pub const fn svdct_by_lh(
         &self,
@@ -3795,6 +4144,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Characteristic Table Provisional ID Low Register"]
     #[inline(always)]
     pub const fn sdctpidl(
         &self,
@@ -3806,6 +4156,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Characteristic Table Provisional ID Low Register"]
     #[inline(always)]
     pub const fn sdctpidl_ha_l(
         &self,
@@ -3817,6 +4168,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Characteristic Table Provisional ID Low Register"]
     #[inline(always)]
     pub const fn sdctpidl_by_ll(
         &self,
@@ -3828,6 +4180,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Characteristic Table Provisional ID Low Register"]
     #[inline(always)]
     pub const fn sdctpidl_by_lh(
         &self,
@@ -3839,6 +4192,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Characteristic Table Provisional ID High Register"]
     #[inline(always)]
     pub const fn sdctpidh(
         &self,
@@ -3850,6 +4204,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Characteristic Table Provisional ID High Register"]
     #[inline(always)]
     pub const fn sdctpidh_ha_l(
         &self,
@@ -3861,6 +4216,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Characteristic Table Provisional ID High Register"]
     #[inline(always)]
     pub const fn sdctpidh_by_ll(
         &self,
@@ -3872,6 +4228,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Characteristic Table Provisional ID High Register"]
     #[inline(always)]
     pub const fn sdctpidh_by_lh(
         &self,
@@ -3883,6 +4240,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Characteristic Table Provisional ID High Register"]
     #[inline(always)]
     pub const fn sdctpidh_ha_h(
         &self,
@@ -3894,6 +4252,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Characteristic Table Provisional ID High Register"]
     #[inline(always)]
     pub const fn sdctpidh_by_hl(
         &self,
@@ -3905,6 +4264,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Characteristic Table Provisional ID High Register"]
     #[inline(always)]
     pub const fn sdctpidh_by_hh(
         &self,
@@ -3916,6 +4276,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Register 0"]
     #[inline(always)]
     pub const fn svdvad0(
         &self,
@@ -3927,6 +4288,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Register 0"]
     #[inline(always)]
     pub const fn svdvad0_ha_h(
         &self,
@@ -3938,6 +4300,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Register 0"]
     #[inline(always)]
     pub const fn svdvad0_by_hl(
         &self,
@@ -3949,6 +4312,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Register 0"]
     #[inline(always)]
     pub const fn svdvad0_by_hh(
         &self,
@@ -3960,6 +4324,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Register 1"]
     #[inline(always)]
     pub const fn svdvad1(
         &self,
@@ -3971,6 +4336,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Register 1"]
     #[inline(always)]
     pub const fn svdvad1_ha_h(
         &self,
@@ -3982,6 +4348,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Register 1"]
     #[inline(always)]
     pub const fn svdvad1_by_hl(
         &self,
@@ -3993,6 +4360,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Register 1"]
     #[inline(always)]
     pub const fn svdvad1_by_hh(
         &self,
@@ -4004,6 +4372,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Register 2"]
     #[inline(always)]
     pub const fn svdvad2(
         &self,
@@ -4015,6 +4384,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Register 2"]
     #[inline(always)]
     pub const fn svdvad2_ha_h(
         &self,
@@ -4026,6 +4396,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Register 2"]
     #[inline(always)]
     pub const fn svdvad2_by_hl(
         &self,
@@ -4037,6 +4408,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Slave Device Address Register 2"]
     #[inline(always)]
     pub const fn svdvad2_by_hh(
         &self,
@@ -4048,6 +4420,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Slave Events Command Register"]
     #[inline(always)]
     pub const fn csecmd(
         &self,
@@ -4059,6 +4432,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Slave Events Command Register"]
     #[inline(always)]
     pub const fn csecmd_ha_l(
         &self,
@@ -4070,6 +4444,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Slave Events Command Register"]
     #[inline(always)]
     pub const fn csecmd_by_ll(
         &self,
@@ -4081,6 +4456,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Enter Activity State Register"]
     #[inline(always)]
     pub const fn ceactst(
         &self,
@@ -4092,6 +4468,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Enter Activity State Register"]
     #[inline(always)]
     pub const fn ceactst_ha_l(
         &self,
@@ -4103,6 +4480,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Enter Activity State Register"]
     #[inline(always)]
     pub const fn ceactst_by_ll(
         &self,
@@ -4114,6 +4492,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Write Length Register"]
     #[inline(always)]
     pub const fn cmwlg(&self) -> &'static crate::common::Reg<self::Cmwlg_SPEC, crate::common::RW> {
         unsafe {
@@ -4123,6 +4502,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Write Length Register"]
     #[inline(always)]
     pub const fn cmwlg_ha_l(
         &self,
@@ -4134,6 +4514,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Write Length Register"]
     #[inline(always)]
     pub const fn cmwlg_by_ll(
         &self,
@@ -4145,6 +4526,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Write Length Register"]
     #[inline(always)]
     pub const fn cmwlg_by_lh(
         &self,
@@ -4156,6 +4538,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Read Length Register"]
     #[inline(always)]
     pub const fn cmrlg(&self) -> &'static crate::common::Reg<self::Cmrlg_SPEC, crate::common::RW> {
         unsafe {
@@ -4165,6 +4548,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Read Length Register"]
     #[inline(always)]
     pub const fn cmrlg_ha_l(
         &self,
@@ -4176,6 +4560,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Read Length Register"]
     #[inline(always)]
     pub const fn cmrlg_by_ll(
         &self,
@@ -4187,6 +4572,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Read Length Register"]
     #[inline(always)]
     pub const fn cmrlg_by_lh(
         &self,
@@ -4198,6 +4584,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Read Length Register"]
     #[inline(always)]
     pub const fn cmrlg_ha_h(
         &self,
@@ -4209,6 +4596,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Read Length Register"]
     #[inline(always)]
     pub const fn cmrlg_by_hl(
         &self,
@@ -4220,6 +4608,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Enter Test Mode Register"]
     #[inline(always)]
     pub const fn cetstmd(
         &self,
@@ -4231,6 +4620,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Enter Test Mode Register"]
     #[inline(always)]
     pub const fn cetstmd_ha_l(
         &self,
@@ -4242,6 +4632,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Enter Test Mode Register"]
     #[inline(always)]
     pub const fn cetstmd_by_ll(
         &self,
@@ -4253,6 +4644,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Get Device Status Register"]
     #[inline(always)]
     pub const fn cgdvst(
         &self,
@@ -4264,6 +4656,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Get Device Status Register"]
     #[inline(always)]
     pub const fn cgdvst_ha_l(
         &self,
@@ -4275,6 +4668,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Get Device Status Register"]
     #[inline(always)]
     pub const fn cgdvst_by_ll(
         &self,
@@ -4286,6 +4680,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Get Device Status Register"]
     #[inline(always)]
     pub const fn cgdvst_by_lh(
         &self,
@@ -4297,6 +4692,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Data Speed W(Write) Registe"]
     #[inline(always)]
     pub const fn cmdspw(
         &self,
@@ -4308,6 +4704,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Data Speed W(Write) Registe"]
     #[inline(always)]
     pub const fn cmdspw_ha_l(
         &self,
@@ -4319,6 +4716,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Data Speed W(Write) Registe"]
     #[inline(always)]
     pub const fn cmdspw_by_ll(
         &self,
@@ -4330,6 +4728,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Data Speed R(Read) Registe"]
     #[inline(always)]
     pub const fn cmdspr(
         &self,
@@ -4341,6 +4740,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Data Speed R(Read) Registe"]
     #[inline(always)]
     pub const fn cmdspr_ha_l(
         &self,
@@ -4352,6 +4752,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Data Speed R(Read) Registe"]
     #[inline(always)]
     pub const fn cmdspr_by_ll(
         &self,
@@ -4363,6 +4764,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Data Speed T(Turnaround) Registe"]
     #[inline(always)]
     pub const fn cmdspt(
         &self,
@@ -4374,6 +4776,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Data Speed T(Turnaround) Register"]
     #[inline(always)]
     pub const fn cmdspt_ha_l(
         &self,
@@ -4385,6 +4788,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Data Speed T(Turnaround) Register"]
     #[inline(always)]
     pub const fn cmdspt_by_ll(
         &self,
@@ -4396,6 +4800,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Data Speed T(Turnaround) Register"]
     #[inline(always)]
     pub const fn cmdspt_by_lh(
         &self,
@@ -4407,6 +4812,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Data Speed T(Turnaround) Register"]
     #[inline(always)]
     pub const fn cmdspt_ha_h(
         &self,
@@ -4418,6 +4824,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Data Speed T(Turnaround) Register"]
     #[inline(always)]
     pub const fn cmdspt_by_hl(
         &self,
@@ -4429,6 +4836,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Max Data Speed T(Turnaround) Register"]
     #[inline(always)]
     pub const fn cmdspt_by_hh(
         &self,
@@ -4440,6 +4848,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Exchange Timing Support Information M(Mode\u{a0}) Register"]
     #[inline(always)]
     pub const fn cetsm(&self) -> &'static crate::common::Reg<self::Cetsm_SPEC, crate::common::RW> {
         unsafe {
@@ -4449,6 +4858,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Exchange Timing Support Information M(Mode\u{a0}) Register"]
     #[inline(always)]
     pub const fn cetsm_ha_l(
         &self,
@@ -4460,6 +4870,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Exchange Timing Support Information M(Mode\u{a0}) Register"]
     #[inline(always)]
     pub const fn cetsm_by_ll(
         &self,
@@ -4471,6 +4882,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Exchange Timing Support Information M(Mode\u{a0}) Register"]
     #[inline(always)]
     pub const fn cetsm_by_lh(
         &self,
@@ -4482,6 +4894,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Exchange Timing Support Information M(Mode\u{a0}) Register"]
     #[inline(always)]
     pub const fn cetsm_ha_h(
         &self,
@@ -4493,6 +4906,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Exchange Timing Support Information M(Mode\u{a0}) Register"]
     #[inline(always)]
     pub const fn cetsm_by_hl(
         &self,
@@ -4504,6 +4918,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Exchange Timing Support Information S(State\u{a0}) Register"]
     #[inline(always)]
     pub const fn cetss(&self) -> &'static crate::common::Reg<self::Cetss_SPEC, crate::common::RW> {
         unsafe {
@@ -4513,6 +4928,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Exchange Timing Support Information S(State\u{a0}) Register"]
     #[inline(always)]
     pub const fn cetss_ha_l(
         &self,
@@ -4524,6 +4940,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Exchange Timing Support Information S(State\u{a0}) Register"]
     #[inline(always)]
     pub const fn cetss_by_ll(
         &self,
@@ -4535,6 +4952,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Get HDR capability Register"]
     #[inline(always)]
     pub const fn cghdrcap(
         &self,
@@ -4546,6 +4964,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Get HDR capability Register"]
     #[inline(always)]
     pub const fn cghdrcap_ha_l(
         &self,
@@ -4557,6 +4976,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "CCC Get HDR capability Register"]
     #[inline(always)]
     pub const fn cghdrcap_by_ll(
         &self,
@@ -4568,6 +4988,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bit Count Register"]
     #[inline(always)]
     pub const fn bitcnt(&self) -> &'static crate::common::Reg<self::Bitcnt_SPEC, crate::common::R> {
         unsafe {
@@ -4577,6 +4998,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bit Count Register"]
     #[inline(always)]
     pub const fn bitcnt_ha_l(
         &self,
@@ -4588,6 +5010,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Bit Count Register"]
     #[inline(always)]
     pub const fn bitcnt_by_ll(
         &self,
@@ -4599,6 +5022,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Queue Status Level Register"]
     #[inline(always)]
     pub const fn nqstlv(&self) -> &'static crate::common::Reg<self::Nqstlv_SPEC, crate::common::R> {
         unsafe {
@@ -4608,6 +5032,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Queue Status Level Register"]
     #[inline(always)]
     pub const fn nqstlv_ha_l(
         &self,
@@ -4619,6 +5044,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Queue Status Level Register"]
     #[inline(always)]
     pub const fn nqstlv_by_ll(
         &self,
@@ -4630,6 +5056,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Queue Status Level Register"]
     #[inline(always)]
     pub const fn nqstlv_by_lh(
         &self,
@@ -4641,6 +5068,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Queue Status Level Register"]
     #[inline(always)]
     pub const fn nqstlv_ha_h(
         &self,
@@ -4652,6 +5080,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Queue Status Level Register"]
     #[inline(always)]
     pub const fn nqstlv_by_hl(
         &self,
@@ -4663,6 +5092,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Queue Status Level Register"]
     #[inline(always)]
     pub const fn nqstlv_by_hh(
         &self,
@@ -4674,6 +5104,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Data Buffer Status Level Register 0"]
     #[inline(always)]
     pub const fn ndbstlv0(
         &self,
@@ -4685,6 +5116,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Data Buffer Status Level Register 0"]
     #[inline(always)]
     pub const fn ndbstlv0_ha_l(
         &self,
@@ -4696,6 +5128,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Data Buffer Status Level Register 0"]
     #[inline(always)]
     pub const fn ndbstlv0_by_ll(
         &self,
@@ -4707,6 +5140,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Data Buffer Status Level Register 0"]
     #[inline(always)]
     pub const fn ndbstlv0_by_lh(
         &self,
@@ -4718,6 +5152,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Receive Status Queue Status Level Register"]
     #[inline(always)]
     pub const fn nrsqstlv(
         &self,
@@ -4729,6 +5164,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Receive Status Queue Status Level Register"]
     #[inline(always)]
     pub const fn nrsqstlv_ha_l(
         &self,
@@ -4740,6 +5176,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Normal Receive Status Queue Status Level Register"]
     #[inline(always)]
     pub const fn nrsqstlv_by_ll(
         &self,
@@ -4751,6 +5188,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Queue Status Level Register"]
     #[inline(always)]
     pub const fn hqstlv(&self) -> &'static crate::common::Reg<self::Hqstlv_SPEC, crate::common::R> {
         unsafe {
@@ -4760,6 +5198,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Queue Status Level Register"]
     #[inline(always)]
     pub const fn hqstlv_ha_l(
         &self,
@@ -4771,6 +5210,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Queue Status Level Register"]
     #[inline(always)]
     pub const fn hqstlv_by_ll(
         &self,
@@ -4782,6 +5222,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Queue Status Level Register"]
     #[inline(always)]
     pub const fn hqstlv_by_lh(
         &self,
@@ -4793,6 +5234,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Data Buffer Status Level Register"]
     #[inline(always)]
     pub const fn hdbstlv(
         &self,
@@ -4804,6 +5246,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Data Buffer Status Level Register"]
     #[inline(always)]
     pub const fn hdbstlv_ha_l(
         &self,
@@ -4815,6 +5258,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Data Buffer Status Level Register"]
     #[inline(always)]
     pub const fn hdbstlv_by_ll(
         &self,
@@ -4826,6 +5270,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "High Priority Data Buffer Status Level Register"]
     #[inline(always)]
     pub const fn hdbstlv_by_lh(
         &self,
@@ -4837,6 +5282,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Present State Debug Register"]
     #[inline(always)]
     pub const fn prstdbg(
         &self,
@@ -4848,6 +5294,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Present State Debug Register"]
     #[inline(always)]
     pub const fn prstdbg_ha_l(
         &self,
@@ -4859,6 +5306,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Present State Debug Register"]
     #[inline(always)]
     pub const fn prstdbg_by_ll(
         &self,
@@ -4870,6 +5318,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Present State Debug Register"]
     #[inline(always)]
     pub const fn prstdbg_by_lh(
         &self,
@@ -4881,6 +5330,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Present State Debug Register"]
     #[inline(always)]
     pub const fn prstdbg_ha_h(
         &self,
@@ -4892,6 +5342,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Present State Debug Register"]
     #[inline(always)]
     pub const fn prstdbg_by_hl(
         &self,
@@ -4903,6 +5354,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Present State Debug Register"]
     #[inline(always)]
     pub const fn prstdbg_by_hh(
         &self,
@@ -4914,6 +5366,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Error Counters Register"]
     #[inline(always)]
     pub const fn mserrcnt(
         &self,
@@ -4925,6 +5378,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Error Counters Register"]
     #[inline(always)]
     pub const fn mserrcnt_ha_l(
         &self,
@@ -4936,6 +5390,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "Master Error Counters Register"]
     #[inline(always)]
     pub const fn mserrcnt_by_ll(
         &self,
@@ -4947,6 +5402,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "SC1 Capture monitor Register"]
     #[inline(always)]
     pub const fn sc1cpt(&self) -> &'static crate::common::Reg<self::Sc1Cpt_SPEC, crate::common::R> {
         unsafe {
@@ -4956,6 +5412,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "SC1 Capture monitor Register"]
     #[inline(always)]
     pub const fn sc1cpt_ha_l(
         &self,
@@ -4967,6 +5424,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "SC1 Capture monitor Register"]
     #[inline(always)]
     pub const fn sc1cpt_by_ll(
         &self,
@@ -4978,6 +5436,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "SC1 Capture monitor Register"]
     #[inline(always)]
     pub const fn sc1cpt_by_lh(
         &self,
@@ -4989,6 +5448,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "SC2 Capture monitor Register"]
     #[inline(always)]
     pub const fn sc2cpt(&self) -> &'static crate::common::Reg<self::Sc2Cpt_SPEC, crate::common::R> {
         unsafe {
@@ -4998,6 +5458,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "SC2 Capture monitor Register"]
     #[inline(always)]
     pub const fn sc2cpt_ha_l(
         &self,
@@ -5009,6 +5470,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "SC2 Capture monitor Register"]
     #[inline(always)]
     pub const fn sc2cpt_by_ll(
         &self,
@@ -5020,6 +5482,7 @@ impl super::I3C {
         }
     }
 
+    #[doc = "SC2 Capture monitor Register"]
     #[inline(always)]
     pub const fn sc2cpt_by_lh(
         &self,
@@ -5038,9 +5501,11 @@ impl crate::sealed::RegSpec for Prts_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Protocol Selection Register"]
 pub type Prts = crate::RegValueT<Prts_SPEC>;
 
 impl Prts {
+    #[doc = "Protocol Mode."]
     #[inline(always)]
     pub fn prtmd(
         self,
@@ -5066,6 +5531,7 @@ impl Prts {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000000000000000000. The write value should be 0000000000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -5086,8 +5552,10 @@ pub mod prts {
     pub struct Prtmd_SPEC;
     pub type Prtmd = crate::EnumBitfieldStruct<u8, Prtmd_SPEC>;
     impl Prtmd {
+        #[doc = "I3C Protocol mode."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C Protocol mode."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5098,9 +5566,11 @@ impl crate::sealed::RegSpec for PrtsHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Protocol Selection Register"]
 pub type PrtsHaL = crate::RegValueT<PrtsHaL_SPEC>;
 
 impl PrtsHaL {
+    #[doc = "Protocol Mode."]
     #[inline(always)]
     pub fn prtmd(
         self,
@@ -5126,6 +5596,7 @@ impl PrtsHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000000. The write value should be 000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -5146,8 +5617,10 @@ pub mod prts_ha_l {
     pub struct Prtmd_SPEC;
     pub type Prtmd = crate::EnumBitfieldStruct<u8, Prtmd_SPEC>;
     impl Prtmd {
+        #[doc = "I3C Protocol mode."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C Protocol mode."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5158,9 +5631,11 @@ impl crate::sealed::RegSpec for PrtsByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Protocol Selection Register"]
 pub type PrtsByLl = crate::RegValueT<PrtsByLl_SPEC>;
 
 impl PrtsByLl {
+    #[doc = "Protocol Mode."]
     #[inline(always)]
     pub fn prtmd(
         self,
@@ -5186,6 +5661,7 @@ impl PrtsByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -5205,8 +5681,10 @@ pub mod prts_by_ll {
     pub struct Prtmd_SPEC;
     pub type Prtmd = crate::EnumBitfieldStruct<u8, Prtmd_SPEC>;
     impl Prtmd {
+        #[doc = "I3C Protocol mode."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C Protocol mode."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5217,9 +5695,11 @@ impl crate::sealed::RegSpec for Bctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Control Register"]
 pub type Bctl = crate::RegValueT<Bctl_SPEC>;
 
 impl Bctl {
+    #[doc = "Include I3C Broadcast Address"]
     #[inline(always)]
     pub fn incba(
         self,
@@ -5245,6 +5725,7 @@ impl Bctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus Mode Selection"]
     #[inline(always)]
     pub fn bmds(
         self,
@@ -5270,6 +5751,7 @@ impl Bctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Hot-Join Acknowledge Control"]
     #[inline(always)]
     pub fn hjackctl(
         self,
@@ -5295,6 +5777,7 @@ impl Bctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000000000000000. The write value should be 00000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -5303,6 +5786,7 @@ impl Bctl {
         crate::common::RegisterField::<9,0xfffff,1,0,u32,u32,Bctl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Abort"]
     #[inline(always)]
     pub fn abt(
         self,
@@ -5328,6 +5812,7 @@ impl Bctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Resume Values when read:"]
     #[inline(always)]
     pub fn rsm(
         self,
@@ -5353,6 +5838,7 @@ impl Bctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus Enable"]
     #[inline(always)]
     pub fn buse(
         self,
@@ -5390,48 +5876,60 @@ pub mod bctl {
     pub struct Incba_SPEC;
     pub type Incba = crate::EnumBitfieldStruct<u8, Incba_SPEC>;
     impl Incba {
+        #[doc = "Do not include I3C Broadcast Address for Private Transfers"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Include I3C Broadcast Address for Private Transfers"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bmds_SPEC;
     pub type Bmds = crate::EnumBitfieldStruct<u8, Bmds_SPEC>;
     impl Bmds {
+        #[doc = "Legacy inclusive Bus mode disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Legacy inclusive (mix) Bus mode enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hjackctl_SPEC;
     pub type Hjackctl = crate::EnumBitfieldStruct<u8, Hjackctl_SPEC>;
     impl Hjackctl {
+        #[doc = "ACK the Hot-Join request"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NACK and send broadcast CCC to disable Hot-Join"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Abt_SPEC;
     pub type Abt = crate::EnumBitfieldStruct<u8, Abt_SPEC>;
     impl Abt {
+        #[doc = "This IP is Running"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP has Aborted a transfer"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rsm_SPEC;
     pub type Rsm = crate::EnumBitfieldStruct<u8, Rsm_SPEC>;
     impl Rsm {
+        #[doc = "This IP is Running"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP is Suspended (RW1C)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Buse_SPEC;
     pub type Buse = crate::EnumBitfieldStruct<u8, Buse_SPEC>;
     impl Buse {
+        #[doc = "This IP bus operation is Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP bus operation is Enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5442,9 +5940,11 @@ impl crate::sealed::RegSpec for BctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Bus Control Register"]
 pub type BctlHaL = crate::RegValueT<BctlHaL_SPEC>;
 
 impl BctlHaL {
+    #[doc = "Include I3C Broadcast Address"]
     #[inline(always)]
     pub fn incba(
         self,
@@ -5470,6 +5970,7 @@ impl BctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus Mode Selection"]
     #[inline(always)]
     pub fn bmds(
         self,
@@ -5495,6 +5996,7 @@ impl BctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Hot-Join Acknowledge Control"]
     #[inline(always)]
     pub fn hjackctl(
         self,
@@ -5520,6 +6022,7 @@ impl BctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -5539,24 +6042,30 @@ pub mod bctl_ha_l {
     pub struct Incba_SPEC;
     pub type Incba = crate::EnumBitfieldStruct<u8, Incba_SPEC>;
     impl Incba {
+        #[doc = "Do not include I3C Broadcast Address for Private Transfers"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Include I3C Broadcast Address for Private Transfers"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bmds_SPEC;
     pub type Bmds = crate::EnumBitfieldStruct<u8, Bmds_SPEC>;
     impl Bmds {
+        #[doc = "Legacy inclusive Bus mode disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Legacy inclusive (mix) Bus mode enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hjackctl_SPEC;
     pub type Hjackctl = crate::EnumBitfieldStruct<u8, Hjackctl_SPEC>;
     impl Hjackctl {
+        #[doc = "ACK the Hot-Join request"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NACK and send broadcast CCC to disable Hot-Join"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5567,9 +6076,11 @@ impl crate::sealed::RegSpec for BctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Control Register"]
 pub type BctlByLl = crate::RegValueT<BctlByLl_SPEC>;
 
 impl BctlByLl {
+    #[doc = "Include I3C Broadcast Address"]
     #[inline(always)]
     pub fn incba(
         self,
@@ -5595,6 +6106,7 @@ impl BctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -5602,6 +6114,7 @@ impl BctlByLl {
         crate::common::RegisterField::<1,0x3f,1,0,u8,u8,BctlByLl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Bus Mode Selection"]
     #[inline(always)]
     pub fn bmds(
         self,
@@ -5639,16 +6152,20 @@ pub mod bctl_by_ll {
     pub struct Incba_SPEC;
     pub type Incba = crate::EnumBitfieldStruct<u8, Incba_SPEC>;
     impl Incba {
+        #[doc = "Do not include I3C Broadcast Address for Private Transfers"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Include I3C Broadcast Address for Private Transfers"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bmds_SPEC;
     pub type Bmds = crate::EnumBitfieldStruct<u8, Bmds_SPEC>;
     impl Bmds {
+        #[doc = "Legacy inclusive Bus mode disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Legacy inclusive (mix) Bus mode enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5659,9 +6176,11 @@ impl crate::sealed::RegSpec for BctlByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Control Register"]
 pub type BctlByLh = crate::RegValueT<BctlByLh_SPEC>;
 
 impl BctlByLh {
+    #[doc = "Hot-Join Acknowledge Control"]
     #[inline(always)]
     pub fn hjackctl(
         self,
@@ -5687,6 +6206,7 @@ impl BctlByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -5706,8 +6226,10 @@ pub mod bctl_by_lh {
     pub struct Hjackctl_SPEC;
     pub type Hjackctl = crate::EnumBitfieldStruct<u8, Hjackctl_SPEC>;
     impl Hjackctl {
+        #[doc = "ACK the Hot-Join request"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NACK and send broadcast CCC to disable Hot-Join"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5718,9 +6240,11 @@ impl crate::sealed::RegSpec for BctlHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Bus Control Register"]
 pub type BctlHaH = crate::RegValueT<BctlHaH_SPEC>;
 
 impl BctlHaH {
+    #[doc = "These bits are read as 0000000000000. The write value should be 0000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -5729,6 +6253,7 @@ impl BctlHaH {
         crate::common::RegisterField::<0,0x1fff,1,0,u16,u16,BctlHaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Abort"]
     #[inline(always)]
     pub fn abt(
         self,
@@ -5754,6 +6279,7 @@ impl BctlHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "Resume Values when read:"]
     #[inline(always)]
     pub fn rsm(
         self,
@@ -5779,6 +6305,7 @@ impl BctlHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus Enable"]
     #[inline(always)]
     pub fn buse(
         self,
@@ -5816,24 +6343,30 @@ pub mod bctl_ha_h {
     pub struct Abt_SPEC;
     pub type Abt = crate::EnumBitfieldStruct<u8, Abt_SPEC>;
     impl Abt {
+        #[doc = "This IP is Running"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP has Aborted a transfer"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rsm_SPEC;
     pub type Rsm = crate::EnumBitfieldStruct<u8, Rsm_SPEC>;
     impl Rsm {
+        #[doc = "This IP is Running"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP is Suspended (RW1C)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Buse_SPEC;
     pub type Buse = crate::EnumBitfieldStruct<u8, Buse_SPEC>;
     impl Buse {
+        #[doc = "This IP bus operation is Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP bus operation is Enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5844,9 +6377,11 @@ impl crate::sealed::RegSpec for BctlByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Control Register"]
 pub type BctlByHh = crate::RegValueT<BctlByHh_SPEC>;
 
 impl BctlByHh {
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -5854,6 +6389,7 @@ impl BctlByHh {
         crate::common::RegisterField::<0,0x1f,1,0,u8,u8,BctlByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Abort"]
     #[inline(always)]
     pub fn abt(
         self,
@@ -5879,6 +6415,7 @@ impl BctlByHh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Resume Values when read:"]
     #[inline(always)]
     pub fn rsm(
         self,
@@ -5904,6 +6441,7 @@ impl BctlByHh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus Enable"]
     #[inline(always)]
     pub fn buse(
         self,
@@ -5941,24 +6479,30 @@ pub mod bctl_by_hh {
     pub struct Abt_SPEC;
     pub type Abt = crate::EnumBitfieldStruct<u8, Abt_SPEC>;
     impl Abt {
+        #[doc = "This IP is Running"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP has Aborted a transfer"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rsm_SPEC;
     pub type Rsm = crate::EnumBitfieldStruct<u8, Rsm_SPEC>;
     impl Rsm {
+        #[doc = "This IP is Running"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP is Suspended (RW1C)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Buse_SPEC;
     pub type Buse = crate::EnumBitfieldStruct<u8, Buse_SPEC>;
     impl Buse {
+        #[doc = "This IP bus operation is Disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP bus operation is Enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5969,9 +6513,11 @@ impl crate::sealed::RegSpec for Msdvad_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Master Device Address Register"]
 pub type Msdvad = crate::RegValueT<Msdvad_SPEC>;
 
 impl Msdvad {
+    #[doc = "Master Dynamic Address"]
     #[inline(always)]
     pub fn mdyad(
         self,
@@ -5979,6 +6525,7 @@ impl Msdvad {
         crate::common::RegisterField::<16,0x7f,1,0,u8,u8,Msdvad_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -5986,6 +6533,7 @@ impl Msdvad {
         crate::common::RegisterField::<23,0xff,1,0,u8,u8,Msdvad_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Master Dynamic Address Valid"]
     #[inline(always)]
     pub fn mdyadv(
         self,
@@ -6023,8 +6571,10 @@ pub mod msdvad {
     pub struct Mdyadv_SPEC;
     pub type Mdyadv = crate::EnumBitfieldStruct<u8, Mdyadv_SPEC>;
     impl Mdyadv {
+        #[doc = "The Master Dynamic Address field is not valid"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master Dynamic Address Field is valid"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6035,9 +6585,11 @@ impl crate::sealed::RegSpec for MsdvadHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Master Device Address Register"]
 pub type MsdvadHaH = crate::RegValueT<MsdvadHaH_SPEC>;
 
 impl MsdvadHaH {
+    #[doc = "Master Dynamic Address"]
     #[inline(always)]
     pub fn mdyad(
         self,
@@ -6046,6 +6598,7 @@ impl MsdvadHaH {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,MsdvadHaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -6054,6 +6607,7 @@ impl MsdvadHaH {
         crate::common::RegisterField::<7,0xff,1,0,u8,u8,MsdvadHaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Master Dynamic Address Valid"]
     #[inline(always)]
     pub fn mdyadv(
         self,
@@ -6091,8 +6645,10 @@ pub mod msdvad_ha_h {
     pub struct Mdyadv_SPEC;
     pub type Mdyadv = crate::EnumBitfieldStruct<u8, Mdyadv_SPEC>;
     impl Mdyadv {
+        #[doc = "The Master Dynamic Address field is not valid"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master Dynamic Address Field is valid"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6103,9 +6659,11 @@ impl crate::sealed::RegSpec for MsdvadByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Master Device Address Register"]
 pub type MsdvadByHl = crate::RegValueT<MsdvadByHl_SPEC>;
 
 impl MsdvadByHl {
+    #[doc = "Master Dynamic Address"]
     #[inline(always)]
     pub fn mdyad(
         self,
@@ -6114,6 +6672,7 @@ impl MsdvadByHl {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,MsdvadByHl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -6135,9 +6694,11 @@ impl crate::sealed::RegSpec for MsdvadByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Master Device Address Register"]
 pub type MsdvadByHh = crate::RegValueT<MsdvadByHh_SPEC>;
 
 impl MsdvadByHh {
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -6146,6 +6707,7 @@ impl MsdvadByHh {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,MsdvadByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Master Dynamic Address Valid"]
     #[inline(always)]
     pub fn mdyadv(
         self,
@@ -6183,8 +6745,10 @@ pub mod msdvad_by_hh {
     pub struct Mdyadv_SPEC;
     pub type Mdyadv = crate::EnumBitfieldStruct<u8, Mdyadv_SPEC>;
     impl Mdyadv {
+        #[doc = "The Master Dynamic Address field is not valid"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master Dynamic Address Field is valid"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6195,9 +6759,11 @@ impl crate::sealed::RegSpec for Rstctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Reset Control Register"]
 pub type Rstctl = crate::RegValueT<Rstctl_SPEC>;
 
 impl Rstctl {
+    #[doc = "R-I3C Software Reset"]
     #[inline(always)]
     pub fn ri3crst(
         self,
@@ -6223,6 +6789,7 @@ impl Rstctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Command Queue Software Reset"]
     #[inline(always)]
     pub fn cmdqrst(
         self,
@@ -6248,6 +6815,7 @@ impl Rstctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Response Queue Software Reset"]
     #[inline(always)]
     pub fn rspqrst(
         self,
@@ -6273,6 +6841,7 @@ impl Rstctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Tx DATA Buffer Software Reset"]
     #[inline(always)]
     pub fn tdbrst(
         self,
@@ -6298,6 +6867,7 @@ impl Rstctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Rx DATA Buffer Software Reset"]
     #[inline(always)]
     pub fn rdbrst(
         self,
@@ -6323,6 +6893,7 @@ impl Rstctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "IBI Queue Software Reset"]
     #[inline(always)]
     pub fn ibiqrst(
         self,
@@ -6348,6 +6919,7 @@ impl Rstctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Receive Status Queue Software Reset"]
     #[inline(always)]
     pub fn rsqrst(
         self,
@@ -6373,6 +6945,7 @@ impl Rstctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Command Queue Software Reset"]
     #[inline(always)]
     pub fn hcmdqrst(
         self,
@@ -6398,6 +6971,7 @@ impl Rstctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Response Queue Software Reset"]
     #[inline(always)]
     pub fn hrspqrst(
         self,
@@ -6423,6 +6997,7 @@ impl Rstctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Tx DATA Buffer Software Reset"]
     #[inline(always)]
     pub fn htdbrst(
         self,
@@ -6448,6 +7023,7 @@ impl Rstctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Rx DATA Buffer Software Reset"]
     #[inline(always)]
     pub fn hrdbrst(
         self,
@@ -6473,6 +7049,7 @@ impl Rstctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Internal Software Reset"]
     #[inline(always)]
     pub fn intlrst(
         self,
@@ -6498,6 +7075,7 @@ impl Rstctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000000. The write value should be 000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -6518,96 +7096,120 @@ pub mod rstctl {
     pub struct Ri3Crst_SPEC;
     pub type Ri3Crst = crate::EnumBitfieldStruct<u8, Ri3Crst_SPEC>;
     impl Ri3Crst {
+        #[doc = "Reset of All registers and Internal State."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "Releases of All registers and Internal State."]
         pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqrst_SPEC;
     pub type Cmdqrst = crate::EnumBitfieldStruct<u8, Cmdqrst_SPEC>;
     impl Cmdqrst {
+        #[doc = "The Command Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Command Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqrst_SPEC;
     pub type Rspqrst = crate::EnumBitfieldStruct<u8, Rspqrst_SPEC>;
     impl Rspqrst {
+        #[doc = "The Response Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Response Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tdbrst_SPEC;
     pub type Tdbrst = crate::EnumBitfieldStruct<u8, Tdbrst_SPEC>;
     impl Tdbrst {
+        #[doc = "The Transmit Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Transmit Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbrst_SPEC;
     pub type Rdbrst = crate::EnumBitfieldStruct<u8, Rdbrst_SPEC>;
     impl Rdbrst {
+        #[doc = "The Receive Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Receive Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ibiqrst_SPEC;
     pub type Ibiqrst = crate::EnumBitfieldStruct<u8, Ibiqrst_SPEC>;
     impl Ibiqrst {
+        #[doc = "The IBI Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The IBI Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rsqrst_SPEC;
     pub type Rsqrst = crate::EnumBitfieldStruct<u8, Rsqrst_SPEC>;
     impl Rsqrst {
+        #[doc = "The Receive Status Queue in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Receive Status Queue in this IP flush"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hcmdqrst_SPEC;
     pub type Hcmdqrst = crate::EnumBitfieldStruct<u8, Hcmdqrst_SPEC>;
     impl Hcmdqrst {
+        #[doc = "The High Priority Command Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The High Priority Command Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hrspqrst_SPEC;
     pub type Hrspqrst = crate::EnumBitfieldStruct<u8, Hrspqrst_SPEC>;
     impl Hrspqrst {
+        #[doc = "The High Priority Response Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The High Priority Response Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Htdbrst_SPEC;
     pub type Htdbrst = crate::EnumBitfieldStruct<u8, Htdbrst_SPEC>;
     impl Htdbrst {
+        #[doc = "The High Priority Transmit Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The High Priority Transmit Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hrdbrst_SPEC;
     pub type Hrdbrst = crate::EnumBitfieldStruct<u8, Hrdbrst_SPEC>;
     impl Hrdbrst {
+        #[doc = "The High Priority Receive Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The High Priority Receive Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Intlrst_SPEC;
     pub type Intlrst = crate::EnumBitfieldStruct<u8, Intlrst_SPEC>;
     impl Intlrst {
+        #[doc = "Releases of some registers and internal state."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Resets of some registers and internal state."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6618,9 +7220,11 @@ impl crate::sealed::RegSpec for RstctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Reset Control Register"]
 pub type RstctlHaL = crate::RegValueT<RstctlHaL_SPEC>;
 
 impl RstctlHaL {
+    #[doc = "R-I3C Software Reset"]
     #[inline(always)]
     pub fn ri3crst(
         self,
@@ -6646,6 +7250,7 @@ impl RstctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Command Queue Software Reset"]
     #[inline(always)]
     pub fn cmdqrst(
         self,
@@ -6671,6 +7276,7 @@ impl RstctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Response Queue Software Reset"]
     #[inline(always)]
     pub fn rspqrst(
         self,
@@ -6696,6 +7302,7 @@ impl RstctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Tx DATA Buffer Software Reset"]
     #[inline(always)]
     pub fn tdbrst(
         self,
@@ -6721,6 +7328,7 @@ impl RstctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Rx DATA Buffer Software Reset"]
     #[inline(always)]
     pub fn rdbrst(
         self,
@@ -6746,6 +7354,7 @@ impl RstctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "IBI Queue Software Reset"]
     #[inline(always)]
     pub fn ibiqrst(
         self,
@@ -6771,6 +7380,7 @@ impl RstctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Receive Status Queue Software Reset"]
     #[inline(always)]
     pub fn rsqrst(
         self,
@@ -6796,6 +7406,7 @@ impl RstctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Command Queue Software Reset"]
     #[inline(always)]
     pub fn hcmdqrst(
         self,
@@ -6821,6 +7432,7 @@ impl RstctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Response Queue Software Reset"]
     #[inline(always)]
     pub fn hrspqrst(
         self,
@@ -6846,6 +7458,7 @@ impl RstctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Tx DATA Buffer Software Reset"]
     #[inline(always)]
     pub fn htdbrst(
         self,
@@ -6871,6 +7484,7 @@ impl RstctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Rx DATA Buffer Software Reset"]
     #[inline(always)]
     pub fn hrdbrst(
         self,
@@ -6896,6 +7510,7 @@ impl RstctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -6916,88 +7531,110 @@ pub mod rstctl_ha_l {
     pub struct Ri3Crst_SPEC;
     pub type Ri3Crst = crate::EnumBitfieldStruct<u8, Ri3Crst_SPEC>;
     impl Ri3Crst {
+        #[doc = "Reset of All registers and Internal State."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "Releases of All registers and Internal State."]
         pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqrst_SPEC;
     pub type Cmdqrst = crate::EnumBitfieldStruct<u8, Cmdqrst_SPEC>;
     impl Cmdqrst {
+        #[doc = "The Command Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Command Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqrst_SPEC;
     pub type Rspqrst = crate::EnumBitfieldStruct<u8, Rspqrst_SPEC>;
     impl Rspqrst {
+        #[doc = "The Response Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Response Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tdbrst_SPEC;
     pub type Tdbrst = crate::EnumBitfieldStruct<u8, Tdbrst_SPEC>;
     impl Tdbrst {
+        #[doc = "The Transmit Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Transmit Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbrst_SPEC;
     pub type Rdbrst = crate::EnumBitfieldStruct<u8, Rdbrst_SPEC>;
     impl Rdbrst {
+        #[doc = "The Receive Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Receive Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ibiqrst_SPEC;
     pub type Ibiqrst = crate::EnumBitfieldStruct<u8, Ibiqrst_SPEC>;
     impl Ibiqrst {
+        #[doc = "The IBI Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The IBI Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rsqrst_SPEC;
     pub type Rsqrst = crate::EnumBitfieldStruct<u8, Rsqrst_SPEC>;
     impl Rsqrst {
+        #[doc = "The Receive Status Queue in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Receive Status Queue in this IP flush"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hcmdqrst_SPEC;
     pub type Hcmdqrst = crate::EnumBitfieldStruct<u8, Hcmdqrst_SPEC>;
     impl Hcmdqrst {
+        #[doc = "The High Priority Command Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The High Priority Command Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hrspqrst_SPEC;
     pub type Hrspqrst = crate::EnumBitfieldStruct<u8, Hrspqrst_SPEC>;
     impl Hrspqrst {
+        #[doc = "The High Priority Response Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The High Priority Response Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Htdbrst_SPEC;
     pub type Htdbrst = crate::EnumBitfieldStruct<u8, Htdbrst_SPEC>;
     impl Htdbrst {
+        #[doc = "The High Priority Transmit Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The High Priority Transmit Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hrdbrst_SPEC;
     pub type Hrdbrst = crate::EnumBitfieldStruct<u8, Hrdbrst_SPEC>;
     impl Hrdbrst {
+        #[doc = "The High Priority Receive Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The High Priority Receive Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7008,9 +7645,11 @@ impl crate::sealed::RegSpec for RstctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Reset Control Register"]
 pub type RstctlByLl = crate::RegValueT<RstctlByLl_SPEC>;
 
 impl RstctlByLl {
+    #[doc = "R-I3C Software Reset"]
     #[inline(always)]
     pub fn ri3crst(
         self,
@@ -7036,6 +7675,7 @@ impl RstctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Command Queue Software Reset"]
     #[inline(always)]
     pub fn cmdqrst(
         self,
@@ -7061,6 +7701,7 @@ impl RstctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Response Queue Software Reset"]
     #[inline(always)]
     pub fn rspqrst(
         self,
@@ -7086,6 +7727,7 @@ impl RstctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Tx DATA Buffer Software Reset"]
     #[inline(always)]
     pub fn tdbrst(
         self,
@@ -7111,6 +7753,7 @@ impl RstctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Rx DATA Buffer Software Reset"]
     #[inline(always)]
     pub fn rdbrst(
         self,
@@ -7136,6 +7779,7 @@ impl RstctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "IBI Queue Software Reset"]
     #[inline(always)]
     pub fn ibiqrst(
         self,
@@ -7161,6 +7805,7 @@ impl RstctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Receive Status Queue Software Reset"]
     #[inline(always)]
     pub fn rsqrst(
         self,
@@ -7186,6 +7831,7 @@ impl RstctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -7205,56 +7851,70 @@ pub mod rstctl_by_ll {
     pub struct Ri3Crst_SPEC;
     pub type Ri3Crst = crate::EnumBitfieldStruct<u8, Ri3Crst_SPEC>;
     impl Ri3Crst {
+        #[doc = "Reset of All registers and Internal State."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "Releases of All registers and Internal State."]
         pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqrst_SPEC;
     pub type Cmdqrst = crate::EnumBitfieldStruct<u8, Cmdqrst_SPEC>;
     impl Cmdqrst {
+        #[doc = "The Command Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Command Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqrst_SPEC;
     pub type Rspqrst = crate::EnumBitfieldStruct<u8, Rspqrst_SPEC>;
     impl Rspqrst {
+        #[doc = "The Response Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Response Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tdbrst_SPEC;
     pub type Tdbrst = crate::EnumBitfieldStruct<u8, Tdbrst_SPEC>;
     impl Tdbrst {
+        #[doc = "The Transmit Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Transmit Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbrst_SPEC;
     pub type Rdbrst = crate::EnumBitfieldStruct<u8, Rdbrst_SPEC>;
     impl Rdbrst {
+        #[doc = "The Receive Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Receive Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ibiqrst_SPEC;
     pub type Ibiqrst = crate::EnumBitfieldStruct<u8, Ibiqrst_SPEC>;
     impl Ibiqrst {
+        #[doc = "The IBI Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The IBI Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rsqrst_SPEC;
     pub type Rsqrst = crate::EnumBitfieldStruct<u8, Rsqrst_SPEC>;
     impl Rsqrst {
+        #[doc = "The Receive Status Queue in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Receive Status Queue in this IP flush"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7265,9 +7925,11 @@ impl crate::sealed::RegSpec for RstctlByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Reset Control Register"]
 pub type RstctlByLh = crate::RegValueT<RstctlByLh_SPEC>;
 
 impl RstctlByLh {
+    #[doc = "High Priority Command Queue Software Reset"]
     #[inline(always)]
     pub fn hcmdqrst(
         self,
@@ -7293,6 +7955,7 @@ impl RstctlByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Response Queue Software Reset"]
     #[inline(always)]
     pub fn hrspqrst(
         self,
@@ -7318,6 +7981,7 @@ impl RstctlByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Tx DATA Buffer Software Reset"]
     #[inline(always)]
     pub fn htdbrst(
         self,
@@ -7343,6 +8007,7 @@ impl RstctlByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Rx DATA Buffer Software Reset"]
     #[inline(always)]
     pub fn hrdbrst(
         self,
@@ -7368,6 +8033,7 @@ impl RstctlByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -7388,32 +8054,40 @@ pub mod rstctl_by_lh {
     pub struct Hcmdqrst_SPEC;
     pub type Hcmdqrst = crate::EnumBitfieldStruct<u8, Hcmdqrst_SPEC>;
     impl Hcmdqrst {
+        #[doc = "The High Priority Command Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The High Priority Command Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hrspqrst_SPEC;
     pub type Hrspqrst = crate::EnumBitfieldStruct<u8, Hrspqrst_SPEC>;
     impl Hrspqrst {
+        #[doc = "The High Priority Response Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The High Priority Response Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Htdbrst_SPEC;
     pub type Htdbrst = crate::EnumBitfieldStruct<u8, Htdbrst_SPEC>;
     impl Htdbrst {
+        #[doc = "The High Priority Transmit Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The High Priority Transmit Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hrdbrst_SPEC;
     pub type Hrdbrst = crate::EnumBitfieldStruct<u8, Hrdbrst_SPEC>;
     impl Hrdbrst {
+        #[doc = "The High Priority Receive Queues in this IP do not flush."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The High Priority Receive Queues in this IP flush."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7424,9 +8098,11 @@ impl crate::sealed::RegSpec for RstctlHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Reset Control Register"]
 pub type RstctlHaH = crate::RegValueT<RstctlHaH_SPEC>;
 
 impl RstctlHaH {
+    #[doc = "Internal Software Reset"]
     #[inline(always)]
     pub fn intlrst(
         self,
@@ -7452,6 +8128,7 @@ impl RstctlHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000000. The write value should be 000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -7472,8 +8149,10 @@ pub mod rstctl_ha_h {
     pub struct Intlrst_SPEC;
     pub type Intlrst = crate::EnumBitfieldStruct<u8, Intlrst_SPEC>;
     impl Intlrst {
+        #[doc = "Releases of some registers and internal state."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Resets of some registers and internal state."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7484,9 +8163,11 @@ impl crate::sealed::RegSpec for RstctlByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Reset Control Register"]
 pub type RstctlByHl = crate::RegValueT<RstctlByHl_SPEC>;
 
 impl RstctlByHl {
+    #[doc = "Internal Software Reset"]
     #[inline(always)]
     pub fn intlrst(
         self,
@@ -7512,6 +8193,7 @@ impl RstctlByHl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -7532,8 +8214,10 @@ pub mod rstctl_by_hl {
     pub struct Intlrst_SPEC;
     pub type Intlrst = crate::EnumBitfieldStruct<u8, Intlrst_SPEC>;
     impl Intlrst {
+        #[doc = "Releases of some registers and internal state."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Resets of some registers and internal state."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7544,9 +8228,11 @@ impl crate::sealed::RegSpec for Prsst_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Present State Register"]
 pub type Prsst = crate::RegValueT<Prsst_SPEC>;
 
 impl Prsst {
+    #[doc = "Current Master"]
     #[inline(always)]
     pub fn crms(
         self,
@@ -7572,6 +8258,7 @@ impl Prsst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transmit/Receive Mode"]
     #[inline(always)]
     pub fn trmd(
         self,
@@ -7597,6 +8284,7 @@ impl Prsst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Present State Write Protect"]
     #[inline(always)]
     pub fn prsstwp(
         self,
@@ -7622,6 +8310,7 @@ impl Prsst {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -7642,24 +8331,30 @@ pub mod prsst {
     pub struct Crms_SPEC;
     pub type Crms = crate::EnumBitfieldStruct<u8, Crms_SPEC>;
     impl Crms {
+        #[doc = "The Master is not the Current Master, and must request and acquire Bus ownership before initiating any transfer."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master is the Current Master, and as a result can initiate transfers."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Trmd_SPEC;
     pub type Trmd = crate::EnumBitfieldStruct<u8, Trmd_SPEC>;
     impl Trmd {
+        #[doc = "Receive mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transmit mode"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Prsstwp_SPEC;
     pub type Prsstwp = crate::EnumBitfieldStruct<u8, Prsstwp_SPEC>;
     impl Prsstwp {
+        #[doc = "Bit CRMS is protected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bit CRMS can be written (When writing simultaneously with the value of the target bit)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7670,9 +8365,11 @@ impl crate::sealed::RegSpec for PrsstHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Present State Register"]
 pub type PrsstHaL = crate::RegValueT<PrsstHaL_SPEC>;
 
 impl PrsstHaL {
+    #[doc = "Current Master"]
     #[inline(always)]
     pub fn crms(
         self,
@@ -7698,6 +8395,7 @@ impl PrsstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transmit/Receive Mode"]
     #[inline(always)]
     pub fn trmd(
         self,
@@ -7723,6 +8421,7 @@ impl PrsstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Present State Write Protect"]
     #[inline(always)]
     pub fn prsstwp(
         self,
@@ -7748,6 +8447,7 @@ impl PrsstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -7767,24 +8467,30 @@ pub mod prsst_ha_l {
     pub struct Crms_SPEC;
     pub type Crms = crate::EnumBitfieldStruct<u8, Crms_SPEC>;
     impl Crms {
+        #[doc = "The Master is not the Current Master, and must request and acquire Bus ownership before initiating any transfer."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master is the Current Master, and as a result can initiate transfers."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Trmd_SPEC;
     pub type Trmd = crate::EnumBitfieldStruct<u8, Trmd_SPEC>;
     impl Trmd {
+        #[doc = "Receive mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transmit mode"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Prsstwp_SPEC;
     pub type Prsstwp = crate::EnumBitfieldStruct<u8, Prsstwp_SPEC>;
     impl Prsstwp {
+        #[doc = "Bit CRMS is protected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bit CRMS can be written (When writing simultaneously with the value of the target bit)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7795,9 +8501,11 @@ impl crate::sealed::RegSpec for PrsstByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Present State Register"]
 pub type PrsstByLl = crate::RegValueT<PrsstByLl_SPEC>;
 
 impl PrsstByLl {
+    #[doc = "Current Master"]
     #[inline(always)]
     pub fn crms(
         self,
@@ -7823,6 +8531,7 @@ impl PrsstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transmit/Receive Mode"]
     #[inline(always)]
     pub fn trmd(
         self,
@@ -7848,6 +8557,7 @@ impl PrsstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00. The write value should be 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -7855,6 +8565,7 @@ impl PrsstByLl {
         crate::common::RegisterField::<5,0x3,1,0,u8,u8,PrsstByLl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Present State Write Protect"]
     #[inline(always)]
     pub fn prsstwp(
         self,
@@ -7892,24 +8603,30 @@ pub mod prsst_by_ll {
     pub struct Crms_SPEC;
     pub type Crms = crate::EnumBitfieldStruct<u8, Crms_SPEC>;
     impl Crms {
+        #[doc = "The Master is not the Current Master, and must request and acquire Bus ownership before initiating any transfer."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master is the Current Master, and as a result can initiate transfers."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Trmd_SPEC;
     pub type Trmd = crate::EnumBitfieldStruct<u8, Trmd_SPEC>;
     impl Trmd {
+        #[doc = "Receive mode"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transmit mode"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Prsstwp_SPEC;
     pub type Prsstwp = crate::EnumBitfieldStruct<u8, Prsstwp_SPEC>;
     impl Prsstwp {
+        #[doc = "Bit CRMS is protected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bit CRMS can be written (When writing simultaneously with the value of the target bit)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7920,9 +8637,11 @@ impl crate::sealed::RegSpec for Inst_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Internal Status Register"]
 pub type Inst = crate::RegValueT<Inst_SPEC>;
 
 impl Inst {
+    #[doc = "Internal Error Flag"]
     #[inline(always)]
     pub fn inef(
         self,
@@ -7948,6 +8667,7 @@ impl Inst {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -7968,8 +8688,10 @@ pub mod inst {
     pub struct Inef_SPEC;
     pub type Inef = crate::EnumBitfieldStruct<u8, Inef_SPEC>;
     impl Inef {
+        #[doc = "This IP Internal Error has not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP Internal Error has detected"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7980,9 +8702,11 @@ impl crate::sealed::RegSpec for InstHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Internal Status Register"]
 pub type InstHaL = crate::RegValueT<InstHaL_SPEC>;
 
 impl InstHaL {
+    #[doc = "Internal Error Flag"]
     #[inline(always)]
     pub fn inef(
         self,
@@ -8008,6 +8732,7 @@ impl InstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -8027,8 +8752,10 @@ pub mod inst_ha_l {
     pub struct Inef_SPEC;
     pub type Inef = crate::EnumBitfieldStruct<u8, Inef_SPEC>;
     impl Inef {
+        #[doc = "This IP Internal Error has not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP Internal Error has detected"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8039,9 +8766,11 @@ impl crate::sealed::RegSpec for InstByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Internal Status Register"]
 pub type InstByLh = crate::RegValueT<InstByLh_SPEC>;
 
 impl InstByLh {
+    #[doc = "Internal Error Flag"]
     #[inline(always)]
     pub fn inef(
         self,
@@ -8067,6 +8796,7 @@ impl InstByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -8086,8 +8816,10 @@ pub mod inst_by_lh {
     pub struct Inef_SPEC;
     pub type Inef = crate::EnumBitfieldStruct<u8, Inef_SPEC>;
     impl Inef {
+        #[doc = "This IP Internal Error has not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP Internal Error has detected"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8098,9 +8830,11 @@ impl crate::sealed::RegSpec for Inste_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Internal Status Enable Register"]
 pub type Inste = crate::RegValueT<Inste_SPEC>;
 
 impl Inste {
+    #[doc = "Internal Error Enable"]
     #[inline(always)]
     pub fn inee(
         self,
@@ -8126,6 +8860,7 @@ impl Inste {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -8146,8 +8881,10 @@ pub mod inste {
     pub struct Inee_SPEC;
     pub type Inee = crate::EnumBitfieldStruct<u8, Inee_SPEC>;
     impl Inee {
+        #[doc = "Disable INST.INEF"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable INST.INEF"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8158,9 +8895,11 @@ impl crate::sealed::RegSpec for InsteHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Internal Status Enable Register"]
 pub type InsteHaL = crate::RegValueT<InsteHaL_SPEC>;
 
 impl InsteHaL {
+    #[doc = "Internal Error Enable"]
     #[inline(always)]
     pub fn inee(
         self,
@@ -8186,6 +8925,7 @@ impl InsteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -8206,8 +8946,10 @@ pub mod inste_ha_l {
     pub struct Inee_SPEC;
     pub type Inee = crate::EnumBitfieldStruct<u8, Inee_SPEC>;
     impl Inee {
+        #[doc = "Disable INST.INEF"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable INST.INEF"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8218,9 +8960,11 @@ impl crate::sealed::RegSpec for InsteByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Internal Status Enable Register"]
 pub type InsteByLh = crate::RegValueT<InsteByLh_SPEC>;
 
 impl InsteByLh {
+    #[doc = "Internal Error Enable"]
     #[inline(always)]
     pub fn inee(
         self,
@@ -8246,6 +8990,7 @@ impl InsteByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -8266,8 +9011,10 @@ pub mod inste_by_lh {
     pub struct Inee_SPEC;
     pub type Inee = crate::EnumBitfieldStruct<u8, Inee_SPEC>;
     impl Inee {
+        #[doc = "Disable INST.INEF"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable INST.INEF"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8278,9 +9025,11 @@ impl crate::sealed::RegSpec for Inie_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Internal Interrupt Enable Register"]
 pub type Inie = crate::RegValueT<Inie_SPEC>;
 
 impl Inie {
+    #[doc = "Internal Error Interrupt Enable"]
     #[inline(always)]
     pub fn ineie(
         self,
@@ -8306,6 +9055,7 @@ impl Inie {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -8326,8 +9076,10 @@ pub mod inie {
     pub struct Ineie_SPEC;
     pub type Ineie = crate::EnumBitfieldStruct<u8, Ineie_SPEC>;
     impl Ineie {
+        #[doc = "Disables Non-recoverable Internal Error Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Non-recoverable Internal Error Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8338,9 +9090,11 @@ impl crate::sealed::RegSpec for InieHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Internal Interrupt Enable Register"]
 pub type InieHaL = crate::RegValueT<InieHaL_SPEC>;
 
 impl InieHaL {
+    #[doc = "Internal Error Interrupt Enable"]
     #[inline(always)]
     pub fn ineie(
         self,
@@ -8366,6 +9120,7 @@ impl InieHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -8385,8 +9140,10 @@ pub mod inie_ha_l {
     pub struct Ineie_SPEC;
     pub type Ineie = crate::EnumBitfieldStruct<u8, Ineie_SPEC>;
     impl Ineie {
+        #[doc = "Disables Non-recoverable Internal Error Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Non-recoverable Internal Error Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8397,9 +9154,11 @@ impl crate::sealed::RegSpec for InieByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Internal Interrupt Enable Register"]
 pub type InieByLh = crate::RegValueT<InieByLh_SPEC>;
 
 impl InieByLh {
+    #[doc = "Internal Error Interrupt Enable"]
     #[inline(always)]
     pub fn ineie(
         self,
@@ -8425,6 +9184,7 @@ impl InieByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -8444,8 +9204,10 @@ pub mod inie_by_lh {
     pub struct Ineie_SPEC;
     pub type Ineie = crate::EnumBitfieldStruct<u8, Ineie_SPEC>;
     impl Ineie {
+        #[doc = "Disables Non-recoverable Internal Error Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Non-recoverable Internal Error Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8456,9 +9218,11 @@ impl crate::sealed::RegSpec for Instfc_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Internal Status Force Register"]
 pub type Instfc = crate::RegValueT<Instfc_SPEC>;
 
 impl Instfc {
+    #[doc = "Internal Error Force"]
     #[inline(always)]
     pub fn inefc(
         self,
@@ -8484,6 +9248,7 @@ impl Instfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -8504,8 +9269,10 @@ pub mod instfc {
     pub struct Inefc_SPEC;
     pub type Inefc = crate::EnumBitfieldStruct<u8, Inefc_SPEC>;
     impl Inefc {
+        #[doc = "not force a specific interrupt"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "force a specific interrupt"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8516,9 +9283,11 @@ impl crate::sealed::RegSpec for InstfcHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Internal Status Force Register"]
 pub type InstfcHaL = crate::RegValueT<InstfcHaL_SPEC>;
 
 impl InstfcHaL {
+    #[doc = "Internal Error Force"]
     #[inline(always)]
     pub fn inefc(
         self,
@@ -8544,6 +9313,7 @@ impl InstfcHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -8564,8 +9334,10 @@ pub mod instfc_ha_l {
     pub struct Inefc_SPEC;
     pub type Inefc = crate::EnumBitfieldStruct<u8, Inefc_SPEC>;
     impl Inefc {
+        #[doc = "not force a specific interrupt"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "force a specific interrupt"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8576,9 +9348,11 @@ impl crate::sealed::RegSpec for InstfcByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Internal Status Force Register"]
 pub type InstfcByLh = crate::RegValueT<InstfcByLh_SPEC>;
 
 impl InstfcByLh {
+    #[doc = "Internal Error Force"]
     #[inline(always)]
     pub fn inefc(
         self,
@@ -8604,6 +9378,7 @@ impl InstfcByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -8624,8 +9399,10 @@ pub mod instfc_by_lh {
     pub struct Inefc_SPEC;
     pub type Inefc = crate::EnumBitfieldStruct<u8, Inefc_SPEC>;
     impl Inefc {
+        #[doc = "not force a specific interrupt"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "force a specific interrupt"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8636,9 +9413,11 @@ impl crate::sealed::RegSpec for Dvct_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Device Characteristic Table Register"]
 pub type Dvct = crate::RegValueT<Dvct_SPEC>;
 
 impl Dvct {
+    #[doc = "DCT Table Index"]
     #[inline(always)]
     pub fn idx(
         self,
@@ -8646,6 +9425,7 @@ impl Dvct {
         crate::common::RegisterField::<19,0x1f,1,0,u8,u8,Dvct_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -8667,9 +9447,11 @@ impl crate::sealed::RegSpec for DvctHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Device Characteristic Table Register"]
 pub type DvctHaH = crate::RegValueT<DvctHaH_SPEC>;
 
 impl DvctHaH {
+    #[doc = "DCT Table Index"]
     #[inline(always)]
     pub fn idx(
         self,
@@ -8677,6 +9459,7 @@ impl DvctHaH {
         crate::common::RegisterField::<3,0x1f,1,0,u8,u8,DvctHaH_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -8698,9 +9481,11 @@ impl crate::sealed::RegSpec for DvctByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Characteristic Table Register"]
 pub type DvctByHl = crate::RegValueT<DvctByHl_SPEC>;
 
 impl DvctByHl {
+    #[doc = "These bits are read as 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -8708,6 +9493,7 @@ impl DvctByHl {
         crate::common::RegisterField::<0,0x7,1,0,u8,u8,DvctByHl_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "DCT Table Index"]
     #[inline(always)]
     pub fn idx(
         self,
@@ -8729,9 +9515,11 @@ impl crate::sealed::RegSpec for Ibinctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "IBI Notify Control Register"]
 pub type Ibinctl = crate::RegValueT<Ibinctl_SPEC>;
 
 impl Ibinctl {
+    #[doc = "Notify Rejected Hot-Join Control"]
     #[inline(always)]
     pub fn nrhjctl(
         self,
@@ -8757,6 +9545,7 @@ impl Ibinctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Notify Rejected Master Request Control"]
     #[inline(always)]
     pub fn nrmrctl(
         self,
@@ -8782,6 +9571,7 @@ impl Ibinctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Notify Rejected Slave Interrupt Request Control"]
     #[inline(always)]
     pub fn nrsirctl(
         self,
@@ -8807,6 +9597,7 @@ impl Ibinctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000000000000000. The write value should be 0000000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -8827,24 +9618,30 @@ pub mod ibinctl {
     pub struct Nrhjctl_SPEC;
     pub type Nrhjctl = crate::EnumBitfieldStruct<u8, Nrhjctl_SPEC>;
     impl Nrhjctl {
+        #[doc = "Do not pass rejected IBI Status to IBI Queue, if the incoming HotJoin request is NACKed and is auto-disabled based on field HJACKCTL of BCTL."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Pass rejected IBI Status to the IBI Queue, if the incoming Hot Join request is NACKed and is auto-disabled based on field HJACKCTL of BCTL."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nrmrctl_SPEC;
     pub type Nrmrctl = crate::EnumBitfieldStruct<u8, Nrmrctl_SPEC>;
     impl Nrmrctl {
+        #[doc = "Do not pass rejected IBI Status to IBI Queue/Ring, if the incoming Master Request is NACKed and is auto-disabled based on DVMRRJ field in relevant DAT entry."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Pass rejected IBI Status to the IBI Queue, if the incoming Master Request is NACKed and is auto-disabled based on DVMRRJ field in relevant DAT entry."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nrsirctl_SPEC;
     pub type Nrsirctl = crate::EnumBitfieldStruct<u8, Nrsirctl_SPEC>;
     impl Nrsirctl {
+        #[doc = "Do not pass rejected IBI Status to the IBI Queue/Rings, if the incoming SIR is NACKed and is auto-disabled based on DVSIRRJ field in relevant DAT entry."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Pass rejected IBI Status to the IBI Queue/Rings, if the incoming SIR is NACKed and is auto-disabled based on DVSIRRJ field in relevant DAT entry."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8855,9 +9652,11 @@ impl crate::sealed::RegSpec for IbinctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "IBI Notify Control Register"]
 pub type IbinctlHaL = crate::RegValueT<IbinctlHaL_SPEC>;
 
 impl IbinctlHaL {
+    #[doc = "Notify Rejected Hot-Join Control"]
     #[inline(always)]
     pub fn nrhjctl(
         self,
@@ -8883,6 +9682,7 @@ impl IbinctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Notify Rejected Master Request Control"]
     #[inline(always)]
     pub fn nrmrctl(
         self,
@@ -8908,6 +9708,7 @@ impl IbinctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Notify Rejected Slave Interrupt Request Control"]
     #[inline(always)]
     pub fn nrsirctl(
         self,
@@ -8933,6 +9734,7 @@ impl IbinctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000. The write value should be 000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -8953,24 +9755,30 @@ pub mod ibinctl_ha_l {
     pub struct Nrhjctl_SPEC;
     pub type Nrhjctl = crate::EnumBitfieldStruct<u8, Nrhjctl_SPEC>;
     impl Nrhjctl {
+        #[doc = "Do not pass rejected IBI Status to IBI Queue, if the incoming HotJoin request is NACKed and is auto-disabled based on field HJACKCTL of BCTL."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Pass rejected IBI Status to the IBI Queue, if the incoming Hot Join request is NACKed and is auto-disabled based on field HJACKCTL of BCTL."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nrmrctl_SPEC;
     pub type Nrmrctl = crate::EnumBitfieldStruct<u8, Nrmrctl_SPEC>;
     impl Nrmrctl {
+        #[doc = "Do not pass rejected IBI Status to IBI Queue/Ring, if the incoming Master Request is NACKed and is auto-disabled based on DVMRRJ field in relevant DAT entry."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Pass rejected IBI Status to the IBI Queue, if the incoming Master Request is NACKed and is auto-disabled based on DVMRRJ field in relevant DAT entry."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nrsirctl_SPEC;
     pub type Nrsirctl = crate::EnumBitfieldStruct<u8, Nrsirctl_SPEC>;
     impl Nrsirctl {
+        #[doc = "Do not pass rejected IBI Status to the IBI Queue/Rings, if the incoming SIR is NACKed and is auto-disabled based on DVSIRRJ field in relevant DAT entry."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Pass rejected IBI Status to the IBI Queue/Rings, if the incoming SIR is NACKed and is auto-disabled based on DVSIRRJ field in relevant DAT entry."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8981,9 +9789,11 @@ impl crate::sealed::RegSpec for IbinctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "IBI Notify Control Register"]
 pub type IbinctlByLl = crate::RegValueT<IbinctlByLl_SPEC>;
 
 impl IbinctlByLl {
+    #[doc = "Notify Rejected Hot-Join Control"]
     #[inline(always)]
     pub fn nrhjctl(
         self,
@@ -9009,6 +9819,7 @@ impl IbinctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Notify Rejected Master Request Control"]
     #[inline(always)]
     pub fn nrmrctl(
         self,
@@ -9034,6 +9845,7 @@ impl IbinctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Notify Rejected Slave Interrupt Request Control"]
     #[inline(always)]
     pub fn nrsirctl(
         self,
@@ -9059,6 +9871,7 @@ impl IbinctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -9079,24 +9892,30 @@ pub mod ibinctl_by_ll {
     pub struct Nrhjctl_SPEC;
     pub type Nrhjctl = crate::EnumBitfieldStruct<u8, Nrhjctl_SPEC>;
     impl Nrhjctl {
+        #[doc = "Do not pass rejected IBI Status to IBI Queue, if the incoming HotJoin request is NACKed and is auto-disabled based on field HJACKCTL of BCTL."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Pass rejected IBI Status to the IBI Queue, if the incoming Hot Join request is NACKed and is auto-disabled based on field HJACKCTL of BCTL."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nrmrctl_SPEC;
     pub type Nrmrctl = crate::EnumBitfieldStruct<u8, Nrmrctl_SPEC>;
     impl Nrmrctl {
+        #[doc = "Do not pass rejected IBI Status to IBI Queue/Ring, if the incoming Master Request is NACKed and is auto-disabled based on DVMRRJ field in relevant DAT entry."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Pass rejected IBI Status to the IBI Queue, if the incoming Master Request is NACKed and is auto-disabled based on DVMRRJ field in relevant DAT entry."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nrsirctl_SPEC;
     pub type Nrsirctl = crate::EnumBitfieldStruct<u8, Nrsirctl_SPEC>;
     impl Nrsirctl {
+        #[doc = "Do not pass rejected IBI Status to the IBI Queue/Rings, if the incoming SIR is NACKed and is auto-disabled based on DVSIRRJ field in relevant DAT entry."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Pass rejected IBI Status to the IBI Queue/Rings, if the incoming SIR is NACKed and is auto-disabled based on DVSIRRJ field in relevant DAT entry."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -9107,9 +9926,11 @@ impl crate::sealed::RegSpec for Bfctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Function Control Register"]
 pub type Bfctl = crate::RegValueT<Bfctl_SPEC>;
 
 impl Bfctl {
+    #[doc = "Master Arbitration-Lost Detection Enable"]
     #[inline(always)]
     pub fn male(
         self,
@@ -9135,6 +9956,7 @@ impl Bfctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "NACK Transmission Arbitration-Lost Detection Enable"]
     #[inline(always)]
     pub fn nale(
         self,
@@ -9160,6 +9982,7 @@ impl Bfctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Arbitration-Lost Detection Enable"]
     #[inline(always)]
     pub fn sale(
         self,
@@ -9185,6 +10008,7 @@ impl Bfctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "SCL Synchronous Circuit Enable"]
     #[inline(always)]
     pub fn scsyne(
         self,
@@ -9210,6 +10034,7 @@ impl Bfctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "SMBus/I2C Bus Selection"]
     #[inline(always)]
     pub fn smbs(
         self,
@@ -9235,6 +10060,7 @@ impl Bfctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Fast-mode Plus Enable"]
     #[inline(always)]
     pub fn fmpe(
         self,
@@ -9260,6 +10086,7 @@ impl Bfctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Speed Mode Enable"]
     #[inline(always)]
     pub fn hsme(
         self,
@@ -9285,6 +10112,7 @@ impl Bfctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -9305,56 +10133,70 @@ pub mod bfctl {
     pub struct Male_SPEC;
     pub type Male = crate::EnumBitfieldStruct<u8, Male_SPEC>;
     impl Male {
+        #[doc = "Master arbitration-lost detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Master arbitration-lost detection enables."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nale_SPEC;
     pub type Nale = crate::EnumBitfieldStruct<u8, Nale_SPEC>;
     impl Nale {
+        #[doc = "NACK transmission arbitration-lost detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NACK transmission arbitration-lost detection enables."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sale_SPEC;
     pub type Sale = crate::EnumBitfieldStruct<u8, Sale_SPEC>;
     impl Sale {
+        #[doc = "Slave arbitration-lost detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave arbitration-lost detection enables."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Scsyne_SPEC;
     pub type Scsyne = crate::EnumBitfieldStruct<u8, Scsyne_SPEC>;
     impl Scsyne {
+        #[doc = "No SCL synchronous circuit uses."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "An SCL synchronous circuit uses."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Smbs_SPEC;
     pub type Smbs = crate::EnumBitfieldStruct<u8, Smbs_SPEC>;
     impl Smbs {
+        #[doc = "The I2C bus select."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The SMBus select."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Fmpe_SPEC;
     pub type Fmpe = crate::EnumBitfieldStruct<u8, Fmpe_SPEC>;
     impl Fmpe {
+        #[doc = "No Fm+ slope control circuit uses for the SCLn pin and SDAn pin."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "An Fm+ slope control circuit uses for the SCLn pin and SDAn pin."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hsme_SPEC;
     pub type Hsme = crate::EnumBitfieldStruct<u8, Hsme_SPEC>;
     impl Hsme {
+        #[doc = "Disable High Speed Mode."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable High Speed Mode."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -9365,9 +10207,11 @@ impl crate::sealed::RegSpec for BfctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Bus Function Control Register"]
 pub type BfctlHaL = crate::RegValueT<BfctlHaL_SPEC>;
 
 impl BfctlHaL {
+    #[doc = "Master Arbitration-Lost Detection Enable"]
     #[inline(always)]
     pub fn male(
         self,
@@ -9393,6 +10237,7 @@ impl BfctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "NACK Transmission Arbitration-Lost Detection Enable"]
     #[inline(always)]
     pub fn nale(
         self,
@@ -9418,6 +10263,7 @@ impl BfctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Arbitration-Lost Detection Enable"]
     #[inline(always)]
     pub fn sale(
         self,
@@ -9443,6 +10289,7 @@ impl BfctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "SCL Synchronous Circuit Enable"]
     #[inline(always)]
     pub fn scsyne(
         self,
@@ -9468,6 +10315,7 @@ impl BfctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "SMBus/I2C Bus Selection"]
     #[inline(always)]
     pub fn smbs(
         self,
@@ -9493,6 +10341,7 @@ impl BfctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -9500,6 +10349,7 @@ impl BfctlHaL {
         crate::common::RegisterFieldBool::<13,1,0,BfctlHaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Fast-mode Plus Enable"]
     #[inline(always)]
     pub fn fmpe(
         self,
@@ -9525,6 +10375,7 @@ impl BfctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Speed Mode Enable"]
     #[inline(always)]
     pub fn hsme(
         self,
@@ -9562,56 +10413,70 @@ pub mod bfctl_ha_l {
     pub struct Male_SPEC;
     pub type Male = crate::EnumBitfieldStruct<u8, Male_SPEC>;
     impl Male {
+        #[doc = "Master arbitration-lost detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Master arbitration-lost detection enables."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nale_SPEC;
     pub type Nale = crate::EnumBitfieldStruct<u8, Nale_SPEC>;
     impl Nale {
+        #[doc = "NACK transmission arbitration-lost detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NACK transmission arbitration-lost detection enables."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sale_SPEC;
     pub type Sale = crate::EnumBitfieldStruct<u8, Sale_SPEC>;
     impl Sale {
+        #[doc = "Slave arbitration-lost detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave arbitration-lost detection enables."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Scsyne_SPEC;
     pub type Scsyne = crate::EnumBitfieldStruct<u8, Scsyne_SPEC>;
     impl Scsyne {
+        #[doc = "No SCL synchronous circuit uses."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "An SCL synchronous circuit uses."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Smbs_SPEC;
     pub type Smbs = crate::EnumBitfieldStruct<u8, Smbs_SPEC>;
     impl Smbs {
+        #[doc = "The I2C bus select."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The SMBus select."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Fmpe_SPEC;
     pub type Fmpe = crate::EnumBitfieldStruct<u8, Fmpe_SPEC>;
     impl Fmpe {
+        #[doc = "No Fm+ slope control circuit uses for the SCLn pin and SDAn pin."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "An Fm+ slope control circuit uses for the SCLn pin and SDAn pin."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hsme_SPEC;
     pub type Hsme = crate::EnumBitfieldStruct<u8, Hsme_SPEC>;
     impl Hsme {
+        #[doc = "Disable High Speed Mode."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable High Speed Mode."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -9622,9 +10487,11 @@ impl crate::sealed::RegSpec for BfctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Function Control Register"]
 pub type BfctlByLl = crate::RegValueT<BfctlByLl_SPEC>;
 
 impl BfctlByLl {
+    #[doc = "Master Arbitration-Lost Detection Enable"]
     #[inline(always)]
     pub fn male(
         self,
@@ -9650,6 +10517,7 @@ impl BfctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "NACK Transmission Arbitration-Lost Detection Enable"]
     #[inline(always)]
     pub fn nale(
         self,
@@ -9675,6 +10543,7 @@ impl BfctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Arbitration-Lost Detection Enable"]
     #[inline(always)]
     pub fn sale(
         self,
@@ -9700,6 +10569,7 @@ impl BfctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -9720,24 +10590,30 @@ pub mod bfctl_by_ll {
     pub struct Male_SPEC;
     pub type Male = crate::EnumBitfieldStruct<u8, Male_SPEC>;
     impl Male {
+        #[doc = "Master arbitration-lost detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Master arbitration-lost detection enables."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nale_SPEC;
     pub type Nale = crate::EnumBitfieldStruct<u8, Nale_SPEC>;
     impl Nale {
+        #[doc = "NACK transmission arbitration-lost detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NACK transmission arbitration-lost detection enables."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sale_SPEC;
     pub type Sale = crate::EnumBitfieldStruct<u8, Sale_SPEC>;
     impl Sale {
+        #[doc = "Slave arbitration-lost detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave arbitration-lost detection enables."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -9748,9 +10624,11 @@ impl crate::sealed::RegSpec for BfctlByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Function Control Register"]
 pub type BfctlByLh = crate::RegValueT<BfctlByLh_SPEC>;
 
 impl BfctlByLh {
+    #[doc = "SCL Synchronous Circuit Enable"]
     #[inline(always)]
     pub fn scsyne(
         self,
@@ -9776,6 +10654,7 @@ impl BfctlByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "SMBus/I2C Bus Selection"]
     #[inline(always)]
     pub fn smbs(
         self,
@@ -9801,6 +10680,7 @@ impl BfctlByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -9808,6 +10688,7 @@ impl BfctlByLh {
         crate::common::RegisterFieldBool::<5,1,0,BfctlByLh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Fast-mode Plus Enable"]
     #[inline(always)]
     pub fn fmpe(
         self,
@@ -9833,6 +10714,7 @@ impl BfctlByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Speed Mode Enable"]
     #[inline(always)]
     pub fn hsme(
         self,
@@ -9870,32 +10752,40 @@ pub mod bfctl_by_lh {
     pub struct Scsyne_SPEC;
     pub type Scsyne = crate::EnumBitfieldStruct<u8, Scsyne_SPEC>;
     impl Scsyne {
+        #[doc = "No SCL synchronous circuit uses."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "An SCL synchronous circuit uses."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Smbs_SPEC;
     pub type Smbs = crate::EnumBitfieldStruct<u8, Smbs_SPEC>;
     impl Smbs {
+        #[doc = "The I2C bus select."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The SMBus select."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Fmpe_SPEC;
     pub type Fmpe = crate::EnumBitfieldStruct<u8, Fmpe_SPEC>;
     impl Fmpe {
+        #[doc = "No Fm+ slope control circuit uses for the SCLn pin and SDAn pin."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "An Fm+ slope control circuit uses for the SCLn pin and SDAn pin."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hsme_SPEC;
     pub type Hsme = crate::EnumBitfieldStruct<u8, Hsme_SPEC>;
     impl Hsme {
+        #[doc = "Disable High Speed Mode."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable High Speed Mode."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -9906,9 +10796,11 @@ impl crate::sealed::RegSpec for Svctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Slave Control Register"]
 pub type Svctl = crate::RegValueT<Svctl_SPEC>;
 
 impl Svctl {
+    #[doc = "General Call Address Enable"]
     #[inline(always)]
     pub fn gcae(
         self,
@@ -9934,6 +10826,7 @@ impl Svctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Hs-mode Master Code Enable"]
     #[inline(always)]
     pub fn hsmce(
         self,
@@ -9959,6 +10852,7 @@ impl Svctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device-ID Address Enable"]
     #[inline(always)]
     pub fn dvide(
         self,
@@ -9984,6 +10878,7 @@ impl Svctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Host Address Enable"]
     #[inline(always)]
     pub fn hoae(
         self,
@@ -10009,6 +10904,7 @@ impl Svctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Address Enable $x ($x=2 to 0)"]
     #[inline(always)]
     pub fn svae(
         self,
@@ -10034,6 +10930,7 @@ impl Svctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000. The write value should be 0000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -10054,40 +10951,50 @@ pub mod svctl {
     pub struct Gcae_SPEC;
     pub type Gcae = crate::EnumBitfieldStruct<u8, Gcae_SPEC>;
     impl Gcae {
+        #[doc = "General call address detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "General call address detection enables."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hsmce_SPEC;
     pub type Hsmce = crate::EnumBitfieldStruct<u8, Hsmce_SPEC>;
     impl Hsmce {
+        #[doc = "Hs-mode Master Code Detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Hs-mode Master Code Detection enables."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvide_SPEC;
     pub type Dvide = crate::EnumBitfieldStruct<u8, Dvide_SPEC>;
     impl Dvide {
+        #[doc = "Device-ID address detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Device-ID address detection enables."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hoae_SPEC;
     pub type Hoae = crate::EnumBitfieldStruct<u8, Hoae_SPEC>;
     impl Hoae {
+        #[doc = "Host address detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Host address detection enables."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Svae_SPEC;
     pub type Svae = crate::EnumBitfieldStruct<u8, Svae_SPEC>;
     impl Svae {
+        #[doc = "Slave $x disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave $x enables."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10098,9 +11005,11 @@ impl crate::sealed::RegSpec for SvctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Slave Control Register"]
 pub type SvctlHaL = crate::RegValueT<SvctlHaL_SPEC>;
 
 impl SvctlHaL {
+    #[doc = "General Call Address Enable"]
     #[inline(always)]
     pub fn gcae(
         self,
@@ -10126,6 +11035,7 @@ impl SvctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Hs-mode Master Code Enable"]
     #[inline(always)]
     pub fn hsmce(
         self,
@@ -10151,6 +11061,7 @@ impl SvctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device-ID Address Enable"]
     #[inline(always)]
     pub fn dvide(
         self,
@@ -10176,6 +11087,7 @@ impl SvctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -10183,6 +11095,7 @@ impl SvctlHaL {
         crate::common::RegisterField::<7,0xff,1,0,u8,u8,SvctlHaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Host Address Enable"]
     #[inline(always)]
     pub fn hoae(
         self,
@@ -10220,32 +11133,40 @@ pub mod svctl_ha_l {
     pub struct Gcae_SPEC;
     pub type Gcae = crate::EnumBitfieldStruct<u8, Gcae_SPEC>;
     impl Gcae {
+        #[doc = "General call address detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "General call address detection enables."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hsmce_SPEC;
     pub type Hsmce = crate::EnumBitfieldStruct<u8, Hsmce_SPEC>;
     impl Hsmce {
+        #[doc = "Hs-mode Master Code Detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Hs-mode Master Code Detection enables."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvide_SPEC;
     pub type Dvide = crate::EnumBitfieldStruct<u8, Dvide_SPEC>;
     impl Dvide {
+        #[doc = "Device-ID address detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Device-ID address detection enables."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hoae_SPEC;
     pub type Hoae = crate::EnumBitfieldStruct<u8, Hoae_SPEC>;
     impl Hoae {
+        #[doc = "Host address detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Host address detection enables."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10256,9 +11177,11 @@ impl crate::sealed::RegSpec for SvctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Control Register"]
 pub type SvctlByLl = crate::RegValueT<SvctlByLl_SPEC>;
 
 impl SvctlByLl {
+    #[doc = "General Call Address Enable"]
     #[inline(always)]
     pub fn gcae(
         self,
@@ -10284,6 +11207,7 @@ impl SvctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Hs-mode Master Code Enable"]
     #[inline(always)]
     pub fn hsmce(
         self,
@@ -10309,6 +11233,7 @@ impl SvctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device-ID Address Enable"]
     #[inline(always)]
     pub fn dvide(
         self,
@@ -10334,6 +11259,7 @@ impl SvctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -10353,24 +11279,30 @@ pub mod svctl_by_ll {
     pub struct Gcae_SPEC;
     pub type Gcae = crate::EnumBitfieldStruct<u8, Gcae_SPEC>;
     impl Gcae {
+        #[doc = "General call address detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "General call address detection enables."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hsmce_SPEC;
     pub type Hsmce = crate::EnumBitfieldStruct<u8, Hsmce_SPEC>;
     impl Hsmce {
+        #[doc = "Hs-mode Master Code Detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Hs-mode Master Code Detection enables."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvide_SPEC;
     pub type Dvide = crate::EnumBitfieldStruct<u8, Dvide_SPEC>;
     impl Dvide {
+        #[doc = "Device-ID address detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Device-ID address detection enables."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10381,9 +11313,11 @@ impl crate::sealed::RegSpec for SvctlByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Control Register"]
 pub type SvctlByLh = crate::RegValueT<SvctlByLh_SPEC>;
 
 impl SvctlByLh {
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -10392,6 +11326,7 @@ impl SvctlByLh {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,SvctlByLh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Host Address Enable"]
     #[inline(always)]
     pub fn hoae(
         self,
@@ -10429,8 +11364,10 @@ pub mod svctl_by_lh {
     pub struct Hoae_SPEC;
     pub type Hoae = crate::EnumBitfieldStruct<u8, Hoae_SPEC>;
     impl Hoae {
+        #[doc = "Host address detection disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Host address detection enables."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10441,9 +11378,11 @@ impl crate::sealed::RegSpec for SvctlHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Slave Control Register"]
 pub type SvctlHaH = crate::RegValueT<SvctlHaH_SPEC>;
 
 impl SvctlHaH {
+    #[doc = "Slave Address Enable $x ($x=2 to 0)"]
     #[inline(always)]
     pub fn svae(
         self,
@@ -10469,6 +11408,7 @@ impl SvctlHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000. The write value should be 0000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -10489,8 +11429,10 @@ pub mod svctl_ha_h {
     pub struct Svae_SPEC;
     pub type Svae = crate::EnumBitfieldStruct<u8, Svae_SPEC>;
     impl Svae {
+        #[doc = "Slave $x disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave $x enables."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10501,9 +11443,11 @@ impl crate::sealed::RegSpec for SvctlByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Control Register"]
 pub type SvctlByHl = crate::RegValueT<SvctlByHl_SPEC>;
 
 impl SvctlByHl {
+    #[doc = "Slave Address Enable $x ($x=2 to 0)"]
     #[inline(always)]
     pub fn svae(
         self,
@@ -10529,6 +11473,7 @@ impl SvctlByHl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -10549,8 +11494,10 @@ pub mod svctl_by_hl {
     pub struct Svae_SPEC;
     pub type Svae = crate::EnumBitfieldStruct<u8, Svae_SPEC>;
     impl Svae {
+        #[doc = "Slave $x disables."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave $x enables."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10561,9 +11508,11 @@ impl crate::sealed::RegSpec for Refckctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Reference Clock Control Register"]
 pub type Refckctl = crate::RegValueT<Refckctl_SPEC>;
 
 impl Refckctl {
+    #[doc = "Internal Reference Clock SelectionSelects the internal reference clock source (I3Cφ) for this IP."]
     #[inline(always)]
     pub fn irefcks(
         self,
@@ -10589,6 +11538,7 @@ impl Refckctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000000000000000000000000. The write value should be 00000000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -10618,20 +11568,28 @@ pub mod refckctl {
     pub struct Irefcks_SPEC;
     pub type Irefcks = crate::EnumBitfieldStruct<u8, Irefcks_SPEC>;
     impl Irefcks {
+        #[doc = "TCLK/1 clock"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "TCLK/2 clock"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "TCLK/4 clock"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "TCLK/8 clock"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "TCLK/16 clock"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "TCLK/32 clock"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "TCLK/64 clock"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "TCLK/128 clock"]
         pub const _111: Self = Self::new(7);
     }
 }
@@ -10642,9 +11600,11 @@ impl crate::sealed::RegSpec for RefckctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Reference Clock Control Register"]
 pub type RefckctlHaL = crate::RegValueT<RefckctlHaL_SPEC>;
 
 impl RefckctlHaL {
+    #[doc = "Internal Reference Clock SelectionSelects the internal reference clock source (I3Cφ) for this IP."]
     #[inline(always)]
     pub fn irefcks(
         self,
@@ -10670,6 +11630,7 @@ impl RefckctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000. The write value should be 0000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -10690,20 +11651,28 @@ pub mod refckctl_ha_l {
     pub struct Irefcks_SPEC;
     pub type Irefcks = crate::EnumBitfieldStruct<u8, Irefcks_SPEC>;
     impl Irefcks {
+        #[doc = "TCLK/1 clock"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "TCLK/2 clock"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "TCLK/4 clock"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "TCLK/8 clock"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "TCLK/16 clock"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "TCLK/32 clock"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "TCLK/64 clock"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "TCLK/128 clock"]
         pub const _111: Self = Self::new(7);
     }
 }
@@ -10714,9 +11683,11 @@ impl crate::sealed::RegSpec for RefckctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Reference Clock Control Register"]
 pub type RefckctlByLl = crate::RegValueT<RefckctlByLl_SPEC>;
 
 impl RefckctlByLl {
+    #[doc = "Internal Reference Clock SelectionSelects the internal reference clock source (I3Cφ) for this IP."]
     #[inline(always)]
     pub fn irefcks(
         self,
@@ -10742,6 +11713,7 @@ impl RefckctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -10762,20 +11734,28 @@ pub mod refckctl_by_ll {
     pub struct Irefcks_SPEC;
     pub type Irefcks = crate::EnumBitfieldStruct<u8, Irefcks_SPEC>;
     impl Irefcks {
+        #[doc = "TCLK/1 clock"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "TCLK/2 clock"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "TCLK/4 clock"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "TCLK/8 clock"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "TCLK/16 clock"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "TCLK/32 clock"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "TCLK/64 clock"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "TCLK/128 clock"]
         pub const _111: Self = Self::new(7);
     }
 }
@@ -10786,9 +11766,11 @@ impl crate::sealed::RegSpec for Stdbr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Standard Bit Rate Register"]
 pub type Stdbr = crate::RegValueT<Stdbr_SPEC>;
 
 impl Stdbr {
+    #[doc = "Standard Bit Rate Low-Level Period Open-Drain"]
     #[inline(always)]
     pub fn sbrlo(
         self,
@@ -10796,6 +11778,7 @@ impl Stdbr {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Stdbr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Standard Bit Rate High-Level Period Open-Drain"]
     #[inline(always)]
     pub fn sbrho(
         self,
@@ -10803,6 +11786,7 @@ impl Stdbr {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Stdbr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Standard Bit Rate Low-Level Period Push-Pull"]
     #[inline(always)]
     pub fn sbrlp(
         self,
@@ -10810,6 +11794,7 @@ impl Stdbr {
         crate::common::RegisterField::<16,0x3f,1,0,u8,u8,Stdbr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Standard Bit Rate High-Level Period Push-Pull"]
     #[inline(always)]
     pub fn sbrhp(
         self,
@@ -10817,6 +11802,7 @@ impl Stdbr {
         crate::common::RegisterField::<24,0x3f,1,0,u8,u8,Stdbr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -10826,6 +11812,7 @@ impl Stdbr {
         )
     }
 
+    #[doc = "Double the Standard Bit Rate Period for Open-Drain"]
     #[inline(always)]
     pub fn dsbrpo(
         self,
@@ -10863,6 +11850,7 @@ pub mod stdbr {
     pub struct Dsbrpo_SPEC;
     pub type Dsbrpo = crate::EnumBitfieldStruct<u8, Dsbrpo_SPEC>;
     impl Dsbrpo {
+        #[doc = "Normal"]
         pub const _0: Self = Self::new(0);
     }
 }
@@ -10873,9 +11861,11 @@ impl crate::sealed::RegSpec for StdbrHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Standard Bit Rate Register"]
 pub type StdbrHaL = crate::RegValueT<StdbrHaL_SPEC>;
 
 impl StdbrHaL {
+    #[doc = "Standard Bit Rate Low-Level Period Open-Drain"]
     #[inline(always)]
     pub fn sbrlo(
         self,
@@ -10883,6 +11873,7 @@ impl StdbrHaL {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,StdbrHaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Standard Bit Rate High-Level Period Open-Drain"]
     #[inline(always)]
     pub fn sbrho(
         self,
@@ -10904,9 +11895,11 @@ impl crate::sealed::RegSpec for StdbrByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Standard Bit Rate Register"]
 pub type StdbrByLl = crate::RegValueT<StdbrByLl_SPEC>;
 
 impl StdbrByLl {
+    #[doc = "Standard Bit Rate Low-Level Period Open-Drain"]
     #[inline(always)]
     pub fn sbrlo(
         self,
@@ -10929,9 +11922,11 @@ impl crate::sealed::RegSpec for StdbrByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Standard Bit Rate Register"]
 pub type StdbrByLh = crate::RegValueT<StdbrByLh_SPEC>;
 
 impl StdbrByLh {
+    #[doc = "Standard Bit Rate High-Level Period Open-Drain"]
     #[inline(always)]
     pub fn sbrho(
         self,
@@ -10954,9 +11949,11 @@ impl crate::sealed::RegSpec for StdbrHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Standard Bit Rate Register"]
 pub type StdbrHaH = crate::RegValueT<StdbrHaH_SPEC>;
 
 impl StdbrHaH {
+    #[doc = "Standard Bit Rate Low-Level Period Push-Pull"]
     #[inline(always)]
     pub fn sbrlp(
         self,
@@ -10964,6 +11961,7 @@ impl StdbrHaH {
         crate::common::RegisterField::<0,0x3f,1,0,u8,u8,StdbrHaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Standard Bit Rate High-Level Period Push-Pull"]
     #[inline(always)]
     pub fn sbrhp(
         self,
@@ -10971,6 +11969,7 @@ impl StdbrHaH {
         crate::common::RegisterField::<8,0x3f,1,0,u8,u8,StdbrHaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -10978,6 +11977,7 @@ impl StdbrHaH {
         crate::common::RegisterFieldBool::<14,1,0,StdbrHaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Double the Standard Bit Rate Period for Open-Drain"]
     #[inline(always)]
     pub fn dsbrpo(
         self,
@@ -11015,6 +12015,7 @@ pub mod stdbr_ha_h {
     pub struct Dsbrpo_SPEC;
     pub type Dsbrpo = crate::EnumBitfieldStruct<u8, Dsbrpo_SPEC>;
     impl Dsbrpo {
+        #[doc = "Normal"]
         pub const _0: Self = Self::new(0);
     }
 }
@@ -11025,9 +12026,11 @@ impl crate::sealed::RegSpec for StdbrByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Standard Bit Rate Register"]
 pub type StdbrByHl = crate::RegValueT<StdbrByHl_SPEC>;
 
 impl StdbrByHl {
+    #[doc = "Standard Bit Rate Low-Level Period Push-Pull"]
     #[inline(always)]
     pub fn sbrlp(
         self,
@@ -11036,6 +12039,7 @@ impl StdbrByHl {
         crate::common::RegisterField::<0,0x3f,1,0,u8,u8,StdbrByHl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00. The write value should be 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -11057,9 +12061,11 @@ impl crate::sealed::RegSpec for StdbrByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Standard Bit Rate Register"]
 pub type StdbrByHh = crate::RegValueT<StdbrByHh_SPEC>;
 
 impl StdbrByHh {
+    #[doc = "Standard Bit Rate High-Level Period Push-Pull"]
     #[inline(always)]
     pub fn sbrhp(
         self,
@@ -11068,6 +12074,7 @@ impl StdbrByHh {
         crate::common::RegisterField::<0,0x3f,1,0,u8,u8,StdbrByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -11075,6 +12082,7 @@ impl StdbrByHh {
         crate::common::RegisterFieldBool::<6,1,0,StdbrByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Double the Standard Bit Rate Period for Open-Drain"]
     #[inline(always)]
     pub fn dsbrpo(
         self,
@@ -11112,6 +12120,7 @@ pub mod stdbr_by_hh {
     pub struct Dsbrpo_SPEC;
     pub type Dsbrpo = crate::EnumBitfieldStruct<u8, Dsbrpo_SPEC>;
     impl Dsbrpo {
+        #[doc = "Normal"]
         pub const _0: Self = Self::new(0);
     }
 }
@@ -11122,9 +12131,11 @@ impl crate::sealed::RegSpec for Extbr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Extended Bit Rate Register"]
 pub type Extbr = crate::RegValueT<Extbr_SPEC>;
 
 impl Extbr {
+    #[doc = "Extended Bit Rate Low-Level Period Open-Drain"]
     #[inline(always)]
     pub fn ebrlo(
         self,
@@ -11132,6 +12143,7 @@ impl Extbr {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Extbr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Extended Bit Rate Low-Level Period Open-Drain"]
     #[inline(always)]
     pub fn ebrho(
         self,
@@ -11139,6 +12151,7 @@ impl Extbr {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Extbr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Extended Bit Rate Low-Level Period Push-Pull"]
     #[inline(always)]
     pub fn ebrlp(
         self,
@@ -11146,6 +12159,7 @@ impl Extbr {
         crate::common::RegisterField::<16,0x3f,1,0,u8,u8,Extbr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Extended Bit Rate Low-Level Period Push-Pull"]
     #[inline(always)]
     pub fn ebrhp(
         self,
@@ -11153,6 +12167,7 @@ impl Extbr {
         crate::common::RegisterField::<24,0x3f,1,0,u8,u8,Extbr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00. The write value should be 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -11174,9 +12189,11 @@ impl crate::sealed::RegSpec for ExtbrHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Extended Bit Rate Register"]
 pub type ExtbrHaL = crate::RegValueT<ExtbrHaL_SPEC>;
 
 impl ExtbrHaL {
+    #[doc = "Extended Bit Rate Low-Level Period Open-Drain"]
     #[inline(always)]
     pub fn ebrlo(
         self,
@@ -11184,6 +12201,7 @@ impl ExtbrHaL {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,ExtbrHaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Extended Bit Rate Low-Level Period Open-Drain"]
     #[inline(always)]
     pub fn ebrho(
         self,
@@ -11205,9 +12223,11 @@ impl crate::sealed::RegSpec for ExtbrByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Extended Bit Rate Register"]
 pub type ExtbrByLl = crate::RegValueT<ExtbrByLl_SPEC>;
 
 impl ExtbrByLl {
+    #[doc = "Extended Bit Rate Low-Level Period Open-Drain"]
     #[inline(always)]
     pub fn ebrlo(
         self,
@@ -11230,9 +12250,11 @@ impl crate::sealed::RegSpec for ExtbrByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Extended Bit Rate Register"]
 pub type ExtbrByLh = crate::RegValueT<ExtbrByLh_SPEC>;
 
 impl ExtbrByLh {
+    #[doc = "Extended Bit Rate Low-Level Period Open-Drain"]
     #[inline(always)]
     pub fn ebrho(
         self,
@@ -11255,9 +12277,11 @@ impl crate::sealed::RegSpec for ExtbrHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Extended Bit Rate Register"]
 pub type ExtbrHaH = crate::RegValueT<ExtbrHaH_SPEC>;
 
 impl ExtbrHaH {
+    #[doc = "Extended Bit Rate Low-Level Period Push-Pull"]
     #[inline(always)]
     pub fn ebrlp(
         self,
@@ -11265,6 +12289,7 @@ impl ExtbrHaH {
         crate::common::RegisterField::<0,0x3f,1,0,u8,u8,ExtbrHaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Extended Bit Rate Low-Level Period Push-Pull"]
     #[inline(always)]
     pub fn ebrhp(
         self,
@@ -11272,6 +12297,7 @@ impl ExtbrHaH {
         crate::common::RegisterField::<8,0x3f,1,0,u8,u8,ExtbrHaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 11. The write value should be 11."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -11293,9 +12319,11 @@ impl crate::sealed::RegSpec for ExtbrByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Extended Bit Rate Register"]
 pub type ExtbrByHl = crate::RegValueT<ExtbrByHl_SPEC>;
 
 impl ExtbrByHl {
+    #[doc = "Extended Bit Rate Low-Level Period Push-Pull"]
     #[inline(always)]
     pub fn ebrlp(
         self,
@@ -11304,6 +12332,7 @@ impl ExtbrByHl {
         crate::common::RegisterField::<0,0x3f,1,0,u8,u8,ExtbrByHl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 11. The write value should be 11."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -11325,9 +12354,11 @@ impl crate::sealed::RegSpec for ExtbrByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Extended Bit Rate Register"]
 pub type ExtbrByHh = crate::RegValueT<ExtbrByHh_SPEC>;
 
 impl ExtbrByHh {
+    #[doc = "Extended Bit Rate Low-Level Period Push-Pull"]
     #[inline(always)]
     pub fn ebrhp(
         self,
@@ -11336,6 +12367,7 @@ impl ExtbrByHh {
         crate::common::RegisterField::<0,0x3f,1,0,u8,u8,ExtbrByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 11. The write value should be 11."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -11357,9 +12389,11 @@ impl crate::sealed::RegSpec for Bfrecdt_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Free Condition Detection Time Register"]
 pub type Bfrecdt = crate::RegValueT<Bfrecdt_SPEC>;
 
 impl Bfrecdt {
+    #[doc = "Bus Free Condition Detection Cycle"]
     #[inline(always)]
     pub fn frecyc(
         self,
@@ -11368,6 +12402,7 @@ impl Bfrecdt {
         crate::common::RegisterField::<0,0x1ff,1,0,u16,u16,Bfrecdt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000000000000000000000. The write value should be 00000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -11390,9 +12425,11 @@ impl crate::sealed::RegSpec for BfrecdtHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Bus Free Condition Detection Time Register"]
 pub type BfrecdtHaL = crate::RegValueT<BfrecdtHaL_SPEC>;
 
 impl BfrecdtHaL {
+    #[doc = "Bus Free Condition Detection Cycle"]
     #[inline(always)]
     pub fn frecyc(
         self,
@@ -11401,6 +12438,7 @@ impl BfrecdtHaL {
         crate::common::RegisterField::<0,0x1ff,1,0,u16,u16,BfrecdtHaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -11423,9 +12461,11 @@ impl crate::sealed::RegSpec for BfrecdtByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Free Condition Detection Time Register"]
 pub type BfrecdtByLl = crate::RegValueT<BfrecdtByLl_SPEC>;
 
 impl BfrecdtByLl {
+    #[doc = "Bus Free Condition Detection Cycle"]
     #[inline(always)]
     pub fn frecyc(
         self,
@@ -11448,9 +12488,11 @@ impl crate::sealed::RegSpec for BfrecdtByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Free Condition Detection Time Register"]
 pub type BfrecdtByLh = crate::RegValueT<BfrecdtByLh_SPEC>;
 
 impl BfrecdtByLh {
+    #[doc = "Bus Free Condition Detection Cycle"]
     #[inline(always)]
     pub fn frecyc(
         self,
@@ -11458,6 +12500,7 @@ impl BfrecdtByLh {
         crate::common::RegisterFieldBool::<0,1,0,BfrecdtByLh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -11480,9 +12523,11 @@ impl crate::sealed::RegSpec for Bavlcdt_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Available Condition Detection Time Register"]
 pub type Bavlcdt = crate::RegValueT<Bavlcdt_SPEC>;
 
 impl Bavlcdt {
+    #[doc = "Bus Available Condition Detection Cycle"]
     #[inline(always)]
     pub fn avlcyc(
         self,
@@ -11491,6 +12536,7 @@ impl Bavlcdt {
         crate::common::RegisterField::<0,0x1ff,1,0,u16,u16,Bavlcdt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000000000000000000000. The write value should be 00000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -11513,9 +12559,11 @@ impl crate::sealed::RegSpec for BavlcdtHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Bus Available Condition Detection Time Register"]
 pub type BavlcdtHaL = crate::RegValueT<BavlcdtHaL_SPEC>;
 
 impl BavlcdtHaL {
+    #[doc = "Bus Available Condition Detection Cycle"]
     #[inline(always)]
     pub fn avlcyc(
         self,
@@ -11524,6 +12572,7 @@ impl BavlcdtHaL {
         crate::common::RegisterField::<0,0x1ff,1,0,u16,u16,BavlcdtHaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -11546,9 +12595,11 @@ impl crate::sealed::RegSpec for BavlcdtByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Available Condition Detection Time Register"]
 pub type BavlcdtByLl = crate::RegValueT<BavlcdtByLl_SPEC>;
 
 impl BavlcdtByLl {
+    #[doc = "Bus Available Condition Detection Cycle"]
     #[inline(always)]
     pub fn avlcyc(
         self,
@@ -11571,9 +12622,11 @@ impl crate::sealed::RegSpec for BavlcdtByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Available Condition Detection Time Register"]
 pub type BavlcdtByLh = crate::RegValueT<BavlcdtByLh_SPEC>;
 
 impl BavlcdtByLh {
+    #[doc = "Bus Available Condition Detection Cycle"]
     #[inline(always)]
     pub fn avlcyc(
         self,
@@ -11581,6 +12634,7 @@ impl BavlcdtByLh {
         crate::common::RegisterFieldBool::<0,1,0,BavlcdtByLh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -11603,9 +12657,11 @@ impl crate::sealed::RegSpec for Bidlcdt_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Idle Condition Detection Time Register"]
 pub type Bidlcdt = crate::RegValueT<Bidlcdt_SPEC>;
 
 impl Bidlcdt {
+    #[doc = "Bus Idle Condition Detection Cycle"]
     #[inline(always)]
     pub fn idlcyc(
         self,
@@ -11614,6 +12670,7 @@ impl Bidlcdt {
         crate::common::RegisterField::<0,0x3ffff,1,0,u32,u32,Bidlcdt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000000000000. The write value should be 00000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -11636,9 +12693,11 @@ impl crate::sealed::RegSpec for BidlcdtHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Bus Idle Condition Detection Time Register"]
 pub type BidlcdtHaL = crate::RegValueT<BidlcdtHaL_SPEC>;
 
 impl BidlcdtHaL {
+    #[doc = "Bus Idle Condition Detection Cycle"]
     #[inline(always)]
     pub fn idlcyc(
         self,
@@ -11661,9 +12720,11 @@ impl crate::sealed::RegSpec for BidlcdtByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Idle Condition Detection Time Register"]
 pub type BidlcdtByLl = crate::RegValueT<BidlcdtByLl_SPEC>;
 
 impl BidlcdtByLl {
+    #[doc = "Bus Idle Condition Detection Cycle"]
     #[inline(always)]
     pub fn idlcyc(
         self,
@@ -11686,9 +12747,11 @@ impl crate::sealed::RegSpec for BidlcdtByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Idle Condition Detection Time Register"]
 pub type BidlcdtByLh = crate::RegValueT<BidlcdtByLh_SPEC>;
 
 impl BidlcdtByLh {
+    #[doc = "Bus Idle Condition Detection Cycle"]
     #[inline(always)]
     pub fn idlcyc(
         self,
@@ -11711,9 +12774,11 @@ impl crate::sealed::RegSpec for BidlcdtHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Bus Idle Condition Detection Time Register"]
 pub type BidlcdtHaH = crate::RegValueT<BidlcdtHaH_SPEC>;
 
 impl BidlcdtHaH {
+    #[doc = "Bus Idle Condition Detection Cycle"]
     #[inline(always)]
     pub fn idlcyc(
         self,
@@ -11722,6 +12787,7 @@ impl BidlcdtHaH {
         crate::common::RegisterField::<0,0x3,1,0,u8,u8,BidlcdtHaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000000000000. The write value should be 00000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -11744,9 +12810,11 @@ impl crate::sealed::RegSpec for BidlcdtByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Idle Condition Detection Time Register"]
 pub type BidlcdtByHl = crate::RegValueT<BidlcdtByHl_SPEC>;
 
 impl BidlcdtByHl {
+    #[doc = "Bus Idle Condition Detection Cycle"]
     #[inline(always)]
     pub fn idlcyc(
         self,
@@ -11755,6 +12823,7 @@ impl BidlcdtByHl {
         crate::common::RegisterField::<0,0x3,1,0,u8,u8,BidlcdtByHl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -11777,9 +12846,11 @@ impl crate::sealed::RegSpec for Outctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Output Control Register"]
 pub type Outctl = crate::RegValueT<Outctl_SPEC>;
 
 impl Outctl {
+    #[doc = "SDA Output Control"]
     #[inline(always)]
     pub fn sdoc(
         self,
@@ -11805,6 +12876,7 @@ impl Outctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "SCL Output Control"]
     #[inline(always)]
     pub fn scoc(
         self,
@@ -11830,6 +12902,7 @@ impl Outctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "SCL/SDA Output Control Write Protect"]
     #[inline(always)]
     pub fn socwp(
         self,
@@ -11855,6 +12928,7 @@ impl Outctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Extra SCL Clock Cycle Output"]
     #[inline(always)]
     pub fn excyc(
         self,
@@ -11880,6 +12954,7 @@ impl Outctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "SDA Output Delay"]
     #[inline(always)]
     pub fn sdod(
         self,
@@ -11905,6 +12980,7 @@ impl Outctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "SDA Output Delay Clock Source Selection"]
     #[inline(always)]
     pub fn sdodcs(
         self,
@@ -11930,6 +13006,7 @@ impl Outctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -11950,76 +13027,102 @@ pub mod outctl {
     pub struct Sdoc_SPEC;
     pub type Sdoc = crate::EnumBitfieldStruct<u8, Sdoc_SPEC>;
     impl Sdoc {
+        #[doc = "This IP drives the SDAn pin low."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP releases the SDAn pin."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Scoc_SPEC;
     pub type Scoc = crate::EnumBitfieldStruct<u8, Scoc_SPEC>;
     impl Scoc {
+        #[doc = "This IP drives the SCLn pin low."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP releases the SCLn pin."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Socwp_SPEC;
     pub type Socwp = crate::EnumBitfieldStruct<u8, Socwp_SPEC>;
     impl Socwp {
+        #[doc = "Bits SCOC and SDOC are protected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bits SCOC and SDOC can be written (When writing simultaneously with the value of the target bit)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Excyc_SPEC;
     pub type Excyc = crate::EnumBitfieldStruct<u8, Excyc_SPEC>;
     impl Excyc {
+        #[doc = "Does not output an extra SCL clock cycle (default)."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Outputs an extra SCL clock cycle."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdod_SPEC;
     pub type Sdod = crate::EnumBitfieldStruct<u8, Sdod_SPEC>;
     impl Sdod {
+        #[doc = "No output delay"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "1 I3Cφ cycle"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "2 I3Cφ cycles"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "3 I3Cφ cycles"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "4 I3Cφ cycles"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "5 I3Cφ cycles"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "6 I3Cφ cycles"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "7 I3Cφ cycles"]
         pub const _111: Self = Self::new(7);
 
+        #[doc = "No output delay"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "1 or 2 I3Cφ cycles"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "3 or 4 I3Cφ cycles"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "5 or 6 I3Cφ cycles"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "7 or 8 I3Cφ cycles"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "9 or 10 I3Cφ cycles"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "11 or 12 I3Cφ cycles"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "13 or 14 I3Cφ cycles"]
         pub const _111: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdodcs_SPEC;
     pub type Sdodcs = crate::EnumBitfieldStruct<u8, Sdodcs_SPEC>;
     impl Sdodcs {
+        #[doc = "The internal reference clock (I3Cφ) is selected as the clock source of the SDA output delay counter."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The internal reference clock divided by 2 (I3Cφ/2) is selected as the clock source of the SDA output delay counter. *1"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12030,9 +13133,11 @@ impl crate::sealed::RegSpec for OutctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Output Control Register"]
 pub type OutctlHaL = crate::RegValueT<OutctlHaL_SPEC>;
 
 impl OutctlHaL {
+    #[doc = "SDA Output Control"]
     #[inline(always)]
     pub fn sdoc(
         self,
@@ -12058,6 +13163,7 @@ impl OutctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "SCL Output Control"]
     #[inline(always)]
     pub fn scoc(
         self,
@@ -12083,6 +13189,7 @@ impl OutctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "SCL/SDA Output Control Write Protect"]
     #[inline(always)]
     pub fn socwp(
         self,
@@ -12108,6 +13215,7 @@ impl OutctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Extra SCL Clock Cycle Output"]
     #[inline(always)]
     pub fn excyc(
         self,
@@ -12133,6 +13241,7 @@ impl OutctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "SDA Output Delay"]
     #[inline(always)]
     pub fn sdod(
         self,
@@ -12158,6 +13267,7 @@ impl OutctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -12166,6 +13276,7 @@ impl OutctlHaL {
         crate::common::RegisterField::<11,0xf,1,0,u8,u8,OutctlHaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "SDA Output Delay Clock Source Selection"]
     #[inline(always)]
     pub fn sdodcs(
         self,
@@ -12203,76 +13314,102 @@ pub mod outctl_ha_l {
     pub struct Sdoc_SPEC;
     pub type Sdoc = crate::EnumBitfieldStruct<u8, Sdoc_SPEC>;
     impl Sdoc {
+        #[doc = "This IP drives the SDAn pin low."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP releases the SDAn pin."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Scoc_SPEC;
     pub type Scoc = crate::EnumBitfieldStruct<u8, Scoc_SPEC>;
     impl Scoc {
+        #[doc = "This IP drives the SCLn pin low."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP releases the SCLn pin."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Socwp_SPEC;
     pub type Socwp = crate::EnumBitfieldStruct<u8, Socwp_SPEC>;
     impl Socwp {
+        #[doc = "Bits SCOC and SDOC are protected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bits SCOC and SDOC can be written (When writing simultaneously with the value of the target bit)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Excyc_SPEC;
     pub type Excyc = crate::EnumBitfieldStruct<u8, Excyc_SPEC>;
     impl Excyc {
+        #[doc = "Does not output an extra SCL clock cycle (default)."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Outputs an extra SCL clock cycle."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdod_SPEC;
     pub type Sdod = crate::EnumBitfieldStruct<u8, Sdod_SPEC>;
     impl Sdod {
+        #[doc = "No output delay"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "1 I3Cφ cycle"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "2 I3Cφ cycles"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "3 I3Cφ cycles"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "4 I3Cφ cycles"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "5 I3Cφ cycles"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "6 I3Cφ cycles"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "7 I3Cφ cycles"]
         pub const _111: Self = Self::new(7);
 
+        #[doc = "No output delay"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "1 or 2 I3Cφ cycles"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "3 or 4 I3Cφ cycles"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "5 or 6 I3Cφ cycles"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "7 or 8 I3Cφ cycles"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "9 or 10 I3Cφ cycles"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "11 or 12 I3Cφ cycles"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "13 or 14 I3Cφ cycles"]
         pub const _111: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdodcs_SPEC;
     pub type Sdodcs = crate::EnumBitfieldStruct<u8, Sdodcs_SPEC>;
     impl Sdodcs {
+        #[doc = "The internal reference clock (I3Cφ) is selected as the clock source of the SDA output delay counter."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The internal reference clock divided by 2 (I3Cφ/2) is selected as the clock source of the SDA output delay counter. *1"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12283,9 +13420,11 @@ impl crate::sealed::RegSpec for OutctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Output Control Register"]
 pub type OutctlByLl = crate::RegValueT<OutctlByLl_SPEC>;
 
 impl OutctlByLl {
+    #[doc = "SDA Output Control"]
     #[inline(always)]
     pub fn sdoc(
         self,
@@ -12311,6 +13450,7 @@ impl OutctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "SCL Output Control"]
     #[inline(always)]
     pub fn scoc(
         self,
@@ -12336,6 +13476,7 @@ impl OutctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "SCL/SDA Output Control Write Protect"]
     #[inline(always)]
     pub fn socwp(
         self,
@@ -12361,6 +13502,7 @@ impl OutctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Extra SCL Clock Cycle Output"]
     #[inline(always)]
     pub fn excyc(
         self,
@@ -12386,6 +13528,7 @@ impl OutctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -12406,32 +13549,40 @@ pub mod outctl_by_ll {
     pub struct Sdoc_SPEC;
     pub type Sdoc = crate::EnumBitfieldStruct<u8, Sdoc_SPEC>;
     impl Sdoc {
+        #[doc = "This IP drives the SDAn pin low."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP releases the SDAn pin."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Scoc_SPEC;
     pub type Scoc = crate::EnumBitfieldStruct<u8, Scoc_SPEC>;
     impl Scoc {
+        #[doc = "This IP drives the SCLn pin low."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP releases the SCLn pin."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Socwp_SPEC;
     pub type Socwp = crate::EnumBitfieldStruct<u8, Socwp_SPEC>;
     impl Socwp {
+        #[doc = "Bits SCOC and SDOC are protected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bits SCOC and SDOC can be written (When writing simultaneously with the value of the target bit)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Excyc_SPEC;
     pub type Excyc = crate::EnumBitfieldStruct<u8, Excyc_SPEC>;
     impl Excyc {
+        #[doc = "Does not output an extra SCL clock cycle (default)."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Outputs an extra SCL clock cycle."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12442,9 +13593,11 @@ impl crate::sealed::RegSpec for OutctlByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Output Control Register"]
 pub type OutctlByLh = crate::RegValueT<OutctlByLh_SPEC>;
 
 impl OutctlByLh {
+    #[doc = "SDA Output Delay"]
     #[inline(always)]
     pub fn sdod(
         self,
@@ -12470,6 +13623,7 @@ impl OutctlByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -12478,6 +13632,7 @@ impl OutctlByLh {
         crate::common::RegisterField::<3,0xf,1,0,u8,u8,OutctlByLh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "SDA Output Delay Clock Source Selection"]
     #[inline(always)]
     pub fn sdodcs(
         self,
@@ -12515,44 +13670,62 @@ pub mod outctl_by_lh {
     pub struct Sdod_SPEC;
     pub type Sdod = crate::EnumBitfieldStruct<u8, Sdod_SPEC>;
     impl Sdod {
+        #[doc = "No output delay"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "1 I3Cφ cycle"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "2 I3Cφ cycles"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "3 I3Cφ cycles"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "4 I3Cφ cycles"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "5 I3Cφ cycles"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "6 I3Cφ cycles"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "7 I3Cφ cycles"]
         pub const _111: Self = Self::new(7);
 
+        #[doc = "No output delay"]
         pub const _000: Self = Self::new(0);
 
+        #[doc = "1 or 2 I3Cφ cycles"]
         pub const _001: Self = Self::new(1);
 
+        #[doc = "3 or 4 I3Cφ cycles"]
         pub const _010: Self = Self::new(2);
 
+        #[doc = "5 or 6 I3Cφ cycles"]
         pub const _011: Self = Self::new(3);
 
+        #[doc = "7 or 8 I3Cφ cycles"]
         pub const _100: Self = Self::new(4);
 
+        #[doc = "9 or 10 I3Cφ cycles"]
         pub const _101: Self = Self::new(5);
 
+        #[doc = "11 or 12 I3Cφ cycles"]
         pub const _110: Self = Self::new(6);
 
+        #[doc = "13 or 14 I3Cφ cycles"]
         pub const _111: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdodcs_SPEC;
     pub type Sdodcs = crate::EnumBitfieldStruct<u8, Sdodcs_SPEC>;
     impl Sdodcs {
+        #[doc = "The internal reference clock (I3Cφ) is selected as the clock source of the SDA output delay counter."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The internal reference clock divided by 2 (I3Cφ/2) is selected as the clock source of the SDA output delay counter. *1"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12563,9 +13736,11 @@ impl crate::sealed::RegSpec for Inctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Input Control Register"]
 pub type Inctl = crate::RegValueT<Inctl_SPEC>;
 
 impl Inctl {
+    #[doc = "Digital Noise Filter Stage Selection"]
     #[inline(always)]
     pub fn dnfs(
         self,
@@ -12591,6 +13766,7 @@ impl Inctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Digital Noise Filter Circuit Enable"]
     #[inline(always)]
     pub fn dnfe(
         self,
@@ -12616,6 +13792,7 @@ impl Inctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -12636,24 +13813,32 @@ pub mod inctl {
     pub struct Dnfs_SPEC;
     pub type Dnfs = crate::EnumBitfieldStruct<u8, Dnfs_SPEC>;
     impl Dnfs {
+        #[doc = "Noise of up to one I3Cφ cycle is filtered out (single-stage filter)."]
         pub const _0000: Self = Self::new(0);
 
+        #[doc = "Noise of up to two I3Cφ cycles is filtered out (2-stage filter)."]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "Noise of up to three I3Cφ cycles is filtered out (3-stage filter)."]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "Noise of up to four I3Cφ cycles is filtered out (4-stage filter)."]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "Noise of up to five I3Cφ cycles is filtered out (5-stage filter)."]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "Noise of up to sixteen I3Cφ cycles is filtered out (16-stage filter)."]
         pub const _1111: Self = Self::new(15);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dnfe_SPEC;
     pub type Dnfe = crate::EnumBitfieldStruct<u8, Dnfe_SPEC>;
     impl Dnfe {
+        #[doc = "No digital noise filter circuit is used."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A digital noise filter circuit is used."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12664,9 +13849,11 @@ impl crate::sealed::RegSpec for InctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Input Control Register"]
 pub type InctlHaL = crate::RegValueT<InctlHaL_SPEC>;
 
 impl InctlHaL {
+    #[doc = "Digital Noise Filter Stage Selection"]
     #[inline(always)]
     pub fn dnfs(
         self,
@@ -12692,6 +13879,7 @@ impl InctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Digital Noise Filter Circuit Enable"]
     #[inline(always)]
     pub fn dnfe(
         self,
@@ -12717,6 +13905,7 @@ impl InctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -12736,24 +13925,32 @@ pub mod inctl_ha_l {
     pub struct Dnfs_SPEC;
     pub type Dnfs = crate::EnumBitfieldStruct<u8, Dnfs_SPEC>;
     impl Dnfs {
+        #[doc = "Noise of up to one I3Cφ cycle is filtered out (single-stage filter)."]
         pub const _0000: Self = Self::new(0);
 
+        #[doc = "Noise of up to two I3Cφ cycles is filtered out (2-stage filter)."]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "Noise of up to three I3Cφ cycles is filtered out (3-stage filter)."]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "Noise of up to four I3Cφ cycles is filtered out (4-stage filter)."]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "Noise of up to five I3Cφ cycles is filtered out (5-stage filter)."]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "Noise of up to sixteen I3Cφ cycles is filtered out (16-stage filter)."]
         pub const _1111: Self = Self::new(15);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dnfe_SPEC;
     pub type Dnfe = crate::EnumBitfieldStruct<u8, Dnfe_SPEC>;
     impl Dnfe {
+        #[doc = "No digital noise filter circuit is used."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A digital noise filter circuit is used."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12764,9 +13961,11 @@ impl crate::sealed::RegSpec for InctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Input Control Register"]
 pub type InctlByLl = crate::RegValueT<InctlByLl_SPEC>;
 
 impl InctlByLl {
+    #[doc = "Digital Noise Filter Stage Selection"]
     #[inline(always)]
     pub fn dnfs(
         self,
@@ -12792,6 +13991,7 @@ impl InctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Digital Noise Filter Circuit Enable"]
     #[inline(always)]
     pub fn dnfe(
         self,
@@ -12817,6 +14017,7 @@ impl InctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 11. The write value should be 11."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -12836,24 +14037,32 @@ pub mod inctl_by_ll {
     pub struct Dnfs_SPEC;
     pub type Dnfs = crate::EnumBitfieldStruct<u8, Dnfs_SPEC>;
     impl Dnfs {
+        #[doc = "Noise of up to one I3Cφ cycle is filtered out (single-stage filter)."]
         pub const _0000: Self = Self::new(0);
 
+        #[doc = "Noise of up to two I3Cφ cycles is filtered out (2-stage filter)."]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "Noise of up to three I3Cφ cycles is filtered out (3-stage filter)."]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "Noise of up to four I3Cφ cycles is filtered out (4-stage filter)."]
         pub const _0011: Self = Self::new(3);
 
+        #[doc = "Noise of up to five I3Cφ cycles is filtered out (5-stage filter)."]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "Noise of up to sixteen I3Cφ cycles is filtered out (16-stage filter)."]
         pub const _1111: Self = Self::new(15);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dnfe_SPEC;
     pub type Dnfe = crate::EnumBitfieldStruct<u8, Dnfe_SPEC>;
     impl Dnfe {
+        #[doc = "No digital noise filter circuit is used."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A digital noise filter circuit is used."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -12864,9 +14073,11 @@ impl crate::sealed::RegSpec for Tmoctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Timeout Control Register"]
 pub type Tmoctl = crate::RegValueT<Tmoctl_SPEC>;
 
 impl Tmoctl {
+    #[doc = "Timeout Detection Time Selection"]
     #[inline(always)]
     pub fn todts(
         self,
@@ -12892,6 +14103,7 @@ impl Tmoctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timeout L Count Control"]
     #[inline(always)]
     pub fn tolctl(
         self,
@@ -12917,6 +14129,7 @@ impl Tmoctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timeout H Count Control"]
     #[inline(always)]
     pub fn tohctl(
         self,
@@ -12942,6 +14155,7 @@ impl Tmoctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timeout Operation Mode Selection"]
     #[inline(always)]
     pub fn tomds(
         self,
@@ -12967,6 +14181,7 @@ impl Tmoctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -12987,36 +14202,46 @@ pub mod tmoctl {
     pub struct Todts_SPEC;
     pub type Todts = crate::EnumBitfieldStruct<u8, Todts_SPEC>;
     impl Todts {
+        #[doc = "16bit-timeout"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "14bit-timeout"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "8bit-timeout"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "6bit-timeout"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tolctl_SPEC;
     pub type Tolctl = crate::EnumBitfieldStruct<u8, Tolctl_SPEC>;
     impl Tolctl {
+        #[doc = "Count is disabled while the SCLn line is at a low level."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Count is enabled while the SCLn line is at a low level."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tohctl_SPEC;
     pub type Tohctl = crate::EnumBitfieldStruct<u8, Tohctl_SPEC>;
     impl Tohctl {
+        #[doc = "Count is disabled while the SCLn line is at a high level."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Count is enabled while the SCLn line is at a high level."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tomds_SPEC;
     pub type Tomds = crate::EnumBitfieldStruct<u8, Tomds_SPEC>;
     impl Tomds {
+        #[doc = "Timeout is detected during the following conditions."]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Timeout is detected while the bus is busy"]
         pub const _01: Self = Self::new(1);
     }
 }
@@ -13027,9 +14252,11 @@ impl crate::sealed::RegSpec for TmoctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timeout Control Register"]
 pub type TmoctlHaL = crate::RegValueT<TmoctlHaL_SPEC>;
 
 impl TmoctlHaL {
+    #[doc = "Timeout Detection Time Selection"]
     #[inline(always)]
     pub fn todts(
         self,
@@ -13055,6 +14282,7 @@ impl TmoctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timeout L Count Control"]
     #[inline(always)]
     pub fn tolctl(
         self,
@@ -13080,6 +14308,7 @@ impl TmoctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timeout H Count Control"]
     #[inline(always)]
     pub fn tohctl(
         self,
@@ -13105,6 +14334,7 @@ impl TmoctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timeout Operation Mode Selection"]
     #[inline(always)]
     pub fn tomds(
         self,
@@ -13130,6 +14360,7 @@ impl TmoctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -13150,36 +14381,46 @@ pub mod tmoctl_ha_l {
     pub struct Todts_SPEC;
     pub type Todts = crate::EnumBitfieldStruct<u8, Todts_SPEC>;
     impl Todts {
+        #[doc = "16bit-timeout"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "14bit-timeout"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "8bit-timeout"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "6bit-timeout"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tolctl_SPEC;
     pub type Tolctl = crate::EnumBitfieldStruct<u8, Tolctl_SPEC>;
     impl Tolctl {
+        #[doc = "Count is disabled while the SCLn line is at a low level."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Count is enabled while the SCLn line is at a low level."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tohctl_SPEC;
     pub type Tohctl = crate::EnumBitfieldStruct<u8, Tohctl_SPEC>;
     impl Tohctl {
+        #[doc = "Count is disabled while the SCLn line is at a high level."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Count is enabled while the SCLn line is at a high level."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tomds_SPEC;
     pub type Tomds = crate::EnumBitfieldStruct<u8, Tomds_SPEC>;
     impl Tomds {
+        #[doc = "Timeout is detected during the following conditions."]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Timeout is detected while the bus is busy"]
         pub const _01: Self = Self::new(1);
     }
 }
@@ -13190,9 +14431,11 @@ impl crate::sealed::RegSpec for TmoctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Timeout Control Register"]
 pub type TmoctlByLl = crate::RegValueT<TmoctlByLl_SPEC>;
 
 impl TmoctlByLl {
+    #[doc = "Timeout Detection Time Selection"]
     #[inline(always)]
     pub fn todts(
         self,
@@ -13218,6 +14461,7 @@ impl TmoctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00. The write value should be 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -13226,6 +14470,7 @@ impl TmoctlByLl {
         crate::common::RegisterField::<2,0x3,1,0,u8,u8,TmoctlByLl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Timeout L Count Control"]
     #[inline(always)]
     pub fn tolctl(
         self,
@@ -13251,6 +14496,7 @@ impl TmoctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timeout H Count Control"]
     #[inline(always)]
     pub fn tohctl(
         self,
@@ -13276,6 +14522,7 @@ impl TmoctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timeout Operation Mode Selection"]
     #[inline(always)]
     pub fn tomds(
         self,
@@ -13313,36 +14560,46 @@ pub mod tmoctl_by_ll {
     pub struct Todts_SPEC;
     pub type Todts = crate::EnumBitfieldStruct<u8, Todts_SPEC>;
     impl Todts {
+        #[doc = "16bit-timeout"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "14bit-timeout"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "8bit-timeout"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "6bit-timeout"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tolctl_SPEC;
     pub type Tolctl = crate::EnumBitfieldStruct<u8, Tolctl_SPEC>;
     impl Tolctl {
+        #[doc = "Count is disabled while the SCLn line is at a low level."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Count is enabled while the SCLn line is at a low level."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tohctl_SPEC;
     pub type Tohctl = crate::EnumBitfieldStruct<u8, Tohctl_SPEC>;
     impl Tohctl {
+        #[doc = "Count is disabled while the SCLn line is at a high level."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Count is enabled while the SCLn line is at a high level."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tomds_SPEC;
     pub type Tomds = crate::EnumBitfieldStruct<u8, Tomds_SPEC>;
     impl Tomds {
+        #[doc = "Timeout is detected during the following conditions."]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Timeout is detected while the bus is busy"]
         pub const _01: Self = Self::new(1);
     }
 }
@@ -13353,9 +14610,11 @@ impl crate::sealed::RegSpec for Wuctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Wake Up Unit Control Register"]
 pub type Wuctl = crate::RegValueT<Wuctl_SPEC>;
 
 impl Wuctl {
+    #[doc = "Wake-Up Acknowledge Selection"]
     #[inline(always)]
     pub fn wuacks(
         self,
@@ -13365,6 +14624,7 @@ impl Wuctl {
         )
     }
 
+    #[doc = "Wake-Up Analog Noise Filter Selection"]
     #[inline(always)]
     pub fn wuanfs(
         self,
@@ -13390,6 +14650,7 @@ impl Wuctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake-Up function Synchronous Enable"]
     #[inline(always)]
     pub fn wufsyne(
         self,
@@ -13415,6 +14676,7 @@ impl Wuctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake Up function Enable"]
     #[inline(always)]
     pub fn wufe(
         self,
@@ -13440,6 +14702,7 @@ impl Wuctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000000000000000. The write value should be 000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -13460,24 +14723,30 @@ pub mod wuctl {
     pub struct Wuanfs_SPEC;
     pub type Wuanfs = crate::EnumBitfieldStruct<u8, Wuanfs_SPEC>;
     impl Wuanfs {
+        #[doc = "Do not add the Wake Up analog filter."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Add the Wake Up analog filter."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wufsyne_SPEC;
     pub type Wufsyne = crate::EnumBitfieldStruct<u8, Wufsyne_SPEC>;
     impl Wufsyne {
+        #[doc = "This IP asynchronous circuit enable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP synchronous circuit enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wufe_SPEC;
     pub type Wufe = crate::EnumBitfieldStruct<u8, Wufe_SPEC>;
     impl Wufe {
+        #[doc = "Wake-up function disables"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Wake-up function enables."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -13488,9 +14757,11 @@ impl crate::sealed::RegSpec for WuctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Wake Up Unit Control Register"]
 pub type WuctlHaL = crate::RegValueT<WuctlHaL_SPEC>;
 
 impl WuctlHaL {
+    #[doc = "Wake-Up Acknowledge Selection"]
     #[inline(always)]
     pub fn wuacks(
         self,
@@ -13500,6 +14771,7 @@ impl WuctlHaL {
         )
     }
 
+    #[doc = "Wake-Up Analog Noise Filter Selection"]
     #[inline(always)]
     pub fn wuanfs(
         self,
@@ -13525,6 +14797,7 @@ impl WuctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake-Up function Synchronous Enable"]
     #[inline(always)]
     pub fn wufsyne(
         self,
@@ -13550,6 +14823,7 @@ impl WuctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake Up function Enable"]
     #[inline(always)]
     pub fn wufe(
         self,
@@ -13575,6 +14849,7 @@ impl WuctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -13594,24 +14869,30 @@ pub mod wuctl_ha_l {
     pub struct Wuanfs_SPEC;
     pub type Wuanfs = crate::EnumBitfieldStruct<u8, Wuanfs_SPEC>;
     impl Wuanfs {
+        #[doc = "Do not add the Wake Up analog filter."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Add the Wake Up analog filter."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wufsyne_SPEC;
     pub type Wufsyne = crate::EnumBitfieldStruct<u8, Wufsyne_SPEC>;
     impl Wufsyne {
+        #[doc = "This IP asynchronous circuit enable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP synchronous circuit enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wufe_SPEC;
     pub type Wufe = crate::EnumBitfieldStruct<u8, Wufe_SPEC>;
     impl Wufe {
+        #[doc = "Wake-up function disables"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Wake-up function enables."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -13622,9 +14903,11 @@ impl crate::sealed::RegSpec for WuctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Wake Up Unit Control Register"]
 pub type WuctlByLl = crate::RegValueT<WuctlByLl_SPEC>;
 
 impl WuctlByLl {
+    #[doc = "Wake-Up Acknowledge Selection"]
     #[inline(always)]
     pub fn wuacks(
         self,
@@ -13632,6 +14915,7 @@ impl WuctlByLl {
         crate::common::RegisterFieldBool::<0,1,0,WuctlByLl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Wake-Up Analog Noise Filter Selection"]
     #[inline(always)]
     pub fn wuanfs(
         self,
@@ -13657,6 +14941,7 @@ impl WuctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -13664,6 +14949,7 @@ impl WuctlByLl {
         crate::common::RegisterFieldBool::<5,1,0,WuctlByLl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Wake-Up function Synchronous Enable"]
     #[inline(always)]
     pub fn wufsyne(
         self,
@@ -13689,6 +14975,7 @@ impl WuctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake Up function Enable"]
     #[inline(always)]
     pub fn wufe(
         self,
@@ -13726,24 +15013,30 @@ pub mod wuctl_by_ll {
     pub struct Wuanfs_SPEC;
     pub type Wuanfs = crate::EnumBitfieldStruct<u8, Wuanfs_SPEC>;
     impl Wuanfs {
+        #[doc = "Do not add the Wake Up analog filter."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Add the Wake Up analog filter."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wufsyne_SPEC;
     pub type Wufsyne = crate::EnumBitfieldStruct<u8, Wufsyne_SPEC>;
     impl Wufsyne {
+        #[doc = "This IP asynchronous circuit enable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP synchronous circuit enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wufe_SPEC;
     pub type Wufe = crate::EnumBitfieldStruct<u8, Wufe_SPEC>;
     impl Wufe {
+        #[doc = "Wake-up function disables"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Wake-up function enables."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -13754,9 +15047,11 @@ impl crate::sealed::RegSpec for Ackctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Acknowledge Control Register"]
 pub type Ackctl = crate::RegValueT<Ackctl_SPEC>;
 
 impl Ackctl {
+    #[doc = "Acknowledge Reception"]
     #[inline(always)]
     pub fn ackr(
         self,
@@ -13782,6 +15077,7 @@ impl Ackctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Acknowledge Transmission"]
     #[inline(always)]
     pub fn ackt(
         self,
@@ -13807,6 +15103,7 @@ impl Ackctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACKT Write Protect"]
     #[inline(always)]
     pub fn acktwp(
         self,
@@ -13832,6 +15129,7 @@ impl Ackctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000000000000000000000000. The write value should be 00000000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -13852,24 +15150,30 @@ pub mod ackctl {
     pub struct Ackr_SPEC;
     pub type Ackr = crate::EnumBitfieldStruct<u8, Ackr_SPEC>;
     impl Ackr {
+        #[doc = "A 0 is received as the acknowledge bit (ACK reception)."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A 1 is received as the acknowledge bit (NACK reception)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ackt_SPEC;
     pub type Ackt = crate::EnumBitfieldStruct<u8, Ackt_SPEC>;
     impl Ackt {
+        #[doc = "A 0 is sent as the acknowledge bit (ACK transmission)."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A 1 is sent as the acknowledge bit (NACK transmission)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Acktwp_SPEC;
     pub type Acktwp = crate::EnumBitfieldStruct<u8, Acktwp_SPEC>;
     impl Acktwp {
+        #[doc = "The ACKT bit are protected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The ACKT bit can be written (When writing simultaneously with the value of the target bit)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -13880,9 +15184,11 @@ impl crate::sealed::RegSpec for AckctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Acknowledge Control Register"]
 pub type AckctlHaL = crate::RegValueT<AckctlHaL_SPEC>;
 
 impl AckctlHaL {
+    #[doc = "Acknowledge Reception"]
     #[inline(always)]
     pub fn ackr(
         self,
@@ -13908,6 +15214,7 @@ impl AckctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Acknowledge Transmission"]
     #[inline(always)]
     pub fn ackt(
         self,
@@ -13933,6 +15240,7 @@ impl AckctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACKT Write Protect"]
     #[inline(always)]
     pub fn acktwp(
         self,
@@ -13958,6 +15266,7 @@ impl AckctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000. The write value should be 0000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -13978,24 +15287,30 @@ pub mod ackctl_ha_l {
     pub struct Ackr_SPEC;
     pub type Ackr = crate::EnumBitfieldStruct<u8, Ackr_SPEC>;
     impl Ackr {
+        #[doc = "A 0 is received as the acknowledge bit (ACK reception)."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A 1 is received as the acknowledge bit (NACK reception)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ackt_SPEC;
     pub type Ackt = crate::EnumBitfieldStruct<u8, Ackt_SPEC>;
     impl Ackt {
+        #[doc = "A 0 is sent as the acknowledge bit (ACK transmission)."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A 1 is sent as the acknowledge bit (NACK transmission)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Acktwp_SPEC;
     pub type Acktwp = crate::EnumBitfieldStruct<u8, Acktwp_SPEC>;
     impl Acktwp {
+        #[doc = "The ACKT bit are protected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The ACKT bit can be written (When writing simultaneously with the value of the target bit)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -14006,9 +15321,11 @@ impl crate::sealed::RegSpec for AckctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Acknowledge Control Register"]
 pub type AckctlByLl = crate::RegValueT<AckctlByLl_SPEC>;
 
 impl AckctlByLl {
+    #[doc = "Acknowledge Reception"]
     #[inline(always)]
     pub fn ackr(
         self,
@@ -14034,6 +15351,7 @@ impl AckctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Acknowledge Transmission"]
     #[inline(always)]
     pub fn ackt(
         self,
@@ -14059,6 +15377,7 @@ impl AckctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACKT Write Protect"]
     #[inline(always)]
     pub fn acktwp(
         self,
@@ -14084,6 +15403,7 @@ impl AckctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -14104,24 +15424,30 @@ pub mod ackctl_by_ll {
     pub struct Ackr_SPEC;
     pub type Ackr = crate::EnumBitfieldStruct<u8, Ackr_SPEC>;
     impl Ackr {
+        #[doc = "A 0 is received as the acknowledge bit (ACK reception)."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A 1 is received as the acknowledge bit (NACK reception)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ackt_SPEC;
     pub type Ackt = crate::EnumBitfieldStruct<u8, Ackt_SPEC>;
     impl Ackt {
+        #[doc = "A 0 is sent as the acknowledge bit (ACK transmission)."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "A 1 is sent as the acknowledge bit (NACK transmission)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Acktwp_SPEC;
     pub type Acktwp = crate::EnumBitfieldStruct<u8, Acktwp_SPEC>;
     impl Acktwp {
+        #[doc = "The ACKT bit are protected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The ACKT bit can be written (When writing simultaneously with the value of the target bit)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -14132,9 +15458,11 @@ impl crate::sealed::RegSpec for Scstrctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "SCL Stretch Control Register"]
 pub type Scstrctl = crate::RegValueT<Scstrctl_SPEC>;
 
 impl Scstrctl {
+    #[doc = "Acknowledge Transmission Wait Enabl (*1)"]
     #[inline(always)]
     pub fn acktwe(
         self,
@@ -14160,6 +15488,7 @@ impl Scstrctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Receive Wait Enable"]
     #[inline(always)]
     pub fn rwe(
         self,
@@ -14185,6 +15514,7 @@ impl Scstrctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000000000000000000000. The write value should be 000000000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -14214,16 +15544,20 @@ pub mod scstrctl {
     pub struct Acktwe_SPEC;
     pub type Acktwe = crate::EnumBitfieldStruct<u8, Acktwe_SPEC>;
     impl Acktwe {
+        #[doc = "NTST.RDBFF0 is set at the rising edge of the ninth SCL clock cycle."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NTST.RDBFF0 is set at the rising edge of the eighth SCL clock cycle."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rwe_SPEC;
     pub type Rwe = crate::EnumBitfieldStruct<u8, Rwe_SPEC>;
     impl Rwe {
+        #[doc = "No WAIT (The period between ninth clock cycle and first clock cycle is not held low.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "WAIT (The period between ninth clock cycle and first clock cycle is held low.)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -14234,9 +15568,11 @@ impl crate::sealed::RegSpec for ScstrctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "SCL Stretch Control Register"]
 pub type ScstrctlHaL = crate::RegValueT<ScstrctlHaL_SPEC>;
 
 impl ScstrctlHaL {
+    #[doc = "Acknowledge Transmission Wait Enabl (*1)"]
     #[inline(always)]
     pub fn acktwe(
         self,
@@ -14262,6 +15598,7 @@ impl ScstrctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Receive Wait Enable"]
     #[inline(always)]
     pub fn rwe(
         self,
@@ -14287,6 +15624,7 @@ impl ScstrctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000000000. The write value should be 00000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -14307,16 +15645,20 @@ pub mod scstrctl_ha_l {
     pub struct Acktwe_SPEC;
     pub type Acktwe = crate::EnumBitfieldStruct<u8, Acktwe_SPEC>;
     impl Acktwe {
+        #[doc = "NTST.RDBFF0 is set at the rising edge of the ninth SCL clock cycle."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NTST.RDBFF0 is set at the rising edge of the eighth SCL clock cycle."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rwe_SPEC;
     pub type Rwe = crate::EnumBitfieldStruct<u8, Rwe_SPEC>;
     impl Rwe {
+        #[doc = "No WAIT (The period between ninth clock cycle and first clock cycle is not held low.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "WAIT (The period between ninth clock cycle and first clock cycle is held low.)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -14327,9 +15669,11 @@ impl crate::sealed::RegSpec for ScstrctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SCL Stretch Control Register"]
 pub type ScstrctlByLl = crate::RegValueT<ScstrctlByLl_SPEC>;
 
 impl ScstrctlByLl {
+    #[doc = "Acknowledge Transmission Wait Enabl (*1)"]
     #[inline(always)]
     pub fn acktwe(
         self,
@@ -14355,6 +15699,7 @@ impl ScstrctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Receive Wait Enable"]
     #[inline(always)]
     pub fn rwe(
         self,
@@ -14380,6 +15725,7 @@ impl ScstrctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -14400,16 +15746,20 @@ pub mod scstrctl_by_ll {
     pub struct Acktwe_SPEC;
     pub type Acktwe = crate::EnumBitfieldStruct<u8, Acktwe_SPEC>;
     impl Acktwe {
+        #[doc = "NTST.RDBFF0 is set at the rising edge of the ninth SCL clock cycle."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NTST.RDBFF0 is set at the rising edge of the eighth SCL clock cycle."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rwe_SPEC;
     pub type Rwe = crate::EnumBitfieldStruct<u8, Rwe_SPEC>;
     impl Rwe {
+        #[doc = "No WAIT (The period between ninth clock cycle and first clock cycle is not held low.)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "WAIT (The period between ninth clock cycle and first clock cycle is held low.)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -14420,9 +15770,11 @@ impl crate::sealed::RegSpec for Scstlctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "SCL Stalling Control Register"]
 pub type Scstlctl = crate::RegValueT<Scstlctl_SPEC>;
 
 impl Scstlctl {
+    #[doc = "Stalling Cycle"]
     #[inline(always)]
     pub fn stlcyc(
         self,
@@ -14431,6 +15783,7 @@ impl Scstlctl {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Scstlctl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Assigend Address Phase EnableEnable bit that allows stall by the first bit at address assignment"]
     #[inline(always)]
     pub fn aape(
         self,
@@ -14456,6 +15809,7 @@ impl Scstlctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -14463,6 +15817,7 @@ impl Scstlctl {
         crate::common::RegisterFieldBool::<29,1,0,Scstlctl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Parity Phase EnableStall enable bit in parity bit period"]
     #[inline(always)]
     pub fn parpe(
         self,
@@ -14488,6 +15843,7 @@ impl Scstlctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACK phase EnableStall enable bit during ACK/NACK phase"]
     #[inline(always)]
     pub fn ackpe(
         self,
@@ -14525,24 +15881,30 @@ pub mod scstlctl {
     pub struct Aape_SPEC;
     pub type Aape = crate::EnumBitfieldStruct<u8, Aape_SPEC>;
     impl Aape {
+        #[doc = "Does not stall the SCL clock during the address assignment phase."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stall the SCL clock during the parity bit period address assignment phase."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Parpe_SPEC;
     pub type Parpe = crate::EnumBitfieldStruct<u8, Parpe_SPEC>;
     impl Parpe {
+        #[doc = "Does not stall the SCL clock during the parity bit period."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stall the SCL clock during the parity bit period."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ackpe_SPEC;
     pub type Ackpe = crate::EnumBitfieldStruct<u8, Ackpe_SPEC>;
     impl Ackpe {
+        #[doc = "Does not stall the SCL clock during the ACK/NACK phase."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stall the SCL clock during the ACK/NACK phase."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -14553,9 +15915,11 @@ impl crate::sealed::RegSpec for ScstlctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "SCL Stalling Control Register"]
 pub type ScstlctlHaL = crate::RegValueT<ScstlctlHaL_SPEC>;
 
 impl ScstlctlHaL {
+    #[doc = "Stalling Cycle"]
     #[inline(always)]
     pub fn stlcyc(
         self,
@@ -14578,9 +15942,11 @@ impl crate::sealed::RegSpec for ScstlctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SCL Stalling Control Register"]
 pub type ScstlctlByLl = crate::RegValueT<ScstlctlByLl_SPEC>;
 
 impl ScstlctlByLl {
+    #[doc = "Stalling Cycle"]
     #[inline(always)]
     pub fn stlcyc(
         self,
@@ -14603,9 +15969,11 @@ impl crate::sealed::RegSpec for ScstlctlByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SCL Stalling Control Register"]
 pub type ScstlctlByLh = crate::RegValueT<ScstlctlByLh_SPEC>;
 
 impl ScstlctlByLh {
+    #[doc = "Stalling Cycle"]
     #[inline(always)]
     pub fn stlcyc(
         self,
@@ -14628,9 +15996,11 @@ impl crate::sealed::RegSpec for ScstlctlHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "SCL Stalling Control Register"]
 pub type ScstlctlHaH = crate::RegValueT<ScstlctlHaH_SPEC>;
 
 impl ScstlctlHaH {
+    #[doc = "Assigend Address Phase EnableEnable bit that allows stall by the first bit at address assignment"]
     #[inline(always)]
     pub fn aape(
         self,
@@ -14656,6 +16026,7 @@ impl ScstlctlHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -14663,6 +16034,7 @@ impl ScstlctlHaH {
         crate::common::RegisterFieldBool::<13,1,0,ScstlctlHaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Parity Phase EnableStall enable bit in parity bit period"]
     #[inline(always)]
     pub fn parpe(
         self,
@@ -14688,6 +16060,7 @@ impl ScstlctlHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACK phase EnableStall enable bit during ACK/NACK phase"]
     #[inline(always)]
     pub fn ackpe(
         self,
@@ -14725,24 +16098,30 @@ pub mod scstlctl_ha_h {
     pub struct Aape_SPEC;
     pub type Aape = crate::EnumBitfieldStruct<u8, Aape_SPEC>;
     impl Aape {
+        #[doc = "Does not stall the SCL clock during the address assignment phase."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stall the SCL clock during the parity bit period address assignment phase."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Parpe_SPEC;
     pub type Parpe = crate::EnumBitfieldStruct<u8, Parpe_SPEC>;
     impl Parpe {
+        #[doc = "Does not stall the SCL clock during the parity bit period."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stall the SCL clock during the parity bit period."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ackpe_SPEC;
     pub type Ackpe = crate::EnumBitfieldStruct<u8, Ackpe_SPEC>;
     impl Ackpe {
+        #[doc = "Does not stall the SCL clock during the ACK/NACK phase."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stall the SCL clock during the ACK/NACK phase."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -14753,9 +16132,11 @@ impl crate::sealed::RegSpec for ScstlctlByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SCL Stalling Control Register"]
 pub type ScstlctlByHh = crate::RegValueT<ScstlctlByHh_SPEC>;
 
 impl ScstlctlByHh {
+    #[doc = "Assigend Address Phase EnableEnable bit that allows stall by the first bit at address assignment"]
     #[inline(always)]
     pub fn aape(
         self,
@@ -14781,6 +16162,7 @@ impl ScstlctlByHh {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -14788,6 +16170,7 @@ impl ScstlctlByHh {
         crate::common::RegisterFieldBool::<5,1,0,ScstlctlByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Parity Phase EnableStall enable bit in parity bit period"]
     #[inline(always)]
     pub fn parpe(
         self,
@@ -14813,6 +16196,7 @@ impl ScstlctlByHh {
         >::from_register(self, 0)
     }
 
+    #[doc = "ACK phase EnableStall enable bit during ACK/NACK phase"]
     #[inline(always)]
     pub fn ackpe(
         self,
@@ -14850,24 +16234,30 @@ pub mod scstlctl_by_hh {
     pub struct Aape_SPEC;
     pub type Aape = crate::EnumBitfieldStruct<u8, Aape_SPEC>;
     impl Aape {
+        #[doc = "Does not stall the SCL clock during the address assignment phase."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stall the SCL clock during the parity bit period address assignment phase."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Parpe_SPEC;
     pub type Parpe = crate::EnumBitfieldStruct<u8, Parpe_SPEC>;
     impl Parpe {
+        #[doc = "Does not stall the SCL clock during the parity bit period."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stall the SCL clock during the parity bit period."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ackpe_SPEC;
     pub type Ackpe = crate::EnumBitfieldStruct<u8, Ackpe_SPEC>;
     impl Ackpe {
+        #[doc = "Does not stall the SCL clock during the ACK/NACK phase."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Stall the SCL clock during the ACK/NACK phase."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -14878,9 +16268,11 @@ impl crate::sealed::RegSpec for Svtdlg0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Slave Transfer Data Length Register 0"]
 pub type Svtdlg0 = crate::RegValueT<Svtdlg0_SPEC>;
 
 impl Svtdlg0 {
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -14889,6 +16281,7 @@ impl Svtdlg0 {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Svtdlg0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Transfer Data Length"]
     #[inline(always)]
     pub fn stdlg(
         self,
@@ -14911,9 +16304,11 @@ impl crate::sealed::RegSpec for Svtdlg0HaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Slave Transfer Data Length Register 0"]
 pub type Svtdlg0HaH = crate::RegValueT<Svtdlg0HaH_SPEC>;
 
 impl Svtdlg0HaH {
+    #[doc = "Slave Transfer Data Length"]
     #[inline(always)]
     pub fn stdlg(
         self,
@@ -14936,9 +16331,11 @@ impl crate::sealed::RegSpec for Svtdlg0ByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Transfer Data Length Register 0"]
 pub type Svtdlg0ByHl = crate::RegValueT<Svtdlg0ByHl_SPEC>;
 
 impl Svtdlg0ByHl {
+    #[doc = "Slave Transfer Data Length"]
     #[inline(always)]
     pub fn stdlg(
         self,
@@ -14961,9 +16358,11 @@ impl crate::sealed::RegSpec for Svtdlg0ByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Transfer Data Length Register 0"]
 pub type Svtdlg0ByHh = crate::RegValueT<Svtdlg0ByHh_SPEC>;
 
 impl Svtdlg0ByHh {
+    #[doc = "Slave Transfer Data Length"]
     #[inline(always)]
     pub fn stdlg(
         self,
@@ -14986,9 +16385,11 @@ impl crate::sealed::RegSpec for Stctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Synchronous Timiming Control Register"]
 pub type Stctl = crate::RegValueT<Stctl_SPEC>;
 
 impl Stctl {
+    #[doc = "Synchronous Timing output Enable"]
     #[inline(always)]
     pub fn stoe(
         self,
@@ -15014,6 +16415,7 @@ impl Stctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000000000000000000. The write value should be 0000000000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -15034,8 +16436,10 @@ pub mod stctl {
     pub struct Stoe_SPEC;
     pub type Stoe = crate::EnumBitfieldStruct<u8, Stoe_SPEC>;
     impl Stoe {
+        #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -15046,9 +16450,11 @@ impl crate::sealed::RegSpec for StctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Synchronous Timiming Control Register"]
 pub type StctlHaL = crate::RegValueT<StctlHaL_SPEC>;
 
 impl StctlHaL {
+    #[doc = "Synchronous Timing output Enable"]
     #[inline(always)]
     pub fn stoe(
         self,
@@ -15074,6 +16480,7 @@ impl StctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000000. The write value should be 000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -15094,8 +16501,10 @@ pub mod stctl_ha_l {
     pub struct Stoe_SPEC;
     pub type Stoe = crate::EnumBitfieldStruct<u8, Stoe_SPEC>;
     impl Stoe {
+        #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -15106,9 +16515,11 @@ impl crate::sealed::RegSpec for StctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Synchronous Timiming Control Register"]
 pub type StctlByLl = crate::RegValueT<StctlByLl_SPEC>;
 
 impl StctlByLl {
+    #[doc = "Synchronous Timing output Enable"]
     #[inline(always)]
     pub fn stoe(
         self,
@@ -15134,6 +16545,7 @@ impl StctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -15154,8 +16566,10 @@ pub mod stctl_by_ll {
     pub struct Stoe_SPEC;
     pub type Stoe = crate::EnumBitfieldStruct<u8, Stoe_SPEC>;
     impl Stoe {
+        #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -15166,9 +16580,11 @@ impl crate::sealed::RegSpec for Atctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Asynchronous Timimg Control Register"]
 pub type Atctl = crate::RegValueT<Atctl_SPEC>;
 
 impl Atctl {
+    #[doc = "Asynchronous Timing Trigger Select"]
     #[inline(always)]
     pub fn attrgs(
         self,
@@ -15194,6 +16610,7 @@ impl Atctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "MREF Output Enable (Capture Event / Counter Overflow)"]
     #[inline(always)]
     pub fn mrefoe(
         self,
@@ -15219,6 +16636,7 @@ impl Atctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Additional Master-initiated bus Event Output Enable"]
     #[inline(always)]
     pub fn ameoe(
         self,
@@ -15244,6 +16662,7 @@ impl Atctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "TCLK Counter Divide Setting"]
     #[inline(always)]
     pub fn cdiv(
         self,
@@ -15251,6 +16670,7 @@ impl Atctl {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Atctl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -15271,24 +16691,30 @@ pub mod atctl {
     pub struct Attrgs_SPEC;
     pub type Attrgs = crate::EnumBitfieldStruct<u8, Attrgs_SPEC>;
     impl Attrgs {
+        #[doc = "Software Trigger"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Hardware Trigger"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mrefoe_SPEC;
     pub type Mrefoe = crate::EnumBitfieldStruct<u8, Mrefoe_SPEC>;
     impl Mrefoe {
+        #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ameoe_SPEC;
     pub type Ameoe = crate::EnumBitfieldStruct<u8, Ameoe_SPEC>;
     impl Ameoe {
+        #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -15299,9 +16725,11 @@ impl crate::sealed::RegSpec for AtctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Asynchronous Timimg Control Register"]
 pub type AtctlHaL = crate::RegValueT<AtctlHaL_SPEC>;
 
 impl AtctlHaL {
+    #[doc = "Asynchronous Timing Trigger Select"]
     #[inline(always)]
     pub fn attrgs(
         self,
@@ -15327,6 +16755,7 @@ impl AtctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "MREF Output Enable (Capture Event / Counter Overflow)"]
     #[inline(always)]
     pub fn mrefoe(
         self,
@@ -15352,6 +16781,7 @@ impl AtctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Additional Master-initiated bus Event Output Enable"]
     #[inline(always)]
     pub fn ameoe(
         self,
@@ -15377,6 +16807,7 @@ impl AtctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -15384,6 +16815,7 @@ impl AtctlHaL {
         crate::common::RegisterField::<3,0x1f,1,0,u8,u8,AtctlHaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "TCLK Counter Divide Setting"]
     #[inline(always)]
     pub fn cdiv(
         self,
@@ -15403,24 +16835,30 @@ pub mod atctl_ha_l {
     pub struct Attrgs_SPEC;
     pub type Attrgs = crate::EnumBitfieldStruct<u8, Attrgs_SPEC>;
     impl Attrgs {
+        #[doc = "Software Trigger"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Hardware Trigger"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mrefoe_SPEC;
     pub type Mrefoe = crate::EnumBitfieldStruct<u8, Mrefoe_SPEC>;
     impl Mrefoe {
+        #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ameoe_SPEC;
     pub type Ameoe = crate::EnumBitfieldStruct<u8, Ameoe_SPEC>;
     impl Ameoe {
+        #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -15431,9 +16869,11 @@ impl crate::sealed::RegSpec for AtctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Asynchronous Timimg Control Register"]
 pub type AtctlByLl = crate::RegValueT<AtctlByLl_SPEC>;
 
 impl AtctlByLl {
+    #[doc = "Asynchronous Timing Trigger Select"]
     #[inline(always)]
     pub fn attrgs(
         self,
@@ -15459,6 +16899,7 @@ impl AtctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "MREF Output Enable (Capture Event / Counter Overflow)"]
     #[inline(always)]
     pub fn mrefoe(
         self,
@@ -15484,6 +16925,7 @@ impl AtctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Additional Master-initiated bus Event Output Enable"]
     #[inline(always)]
     pub fn ameoe(
         self,
@@ -15509,6 +16951,7 @@ impl AtctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -15529,24 +16972,30 @@ pub mod atctl_by_ll {
     pub struct Attrgs_SPEC;
     pub type Attrgs = crate::EnumBitfieldStruct<u8, Attrgs_SPEC>;
     impl Attrgs {
+        #[doc = "Software Trigger"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Hardware Trigger"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mrefoe_SPEC;
     pub type Mrefoe = crate::EnumBitfieldStruct<u8, Mrefoe_SPEC>;
     impl Mrefoe {
+        #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ameoe_SPEC;
     pub type Ameoe = crate::EnumBitfieldStruct<u8, Ameoe_SPEC>;
     impl Ameoe {
+        #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -15557,9 +17006,11 @@ impl crate::sealed::RegSpec for AtctlByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Asynchronous Timimg Control Register"]
 pub type AtctlByLh = crate::RegValueT<AtctlByLh_SPEC>;
 
 impl AtctlByLh {
+    #[doc = "TCLK Counter Divide Setting"]
     #[inline(always)]
     pub fn cdiv(
         self,
@@ -15582,9 +17033,11 @@ impl crate::sealed::RegSpec for Attrg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Asynchronous Timiming Trigger Register"]
 pub type Attrg = crate::RegValueT<Attrg_SPEC>;
 
 impl Attrg {
+    #[doc = "Asynchronous Timing Software Trigger"]
     #[inline(always)]
     pub fn atstrg(
         self,
@@ -15610,6 +17063,7 @@ impl Attrg {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 0000000000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -15630,8 +17084,10 @@ pub mod attrg {
     pub struct Atstrg_SPEC;
     pub type Atstrg = crate::EnumBitfieldStruct<u8, Atstrg_SPEC>;
     impl Atstrg {
+        #[doc = "Write : do nothing"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Write : Software trigger (one-shot pulse) output"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -15642,9 +17098,11 @@ impl crate::sealed::RegSpec for AttrgHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Asynchronous Timiming Trigger Register"]
 pub type AttrgHaL = crate::RegValueT<AttrgHaL_SPEC>;
 
 impl AttrgHaL {
+    #[doc = "Asynchronous Timing Software Trigger"]
     #[inline(always)]
     pub fn atstrg(
         self,
@@ -15670,6 +17128,7 @@ impl AttrgHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -15690,8 +17149,10 @@ pub mod attrg_ha_l {
     pub struct Atstrg_SPEC;
     pub type Atstrg = crate::EnumBitfieldStruct<u8, Atstrg_SPEC>;
     impl Atstrg {
+        #[doc = "Write : do nothing"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Write : Software trigger (one-shot pulse) output"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -15702,9 +17163,11 @@ impl crate::sealed::RegSpec for AttrgByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Asynchronous Timiming Trigger Register"]
 pub type AttrgByLl = crate::RegValueT<AttrgByLl_SPEC>;
 
 impl AttrgByLl {
+    #[doc = "Asynchronous Timing Software Trigger"]
     #[inline(always)]
     pub fn atstrg(
         self,
@@ -15730,6 +17193,7 @@ impl AttrgByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -15749,8 +17213,10 @@ pub mod attrg_by_ll {
     pub struct Atstrg_SPEC;
     pub type Atstrg = crate::EnumBitfieldStruct<u8, Atstrg_SPEC>;
     impl Atstrg {
+        #[doc = "Write : do nothing"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Write : Software trigger (one-shot pulse) output"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -15761,9 +17227,11 @@ impl crate::sealed::RegSpec for Atccnte_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Asynchronous Timing Contorol Counter enable Register"]
 pub type Atccnte = crate::RegValueT<Atccnte_SPEC>;
 
 impl Atccnte {
+    #[doc = "Asynchronous Timing Counter Enable for MREF, MC2, SC1, SC2."]
     #[inline(always)]
     pub fn atce(
         self,
@@ -15789,6 +17257,7 @@ impl Atccnte {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000000000000000000. The write value should be 0000000000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -15809,8 +17278,10 @@ pub mod atccnte {
     pub struct Atce_SPEC;
     pub type Atce = crate::EnumBitfieldStruct<u8, Atce_SPEC>;
     impl Atce {
+        #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -15821,9 +17292,11 @@ impl crate::sealed::RegSpec for AtccnteHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Asynchronous Timing Contorol Counter enable Register"]
 pub type AtccnteHaL = crate::RegValueT<AtccnteHaL_SPEC>;
 
 impl AtccnteHaL {
+    #[doc = "Asynchronous Timing Counter Enable for MREF, MC2, SC1, SC2."]
     #[inline(always)]
     pub fn atce(
         self,
@@ -15849,6 +17322,7 @@ impl AtccnteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000000. The write value should be 000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -15869,8 +17343,10 @@ pub mod atccnte_ha_l {
     pub struct Atce_SPEC;
     pub type Atce = crate::EnumBitfieldStruct<u8, Atce_SPEC>;
     impl Atce {
+        #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -15881,9 +17357,11 @@ impl crate::sealed::RegSpec for AtccnteByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Asynchronous Timing Contorol Counter enable Register"]
 pub type AtccnteByLl = crate::RegValueT<AtccnteByLl_SPEC>;
 
 impl AtccnteByLl {
+    #[doc = "Asynchronous Timing Counter Enable for MREF, MC2, SC1, SC2."]
     #[inline(always)]
     pub fn atce(
         self,
@@ -15909,6 +17387,7 @@ impl AtccnteByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -15929,8 +17408,10 @@ pub mod atccnte_by_ll {
     pub struct Atce_SPEC;
     pub type Atce = crate::EnumBitfieldStruct<u8, Atce_SPEC>;
     impl Atce {
+        #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -15941,9 +17422,11 @@ impl crate::sealed::RegSpec for Cndctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Condition Control Register"]
 pub type Cndctl = crate::RegValueT<Cndctl_SPEC>;
 
 impl Cndctl {
+    #[doc = "START (S) Condition Issuance"]
     #[inline(always)]
     pub fn stcnd(
         self,
@@ -15969,6 +17452,7 @@ impl Cndctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Repeated START (Sr) Condition Issuance"]
     #[inline(always)]
     pub fn srcnd(
         self,
@@ -15994,6 +17478,7 @@ impl Cndctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "STOP (P) Condition Issuance"]
     #[inline(always)]
     pub fn spcnd(
         self,
@@ -16019,6 +17504,7 @@ impl Cndctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000000000000000000000000. The write value should be 00000000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -16039,24 +17525,30 @@ pub mod cndctl {
     pub struct Stcnd_SPEC;
     pub type Stcnd = crate::EnumBitfieldStruct<u8, Stcnd_SPEC>;
     impl Stcnd {
+        #[doc = "Does not request to issue a START condition."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Requests to issue a START condition."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Srcnd_SPEC;
     pub type Srcnd = crate::EnumBitfieldStruct<u8, Srcnd_SPEC>;
     impl Srcnd {
+        #[doc = "Does not request to issue a Repeated START condition."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Requests to issue a Repeated START condition."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spcnd_SPEC;
     pub type Spcnd = crate::EnumBitfieldStruct<u8, Spcnd_SPEC>;
     impl Spcnd {
+        #[doc = "Does not request to issue a STOP condition."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Requests to issue a STOP condition."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -16067,9 +17559,11 @@ impl crate::sealed::RegSpec for CndctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Condition Control Register"]
 pub type CndctlHaL = crate::RegValueT<CndctlHaL_SPEC>;
 
 impl CndctlHaL {
+    #[doc = "START (S) Condition Issuance"]
     #[inline(always)]
     pub fn stcnd(
         self,
@@ -16095,6 +17589,7 @@ impl CndctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Repeated START (Sr) Condition Issuance"]
     #[inline(always)]
     pub fn srcnd(
         self,
@@ -16120,6 +17615,7 @@ impl CndctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "STOP (P) Condition Issuance"]
     #[inline(always)]
     pub fn spcnd(
         self,
@@ -16145,6 +17641,7 @@ impl CndctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000. The write value should be 0000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -16165,24 +17662,30 @@ pub mod cndctl_ha_l {
     pub struct Stcnd_SPEC;
     pub type Stcnd = crate::EnumBitfieldStruct<u8, Stcnd_SPEC>;
     impl Stcnd {
+        #[doc = "Does not request to issue a START condition."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Requests to issue a START condition."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Srcnd_SPEC;
     pub type Srcnd = crate::EnumBitfieldStruct<u8, Srcnd_SPEC>;
     impl Srcnd {
+        #[doc = "Does not request to issue a Repeated START condition."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Requests to issue a Repeated START condition."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spcnd_SPEC;
     pub type Spcnd = crate::EnumBitfieldStruct<u8, Spcnd_SPEC>;
     impl Spcnd {
+        #[doc = "Does not request to issue a STOP condition."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Requests to issue a STOP condition."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -16193,9 +17696,11 @@ impl crate::sealed::RegSpec for CndctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Condition Control Register"]
 pub type CndctlByLl = crate::RegValueT<CndctlByLl_SPEC>;
 
 impl CndctlByLl {
+    #[doc = "START (S) Condition Issuance"]
     #[inline(always)]
     pub fn stcnd(
         self,
@@ -16221,6 +17726,7 @@ impl CndctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Repeated START (Sr) Condition Issuance"]
     #[inline(always)]
     pub fn srcnd(
         self,
@@ -16246,6 +17752,7 @@ impl CndctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "STOP (P) Condition Issuance"]
     #[inline(always)]
     pub fn spcnd(
         self,
@@ -16271,6 +17778,7 @@ impl CndctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -16291,24 +17799,30 @@ pub mod cndctl_by_ll {
     pub struct Stcnd_SPEC;
     pub type Stcnd = crate::EnumBitfieldStruct<u8, Stcnd_SPEC>;
     impl Stcnd {
+        #[doc = "Does not request to issue a START condition."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Requests to issue a START condition."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Srcnd_SPEC;
     pub type Srcnd = crate::EnumBitfieldStruct<u8, Srcnd_SPEC>;
     impl Srcnd {
+        #[doc = "Does not request to issue a Repeated START condition."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Requests to issue a Repeated START condition."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spcnd_SPEC;
     pub type Spcnd = crate::EnumBitfieldStruct<u8, Spcnd_SPEC>;
     impl Spcnd {
+        #[doc = "Does not request to issue a STOP condition."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Requests to issue a STOP condition."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -16319,9 +17833,11 @@ impl crate::sealed::RegSpec for Ncmdqp_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Normal Command Queue Port Register"]
 pub type Ncmdqp = crate::RegValueT<Ncmdqp_SPEC>;
 
 impl Ncmdqp {
+    #[doc = "Normal Command Queue Port"]
     #[inline(always)]
     pub fn ncmdqp(
         self,
@@ -16344,9 +17860,11 @@ impl crate::sealed::RegSpec for Nrspqp_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Normal Response Queue Port Register"]
 pub type Nrspqp = crate::RegValueT<Nrspqp_SPEC>;
 
 impl Nrspqp {
+    #[doc = "Normal Response Queue Port"]
     #[inline(always)]
     pub fn nrspqp(
         self,
@@ -16369,9 +17887,11 @@ impl crate::sealed::RegSpec for Ntdtbp0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Normal Transfer Data Buffer Port Register 0"]
 pub type Ntdtbp0 = crate::RegValueT<Ntdtbp0_SPEC>;
 
 impl Ntdtbp0 {
+    #[doc = "Normal Transfer Data Buffer Port"]
     #[inline(always)]
     pub fn ntdtbp0(
         self,
@@ -16394,9 +17914,11 @@ impl crate::sealed::RegSpec for Ntdtbp0ByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Transfer Data Buffer Port Register 0"]
 pub type Ntdtbp0ByLl = crate::RegValueT<Ntdtbp0ByLl_SPEC>;
 
 impl Ntdtbp0ByLl {
+    #[doc = "Normal Transfer Data Buffer Port"]
     #[inline(always)]
     pub fn ntdtbp0(
         self,
@@ -16419,9 +17941,11 @@ impl crate::sealed::RegSpec for Nibiqp_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Normal IBI Queue Port Register"]
 pub type Nibiqp = crate::RegValueT<Nibiqp_SPEC>;
 
 impl Nibiqp {
+    #[doc = "Normal IBI Queue Port"]
     #[inline(always)]
     pub fn nibiqp(
         self,
@@ -16444,9 +17968,11 @@ impl crate::sealed::RegSpec for Nrsqp_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Normal Receive Status Queue Port Register"]
 pub type Nrsqp = crate::RegValueT<Nrsqp_SPEC>;
 
 impl Nrsqp {
+    #[doc = "Normal Receive Status Queue Port"]
     #[inline(always)]
     pub fn nrsqp(
         self,
@@ -16469,9 +17995,11 @@ impl crate::sealed::RegSpec for Hcmdqp_SPEC {
     type DataType = u32;
 }
 
+#[doc = "High Priority Command Queue Port Register"]
 pub type Hcmdqp = crate::RegValueT<Hcmdqp_SPEC>;
 
 impl Hcmdqp {
+    #[doc = "High Priority Command Queue Port"]
     #[inline(always)]
     pub fn hcmdqp(
         self,
@@ -16494,9 +18022,11 @@ impl crate::sealed::RegSpec for Hrspqp_SPEC {
     type DataType = u32;
 }
 
+#[doc = "High Priority Response Queue Port Register"]
 pub type Hrspqp = crate::RegValueT<Hrspqp_SPEC>;
 
 impl Hrspqp {
+    #[doc = "High Priority Response Queue Port"]
     #[inline(always)]
     pub fn hrspqp(
         self,
@@ -16519,9 +18049,11 @@ impl crate::sealed::RegSpec for Htdtbp_SPEC {
     type DataType = u32;
 }
 
+#[doc = "High Priority Transfer Data Buffer Port Register"]
 pub type Htdtbp = crate::RegValueT<Htdtbp_SPEC>;
 
 impl Htdtbp {
+    #[doc = "High Priority Transfer Data Buffer Port"]
     #[inline(always)]
     pub fn htdtbp(
         self,
@@ -16544,9 +18076,11 @@ impl crate::sealed::RegSpec for Nqthctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Normal Queue Threshold Control Register"]
 pub type Nqthctl = crate::RegValueT<Nqthctl_SPEC>;
 
 impl Nqthctl {
+    #[doc = "Normal Command Queue Threshold"]
     #[inline(always)]
     pub fn cmdqth(
         self,
@@ -16572,6 +18106,7 @@ impl Nqthctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Response Queue Threshold"]
     #[inline(always)]
     pub fn rspqth(
         self,
@@ -16597,6 +18132,7 @@ impl Nqthctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal IBI Data Segment Size"]
     #[inline(always)]
     pub fn ibidssz(
         self,
@@ -16604,6 +18140,7 @@ impl Nqthctl {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Nqthctl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Normal IBI Queue Threshold"]
     #[inline(always)]
     pub fn ibiqth(
         self,
@@ -16641,20 +18178,24 @@ pub mod nqthctl {
     pub struct Cmdqth_SPEC;
     pub type Cmdqth = crate::EnumBitfieldStruct<u8, Cmdqth_SPEC>;
     impl Cmdqth {
+        #[doc = "Interrupt is issued when Command Queue is completely empty"]
         pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqth_SPEC;
     pub type Rspqth = crate::EnumBitfieldStruct<u8, Rspqth_SPEC>;
     impl Rspqth {
+        #[doc = "Interrupt is issued when response Queue contains 1 entry (DWORD)"]
         pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ibiqth_SPEC;
     pub type Ibiqth = crate::EnumBitfieldStruct<u8, Ibiqth_SPEC>;
     impl Ibiqth {
+        #[doc = "Interrupt is generated when the Outstanding IBI Status count is >= 1"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt is issued when IBI Data Buffer is completely empty"]
         pub const _0: Self = Self::new(0);
     }
 }
@@ -16665,9 +18206,11 @@ impl crate::sealed::RegSpec for NqthctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Normal Queue Threshold Control Register"]
 pub type NqthctlHaL = crate::RegValueT<NqthctlHaL_SPEC>;
 
 impl NqthctlHaL {
+    #[doc = "Normal Command Queue Threshold"]
     #[inline(always)]
     pub fn cmdqth(
         self,
@@ -16693,6 +18236,7 @@ impl NqthctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Response Queue Threshold"]
     #[inline(always)]
     pub fn rspqth(
         self,
@@ -16730,12 +18274,14 @@ pub mod nqthctl_ha_l {
     pub struct Cmdqth_SPEC;
     pub type Cmdqth = crate::EnumBitfieldStruct<u8, Cmdqth_SPEC>;
     impl Cmdqth {
+        #[doc = "Interrupt is issued when Command Queue is completely empty"]
         pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqth_SPEC;
     pub type Rspqth = crate::EnumBitfieldStruct<u8, Rspqth_SPEC>;
     impl Rspqth {
+        #[doc = "Interrupt is issued when response Queue contains 1 entry (DWORD)"]
         pub const _0: Self = Self::new(0);
     }
 }
@@ -16746,9 +18292,11 @@ impl crate::sealed::RegSpec for NqthctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Queue Threshold Control Register"]
 pub type NqthctlByLl = crate::RegValueT<NqthctlByLl_SPEC>;
 
 impl NqthctlByLl {
+    #[doc = "Normal Command Queue Threshold"]
     #[inline(always)]
     pub fn cmdqth(
         self,
@@ -16786,6 +18334,7 @@ pub mod nqthctl_by_ll {
     pub struct Cmdqth_SPEC;
     pub type Cmdqth = crate::EnumBitfieldStruct<u8, Cmdqth_SPEC>;
     impl Cmdqth {
+        #[doc = "Interrupt is issued when Command Queue is completely empty"]
         pub const _0: Self = Self::new(0);
     }
 }
@@ -16796,9 +18345,11 @@ impl crate::sealed::RegSpec for NqthctlByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Queue Threshold Control Register"]
 pub type NqthctlByLh = crate::RegValueT<NqthctlByLh_SPEC>;
 
 impl NqthctlByLh {
+    #[doc = "Normal Response Queue Threshold"]
     #[inline(always)]
     pub fn rspqth(
         self,
@@ -16836,6 +18387,7 @@ pub mod nqthctl_by_lh {
     pub struct Rspqth_SPEC;
     pub type Rspqth = crate::EnumBitfieldStruct<u8, Rspqth_SPEC>;
     impl Rspqth {
+        #[doc = "Interrupt is issued when response Queue contains 1 entry (DWORD)"]
         pub const _0: Self = Self::new(0);
     }
 }
@@ -16846,9 +18398,11 @@ impl crate::sealed::RegSpec for NqthctlHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Normal Queue Threshold Control Register"]
 pub type NqthctlHaH = crate::RegValueT<NqthctlHaH_SPEC>;
 
 impl NqthctlHaH {
+    #[doc = "Normal IBI Data Segment Size"]
     #[inline(always)]
     pub fn ibidssz(
         self,
@@ -16857,6 +18411,7 @@ impl NqthctlHaH {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,NqthctlHaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Normal IBI Queue Threshold"]
     #[inline(always)]
     pub fn ibiqth(
         self,
@@ -16894,8 +18449,10 @@ pub mod nqthctl_ha_h {
     pub struct Ibiqth_SPEC;
     pub type Ibiqth = crate::EnumBitfieldStruct<u8, Ibiqth_SPEC>;
     impl Ibiqth {
+        #[doc = "Interrupt is generated when the Outstanding IBI Status count is >= 1"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt is issued when IBI Data Buffer is completely empty"]
         pub const _0: Self = Self::new(0);
     }
 }
@@ -16906,9 +18463,11 @@ impl crate::sealed::RegSpec for NqthctlByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Queue Threshold Control Register"]
 pub type NqthctlByHl = crate::RegValueT<NqthctlByHl_SPEC>;
 
 impl NqthctlByHl {
+    #[doc = "Normal IBI Data Segment Size"]
     #[inline(always)]
     pub fn ibidssz(
         self,
@@ -16931,9 +18490,11 @@ impl crate::sealed::RegSpec for NqthctlByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Queue Threshold Control Register"]
 pub type NqthctlByHh = crate::RegValueT<NqthctlByHh_SPEC>;
 
 impl NqthctlByHh {
+    #[doc = "Normal IBI Queue Threshold"]
     #[inline(always)]
     pub fn ibiqth(
         self,
@@ -16971,8 +18532,10 @@ pub mod nqthctl_by_hh {
     pub struct Ibiqth_SPEC;
     pub type Ibiqth = crate::EnumBitfieldStruct<u8, Ibiqth_SPEC>;
     impl Ibiqth {
+        #[doc = "Interrupt is generated when the Outstanding IBI Status count is >= 1"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Interrupt is issued when IBI Data Buffer is completely empty"]
         pub const _0: Self = Self::new(0);
     }
 }
@@ -16983,9 +18546,11 @@ impl crate::sealed::RegSpec for Ntbthctl0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Normal Transfer Data Buffer Threshold Control Register 0"]
 pub type Ntbthctl0 = crate::RegValueT<Ntbthctl0_SPEC>;
 
 impl Ntbthctl0 {
+    #[doc = "Normal Tx Data Buffer Threshold"]
     #[inline(always)]
     pub fn txdbth(
         self,
@@ -17011,6 +18576,7 @@ impl Ntbthctl0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Rx Data Buffer Threshold"]
     #[inline(always)]
     pub fn rxdbth(
         self,
@@ -17036,6 +18602,7 @@ impl Ntbthctl0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Tx Start Threshold"]
     #[inline(always)]
     pub fn txstth(
         self,
@@ -17061,6 +18628,7 @@ impl Ntbthctl0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Rx Start Threshold"]
     #[inline(always)]
     pub fn rxstth(
         self,
@@ -17086,6 +18654,7 @@ impl Ntbthctl0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -17106,80 +18675,112 @@ pub mod ntbthctl0 {
     pub struct Txdbth_SPEC;
     pub type Txdbth = crate::EnumBitfieldStruct<u8, Txdbth_SPEC>;
     impl Txdbth {
+        #[doc = "Interrupt triggers at 2 Tx Buffer entries, DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Interrupt triggers at 4 Tx Buffer entries, DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Interrupt triggers at 8 Tx Buffer entries, DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Interrupt triggers at 16 Tx Buffer entries, DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Interrupt triggers at 32 Tx Buffer entries, DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Interrupt triggers at 64 Tx Buffer entries, DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Interrupt triggers at 128 Tx Buffer entries, DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Interrupt triggers at 256 Tx Buffer entries, DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rxdbth_SPEC;
     pub type Rxdbth = crate::EnumBitfieldStruct<u8, Rxdbth_SPEC>;
     impl Rxdbth {
+        #[doc = "Interrupt triggers at 2 Rx Buffer entries, DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Interrupt triggers at 4 Rx Buffer entries, DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Interrupt triggers at 8 Rx Buffer entries, DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Interrupt triggers at 16 Rx Buffer entries, DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Interrupt triggers at 32 Rx Buffer entries, DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Interrupt triggers at 64 Rx Buffer entries, DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Interrupt triggers at 128 Rx Buffer entries, DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Interrupt triggers at 256 Rx Buffer entries, DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txstth_SPEC;
     pub type Txstth = crate::EnumBitfieldStruct<u8, Txstth_SPEC>;
     impl Txstth {
+        #[doc = "Wait for 2 entry DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Wait for 4 entry DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Wait for 8 entry DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Wait for 16 entry DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Wait for 32 entry DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Wait for 64 entry DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Wait for 128 entry DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Wait for 256 entry DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rxstth_SPEC;
     pub type Rxstth = crate::EnumBitfieldStruct<u8, Rxstth_SPEC>;
     impl Rxstth {
+        #[doc = "Wait for 2 empty DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Wait for 4 empty DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Wait for 8 empty DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Wait for 16 empty DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Wait for 32 empty DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Wait for 64 empty DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Wait for 128 empty DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Wait for 256 empty DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
 }
@@ -17190,9 +18791,11 @@ impl crate::sealed::RegSpec for Ntbthctl0HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Normal Transfer Data Buffer Threshold Control Register 0"]
 pub type Ntbthctl0HaL = crate::RegValueT<Ntbthctl0HaL_SPEC>;
 
 impl Ntbthctl0HaL {
+    #[doc = "Normal Tx Data Buffer Threshold"]
     #[inline(always)]
     pub fn txdbth(
         self,
@@ -17218,6 +18821,7 @@ impl Ntbthctl0HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Rx Data Buffer Threshold"]
     #[inline(always)]
     pub fn rxdbth(
         self,
@@ -17243,6 +18847,7 @@ impl Ntbthctl0HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -17263,40 +18868,56 @@ pub mod ntbthctl0_ha_l {
     pub struct Txdbth_SPEC;
     pub type Txdbth = crate::EnumBitfieldStruct<u8, Txdbth_SPEC>;
     impl Txdbth {
+        #[doc = "Interrupt triggers at 2 Tx Buffer entries, DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Interrupt triggers at 4 Tx Buffer entries, DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Interrupt triggers at 8 Tx Buffer entries, DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Interrupt triggers at 16 Tx Buffer entries, DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Interrupt triggers at 32 Tx Buffer entries, DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Interrupt triggers at 64 Tx Buffer entries, DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Interrupt triggers at 128 Tx Buffer entries, DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Interrupt triggers at 256 Tx Buffer entries, DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rxdbth_SPEC;
     pub type Rxdbth = crate::EnumBitfieldStruct<u8, Rxdbth_SPEC>;
     impl Rxdbth {
+        #[doc = "Interrupt triggers at 2 Rx Buffer entries, DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Interrupt triggers at 4 Rx Buffer entries, DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Interrupt triggers at 8 Rx Buffer entries, DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Interrupt triggers at 16 Rx Buffer entries, DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Interrupt triggers at 32 Rx Buffer entries, DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Interrupt triggers at 64 Rx Buffer entries, DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Interrupt triggers at 128 Rx Buffer entries, DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Interrupt triggers at 256 Rx Buffer entries, DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
 }
@@ -17307,9 +18928,11 @@ impl crate::sealed::RegSpec for Ntbthctl0ByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Transfer Data Buffer Threshold Control Register 0"]
 pub type Ntbthctl0ByLl = crate::RegValueT<Ntbthctl0ByLl_SPEC>;
 
 impl Ntbthctl0ByLl {
+    #[doc = "Normal Tx Data Buffer Threshold"]
     #[inline(always)]
     pub fn txdbth(
         self,
@@ -17335,6 +18958,7 @@ impl Ntbthctl0ByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -17355,20 +18979,28 @@ pub mod ntbthctl0_by_ll {
     pub struct Txdbth_SPEC;
     pub type Txdbth = crate::EnumBitfieldStruct<u8, Txdbth_SPEC>;
     impl Txdbth {
+        #[doc = "Interrupt triggers at 2 Tx Buffer entries, DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Interrupt triggers at 4 Tx Buffer entries, DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Interrupt triggers at 8 Tx Buffer entries, DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Interrupt triggers at 16 Tx Buffer entries, DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Interrupt triggers at 32 Tx Buffer entries, DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Interrupt triggers at 64 Tx Buffer entries, DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Interrupt triggers at 128 Tx Buffer entries, DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Interrupt triggers at 256 Tx Buffer entries, DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
 }
@@ -17379,9 +19011,11 @@ impl crate::sealed::RegSpec for Ntbthctl0ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Transfer Data Buffer Threshold Control Register 0"]
 pub type Ntbthctl0ByLh = crate::RegValueT<Ntbthctl0ByLh_SPEC>;
 
 impl Ntbthctl0ByLh {
+    #[doc = "Normal Rx Data Buffer Threshold"]
     #[inline(always)]
     pub fn rxdbth(
         self,
@@ -17407,6 +19041,7 @@ impl Ntbthctl0ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -17427,20 +19062,28 @@ pub mod ntbthctl0_by_lh {
     pub struct Rxdbth_SPEC;
     pub type Rxdbth = crate::EnumBitfieldStruct<u8, Rxdbth_SPEC>;
     impl Rxdbth {
+        #[doc = "Interrupt triggers at 2 Rx Buffer entries, DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Interrupt triggers at 4 Rx Buffer entries, DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Interrupt triggers at 8 Rx Buffer entries, DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Interrupt triggers at 16 Rx Buffer entries, DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Interrupt triggers at 32 Rx Buffer entries, DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Interrupt triggers at 64 Rx Buffer entries, DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Interrupt triggers at 128 Rx Buffer entries, DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Interrupt triggers at 256 Rx Buffer entries, DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
 }
@@ -17451,9 +19094,11 @@ impl crate::sealed::RegSpec for Ntbthctl0HaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Normal Transfer Data Buffer Threshold Control Register 0"]
 pub type Ntbthctl0HaH = crate::RegValueT<Ntbthctl0HaH_SPEC>;
 
 impl Ntbthctl0HaH {
+    #[doc = "Normal Tx Start Threshold"]
     #[inline(always)]
     pub fn txstth(
         self,
@@ -17479,6 +19124,7 @@ impl Ntbthctl0HaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Rx Start Threshold"]
     #[inline(always)]
     pub fn rxstth(
         self,
@@ -17504,6 +19150,7 @@ impl Ntbthctl0HaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -17524,40 +19171,56 @@ pub mod ntbthctl0_ha_h {
     pub struct Txstth_SPEC;
     pub type Txstth = crate::EnumBitfieldStruct<u8, Txstth_SPEC>;
     impl Txstth {
+        #[doc = "Wait for 2 entry DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Wait for 4 entry DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Wait for 8 entry DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Wait for 16 entry DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Wait for 32 entry DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Wait for 64 entry DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Wait for 128 entry DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Wait for 256 entry DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rxstth_SPEC;
     pub type Rxstth = crate::EnumBitfieldStruct<u8, Rxstth_SPEC>;
     impl Rxstth {
+        #[doc = "Wait for 2 empty DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Wait for 4 empty DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Wait for 8 empty DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Wait for 16 empty DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Wait for 32 empty DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Wait for 64 empty DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Wait for 128 empty DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Wait for 256 empty DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
 }
@@ -17568,9 +19231,11 @@ impl crate::sealed::RegSpec for Ntbthctl0ByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Transfer Data Buffer Threshold Control Register 0"]
 pub type Ntbthctl0ByHl = crate::RegValueT<Ntbthctl0ByHl_SPEC>;
 
 impl Ntbthctl0ByHl {
+    #[doc = "Normal Tx Start Threshold"]
     #[inline(always)]
     pub fn txstth(
         self,
@@ -17596,6 +19261,7 @@ impl Ntbthctl0ByHl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -17616,20 +19282,28 @@ pub mod ntbthctl0_by_hl {
     pub struct Txstth_SPEC;
     pub type Txstth = crate::EnumBitfieldStruct<u8, Txstth_SPEC>;
     impl Txstth {
+        #[doc = "Wait for 2 entry DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Wait for 4 entry DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Wait for 8 entry DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Wait for 16 entry DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Wait for 32 entry DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Wait for 64 entry DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Wait for 128 entry DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Wait for 256 entry DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
 }
@@ -17640,9 +19314,11 @@ impl crate::sealed::RegSpec for Ntbthctl0ByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Transfer Data Buffer Threshold Control Register 0"]
 pub type Ntbthctl0ByHh = crate::RegValueT<Ntbthctl0ByHh_SPEC>;
 
 impl Ntbthctl0ByHh {
+    #[doc = "Normal Rx Start Threshold"]
     #[inline(always)]
     pub fn rxstth(
         self,
@@ -17668,6 +19344,7 @@ impl Ntbthctl0ByHh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -17688,20 +19365,28 @@ pub mod ntbthctl0_by_hh {
     pub struct Rxstth_SPEC;
     pub type Rxstth = crate::EnumBitfieldStruct<u8, Rxstth_SPEC>;
     impl Rxstth {
+        #[doc = "Wait for 2 empty DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Wait for 4 empty DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Wait for 8 empty DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Wait for 16 empty DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Wait for 32 empty DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Wait for 64 empty DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Wait for 128 empty DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Wait for 256 empty DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
 }
@@ -17712,9 +19397,11 @@ impl crate::sealed::RegSpec for Nrqthctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Normal Receive Status Queue Threshold Control Register"]
 pub type Nrqthctl = crate::RegValueT<Nrqthctl_SPEC>;
 
 impl Nrqthctl {
+    #[doc = "Normal Receive Status Queue Threshold"]
     #[inline(always)]
     pub fn rsqth(
         self,
@@ -17740,6 +19427,7 @@ impl Nrqthctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000000000000000. The write value should be 000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -17760,6 +19448,7 @@ pub mod nrqthctl {
     pub struct Rsqth_SPEC;
     pub type Rsqth = crate::EnumBitfieldStruct<u8, Rsqth_SPEC>;
     impl Rsqth {
+        #[doc = "Interrupt is issued when Receive Status Queue contains 1 entry (DWORD)"]
         pub const _0: Self = Self::new(0);
     }
 }
@@ -17770,9 +19459,11 @@ impl crate::sealed::RegSpec for NrqthctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Normal Receive Status Queue Threshold Control Register"]
 pub type NrqthctlHaL = crate::RegValueT<NrqthctlHaL_SPEC>;
 
 impl NrqthctlHaL {
+    #[doc = "Normal Receive Status Queue Threshold"]
     #[inline(always)]
     pub fn rsqth(
         self,
@@ -17798,6 +19489,7 @@ impl NrqthctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -17818,6 +19510,7 @@ pub mod nrqthctl_ha_l {
     pub struct Rsqth_SPEC;
     pub type Rsqth = crate::EnumBitfieldStruct<u8, Rsqth_SPEC>;
     impl Rsqth {
+        #[doc = "Interrupt is issued when Receive Status Queue contains 1 entry (DWORD)"]
         pub const _0: Self = Self::new(0);
     }
 }
@@ -17828,9 +19521,11 @@ impl crate::sealed::RegSpec for NrqthctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Receive Status Queue Threshold Control Register"]
 pub type NrqthctlByLl = crate::RegValueT<NrqthctlByLl_SPEC>;
 
 impl NrqthctlByLl {
+    #[doc = "Normal Receive Status Queue Threshold"]
     #[inline(always)]
     pub fn rsqth(
         self,
@@ -17868,6 +19563,7 @@ pub mod nrqthctl_by_ll {
     pub struct Rsqth_SPEC;
     pub type Rsqth = crate::EnumBitfieldStruct<u8, Rsqth_SPEC>;
     impl Rsqth {
+        #[doc = "Interrupt is issued when Receive Status Queue contains 1 entry (DWORD)"]
         pub const _0: Self = Self::new(0);
     }
 }
@@ -17878,9 +19574,11 @@ impl crate::sealed::RegSpec for Hqthctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "High Priority Queue Threshold Control Register"]
 pub type Hqthctl = crate::RegValueT<Hqthctl_SPEC>;
 
 impl Hqthctl {
+    #[doc = "High Priority Command Queue Threshold"]
     #[inline(always)]
     pub fn cmdqth(
         self,
@@ -17906,6 +19604,7 @@ impl Hqthctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Response Queue Threshold"]
     #[inline(always)]
     pub fn rspqth(
         self,
@@ -17931,6 +19630,7 @@ impl Hqthctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -17951,12 +19651,14 @@ pub mod hqthctl {
     pub struct Cmdqth_SPEC;
     pub type Cmdqth = crate::EnumBitfieldStruct<u8, Cmdqth_SPEC>;
     impl Cmdqth {
+        #[doc = "Interrupt is issued when High Priority Command Queue is completely empty"]
         pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqth_SPEC;
     pub type Rspqth = crate::EnumBitfieldStruct<u8, Rspqth_SPEC>;
     impl Rspqth {
+        #[doc = "Interrupt is issued when High Priority Response Queue contains 1 entry (DWORD)"]
         pub const _0: Self = Self::new(0);
     }
 }
@@ -17967,9 +19669,11 @@ impl crate::sealed::RegSpec for HqthctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "High Priority Queue Threshold Control Register"]
 pub type HqthctlHaL = crate::RegValueT<HqthctlHaL_SPEC>;
 
 impl HqthctlHaL {
+    #[doc = "High Priority Command Queue Threshold"]
     #[inline(always)]
     pub fn cmdqth(
         self,
@@ -17995,6 +19699,7 @@ impl HqthctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Response Queue Threshold"]
     #[inline(always)]
     pub fn rspqth(
         self,
@@ -18032,12 +19737,14 @@ pub mod hqthctl_ha_l {
     pub struct Cmdqth_SPEC;
     pub type Cmdqth = crate::EnumBitfieldStruct<u8, Cmdqth_SPEC>;
     impl Cmdqth {
+        #[doc = "Interrupt is issued when High Priority Command Queue is completely empty"]
         pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqth_SPEC;
     pub type Rspqth = crate::EnumBitfieldStruct<u8, Rspqth_SPEC>;
     impl Rspqth {
+        #[doc = "Interrupt is issued when High Priority Response Queue contains 1 entry (DWORD)"]
         pub const _0: Self = Self::new(0);
     }
 }
@@ -18048,9 +19755,11 @@ impl crate::sealed::RegSpec for HqthctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High Priority Queue Threshold Control Register"]
 pub type HqthctlByLl = crate::RegValueT<HqthctlByLl_SPEC>;
 
 impl HqthctlByLl {
+    #[doc = "High Priority Command Queue Threshold"]
     #[inline(always)]
     pub fn cmdqth(
         self,
@@ -18088,6 +19797,7 @@ pub mod hqthctl_by_ll {
     pub struct Cmdqth_SPEC;
     pub type Cmdqth = crate::EnumBitfieldStruct<u8, Cmdqth_SPEC>;
     impl Cmdqth {
+        #[doc = "Interrupt is issued when High Priority Command Queue is completely empty"]
         pub const _0: Self = Self::new(0);
     }
 }
@@ -18098,9 +19808,11 @@ impl crate::sealed::RegSpec for HqthctlByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High Priority Queue Threshold Control Register"]
 pub type HqthctlByLh = crate::RegValueT<HqthctlByLh_SPEC>;
 
 impl HqthctlByLh {
+    #[doc = "High Priority Response Queue Threshold"]
     #[inline(always)]
     pub fn rspqth(
         self,
@@ -18138,6 +19850,7 @@ pub mod hqthctl_by_lh {
     pub struct Rspqth_SPEC;
     pub type Rspqth = crate::EnumBitfieldStruct<u8, Rspqth_SPEC>;
     impl Rspqth {
+        #[doc = "Interrupt is issued when High Priority Response Queue contains 1 entry (DWORD)"]
         pub const _0: Self = Self::new(0);
     }
 }
@@ -18148,9 +19861,11 @@ impl crate::sealed::RegSpec for Htbthctl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "High Priority Transfer Data Buffer Threshold Control Register"]
 pub type Htbthctl = crate::RegValueT<Htbthctl_SPEC>;
 
 impl Htbthctl {
+    #[doc = "High Priority Tx Data Buffer Threshold"]
     #[inline(always)]
     pub fn txdbth(
         self,
@@ -18176,6 +19891,7 @@ impl Htbthctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Rx Data Buffer Threshold"]
     #[inline(always)]
     pub fn rxdbth(
         self,
@@ -18201,6 +19917,7 @@ impl Htbthctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Tx Start Threshold"]
     #[inline(always)]
     pub fn txstth(
         self,
@@ -18226,6 +19943,7 @@ impl Htbthctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Rx Start Threshold"]
     #[inline(always)]
     pub fn rxstth(
         self,
@@ -18251,6 +19969,7 @@ impl Htbthctl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -18271,80 +19990,112 @@ pub mod htbthctl {
     pub struct Txdbth_SPEC;
     pub type Txdbth = crate::EnumBitfieldStruct<u8, Txdbth_SPEC>;
     impl Txdbth {
+        #[doc = "Interrupt triggers at 2 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Interrupt triggers at 4 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Interrupt triggers at 8 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Interrupt triggers at 16 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Interrupt triggers at 32 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Interrupt triggers at 64 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Interrupt triggers at 128 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Interrupt triggers at 256 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rxdbth_SPEC;
     pub type Rxdbth = crate::EnumBitfieldStruct<u8, Rxdbth_SPEC>;
     impl Rxdbth {
+        #[doc = "Interrupt triggers at 2 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Interrupt triggers at 4 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Interrupt triggers at 8 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Interrupt triggers at 16 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Interrupt triggers at 32 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Interrupt triggers at 64 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Interrupt triggers at 128 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Interrupt triggers at 256 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txstth_SPEC;
     pub type Txstth = crate::EnumBitfieldStruct<u8, Txstth_SPEC>;
     impl Txstth {
+        #[doc = "Wait for 2 entry DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Wait for 4 entry DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Wait for 8 entry DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Wait for 16 entry DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Wait for 32 entry DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Wait for 64 entry DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Wait for 128 entry DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Wait for 256 entry DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rxstth_SPEC;
     pub type Rxstth = crate::EnumBitfieldStruct<u8, Rxstth_SPEC>;
     impl Rxstth {
+        #[doc = "Wait for 2 empty DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Wait for 4 empty DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Wait for 8 empty DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Wait for 16 empty DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Wait for 32 empty DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Wait for 64 empty DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Wait for 128 empty DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Wait for 256 empty DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
 }
@@ -18355,9 +20106,11 @@ impl crate::sealed::RegSpec for HtbthctlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "High Priority Transfer Data Buffer Threshold Control Register"]
 pub type HtbthctlHaL = crate::RegValueT<HtbthctlHaL_SPEC>;
 
 impl HtbthctlHaL {
+    #[doc = "High Priority Tx Data Buffer Threshold"]
     #[inline(always)]
     pub fn txdbth(
         self,
@@ -18383,6 +20136,7 @@ impl HtbthctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Rx Data Buffer Threshold"]
     #[inline(always)]
     pub fn rxdbth(
         self,
@@ -18408,6 +20162,7 @@ impl HtbthctlHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -18428,40 +20183,56 @@ pub mod htbthctl_ha_l {
     pub struct Txdbth_SPEC;
     pub type Txdbth = crate::EnumBitfieldStruct<u8, Txdbth_SPEC>;
     impl Txdbth {
+        #[doc = "Interrupt triggers at 2 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Interrupt triggers at 4 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Interrupt triggers at 8 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Interrupt triggers at 16 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Interrupt triggers at 32 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Interrupt triggers at 64 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Interrupt triggers at 128 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Interrupt triggers at 256 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rxdbth_SPEC;
     pub type Rxdbth = crate::EnumBitfieldStruct<u8, Rxdbth_SPEC>;
     impl Rxdbth {
+        #[doc = "Interrupt triggers at 2 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Interrupt triggers at 4 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Interrupt triggers at 8 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Interrupt triggers at 16 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Interrupt triggers at 32 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Interrupt triggers at 64 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Interrupt triggers at 128 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Interrupt triggers at 256 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
 }
@@ -18472,9 +20243,11 @@ impl crate::sealed::RegSpec for HtbthctlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High Priority Transfer Data Buffer Threshold Control Register"]
 pub type HtbthctlByLl = crate::RegValueT<HtbthctlByLl_SPEC>;
 
 impl HtbthctlByLl {
+    #[doc = "High Priority Tx Data Buffer Threshold"]
     #[inline(always)]
     pub fn txdbth(
         self,
@@ -18500,6 +20273,7 @@ impl HtbthctlByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -18520,20 +20294,28 @@ pub mod htbthctl_by_ll {
     pub struct Txdbth_SPEC;
     pub type Txdbth = crate::EnumBitfieldStruct<u8, Txdbth_SPEC>;
     impl Txdbth {
+        #[doc = "Interrupt triggers at 2 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Interrupt triggers at 4 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Interrupt triggers at 8 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Interrupt triggers at 16 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Interrupt triggers at 32 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Interrupt triggers at 64 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Interrupt triggers at 128 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Interrupt triggers at 256 High Priority Tx Buffer empties, DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
 }
@@ -18544,9 +20326,11 @@ impl crate::sealed::RegSpec for HtbthctlByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High Priority Transfer Data Buffer Threshold Control Register"]
 pub type HtbthctlByLh = crate::RegValueT<HtbthctlByLh_SPEC>;
 
 impl HtbthctlByLh {
+    #[doc = "High Priority Rx Data Buffer Threshold"]
     #[inline(always)]
     pub fn rxdbth(
         self,
@@ -18572,6 +20356,7 @@ impl HtbthctlByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -18592,20 +20377,28 @@ pub mod htbthctl_by_lh {
     pub struct Rxdbth_SPEC;
     pub type Rxdbth = crate::EnumBitfieldStruct<u8, Rxdbth_SPEC>;
     impl Rxdbth {
+        #[doc = "Interrupt triggers at 2 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Interrupt triggers at 4 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Interrupt triggers at 8 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Interrupt triggers at 16 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Interrupt triggers at 32 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Interrupt triggers at 64 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Interrupt triggers at 128 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Interrupt triggers at 256 High Priority Rx Buffer entries, DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
 }
@@ -18616,9 +20409,11 @@ impl crate::sealed::RegSpec for HtbthctlHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "High Priority Transfer Data Buffer Threshold Control Register"]
 pub type HtbthctlHaH = crate::RegValueT<HtbthctlHaH_SPEC>;
 
 impl HtbthctlHaH {
+    #[doc = "High Priority Tx Start Threshold"]
     #[inline(always)]
     pub fn txstth(
         self,
@@ -18644,6 +20439,7 @@ impl HtbthctlHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Rx Start Threshold"]
     #[inline(always)]
     pub fn rxstth(
         self,
@@ -18669,6 +20465,7 @@ impl HtbthctlHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -18689,40 +20486,56 @@ pub mod htbthctl_ha_h {
     pub struct Txstth_SPEC;
     pub type Txstth = crate::EnumBitfieldStruct<u8, Txstth_SPEC>;
     impl Txstth {
+        #[doc = "Wait for 2 entry DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Wait for 4 entry DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Wait for 8 entry DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Wait for 16 entry DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Wait for 32 entry DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Wait for 64 entry DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Wait for 128 entry DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Wait for 256 entry DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rxstth_SPEC;
     pub type Rxstth = crate::EnumBitfieldStruct<u8, Rxstth_SPEC>;
     impl Rxstth {
+        #[doc = "Wait for 2 empty DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Wait for 4 empty DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Wait for 8 empty DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Wait for 16 empty DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Wait for 32 empty DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Wait for 64 empty DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Wait for 128 empty DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Wait for 256 empty DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
 }
@@ -18733,9 +20546,11 @@ impl crate::sealed::RegSpec for HtbthctlByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High Priority Transfer Data Buffer Threshold Control Register"]
 pub type HtbthctlByHl = crate::RegValueT<HtbthctlByHl_SPEC>;
 
 impl HtbthctlByHl {
+    #[doc = "High Priority Tx Start Threshold"]
     #[inline(always)]
     pub fn txstth(
         self,
@@ -18761,6 +20576,7 @@ impl HtbthctlByHl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -18781,20 +20597,28 @@ pub mod htbthctl_by_hl {
     pub struct Txstth_SPEC;
     pub type Txstth = crate::EnumBitfieldStruct<u8, Txstth_SPEC>;
     impl Txstth {
+        #[doc = "Wait for 2 entry DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Wait for 4 entry DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Wait for 8 entry DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Wait for 16 entry DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Wait for 32 entry DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Wait for 64 entry DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Wait for 128 entry DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Wait for 256 entry DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
 }
@@ -18805,9 +20629,11 @@ impl crate::sealed::RegSpec for HtbthctlByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High Priority Transfer Data Buffer Threshold Control Register"]
 pub type HtbthctlByHh = crate::RegValueT<HtbthctlByHh_SPEC>;
 
 impl HtbthctlByHh {
+    #[doc = "High Priority Rx Start Threshold"]
     #[inline(always)]
     pub fn rxstth(
         self,
@@ -18833,6 +20659,7 @@ impl HtbthctlByHh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -18853,20 +20680,28 @@ pub mod htbthctl_by_hh {
     pub struct Rxstth_SPEC;
     pub type Rxstth = crate::EnumBitfieldStruct<u8, Rxstth_SPEC>;
     impl Rxstth {
+        #[doc = "Wait for 2 empty DWORDs"]
         pub const _0_X_0: Self = Self::new(0);
 
+        #[doc = "Wait for 4 empty DWORDs"]
         pub const _0_X_1: Self = Self::new(1);
 
+        #[doc = "Wait for 8 empty DWORDs"]
         pub const _0_X_2: Self = Self::new(2);
 
+        #[doc = "Wait for 16 empty DWORDs"]
         pub const _0_X_3: Self = Self::new(3);
 
+        #[doc = "Wait for 32 empty DWORDs"]
         pub const _0_X_4: Self = Self::new(4);
 
+        #[doc = "Wait for 64 empty DWORDs"]
         pub const _0_X_5: Self = Self::new(5);
 
+        #[doc = "Wait for 128 empty DWORDs"]
         pub const _0_X_6: Self = Self::new(6);
 
+        #[doc = "Wait for 256 empty DWORDs"]
         pub const _0_X_7: Self = Self::new(7);
     }
 }
@@ -18877,9 +20712,11 @@ impl crate::sealed::RegSpec for Bst_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Status Register"]
 pub type Bst = crate::RegValueT<Bst_SPEC>;
 
 impl Bst {
+    #[doc = "START Condition Detection Flag"]
     #[inline(always)]
     pub fn stcnddf(
         self,
@@ -18905,6 +20742,7 @@ impl Bst {
         >::from_register(self, 0)
     }
 
+    #[doc = "STOP Condition Detection Flag"]
     #[inline(always)]
     pub fn spcnddf(
         self,
@@ -18930,6 +20768,7 @@ impl Bst {
         >::from_register(self, 0)
     }
 
+    #[doc = "HDR Exit Pattern Detection Flag"]
     #[inline(always)]
     pub fn hdrexdf(
         self,
@@ -18955,6 +20794,7 @@ impl Bst {
         >::from_register(self, 0)
     }
 
+    #[doc = "NACK Detection Flag"]
     #[inline(always)]
     pub fn nackdf(
         self,
@@ -18980,6 +20820,7 @@ impl Bst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transmit End Flag"]
     #[inline(always)]
     pub fn tendf(
         self,
@@ -19005,6 +20846,7 @@ impl Bst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Arbitration Lost Flag"]
     #[inline(always)]
     pub fn alf(
         self,
@@ -19013,6 +20855,7 @@ impl Bst {
         crate::common::RegisterField::<16,0x1,1,0,bst::Alf,bst::Alf,Bst_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Timeout Detection Flag"]
     #[inline(always)]
     pub fn todf(
         self,
@@ -19038,6 +20881,7 @@ impl Bst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake-Up Condition Detection Flag"]
     #[inline(always)]
     pub fn wucnddf(
         self,
@@ -19063,6 +20907,7 @@ impl Bst {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -19082,64 +20927,80 @@ pub mod bst {
     pub struct Stcnddf_SPEC;
     pub type Stcnddf = crate::EnumBitfieldStruct<u8, Stcnddf_SPEC>;
     impl Stcnddf {
+        #[doc = "START condition is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "START condition is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spcnddf_SPEC;
     pub type Spcnddf = crate::EnumBitfieldStruct<u8, Spcnddf_SPEC>;
     impl Spcnddf {
+        #[doc = "STOP condition is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "STOP condition is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hdrexdf_SPEC;
     pub type Hdrexdf = crate::EnumBitfieldStruct<u8, Hdrexdf_SPEC>;
     impl Hdrexdf {
+        #[doc = "HDR Exit Pattern is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "HDR Exit Pattern is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nackdf_SPEC;
     pub type Nackdf = crate::EnumBitfieldStruct<u8, Nackdf_SPEC>;
     impl Nackdf {
+        #[doc = "NACK is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NACK is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tendf_SPEC;
     pub type Tendf = crate::EnumBitfieldStruct<u8, Tendf_SPEC>;
     impl Tendf {
+        #[doc = "Data is being transmitted"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Data has been transmitted"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Alf_SPEC;
     pub type Alf = crate::EnumBitfieldStruct<u8, Alf_SPEC>;
     impl Alf {
+        #[doc = "Arbitration is not lost"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Arbitration is lost"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Todf_SPEC;
     pub type Todf = crate::EnumBitfieldStruct<u8, Todf_SPEC>;
     impl Todf {
+        #[doc = "Timeout is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Timeout is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wucnddf_SPEC;
     pub type Wucnddf = crate::EnumBitfieldStruct<u8, Wucnddf_SPEC>;
     impl Wucnddf {
+        #[doc = "Wake-Up Condition is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Wake-Up Condition is detected"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -19150,9 +21011,11 @@ impl crate::sealed::RegSpec for BstHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Bus Status Register"]
 pub type BstHaL = crate::RegValueT<BstHaL_SPEC>;
 
 impl BstHaL {
+    #[doc = "START Condition Detection Flag"]
     #[inline(always)]
     pub fn stcnddf(
         self,
@@ -19178,6 +21041,7 @@ impl BstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "STOP Condition Detection Flag"]
     #[inline(always)]
     pub fn spcnddf(
         self,
@@ -19203,6 +21067,7 @@ impl BstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "HDR Exit Pattern Detection Flag"]
     #[inline(always)]
     pub fn hdrexdf(
         self,
@@ -19228,6 +21093,7 @@ impl BstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "NACK Detection Flag"]
     #[inline(always)]
     pub fn nackdf(
         self,
@@ -19253,6 +21119,7 @@ impl BstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transmit End Flag"]
     #[inline(always)]
     pub fn tendf(
         self,
@@ -19278,6 +21145,7 @@ impl BstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -19297,40 +21165,50 @@ pub mod bst_ha_l {
     pub struct Stcnddf_SPEC;
     pub type Stcnddf = crate::EnumBitfieldStruct<u8, Stcnddf_SPEC>;
     impl Stcnddf {
+        #[doc = "START condition is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "START condition is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spcnddf_SPEC;
     pub type Spcnddf = crate::EnumBitfieldStruct<u8, Spcnddf_SPEC>;
     impl Spcnddf {
+        #[doc = "STOP condition is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "STOP condition is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hdrexdf_SPEC;
     pub type Hdrexdf = crate::EnumBitfieldStruct<u8, Hdrexdf_SPEC>;
     impl Hdrexdf {
+        #[doc = "HDR Exit Pattern is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "HDR Exit Pattern is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nackdf_SPEC;
     pub type Nackdf = crate::EnumBitfieldStruct<u8, Nackdf_SPEC>;
     impl Nackdf {
+        #[doc = "NACK is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NACK is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tendf_SPEC;
     pub type Tendf = crate::EnumBitfieldStruct<u8, Tendf_SPEC>;
     impl Tendf {
+        #[doc = "Data is being transmitted"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Data has been transmitted"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -19341,9 +21219,11 @@ impl crate::sealed::RegSpec for BstByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Status Register"]
 pub type BstByLl = crate::RegValueT<BstByLl_SPEC>;
 
 impl BstByLl {
+    #[doc = "START Condition Detection Flag"]
     #[inline(always)]
     pub fn stcnddf(
         self,
@@ -19369,6 +21249,7 @@ impl BstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "STOP Condition Detection Flag"]
     #[inline(always)]
     pub fn spcnddf(
         self,
@@ -19394,6 +21275,7 @@ impl BstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "HDR Exit Pattern Detection Flag"]
     #[inline(always)]
     pub fn hdrexdf(
         self,
@@ -19419,6 +21301,7 @@ impl BstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "NACK Detection Flag"]
     #[inline(always)]
     pub fn nackdf(
         self,
@@ -19444,6 +21327,7 @@ impl BstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -19463,32 +21347,40 @@ pub mod bst_by_ll {
     pub struct Stcnddf_SPEC;
     pub type Stcnddf = crate::EnumBitfieldStruct<u8, Stcnddf_SPEC>;
     impl Stcnddf {
+        #[doc = "START condition is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "START condition is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spcnddf_SPEC;
     pub type Spcnddf = crate::EnumBitfieldStruct<u8, Spcnddf_SPEC>;
     impl Spcnddf {
+        #[doc = "STOP condition is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "STOP condition is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hdrexdf_SPEC;
     pub type Hdrexdf = crate::EnumBitfieldStruct<u8, Hdrexdf_SPEC>;
     impl Hdrexdf {
+        #[doc = "HDR Exit Pattern is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "HDR Exit Pattern is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nackdf_SPEC;
     pub type Nackdf = crate::EnumBitfieldStruct<u8, Nackdf_SPEC>;
     impl Nackdf {
+        #[doc = "NACK is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NACK is detected"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -19499,9 +21391,11 @@ impl crate::sealed::RegSpec for BstByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Status Register"]
 pub type BstByLh = crate::RegValueT<BstByLh_SPEC>;
 
 impl BstByLh {
+    #[doc = "Transmit End Flag"]
     #[inline(always)]
     pub fn tendf(
         self,
@@ -19527,6 +21421,7 @@ impl BstByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -19546,8 +21441,10 @@ pub mod bst_by_lh {
     pub struct Tendf_SPEC;
     pub type Tendf = crate::EnumBitfieldStruct<u8, Tendf_SPEC>;
     impl Tendf {
+        #[doc = "Data is being transmitted"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Data has been transmitted"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -19558,9 +21455,11 @@ impl crate::sealed::RegSpec for BstHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Bus Status Register"]
 pub type BstHaH = crate::RegValueT<BstHaH_SPEC>;
 
 impl BstHaH {
+    #[doc = "Arbitration Lost Flag"]
     #[inline(always)]
     pub fn alf(
         self,
@@ -19586,6 +21485,7 @@ impl BstHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timeout Detection Flag"]
     #[inline(always)]
     pub fn todf(
         self,
@@ -19611,6 +21511,7 @@ impl BstHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake-Up Condition Detection Flag"]
     #[inline(always)]
     pub fn wucnddf(
         self,
@@ -19636,6 +21537,7 @@ impl BstHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -19655,24 +21557,30 @@ pub mod bst_ha_h {
     pub struct Alf_SPEC;
     pub type Alf = crate::EnumBitfieldStruct<u8, Alf_SPEC>;
     impl Alf {
+        #[doc = "Arbitration is not lost"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Arbitration is lost"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Todf_SPEC;
     pub type Todf = crate::EnumBitfieldStruct<u8, Todf_SPEC>;
     impl Todf {
+        #[doc = "Timeout is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Timeout is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wucnddf_SPEC;
     pub type Wucnddf = crate::EnumBitfieldStruct<u8, Wucnddf_SPEC>;
     impl Wucnddf {
+        #[doc = "Wake-Up Condition is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Wake-Up Condition is detected"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -19683,9 +21591,11 @@ impl crate::sealed::RegSpec for BstByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Status Register"]
 pub type BstByHl = crate::RegValueT<BstByHl_SPEC>;
 
 impl BstByHl {
+    #[doc = "Arbitration Lost Flag"]
     #[inline(always)]
     pub fn alf(
         self,
@@ -19711,6 +21621,7 @@ impl BstByHl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timeout Detection Flag"]
     #[inline(always)]
     pub fn todf(
         self,
@@ -19736,6 +21647,7 @@ impl BstByHl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -19755,16 +21667,20 @@ pub mod bst_by_hl {
     pub struct Alf_SPEC;
     pub type Alf = crate::EnumBitfieldStruct<u8, Alf_SPEC>;
     impl Alf {
+        #[doc = "Arbitration is not lost"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Arbitration is lost"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Todf_SPEC;
     pub type Todf = crate::EnumBitfieldStruct<u8, Todf_SPEC>;
     impl Todf {
+        #[doc = "Timeout is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Timeout is detected"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -19775,9 +21691,11 @@ impl crate::sealed::RegSpec for BstByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Status Register"]
 pub type BstByHh = crate::RegValueT<BstByHh_SPEC>;
 
 impl BstByHh {
+    #[doc = "Wake-Up Condition Detection Flag"]
     #[inline(always)]
     pub fn wucnddf(
         self,
@@ -19803,6 +21721,7 @@ impl BstByHh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -19822,8 +21741,10 @@ pub mod bst_by_hh {
     pub struct Wucnddf_SPEC;
     pub type Wucnddf = crate::EnumBitfieldStruct<u8, Wucnddf_SPEC>;
     impl Wucnddf {
+        #[doc = "Wake-Up Condition is not detected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Wake-Up Condition is detected"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -19834,9 +21755,11 @@ impl crate::sealed::RegSpec for Bste_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Status Enable Register"]
 pub type Bste = crate::RegValueT<Bste_SPEC>;
 
 impl Bste {
+    #[doc = "START Condition Detection Enable"]
     #[inline(always)]
     pub fn stcndde(
         self,
@@ -19862,6 +21785,7 @@ impl Bste {
         >::from_register(self, 0)
     }
 
+    #[doc = "STOP Condition Detection Enable"]
     #[inline(always)]
     pub fn spcndde(
         self,
@@ -19887,6 +21811,7 @@ impl Bste {
         >::from_register(self, 0)
     }
 
+    #[doc = "HDR Exit Pattern  Detection Enable"]
     #[inline(always)]
     pub fn hdrexde(
         self,
@@ -19912,6 +21837,7 @@ impl Bste {
         >::from_register(self, 0)
     }
 
+    #[doc = "NACK Detection Enable"]
     #[inline(always)]
     pub fn nackde(
         self,
@@ -19937,6 +21863,7 @@ impl Bste {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transmit End Enable"]
     #[inline(always)]
     pub fn tende(
         self,
@@ -19962,6 +21889,7 @@ impl Bste {
         >::from_register(self, 0)
     }
 
+    #[doc = "Arbitration Lost Enable"]
     #[inline(always)]
     pub fn ale(
         self,
@@ -19987,6 +21915,7 @@ impl Bste {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timeout Detection Enable"]
     #[inline(always)]
     pub fn tode(
         self,
@@ -20012,6 +21941,7 @@ impl Bste {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake-up Condition Detection Enable"]
     #[inline(always)]
     pub fn wucndde(
         self,
@@ -20037,6 +21967,7 @@ impl Bste {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -20056,64 +21987,80 @@ pub mod bste {
     pub struct Stcndde_SPEC;
     pub type Stcndde = crate::EnumBitfieldStruct<u8, Stcndde_SPEC>;
     impl Stcndde {
+        #[doc = "Disables START Condition Detection Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables START Condition Detection Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spcndde_SPEC;
     pub type Spcndde = crate::EnumBitfieldStruct<u8, Spcndde_SPEC>;
     impl Spcndde {
+        #[doc = "Disables STOP Condition Detection Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables STOP Condition Detection Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hdrexde_SPEC;
     pub type Hdrexde = crate::EnumBitfieldStruct<u8, Hdrexde_SPEC>;
     impl Hdrexde {
+        #[doc = "Disables HDR Exit Pattern Detection Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables HDR Exit Pattern Detection Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nackde_SPEC;
     pub type Nackde = crate::EnumBitfieldStruct<u8, Nackde_SPEC>;
     impl Nackde {
+        #[doc = "Disables NACK Detection Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables NACK Detection Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tende_SPEC;
     pub type Tende = crate::EnumBitfieldStruct<u8, Tende_SPEC>;
     impl Tende {
+        #[doc = "Disables Transmit End Interrupt Status logging"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Transmit End Interrupt Status logging"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ale_SPEC;
     pub type Ale = crate::EnumBitfieldStruct<u8, Ale_SPEC>;
     impl Ale {
+        #[doc = "Disables Arbitration Lost Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Arbitration Lost Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tode_SPEC;
     pub type Tode = crate::EnumBitfieldStruct<u8, Tode_SPEC>;
     impl Tode {
+        #[doc = "Disables Timeout Detection Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Timeout Detection Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wucndde_SPEC;
     pub type Wucndde = crate::EnumBitfieldStruct<u8, Wucndde_SPEC>;
     impl Wucndde {
+        #[doc = "Disables Wake-up Condition Detection Status logging"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Wake-up Condition Detection Status logging"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -20124,9 +22071,11 @@ impl crate::sealed::RegSpec for BsteHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Bus Status Enable Register"]
 pub type BsteHaL = crate::RegValueT<BsteHaL_SPEC>;
 
 impl BsteHaL {
+    #[doc = "START Condition Detection Enable"]
     #[inline(always)]
     pub fn stcndde(
         self,
@@ -20152,6 +22101,7 @@ impl BsteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "STOP Condition Detection Enable"]
     #[inline(always)]
     pub fn spcndde(
         self,
@@ -20177,6 +22127,7 @@ impl BsteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "HDR Exit Pattern  Detection Enable"]
     #[inline(always)]
     pub fn hdrexde(
         self,
@@ -20202,6 +22153,7 @@ impl BsteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "NACK Detection Enable"]
     #[inline(always)]
     pub fn nackde(
         self,
@@ -20227,6 +22179,7 @@ impl BsteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transmit End Enable"]
     #[inline(always)]
     pub fn tende(
         self,
@@ -20252,6 +22205,7 @@ impl BsteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -20271,40 +22225,50 @@ pub mod bste_ha_l {
     pub struct Stcndde_SPEC;
     pub type Stcndde = crate::EnumBitfieldStruct<u8, Stcndde_SPEC>;
     impl Stcndde {
+        #[doc = "Disables START Condition Detection Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables START Condition Detection Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spcndde_SPEC;
     pub type Spcndde = crate::EnumBitfieldStruct<u8, Spcndde_SPEC>;
     impl Spcndde {
+        #[doc = "Disables STOP Condition Detection Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables STOP Condition Detection Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hdrexde_SPEC;
     pub type Hdrexde = crate::EnumBitfieldStruct<u8, Hdrexde_SPEC>;
     impl Hdrexde {
+        #[doc = "Disables HDR Exit Pattern Detection Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables HDR Exit Pattern Detection Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nackde_SPEC;
     pub type Nackde = crate::EnumBitfieldStruct<u8, Nackde_SPEC>;
     impl Nackde {
+        #[doc = "Disables NACK Detection Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables NACK Detection Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tende_SPEC;
     pub type Tende = crate::EnumBitfieldStruct<u8, Tende_SPEC>;
     impl Tende {
+        #[doc = "Disables Transmit End Interrupt Status logging"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Transmit End Interrupt Status logging"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -20315,9 +22279,11 @@ impl crate::sealed::RegSpec for BsteByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Status Enable Register"]
 pub type BsteByLl = crate::RegValueT<BsteByLl_SPEC>;
 
 impl BsteByLl {
+    #[doc = "START Condition Detection Enable"]
     #[inline(always)]
     pub fn stcndde(
         self,
@@ -20343,6 +22309,7 @@ impl BsteByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "STOP Condition Detection Enable"]
     #[inline(always)]
     pub fn spcndde(
         self,
@@ -20368,6 +22335,7 @@ impl BsteByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "HDR Exit Pattern  Detection Enable"]
     #[inline(always)]
     pub fn hdrexde(
         self,
@@ -20393,6 +22361,7 @@ impl BsteByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "NACK Detection Enable"]
     #[inline(always)]
     pub fn nackde(
         self,
@@ -20418,6 +22387,7 @@ impl BsteByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -20437,32 +22407,40 @@ pub mod bste_by_ll {
     pub struct Stcndde_SPEC;
     pub type Stcndde = crate::EnumBitfieldStruct<u8, Stcndde_SPEC>;
     impl Stcndde {
+        #[doc = "Disables START Condition Detection Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables START Condition Detection Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spcndde_SPEC;
     pub type Spcndde = crate::EnumBitfieldStruct<u8, Spcndde_SPEC>;
     impl Spcndde {
+        #[doc = "Disables STOP Condition Detection Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables STOP Condition Detection Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hdrexde_SPEC;
     pub type Hdrexde = crate::EnumBitfieldStruct<u8, Hdrexde_SPEC>;
     impl Hdrexde {
+        #[doc = "Disables HDR Exit Pattern Detection Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables HDR Exit Pattern Detection Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nackde_SPEC;
     pub type Nackde = crate::EnumBitfieldStruct<u8, Nackde_SPEC>;
     impl Nackde {
+        #[doc = "Disables NACK Detection Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables NACK Detection Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -20473,9 +22451,11 @@ impl crate::sealed::RegSpec for BsteByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Status Enable Register"]
 pub type BsteByLh = crate::RegValueT<BsteByLh_SPEC>;
 
 impl BsteByLh {
+    #[doc = "Transmit End Enable"]
     #[inline(always)]
     pub fn tende(
         self,
@@ -20501,6 +22481,7 @@ impl BsteByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -20520,8 +22501,10 @@ pub mod bste_by_lh {
     pub struct Tende_SPEC;
     pub type Tende = crate::EnumBitfieldStruct<u8, Tende_SPEC>;
     impl Tende {
+        #[doc = "Disables Transmit End Interrupt Status logging"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Transmit End Interrupt Status logging"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -20532,9 +22515,11 @@ impl crate::sealed::RegSpec for BsteHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Bus Status Enable Register"]
 pub type BsteHaH = crate::RegValueT<BsteHaH_SPEC>;
 
 impl BsteHaH {
+    #[doc = "Arbitration Lost Enable"]
     #[inline(always)]
     pub fn ale(
         self,
@@ -20560,6 +22545,7 @@ impl BsteHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timeout Detection Enable"]
     #[inline(always)]
     pub fn tode(
         self,
@@ -20585,6 +22571,7 @@ impl BsteHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake-up Condition Detection Enable"]
     #[inline(always)]
     pub fn wucndde(
         self,
@@ -20610,6 +22597,7 @@ impl BsteHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -20629,24 +22617,30 @@ pub mod bste_ha_h {
     pub struct Ale_SPEC;
     pub type Ale = crate::EnumBitfieldStruct<u8, Ale_SPEC>;
     impl Ale {
+        #[doc = "Disables Arbitration Lost Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Arbitration Lost Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tode_SPEC;
     pub type Tode = crate::EnumBitfieldStruct<u8, Tode_SPEC>;
     impl Tode {
+        #[doc = "Disables Timeout Detection Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Timeout Detection Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wucndde_SPEC;
     pub type Wucndde = crate::EnumBitfieldStruct<u8, Wucndde_SPEC>;
     impl Wucndde {
+        #[doc = "Disables Wake-up Condition Detection Status logging"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Wake-up Condition Detection Status logging"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -20657,9 +22651,11 @@ impl crate::sealed::RegSpec for BsteByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Status Enable Register"]
 pub type BsteByHl = crate::RegValueT<BsteByHl_SPEC>;
 
 impl BsteByHl {
+    #[doc = "Arbitration Lost Enable"]
     #[inline(always)]
     pub fn ale(
         self,
@@ -20685,6 +22681,7 @@ impl BsteByHl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timeout Detection Enable"]
     #[inline(always)]
     pub fn tode(
         self,
@@ -20710,6 +22707,7 @@ impl BsteByHl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -20729,16 +22727,20 @@ pub mod bste_by_hl {
     pub struct Ale_SPEC;
     pub type Ale = crate::EnumBitfieldStruct<u8, Ale_SPEC>;
     impl Ale {
+        #[doc = "Disables Arbitration Lost Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Arbitration Lost Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tode_SPEC;
     pub type Tode = crate::EnumBitfieldStruct<u8, Tode_SPEC>;
     impl Tode {
+        #[doc = "Disables Timeout Detection Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Timeout Detection Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -20749,9 +22751,11 @@ impl crate::sealed::RegSpec for BsteByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Status Enable Register"]
 pub type BsteByHh = crate::RegValueT<BsteByHh_SPEC>;
 
 impl BsteByHh {
+    #[doc = "Wake-up Condition Detection Enable"]
     #[inline(always)]
     pub fn wucndde(
         self,
@@ -20777,6 +22781,7 @@ impl BsteByHh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -20796,8 +22801,10 @@ pub mod bste_by_hh {
     pub struct Wucndde_SPEC;
     pub type Wucndde = crate::EnumBitfieldStruct<u8, Wucndde_SPEC>;
     impl Wucndde {
+        #[doc = "Disables Wake-up Condition Detection Status logging"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Wake-up Condition Detection Status logging"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -20808,9 +22815,11 @@ impl crate::sealed::RegSpec for Bie_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Interrupt Enable Register"]
 pub type Bie = crate::RegValueT<Bie_SPEC>;
 
 impl Bie {
+    #[doc = "START Condition Detection Interrupt Enable"]
     #[inline(always)]
     pub fn stcnddie(
         self,
@@ -20836,6 +22845,7 @@ impl Bie {
         >::from_register(self, 0)
     }
 
+    #[doc = "STOP Condition Detection Interrupt Enable"]
     #[inline(always)]
     pub fn spcnddie(
         self,
@@ -20861,6 +22871,7 @@ impl Bie {
         >::from_register(self, 0)
     }
 
+    #[doc = "HDR Exit Pattern Detection Interrupt Enable"]
     #[inline(always)]
     pub fn hdrexdie(
         self,
@@ -20886,6 +22897,7 @@ impl Bie {
         >::from_register(self, 0)
     }
 
+    #[doc = "NACK Detection Interrupt Enable"]
     #[inline(always)]
     pub fn nackdie(
         self,
@@ -20911,6 +22923,7 @@ impl Bie {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transmit End Interrupt Enable"]
     #[inline(always)]
     pub fn tendie(
         self,
@@ -20936,6 +22949,7 @@ impl Bie {
         >::from_register(self, 0)
     }
 
+    #[doc = "Arbitration Lost Interrupt Enable"]
     #[inline(always)]
     pub fn alie(
         self,
@@ -20961,6 +22975,7 @@ impl Bie {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timeout Detection Interrupt Enable"]
     #[inline(always)]
     pub fn todie(
         self,
@@ -20986,6 +23001,7 @@ impl Bie {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake-Up Condition Detection Interrupt Enable"]
     #[inline(always)]
     pub fn wucnddie(
         self,
@@ -21011,6 +23027,7 @@ impl Bie {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -21030,64 +23047,80 @@ pub mod bie {
     pub struct Stcnddie_SPEC;
     pub type Stcnddie = crate::EnumBitfieldStruct<u8, Stcnddie_SPEC>;
     impl Stcnddie {
+        #[doc = "Disables START Condition Detection Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables START Condition Detection Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spcnddie_SPEC;
     pub type Spcnddie = crate::EnumBitfieldStruct<u8, Spcnddie_SPEC>;
     impl Spcnddie {
+        #[doc = "Disables STOP Condition Detection Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables STOP Condition Detection Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hdrexdie_SPEC;
     pub type Hdrexdie = crate::EnumBitfieldStruct<u8, Hdrexdie_SPEC>;
     impl Hdrexdie {
+        #[doc = "Disables HDR Exit Pattern Detection Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables HDR Exit Pattern Detection Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nackdie_SPEC;
     pub type Nackdie = crate::EnumBitfieldStruct<u8, Nackdie_SPEC>;
     impl Nackdie {
+        #[doc = "Disables NACK Detection Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables NACK Detection Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tendie_SPEC;
     pub type Tendie = crate::EnumBitfieldStruct<u8, Tendie_SPEC>;
     impl Tendie {
+        #[doc = "Disables Transmit End Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Transmit End Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Alie_SPEC;
     pub type Alie = crate::EnumBitfieldStruct<u8, Alie_SPEC>;
     impl Alie {
+        #[doc = "Disables Arbitration Lost Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Arbitration Lost Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Todie_SPEC;
     pub type Todie = crate::EnumBitfieldStruct<u8, Todie_SPEC>;
     impl Todie {
+        #[doc = "Disables Timeout Detection Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Timeout Detection Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wucnddie_SPEC;
     pub type Wucnddie = crate::EnumBitfieldStruct<u8, Wucnddie_SPEC>;
     impl Wucnddie {
+        #[doc = "Disables Wake-Up Condition Detection Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Wake-Up Condition Detection Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -21098,9 +23131,11 @@ impl crate::sealed::RegSpec for BieHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Bus Interrupt Enable Register"]
 pub type BieHaL = crate::RegValueT<BieHaL_SPEC>;
 
 impl BieHaL {
+    #[doc = "START Condition Detection Interrupt Enable"]
     #[inline(always)]
     pub fn stcnddie(
         self,
@@ -21126,6 +23161,7 @@ impl BieHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "STOP Condition Detection Interrupt Enable"]
     #[inline(always)]
     pub fn spcnddie(
         self,
@@ -21151,6 +23187,7 @@ impl BieHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "HDR Exit Pattern Detection Interrupt Enable"]
     #[inline(always)]
     pub fn hdrexdie(
         self,
@@ -21176,6 +23213,7 @@ impl BieHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "NACK Detection Interrupt Enable"]
     #[inline(always)]
     pub fn nackdie(
         self,
@@ -21201,6 +23239,7 @@ impl BieHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transmit End Interrupt Enable"]
     #[inline(always)]
     pub fn tendie(
         self,
@@ -21226,6 +23265,7 @@ impl BieHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -21245,40 +23285,50 @@ pub mod bie_ha_l {
     pub struct Stcnddie_SPEC;
     pub type Stcnddie = crate::EnumBitfieldStruct<u8, Stcnddie_SPEC>;
     impl Stcnddie {
+        #[doc = "Disables START Condition Detection Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables START Condition Detection Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spcnddie_SPEC;
     pub type Spcnddie = crate::EnumBitfieldStruct<u8, Spcnddie_SPEC>;
     impl Spcnddie {
+        #[doc = "Disables STOP Condition Detection Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables STOP Condition Detection Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hdrexdie_SPEC;
     pub type Hdrexdie = crate::EnumBitfieldStruct<u8, Hdrexdie_SPEC>;
     impl Hdrexdie {
+        #[doc = "Disables HDR Exit Pattern Detection Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables HDR Exit Pattern Detection Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nackdie_SPEC;
     pub type Nackdie = crate::EnumBitfieldStruct<u8, Nackdie_SPEC>;
     impl Nackdie {
+        #[doc = "Disables NACK Detection Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables NACK Detection Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tendie_SPEC;
     pub type Tendie = crate::EnumBitfieldStruct<u8, Tendie_SPEC>;
     impl Tendie {
+        #[doc = "Disables Transmit End Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Transmit End Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -21289,9 +23339,11 @@ impl crate::sealed::RegSpec for BieByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Interrupt Enable Register"]
 pub type BieByLl = crate::RegValueT<BieByLl_SPEC>;
 
 impl BieByLl {
+    #[doc = "START Condition Detection Interrupt Enable"]
     #[inline(always)]
     pub fn stcnddie(
         self,
@@ -21317,6 +23369,7 @@ impl BieByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "STOP Condition Detection Interrupt Enable"]
     #[inline(always)]
     pub fn spcnddie(
         self,
@@ -21342,6 +23395,7 @@ impl BieByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "HDR Exit Pattern Detection Interrupt Enable"]
     #[inline(always)]
     pub fn hdrexdie(
         self,
@@ -21367,6 +23421,7 @@ impl BieByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "NACK Detection Interrupt Enable"]
     #[inline(always)]
     pub fn nackdie(
         self,
@@ -21392,6 +23447,7 @@ impl BieByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -21411,32 +23467,40 @@ pub mod bie_by_ll {
     pub struct Stcnddie_SPEC;
     pub type Stcnddie = crate::EnumBitfieldStruct<u8, Stcnddie_SPEC>;
     impl Stcnddie {
+        #[doc = "Disables START Condition Detection Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables START Condition Detection Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spcnddie_SPEC;
     pub type Spcnddie = crate::EnumBitfieldStruct<u8, Spcnddie_SPEC>;
     impl Spcnddie {
+        #[doc = "Disables STOP Condition Detection Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables STOP Condition Detection Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hdrexdie_SPEC;
     pub type Hdrexdie = crate::EnumBitfieldStruct<u8, Hdrexdie_SPEC>;
     impl Hdrexdie {
+        #[doc = "Disables HDR Exit Pattern Detection Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables HDR Exit Pattern Detection Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nackdie_SPEC;
     pub type Nackdie = crate::EnumBitfieldStruct<u8, Nackdie_SPEC>;
     impl Nackdie {
+        #[doc = "Disables NACK Detection Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables NACK Detection Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -21447,9 +23511,11 @@ impl crate::sealed::RegSpec for BieByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Interrupt Enable Register"]
 pub type BieByLh = crate::RegValueT<BieByLh_SPEC>;
 
 impl BieByLh {
+    #[doc = "Transmit End Interrupt Enable"]
     #[inline(always)]
     pub fn tendie(
         self,
@@ -21475,6 +23541,7 @@ impl BieByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -21494,8 +23561,10 @@ pub mod bie_by_lh {
     pub struct Tendie_SPEC;
     pub type Tendie = crate::EnumBitfieldStruct<u8, Tendie_SPEC>;
     impl Tendie {
+        #[doc = "Disables Transmit End Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Transmit End Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -21506,9 +23575,11 @@ impl crate::sealed::RegSpec for BieHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Bus Interrupt Enable Register"]
 pub type BieHaH = crate::RegValueT<BieHaH_SPEC>;
 
 impl BieHaH {
+    #[doc = "Arbitration Lost Interrupt Enable"]
     #[inline(always)]
     pub fn alie(
         self,
@@ -21534,6 +23605,7 @@ impl BieHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timeout Detection Interrupt Enable"]
     #[inline(always)]
     pub fn todie(
         self,
@@ -21559,6 +23631,7 @@ impl BieHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake-Up Condition Detection Interrupt Enable"]
     #[inline(always)]
     pub fn wucnddie(
         self,
@@ -21584,6 +23657,7 @@ impl BieHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -21603,24 +23677,30 @@ pub mod bie_ha_h {
     pub struct Alie_SPEC;
     pub type Alie = crate::EnumBitfieldStruct<u8, Alie_SPEC>;
     impl Alie {
+        #[doc = "Disables Arbitration Lost Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Arbitration Lost Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Todie_SPEC;
     pub type Todie = crate::EnumBitfieldStruct<u8, Todie_SPEC>;
     impl Todie {
+        #[doc = "Disables Timeout Detection Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Timeout Detection Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wucnddie_SPEC;
     pub type Wucnddie = crate::EnumBitfieldStruct<u8, Wucnddie_SPEC>;
     impl Wucnddie {
+        #[doc = "Disables Wake-Up Condition Detection Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Wake-Up Condition Detection Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -21631,9 +23711,11 @@ impl crate::sealed::RegSpec for BieByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Interrupt Enable Register"]
 pub type BieByHl = crate::RegValueT<BieByHl_SPEC>;
 
 impl BieByHl {
+    #[doc = "Arbitration Lost Interrupt Enable"]
     #[inline(always)]
     pub fn alie(
         self,
@@ -21659,6 +23741,7 @@ impl BieByHl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timeout Detection Interrupt Enable"]
     #[inline(always)]
     pub fn todie(
         self,
@@ -21684,6 +23767,7 @@ impl BieByHl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -21703,16 +23787,20 @@ pub mod bie_by_hl {
     pub struct Alie_SPEC;
     pub type Alie = crate::EnumBitfieldStruct<u8, Alie_SPEC>;
     impl Alie {
+        #[doc = "Disables Arbitration Lost Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Arbitration Lost Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Todie_SPEC;
     pub type Todie = crate::EnumBitfieldStruct<u8, Todie_SPEC>;
     impl Todie {
+        #[doc = "Disables Timeout Detection Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Timeout Detection Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -21723,9 +23811,11 @@ impl crate::sealed::RegSpec for BieByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Interrupt Enable Register"]
 pub type BieByHh = crate::RegValueT<BieByHh_SPEC>;
 
 impl BieByHh {
+    #[doc = "Wake-Up Condition Detection Interrupt Enable"]
     #[inline(always)]
     pub fn wucnddie(
         self,
@@ -21751,6 +23841,7 @@ impl BieByHh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -21770,8 +23861,10 @@ pub mod bie_by_hh {
     pub struct Wucnddie_SPEC;
     pub type Wucnddie = crate::EnumBitfieldStruct<u8, Wucnddie_SPEC>;
     impl Wucnddie {
+        #[doc = "Disables Wake-Up Condition Detection Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Wake-Up Condition Detection Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -21782,9 +23875,11 @@ impl crate::sealed::RegSpec for Bstfc_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Status Force Register"]
 pub type Bstfc = crate::RegValueT<Bstfc_SPEC>;
 
 impl Bstfc {
+    #[doc = "START Condition Detection Force"]
     #[inline(always)]
     pub fn stcnddfc(
         self,
@@ -21810,6 +23905,7 @@ impl Bstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "STOP Condition Detection Force"]
     #[inline(always)]
     pub fn spcnddfc(
         self,
@@ -21835,6 +23931,7 @@ impl Bstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "HDR Exit Pattern Detection Force"]
     #[inline(always)]
     pub fn hdrexdfc(
         self,
@@ -21860,6 +23957,7 @@ impl Bstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "NACK Detection Force"]
     #[inline(always)]
     pub fn nackdfc(
         self,
@@ -21885,6 +23983,7 @@ impl Bstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transmit End Force"]
     #[inline(always)]
     pub fn tendfc(
         self,
@@ -21910,6 +24009,7 @@ impl Bstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Arbitration Lost Force"]
     #[inline(always)]
     pub fn alfc(
         self,
@@ -21935,6 +24035,7 @@ impl Bstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timeout Detection Force"]
     #[inline(always)]
     pub fn todfc(
         self,
@@ -21960,6 +24061,7 @@ impl Bstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake-Up Condition Detection Force"]
     #[inline(always)]
     pub fn wucnddfc(
         self,
@@ -21985,6 +24087,7 @@ impl Bstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -22004,64 +24107,80 @@ pub mod bstfc {
     pub struct Stcnddfc_SPEC;
     pub type Stcnddfc = crate::EnumBitfieldStruct<u8, Stcnddfc_SPEC>;
     impl Stcnddfc {
+        #[doc = "not Force START Condition Detection Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force START Condition Detection Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spcnddfc_SPEC;
     pub type Spcnddfc = crate::EnumBitfieldStruct<u8, Spcnddfc_SPEC>;
     impl Spcnddfc {
+        #[doc = "not Force STOP Condition Detection Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force STOP Condition Detection Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hdrexdfc_SPEC;
     pub type Hdrexdfc = crate::EnumBitfieldStruct<u8, Hdrexdfc_SPEC>;
     impl Hdrexdfc {
+        #[doc = "not Force HDR Exit Pattern Detection Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force HDR Exit Pattern Detection Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nackdfc_SPEC;
     pub type Nackdfc = crate::EnumBitfieldStruct<u8, Nackdfc_SPEC>;
     impl Nackdfc {
+        #[doc = "not Force NACK Detection Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force NACK Detection Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tendfc_SPEC;
     pub type Tendfc = crate::EnumBitfieldStruct<u8, Tendfc_SPEC>;
     impl Tendfc {
+        #[doc = "not Force Transmit End Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Transmit End Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Alfc_SPEC;
     pub type Alfc = crate::EnumBitfieldStruct<u8, Alfc_SPEC>;
     impl Alfc {
+        #[doc = "not Force Arbitration Lost Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Arbitration Lost Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Todfc_SPEC;
     pub type Todfc = crate::EnumBitfieldStruct<u8, Todfc_SPEC>;
     impl Todfc {
+        #[doc = "not Force Timeout Detection Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Timeout Detection Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wucnddfc_SPEC;
     pub type Wucnddfc = crate::EnumBitfieldStruct<u8, Wucnddfc_SPEC>;
     impl Wucnddfc {
+        #[doc = "not Force Wake-Up Condition Detection Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Wake-Up Condition Detection Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -22072,9 +24191,11 @@ impl crate::sealed::RegSpec for BstfcHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Bus Status Force Register"]
 pub type BstfcHaL = crate::RegValueT<BstfcHaL_SPEC>;
 
 impl BstfcHaL {
+    #[doc = "START Condition Detection Force"]
     #[inline(always)]
     pub fn stcnddfc(
         self,
@@ -22100,6 +24221,7 @@ impl BstfcHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "STOP Condition Detection Force"]
     #[inline(always)]
     pub fn spcnddfc(
         self,
@@ -22125,6 +24247,7 @@ impl BstfcHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "HDR Exit Pattern Detection Force"]
     #[inline(always)]
     pub fn hdrexdfc(
         self,
@@ -22150,6 +24273,7 @@ impl BstfcHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "NACK Detection Force"]
     #[inline(always)]
     pub fn nackdfc(
         self,
@@ -22175,6 +24299,7 @@ impl BstfcHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Transmit End Force"]
     #[inline(always)]
     pub fn tendfc(
         self,
@@ -22200,6 +24325,7 @@ impl BstfcHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -22219,40 +24345,50 @@ pub mod bstfc_ha_l {
     pub struct Stcnddfc_SPEC;
     pub type Stcnddfc = crate::EnumBitfieldStruct<u8, Stcnddfc_SPEC>;
     impl Stcnddfc {
+        #[doc = "not Force START Condition Detection Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force START Condition Detection Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spcnddfc_SPEC;
     pub type Spcnddfc = crate::EnumBitfieldStruct<u8, Spcnddfc_SPEC>;
     impl Spcnddfc {
+        #[doc = "not Force STOP Condition Detection Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force STOP Condition Detection Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hdrexdfc_SPEC;
     pub type Hdrexdfc = crate::EnumBitfieldStruct<u8, Hdrexdfc_SPEC>;
     impl Hdrexdfc {
+        #[doc = "not Force HDR Exit Pattern Detection Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force HDR Exit Pattern Detection Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nackdfc_SPEC;
     pub type Nackdfc = crate::EnumBitfieldStruct<u8, Nackdfc_SPEC>;
     impl Nackdfc {
+        #[doc = "not Force NACK Detection Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force NACK Detection Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tendfc_SPEC;
     pub type Tendfc = crate::EnumBitfieldStruct<u8, Tendfc_SPEC>;
     impl Tendfc {
+        #[doc = "not Force Transmit End Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Transmit End Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -22263,9 +24399,11 @@ impl crate::sealed::RegSpec for BstfcByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Status Force Register"]
 pub type BstfcByLl = crate::RegValueT<BstfcByLl_SPEC>;
 
 impl BstfcByLl {
+    #[doc = "START Condition Detection Force"]
     #[inline(always)]
     pub fn stcnddfc(
         self,
@@ -22291,6 +24429,7 @@ impl BstfcByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "STOP Condition Detection Force"]
     #[inline(always)]
     pub fn spcnddfc(
         self,
@@ -22316,6 +24455,7 @@ impl BstfcByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "HDR Exit Pattern Detection Force"]
     #[inline(always)]
     pub fn hdrexdfc(
         self,
@@ -22341,6 +24481,7 @@ impl BstfcByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "NACK Detection Force"]
     #[inline(always)]
     pub fn nackdfc(
         self,
@@ -22366,6 +24507,7 @@ impl BstfcByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -22385,32 +24527,40 @@ pub mod bstfc_by_ll {
     pub struct Stcnddfc_SPEC;
     pub type Stcnddfc = crate::EnumBitfieldStruct<u8, Stcnddfc_SPEC>;
     impl Stcnddfc {
+        #[doc = "not Force START Condition Detection Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force START Condition Detection Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spcnddfc_SPEC;
     pub type Spcnddfc = crate::EnumBitfieldStruct<u8, Spcnddfc_SPEC>;
     impl Spcnddfc {
+        #[doc = "not Force STOP Condition Detection Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force STOP Condition Detection Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hdrexdfc_SPEC;
     pub type Hdrexdfc = crate::EnumBitfieldStruct<u8, Hdrexdfc_SPEC>;
     impl Hdrexdfc {
+        #[doc = "not Force HDR Exit Pattern Detection Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force HDR Exit Pattern Detection Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nackdfc_SPEC;
     pub type Nackdfc = crate::EnumBitfieldStruct<u8, Nackdfc_SPEC>;
     impl Nackdfc {
+        #[doc = "not Force NACK Detection Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force NACK Detection Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -22421,9 +24571,11 @@ impl crate::sealed::RegSpec for BstfcByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Status Force Register"]
 pub type BstfcByLh = crate::RegValueT<BstfcByLh_SPEC>;
 
 impl BstfcByLh {
+    #[doc = "Transmit End Force"]
     #[inline(always)]
     pub fn tendfc(
         self,
@@ -22449,6 +24601,7 @@ impl BstfcByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -22468,8 +24621,10 @@ pub mod bstfc_by_lh {
     pub struct Tendfc_SPEC;
     pub type Tendfc = crate::EnumBitfieldStruct<u8, Tendfc_SPEC>;
     impl Tendfc {
+        #[doc = "not Force Transmit End Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Transmit End Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -22480,9 +24635,11 @@ impl crate::sealed::RegSpec for BstfcHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Bus Status Force Register"]
 pub type BstfcHaH = crate::RegValueT<BstfcHaH_SPEC>;
 
 impl BstfcHaH {
+    #[doc = "Arbitration Lost Force"]
     #[inline(always)]
     pub fn alfc(
         self,
@@ -22508,6 +24665,7 @@ impl BstfcHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timeout Detection Force"]
     #[inline(always)]
     pub fn todfc(
         self,
@@ -22533,6 +24691,7 @@ impl BstfcHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "Wake-Up Condition Detection Force"]
     #[inline(always)]
     pub fn wucnddfc(
         self,
@@ -22558,6 +24717,7 @@ impl BstfcHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -22577,24 +24737,30 @@ pub mod bstfc_ha_h {
     pub struct Alfc_SPEC;
     pub type Alfc = crate::EnumBitfieldStruct<u8, Alfc_SPEC>;
     impl Alfc {
+        #[doc = "not Force Arbitration Lost Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Arbitration Lost Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Todfc_SPEC;
     pub type Todfc = crate::EnumBitfieldStruct<u8, Todfc_SPEC>;
     impl Todfc {
+        #[doc = "not Force Timeout Detection Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Timeout Detection Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wucnddfc_SPEC;
     pub type Wucnddfc = crate::EnumBitfieldStruct<u8, Wucnddfc_SPEC>;
     impl Wucnddfc {
+        #[doc = "not Force Wake-Up Condition Detection Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Wake-Up Condition Detection Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -22605,9 +24771,11 @@ impl crate::sealed::RegSpec for BstfcByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Status Force Register"]
 pub type BstfcByHl = crate::RegValueT<BstfcByHl_SPEC>;
 
 impl BstfcByHl {
+    #[doc = "Arbitration Lost Force"]
     #[inline(always)]
     pub fn alfc(
         self,
@@ -22633,6 +24801,7 @@ impl BstfcByHl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Timeout Detection Force"]
     #[inline(always)]
     pub fn todfc(
         self,
@@ -22658,6 +24827,7 @@ impl BstfcByHl {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -22677,16 +24847,20 @@ pub mod bstfc_by_hl {
     pub struct Alfc_SPEC;
     pub type Alfc = crate::EnumBitfieldStruct<u8, Alfc_SPEC>;
     impl Alfc {
+        #[doc = "not Force Arbitration Lost Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Arbitration Lost Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Todfc_SPEC;
     pub type Todfc = crate::EnumBitfieldStruct<u8, Todfc_SPEC>;
     impl Todfc {
+        #[doc = "not Force Timeout Detection Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Timeout Detection Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -22697,9 +24871,11 @@ impl crate::sealed::RegSpec for BstfcByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Status Force Register"]
 pub type BstfcByHh = crate::RegValueT<BstfcByHh_SPEC>;
 
 impl BstfcByHh {
+    #[doc = "Wake-Up Condition Detection Force"]
     #[inline(always)]
     pub fn wucnddfc(
         self,
@@ -22725,6 +24901,7 @@ impl BstfcByHh {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -22744,8 +24921,10 @@ pub mod bstfc_by_hh {
     pub struct Wucnddfc_SPEC;
     pub type Wucnddfc = crate::EnumBitfieldStruct<u8, Wucnddfc_SPEC>;
     impl Wucnddfc {
+        #[doc = "not Force Wake-Up Condition Detection Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Wake-Up Condition Detection Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -22756,9 +24935,11 @@ impl crate::sealed::RegSpec for Ntst_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Normal Transfer Status Register"]
 pub type Ntst = crate::RegValueT<Ntst_SPEC>;
 
 impl Ntst {
+    #[doc = "Normal Tx Data Buffer Empty Flag 0"]
     #[inline(always)]
     pub fn tdbef0(
         self,
@@ -22784,6 +24965,7 @@ impl Ntst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Rx Data Buffer Full Flag 0"]
     #[inline(always)]
     pub fn rdbff0(
         self,
@@ -22809,6 +24991,7 @@ impl Ntst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal IBI Queue Empty/Full Flag"]
     #[inline(always)]
     pub fn ibiqeff(
         self,
@@ -22834,6 +25017,7 @@ impl Ntst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Command Queue Empty Flag"]
     #[inline(always)]
     pub fn cmdqef(
         self,
@@ -22859,6 +25043,7 @@ impl Ntst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Response Queue Full Flag"]
     #[inline(always)]
     pub fn rspqff(
         self,
@@ -22884,6 +25069,7 @@ impl Ntst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Abort Flag"]
     #[inline(always)]
     pub fn tabtf(
         self,
@@ -22909,6 +25095,7 @@ impl Ntst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Error Flag"]
     #[inline(always)]
     pub fn tef(
         self,
@@ -22934,6 +25121,7 @@ impl Ntst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Receive Status Queue Full Flag"]
     #[inline(always)]
     pub fn rsqff(
         self,
@@ -22959,6 +25147,7 @@ impl Ntst {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000000. The write value should be 00000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -22978,84 +25167,110 @@ pub mod ntst {
     pub struct Tdbef0_SPEC;
     pub type Tdbef0 = crate::EnumBitfieldStruct<u8, Tdbef0_SPEC>;
     impl Tdbef0 {
+        #[doc = "Normal Tx Data Buffer 0 contains transmit data"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Normal Tx Data Buffer 0 contains no transmit data."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "The number of empties in the Normal Tx Data Buffer 0 is < the NTBTHCTL0.TXDBTH\\[2:0\\] threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of empties in the Normal Tx Data Buffer 0 is >= the NTBTHCTL0.TXDBTH\\[2:0\\] threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbff0_SPEC;
     pub type Rdbff0 = crate::EnumBitfieldStruct<u8, Rdbff0_SPEC>;
     impl Rdbff0 {
+        #[doc = "Normal Rx Data Buffer0 contains no receive data."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Normal Rx Data Buffer0 contains receive data."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "The number of entries in the Normal Rx Data Buffer 0 is < the NTBTHCTL0.RXDBTH\\[2:0\\] threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of entries in the Normal Rx Data Buffer 0 is >= the NTBTHCTL0.RXDBTH\\[2:0\\] threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ibiqeff_SPEC;
     pub type Ibiqeff = crate::EnumBitfieldStruct<u8, Ibiqeff_SPEC>;
     impl Ibiqeff {
+        #[doc = "The number of IBI Status Queue entries is <= the NQTHCTL.IBIQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of IBI Status Queue entries is > the NQTHCTL.IBIQTH threshold"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "The number of IBI Data Buffer empties is < the IBI Data Buffer size."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of IBI Data Buffer empties is the IBI Data Buffer size."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "The number of IBI Data Buffer empties is < the NQTHCTL.IBIQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of IBI Data Buffer empties is >= the NQTHCTL.IBIQTH threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqef_SPEC;
     pub type Cmdqef = crate::EnumBitfieldStruct<u8, Cmdqef_SPEC>;
     impl Cmdqef {
+        #[doc = "The number of Command Queue empties is < the Command Queue size."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of Command Queue empties is the Command Queue size."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "The number of Command Queue empties is < the NQTHCTL.CMDQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of Command Queue empties is >= the NQTHCTL.CMDQTH threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqff_SPEC;
     pub type Rspqff = crate::EnumBitfieldStruct<u8, Rspqff_SPEC>;
     impl Rspqff {
+        #[doc = "The number of Response Queue entries is <= the NQTHCTL.RSPQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of Response Queue entries is > the NQTHCTL.RSPQTH threshold"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabtf_SPEC;
     pub type Tabtf = crate::EnumBitfieldStruct<u8, Tabtf_SPEC>;
     impl Tabtf {
+        #[doc = "Transfer Abort does not occur."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transfer Abort occur."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tef_SPEC;
     pub type Tef = crate::EnumBitfieldStruct<u8, Tef_SPEC>;
     impl Tef {
+        #[doc = "Transfer Error does not occur."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transfer Error occurs."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rsqff_SPEC;
     pub type Rsqff = crate::EnumBitfieldStruct<u8, Rsqff_SPEC>;
     impl Rsqff {
+        #[doc = "The number of Receive Status Queue entries is <= the NRQTHCTL.RSQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of Receive Status Queue entries is > the NRQTHCTL.RSQTH threshold."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -23066,9 +25281,11 @@ impl crate::sealed::RegSpec for NtstHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Normal Transfer Status Register"]
 pub type NtstHaL = crate::RegValueT<NtstHaL_SPEC>;
 
 impl NtstHaL {
+    #[doc = "Normal Tx Data Buffer Empty Flag 0"]
     #[inline(always)]
     pub fn tdbef0(
         self,
@@ -23094,6 +25311,7 @@ impl NtstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Rx Data Buffer Full Flag 0"]
     #[inline(always)]
     pub fn rdbff0(
         self,
@@ -23119,6 +25337,7 @@ impl NtstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal IBI Queue Empty/Full Flag"]
     #[inline(always)]
     pub fn ibiqeff(
         self,
@@ -23144,6 +25363,7 @@ impl NtstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Command Queue Empty Flag"]
     #[inline(always)]
     pub fn cmdqef(
         self,
@@ -23169,6 +25389,7 @@ impl NtstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Response Queue Full Flag"]
     #[inline(always)]
     pub fn rspqff(
         self,
@@ -23194,6 +25415,7 @@ impl NtstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Abort Flag"]
     #[inline(always)]
     pub fn tabtf(
         self,
@@ -23219,6 +25441,7 @@ impl NtstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Error Flag"]
     #[inline(always)]
     pub fn tef(
         self,
@@ -23244,6 +25467,7 @@ impl NtstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -23263,76 +25487,100 @@ pub mod ntst_ha_l {
     pub struct Tdbef0_SPEC;
     pub type Tdbef0 = crate::EnumBitfieldStruct<u8, Tdbef0_SPEC>;
     impl Tdbef0 {
+        #[doc = "Normal Tx Data Buffer 0 contains transmit data"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Normal Tx Data Buffer 0 contains no transmit data."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "The number of empties in the Normal Tx Data Buffer 0 is < the NTBTHCTL0.TXDBTH\\[2:0\\] threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of empties in the Normal Tx Data Buffer 0 is >= the NTBTHCTL0.TXDBTH\\[2:0\\] threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbff0_SPEC;
     pub type Rdbff0 = crate::EnumBitfieldStruct<u8, Rdbff0_SPEC>;
     impl Rdbff0 {
+        #[doc = "Normal Rx Data Buffer0 contains no receive data."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Normal Rx Data Buffer0 contains receive data."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "The number of entries in the Normal Rx Data Buffer 0 is < the NTBTHCTL0.RXDBTH\\[2:0\\] threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of entries in the Normal Rx Data Buffer 0 is >= the NTBTHCTL0.RXDBTH\\[2:0\\] threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ibiqeff_SPEC;
     pub type Ibiqeff = crate::EnumBitfieldStruct<u8, Ibiqeff_SPEC>;
     impl Ibiqeff {
+        #[doc = "The number of IBI Status Queue entries is <= the NQTHCTL.IBIQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of IBI Status Queue entries is > the NQTHCTL.IBIQTH threshold"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "The number of IBI Data Buffer empties is < the IBI Data Buffer size."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of IBI Data Buffer empties is the IBI Data Buffer size."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "The number of IBI Data Buffer empties is < the NQTHCTL.IBIQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of IBI Data Buffer empties is >= the NQTHCTL.IBIQTH threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqef_SPEC;
     pub type Cmdqef = crate::EnumBitfieldStruct<u8, Cmdqef_SPEC>;
     impl Cmdqef {
+        #[doc = "The number of Command Queue empties is < the Command Queue size."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of Command Queue empties is the Command Queue size."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "The number of Command Queue empties is < the NQTHCTL.CMDQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of Command Queue empties is >= the NQTHCTL.CMDQTH threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqff_SPEC;
     pub type Rspqff = crate::EnumBitfieldStruct<u8, Rspqff_SPEC>;
     impl Rspqff {
+        #[doc = "The number of Response Queue entries is <= the NQTHCTL.RSPQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of Response Queue entries is > the NQTHCTL.RSPQTH threshold"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabtf_SPEC;
     pub type Tabtf = crate::EnumBitfieldStruct<u8, Tabtf_SPEC>;
     impl Tabtf {
+        #[doc = "Transfer Abort does not occur."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transfer Abort occur."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tef_SPEC;
     pub type Tef = crate::EnumBitfieldStruct<u8, Tef_SPEC>;
     impl Tef {
+        #[doc = "Transfer Error does not occur."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transfer Error occurs."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -23343,9 +25591,11 @@ impl crate::sealed::RegSpec for NtstByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Transfer Status Register"]
 pub type NtstByLl = crate::RegValueT<NtstByLl_SPEC>;
 
 impl NtstByLl {
+    #[doc = "Normal Tx Data Buffer Empty Flag 0"]
     #[inline(always)]
     pub fn tdbef0(
         self,
@@ -23371,6 +25621,7 @@ impl NtstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Rx Data Buffer Full Flag 0"]
     #[inline(always)]
     pub fn rdbff0(
         self,
@@ -23396,6 +25647,7 @@ impl NtstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal IBI Queue Empty/Full Flag"]
     #[inline(always)]
     pub fn ibiqeff(
         self,
@@ -23421,6 +25673,7 @@ impl NtstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Command Queue Empty Flag"]
     #[inline(always)]
     pub fn cmdqef(
         self,
@@ -23446,6 +25699,7 @@ impl NtstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Response Queue Full Flag"]
     #[inline(always)]
     pub fn rspqff(
         self,
@@ -23471,6 +25725,7 @@ impl NtstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Abort Flag"]
     #[inline(always)]
     pub fn tabtf(
         self,
@@ -23496,6 +25751,7 @@ impl NtstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00. The write value should be 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -23515,68 +25771,90 @@ pub mod ntst_by_ll {
     pub struct Tdbef0_SPEC;
     pub type Tdbef0 = crate::EnumBitfieldStruct<u8, Tdbef0_SPEC>;
     impl Tdbef0 {
+        #[doc = "Normal Tx Data Buffer 0 contains transmit data"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Normal Tx Data Buffer 0 contains no transmit data."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "The number of empties in the Normal Tx Data Buffer 0 is < the NTBTHCTL0.TXDBTH\\[2:0\\] threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of empties in the Normal Tx Data Buffer 0 is >= the NTBTHCTL0.TXDBTH\\[2:0\\] threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbff0_SPEC;
     pub type Rdbff0 = crate::EnumBitfieldStruct<u8, Rdbff0_SPEC>;
     impl Rdbff0 {
+        #[doc = "Normal Rx Data Buffer0 contains no receive data."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Normal Rx Data Buffer0 contains receive data."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "The number of entries in the Normal Rx Data Buffer 0 is < the NTBTHCTL0.RXDBTH\\[2:0\\] threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of entries in the Normal Rx Data Buffer 0 is >= the NTBTHCTL0.RXDBTH\\[2:0\\] threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ibiqeff_SPEC;
     pub type Ibiqeff = crate::EnumBitfieldStruct<u8, Ibiqeff_SPEC>;
     impl Ibiqeff {
+        #[doc = "The number of IBI Status Queue entries is <= the NQTHCTL.IBIQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of IBI Status Queue entries is > the NQTHCTL.IBIQTH threshold"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "The number of IBI Data Buffer empties is < the IBI Data Buffer size."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of IBI Data Buffer empties is the IBI Data Buffer size."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "The number of IBI Data Buffer empties is < the NQTHCTL.IBIQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of IBI Data Buffer empties is >= the NQTHCTL.IBIQTH threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqef_SPEC;
     pub type Cmdqef = crate::EnumBitfieldStruct<u8, Cmdqef_SPEC>;
     impl Cmdqef {
+        #[doc = "The number of Command Queue empties is < the Command Queue size."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of Command Queue empties is the Command Queue size."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "The number of Command Queue empties is < the NQTHCTL.CMDQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of Command Queue empties is >= the NQTHCTL.CMDQTH threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqff_SPEC;
     pub type Rspqff = crate::EnumBitfieldStruct<u8, Rspqff_SPEC>;
     impl Rspqff {
+        #[doc = "The number of Response Queue entries is <= the NQTHCTL.RSPQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of Response Queue entries is > the NQTHCTL.RSPQTH threshold"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabtf_SPEC;
     pub type Tabtf = crate::EnumBitfieldStruct<u8, Tabtf_SPEC>;
     impl Tabtf {
+        #[doc = "Transfer Abort does not occur."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transfer Abort occur."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -23587,9 +25865,11 @@ impl crate::sealed::RegSpec for NtstByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Transfer Status Register"]
 pub type NtstByLh = crate::RegValueT<NtstByLh_SPEC>;
 
 impl NtstByLh {
+    #[doc = "Normal Transfer Error Flag"]
     #[inline(always)]
     pub fn tef(
         self,
@@ -23615,6 +25895,7 @@ impl NtstByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -23634,8 +25915,10 @@ pub mod ntst_by_lh {
     pub struct Tef_SPEC;
     pub type Tef = crate::EnumBitfieldStruct<u8, Tef_SPEC>;
     impl Tef {
+        #[doc = "Transfer Error does not occur."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Transfer Error occurs."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -23646,9 +25929,11 @@ impl crate::sealed::RegSpec for NtstHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Normal Transfer Status Register"]
 pub type NtstHaH = crate::RegValueT<NtstHaH_SPEC>;
 
 impl NtstHaH {
+    #[doc = "Normal Receive Status Queue Full Flag"]
     #[inline(always)]
     pub fn rsqff(
         self,
@@ -23674,6 +25959,7 @@ impl NtstHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000000. The write value should be 00000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -23694,8 +25980,10 @@ pub mod ntst_ha_h {
     pub struct Rsqff_SPEC;
     pub type Rsqff = crate::EnumBitfieldStruct<u8, Rsqff_SPEC>;
     impl Rsqff {
+        #[doc = "The number of Receive Status Queue entries is <= the NRQTHCTL.RSQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of Receive Status Queue entries is > the NRQTHCTL.RSQTH threshold."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -23706,9 +25994,11 @@ impl crate::sealed::RegSpec for NtstByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Transfer Status Register"]
 pub type NtstByHl = crate::RegValueT<NtstByHl_SPEC>;
 
 impl NtstByHl {
+    #[doc = "Normal Receive Status Queue Full Flag"]
     #[inline(always)]
     pub fn rsqff(
         self,
@@ -23734,6 +26024,7 @@ impl NtstByHl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -23753,8 +26044,10 @@ pub mod ntst_by_hl {
     pub struct Rsqff_SPEC;
     pub type Rsqff = crate::EnumBitfieldStruct<u8, Rsqff_SPEC>;
     impl Rsqff {
+        #[doc = "The number of Receive Status Queue entries is <= the NRQTHCTL.RSQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of Receive Status Queue entries is > the NRQTHCTL.RSQTH threshold."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -23765,9 +26058,11 @@ impl crate::sealed::RegSpec for Ntste_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Normal Transfer Status Enable Register"]
 pub type Ntste = crate::RegValueT<Ntste_SPEC>;
 
 impl Ntste {
+    #[doc = "Normal Tx Data Buffer Empty Enable 0"]
     #[inline(always)]
     pub fn tdbee0(
         self,
@@ -23793,6 +26088,7 @@ impl Ntste {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Rx Data Buffer Full Enable 0"]
     #[inline(always)]
     pub fn rdbfe0(
         self,
@@ -23818,6 +26114,7 @@ impl Ntste {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal IBI Queue Empty/Full Enable"]
     #[inline(always)]
     pub fn ibiqefe(
         self,
@@ -23843,6 +26140,7 @@ impl Ntste {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Command Queue Empty Enable"]
     #[inline(always)]
     pub fn cmdqee(
         self,
@@ -23868,6 +26166,7 @@ impl Ntste {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Response Queue Full Enable"]
     #[inline(always)]
     pub fn rspqfe(
         self,
@@ -23893,6 +26192,7 @@ impl Ntste {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Abort Enable"]
     #[inline(always)]
     pub fn tabte(
         self,
@@ -23918,6 +26218,7 @@ impl Ntste {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Error Enable"]
     #[inline(always)]
     pub fn tee(
         self,
@@ -23943,6 +26244,7 @@ impl Ntste {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Receive Status Queue Full Enable"]
     #[inline(always)]
     pub fn rsqfe(
         self,
@@ -23968,6 +26270,7 @@ impl Ntste {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000000. The write value should be 00000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -23988,64 +26291,80 @@ pub mod ntste {
     pub struct Tdbee0_SPEC;
     pub type Tdbee0 = crate::EnumBitfieldStruct<u8, Tdbee0_SPEC>;
     impl Tdbee0 {
+        #[doc = "Disables Tx0 Data Buffer Empty Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Tx0 Data Buffer Empty Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbfe0_SPEC;
     pub type Rdbfe0 = crate::EnumBitfieldStruct<u8, Rdbfe0_SPEC>;
     impl Rdbfe0 {
+        #[doc = "Disables Rx0 Data Buffer Full Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Rx0 Data Buffer Full Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ibiqefe_SPEC;
     pub type Ibiqefe = crate::EnumBitfieldStruct<u8, Ibiqefe_SPEC>;
     impl Ibiqefe {
+        #[doc = "Disables IBI Status Buffer Empty/Full Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables IBI Status Buffer Empty/Full Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqee_SPEC;
     pub type Cmdqee = crate::EnumBitfieldStruct<u8, Cmdqee_SPEC>;
     impl Cmdqee {
+        #[doc = "Disables Command Buffer Empty Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Command Buffer Empty Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqfe_SPEC;
     pub type Rspqfe = crate::EnumBitfieldStruct<u8, Rspqfe_SPEC>;
     impl Rspqfe {
+        #[doc = "Disables Response Buffer Full Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Response Buffer Full Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabte_SPEC;
     pub type Tabte = crate::EnumBitfieldStruct<u8, Tabte_SPEC>;
     impl Tabte {
+        #[doc = "Disables Transfer Abort Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Transfer Abort Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tee_SPEC;
     pub type Tee = crate::EnumBitfieldStruct<u8, Tee_SPEC>;
     impl Tee {
+        #[doc = "Disables Transfer Error Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Transfer Error Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rsqfe_SPEC;
     pub type Rsqfe = crate::EnumBitfieldStruct<u8, Rsqfe_SPEC>;
     impl Rsqfe {
+        #[doc = "Disables Receive Status Buffer Full Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Receive Status Buffer Full Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -24056,9 +26375,11 @@ impl crate::sealed::RegSpec for NtsteHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Normal Transfer Status Enable Register"]
 pub type NtsteHaL = crate::RegValueT<NtsteHaL_SPEC>;
 
 impl NtsteHaL {
+    #[doc = "Normal Tx Data Buffer Empty Enable 0"]
     #[inline(always)]
     pub fn tdbee0(
         self,
@@ -24084,6 +26405,7 @@ impl NtsteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Rx Data Buffer Full Enable 0"]
     #[inline(always)]
     pub fn rdbfe0(
         self,
@@ -24109,6 +26431,7 @@ impl NtsteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal IBI Queue Empty/Full Enable"]
     #[inline(always)]
     pub fn ibiqefe(
         self,
@@ -24134,6 +26457,7 @@ impl NtsteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Command Queue Empty Enable"]
     #[inline(always)]
     pub fn cmdqee(
         self,
@@ -24159,6 +26483,7 @@ impl NtsteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Response Queue Full Enable"]
     #[inline(always)]
     pub fn rspqfe(
         self,
@@ -24184,6 +26509,7 @@ impl NtsteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Abort Enable"]
     #[inline(always)]
     pub fn tabte(
         self,
@@ -24209,6 +26535,7 @@ impl NtsteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Error Enable"]
     #[inline(always)]
     pub fn tee(
         self,
@@ -24234,6 +26561,7 @@ impl NtsteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -24254,56 +26582,70 @@ pub mod ntste_ha_l {
     pub struct Tdbee0_SPEC;
     pub type Tdbee0 = crate::EnumBitfieldStruct<u8, Tdbee0_SPEC>;
     impl Tdbee0 {
+        #[doc = "Disables Tx0 Data Buffer Empty Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Tx0 Data Buffer Empty Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbfe0_SPEC;
     pub type Rdbfe0 = crate::EnumBitfieldStruct<u8, Rdbfe0_SPEC>;
     impl Rdbfe0 {
+        #[doc = "Disables Rx0 Data Buffer Full Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Rx0 Data Buffer Full Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ibiqefe_SPEC;
     pub type Ibiqefe = crate::EnumBitfieldStruct<u8, Ibiqefe_SPEC>;
     impl Ibiqefe {
+        #[doc = "Disables IBI Status Buffer Empty/Full Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables IBI Status Buffer Empty/Full Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqee_SPEC;
     pub type Cmdqee = crate::EnumBitfieldStruct<u8, Cmdqee_SPEC>;
     impl Cmdqee {
+        #[doc = "Disables Command Buffer Empty Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Command Buffer Empty Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqfe_SPEC;
     pub type Rspqfe = crate::EnumBitfieldStruct<u8, Rspqfe_SPEC>;
     impl Rspqfe {
+        #[doc = "Disables Response Buffer Full Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Response Buffer Full Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabte_SPEC;
     pub type Tabte = crate::EnumBitfieldStruct<u8, Tabte_SPEC>;
     impl Tabte {
+        #[doc = "Disables Transfer Abort Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Transfer Abort Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tee_SPEC;
     pub type Tee = crate::EnumBitfieldStruct<u8, Tee_SPEC>;
     impl Tee {
+        #[doc = "Disables Transfer Error Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Transfer Error Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -24314,9 +26656,11 @@ impl crate::sealed::RegSpec for NtsteByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Transfer Status Enable Register"]
 pub type NtsteByLl = crate::RegValueT<NtsteByLl_SPEC>;
 
 impl NtsteByLl {
+    #[doc = "Normal Tx Data Buffer Empty Enable 0"]
     #[inline(always)]
     pub fn tdbee0(
         self,
@@ -24342,6 +26686,7 @@ impl NtsteByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Rx Data Buffer Full Enable 0"]
     #[inline(always)]
     pub fn rdbfe0(
         self,
@@ -24367,6 +26712,7 @@ impl NtsteByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal IBI Queue Empty/Full Enable"]
     #[inline(always)]
     pub fn ibiqefe(
         self,
@@ -24392,6 +26738,7 @@ impl NtsteByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Command Queue Empty Enable"]
     #[inline(always)]
     pub fn cmdqee(
         self,
@@ -24417,6 +26764,7 @@ impl NtsteByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Response Queue Full Enable"]
     #[inline(always)]
     pub fn rspqfe(
         self,
@@ -24442,6 +26790,7 @@ impl NtsteByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Abort Enable"]
     #[inline(always)]
     pub fn tabte(
         self,
@@ -24467,6 +26816,7 @@ impl NtsteByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00. The write value should be 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -24486,48 +26836,60 @@ pub mod ntste_by_ll {
     pub struct Tdbee0_SPEC;
     pub type Tdbee0 = crate::EnumBitfieldStruct<u8, Tdbee0_SPEC>;
     impl Tdbee0 {
+        #[doc = "Disables Tx0 Data Buffer Empty Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Tx0 Data Buffer Empty Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbfe0_SPEC;
     pub type Rdbfe0 = crate::EnumBitfieldStruct<u8, Rdbfe0_SPEC>;
     impl Rdbfe0 {
+        #[doc = "Disables Rx0 Data Buffer Full Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Rx0 Data Buffer Full Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ibiqefe_SPEC;
     pub type Ibiqefe = crate::EnumBitfieldStruct<u8, Ibiqefe_SPEC>;
     impl Ibiqefe {
+        #[doc = "Disables IBI Status Buffer Empty/Full Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables IBI Status Buffer Empty/Full Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqee_SPEC;
     pub type Cmdqee = crate::EnumBitfieldStruct<u8, Cmdqee_SPEC>;
     impl Cmdqee {
+        #[doc = "Disables Command Buffer Empty Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Command Buffer Empty Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqfe_SPEC;
     pub type Rspqfe = crate::EnumBitfieldStruct<u8, Rspqfe_SPEC>;
     impl Rspqfe {
+        #[doc = "Disables Response Buffer Full Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Response Buffer Full Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabte_SPEC;
     pub type Tabte = crate::EnumBitfieldStruct<u8, Tabte_SPEC>;
     impl Tabte {
+        #[doc = "Disables Transfer Abort Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Transfer Abort Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -24538,9 +26900,11 @@ impl crate::sealed::RegSpec for NtsteByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Transfer Status Enable Register"]
 pub type NtsteByLh = crate::RegValueT<NtsteByLh_SPEC>;
 
 impl NtsteByLh {
+    #[doc = "Normal Transfer Error Enable"]
     #[inline(always)]
     pub fn tee(
         self,
@@ -24566,6 +26930,7 @@ impl NtsteByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -24586,8 +26951,10 @@ pub mod ntste_by_lh {
     pub struct Tee_SPEC;
     pub type Tee = crate::EnumBitfieldStruct<u8, Tee_SPEC>;
     impl Tee {
+        #[doc = "Disables Transfer Error Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Transfer Error Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -24598,9 +26965,11 @@ impl crate::sealed::RegSpec for NtsteHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Normal Transfer Status Enable Register"]
 pub type NtsteHaH = crate::RegValueT<NtsteHaH_SPEC>;
 
 impl NtsteHaH {
+    #[doc = "Normal Receive Status Queue Full Enable"]
     #[inline(always)]
     pub fn rsqfe(
         self,
@@ -24626,6 +26995,7 @@ impl NtsteHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000000. The write value should be 00000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -24646,8 +27016,10 @@ pub mod ntste_ha_h {
     pub struct Rsqfe_SPEC;
     pub type Rsqfe = crate::EnumBitfieldStruct<u8, Rsqfe_SPEC>;
     impl Rsqfe {
+        #[doc = "Disables Receive Status Buffer Full Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Receive Status Buffer Full Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -24658,9 +27030,11 @@ impl crate::sealed::RegSpec for NtsteByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Transfer Status Enable Register"]
 pub type NtsteByHl = crate::RegValueT<NtsteByHl_SPEC>;
 
 impl NtsteByHl {
+    #[doc = "Normal Receive Status Queue Full Enable"]
     #[inline(always)]
     pub fn rsqfe(
         self,
@@ -24686,6 +27060,7 @@ impl NtsteByHl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -24705,8 +27080,10 @@ pub mod ntste_by_hl {
     pub struct Rsqfe_SPEC;
     pub type Rsqfe = crate::EnumBitfieldStruct<u8, Rsqfe_SPEC>;
     impl Rsqfe {
+        #[doc = "Disables Receive Status Buffer Full Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Receive Status Buffer Full Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -24717,9 +27094,11 @@ impl crate::sealed::RegSpec for Ntie_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Normal Transfer Interrupt Enable Register"]
 pub type Ntie = crate::RegValueT<Ntie_SPEC>;
 
 impl Ntie {
+    #[doc = "Normal Tx Data Buffer Empty Interrupt Enable 0"]
     #[inline(always)]
     pub fn tdbeie0(
         self,
@@ -24745,6 +27124,7 @@ impl Ntie {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Rx Data Buffer Full Interrupt Enable 0"]
     #[inline(always)]
     pub fn rdbfie0(
         self,
@@ -24770,6 +27150,7 @@ impl Ntie {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal IBI Queue Empty/Full Interrupt Enable"]
     #[inline(always)]
     pub fn ibiqefie(
         self,
@@ -24795,6 +27176,7 @@ impl Ntie {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Command Queue Empty Interrupt Enable"]
     #[inline(always)]
     pub fn cmdqeie(
         self,
@@ -24820,6 +27202,7 @@ impl Ntie {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Response Queue Full Interrupt Enable"]
     #[inline(always)]
     pub fn rspqfie(
         self,
@@ -24845,6 +27228,7 @@ impl Ntie {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Abort Interrupt Enable"]
     #[inline(always)]
     pub fn tabtie(
         self,
@@ -24870,6 +27254,7 @@ impl Ntie {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Error Interrupt Enable"]
     #[inline(always)]
     pub fn teie(
         self,
@@ -24895,6 +27280,7 @@ impl Ntie {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Receive Status Queue Full Interrupt Enable"]
     #[inline(always)]
     pub fn rsqfie(
         self,
@@ -24920,6 +27306,7 @@ impl Ntie {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000000. The write value should be 00000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -24939,64 +27326,80 @@ pub mod ntie {
     pub struct Tdbeie0_SPEC;
     pub type Tdbeie0 = crate::EnumBitfieldStruct<u8, Tdbeie0_SPEC>;
     impl Tdbeie0 {
+        #[doc = "Disables Tx0 Data Buffer Empty Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Tx0 Data Buffer Empty Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbfie0_SPEC;
     pub type Rdbfie0 = crate::EnumBitfieldStruct<u8, Rdbfie0_SPEC>;
     impl Rdbfie0 {
+        #[doc = "Disables Rx0 Data Buffer Full Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Rx0 Data Buffer Full Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ibiqefie_SPEC;
     pub type Ibiqefie = crate::EnumBitfieldStruct<u8, Ibiqefie_SPEC>;
     impl Ibiqefie {
+        #[doc = "Disables IBI Status Buffer Empty/Full Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables IBI Status Buffer Empty/Full Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqeie_SPEC;
     pub type Cmdqeie = crate::EnumBitfieldStruct<u8, Cmdqeie_SPEC>;
     impl Cmdqeie {
+        #[doc = "Disables Command Buffer Empty Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Command Buffer Empty Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqfie_SPEC;
     pub type Rspqfie = crate::EnumBitfieldStruct<u8, Rspqfie_SPEC>;
     impl Rspqfie {
+        #[doc = "Disables Response Buffer Full Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Response Buffer Full Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabtie_SPEC;
     pub type Tabtie = crate::EnumBitfieldStruct<u8, Tabtie_SPEC>;
     impl Tabtie {
+        #[doc = "Disables Transfer Abort Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Transfer Abort Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Teie_SPEC;
     pub type Teie = crate::EnumBitfieldStruct<u8, Teie_SPEC>;
     impl Teie {
+        #[doc = "Disables Transfer Error Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Transfer Error Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rsqfie_SPEC;
     pub type Rsqfie = crate::EnumBitfieldStruct<u8, Rsqfie_SPEC>;
     impl Rsqfie {
+        #[doc = "Disables Receive Status Buffer Full Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Receive Status Buffer Full Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -25007,9 +27410,11 @@ impl crate::sealed::RegSpec for NtieHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Normal Transfer Interrupt Enable Register"]
 pub type NtieHaL = crate::RegValueT<NtieHaL_SPEC>;
 
 impl NtieHaL {
+    #[doc = "Normal Tx Data Buffer Empty Interrupt Enable 0"]
     #[inline(always)]
     pub fn tdbeie0(
         self,
@@ -25035,6 +27440,7 @@ impl NtieHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Rx Data Buffer Full Interrupt Enable 0"]
     #[inline(always)]
     pub fn rdbfie0(
         self,
@@ -25060,6 +27466,7 @@ impl NtieHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal IBI Queue Empty/Full Interrupt Enable"]
     #[inline(always)]
     pub fn ibiqefie(
         self,
@@ -25085,6 +27492,7 @@ impl NtieHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Command Queue Empty Interrupt Enable"]
     #[inline(always)]
     pub fn cmdqeie(
         self,
@@ -25110,6 +27518,7 @@ impl NtieHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Response Queue Full Interrupt Enable"]
     #[inline(always)]
     pub fn rspqfie(
         self,
@@ -25135,6 +27544,7 @@ impl NtieHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Abort Interrupt Enable"]
     #[inline(always)]
     pub fn tabtie(
         self,
@@ -25160,6 +27570,7 @@ impl NtieHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Error Interrupt Enable"]
     #[inline(always)]
     pub fn teie(
         self,
@@ -25185,6 +27596,7 @@ impl NtieHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -25204,56 +27616,70 @@ pub mod ntie_ha_l {
     pub struct Tdbeie0_SPEC;
     pub type Tdbeie0 = crate::EnumBitfieldStruct<u8, Tdbeie0_SPEC>;
     impl Tdbeie0 {
+        #[doc = "Disables Tx0 Data Buffer Empty Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Tx0 Data Buffer Empty Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbfie0_SPEC;
     pub type Rdbfie0 = crate::EnumBitfieldStruct<u8, Rdbfie0_SPEC>;
     impl Rdbfie0 {
+        #[doc = "Disables Rx0 Data Buffer Full Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Rx0 Data Buffer Full Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ibiqefie_SPEC;
     pub type Ibiqefie = crate::EnumBitfieldStruct<u8, Ibiqefie_SPEC>;
     impl Ibiqefie {
+        #[doc = "Disables IBI Status Buffer Empty/Full Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables IBI Status Buffer Empty/Full Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqeie_SPEC;
     pub type Cmdqeie = crate::EnumBitfieldStruct<u8, Cmdqeie_SPEC>;
     impl Cmdqeie {
+        #[doc = "Disables Command Buffer Empty Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Command Buffer Empty Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqfie_SPEC;
     pub type Rspqfie = crate::EnumBitfieldStruct<u8, Rspqfie_SPEC>;
     impl Rspqfie {
+        #[doc = "Disables Response Buffer Full Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Response Buffer Full Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabtie_SPEC;
     pub type Tabtie = crate::EnumBitfieldStruct<u8, Tabtie_SPEC>;
     impl Tabtie {
+        #[doc = "Disables Transfer Abort Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Transfer Abort Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Teie_SPEC;
     pub type Teie = crate::EnumBitfieldStruct<u8, Teie_SPEC>;
     impl Teie {
+        #[doc = "Disables Transfer Error Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Transfer Error Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -25264,9 +27690,11 @@ impl crate::sealed::RegSpec for NtieByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Transfer Interrupt Enable Register"]
 pub type NtieByLl = crate::RegValueT<NtieByLl_SPEC>;
 
 impl NtieByLl {
+    #[doc = "Normal Tx Data Buffer Empty Interrupt Enable 0"]
     #[inline(always)]
     pub fn tdbeie0(
         self,
@@ -25292,6 +27720,7 @@ impl NtieByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Rx Data Buffer Full Interrupt Enable 0"]
     #[inline(always)]
     pub fn rdbfie0(
         self,
@@ -25317,6 +27746,7 @@ impl NtieByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal IBI Queue Empty/Full Interrupt Enable"]
     #[inline(always)]
     pub fn ibiqefie(
         self,
@@ -25342,6 +27772,7 @@ impl NtieByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Command Queue Empty Interrupt Enable"]
     #[inline(always)]
     pub fn cmdqeie(
         self,
@@ -25367,6 +27798,7 @@ impl NtieByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Response Queue Full Interrupt Enable"]
     #[inline(always)]
     pub fn rspqfie(
         self,
@@ -25392,6 +27824,7 @@ impl NtieByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Abort Interrupt Enable"]
     #[inline(always)]
     pub fn tabtie(
         self,
@@ -25417,6 +27850,7 @@ impl NtieByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00. The write value should be 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -25436,48 +27870,60 @@ pub mod ntie_by_ll {
     pub struct Tdbeie0_SPEC;
     pub type Tdbeie0 = crate::EnumBitfieldStruct<u8, Tdbeie0_SPEC>;
     impl Tdbeie0 {
+        #[doc = "Disables Tx0 Data Buffer Empty Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Tx0 Data Buffer Empty Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbfie0_SPEC;
     pub type Rdbfie0 = crate::EnumBitfieldStruct<u8, Rdbfie0_SPEC>;
     impl Rdbfie0 {
+        #[doc = "Disables Rx0 Data Buffer Full Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Rx0 Data Buffer Full Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ibiqefie_SPEC;
     pub type Ibiqefie = crate::EnumBitfieldStruct<u8, Ibiqefie_SPEC>;
     impl Ibiqefie {
+        #[doc = "Disables IBI Status Buffer Empty/Full Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables IBI Status Buffer Empty/Full Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqeie_SPEC;
     pub type Cmdqeie = crate::EnumBitfieldStruct<u8, Cmdqeie_SPEC>;
     impl Cmdqeie {
+        #[doc = "Disables Command Buffer Empty Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Command Buffer Empty Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqfie_SPEC;
     pub type Rspqfie = crate::EnumBitfieldStruct<u8, Rspqfie_SPEC>;
     impl Rspqfie {
+        #[doc = "Disables Response Buffer Full Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Response Buffer Full Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabtie_SPEC;
     pub type Tabtie = crate::EnumBitfieldStruct<u8, Tabtie_SPEC>;
     impl Tabtie {
+        #[doc = "Disables Transfer Abort Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Transfer Abort Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -25488,9 +27934,11 @@ impl crate::sealed::RegSpec for NtieByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Transfer Interrupt Enable Register"]
 pub type NtieByLh = crate::RegValueT<NtieByLh_SPEC>;
 
 impl NtieByLh {
+    #[doc = "Normal Transfer Error Interrupt Enable"]
     #[inline(always)]
     pub fn teie(
         self,
@@ -25516,6 +27964,7 @@ impl NtieByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -25535,8 +27984,10 @@ pub mod ntie_by_lh {
     pub struct Teie_SPEC;
     pub type Teie = crate::EnumBitfieldStruct<u8, Teie_SPEC>;
     impl Teie {
+        #[doc = "Disables Transfer Error Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Transfer Error Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -25547,9 +27998,11 @@ impl crate::sealed::RegSpec for NtieHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Normal Transfer Interrupt Enable Register"]
 pub type NtieHaH = crate::RegValueT<NtieHaH_SPEC>;
 
 impl NtieHaH {
+    #[doc = "Normal Receive Status Queue Full Interrupt Enable"]
     #[inline(always)]
     pub fn rsqfie(
         self,
@@ -25575,6 +28028,7 @@ impl NtieHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000000. The write value should be 00000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -25595,8 +28049,10 @@ pub mod ntie_ha_h {
     pub struct Rsqfie_SPEC;
     pub type Rsqfie = crate::EnumBitfieldStruct<u8, Rsqfie_SPEC>;
     impl Rsqfie {
+        #[doc = "Disables Receive Status Buffer Full Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Receive Status Buffer Full Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -25607,9 +28063,11 @@ impl crate::sealed::RegSpec for NtieByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Transfer Interrupt Enable Register"]
 pub type NtieByHl = crate::RegValueT<NtieByHl_SPEC>;
 
 impl NtieByHl {
+    #[doc = "Normal Receive Status Queue Full Interrupt Enable"]
     #[inline(always)]
     pub fn rsqfie(
         self,
@@ -25635,6 +28093,7 @@ impl NtieByHl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -25654,8 +28113,10 @@ pub mod ntie_by_hl {
     pub struct Rsqfie_SPEC;
     pub type Rsqfie = crate::EnumBitfieldStruct<u8, Rsqfie_SPEC>;
     impl Rsqfie {
+        #[doc = "Disables Receive Status Buffer Full Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables Receive Status Buffer Full Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -25666,9 +28127,11 @@ impl crate::sealed::RegSpec for Ntstfc_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Normal Transfer Status Force Register"]
 pub type Ntstfc = crate::RegValueT<Ntstfc_SPEC>;
 
 impl Ntstfc {
+    #[doc = "Normal Tx Data Buffer Empty Force 0"]
     #[inline(always)]
     pub fn tdbefc0(
         self,
@@ -25694,6 +28157,7 @@ impl Ntstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Rx Data Buffer Full Force 0"]
     #[inline(always)]
     pub fn rdbffc0(
         self,
@@ -25719,6 +28183,7 @@ impl Ntstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal IBI Queue Empty/Full Force"]
     #[inline(always)]
     pub fn ibiqeffc(
         self,
@@ -25744,6 +28209,7 @@ impl Ntstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Command Queue Empty Force"]
     #[inline(always)]
     pub fn cmdqefc(
         self,
@@ -25769,6 +28235,7 @@ impl Ntstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Response Queue Full Force"]
     #[inline(always)]
     pub fn rspqffc(
         self,
@@ -25794,6 +28261,7 @@ impl Ntstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Abort Force"]
     #[inline(always)]
     pub fn tabtfc(
         self,
@@ -25819,6 +28287,7 @@ impl Ntstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Error Force"]
     #[inline(always)]
     pub fn tefc(
         self,
@@ -25844,6 +28313,7 @@ impl Ntstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Receive Status Queue Full Force"]
     #[inline(always)]
     pub fn rsqffc(
         self,
@@ -25869,6 +28339,7 @@ impl Ntstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 00000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -25889,64 +28360,80 @@ pub mod ntstfc {
     pub struct Tdbefc0_SPEC;
     pub type Tdbefc0 = crate::EnumBitfieldStruct<u8, Tdbefc0_SPEC>;
     impl Tdbefc0 {
+        #[doc = "not Force Tx0 Data Buffer Empty Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Tx0 Data Buffer Empty Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbffc0_SPEC;
     pub type Rdbffc0 = crate::EnumBitfieldStruct<u8, Rdbffc0_SPEC>;
     impl Rdbffc0 {
+        #[doc = "not Force Rx0 Data Buffer Full Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Rx0 Data Buffer Full Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ibiqeffc_SPEC;
     pub type Ibiqeffc = crate::EnumBitfieldStruct<u8, Ibiqeffc_SPEC>;
     impl Ibiqeffc {
+        #[doc = "not Force IBI Status Buffer Empty/Full Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force IBI Status Buffer Empty/Full Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqefc_SPEC;
     pub type Cmdqefc = crate::EnumBitfieldStruct<u8, Cmdqefc_SPEC>;
     impl Cmdqefc {
+        #[doc = "not Force Command Buffer Empty Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Command Buffer Empty Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqffc_SPEC;
     pub type Rspqffc = crate::EnumBitfieldStruct<u8, Rspqffc_SPEC>;
     impl Rspqffc {
+        #[doc = "not Force Response Buffer Full Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Response Buffer Full Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabtfc_SPEC;
     pub type Tabtfc = crate::EnumBitfieldStruct<u8, Tabtfc_SPEC>;
     impl Tabtfc {
+        #[doc = "not Force Transfer Abort Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Transfer Abort Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tefc_SPEC;
     pub type Tefc = crate::EnumBitfieldStruct<u8, Tefc_SPEC>;
     impl Tefc {
+        #[doc = "not Force Transfer Error Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Transfer Error Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rsqffc_SPEC;
     pub type Rsqffc = crate::EnumBitfieldStruct<u8, Rsqffc_SPEC>;
     impl Rsqffc {
+        #[doc = "not Force Receive Status Buffer Full Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Receive Status Buffer Full Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -25957,9 +28444,11 @@ impl crate::sealed::RegSpec for NtstfcHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Normal Transfer Status Force Register"]
 pub type NtstfcHaL = crate::RegValueT<NtstfcHaL_SPEC>;
 
 impl NtstfcHaL {
+    #[doc = "Normal Tx Data Buffer Empty Force 0"]
     #[inline(always)]
     pub fn tdbefc0(
         self,
@@ -25985,6 +28474,7 @@ impl NtstfcHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Rx Data Buffer Full Force 0"]
     #[inline(always)]
     pub fn rdbffc0(
         self,
@@ -26010,6 +28500,7 @@ impl NtstfcHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal IBI Queue Empty/Full Force"]
     #[inline(always)]
     pub fn ibiqeffc(
         self,
@@ -26035,6 +28526,7 @@ impl NtstfcHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Command Queue Empty Force"]
     #[inline(always)]
     pub fn cmdqefc(
         self,
@@ -26060,6 +28552,7 @@ impl NtstfcHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Response Queue Full Force"]
     #[inline(always)]
     pub fn rspqffc(
         self,
@@ -26085,6 +28578,7 @@ impl NtstfcHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Abort Force"]
     #[inline(always)]
     pub fn tabtfc(
         self,
@@ -26110,6 +28604,7 @@ impl NtstfcHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Error Force"]
     #[inline(always)]
     pub fn tefc(
         self,
@@ -26135,6 +28630,7 @@ impl NtstfcHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -26155,56 +28651,70 @@ pub mod ntstfc_ha_l {
     pub struct Tdbefc0_SPEC;
     pub type Tdbefc0 = crate::EnumBitfieldStruct<u8, Tdbefc0_SPEC>;
     impl Tdbefc0 {
+        #[doc = "not Force Tx0 Data Buffer Empty Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Tx0 Data Buffer Empty Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbffc0_SPEC;
     pub type Rdbffc0 = crate::EnumBitfieldStruct<u8, Rdbffc0_SPEC>;
     impl Rdbffc0 {
+        #[doc = "not Force Rx0 Data Buffer Full Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Rx0 Data Buffer Full Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ibiqeffc_SPEC;
     pub type Ibiqeffc = crate::EnumBitfieldStruct<u8, Ibiqeffc_SPEC>;
     impl Ibiqeffc {
+        #[doc = "not Force IBI Status Buffer Empty/Full Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force IBI Status Buffer Empty/Full Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqefc_SPEC;
     pub type Cmdqefc = crate::EnumBitfieldStruct<u8, Cmdqefc_SPEC>;
     impl Cmdqefc {
+        #[doc = "not Force Command Buffer Empty Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Command Buffer Empty Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqffc_SPEC;
     pub type Rspqffc = crate::EnumBitfieldStruct<u8, Rspqffc_SPEC>;
     impl Rspqffc {
+        #[doc = "not Force Response Buffer Full Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Response Buffer Full Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabtfc_SPEC;
     pub type Tabtfc = crate::EnumBitfieldStruct<u8, Tabtfc_SPEC>;
     impl Tabtfc {
+        #[doc = "not Force Transfer Abort Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Transfer Abort Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tefc_SPEC;
     pub type Tefc = crate::EnumBitfieldStruct<u8, Tefc_SPEC>;
     impl Tefc {
+        #[doc = "not Force Transfer Error Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Transfer Error Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -26215,9 +28725,11 @@ impl crate::sealed::RegSpec for NtstfcByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Transfer Status Force Register"]
 pub type NtstfcByLl = crate::RegValueT<NtstfcByLl_SPEC>;
 
 impl NtstfcByLl {
+    #[doc = "Normal Tx Data Buffer Empty Force 0"]
     #[inline(always)]
     pub fn tdbefc0(
         self,
@@ -26243,6 +28755,7 @@ impl NtstfcByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Rx Data Buffer Full Force 0"]
     #[inline(always)]
     pub fn rdbffc0(
         self,
@@ -26268,6 +28781,7 @@ impl NtstfcByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal IBI Queue Empty/Full Force"]
     #[inline(always)]
     pub fn ibiqeffc(
         self,
@@ -26293,6 +28807,7 @@ impl NtstfcByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Command Queue Empty Force"]
     #[inline(always)]
     pub fn cmdqefc(
         self,
@@ -26318,6 +28833,7 @@ impl NtstfcByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Response Queue Full Force"]
     #[inline(always)]
     pub fn rspqffc(
         self,
@@ -26343,6 +28859,7 @@ impl NtstfcByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Normal Transfer Abort Force"]
     #[inline(always)]
     pub fn tabtfc(
         self,
@@ -26368,6 +28885,7 @@ impl NtstfcByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -26387,48 +28905,60 @@ pub mod ntstfc_by_ll {
     pub struct Tdbefc0_SPEC;
     pub type Tdbefc0 = crate::EnumBitfieldStruct<u8, Tdbefc0_SPEC>;
     impl Tdbefc0 {
+        #[doc = "not Force Tx0 Data Buffer Empty Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Tx0 Data Buffer Empty Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbffc0_SPEC;
     pub type Rdbffc0 = crate::EnumBitfieldStruct<u8, Rdbffc0_SPEC>;
     impl Rdbffc0 {
+        #[doc = "not Force Rx0 Data Buffer Full Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Rx0 Data Buffer Full Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ibiqeffc_SPEC;
     pub type Ibiqeffc = crate::EnumBitfieldStruct<u8, Ibiqeffc_SPEC>;
     impl Ibiqeffc {
+        #[doc = "not Force IBI Status Buffer Empty/Full Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force IBI Status Buffer Empty/Full Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqefc_SPEC;
     pub type Cmdqefc = crate::EnumBitfieldStruct<u8, Cmdqefc_SPEC>;
     impl Cmdqefc {
+        #[doc = "not Force Command Buffer Empty Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Command Buffer Empty Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqffc_SPEC;
     pub type Rspqffc = crate::EnumBitfieldStruct<u8, Rspqffc_SPEC>;
     impl Rspqffc {
+        #[doc = "not Force Response Buffer Full Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Response Buffer Full Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabtfc_SPEC;
     pub type Tabtfc = crate::EnumBitfieldStruct<u8, Tabtfc_SPEC>;
     impl Tabtfc {
+        #[doc = "not Force Transfer Abort Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Transfer Abort Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -26439,9 +28969,11 @@ impl crate::sealed::RegSpec for NtstfcByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Transfer Status Force Register"]
 pub type NtstfcByLh = crate::RegValueT<NtstfcByLh_SPEC>;
 
 impl NtstfcByLh {
+    #[doc = "Normal Transfer Error Force"]
     #[inline(always)]
     pub fn tefc(
         self,
@@ -26467,6 +28999,7 @@ impl NtstfcByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -26487,8 +29020,10 @@ pub mod ntstfc_by_lh {
     pub struct Tefc_SPEC;
     pub type Tefc = crate::EnumBitfieldStruct<u8, Tefc_SPEC>;
     impl Tefc {
+        #[doc = "not Force Transfer Error Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Transfer Error Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -26499,9 +29034,11 @@ impl crate::sealed::RegSpec for NtstfcHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Normal Transfer Status Force Register"]
 pub type NtstfcHaH = crate::RegValueT<NtstfcHaH_SPEC>;
 
 impl NtstfcHaH {
+    #[doc = "Normal Receive Status Queue Full Force"]
     #[inline(always)]
     pub fn rsqffc(
         self,
@@ -26527,6 +29064,7 @@ impl NtstfcHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 00000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -26547,8 +29085,10 @@ pub mod ntstfc_ha_h {
     pub struct Rsqffc_SPEC;
     pub type Rsqffc = crate::EnumBitfieldStruct<u8, Rsqffc_SPEC>;
     impl Rsqffc {
+        #[doc = "not Force Receive Status Buffer Full Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Receive Status Buffer Full Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -26559,9 +29099,11 @@ impl crate::sealed::RegSpec for NtstfcByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Transfer Status Force Register"]
 pub type NtstfcByHl = crate::RegValueT<NtstfcByHl_SPEC>;
 
 impl NtstfcByHl {
+    #[doc = "Normal Receive Status Queue Full Force"]
     #[inline(always)]
     pub fn rsqffc(
         self,
@@ -26587,6 +29129,7 @@ impl NtstfcByHl {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -26606,8 +29149,10 @@ pub mod ntstfc_by_hl {
     pub struct Rsqffc_SPEC;
     pub type Rsqffc = crate::EnumBitfieldStruct<u8, Rsqffc_SPEC>;
     impl Rsqffc {
+        #[doc = "not Force Receive Status Buffer Full Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force Receive Status Buffer Full Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -26618,9 +29163,11 @@ impl crate::sealed::RegSpec for Htst_SPEC {
     type DataType = u32;
 }
 
+#[doc = "High Priority Transfer Status Register"]
 pub type Htst = crate::RegValueT<Htst_SPEC>;
 
 impl Htst {
+    #[doc = "High Priority Tx Data Buffer Empty Flag"]
     #[inline(always)]
     pub fn tdbef(
         self,
@@ -26646,6 +29193,7 @@ impl Htst {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Rx Data Buffer Full Flag"]
     #[inline(always)]
     pub fn rdbff(
         self,
@@ -26671,6 +29219,7 @@ impl Htst {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Command Queue Empty Flag"]
     #[inline(always)]
     pub fn cmdqef(
         self,
@@ -26696,6 +29245,7 @@ impl Htst {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Response Queue Full Flag"]
     #[inline(always)]
     pub fn rspqff(
         self,
@@ -26721,6 +29271,7 @@ impl Htst {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Abort Flag"]
     #[inline(always)]
     pub fn tabtf(
         self,
@@ -26746,6 +29297,7 @@ impl Htst {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Error Flag"]
     #[inline(always)]
     pub fn tef(
         self,
@@ -26771,6 +29323,7 @@ impl Htst {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000000000. The write value should be 0000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -26791,52 +29344,66 @@ pub mod htst {
     pub struct Tdbef_SPEC;
     pub type Tdbef = crate::EnumBitfieldStruct<u8, Tdbef_SPEC>;
     impl Tdbef {
+        #[doc = "The number of empties in the High Priority Tx Data Buffer is < the HTBTHCTL.TXDBTH\\[2:0\\] threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of empties in the High Priority Tx Data Buffer is >= the HTBTHCTL.TXDBTH\\[2:0\\] threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbff_SPEC;
     pub type Rdbff = crate::EnumBitfieldStruct<u8, Rdbff_SPEC>;
     impl Rdbff {
+        #[doc = "The number of entries in the High Priority Rx Data Buffer is < the HTBTHCTL.RXDBTH\\[2:0\\] threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of entries in the High Priority Rx Data Buffer is >= the HTBTHCTL.RXDBTH\\[2:0\\] threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqef_SPEC;
     pub type Cmdqef = crate::EnumBitfieldStruct<u8, Cmdqef_SPEC>;
     impl Cmdqef {
+        #[doc = "The number of Command Queue empties is < the Command Queue size."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of Command Queue empties is the Command Queue size."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "The number of High Priority Command Queue empties is < the HQTHCTL.CMDQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of High Priority Command Queue empties is >= the HQTHCTL.CMDQTH threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqff_SPEC;
     pub type Rspqff = crate::EnumBitfieldStruct<u8, Rspqff_SPEC>;
     impl Rspqff {
+        #[doc = "The number of High Priority Response Queue entries is <= the HQTHCTL .RSPQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of High Priority Response Queue entries is > the HQTHCTL .RSPQTH threshold"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabtf_SPEC;
     pub type Tabtf = crate::EnumBitfieldStruct<u8, Tabtf_SPEC>;
     impl Tabtf {
+        #[doc = "High Priority Transfer Abort does not occur."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High Priority Transfer Abort occurs."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tef_SPEC;
     pub type Tef = crate::EnumBitfieldStruct<u8, Tef_SPEC>;
     impl Tef {
+        #[doc = "High Priority Transfer Error does not occur."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High Priority Transfer Error occurs."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -26847,9 +29414,11 @@ impl crate::sealed::RegSpec for HtstHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "High Priority Transfer Status Register"]
 pub type HtstHaL = crate::RegValueT<HtstHaL_SPEC>;
 
 impl HtstHaL {
+    #[doc = "High Priority Tx Data Buffer Empty Flag"]
     #[inline(always)]
     pub fn tdbef(
         self,
@@ -26875,6 +29444,7 @@ impl HtstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Rx Data Buffer Full Flag"]
     #[inline(always)]
     pub fn rdbff(
         self,
@@ -26900,6 +29470,7 @@ impl HtstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Command Queue Empty Flag"]
     #[inline(always)]
     pub fn cmdqef(
         self,
@@ -26925,6 +29496,7 @@ impl HtstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Response Queue Full Flag"]
     #[inline(always)]
     pub fn rspqff(
         self,
@@ -26950,6 +29522,7 @@ impl HtstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Abort Flag"]
     #[inline(always)]
     pub fn tabtf(
         self,
@@ -26975,6 +29548,7 @@ impl HtstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Error Flag"]
     #[inline(always)]
     pub fn tef(
         self,
@@ -27000,6 +29574,7 @@ impl HtstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -27019,52 +29594,66 @@ pub mod htst_ha_l {
     pub struct Tdbef_SPEC;
     pub type Tdbef = crate::EnumBitfieldStruct<u8, Tdbef_SPEC>;
     impl Tdbef {
+        #[doc = "The number of empties in the High Priority Tx Data Buffer is < the HTBTHCTL.TXDBTH\\[2:0\\] threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of empties in the High Priority Tx Data Buffer is >= the HTBTHCTL.TXDBTH\\[2:0\\] threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbff_SPEC;
     pub type Rdbff = crate::EnumBitfieldStruct<u8, Rdbff_SPEC>;
     impl Rdbff {
+        #[doc = "The number of entries in the High Priority Rx Data Buffer is < the HTBTHCTL.RXDBTH\\[2:0\\] threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of entries in the High Priority Rx Data Buffer is >= the HTBTHCTL.RXDBTH\\[2:0\\] threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqef_SPEC;
     pub type Cmdqef = crate::EnumBitfieldStruct<u8, Cmdqef_SPEC>;
     impl Cmdqef {
+        #[doc = "The number of Command Queue empties is < the Command Queue size."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of Command Queue empties is the Command Queue size."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "The number of High Priority Command Queue empties is < the HQTHCTL.CMDQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of High Priority Command Queue empties is >= the HQTHCTL.CMDQTH threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqff_SPEC;
     pub type Rspqff = crate::EnumBitfieldStruct<u8, Rspqff_SPEC>;
     impl Rspqff {
+        #[doc = "The number of High Priority Response Queue entries is <= the HQTHCTL .RSPQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of High Priority Response Queue entries is > the HQTHCTL .RSPQTH threshold"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabtf_SPEC;
     pub type Tabtf = crate::EnumBitfieldStruct<u8, Tabtf_SPEC>;
     impl Tabtf {
+        #[doc = "High Priority Transfer Abort does not occur."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High Priority Transfer Abort occurs."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tef_SPEC;
     pub type Tef = crate::EnumBitfieldStruct<u8, Tef_SPEC>;
     impl Tef {
+        #[doc = "High Priority Transfer Error does not occur."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High Priority Transfer Error occurs."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -27075,9 +29664,11 @@ impl crate::sealed::RegSpec for HtstByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High Priority Transfer Status Register"]
 pub type HtstByLl = crate::RegValueT<HtstByLl_SPEC>;
 
 impl HtstByLl {
+    #[doc = "High Priority Tx Data Buffer Empty Flag"]
     #[inline(always)]
     pub fn tdbef(
         self,
@@ -27103,6 +29694,7 @@ impl HtstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Rx Data Buffer Full Flag"]
     #[inline(always)]
     pub fn rdbff(
         self,
@@ -27128,6 +29720,7 @@ impl HtstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Command Queue Empty Flag"]
     #[inline(always)]
     pub fn cmdqef(
         self,
@@ -27153,6 +29746,7 @@ impl HtstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Response Queue Full Flag"]
     #[inline(always)]
     pub fn rspqff(
         self,
@@ -27178,6 +29772,7 @@ impl HtstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Abort Flag"]
     #[inline(always)]
     pub fn tabtf(
         self,
@@ -27203,6 +29798,7 @@ impl HtstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00. The write value should be 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -27222,44 +29818,56 @@ pub mod htst_by_ll {
     pub struct Tdbef_SPEC;
     pub type Tdbef = crate::EnumBitfieldStruct<u8, Tdbef_SPEC>;
     impl Tdbef {
+        #[doc = "The number of empties in the High Priority Tx Data Buffer is < the HTBTHCTL.TXDBTH\\[2:0\\] threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of empties in the High Priority Tx Data Buffer is >= the HTBTHCTL.TXDBTH\\[2:0\\] threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbff_SPEC;
     pub type Rdbff = crate::EnumBitfieldStruct<u8, Rdbff_SPEC>;
     impl Rdbff {
+        #[doc = "The number of entries in the High Priority Rx Data Buffer is < the HTBTHCTL.RXDBTH\\[2:0\\] threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of entries in the High Priority Rx Data Buffer is >= the HTBTHCTL.RXDBTH\\[2:0\\] threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqef_SPEC;
     pub type Cmdqef = crate::EnumBitfieldStruct<u8, Cmdqef_SPEC>;
     impl Cmdqef {
+        #[doc = "The number of Command Queue empties is < the Command Queue size."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of Command Queue empties is the Command Queue size."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "The number of High Priority Command Queue empties is < the HQTHCTL.CMDQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of High Priority Command Queue empties is >= the HQTHCTL.CMDQTH threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqff_SPEC;
     pub type Rspqff = crate::EnumBitfieldStruct<u8, Rspqff_SPEC>;
     impl Rspqff {
+        #[doc = "The number of High Priority Response Queue entries is <= the HQTHCTL .RSPQTH threshold."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The number of High Priority Response Queue entries is > the HQTHCTL .RSPQTH threshold"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabtf_SPEC;
     pub type Tabtf = crate::EnumBitfieldStruct<u8, Tabtf_SPEC>;
     impl Tabtf {
+        #[doc = "High Priority Transfer Abort does not occur."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High Priority Transfer Abort occurs."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -27270,9 +29878,11 @@ impl crate::sealed::RegSpec for HtstByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High Priority Transfer Status Register"]
 pub type HtstByLh = crate::RegValueT<HtstByLh_SPEC>;
 
 impl HtstByLh {
+    #[doc = "High Priority Transfer Error Flag"]
     #[inline(always)]
     pub fn tef(
         self,
@@ -27298,6 +29908,7 @@ impl HtstByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -27317,8 +29928,10 @@ pub mod htst_by_lh {
     pub struct Tef_SPEC;
     pub type Tef = crate::EnumBitfieldStruct<u8, Tef_SPEC>;
     impl Tef {
+        #[doc = "High Priority Transfer Error does not occur."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "High Priority Transfer Error occurs."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -27329,9 +29942,11 @@ impl crate::sealed::RegSpec for Htste_SPEC {
     type DataType = u32;
 }
 
+#[doc = "High Priority Transfer Status Enable Register"]
 pub type Htste = crate::RegValueT<Htste_SPEC>;
 
 impl Htste {
+    #[doc = "High Priority Tx Data Buffer Empty Enable"]
     #[inline(always)]
     pub fn tdbee(
         self,
@@ -27357,6 +29972,7 @@ impl Htste {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Rx Data Buffer Full Enable"]
     #[inline(always)]
     pub fn rdbfe(
         self,
@@ -27382,6 +29998,7 @@ impl Htste {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Command Queue Empty Enable."]
     #[inline(always)]
     pub fn cmdqee(
         self,
@@ -27407,6 +30024,7 @@ impl Htste {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Response Queue Full Enable"]
     #[inline(always)]
     pub fn rspqfe(
         self,
@@ -27432,6 +30050,7 @@ impl Htste {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Abort Enable"]
     #[inline(always)]
     pub fn tabte(
         self,
@@ -27457,6 +30076,7 @@ impl Htste {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Error Enable"]
     #[inline(always)]
     pub fn tee(
         self,
@@ -27482,6 +30102,7 @@ impl Htste {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000000000. The write value should be 0000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -27502,48 +30123,60 @@ pub mod htste {
     pub struct Tdbee_SPEC;
     pub type Tdbee = crate::EnumBitfieldStruct<u8, Tdbee_SPEC>;
     impl Tdbee {
+        #[doc = "Disables High Priority Tx Data Buffer Empty Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Tx Data Buffer Empty Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbfe_SPEC;
     pub type Rdbfe = crate::EnumBitfieldStruct<u8, Rdbfe_SPEC>;
     impl Rdbfe {
+        #[doc = "Disables High Priority Rx Data Buffer Full Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Rx Data Buffer Full Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqee_SPEC;
     pub type Cmdqee = crate::EnumBitfieldStruct<u8, Cmdqee_SPEC>;
     impl Cmdqee {
+        #[doc = "Disables High Priority Command Buffer Empty Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Command Buffer Empty Interrupt Status logging"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqfe_SPEC;
     pub type Rspqfe = crate::EnumBitfieldStruct<u8, Rspqfe_SPEC>;
     impl Rspqfe {
+        #[doc = "Disables High Priority Response Buffer Full Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Response Buffer Full Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabte_SPEC;
     pub type Tabte = crate::EnumBitfieldStruct<u8, Tabte_SPEC>;
     impl Tabte {
+        #[doc = "Disables High PriorityTransfer Abort Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Transfer Abort Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tee_SPEC;
     pub type Tee = crate::EnumBitfieldStruct<u8, Tee_SPEC>;
     impl Tee {
+        #[doc = "Disables High Priority Transfer Error interrupt Stats logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Transfer Error interrupt Stats logging."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -27554,9 +30187,11 @@ impl crate::sealed::RegSpec for HtsteHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "High Priority Transfer Status Enable Register"]
 pub type HtsteHaL = crate::RegValueT<HtsteHaL_SPEC>;
 
 impl HtsteHaL {
+    #[doc = "High Priority Tx Data Buffer Empty Enable"]
     #[inline(always)]
     pub fn tdbee(
         self,
@@ -27582,6 +30217,7 @@ impl HtsteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Rx Data Buffer Full Enable"]
     #[inline(always)]
     pub fn rdbfe(
         self,
@@ -27607,6 +30243,7 @@ impl HtsteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Command Queue Empty Enable."]
     #[inline(always)]
     pub fn cmdqee(
         self,
@@ -27632,6 +30269,7 @@ impl HtsteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Response Queue Full Enable"]
     #[inline(always)]
     pub fn rspqfe(
         self,
@@ -27657,6 +30295,7 @@ impl HtsteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Abort Enable"]
     #[inline(always)]
     pub fn tabte(
         self,
@@ -27682,6 +30321,7 @@ impl HtsteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Error Enable"]
     #[inline(always)]
     pub fn tee(
         self,
@@ -27707,6 +30347,7 @@ impl HtsteHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -27727,48 +30368,60 @@ pub mod htste_ha_l {
     pub struct Tdbee_SPEC;
     pub type Tdbee = crate::EnumBitfieldStruct<u8, Tdbee_SPEC>;
     impl Tdbee {
+        #[doc = "Disables High Priority Tx Data Buffer Empty Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Tx Data Buffer Empty Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbfe_SPEC;
     pub type Rdbfe = crate::EnumBitfieldStruct<u8, Rdbfe_SPEC>;
     impl Rdbfe {
+        #[doc = "Disables High Priority Rx Data Buffer Full Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Rx Data Buffer Full Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqee_SPEC;
     pub type Cmdqee = crate::EnumBitfieldStruct<u8, Cmdqee_SPEC>;
     impl Cmdqee {
+        #[doc = "Disables High Priority Command Buffer Empty Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Command Buffer Empty Interrupt Status logging"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqfe_SPEC;
     pub type Rspqfe = crate::EnumBitfieldStruct<u8, Rspqfe_SPEC>;
     impl Rspqfe {
+        #[doc = "Disables High Priority Response Buffer Full Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Response Buffer Full Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabte_SPEC;
     pub type Tabte = crate::EnumBitfieldStruct<u8, Tabte_SPEC>;
     impl Tabte {
+        #[doc = "Disables High PriorityTransfer Abort Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Transfer Abort Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tee_SPEC;
     pub type Tee = crate::EnumBitfieldStruct<u8, Tee_SPEC>;
     impl Tee {
+        #[doc = "Disables High Priority Transfer Error interrupt Stats logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Transfer Error interrupt Stats logging."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -27779,9 +30432,11 @@ impl crate::sealed::RegSpec for HtsteByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High Priority Transfer Status Enable Register"]
 pub type HtsteByLl = crate::RegValueT<HtsteByLl_SPEC>;
 
 impl HtsteByLl {
+    #[doc = "High Priority Tx Data Buffer Empty Enable"]
     #[inline(always)]
     pub fn tdbee(
         self,
@@ -27807,6 +30462,7 @@ impl HtsteByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Rx Data Buffer Full Enable"]
     #[inline(always)]
     pub fn rdbfe(
         self,
@@ -27832,6 +30488,7 @@ impl HtsteByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Command Queue Empty Enable."]
     #[inline(always)]
     pub fn cmdqee(
         self,
@@ -27857,6 +30514,7 @@ impl HtsteByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Response Queue Full Enable"]
     #[inline(always)]
     pub fn rspqfe(
         self,
@@ -27882,6 +30540,7 @@ impl HtsteByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Abort Enable"]
     #[inline(always)]
     pub fn tabte(
         self,
@@ -27907,6 +30566,7 @@ impl HtsteByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00. The write value should be 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -27926,40 +30586,50 @@ pub mod htste_by_ll {
     pub struct Tdbee_SPEC;
     pub type Tdbee = crate::EnumBitfieldStruct<u8, Tdbee_SPEC>;
     impl Tdbee {
+        #[doc = "Disables High Priority Tx Data Buffer Empty Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Tx Data Buffer Empty Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbfe_SPEC;
     pub type Rdbfe = crate::EnumBitfieldStruct<u8, Rdbfe_SPEC>;
     impl Rdbfe {
+        #[doc = "Disables High Priority Rx Data Buffer Full Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Rx Data Buffer Full Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqee_SPEC;
     pub type Cmdqee = crate::EnumBitfieldStruct<u8, Cmdqee_SPEC>;
     impl Cmdqee {
+        #[doc = "Disables High Priority Command Buffer Empty Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Command Buffer Empty Interrupt Status logging"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqfe_SPEC;
     pub type Rspqfe = crate::EnumBitfieldStruct<u8, Rspqfe_SPEC>;
     impl Rspqfe {
+        #[doc = "Disables High Priority Response Buffer Full Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Response Buffer Full Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabte_SPEC;
     pub type Tabte = crate::EnumBitfieldStruct<u8, Tabte_SPEC>;
     impl Tabte {
+        #[doc = "Disables High PriorityTransfer Abort Interrupt Status logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Transfer Abort Interrupt Status logging."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -27970,9 +30640,11 @@ impl crate::sealed::RegSpec for HtsteByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High Priority Transfer Status Enable Register"]
 pub type HtsteByLh = crate::RegValueT<HtsteByLh_SPEC>;
 
 impl HtsteByLh {
+    #[doc = "High Priority Transfer Error Enable"]
     #[inline(always)]
     pub fn tee(
         self,
@@ -27998,6 +30670,7 @@ impl HtsteByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -28018,8 +30691,10 @@ pub mod htste_by_lh {
     pub struct Tee_SPEC;
     pub type Tee = crate::EnumBitfieldStruct<u8, Tee_SPEC>;
     impl Tee {
+        #[doc = "Disables High Priority Transfer Error interrupt Stats logging."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Transfer Error interrupt Stats logging."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -28030,9 +30705,11 @@ impl crate::sealed::RegSpec for Htie_SPEC {
     type DataType = u32;
 }
 
+#[doc = "High Priority Transfer Interrupt Enable Register"]
 pub type Htie = crate::RegValueT<Htie_SPEC>;
 
 impl Htie {
+    #[doc = "High Priority Tx Data Buffer Empty Interrupt Enable"]
     #[inline(always)]
     pub fn tdbeie(
         self,
@@ -28058,6 +30735,7 @@ impl Htie {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Rx Data Buffer Full Interrupt Enable"]
     #[inline(always)]
     pub fn rdbfie(
         self,
@@ -28083,6 +30761,7 @@ impl Htie {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Command Queue Empty Interrupt Enable"]
     #[inline(always)]
     pub fn cmdqeie(
         self,
@@ -28108,6 +30787,7 @@ impl Htie {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Response Queue Full Interrupt Enable"]
     #[inline(always)]
     pub fn rspqfie(
         self,
@@ -28133,6 +30813,7 @@ impl Htie {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Abort Interrupt Enable"]
     #[inline(always)]
     pub fn tabtie(
         self,
@@ -28158,6 +30839,7 @@ impl Htie {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Error Interrupt Enable"]
     #[inline(always)]
     pub fn teie(
         self,
@@ -28183,6 +30865,7 @@ impl Htie {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000000000. The write value should be 0000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -28203,48 +30886,60 @@ pub mod htie {
     pub struct Tdbeie_SPEC;
     pub type Tdbeie = crate::EnumBitfieldStruct<u8, Tdbeie_SPEC>;
     impl Tdbeie {
+        #[doc = "Disables High Priority Tx Data Buffer Empty Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Tx Data Buffer Empty Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbfie_SPEC;
     pub type Rdbfie = crate::EnumBitfieldStruct<u8, Rdbfie_SPEC>;
     impl Rdbfie {
+        #[doc = "Disables High Priority Rx Data Buffer Full Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Rx Data Buffer Full Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqeie_SPEC;
     pub type Cmdqeie = crate::EnumBitfieldStruct<u8, Cmdqeie_SPEC>;
     impl Cmdqeie {
+        #[doc = "Disables High Priority Command Buffer Empty Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Command Buffer Empty Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqfie_SPEC;
     pub type Rspqfie = crate::EnumBitfieldStruct<u8, Rspqfie_SPEC>;
     impl Rspqfie {
+        #[doc = "Disables High Priority Response Buffer Full Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Response Buffer Full Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabtie_SPEC;
     pub type Tabtie = crate::EnumBitfieldStruct<u8, Tabtie_SPEC>;
     impl Tabtie {
+        #[doc = "Disables High Priority Transfer Abort interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Transfer Abort interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Teie_SPEC;
     pub type Teie = crate::EnumBitfieldStruct<u8, Teie_SPEC>;
     impl Teie {
+        #[doc = "Disables High Priority Transfer Error Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Transfer Error Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -28255,9 +30950,11 @@ impl crate::sealed::RegSpec for HtieHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "High Priority Transfer Interrupt Enable Register"]
 pub type HtieHaL = crate::RegValueT<HtieHaL_SPEC>;
 
 impl HtieHaL {
+    #[doc = "High Priority Tx Data Buffer Empty Interrupt Enable"]
     #[inline(always)]
     pub fn tdbeie(
         self,
@@ -28283,6 +30980,7 @@ impl HtieHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Rx Data Buffer Full Interrupt Enable"]
     #[inline(always)]
     pub fn rdbfie(
         self,
@@ -28308,6 +31006,7 @@ impl HtieHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Command Queue Empty Interrupt Enable"]
     #[inline(always)]
     pub fn cmdqeie(
         self,
@@ -28333,6 +31032,7 @@ impl HtieHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Response Queue Full Interrupt Enable"]
     #[inline(always)]
     pub fn rspqfie(
         self,
@@ -28358,6 +31058,7 @@ impl HtieHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Abort Interrupt Enable"]
     #[inline(always)]
     pub fn tabtie(
         self,
@@ -28383,6 +31084,7 @@ impl HtieHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Error Interrupt Enable"]
     #[inline(always)]
     pub fn teie(
         self,
@@ -28408,6 +31110,7 @@ impl HtieHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -28427,48 +31130,60 @@ pub mod htie_ha_l {
     pub struct Tdbeie_SPEC;
     pub type Tdbeie = crate::EnumBitfieldStruct<u8, Tdbeie_SPEC>;
     impl Tdbeie {
+        #[doc = "Disables High Priority Tx Data Buffer Empty Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Tx Data Buffer Empty Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbfie_SPEC;
     pub type Rdbfie = crate::EnumBitfieldStruct<u8, Rdbfie_SPEC>;
     impl Rdbfie {
+        #[doc = "Disables High Priority Rx Data Buffer Full Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Rx Data Buffer Full Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqeie_SPEC;
     pub type Cmdqeie = crate::EnumBitfieldStruct<u8, Cmdqeie_SPEC>;
     impl Cmdqeie {
+        #[doc = "Disables High Priority Command Buffer Empty Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Command Buffer Empty Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqfie_SPEC;
     pub type Rspqfie = crate::EnumBitfieldStruct<u8, Rspqfie_SPEC>;
     impl Rspqfie {
+        #[doc = "Disables High Priority Response Buffer Full Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Response Buffer Full Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabtie_SPEC;
     pub type Tabtie = crate::EnumBitfieldStruct<u8, Tabtie_SPEC>;
     impl Tabtie {
+        #[doc = "Disables High Priority Transfer Abort interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Transfer Abort interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Teie_SPEC;
     pub type Teie = crate::EnumBitfieldStruct<u8, Teie_SPEC>;
     impl Teie {
+        #[doc = "Disables High Priority Transfer Error Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Transfer Error Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -28479,9 +31194,11 @@ impl crate::sealed::RegSpec for HtieByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High Priority Transfer Interrupt Enable Register"]
 pub type HtieByLl = crate::RegValueT<HtieByLl_SPEC>;
 
 impl HtieByLl {
+    #[doc = "High Priority Tx Data Buffer Empty Interrupt Enable"]
     #[inline(always)]
     pub fn tdbeie(
         self,
@@ -28507,6 +31224,7 @@ impl HtieByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Rx Data Buffer Full Interrupt Enable"]
     #[inline(always)]
     pub fn rdbfie(
         self,
@@ -28532,6 +31250,7 @@ impl HtieByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Command Queue Empty Interrupt Enable"]
     #[inline(always)]
     pub fn cmdqeie(
         self,
@@ -28557,6 +31276,7 @@ impl HtieByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Response Queue Full Interrupt Enable"]
     #[inline(always)]
     pub fn rspqfie(
         self,
@@ -28582,6 +31302,7 @@ impl HtieByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Abort Interrupt Enable"]
     #[inline(always)]
     pub fn tabtie(
         self,
@@ -28607,6 +31328,7 @@ impl HtieByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00. The write value should be 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -28626,40 +31348,50 @@ pub mod htie_by_ll {
     pub struct Tdbeie_SPEC;
     pub type Tdbeie = crate::EnumBitfieldStruct<u8, Tdbeie_SPEC>;
     impl Tdbeie {
+        #[doc = "Disables High Priority Tx Data Buffer Empty Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Tx Data Buffer Empty Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbfie_SPEC;
     pub type Rdbfie = crate::EnumBitfieldStruct<u8, Rdbfie_SPEC>;
     impl Rdbfie {
+        #[doc = "Disables High Priority Rx Data Buffer Full Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Rx Data Buffer Full Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqeie_SPEC;
     pub type Cmdqeie = crate::EnumBitfieldStruct<u8, Cmdqeie_SPEC>;
     impl Cmdqeie {
+        #[doc = "Disables High Priority Command Buffer Empty Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Command Buffer Empty Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqfie_SPEC;
     pub type Rspqfie = crate::EnumBitfieldStruct<u8, Rspqfie_SPEC>;
     impl Rspqfie {
+        #[doc = "Disables High Priority Response Buffer Full Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Response Buffer Full Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabtie_SPEC;
     pub type Tabtie = crate::EnumBitfieldStruct<u8, Tabtie_SPEC>;
     impl Tabtie {
+        #[doc = "Disables High Priority Transfer Abort interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Transfer Abort interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -28670,9 +31402,11 @@ impl crate::sealed::RegSpec for HtieByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High Priority Transfer Interrupt Enable Register"]
 pub type HtieByLh = crate::RegValueT<HtieByLh_SPEC>;
 
 impl HtieByLh {
+    #[doc = "High Priority Transfer Error Interrupt Enable"]
     #[inline(always)]
     pub fn teie(
         self,
@@ -28698,6 +31432,7 @@ impl HtieByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -28717,8 +31452,10 @@ pub mod htie_by_lh {
     pub struct Teie_SPEC;
     pub type Teie = crate::EnumBitfieldStruct<u8, Teie_SPEC>;
     impl Teie {
+        #[doc = "Disables High Priority Transfer Error Interrupt Signal."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables High Priority Transfer Error Interrupt Signal."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -28729,9 +31466,11 @@ impl crate::sealed::RegSpec for Htstfc_SPEC {
     type DataType = u32;
 }
 
+#[doc = "High Priority Transfer Status Force Register"]
 pub type Htstfc = crate::RegValueT<Htstfc_SPEC>;
 
 impl Htstfc {
+    #[doc = "High Priority Tx Data Buffer Empty Force"]
     #[inline(always)]
     pub fn tdbefc(
         self,
@@ -28757,6 +31496,7 @@ impl Htstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Rx Data Buffer Full Force"]
     #[inline(always)]
     pub fn rdbffc(
         self,
@@ -28782,6 +31522,7 @@ impl Htstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Command Queue Empty Force"]
     #[inline(always)]
     pub fn cmdqefc(
         self,
@@ -28807,6 +31548,7 @@ impl Htstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Response Queue Full Force"]
     #[inline(always)]
     pub fn rspqffc(
         self,
@@ -28832,6 +31574,7 @@ impl Htstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Abort Force"]
     #[inline(always)]
     pub fn tabtfc(
         self,
@@ -28857,6 +31600,7 @@ impl Htstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Error Force"]
     #[inline(always)]
     pub fn tefc(
         self,
@@ -28882,6 +31626,7 @@ impl Htstfc {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 0000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -28902,48 +31647,60 @@ pub mod htstfc {
     pub struct Tdbefc_SPEC;
     pub type Tdbefc = crate::EnumBitfieldStruct<u8, Tdbefc_SPEC>;
     impl Tdbefc {
+        #[doc = "not Force High Priority Tx Data Buffer Empty Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force High Priority Tx Data Buffer Empty Interrupt for software"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbffc_SPEC;
     pub type Rdbffc = crate::EnumBitfieldStruct<u8, Rdbffc_SPEC>;
     impl Rdbffc {
+        #[doc = "not Force High Priority Rx Data Buffer Full Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force High Priority Rx Data Buffer Full Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqefc_SPEC;
     pub type Cmdqefc = crate::EnumBitfieldStruct<u8, Cmdqefc_SPEC>;
     impl Cmdqefc {
+        #[doc = "not Force High Priority Command Buffer Empty Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force High Priority Command Buffer Empty Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqffc_SPEC;
     pub type Rspqffc = crate::EnumBitfieldStruct<u8, Rspqffc_SPEC>;
     impl Rspqffc {
+        #[doc = "not Force High Priority Response Buffer Full Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force High Priority Response Buffer Full Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabtfc_SPEC;
     pub type Tabtfc = crate::EnumBitfieldStruct<u8, Tabtfc_SPEC>;
     impl Tabtfc {
+        #[doc = "not Force High Priority Transfer Abort Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force High Priority Transfer Abort Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tefc_SPEC;
     pub type Tefc = crate::EnumBitfieldStruct<u8, Tefc_SPEC>;
     impl Tefc {
+        #[doc = "not Force High Priority Transfer Error Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force High Priority Transfer Error Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -28954,9 +31711,11 @@ impl crate::sealed::RegSpec for HtstfcHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "High Priority Transfer Status Force Register"]
 pub type HtstfcHaL = crate::RegValueT<HtstfcHaL_SPEC>;
 
 impl HtstfcHaL {
+    #[doc = "High Priority Tx Data Buffer Empty Force"]
     #[inline(always)]
     pub fn tdbefc(
         self,
@@ -28982,6 +31741,7 @@ impl HtstfcHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Rx Data Buffer Full Force"]
     #[inline(always)]
     pub fn rdbffc(
         self,
@@ -29007,6 +31767,7 @@ impl HtstfcHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Command Queue Empty Force"]
     #[inline(always)]
     pub fn cmdqefc(
         self,
@@ -29032,6 +31793,7 @@ impl HtstfcHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Response Queue Full Force"]
     #[inline(always)]
     pub fn rspqffc(
         self,
@@ -29057,6 +31819,7 @@ impl HtstfcHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Abort Force"]
     #[inline(always)]
     pub fn tabtfc(
         self,
@@ -29082,6 +31845,7 @@ impl HtstfcHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Error Force"]
     #[inline(always)]
     pub fn tefc(
         self,
@@ -29107,6 +31871,7 @@ impl HtstfcHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -29127,48 +31892,60 @@ pub mod htstfc_ha_l {
     pub struct Tdbefc_SPEC;
     pub type Tdbefc = crate::EnumBitfieldStruct<u8, Tdbefc_SPEC>;
     impl Tdbefc {
+        #[doc = "not Force High Priority Tx Data Buffer Empty Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force High Priority Tx Data Buffer Empty Interrupt for software"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbffc_SPEC;
     pub type Rdbffc = crate::EnumBitfieldStruct<u8, Rdbffc_SPEC>;
     impl Rdbffc {
+        #[doc = "not Force High Priority Rx Data Buffer Full Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force High Priority Rx Data Buffer Full Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqefc_SPEC;
     pub type Cmdqefc = crate::EnumBitfieldStruct<u8, Cmdqefc_SPEC>;
     impl Cmdqefc {
+        #[doc = "not Force High Priority Command Buffer Empty Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force High Priority Command Buffer Empty Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqffc_SPEC;
     pub type Rspqffc = crate::EnumBitfieldStruct<u8, Rspqffc_SPEC>;
     impl Rspqffc {
+        #[doc = "not Force High Priority Response Buffer Full Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force High Priority Response Buffer Full Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabtfc_SPEC;
     pub type Tabtfc = crate::EnumBitfieldStruct<u8, Tabtfc_SPEC>;
     impl Tabtfc {
+        #[doc = "not Force High Priority Transfer Abort Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force High Priority Transfer Abort Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tefc_SPEC;
     pub type Tefc = crate::EnumBitfieldStruct<u8, Tefc_SPEC>;
     impl Tefc {
+        #[doc = "not Force High Priority Transfer Error Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force High Priority Transfer Error Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -29179,9 +31956,11 @@ impl crate::sealed::RegSpec for HtstfcByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High Priority Transfer Status Force Register"]
 pub type HtstfcByLl = crate::RegValueT<HtstfcByLl_SPEC>;
 
 impl HtstfcByLl {
+    #[doc = "High Priority Tx Data Buffer Empty Force"]
     #[inline(always)]
     pub fn tdbefc(
         self,
@@ -29207,6 +31986,7 @@ impl HtstfcByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Rx Data Buffer Full Force"]
     #[inline(always)]
     pub fn rdbffc(
         self,
@@ -29232,6 +32012,7 @@ impl HtstfcByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Command Queue Empty Force"]
     #[inline(always)]
     pub fn cmdqefc(
         self,
@@ -29257,6 +32038,7 @@ impl HtstfcByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Response Queue Full Force"]
     #[inline(always)]
     pub fn rspqffc(
         self,
@@ -29282,6 +32064,7 @@ impl HtstfcByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "High Priority Transfer Abort Force"]
     #[inline(always)]
     pub fn tabtfc(
         self,
@@ -29307,6 +32090,7 @@ impl HtstfcByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -29326,40 +32110,50 @@ pub mod htstfc_by_ll {
     pub struct Tdbefc_SPEC;
     pub type Tdbefc = crate::EnumBitfieldStruct<u8, Tdbefc_SPEC>;
     impl Tdbefc {
+        #[doc = "not Force High Priority Tx Data Buffer Empty Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force High Priority Tx Data Buffer Empty Interrupt for software"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbffc_SPEC;
     pub type Rdbffc = crate::EnumBitfieldStruct<u8, Rdbffc_SPEC>;
     impl Rdbffc {
+        #[doc = "not Force High Priority Rx Data Buffer Full Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force High Priority Rx Data Buffer Full Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqefc_SPEC;
     pub type Cmdqefc = crate::EnumBitfieldStruct<u8, Cmdqefc_SPEC>;
     impl Cmdqefc {
+        #[doc = "not Force High Priority Command Buffer Empty Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force High Priority Command Buffer Empty Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqffc_SPEC;
     pub type Rspqffc = crate::EnumBitfieldStruct<u8, Rspqffc_SPEC>;
     impl Rspqffc {
+        #[doc = "not Force High Priority Response Buffer Full Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force High Priority Response Buffer Full Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tabtfc_SPEC;
     pub type Tabtfc = crate::EnumBitfieldStruct<u8, Tabtfc_SPEC>;
     impl Tabtfc {
+        #[doc = "not Force High Priority Transfer Abort Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force High Priority Transfer Abort Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -29370,9 +32164,11 @@ impl crate::sealed::RegSpec for HtstfcByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High Priority Transfer Status Force Register"]
 pub type HtstfcByLh = crate::RegValueT<HtstfcByLh_SPEC>;
 
 impl HtstfcByLh {
+    #[doc = "High Priority Transfer Error Force"]
     #[inline(always)]
     pub fn tefc(
         self,
@@ -29398,6 +32194,7 @@ impl HtstfcByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -29418,8 +32215,10 @@ pub mod htstfc_by_lh {
     pub struct Tefc_SPEC;
     pub type Tefc = crate::EnumBitfieldStruct<u8, Tefc_SPEC>;
     impl Tefc {
+        #[doc = "not Force High Priority Transfer Error Interrupt for software testing."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Force High Priority Transfer Error Interrupt for software testing."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -29430,9 +32229,11 @@ impl crate::sealed::RegSpec for Bcst_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bus Condition Status Register"]
 pub type Bcst = crate::RegValueT<Bcst_SPEC>;
 
 impl Bcst {
+    #[doc = "Bus Free Detection Flag"]
     #[inline(always)]
     pub fn bfref(
         self,
@@ -29458,6 +32259,7 @@ impl Bcst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus Available Detection Flag"]
     #[inline(always)]
     pub fn bavlf(
         self,
@@ -29483,6 +32285,7 @@ impl Bcst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus Idle Detection Flag"]
     #[inline(always)]
     pub fn bidlf(
         self,
@@ -29508,6 +32311,7 @@ impl Bcst {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -29528,24 +32332,30 @@ pub mod bcst {
     pub struct Bfref_SPEC;
     pub type Bfref = crate::EnumBitfieldStruct<u8, Bfref_SPEC>;
     impl Bfref {
+        #[doc = "Have not Detected Bus Free"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Have Detected Bus Free"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bavlf_SPEC;
     pub type Bavlf = crate::EnumBitfieldStruct<u8, Bavlf_SPEC>;
     impl Bavlf {
+        #[doc = "Have not Detected Bus Available"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Have Detected Bus Available"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bidlf_SPEC;
     pub type Bidlf = crate::EnumBitfieldStruct<u8, Bidlf_SPEC>;
     impl Bidlf {
+        #[doc = "Have not Detected Bus Idle"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Have Detected Bus Idle"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -29556,9 +32366,11 @@ impl crate::sealed::RegSpec for BcstHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Bus Condition Status Register"]
 pub type BcstHaL = crate::RegValueT<BcstHaL_SPEC>;
 
 impl BcstHaL {
+    #[doc = "Bus Free Detection Flag"]
     #[inline(always)]
     pub fn bfref(
         self,
@@ -29584,6 +32396,7 @@ impl BcstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus Available Detection Flag"]
     #[inline(always)]
     pub fn bavlf(
         self,
@@ -29609,6 +32422,7 @@ impl BcstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus Idle Detection Flag"]
     #[inline(always)]
     pub fn bidlf(
         self,
@@ -29634,6 +32448,7 @@ impl BcstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -29654,24 +32469,30 @@ pub mod bcst_ha_l {
     pub struct Bfref_SPEC;
     pub type Bfref = crate::EnumBitfieldStruct<u8, Bfref_SPEC>;
     impl Bfref {
+        #[doc = "Have not Detected Bus Free"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Have Detected Bus Free"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bavlf_SPEC;
     pub type Bavlf = crate::EnumBitfieldStruct<u8, Bavlf_SPEC>;
     impl Bavlf {
+        #[doc = "Have not Detected Bus Available"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Have Detected Bus Available"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bidlf_SPEC;
     pub type Bidlf = crate::EnumBitfieldStruct<u8, Bidlf_SPEC>;
     impl Bidlf {
+        #[doc = "Have not Detected Bus Idle"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Have Detected Bus Idle"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -29682,9 +32503,11 @@ impl crate::sealed::RegSpec for BcstByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bus Condition Status Register"]
 pub type BcstByLl = crate::RegValueT<BcstByLl_SPEC>;
 
 impl BcstByLl {
+    #[doc = "Bus Free Detection Flag"]
     #[inline(always)]
     pub fn bfref(
         self,
@@ -29710,6 +32533,7 @@ impl BcstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus Available Detection Flag"]
     #[inline(always)]
     pub fn bavlf(
         self,
@@ -29735,6 +32559,7 @@ impl BcstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Bus Idle Detection Flag"]
     #[inline(always)]
     pub fn bidlf(
         self,
@@ -29760,6 +32585,7 @@ impl BcstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -29779,24 +32605,30 @@ pub mod bcst_by_ll {
     pub struct Bfref_SPEC;
     pub type Bfref = crate::EnumBitfieldStruct<u8, Bfref_SPEC>;
     impl Bfref {
+        #[doc = "Have not Detected Bus Free"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Have Detected Bus Free"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bavlf_SPEC;
     pub type Bavlf = crate::EnumBitfieldStruct<u8, Bavlf_SPEC>;
     impl Bavlf {
+        #[doc = "Have not Detected Bus Available"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Have Detected Bus Available"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bidlf_SPEC;
     pub type Bidlf = crate::EnumBitfieldStruct<u8, Bidlf_SPEC>;
     impl Bidlf {
+        #[doc = "Have not Detected Bus Idle"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Have Detected Bus Idle"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -29807,9 +32639,11 @@ impl crate::sealed::RegSpec for Svst_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Slave Status Register"]
 pub type Svst = crate::RegValueT<Svst_SPEC>;
 
 impl Svst {
+    #[doc = "General Call Address Detection Flag"]
     #[inline(always)]
     pub fn gcaf(
         self,
@@ -29835,6 +32669,7 @@ impl Svst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Hs-mode Master Code Detection Flag"]
     #[inline(always)]
     pub fn hsmcf(
         self,
@@ -29860,6 +32695,7 @@ impl Svst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device-ID Address Detection Flag"]
     #[inline(always)]
     pub fn dvidf(
         self,
@@ -29885,6 +32721,7 @@ impl Svst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Host Address Detection Flag"]
     #[inline(always)]
     pub fn hoaf(
         self,
@@ -29910,6 +32747,7 @@ impl Svst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Address Detection Flag $x ($x=2 to 0)"]
     #[inline(always)]
     pub fn svaf(
         self,
@@ -29935,6 +32773,7 @@ impl Svst {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000. The write value should be 0000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -29955,40 +32794,50 @@ pub mod svst {
     pub struct Gcaf_SPEC;
     pub type Gcaf = crate::EnumBitfieldStruct<u8, Gcaf_SPEC>;
     impl Gcaf {
+        #[doc = "General call address does not detect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "General call address detects."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hsmcf_SPEC;
     pub type Hsmcf = crate::EnumBitfieldStruct<u8, Hsmcf_SPEC>;
     impl Hsmcf {
+        #[doc = "Hs-mode Master Code does not detect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Hs-mode Master Code detects."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvidf_SPEC;
     pub type Dvidf = crate::EnumBitfieldStruct<u8, Dvidf_SPEC>;
     impl Dvidf {
+        #[doc = "Device-ID command does not detect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Device-ID command detects."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hoaf_SPEC;
     pub type Hoaf = crate::EnumBitfieldStruct<u8, Hoaf_SPEC>;
     impl Hoaf {
+        #[doc = "Host address does not detect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Host address detects."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Svaf_SPEC;
     pub type Svaf = crate::EnumBitfieldStruct<u8, Svaf_SPEC>;
     impl Svaf {
+        #[doc = "Slave{$x} does not detect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave{$x} detect"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -29999,9 +32848,11 @@ impl crate::sealed::RegSpec for SvstHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Slave Status Register"]
 pub type SvstHaL = crate::RegValueT<SvstHaL_SPEC>;
 
 impl SvstHaL {
+    #[doc = "General Call Address Detection Flag"]
     #[inline(always)]
     pub fn gcaf(
         self,
@@ -30027,6 +32878,7 @@ impl SvstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Hs-mode Master Code Detection Flag"]
     #[inline(always)]
     pub fn hsmcf(
         self,
@@ -30052,6 +32904,7 @@ impl SvstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device-ID Address Detection Flag"]
     #[inline(always)]
     pub fn dvidf(
         self,
@@ -30077,6 +32930,7 @@ impl SvstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -30084,6 +32938,7 @@ impl SvstHaL {
         crate::common::RegisterField::<7,0xff,1,0,u8,u8,SvstHaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Host Address Detection Flag"]
     #[inline(always)]
     pub fn hoaf(
         self,
@@ -30121,32 +32976,40 @@ pub mod svst_ha_l {
     pub struct Gcaf_SPEC;
     pub type Gcaf = crate::EnumBitfieldStruct<u8, Gcaf_SPEC>;
     impl Gcaf {
+        #[doc = "General call address does not detect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "General call address detects."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hsmcf_SPEC;
     pub type Hsmcf = crate::EnumBitfieldStruct<u8, Hsmcf_SPEC>;
     impl Hsmcf {
+        #[doc = "Hs-mode Master Code does not detect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Hs-mode Master Code detects."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvidf_SPEC;
     pub type Dvidf = crate::EnumBitfieldStruct<u8, Dvidf_SPEC>;
     impl Dvidf {
+        #[doc = "Device-ID command does not detect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Device-ID command detects."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hoaf_SPEC;
     pub type Hoaf = crate::EnumBitfieldStruct<u8, Hoaf_SPEC>;
     impl Hoaf {
+        #[doc = "Host address does not detect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Host address detects."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -30157,9 +33020,11 @@ impl crate::sealed::RegSpec for SvstByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Status Register"]
 pub type SvstByLl = crate::RegValueT<SvstByLl_SPEC>;
 
 impl SvstByLl {
+    #[doc = "General Call Address Detection Flag"]
     #[inline(always)]
     pub fn gcaf(
         self,
@@ -30185,6 +33050,7 @@ impl SvstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Hs-mode Master Code Detection Flag"]
     #[inline(always)]
     pub fn hsmcf(
         self,
@@ -30210,6 +33076,7 @@ impl SvstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device-ID Address Detection Flag"]
     #[inline(always)]
     pub fn dvidf(
         self,
@@ -30235,6 +33102,7 @@ impl SvstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -30256,24 +33124,30 @@ pub mod svst_by_ll {
     pub struct Gcaf_SPEC;
     pub type Gcaf = crate::EnumBitfieldStruct<u8, Gcaf_SPEC>;
     impl Gcaf {
+        #[doc = "General call address does not detect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "General call address detects."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hsmcf_SPEC;
     pub type Hsmcf = crate::EnumBitfieldStruct<u8, Hsmcf_SPEC>;
     impl Hsmcf {
+        #[doc = "Hs-mode Master Code does not detect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Hs-mode Master Code detects."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvidf_SPEC;
     pub type Dvidf = crate::EnumBitfieldStruct<u8, Dvidf_SPEC>;
     impl Dvidf {
+        #[doc = "Device-ID command does not detect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Device-ID command detects."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -30284,9 +33158,11 @@ impl crate::sealed::RegSpec for SvstByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Status Register"]
 pub type SvstByLh = crate::RegValueT<SvstByLh_SPEC>;
 
 impl SvstByLh {
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -30294,6 +33170,7 @@ impl SvstByLh {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,SvstByLh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Host Address Detection Flag"]
     #[inline(always)]
     pub fn hoaf(
         self,
@@ -30331,8 +33208,10 @@ pub mod svst_by_lh {
     pub struct Hoaf_SPEC;
     pub type Hoaf = crate::EnumBitfieldStruct<u8, Hoaf_SPEC>;
     impl Hoaf {
+        #[doc = "Host address does not detect."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Host address detects."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -30343,9 +33222,11 @@ impl crate::sealed::RegSpec for SvstHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Slave Status Register"]
 pub type SvstHaH = crate::RegValueT<SvstHaH_SPEC>;
 
 impl SvstHaH {
+    #[doc = "Slave Address Detection Flag $x ($x=2 to 0)"]
     #[inline(always)]
     pub fn svaf(
         self,
@@ -30371,6 +33252,7 @@ impl SvstHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000. The write value should be 0000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -30391,8 +33273,10 @@ pub mod svst_ha_h {
     pub struct Svaf_SPEC;
     pub type Svaf = crate::EnumBitfieldStruct<u8, Svaf_SPEC>;
     impl Svaf {
+        #[doc = "Slave{$x} does not detect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave{$x} detect"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -30403,9 +33287,11 @@ impl crate::sealed::RegSpec for SvstByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Status Register"]
 pub type SvstByHl = crate::RegValueT<SvstByHl_SPEC>;
 
 impl SvstByHl {
+    #[doc = "Slave Address Detection Flag $x ($x=2 to 0)"]
     #[inline(always)]
     pub fn svaf(
         self,
@@ -30431,6 +33317,7 @@ impl SvstByHl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -30450,8 +33337,10 @@ pub mod svst_by_hl {
     pub struct Svaf_SPEC;
     pub type Svaf = crate::EnumBitfieldStruct<u8, Svaf_SPEC>;
     impl Svaf {
+        #[doc = "Slave{$x} does not detect"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave{$x} detect"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -30462,9 +33351,11 @@ impl crate::sealed::RegSpec for Wust_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Wake Up Unit Operating Status Register"]
 pub type Wust = crate::RegValueT<Wust_SPEC>;
 
 impl Wust {
+    #[doc = "Wake-Up function Asynchronous operation status Flag"]
     #[inline(always)]
     pub fn wuasynf(
         self,
@@ -30490,6 +33381,7 @@ impl Wust {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -30510,8 +33402,10 @@ pub mod wust {
     pub struct Wuasynf_SPEC;
     pub type Wuasynf = crate::EnumBitfieldStruct<u8, Wuasynf_SPEC>;
     impl Wuasynf {
+        #[doc = "This IP synchronous circuit enable condition"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP asynchronous circuit enable condition"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -30522,9 +33416,11 @@ impl crate::sealed::RegSpec for WustHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Wake Up Unit Operating Status Register"]
 pub type WustHaL = crate::RegValueT<WustHaL_SPEC>;
 
 impl WustHaL {
+    #[doc = "Wake-Up function Asynchronous operation status Flag"]
     #[inline(always)]
     pub fn wuasynf(
         self,
@@ -30550,6 +33446,7 @@ impl WustHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -30570,8 +33467,10 @@ pub mod wust_ha_l {
     pub struct Wuasynf_SPEC;
     pub type Wuasynf = crate::EnumBitfieldStruct<u8, Wuasynf_SPEC>;
     impl Wuasynf {
+        #[doc = "This IP synchronous circuit enable condition"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP asynchronous circuit enable condition"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -30582,9 +33481,11 @@ impl crate::sealed::RegSpec for WustByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Wake Up Unit Operating Status Register"]
 pub type WustByLl = crate::RegValueT<WustByLl_SPEC>;
 
 impl WustByLl {
+    #[doc = "Wake-Up function Asynchronous operation status Flag"]
     #[inline(always)]
     pub fn wuasynf(
         self,
@@ -30610,6 +33511,7 @@ impl WustByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -30629,8 +33531,10 @@ pub mod wust_by_ll {
     pub struct Wuasynf_SPEC;
     pub type Wuasynf = crate::EnumBitfieldStruct<u8, Wuasynf_SPEC>;
     impl Wuasynf {
+        #[doc = "This IP synchronous circuit enable condition"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP asynchronous circuit enable condition"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -30641,9 +33545,11 @@ impl crate::sealed::RegSpec for Mrccpt_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MsyncCNT Counter Capture Register"]
 pub type Mrccpt = crate::RegValueT<Mrccpt_SPEC>;
 
 impl Mrccpt {
+    #[doc = "MSyncCNT Counter Capture"]
     #[inline(always)]
     pub fn mrccpt(
         self,
@@ -30666,9 +33572,11 @@ impl crate::sealed::RegSpec for Datbas0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Device Address Table Basic Register 0"]
 pub type Datbas0 = crate::RegValueT<Datbas0_SPEC>;
 
 impl Datbas0 {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -30676,6 +33584,7 @@ impl Datbas0 {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -30701,6 +33610,7 @@ impl Datbas0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -30726,6 +33636,7 @@ impl Datbas0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -30751,6 +33662,7 @@ impl Datbas0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -30776,6 +33688,7 @@ impl Datbas0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -30783,6 +33696,7 @@ impl Datbas0 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Datbas0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -30790,6 +33704,7 @@ impl Datbas0 {
         crate::common::RegisterField::<24,0x1f,1,0,u8,u8,Datbas0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -30797,6 +33712,7 @@ impl Datbas0 {
         crate::common::RegisterField::<29,0x3,1,0,u8,u8,Datbas0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -30834,40 +33750,50 @@ pub mod datbas0 {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -30878,9 +33804,11 @@ impl crate::sealed::RegSpec for Datbas0HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Device Address Table Basic Register 0"]
 pub type Datbas0HaL = crate::RegValueT<Datbas0HaL_SPEC>;
 
 impl Datbas0HaL {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -30889,6 +33817,7 @@ impl Datbas0HaL {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas0HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -30897,6 +33826,7 @@ impl Datbas0HaL {
         crate::common::RegisterField::<7,0x1f,1,0,u8,u8,Datbas0HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -30922,6 +33852,7 @@ impl Datbas0HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -30947,6 +33878,7 @@ impl Datbas0HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -30972,6 +33904,7 @@ impl Datbas0HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -31009,32 +33942,40 @@ pub mod datbas0_ha_l {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -31045,9 +33986,11 @@ impl crate::sealed::RegSpec for Datbas0ByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 0"]
 pub type Datbas0ByLl = crate::RegValueT<Datbas0ByLl_SPEC>;
 
 impl Datbas0ByLl {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -31056,6 +33999,7 @@ impl Datbas0ByLl {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas0ByLl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -31077,9 +34021,11 @@ impl crate::sealed::RegSpec for Datbas0ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 0"]
 pub type Datbas0ByLh = crate::RegValueT<Datbas0ByLh_SPEC>;
 
 impl Datbas0ByLh {
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -31088,6 +34034,7 @@ impl Datbas0ByLh {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Datbas0ByLh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -31113,6 +34060,7 @@ impl Datbas0ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -31138,6 +34086,7 @@ impl Datbas0ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -31163,6 +34112,7 @@ impl Datbas0ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -31200,32 +34150,40 @@ pub mod datbas0_by_lh {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -31236,9 +34194,11 @@ impl crate::sealed::RegSpec for Datbas0HaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Device Address Table Basic Register 0"]
 pub type Datbas0HaH = crate::RegValueT<Datbas0HaH_SPEC>;
 
 impl Datbas0HaH {
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -31247,6 +34207,7 @@ impl Datbas0HaH {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Datbas0HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -31255,6 +34216,7 @@ impl Datbas0HaH {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,Datbas0HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -31263,6 +34225,7 @@ impl Datbas0HaH {
         crate::common::RegisterField::<13,0x3,1,0,u8,u8,Datbas0HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -31300,8 +34263,10 @@ pub mod datbas0_ha_h {
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -31312,9 +34277,11 @@ impl crate::sealed::RegSpec for Datbas0ByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 0"]
 pub type Datbas0ByHl = crate::RegValueT<Datbas0ByHl_SPEC>;
 
 impl Datbas0ByHl {
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -31337,9 +34304,11 @@ impl crate::sealed::RegSpec for Datbas0ByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 0"]
 pub type Datbas0ByHh = crate::RegValueT<Datbas0ByHh_SPEC>;
 
 impl Datbas0ByHh {
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -31348,6 +34317,7 @@ impl Datbas0ByHh {
         crate::common::RegisterField::<0,0x1f,1,0,u8,u8,Datbas0ByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -31356,6 +34326,7 @@ impl Datbas0ByHh {
         crate::common::RegisterField::<5,0x3,1,0,u8,u8,Datbas0ByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -31393,8 +34364,10 @@ pub mod datbas0_by_hh {
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -31405,9 +34378,11 @@ impl crate::sealed::RegSpec for Datbas1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Device Address Table Basic Register 1"]
 pub type Datbas1 = crate::RegValueT<Datbas1_SPEC>;
 
 impl Datbas1 {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -31415,6 +34390,7 @@ impl Datbas1 {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -31440,6 +34416,7 @@ impl Datbas1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -31465,6 +34442,7 @@ impl Datbas1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -31490,6 +34468,7 @@ impl Datbas1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -31515,6 +34494,7 @@ impl Datbas1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -31522,6 +34502,7 @@ impl Datbas1 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Datbas1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -31529,6 +34510,7 @@ impl Datbas1 {
         crate::common::RegisterField::<24,0x1f,1,0,u8,u8,Datbas1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -31536,6 +34518,7 @@ impl Datbas1 {
         crate::common::RegisterField::<29,0x3,1,0,u8,u8,Datbas1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -31573,40 +34556,50 @@ pub mod datbas1 {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -31617,9 +34610,11 @@ impl crate::sealed::RegSpec for Datbas1HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Device Address Table Basic Register 1"]
 pub type Datbas1HaL = crate::RegValueT<Datbas1HaL_SPEC>;
 
 impl Datbas1HaL {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -31628,6 +34623,7 @@ impl Datbas1HaL {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas1HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -31636,6 +34632,7 @@ impl Datbas1HaL {
         crate::common::RegisterField::<7,0x1f,1,0,u8,u8,Datbas1HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -31661,6 +34658,7 @@ impl Datbas1HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -31686,6 +34684,7 @@ impl Datbas1HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -31711,6 +34710,7 @@ impl Datbas1HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -31748,32 +34748,40 @@ pub mod datbas1_ha_l {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -31784,9 +34792,11 @@ impl crate::sealed::RegSpec for Datbas1ByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 1"]
 pub type Datbas1ByLl = crate::RegValueT<Datbas1ByLl_SPEC>;
 
 impl Datbas1ByLl {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -31795,6 +34805,7 @@ impl Datbas1ByLl {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas1ByLl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -31816,9 +34827,11 @@ impl crate::sealed::RegSpec for Datbas1ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 1"]
 pub type Datbas1ByLh = crate::RegValueT<Datbas1ByLh_SPEC>;
 
 impl Datbas1ByLh {
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -31827,6 +34840,7 @@ impl Datbas1ByLh {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Datbas1ByLh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -31852,6 +34866,7 @@ impl Datbas1ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -31877,6 +34892,7 @@ impl Datbas1ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -31902,6 +34918,7 @@ impl Datbas1ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -31939,32 +34956,40 @@ pub mod datbas1_by_lh {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -31975,9 +35000,11 @@ impl crate::sealed::RegSpec for Datbas1HaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Device Address Table Basic Register 1"]
 pub type Datbas1HaH = crate::RegValueT<Datbas1HaH_SPEC>;
 
 impl Datbas1HaH {
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -31986,6 +35013,7 @@ impl Datbas1HaH {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Datbas1HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -31994,6 +35022,7 @@ impl Datbas1HaH {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,Datbas1HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -32002,6 +35031,7 @@ impl Datbas1HaH {
         crate::common::RegisterField::<13,0x3,1,0,u8,u8,Datbas1HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -32039,8 +35069,10 @@ pub mod datbas1_ha_h {
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -32051,9 +35083,11 @@ impl crate::sealed::RegSpec for Datbas1ByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 1"]
 pub type Datbas1ByHl = crate::RegValueT<Datbas1ByHl_SPEC>;
 
 impl Datbas1ByHl {
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -32076,9 +35110,11 @@ impl crate::sealed::RegSpec for Datbas1ByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 1"]
 pub type Datbas1ByHh = crate::RegValueT<Datbas1ByHh_SPEC>;
 
 impl Datbas1ByHh {
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -32087,6 +35123,7 @@ impl Datbas1ByHh {
         crate::common::RegisterField::<0,0x1f,1,0,u8,u8,Datbas1ByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -32095,6 +35132,7 @@ impl Datbas1ByHh {
         crate::common::RegisterField::<5,0x3,1,0,u8,u8,Datbas1ByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -32132,8 +35170,10 @@ pub mod datbas1_by_hh {
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -32144,9 +35184,11 @@ impl crate::sealed::RegSpec for Datbas2_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Device Address Table Basic Register 2"]
 pub type Datbas2 = crate::RegValueT<Datbas2_SPEC>;
 
 impl Datbas2 {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -32154,6 +35196,7 @@ impl Datbas2 {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas2_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -32179,6 +35222,7 @@ impl Datbas2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -32204,6 +35248,7 @@ impl Datbas2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -32229,6 +35274,7 @@ impl Datbas2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -32254,6 +35300,7 @@ impl Datbas2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -32261,6 +35308,7 @@ impl Datbas2 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Datbas2_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -32268,6 +35316,7 @@ impl Datbas2 {
         crate::common::RegisterField::<24,0x1f,1,0,u8,u8,Datbas2_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -32275,6 +35324,7 @@ impl Datbas2 {
         crate::common::RegisterField::<29,0x3,1,0,u8,u8,Datbas2_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -32312,40 +35362,50 @@ pub mod datbas2 {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -32356,9 +35416,11 @@ impl crate::sealed::RegSpec for Datbas2HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Device Address Table Basic Register 2"]
 pub type Datbas2HaL = crate::RegValueT<Datbas2HaL_SPEC>;
 
 impl Datbas2HaL {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -32367,6 +35429,7 @@ impl Datbas2HaL {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas2HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -32375,6 +35438,7 @@ impl Datbas2HaL {
         crate::common::RegisterField::<7,0x1f,1,0,u8,u8,Datbas2HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -32400,6 +35464,7 @@ impl Datbas2HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -32425,6 +35490,7 @@ impl Datbas2HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -32450,6 +35516,7 @@ impl Datbas2HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -32487,32 +35554,40 @@ pub mod datbas2_ha_l {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -32523,9 +35598,11 @@ impl crate::sealed::RegSpec for Datbas2ByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 2"]
 pub type Datbas2ByLl = crate::RegValueT<Datbas2ByLl_SPEC>;
 
 impl Datbas2ByLl {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -32534,6 +35611,7 @@ impl Datbas2ByLl {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas2ByLl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -32555,9 +35633,11 @@ impl crate::sealed::RegSpec for Datbas2ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 2"]
 pub type Datbas2ByLh = crate::RegValueT<Datbas2ByLh_SPEC>;
 
 impl Datbas2ByLh {
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -32566,6 +35646,7 @@ impl Datbas2ByLh {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Datbas2ByLh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -32591,6 +35672,7 @@ impl Datbas2ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -32616,6 +35698,7 @@ impl Datbas2ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -32641,6 +35724,7 @@ impl Datbas2ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -32678,32 +35762,40 @@ pub mod datbas2_by_lh {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -32714,9 +35806,11 @@ impl crate::sealed::RegSpec for Datbas2HaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Device Address Table Basic Register 2"]
 pub type Datbas2HaH = crate::RegValueT<Datbas2HaH_SPEC>;
 
 impl Datbas2HaH {
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -32725,6 +35819,7 @@ impl Datbas2HaH {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Datbas2HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -32733,6 +35828,7 @@ impl Datbas2HaH {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,Datbas2HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -32741,6 +35837,7 @@ impl Datbas2HaH {
         crate::common::RegisterField::<13,0x3,1,0,u8,u8,Datbas2HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -32778,8 +35875,10 @@ pub mod datbas2_ha_h {
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -32790,9 +35889,11 @@ impl crate::sealed::RegSpec for Datbas2ByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 2"]
 pub type Datbas2ByHl = crate::RegValueT<Datbas2ByHl_SPEC>;
 
 impl Datbas2ByHl {
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -32815,9 +35916,11 @@ impl crate::sealed::RegSpec for Datbas2ByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 2"]
 pub type Datbas2ByHh = crate::RegValueT<Datbas2ByHh_SPEC>;
 
 impl Datbas2ByHh {
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -32826,6 +35929,7 @@ impl Datbas2ByHh {
         crate::common::RegisterField::<0,0x1f,1,0,u8,u8,Datbas2ByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -32834,6 +35938,7 @@ impl Datbas2ByHh {
         crate::common::RegisterField::<5,0x3,1,0,u8,u8,Datbas2ByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -32871,8 +35976,10 @@ pub mod datbas2_by_hh {
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -32883,9 +35990,11 @@ impl crate::sealed::RegSpec for Datbas3_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Device Address Table Basic Register 3"]
 pub type Datbas3 = crate::RegValueT<Datbas3_SPEC>;
 
 impl Datbas3 {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -32893,6 +36002,7 @@ impl Datbas3 {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas3_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -32918,6 +36028,7 @@ impl Datbas3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -32943,6 +36054,7 @@ impl Datbas3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -32968,6 +36080,7 @@ impl Datbas3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -32993,6 +36106,7 @@ impl Datbas3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -33000,6 +36114,7 @@ impl Datbas3 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Datbas3_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -33007,6 +36122,7 @@ impl Datbas3 {
         crate::common::RegisterField::<24,0x1f,1,0,u8,u8,Datbas3_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -33014,6 +36130,7 @@ impl Datbas3 {
         crate::common::RegisterField::<29,0x3,1,0,u8,u8,Datbas3_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -33051,40 +36168,50 @@ pub mod datbas3 {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -33095,9 +36222,11 @@ impl crate::sealed::RegSpec for Datbas3HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Device Address Table Basic Register 3"]
 pub type Datbas3HaL = crate::RegValueT<Datbas3HaL_SPEC>;
 
 impl Datbas3HaL {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -33106,6 +36235,7 @@ impl Datbas3HaL {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas3HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -33114,6 +36244,7 @@ impl Datbas3HaL {
         crate::common::RegisterField::<7,0x1f,1,0,u8,u8,Datbas3HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -33139,6 +36270,7 @@ impl Datbas3HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -33164,6 +36296,7 @@ impl Datbas3HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -33189,6 +36322,7 @@ impl Datbas3HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -33226,32 +36360,40 @@ pub mod datbas3_ha_l {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -33262,9 +36404,11 @@ impl crate::sealed::RegSpec for Datbas3ByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 3"]
 pub type Datbas3ByLl = crate::RegValueT<Datbas3ByLl_SPEC>;
 
 impl Datbas3ByLl {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -33273,6 +36417,7 @@ impl Datbas3ByLl {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas3ByLl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -33294,9 +36439,11 @@ impl crate::sealed::RegSpec for Datbas3ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 3"]
 pub type Datbas3ByLh = crate::RegValueT<Datbas3ByLh_SPEC>;
 
 impl Datbas3ByLh {
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -33305,6 +36452,7 @@ impl Datbas3ByLh {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Datbas3ByLh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -33330,6 +36478,7 @@ impl Datbas3ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -33355,6 +36504,7 @@ impl Datbas3ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -33380,6 +36530,7 @@ impl Datbas3ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -33417,32 +36568,40 @@ pub mod datbas3_by_lh {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -33453,9 +36612,11 @@ impl crate::sealed::RegSpec for Datbas3HaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Device Address Table Basic Register 3"]
 pub type Datbas3HaH = crate::RegValueT<Datbas3HaH_SPEC>;
 
 impl Datbas3HaH {
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -33464,6 +36625,7 @@ impl Datbas3HaH {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Datbas3HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -33472,6 +36634,7 @@ impl Datbas3HaH {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,Datbas3HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -33480,6 +36643,7 @@ impl Datbas3HaH {
         crate::common::RegisterField::<13,0x3,1,0,u8,u8,Datbas3HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -33517,8 +36681,10 @@ pub mod datbas3_ha_h {
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -33529,9 +36695,11 @@ impl crate::sealed::RegSpec for Datbas3ByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 3"]
 pub type Datbas3ByHl = crate::RegValueT<Datbas3ByHl_SPEC>;
 
 impl Datbas3ByHl {
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -33554,9 +36722,11 @@ impl crate::sealed::RegSpec for Datbas3ByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 3"]
 pub type Datbas3ByHh = crate::RegValueT<Datbas3ByHh_SPEC>;
 
 impl Datbas3ByHh {
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -33565,6 +36735,7 @@ impl Datbas3ByHh {
         crate::common::RegisterField::<0,0x1f,1,0,u8,u8,Datbas3ByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -33573,6 +36744,7 @@ impl Datbas3ByHh {
         crate::common::RegisterField::<5,0x3,1,0,u8,u8,Datbas3ByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -33610,8 +36782,10 @@ pub mod datbas3_by_hh {
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -33622,9 +36796,11 @@ impl crate::sealed::RegSpec for Datbas4_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Device Address Table Basic Register 4"]
 pub type Datbas4 = crate::RegValueT<Datbas4_SPEC>;
 
 impl Datbas4 {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -33632,6 +36808,7 @@ impl Datbas4 {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas4_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -33657,6 +36834,7 @@ impl Datbas4 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -33682,6 +36860,7 @@ impl Datbas4 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -33707,6 +36886,7 @@ impl Datbas4 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -33732,6 +36912,7 @@ impl Datbas4 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -33739,6 +36920,7 @@ impl Datbas4 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Datbas4_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -33746,6 +36928,7 @@ impl Datbas4 {
         crate::common::RegisterField::<24,0x1f,1,0,u8,u8,Datbas4_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -33753,6 +36936,7 @@ impl Datbas4 {
         crate::common::RegisterField::<29,0x3,1,0,u8,u8,Datbas4_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -33790,40 +36974,50 @@ pub mod datbas4 {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -33834,9 +37028,11 @@ impl crate::sealed::RegSpec for Datbas4HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Device Address Table Basic Register 4"]
 pub type Datbas4HaL = crate::RegValueT<Datbas4HaL_SPEC>;
 
 impl Datbas4HaL {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -33845,6 +37041,7 @@ impl Datbas4HaL {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas4HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -33853,6 +37050,7 @@ impl Datbas4HaL {
         crate::common::RegisterField::<7,0x1f,1,0,u8,u8,Datbas4HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -33878,6 +37076,7 @@ impl Datbas4HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -33903,6 +37102,7 @@ impl Datbas4HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -33928,6 +37128,7 @@ impl Datbas4HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -33965,32 +37166,40 @@ pub mod datbas4_ha_l {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -34001,9 +37210,11 @@ impl crate::sealed::RegSpec for Datbas4ByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 4"]
 pub type Datbas4ByLl = crate::RegValueT<Datbas4ByLl_SPEC>;
 
 impl Datbas4ByLl {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -34012,6 +37223,7 @@ impl Datbas4ByLl {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas4ByLl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -34033,9 +37245,11 @@ impl crate::sealed::RegSpec for Datbas4ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 4"]
 pub type Datbas4ByLh = crate::RegValueT<Datbas4ByLh_SPEC>;
 
 impl Datbas4ByLh {
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -34044,6 +37258,7 @@ impl Datbas4ByLh {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Datbas4ByLh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -34069,6 +37284,7 @@ impl Datbas4ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -34094,6 +37310,7 @@ impl Datbas4ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -34119,6 +37336,7 @@ impl Datbas4ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -34156,32 +37374,40 @@ pub mod datbas4_by_lh {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -34192,9 +37418,11 @@ impl crate::sealed::RegSpec for Datbas4HaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Device Address Table Basic Register 4"]
 pub type Datbas4HaH = crate::RegValueT<Datbas4HaH_SPEC>;
 
 impl Datbas4HaH {
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -34203,6 +37431,7 @@ impl Datbas4HaH {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Datbas4HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -34211,6 +37440,7 @@ impl Datbas4HaH {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,Datbas4HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -34219,6 +37449,7 @@ impl Datbas4HaH {
         crate::common::RegisterField::<13,0x3,1,0,u8,u8,Datbas4HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -34256,8 +37487,10 @@ pub mod datbas4_ha_h {
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -34268,9 +37501,11 @@ impl crate::sealed::RegSpec for Datbas4ByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 4"]
 pub type Datbas4ByHl = crate::RegValueT<Datbas4ByHl_SPEC>;
 
 impl Datbas4ByHl {
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -34293,9 +37528,11 @@ impl crate::sealed::RegSpec for Datbas4ByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 4"]
 pub type Datbas4ByHh = crate::RegValueT<Datbas4ByHh_SPEC>;
 
 impl Datbas4ByHh {
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -34304,6 +37541,7 @@ impl Datbas4ByHh {
         crate::common::RegisterField::<0,0x1f,1,0,u8,u8,Datbas4ByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -34312,6 +37550,7 @@ impl Datbas4ByHh {
         crate::common::RegisterField::<5,0x3,1,0,u8,u8,Datbas4ByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -34349,8 +37588,10 @@ pub mod datbas4_by_hh {
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -34361,9 +37602,11 @@ impl crate::sealed::RegSpec for Datbas5_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Device Address Table Basic Register 5"]
 pub type Datbas5 = crate::RegValueT<Datbas5_SPEC>;
 
 impl Datbas5 {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -34371,6 +37614,7 @@ impl Datbas5 {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas5_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -34396,6 +37640,7 @@ impl Datbas5 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -34421,6 +37666,7 @@ impl Datbas5 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -34446,6 +37692,7 @@ impl Datbas5 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -34471,6 +37718,7 @@ impl Datbas5 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -34478,6 +37726,7 @@ impl Datbas5 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Datbas5_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -34485,6 +37734,7 @@ impl Datbas5 {
         crate::common::RegisterField::<24,0x1f,1,0,u8,u8,Datbas5_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -34492,6 +37742,7 @@ impl Datbas5 {
         crate::common::RegisterField::<29,0x3,1,0,u8,u8,Datbas5_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -34529,40 +37780,50 @@ pub mod datbas5 {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -34573,9 +37834,11 @@ impl crate::sealed::RegSpec for Datbas5HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Device Address Table Basic Register 5"]
 pub type Datbas5HaL = crate::RegValueT<Datbas5HaL_SPEC>;
 
 impl Datbas5HaL {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -34584,6 +37847,7 @@ impl Datbas5HaL {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas5HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -34592,6 +37856,7 @@ impl Datbas5HaL {
         crate::common::RegisterField::<7,0x1f,1,0,u8,u8,Datbas5HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -34617,6 +37882,7 @@ impl Datbas5HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -34642,6 +37908,7 @@ impl Datbas5HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -34667,6 +37934,7 @@ impl Datbas5HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -34704,32 +37972,40 @@ pub mod datbas5_ha_l {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -34740,9 +38016,11 @@ impl crate::sealed::RegSpec for Datbas5ByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 5"]
 pub type Datbas5ByLl = crate::RegValueT<Datbas5ByLl_SPEC>;
 
 impl Datbas5ByLl {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -34751,6 +38029,7 @@ impl Datbas5ByLl {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas5ByLl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -34772,9 +38051,11 @@ impl crate::sealed::RegSpec for Datbas5ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 5"]
 pub type Datbas5ByLh = crate::RegValueT<Datbas5ByLh_SPEC>;
 
 impl Datbas5ByLh {
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -34783,6 +38064,7 @@ impl Datbas5ByLh {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Datbas5ByLh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -34808,6 +38090,7 @@ impl Datbas5ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -34833,6 +38116,7 @@ impl Datbas5ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -34858,6 +38142,7 @@ impl Datbas5ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -34895,32 +38180,40 @@ pub mod datbas5_by_lh {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -34931,9 +38224,11 @@ impl crate::sealed::RegSpec for Datbas5HaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Device Address Table Basic Register 5"]
 pub type Datbas5HaH = crate::RegValueT<Datbas5HaH_SPEC>;
 
 impl Datbas5HaH {
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -34942,6 +38237,7 @@ impl Datbas5HaH {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Datbas5HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -34950,6 +38246,7 @@ impl Datbas5HaH {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,Datbas5HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -34958,6 +38255,7 @@ impl Datbas5HaH {
         crate::common::RegisterField::<13,0x3,1,0,u8,u8,Datbas5HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -34995,8 +38293,10 @@ pub mod datbas5_ha_h {
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -35007,9 +38307,11 @@ impl crate::sealed::RegSpec for Datbas5ByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 5"]
 pub type Datbas5ByHl = crate::RegValueT<Datbas5ByHl_SPEC>;
 
 impl Datbas5ByHl {
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -35032,9 +38334,11 @@ impl crate::sealed::RegSpec for Datbas5ByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 5"]
 pub type Datbas5ByHh = crate::RegValueT<Datbas5ByHh_SPEC>;
 
 impl Datbas5ByHh {
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -35043,6 +38347,7 @@ impl Datbas5ByHh {
         crate::common::RegisterField::<0,0x1f,1,0,u8,u8,Datbas5ByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -35051,6 +38356,7 @@ impl Datbas5ByHh {
         crate::common::RegisterField::<5,0x3,1,0,u8,u8,Datbas5ByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -35088,8 +38394,10 @@ pub mod datbas5_by_hh {
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -35100,9 +38408,11 @@ impl crate::sealed::RegSpec for Datbas6_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Device Address Table Basic Register 6"]
 pub type Datbas6 = crate::RegValueT<Datbas6_SPEC>;
 
 impl Datbas6 {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -35110,6 +38420,7 @@ impl Datbas6 {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas6_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -35135,6 +38446,7 @@ impl Datbas6 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -35160,6 +38472,7 @@ impl Datbas6 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -35185,6 +38498,7 @@ impl Datbas6 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -35210,6 +38524,7 @@ impl Datbas6 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -35217,6 +38532,7 @@ impl Datbas6 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Datbas6_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -35224,6 +38540,7 @@ impl Datbas6 {
         crate::common::RegisterField::<24,0x1f,1,0,u8,u8,Datbas6_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -35231,6 +38548,7 @@ impl Datbas6 {
         crate::common::RegisterField::<29,0x3,1,0,u8,u8,Datbas6_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -35268,40 +38586,50 @@ pub mod datbas6 {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -35312,9 +38640,11 @@ impl crate::sealed::RegSpec for Datbas6HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Device Address Table Basic Register 6"]
 pub type Datbas6HaL = crate::RegValueT<Datbas6HaL_SPEC>;
 
 impl Datbas6HaL {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -35323,6 +38653,7 @@ impl Datbas6HaL {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas6HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -35331,6 +38662,7 @@ impl Datbas6HaL {
         crate::common::RegisterField::<7,0x1f,1,0,u8,u8,Datbas6HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -35356,6 +38688,7 @@ impl Datbas6HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -35381,6 +38714,7 @@ impl Datbas6HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -35406,6 +38740,7 @@ impl Datbas6HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -35443,32 +38778,40 @@ pub mod datbas6_ha_l {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -35479,9 +38822,11 @@ impl crate::sealed::RegSpec for Datbas6ByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 6"]
 pub type Datbas6ByLl = crate::RegValueT<Datbas6ByLl_SPEC>;
 
 impl Datbas6ByLl {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -35490,6 +38835,7 @@ impl Datbas6ByLl {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas6ByLl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -35511,9 +38857,11 @@ impl crate::sealed::RegSpec for Datbas6ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 6"]
 pub type Datbas6ByLh = crate::RegValueT<Datbas6ByLh_SPEC>;
 
 impl Datbas6ByLh {
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -35522,6 +38870,7 @@ impl Datbas6ByLh {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Datbas6ByLh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -35547,6 +38896,7 @@ impl Datbas6ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -35572,6 +38922,7 @@ impl Datbas6ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -35597,6 +38948,7 @@ impl Datbas6ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -35634,32 +38986,40 @@ pub mod datbas6_by_lh {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -35670,9 +39030,11 @@ impl crate::sealed::RegSpec for Datbas6HaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Device Address Table Basic Register 6"]
 pub type Datbas6HaH = crate::RegValueT<Datbas6HaH_SPEC>;
 
 impl Datbas6HaH {
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -35681,6 +39043,7 @@ impl Datbas6HaH {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Datbas6HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -35689,6 +39052,7 @@ impl Datbas6HaH {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,Datbas6HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -35697,6 +39061,7 @@ impl Datbas6HaH {
         crate::common::RegisterField::<13,0x3,1,0,u8,u8,Datbas6HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -35734,8 +39099,10 @@ pub mod datbas6_ha_h {
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -35746,9 +39113,11 @@ impl crate::sealed::RegSpec for Datbas6ByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 6"]
 pub type Datbas6ByHl = crate::RegValueT<Datbas6ByHl_SPEC>;
 
 impl Datbas6ByHl {
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -35771,9 +39140,11 @@ impl crate::sealed::RegSpec for Datbas6ByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 6"]
 pub type Datbas6ByHh = crate::RegValueT<Datbas6ByHh_SPEC>;
 
 impl Datbas6ByHh {
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -35782,6 +39153,7 @@ impl Datbas6ByHh {
         crate::common::RegisterField::<0,0x1f,1,0,u8,u8,Datbas6ByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -35790,6 +39162,7 @@ impl Datbas6ByHh {
         crate::common::RegisterField::<5,0x3,1,0,u8,u8,Datbas6ByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -35827,8 +39200,10 @@ pub mod datbas6_by_hh {
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -35839,9 +39214,11 @@ impl crate::sealed::RegSpec for Datbas7_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Device Address Table Basic Register 7"]
 pub type Datbas7 = crate::RegValueT<Datbas7_SPEC>;
 
 impl Datbas7 {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -35849,6 +39226,7 @@ impl Datbas7 {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas7_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -35874,6 +39252,7 @@ impl Datbas7 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -35899,6 +39278,7 @@ impl Datbas7 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -35924,6 +39304,7 @@ impl Datbas7 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -35949,6 +39330,7 @@ impl Datbas7 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -35956,6 +39338,7 @@ impl Datbas7 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Datbas7_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -35963,6 +39346,7 @@ impl Datbas7 {
         crate::common::RegisterField::<24,0x1f,1,0,u8,u8,Datbas7_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -35970,6 +39354,7 @@ impl Datbas7 {
         crate::common::RegisterField::<29,0x3,1,0,u8,u8,Datbas7_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -36007,40 +39392,50 @@ pub mod datbas7 {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -36051,9 +39446,11 @@ impl crate::sealed::RegSpec for Datbas7HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Device Address Table Basic Register 7"]
 pub type Datbas7HaL = crate::RegValueT<Datbas7HaL_SPEC>;
 
 impl Datbas7HaL {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -36062,6 +39459,7 @@ impl Datbas7HaL {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas7HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -36070,6 +39468,7 @@ impl Datbas7HaL {
         crate::common::RegisterField::<7,0x1f,1,0,u8,u8,Datbas7HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -36095,6 +39494,7 @@ impl Datbas7HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -36120,6 +39520,7 @@ impl Datbas7HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -36145,6 +39546,7 @@ impl Datbas7HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -36182,32 +39584,40 @@ pub mod datbas7_ha_l {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -36218,9 +39628,11 @@ impl crate::sealed::RegSpec for Datbas7ByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 7"]
 pub type Datbas7ByLl = crate::RegValueT<Datbas7ByLl_SPEC>;
 
 impl Datbas7ByLl {
+    #[doc = "Device Static Address"]
     #[inline(always)]
     pub fn dvstad(
         self,
@@ -36229,6 +39641,7 @@ impl Datbas7ByLl {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Datbas7ByLl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -36250,9 +39663,11 @@ impl crate::sealed::RegSpec for Datbas7ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 7"]
 pub type Datbas7ByLh = crate::RegValueT<Datbas7ByLh_SPEC>;
 
 impl Datbas7ByLh {
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -36261,6 +39676,7 @@ impl Datbas7ByLh {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Datbas7ByLh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device IBI Payload"]
     #[inline(always)]
     pub fn dvibipl(
         self,
@@ -36286,6 +39702,7 @@ impl Datbas7ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Slave Interrupt Request Reject"]
     #[inline(always)]
     pub fn dvsirrj(
         self,
@@ -36311,6 +39728,7 @@ impl Datbas7ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device In-Band Master Request Reject"]
     #[inline(always)]
     pub fn dvmrrj(
         self,
@@ -36336,6 +39754,7 @@ impl Datbas7ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Device IBI Time-stamp"]
     #[inline(always)]
     pub fn dvibits(
         self,
@@ -36373,32 +39792,40 @@ pub mod datbas7_by_lh {
     pub struct Dvibipl_SPEC;
     pub type Dvibipl = crate::EnumBitfieldStruct<u8, Dvibipl_SPEC>;
     impl Dvibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvsirrj_SPEC;
     pub type Dvsirrj = crate::EnumBitfieldStruct<u8, Dvsirrj_SPEC>;
     impl Dvsirrj {
+        #[doc = "This Device shall ACK the SIR"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK the SIR and send the auto-disable CCC"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvmrrj_SPEC;
     pub type Dvmrrj = crate::EnumBitfieldStruct<u8, Dvmrrj_SPEC>;
     impl Dvmrrj {
+        #[doc = "This Device shall ACK Master Requests"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This Device shall NACK Master Requests and send the auto-disable command"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvibits_SPEC;
     pub type Dvibits = crate::EnumBitfieldStruct<u8, Dvibits_SPEC>;
     impl Dvibits {
+        #[doc = "The Master shall not time-stamp IBIs from this Device with Master Time-stamps"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Master shall time-stamp IBIs for this Device with Master Time-stamps"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -36409,9 +39836,11 @@ impl crate::sealed::RegSpec for Datbas7HaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Device Address Table Basic Register 7"]
 pub type Datbas7HaH = crate::RegValueT<Datbas7HaH_SPEC>;
 
 impl Datbas7HaH {
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -36420,6 +39849,7 @@ impl Datbas7HaH {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Datbas7HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -36428,6 +39858,7 @@ impl Datbas7HaH {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,Datbas7HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -36436,6 +39867,7 @@ impl Datbas7HaH {
         crate::common::RegisterField::<13,0x3,1,0,u8,u8,Datbas7HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -36473,8 +39905,10 @@ pub mod datbas7_ha_h {
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -36485,9 +39919,11 @@ impl crate::sealed::RegSpec for Datbas7ByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 7"]
 pub type Datbas7ByHl = crate::RegValueT<Datbas7ByHl_SPEC>;
 
 impl Datbas7ByHl {
+    #[doc = "Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn dvdyad(
         self,
@@ -36510,9 +39946,11 @@ impl crate::sealed::RegSpec for Datbas7ByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Device Address Table Basic Register 7"]
 pub type Datbas7ByHh = crate::RegValueT<Datbas7ByHh_SPEC>;
 
 impl Datbas7ByHh {
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -36521,6 +39959,7 @@ impl Datbas7ByHh {
         crate::common::RegisterField::<0,0x1f,1,0,u8,u8,Datbas7ByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device NACK Retry Count"]
     #[inline(always)]
     pub fn dvnack(
         self,
@@ -36529,6 +39968,7 @@ impl Datbas7ByHh {
         crate::common::RegisterField::<5,0x3,1,0,u8,u8,Datbas7ByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Device Type"]
     #[inline(always)]
     pub fn dvtyp(
         self,
@@ -36566,8 +40006,10 @@ pub mod datbas7_by_hh {
     pub struct Dvtyp_SPEC;
     pub type Dvtyp = crate::EnumBitfieldStruct<u8, Dvtyp_SPEC>;
     impl Dvtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -36578,9 +40020,11 @@ impl crate::sealed::RegSpec for Exdatbas_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Extended Device Address Table Basic Register"]
 pub type Exdatbas = crate::RegValueT<Exdatbas_SPEC>;
 
 impl Exdatbas {
+    #[doc = "Extended Device Static Address"]
     #[inline(always)]
     pub fn edstad(
         self,
@@ -36588,6 +40032,7 @@ impl Exdatbas {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Exdatbas_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Extended Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn eddyad(
         self,
@@ -36596,6 +40041,7 @@ impl Exdatbas {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Exdatbas_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -36604,6 +40050,7 @@ impl Exdatbas {
         crate::common::RegisterField::<24,0x1f,1,0,u8,u8,Exdatbas_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Extended Device NACK Retry Count"]
     #[inline(always)]
     pub fn ednack(
         self,
@@ -36611,6 +40058,7 @@ impl Exdatbas {
         crate::common::RegisterField::<29,0x3,1,0,u8,u8,Exdatbas_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Extended Device Type"]
     #[inline(always)]
     pub fn edtyp(
         self,
@@ -36648,8 +40096,10 @@ pub mod exdatbas {
     pub struct Edtyp_SPEC;
     pub type Edtyp = crate::EnumBitfieldStruct<u8, Edtyp_SPEC>;
     impl Edtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -36660,9 +40110,11 @@ impl crate::sealed::RegSpec for ExdatbasHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Extended Device Address Table Basic Register"]
 pub type ExdatbasHaL = crate::RegValueT<ExdatbasHaL_SPEC>;
 
 impl ExdatbasHaL {
+    #[doc = "Extended Device Static Address"]
     #[inline(always)]
     pub fn edstad(
         self,
@@ -36671,6 +40123,7 @@ impl ExdatbasHaL {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,ExdatbasHaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 000000000. The write value should be 000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -36693,9 +40146,11 @@ impl crate::sealed::RegSpec for ExdatbasByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Extended Device Address Table Basic Register"]
 pub type ExdatbasByLl = crate::RegValueT<ExdatbasByLl_SPEC>;
 
 impl ExdatbasByLl {
+    #[doc = "Extended Device Static Address"]
     #[inline(always)]
     pub fn edstad(
         self,
@@ -36704,6 +40159,7 @@ impl ExdatbasByLl {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,ExdatbasByLl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -36725,9 +40181,11 @@ impl crate::sealed::RegSpec for ExdatbasByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Extended Device Address Table Basic Register"]
 pub type ExdatbasByLh = crate::RegValueT<ExdatbasByLh_SPEC>;
 
 impl ExdatbasByLh {
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -36750,9 +40208,11 @@ impl crate::sealed::RegSpec for ExdatbasHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Extended Device Address Table Basic Register"]
 pub type ExdatbasHaH = crate::RegValueT<ExdatbasHaH_SPEC>;
 
 impl ExdatbasHaH {
+    #[doc = "Extended Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn eddyad(
         self,
@@ -36761,6 +40221,7 @@ impl ExdatbasHaH {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,ExdatbasHaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -36769,6 +40230,7 @@ impl ExdatbasHaH {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,ExdatbasHaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Extended Device NACK Retry Count"]
     #[inline(always)]
     pub fn ednack(
         self,
@@ -36777,6 +40239,7 @@ impl ExdatbasHaH {
         crate::common::RegisterField::<13,0x3,1,0,u8,u8,ExdatbasHaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Extended Device Type"]
     #[inline(always)]
     pub fn edtyp(
         self,
@@ -36814,8 +40277,10 @@ pub mod exdatbas_ha_h {
     pub struct Edtyp_SPEC;
     pub type Edtyp = crate::EnumBitfieldStruct<u8, Edtyp_SPEC>;
     impl Edtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -36826,9 +40291,11 @@ impl crate::sealed::RegSpec for ExdatbasByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Extended Device Address Table Basic Register"]
 pub type ExdatbasByHl = crate::RegValueT<ExdatbasByHl_SPEC>;
 
 impl ExdatbasByHl {
+    #[doc = "Extended Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn eddyad(
         self,
@@ -36851,9 +40318,11 @@ impl crate::sealed::RegSpec for ExdatbasByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Extended Device Address Table Basic Register"]
 pub type ExdatbasByHh = crate::RegValueT<ExdatbasByHh_SPEC>;
 
 impl ExdatbasByHh {
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -36862,6 +40331,7 @@ impl ExdatbasByHh {
         crate::common::RegisterField::<0,0x1f,1,0,u8,u8,ExdatbasByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Extended Device NACK Retry Count"]
     #[inline(always)]
     pub fn ednack(
         self,
@@ -36870,6 +40340,7 @@ impl ExdatbasByHh {
         crate::common::RegisterField::<5,0x3,1,0,u8,u8,ExdatbasByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Extended Device Type"]
     #[inline(always)]
     pub fn edtyp(
         self,
@@ -36907,8 +40378,10 @@ pub mod exdatbas_by_hh {
     pub struct Edtyp_SPEC;
     pub type Edtyp = crate::EnumBitfieldStruct<u8, Edtyp_SPEC>;
     impl Edtyp {
+        #[doc = "I3C: I3C Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "I2C: I2C Device"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -36919,9 +40392,11 @@ impl crate::sealed::RegSpec for Sdatbas0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Slave Device Address Table Basic Register 0"]
 pub type Sdatbas0 = crate::RegValueT<Sdatbas0_SPEC>;
 
 impl Sdatbas0 {
+    #[doc = "Slave Device Static Address"]
     #[inline(always)]
     pub fn sdstad(
         self,
@@ -36930,6 +40405,7 @@ impl Sdatbas0 {
         crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,Sdatbas0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Device Address Length Selection"]
     #[inline(always)]
     pub fn sdadls(
         self,
@@ -36955,6 +40431,7 @@ impl Sdatbas0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Device IBI Payload"]
     #[inline(always)]
     pub fn sdibipl(
         self,
@@ -36980,6 +40457,7 @@ impl Sdatbas0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn sddyad(
         self,
@@ -36988,6 +40466,7 @@ impl Sdatbas0 {
         crate::common::RegisterField::<16,0x7f,1,0,u8,u8,Sdatbas0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 000000000. The write value should be 000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -37008,16 +40487,20 @@ pub mod sdatbas0 {
     pub struct Sdadls_SPEC;
     pub type Sdadls = crate::EnumBitfieldStruct<u8, Sdadls_SPEC>;
     impl Sdadls {
+        #[doc = "Slave Device address length 7 bits selected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave Device address length 10 bits selected. (I2C device only)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdibipl_SPEC;
     pub type Sdibipl = crate::EnumBitfieldStruct<u8, Sdibipl_SPEC>;
     impl Sdibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -37028,9 +40511,11 @@ impl crate::sealed::RegSpec for Sdatbas0HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Slave Device Address Table Basic Register 0"]
 pub type Sdatbas0HaL = crate::RegValueT<Sdatbas0HaL_SPEC>;
 
 impl Sdatbas0HaL {
+    #[doc = "Slave Device Static Address"]
     #[inline(always)]
     pub fn sdstad(
         self,
@@ -37039,6 +40524,7 @@ impl Sdatbas0HaL {
         crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,Sdatbas0HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Device Address Length Selection"]
     #[inline(always)]
     pub fn sdadls(
         self,
@@ -37064,6 +40550,7 @@ impl Sdatbas0HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Device IBI Payload"]
     #[inline(always)]
     pub fn sdibipl(
         self,
@@ -37089,6 +40576,7 @@ impl Sdatbas0HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -37109,16 +40597,20 @@ pub mod sdatbas0_ha_l {
     pub struct Sdadls_SPEC;
     pub type Sdadls = crate::EnumBitfieldStruct<u8, Sdadls_SPEC>;
     impl Sdadls {
+        #[doc = "Slave Device address length 7 bits selected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave Device address length 10 bits selected. (I2C device only)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdibipl_SPEC;
     pub type Sdibipl = crate::EnumBitfieldStruct<u8, Sdibipl_SPEC>;
     impl Sdibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -37129,9 +40621,11 @@ impl crate::sealed::RegSpec for Sdatbas0ByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Address Table Basic Register 0"]
 pub type Sdatbas0ByLl = crate::RegValueT<Sdatbas0ByLl_SPEC>;
 
 impl Sdatbas0ByLl {
+    #[doc = "Slave Device Static Address"]
     #[inline(always)]
     pub fn sdstad(
         self,
@@ -37154,9 +40648,11 @@ impl crate::sealed::RegSpec for Sdatbas0ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Address Table Basic Register 0"]
 pub type Sdatbas0ByLh = crate::RegValueT<Sdatbas0ByLh_SPEC>;
 
 impl Sdatbas0ByLh {
+    #[doc = "Slave Device Static Address"]
     #[inline(always)]
     pub fn sdstad(
         self,
@@ -37165,6 +40661,7 @@ impl Sdatbas0ByLh {
         crate::common::RegisterField::<0,0x3,1,0,u8,u8,Sdatbas0ByLh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Device Address Length Selection"]
     #[inline(always)]
     pub fn sdadls(
         self,
@@ -37190,6 +40687,7 @@ impl Sdatbas0ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Device IBI Payload"]
     #[inline(always)]
     pub fn sdibipl(
         self,
@@ -37215,6 +40713,7 @@ impl Sdatbas0ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -37235,16 +40734,20 @@ pub mod sdatbas0_by_lh {
     pub struct Sdadls_SPEC;
     pub type Sdadls = crate::EnumBitfieldStruct<u8, Sdadls_SPEC>;
     impl Sdadls {
+        #[doc = "Slave Device address length 7 bits selected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave Device address length 10 bits selected. (I2C device only)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdibipl_SPEC;
     pub type Sdibipl = crate::EnumBitfieldStruct<u8, Sdibipl_SPEC>;
     impl Sdibipl {
+        #[doc = "IBIs from this Device do not carry a Data Payload"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "IBIs from this Device do carry a Data Payload"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -37255,9 +40758,11 @@ impl crate::sealed::RegSpec for Sdatbas0HaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Slave Device Address Table Basic Register 0"]
 pub type Sdatbas0HaH = crate::RegValueT<Sdatbas0HaH_SPEC>;
 
 impl Sdatbas0HaH {
+    #[doc = "Slave Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn sddyad(
         self,
@@ -37266,6 +40771,7 @@ impl Sdatbas0HaH {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Sdatbas0HaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 000000000. The write value should be 000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -37288,9 +40794,11 @@ impl crate::sealed::RegSpec for Sdatbas0ByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Address Table Basic Register 0"]
 pub type Sdatbas0ByHl = crate::RegValueT<Sdatbas0ByHl_SPEC>;
 
 impl Sdatbas0ByHl {
+    #[doc = "Slave Device I3C Dynamic Address"]
     #[inline(always)]
     pub fn sddyad(
         self,
@@ -37299,6 +40807,7 @@ impl Sdatbas0ByHl {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Sdatbas0ByHl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -37320,9 +40829,11 @@ impl crate::sealed::RegSpec for Sdatbas1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Slave Device Address Table Basic Register 1"]
 pub type Sdatbas1 = crate::RegValueT<Sdatbas1_SPEC>;
 
 impl Sdatbas1 {
+    #[doc = "Slave Device Static Address"]
     #[inline(always)]
     pub fn sdstad(
         self,
@@ -37331,6 +40842,7 @@ impl Sdatbas1 {
         crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,Sdatbas1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Device Address Length Selection"]
     #[inline(always)]
     pub fn sdadls(
         self,
@@ -37356,6 +40868,7 @@ impl Sdatbas1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000000000000. The write value should be 000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -37376,8 +40889,10 @@ pub mod sdatbas1 {
     pub struct Sdadls_SPEC;
     pub type Sdadls = crate::EnumBitfieldStruct<u8, Sdadls_SPEC>;
     impl Sdadls {
+        #[doc = "Slave Device address length 7 bits selected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave Device address length 10 bits selected. (I2C device only)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -37388,9 +40903,11 @@ impl crate::sealed::RegSpec for Sdatbas1HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Slave Device Address Table Basic Register 1"]
 pub type Sdatbas1HaL = crate::RegValueT<Sdatbas1HaL_SPEC>;
 
 impl Sdatbas1HaL {
+    #[doc = "Slave Device Static Address"]
     #[inline(always)]
     pub fn sdstad(
         self,
@@ -37399,6 +40916,7 @@ impl Sdatbas1HaL {
         crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,Sdatbas1HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Device Address Length Selection"]
     #[inline(always)]
     pub fn sdadls(
         self,
@@ -37424,6 +40942,7 @@ impl Sdatbas1HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -37444,8 +40963,10 @@ pub mod sdatbas1_ha_l {
     pub struct Sdadls_SPEC;
     pub type Sdadls = crate::EnumBitfieldStruct<u8, Sdadls_SPEC>;
     impl Sdadls {
+        #[doc = "Slave Device address length 7 bits selected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave Device address length 10 bits selected. (I2C device only)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -37456,9 +40977,11 @@ impl crate::sealed::RegSpec for Sdatbas1ByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Address Table Basic Register 1"]
 pub type Sdatbas1ByLl = crate::RegValueT<Sdatbas1ByLl_SPEC>;
 
 impl Sdatbas1ByLl {
+    #[doc = "Slave Device Static Address"]
     #[inline(always)]
     pub fn sdstad(
         self,
@@ -37481,9 +41004,11 @@ impl crate::sealed::RegSpec for Sdatbas1ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Address Table Basic Register 1"]
 pub type Sdatbas1ByLh = crate::RegValueT<Sdatbas1ByLh_SPEC>;
 
 impl Sdatbas1ByLh {
+    #[doc = "Slave Device Static Address"]
     #[inline(always)]
     pub fn sdstad(
         self,
@@ -37492,6 +41017,7 @@ impl Sdatbas1ByLh {
         crate::common::RegisterField::<0,0x3,1,0,u8,u8,Sdatbas1ByLh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Device Address Length Selection"]
     #[inline(always)]
     pub fn sdadls(
         self,
@@ -37517,6 +41043,7 @@ impl Sdatbas1ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -37537,8 +41064,10 @@ pub mod sdatbas1_by_lh {
     pub struct Sdadls_SPEC;
     pub type Sdadls = crate::EnumBitfieldStruct<u8, Sdadls_SPEC>;
     impl Sdadls {
+        #[doc = "Slave Device address length 7 bits selected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave Device address length 10 bits selected. (I2C device only)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -37549,9 +41078,11 @@ impl crate::sealed::RegSpec for Sdatbas2_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Slave Device Address Table Basic Register 2"]
 pub type Sdatbas2 = crate::RegValueT<Sdatbas2_SPEC>;
 
 impl Sdatbas2 {
+    #[doc = "Slave Device Static Address"]
     #[inline(always)]
     pub fn sdstad(
         self,
@@ -37560,6 +41091,7 @@ impl Sdatbas2 {
         crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,Sdatbas2_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Device Address Length Selection"]
     #[inline(always)]
     pub fn sdadls(
         self,
@@ -37585,6 +41117,7 @@ impl Sdatbas2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000000000000. The write value should be 000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -37605,8 +41138,10 @@ pub mod sdatbas2 {
     pub struct Sdadls_SPEC;
     pub type Sdadls = crate::EnumBitfieldStruct<u8, Sdadls_SPEC>;
     impl Sdadls {
+        #[doc = "Slave Device address length 7 bits selected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave Device address length 10 bits selected. (I2C device only)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -37617,9 +41152,11 @@ impl crate::sealed::RegSpec for Sdatbas2HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Slave Device Address Table Basic Register 2"]
 pub type Sdatbas2HaL = crate::RegValueT<Sdatbas2HaL_SPEC>;
 
 impl Sdatbas2HaL {
+    #[doc = "Slave Device Static Address"]
     #[inline(always)]
     pub fn sdstad(
         self,
@@ -37628,6 +41165,7 @@ impl Sdatbas2HaL {
         crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,Sdatbas2HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Device Address Length Selection"]
     #[inline(always)]
     pub fn sdadls(
         self,
@@ -37653,6 +41191,7 @@ impl Sdatbas2HaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -37673,8 +41212,10 @@ pub mod sdatbas2_ha_l {
     pub struct Sdadls_SPEC;
     pub type Sdadls = crate::EnumBitfieldStruct<u8, Sdadls_SPEC>;
     impl Sdadls {
+        #[doc = "Slave Device address length 7 bits selected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave Device address length 10 bits selected. (I2C device only)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -37685,9 +41226,11 @@ impl crate::sealed::RegSpec for Sdatbas2ByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Address Table Basic Register 2"]
 pub type Sdatbas2ByLl = crate::RegValueT<Sdatbas2ByLl_SPEC>;
 
 impl Sdatbas2ByLl {
+    #[doc = "Slave Device Static Address"]
     #[inline(always)]
     pub fn sdstad(
         self,
@@ -37710,9 +41253,11 @@ impl crate::sealed::RegSpec for Sdatbas2ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Address Table Basic Register 2"]
 pub type Sdatbas2ByLh = crate::RegValueT<Sdatbas2ByLh_SPEC>;
 
 impl Sdatbas2ByLh {
+    #[doc = "Slave Device Static Address"]
     #[inline(always)]
     pub fn sdstad(
         self,
@@ -37721,6 +41266,7 @@ impl Sdatbas2ByLh {
         crate::common::RegisterField::<0,0x3,1,0,u8,u8,Sdatbas2ByLh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Slave Device Address Length Selection"]
     #[inline(always)]
     pub fn sdadls(
         self,
@@ -37746,6 +41292,7 @@ impl Sdatbas2ByLh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -37766,8 +41313,10 @@ pub mod sdatbas2_by_lh {
     pub struct Sdadls_SPEC;
     pub type Sdadls = crate::EnumBitfieldStruct<u8, Sdadls_SPEC>;
     impl Sdadls {
+        #[doc = "Slave Device address length 7 bits selected"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave Device address length 10 bits selected. (I2C device only)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -37778,9 +41327,11 @@ impl crate::sealed::RegSpec for Msdct0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Master Device Characteristic Table Register 0"]
 pub type Msdct0 = crate::RegValueT<Msdct0_SPEC>;
 
 impl Msdct0 {
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -37806,6 +41357,7 @@ impl Msdct0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -37826,28 +41378,40 @@ pub mod msdct0 {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -37858,9 +41422,11 @@ impl crate::sealed::RegSpec for Msdct0HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Master Device Characteristic Table Register 0"]
 pub type Msdct0HaL = crate::RegValueT<Msdct0HaL_SPEC>;
 
 impl Msdct0HaL {
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -37869,6 +41435,7 @@ impl Msdct0HaL {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Msdct0HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -37906,28 +41473,40 @@ pub mod msdct0_ha_l {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -37938,9 +41517,11 @@ impl crate::sealed::RegSpec for Msdct0ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Master Device Characteristic Table Register 0"]
 pub type Msdct0ByLh = crate::RegValueT<Msdct0ByLh_SPEC>;
 
 impl Msdct0ByLh {
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -37978,28 +41559,40 @@ pub mod msdct0_by_lh {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -38010,9 +41603,11 @@ impl crate::sealed::RegSpec for Msdct1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Master Device Characteristic Table Register 1"]
 pub type Msdct1 = crate::RegValueT<Msdct1_SPEC>;
 
 impl Msdct1 {
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -38038,6 +41633,7 @@ impl Msdct1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -38058,28 +41654,40 @@ pub mod msdct1 {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -38090,9 +41698,11 @@ impl crate::sealed::RegSpec for Msdct1HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Master Device Characteristic Table Register 1"]
 pub type Msdct1HaL = crate::RegValueT<Msdct1HaL_SPEC>;
 
 impl Msdct1HaL {
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -38101,6 +41711,7 @@ impl Msdct1HaL {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Msdct1HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -38138,28 +41749,40 @@ pub mod msdct1_ha_l {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -38170,9 +41793,11 @@ impl crate::sealed::RegSpec for Msdct1ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Master Device Characteristic Table Register 1"]
 pub type Msdct1ByLh = crate::RegValueT<Msdct1ByLh_SPEC>;
 
 impl Msdct1ByLh {
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -38210,28 +41835,40 @@ pub mod msdct1_by_lh {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -38242,9 +41879,11 @@ impl crate::sealed::RegSpec for Msdct2_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Master Device Characteristic Table Register 2"]
 pub type Msdct2 = crate::RegValueT<Msdct2_SPEC>;
 
 impl Msdct2 {
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -38270,6 +41909,7 @@ impl Msdct2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -38290,28 +41930,40 @@ pub mod msdct2 {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -38322,9 +41974,11 @@ impl crate::sealed::RegSpec for Msdct2HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Master Device Characteristic Table Register 2"]
 pub type Msdct2HaL = crate::RegValueT<Msdct2HaL_SPEC>;
 
 impl Msdct2HaL {
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -38333,6 +41987,7 @@ impl Msdct2HaL {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Msdct2HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -38370,28 +42025,40 @@ pub mod msdct2_ha_l {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -38402,9 +42069,11 @@ impl crate::sealed::RegSpec for Msdct2ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Master Device Characteristic Table Register 2"]
 pub type Msdct2ByLh = crate::RegValueT<Msdct2ByLh_SPEC>;
 
 impl Msdct2ByLh {
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -38442,28 +42111,40 @@ pub mod msdct2_by_lh {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -38474,9 +42155,11 @@ impl crate::sealed::RegSpec for Msdct3_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Master Device Characteristic Table Register 3"]
 pub type Msdct3 = crate::RegValueT<Msdct3_SPEC>;
 
 impl Msdct3 {
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -38502,6 +42185,7 @@ impl Msdct3 {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -38522,28 +42206,40 @@ pub mod msdct3 {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -38554,9 +42250,11 @@ impl crate::sealed::RegSpec for Msdct3HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Master Device Characteristic Table Register 3"]
 pub type Msdct3HaL = crate::RegValueT<Msdct3HaL_SPEC>;
 
 impl Msdct3HaL {
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -38565,6 +42263,7 @@ impl Msdct3HaL {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Msdct3HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -38602,28 +42301,40 @@ pub mod msdct3_ha_l {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -38634,9 +42345,11 @@ impl crate::sealed::RegSpec for Msdct3ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Master Device Characteristic Table Register 3"]
 pub type Msdct3ByLh = crate::RegValueT<Msdct3ByLh_SPEC>;
 
 impl Msdct3ByLh {
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -38674,28 +42387,40 @@ pub mod msdct3_by_lh {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -38706,9 +42431,11 @@ impl crate::sealed::RegSpec for Msdct4_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Master Device Characteristic Table Register 4"]
 pub type Msdct4 = crate::RegValueT<Msdct4_SPEC>;
 
 impl Msdct4 {
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -38734,6 +42461,7 @@ impl Msdct4 {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -38754,28 +42482,40 @@ pub mod msdct4 {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -38786,9 +42526,11 @@ impl crate::sealed::RegSpec for Msdct4HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Master Device Characteristic Table Register 4"]
 pub type Msdct4HaL = crate::RegValueT<Msdct4HaL_SPEC>;
 
 impl Msdct4HaL {
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -38797,6 +42539,7 @@ impl Msdct4HaL {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Msdct4HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -38834,28 +42577,40 @@ pub mod msdct4_ha_l {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -38866,9 +42621,11 @@ impl crate::sealed::RegSpec for Msdct4ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Master Device Characteristic Table Register 4"]
 pub type Msdct4ByLh = crate::RegValueT<Msdct4ByLh_SPEC>;
 
 impl Msdct4ByLh {
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -38906,28 +42663,40 @@ pub mod msdct4_by_lh {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -38938,9 +42707,11 @@ impl crate::sealed::RegSpec for Msdct5_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Master Device Characteristic Table Register 5"]
 pub type Msdct5 = crate::RegValueT<Msdct5_SPEC>;
 
 impl Msdct5 {
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -38966,6 +42737,7 @@ impl Msdct5 {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -38986,28 +42758,40 @@ pub mod msdct5 {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -39018,9 +42802,11 @@ impl crate::sealed::RegSpec for Msdct5HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Master Device Characteristic Table Register 5"]
 pub type Msdct5HaL = crate::RegValueT<Msdct5HaL_SPEC>;
 
 impl Msdct5HaL {
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -39029,6 +42815,7 @@ impl Msdct5HaL {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Msdct5HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -39066,28 +42853,40 @@ pub mod msdct5_ha_l {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -39098,9 +42897,11 @@ impl crate::sealed::RegSpec for Msdct5ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Master Device Characteristic Table Register 5"]
 pub type Msdct5ByLh = crate::RegValueT<Msdct5ByLh_SPEC>;
 
 impl Msdct5ByLh {
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -39138,28 +42939,40 @@ pub mod msdct5_by_lh {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -39170,9 +42983,11 @@ impl crate::sealed::RegSpec for Msdct6_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Master Device Characteristic Table Register 6"]
 pub type Msdct6 = crate::RegValueT<Msdct6_SPEC>;
 
 impl Msdct6 {
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -39198,6 +43013,7 @@ impl Msdct6 {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -39218,28 +43034,40 @@ pub mod msdct6 {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -39250,9 +43078,11 @@ impl crate::sealed::RegSpec for Msdct6HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Master Device Characteristic Table Register 6"]
 pub type Msdct6HaL = crate::RegValueT<Msdct6HaL_SPEC>;
 
 impl Msdct6HaL {
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -39261,6 +43091,7 @@ impl Msdct6HaL {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Msdct6HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -39298,28 +43129,40 @@ pub mod msdct6_ha_l {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -39330,9 +43173,11 @@ impl crate::sealed::RegSpec for Msdct6ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Master Device Characteristic Table Register 6"]
 pub type Msdct6ByLh = crate::RegValueT<Msdct6ByLh_SPEC>;
 
 impl Msdct6ByLh {
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -39370,28 +43215,40 @@ pub mod msdct6_by_lh {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -39402,9 +43259,11 @@ impl crate::sealed::RegSpec for Msdct7_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Master Device Characteristic Table Register 7"]
 pub type Msdct7 = crate::RegValueT<Msdct7_SPEC>;
 
 impl Msdct7 {
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -39430,6 +43289,7 @@ impl Msdct7 {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -39450,28 +43310,40 @@ pub mod msdct7 {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -39482,9 +43354,11 @@ impl crate::sealed::RegSpec for Msdct7HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Master Device Characteristic Table Register 7"]
 pub type Msdct7HaL = crate::RegValueT<Msdct7HaL_SPEC>;
 
 impl Msdct7HaL {
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -39493,6 +43367,7 @@ impl Msdct7HaL {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Msdct7HaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -39530,28 +43405,40 @@ pub mod msdct7_ha_l {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -39562,9 +43449,11 @@ impl crate::sealed::RegSpec for Msdct7ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Master Device Characteristic Table Register 7"]
 pub type Msdct7ByLh = crate::RegValueT<Msdct7ByLh_SPEC>;
 
 impl Msdct7ByLh {
+    #[doc = "Received Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn rbcr(
         self,
@@ -39602,28 +43491,40 @@ pub mod msdct7_by_lh {
     pub struct Rbcr_SPEC;
     pub type Rbcr = crate::EnumBitfieldStruct<u8, Rbcr_SPEC>;
     impl Rbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -39634,9 +43535,11 @@ impl crate::sealed::RegSpec for Svdct_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Slave Device Characteristic Table Register"]
 pub type Svdct = crate::RegValueT<Svdct_SPEC>;
 
 impl Svdct {
+    #[doc = "Transfar Device Characteristic Register"]
     #[inline(always)]
     pub fn tdcr(
         self,
@@ -39644,6 +43547,7 @@ impl Svdct {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Svdct_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Transfar Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn tbcr(
         self,
@@ -39669,6 +43573,7 @@ impl Svdct {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -39689,28 +43594,40 @@ pub mod svdct {
     pub struct Tbcr_SPEC;
     pub type Tbcr = crate::EnumBitfieldStruct<u8, Tbcr_SPEC>;
     impl Tbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -39721,9 +43638,11 @@ impl crate::sealed::RegSpec for SvdctHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Slave Device Characteristic Table Register"]
 pub type SvdctHaL = crate::RegValueT<SvdctHaL_SPEC>;
 
 impl SvdctHaL {
+    #[doc = "Transfar Device Characteristic Register"]
     #[inline(always)]
     pub fn tdcr(
         self,
@@ -39731,6 +43650,7 @@ impl SvdctHaL {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,SvdctHaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Transfar Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn tbcr(
         self,
@@ -39768,28 +43688,40 @@ pub mod svdct_ha_l {
     pub struct Tbcr_SPEC;
     pub type Tbcr = crate::EnumBitfieldStruct<u8, Tbcr_SPEC>;
     impl Tbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -39800,9 +43732,11 @@ impl crate::sealed::RegSpec for SvdctByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Characteristic Table Register"]
 pub type SvdctByLl = crate::RegValueT<SvdctByLl_SPEC>;
 
 impl SvdctByLl {
+    #[doc = "Transfar Device Characteristic Register"]
     #[inline(always)]
     pub fn tdcr(
         self,
@@ -39825,9 +43759,11 @@ impl crate::sealed::RegSpec for SvdctByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Characteristic Table Register"]
 pub type SvdctByLh = crate::RegValueT<SvdctByLh_SPEC>;
 
 impl SvdctByLh {
+    #[doc = "Transfar Bus Characteristic RegisterValue of Device\'s I3C Bus Characteristics Register."]
     #[inline(always)]
     pub fn tbcr(
         self,
@@ -39865,28 +43801,40 @@ pub mod svdct_by_lh {
     pub struct Tbcr_SPEC;
     pub type Tbcr = crate::EnumBitfieldStruct<u8, Tbcr_SPEC>;
     impl Tbcr {
+        #[doc = "– SDR only"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not a Bridge Device"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Is a Bridge Device"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Device will always respond to I3C Bus commands"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Device will not always respond to I3C Bus commands"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No data byte follows the accepted IBI"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– Not Capable"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Capable"]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "– No Limitation"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -39897,9 +43845,11 @@ impl crate::sealed::RegSpec for Sdctpidl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Slave Device Characteristic Table Provisional ID Low Register"]
 pub type Sdctpidl = crate::RegValueT<Sdctpidl_SPEC>;
 
 impl Sdctpidl {
+    #[doc = "Transfar Device Provisional ID Low"]
     #[inline(always)]
     pub fn sdctpidl(
         self,
@@ -39908,6 +43858,7 @@ impl Sdctpidl {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Sdctpidl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -39930,9 +43881,11 @@ impl crate::sealed::RegSpec for SdctpidlHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Slave Device Characteristic Table Provisional ID Low Register"]
 pub type SdctpidlHaL = crate::RegValueT<SdctpidlHaL_SPEC>;
 
 impl SdctpidlHaL {
+    #[doc = "Transfar Device Provisional ID Low"]
     #[inline(always)]
     pub fn sdctpidl(
         self,
@@ -39955,9 +43908,11 @@ impl crate::sealed::RegSpec for SdctpidlByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Characteristic Table Provisional ID Low Register"]
 pub type SdctpidlByLl = crate::RegValueT<SdctpidlByLl_SPEC>;
 
 impl SdctpidlByLl {
+    #[doc = "Transfar Device Provisional ID Low"]
     #[inline(always)]
     pub fn sdctpidl(
         self,
@@ -39980,9 +43935,11 @@ impl crate::sealed::RegSpec for SdctpidlByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Characteristic Table Provisional ID Low Register"]
 pub type SdctpidlByLh = crate::RegValueT<SdctpidlByLh_SPEC>;
 
 impl SdctpidlByLh {
+    #[doc = "Transfar Device Provisional ID Low"]
     #[inline(always)]
     pub fn sdctpidl(
         self,
@@ -40005,9 +43962,11 @@ impl crate::sealed::RegSpec for Sdctpidh_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Slave Device Characteristic Table Provisional ID High Register"]
 pub type Sdctpidh = crate::RegValueT<Sdctpidh_SPEC>;
 
 impl Sdctpidh {
+    #[doc = "Transfar Device Provisional ID High"]
     #[inline(always)]
     pub fn sdctpidh(
         self,
@@ -40039,9 +43998,11 @@ impl crate::sealed::RegSpec for SdctpidhHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Slave Device Characteristic Table Provisional ID High Register"]
 pub type SdctpidhHaL = crate::RegValueT<SdctpidhHaL_SPEC>;
 
 impl SdctpidhHaL {
+    #[doc = "Transfar Device Provisional ID High"]
     #[inline(always)]
     pub fn sdctpidh(
         self,
@@ -40064,9 +44025,11 @@ impl crate::sealed::RegSpec for SdctpidhByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Characteristic Table Provisional ID High Register"]
 pub type SdctpidhByLl = crate::RegValueT<SdctpidhByLl_SPEC>;
 
 impl SdctpidhByLl {
+    #[doc = "Transfar Device Provisional ID High"]
     #[inline(always)]
     pub fn sdctpidh(
         self,
@@ -40089,9 +44052,11 @@ impl crate::sealed::RegSpec for SdctpidhByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Characteristic Table Provisional ID High Register"]
 pub type SdctpidhByLh = crate::RegValueT<SdctpidhByLh_SPEC>;
 
 impl SdctpidhByLh {
+    #[doc = "Transfar Device Provisional ID High"]
     #[inline(always)]
     pub fn sdctpidh(
         self,
@@ -40114,9 +44079,11 @@ impl crate::sealed::RegSpec for SdctpidhHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Slave Device Characteristic Table Provisional ID High Register"]
 pub type SdctpidhHaH = crate::RegValueT<SdctpidhHaH_SPEC>;
 
 impl SdctpidhHaH {
+    #[doc = "Transfar Device Provisional ID High"]
     #[inline(always)]
     pub fn sdctpidh(
         self,
@@ -40139,9 +44106,11 @@ impl crate::sealed::RegSpec for SdctpidhByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Characteristic Table Provisional ID High Register"]
 pub type SdctpidhByHl = crate::RegValueT<SdctpidhByHl_SPEC>;
 
 impl SdctpidhByHl {
+    #[doc = "Transfar Device Provisional ID High"]
     #[inline(always)]
     pub fn sdctpidh(
         self,
@@ -40164,9 +44133,11 @@ impl crate::sealed::RegSpec for SdctpidhByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Characteristic Table Provisional ID High Register"]
 pub type SdctpidhByHh = crate::RegValueT<SdctpidhByHh_SPEC>;
 
 impl SdctpidhByHh {
+    #[doc = "Transfar Device Provisional ID High"]
     #[inline(always)]
     pub fn sdctpidh(
         self,
@@ -40189,9 +44160,11 @@ impl crate::sealed::RegSpec for Svdvad0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Slave Device Address Register 0"]
 pub type Svdvad0 = crate::RegValueT<Svdvad0_SPEC>;
 
 impl Svdvad0 {
+    #[doc = "Slave Address"]
     #[inline(always)]
     pub fn svad(
         self,
@@ -40200,6 +44173,7 @@ impl Svdvad0 {
         crate::common::RegisterField::<16,0x3ff,1,0,u16,u16,Svdvad0_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Slave Address Length"]
     #[inline(always)]
     pub fn sadlg(
         self,
@@ -40225,6 +44199,7 @@ impl Svdvad0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -40232,6 +44207,7 @@ impl Svdvad0 {
         crate::common::RegisterField::<28,0x3,1,0,u8,u8,Svdvad0_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Slave Static Address Valid"]
     #[inline(always)]
     pub fn sstadv(
         self,
@@ -40257,6 +44233,7 @@ impl Svdvad0 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Dynamic Address Valid"]
     #[inline(always)]
     pub fn sdyadv(
         self,
@@ -40294,24 +44271,30 @@ pub mod svdvad0 {
     pub struct Sadlg_SPEC;
     pub type Sadlg = crate::EnumBitfieldStruct<u8, Sadlg_SPEC>;
     impl Sadlg {
+        #[doc = "The 7-bit address format is selected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The 10-bit address format is selected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sstadv_SPEC;
     pub type Sstadv = crate::EnumBitfieldStruct<u8, Sstadv_SPEC>;
     impl Sstadv {
+        #[doc = "Slave address is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave address is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdyadv_SPEC;
     pub type Sdyadv = crate::EnumBitfieldStruct<u8, Sdyadv_SPEC>;
     impl Sdyadv {
+        #[doc = "Dynamic Address is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Dynamic Address is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -40322,9 +44305,11 @@ impl crate::sealed::RegSpec for Svdvad0HaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Slave Device Address Register 0"]
 pub type Svdvad0HaH = crate::RegValueT<Svdvad0HaH_SPEC>;
 
 impl Svdvad0HaH {
+    #[doc = "Slave Address"]
     #[inline(always)]
     pub fn svad(
         self,
@@ -40333,6 +44318,7 @@ impl Svdvad0HaH {
         crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,Svdvad0HaH_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Slave Address Length"]
     #[inline(always)]
     pub fn sadlg(
         self,
@@ -40358,6 +44344,7 @@ impl Svdvad0HaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -40366,6 +44353,7 @@ impl Svdvad0HaH {
         crate::common::RegisterField::<12,0x3,1,0,u8,u8,Svdvad0HaH_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Slave Static Address Valid"]
     #[inline(always)]
     pub fn sstadv(
         self,
@@ -40391,6 +44379,7 @@ impl Svdvad0HaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Dynamic Address Valid"]
     #[inline(always)]
     pub fn sdyadv(
         self,
@@ -40428,24 +44417,30 @@ pub mod svdvad0_ha_h {
     pub struct Sadlg_SPEC;
     pub type Sadlg = crate::EnumBitfieldStruct<u8, Sadlg_SPEC>;
     impl Sadlg {
+        #[doc = "The 7-bit address format is selected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The 10-bit address format is selected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sstadv_SPEC;
     pub type Sstadv = crate::EnumBitfieldStruct<u8, Sstadv_SPEC>;
     impl Sstadv {
+        #[doc = "Slave address is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave address is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdyadv_SPEC;
     pub type Sdyadv = crate::EnumBitfieldStruct<u8, Sdyadv_SPEC>;
     impl Sdyadv {
+        #[doc = "Dynamic Address is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Dynamic Address is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -40456,9 +44451,11 @@ impl crate::sealed::RegSpec for Svdvad0ByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Address Register 0"]
 pub type Svdvad0ByHl = crate::RegValueT<Svdvad0ByHl_SPEC>;
 
 impl Svdvad0ByHl {
+    #[doc = "Slave Address"]
     #[inline(always)]
     pub fn svad(
         self,
@@ -40481,9 +44478,11 @@ impl crate::sealed::RegSpec for Svdvad0ByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Address Register 0"]
 pub type Svdvad0ByHh = crate::RegValueT<Svdvad0ByHh_SPEC>;
 
 impl Svdvad0ByHh {
+    #[doc = "Slave Address"]
     #[inline(always)]
     pub fn svad(
         self,
@@ -40492,6 +44491,7 @@ impl Svdvad0ByHh {
         crate::common::RegisterField::<0,0x3,1,0,u8,u8,Svdvad0ByHh_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Slave Address Length"]
     #[inline(always)]
     pub fn sadlg(
         self,
@@ -40517,6 +44517,7 @@ impl Svdvad0ByHh {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -40525,6 +44526,7 @@ impl Svdvad0ByHh {
         crate::common::RegisterField::<4,0x3,1,0,u8,u8,Svdvad0ByHh_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Slave Static Address Valid"]
     #[inline(always)]
     pub fn sstadv(
         self,
@@ -40550,6 +44552,7 @@ impl Svdvad0ByHh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Dynamic Address Valid"]
     #[inline(always)]
     pub fn sdyadv(
         self,
@@ -40587,24 +44590,30 @@ pub mod svdvad0_by_hh {
     pub struct Sadlg_SPEC;
     pub type Sadlg = crate::EnumBitfieldStruct<u8, Sadlg_SPEC>;
     impl Sadlg {
+        #[doc = "The 7-bit address format is selected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The 10-bit address format is selected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sstadv_SPEC;
     pub type Sstadv = crate::EnumBitfieldStruct<u8, Sstadv_SPEC>;
     impl Sstadv {
+        #[doc = "Slave address is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave address is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdyadv_SPEC;
     pub type Sdyadv = crate::EnumBitfieldStruct<u8, Sdyadv_SPEC>;
     impl Sdyadv {
+        #[doc = "Dynamic Address is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Dynamic Address is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -40615,9 +44624,11 @@ impl crate::sealed::RegSpec for Svdvad1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Slave Device Address Register 1"]
 pub type Svdvad1 = crate::RegValueT<Svdvad1_SPEC>;
 
 impl Svdvad1 {
+    #[doc = "Slave Address"]
     #[inline(always)]
     pub fn svad(
         self,
@@ -40626,6 +44637,7 @@ impl Svdvad1 {
         crate::common::RegisterField::<16,0x3ff,1,0,u16,u16,Svdvad1_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Slave Address Length"]
     #[inline(always)]
     pub fn sadlg(
         self,
@@ -40651,6 +44663,7 @@ impl Svdvad1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Static Address Valid"]
     #[inline(always)]
     pub fn sstadv(
         self,
@@ -40676,6 +44689,7 @@ impl Svdvad1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -40697,16 +44711,20 @@ pub mod svdvad1 {
     pub struct Sadlg_SPEC;
     pub type Sadlg = crate::EnumBitfieldStruct<u8, Sadlg_SPEC>;
     impl Sadlg {
+        #[doc = "The 7-bit address format is selected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The 10-bit address format is selected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sstadv_SPEC;
     pub type Sstadv = crate::EnumBitfieldStruct<u8, Sstadv_SPEC>;
     impl Sstadv {
+        #[doc = "Slave address is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave address is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -40717,9 +44735,11 @@ impl crate::sealed::RegSpec for Svdvad1HaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Slave Device Address Register 1"]
 pub type Svdvad1HaH = crate::RegValueT<Svdvad1HaH_SPEC>;
 
 impl Svdvad1HaH {
+    #[doc = "Slave Address"]
     #[inline(always)]
     pub fn svad(
         self,
@@ -40728,6 +44748,7 @@ impl Svdvad1HaH {
         crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,Svdvad1HaH_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Slave Address Length"]
     #[inline(always)]
     pub fn sadlg(
         self,
@@ -40753,6 +44774,7 @@ impl Svdvad1HaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Static Address Valid"]
     #[inline(always)]
     pub fn sstadv(
         self,
@@ -40778,6 +44800,7 @@ impl Svdvad1HaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -40797,16 +44820,20 @@ pub mod svdvad1_ha_h {
     pub struct Sadlg_SPEC;
     pub type Sadlg = crate::EnumBitfieldStruct<u8, Sadlg_SPEC>;
     impl Sadlg {
+        #[doc = "The 7-bit address format is selected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The 10-bit address format is selected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sstadv_SPEC;
     pub type Sstadv = crate::EnumBitfieldStruct<u8, Sstadv_SPEC>;
     impl Sstadv {
+        #[doc = "Slave address is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave address is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -40817,9 +44844,11 @@ impl crate::sealed::RegSpec for Svdvad1ByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Address Register 1"]
 pub type Svdvad1ByHl = crate::RegValueT<Svdvad1ByHl_SPEC>;
 
 impl Svdvad1ByHl {
+    #[doc = "Slave Address"]
     #[inline(always)]
     pub fn svad(
         self,
@@ -40842,9 +44871,11 @@ impl crate::sealed::RegSpec for Svdvad1ByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Address Register 1"]
 pub type Svdvad1ByHh = crate::RegValueT<Svdvad1ByHh_SPEC>;
 
 impl Svdvad1ByHh {
+    #[doc = "Slave Address"]
     #[inline(always)]
     pub fn svad(
         self,
@@ -40853,6 +44884,7 @@ impl Svdvad1ByHh {
         crate::common::RegisterField::<0,0x3,1,0,u8,u8,Svdvad1ByHh_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Slave Address Length"]
     #[inline(always)]
     pub fn sadlg(
         self,
@@ -40878,6 +44910,7 @@ impl Svdvad1ByHh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Static Address Valid"]
     #[inline(always)]
     pub fn sstadv(
         self,
@@ -40903,6 +44936,7 @@ impl Svdvad1ByHh {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -40922,16 +44956,20 @@ pub mod svdvad1_by_hh {
     pub struct Sadlg_SPEC;
     pub type Sadlg = crate::EnumBitfieldStruct<u8, Sadlg_SPEC>;
     impl Sadlg {
+        #[doc = "The 7-bit address format is selected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The 10-bit address format is selected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sstadv_SPEC;
     pub type Sstadv = crate::EnumBitfieldStruct<u8, Sstadv_SPEC>;
     impl Sstadv {
+        #[doc = "Slave address is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave address is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -40942,9 +44980,11 @@ impl crate::sealed::RegSpec for Svdvad2_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Slave Device Address Register 2"]
 pub type Svdvad2 = crate::RegValueT<Svdvad2_SPEC>;
 
 impl Svdvad2 {
+    #[doc = "Slave Address"]
     #[inline(always)]
     pub fn svad(
         self,
@@ -40953,6 +44993,7 @@ impl Svdvad2 {
         crate::common::RegisterField::<16,0x3ff,1,0,u16,u16,Svdvad2_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Slave Address Length"]
     #[inline(always)]
     pub fn sadlg(
         self,
@@ -40978,6 +45019,7 @@ impl Svdvad2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Static Address Valid"]
     #[inline(always)]
     pub fn sstadv(
         self,
@@ -41003,6 +45045,7 @@ impl Svdvad2 {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -41024,16 +45067,20 @@ pub mod svdvad2 {
     pub struct Sadlg_SPEC;
     pub type Sadlg = crate::EnumBitfieldStruct<u8, Sadlg_SPEC>;
     impl Sadlg {
+        #[doc = "The 7-bit address format is selected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The 10-bit address format is selected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sstadv_SPEC;
     pub type Sstadv = crate::EnumBitfieldStruct<u8, Sstadv_SPEC>;
     impl Sstadv {
+        #[doc = "Slave address is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave address is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -41044,9 +45091,11 @@ impl crate::sealed::RegSpec for Svdvad2HaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Slave Device Address Register 2"]
 pub type Svdvad2HaH = crate::RegValueT<Svdvad2HaH_SPEC>;
 
 impl Svdvad2HaH {
+    #[doc = "Slave Address"]
     #[inline(always)]
     pub fn svad(
         self,
@@ -41055,6 +45104,7 @@ impl Svdvad2HaH {
         crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,Svdvad2HaH_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Slave Address Length"]
     #[inline(always)]
     pub fn sadlg(
         self,
@@ -41080,6 +45130,7 @@ impl Svdvad2HaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Static Address Valid"]
     #[inline(always)]
     pub fn sstadv(
         self,
@@ -41105,6 +45156,7 @@ impl Svdvad2HaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -41124,16 +45176,20 @@ pub mod svdvad2_ha_h {
     pub struct Sadlg_SPEC;
     pub type Sadlg = crate::EnumBitfieldStruct<u8, Sadlg_SPEC>;
     impl Sadlg {
+        #[doc = "The 7-bit address format is selected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The 10-bit address format is selected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sstadv_SPEC;
     pub type Sstadv = crate::EnumBitfieldStruct<u8, Sstadv_SPEC>;
     impl Sstadv {
+        #[doc = "Slave address is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave address is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -41144,9 +45200,11 @@ impl crate::sealed::RegSpec for Svdvad2ByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Address Register 2"]
 pub type Svdvad2ByHl = crate::RegValueT<Svdvad2ByHl_SPEC>;
 
 impl Svdvad2ByHl {
+    #[doc = "Slave Address"]
     #[inline(always)]
     pub fn svad(
         self,
@@ -41169,9 +45227,11 @@ impl crate::sealed::RegSpec for Svdvad2ByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Slave Device Address Register 2"]
 pub type Svdvad2ByHh = crate::RegValueT<Svdvad2ByHh_SPEC>;
 
 impl Svdvad2ByHh {
+    #[doc = "Slave Address"]
     #[inline(always)]
     pub fn svad(
         self,
@@ -41180,6 +45240,7 @@ impl Svdvad2ByHh {
         crate::common::RegisterField::<0,0x3,1,0,u8,u8,Svdvad2ByHh_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Slave Address Length"]
     #[inline(always)]
     pub fn sadlg(
         self,
@@ -41205,6 +45266,7 @@ impl Svdvad2ByHh {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Static Address Valid"]
     #[inline(always)]
     pub fn sstadv(
         self,
@@ -41230,6 +45292,7 @@ impl Svdvad2ByHh {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -41249,16 +45312,20 @@ pub mod svdvad2_by_hh {
     pub struct Sadlg_SPEC;
     pub type Sadlg = crate::EnumBitfieldStruct<u8, Sadlg_SPEC>;
     impl Sadlg {
+        #[doc = "The 7-bit address format is selected."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The 10-bit address format is selected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sstadv_SPEC;
     pub type Sstadv = crate::EnumBitfieldStruct<u8, Sstadv_SPEC>;
     impl Sstadv {
+        #[doc = "Slave address is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave address is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -41269,9 +45336,11 @@ impl crate::sealed::RegSpec for Csecmd_SPEC {
     type DataType = u32;
 }
 
+#[doc = "CCC Slave Events Command Register"]
 pub type Csecmd = crate::RegValueT<Csecmd_SPEC>;
 
 impl Csecmd {
+    #[doc = "Slave Interrupt Requests Enable"]
     #[inline(always)]
     pub fn svirqe(
         self,
@@ -41297,6 +45366,7 @@ impl Csecmd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Mastership Requests Enable"]
     #[inline(always)]
     pub fn msrqe(
         self,
@@ -41322,6 +45392,7 @@ impl Csecmd {
         >::from_register(self, 0)
     }
 
+    #[doc = "Hot-Join Event Enable"]
     #[inline(always)]
     pub fn hjeve(
         self,
@@ -41347,6 +45418,7 @@ impl Csecmd {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000000000000000. The write value should be 0000000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -41367,24 +45439,30 @@ pub mod csecmd {
     pub struct Svirqe_SPEC;
     pub type Svirqe = crate::EnumBitfieldStruct<u8, Svirqe_SPEC>;
     impl Svirqe {
+        #[doc = "DISABLED: Slave-initiated Interrupts is Disabled by the Master to control."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "ENABLED: Slave-initiated Interrupts is Enabled by the Master to control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Msrqe_SPEC;
     pub type Msrqe = crate::EnumBitfieldStruct<u8, Msrqe_SPEC>;
     impl Msrqe {
+        #[doc = "DISABLED: Mastership requests from Secondary Masters is Disabled by the Current Master to control."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "ENABLED: Mastership requests from Secondary Masters is Enabled by the Current Master to control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hjeve_SPEC;
     pub type Hjeve = crate::EnumBitfieldStruct<u8, Hjeve_SPEC>;
     impl Hjeve {
+        #[doc = "DISABLED: Slave-initiated Hot-Join is Disabled by the Master to control."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "ENABLED: Slave-initiated Hot-Join is Enabled by the Master to control."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -41395,9 +45473,11 @@ impl crate::sealed::RegSpec for CsecmdHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "CCC Slave Events Command Register"]
 pub type CsecmdHaL = crate::RegValueT<CsecmdHaL_SPEC>;
 
 impl CsecmdHaL {
+    #[doc = "Slave Interrupt Requests Enable"]
     #[inline(always)]
     pub fn svirqe(
         self,
@@ -41423,6 +45503,7 @@ impl CsecmdHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Mastership Requests Enable"]
     #[inline(always)]
     pub fn msrqe(
         self,
@@ -41448,6 +45529,7 @@ impl CsecmdHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Hot-Join Event Enable"]
     #[inline(always)]
     pub fn hjeve(
         self,
@@ -41473,6 +45555,7 @@ impl CsecmdHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000. The write value should be 000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -41493,24 +45576,30 @@ pub mod csecmd_ha_l {
     pub struct Svirqe_SPEC;
     pub type Svirqe = crate::EnumBitfieldStruct<u8, Svirqe_SPEC>;
     impl Svirqe {
+        #[doc = "DISABLED: Slave-initiated Interrupts is Disabled by the Master to control."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "ENABLED: Slave-initiated Interrupts is Enabled by the Master to control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Msrqe_SPEC;
     pub type Msrqe = crate::EnumBitfieldStruct<u8, Msrqe_SPEC>;
     impl Msrqe {
+        #[doc = "DISABLED: Mastership requests from Secondary Masters is Disabled by the Current Master to control."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "ENABLED: Mastership requests from Secondary Masters is Enabled by the Current Master to control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hjeve_SPEC;
     pub type Hjeve = crate::EnumBitfieldStruct<u8, Hjeve_SPEC>;
     impl Hjeve {
+        #[doc = "DISABLED: Slave-initiated Hot-Join is Disabled by the Master to control."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "ENABLED: Slave-initiated Hot-Join is Enabled by the Master to control."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -41521,9 +45610,11 @@ impl crate::sealed::RegSpec for CsecmdByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Slave Events Command Register"]
 pub type CsecmdByLl = crate::RegValueT<CsecmdByLl_SPEC>;
 
 impl CsecmdByLl {
+    #[doc = "Slave Interrupt Requests Enable"]
     #[inline(always)]
     pub fn svirqe(
         self,
@@ -41549,6 +45640,7 @@ impl CsecmdByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Mastership Requests Enable"]
     #[inline(always)]
     pub fn msrqe(
         self,
@@ -41574,6 +45666,7 @@ impl CsecmdByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Hot-Join Event Enable"]
     #[inline(always)]
     pub fn hjeve(
         self,
@@ -41599,6 +45692,7 @@ impl CsecmdByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -41619,24 +45713,30 @@ pub mod csecmd_by_ll {
     pub struct Svirqe_SPEC;
     pub type Svirqe = crate::EnumBitfieldStruct<u8, Svirqe_SPEC>;
     impl Svirqe {
+        #[doc = "DISABLED: Slave-initiated Interrupts is Disabled by the Master to control."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "ENABLED: Slave-initiated Interrupts is Enabled by the Master to control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Msrqe_SPEC;
     pub type Msrqe = crate::EnumBitfieldStruct<u8, Msrqe_SPEC>;
     impl Msrqe {
+        #[doc = "DISABLED: Mastership requests from Secondary Masters is Disabled by the Current Master to control."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "ENABLED: Mastership requests from Secondary Masters is Enabled by the Current Master to control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hjeve_SPEC;
     pub type Hjeve = crate::EnumBitfieldStruct<u8, Hjeve_SPEC>;
     impl Hjeve {
+        #[doc = "DISABLED: Slave-initiated Hot-Join is Disabled by the Master to control."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "ENABLED: Slave-initiated Hot-Join is Enabled by the Master to control."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -41647,9 +45747,11 @@ impl crate::sealed::RegSpec for Ceactst_SPEC {
     type DataType = u32;
 }
 
+#[doc = "CCC Enter Activity State Register"]
 pub type Ceactst = crate::RegValueT<Ceactst_SPEC>;
 
 impl Ceactst {
+    #[doc = "Activity State"]
     #[inline(always)]
     pub fn actst(
         self,
@@ -41675,6 +45777,7 @@ impl Ceactst {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000000000000000000. The write value should be 0000000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -41695,12 +45798,16 @@ pub mod ceactst {
     pub struct Actst_SPEC;
     pub type Actst = crate::EnumBitfieldStruct<u8, Actst_SPEC>;
     impl Actst {
+        #[doc = "ENTAS0 1μSec: Latency-free operation"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "ENTAS1 100μSec"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "ENTAS2 2mSec"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "ENTAS3 50mSec: Lowest-activity operation"]
         pub const _1000: Self = Self::new(8);
     }
 }
@@ -41711,9 +45818,11 @@ impl crate::sealed::RegSpec for CeactstHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "CCC Enter Activity State Register"]
 pub type CeactstHaL = crate::RegValueT<CeactstHaL_SPEC>;
 
 impl CeactstHaL {
+    #[doc = "Activity State"]
     #[inline(always)]
     pub fn actst(
         self,
@@ -41739,6 +45848,7 @@ impl CeactstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000. The write value should be 000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -41759,12 +45869,16 @@ pub mod ceactst_ha_l {
     pub struct Actst_SPEC;
     pub type Actst = crate::EnumBitfieldStruct<u8, Actst_SPEC>;
     impl Actst {
+        #[doc = "ENTAS0 1μSec: Latency-free operation"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "ENTAS1 100μSec"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "ENTAS2 2mSec"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "ENTAS3 50mSec: Lowest-activity operation"]
         pub const _1000: Self = Self::new(8);
     }
 }
@@ -41775,9 +45889,11 @@ impl crate::sealed::RegSpec for CeactstByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Enter Activity State Register"]
 pub type CeactstByLl = crate::RegValueT<CeactstByLl_SPEC>;
 
 impl CeactstByLl {
+    #[doc = "Activity State"]
     #[inline(always)]
     pub fn actst(
         self,
@@ -41803,6 +45919,7 @@ impl CeactstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -41823,12 +45940,16 @@ pub mod ceactst_by_ll {
     pub struct Actst_SPEC;
     pub type Actst = crate::EnumBitfieldStruct<u8, Actst_SPEC>;
     impl Actst {
+        #[doc = "ENTAS0 1μSec: Latency-free operation"]
         pub const _0001: Self = Self::new(1);
 
+        #[doc = "ENTAS1 100μSec"]
         pub const _0010: Self = Self::new(2);
 
+        #[doc = "ENTAS2 2mSec"]
         pub const _0100: Self = Self::new(4);
 
+        #[doc = "ENTAS3 50mSec: Lowest-activity operation"]
         pub const _1000: Self = Self::new(8);
     }
 }
@@ -41839,9 +45960,11 @@ impl crate::sealed::RegSpec for Cmwlg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "CCC Max Write Length Register"]
 pub type Cmwlg = crate::RegValueT<Cmwlg_SPEC>;
 
 impl Cmwlg {
+    #[doc = "Max Write Length"]
     #[inline(always)]
     pub fn mwlg(
         self,
@@ -41850,6 +45973,7 @@ impl Cmwlg {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Cmwlg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -41872,9 +45996,11 @@ impl crate::sealed::RegSpec for CmwlgHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "CCC Max Write Length Register"]
 pub type CmwlgHaL = crate::RegValueT<CmwlgHaL_SPEC>;
 
 impl CmwlgHaL {
+    #[doc = "Max Write Length"]
     #[inline(always)]
     pub fn mwlg(
         self,
@@ -41897,9 +46023,11 @@ impl crate::sealed::RegSpec for CmwlgByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Max Write Length Register"]
 pub type CmwlgByLl = crate::RegValueT<CmwlgByLl_SPEC>;
 
 impl CmwlgByLl {
+    #[doc = "Max Write Length"]
     #[inline(always)]
     pub fn mwlg(
         self,
@@ -41922,9 +46050,11 @@ impl crate::sealed::RegSpec for CmwlgByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Max Write Length Register"]
 pub type CmwlgByLh = crate::RegValueT<CmwlgByLh_SPEC>;
 
 impl CmwlgByLh {
+    #[doc = "Max Write Length"]
     #[inline(always)]
     pub fn mwlg(
         self,
@@ -41947,9 +46077,11 @@ impl crate::sealed::RegSpec for Cmrlg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "CCC Max Read Length Register"]
 pub type Cmrlg = crate::RegValueT<Cmrlg_SPEC>;
 
 impl Cmrlg {
+    #[doc = "Max Read Length."]
     #[inline(always)]
     pub fn mrlg(
         self,
@@ -41958,6 +46090,7 @@ impl Cmrlg {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Cmrlg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "IBI Payload Size"]
     #[inline(always)]
     pub fn ibipsz(
         self,
@@ -41965,6 +46098,7 @@ impl Cmrlg {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Cmrlg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -41986,9 +46120,11 @@ impl crate::sealed::RegSpec for CmrlgHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "CCC Max Read Length Register"]
 pub type CmrlgHaL = crate::RegValueT<CmrlgHaL_SPEC>;
 
 impl CmrlgHaL {
+    #[doc = "Max Read Length."]
     #[inline(always)]
     pub fn mrlg(
         self,
@@ -42011,9 +46147,11 @@ impl crate::sealed::RegSpec for CmrlgByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Max Read Length Register"]
 pub type CmrlgByLl = crate::RegValueT<CmrlgByLl_SPEC>;
 
 impl CmrlgByLl {
+    #[doc = "Max Read Length."]
     #[inline(always)]
     pub fn mrlg(
         self,
@@ -42036,9 +46174,11 @@ impl crate::sealed::RegSpec for CmrlgByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Max Read Length Register"]
 pub type CmrlgByLh = crate::RegValueT<CmrlgByLh_SPEC>;
 
 impl CmrlgByLh {
+    #[doc = "Max Read Length."]
     #[inline(always)]
     pub fn mrlg(
         self,
@@ -42061,9 +46201,11 @@ impl crate::sealed::RegSpec for CmrlgHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "CCC Max Read Length Register"]
 pub type CmrlgHaH = crate::RegValueT<CmrlgHaH_SPEC>;
 
 impl CmrlgHaH {
+    #[doc = "IBI Payload Size"]
     #[inline(always)]
     pub fn ibipsz(
         self,
@@ -42071,6 +46213,7 @@ impl CmrlgHaH {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,CmrlgHaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -42092,9 +46235,11 @@ impl crate::sealed::RegSpec for CmrlgByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Max Read Length Register"]
 pub type CmrlgByHl = crate::RegValueT<CmrlgByHl_SPEC>;
 
 impl CmrlgByHl {
+    #[doc = "IBI Payload Size"]
     #[inline(always)]
     pub fn ibipsz(
         self,
@@ -42117,9 +46262,11 @@ impl crate::sealed::RegSpec for Cetstmd_SPEC {
     type DataType = u32;
 }
 
+#[doc = "CCC Enter Test Mode Register"]
 pub type Cetstmd = crate::RegValueT<Cetstmd_SPEC>;
 
 impl Cetstmd {
+    #[doc = "Test Mode"]
     #[inline(always)]
     pub fn tstmd(
         self,
@@ -42145,6 +46292,7 @@ impl Cetstmd {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -42165,10 +46313,13 @@ pub mod cetstmd {
     pub struct Tstmd_SPEC;
     pub type Tstmd = crate::EnumBitfieldStruct<u8, Tstmd_SPEC>;
     impl Tstmd {
+        #[doc = "Exit Test Mode"]
         pub const _0_X_00: Self = Self::new(0);
 
+        #[doc = "Vendor Test Mode"]
         pub const _0_X_01: Self = Self::new(1);
 
+        #[doc = "– 0xFF : MIPI Reserved"]
         pub const _0_X_02: Self = Self::new(2);
     }
 }
@@ -42179,9 +46330,11 @@ impl crate::sealed::RegSpec for CetstmdHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "CCC Enter Test Mode Register"]
 pub type CetstmdHaL = crate::RegValueT<CetstmdHaL_SPEC>;
 
 impl CetstmdHaL {
+    #[doc = "Test Mode"]
     #[inline(always)]
     pub fn tstmd(
         self,
@@ -42207,6 +46360,7 @@ impl CetstmdHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -42227,10 +46381,13 @@ pub mod cetstmd_ha_l {
     pub struct Tstmd_SPEC;
     pub type Tstmd = crate::EnumBitfieldStruct<u8, Tstmd_SPEC>;
     impl Tstmd {
+        #[doc = "Exit Test Mode"]
         pub const _0_X_00: Self = Self::new(0);
 
+        #[doc = "Vendor Test Mode"]
         pub const _0_X_01: Self = Self::new(1);
 
+        #[doc = "– 0xFF : MIPI Reserved"]
         pub const _0_X_02: Self = Self::new(2);
     }
 }
@@ -42241,9 +46398,11 @@ impl crate::sealed::RegSpec for CetstmdByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Enter Test Mode Register"]
 pub type CetstmdByLl = crate::RegValueT<CetstmdByLl_SPEC>;
 
 impl CetstmdByLl {
+    #[doc = "Test Mode"]
     #[inline(always)]
     pub fn tstmd(
         self,
@@ -42281,10 +46440,13 @@ pub mod cetstmd_by_ll {
     pub struct Tstmd_SPEC;
     pub type Tstmd = crate::EnumBitfieldStruct<u8, Tstmd_SPEC>;
     impl Tstmd {
+        #[doc = "Exit Test Mode"]
         pub const _0_X_00: Self = Self::new(0);
 
+        #[doc = "Vendor Test Mode"]
         pub const _0_X_01: Self = Self::new(1);
 
+        #[doc = "– 0xFF : MIPI Reserved"]
         pub const _0_X_02: Self = Self::new(2);
     }
 }
@@ -42295,9 +46457,11 @@ impl crate::sealed::RegSpec for Cgdvst_SPEC {
     type DataType = u32;
 }
 
+#[doc = "CCC Get Device Status Register"]
 pub type Cgdvst = crate::RegValueT<Cgdvst_SPEC>;
 
 impl Cgdvst {
+    #[doc = "Pending Interrupt"]
     #[inline(always)]
     pub fn pndint(
         self,
@@ -42305,6 +46469,7 @@ impl Cgdvst {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Cgdvst_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Protocol Error"]
     #[inline(always)]
     pub fn prte(
         self,
@@ -42330,6 +46495,7 @@ impl Cgdvst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Device\'s current Activity Mode"]
     #[inline(always)]
     pub fn actmd(
         self,
@@ -42355,6 +46521,7 @@ impl Cgdvst {
         >::from_register(self, 0)
     }
 
+    #[doc = "Vendor Reserved"]
     #[inline(always)]
     pub fn vdrsv(
         self,
@@ -42362,6 +46529,7 @@ impl Cgdvst {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Cgdvst_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -42382,20 +46550,26 @@ pub mod cgdvst {
     pub struct Prte_SPEC;
     pub type Prte = crate::EnumBitfieldStruct<u8, Prte_SPEC>;
     impl Prte {
+        #[doc = "The Slave has not detected a protocol error since the last Status read."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Slave has detected a protocol error since the last Status read."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Actmd_SPEC;
     pub type Actmd = crate::EnumBitfieldStruct<u8, Actmd_SPEC>;
     impl Actmd {
+        #[doc = "Activity Mode 0"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Activity Mode 1"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Activity Mode 2"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Activity Mode 3"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -42406,9 +46580,11 @@ impl crate::sealed::RegSpec for CgdvstHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "CCC Get Device Status Register"]
 pub type CgdvstHaL = crate::RegValueT<CgdvstHaL_SPEC>;
 
 impl CgdvstHaL {
+    #[doc = "Pending Interrupt"]
     #[inline(always)]
     pub fn pndint(
         self,
@@ -42416,6 +46592,7 @@ impl CgdvstHaL {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,CgdvstHaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -42423,6 +46600,7 @@ impl CgdvstHaL {
         crate::common::RegisterFieldBool::<4,1,0,CgdvstHaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Protocol Error"]
     #[inline(always)]
     pub fn prte(
         self,
@@ -42448,6 +46626,7 @@ impl CgdvstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Device\'s current Activity Mode"]
     #[inline(always)]
     pub fn actmd(
         self,
@@ -42473,6 +46652,7 @@ impl CgdvstHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Vendor Reserved"]
     #[inline(always)]
     pub fn vdrsv(
         self,
@@ -42493,20 +46673,26 @@ pub mod cgdvst_ha_l {
     pub struct Prte_SPEC;
     pub type Prte = crate::EnumBitfieldStruct<u8, Prte_SPEC>;
     impl Prte {
+        #[doc = "The Slave has not detected a protocol error since the last Status read."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Slave has detected a protocol error since the last Status read."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Actmd_SPEC;
     pub type Actmd = crate::EnumBitfieldStruct<u8, Actmd_SPEC>;
     impl Actmd {
+        #[doc = "Activity Mode 0"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Activity Mode 1"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Activity Mode 2"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Activity Mode 3"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -42517,9 +46703,11 @@ impl crate::sealed::RegSpec for CgdvstByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Get Device Status Register"]
 pub type CgdvstByLl = crate::RegValueT<CgdvstByLl_SPEC>;
 
 impl CgdvstByLl {
+    #[doc = "Pending Interrupt"]
     #[inline(always)]
     pub fn pndint(
         self,
@@ -42528,6 +46716,7 @@ impl CgdvstByLl {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,CgdvstByLl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -42535,6 +46724,7 @@ impl CgdvstByLl {
         crate::common::RegisterFieldBool::<4,1,0,CgdvstByLl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Protocol Error"]
     #[inline(always)]
     pub fn prte(
         self,
@@ -42560,6 +46750,7 @@ impl CgdvstByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Slave Device\'s current Activity Mode"]
     #[inline(always)]
     pub fn actmd(
         self,
@@ -42597,20 +46788,26 @@ pub mod cgdvst_by_ll {
     pub struct Prte_SPEC;
     pub type Prte = crate::EnumBitfieldStruct<u8, Prte_SPEC>;
     impl Prte {
+        #[doc = "The Slave has not detected a protocol error since the last Status read."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "The Slave has detected a protocol error since the last Status read."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Actmd_SPEC;
     pub type Actmd = crate::EnumBitfieldStruct<u8, Actmd_SPEC>;
     impl Actmd {
+        #[doc = "Activity Mode 0"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Activity Mode 1"]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Activity Mode 2"]
         pub const _10: Self = Self::new(2);
 
+        #[doc = "Activity Mode 3"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -42621,9 +46818,11 @@ impl crate::sealed::RegSpec for CgdvstByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Get Device Status Register"]
 pub type CgdvstByLh = crate::RegValueT<CgdvstByLh_SPEC>;
 
 impl CgdvstByLh {
+    #[doc = "Vendor Reserved"]
     #[inline(always)]
     pub fn vdrsv(
         self,
@@ -42646,9 +46845,11 @@ impl crate::sealed::RegSpec for Cmdspw_SPEC {
     type DataType = u32;
 }
 
+#[doc = "CCC Max Data Speed W(Write) Registe"]
 pub type Cmdspw = crate::RegValueT<Cmdspw_SPEC>;
 
 impl Cmdspw {
+    #[doc = "Maximum Sustained Write Data Rate"]
     #[inline(always)]
     pub fn mswdr(
         self,
@@ -42674,6 +46875,7 @@ impl Cmdspw {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000000000000000000000000. The write value should be 00000000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -42694,8 +46896,10 @@ pub mod cmdspw {
     pub struct Mswdr_SPEC;
     pub type Mswdr = crate::EnumBitfieldStruct<u8, Mswdr_SPEC>;
     impl Mswdr {
+        #[doc = "fscl Max (default value)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "8MHz"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -42706,9 +46910,11 @@ impl crate::sealed::RegSpec for CmdspwHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "CCC Max Data Speed W(Write) Registe"]
 pub type CmdspwHaL = crate::RegValueT<CmdspwHaL_SPEC>;
 
 impl CmdspwHaL {
+    #[doc = "Maximum Sustained Write Data Rate"]
     #[inline(always)]
     pub fn mswdr(
         self,
@@ -42734,6 +46940,7 @@ impl CmdspwHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000. The write value should be 0000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -42754,8 +46961,10 @@ pub mod cmdspw_ha_l {
     pub struct Mswdr_SPEC;
     pub type Mswdr = crate::EnumBitfieldStruct<u8, Mswdr_SPEC>;
     impl Mswdr {
+        #[doc = "fscl Max (default value)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "8MHz"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -42766,9 +46975,11 @@ impl crate::sealed::RegSpec for CmdspwByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Max Data Speed W(Write) Registe"]
 pub type CmdspwByLl = crate::RegValueT<CmdspwByLl_SPEC>;
 
 impl CmdspwByLl {
+    #[doc = "Maximum Sustained Write Data Rate"]
     #[inline(always)]
     pub fn mswdr(
         self,
@@ -42794,6 +47005,7 @@ impl CmdspwByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -42814,8 +47026,10 @@ pub mod cmdspw_by_ll {
     pub struct Mswdr_SPEC;
     pub type Mswdr = crate::EnumBitfieldStruct<u8, Mswdr_SPEC>;
     impl Mswdr {
+        #[doc = "fscl Max (default value)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "8MHz"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -42826,9 +47040,11 @@ impl crate::sealed::RegSpec for Cmdspr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "CCC Max Data Speed R(Read) Registe"]
 pub type Cmdspr = crate::RegValueT<Cmdspr_SPEC>;
 
 impl Cmdspr {
+    #[doc = "Maximum Sustained Read Data Rate"]
     #[inline(always)]
     pub fn msrdr(
         self,
@@ -42854,6 +47070,7 @@ impl Cmdspr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Clock to Data Turnaround Time (TSCO)"]
     #[inline(always)]
     pub fn cdttim(
         self,
@@ -42879,6 +47096,7 @@ impl Cmdspr {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000000000000000000000. The write value should be 00000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -42899,16 +47117,20 @@ pub mod cmdspr {
     pub struct Msrdr_SPEC;
     pub type Msrdr = crate::EnumBitfieldStruct<u8, Msrdr_SPEC>;
     impl Msrdr {
+        #[doc = "fscl Max (default value)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "8MHz"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdttim_SPEC;
     pub type Cdttim = crate::EnumBitfieldStruct<u8, Cdttim_SPEC>;
     impl Cdttim {
+        #[doc = "<= 8ns(default value)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "<= 9ns"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -42919,9 +47141,11 @@ impl crate::sealed::RegSpec for CmdsprHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "CCC Max Data Speed R(Read) Registe"]
 pub type CmdsprHaL = crate::RegValueT<CmdsprHaL_SPEC>;
 
 impl CmdsprHaL {
+    #[doc = "Maximum Sustained Read Data Rate"]
     #[inline(always)]
     pub fn msrdr(
         self,
@@ -42947,6 +47171,7 @@ impl CmdsprHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Clock to Data Turnaround Time (TSCO)"]
     #[inline(always)]
     pub fn cdttim(
         self,
@@ -42972,6 +47197,7 @@ impl CmdsprHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000. The write value should be 0000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -42992,16 +47218,20 @@ pub mod cmdspr_ha_l {
     pub struct Msrdr_SPEC;
     pub type Msrdr = crate::EnumBitfieldStruct<u8, Msrdr_SPEC>;
     impl Msrdr {
+        #[doc = "fscl Max (default value)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "8MHz"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdttim_SPEC;
     pub type Cdttim = crate::EnumBitfieldStruct<u8, Cdttim_SPEC>;
     impl Cdttim {
+        #[doc = "<= 8ns(default value)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "<= 9ns"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -43012,9 +47242,11 @@ impl crate::sealed::RegSpec for CmdsprByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Max Data Speed R(Read) Registe"]
 pub type CmdsprByLl = crate::RegValueT<CmdsprByLl_SPEC>;
 
 impl CmdsprByLl {
+    #[doc = "Maximum Sustained Read Data Rate"]
     #[inline(always)]
     pub fn msrdr(
         self,
@@ -43040,6 +47272,7 @@ impl CmdsprByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Clock to Data Turnaround Time (TSCO)"]
     #[inline(always)]
     pub fn cdttim(
         self,
@@ -43065,6 +47298,7 @@ impl CmdsprByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00. The write value should be 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -43085,16 +47319,20 @@ pub mod cmdspr_by_ll {
     pub struct Msrdr_SPEC;
     pub type Msrdr = crate::EnumBitfieldStruct<u8, Msrdr_SPEC>;
     impl Msrdr {
+        #[doc = "fscl Max (default value)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "8MHz"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdttim_SPEC;
     pub type Cdttim = crate::EnumBitfieldStruct<u8, Cdttim_SPEC>;
     impl Cdttim {
+        #[doc = "<= 8ns(default value)"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "<= 9ns"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -43105,9 +47343,11 @@ impl crate::sealed::RegSpec for Cmdspt_SPEC {
     type DataType = u32;
 }
 
+#[doc = "CCC Max Data Speed T(Turnaround) Registe"]
 pub type Cmdspt = crate::RegValueT<Cmdspt_SPEC>;
 
 impl Cmdspt {
+    #[doc = "Maximum Read Turnaround Time24-bit field can encode turnaround times from 0.0 seconds to 16 seconds."]
     #[inline(always)]
     pub fn mrttim(
         self,
@@ -43116,6 +47356,7 @@ impl Cmdspt {
         crate::common::RegisterField::<0,0xffffff,1,0,u32,u32,Cmdspt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -43123,6 +47364,7 @@ impl Cmdspt {
         crate::common::RegisterField::<24,0x7f,1,0,u8,u8,Cmdspt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Maximum Read Turnaround Time Enable"]
     #[inline(always)]
     pub fn mrte(
         self,
@@ -43160,8 +47402,10 @@ pub mod cmdspt {
     pub struct Mrte_SPEC;
     pub type Mrte = crate::EnumBitfieldStruct<u8, Mrte_SPEC>;
     impl Mrte {
+        #[doc = "Disables transmission of the Maximum Read Turnaround Time."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables transmission of the Maximum Read Turnaround Time."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -43172,9 +47416,11 @@ impl crate::sealed::RegSpec for CmdsptHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "CCC Max Data Speed T(Turnaround) Register"]
 pub type CmdsptHaL = crate::RegValueT<CmdsptHaL_SPEC>;
 
 impl CmdsptHaL {
+    #[doc = "Maximum Read Turnaround Time24-bit field can encode turnaround times from 0.0 seconds to 16 seconds."]
     #[inline(always)]
     pub fn mrttim(
         self,
@@ -43197,9 +47443,11 @@ impl crate::sealed::RegSpec for CmdsptByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Max Data Speed T(Turnaround) Register"]
 pub type CmdsptByLl = crate::RegValueT<CmdsptByLl_SPEC>;
 
 impl CmdsptByLl {
+    #[doc = "Maximum Read Turnaround Time24-bit field can encode turnaround times from 0.0 seconds to 16 seconds."]
     #[inline(always)]
     pub fn mrttim(
         self,
@@ -43222,9 +47470,11 @@ impl crate::sealed::RegSpec for CmdsptByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Max Data Speed T(Turnaround) Register"]
 pub type CmdsptByLh = crate::RegValueT<CmdsptByLh_SPEC>;
 
 impl CmdsptByLh {
+    #[doc = "Maximum Read Turnaround Time24-bit field can encode turnaround times from 0.0 seconds to 16 seconds."]
     #[inline(always)]
     pub fn mrttim(
         self,
@@ -43247,9 +47497,11 @@ impl crate::sealed::RegSpec for CmdsptHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "CCC Max Data Speed T(Turnaround) Register"]
 pub type CmdsptHaH = crate::RegValueT<CmdsptHaH_SPEC>;
 
 impl CmdsptHaH {
+    #[doc = "Maximum Read Turnaround Time24-bit field can encode turnaround times from 0.0 seconds to 16 seconds."]
     #[inline(always)]
     pub fn mrttim(
         self,
@@ -43258,6 +47510,7 @@ impl CmdsptHaH {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,CmdsptHaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -43266,6 +47519,7 @@ impl CmdsptHaH {
         crate::common::RegisterField::<8,0x7f,1,0,u8,u8,CmdsptHaH_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Maximum Read Turnaround Time Enable"]
     #[inline(always)]
     pub fn mrte(
         self,
@@ -43303,8 +47557,10 @@ pub mod cmdspt_ha_h {
     pub struct Mrte_SPEC;
     pub type Mrte = crate::EnumBitfieldStruct<u8, Mrte_SPEC>;
     impl Mrte {
+        #[doc = "Disables transmission of the Maximum Read Turnaround Time."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables transmission of the Maximum Read Turnaround Time."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -43315,9 +47571,11 @@ impl crate::sealed::RegSpec for CmdsptByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Max Data Speed T(Turnaround) Register"]
 pub type CmdsptByHl = crate::RegValueT<CmdsptByHl_SPEC>;
 
 impl CmdsptByHl {
+    #[doc = "Maximum Read Turnaround Time24-bit field can encode turnaround times from 0.0 seconds to 16 seconds."]
     #[inline(always)]
     pub fn mrttim(
         self,
@@ -43340,9 +47598,11 @@ impl crate::sealed::RegSpec for CmdsptByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Max Data Speed T(Turnaround) Register"]
 pub type CmdsptByHh = crate::RegValueT<CmdsptByHh_SPEC>;
 
 impl CmdsptByHh {
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -43351,6 +47611,7 @@ impl CmdsptByHh {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,CmdsptByHh_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Maximum Read Turnaround Time Enable"]
     #[inline(always)]
     pub fn mrte(
         self,
@@ -43388,8 +47649,10 @@ pub mod cmdspt_by_hh {
     pub struct Mrte_SPEC;
     pub type Mrte = crate::EnumBitfieldStruct<u8, Mrte_SPEC>;
     impl Mrte {
+        #[doc = "Disables transmission of the Maximum Read Turnaround Time."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enables transmission of the Maximum Read Turnaround Time."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -43400,9 +47663,11 @@ impl crate::sealed::RegSpec for Cetsm_SPEC {
     type DataType = u32;
 }
 
+#[doc = "CCC Exchange Timing Support Information M(Mode\u{a0}) Register"]
 pub type Cetsm = crate::RegValueT<Cetsm_SPEC>;
 
 impl Cetsm {
+    #[doc = "Supports Sync Mode"]
     #[inline(always)]
     pub fn sptsyn(
         self,
@@ -43428,6 +47693,7 @@ impl Cetsm {
         >::from_register(self, 0)
     }
 
+    #[doc = "Supports Async Mode 0"]
     #[inline(always)]
     pub fn sptasyn0(
         self,
@@ -43453,6 +47719,7 @@ impl Cetsm {
         >::from_register(self, 0)
     }
 
+    #[doc = "Supports Async Mode 1"]
     #[inline(always)]
     pub fn sptasyn1(
         self,
@@ -43478,6 +47745,7 @@ impl Cetsm {
         >::from_register(self, 0)
     }
 
+    #[doc = "Frequency ByteThis byte represents the Slave\'s internal oscillator frequency in increments of 0.5 MHz (500 kHz), up to 127.5 MHz."]
     #[inline(always)]
     pub fn freq(
         self,
@@ -43503,6 +47771,7 @@ impl Cetsm {
         >::from_register(self, 0)
     }
 
+    #[doc = "Inaccuracy ByteThis byte represents the maximum variation of the Slave\'s internal oscillator in 1/10th percent (0.1%) increments, up to 25.5%."]
     #[inline(always)]
     pub fn inac(
         self,
@@ -43528,6 +47797,7 @@ impl Cetsm {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -43547,100 +47817,140 @@ pub mod cetsm {
     pub struct Sptsyn_SPEC;
     pub type Sptsyn = crate::EnumBitfieldStruct<u8, Sptsyn_SPEC>;
     impl Sptsyn {
+        #[doc = "Disable Supports Sync Mode."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable Supports Sync Mode."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sptasyn0_SPEC;
     pub type Sptasyn0 = crate::EnumBitfieldStruct<u8, Sptasyn0_SPEC>;
     impl Sptasyn0 {
+        #[doc = "Async Mode 0 is not supported."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Async Mode 0 is supported."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sptasyn1_SPEC;
     pub type Sptasyn1 = crate::EnumBitfieldStruct<u8, Sptasyn1_SPEC>;
     impl Sptasyn1 {
+        #[doc = "Async Mode 1 is not supported."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Async Mode 1 is supported."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Freq_SPEC;
     pub type Freq = crate::EnumBitfieldStruct<u8, Freq_SPEC>;
     impl Freq {
+        #[doc = "32.0KHz"]
         pub const _0_X_00: Self = Self::new(0);
 
+        #[doc = ":   7.5MHz"]
         pub const _0_X_0_F: Self = Self::new(15);
 
+        #[doc = "15.5MHz"]
         pub const _0_X_1_F: Self = Self::new(31);
 
+        #[doc = "23.5MHz"]
         pub const _0_X_2_F: Self = Self::new(47);
 
+        #[doc = "31.5MHz"]
         pub const _0_X_3_F: Self = Self::new(63);
 
+        #[doc = "39.5MHz"]
         pub const _0_X_4_F: Self = Self::new(79);
 
+        #[doc = "47.5MHz"]
         pub const _0_X_5_F: Self = Self::new(95);
 
+        #[doc = "55.5MHz"]
         pub const _0_X_6_F: Self = Self::new(111);
 
+        #[doc = "63.5MHz"]
         pub const _0_X_7_F: Self = Self::new(127);
 
+        #[doc = "71.5MHz"]
         pub const _0_X_8_F: Self = Self::new(143);
 
+        #[doc = "79.5MHz"]
         pub const _0_X_9_F: Self = Self::new(159);
 
+        #[doc = "87.5MHz"]
         pub const _0_X_AF: Self = Self::new(175);
 
+        #[doc = "95.5MHz"]
         pub const _0_X_BF: Self = Self::new(191);
 
+        #[doc = "103.5MHz"]
         pub const _0_X_CF: Self = Self::new(207);
 
+        #[doc = "111.5MHz"]
         pub const _0_X_DF: Self = Self::new(223);
 
+        #[doc = "119.5MHz"]
         pub const _0_X_EF: Self = Self::new(239);
 
+        #[doc = "127.5MHz"]
         pub const _0_X_FF: Self = Self::new(255);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Inac_SPEC;
     pub type Inac = crate::EnumBitfieldStruct<u8, Inac_SPEC>;
     impl Inac {
+        #[doc = "0.0%"]
         pub const _0_X_00: Self = Self::new(0);
 
+        #[doc = "1.5%"]
         pub const _0_X_0_F: Self = Self::new(15);
 
+        #[doc = "3.1%"]
         pub const _0_X_1_F: Self = Self::new(31);
 
+        #[doc = "4.7%"]
         pub const _0_X_2_F: Self = Self::new(47);
 
+        #[doc = "6.3%"]
         pub const _0_X_3_F: Self = Self::new(63);
 
+        #[doc = "7.9%"]
         pub const _0_X_4_F: Self = Self::new(79);
 
+        #[doc = "9.5%"]
         pub const _0_X_5_F: Self = Self::new(95);
 
+        #[doc = "11.1%"]
         pub const _0_X_6_F: Self = Self::new(111);
 
+        #[doc = "12.7%"]
         pub const _0_X_7_F: Self = Self::new(127);
 
+        #[doc = "14.3%"]
         pub const _0_X_8_F: Self = Self::new(143);
 
+        #[doc = "15.9%"]
         pub const _0_X_9_F: Self = Self::new(159);
 
+        #[doc = "17.5%"]
         pub const _0_X_AF: Self = Self::new(175);
 
+        #[doc = "19.1%"]
         pub const _0_X_BF: Self = Self::new(191);
 
+        #[doc = "20.7%"]
         pub const _0_X_CF: Self = Self::new(207);
 
+        #[doc = "22.3%"]
         pub const _0_X_DF: Self = Self::new(223);
 
+        #[doc = "23.9%"]
         pub const _0_X_EF: Self = Self::new(239);
 
+        #[doc = "25.5%"]
         pub const _0_X_FF: Self = Self::new(255);
     }
 }
@@ -43651,9 +47961,11 @@ impl crate::sealed::RegSpec for CetsmHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "CCC Exchange Timing Support Information M(Mode\u{a0}) Register"]
 pub type CetsmHaL = crate::RegValueT<CetsmHaL_SPEC>;
 
 impl CetsmHaL {
+    #[doc = "Supports Sync Mode"]
     #[inline(always)]
     pub fn sptsyn(
         self,
@@ -43679,6 +47991,7 @@ impl CetsmHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Supports Async Mode 0"]
     #[inline(always)]
     pub fn sptasyn0(
         self,
@@ -43704,6 +48017,7 @@ impl CetsmHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Supports Async Mode 1"]
     #[inline(always)]
     pub fn sptasyn1(
         self,
@@ -43729,6 +48043,7 @@ impl CetsmHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -43736,6 +48051,7 @@ impl CetsmHaL {
         crate::common::RegisterField::<3,0x1f,1,0,u8,u8,CetsmHaL_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Frequency ByteThis byte represents the Slave\'s internal oscillator frequency in increments of 0.5 MHz (500 kHz), up to 127.5 MHz."]
     #[inline(always)]
     pub fn freq(
         self,
@@ -43773,62 +48089,85 @@ pub mod cetsm_ha_l {
     pub struct Sptsyn_SPEC;
     pub type Sptsyn = crate::EnumBitfieldStruct<u8, Sptsyn_SPEC>;
     impl Sptsyn {
+        #[doc = "Disable Supports Sync Mode."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable Supports Sync Mode."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sptasyn0_SPEC;
     pub type Sptasyn0 = crate::EnumBitfieldStruct<u8, Sptasyn0_SPEC>;
     impl Sptasyn0 {
+        #[doc = "Async Mode 0 is not supported."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Async Mode 0 is supported."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sptasyn1_SPEC;
     pub type Sptasyn1 = crate::EnumBitfieldStruct<u8, Sptasyn1_SPEC>;
     impl Sptasyn1 {
+        #[doc = "Async Mode 1 is not supported."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Async Mode 1 is supported."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Freq_SPEC;
     pub type Freq = crate::EnumBitfieldStruct<u8, Freq_SPEC>;
     impl Freq {
+        #[doc = "32.0KHz"]
         pub const _0_X_00: Self = Self::new(0);
 
+        #[doc = ":   7.5MHz"]
         pub const _0_X_0_F: Self = Self::new(15);
 
+        #[doc = "15.5MHz"]
         pub const _0_X_1_F: Self = Self::new(31);
 
+        #[doc = "23.5MHz"]
         pub const _0_X_2_F: Self = Self::new(47);
 
+        #[doc = "31.5MHz"]
         pub const _0_X_3_F: Self = Self::new(63);
 
+        #[doc = "39.5MHz"]
         pub const _0_X_4_F: Self = Self::new(79);
 
+        #[doc = "47.5MHz"]
         pub const _0_X_5_F: Self = Self::new(95);
 
+        #[doc = "55.5MHz"]
         pub const _0_X_6_F: Self = Self::new(111);
 
+        #[doc = "63.5MHz"]
         pub const _0_X_7_F: Self = Self::new(127);
 
+        #[doc = "71.5MHz"]
         pub const _0_X_8_F: Self = Self::new(143);
 
+        #[doc = "79.5MHz"]
         pub const _0_X_9_F: Self = Self::new(159);
 
+        #[doc = "87.5MHz"]
         pub const _0_X_AF: Self = Self::new(175);
 
+        #[doc = "95.5MHz"]
         pub const _0_X_BF: Self = Self::new(191);
 
+        #[doc = "103.5MHz"]
         pub const _0_X_CF: Self = Self::new(207);
 
+        #[doc = "111.5MHz"]
         pub const _0_X_DF: Self = Self::new(223);
 
+        #[doc = "119.5MHz"]
         pub const _0_X_EF: Self = Self::new(239);
 
+        #[doc = "127.5MHz"]
         pub const _0_X_FF: Self = Self::new(255);
     }
 }
@@ -43839,9 +48178,11 @@ impl crate::sealed::RegSpec for CetsmByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Exchange Timing Support Information M(Mode\u{a0}) Register"]
 pub type CetsmByLl = crate::RegValueT<CetsmByLl_SPEC>;
 
 impl CetsmByLl {
+    #[doc = "Supports Sync Mode"]
     #[inline(always)]
     pub fn sptsyn(
         self,
@@ -43867,6 +48208,7 @@ impl CetsmByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Supports Async Mode 0"]
     #[inline(always)]
     pub fn sptasyn0(
         self,
@@ -43892,6 +48234,7 @@ impl CetsmByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Supports Async Mode 1"]
     #[inline(always)]
     pub fn sptasyn1(
         self,
@@ -43917,6 +48260,7 @@ impl CetsmByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -43937,24 +48281,30 @@ pub mod cetsm_by_ll {
     pub struct Sptsyn_SPEC;
     pub type Sptsyn = crate::EnumBitfieldStruct<u8, Sptsyn_SPEC>;
     impl Sptsyn {
+        #[doc = "Disable Supports Sync Mode."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Enable Supports Sync Mode."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sptasyn0_SPEC;
     pub type Sptasyn0 = crate::EnumBitfieldStruct<u8, Sptasyn0_SPEC>;
     impl Sptasyn0 {
+        #[doc = "Async Mode 0 is not supported."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Async Mode 0 is supported."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sptasyn1_SPEC;
     pub type Sptasyn1 = crate::EnumBitfieldStruct<u8, Sptasyn1_SPEC>;
     impl Sptasyn1 {
+        #[doc = "Async Mode 1 is not supported."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Async Mode 1 is supported."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -43965,9 +48315,11 @@ impl crate::sealed::RegSpec for CetsmByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Exchange Timing Support Information M(Mode\u{a0}) Register"]
 pub type CetsmByLh = crate::RegValueT<CetsmByLh_SPEC>;
 
 impl CetsmByLh {
+    #[doc = "Frequency ByteThis byte represents the Slave\'s internal oscillator frequency in increments of 0.5 MHz (500 kHz), up to 127.5 MHz."]
     #[inline(always)]
     pub fn freq(
         self,
@@ -44005,38 +48357,55 @@ pub mod cetsm_by_lh {
     pub struct Freq_SPEC;
     pub type Freq = crate::EnumBitfieldStruct<u8, Freq_SPEC>;
     impl Freq {
+        #[doc = "32.0KHz"]
         pub const _0_X_00: Self = Self::new(0);
 
+        #[doc = ":   7.5MHz"]
         pub const _0_X_0_F: Self = Self::new(15);
 
+        #[doc = "15.5MHz"]
         pub const _0_X_1_F: Self = Self::new(31);
 
+        #[doc = "23.5MHz"]
         pub const _0_X_2_F: Self = Self::new(47);
 
+        #[doc = "31.5MHz"]
         pub const _0_X_3_F: Self = Self::new(63);
 
+        #[doc = "39.5MHz"]
         pub const _0_X_4_F: Self = Self::new(79);
 
+        #[doc = "47.5MHz"]
         pub const _0_X_5_F: Self = Self::new(95);
 
+        #[doc = "55.5MHz"]
         pub const _0_X_6_F: Self = Self::new(111);
 
+        #[doc = "63.5MHz"]
         pub const _0_X_7_F: Self = Self::new(127);
 
+        #[doc = "71.5MHz"]
         pub const _0_X_8_F: Self = Self::new(143);
 
+        #[doc = "79.5MHz"]
         pub const _0_X_9_F: Self = Self::new(159);
 
+        #[doc = "87.5MHz"]
         pub const _0_X_AF: Self = Self::new(175);
 
+        #[doc = "95.5MHz"]
         pub const _0_X_BF: Self = Self::new(191);
 
+        #[doc = "103.5MHz"]
         pub const _0_X_CF: Self = Self::new(207);
 
+        #[doc = "111.5MHz"]
         pub const _0_X_DF: Self = Self::new(223);
 
+        #[doc = "119.5MHz"]
         pub const _0_X_EF: Self = Self::new(239);
 
+        #[doc = "127.5MHz"]
         pub const _0_X_FF: Self = Self::new(255);
     }
 }
@@ -44047,9 +48416,11 @@ impl crate::sealed::RegSpec for CetsmHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "CCC Exchange Timing Support Information M(Mode\u{a0}) Register"]
 pub type CetsmHaH = crate::RegValueT<CetsmHaH_SPEC>;
 
 impl CetsmHaH {
+    #[doc = "Inaccuracy ByteThis byte represents the maximum variation of the Slave\'s internal oscillator in 1/10th percent (0.1%) increments, up to 25.5%."]
     #[inline(always)]
     pub fn inac(
         self,
@@ -44075,6 +48446,7 @@ impl CetsmHaH {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -44094,38 +48466,55 @@ pub mod cetsm_ha_h {
     pub struct Inac_SPEC;
     pub type Inac = crate::EnumBitfieldStruct<u8, Inac_SPEC>;
     impl Inac {
+        #[doc = "0.0%"]
         pub const _0_X_00: Self = Self::new(0);
 
+        #[doc = "1.5%"]
         pub const _0_X_0_F: Self = Self::new(15);
 
+        #[doc = "3.1%"]
         pub const _0_X_1_F: Self = Self::new(31);
 
+        #[doc = "4.7%"]
         pub const _0_X_2_F: Self = Self::new(47);
 
+        #[doc = "6.3%"]
         pub const _0_X_3_F: Self = Self::new(63);
 
+        #[doc = "7.9%"]
         pub const _0_X_4_F: Self = Self::new(79);
 
+        #[doc = "9.5%"]
         pub const _0_X_5_F: Self = Self::new(95);
 
+        #[doc = "11.1%"]
         pub const _0_X_6_F: Self = Self::new(111);
 
+        #[doc = "12.7%"]
         pub const _0_X_7_F: Self = Self::new(127);
 
+        #[doc = "14.3%"]
         pub const _0_X_8_F: Self = Self::new(143);
 
+        #[doc = "15.9%"]
         pub const _0_X_9_F: Self = Self::new(159);
 
+        #[doc = "17.5%"]
         pub const _0_X_AF: Self = Self::new(175);
 
+        #[doc = "19.1%"]
         pub const _0_X_BF: Self = Self::new(191);
 
+        #[doc = "20.7%"]
         pub const _0_X_CF: Self = Self::new(207);
 
+        #[doc = "22.3%"]
         pub const _0_X_DF: Self = Self::new(223);
 
+        #[doc = "23.9%"]
         pub const _0_X_EF: Self = Self::new(239);
 
+        #[doc = "25.5%"]
         pub const _0_X_FF: Self = Self::new(255);
     }
 }
@@ -44136,9 +48525,11 @@ impl crate::sealed::RegSpec for CetsmByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Exchange Timing Support Information M(Mode\u{a0}) Register"]
 pub type CetsmByHl = crate::RegValueT<CetsmByHl_SPEC>;
 
 impl CetsmByHl {
+    #[doc = "Inaccuracy ByteThis byte represents the maximum variation of the Slave\'s internal oscillator in 1/10th percent (0.1%) increments, up to 25.5%."]
     #[inline(always)]
     pub fn inac(
         self,
@@ -44176,38 +48567,55 @@ pub mod cetsm_by_hl {
     pub struct Inac_SPEC;
     pub type Inac = crate::EnumBitfieldStruct<u8, Inac_SPEC>;
     impl Inac {
+        #[doc = "0.0%"]
         pub const _0_X_00: Self = Self::new(0);
 
+        #[doc = "1.5%"]
         pub const _0_X_0_F: Self = Self::new(15);
 
+        #[doc = "3.1%"]
         pub const _0_X_1_F: Self = Self::new(31);
 
+        #[doc = "4.7%"]
         pub const _0_X_2_F: Self = Self::new(47);
 
+        #[doc = "6.3%"]
         pub const _0_X_3_F: Self = Self::new(63);
 
+        #[doc = "7.9%"]
         pub const _0_X_4_F: Self = Self::new(79);
 
+        #[doc = "9.5%"]
         pub const _0_X_5_F: Self = Self::new(95);
 
+        #[doc = "11.1%"]
         pub const _0_X_6_F: Self = Self::new(111);
 
+        #[doc = "12.7%"]
         pub const _0_X_7_F: Self = Self::new(127);
 
+        #[doc = "14.3%"]
         pub const _0_X_8_F: Self = Self::new(143);
 
+        #[doc = "15.9%"]
         pub const _0_X_9_F: Self = Self::new(159);
 
+        #[doc = "17.5%"]
         pub const _0_X_AF: Self = Self::new(175);
 
+        #[doc = "19.1%"]
         pub const _0_X_BF: Self = Self::new(191);
 
+        #[doc = "20.7%"]
         pub const _0_X_CF: Self = Self::new(207);
 
+        #[doc = "22.3%"]
         pub const _0_X_DF: Self = Self::new(223);
 
+        #[doc = "23.9%"]
         pub const _0_X_EF: Self = Self::new(239);
 
+        #[doc = "25.5%"]
         pub const _0_X_FF: Self = Self::new(255);
     }
 }
@@ -44218,9 +48626,11 @@ impl crate::sealed::RegSpec for Cetss_SPEC {
     type DataType = u32;
 }
 
+#[doc = "CCC Exchange Timing Support Information S(State\u{a0}) Register"]
 pub type Cetss = crate::RegValueT<Cetss_SPEC>;
 
 impl Cetss {
+    #[doc = "Sync Mode Enabled"]
     #[inline(always)]
     pub fn syne(
         self,
@@ -44246,6 +48656,7 @@ impl Cetss {
         >::from_register(self, 0)
     }
 
+    #[doc = "Async Mode Enabled"]
     #[inline(always)]
     pub fn asyne(
         self,
@@ -44271,6 +48682,7 @@ impl Cetss {
         >::from_register(self, 0)
     }
 
+    #[doc = "Internal Counter Overflow"]
     #[inline(always)]
     pub fn icovf(
         self,
@@ -44296,6 +48708,7 @@ impl Cetss {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000000000000000. The write value should be 000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -44316,26 +48729,33 @@ pub mod cetss {
     pub struct Syne_SPEC;
     pub type Syne = crate::EnumBitfieldStruct<u8, Syne_SPEC>;
     impl Syne {
+        #[doc = "Sync Mode Disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Sync Mode Enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asyne_SPEC;
     pub type Asyne = crate::EnumBitfieldStruct<u8, Asyne_SPEC>;
     impl Asyne {
+        #[doc = "All Mode Disable"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Async Mode 0 Enabled."]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Async Mode 1 Enabled."]
         pub const _10: Self = Self::new(2);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Icovf_SPEC;
     pub type Icovf = crate::EnumBitfieldStruct<u8, Icovf_SPEC>;
     impl Icovf {
+        #[doc = "Slave has not experienced a counter overflow since the most recent previous check."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave experienced a counter overflow since the most recent previous check."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -44346,9 +48766,11 @@ impl crate::sealed::RegSpec for CetssHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "CCC Exchange Timing Support Information S(State\u{a0}) Register"]
 pub type CetssHaL = crate::RegValueT<CetssHaL_SPEC>;
 
 impl CetssHaL {
+    #[doc = "Sync Mode Enabled"]
     #[inline(always)]
     pub fn syne(
         self,
@@ -44374,6 +48796,7 @@ impl CetssHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Async Mode Enabled"]
     #[inline(always)]
     pub fn asyne(
         self,
@@ -44399,6 +48822,7 @@ impl CetssHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "Internal Counter Overflow"]
     #[inline(always)]
     pub fn icovf(
         self,
@@ -44424,6 +48848,7 @@ impl CetssHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -44443,26 +48868,33 @@ pub mod cetss_ha_l {
     pub struct Syne_SPEC;
     pub type Syne = crate::EnumBitfieldStruct<u8, Syne_SPEC>;
     impl Syne {
+        #[doc = "Sync Mode Disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Sync Mode Enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asyne_SPEC;
     pub type Asyne = crate::EnumBitfieldStruct<u8, Asyne_SPEC>;
     impl Asyne {
+        #[doc = "All Mode Disable"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Async Mode 0 Enabled."]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Async Mode 1 Enabled."]
         pub const _10: Self = Self::new(2);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Icovf_SPEC;
     pub type Icovf = crate::EnumBitfieldStruct<u8, Icovf_SPEC>;
     impl Icovf {
+        #[doc = "Slave has not experienced a counter overflow since the most recent previous check."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave experienced a counter overflow since the most recent previous check."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -44473,9 +48905,11 @@ impl crate::sealed::RegSpec for CetssByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Exchange Timing Support Information S(State\u{a0}) Register"]
 pub type CetssByLl = crate::RegValueT<CetssByLl_SPEC>;
 
 impl CetssByLl {
+    #[doc = "Sync Mode Enabled"]
     #[inline(always)]
     pub fn syne(
         self,
@@ -44501,6 +48935,7 @@ impl CetssByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "Async Mode Enabled"]
     #[inline(always)]
     pub fn asyne(
         self,
@@ -44526,6 +48961,7 @@ impl CetssByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -44533,6 +48969,7 @@ impl CetssByLl {
         crate::common::RegisterField::<3,0xf,1,0,u8,u8,CetssByLl_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Internal Counter Overflow"]
     #[inline(always)]
     pub fn icovf(
         self,
@@ -44570,26 +49007,33 @@ pub mod cetss_by_ll {
     pub struct Syne_SPEC;
     pub type Syne = crate::EnumBitfieldStruct<u8, Syne_SPEC>;
     impl Syne {
+        #[doc = "Sync Mode Disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Sync Mode Enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asyne_SPEC;
     pub type Asyne = crate::EnumBitfieldStruct<u8, Asyne_SPEC>;
     impl Asyne {
+        #[doc = "All Mode Disable"]
         pub const _00: Self = Self::new(0);
 
+        #[doc = "Async Mode 0 Enabled."]
         pub const _01: Self = Self::new(1);
 
+        #[doc = "Async Mode 1 Enabled."]
         pub const _10: Self = Self::new(2);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Icovf_SPEC;
     pub type Icovf = crate::EnumBitfieldStruct<u8, Icovf_SPEC>;
     impl Icovf {
+        #[doc = "Slave has not experienced a counter overflow since the most recent previous check."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Slave experienced a counter overflow since the most recent previous check."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -44600,9 +49044,11 @@ impl crate::sealed::RegSpec for Cghdrcap_SPEC {
     type DataType = u32;
 }
 
+#[doc = "CCC Get HDR capability Register"]
 pub type Cghdrcap = crate::RegValueT<Cghdrcap_SPEC>;
 
 impl Cghdrcap {
+    #[doc = "HDR-DDR Operation Enable"]
     #[inline(always)]
     pub fn ddren(
         self,
@@ -44628,6 +49074,7 @@ impl Cghdrcap {
         >::from_register(self, 0)
     }
 
+    #[doc = "HDR-TSP Operation Enable"]
     #[inline(always)]
     pub fn tspen(
         self,
@@ -44653,6 +49100,7 @@ impl Cghdrcap {
         >::from_register(self, 0)
     }
 
+    #[doc = "HDR-TSL Operation Enable"]
     #[inline(always)]
     pub fn tslen(
         self,
@@ -44678,6 +49126,7 @@ impl Cghdrcap {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000000000000000000000000000. The write value should be 00000000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -44707,24 +49156,30 @@ pub mod cghdrcap {
     pub struct Ddren_SPEC;
     pub type Ddren = crate::EnumBitfieldStruct<u8, Ddren_SPEC>;
     impl Ddren {
+        #[doc = "HDR-DDR Operation is Disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "HDR-DDR Operation is Enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tspen_SPEC;
     pub type Tspen = crate::EnumBitfieldStruct<u8, Tspen_SPEC>;
     impl Tspen {
+        #[doc = "HDR-TSP Operation is Disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "HDR-TSP Operation is Enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tslen_SPEC;
     pub type Tslen = crate::EnumBitfieldStruct<u8, Tslen_SPEC>;
     impl Tslen {
+        #[doc = "HDR-TSL Operation is Disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "HDR-TSL Operation is Enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -44735,9 +49190,11 @@ impl crate::sealed::RegSpec for CghdrcapHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "CCC Get HDR capability Register"]
 pub type CghdrcapHaL = crate::RegValueT<CghdrcapHaL_SPEC>;
 
 impl CghdrcapHaL {
+    #[doc = "HDR-DDR Operation Enable"]
     #[inline(always)]
     pub fn ddren(
         self,
@@ -44763,6 +49220,7 @@ impl CghdrcapHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "HDR-TSP Operation Enable"]
     #[inline(always)]
     pub fn tspen(
         self,
@@ -44788,6 +49246,7 @@ impl CghdrcapHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "HDR-TSL Operation Enable"]
     #[inline(always)]
     pub fn tslen(
         self,
@@ -44813,6 +49272,7 @@ impl CghdrcapHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000000000. The write value should be 0000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -44833,24 +49293,30 @@ pub mod cghdrcap_ha_l {
     pub struct Ddren_SPEC;
     pub type Ddren = crate::EnumBitfieldStruct<u8, Ddren_SPEC>;
     impl Ddren {
+        #[doc = "HDR-DDR Operation is Disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "HDR-DDR Operation is Enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tspen_SPEC;
     pub type Tspen = crate::EnumBitfieldStruct<u8, Tspen_SPEC>;
     impl Tspen {
+        #[doc = "HDR-TSP Operation is Disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "HDR-TSP Operation is Enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tslen_SPEC;
     pub type Tslen = crate::EnumBitfieldStruct<u8, Tslen_SPEC>;
     impl Tslen {
+        #[doc = "HDR-TSL Operation is Disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "HDR-TSL Operation is Enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -44861,9 +49327,11 @@ impl crate::sealed::RegSpec for CghdrcapByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "CCC Get HDR capability Register"]
 pub type CghdrcapByLl = crate::RegValueT<CghdrcapByLl_SPEC>;
 
 impl CghdrcapByLl {
+    #[doc = "HDR-DDR Operation Enable"]
     #[inline(always)]
     pub fn ddren(
         self,
@@ -44889,6 +49357,7 @@ impl CghdrcapByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "HDR-TSP Operation Enable"]
     #[inline(always)]
     pub fn tspen(
         self,
@@ -44914,6 +49383,7 @@ impl CghdrcapByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "HDR-TSL Operation Enable"]
     #[inline(always)]
     pub fn tslen(
         self,
@@ -44939,6 +49409,7 @@ impl CghdrcapByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -44959,24 +49430,30 @@ pub mod cghdrcap_by_ll {
     pub struct Ddren_SPEC;
     pub type Ddren = crate::EnumBitfieldStruct<u8, Ddren_SPEC>;
     impl Ddren {
+        #[doc = "HDR-DDR Operation is Disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "HDR-DDR Operation is Enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tspen_SPEC;
     pub type Tspen = crate::EnumBitfieldStruct<u8, Tspen_SPEC>;
     impl Tspen {
+        #[doc = "HDR-TSP Operation is Disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "HDR-TSP Operation is Enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tslen_SPEC;
     pub type Tslen = crate::EnumBitfieldStruct<u8, Tslen_SPEC>;
     impl Tslen {
+        #[doc = "HDR-TSL Operation is Disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "HDR-TSL Operation is Enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -44987,9 +49464,11 @@ impl crate::sealed::RegSpec for Bitcnt_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Bit Count Register"]
 pub type Bitcnt = crate::RegValueT<Bitcnt_SPEC>;
 
 impl Bitcnt {
+    #[doc = "Bit Counter"]
     #[inline(always)]
     pub fn bcnt(
         self,
@@ -44997,6 +49476,7 @@ impl Bitcnt {
         crate::common::RegisterField::<0,0x1f,1,0,u8,u8,Bitcnt_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 000000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -45019,9 +49499,11 @@ impl crate::sealed::RegSpec for BitcntHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Bit Count Register"]
 pub type BitcntHaL = crate::RegValueT<BitcntHaL_SPEC>;
 
 impl BitcntHaL {
+    #[doc = "Bit Counter"]
     #[inline(always)]
     pub fn bcnt(
         self,
@@ -45029,6 +49511,7 @@ impl BitcntHaL {
         crate::common::RegisterField::<0,0x1f,1,0,u8,u8,BitcntHaL_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -45051,9 +49534,11 @@ impl crate::sealed::RegSpec for BitcntByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Bit Count Register"]
 pub type BitcntByLl = crate::RegValueT<BitcntByLl_SPEC>;
 
 impl BitcntByLl {
+    #[doc = "Bit Counter"]
     #[inline(always)]
     pub fn bcnt(
         self,
@@ -45062,6 +49547,7 @@ impl BitcntByLl {
         crate::common::RegisterField::<0,0x1f,1,0,u8,u8,BitcntByLl_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -45083,9 +49569,11 @@ impl crate::sealed::RegSpec for Nqstlv_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Normal Queue Status Level Register"]
 pub type Nqstlv = crate::RegValueT<Nqstlv_SPEC>;
 
 impl Nqstlv {
+    #[doc = "Normal Command Queue Free LevelNumber of free buffer entries currently in the Command Queue. Reset value is the depth of the Command Queue."]
     #[inline(always)]
     pub fn cmdqflv(
         self,
@@ -45093,6 +49581,7 @@ impl Nqstlv {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Nqstlv_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Normal Response Queue LevelNumber of buffer entries currently in the Response Queue."]
     #[inline(always)]
     pub fn rspqlv(
         self,
@@ -45100,6 +49589,7 @@ impl Nqstlv {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Nqstlv_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Normal IBI Queue Level  Number of buffer entries currently in the IBI Queue."]
     #[inline(always)]
     pub fn ibiqlv(
         self,
@@ -45107,6 +49597,7 @@ impl Nqstlv {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Nqstlv_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Normal IBI Status CountNumber of IBI Status entries currently in the IBI Queue."]
     #[inline(always)]
     pub fn ibiscnt(
         self,
@@ -45114,6 +49605,7 @@ impl Nqstlv {
         crate::common::RegisterField::<24,0x1f,1,0,u8,u8,Nqstlv_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -45135,9 +49627,11 @@ impl crate::sealed::RegSpec for NqstlvHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Normal Queue Status Level Register"]
 pub type NqstlvHaL = crate::RegValueT<NqstlvHaL_SPEC>;
 
 impl NqstlvHaL {
+    #[doc = "Normal Command Queue Free LevelNumber of free buffer entries currently in the Command Queue. Reset value is the depth of the Command Queue."]
     #[inline(always)]
     pub fn cmdqflv(
         self,
@@ -45145,6 +49639,7 @@ impl NqstlvHaL {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,NqstlvHaL_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Normal Response Queue LevelNumber of buffer entries currently in the Response Queue."]
     #[inline(always)]
     pub fn rspqlv(
         self,
@@ -45166,9 +49661,11 @@ impl crate::sealed::RegSpec for NqstlvByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Queue Status Level Register"]
 pub type NqstlvByLl = crate::RegValueT<NqstlvByLl_SPEC>;
 
 impl NqstlvByLl {
+    #[doc = "Normal Command Queue Free LevelNumber of free buffer entries currently in the Command Queue. Reset value is the depth of the Command Queue."]
     #[inline(always)]
     pub fn cmdqflv(
         self,
@@ -45191,9 +49688,11 @@ impl crate::sealed::RegSpec for NqstlvByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Queue Status Level Register"]
 pub type NqstlvByLh = crate::RegValueT<NqstlvByLh_SPEC>;
 
 impl NqstlvByLh {
+    #[doc = "Normal Response Queue LevelNumber of buffer entries currently in the Response Queue."]
     #[inline(always)]
     pub fn rspqlv(
         self,
@@ -45216,9 +49715,11 @@ impl crate::sealed::RegSpec for NqstlvHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Normal Queue Status Level Register"]
 pub type NqstlvHaH = crate::RegValueT<NqstlvHaH_SPEC>;
 
 impl NqstlvHaH {
+    #[doc = "Normal IBI Queue Level  Number of buffer entries currently in the IBI Queue."]
     #[inline(always)]
     pub fn ibiqlv(
         self,
@@ -45226,6 +49727,7 @@ impl NqstlvHaH {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,NqstlvHaH_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Normal IBI Status CountNumber of IBI Status entries currently in the IBI Queue."]
     #[inline(always)]
     pub fn ibiscnt(
         self,
@@ -45233,6 +49735,7 @@ impl NqstlvHaH {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,NqstlvHaH_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -45254,9 +49757,11 @@ impl crate::sealed::RegSpec for NqstlvByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Queue Status Level Register"]
 pub type NqstlvByHl = crate::RegValueT<NqstlvByHl_SPEC>;
 
 impl NqstlvByHl {
+    #[doc = "Normal IBI Queue Level  Number of buffer entries currently in the IBI Queue."]
     #[inline(always)]
     pub fn ibiqlv(
         self,
@@ -45279,9 +49784,11 @@ impl crate::sealed::RegSpec for NqstlvByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Queue Status Level Register"]
 pub type NqstlvByHh = crate::RegValueT<NqstlvByHh_SPEC>;
 
 impl NqstlvByHh {
+    #[doc = "Normal IBI Status CountNumber of IBI Status entries currently in the IBI Queue."]
     #[inline(always)]
     pub fn ibiscnt(
         self,
@@ -45290,6 +49797,7 @@ impl NqstlvByHh {
         crate::common::RegisterField::<0,0x1f,1,0,u8,u8,NqstlvByHh_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -45311,9 +49819,11 @@ impl crate::sealed::RegSpec for Ndbstlv0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Normal Data Buffer Status Level Register 0"]
 pub type Ndbstlv0 = crate::RegValueT<Ndbstlv0_SPEC>;
 
 impl Ndbstlv0 {
+    #[doc = "Normal Tx Data Buffer Free LevelIndicates the number of free Tx Data Buffer entries in the Tx Data Queue.Reset value is the depth of the Tx Data Queue."]
     #[inline(always)]
     pub fn tdbflv(
         self,
@@ -45321,6 +49831,7 @@ impl Ndbstlv0 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Ndbstlv0_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Normal Rx Data Buffer LevelIndicates the number of Rx Data Buffer entries in the Rx Data Queue."]
     #[inline(always)]
     pub fn rdblv(
         self,
@@ -45328,6 +49839,7 @@ impl Ndbstlv0 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Ndbstlv0_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -45350,9 +49862,11 @@ impl crate::sealed::RegSpec for Ndbstlv0HaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Normal Data Buffer Status Level Register 0"]
 pub type Ndbstlv0HaL = crate::RegValueT<Ndbstlv0HaL_SPEC>;
 
 impl Ndbstlv0HaL {
+    #[doc = "Normal Tx Data Buffer Free LevelIndicates the number of free Tx Data Buffer entries in the Tx Data Queue.Reset value is the depth of the Tx Data Queue."]
     #[inline(always)]
     pub fn tdbflv(
         self,
@@ -45361,6 +49875,7 @@ impl Ndbstlv0HaL {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Ndbstlv0HaL_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Normal Rx Data Buffer LevelIndicates the number of Rx Data Buffer entries in the Rx Data Queue."]
     #[inline(always)]
     pub fn rdblv(
         self,
@@ -45383,9 +49898,11 @@ impl crate::sealed::RegSpec for Ndbstlv0ByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Data Buffer Status Level Register 0"]
 pub type Ndbstlv0ByLl = crate::RegValueT<Ndbstlv0ByLl_SPEC>;
 
 impl Ndbstlv0ByLl {
+    #[doc = "Normal Tx Data Buffer Free LevelIndicates the number of free Tx Data Buffer entries in the Tx Data Queue.Reset value is the depth of the Tx Data Queue."]
     #[inline(always)]
     pub fn tdbflv(
         self,
@@ -45408,9 +49925,11 @@ impl crate::sealed::RegSpec for Ndbstlv0ByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Data Buffer Status Level Register 0"]
 pub type Ndbstlv0ByLh = crate::RegValueT<Ndbstlv0ByLh_SPEC>;
 
 impl Ndbstlv0ByLh {
+    #[doc = "Normal Rx Data Buffer LevelIndicates the number of Rx Data Buffer entries in the Rx Data Queue."]
     #[inline(always)]
     pub fn rdblv(
         self,
@@ -45433,9 +49952,11 @@ impl crate::sealed::RegSpec for Nrsqstlv_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Normal Receive Status Queue Status Level Register"]
 pub type Nrsqstlv = crate::RegValueT<Nrsqstlv_SPEC>;
 
 impl Nrsqstlv {
+    #[doc = "Normal Receive Status Queue Level"]
     #[inline(always)]
     pub fn rsqlv(
         self,
@@ -45443,6 +49964,7 @@ impl Nrsqstlv {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Nrsqstlv_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 000000000000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -45465,9 +49987,11 @@ impl crate::sealed::RegSpec for NrsqstlvHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Normal Receive Status Queue Status Level Register"]
 pub type NrsqstlvHaL = crate::RegValueT<NrsqstlvHaL_SPEC>;
 
 impl NrsqstlvHaL {
+    #[doc = "Normal Receive Status Queue Level"]
     #[inline(always)]
     pub fn rsqlv(
         self,
@@ -45476,6 +50000,7 @@ impl NrsqstlvHaL {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,NrsqstlvHaL_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -45498,9 +50023,11 @@ impl crate::sealed::RegSpec for NrsqstlvByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Normal Receive Status Queue Status Level Register"]
 pub type NrsqstlvByLl = crate::RegValueT<NrsqstlvByLl_SPEC>;
 
 impl NrsqstlvByLl {
+    #[doc = "Normal Receive Status Queue Level"]
     #[inline(always)]
     pub fn rsqlv(
         self,
@@ -45523,9 +50050,11 @@ impl crate::sealed::RegSpec for Hqstlv_SPEC {
     type DataType = u32;
 }
 
+#[doc = "High Priority Queue Status Level Register"]
 pub type Hqstlv = crate::RegValueT<Hqstlv_SPEC>;
 
 impl Hqstlv {
+    #[doc = "High Priority Command Queue LevelNumber of free buffer entries currently in the High Priority Command Queue. Reset value is the depth of the High Priority Command Queue"]
     #[inline(always)]
     pub fn cmdqlv(
         self,
@@ -45533,6 +50062,7 @@ impl Hqstlv {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Hqstlv_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "High Priority Response Queue LevelNumber of buffer entries currently in the High Priority Response Queue. Data Queue."]
     #[inline(always)]
     pub fn rspqlv(
         self,
@@ -45540,6 +50070,7 @@ impl Hqstlv {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Hqstlv_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -45562,9 +50093,11 @@ impl crate::sealed::RegSpec for HqstlvHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "High Priority Queue Status Level Register"]
 pub type HqstlvHaL = crate::RegValueT<HqstlvHaL_SPEC>;
 
 impl HqstlvHaL {
+    #[doc = "High Priority Command Queue LevelNumber of free buffer entries currently in the High Priority Command Queue. Reset value is the depth of the High Priority Command Queue"]
     #[inline(always)]
     pub fn cmdqlv(
         self,
@@ -45572,6 +50105,7 @@ impl HqstlvHaL {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,HqstlvHaL_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "High Priority Response Queue LevelNumber of buffer entries currently in the High Priority Response Queue. Data Queue."]
     #[inline(always)]
     pub fn rspqlv(
         self,
@@ -45593,9 +50127,11 @@ impl crate::sealed::RegSpec for HqstlvByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High Priority Queue Status Level Register"]
 pub type HqstlvByLl = crate::RegValueT<HqstlvByLl_SPEC>;
 
 impl HqstlvByLl {
+    #[doc = "High Priority Command Queue LevelNumber of free buffer entries currently in the High Priority Command Queue. Reset value is the depth of the High Priority Command Queue"]
     #[inline(always)]
     pub fn cmdqlv(
         self,
@@ -45618,9 +50154,11 @@ impl crate::sealed::RegSpec for HqstlvByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High Priority Queue Status Level Register"]
 pub type HqstlvByLh = crate::RegValueT<HqstlvByLh_SPEC>;
 
 impl HqstlvByLh {
+    #[doc = "High Priority Response Queue LevelNumber of buffer entries currently in the High Priority Response Queue. Data Queue."]
     #[inline(always)]
     pub fn rspqlv(
         self,
@@ -45643,9 +50181,11 @@ impl crate::sealed::RegSpec for Hdbstlv_SPEC {
     type DataType = u32;
 }
 
+#[doc = "High Priority Data Buffer Status Level Register"]
 pub type Hdbstlv = crate::RegValueT<Hdbstlv_SPEC>;
 
 impl Hdbstlv {
+    #[doc = "High Priority Tx Data Buffer Free LevelIndicates the number of free High Priority Tx Data Buffer entries in the High Priority Tx Data Queue.Reset value is the depth of the High Priority Tx Data Queue."]
     #[inline(always)]
     pub fn tdbflv(
         self,
@@ -45653,6 +50193,7 @@ impl Hdbstlv {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Hdbstlv_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "High Priority Rx Data Buffer Level Indicates the number of High Priority Rx Data Buffer entries in the High Priority Rx Data Queue."]
     #[inline(always)]
     pub fn rdblv(
         self,
@@ -45660,6 +50201,7 @@ impl Hdbstlv {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Hdbstlv_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -45682,9 +50224,11 @@ impl crate::sealed::RegSpec for HdbstlvHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "High Priority Data Buffer Status Level Register"]
 pub type HdbstlvHaL = crate::RegValueT<HdbstlvHaL_SPEC>;
 
 impl HdbstlvHaL {
+    #[doc = "High Priority Tx Data Buffer Free LevelIndicates the number of free High Priority Tx Data Buffer entries in the High Priority Tx Data Queue.Reset value is the depth of the High Priority Tx Data Queue."]
     #[inline(always)]
     pub fn tdbflv(
         self,
@@ -45693,6 +50237,7 @@ impl HdbstlvHaL {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,HdbstlvHaL_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "High Priority Rx Data Buffer Level Indicates the number of High Priority Rx Data Buffer entries in the High Priority Rx Data Queue."]
     #[inline(always)]
     pub fn rdblv(
         self,
@@ -45715,9 +50260,11 @@ impl crate::sealed::RegSpec for HdbstlvByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High Priority Data Buffer Status Level Register"]
 pub type HdbstlvByLl = crate::RegValueT<HdbstlvByLl_SPEC>;
 
 impl HdbstlvByLl {
+    #[doc = "High Priority Tx Data Buffer Free LevelIndicates the number of free High Priority Tx Data Buffer entries in the High Priority Tx Data Queue.Reset value is the depth of the High Priority Tx Data Queue."]
     #[inline(always)]
     pub fn tdbflv(
         self,
@@ -45740,9 +50287,11 @@ impl crate::sealed::RegSpec for HdbstlvByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "High Priority Data Buffer Status Level Register"]
 pub type HdbstlvByLh = crate::RegValueT<HdbstlvByLh_SPEC>;
 
 impl HdbstlvByLh {
+    #[doc = "High Priority Rx Data Buffer Level Indicates the number of High Priority Rx Data Buffer entries in the High Priority Rx Data Queue."]
     #[inline(always)]
     pub fn rdblv(
         self,
@@ -45765,9 +50314,11 @@ impl crate::sealed::RegSpec for Prstdbg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Present State Debug Register"]
 pub type Prstdbg = crate::RegValueT<Prstdbg_SPEC>;
 
 impl Prstdbg {
+    #[doc = "SCL Line Signal LevelThis bit is used to check the SCL Line level, in order to recover from errors and for debugging. This bit reflects the value of synchronized pt_scli_a signal."]
     #[inline(always)]
     pub fn scilv(
         self,
@@ -45777,6 +50328,7 @@ impl Prstdbg {
         )
     }
 
+    #[doc = "SDA Line Signal LevelThis bit is used to check the SDA Line level, in order to recover from errors and for debugging. This bit reflects the value of synchronized pt_sdai_a  signal."]
     #[inline(always)]
     pub fn sdilv(
         self,
@@ -45786,6 +50338,7 @@ impl Prstdbg {
         )
     }
 
+    #[doc = "SCL Output Level"]
     #[inline(always)]
     pub fn scolv(
         self,
@@ -45811,6 +50364,7 @@ impl Prstdbg {
         >::from_register(self, 0)
     }
 
+    #[doc = "SDA Output Level"]
     #[inline(always)]
     pub fn sdolv(
         self,
@@ -45836,6 +50390,7 @@ impl Prstdbg {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -45855,16 +50410,20 @@ pub mod prstdbg {
     pub struct Scolv_SPEC;
     pub type Scolv = crate::EnumBitfieldStruct<u8, Scolv_SPEC>;
     impl Scolv {
+        #[doc = "This IP has driven the SCL pin low."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP has released the SCL pin."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdolv_SPEC;
     pub type Sdolv = crate::EnumBitfieldStruct<u8, Sdolv_SPEC>;
     impl Sdolv {
+        #[doc = "This IP has driven the SDA pin low."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP has released the SDA pin."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -45875,9 +50434,11 @@ impl crate::sealed::RegSpec for PrstdbgHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Present State Debug Register"]
 pub type PrstdbgHaL = crate::RegValueT<PrstdbgHaL_SPEC>;
 
 impl PrstdbgHaL {
+    #[doc = "SCL Line Signal LevelThis bit is used to check the SCL Line level, in order to recover from errors and for debugging. This bit reflects the value of synchronized pt_scli_a signal."]
     #[inline(always)]
     pub fn scilv(
         self,
@@ -45885,6 +50446,7 @@ impl PrstdbgHaL {
         crate::common::RegisterFieldBool::<0,1,0,PrstdbgHaL_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "SDA Line Signal LevelThis bit is used to check the SDA Line level, in order to recover from errors and for debugging. This bit reflects the value of synchronized pt_sdai_a  signal."]
     #[inline(always)]
     pub fn sdilv(
         self,
@@ -45892,6 +50454,7 @@ impl PrstdbgHaL {
         crate::common::RegisterFieldBool::<1,1,0,PrstdbgHaL_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "SCL Output Level"]
     #[inline(always)]
     pub fn scolv(
         self,
@@ -45917,6 +50480,7 @@ impl PrstdbgHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "SDA Output Level"]
     #[inline(always)]
     pub fn sdolv(
         self,
@@ -45942,6 +50506,7 @@ impl PrstdbgHaL {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -45962,16 +50527,20 @@ pub mod prstdbg_ha_l {
     pub struct Scolv_SPEC;
     pub type Scolv = crate::EnumBitfieldStruct<u8, Scolv_SPEC>;
     impl Scolv {
+        #[doc = "This IP has driven the SCL pin low."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP has released the SCL pin."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdolv_SPEC;
     pub type Sdolv = crate::EnumBitfieldStruct<u8, Sdolv_SPEC>;
     impl Sdolv {
+        #[doc = "This IP has driven the SDA pin low."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP has released the SDA pin."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -45982,9 +50551,11 @@ impl crate::sealed::RegSpec for PrstdbgByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Present State Debug Register"]
 pub type PrstdbgByLl = crate::RegValueT<PrstdbgByLl_SPEC>;
 
 impl PrstdbgByLl {
+    #[doc = "SCL Line Signal LevelThis bit is used to check the SCL Line level, in order to recover from errors and for debugging. This bit reflects the value of synchronized pt_scli_a signal."]
     #[inline(always)]
     pub fn scilv(
         self,
@@ -45992,6 +50563,7 @@ impl PrstdbgByLl {
         crate::common::RegisterFieldBool::<0,1,0,PrstdbgByLl_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "SDA Line Signal LevelThis bit is used to check the SDA Line level, in order to recover from errors and for debugging. This bit reflects the value of synchronized pt_sdai_a  signal."]
     #[inline(always)]
     pub fn sdilv(
         self,
@@ -45999,6 +50571,7 @@ impl PrstdbgByLl {
         crate::common::RegisterFieldBool::<1,1,0,PrstdbgByLl_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "SCL Output Level"]
     #[inline(always)]
     pub fn scolv(
         self,
@@ -46024,6 +50597,7 @@ impl PrstdbgByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "SDA Output Level"]
     #[inline(always)]
     pub fn sdolv(
         self,
@@ -46049,6 +50623,7 @@ impl PrstdbgByLl {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -46069,16 +50644,20 @@ pub mod prstdbg_by_ll {
     pub struct Scolv_SPEC;
     pub type Scolv = crate::EnumBitfieldStruct<u8, Scolv_SPEC>;
     impl Scolv {
+        #[doc = "This IP has driven the SCL pin low."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP has released the SCL pin."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdolv_SPEC;
     pub type Sdolv = crate::EnumBitfieldStruct<u8, Sdolv_SPEC>;
     impl Sdolv {
+        #[doc = "This IP has driven the SDA pin low."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "This IP has released the SDA pin."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -46089,9 +50668,11 @@ impl crate::sealed::RegSpec for PrstdbgByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Present State Debug Register"]
 pub type PrstdbgByLh = crate::RegValueT<PrstdbgByLh_SPEC>;
 
 impl PrstdbgByLh {
+    #[doc = "These bits are read as 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -46114,9 +50695,11 @@ impl crate::sealed::RegSpec for PrstdbgHaH_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Present State Debug Register"]
 pub type PrstdbgHaH = crate::RegValueT<PrstdbgHaH_SPEC>;
 
 impl PrstdbgHaH {
+    #[doc = "These bits are read as 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -46139,9 +50722,11 @@ impl crate::sealed::RegSpec for PrstdbgByHl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Present State Debug Register"]
 pub type PrstdbgByHl = crate::RegValueT<PrstdbgByHl_SPEC>;
 
 impl PrstdbgByHl {
+    #[doc = "These bits are read as 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -46164,9 +50749,11 @@ impl crate::sealed::RegSpec for PrstdbgByHh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Present State Debug Register"]
 pub type PrstdbgByHh = crate::RegValueT<PrstdbgByHh_SPEC>;
 
 impl PrstdbgByHh {
+    #[doc = "These bits are read as 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -46189,9 +50776,11 @@ impl crate::sealed::RegSpec for Mserrcnt_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Master Error Counters Register"]
 pub type Mserrcnt = crate::RegValueT<Mserrcnt_SPEC>;
 
 impl Mserrcnt {
+    #[doc = "M2 Error CounterCounts I3C Type M2 errors on the I3C Bus.Cleared upon Read out."]
     #[inline(always)]
     pub fn m2ecnt(
         self,
@@ -46199,6 +50788,7 @@ impl Mserrcnt {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Mserrcnt_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "This bit is read as 0."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -46222,9 +50812,11 @@ impl crate::sealed::RegSpec for MserrcntHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Master Error Counters Register"]
 pub type MserrcntHaL = crate::RegValueT<MserrcntHaL_SPEC>;
 
 impl MserrcntHaL {
+    #[doc = "M2 Error CounterCounts I3C Type M2 errors on the I3C Bus.Cleared upon Read out."]
     #[inline(always)]
     pub fn m2ecnt(
         self,
@@ -46233,6 +50825,7 @@ impl MserrcntHaL {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,MserrcntHaL_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -46255,9 +50848,11 @@ impl crate::sealed::RegSpec for MserrcntByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Master Error Counters Register"]
 pub type MserrcntByLl = crate::RegValueT<MserrcntByLl_SPEC>;
 
 impl MserrcntByLl {
+    #[doc = "M2 Error CounterCounts I3C Type M2 errors on the I3C Bus.Cleared upon Read out."]
     #[inline(always)]
     pub fn m2ecnt(
         self,
@@ -46280,9 +50875,11 @@ impl crate::sealed::RegSpec for Sc1Cpt_SPEC {
     type DataType = u32;
 }
 
+#[doc = "SC1 Capture monitor Register"]
 pub type Sc1Cpt = crate::RegValueT<Sc1Cpt_SPEC>;
 
 impl Sc1Cpt {
+    #[doc = "SC1 Capture"]
     #[inline(always)]
     pub fn sc1c(
         self,
@@ -46291,6 +50888,7 @@ impl Sc1Cpt {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Sc1Cpt_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -46313,9 +50911,11 @@ impl crate::sealed::RegSpec for Sc1CptHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "SC1 Capture monitor Register"]
 pub type Sc1CptHaL = crate::RegValueT<Sc1CptHaL_SPEC>;
 
 impl Sc1CptHaL {
+    #[doc = "SC1 Capture"]
     #[inline(always)]
     pub fn sc1c(
         self,
@@ -46338,9 +50938,11 @@ impl crate::sealed::RegSpec for Sc1CptByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SC1 Capture monitor Register"]
 pub type Sc1CptByLl = crate::RegValueT<Sc1CptByLl_SPEC>;
 
 impl Sc1CptByLl {
+    #[doc = "SC1 Capture"]
     #[inline(always)]
     pub fn sc1c(
         self,
@@ -46363,9 +50965,11 @@ impl crate::sealed::RegSpec for Sc1CptByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SC1 Capture monitor Register"]
 pub type Sc1CptByLh = crate::RegValueT<Sc1CptByLh_SPEC>;
 
 impl Sc1CptByLh {
+    #[doc = "SC1 Capture"]
     #[inline(always)]
     pub fn sc1c(
         self,
@@ -46388,9 +50992,11 @@ impl crate::sealed::RegSpec for Sc2Cpt_SPEC {
     type DataType = u32;
 }
 
+#[doc = "SC2 Capture monitor Register"]
 pub type Sc2Cpt = crate::RegValueT<Sc2Cpt_SPEC>;
 
 impl Sc2Cpt {
+    #[doc = "SC2 Capture"]
     #[inline(always)]
     pub fn sc2c(
         self,
@@ -46399,6 +51005,7 @@ impl Sc2Cpt {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Sc2Cpt_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -46421,9 +51028,11 @@ impl crate::sealed::RegSpec for Sc2CptHaL_SPEC {
     type DataType = u16;
 }
 
+#[doc = "SC2 Capture monitor Register"]
 pub type Sc2CptHaL = crate::RegValueT<Sc2CptHaL_SPEC>;
 
 impl Sc2CptHaL {
+    #[doc = "SC2 Capture"]
     #[inline(always)]
     pub fn sc2c(
         self,
@@ -46446,9 +51055,11 @@ impl crate::sealed::RegSpec for Sc2CptByLl_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SC2 Capture monitor Register"]
 pub type Sc2CptByLl = crate::RegValueT<Sc2CptByLl_SPEC>;
 
 impl Sc2CptByLl {
+    #[doc = "SC2 Capture"]
     #[inline(always)]
     pub fn sc2c(
         self,
@@ -46471,9 +51082,11 @@ impl crate::sealed::RegSpec for Sc2CptByLh_SPEC {
     type DataType = u8;
 }
 
+#[doc = "SC2 Capture monitor Register"]
 pub type Sc2CptByLh = crate::RegValueT<Sc2CptByLh_SPEC>;
 
 impl Sc2CptByLh {
+    #[doc = "SC2 Capture"]
     #[inline(always)]
     pub fn sc2c(
         self,

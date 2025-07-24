@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:23:25 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Pscu {
         self.ptr
     }
 
+    #[doc = "Peripheral Security Attribution Register B"]
     #[inline(always)]
     pub const fn psarb(&self) -> &'static crate::common::Reg<self::Psarb_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Peripheral Security Attribution Register C"]
     #[inline(always)]
     pub const fn psarc(&self) -> &'static crate::common::Reg<self::Psarc_SPEC, crate::common::RW> {
         unsafe {
@@ -52,6 +54,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Peripheral Security Attribution Register D"]
     #[inline(always)]
     pub const fn psard(&self) -> &'static crate::common::Reg<self::Psard_SPEC, crate::common::RW> {
         unsafe {
@@ -61,6 +64,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Peripheral Security Attribution Register E"]
     #[inline(always)]
     pub const fn psare(&self) -> &'static crate::common::Reg<self::Psare_SPEC, crate::common::RW> {
         unsafe {
@@ -70,6 +74,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Module Stop Security Attribution Register"]
     #[inline(always)]
     pub const fn mssar(&self) -> &'static crate::common::Reg<self::Mssar_SPEC, crate::common::RW> {
         unsafe {
@@ -79,6 +84,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Peripheral Privilege Attribution Register B"]
     #[inline(always)]
     pub const fn pparb(&self) -> &'static crate::common::Reg<self::Pparb_SPEC, crate::common::RW> {
         unsafe {
@@ -88,6 +94,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Peripheral Privilege Attribution Register C"]
     #[inline(always)]
     pub const fn pparc(&self) -> &'static crate::common::Reg<self::Pparc_SPEC, crate::common::RW> {
         unsafe {
@@ -97,6 +104,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Peripheral Privilege Attribution Register D"]
     #[inline(always)]
     pub const fn ppard(&self) -> &'static crate::common::Reg<self::Ppard_SPEC, crate::common::RW> {
         unsafe {
@@ -106,6 +114,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Peripheral Privilege Attribution Register E"]
     #[inline(always)]
     pub const fn ppare(&self) -> &'static crate::common::Reg<self::Ppare_SPEC, crate::common::RW> {
         unsafe {
@@ -115,6 +124,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Module Stop Privilege Attribution Register"]
     #[inline(always)]
     pub const fn mspar(&self) -> &'static crate::common::Reg<self::Mspar_SPEC, crate::common::RW> {
         unsafe {
@@ -124,6 +134,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Code Flash Security Attribution Monitor Register A"]
     #[inline(always)]
     pub const fn cfsamona(
         &self,
@@ -135,6 +146,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Data Flash Security Attribution Monitor Register"]
     #[inline(always)]
     pub const fn dfsamon(
         &self,
@@ -146,6 +158,7 @@ impl super::Pscu {
         }
     }
 
+    #[doc = "Device Lifecycle Management State Monitor Register"]
     #[inline(always)]
     pub const fn dlmmon(&self) -> &'static crate::common::Reg<self::Dlmmon_SPEC, crate::common::R> {
         unsafe {
@@ -162,9 +175,11 @@ impl crate::sealed::RegSpec for Psarb_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Peripheral Security Attribution Register B"]
 pub type Psarb = crate::RegValueT<Psarb_SPEC>;
 
 impl Psarb {
+    #[doc = "I3C Bus Interface 2 Security Attribution"]
     #[inline(always)]
     pub fn psarb4(
         self,
@@ -174,6 +189,7 @@ impl Psarb {
         )
     }
 
+    #[doc = "I2C Bus Interface 1 Security Attribution"]
     #[inline(always)]
     pub fn psarb8(
         self,
@@ -183,6 +199,7 @@ impl Psarb {
         )
     }
 
+    #[doc = "I2C Bus Interface 0 Security Attribution"]
     #[inline(always)]
     pub fn psarb9(
         self,
@@ -192,6 +209,7 @@ impl Psarb {
         )
     }
 
+    #[doc = "Universal Serial Bus 2.0 FS Interface 0 Security Attribution"]
     #[inline(always)]
     pub fn psarb11(
         self,
@@ -201,6 +219,7 @@ impl Psarb {
         )
     }
 
+    #[doc = "Universal Serial Bus 2.0 HS Interface 0 Security Attribution"]
     #[inline(always)]
     pub fn psarb12(
         self,
@@ -210,6 +229,7 @@ impl Psarb {
         )
     }
 
+    #[doc = "ETHER0/EDMAC0 Controller Security Attribution"]
     #[inline(always)]
     pub fn psarb15(
         self,
@@ -219,6 +239,7 @@ impl Psarb {
         )
     }
 
+    #[doc = "Octa Memory Controller Security Attribution"]
     #[inline(always)]
     pub fn psarb16(
         self,
@@ -228,6 +249,7 @@ impl Psarb {
         )
     }
 
+    #[doc = "Serial Peripheral Interface 1 Security Attribution"]
     #[inline(always)]
     pub fn psarb18(
         self,
@@ -237,6 +259,7 @@ impl Psarb {
         )
     }
 
+    #[doc = "Serial Peripheral Interface 0 Security Attribution"]
     #[inline(always)]
     pub fn psarb19(
         self,
@@ -246,6 +269,7 @@ impl Psarb {
         )
     }
 
+    #[doc = "Serial Communication Interface 9 Security Attribution"]
     #[inline(always)]
     pub fn psarb22(
         self,
@@ -255,6 +279,7 @@ impl Psarb {
         )
     }
 
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -262,6 +287,7 @@ impl Psarb {
         crate::common::RegisterField::<23,0xf,1,0,u8,u8,Psarb_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Serial Communication Interface 4 Security Attribution"]
     #[inline(always)]
     pub fn psarb27(
         self,
@@ -271,6 +297,7 @@ impl Psarb {
         )
     }
 
+    #[doc = "Serial Communication Interface 3 Security Attribution"]
     #[inline(always)]
     pub fn psarb28(
         self,
@@ -280,6 +307,7 @@ impl Psarb {
         )
     }
 
+    #[doc = "Serial Communication Interface 2 Security Attribution"]
     #[inline(always)]
     pub fn psarb29(
         self,
@@ -289,6 +317,7 @@ impl Psarb {
         )
     }
 
+    #[doc = "Serial Communication Interface 1 Security Attribution"]
     #[inline(always)]
     pub fn psarb30(
         self,
@@ -298,6 +327,7 @@ impl Psarb {
         )
     }
 
+    #[doc = "Serial Communication Interface 0 Security Attribution"]
     #[inline(always)]
     pub fn psarb31(
         self,
@@ -321,9 +351,11 @@ impl crate::sealed::RegSpec for Psarc_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Peripheral Security Attribution Register C"]
 pub type Psarc = crate::RegValueT<Psarc_SPEC>;
 
 impl Psarc {
+    #[doc = "Clock Frequency Accuracy Measurement Circuit Security Attribution"]
     #[inline(always)]
     pub fn psarc0(
         self,
@@ -333,6 +365,7 @@ impl Psarc {
         )
     }
 
+    #[doc = "Cyclic Redundancy Check Calculator Security Attribution"]
     #[inline(always)]
     pub fn psarc1(
         self,
@@ -342,6 +375,7 @@ impl Psarc {
         )
     }
 
+    #[doc = "Serial Sound Interface Enhanced (channel 1)  Security Attribution"]
     #[inline(always)]
     pub fn psarc7(
         self,
@@ -351,6 +385,7 @@ impl Psarc {
         )
     }
 
+    #[doc = "Serial Sound Interface Enhanced (channel 0)  Security Attribution"]
     #[inline(always)]
     pub fn psarc8(
         self,
@@ -360,6 +395,7 @@ impl Psarc {
         )
     }
 
+    #[doc = "Secure Digital Host IF 1 Security Attribution"]
     #[inline(always)]
     pub fn psarc11(
         self,
@@ -369,6 +405,7 @@ impl Psarc {
         )
     }
 
+    #[doc = "Secure Digital Host IF 0 Security Attribution"]
     #[inline(always)]
     pub fn psarc12(
         self,
@@ -378,6 +415,7 @@ impl Psarc {
         )
     }
 
+    #[doc = "Data Operation Circuit Security Attribution"]
     #[inline(always)]
     pub fn psarc13(
         self,
@@ -387,6 +425,7 @@ impl Psarc {
         )
     }
 
+    #[doc = "Graph-ic(GLCDC,MIPI,DRW,JPEG) Security Attribution"]
     #[inline(always)]
     pub fn psarc15(
         self,
@@ -396,6 +435,7 @@ impl Psarc {
         )
     }
 
+    #[doc = "CEU Security Attribution"]
     #[inline(always)]
     pub fn psarc16(
         self,
@@ -405,6 +445,7 @@ impl Psarc {
         )
     }
 
+    #[doc = "Controller Area Network with Flexible Data-Rate 1 Security Attribution"]
     #[inline(always)]
     pub fn psarc26(
         self,
@@ -414,6 +455,7 @@ impl Psarc {
         )
     }
 
+    #[doc = "Controller Area Network with Flexible Data-Rate 0 Security Attribution"]
     #[inline(always)]
     pub fn psarc27(
         self,
@@ -423,6 +465,7 @@ impl Psarc {
         )
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -430,6 +473,7 @@ impl Psarc {
         crate::common::RegisterField::<28,0x7,1,0,u8,u8,Psarc_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "SHIP Security Attribution"]
     #[inline(always)]
     pub fn psarc31(
         self,
@@ -453,9 +497,11 @@ impl crate::sealed::RegSpec for Psard_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Peripheral Security Attribution Register D"]
 pub type Psard = crate::RegValueT<Psard_SPEC>;
 
 impl Psard {
+    #[doc = "Asynchronous General Purpose Timer 1 Security Attribution"]
     #[inline(always)]
     pub fn psard4(
         self,
@@ -465,6 +511,7 @@ impl Psard {
         )
     }
 
+    #[doc = "Asynchronous General Purpose Timer 0 Security Attribution"]
     #[inline(always)]
     pub fn psard5(
         self,
@@ -474,6 +521,7 @@ impl Psard {
         )
     }
 
+    #[doc = "Port Output Enable for GPT Group 3 Security Attribution"]
     #[inline(always)]
     pub fn psard11(
         self,
@@ -483,6 +531,7 @@ impl Psard {
         )
     }
 
+    #[doc = "Port Output Enable for GPT Group 2 Security Attribution"]
     #[inline(always)]
     pub fn psard12(
         self,
@@ -492,6 +541,7 @@ impl Psard {
         )
     }
 
+    #[doc = "Port Output Enable for GPT Group 1 Security Attribution"]
     #[inline(always)]
     pub fn psard13(
         self,
@@ -501,6 +551,7 @@ impl Psard {
         )
     }
 
+    #[doc = "Port Output Enable for GPT Group 0 Security Attribution"]
     #[inline(always)]
     pub fn psard14(
         self,
@@ -510,6 +561,7 @@ impl Psard {
         )
     }
 
+    #[doc = "12-Bit A/D 1 Converter Security Attribution"]
     #[inline(always)]
     pub fn psard15(
         self,
@@ -535,6 +587,7 @@ impl Psard {
         >::from_register(self, 0)
     }
 
+    #[doc = "12-Bit A/D 0 Converter Security Attribution"]
     #[inline(always)]
     pub fn psard16(
         self,
@@ -560,6 +613,7 @@ impl Psard {
         >::from_register(self, 0)
     }
 
+    #[doc = "12-Bit D/A Converter Security Attribution"]
     #[inline(always)]
     pub fn psard20(
         self,
@@ -569,6 +623,7 @@ impl Psard {
         )
     }
 
+    #[doc = "Temperature Sensor Security Attribution"]
     #[inline(always)]
     pub fn psard22(
         self,
@@ -578,6 +633,7 @@ impl Psard {
         )
     }
 
+    #[doc = "High speed analog Comparator 1 Security Attribution"]
     #[inline(always)]
     pub fn psard27(
         self,
@@ -587,6 +643,7 @@ impl Psard {
         )
     }
 
+    #[doc = "High speed analog Comparator 0 Security Attribution"]
     #[inline(always)]
     pub fn psard28(
         self,
@@ -596,6 +653,7 @@ impl Psard {
         )
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -615,16 +673,20 @@ pub mod psard {
     pub struct Psard15_SPEC;
     pub type Psard15 = crate::EnumBitfieldStruct<u8, Psard15_SPEC>;
     impl Psard15 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NonSecure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psard16_SPEC;
     pub type Psard16 = crate::EnumBitfieldStruct<u8, Psard16_SPEC>;
     impl Psard16 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NonSecure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -635,9 +697,11 @@ impl crate::sealed::RegSpec for Psare_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Peripheral Security Attribution Register E"]
 pub type Psare = crate::RegValueT<Psare_SPEC>;
 
 impl Psare {
+    #[doc = "WDT0 Security Attribution"]
     #[inline(always)]
     pub fn psare1(
         self,
@@ -663,6 +727,7 @@ impl Psare {
         >::from_register(self, 0)
     }
 
+    #[doc = "Independent Watchdog Timer Security Attribution"]
     #[inline(always)]
     pub fn psare2(
         self,
@@ -672,6 +737,7 @@ impl Psare {
         )
     }
 
+    #[doc = "Real Time Clock  Security Attribution"]
     #[inline(always)]
     pub fn psare3(
         self,
@@ -681,6 +747,7 @@ impl Psare {
         )
     }
 
+    #[doc = "ULPT1 Security Attribution"]
     #[inline(always)]
     pub fn psare8(
         self,
@@ -690,6 +757,7 @@ impl Psare {
         )
     }
 
+    #[doc = "ULPT0 Security Attribution"]
     #[inline(always)]
     pub fn psare9(
         self,
@@ -699,6 +767,7 @@ impl Psare {
         )
     }
 
+    #[doc = "These bits are read as 00. The write value should be 00."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -706,6 +775,7 @@ impl Psare {
         crate::common::RegisterField::<16,0x3,1,0,u8,u8,Psare_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "General PWM Timer channel13 Security Attribution"]
     #[inline(always)]
     pub fn psare18(
         self,
@@ -715,6 +785,7 @@ impl Psare {
         )
     }
 
+    #[doc = "General PWM Timer channel12 Security Attribution"]
     #[inline(always)]
     pub fn psare19(
         self,
@@ -724,6 +795,7 @@ impl Psare {
         )
     }
 
+    #[doc = "General PWM Timer channel11 Security Attribution"]
     #[inline(always)]
     pub fn psare20(
         self,
@@ -733,6 +805,7 @@ impl Psare {
         )
     }
 
+    #[doc = "General PWM Timer channel10 Security Attribution"]
     #[inline(always)]
     pub fn psare21(
         self,
@@ -742,6 +815,7 @@ impl Psare {
         )
     }
 
+    #[doc = "General PWM Timer channel9 Security Attribution"]
     #[inline(always)]
     pub fn psare22(
         self,
@@ -751,6 +825,7 @@ impl Psare {
         )
     }
 
+    #[doc = "General PWM Timer channel8 Security Attribution"]
     #[inline(always)]
     pub fn psare23(
         self,
@@ -760,6 +835,7 @@ impl Psare {
         )
     }
 
+    #[doc = "General PWM Timer channel7 Security Attribution"]
     #[inline(always)]
     pub fn psare24(
         self,
@@ -769,6 +845,7 @@ impl Psare {
         )
     }
 
+    #[doc = "General PWM Timer channel6 Security Attribution"]
     #[inline(always)]
     pub fn psare25(
         self,
@@ -778,6 +855,7 @@ impl Psare {
         )
     }
 
+    #[doc = "General PWM Timer channel5 Security Attribution"]
     #[inline(always)]
     pub fn psare26(
         self,
@@ -787,6 +865,7 @@ impl Psare {
         )
     }
 
+    #[doc = "General PWM Timer channel4 Security Attribution"]
     #[inline(always)]
     pub fn psare27(
         self,
@@ -796,6 +875,7 @@ impl Psare {
         )
     }
 
+    #[doc = "General PWM Timer channel3 Security Attribution"]
     #[inline(always)]
     pub fn psare28(
         self,
@@ -805,6 +885,7 @@ impl Psare {
         )
     }
 
+    #[doc = "General PWM Timer channel2 Security Attribution"]
     #[inline(always)]
     pub fn psare29(
         self,
@@ -814,6 +895,7 @@ impl Psare {
         )
     }
 
+    #[doc = "General PWM Timer channel1 Security Attribution"]
     #[inline(always)]
     pub fn psare30(
         self,
@@ -823,6 +905,7 @@ impl Psare {
         )
     }
 
+    #[doc = "General PWM Timer channel0 Security Attribution"]
     #[inline(always)]
     pub fn psare31(
         self,
@@ -844,8 +927,10 @@ pub mod psare {
     pub struct Psare1_SPEC;
     pub type Psare1 = crate::EnumBitfieldStruct<u8, Psare1_SPEC>;
     impl Psare1 {
+        #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "NonSecure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -856,9 +941,11 @@ impl crate::sealed::RegSpec for Mssar_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Module Stop Security Attribution Register"]
 pub type Mssar = crate::RegValueT<Mssar_SPEC>;
 
 impl Mssar {
+    #[doc = "SRAM0 Clock Stop Security Attribution"]
     #[inline(always)]
     pub fn mssar0(
         self,
@@ -884,6 +971,7 @@ impl Mssar {
         >::from_register(self, 0)
     }
 
+    #[doc = "SRAM1 Clock Stop Security Attribution"]
     #[inline(always)]
     pub fn mssar1(
         self,
@@ -909,6 +997,7 @@ impl Mssar {
         >::from_register(self, 0)
     }
 
+    #[doc = "CTCM0 Security Attribution"]
     #[inline(always)]
     pub fn mssar11(
         self,
@@ -934,6 +1023,7 @@ impl Mssar {
         >::from_register(self, 0)
     }
 
+    #[doc = "STCM0 Security Attribution"]
     #[inline(always)]
     pub fn mssar13(
         self,
@@ -959,6 +1049,7 @@ impl Mssar {
         >::from_register(self, 0)
     }
 
+    #[doc = "Standby RAM Clock Stop Security Attribution"]
     #[inline(always)]
     pub fn mssar15(
         self,
@@ -984,6 +1075,7 @@ impl Mssar {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMAC0/DTC0 Clock Stop Security Attribution"]
     #[inline(always)]
     pub fn mssar22(
         self,
@@ -993,6 +1085,7 @@ impl Mssar {
         )
     }
 
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1000,6 +1093,7 @@ impl Mssar {
         crate::common::RegisterField::<23,0xff,1,0,u8,u8,Mssar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "ELC clock stop Security Attribution"]
     #[inline(always)]
     pub fn mssar31(
         self,
@@ -1037,48 +1131,60 @@ pub mod mssar {
     pub struct Mssar0_SPEC;
     pub type Mssar0 = crate::EnumBitfieldStruct<u8, Mssar0_SPEC>;
     impl Mssar0 {
+        #[doc = "Secure."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mssar1_SPEC;
     pub type Mssar1 = crate::EnumBitfieldStruct<u8, Mssar1_SPEC>;
     impl Mssar1 {
+        #[doc = "Secure."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mssar11_SPEC;
     pub type Mssar11 = crate::EnumBitfieldStruct<u8, Mssar11_SPEC>;
     impl Mssar11 {
+        #[doc = "Secure."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mssar13_SPEC;
     pub type Mssar13 = crate::EnumBitfieldStruct<u8, Mssar13_SPEC>;
     impl Mssar13 {
+        #[doc = "Secure."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mssar15_SPEC;
     pub type Mssar15 = crate::EnumBitfieldStruct<u8, Mssar15_SPEC>;
     impl Mssar15 {
+        #[doc = "Secure."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mssar31_SPEC;
     pub type Mssar31 = crate::EnumBitfieldStruct<u8, Mssar31_SPEC>;
     impl Mssar31 {
+        #[doc = "Secure."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-Secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1089,9 +1195,11 @@ impl crate::sealed::RegSpec for Pparb_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Peripheral Privilege Attribution Register B"]
 pub type Pparb = crate::RegValueT<Pparb_SPEC>;
 
 impl Pparb {
+    #[doc = "I3C Bus Interface 2 Privilege Attribution"]
     #[inline(always)]
     pub fn pparb4(
         self,
@@ -1101,6 +1209,17 @@ impl Pparb {
         )
     }
 
+    #[doc = "I2C Bus Interface 1 Privilege Attribution"]
+    #[inline(always)]
+    pub fn pparb8(
+        self,
+    ) -> crate::common::RegisterFieldBool<8, 1, 0, Pparb_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<8, 1, 0, Pparb_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
+
+    #[doc = "I2C Bus Interface 0 Privilege Attribution"]
     #[inline(always)]
     pub fn pparb9(
         self,
@@ -1110,6 +1229,17 @@ impl Pparb {
         )
     }
 
+    #[doc = "Universal Serial Bus 2.0 FS Interface 0 Privilege Attribution"]
+    #[inline(always)]
+    pub fn pparb11(
+        self,
+    ) -> crate::common::RegisterFieldBool<11, 1, 0, Pparb_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<11, 1, 0, Pparb_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
+
+    #[doc = "Universal Serial Bus 2.0 HS Interface 0 Privilege Attribution"]
     #[inline(always)]
     pub fn pparb12(
         self,
@@ -1119,6 +1249,7 @@ impl Pparb {
         )
     }
 
+    #[doc = "ETHER0/EDMAC0 Controller Privilege Attribution"]
     #[inline(always)]
     pub fn pparb15(
         self,
@@ -1128,6 +1259,7 @@ impl Pparb {
         )
     }
 
+    #[doc = "Octa Memory Controller Privilege Attribution"]
     #[inline(always)]
     pub fn pparb16(
         self,
@@ -1137,6 +1269,7 @@ impl Pparb {
         )
     }
 
+    #[doc = "Serial Peripheral Interface 1 Privilege Attribution"]
     #[inline(always)]
     pub fn pparb18(
         self,
@@ -1146,6 +1279,7 @@ impl Pparb {
         )
     }
 
+    #[doc = "Serial Peripheral Interface 0 Privilege Attribution"]
     #[inline(always)]
     pub fn pparb19(
         self,
@@ -1155,6 +1289,7 @@ impl Pparb {
         )
     }
 
+    #[doc = "Serial Communication Interface 9 Privilege Attribution"]
     #[inline(always)]
     pub fn pparb22(
         self,
@@ -1164,6 +1299,7 @@ impl Pparb {
         )
     }
 
+    #[doc = "These bits are read as 1111. The write value should be 1111."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1171,6 +1307,7 @@ impl Pparb {
         crate::common::RegisterField::<23,0xf,1,0,u8,u8,Pparb_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Serial Communication Interface 4 Privilege Attribution"]
     #[inline(always)]
     pub fn pparb27(
         self,
@@ -1180,6 +1317,7 @@ impl Pparb {
         )
     }
 
+    #[doc = "Serial Communication Interface 3 Privilege Attribution"]
     #[inline(always)]
     pub fn pparb28(
         self,
@@ -1189,6 +1327,7 @@ impl Pparb {
         )
     }
 
+    #[doc = "Serial Communication Interface 2 Privilege Attribution"]
     #[inline(always)]
     pub fn pparb29(
         self,
@@ -1198,6 +1337,7 @@ impl Pparb {
         )
     }
 
+    #[doc = "Serial Communication Interface 1 Privilege Attribution"]
     #[inline(always)]
     pub fn pparb30(
         self,
@@ -1207,6 +1347,7 @@ impl Pparb {
         )
     }
 
+    #[doc = "Serial Communication Interface 0 Privilege Attribution"]
     #[inline(always)]
     pub fn pparb31(
         self,
@@ -1230,9 +1371,11 @@ impl crate::sealed::RegSpec for Pparc_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Peripheral Privilege Attribution Register C"]
 pub type Pparc = crate::RegValueT<Pparc_SPEC>;
 
 impl Pparc {
+    #[doc = "Clock Frequency Accuracy Measurement Circuit Privilege Attribution"]
     #[inline(always)]
     pub fn pparc0(
         self,
@@ -1242,6 +1385,7 @@ impl Pparc {
         )
     }
 
+    #[doc = "Cyclic Redundancy Check Calculator Privilege Attribution"]
     #[inline(always)]
     pub fn pparc1(
         self,
@@ -1251,6 +1395,7 @@ impl Pparc {
         )
     }
 
+    #[doc = "Serial Sound Interface Enhanced (channel 1)  Privilege Attribution"]
     #[inline(always)]
     pub fn pparc7(
         self,
@@ -1260,6 +1405,7 @@ impl Pparc {
         )
     }
 
+    #[doc = "Serial Sound Interface Enhanced (channel 0)  Privilege Attribution"]
     #[inline(always)]
     pub fn pparc8(
         self,
@@ -1269,6 +1415,7 @@ impl Pparc {
         )
     }
 
+    #[doc = "Privilege Digital Host IF 1 Privilege Attribution"]
     #[inline(always)]
     pub fn pparc11(
         self,
@@ -1278,6 +1425,7 @@ impl Pparc {
         )
     }
 
+    #[doc = "Privilege Digital Host IF 0 Privilege Attribution"]
     #[inline(always)]
     pub fn pparc12(
         self,
@@ -1287,6 +1435,7 @@ impl Pparc {
         )
     }
 
+    #[doc = "Data Operation Circuit Privilege Attribution"]
     #[inline(always)]
     pub fn pparc13(
         self,
@@ -1296,6 +1445,7 @@ impl Pparc {
         )
     }
 
+    #[doc = "Graph-ic(GLCDC,MIPI,DRW,JPEG) Privilege Attribution"]
     #[inline(always)]
     pub fn pparc15(
         self,
@@ -1305,6 +1455,7 @@ impl Pparc {
         )
     }
 
+    #[doc = "CEU Privilege Attribution"]
     #[inline(always)]
     pub fn pparc16(
         self,
@@ -1314,6 +1465,7 @@ impl Pparc {
         )
     }
 
+    #[doc = "Controller Area Network with Flexible Data-Rate 1 Privilege Attribution"]
     #[inline(always)]
     pub fn pparc26(
         self,
@@ -1323,6 +1475,7 @@ impl Pparc {
         )
     }
 
+    #[doc = "Controller Area Network with Flexible Data-Rate 0 Privilege Attribution"]
     #[inline(always)]
     pub fn pparc27(
         self,
@@ -1332,6 +1485,7 @@ impl Pparc {
         )
     }
 
+    #[doc = "These bits are read as 111. The write value should be 111."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1339,6 +1493,7 @@ impl Pparc {
         crate::common::RegisterField::<28,0x7,1,0,u8,u8,Pparc_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "SHIP Privilege Attribution"]
     #[inline(always)]
     pub fn pparc31(
         self,
@@ -1362,9 +1517,11 @@ impl crate::sealed::RegSpec for Ppard_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Peripheral Privilege Attribution Register D"]
 pub type Ppard = crate::RegValueT<Ppard_SPEC>;
 
 impl Ppard {
+    #[doc = "Asynchronous General Purpose Timer 1 Privilege Attribution"]
     #[inline(always)]
     pub fn ppard4(
         self,
@@ -1374,6 +1531,7 @@ impl Ppard {
         )
     }
 
+    #[doc = "Asynchronous General Purpose Timer 0 Privilege Attribution"]
     #[inline(always)]
     pub fn ppard5(
         self,
@@ -1383,6 +1541,7 @@ impl Ppard {
         )
     }
 
+    #[doc = "Port Output Enable for GPT Group 3 Privilege Attribution"]
     #[inline(always)]
     pub fn ppard11(
         self,
@@ -1392,6 +1551,7 @@ impl Ppard {
         )
     }
 
+    #[doc = "Port Output Enable for GPT Group 2 Privilege Attribution"]
     #[inline(always)]
     pub fn ppard12(
         self,
@@ -1401,6 +1561,7 @@ impl Ppard {
         )
     }
 
+    #[doc = "Port Output Enable for GPT Group 1 Privilege Attribution"]
     #[inline(always)]
     pub fn ppard13(
         self,
@@ -1410,6 +1571,7 @@ impl Ppard {
         )
     }
 
+    #[doc = "Port Output Enable for GPT Group 0 Privilege Attribution"]
     #[inline(always)]
     pub fn ppard14(
         self,
@@ -1419,6 +1581,7 @@ impl Ppard {
         )
     }
 
+    #[doc = "12-Bit A/D 1 Converter Privilege Attribution"]
     #[inline(always)]
     pub fn ppard15(
         self,
@@ -1444,6 +1607,7 @@ impl Ppard {
         >::from_register(self, 0)
     }
 
+    #[doc = "12-Bit A/D 0 Converter Privilege Attribution"]
     #[inline(always)]
     pub fn ppard16(
         self,
@@ -1469,6 +1633,7 @@ impl Ppard {
         >::from_register(self, 0)
     }
 
+    #[doc = "12-Bit D/A Converter Privilege Attribution"]
     #[inline(always)]
     pub fn ppard20(
         self,
@@ -1478,6 +1643,7 @@ impl Ppard {
         )
     }
 
+    #[doc = "Temperature Sensor Privilege Attribution"]
     #[inline(always)]
     pub fn ppard22(
         self,
@@ -1487,6 +1653,7 @@ impl Ppard {
         )
     }
 
+    #[doc = "High speed analog Comparator 1 Privilege Attribution"]
     #[inline(always)]
     pub fn ppard27(
         self,
@@ -1496,6 +1663,7 @@ impl Ppard {
         )
     }
 
+    #[doc = "High speed analog Comparator 0 Privilege Attribution"]
     #[inline(always)]
     pub fn ppard28(
         self,
@@ -1505,6 +1673,7 @@ impl Ppard {
         )
     }
 
+    #[doc = "These bits are read as 111. The write value should be 111."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1524,16 +1693,20 @@ pub mod ppard {
     pub struct Ppard15_SPEC;
     pub type Ppard15 = crate::EnumBitfieldStruct<u8, Ppard15_SPEC>;
     impl Ppard15 {
+        #[doc = "Privilege"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Any Privilege"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ppard16_SPEC;
     pub type Ppard16 = crate::EnumBitfieldStruct<u8, Ppard16_SPEC>;
     impl Ppard16 {
+        #[doc = "Privilege"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Any Privilege"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1544,9 +1717,11 @@ impl crate::sealed::RegSpec for Ppare_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Peripheral Privilege Attribution Register E"]
 pub type Ppare = crate::RegValueT<Ppare_SPEC>;
 
 impl Ppare {
+    #[doc = "Watchdog Timer0 Privilege Attribution"]
     #[inline(always)]
     pub fn ppare1(
         self,
@@ -1556,6 +1731,7 @@ impl Ppare {
         )
     }
 
+    #[doc = "Independent Watchdog Timer Privilege Attribution"]
     #[inline(always)]
     pub fn ppare2(
         self,
@@ -1565,6 +1741,7 @@ impl Ppare {
         )
     }
 
+    #[doc = "Real Time Clock  Privilege Attribution"]
     #[inline(always)]
     pub fn ppare3(
         self,
@@ -1574,6 +1751,7 @@ impl Ppare {
         )
     }
 
+    #[doc = "ULPT1 Privilege Attribution"]
     #[inline(always)]
     pub fn ppare8(
         self,
@@ -1583,6 +1761,7 @@ impl Ppare {
         )
     }
 
+    #[doc = "ULPT0 Privilege Attribution"]
     #[inline(always)]
     pub fn ppare9(
         self,
@@ -1592,6 +1771,7 @@ impl Ppare {
         )
     }
 
+    #[doc = "These bits are read as 11. The write value should be 11."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1599,6 +1779,7 @@ impl Ppare {
         crate::common::RegisterField::<16,0x3,1,0,u8,u8,Ppare_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "General PWM Timer channel13 Privilege Attribution"]
     #[inline(always)]
     pub fn ppare18(
         self,
@@ -1608,6 +1789,7 @@ impl Ppare {
         )
     }
 
+    #[doc = "General PWM Timer channel12 Privilege Attribution"]
     #[inline(always)]
     pub fn ppare19(
         self,
@@ -1617,6 +1799,7 @@ impl Ppare {
         )
     }
 
+    #[doc = "General PWM Timer channel11 Privilege Attribution"]
     #[inline(always)]
     pub fn ppare20(
         self,
@@ -1626,6 +1809,7 @@ impl Ppare {
         )
     }
 
+    #[doc = "General PWM Timer channel10 Privilege Attribution"]
     #[inline(always)]
     pub fn ppare21(
         self,
@@ -1635,6 +1819,7 @@ impl Ppare {
         )
     }
 
+    #[doc = "General PWM Timer channel9 Privilege Attribution"]
     #[inline(always)]
     pub fn ppare22(
         self,
@@ -1644,6 +1829,7 @@ impl Ppare {
         )
     }
 
+    #[doc = "General PWM Timer channel8 Privilege Attribution"]
     #[inline(always)]
     pub fn ppare23(
         self,
@@ -1653,6 +1839,7 @@ impl Ppare {
         )
     }
 
+    #[doc = "General PWM Timer channel7 Privilege Attribution"]
     #[inline(always)]
     pub fn ppare24(
         self,
@@ -1662,6 +1849,7 @@ impl Ppare {
         )
     }
 
+    #[doc = "General PWM Timer channel6 Privilege Attribution"]
     #[inline(always)]
     pub fn ppare25(
         self,
@@ -1671,6 +1859,7 @@ impl Ppare {
         )
     }
 
+    #[doc = "General PWM Timer channel5 Privilege Attribution"]
     #[inline(always)]
     pub fn ppare26(
         self,
@@ -1680,6 +1869,7 @@ impl Ppare {
         )
     }
 
+    #[doc = "General PWM Timer channel4 Privilege Attribution"]
     #[inline(always)]
     pub fn ppare27(
         self,
@@ -1689,6 +1879,7 @@ impl Ppare {
         )
     }
 
+    #[doc = "General PWM Timer channel3 Privilege Attribution"]
     #[inline(always)]
     pub fn ppare28(
         self,
@@ -1698,6 +1889,7 @@ impl Ppare {
         )
     }
 
+    #[doc = "General PWM Timer channel2 Privilege Attribution"]
     #[inline(always)]
     pub fn ppare29(
         self,
@@ -1707,6 +1899,7 @@ impl Ppare {
         )
     }
 
+    #[doc = "General PWM Timer channel1 Privilege Attribution"]
     #[inline(always)]
     pub fn ppare30(
         self,
@@ -1716,6 +1909,7 @@ impl Ppare {
         )
     }
 
+    #[doc = "General PWM Timer channel0 Privilege Attribution"]
     #[inline(always)]
     pub fn ppare31(
         self,
@@ -1739,9 +1933,11 @@ impl crate::sealed::RegSpec for Mspar_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Module Stop Privilege Attribution Register"]
 pub type Mspar = crate::RegValueT<Mspar_SPEC>;
 
 impl Mspar {
+    #[doc = "These bits are read as 111111111111111. The write value should be 111111111111111."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1750,6 +1946,7 @@ impl Mspar {
         crate::common::RegisterField::<16,0x7fff,1,0,u16,u16,Mspar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "ELC clock stop Privilege Attribution"]
     #[inline(always)]
     pub fn mspar31(
         self,
@@ -1787,8 +1984,10 @@ pub mod mspar {
     pub struct Mspar31_SPEC;
     pub type Mspar31 = crate::EnumBitfieldStruct<u8, Mspar31_SPEC>;
     impl Mspar31 {
+        #[doc = "Privilege."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Non-Privilege"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1799,9 +1998,11 @@ impl crate::sealed::RegSpec for Cfsamona_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Code Flash Security Attribution Monitor Register A"]
 pub type Cfsamona = crate::RegValueT<Cfsamona_SPEC>;
 
 impl Cfsamona {
+    #[doc = "Code Flash Secure area"]
     #[inline(always)]
     pub fn cfs2(
         self,
@@ -1810,6 +2011,7 @@ impl Cfsamona {
         crate::common::RegisterField::<15,0x1ff,1,0,u16,u16,Cfsamona_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 00000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1831,9 +2033,11 @@ impl crate::sealed::RegSpec for Dfsamon_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Data Flash Security Attribution Monitor Register"]
 pub type Dfsamon = crate::RegValueT<Dfsamon_SPEC>;
 
 impl Dfsamon {
+    #[doc = "Data flash Secure area"]
     #[inline(always)]
     pub fn dfs(
         self,
@@ -1841,6 +2045,7 @@ impl Dfsamon {
         crate::common::RegisterField::<10,0x3f,1,0,u8,u8,Dfsamon_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 0000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -1863,9 +2068,11 @@ impl crate::sealed::RegSpec for Dlmmon_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Device Lifecycle Management State Monitor Register"]
 pub type Dlmmon = crate::RegValueT<Dlmmon_SPEC>;
 
 impl Dlmmon {
+    #[doc = "Device Lifecycle Management State Monitor"]
     #[inline(always)]
     pub fn dlmmon(
         self,
@@ -1873,6 +2080,7 @@ impl Dlmmon {
         crate::common::RegisterField::<0,0xf,1,0,u8,u8,Dlmmon_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "These bits are read as 1111111111111111."]
     #[inline(always)]
     pub fn reserved(
         self,

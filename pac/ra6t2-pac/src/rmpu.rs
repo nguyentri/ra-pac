@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.40.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:21:24 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:39 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Rmpu {
         self.ptr
     }
 
+    #[doc = "MMPU Operation After Detection Register"]
     #[inline(always)]
     pub const fn mmpuoad(
         &self,
@@ -45,6 +46,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Operation After Detection Protect Register"]
     #[inline(always)]
     pub const fn mmpuoadpt(
         &self,
@@ -56,6 +58,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Enable Register for DMAC"]
     #[inline(always)]
     pub const fn mmpuendmac(
         &self,
@@ -67,6 +70,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Enable Protect Register for DMAC"]
     #[inline(always)]
     pub const fn mmpuenptdmac(
         &self,
@@ -78,6 +82,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Regions Protect Register for DMAC"]
     #[inline(always)]
     pub const fn mmpurptdmac(
         &self,
@@ -89,6 +94,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Regions Protect register for DMAC Secure"]
     #[inline(always)]
     pub const fn mmpurptdmac_sec(
         &self,
@@ -100,6 +106,7 @@ impl super::Rmpu {
         }
     }
 
+    #[doc = "MMPU Access Control Register for DMAC"]
     #[inline(always)]
     pub const fn mmpuacdmac(
         &self,
@@ -112,7 +119,88 @@ impl super::Rmpu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x200usize))
         }
     }
+    #[inline(always)]
+    pub const fn mmpuacdmac0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x200usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacdmac1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x210usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacdmac2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x220usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacdmac3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x230usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacdmac4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x240usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacdmac5(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x250usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacdmac6(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x260usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuacdmac7(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuacdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuacdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x270usize),
+            )
+        }
+    }
 
+    #[doc = "MMPU Start Address Register for DMAC"]
     #[inline(always)]
     pub const fn mmpusdmac(
         &self,
@@ -125,7 +213,88 @@ impl super::Rmpu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x204usize))
         }
     }
+    #[inline(always)]
+    pub const fn mmpusdmac0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x204usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusdmac1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x214usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusdmac2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x224usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusdmac3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x234usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusdmac4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x244usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusdmac5(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x254usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusdmac6(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x264usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpusdmac7(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpusdmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpusdmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x274usize),
+            )
+        }
+    }
 
+    #[doc = "MMPU End Address Register for DMAC"]
     #[inline(always)]
     pub const fn mmpuedmac(
         &self,
@@ -138,6 +307,86 @@ impl super::Rmpu {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x208usize))
         }
     }
+    #[inline(always)]
+    pub const fn mmpuedmac0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x208usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuedmac1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x218usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuedmac2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x228usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuedmac3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x238usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuedmac4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x248usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuedmac5(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x258usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuedmac6(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x268usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn mmpuedmac7(
+        &self,
+    ) -> &'static crate::common::Reg<self::Mmpuedmac_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Mmpuedmac_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x278usize),
+            )
+        }
+    }
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -146,9 +395,11 @@ impl crate::sealed::RegSpec for Mmpuoad_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Operation After Detection Register"]
 pub type Mmpuoad = crate::RegValueT<Mmpuoad_SPEC>;
 
 impl Mmpuoad {
+    #[doc = "Operation after detection"]
     #[inline(always)]
     pub fn oad(
         self,
@@ -174,6 +425,7 @@ impl Mmpuoad {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit enables or disables writes to the OAD bit."]
     #[inline(always)]
     pub fn key(
         self,
@@ -193,8 +445,10 @@ pub mod mmpuoad {
     pub struct Oad_SPEC;
     pub type Oad = crate::EnumBitfieldStruct<u8, Oad_SPEC>;
     impl Oad {
+        #[doc = "Non-maskable interrupt"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Reset"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -205,9 +459,11 @@ impl crate::sealed::RegSpec for Mmpuoadpt_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Operation After Detection Protect Register"]
 pub type Mmpuoadpt = crate::RegValueT<Mmpuoadpt_SPEC>;
 
 impl Mmpuoadpt {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -233,6 +489,7 @@ impl Mmpuoadpt {
         >::from_register(self, 0)
     }
 
+    #[doc = "Key code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -252,8 +509,10 @@ pub mod mmpuoadpt {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "MMPUOAD register writes are possible."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "MMPUOAD register writes are protected. Read is possible."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -264,9 +523,11 @@ impl crate::sealed::RegSpec for Mmpuendmac_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Enable Register for DMAC"]
 pub type Mmpuendmac = crate::RegValueT<Mmpuendmac_SPEC>;
 
 impl Mmpuendmac {
+    #[doc = "Bus Master MPU of DMAC enable"]
     #[inline(always)]
     pub fn enable(
         self,
@@ -292,6 +553,7 @@ impl Mmpuendmac {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits enable or disable writes to the ENABLE bit."]
     #[inline(always)]
     pub fn key(
         self,
@@ -312,8 +574,10 @@ pub mod mmpuendmac {
     pub struct Enable_SPEC;
     pub type Enable = crate::EnumBitfieldStruct<u8, Enable_SPEC>;
     impl Enable {
+        #[doc = "Bus Master MPU of DMAC is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus Master MPU of DMAC is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -324,9 +588,11 @@ impl crate::sealed::RegSpec for Mmpuenptdmac_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Enable Protect Register for DMAC"]
 pub type Mmpuenptdmac = crate::RegValueT<Mmpuenptdmac_SPEC>;
 
 impl Mmpuenptdmac {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -352,6 +618,7 @@ impl Mmpuenptdmac {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits enable or disable writes to the PROTECT bit."]
     #[inline(always)]
     pub fn key(
         self,
@@ -372,8 +639,10 @@ pub mod mmpuenptdmac {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "MMPUENDMAC register writes are possible."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "MMPUENDMAC register writes are protected. Read is possible."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -384,9 +653,11 @@ impl crate::sealed::RegSpec for Mmpurptdmac_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Regions Protect Register for DMAC"]
 pub type Mmpurptdmac = crate::RegValueT<Mmpurptdmac_SPEC>;
 
 impl Mmpurptdmac {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -412,6 +683,7 @@ impl Mmpurptdmac {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits enable or disable writes to the PROTECT bit."]
     #[inline(always)]
     pub fn key(
         self,
@@ -432,8 +704,10 @@ pub mod mmpurptdmac {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "Bus Master MPU register for DMAC writing is possible."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus Master MPU register for DMAC writing is protected. Read is possible."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -444,9 +718,11 @@ impl crate::sealed::RegSpec for MmpurptdmacSec_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Regions Protect register for DMAC Secure"]
 pub type MmpurptdmacSec = crate::RegValueT<MmpurptdmacSec_SPEC>;
 
 impl MmpurptdmacSec {
+    #[doc = "Protection of register"]
     #[inline(always)]
     pub fn protect(
         self,
@@ -472,6 +748,7 @@ impl MmpurptdmacSec {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits enable or disable writes to the PROTECT bit."]
     #[inline(always)]
     pub fn key(
         self,
@@ -492,8 +769,10 @@ pub mod mmpurptdmac_sec {
     pub struct Protect_SPEC;
     pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
     impl Protect {
+        #[doc = "Bus master MPU register for DMAC secure writes are possible."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Bus master MPU register for DMAC secure writes are protected. Read is possible."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -504,9 +783,11 @@ impl crate::sealed::RegSpec for Mmpuacdmac_SPEC {
     type DataType = u16;
 }
 
+#[doc = "MMPU Access Control Register for DMAC"]
 pub type Mmpuacdmac = crate::RegValueT<Mmpuacdmac_SPEC>;
 
 impl Mmpuacdmac {
+    #[doc = "Region enable"]
     #[inline(always)]
     pub fn enable(
         self,
@@ -532,6 +813,7 @@ impl Mmpuacdmac {
         >::from_register(self, 0)
     }
 
+    #[doc = "Read protection"]
     #[inline(always)]
     pub fn rp(
         self,
@@ -557,6 +839,7 @@ impl Mmpuacdmac {
         >::from_register(self, 0)
     }
 
+    #[doc = "Write protection"]
     #[inline(always)]
     pub fn wp(
         self,
@@ -594,24 +877,30 @@ pub mod mmpuacdmac {
     pub struct Enable_SPEC;
     pub type Enable = crate::EnumBitfieldStruct<u8, Enable_SPEC>;
     impl Enable {
+        #[doc = "DMAC Region n unit is disabled"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMAC Region n unit is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rp_SPEC;
     pub type Rp = crate::EnumBitfieldStruct<u8, Rp_SPEC>;
     impl Rp {
+        #[doc = "Read permission"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Read protection"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wp_SPEC;
     pub type Wp = crate::EnumBitfieldStruct<u8, Wp_SPEC>;
     impl Wp {
+        #[doc = "Write permission"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "Write protection"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -622,9 +911,11 @@ impl crate::sealed::RegSpec for Mmpusdmac_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MMPU Start Address Register for DMAC"]
 pub type Mmpusdmac = crate::RegValueT<Mmpusdmac_SPEC>;
 
 impl Mmpusdmac {
+    #[doc = "Region start address register"]
     #[inline(always)]
     pub fn mmpus(
         self,
@@ -656,9 +947,11 @@ impl crate::sealed::RegSpec for Mmpuedmac_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MMPU End Address Register for DMAC"]
 pub type Mmpuedmac = crate::RegValueT<Mmpuedmac_SPEC>;
 
 impl Mmpuedmac {
+    #[doc = "Region end address register"]
     #[inline(always)]
     pub fn mmpue(
         self,

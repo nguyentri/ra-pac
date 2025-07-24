@@ -13,11 +13,11 @@
 # following link:
 # http://www.renesas.com/disclaimer
 #
-# Generated from SVD 1.10.00, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:47 +0000
+# Generated from SVD 1.10.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:59 +0000
 
 [package]
 name = "ra0e1-pac"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 description = "Peripheral Access Crate (PAC) for R7FAA0E1."
 authors = ["Tri Nguyen <trongtribk06@gmail.com>"]
@@ -27,14 +27,14 @@ documentation = "https://docs.rs/crate/ra0e1-pac/latest"
 categories = ["embedded", "hardware-support", "no-std"]
 include = ["src/*", "Cargo.toml", "README.md", "build.rs", "device.x"]
 readme = "README.md"
-license-file = "LICENSE.txt"
+license = "MIT OR Apache-2.0"
 
 [lib]
 test = false
 bench = false
 
 [dependencies]
-phf = { version = "0.11", features = ["macros"], optional = true }
+phf = { version = "0.12.1", features = ["macros"], optional = true }
 cortex-m-rt = { version = "0.7", optional = true }
 cortex-m = "0.7.6"
 
@@ -69,37 +69,7 @@ pclbuz = []
 trng = []
 flcn = []
 
-all = [
-    "sram",
-    "bus",
-    "dtc",
-    "icu",
-    "dbg",
-    "sysc",
-    "elc",
-    "iwdt",
-    "mstp",
-    "crc",
-    "port0",
-    "port1",
-    "port2",
-    "port3",
-    "port4",
-    "port9",
-    "pfs_a",
-    "porga",
-    "adc_d",
-    "sau0",
-    "sau1",
-    "tau",
-    "rtc_c",
-    "iica",
-    "uarta",
-    "tml32",
-    "pclbuz",
-    "trng",
-    "flcn",
-]
+all = ["sram" , "bus" , "dtc" , "icu" , "dbg" , "sysc" , "elc" , "iwdt" , "mstp" , "crc" , "port0" , "port1" , "port2" , "port3" , "port4" , "port9" , "pfs_a" , "porga" , "adc_d" , "sau0" , "sau1" , "tau" , "rtc_c" , "iica" , "uarta" , "tml32" , "pclbuz" , "trng" , "flcn"]
 
 tracing = ["dep:phf"]
 

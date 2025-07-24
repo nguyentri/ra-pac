@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.0, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:21:11 +0000
+// Generated from SVD 1.0, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:24 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Mmf {
         self.ptr
     }
 
+    #[doc = "MemMirror Special Function Register"]
     #[inline(always)]
     pub const fn mmsfr(&self) -> &'static crate::common::Reg<self::Mmsfr_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Mmf {
         }
     }
 
+    #[doc = "MemMirror Enable Register"]
     #[inline(always)]
     pub const fn mmen(&self) -> &'static crate::common::Reg<self::Mmen_SPEC, crate::common::RW> {
         unsafe {
@@ -59,9 +61,11 @@ impl crate::sealed::RegSpec for Mmsfr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MemMirror Special Function Register"]
 pub type Mmsfr = crate::RegValueT<Mmsfr_SPEC>;
 
 impl Mmsfr {
+    #[doc = "MMSFR Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -87,6 +91,7 @@ impl Mmsfr {
         >::from_register(self, 0)
     }
 
+    #[doc = "Specifies the memory mirror address.NOTE: A value cannot be set in the low-order 7 bits. These bits are fixed to 0."]
     #[inline(always)]
     pub fn memmiraddr(
         self,
@@ -107,8 +112,10 @@ pub mod mmsfr {
     pub struct Key_SPEC;
     pub type Key = crate::EnumBitfieldStruct<u8, Key_SPEC>;
     impl Key {
+        #[doc = "Writing to the MEMMIRADDR bits are valid, when the KEY bits are written 0xDB."]
         pub const _0_X_DB: Self = Self::new(219);
 
+        #[doc = "Writing to the MEMMIRADDR bits are invalid."]
         pub const OTHERS: Self = Self::new(0);
     }
 }
@@ -119,9 +126,11 @@ impl crate::sealed::RegSpec for Mmen_SPEC {
     type DataType = u32;
 }
 
+#[doc = "MemMirror Enable Register"]
 pub type Mmen = crate::RegValueT<Mmen_SPEC>;
 
 impl Mmen {
+    #[doc = "MMEN Key Code"]
     #[inline(always)]
     pub fn key(
         self,
@@ -147,6 +156,7 @@ impl Mmen {
         >::from_register(self, 0)
     }
 
+    #[doc = "Memory Mirror Function Enable"]
     #[inline(always)]
     pub fn en(
         self,
@@ -167,16 +177,20 @@ pub mod mmen {
     pub struct Key_SPEC;
     pub type Key = crate::EnumBitfieldStruct<u8, Key_SPEC>;
     impl Key {
+        #[doc = "Writing to the EN bit is valid, when the KEY bits are written 0xDB."]
         pub const _0_X_DB: Self = Self::new(219);
 
+        #[doc = "Writing to the EN bit is invalid."]
         pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct En_SPEC;
     pub type En = crate::EnumBitfieldStruct<u8, En_SPEC>;
     impl En {
+        #[doc = "Memory Mirror Function is enabled."]
         pub const _1: Self = Self::new(1);
 
+        #[doc = "Memory Mirror Function is disabled."]
         pub const _0: Self = Self::new(0);
     }
 }

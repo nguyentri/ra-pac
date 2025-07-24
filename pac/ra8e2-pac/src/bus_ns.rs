@@ -3401,7 +3401,7 @@ impl crate::sealed::RegSpec for Bussabt1Fhbi_SPEC {
 pub type Bussabt1Fhbi = crate::RegValueT<Bussabt1Fhbi_SPEC>;
 
 impl Bussabt1Fhbi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -3463,7 +3463,7 @@ impl crate::sealed::RegSpec for Bussabt0Flbi_SPEC {
 pub type Bussabt0Flbi = crate::RegValueT<Bussabt0Flbi_SPEC>;
 
 impl Bussabt0Flbi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -3519,7 +3519,7 @@ impl crate::sealed::RegSpec for Bussabt1S0Bi_SPEC {
 pub type Bussabt1S0Bi = crate::RegValueT<Bussabt1S0Bi_SPEC>;
 
 impl Bussabt1S0Bi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -3581,7 +3581,7 @@ impl crate::sealed::RegSpec for Bussabt1S1Bi_SPEC {
 pub type Bussabt1S1Bi = crate::RegValueT<Bussabt1S1Bi_SPEC>;
 
 impl Bussabt1S1Bi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -3643,7 +3643,7 @@ impl crate::sealed::RegSpec for Bussabt0Stbysbi_SPEC {
 pub type Bussabt0Stbysbi = crate::RegValueT<Bussabt0Stbysbi_SPEC>;
 
 impl Bussabt0Stbysbi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -3699,7 +3699,7 @@ impl crate::sealed::RegSpec for Bussabt0Ecbi_SPEC {
 pub type Bussabt0Ecbi = crate::RegValueT<Bussabt0Ecbi_SPEC>;
 
 impl Bussabt0Ecbi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -3755,7 +3755,7 @@ impl crate::sealed::RegSpec for Bussabt0Eobi_SPEC {
 pub type Bussabt0Eobi = crate::RegValueT<Bussabt0Eobi_SPEC>;
 
 impl Bussabt0Eobi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -3811,7 +3811,7 @@ impl crate::sealed::RegSpec for Bussabt0Pbbi_SPEC {
 pub type Bussabt0Pbbi = crate::RegValueT<Bussabt0Pbbi_SPEC>;
 
 impl Bussabt0Pbbi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -3867,7 +3867,7 @@ impl crate::sealed::RegSpec for Bussabt0Pabi_SPEC {
 pub type Bussabt0Pabi = crate::RegValueT<Bussabt0Pabi_SPEC>;
 
 impl Bussabt0Pabi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -3923,7 +3923,7 @@ impl crate::sealed::RegSpec for Bussabt0Pibi_SPEC {
 pub type Bussabt0Pibi = crate::RegValueT<Bussabt0Pibi_SPEC>;
 
 impl Bussabt0Pibi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -3979,7 +3979,7 @@ impl crate::sealed::RegSpec for Bussabt0Psbi_SPEC {
 pub type Bussabt0Psbi = crate::RegValueT<Bussabt0Psbi_SPEC>;
 
 impl Bussabt0Psbi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,

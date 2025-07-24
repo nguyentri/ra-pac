@@ -325,7 +325,7 @@ pub mod compmdr {
     pub struct C1Mon_SPEC;
     pub type C1Mon = crate::EnumBitfieldStruct<u8, C1Mon_SPEC>;
     impl C1Mon {
-        #[doc = "IVCMP1 < Comparator1 Reference level(When the window function is disabled)/IVCMP1 < IVREF0 or IVCMP1 > IVREF1(When the window function is enabled)"]
+        #[doc = "IVCMP1 < Comparator1 Reference level(When the window function is disabled)/IVCMP1 &lt; IVREF0 or IVCMP1 &gt; IVREF1(When the window function is enabled)"]
         pub const _0: Self = Self::new(0);
 
         #[doc = "IVCMP1 > Comparator1 Reference level(When the window function is disabled)/IVREF0 < IVCMP1 < IVREF1(When the window function is enabled)"]
@@ -365,7 +365,7 @@ pub mod compmdr {
     pub struct C0Mon_SPEC;
     pub type C0Mon = crate::EnumBitfieldStruct<u8, C0Mon_SPEC>;
     impl C0Mon {
-        #[doc = "IVCMP0 < Comparator0 Reference level(When the window function is disabled)/IVCMP0 < IVREF0 or IVCMP0 > IVREF1(When the window function is enabled)"]
+        #[doc = "IVCMP0 < Comparator0 Reference level(When the window function is disabled)/IVCMP0 &lt; IVREF0 or IVCMP0 &gt; IVREF1(When the window function is enabled)"]
         pub const _0: Self = Self::new(0);
 
         #[doc = "IVCMP0 > Comparator0 Reference level(When the window function is disabled)/IVREF0 < IVCMP0 < IVREF1(When the window function is enabled)"]

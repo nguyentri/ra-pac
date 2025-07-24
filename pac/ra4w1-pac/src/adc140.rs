@@ -6106,7 +6106,7 @@ pub mod adcmpler {
     pub struct Cmploca_SPEC;
     pub type Cmploca = crate::EnumBitfieldStruct<u8, Cmploca_SPEC>;
     impl Cmploca {
-        #[doc = "ADCMPDR0 value > A/D converted value(ADCMPCR.WCMPE=0) / A/D converted value < ADCMPDR0 value or A/D converted value > ADCMPDR1 value (ADCMPCR.WCMPE=1)"]
+        #[doc = "ADCMPDR0 value > A/D converted value(ADCMPCR.WCMPE=0) / A/D converted value &lt; ADCMPDR0 value or A/D converted value &gt; ADCMPDR1 value (ADCMPCR.WCMPE=1)"]
         pub const _0: Self = Self::new(0);
 
         #[doc = "ADCMPDR0 value < A/D converted value(ADCMPCR.WCMPE=0) / ADCMPDR0 value < A/D converted value < ADCMPDR1 value(ADCMPCR.WCMPE=1)"]

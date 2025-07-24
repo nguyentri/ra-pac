@@ -10520,10 +10520,10 @@ pub mod mcr {
     pub struct Synval_SPEC;
     pub type Synval = crate::EnumBitfieldStruct<u8, Synval_SPEC>;
     impl Synval {
-        #[doc = "Start bit is added as <0 → 1 transition> with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <0 → 1 transition> pattern,Otherwise it is judged as an error.(SBSEL=0 Receive)/Start bit is added as <0 → 1 transition> with 3 bits(SBSEL=1 Transmission)"]
+        #[doc = "Start bit is added as &lt;0 → 1 transition&gt; with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <0 → 1 transition> pattern,Otherwise it is judged as an error.(SBSEL=0 Receive)/Start bit is added as <0 → 1 transition> with 3 bits(SBSEL=1 Transmission)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Start bit is added as <1 → 0 transition> with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <1 → 0 transition> pattern.Otherwise it is judged as an error.(SEBSEL=0,Receive)/ Start bit is added as <1 → 0 transition> with 3 bits(SBSEL=1 Transmission)"]
+        #[doc = "Start bit is added as &lt;1 → 0 transition&gt; with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <1 → 0 transition> pattern.Otherwise it is judged as an error.(SEBSEL=0,Receive)/ Start bit is added as <1 → 0 transition> with 3 bits(SBSEL=1 Transmission)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -10892,10 +10892,10 @@ pub mod mcr_ha_l {
     pub struct Synval_SPEC;
     pub type Synval = crate::EnumBitfieldStruct<u8, Synval_SPEC>;
     impl Synval {
-        #[doc = "Start bit is added as <0 → 1 transition> with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <0 → 1 transition> pattern,Otherwise it is judged as an error.(SBSEL=0 Receive)/Start bit is added as <0 → 1 transition> with 3 bits(SBSEL=1 Transmission)"]
+        #[doc = "Start bit is added as &lt;0 → 1 transition&gt; with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <0 → 1 transition> pattern,Otherwise it is judged as an error.(SBSEL=0 Receive)/Start bit is added as <0 → 1 transition> with 3 bits(SBSEL=1 Transmission)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Start bit is added as <1 → 0 transition> with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <1 → 0 transition> pattern.Otherwise it is judged as an error.(SEBSEL=0,Receive)/ Start bit is added as <1 → 0 transition> with 3 bits(SBSEL=1 Transmission)"]
+        #[doc = "Start bit is added as &lt;1 → 0 transition&gt; with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <1 → 0 transition> pattern.Otherwise it is judged as an error.(SEBSEL=0,Receive)/ Start bit is added as <1 → 0 transition> with 3 bits(SBSEL=1 Transmission)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -11158,10 +11158,10 @@ pub mod mcr_by_ll {
     pub struct Synval_SPEC;
     pub type Synval = crate::EnumBitfieldStruct<u8, Synval_SPEC>;
     impl Synval {
-        #[doc = "Start bit is added as <0 → 1 transition> with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <0 → 1 transition> pattern,Otherwise it is judged as an error.(SBSEL=0 Receive)/Start bit is added as <0 → 1 transition> with 3 bits(SBSEL=1 Transmission)"]
+        #[doc = "Start bit is added as &lt;0 → 1 transition&gt; with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <0 → 1 transition> pattern,Otherwise it is judged as an error.(SBSEL=0 Receive)/Start bit is added as <0 → 1 transition> with 3 bits(SBSEL=1 Transmission)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Start bit is added as <1 → 0 transition> with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <1 → 0 transition> pattern.Otherwise it is judged as an error.(SEBSEL=0,Receive)/ Start bit is added as <1 → 0 transition> with 3 bits(SBSEL=1 Transmission)"]
+        #[doc = "Start bit is added as &lt;1 → 0 transition&gt; with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <1 → 0 transition> pattern.Otherwise it is judged as an error.(SEBSEL=0,Receive)/ Start bit is added as <1 → 0 transition> with 3 bits(SBSEL=1 Transmission)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]

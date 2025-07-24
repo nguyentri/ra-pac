@@ -812,8 +812,7 @@ impl<T: Sized, const DIM: usize, const DIM_INCREMENT: usize>
 
     #[allow(dead_code)]
     #[inline(always)]
-    #[allow(dead_code)]
-      pub(crate) const unsafe fn from_ptr(ptr: *mut u8) -> &'static Self {
+    pub(crate) const unsafe fn from_ptr(ptr: *mut u8) -> &'static Self {
         unsafe { &*(ptr as *const Self) }
     }
 

@@ -4127,6 +4127,12 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x40040d03u64 => "
       PMISC.pwpr(),
     ",
+  0x40006000u64 => "
+      ICU.irqcr()[0],
+    ",
+  0x40006001u64 => "
+      ICU.irqcr()[1],
+    ",
   0x40006002u64 => "
       ICU.irqcr()[2],
     ",
@@ -4160,11 +4166,14 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x4000600cu64 => "
       ICU.irqcr()[12],
     ",
+  0x4000600du64 => "
+      ICU.irqcr()[13],
+    ",
   0x4000600eu64 => "
-      ICU.irqcr()[0],
+      ICU.irqcr()[14],
     ",
   0x4000600fu64 => "
-      ICU.irqcr()[1],
+      ICU.irqcr()[15],
     ",
   0x40006140u64 => "
       ICU.nmisr(),

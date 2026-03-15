@@ -3801,7 +3801,7 @@ impl crate::sealed::RegSpec for Bussabt0Mre0Bi_SPEC {
 pub type Bussabt0Mre0Bi = crate::RegValueT<Bussabt0Mre0Bi_SPEC>;
 
 impl Bussabt0Mre0Bi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -3857,7 +3857,7 @@ impl crate::sealed::RegSpec for Bussabt0S0Bi_SPEC {
 pub type Bussabt0S0Bi = crate::RegValueT<Bussabt0S0Bi_SPEC>;
 
 impl Bussabt0S0Bi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -3913,7 +3913,7 @@ impl crate::sealed::RegSpec for Bussabt0S1Bi_SPEC {
 pub type Bussabt0S1Bi = crate::RegValueT<Bussabt0S1Bi_SPEC>;
 
 impl Bussabt0S1Bi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -3969,7 +3969,7 @@ impl crate::sealed::RegSpec for Bussabt0S2Bi_SPEC {
 pub type Bussabt0S2Bi = crate::RegValueT<Bussabt0S2Bi_SPEC>;
 
 impl Bussabt0S2Bi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -4025,7 +4025,7 @@ impl crate::sealed::RegSpec for Bussabt0Ecbi_SPEC {
 pub type Bussabt0Ecbi = crate::RegValueT<Bussabt0Ecbi_SPEC>;
 
 impl Bussabt0Ecbi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -4081,7 +4081,7 @@ impl crate::sealed::RegSpec for Bussabt0Ospi0Bi_SPEC {
 pub type Bussabt0Ospi0Bi = crate::RegValueT<Bussabt0Ospi0Bi_SPEC>;
 
 impl Bussabt0Ospi0Bi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -4137,7 +4137,7 @@ impl crate::sealed::RegSpec for Bussabt0Ospi1Bi_SPEC {
 pub type Bussabt0Ospi1Bi = crate::RegValueT<Bussabt0Ospi1Bi_SPEC>;
 
 impl Bussabt0Ospi1Bi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -4193,7 +4193,7 @@ impl crate::sealed::RegSpec for Bussabt0S3Bi_SPEC {
 pub type Bussabt0S3Bi = crate::RegValueT<Bussabt0S3Bi_SPEC>;
 
 impl Bussabt0S3Bi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -4249,7 +4249,7 @@ impl crate::sealed::RegSpec for Bussabt0Cpu0Sahbi_SPEC {
 pub type Bussabt0Cpu0Sahbi = crate::RegValueT<Bussabt0Cpu0Sahbi_SPEC>;
 
 impl Bussabt0Cpu0Sahbi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -4305,7 +4305,7 @@ impl crate::sealed::RegSpec for Bussabt0Cpu1Tcmbi_SPEC {
 pub type Bussabt0Cpu1Tcmbi = crate::RegValueT<Bussabt0Cpu1Tcmbi_SPEC>;
 
 impl Bussabt0Cpu1Tcmbi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -4361,7 +4361,7 @@ impl crate::sealed::RegSpec for Bussabt0Pabi_SPEC {
 pub type Bussabt0Pabi = crate::RegValueT<Bussabt0Pabi_SPEC>;
 
 impl Bussabt0Pabi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -4417,7 +4417,7 @@ impl crate::sealed::RegSpec for Bussabt0Pbbi_SPEC {
 pub type Bussabt0Pbbi = crate::RegValueT<Bussabt0Pbbi_SPEC>;
 
 impl Bussabt0Pbbi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -4473,7 +4473,7 @@ impl crate::sealed::RegSpec for Bussabt0Pibi_SPEC {
 pub type Bussabt0Pibi = crate::RegValueT<Bussabt0Pibi_SPEC>;
 
 impl Bussabt0Pibi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -4529,7 +4529,7 @@ impl crate::sealed::RegSpec for Bussabt0Psbi_SPEC {
 pub type Bussabt0Psbi = crate::RegValueT<Bussabt0Psbi_SPEC>;
 
 impl Bussabt0Psbi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select for &lt;slave&gt;"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -4868,7 +4868,7 @@ pub mod buserrclrcpu0 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.SLERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.SLERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -4878,7 +4878,7 @@ pub mod buserrclrcpu0 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MMERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MMERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -4888,7 +4888,7 @@ pub mod buserrclrcpu0 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.ILERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.ILERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -4898,7 +4898,7 @@ pub mod buserrclrcpu0 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MSERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MSERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5252,7 +5252,7 @@ pub mod buserrclrcpu1 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.SLERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.SLERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -5262,7 +5262,7 @@ pub mod buserrclrcpu1 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MMERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MMERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -5272,7 +5272,7 @@ pub mod buserrclrcpu1 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.ILERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.ILERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -5282,7 +5282,7 @@ pub mod buserrclrcpu1 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MSERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MSERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5636,7 +5636,7 @@ pub mod buserrclrdmac0 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.SLERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.SLERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -5646,7 +5646,7 @@ pub mod buserrclrdmac0 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MMERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MMERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -5656,7 +5656,7 @@ pub mod buserrclrdmac0 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.ILERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.ILERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -5666,7 +5666,7 @@ pub mod buserrclrdmac0 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MSERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MSERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6020,7 +6020,7 @@ pub mod buserrclrdmac1 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.SLERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.SLERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6030,7 +6030,7 @@ pub mod buserrclrdmac1 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MMERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MMERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6040,7 +6040,7 @@ pub mod buserrclrdmac1 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.ILERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.ILERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6050,7 +6050,7 @@ pub mod buserrclrdmac1 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MSERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MSERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6404,7 +6404,7 @@ pub mod buserrclrnpu {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.SLERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.SLERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6414,7 +6414,7 @@ pub mod buserrclrnpu {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MMERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MMERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6424,7 +6424,7 @@ pub mod buserrclrnpu {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.ILERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.ILERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6434,7 +6434,7 @@ pub mod buserrclrnpu {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MSERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MSERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6788,7 +6788,7 @@ pub mod buserrclredmac {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.SLERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.SLERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6798,7 +6798,7 @@ pub mod buserrclredmac {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MMERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MMERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6808,7 +6808,7 @@ pub mod buserrclredmac {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.ILERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.ILERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6818,7 +6818,7 @@ pub mod buserrclredmac {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MSERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MSERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7172,7 +7172,7 @@ pub mod buserrclrglcdc {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.SLERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.SLERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7182,7 +7182,7 @@ pub mod buserrclrglcdc {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MMERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MMERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7192,7 +7192,7 @@ pub mod buserrclrglcdc {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.ILERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.ILERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7202,7 +7202,7 @@ pub mod buserrclrglcdc {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MSERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MSERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7556,7 +7556,7 @@ pub mod buserrclrtdrw {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.SLERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.SLERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7566,7 +7566,7 @@ pub mod buserrclrtdrw {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MMERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MMERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7576,7 +7576,7 @@ pub mod buserrclrtdrw {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.ILERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.ILERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7586,7 +7586,7 @@ pub mod buserrclrtdrw {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MSERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MSERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7940,7 +7940,7 @@ pub mod buserrclrmipi0 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.SLERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.SLERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7950,7 +7950,7 @@ pub mod buserrclrmipi0 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MMERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MMERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7960,7 +7960,7 @@ pub mod buserrclrmipi0 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.ILERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.ILERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7970,7 +7970,7 @@ pub mod buserrclrmipi0 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MSERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MSERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8324,7 +8324,7 @@ pub mod buserrclrmipi1 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.SLERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.SLERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -8334,7 +8334,7 @@ pub mod buserrclrmipi1 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MMERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MMERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -8344,7 +8344,7 @@ pub mod buserrclrmipi1 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.ILERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.ILERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -8354,7 +8354,7 @@ pub mod buserrclrmipi1 {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MSERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MSERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8708,7 +8708,7 @@ pub mod buserrclrceu {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.SLERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.SLERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -8718,7 +8718,7 @@ pub mod buserrclrceu {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MMERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MMERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -8728,7 +8728,7 @@ pub mod buserrclrceu {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.ILERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.ILERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -8738,7 +8738,7 @@ pub mod buserrclrceu {
         #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the BUSERRSTAT<Master Name>.MSERRSTAT flag"]
+        #[doc = "Clear the BUSERRSTAT&lt;Master Name&gt;.MSERRSTAT flag"]
         pub const _1: Self = Self::new(1);
     }
 }

@@ -1861,7 +1861,7 @@ def process_device(device_name, patch_only=False, pac_only=False):
             print(f"Found patched SVD file: {patched_svd}")
             print(f"Attempting to run svd2pac with the patched file {patched_svd} to create {package_name}...")
             # Use quotes for the file paths to correctly handle backslashes on Windows
-            patched_cmd = f'svd2pac "{patched_svd}" "{pac_dir}" --target cortex-m --tracing --license-file LICENSE.txt --package-name {package_name}'
+            patched_cmd = f'svd2pac "{patched_svd}" "{pac_dir}" --target cortex-m --tracing --package-name {package_name}'
             print(f"Running command: {patched_cmd}")
             result = run_command(patched_cmd, check=False)
 

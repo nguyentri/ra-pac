@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -24,7 +24,7 @@ http://www.renesas.com/disclaimer
 use crate::common::sealed;
 #[allow(unused_imports)]
 use crate::common::*;
-#[doc = r"GLCDC"]
+#[doc = r"Graphics LCD Controller"]
 unsafe impl ::core::marker::Send for super::Glcdc {}
 unsafe impl ::core::marker::Sync for super::Glcdc {}
 impl super::Glcdc {
@@ -34,7 +34,7 @@ impl super::Glcdc {
         self.ptr
     }
 
-    #[doc = "Color Palette"]
+    #[doc = "Color Palette 0 Plane for Graphics 1 Plane"]
     #[inline(always)]
     pub const fn gr1_clut0(
         &self,
@@ -48,7 +48,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut00(
+    pub const fn gr1_clut0_0_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -58,7 +58,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut01(
+    pub const fn gr1_clut0_1_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -68,7 +68,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut02(
+    pub const fn gr1_clut0_2_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -78,7 +78,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut03(
+    pub const fn gr1_clut0_3_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -88,7 +88,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut04(
+    pub const fn gr1_clut0_4_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -98,7 +98,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut05(
+    pub const fn gr1_clut0_5_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -108,7 +108,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut06(
+    pub const fn gr1_clut0_6_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -118,7 +118,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut07(
+    pub const fn gr1_clut0_7_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -128,7 +128,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut08(
+    pub const fn gr1_clut0_8_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -138,7 +138,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut09(
+    pub const fn gr1_clut0_9_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -148,7 +148,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut010(
+    pub const fn gr1_clut0_10_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -158,7 +158,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut011(
+    pub const fn gr1_clut0_11_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -168,7 +168,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut012(
+    pub const fn gr1_clut0_12_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -178,7 +178,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut013(
+    pub const fn gr1_clut0_13_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -188,7 +188,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut014(
+    pub const fn gr1_clut0_14_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -198,7 +198,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut015(
+    pub const fn gr1_clut0_15_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -208,7 +208,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut016(
+    pub const fn gr1_clut0_16_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -218,7 +218,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut017(
+    pub const fn gr1_clut0_17_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -228,7 +228,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut018(
+    pub const fn gr1_clut0_18_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -238,7 +238,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut019(
+    pub const fn gr1_clut0_19_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -248,7 +248,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut020(
+    pub const fn gr1_clut0_20_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -258,7 +258,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut021(
+    pub const fn gr1_clut0_21_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -268,7 +268,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut022(
+    pub const fn gr1_clut0_22_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -278,7 +278,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut023(
+    pub const fn gr1_clut0_23_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -288,7 +288,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut024(
+    pub const fn gr1_clut0_24_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -298,7 +298,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut025(
+    pub const fn gr1_clut0_25_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -308,7 +308,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut026(
+    pub const fn gr1_clut0_26_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -318,7 +318,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut027(
+    pub const fn gr1_clut0_27_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -328,7 +328,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut028(
+    pub const fn gr1_clut0_28_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -338,7 +338,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut029(
+    pub const fn gr1_clut0_29_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -348,7 +348,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut030(
+    pub const fn gr1_clut0_30_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -358,7 +358,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut031(
+    pub const fn gr1_clut0_31_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -368,7 +368,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut032(
+    pub const fn gr1_clut0_32_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -378,7 +378,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut033(
+    pub const fn gr1_clut0_33_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -388,7 +388,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut034(
+    pub const fn gr1_clut0_34_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -398,7 +398,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut035(
+    pub const fn gr1_clut0_35_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -408,7 +408,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut036(
+    pub const fn gr1_clut0_36_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -418,7 +418,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut037(
+    pub const fn gr1_clut0_37_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -428,7 +428,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut038(
+    pub const fn gr1_clut0_38_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -438,7 +438,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut039(
+    pub const fn gr1_clut0_39_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -448,7 +448,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut040(
+    pub const fn gr1_clut0_40_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -458,7 +458,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut041(
+    pub const fn gr1_clut0_41_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -468,7 +468,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut042(
+    pub const fn gr1_clut0_42_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -478,7 +478,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut043(
+    pub const fn gr1_clut0_43_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -488,7 +488,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut044(
+    pub const fn gr1_clut0_44_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -498,7 +498,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut045(
+    pub const fn gr1_clut0_45_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -508,7 +508,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut046(
+    pub const fn gr1_clut0_46_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -518,7 +518,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut047(
+    pub const fn gr1_clut0_47_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -528,7 +528,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut048(
+    pub const fn gr1_clut0_48_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -538,7 +538,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut049(
+    pub const fn gr1_clut0_49_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -548,7 +548,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut050(
+    pub const fn gr1_clut0_50_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -558,7 +558,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut051(
+    pub const fn gr1_clut0_51_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -568,7 +568,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut052(
+    pub const fn gr1_clut0_52_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -578,7 +578,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut053(
+    pub const fn gr1_clut0_53_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -588,7 +588,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut054(
+    pub const fn gr1_clut0_54_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -598,7 +598,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut055(
+    pub const fn gr1_clut0_55_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -608,7 +608,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut056(
+    pub const fn gr1_clut0_56_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -618,7 +618,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut057(
+    pub const fn gr1_clut0_57_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -628,7 +628,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut058(
+    pub const fn gr1_clut0_58_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -638,7 +638,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut059(
+    pub const fn gr1_clut0_59_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -648,7 +648,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut060(
+    pub const fn gr1_clut0_60_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -658,7 +658,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut061(
+    pub const fn gr1_clut0_61_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -668,7 +668,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut062(
+    pub const fn gr1_clut0_62_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -678,7 +678,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut063(
+    pub const fn gr1_clut0_63_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -688,7 +688,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut064(
+    pub const fn gr1_clut0_64_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -698,7 +698,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut065(
+    pub const fn gr1_clut0_65_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -708,7 +708,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut066(
+    pub const fn gr1_clut0_66_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -718,7 +718,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut067(
+    pub const fn gr1_clut0_67_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -728,7 +728,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut068(
+    pub const fn gr1_clut0_68_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -738,7 +738,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut069(
+    pub const fn gr1_clut0_69_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -748,7 +748,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut070(
+    pub const fn gr1_clut0_70_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -758,7 +758,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut071(
+    pub const fn gr1_clut0_71_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -768,7 +768,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut072(
+    pub const fn gr1_clut0_72_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -778,7 +778,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut073(
+    pub const fn gr1_clut0_73_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -788,7 +788,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut074(
+    pub const fn gr1_clut0_74_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -798,7 +798,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut075(
+    pub const fn gr1_clut0_75_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -808,7 +808,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut076(
+    pub const fn gr1_clut0_76_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -818,7 +818,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut077(
+    pub const fn gr1_clut0_77_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -828,7 +828,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut078(
+    pub const fn gr1_clut0_78_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -838,7 +838,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut079(
+    pub const fn gr1_clut0_79_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -848,7 +848,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut080(
+    pub const fn gr1_clut0_80_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -858,7 +858,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut081(
+    pub const fn gr1_clut0_81_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -868,7 +868,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut082(
+    pub const fn gr1_clut0_82_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -878,7 +878,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut083(
+    pub const fn gr1_clut0_83_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -888,7 +888,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut084(
+    pub const fn gr1_clut0_84_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -898,7 +898,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut085(
+    pub const fn gr1_clut0_85_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -908,7 +908,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut086(
+    pub const fn gr1_clut0_86_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -918,7 +918,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut087(
+    pub const fn gr1_clut0_87_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -928,7 +928,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut088(
+    pub const fn gr1_clut0_88_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -938,7 +938,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut089(
+    pub const fn gr1_clut0_89_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -948,7 +948,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut090(
+    pub const fn gr1_clut0_90_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -958,7 +958,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut091(
+    pub const fn gr1_clut0_91_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -968,7 +968,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut092(
+    pub const fn gr1_clut0_92_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -978,7 +978,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut093(
+    pub const fn gr1_clut0_93_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -988,7 +988,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut094(
+    pub const fn gr1_clut0_94_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -998,7 +998,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut095(
+    pub const fn gr1_clut0_95_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1008,7 +1008,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut096(
+    pub const fn gr1_clut0_96_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1018,7 +1018,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut097(
+    pub const fn gr1_clut0_97_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1028,7 +1028,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut098(
+    pub const fn gr1_clut0_98_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1038,7 +1038,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut099(
+    pub const fn gr1_clut0_99_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1048,7 +1048,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0100(
+    pub const fn gr1_clut0_100_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1058,7 +1058,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0101(
+    pub const fn gr1_clut0_101_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1068,7 +1068,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0102(
+    pub const fn gr1_clut0_102_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1078,7 +1078,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0103(
+    pub const fn gr1_clut0_103_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1088,7 +1088,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0104(
+    pub const fn gr1_clut0_104_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1098,7 +1098,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0105(
+    pub const fn gr1_clut0_105_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1108,7 +1108,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0106(
+    pub const fn gr1_clut0_106_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1118,7 +1118,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0107(
+    pub const fn gr1_clut0_107_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1128,7 +1128,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0108(
+    pub const fn gr1_clut0_108_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1138,7 +1138,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0109(
+    pub const fn gr1_clut0_109_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1148,7 +1148,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0110(
+    pub const fn gr1_clut0_110_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1158,7 +1158,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0111(
+    pub const fn gr1_clut0_111_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1168,7 +1168,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0112(
+    pub const fn gr1_clut0_112_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1178,7 +1178,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0113(
+    pub const fn gr1_clut0_113_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1188,7 +1188,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0114(
+    pub const fn gr1_clut0_114_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1198,7 +1198,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0115(
+    pub const fn gr1_clut0_115_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1208,7 +1208,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0116(
+    pub const fn gr1_clut0_116_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1218,7 +1218,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0117(
+    pub const fn gr1_clut0_117_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1228,7 +1228,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0118(
+    pub const fn gr1_clut0_118_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1238,7 +1238,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0119(
+    pub const fn gr1_clut0_119_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1248,7 +1248,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0120(
+    pub const fn gr1_clut0_120_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1258,7 +1258,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0121(
+    pub const fn gr1_clut0_121_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1268,7 +1268,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0122(
+    pub const fn gr1_clut0_122_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1278,7 +1278,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0123(
+    pub const fn gr1_clut0_123_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1288,7 +1288,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0124(
+    pub const fn gr1_clut0_124_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1298,7 +1298,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0125(
+    pub const fn gr1_clut0_125_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1308,7 +1308,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0126(
+    pub const fn gr1_clut0_126_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1318,7 +1318,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0127(
+    pub const fn gr1_clut0_127_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1328,7 +1328,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0128(
+    pub const fn gr1_clut0_128_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1338,7 +1338,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0129(
+    pub const fn gr1_clut0_129_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1348,7 +1348,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0130(
+    pub const fn gr1_clut0_130_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1358,7 +1358,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0131(
+    pub const fn gr1_clut0_131_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1368,7 +1368,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0132(
+    pub const fn gr1_clut0_132_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1378,7 +1378,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0133(
+    pub const fn gr1_clut0_133_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1388,7 +1388,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0134(
+    pub const fn gr1_clut0_134_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1398,7 +1398,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0135(
+    pub const fn gr1_clut0_135_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1408,7 +1408,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0136(
+    pub const fn gr1_clut0_136_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1418,7 +1418,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0137(
+    pub const fn gr1_clut0_137_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1428,7 +1428,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0138(
+    pub const fn gr1_clut0_138_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1438,7 +1438,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0139(
+    pub const fn gr1_clut0_139_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1448,7 +1448,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0140(
+    pub const fn gr1_clut0_140_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1458,7 +1458,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0141(
+    pub const fn gr1_clut0_141_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1468,7 +1468,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0142(
+    pub const fn gr1_clut0_142_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1478,7 +1478,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0143(
+    pub const fn gr1_clut0_143_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1488,7 +1488,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0144(
+    pub const fn gr1_clut0_144_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1498,7 +1498,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0145(
+    pub const fn gr1_clut0_145_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1508,7 +1508,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0146(
+    pub const fn gr1_clut0_146_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1518,7 +1518,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0147(
+    pub const fn gr1_clut0_147_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1528,7 +1528,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0148(
+    pub const fn gr1_clut0_148_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1538,7 +1538,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0149(
+    pub const fn gr1_clut0_149_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1548,7 +1548,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0150(
+    pub const fn gr1_clut0_150_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1558,7 +1558,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0151(
+    pub const fn gr1_clut0_151_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1568,7 +1568,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0152(
+    pub const fn gr1_clut0_152_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1578,7 +1578,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0153(
+    pub const fn gr1_clut0_153_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1588,7 +1588,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0154(
+    pub const fn gr1_clut0_154_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1598,7 +1598,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0155(
+    pub const fn gr1_clut0_155_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1608,7 +1608,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0156(
+    pub const fn gr1_clut0_156_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1618,7 +1618,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0157(
+    pub const fn gr1_clut0_157_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1628,7 +1628,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0158(
+    pub const fn gr1_clut0_158_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1638,7 +1638,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0159(
+    pub const fn gr1_clut0_159_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1648,7 +1648,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0160(
+    pub const fn gr1_clut0_160_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1658,7 +1658,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0161(
+    pub const fn gr1_clut0_161_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1668,7 +1668,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0162(
+    pub const fn gr1_clut0_162_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1678,7 +1678,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0163(
+    pub const fn gr1_clut0_163_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1688,7 +1688,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0164(
+    pub const fn gr1_clut0_164_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1698,7 +1698,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0165(
+    pub const fn gr1_clut0_165_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1708,7 +1708,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0166(
+    pub const fn gr1_clut0_166_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1718,7 +1718,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0167(
+    pub const fn gr1_clut0_167_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1728,7 +1728,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0168(
+    pub const fn gr1_clut0_168_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1738,7 +1738,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0169(
+    pub const fn gr1_clut0_169_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1748,7 +1748,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0170(
+    pub const fn gr1_clut0_170_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1758,7 +1758,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0171(
+    pub const fn gr1_clut0_171_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1768,7 +1768,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0172(
+    pub const fn gr1_clut0_172_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1778,7 +1778,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0173(
+    pub const fn gr1_clut0_173_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1788,7 +1788,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0174(
+    pub const fn gr1_clut0_174_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1798,7 +1798,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0175(
+    pub const fn gr1_clut0_175_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1808,7 +1808,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0176(
+    pub const fn gr1_clut0_176_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1818,7 +1818,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0177(
+    pub const fn gr1_clut0_177_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1828,7 +1828,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0178(
+    pub const fn gr1_clut0_178_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1838,7 +1838,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0179(
+    pub const fn gr1_clut0_179_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1848,7 +1848,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0180(
+    pub const fn gr1_clut0_180_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1858,7 +1858,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0181(
+    pub const fn gr1_clut0_181_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1868,7 +1868,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0182(
+    pub const fn gr1_clut0_182_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1878,7 +1878,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0183(
+    pub const fn gr1_clut0_183_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1888,7 +1888,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0184(
+    pub const fn gr1_clut0_184_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1898,7 +1898,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0185(
+    pub const fn gr1_clut0_185_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1908,7 +1908,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0186(
+    pub const fn gr1_clut0_186_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1918,7 +1918,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0187(
+    pub const fn gr1_clut0_187_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1928,7 +1928,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0188(
+    pub const fn gr1_clut0_188_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1938,7 +1938,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0189(
+    pub const fn gr1_clut0_189_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1948,7 +1948,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0190(
+    pub const fn gr1_clut0_190_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1958,7 +1958,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0191(
+    pub const fn gr1_clut0_191_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1968,7 +1968,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0192(
+    pub const fn gr1_clut0_192_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1978,7 +1978,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0193(
+    pub const fn gr1_clut0_193_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1988,7 +1988,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0194(
+    pub const fn gr1_clut0_194_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -1998,7 +1998,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0195(
+    pub const fn gr1_clut0_195_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2008,7 +2008,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0196(
+    pub const fn gr1_clut0_196_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2018,7 +2018,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0197(
+    pub const fn gr1_clut0_197_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2028,7 +2028,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0198(
+    pub const fn gr1_clut0_198_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2038,7 +2038,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0199(
+    pub const fn gr1_clut0_199_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2048,7 +2048,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0200(
+    pub const fn gr1_clut0_200_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2058,7 +2058,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0201(
+    pub const fn gr1_clut0_201_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2068,7 +2068,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0202(
+    pub const fn gr1_clut0_202_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2078,7 +2078,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0203(
+    pub const fn gr1_clut0_203_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2088,7 +2088,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0204(
+    pub const fn gr1_clut0_204_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2098,7 +2098,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0205(
+    pub const fn gr1_clut0_205_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2108,7 +2108,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0206(
+    pub const fn gr1_clut0_206_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2118,7 +2118,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0207(
+    pub const fn gr1_clut0_207_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2128,7 +2128,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0208(
+    pub const fn gr1_clut0_208_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2138,7 +2138,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0209(
+    pub const fn gr1_clut0_209_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2148,7 +2148,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0210(
+    pub const fn gr1_clut0_210_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2158,7 +2158,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0211(
+    pub const fn gr1_clut0_211_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2168,7 +2168,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0212(
+    pub const fn gr1_clut0_212_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2178,7 +2178,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0213(
+    pub const fn gr1_clut0_213_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2188,7 +2188,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0214(
+    pub const fn gr1_clut0_214_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2198,7 +2198,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0215(
+    pub const fn gr1_clut0_215_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2208,7 +2208,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0216(
+    pub const fn gr1_clut0_216_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2218,7 +2218,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0217(
+    pub const fn gr1_clut0_217_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2228,7 +2228,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0218(
+    pub const fn gr1_clut0_218_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2238,7 +2238,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0219(
+    pub const fn gr1_clut0_219_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2248,7 +2248,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0220(
+    pub const fn gr1_clut0_220_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2258,7 +2258,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0221(
+    pub const fn gr1_clut0_221_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2268,7 +2268,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0222(
+    pub const fn gr1_clut0_222_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2278,7 +2278,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0223(
+    pub const fn gr1_clut0_223_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2288,7 +2288,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0224(
+    pub const fn gr1_clut0_224_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2298,7 +2298,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0225(
+    pub const fn gr1_clut0_225_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2308,7 +2308,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0226(
+    pub const fn gr1_clut0_226_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2318,7 +2318,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0227(
+    pub const fn gr1_clut0_227_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2328,7 +2328,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0228(
+    pub const fn gr1_clut0_228_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2338,7 +2338,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0229(
+    pub const fn gr1_clut0_229_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2348,7 +2348,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0230(
+    pub const fn gr1_clut0_230_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2358,7 +2358,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0231(
+    pub const fn gr1_clut0_231_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2368,7 +2368,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0232(
+    pub const fn gr1_clut0_232_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2378,7 +2378,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0233(
+    pub const fn gr1_clut0_233_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2388,7 +2388,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0234(
+    pub const fn gr1_clut0_234_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2398,7 +2398,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0235(
+    pub const fn gr1_clut0_235_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2408,7 +2408,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0236(
+    pub const fn gr1_clut0_236_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2418,7 +2418,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0237(
+    pub const fn gr1_clut0_237_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2428,7 +2428,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0238(
+    pub const fn gr1_clut0_238_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2438,7 +2438,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0239(
+    pub const fn gr1_clut0_239_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2448,7 +2448,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0240(
+    pub const fn gr1_clut0_240_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2458,7 +2458,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0241(
+    pub const fn gr1_clut0_241_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2468,7 +2468,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0242(
+    pub const fn gr1_clut0_242_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2478,7 +2478,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0243(
+    pub const fn gr1_clut0_243_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2488,7 +2488,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0244(
+    pub const fn gr1_clut0_244_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2498,7 +2498,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0245(
+    pub const fn gr1_clut0_245_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2508,7 +2508,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0246(
+    pub const fn gr1_clut0_246_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2518,7 +2518,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0247(
+    pub const fn gr1_clut0_247_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2528,7 +2528,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0248(
+    pub const fn gr1_clut0_248_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2538,7 +2538,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0249(
+    pub const fn gr1_clut0_249_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2548,7 +2548,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0250(
+    pub const fn gr1_clut0_250_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2558,7 +2558,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0251(
+    pub const fn gr1_clut0_251_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2568,7 +2568,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0252(
+    pub const fn gr1_clut0_252_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2578,7 +2578,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0253(
+    pub const fn gr1_clut0_253_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2588,7 +2588,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0254(
+    pub const fn gr1_clut0_254_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2598,7 +2598,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut0255(
+    pub const fn gr1_clut0_255_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -2608,7 +2608,7 @@ impl super::Glcdc {
         }
     }
 
-    #[doc = "Color Palette"]
+    #[doc = "Color Palette 1 Plane for Graphics 1 Plane"]
     #[inline(always)]
     pub const fn gr1_clut1(
         &self,
@@ -2622,7 +2622,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut10(
+    pub const fn gr1_clut1_0_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2632,7 +2632,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut11(
+    pub const fn gr1_clut1_1_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2642,7 +2642,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut12(
+    pub const fn gr1_clut1_2_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2652,7 +2652,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut13(
+    pub const fn gr1_clut1_3_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2662,7 +2662,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut14(
+    pub const fn gr1_clut1_4_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2672,7 +2672,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut15(
+    pub const fn gr1_clut1_5_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2682,7 +2682,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut16(
+    pub const fn gr1_clut1_6_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2692,7 +2692,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut17(
+    pub const fn gr1_clut1_7_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2702,7 +2702,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut18(
+    pub const fn gr1_clut1_8_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2712,7 +2712,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut19(
+    pub const fn gr1_clut1_9_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2722,7 +2722,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut110(
+    pub const fn gr1_clut1_10_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2732,7 +2732,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut111(
+    pub const fn gr1_clut1_11_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2742,7 +2742,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut112(
+    pub const fn gr1_clut1_12_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2752,7 +2752,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut113(
+    pub const fn gr1_clut1_13_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2762,7 +2762,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut114(
+    pub const fn gr1_clut1_14_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2772,7 +2772,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut115(
+    pub const fn gr1_clut1_15_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2782,7 +2782,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut116(
+    pub const fn gr1_clut1_16_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2792,7 +2792,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut117(
+    pub const fn gr1_clut1_17_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2802,7 +2802,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut118(
+    pub const fn gr1_clut1_18_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2812,7 +2812,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut119(
+    pub const fn gr1_clut1_19_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2822,7 +2822,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut120(
+    pub const fn gr1_clut1_20_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2832,7 +2832,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut121(
+    pub const fn gr1_clut1_21_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2842,7 +2842,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut122(
+    pub const fn gr1_clut1_22_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2852,7 +2852,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut123(
+    pub const fn gr1_clut1_23_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2862,7 +2862,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut124(
+    pub const fn gr1_clut1_24_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2872,7 +2872,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut125(
+    pub const fn gr1_clut1_25_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2882,7 +2882,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut126(
+    pub const fn gr1_clut1_26_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2892,7 +2892,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut127(
+    pub const fn gr1_clut1_27_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2902,7 +2902,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut128(
+    pub const fn gr1_clut1_28_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2912,7 +2912,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut129(
+    pub const fn gr1_clut1_29_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2922,7 +2922,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut130(
+    pub const fn gr1_clut1_30_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2932,7 +2932,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut131(
+    pub const fn gr1_clut1_31_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2942,7 +2942,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut132(
+    pub const fn gr1_clut1_32_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2952,7 +2952,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut133(
+    pub const fn gr1_clut1_33_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2962,7 +2962,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut134(
+    pub const fn gr1_clut1_34_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2972,7 +2972,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut135(
+    pub const fn gr1_clut1_35_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2982,7 +2982,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut136(
+    pub const fn gr1_clut1_36_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -2992,7 +2992,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut137(
+    pub const fn gr1_clut1_37_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3002,7 +3002,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut138(
+    pub const fn gr1_clut1_38_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3012,7 +3012,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut139(
+    pub const fn gr1_clut1_39_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3022,7 +3022,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut140(
+    pub const fn gr1_clut1_40_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3032,7 +3032,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut141(
+    pub const fn gr1_clut1_41_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3042,7 +3042,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut142(
+    pub const fn gr1_clut1_42_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3052,7 +3052,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut143(
+    pub const fn gr1_clut1_43_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3062,7 +3062,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut144(
+    pub const fn gr1_clut1_44_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3072,7 +3072,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut145(
+    pub const fn gr1_clut1_45_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3082,7 +3082,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut146(
+    pub const fn gr1_clut1_46_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3092,7 +3092,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut147(
+    pub const fn gr1_clut1_47_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3102,7 +3102,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut148(
+    pub const fn gr1_clut1_48_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3112,7 +3112,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut149(
+    pub const fn gr1_clut1_49_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3122,7 +3122,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut150(
+    pub const fn gr1_clut1_50_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3132,7 +3132,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut151(
+    pub const fn gr1_clut1_51_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3142,7 +3142,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut152(
+    pub const fn gr1_clut1_52_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3152,7 +3152,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut153(
+    pub const fn gr1_clut1_53_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3162,7 +3162,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut154(
+    pub const fn gr1_clut1_54_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3172,7 +3172,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut155(
+    pub const fn gr1_clut1_55_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3182,7 +3182,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut156(
+    pub const fn gr1_clut1_56_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3192,7 +3192,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut157(
+    pub const fn gr1_clut1_57_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3202,7 +3202,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut158(
+    pub const fn gr1_clut1_58_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3212,7 +3212,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut159(
+    pub const fn gr1_clut1_59_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3222,7 +3222,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut160(
+    pub const fn gr1_clut1_60_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3232,7 +3232,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut161(
+    pub const fn gr1_clut1_61_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3242,7 +3242,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut162(
+    pub const fn gr1_clut1_62_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3252,7 +3252,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut163(
+    pub const fn gr1_clut1_63_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3262,7 +3262,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut164(
+    pub const fn gr1_clut1_64_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3272,7 +3272,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut165(
+    pub const fn gr1_clut1_65_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3282,7 +3282,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut166(
+    pub const fn gr1_clut1_66_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3292,7 +3292,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut167(
+    pub const fn gr1_clut1_67_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3302,7 +3302,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut168(
+    pub const fn gr1_clut1_68_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3312,7 +3312,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut169(
+    pub const fn gr1_clut1_69_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3322,7 +3322,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut170(
+    pub const fn gr1_clut1_70_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3332,7 +3332,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut171(
+    pub const fn gr1_clut1_71_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3342,7 +3342,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut172(
+    pub const fn gr1_clut1_72_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3352,7 +3352,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut173(
+    pub const fn gr1_clut1_73_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3362,7 +3362,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut174(
+    pub const fn gr1_clut1_74_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3372,7 +3372,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut175(
+    pub const fn gr1_clut1_75_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3382,7 +3382,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut176(
+    pub const fn gr1_clut1_76_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3392,7 +3392,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut177(
+    pub const fn gr1_clut1_77_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3402,7 +3402,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut178(
+    pub const fn gr1_clut1_78_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3412,7 +3412,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut179(
+    pub const fn gr1_clut1_79_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3422,7 +3422,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut180(
+    pub const fn gr1_clut1_80_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3432,7 +3432,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut181(
+    pub const fn gr1_clut1_81_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3442,7 +3442,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut182(
+    pub const fn gr1_clut1_82_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3452,7 +3452,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut183(
+    pub const fn gr1_clut1_83_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3462,7 +3462,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut184(
+    pub const fn gr1_clut1_84_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3472,7 +3472,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut185(
+    pub const fn gr1_clut1_85_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3482,7 +3482,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut186(
+    pub const fn gr1_clut1_86_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3492,7 +3492,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut187(
+    pub const fn gr1_clut1_87_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3502,7 +3502,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut188(
+    pub const fn gr1_clut1_88_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3512,7 +3512,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut189(
+    pub const fn gr1_clut1_89_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3522,7 +3522,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut190(
+    pub const fn gr1_clut1_90_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3532,7 +3532,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut191(
+    pub const fn gr1_clut1_91_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3542,7 +3542,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut192(
+    pub const fn gr1_clut1_92_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3552,7 +3552,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut193(
+    pub const fn gr1_clut1_93_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3562,7 +3562,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut194(
+    pub const fn gr1_clut1_94_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3572,7 +3572,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut195(
+    pub const fn gr1_clut1_95_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3582,7 +3582,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut196(
+    pub const fn gr1_clut1_96_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3592,7 +3592,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut197(
+    pub const fn gr1_clut1_97_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3602,7 +3602,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut198(
+    pub const fn gr1_clut1_98_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3612,7 +3612,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut199(
+    pub const fn gr1_clut1_99_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3622,7 +3622,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1100(
+    pub const fn gr1_clut1_100_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3632,7 +3632,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1101(
+    pub const fn gr1_clut1_101_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3642,7 +3642,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1102(
+    pub const fn gr1_clut1_102_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3652,7 +3652,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1103(
+    pub const fn gr1_clut1_103_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3662,7 +3662,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1104(
+    pub const fn gr1_clut1_104_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3672,7 +3672,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1105(
+    pub const fn gr1_clut1_105_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3682,7 +3682,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1106(
+    pub const fn gr1_clut1_106_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3692,7 +3692,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1107(
+    pub const fn gr1_clut1_107_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3702,7 +3702,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1108(
+    pub const fn gr1_clut1_108_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3712,7 +3712,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1109(
+    pub const fn gr1_clut1_109_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3722,7 +3722,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1110(
+    pub const fn gr1_clut1_110_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3732,7 +3732,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1111(
+    pub const fn gr1_clut1_111_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3742,7 +3742,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1112(
+    pub const fn gr1_clut1_112_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3752,7 +3752,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1113(
+    pub const fn gr1_clut1_113_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3762,7 +3762,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1114(
+    pub const fn gr1_clut1_114_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3772,7 +3772,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1115(
+    pub const fn gr1_clut1_115_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3782,7 +3782,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1116(
+    pub const fn gr1_clut1_116_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3792,7 +3792,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1117(
+    pub const fn gr1_clut1_117_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3802,7 +3802,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1118(
+    pub const fn gr1_clut1_118_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3812,7 +3812,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1119(
+    pub const fn gr1_clut1_119_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3822,7 +3822,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1120(
+    pub const fn gr1_clut1_120_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3832,7 +3832,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1121(
+    pub const fn gr1_clut1_121_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3842,7 +3842,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1122(
+    pub const fn gr1_clut1_122_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3852,7 +3852,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1123(
+    pub const fn gr1_clut1_123_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3862,7 +3862,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1124(
+    pub const fn gr1_clut1_124_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3872,7 +3872,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1125(
+    pub const fn gr1_clut1_125_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3882,7 +3882,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1126(
+    pub const fn gr1_clut1_126_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3892,7 +3892,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1127(
+    pub const fn gr1_clut1_127_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3902,7 +3902,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1128(
+    pub const fn gr1_clut1_128_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3912,7 +3912,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1129(
+    pub const fn gr1_clut1_129_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3922,7 +3922,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1130(
+    pub const fn gr1_clut1_130_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3932,7 +3932,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1131(
+    pub const fn gr1_clut1_131_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3942,7 +3942,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1132(
+    pub const fn gr1_clut1_132_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3952,7 +3952,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1133(
+    pub const fn gr1_clut1_133_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3962,7 +3962,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1134(
+    pub const fn gr1_clut1_134_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3972,7 +3972,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1135(
+    pub const fn gr1_clut1_135_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3982,7 +3982,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1136(
+    pub const fn gr1_clut1_136_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -3992,7 +3992,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1137(
+    pub const fn gr1_clut1_137_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4002,7 +4002,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1138(
+    pub const fn gr1_clut1_138_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4012,7 +4012,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1139(
+    pub const fn gr1_clut1_139_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4022,7 +4022,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1140(
+    pub const fn gr1_clut1_140_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4032,7 +4032,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1141(
+    pub const fn gr1_clut1_141_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4042,7 +4042,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1142(
+    pub const fn gr1_clut1_142_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4052,7 +4052,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1143(
+    pub const fn gr1_clut1_143_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4062,7 +4062,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1144(
+    pub const fn gr1_clut1_144_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4072,7 +4072,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1145(
+    pub const fn gr1_clut1_145_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4082,7 +4082,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1146(
+    pub const fn gr1_clut1_146_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4092,7 +4092,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1147(
+    pub const fn gr1_clut1_147_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4102,7 +4102,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1148(
+    pub const fn gr1_clut1_148_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4112,7 +4112,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1149(
+    pub const fn gr1_clut1_149_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4122,7 +4122,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1150(
+    pub const fn gr1_clut1_150_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4132,7 +4132,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1151(
+    pub const fn gr1_clut1_151_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4142,7 +4142,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1152(
+    pub const fn gr1_clut1_152_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4152,7 +4152,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1153(
+    pub const fn gr1_clut1_153_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4162,7 +4162,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1154(
+    pub const fn gr1_clut1_154_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4172,7 +4172,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1155(
+    pub const fn gr1_clut1_155_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4182,7 +4182,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1156(
+    pub const fn gr1_clut1_156_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4192,7 +4192,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1157(
+    pub const fn gr1_clut1_157_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4202,7 +4202,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1158(
+    pub const fn gr1_clut1_158_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4212,7 +4212,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1159(
+    pub const fn gr1_clut1_159_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4222,7 +4222,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1160(
+    pub const fn gr1_clut1_160_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4232,7 +4232,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1161(
+    pub const fn gr1_clut1_161_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4242,7 +4242,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1162(
+    pub const fn gr1_clut1_162_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4252,7 +4252,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1163(
+    pub const fn gr1_clut1_163_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4262,7 +4262,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1164(
+    pub const fn gr1_clut1_164_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4272,7 +4272,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1165(
+    pub const fn gr1_clut1_165_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4282,7 +4282,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1166(
+    pub const fn gr1_clut1_166_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4292,7 +4292,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1167(
+    pub const fn gr1_clut1_167_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4302,7 +4302,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1168(
+    pub const fn gr1_clut1_168_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4312,7 +4312,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1169(
+    pub const fn gr1_clut1_169_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4322,7 +4322,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1170(
+    pub const fn gr1_clut1_170_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4332,7 +4332,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1171(
+    pub const fn gr1_clut1_171_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4342,7 +4342,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1172(
+    pub const fn gr1_clut1_172_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4352,7 +4352,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1173(
+    pub const fn gr1_clut1_173_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4362,7 +4362,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1174(
+    pub const fn gr1_clut1_174_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4372,7 +4372,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1175(
+    pub const fn gr1_clut1_175_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4382,7 +4382,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1176(
+    pub const fn gr1_clut1_176_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4392,7 +4392,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1177(
+    pub const fn gr1_clut1_177_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4402,7 +4402,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1178(
+    pub const fn gr1_clut1_178_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4412,7 +4412,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1179(
+    pub const fn gr1_clut1_179_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4422,7 +4422,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1180(
+    pub const fn gr1_clut1_180_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4432,7 +4432,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1181(
+    pub const fn gr1_clut1_181_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4442,7 +4442,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1182(
+    pub const fn gr1_clut1_182_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4452,7 +4452,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1183(
+    pub const fn gr1_clut1_183_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4462,7 +4462,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1184(
+    pub const fn gr1_clut1_184_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4472,7 +4472,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1185(
+    pub const fn gr1_clut1_185_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4482,7 +4482,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1186(
+    pub const fn gr1_clut1_186_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4492,7 +4492,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1187(
+    pub const fn gr1_clut1_187_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4502,7 +4502,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1188(
+    pub const fn gr1_clut1_188_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4512,7 +4512,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1189(
+    pub const fn gr1_clut1_189_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4522,7 +4522,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1190(
+    pub const fn gr1_clut1_190_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4532,7 +4532,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1191(
+    pub const fn gr1_clut1_191_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4542,7 +4542,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1192(
+    pub const fn gr1_clut1_192_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4552,7 +4552,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1193(
+    pub const fn gr1_clut1_193_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4562,7 +4562,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1194(
+    pub const fn gr1_clut1_194_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4572,7 +4572,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1195(
+    pub const fn gr1_clut1_195_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4582,7 +4582,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1196(
+    pub const fn gr1_clut1_196_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4592,7 +4592,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1197(
+    pub const fn gr1_clut1_197_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4602,7 +4602,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1198(
+    pub const fn gr1_clut1_198_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4612,7 +4612,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1199(
+    pub const fn gr1_clut1_199_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4622,7 +4622,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1200(
+    pub const fn gr1_clut1_200_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4632,7 +4632,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1201(
+    pub const fn gr1_clut1_201_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4642,7 +4642,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1202(
+    pub const fn gr1_clut1_202_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4652,7 +4652,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1203(
+    pub const fn gr1_clut1_203_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4662,7 +4662,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1204(
+    pub const fn gr1_clut1_204_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4672,7 +4672,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1205(
+    pub const fn gr1_clut1_205_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4682,7 +4682,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1206(
+    pub const fn gr1_clut1_206_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4692,7 +4692,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1207(
+    pub const fn gr1_clut1_207_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4702,7 +4702,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1208(
+    pub const fn gr1_clut1_208_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4712,7 +4712,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1209(
+    pub const fn gr1_clut1_209_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4722,7 +4722,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1210(
+    pub const fn gr1_clut1_210_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4732,7 +4732,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1211(
+    pub const fn gr1_clut1_211_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4742,7 +4742,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1212(
+    pub const fn gr1_clut1_212_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4752,7 +4752,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1213(
+    pub const fn gr1_clut1_213_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4762,7 +4762,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1214(
+    pub const fn gr1_clut1_214_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4772,7 +4772,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1215(
+    pub const fn gr1_clut1_215_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4782,7 +4782,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1216(
+    pub const fn gr1_clut1_216_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4792,7 +4792,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1217(
+    pub const fn gr1_clut1_217_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4802,7 +4802,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1218(
+    pub const fn gr1_clut1_218_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4812,7 +4812,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1219(
+    pub const fn gr1_clut1_219_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4822,7 +4822,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1220(
+    pub const fn gr1_clut1_220_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4832,7 +4832,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1221(
+    pub const fn gr1_clut1_221_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4842,7 +4842,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1222(
+    pub const fn gr1_clut1_222_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4852,7 +4852,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1223(
+    pub const fn gr1_clut1_223_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4862,7 +4862,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1224(
+    pub const fn gr1_clut1_224_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4872,7 +4872,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1225(
+    pub const fn gr1_clut1_225_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4882,7 +4882,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1226(
+    pub const fn gr1_clut1_226_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4892,7 +4892,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1227(
+    pub const fn gr1_clut1_227_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4902,7 +4902,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1228(
+    pub const fn gr1_clut1_228_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4912,7 +4912,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1229(
+    pub const fn gr1_clut1_229_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4922,7 +4922,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1230(
+    pub const fn gr1_clut1_230_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4932,7 +4932,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1231(
+    pub const fn gr1_clut1_231_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4942,7 +4942,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1232(
+    pub const fn gr1_clut1_232_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4952,7 +4952,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1233(
+    pub const fn gr1_clut1_233_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4962,7 +4962,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1234(
+    pub const fn gr1_clut1_234_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4972,7 +4972,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1235(
+    pub const fn gr1_clut1_235_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4982,7 +4982,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1236(
+    pub const fn gr1_clut1_236_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -4992,7 +4992,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1237(
+    pub const fn gr1_clut1_237_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -5002,7 +5002,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1238(
+    pub const fn gr1_clut1_238_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -5012,7 +5012,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1239(
+    pub const fn gr1_clut1_239_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -5022,7 +5022,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1240(
+    pub const fn gr1_clut1_240_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -5032,7 +5032,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1241(
+    pub const fn gr1_clut1_241_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -5042,7 +5042,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1242(
+    pub const fn gr1_clut1_242_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -5052,7 +5052,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1243(
+    pub const fn gr1_clut1_243_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -5062,7 +5062,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1244(
+    pub const fn gr1_clut1_244_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -5072,7 +5072,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1245(
+    pub const fn gr1_clut1_245_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -5082,7 +5082,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1246(
+    pub const fn gr1_clut1_246_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -5092,7 +5092,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1247(
+    pub const fn gr1_clut1_247_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -5102,7 +5102,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1248(
+    pub const fn gr1_clut1_248_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -5112,7 +5112,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1249(
+    pub const fn gr1_clut1_249_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -5122,7 +5122,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1250(
+    pub const fn gr1_clut1_250_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -5132,7 +5132,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1251(
+    pub const fn gr1_clut1_251_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -5142,7 +5142,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1252(
+    pub const fn gr1_clut1_252_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -5152,7 +5152,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1253(
+    pub const fn gr1_clut1_253_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -5162,7 +5162,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1254(
+    pub const fn gr1_clut1_254_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -5172,7 +5172,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr1_clut1255(
+    pub const fn gr1_clut1_255_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr1Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -5182,7 +5182,7 @@ impl super::Glcdc {
         }
     }
 
-    #[doc = "Color Palette"]
+    #[doc = "Color Palette 0 Plane for Graphics 2 Plane"]
     #[inline(always)]
     pub const fn gr2_clut0(
         &self,
@@ -5196,7 +5196,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut00(
+    pub const fn gr2_clut0_0_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5206,7 +5206,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut01(
+    pub const fn gr2_clut0_1_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5216,7 +5216,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut02(
+    pub const fn gr2_clut0_2_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5226,7 +5226,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut03(
+    pub const fn gr2_clut0_3_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5236,7 +5236,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut04(
+    pub const fn gr2_clut0_4_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5246,7 +5246,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut05(
+    pub const fn gr2_clut0_5_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5256,7 +5256,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut06(
+    pub const fn gr2_clut0_6_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5266,7 +5266,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut07(
+    pub const fn gr2_clut0_7_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5276,7 +5276,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut08(
+    pub const fn gr2_clut0_8_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5286,7 +5286,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut09(
+    pub const fn gr2_clut0_9_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5296,7 +5296,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut010(
+    pub const fn gr2_clut0_10_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5306,7 +5306,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut011(
+    pub const fn gr2_clut0_11_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5316,7 +5316,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut012(
+    pub const fn gr2_clut0_12_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5326,7 +5326,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut013(
+    pub const fn gr2_clut0_13_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5336,7 +5336,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut014(
+    pub const fn gr2_clut0_14_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5346,7 +5346,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut015(
+    pub const fn gr2_clut0_15_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5356,7 +5356,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut016(
+    pub const fn gr2_clut0_16_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5366,7 +5366,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut017(
+    pub const fn gr2_clut0_17_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5376,7 +5376,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut018(
+    pub const fn gr2_clut0_18_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5386,7 +5386,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut019(
+    pub const fn gr2_clut0_19_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5396,7 +5396,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut020(
+    pub const fn gr2_clut0_20_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5406,7 +5406,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut021(
+    pub const fn gr2_clut0_21_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5416,7 +5416,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut022(
+    pub const fn gr2_clut0_22_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5426,7 +5426,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut023(
+    pub const fn gr2_clut0_23_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5436,7 +5436,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut024(
+    pub const fn gr2_clut0_24_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5446,7 +5446,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut025(
+    pub const fn gr2_clut0_25_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5456,7 +5456,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut026(
+    pub const fn gr2_clut0_26_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5466,7 +5466,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut027(
+    pub const fn gr2_clut0_27_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5476,7 +5476,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut028(
+    pub const fn gr2_clut0_28_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5486,7 +5486,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut029(
+    pub const fn gr2_clut0_29_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5496,7 +5496,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut030(
+    pub const fn gr2_clut0_30_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5506,7 +5506,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut031(
+    pub const fn gr2_clut0_31_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5516,7 +5516,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut032(
+    pub const fn gr2_clut0_32_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5526,7 +5526,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut033(
+    pub const fn gr2_clut0_33_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5536,7 +5536,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut034(
+    pub const fn gr2_clut0_34_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5546,7 +5546,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut035(
+    pub const fn gr2_clut0_35_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5556,7 +5556,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut036(
+    pub const fn gr2_clut0_36_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5566,7 +5566,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut037(
+    pub const fn gr2_clut0_37_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5576,7 +5576,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut038(
+    pub const fn gr2_clut0_38_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5586,7 +5586,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut039(
+    pub const fn gr2_clut0_39_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5596,7 +5596,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut040(
+    pub const fn gr2_clut0_40_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5606,7 +5606,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut041(
+    pub const fn gr2_clut0_41_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5616,7 +5616,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut042(
+    pub const fn gr2_clut0_42_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5626,7 +5626,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut043(
+    pub const fn gr2_clut0_43_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5636,7 +5636,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut044(
+    pub const fn gr2_clut0_44_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5646,7 +5646,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut045(
+    pub const fn gr2_clut0_45_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5656,7 +5656,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut046(
+    pub const fn gr2_clut0_46_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5666,7 +5666,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut047(
+    pub const fn gr2_clut0_47_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5676,7 +5676,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut048(
+    pub const fn gr2_clut0_48_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5686,7 +5686,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut049(
+    pub const fn gr2_clut0_49_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5696,7 +5696,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut050(
+    pub const fn gr2_clut0_50_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5706,7 +5706,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut051(
+    pub const fn gr2_clut0_51_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5716,7 +5716,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut052(
+    pub const fn gr2_clut0_52_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5726,7 +5726,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut053(
+    pub const fn gr2_clut0_53_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5736,7 +5736,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut054(
+    pub const fn gr2_clut0_54_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5746,7 +5746,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut055(
+    pub const fn gr2_clut0_55_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5756,7 +5756,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut056(
+    pub const fn gr2_clut0_56_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5766,7 +5766,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut057(
+    pub const fn gr2_clut0_57_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5776,7 +5776,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut058(
+    pub const fn gr2_clut0_58_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5786,7 +5786,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut059(
+    pub const fn gr2_clut0_59_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5796,7 +5796,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut060(
+    pub const fn gr2_clut0_60_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5806,7 +5806,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut061(
+    pub const fn gr2_clut0_61_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5816,7 +5816,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut062(
+    pub const fn gr2_clut0_62_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5826,7 +5826,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut063(
+    pub const fn gr2_clut0_63_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5836,7 +5836,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut064(
+    pub const fn gr2_clut0_64_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5846,7 +5846,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut065(
+    pub const fn gr2_clut0_65_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5856,7 +5856,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut066(
+    pub const fn gr2_clut0_66_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5866,7 +5866,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut067(
+    pub const fn gr2_clut0_67_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5876,7 +5876,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut068(
+    pub const fn gr2_clut0_68_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5886,7 +5886,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut069(
+    pub const fn gr2_clut0_69_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5896,7 +5896,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut070(
+    pub const fn gr2_clut0_70_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5906,7 +5906,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut071(
+    pub const fn gr2_clut0_71_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5916,7 +5916,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut072(
+    pub const fn gr2_clut0_72_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5926,7 +5926,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut073(
+    pub const fn gr2_clut0_73_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5936,7 +5936,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut074(
+    pub const fn gr2_clut0_74_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5946,7 +5946,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut075(
+    pub const fn gr2_clut0_75_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5956,7 +5956,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut076(
+    pub const fn gr2_clut0_76_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5966,7 +5966,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut077(
+    pub const fn gr2_clut0_77_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5976,7 +5976,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut078(
+    pub const fn gr2_clut0_78_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5986,7 +5986,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut079(
+    pub const fn gr2_clut0_79_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -5996,7 +5996,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut080(
+    pub const fn gr2_clut0_80_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6006,7 +6006,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut081(
+    pub const fn gr2_clut0_81_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6016,7 +6016,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut082(
+    pub const fn gr2_clut0_82_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6026,7 +6026,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut083(
+    pub const fn gr2_clut0_83_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6036,7 +6036,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut084(
+    pub const fn gr2_clut0_84_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6046,7 +6046,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut085(
+    pub const fn gr2_clut0_85_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6056,7 +6056,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut086(
+    pub const fn gr2_clut0_86_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6066,7 +6066,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut087(
+    pub const fn gr2_clut0_87_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6076,7 +6076,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut088(
+    pub const fn gr2_clut0_88_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6086,7 +6086,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut089(
+    pub const fn gr2_clut0_89_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6096,7 +6096,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut090(
+    pub const fn gr2_clut0_90_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6106,7 +6106,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut091(
+    pub const fn gr2_clut0_91_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6116,7 +6116,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut092(
+    pub const fn gr2_clut0_92_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6126,7 +6126,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut093(
+    pub const fn gr2_clut0_93_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6136,7 +6136,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut094(
+    pub const fn gr2_clut0_94_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6146,7 +6146,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut095(
+    pub const fn gr2_clut0_95_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6156,7 +6156,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut096(
+    pub const fn gr2_clut0_96_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6166,7 +6166,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut097(
+    pub const fn gr2_clut0_97_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6176,7 +6176,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut098(
+    pub const fn gr2_clut0_98_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6186,7 +6186,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut099(
+    pub const fn gr2_clut0_99_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6196,7 +6196,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0100(
+    pub const fn gr2_clut0_100_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6206,7 +6206,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0101(
+    pub const fn gr2_clut0_101_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6216,7 +6216,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0102(
+    pub const fn gr2_clut0_102_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6226,7 +6226,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0103(
+    pub const fn gr2_clut0_103_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6236,7 +6236,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0104(
+    pub const fn gr2_clut0_104_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6246,7 +6246,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0105(
+    pub const fn gr2_clut0_105_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6256,7 +6256,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0106(
+    pub const fn gr2_clut0_106_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6266,7 +6266,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0107(
+    pub const fn gr2_clut0_107_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6276,7 +6276,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0108(
+    pub const fn gr2_clut0_108_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6286,7 +6286,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0109(
+    pub const fn gr2_clut0_109_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6296,7 +6296,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0110(
+    pub const fn gr2_clut0_110_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6306,7 +6306,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0111(
+    pub const fn gr2_clut0_111_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6316,7 +6316,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0112(
+    pub const fn gr2_clut0_112_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6326,7 +6326,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0113(
+    pub const fn gr2_clut0_113_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6336,7 +6336,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0114(
+    pub const fn gr2_clut0_114_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6346,7 +6346,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0115(
+    pub const fn gr2_clut0_115_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6356,7 +6356,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0116(
+    pub const fn gr2_clut0_116_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6366,7 +6366,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0117(
+    pub const fn gr2_clut0_117_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6376,7 +6376,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0118(
+    pub const fn gr2_clut0_118_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6386,7 +6386,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0119(
+    pub const fn gr2_clut0_119_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6396,7 +6396,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0120(
+    pub const fn gr2_clut0_120_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6406,7 +6406,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0121(
+    pub const fn gr2_clut0_121_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6416,7 +6416,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0122(
+    pub const fn gr2_clut0_122_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6426,7 +6426,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0123(
+    pub const fn gr2_clut0_123_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6436,7 +6436,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0124(
+    pub const fn gr2_clut0_124_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6446,7 +6446,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0125(
+    pub const fn gr2_clut0_125_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6456,7 +6456,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0126(
+    pub const fn gr2_clut0_126_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6466,7 +6466,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0127(
+    pub const fn gr2_clut0_127_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6476,7 +6476,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0128(
+    pub const fn gr2_clut0_128_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6486,7 +6486,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0129(
+    pub const fn gr2_clut0_129_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6496,7 +6496,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0130(
+    pub const fn gr2_clut0_130_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6506,7 +6506,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0131(
+    pub const fn gr2_clut0_131_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6516,7 +6516,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0132(
+    pub const fn gr2_clut0_132_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6526,7 +6526,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0133(
+    pub const fn gr2_clut0_133_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6536,7 +6536,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0134(
+    pub const fn gr2_clut0_134_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6546,7 +6546,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0135(
+    pub const fn gr2_clut0_135_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6556,7 +6556,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0136(
+    pub const fn gr2_clut0_136_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6566,7 +6566,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0137(
+    pub const fn gr2_clut0_137_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6576,7 +6576,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0138(
+    pub const fn gr2_clut0_138_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6586,7 +6586,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0139(
+    pub const fn gr2_clut0_139_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6596,7 +6596,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0140(
+    pub const fn gr2_clut0_140_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6606,7 +6606,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0141(
+    pub const fn gr2_clut0_141_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6616,7 +6616,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0142(
+    pub const fn gr2_clut0_142_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6626,7 +6626,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0143(
+    pub const fn gr2_clut0_143_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6636,7 +6636,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0144(
+    pub const fn gr2_clut0_144_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6646,7 +6646,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0145(
+    pub const fn gr2_clut0_145_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6656,7 +6656,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0146(
+    pub const fn gr2_clut0_146_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6666,7 +6666,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0147(
+    pub const fn gr2_clut0_147_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6676,7 +6676,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0148(
+    pub const fn gr2_clut0_148_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6686,7 +6686,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0149(
+    pub const fn gr2_clut0_149_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6696,7 +6696,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0150(
+    pub const fn gr2_clut0_150_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6706,7 +6706,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0151(
+    pub const fn gr2_clut0_151_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6716,7 +6716,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0152(
+    pub const fn gr2_clut0_152_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6726,7 +6726,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0153(
+    pub const fn gr2_clut0_153_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6736,7 +6736,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0154(
+    pub const fn gr2_clut0_154_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6746,7 +6746,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0155(
+    pub const fn gr2_clut0_155_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6756,7 +6756,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0156(
+    pub const fn gr2_clut0_156_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6766,7 +6766,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0157(
+    pub const fn gr2_clut0_157_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6776,7 +6776,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0158(
+    pub const fn gr2_clut0_158_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6786,7 +6786,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0159(
+    pub const fn gr2_clut0_159_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6796,7 +6796,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0160(
+    pub const fn gr2_clut0_160_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6806,7 +6806,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0161(
+    pub const fn gr2_clut0_161_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6816,7 +6816,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0162(
+    pub const fn gr2_clut0_162_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6826,7 +6826,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0163(
+    pub const fn gr2_clut0_163_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6836,7 +6836,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0164(
+    pub const fn gr2_clut0_164_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6846,7 +6846,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0165(
+    pub const fn gr2_clut0_165_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6856,7 +6856,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0166(
+    pub const fn gr2_clut0_166_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6866,7 +6866,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0167(
+    pub const fn gr2_clut0_167_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6876,7 +6876,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0168(
+    pub const fn gr2_clut0_168_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6886,7 +6886,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0169(
+    pub const fn gr2_clut0_169_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6896,7 +6896,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0170(
+    pub const fn gr2_clut0_170_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6906,7 +6906,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0171(
+    pub const fn gr2_clut0_171_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6916,7 +6916,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0172(
+    pub const fn gr2_clut0_172_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6926,7 +6926,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0173(
+    pub const fn gr2_clut0_173_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6936,7 +6936,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0174(
+    pub const fn gr2_clut0_174_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6946,7 +6946,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0175(
+    pub const fn gr2_clut0_175_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6956,7 +6956,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0176(
+    pub const fn gr2_clut0_176_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6966,7 +6966,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0177(
+    pub const fn gr2_clut0_177_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6976,7 +6976,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0178(
+    pub const fn gr2_clut0_178_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6986,7 +6986,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0179(
+    pub const fn gr2_clut0_179_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -6996,7 +6996,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0180(
+    pub const fn gr2_clut0_180_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7006,7 +7006,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0181(
+    pub const fn gr2_clut0_181_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7016,7 +7016,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0182(
+    pub const fn gr2_clut0_182_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7026,7 +7026,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0183(
+    pub const fn gr2_clut0_183_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7036,7 +7036,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0184(
+    pub const fn gr2_clut0_184_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7046,7 +7046,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0185(
+    pub const fn gr2_clut0_185_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7056,7 +7056,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0186(
+    pub const fn gr2_clut0_186_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7066,7 +7066,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0187(
+    pub const fn gr2_clut0_187_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7076,7 +7076,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0188(
+    pub const fn gr2_clut0_188_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7086,7 +7086,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0189(
+    pub const fn gr2_clut0_189_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7096,7 +7096,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0190(
+    pub const fn gr2_clut0_190_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7106,7 +7106,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0191(
+    pub const fn gr2_clut0_191_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7116,7 +7116,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0192(
+    pub const fn gr2_clut0_192_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7126,7 +7126,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0193(
+    pub const fn gr2_clut0_193_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7136,7 +7136,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0194(
+    pub const fn gr2_clut0_194_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7146,7 +7146,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0195(
+    pub const fn gr2_clut0_195_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7156,7 +7156,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0196(
+    pub const fn gr2_clut0_196_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7166,7 +7166,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0197(
+    pub const fn gr2_clut0_197_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7176,7 +7176,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0198(
+    pub const fn gr2_clut0_198_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7186,7 +7186,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0199(
+    pub const fn gr2_clut0_199_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7196,7 +7196,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0200(
+    pub const fn gr2_clut0_200_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7206,7 +7206,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0201(
+    pub const fn gr2_clut0_201_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7216,7 +7216,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0202(
+    pub const fn gr2_clut0_202_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7226,7 +7226,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0203(
+    pub const fn gr2_clut0_203_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7236,7 +7236,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0204(
+    pub const fn gr2_clut0_204_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7246,7 +7246,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0205(
+    pub const fn gr2_clut0_205_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7256,7 +7256,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0206(
+    pub const fn gr2_clut0_206_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7266,7 +7266,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0207(
+    pub const fn gr2_clut0_207_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7276,7 +7276,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0208(
+    pub const fn gr2_clut0_208_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7286,7 +7286,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0209(
+    pub const fn gr2_clut0_209_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7296,7 +7296,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0210(
+    pub const fn gr2_clut0_210_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7306,7 +7306,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0211(
+    pub const fn gr2_clut0_211_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7316,7 +7316,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0212(
+    pub const fn gr2_clut0_212_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7326,7 +7326,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0213(
+    pub const fn gr2_clut0_213_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7336,7 +7336,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0214(
+    pub const fn gr2_clut0_214_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7346,7 +7346,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0215(
+    pub const fn gr2_clut0_215_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7356,7 +7356,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0216(
+    pub const fn gr2_clut0_216_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7366,7 +7366,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0217(
+    pub const fn gr2_clut0_217_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7376,7 +7376,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0218(
+    pub const fn gr2_clut0_218_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7386,7 +7386,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0219(
+    pub const fn gr2_clut0_219_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7396,7 +7396,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0220(
+    pub const fn gr2_clut0_220_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7406,7 +7406,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0221(
+    pub const fn gr2_clut0_221_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7416,7 +7416,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0222(
+    pub const fn gr2_clut0_222_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7426,7 +7426,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0223(
+    pub const fn gr2_clut0_223_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7436,7 +7436,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0224(
+    pub const fn gr2_clut0_224_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7446,7 +7446,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0225(
+    pub const fn gr2_clut0_225_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7456,7 +7456,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0226(
+    pub const fn gr2_clut0_226_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7466,7 +7466,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0227(
+    pub const fn gr2_clut0_227_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7476,7 +7476,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0228(
+    pub const fn gr2_clut0_228_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7486,7 +7486,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0229(
+    pub const fn gr2_clut0_229_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7496,7 +7496,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0230(
+    pub const fn gr2_clut0_230_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7506,7 +7506,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0231(
+    pub const fn gr2_clut0_231_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7516,7 +7516,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0232(
+    pub const fn gr2_clut0_232_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7526,7 +7526,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0233(
+    pub const fn gr2_clut0_233_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7536,7 +7536,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0234(
+    pub const fn gr2_clut0_234_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7546,7 +7546,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0235(
+    pub const fn gr2_clut0_235_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7556,7 +7556,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0236(
+    pub const fn gr2_clut0_236_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7566,7 +7566,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0237(
+    pub const fn gr2_clut0_237_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7576,7 +7576,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0238(
+    pub const fn gr2_clut0_238_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7586,7 +7586,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0239(
+    pub const fn gr2_clut0_239_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7596,7 +7596,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0240(
+    pub const fn gr2_clut0_240_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7606,7 +7606,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0241(
+    pub const fn gr2_clut0_241_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7616,7 +7616,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0242(
+    pub const fn gr2_clut0_242_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7626,7 +7626,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0243(
+    pub const fn gr2_clut0_243_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7636,7 +7636,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0244(
+    pub const fn gr2_clut0_244_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7646,7 +7646,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0245(
+    pub const fn gr2_clut0_245_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7656,7 +7656,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0246(
+    pub const fn gr2_clut0_246_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7666,7 +7666,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0247(
+    pub const fn gr2_clut0_247_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7676,7 +7676,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0248(
+    pub const fn gr2_clut0_248_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7686,7 +7686,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0249(
+    pub const fn gr2_clut0_249_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7696,7 +7696,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0250(
+    pub const fn gr2_clut0_250_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7706,7 +7706,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0251(
+    pub const fn gr2_clut0_251_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7716,7 +7716,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0252(
+    pub const fn gr2_clut0_252_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7726,7 +7726,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0253(
+    pub const fn gr2_clut0_253_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7736,7 +7736,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0254(
+    pub const fn gr2_clut0_254_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7746,7 +7746,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut0255(
+    pub const fn gr2_clut0_255_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut0_SPEC, crate::common::RW> {
         unsafe {
@@ -7756,7 +7756,7 @@ impl super::Glcdc {
         }
     }
 
-    #[doc = "Color Palette"]
+    #[doc = "Color Palette 1 Plane for Graphics 2 Plane"]
     #[inline(always)]
     pub const fn gr2_clut1(
         &self,
@@ -7770,7 +7770,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut10(
+    pub const fn gr2_clut1_0_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7780,7 +7780,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut11(
+    pub const fn gr2_clut1_1_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7790,7 +7790,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut12(
+    pub const fn gr2_clut1_2_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7800,7 +7800,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut13(
+    pub const fn gr2_clut1_3_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7810,7 +7810,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut14(
+    pub const fn gr2_clut1_4_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7820,7 +7820,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut15(
+    pub const fn gr2_clut1_5_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7830,7 +7830,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut16(
+    pub const fn gr2_clut1_6_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7840,7 +7840,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut17(
+    pub const fn gr2_clut1_7_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7850,7 +7850,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut18(
+    pub const fn gr2_clut1_8_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7860,7 +7860,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut19(
+    pub const fn gr2_clut1_9_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7870,7 +7870,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut110(
+    pub const fn gr2_clut1_10_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7880,7 +7880,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut111(
+    pub const fn gr2_clut1_11_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7890,7 +7890,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut112(
+    pub const fn gr2_clut1_12_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7900,7 +7900,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut113(
+    pub const fn gr2_clut1_13_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7910,7 +7910,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut114(
+    pub const fn gr2_clut1_14_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7920,7 +7920,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut115(
+    pub const fn gr2_clut1_15_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7930,7 +7930,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut116(
+    pub const fn gr2_clut1_16_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7940,7 +7940,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut117(
+    pub const fn gr2_clut1_17_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7950,7 +7950,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut118(
+    pub const fn gr2_clut1_18_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7960,7 +7960,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut119(
+    pub const fn gr2_clut1_19_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7970,7 +7970,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut120(
+    pub const fn gr2_clut1_20_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7980,7 +7980,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut121(
+    pub const fn gr2_clut1_21_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -7990,7 +7990,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut122(
+    pub const fn gr2_clut1_22_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8000,7 +8000,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut123(
+    pub const fn gr2_clut1_23_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8010,7 +8010,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut124(
+    pub const fn gr2_clut1_24_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8020,7 +8020,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut125(
+    pub const fn gr2_clut1_25_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8030,7 +8030,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut126(
+    pub const fn gr2_clut1_26_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8040,7 +8040,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut127(
+    pub const fn gr2_clut1_27_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8050,7 +8050,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut128(
+    pub const fn gr2_clut1_28_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8060,7 +8060,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut129(
+    pub const fn gr2_clut1_29_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8070,7 +8070,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut130(
+    pub const fn gr2_clut1_30_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8080,7 +8080,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut131(
+    pub const fn gr2_clut1_31_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8090,7 +8090,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut132(
+    pub const fn gr2_clut1_32_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8100,7 +8100,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut133(
+    pub const fn gr2_clut1_33_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8110,7 +8110,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut134(
+    pub const fn gr2_clut1_34_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8120,7 +8120,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut135(
+    pub const fn gr2_clut1_35_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8130,7 +8130,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut136(
+    pub const fn gr2_clut1_36_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8140,7 +8140,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut137(
+    pub const fn gr2_clut1_37_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8150,7 +8150,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut138(
+    pub const fn gr2_clut1_38_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8160,7 +8160,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut139(
+    pub const fn gr2_clut1_39_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8170,7 +8170,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut140(
+    pub const fn gr2_clut1_40_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8180,7 +8180,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut141(
+    pub const fn gr2_clut1_41_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8190,7 +8190,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut142(
+    pub const fn gr2_clut1_42_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8200,7 +8200,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut143(
+    pub const fn gr2_clut1_43_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8210,7 +8210,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut144(
+    pub const fn gr2_clut1_44_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8220,7 +8220,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut145(
+    pub const fn gr2_clut1_45_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8230,7 +8230,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut146(
+    pub const fn gr2_clut1_46_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8240,7 +8240,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut147(
+    pub const fn gr2_clut1_47_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8250,7 +8250,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut148(
+    pub const fn gr2_clut1_48_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8260,7 +8260,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut149(
+    pub const fn gr2_clut1_49_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8270,7 +8270,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut150(
+    pub const fn gr2_clut1_50_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8280,7 +8280,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut151(
+    pub const fn gr2_clut1_51_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8290,7 +8290,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut152(
+    pub const fn gr2_clut1_52_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8300,7 +8300,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut153(
+    pub const fn gr2_clut1_53_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8310,7 +8310,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut154(
+    pub const fn gr2_clut1_54_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8320,7 +8320,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut155(
+    pub const fn gr2_clut1_55_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8330,7 +8330,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut156(
+    pub const fn gr2_clut1_56_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8340,7 +8340,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut157(
+    pub const fn gr2_clut1_57_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8350,7 +8350,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut158(
+    pub const fn gr2_clut1_58_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8360,7 +8360,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut159(
+    pub const fn gr2_clut1_59_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8370,7 +8370,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut160(
+    pub const fn gr2_clut1_60_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8380,7 +8380,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut161(
+    pub const fn gr2_clut1_61_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8390,7 +8390,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut162(
+    pub const fn gr2_clut1_62_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8400,7 +8400,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut163(
+    pub const fn gr2_clut1_63_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8410,7 +8410,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut164(
+    pub const fn gr2_clut1_64_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8420,7 +8420,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut165(
+    pub const fn gr2_clut1_65_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8430,7 +8430,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut166(
+    pub const fn gr2_clut1_66_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8440,7 +8440,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut167(
+    pub const fn gr2_clut1_67_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8450,7 +8450,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut168(
+    pub const fn gr2_clut1_68_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8460,7 +8460,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut169(
+    pub const fn gr2_clut1_69_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8470,7 +8470,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut170(
+    pub const fn gr2_clut1_70_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8480,7 +8480,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut171(
+    pub const fn gr2_clut1_71_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8490,7 +8490,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut172(
+    pub const fn gr2_clut1_72_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8500,7 +8500,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut173(
+    pub const fn gr2_clut1_73_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8510,7 +8510,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut174(
+    pub const fn gr2_clut1_74_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8520,7 +8520,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut175(
+    pub const fn gr2_clut1_75_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8530,7 +8530,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut176(
+    pub const fn gr2_clut1_76_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8540,7 +8540,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut177(
+    pub const fn gr2_clut1_77_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8550,7 +8550,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut178(
+    pub const fn gr2_clut1_78_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8560,7 +8560,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut179(
+    pub const fn gr2_clut1_79_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8570,7 +8570,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut180(
+    pub const fn gr2_clut1_80_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8580,7 +8580,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut181(
+    pub const fn gr2_clut1_81_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8590,7 +8590,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut182(
+    pub const fn gr2_clut1_82_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8600,7 +8600,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut183(
+    pub const fn gr2_clut1_83_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8610,7 +8610,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut184(
+    pub const fn gr2_clut1_84_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8620,7 +8620,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut185(
+    pub const fn gr2_clut1_85_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8630,7 +8630,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut186(
+    pub const fn gr2_clut1_86_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8640,7 +8640,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut187(
+    pub const fn gr2_clut1_87_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8650,7 +8650,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut188(
+    pub const fn gr2_clut1_88_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8660,7 +8660,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut189(
+    pub const fn gr2_clut1_89_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8670,7 +8670,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut190(
+    pub const fn gr2_clut1_90_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8680,7 +8680,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut191(
+    pub const fn gr2_clut1_91_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8690,7 +8690,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut192(
+    pub const fn gr2_clut1_92_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8700,7 +8700,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut193(
+    pub const fn gr2_clut1_93_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8710,7 +8710,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut194(
+    pub const fn gr2_clut1_94_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8720,7 +8720,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut195(
+    pub const fn gr2_clut1_95_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8730,7 +8730,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut196(
+    pub const fn gr2_clut1_96_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8740,7 +8740,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut197(
+    pub const fn gr2_clut1_97_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8750,7 +8750,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut198(
+    pub const fn gr2_clut1_98_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8760,7 +8760,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut199(
+    pub const fn gr2_clut1_99_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8770,7 +8770,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1100(
+    pub const fn gr2_clut1_100_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8780,7 +8780,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1101(
+    pub const fn gr2_clut1_101_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8790,7 +8790,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1102(
+    pub const fn gr2_clut1_102_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8800,7 +8800,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1103(
+    pub const fn gr2_clut1_103_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8810,7 +8810,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1104(
+    pub const fn gr2_clut1_104_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8820,7 +8820,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1105(
+    pub const fn gr2_clut1_105_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8830,7 +8830,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1106(
+    pub const fn gr2_clut1_106_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8840,7 +8840,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1107(
+    pub const fn gr2_clut1_107_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8850,7 +8850,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1108(
+    pub const fn gr2_clut1_108_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8860,7 +8860,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1109(
+    pub const fn gr2_clut1_109_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8870,7 +8870,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1110(
+    pub const fn gr2_clut1_110_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8880,7 +8880,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1111(
+    pub const fn gr2_clut1_111_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8890,7 +8890,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1112(
+    pub const fn gr2_clut1_112_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8900,7 +8900,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1113(
+    pub const fn gr2_clut1_113_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8910,7 +8910,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1114(
+    pub const fn gr2_clut1_114_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8920,7 +8920,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1115(
+    pub const fn gr2_clut1_115_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8930,7 +8930,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1116(
+    pub const fn gr2_clut1_116_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8940,7 +8940,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1117(
+    pub const fn gr2_clut1_117_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8950,7 +8950,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1118(
+    pub const fn gr2_clut1_118_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8960,7 +8960,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1119(
+    pub const fn gr2_clut1_119_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8970,7 +8970,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1120(
+    pub const fn gr2_clut1_120_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8980,7 +8980,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1121(
+    pub const fn gr2_clut1_121_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -8990,7 +8990,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1122(
+    pub const fn gr2_clut1_122_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9000,7 +9000,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1123(
+    pub const fn gr2_clut1_123_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9010,7 +9010,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1124(
+    pub const fn gr2_clut1_124_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9020,7 +9020,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1125(
+    pub const fn gr2_clut1_125_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9030,7 +9030,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1126(
+    pub const fn gr2_clut1_126_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9040,7 +9040,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1127(
+    pub const fn gr2_clut1_127_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9050,7 +9050,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1128(
+    pub const fn gr2_clut1_128_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9060,7 +9060,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1129(
+    pub const fn gr2_clut1_129_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9070,7 +9070,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1130(
+    pub const fn gr2_clut1_130_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9080,7 +9080,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1131(
+    pub const fn gr2_clut1_131_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9090,7 +9090,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1132(
+    pub const fn gr2_clut1_132_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9100,7 +9100,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1133(
+    pub const fn gr2_clut1_133_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9110,7 +9110,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1134(
+    pub const fn gr2_clut1_134_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9120,7 +9120,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1135(
+    pub const fn gr2_clut1_135_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9130,7 +9130,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1136(
+    pub const fn gr2_clut1_136_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9140,7 +9140,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1137(
+    pub const fn gr2_clut1_137_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9150,7 +9150,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1138(
+    pub const fn gr2_clut1_138_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9160,7 +9160,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1139(
+    pub const fn gr2_clut1_139_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9170,7 +9170,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1140(
+    pub const fn gr2_clut1_140_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9180,7 +9180,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1141(
+    pub const fn gr2_clut1_141_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9190,7 +9190,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1142(
+    pub const fn gr2_clut1_142_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9200,7 +9200,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1143(
+    pub const fn gr2_clut1_143_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9210,7 +9210,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1144(
+    pub const fn gr2_clut1_144_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9220,7 +9220,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1145(
+    pub const fn gr2_clut1_145_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9230,7 +9230,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1146(
+    pub const fn gr2_clut1_146_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9240,7 +9240,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1147(
+    pub const fn gr2_clut1_147_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9250,7 +9250,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1148(
+    pub const fn gr2_clut1_148_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9260,7 +9260,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1149(
+    pub const fn gr2_clut1_149_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9270,7 +9270,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1150(
+    pub const fn gr2_clut1_150_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9280,7 +9280,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1151(
+    pub const fn gr2_clut1_151_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9290,7 +9290,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1152(
+    pub const fn gr2_clut1_152_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9300,7 +9300,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1153(
+    pub const fn gr2_clut1_153_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9310,7 +9310,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1154(
+    pub const fn gr2_clut1_154_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9320,7 +9320,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1155(
+    pub const fn gr2_clut1_155_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9330,7 +9330,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1156(
+    pub const fn gr2_clut1_156_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9340,7 +9340,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1157(
+    pub const fn gr2_clut1_157_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9350,7 +9350,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1158(
+    pub const fn gr2_clut1_158_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9360,7 +9360,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1159(
+    pub const fn gr2_clut1_159_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9370,7 +9370,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1160(
+    pub const fn gr2_clut1_160_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9380,7 +9380,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1161(
+    pub const fn gr2_clut1_161_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9390,7 +9390,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1162(
+    pub const fn gr2_clut1_162_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9400,7 +9400,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1163(
+    pub const fn gr2_clut1_163_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9410,7 +9410,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1164(
+    pub const fn gr2_clut1_164_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9420,7 +9420,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1165(
+    pub const fn gr2_clut1_165_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9430,7 +9430,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1166(
+    pub const fn gr2_clut1_166_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9440,7 +9440,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1167(
+    pub const fn gr2_clut1_167_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9450,7 +9450,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1168(
+    pub const fn gr2_clut1_168_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9460,7 +9460,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1169(
+    pub const fn gr2_clut1_169_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9470,7 +9470,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1170(
+    pub const fn gr2_clut1_170_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9480,7 +9480,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1171(
+    pub const fn gr2_clut1_171_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9490,7 +9490,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1172(
+    pub const fn gr2_clut1_172_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9500,7 +9500,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1173(
+    pub const fn gr2_clut1_173_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9510,7 +9510,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1174(
+    pub const fn gr2_clut1_174_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9520,7 +9520,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1175(
+    pub const fn gr2_clut1_175_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9530,7 +9530,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1176(
+    pub const fn gr2_clut1_176_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9540,7 +9540,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1177(
+    pub const fn gr2_clut1_177_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9550,7 +9550,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1178(
+    pub const fn gr2_clut1_178_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9560,7 +9560,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1179(
+    pub const fn gr2_clut1_179_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9570,7 +9570,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1180(
+    pub const fn gr2_clut1_180_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9580,7 +9580,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1181(
+    pub const fn gr2_clut1_181_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9590,7 +9590,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1182(
+    pub const fn gr2_clut1_182_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9600,7 +9600,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1183(
+    pub const fn gr2_clut1_183_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9610,7 +9610,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1184(
+    pub const fn gr2_clut1_184_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9620,7 +9620,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1185(
+    pub const fn gr2_clut1_185_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9630,7 +9630,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1186(
+    pub const fn gr2_clut1_186_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9640,7 +9640,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1187(
+    pub const fn gr2_clut1_187_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9650,7 +9650,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1188(
+    pub const fn gr2_clut1_188_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9660,7 +9660,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1189(
+    pub const fn gr2_clut1_189_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9670,7 +9670,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1190(
+    pub const fn gr2_clut1_190_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9680,7 +9680,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1191(
+    pub const fn gr2_clut1_191_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9690,7 +9690,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1192(
+    pub const fn gr2_clut1_192_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9700,7 +9700,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1193(
+    pub const fn gr2_clut1_193_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9710,7 +9710,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1194(
+    pub const fn gr2_clut1_194_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9720,7 +9720,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1195(
+    pub const fn gr2_clut1_195_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9730,7 +9730,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1196(
+    pub const fn gr2_clut1_196_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9740,7 +9740,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1197(
+    pub const fn gr2_clut1_197_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9750,7 +9750,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1198(
+    pub const fn gr2_clut1_198_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9760,7 +9760,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1199(
+    pub const fn gr2_clut1_199_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9770,7 +9770,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1200(
+    pub const fn gr2_clut1_200_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9780,7 +9780,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1201(
+    pub const fn gr2_clut1_201_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9790,7 +9790,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1202(
+    pub const fn gr2_clut1_202_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9800,7 +9800,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1203(
+    pub const fn gr2_clut1_203_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9810,7 +9810,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1204(
+    pub const fn gr2_clut1_204_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9820,7 +9820,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1205(
+    pub const fn gr2_clut1_205_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9830,7 +9830,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1206(
+    pub const fn gr2_clut1_206_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9840,7 +9840,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1207(
+    pub const fn gr2_clut1_207_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9850,7 +9850,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1208(
+    pub const fn gr2_clut1_208_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9860,7 +9860,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1209(
+    pub const fn gr2_clut1_209_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9870,7 +9870,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1210(
+    pub const fn gr2_clut1_210_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9880,7 +9880,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1211(
+    pub const fn gr2_clut1_211_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9890,7 +9890,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1212(
+    pub const fn gr2_clut1_212_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9900,7 +9900,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1213(
+    pub const fn gr2_clut1_213_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9910,7 +9910,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1214(
+    pub const fn gr2_clut1_214_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9920,7 +9920,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1215(
+    pub const fn gr2_clut1_215_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9930,7 +9930,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1216(
+    pub const fn gr2_clut1_216_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9940,7 +9940,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1217(
+    pub const fn gr2_clut1_217_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9950,7 +9950,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1218(
+    pub const fn gr2_clut1_218_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9960,7 +9960,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1219(
+    pub const fn gr2_clut1_219_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9970,7 +9970,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1220(
+    pub const fn gr2_clut1_220_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9980,7 +9980,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1221(
+    pub const fn gr2_clut1_221_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -9990,7 +9990,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1222(
+    pub const fn gr2_clut1_222_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10000,7 +10000,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1223(
+    pub const fn gr2_clut1_223_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10010,7 +10010,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1224(
+    pub const fn gr2_clut1_224_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10020,7 +10020,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1225(
+    pub const fn gr2_clut1_225_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10030,7 +10030,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1226(
+    pub const fn gr2_clut1_226_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10040,7 +10040,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1227(
+    pub const fn gr2_clut1_227_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10050,7 +10050,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1228(
+    pub const fn gr2_clut1_228_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10060,7 +10060,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1229(
+    pub const fn gr2_clut1_229_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10070,7 +10070,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1230(
+    pub const fn gr2_clut1_230_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10080,7 +10080,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1231(
+    pub const fn gr2_clut1_231_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10090,7 +10090,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1232(
+    pub const fn gr2_clut1_232_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10100,7 +10100,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1233(
+    pub const fn gr2_clut1_233_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10110,7 +10110,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1234(
+    pub const fn gr2_clut1_234_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10120,7 +10120,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1235(
+    pub const fn gr2_clut1_235_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10130,7 +10130,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1236(
+    pub const fn gr2_clut1_236_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10140,7 +10140,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1237(
+    pub const fn gr2_clut1_237_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10150,7 +10150,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1238(
+    pub const fn gr2_clut1_238_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10160,7 +10160,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1239(
+    pub const fn gr2_clut1_239_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10170,7 +10170,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1240(
+    pub const fn gr2_clut1_240_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10180,7 +10180,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1241(
+    pub const fn gr2_clut1_241_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10190,7 +10190,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1242(
+    pub const fn gr2_clut1_242_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10200,7 +10200,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1243(
+    pub const fn gr2_clut1_243_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10210,7 +10210,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1244(
+    pub const fn gr2_clut1_244_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10220,7 +10220,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1245(
+    pub const fn gr2_clut1_245_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10230,7 +10230,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1246(
+    pub const fn gr2_clut1_246_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10240,7 +10240,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1247(
+    pub const fn gr2_clut1_247_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10250,7 +10250,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1248(
+    pub const fn gr2_clut1_248_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10260,7 +10260,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1249(
+    pub const fn gr2_clut1_249_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10270,7 +10270,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1250(
+    pub const fn gr2_clut1_250_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10280,7 +10280,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1251(
+    pub const fn gr2_clut1_251_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10290,7 +10290,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1252(
+    pub const fn gr2_clut1_252_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10300,7 +10300,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1253(
+    pub const fn gr2_clut1_253_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10310,7 +10310,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1254(
+    pub const fn gr2_clut1_254_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10320,7 +10320,7 @@ impl super::Glcdc {
         }
     }
     #[inline(always)]
-    pub const fn gr2_clut1255(
+    pub const fn gr2_clut1_255_(
         &self,
     ) -> &'static crate::common::Reg<self::Gr2Clut1_SPEC, crate::common::RW> {
         unsafe {
@@ -10408,7 +10408,7 @@ impl super::Glcdc {
         }
     }
 
-    #[doc = "Graphics %s Register Update Control Register"]
+    #[doc = "Graphics %s  Register Update Control Register"]
     #[inline(always)]
     pub const fn gr_ven(
         &self,
@@ -11050,14 +11050,46 @@ impl super::Glcdc {
         }
     }
 
-    #[doc = "Gamma G Register Update Control Register"]
+    #[doc = "Gamma %s Register Update Control Register"]
+    #[inline(always)]
+    pub const fn gam_latch(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::GamLatch_SPEC, crate::common::RW>,
+        3,
+        0x40,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1300usize))
+        }
+    }
     #[inline(always)]
     pub const fn gamg_latch(
         &self,
-    ) -> &'static crate::common::Reg<self::GamgLatch_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::GamLatch_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::GamgLatch_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4864usize),
+            crate::common::Reg::<self::GamLatch_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1300usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn gamb_latch(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamLatch_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamLatch_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1340usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn gamr_latch(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamLatch_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamLatch_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1380usize),
             )
         }
     }
@@ -11072,494 +11104,574 @@ impl super::Glcdc {
         }
     }
 
-    #[doc = "Gamma G Correction Block Table Setting Register 1"]
+    #[doc = "Gamma %s Correction Block Table Setting Register 1"]
+    #[inline(always)]
+    pub const fn gam_lut1(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::GamLut1_SPEC, crate::common::RW>,
+        3,
+        0x40,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1308usize))
+        }
+    }
     #[inline(always)]
     pub const fn gamg_lut1(
         &self,
-    ) -> &'static crate::common::Reg<self::GamgLut1_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::GamLut1_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::GamgLut1_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4872usize),
+            crate::common::Reg::<self::GamLut1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1308usize),
             )
         }
     }
-
-    #[doc = "Gamma G Correction Block Table Setting Register 2"]
-    #[inline(always)]
-    pub const fn gamg_lut2(
-        &self,
-    ) -> &'static crate::common::Reg<self::GamgLut2_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GamgLut2_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4876usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma G Correction Block Table Setting Register 3"]
-    #[inline(always)]
-    pub const fn gamg_lut3(
-        &self,
-    ) -> &'static crate::common::Reg<self::GamgLut3_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GamgLut3_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4880usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma G Correction Block Table Setting Register 4"]
-    #[inline(always)]
-    pub const fn gamg_lut4(
-        &self,
-    ) -> &'static crate::common::Reg<self::GamgLut4_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GamgLut4_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4884usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma G Correction Block Table Setting Register 5"]
-    #[inline(always)]
-    pub const fn gamg_lut5(
-        &self,
-    ) -> &'static crate::common::Reg<self::GamgLut5_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GamgLut5_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4888usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma G Correction Block Table Setting Register 6"]
-    #[inline(always)]
-    pub const fn gamg_lut6(
-        &self,
-    ) -> &'static crate::common::Reg<self::GamgLut6_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GamgLut6_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4892usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma G Correction Block Table Setting Register 7"]
-    #[inline(always)]
-    pub const fn gamg_lut7(
-        &self,
-    ) -> &'static crate::common::Reg<self::GamgLut7_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GamgLut7_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4896usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma G Correction Block Table Setting Register 8"]
-    #[inline(always)]
-    pub const fn gamg_lut8(
-        &self,
-    ) -> &'static crate::common::Reg<self::GamgLut8_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GamgLut8_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4900usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma G Correction Block Area Setting Register 1"]
-    #[inline(always)]
-    pub const fn gamg_area1(
-        &self,
-    ) -> &'static crate::common::Reg<self::GamgArea1_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GamgArea1_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4904usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma G Correction Block Area Setting Register 2"]
-    #[inline(always)]
-    pub const fn gamg_area2(
-        &self,
-    ) -> &'static crate::common::Reg<self::GamgArea2_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GamgArea2_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4908usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma G Correction Block Area Setting Register 3"]
-    #[inline(always)]
-    pub const fn gamg_area3(
-        &self,
-    ) -> &'static crate::common::Reg<self::GamgArea3_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GamgArea3_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4912usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma G Correction Block Area Setting Register 4"]
-    #[inline(always)]
-    pub const fn gamg_area4(
-        &self,
-    ) -> &'static crate::common::Reg<self::GamgArea4_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GamgArea4_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4916usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma G Correction Block Area Setting Register 5"]
-    #[inline(always)]
-    pub const fn gamg_area5(
-        &self,
-    ) -> &'static crate::common::Reg<self::GamgArea5_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GamgArea5_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4920usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma B Register Update Control Register"]
-    #[inline(always)]
-    pub const fn gamb_latch(
-        &self,
-    ) -> &'static crate::common::Reg<self::GambLatch_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GambLatch_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4928usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma B Correction Block Table Setting Register 1"]
     #[inline(always)]
     pub const fn gamb_lut1(
         &self,
-    ) -> &'static crate::common::Reg<self::GambLut1_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::GamLut1_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::GambLut1_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4936usize),
+            crate::common::Reg::<self::GamLut1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1348usize),
             )
         }
     }
-
-    #[doc = "Gamma B Correction Block Table Setting Register 2"]
-    #[inline(always)]
-    pub const fn gamb_lut2(
-        &self,
-    ) -> &'static crate::common::Reg<self::GambLut2_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GambLut2_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4940usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma B Correction Block Table Setting Register 3"]
-    #[inline(always)]
-    pub const fn gamb_lut3(
-        &self,
-    ) -> &'static crate::common::Reg<self::GambLut3_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GambLut3_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4944usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma B Correction Block Table Setting Register 4"]
-    #[inline(always)]
-    pub const fn gamb_lut4(
-        &self,
-    ) -> &'static crate::common::Reg<self::GambLut4_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GambLut4_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4948usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma B Correction Block Table Setting Register 5"]
-    #[inline(always)]
-    pub const fn gamb_lut5(
-        &self,
-    ) -> &'static crate::common::Reg<self::GambLut5_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GambLut5_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4952usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma B Correction Block Table Setting Register 6"]
-    #[inline(always)]
-    pub const fn gamb_lut6(
-        &self,
-    ) -> &'static crate::common::Reg<self::GambLut6_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GambLut6_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4956usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma B Correction Block Table Setting Register 7"]
-    #[inline(always)]
-    pub const fn gamb_lut7(
-        &self,
-    ) -> &'static crate::common::Reg<self::GambLut7_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GambLut7_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4960usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma B Correction Block Table Setting Register 8"]
-    #[inline(always)]
-    pub const fn gamb_lut8(
-        &self,
-    ) -> &'static crate::common::Reg<self::GambLut8_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GambLut8_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4964usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma B Correction Block Area Setting Register 1"]
-    #[inline(always)]
-    pub const fn gamb_area1(
-        &self,
-    ) -> &'static crate::common::Reg<self::GambArea1_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GambArea1_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4968usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma B Correction Block Area Setting Register 2"]
-    #[inline(always)]
-    pub const fn gamb_area2(
-        &self,
-    ) -> &'static crate::common::Reg<self::GambArea2_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GambArea2_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4972usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma B Correction Block Area Setting Register 3"]
-    #[inline(always)]
-    pub const fn gamb_area3(
-        &self,
-    ) -> &'static crate::common::Reg<self::GambArea3_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GambArea3_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4976usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma B Correction Block Area Setting Register 4"]
-    #[inline(always)]
-    pub const fn gamb_area4(
-        &self,
-    ) -> &'static crate::common::Reg<self::GambArea4_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GambArea4_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4980usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma B Correction Block Area Setting Register 5"]
-    #[inline(always)]
-    pub const fn gamb_area5(
-        &self,
-    ) -> &'static crate::common::Reg<self::GambArea5_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GambArea5_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4984usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma R Register Update Control Register"]
-    #[inline(always)]
-    pub const fn gamr_latch(
-        &self,
-    ) -> &'static crate::common::Reg<self::GamrLatch_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::GamrLatch_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4992usize),
-            )
-        }
-    }
-
-    #[doc = "Gamma R Correction Block Table Setting Register 1"]
     #[inline(always)]
     pub const fn gamr_lut1(
         &self,
-    ) -> &'static crate::common::Reg<self::GamrLut1_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::GamLut1_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::GamrLut1_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5000usize),
+            crate::common::Reg::<self::GamLut1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1388usize),
             )
         }
     }
 
-    #[doc = "Gamma R Correction Block Table Setting Register 2"]
+    #[doc = "Gamma %s Correction Block Table Setting Register 2"]
+    #[inline(always)]
+    pub const fn gam_lut2(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::GamLut2_SPEC, crate::common::RW>,
+        3,
+        0x40,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x130cusize))
+        }
+    }
+    #[inline(always)]
+    pub const fn gamg_lut2(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamLut2_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamLut2_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x130cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn gamb_lut2(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamLut2_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamLut2_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x134cusize),
+            )
+        }
+    }
     #[inline(always)]
     pub const fn gamr_lut2(
         &self,
-    ) -> &'static crate::common::Reg<self::GamrLut2_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::GamLut2_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::GamrLut2_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5004usize),
+            crate::common::Reg::<self::GamLut2_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x138cusize),
             )
         }
     }
 
-    #[doc = "Gamma R Correction Block Table Setting Register 3"]
+    #[doc = "Gamma %s Correction Block Table Setting Register 3"]
+    #[inline(always)]
+    pub const fn gam_lut3(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::GamLut3_SPEC, crate::common::RW>,
+        3,
+        0x40,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1310usize))
+        }
+    }
+    #[inline(always)]
+    pub const fn gamg_lut3(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamLut3_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamLut3_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1310usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn gamb_lut3(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamLut3_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamLut3_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1350usize),
+            )
+        }
+    }
     #[inline(always)]
     pub const fn gamr_lut3(
         &self,
-    ) -> &'static crate::common::Reg<self::GamrLut3_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::GamLut3_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::GamrLut3_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5008usize),
+            crate::common::Reg::<self::GamLut3_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1390usize),
             )
         }
     }
 
-    #[doc = "Gamma R Correction Block Table Setting Register 4"]
+    #[doc = "Gamma %s Correction Block Table Setting Register 4"]
+    #[inline(always)]
+    pub const fn gam_lut4(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::GamLut4_SPEC, crate::common::RW>,
+        3,
+        0x40,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1314usize))
+        }
+    }
+    #[inline(always)]
+    pub const fn gamg_lut4(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamLut4_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamLut4_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1314usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn gamb_lut4(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamLut4_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamLut4_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1354usize),
+            )
+        }
+    }
     #[inline(always)]
     pub const fn gamr_lut4(
         &self,
-    ) -> &'static crate::common::Reg<self::GamrLut4_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::GamLut4_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::GamrLut4_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5012usize),
+            crate::common::Reg::<self::GamLut4_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1394usize),
             )
         }
     }
 
-    #[doc = "Gamma R Correction Block Table Setting Register 5"]
+    #[doc = "Gamma %s Correction Block Table Setting Register 5"]
+    #[inline(always)]
+    pub const fn gam_lut5(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::GamLut5_SPEC, crate::common::RW>,
+        3,
+        0x40,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1318usize))
+        }
+    }
+    #[inline(always)]
+    pub const fn gamg_lut5(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamLut5_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamLut5_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1318usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn gamb_lut5(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamLut5_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamLut5_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1358usize),
+            )
+        }
+    }
     #[inline(always)]
     pub const fn gamr_lut5(
         &self,
-    ) -> &'static crate::common::Reg<self::GamrLut5_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::GamLut5_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::GamrLut5_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5016usize),
+            crate::common::Reg::<self::GamLut5_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1398usize),
             )
         }
     }
 
-    #[doc = "Gamma R Correction Block Table Setting Register 6"]
+    #[doc = "Gamma %s Correction Block Table Setting Register 6"]
+    #[inline(always)]
+    pub const fn gam_lut6(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::GamLut6_SPEC, crate::common::RW>,
+        3,
+        0x40,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x131cusize))
+        }
+    }
+    #[inline(always)]
+    pub const fn gamg_lut6(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamLut6_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamLut6_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x131cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn gamb_lut6(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamLut6_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamLut6_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x135cusize),
+            )
+        }
+    }
     #[inline(always)]
     pub const fn gamr_lut6(
         &self,
-    ) -> &'static crate::common::Reg<self::GamrLut6_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::GamLut6_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::GamrLut6_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5020usize),
+            crate::common::Reg::<self::GamLut6_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x139cusize),
             )
         }
     }
 
-    #[doc = "Gamma R Correction Block Table Setting Register 7"]
+    #[doc = "Gamma %s Correction Block Table Setting Register 7"]
+    #[inline(always)]
+    pub const fn gam_lut7(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::GamLut7_SPEC, crate::common::RW>,
+        3,
+        0x40,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1320usize))
+        }
+    }
+    #[inline(always)]
+    pub const fn gamg_lut7(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamLut7_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamLut7_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1320usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn gamb_lut7(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamLut7_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamLut7_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1360usize),
+            )
+        }
+    }
     #[inline(always)]
     pub const fn gamr_lut7(
         &self,
-    ) -> &'static crate::common::Reg<self::GamrLut7_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::GamLut7_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::GamrLut7_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5024usize),
+            crate::common::Reg::<self::GamLut7_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13a0usize),
             )
         }
     }
 
-    #[doc = "Gamma R Correction Block Table Setting Register 8"]
+    #[doc = "Gamma %s Correction Block Table Setting Register 8"]
+    #[inline(always)]
+    pub const fn gam_lut8(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::GamLut8_SPEC, crate::common::RW>,
+        3,
+        0x40,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1324usize))
+        }
+    }
+    #[inline(always)]
+    pub const fn gamg_lut8(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamLut8_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamLut8_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1324usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn gamb_lut8(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamLut8_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamLut8_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1364usize),
+            )
+        }
+    }
     #[inline(always)]
     pub const fn gamr_lut8(
         &self,
-    ) -> &'static crate::common::Reg<self::GamrLut8_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::GamLut8_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::GamrLut8_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5028usize),
+            crate::common::Reg::<self::GamLut8_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13a4usize),
             )
         }
     }
 
-    #[doc = "Gamma R Correction Block Area Setting Register 1"]
+    #[doc = "Gamma %s Correction Block Area Setting Register 1"]
+    #[inline(always)]
+    pub const fn gam_area1(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::GamArea1_SPEC, crate::common::RW>,
+        3,
+        0x40,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1328usize))
+        }
+    }
+    #[inline(always)]
+    pub const fn gamg_area1(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamArea1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamArea1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1328usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn gamb_area1(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamArea1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamArea1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1368usize),
+            )
+        }
+    }
     #[inline(always)]
     pub const fn gamr_area1(
         &self,
-    ) -> &'static crate::common::Reg<self::GamrArea1_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::GamArea1_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::GamrArea1_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5032usize),
+            crate::common::Reg::<self::GamArea1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13a8usize),
             )
         }
     }
 
-    #[doc = "Gamma R Correction Block Area Setting Register 2"]
+    #[doc = "Gamma %s Correction Block Area Setting Register 2"]
+    #[inline(always)]
+    pub const fn gam_area2(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::GamArea2_SPEC, crate::common::RW>,
+        3,
+        0x40,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x132cusize))
+        }
+    }
+    #[inline(always)]
+    pub const fn gamg_area2(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamArea2_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamArea2_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x132cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn gamb_area2(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamArea2_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamArea2_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x136cusize),
+            )
+        }
+    }
     #[inline(always)]
     pub const fn gamr_area2(
         &self,
-    ) -> &'static crate::common::Reg<self::GamrArea2_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::GamArea2_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::GamrArea2_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5036usize),
+            crate::common::Reg::<self::GamArea2_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13acusize),
             )
         }
     }
 
-    #[doc = "Gamma R Correction Block Area Setting Register 3"]
+    #[doc = "Gamma %s Correction Block Area Setting Register 3"]
+    #[inline(always)]
+    pub const fn gam_area3(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::GamArea3_SPEC, crate::common::RW>,
+        3,
+        0x40,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1330usize))
+        }
+    }
+    #[inline(always)]
+    pub const fn gamg_area3(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamArea3_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamArea3_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1330usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn gamb_area3(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamArea3_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamArea3_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1370usize),
+            )
+        }
+    }
     #[inline(always)]
     pub const fn gamr_area3(
         &self,
-    ) -> &'static crate::common::Reg<self::GamrArea3_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::GamArea3_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::GamrArea3_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5040usize),
+            crate::common::Reg::<self::GamArea3_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13b0usize),
             )
         }
     }
 
-    #[doc = "Gamma R Correction Block Area Setting Register 4"]
+    #[doc = "Gamma %s Correction Block Area Setting Register 4"]
+    #[inline(always)]
+    pub const fn gam_area4(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::GamArea4_SPEC, crate::common::RW>,
+        3,
+        0x40,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1334usize))
+        }
+    }
+    #[inline(always)]
+    pub const fn gamg_area4(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamArea4_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamArea4_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1334usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn gamb_area4(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamArea4_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamArea4_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1374usize),
+            )
+        }
+    }
     #[inline(always)]
     pub const fn gamr_area4(
         &self,
-    ) -> &'static crate::common::Reg<self::GamrArea4_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::GamArea4_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::GamrArea4_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5044usize),
+            crate::common::Reg::<self::GamArea4_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13b4usize),
             )
         }
     }
 
-    #[doc = "Gamma R Correction Block Area Setting Register 5"]
+    #[doc = "Gamma %s Correction Block Area Setting Register 5"]
+    #[inline(always)]
+    pub const fn gam_area5(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::GamArea5_SPEC, crate::common::RW>,
+        3,
+        0x40,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1338usize))
+        }
+    }
+    #[inline(always)]
+    pub const fn gamg_area5(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamArea5_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamArea5_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1338usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn gamb_area5(
+        &self,
+    ) -> &'static crate::common::Reg<self::GamArea5_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::GamArea5_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1378usize),
+            )
+        }
+    }
     #[inline(always)]
     pub const fn gamr_area5(
         &self,
-    ) -> &'static crate::common::Reg<self::GamrArea5_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::GamArea5_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::GamrArea5_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5048usize),
+            crate::common::Reg::<self::GamArea5_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x13b8usize),
             )
         }
     }
@@ -11648,6 +11760,18 @@ impl super::Glcdc {
         }
     }
 
+    #[doc = "TCON VLATCH Register"]
+    #[inline(always)]
+    pub const fn tcon_vlatch(
+        &self,
+    ) -> &'static crate::common::Reg<self::TconVlatch_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::TconVlatch_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(5120usize),
+            )
+        }
+    }
+
     #[doc = "TCON Reference Timing Setting Register"]
     #[inline(always)]
     pub const fn tcon_tim(
@@ -11660,98 +11784,138 @@ impl super::Glcdc {
         }
     }
 
-    #[doc = "TCON Vertical Timing Setting Register x1"]
+    #[doc = "TCON Vertical Timing Setting Register %s1"]
+    #[inline(always)]
+    pub const fn tcon_stv1(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::TconStv1_SPEC, crate::common::RW>,
+        2,
+        0x8,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1408usize))
+        }
+    }
     #[inline(always)]
     pub const fn tcon_stva1(
         &self,
-    ) -> &'static crate::common::Reg<self::TconStva1_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::TconStv1_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::TconStva1_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5128usize),
+            crate::common::Reg::<self::TconStv1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1408usize),
             )
         }
     }
-
-    #[doc = "TCON Vertical Timing Setting Register x2"]
-    #[inline(always)]
-    pub const fn tcon_stva2(
-        &self,
-    ) -> &'static crate::common::Reg<self::TconStva2_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::TconStva2_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5132usize),
-            )
-        }
-    }
-
-    #[doc = "TCON Vertical Timing Setting Register x1"]
     #[inline(always)]
     pub const fn tcon_stvb1(
         &self,
-    ) -> &'static crate::common::Reg<self::TconStvb1_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::TconStv1_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::TconStvb1_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5136usize),
+            crate::common::Reg::<self::TconStv1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1410usize),
             )
         }
     }
 
-    #[doc = "TCON Vertical Timing Setting Register x2"]
+    #[doc = "TCON Vertical Timing Setting Register %s2"]
+    #[inline(always)]
+    pub const fn tcon_stv2(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::TconStv2_SPEC, crate::common::RW>,
+        2,
+        0x8,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x140cusize))
+        }
+    }
+    #[inline(always)]
+    pub const fn tcon_stva2(
+        &self,
+    ) -> &'static crate::common::Reg<self::TconStv2_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::TconStv2_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x140cusize),
+            )
+        }
+    }
     #[inline(always)]
     pub const fn tcon_stvb2(
         &self,
-    ) -> &'static crate::common::Reg<self::TconStvb2_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::TconStv2_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::TconStvb2_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5140usize),
+            crate::common::Reg::<self::TconStv2_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1414usize),
             )
         }
     }
 
-    #[doc = "TCON Horizontal Timing Setting Register x1"]
+    #[doc = "TCON Horizontal Timing Setting Register STH%s1"]
+    #[inline(always)]
+    pub const fn tcon_sth1(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::TconSth1_SPEC, crate::common::RW>,
+        2,
+        0x8,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1418usize))
+        }
+    }
     #[inline(always)]
     pub const fn tcon_stha1(
         &self,
-    ) -> &'static crate::common::Reg<self::TconStha1_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::TconSth1_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::TconStha1_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5144usize),
+            crate::common::Reg::<self::TconSth1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1418usize),
             )
         }
     }
-
-    #[doc = "TCON Horizontal Timing Setting Register x2"]
-    #[inline(always)]
-    pub const fn tcon_stha2(
-        &self,
-    ) -> &'static crate::common::Reg<self::TconStha2_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::TconStha2_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5148usize),
-            )
-        }
-    }
-
-    #[doc = "TCON Horizontal Timing Setting Register x1"]
     #[inline(always)]
     pub const fn tcon_sthb1(
         &self,
-    ) -> &'static crate::common::Reg<self::TconSthb1_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::TconSth1_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::TconSthb1_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5152usize),
+            crate::common::Reg::<self::TconSth1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1420usize),
             )
         }
     }
 
-    #[doc = "TCON Horizontal Timing Setting Register x2"]
+    #[doc = "TCON Horizontal Timing Setting Register STH%s2"]
+    #[inline(always)]
+    pub const fn tcon_sth2(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::TconSth2_SPEC, crate::common::RW>,
+        2,
+        0x8,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x141cusize))
+        }
+    }
+    #[inline(always)]
+    pub const fn tcon_stha2(
+        &self,
+    ) -> &'static crate::common::Reg<self::TconSth2_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::TconSth2_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x141cusize),
+            )
+        }
+    }
     #[inline(always)]
     pub const fn tcon_sthb2(
         &self,
-    ) -> &'static crate::common::Reg<self::TconSthb2_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::TconSth2_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::TconSthb2_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(5156usize),
+            crate::common::Reg::<self::TconSth2_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1424usize),
             )
         }
     }
@@ -11835,11 +11999,11 @@ impl crate::sealed::RegSpec for Gr1Clut0_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Color Palette"]
+#[doc = "Color Palette 0 Plane for Graphics 1 Plane"]
 pub type Gr1Clut0 = crate::RegValueT<Gr1Clut0_SPEC>;
 
 impl Gr1Clut0 {
-    #[doc = "B value of color palette n plane for graphics m plane. Unsigned 8-bit integer."]
+    #[doc = "B Value of Color Palette n Plane for Graphics m Plane"]
     #[inline(always)]
     pub fn b(
         self,
@@ -11847,7 +12011,7 @@ impl Gr1Clut0 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Gr1Clut0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "G value of color palette n plane for graphics m plane. Unsigned 8-bit integer."]
+    #[doc = "G Value of Color Palette n Plane for Graphics m Plane"]
     #[inline(always)]
     pub fn g(
         self,
@@ -11855,7 +12019,7 @@ impl Gr1Clut0 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Gr1Clut0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "R value of color palette n plane for graphics m plane. Unsigned 8-bit integer."]
+    #[doc = "R Value of Color Palette n Plane for Graphics m Plane"]
     #[inline(always)]
     pub fn r(
         self,
@@ -11864,7 +12028,7 @@ impl Gr1Clut0 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Gr1Clut0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Alpha blending value of color palette n plane for graphics m plane. Unsigned 8-bit integer."]
+    #[doc = "Alpha Blending Value of Color Palette n Plane for Graphics m Plane"]
     #[inline(always)]
     pub fn a(
         self,
@@ -11887,11 +12051,11 @@ impl crate::sealed::RegSpec for Gr1Clut1_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Color Palette"]
+#[doc = "Color Palette 1 Plane for Graphics 1 Plane"]
 pub type Gr1Clut1 = crate::RegValueT<Gr1Clut1_SPEC>;
 
 impl Gr1Clut1 {
-    #[doc = "B value of color palette n plane for graphics m plane. Unsigned 8-bit integer."]
+    #[doc = "B Value of Color Palette n Plane for Graphics m Plane"]
     #[inline(always)]
     pub fn b(
         self,
@@ -11899,7 +12063,7 @@ impl Gr1Clut1 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Gr1Clut1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "G value of color palette n plane for graphics m plane. Unsigned 8-bit integer."]
+    #[doc = "G Value of Color Palette n Plane for Graphics m Plane"]
     #[inline(always)]
     pub fn g(
         self,
@@ -11907,7 +12071,7 @@ impl Gr1Clut1 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Gr1Clut1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "R value of color palette n plane for graphics m plane. Unsigned 8-bit integer."]
+    #[doc = "R Value of Color Palette n Plane for Graphics m Plane"]
     #[inline(always)]
     pub fn r(
         self,
@@ -11916,7 +12080,7 @@ impl Gr1Clut1 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Gr1Clut1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Alpha blending value of color palette n plane for graphics m plane. Unsigned 8-bit integer."]
+    #[doc = "Alpha Blending Value of Color Palette n Plane for Graphics m Plane"]
     #[inline(always)]
     pub fn a(
         self,
@@ -11939,11 +12103,11 @@ impl crate::sealed::RegSpec for Gr2Clut0_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Color Palette"]
+#[doc = "Color Palette 0 Plane for Graphics 2 Plane"]
 pub type Gr2Clut0 = crate::RegValueT<Gr2Clut0_SPEC>;
 
 impl Gr2Clut0 {
-    #[doc = "B value of color palette n plane for graphics m plane. Unsigned 8-bit integer."]
+    #[doc = "B Value of Color Palette n Plane for Graphics m Plane"]
     #[inline(always)]
     pub fn b(
         self,
@@ -11951,7 +12115,7 @@ impl Gr2Clut0 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Gr2Clut0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "G value of color palette n plane for graphics m plane. Unsigned 8-bit integer."]
+    #[doc = "G Value of Color Palette n Plane for Graphics m Plane"]
     #[inline(always)]
     pub fn g(
         self,
@@ -11959,7 +12123,7 @@ impl Gr2Clut0 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Gr2Clut0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "R value of color palette n plane for graphics m plane. Unsigned 8-bit integer."]
+    #[doc = "R Value of Color Palette n Plane for Graphics m Plane"]
     #[inline(always)]
     pub fn r(
         self,
@@ -11968,7 +12132,7 @@ impl Gr2Clut0 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Gr2Clut0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Alpha blending value of color palette n plane for graphics m plane. Unsigned 8-bit integer."]
+    #[doc = "Alpha Blending Value of Color Palette n Plane for Graphics m Plane"]
     #[inline(always)]
     pub fn a(
         self,
@@ -11991,11 +12155,11 @@ impl crate::sealed::RegSpec for Gr2Clut1_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Color Palette"]
+#[doc = "Color Palette 1 Plane for Graphics 2 Plane"]
 pub type Gr2Clut1 = crate::RegValueT<Gr2Clut1_SPEC>;
 
 impl Gr2Clut1 {
-    #[doc = "B value of color palette n plane for graphics m plane. Unsigned 8-bit integer."]
+    #[doc = "B Value of Color Palette n Plane for Graphics m Plane"]
     #[inline(always)]
     pub fn b(
         self,
@@ -12003,7 +12167,7 @@ impl Gr2Clut1 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Gr2Clut1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "G value of color palette n plane for graphics m plane. Unsigned 8-bit integer."]
+    #[doc = "G Value of Color Palette n Plane for Graphics m Plane"]
     #[inline(always)]
     pub fn g(
         self,
@@ -12011,7 +12175,7 @@ impl Gr2Clut1 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Gr2Clut1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "R value of color palette n plane for graphics m plane. Unsigned 8-bit integer."]
+    #[doc = "R Value of Color Palette n Plane for Graphics m Plane"]
     #[inline(always)]
     pub fn r(
         self,
@@ -12020,7 +12184,7 @@ impl Gr2Clut1 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Gr2Clut1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Alpha blending value of color palette n plane for graphics m plane. Unsigned 8-bit integer."]
+    #[doc = "Alpha Blending Value of Color Palette n Plane for Graphics m Plane"]
     #[inline(always)]
     pub fn a(
         self,
@@ -12047,7 +12211,7 @@ impl crate::sealed::RegSpec for BgEn_SPEC {
 pub type BgEn = crate::RegValueT<BgEn_SPEC>;
 
 impl BgEn {
-    #[doc = "Background Plane Operation Enable"]
+    #[doc = "Background plane generation module operation enable"]
     #[inline(always)]
     pub fn en(
         self,
@@ -12073,7 +12237,7 @@ impl BgEn {
         >::from_register(self, 0)
     }
 
-    #[doc = "Control of GLCDC Internal Register Value Reflection to Internal Operations"]
+    #[doc = "Control of LCDC internal register value reflection to internal operations"]
     #[inline(always)]
     pub fn ven(
         self,
@@ -12099,7 +12263,7 @@ impl BgEn {
         >::from_register(self, 0)
     }
 
-    #[doc = "Software Reset Control"]
+    #[doc = "Entire module SW reset control"]
     #[inline(always)]
     pub fn swrst(
         self,
@@ -12124,6 +12288,15 @@ impl BgEn {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000000000000. The write value should be 000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<17, 0x7fff, 1, 0, u16, u16, BgEn_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<17,0x7fff,1,0,u16,u16,BgEn_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for BgEn {
     #[inline(always)]
@@ -12137,31 +12310,31 @@ pub mod bg_en {
     pub struct En_SPEC;
     pub type En = crate::EnumBitfieldStruct<u8, En_SPEC>;
     impl En {
-        #[doc = "Disable background plane operation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable background plane operation"]
+        #[doc = "Enables operation."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Disables operation."]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ven_SPEC;
     pub type Ven = crate::EnumBitfieldStruct<u8, Ven_SPEC>;
     impl Ven {
-        #[doc = "Disable GLCDC register values from being reflected in internal operations at start of screen generation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable GLCDC register values to be reflected in internal operations at start of screen generation"]
+        #[doc = "Enables"]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Disables(Cleared to 0 by an internal source)"]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Swrst_SPEC;
     pub type Swrst = crate::EnumBitfieldStruct<u8, Swrst_SPEC>;
     impl Swrst {
-        #[doc = "Place entire module in software reset state"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Release entire module from software reset state"]
+        #[doc = "Releases the entire module from the SW reset state."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Places the entire module in the SW reset state."]
+        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -12175,56 +12348,30 @@ impl crate::sealed::RegSpec for BgPeri_SPEC {
 pub type BgPeri = crate::RegValueT<BgPeri_SPEC>;
 
 impl BgPeri {
-    #[doc = "Background Plane Horizontal Synchronization Signal Period"]
+    #[doc = "Background plane horizontal synchronization signal period on the basis of pixel clock (PXCLK)."]
     #[inline(always)]
     pub fn fh(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        bg_peri::Fh,
-        bg_peri::Fh,
-        BgPeri_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            bg_peri::Fh,
-            bg_peri::Fh,
-            BgPeri_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, BgPeri_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,BgPeri_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Background Plane Vertical Synchronization Signal Period"]
+    #[doc = "Background plane vertical synchronization signal period on the basis of line."]
     #[inline(always)]
     pub fn fv(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        bg_peri::Fv,
-        bg_peri::Fv,
-        BgPeri_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            bg_peri::Fv,
-            bg_peri::Fv,
-            BgPeri_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, BgPeri_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,BgPeri_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x1f, 1, 0, u8, u8, BgPeri_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<27,0x1f,1,0,u8,u8,BgPeri_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for BgPeri {
@@ -12233,35 +12380,7 @@ impl ::core::default::Default for BgPeri {
         <crate::RegValueT<BgPeri_SPEC> as RegisterValue<_>>::new(1507351)
     }
 }
-pub mod bg_peri {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Fh_SPEC;
-    pub type Fh = crate::EnumBitfieldStruct<u16, Fh_SPEC>;
-    impl Fh {
-        #[doc = "24 cycles (pixels)"]
-        pub const _0_X_017: Self = Self::new(23);
-
-        #[doc = "1024 cycles (pixels)"]
-        pub const _0_X_3_FF: Self = Self::new(1023);
-
-        #[doc = "2048 cycles (pixels)"]
-        pub const _0_X_7_FF: Self = Self::new(2047);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Fv_SPEC;
-    pub type Fv = crate::EnumBitfieldStruct<u16, Fv_SPEC>;
-    impl Fv {
-        #[doc = "20 lines"]
-        pub const _0_X_013: Self = Self::new(19);
-
-        #[doc = "1024 lines"]
-        pub const _0_X_3_FF: Self = Self::new(1023);
-
-        #[doc = "2048 lines"]
-        pub const _0_X_7_FF: Self = Self::new(2047);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct BgSync_SPEC;
@@ -12273,7 +12392,7 @@ impl crate::sealed::RegSpec for BgSync_SPEC {
 pub type BgSync = crate::RegValueT<BgSync_SPEC>;
 
 impl BgSync {
-    #[doc = "Background Plane Horizontal Synchronization Signal Assertion Position"]
+    #[doc = "Background plane horizontal synchronization signal assertion position on the basis of pixel clock (PXCLK)."]
     #[inline(always)]
     pub fn hp(
         self,
@@ -12299,7 +12418,7 @@ impl BgSync {
         >::from_register(self, 0)
     }
 
-    #[doc = "Background Plane Vertical Synchronization Assertion Position"]
+    #[doc = "Background plane vertical synchronization signal assertion position on the basis of line."]
     #[inline(always)]
     pub fn vp(
         self,
@@ -12324,6 +12443,15 @@ impl BgSync {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000000000. The write value should be 000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<20, 0xfff, 1, 0, u16, u16, BgSync_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<20,0xfff,1,0,u16,u16,BgSync_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for BgSync {
     #[inline(always)]
@@ -12339,9 +12467,6 @@ pub mod bg_sync {
     impl Hp {
         #[doc = "Setting prohibited"]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "HPth cycle (pixel)"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vp_SPEC;
@@ -12349,9 +12474,6 @@ pub mod bg_sync {
     impl Vp {
         #[doc = "Setting prohibited"]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "VPth line"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -12365,7 +12487,7 @@ impl crate::sealed::RegSpec for BgVsize_SPEC {
 pub type BgVsize = crate::RegValueT<BgVsize_SPEC>;
 
 impl BgVsize {
-    #[doc = "Background Plane Vertical Valid Pixel Width"]
+    #[doc = "Background plane vertical valid pixel width on the basis of line"]
     #[inline(always)]
     pub fn vw(
         self,
@@ -12374,13 +12496,21 @@ impl BgVsize {
         crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,BgVsize_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Background Plane Vertical Valid Pixel Start Position"]
+    #[doc = "Background plane vertical valid pixel start position on the basis of line"]
     #[inline(always)]
     pub fn vp(
         self,
     ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, BgVsize_SPEC, crate::common::RW>
     {
         crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,BgVsize_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x1f, 1, 0, u8, u8, BgVsize_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<27,0x1f,1,0,u8,u8,BgVsize_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for BgVsize {
@@ -12401,7 +12531,7 @@ impl crate::sealed::RegSpec for BgHsize_SPEC {
 pub type BgHsize = crate::RegValueT<BgHsize_SPEC>;
 
 impl BgHsize {
-    #[doc = "Background Plane Horizontal Valid Pixel Width"]
+    #[doc = "Background plane horizontall valid pixel width on the basis of pixel clock (PXCLK)Note: When serial RGB is selected as the output format for the output control block, add two to the horizontal enable signal width and set the resulting value to this field."]
     #[inline(always)]
     pub fn hw(
         self,
@@ -12410,13 +12540,21 @@ impl BgHsize {
         crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,BgHsize_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Background Plane Horizontal Valid Pixel Start Position"]
+    #[doc = "Background plane horizontal valid pixel start position on the basis of pixel clock (PXCLK)."]
     #[inline(always)]
     pub fn hp(
         self,
     ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, BgHsize_SPEC, crate::common::RW>
     {
         crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,BgHsize_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x1f, 1, 0, u8, u8, BgHsize_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<27,0x1f,1,0,u8,u8,BgHsize_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for BgHsize {
@@ -12437,7 +12575,7 @@ impl crate::sealed::RegSpec for BgBgc_SPEC {
 pub type BgBgc = crate::RegValueT<BgBgc_SPEC>;
 
 impl BgBgc {
-    #[doc = "Background Plane Valid Pixel Area B Value"]
+    #[doc = "B value for background plane valid pixel areaUnsigned; 8-bit integer"]
     #[inline(always)]
     pub fn b(
         self,
@@ -12445,7 +12583,7 @@ impl BgBgc {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,BgBgc_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Background Plane Valid Pixel Area G Value"]
+    #[doc = "G value for background plane valid pixel areaUnsigned; 8-bit integer"]
     #[inline(always)]
     pub fn g(
         self,
@@ -12453,12 +12591,20 @@ impl BgBgc {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,BgBgc_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Background Plane Valid Pixel Area R Value"]
+    #[doc = "R value for background plane valid pixel area.Unsigned; 8-bit integer."]
     #[inline(always)]
     pub fn r(
         self,
     ) -> crate::common::RegisterField<16, 0xff, 1, 0, u8, u8, BgBgc_SPEC, crate::common::RW> {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,BgBgc_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, u8, BgBgc_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<24,0xff,1,0,u8,u8,BgBgc_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for BgBgc {
@@ -12479,7 +12625,7 @@ impl crate::sealed::RegSpec for BgMon_SPEC {
 pub type BgMon = crate::RegValueT<BgMon_SPEC>;
 
 impl BgMon {
-    #[doc = "Background Plane Operation Monitor"]
+    #[doc = "Background plane generation module operation state monitor."]
     #[inline(always)]
     pub fn en(
         self,
@@ -12505,7 +12651,7 @@ impl BgMon {
         >::from_register(self, 0)
     }
 
-    #[doc = "Entire Module Internal Operation Reflection Control Signal Monitor"]
+    #[doc = "Entire module internal operation reflection control signal monitor.The signal  state for controlling reflection of the register values to the internal operations upon assertion of the vertical synchronization signal."]
     #[inline(always)]
     pub fn ven(
         self,
@@ -12531,7 +12677,7 @@ impl BgMon {
         >::from_register(self, 0)
     }
 
-    #[doc = "Entire Module SW Reset State Monitor"]
+    #[doc = "Entire module SW reset state monitor."]
     #[inline(always)]
     pub fn swrst(
         self,
@@ -12556,6 +12702,15 @@ impl BgMon {
             crate::common::R,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<17, 0x7fff, 1, 0, u16, u16, BgMon_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<17,0x7fff,1,0,u16,u16,BgMon_SPEC,crate::common::R>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for BgMon {
     #[inline(always)]
@@ -12569,31 +12724,31 @@ pub mod bg_mon {
     pub struct En_SPEC;
     pub type En = crate::EnumBitfieldStruct<u8, En_SPEC>;
     impl En {
-        #[doc = "Operation is stopped"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Operation is in progress"]
+        #[doc = "Operation is in progress."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Operation is stopped."]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ven_SPEC;
     pub type Ven = crate::EnumBitfieldStruct<u8, Ven_SPEC>;
     impl Ven {
-        #[doc = "Signal for controlling reflection of the register values to internal operations on assertion of vertical synchronization signal is negated"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Signal for controlling reflection of the register values to internal operations on assertion of vertical synchronization signal is asserted"]
+        #[doc = "The signal for controlling reflection of the register values to the internal operations upon assertion of the vertical synchronization signal is asserted."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "The signal for controlling reflection of the register values to the internal operations upon assertion of the vertical synchronization signal is negated."]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Swrst_SPEC;
     pub type Swrst = crate::EnumBitfieldStruct<u8, Swrst_SPEC>;
     impl Swrst {
-        #[doc = "Entire module is in software reset state"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Entire module is released from software reset state"]
+        #[doc = "The entire module is released from the SW reset state."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "The entire module is in the SW reset state."]
+        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -12603,11 +12758,11 @@ impl crate::sealed::RegSpec for GrVen_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Graphics %s Register Update Control Register"]
+#[doc = "Graphics %s  Register Update Control Register"]
 pub type GrVen = crate::RegValueT<GrVen_SPEC>;
 
 impl GrVen {
-    #[doc = "This bit is cleared to 0 by an internal source."]
+    #[doc = "Control of graphics n module register value reflection to internal operations.Reflection of the register values to the internal operation at the assertion of the vertical synchronization signal (VS)."]
     #[inline(always)]
     pub fn pven(
         self,
@@ -12632,6 +12787,15 @@ impl GrVen {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000000000000000000. The write value should be 0000000000000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<1, 0x7fffffff, 1, 0, u32, u32, GrVen_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<1,0x7fffffff,1,0,u32,u32,GrVen_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for GrVen {
     #[inline(always)]
@@ -12645,11 +12809,11 @@ pub mod gr_ven {
     pub struct Pven_SPEC;
     pub type Pven = crate::EnumBitfieldStruct<u8, Pven_SPEC>;
     impl Pven {
-        #[doc = "Disable reflection of register values to internal operations on assertion of vertical synchronization signal (VS)"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable reflection of register values to internal operations on assertion of the vertical synchronization signal (VS)"]
+        #[doc = "Enables reflection of the register values to the internal operation at the assertion of the vertical synchronization signal (VS)."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Disables reflection of the register values to the internal operation at the assertion of the vertical synchronization signal (VS)."]
+        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -12663,7 +12827,7 @@ impl crate::sealed::RegSpec for GrFlmrd_SPEC {
 pub type GrFlmrd = crate::RegValueT<GrFlmrd_SPEC>;
 
 impl GrFlmrd {
-    #[doc = "Graphics Data Read Enable"]
+    #[doc = "Graphics data (frame buffer data) read enable."]
     #[inline(always)]
     pub fn renb(
         self,
@@ -12688,6 +12852,15 @@ impl GrFlmrd {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, GrFlmrd_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,GrFlmrd_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for GrFlmrd {
     #[inline(always)]
@@ -12701,11 +12874,11 @@ pub mod gr_flmrd {
     pub struct Renb_SPEC;
     pub type Renb = crate::EnumBitfieldStruct<u8, Renb_SPEC>;
     impl Renb {
-        #[doc = "Disable reading"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable reading"]
+        #[doc = "Enables reading."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Disables reading."]
+        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -12719,7 +12892,7 @@ impl crate::sealed::RegSpec for GrFlm1_SPEC {
 pub type GrFlm1 = crate::RegValueT<GrFlm1_SPEC>;
 
 impl GrFlm1 {
-    #[doc = "Burst Transfer Control for Graphics Data Access"]
+    #[doc = "Burst transfer control for graphics data (frame buffer data)access"]
     #[inline(always)]
     pub fn bstmd(
         self,
@@ -12731,7 +12904,7 @@ impl GrFlm1 {
         gr_flm1::Bstmd,
         gr_flm1::Bstmd,
         GrFlm1_SPEC,
-        crate::common::RW,
+        crate::common::R,
     > {
         crate::common::RegisterField::<
             0,
@@ -12741,8 +12914,17 @@ impl GrFlm1 {
             gr_flm1::Bstmd,
             gr_flm1::Bstmd,
             GrFlm1_SPEC,
-            crate::common::RW,
+            crate::common::R,
         >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 000000000000000000000000000000. The write value should be 000000000000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<2, 0x3fffffff, 1, 0, u32, u32, GrFlm1_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<2,0x3fffffff,1,0,u32,u32,GrFlm1_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GrFlm1 {
@@ -12759,9 +12941,6 @@ pub mod gr_flm1 {
     impl Bstmd {
         #[doc = "16-beat increment burst transfer (64-byte boundary)"]
         pub const _11: Self = Self::new(3);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -12775,7 +12954,7 @@ impl crate::sealed::RegSpec for GrFlm2_SPEC {
 pub type GrFlm2 = crate::RegValueT<GrFlm2_SPEC>;
 
 impl GrFlm2 {
-    #[doc = "Base Address for Accessing Graphics Data"]
+    #[doc = "Base address for accessing graphics data (frame buffer data)Set the head address in the frame buffer where graphics data is to be stored. GRn_FLM2.BASE\\[5:0\\] should be fixed to 0 during 64-byte burst transfer."]
     #[inline(always)]
     pub fn base(
         self,
@@ -12802,7 +12981,7 @@ impl crate::sealed::RegSpec for GrFlm3_SPEC {
 pub type GrFlm3 = crate::RegValueT<GrFlm3_SPEC>;
 
 impl GrFlm3 {
-    #[doc = "Macro Line Offset Address for Accessing Graphics Data"]
+    #[doc = "Macro line offset address for accessing graphics data(frame buffer data)Signed; 16-bit integer"]
     #[inline(always)]
     pub fn lnoff(
         self,
@@ -12829,7 +13008,7 @@ impl crate::sealed::RegSpec for GrFlm5_SPEC {
 pub type GrFlm5 = crate::RegValueT<GrFlm5_SPEC>;
 
 impl GrFlm5 {
-    #[doc = "Number of Data Transfer Times Per Line for Accessing Graphics Data"]
+    #[doc = "Number of data transfer times per line for accessing graphics data (frame buffer data), where one transfer is defined as 16-beat burst access (64-byte boundary)"]
     #[inline(always)]
     pub fn datanum(
         self,
@@ -12838,7 +13017,7 @@ impl GrFlm5 {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,GrFlm5_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Number of Lines Per Frame for Accessing Graphics Data"]
+    #[doc = "Number of lines per frame for accessing graphics data (frame buffer data)."]
     #[inline(always)]
     pub fn lnnum(
         self,
@@ -12865,7 +13044,7 @@ impl crate::sealed::RegSpec for GrFlm6_SPEC {
 pub type GrFlm6 = crate::RegValueT<GrFlm6_SPEC>;
 
 impl GrFlm6 {
-    #[doc = "Data Format for Accessing Graphics Data"]
+    #[doc = "Data format for accessing graphics data (frame buffer data)."]
     #[inline(always)]
     pub fn format(
         self,
@@ -12890,6 +13069,16 @@ impl GrFlm6 {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<31, 1, 0, GrFlm6_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<31, 1, 0, GrFlm6_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
 }
 impl ::core::default::Default for GrFlm6 {
     #[inline(always)]
@@ -12903,29 +13092,29 @@ pub mod gr_flm6 {
     pub struct Format_SPEC;
     pub type Format = crate::EnumBitfieldStruct<u8, Format_SPEC>;
     impl Format {
-        #[doc = "RGB565 (16 bits/pixel)"]
-        pub const _000: Self = Self::new(0);
+        #[doc = "CLUT11bit/pix)"]
+        pub const _111: Self = Self::new(7);
 
-        #[doc = "RGB888 (32 bits/pixel, 8 bits on the MSB side are invalid)"]
-        pub const _001: Self = Self::new(1);
-
-        #[doc = "ARGB1555 (16 bits/pixel, 1 bit of A is LUT data)"]
-        pub const _010: Self = Self::new(2);
-
-        #[doc = "ARGB4444 (16 bits/pixel)"]
-        pub const _011: Self = Self::new(3);
-
-        #[doc = "ARGB8888 (32 bits/pixel)"]
-        pub const _100: Self = Self::new(4);
-
-        #[doc = "CLUT8 (8 bits/pixel)"]
-        pub const _101: Self = Self::new(5);
-
-        #[doc = "CLUT4 (4 bits/pixel)"]
+        #[doc = "CLUT4 (4 bits/pix)"]
         pub const _110: Self = Self::new(6);
 
-        #[doc = "CLUT1 (1 bit/pixel)"]
-        pub const _111: Self = Self::new(7);
+        #[doc = "CLUT8 (8 bits/pix)"]
+        pub const _101: Self = Self::new(5);
+
+        #[doc = "ARGB8888 (32 bits/pix)"]
+        pub const _100: Self = Self::new(4);
+
+        #[doc = "ARGB4444 (16 bits/pix)"]
+        pub const _011: Self = Self::new(3);
+
+        #[doc = "ARGB1555 (16 bits/pix, 1 bit of A is LUT data)"]
+        pub const _010: Self = Self::new(2);
+
+        #[doc = "RGB888 (32 bits/pix, 8 bits on the MSB side are invalid)"]
+        pub const _001: Self = Self::new(1);
+
+        #[doc = "RGB565 (16 bits/pix)"]
+        pub const _000: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -12939,7 +13128,7 @@ impl crate::sealed::RegSpec for GrAb1_SPEC {
 pub type GrAb1 = crate::RegValueT<GrAb1_SPEC>;
 
 impl GrAb1 {
-    #[doc = "Graphics Display Plane Control"]
+    #[doc = "Graphics display plane control."]
     #[inline(always)]
     pub fn dispsel(
         self,
@@ -12965,7 +13154,7 @@ impl GrAb1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Graphics Image Area Border Display Control"]
+    #[doc = "Graphics image area border display control."]
     #[inline(always)]
     pub fn grcdispon(
         self,
@@ -12991,7 +13180,7 @@ impl GrAb1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Image Area Border Display Control for Rectangular Area Alpha Blending"]
+    #[doc = "Image area border display control for rectangular area alpha blending."]
     #[inline(always)]
     pub fn arcdispon(
         self,
@@ -13017,7 +13206,7 @@ impl GrAb1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Rectangular Area Alpha Blending Control"]
+    #[doc = "Rectangular area alpha blending control."]
     #[inline(always)]
     pub fn arcon(
         self,
@@ -13042,6 +13231,15 @@ impl GrAb1 {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000000. The write value should be 0000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<13, 0x7ffff, 1, 0, u32, u32, GrAb1_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<13,0x7ffff,1,0,u32,u32,GrAb1_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for GrAb1 {
     #[inline(always)]
@@ -13055,47 +13253,47 @@ pub mod gr_ab1 {
     pub struct Dispsel_SPEC;
     pub type Dispsel = crate::EnumBitfieldStruct<u8, Dispsel_SPEC>;
     impl Dispsel {
-        #[doc = "Background color display (value set in the GRn_BASE register)"]
-        pub const _00: Self = Self::new(0);
-
-        #[doc = "Lower-layer graphics display"]
-        pub const _01: Self = Self::new(1);
+        #[doc = "Blended display of lower-layer graphics (input image from the previous stage) and current graphics (graphics data read from the AHB bus)"]
+        pub const _11: Self = Self::new(3);
 
         #[doc = "Current graphics display"]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "Blended display of lower-layer graphics (input image from the previous stage) and current graphics (data read from the GLCDC0 and GLCDC1 bus)"]
-        pub const _11: Self = Self::new(3);
+        #[doc = "Lower-layer graphics display"]
+        pub const _01: Self = Self::new(1);
+
+        #[doc = "Background color display (value set by the GRn_BASE register)."]
+        pub const _00: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Grcdispon_SPEC;
     pub type Grcdispon = crate::EnumBitfieldStruct<u8, Grcdispon_SPEC>;
     impl Grcdispon {
-        #[doc = "Turn display off"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Turn display on"]
+        #[doc = "Display on"]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Display off"]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Arcdispon_SPEC;
     pub type Arcdispon = crate::EnumBitfieldStruct<u8, Arcdispon_SPEC>;
     impl Arcdispon {
-        #[doc = "Turn display off"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Turn display on"]
+        #[doc = "Display on"]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Display off"]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Arcon_SPEC;
     pub type Arcon = crate::EnumBitfieldStruct<u8, Arcon_SPEC>;
     impl Arcon {
-        #[doc = "Turn blending off"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Turn blending on"]
+        #[doc = "On"]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Off"]
+        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -13109,7 +13307,7 @@ impl crate::sealed::RegSpec for GrAb2_SPEC {
 pub type GrAb2 = crate::RegValueT<GrAb2_SPEC>;
 
 impl GrAb2 {
-    #[doc = "Vertical Width of Graphics Image Area"]
+    #[doc = "Vertical width of graphics image area."]
     #[inline(always)]
     pub fn grcvw(
         self,
@@ -13117,13 +13315,21 @@ impl GrAb2 {
         crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GrAb2_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Vertical Start Position of Graphics Image Area"]
+    #[doc = "Vertical start position of graphics image area."]
     #[inline(always)]
     pub fn grcvs(
         self,
     ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GrAb2_SPEC, crate::common::RW>
     {
         crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GrAb2_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x1f, 1, 0, u8, u8, GrAb2_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<27,0x1f,1,0,u8,u8,GrAb2_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GrAb2 {
@@ -13144,7 +13350,7 @@ impl crate::sealed::RegSpec for GrAb3_SPEC {
 pub type GrAb3 = crate::RegValueT<GrAb3_SPEC>;
 
 impl GrAb3 {
-    #[doc = "Horizontal Width of Graphics Image Area"]
+    #[doc = "Horizontal width of graphics image area."]
     #[inline(always)]
     pub fn grchw(
         self,
@@ -13152,13 +13358,21 @@ impl GrAb3 {
         crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GrAb3_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Horizontal Start Position of Graphics Image Area"]
+    #[doc = "Horizontal start position of graphics image area."]
     #[inline(always)]
     pub fn grchs(
         self,
     ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GrAb3_SPEC, crate::common::RW>
     {
         crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GrAb3_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x1f, 1, 0, u8, u8, GrAb3_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<27,0x1f,1,0,u8,u8,GrAb3_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GrAb3 {
@@ -13179,7 +13393,7 @@ impl crate::sealed::RegSpec for GrAb4_SPEC {
 pub type GrAb4 = crate::RegValueT<GrAb4_SPEC>;
 
 impl GrAb4 {
-    #[doc = "Vertical Width of Rectangular Area Alpha Blending Image Area"]
+    #[doc = "Vertical width of rectangular area alpha blending image area."]
     #[inline(always)]
     pub fn arcvw(
         self,
@@ -13187,13 +13401,21 @@ impl GrAb4 {
         crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GrAb4_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Vertical Start Position of Rectangular Area Alpha Blending Image Area"]
+    #[doc = "Vertical start position of rectangular area alpha blending image area"]
     #[inline(always)]
     pub fn arcvs(
         self,
     ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GrAb4_SPEC, crate::common::RW>
     {
         crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GrAb4_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x1f, 1, 0, u8, u8, GrAb4_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<27,0x1f,1,0,u8,u8,GrAb4_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GrAb4 {
@@ -13214,7 +13436,7 @@ impl crate::sealed::RegSpec for GrAb5_SPEC {
 pub type GrAb5 = crate::RegValueT<GrAb5_SPEC>;
 
 impl GrAb5 {
-    #[doc = "Horizontal Width of Rectangular Area Alpha Blending Image Area"]
+    #[doc = "Horizontal width of rectangular area alpha blending image area."]
     #[inline(always)]
     pub fn archw(
         self,
@@ -13222,13 +13444,21 @@ impl GrAb5 {
         crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GrAb5_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Horizontal Start Position of Rectangular Area Alpha Blending Image Area"]
+    #[doc = "Horizontal start position of rectangular area alpha blending image area."]
     #[inline(always)]
     pub fn archs(
         self,
     ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GrAb5_SPEC, crate::common::RW>
     {
         crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GrAb5_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x1f, 1, 0, u8, u8, GrAb5_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<27,0x1f,1,0,u8,u8,GrAb5_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GrAb5 {
@@ -13249,7 +13479,7 @@ impl crate::sealed::RegSpec for GrAb6_SPEC {
 pub type GrAb6 = crate::RegValueT<GrAb6_SPEC>;
 
 impl GrAb6 {
-    #[doc = "Frame Rate for Alpha Blending in Rectangular Area"]
+    #[doc = "Frame rate for alpha blending in rectangular area."]
     #[inline(always)]
     pub fn arcrate(
         self,
@@ -13257,13 +13487,21 @@ impl GrAb6 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,GrAb6_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Alpha Coefficient for Alpha Blending in Rectangular Area"]
+    #[doc = "Alpha coefficient for alpha blending in rectangular area (-255 to 255).\\[8\\]: Sign (0: addition, 1: subtraction)\\[7:0\\]: Variation (absolute value)"]
     #[inline(always)]
     pub fn arccoef(
         self,
     ) -> crate::common::RegisterField<16, 0x1ff, 1, 0, u16, u16, GrAb6_SPEC, crate::common::RW>
     {
         crate::common::RegisterField::<16,0x1ff,1,0,u16,u16,GrAb6_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<25, 0x7f, 1, 0, u8, u8, GrAb6_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<25,0x7f,1,0,u8,u8,GrAb6_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GrAb6 {
@@ -13284,7 +13522,7 @@ impl crate::sealed::RegSpec for GrAb7_SPEC {
 pub type GrAb7 = crate::RegValueT<GrAb7_SPEC>;
 
 impl GrAb7 {
-    #[doc = "RGB-Index Chroma-Key Processing Control"]
+    #[doc = "RGB-index chroma-key processing control."]
     #[inline(always)]
     pub fn ckon(
         self,
@@ -13310,12 +13548,20 @@ impl GrAb7 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Initial Alpha Value for Alpha Blending in Rectangular Area"]
+    #[doc = "Initial alpha value for alpha blending in rectangular area."]
     #[inline(always)]
     pub fn arcdef(
         self,
     ) -> crate::common::RegisterField<16, 0xff, 1, 0, u8, u8, GrAb7_SPEC, crate::common::RW> {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,GrAb7_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, u8, GrAb7_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<24,0xff,1,0,u8,u8,GrAb7_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GrAb7 {
@@ -13330,11 +13576,11 @@ pub mod gr_ab7 {
     pub struct Ckon_SPEC;
     pub type Ckon = crate::EnumBitfieldStruct<u8, Ckon_SPEC>;
     impl Ckon {
-        #[doc = "Disable chroma-key processing"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable chroma-key processing"]
+        #[doc = "Enables chroma-key processing"]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Disables chroma-key processing"]
+        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -13348,7 +13594,7 @@ impl crate::sealed::RegSpec for GrAb8_SPEC {
 pub type GrAb8 = crate::RegValueT<GrAb8_SPEC>;
 
 impl GrAb8 {
-    #[doc = "R Signal for RGB-Index Chroma-Key Processing"]
+    #[doc = "R signal for RGB-index chroma-key processingUnsigned; 8 bits."]
     #[inline(always)]
     pub fn ckkr(
         self,
@@ -13356,7 +13602,7 @@ impl GrAb8 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,GrAb8_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "B Signal for RGB-Index Chroma-Key Processing"]
+    #[doc = "B signal for RGB-index chroma-key processingUnsigned; 8 bits."]
     #[inline(always)]
     pub fn ckkb(
         self,
@@ -13364,12 +13610,20 @@ impl GrAb8 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,GrAb8_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "G Signal for RGB-Index Chroma-Key Processing"]
+    #[doc = "G signal for RGB-index chroma-key processingUnsigned; 8 bits."]
     #[inline(always)]
     pub fn ckkg(
         self,
     ) -> crate::common::RegisterField<16, 0xff, 1, 0, u8, u8, GrAb8_SPEC, crate::common::RW> {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,GrAb8_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, u8, GrAb8_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<24,0xff,1,0,u8,u8,GrAb8_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GrAb8 {
@@ -13390,7 +13644,7 @@ impl crate::sealed::RegSpec for GrAb9_SPEC {
 pub type GrAb9 = crate::RegValueT<GrAb9_SPEC>;
 
 impl GrAb9 {
-    #[doc = "R Value after RGB-Index Chroma-Key Processing Replacement"]
+    #[doc = "R value after RGB-index chroma-key processing replacementUnsigned; 8 bits."]
     #[inline(always)]
     pub fn ckr(
         self,
@@ -13398,7 +13652,7 @@ impl GrAb9 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,GrAb9_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "B Value after RGB-Index Chroma-Key Processing Replacement"]
+    #[doc = "B value after RGB-index chroma-key processing replacementUnsigned; 8 bits."]
     #[inline(always)]
     pub fn ckb(
         self,
@@ -13406,7 +13660,7 @@ impl GrAb9 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,GrAb9_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "G Value after RGB-Index Chroma-Key Processing Replacement"]
+    #[doc = "G value after RGB-index chroma-key processing replacementUnsigned; 8 bits."]
     #[inline(always)]
     pub fn ckg(
         self,
@@ -13414,7 +13668,7 @@ impl GrAb9 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,GrAb9_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "A Value after RGB-Index Chroma-Key Processing Replacement"]
+    #[doc = "A value after RGB-index chroma-key processing replacement."]
     #[inline(always)]
     pub fn cka(
         self,
@@ -13440,7 +13694,7 @@ impl crate::sealed::RegSpec for GrBase_SPEC {
 pub type GrBase = crate::RegValueT<GrBase_SPEC>;
 
 impl GrBase {
-    #[doc = "Background Color R Value"]
+    #[doc = "Background color R valueUnsigned; 8 bits"]
     #[inline(always)]
     pub fn r(
         self,
@@ -13448,7 +13702,7 @@ impl GrBase {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,GrBase_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Background Color B Value"]
+    #[doc = "Background color B valueUnsigned; 8 bits"]
     #[inline(always)]
     pub fn b(
         self,
@@ -13456,12 +13710,20 @@ impl GrBase {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,GrBase_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Background Color G Value"]
+    #[doc = "Background color G valueUnsigned; 8 bits"]
     #[inline(always)]
     pub fn g(
         self,
     ) -> crate::common::RegisterField<16, 0xff, 1, 0, u8, u8, GrBase_SPEC, crate::common::RW> {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,GrBase_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, u8, GrBase_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<24,0xff,1,0,u8,u8,GrBase_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GrBase {
@@ -13482,7 +13744,7 @@ impl crate::sealed::RegSpec for GrClutint_SPEC {
 pub type GrClutint = crate::RegValueT<GrClutint_SPEC>;
 
 impl GrClutint {
-    #[doc = "Number of Detection Lines"]
+    #[doc = "Number of detection lines"]
     #[inline(always)]
     pub fn line(
         self,
@@ -13491,7 +13753,7 @@ impl GrClutint {
         crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GrClutint_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "CLUT Table Control"]
+    #[doc = "CLUT table control"]
     #[inline(always)]
     pub fn sel(
         self,
@@ -13516,6 +13778,15 @@ impl GrClutint {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000000000000. The write value should be 000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<17, 0x7fff, 1, 0, u16, u16, GrClutint_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<17,0x7fff,1,0,u16,u16,GrClutint_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for GrClutint {
     #[inline(always)]
@@ -13529,11 +13800,11 @@ pub mod gr_clutint {
     pub struct Sel_SPEC;
     pub type Sel = crate::EnumBitfieldStruct<u8, Sel_SPEC>;
     impl Sel {
-        #[doc = "Select CLUT table 0"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Select CLUT table 1"]
+        #[doc = "Uses CLUT1 plane for internal operations."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Uses CLUT0 plane for internal operations."]
+        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -13547,7 +13818,7 @@ impl crate::sealed::RegSpec for GrMon_SPEC {
 pub type GrMon = crate::RegValueT<GrMon_SPEC>;
 
 impl GrMon {
-    #[doc = "Status Monitor for Alpha Blending in Rectangular Area"]
+    #[doc = "Status monitor for alpha blending in rectangular area"]
     #[inline(always)]
     pub fn arcst(
         self,
@@ -13573,7 +13844,7 @@ impl GrMon {
         >::from_register(self, 0)
     }
 
-    #[doc = "Underflow Status Monitor"]
+    #[doc = "Status monitor for underflow"]
     #[inline(always)]
     pub fn undflst(
         self,
@@ -13598,6 +13869,15 @@ impl GrMon {
             crate::common::R,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<17, 0x7fff, 1, 0, u16, u16, GrMon_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<17,0x7fff,1,0,u16,u16,GrMon_SPEC,crate::common::R>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for GrMon {
     #[inline(always)]
@@ -13611,35 +13891,35 @@ pub mod gr_mon {
     pub struct Arcst_SPEC;
     pub type Arcst = crate::EnumBitfieldStruct<u8, Arcst_SPEC>;
     impl Arcst {
-        #[doc = "Fade-in/fade-out not in progress"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Fade-in/fade-out in progress"]
+        #[doc = "Fade-in/fade-out is in progress."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Fade-in/fade-out is not in progress."]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Undflst_SPEC;
     pub type Undflst = crate::EnumBitfieldStruct<u8, Undflst_SPEC>;
     impl Undflst {
-        #[doc = "No underflow occurred in internal operations"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Underflow occurred in internal operations"]
+        #[doc = "An underflow occurs in internal operations."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "No underflow occurs in internal operations."]
+        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamgLatch_SPEC;
-impl crate::sealed::RegSpec for GamgLatch_SPEC {
+pub struct GamLatch_SPEC;
+impl crate::sealed::RegSpec for GamLatch_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Gamma G Register Update Control Register"]
-pub type GamgLatch = crate::RegValueT<GamgLatch_SPEC>;
+#[doc = "Gamma %s Register Update Control Register"]
+pub type GamLatch = crate::RegValueT<GamLatch_SPEC>;
 
-impl GamgLatch {
-    #[doc = "Control of Gamma Correction × Module Register Value Reflection to Internal Operations"]
+impl GamLatch {
+    #[doc = "Control of gamma correction x module register value reflection to internal operations.The register values to be reflected to the internal operations at the assertion of the vertical synchronization signal (VS)."]
     #[inline(always)]
     pub fn ven(
         self,
@@ -13648,9 +13928,9 @@ impl GamgLatch {
         0x1,
         1,
         0,
-        gamg_latch::Ven,
-        gamg_latch::Ven,
-        GamgLatch_SPEC,
+        gam_latch::Ven,
+        gam_latch::Ven,
+        GamLatch_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -13658,30 +13938,48 @@ impl GamgLatch {
             0x1,
             1,
             0,
-            gamg_latch::Ven,
-            gamg_latch::Ven,
-            GamgLatch_SPEC,
+            gam_latch::Ven,
+            gam_latch::Ven,
+            GamLatch_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000000000000000000. The write value should be 0000000000000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<1, 0x7fffffff, 1, 0, u32, u32, GamLatch_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<
+            1,
+            0x7fffffff,
+            1,
+            0,
+            u32,
+            u32,
+            GamLatch_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 }
-impl ::core::default::Default for GamgLatch {
+impl ::core::default::Default for GamLatch {
     #[inline(always)]
-    fn default() -> GamgLatch {
-        <crate::RegValueT<GamgLatch_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> GamLatch {
+        <crate::RegValueT<GamLatch_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod gamg_latch {
+pub mod gam_latch {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ven_SPEC;
     pub type Ven = crate::EnumBitfieldStruct<u8, Ven_SPEC>;
     impl Ven {
-        #[doc = "Disable reflection of register values to internal operations on assertion of vertical synchronization signal (VS)"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable reflection of register values to internal operations on assertion of the vertical synchronization signal (VS)"]
+        #[doc = "Enables the register values to be reflected to the internal operations at the assertion of the vertical synchronization signal (VS)."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Disables the register values to be reflected to the internal operations at the assertion of the vertical synchronization signal (VS)."]
+        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -13695,7 +13993,7 @@ impl crate::sealed::RegSpec for GamSw_SPEC {
 pub type GamSw = crate::RegValueT<GamSw_SPEC>;
 
 impl GamSw {
-    #[doc = "Gamma Correction On/Off Control"]
+    #[doc = "Gamma correction on/off control"]
     #[inline(always)]
     pub fn gamon(
         self,
@@ -13720,6 +14018,15 @@ impl GamSw {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000000000000000000. The write value should be 0000000000000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<1, 0x7fffffff, 1, 0, u32, u32, GamSw_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<1,0x7fffffff,1,0,u32,u32,GamSw_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for GamSw {
     #[inline(always)]
@@ -13733,1661 +14040,627 @@ pub mod gam_sw {
     pub struct Gamon_SPEC;
     pub type Gamon = crate::EnumBitfieldStruct<u8, Gamon_SPEC>;
     impl Gamon {
-        #[doc = "Turn off gamma correction"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Turn on gamma correction"]
+        #[doc = "Turns on gamma correction."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Turns off gamma correction."]
+        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamgLut1_SPEC;
-impl crate::sealed::RegSpec for GamgLut1_SPEC {
+pub struct GamLut1_SPEC;
+impl crate::sealed::RegSpec for GamLut1_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Gamma G Correction Block Table Setting Register 1"]
-pub type GamgLut1 = crate::RegValueT<GamgLut1_SPEC>;
+#[doc = "Gamma %s Correction Block Table Setting Register 1"]
+pub type GamLut1 = crate::RegValueT<GamLut1_SPEC>;
 
-impl GamgLut1 {
-    #[doc = "Gain Value of Area 1"]
+impl GamLut1 {
+    #[doc = "Gain value of area 1Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain01(
         self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamgLut1_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamLut1_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamgLut1_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamLut1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Gain Value of Area 0"]
+    #[doc = "Gain value of area 0.Unsigned 11-bit fixed point."]
     #[inline(always)]
     pub fn gain00(
         self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamgLut1_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamLut1_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamgLut1_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamLut1_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x1f, 1, 0, u8, u8, GamLut1_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<27,0x1f,1,0,u8,u8,GamLut1_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
-impl ::core::default::Default for GamgLut1 {
+impl ::core::default::Default for GamLut1 {
     #[inline(always)]
-    fn default() -> GamgLut1 {
-        <crate::RegValueT<GamgLut1_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> GamLut1 {
+        <crate::RegValueT<GamLut1_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamgLut2_SPEC;
-impl crate::sealed::RegSpec for GamgLut2_SPEC {
+pub struct GamLut2_SPEC;
+impl crate::sealed::RegSpec for GamLut2_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Gamma G Correction Block Table Setting Register 2"]
-pub type GamgLut2 = crate::RegValueT<GamgLut2_SPEC>;
+#[doc = "Gamma %s Correction Block Table Setting Register 2"]
+pub type GamLut2 = crate::RegValueT<GamLut2_SPEC>;
 
-impl GamgLut2 {
-    #[doc = "Gain Value of Area 3"]
+impl GamLut2 {
+    #[doc = "Gain value of area 3Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain03(
         self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamgLut2_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamLut2_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamgLut2_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamLut2_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Gain Value of Area 2"]
+    #[doc = "Gain value of area 2Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain02(
         self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamgLut2_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamLut2_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamgLut2_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamLut2_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x1f, 1, 0, u8, u8, GamLut2_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<27,0x1f,1,0,u8,u8,GamLut2_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
-impl ::core::default::Default for GamgLut2 {
+impl ::core::default::Default for GamLut2 {
     #[inline(always)]
-    fn default() -> GamgLut2 {
-        <crate::RegValueT<GamgLut2_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> GamLut2 {
+        <crate::RegValueT<GamLut2_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamgLut3_SPEC;
-impl crate::sealed::RegSpec for GamgLut3_SPEC {
+pub struct GamLut3_SPEC;
+impl crate::sealed::RegSpec for GamLut3_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Gamma G Correction Block Table Setting Register 3"]
-pub type GamgLut3 = crate::RegValueT<GamgLut3_SPEC>;
+#[doc = "Gamma %s Correction Block Table Setting Register 3"]
+pub type GamLut3 = crate::RegValueT<GamLut3_SPEC>;
 
-impl GamgLut3 {
-    #[doc = "Gain Value of Area 5"]
+impl GamLut3 {
+    #[doc = "Gain value of area 5Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain05(
         self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamgLut3_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamLut3_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamgLut3_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamLut3_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Gain Value of Area 4"]
+    #[doc = "Gain value of area 4Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain04(
         self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamgLut3_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamLut3_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamgLut3_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamLut3_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x1f, 1, 0, u8, u8, GamLut3_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<27,0x1f,1,0,u8,u8,GamLut3_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
-impl ::core::default::Default for GamgLut3 {
+impl ::core::default::Default for GamLut3 {
     #[inline(always)]
-    fn default() -> GamgLut3 {
-        <crate::RegValueT<GamgLut3_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> GamLut3 {
+        <crate::RegValueT<GamLut3_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamgLut4_SPEC;
-impl crate::sealed::RegSpec for GamgLut4_SPEC {
+pub struct GamLut4_SPEC;
+impl crate::sealed::RegSpec for GamLut4_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Gamma G Correction Block Table Setting Register 4"]
-pub type GamgLut4 = crate::RegValueT<GamgLut4_SPEC>;
+#[doc = "Gamma %s Correction Block Table Setting Register 4"]
+pub type GamLut4 = crate::RegValueT<GamLut4_SPEC>;
 
-impl GamgLut4 {
-    #[doc = "Gain Value of Area 7"]
+impl GamLut4 {
+    #[doc = "Gain value of area 7Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain07(
         self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamgLut4_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamLut4_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamgLut4_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamLut4_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Gain Value of Area 6"]
+    #[doc = "Gain value of area 6Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain06(
         self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamgLut4_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamLut4_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamgLut4_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamLut4_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x1f, 1, 0, u8, u8, GamLut4_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<27,0x1f,1,0,u8,u8,GamLut4_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
-impl ::core::default::Default for GamgLut4 {
+impl ::core::default::Default for GamLut4 {
     #[inline(always)]
-    fn default() -> GamgLut4 {
-        <crate::RegValueT<GamgLut4_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> GamLut4 {
+        <crate::RegValueT<GamLut4_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamgLut5_SPEC;
-impl crate::sealed::RegSpec for GamgLut5_SPEC {
+pub struct GamLut5_SPEC;
+impl crate::sealed::RegSpec for GamLut5_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Gamma G Correction Block Table Setting Register 5"]
-pub type GamgLut5 = crate::RegValueT<GamgLut5_SPEC>;
+#[doc = "Gamma %s Correction Block Table Setting Register 5"]
+pub type GamLut5 = crate::RegValueT<GamLut5_SPEC>;
 
-impl GamgLut5 {
-    #[doc = "Gain Value of Area 9"]
+impl GamLut5 {
+    #[doc = "Gain value of area 9Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain09(
         self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamgLut5_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamLut5_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamgLut5_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamLut5_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Gain Value of Area 8"]
+    #[doc = "Gain value of area 8Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain08(
         self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamgLut5_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamLut5_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamgLut5_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamLut5_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x1f, 1, 0, u8, u8, GamLut5_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<27,0x1f,1,0,u8,u8,GamLut5_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
-impl ::core::default::Default for GamgLut5 {
+impl ::core::default::Default for GamLut5 {
     #[inline(always)]
-    fn default() -> GamgLut5 {
-        <crate::RegValueT<GamgLut5_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> GamLut5 {
+        <crate::RegValueT<GamLut5_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamgLut6_SPEC;
-impl crate::sealed::RegSpec for GamgLut6_SPEC {
+pub struct GamLut6_SPEC;
+impl crate::sealed::RegSpec for GamLut6_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Gamma G Correction Block Table Setting Register 6"]
-pub type GamgLut6 = crate::RegValueT<GamgLut6_SPEC>;
+#[doc = "Gamma %s Correction Block Table Setting Register 6"]
+pub type GamLut6 = crate::RegValueT<GamLut6_SPEC>;
 
-impl GamgLut6 {
-    #[doc = "Gain Value of Area 11"]
+impl GamLut6 {
+    #[doc = "Gain value of area 11Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain11(
         self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamgLut6_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamLut6_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamgLut6_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamLut6_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Gain Value of Area 10"]
+    #[doc = "Gain value of area 10Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain10(
         self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamgLut6_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamLut6_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamgLut6_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamLut6_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x1f, 1, 0, u8, u8, GamLut6_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<27,0x1f,1,0,u8,u8,GamLut6_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
-impl ::core::default::Default for GamgLut6 {
+impl ::core::default::Default for GamLut6 {
     #[inline(always)]
-    fn default() -> GamgLut6 {
-        <crate::RegValueT<GamgLut6_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> GamLut6 {
+        <crate::RegValueT<GamLut6_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamgLut7_SPEC;
-impl crate::sealed::RegSpec for GamgLut7_SPEC {
+pub struct GamLut7_SPEC;
+impl crate::sealed::RegSpec for GamLut7_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Gamma G Correction Block Table Setting Register 7"]
-pub type GamgLut7 = crate::RegValueT<GamgLut7_SPEC>;
+#[doc = "Gamma %s Correction Block Table Setting Register 7"]
+pub type GamLut7 = crate::RegValueT<GamLut7_SPEC>;
 
-impl GamgLut7 {
-    #[doc = "Gain Value of Area 13"]
+impl GamLut7 {
+    #[doc = "Gain value of area 13Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain13(
         self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamgLut7_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamLut7_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamgLut7_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamLut7_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Gain Value of Area 12"]
+    #[doc = "Gain value of area 12Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain12(
         self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamgLut7_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamLut7_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamgLut7_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamLut7_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x1f, 1, 0, u8, u8, GamLut7_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<27,0x1f,1,0,u8,u8,GamLut7_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
-impl ::core::default::Default for GamgLut7 {
+impl ::core::default::Default for GamLut7 {
     #[inline(always)]
-    fn default() -> GamgLut7 {
-        <crate::RegValueT<GamgLut7_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> GamLut7 {
+        <crate::RegValueT<GamLut7_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamgLut8_SPEC;
-impl crate::sealed::RegSpec for GamgLut8_SPEC {
+pub struct GamLut8_SPEC;
+impl crate::sealed::RegSpec for GamLut8_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Gamma G Correction Block Table Setting Register 8"]
-pub type GamgLut8 = crate::RegValueT<GamgLut8_SPEC>;
+#[doc = "Gamma %s Correction Block Table Setting Register 8"]
+pub type GamLut8 = crate::RegValueT<GamLut8_SPEC>;
 
-impl GamgLut8 {
-    #[doc = "Gain Value of Area 15"]
+impl GamLut8 {
+    #[doc = "Gain value of area 15Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain15(
         self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamgLut8_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamLut8_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamgLut8_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamLut8_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Gain Value of Area 14"]
+    #[doc = "Gain value of area 14Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain14(
         self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamgLut8_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamLut8_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamgLut8_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamLut8_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x1f, 1, 0, u8, u8, GamLut8_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<27,0x1f,1,0,u8,u8,GamLut8_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
-impl ::core::default::Default for GamgLut8 {
+impl ::core::default::Default for GamLut8 {
     #[inline(always)]
-    fn default() -> GamgLut8 {
-        <crate::RegValueT<GamgLut8_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> GamLut8 {
+        <crate::RegValueT<GamLut8_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamgArea1_SPEC;
-impl crate::sealed::RegSpec for GamgArea1_SPEC {
+pub struct GamArea1_SPEC;
+impl crate::sealed::RegSpec for GamArea1_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Gamma G Correction Block Area Setting Register 1"]
-pub type GamgArea1 = crate::RegValueT<GamgArea1_SPEC>;
+#[doc = "Gamma %s Correction Block Area Setting Register 1"]
+pub type GamArea1 = crate::RegValueT<GamArea1_SPEC>;
 
-impl GamgArea1 {
-    #[doc = "Start Threshold of Area 3"]
+impl GamArea1 {
+    #[doc = "Start threshold of area 3Unsigned 10-bit integer"]
     #[inline(always)]
     pub fn th03(
         self,
-    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GamgArea1_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GamArea1_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GamgArea1_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GamArea1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Start Threshold of Area 2"]
+    #[doc = "Start threshold of area 2Unsigned 10-bit integer"]
     #[inline(always)]
     pub fn th02(
         self,
-    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GamgArea1_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GamArea1_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GamgArea1_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GamArea1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Start Threshold of Area 1"]
+    #[doc = "Start threshold of area 1Unsigned 10-bit integer"]
     #[inline(always)]
     pub fn th01(
         self,
-    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GamgArea1_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GamArea1_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GamgArea1_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GamArea1_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00. The write value should be 00."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<30, 0x3, 1, 0, u8, u8, GamArea1_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<30,0x3,1,0,u8,u8,GamArea1_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
-impl ::core::default::Default for GamgArea1 {
+impl ::core::default::Default for GamArea1 {
     #[inline(always)]
-    fn default() -> GamgArea1 {
-        <crate::RegValueT<GamgArea1_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> GamArea1 {
+        <crate::RegValueT<GamArea1_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamgArea2_SPEC;
-impl crate::sealed::RegSpec for GamgArea2_SPEC {
+pub struct GamArea2_SPEC;
+impl crate::sealed::RegSpec for GamArea2_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Gamma G Correction Block Area Setting Register 2"]
-pub type GamgArea2 = crate::RegValueT<GamgArea2_SPEC>;
+#[doc = "Gamma %s Correction Block Area Setting Register 2"]
+pub type GamArea2 = crate::RegValueT<GamArea2_SPEC>;
 
-impl GamgArea2 {
-    #[doc = "Start Threshold of Area 6"]
+impl GamArea2 {
+    #[doc = "Start threshold of area 6Unsigned 10-bit integer"]
     #[inline(always)]
     pub fn th06(
         self,
-    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GamgArea2_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GamArea2_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GamgArea2_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GamArea2_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Start Threshold of Area 5"]
+    #[doc = "Start threshold of area 5Unsigned 10-bit integer"]
     #[inline(always)]
     pub fn th05(
         self,
-    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GamgArea2_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GamArea2_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GamgArea2_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GamArea2_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Start Threshold of Area 4"]
+    #[doc = "Start threshold of area 4Unsigned 10-bit integer"]
     #[inline(always)]
     pub fn th04(
         self,
-    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GamgArea2_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GamArea2_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GamgArea2_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GamArea2_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00. The write value should be 00."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<30, 0x3, 1, 0, u8, u8, GamArea2_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<30,0x3,1,0,u8,u8,GamArea2_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
-impl ::core::default::Default for GamgArea2 {
+impl ::core::default::Default for GamArea2 {
     #[inline(always)]
-    fn default() -> GamgArea2 {
-        <crate::RegValueT<GamgArea2_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> GamArea2 {
+        <crate::RegValueT<GamArea2_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamgArea3_SPEC;
-impl crate::sealed::RegSpec for GamgArea3_SPEC {
+pub struct GamArea3_SPEC;
+impl crate::sealed::RegSpec for GamArea3_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Gamma G Correction Block Area Setting Register 3"]
-pub type GamgArea3 = crate::RegValueT<GamgArea3_SPEC>;
+#[doc = "Gamma %s Correction Block Area Setting Register 3"]
+pub type GamArea3 = crate::RegValueT<GamArea3_SPEC>;
 
-impl GamgArea3 {
-    #[doc = "Start Threshold of Area 9"]
+impl GamArea3 {
+    #[doc = "Start threshold of area 9Unsigned 10-bit integer"]
     #[inline(always)]
     pub fn th09(
         self,
-    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GamgArea3_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GamArea3_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GamgArea3_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GamArea3_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Start Threshold of Area 8"]
+    #[doc = "Start threshold of area 8Unsigned 10-bit integer"]
     #[inline(always)]
     pub fn th08(
         self,
-    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GamgArea3_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GamArea3_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GamgArea3_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GamArea3_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Start Threshold of Area 7"]
+    #[doc = "Start threshold of area 7Unsigned 10-bit integer"]
     #[inline(always)]
     pub fn th07(
         self,
-    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GamgArea3_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GamArea3_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GamgArea3_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GamArea3_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00. The write value should be 00."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<30, 0x3, 1, 0, u8, u8, GamArea3_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<30,0x3,1,0,u8,u8,GamArea3_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
-impl ::core::default::Default for GamgArea3 {
+impl ::core::default::Default for GamArea3 {
     #[inline(always)]
-    fn default() -> GamgArea3 {
-        <crate::RegValueT<GamgArea3_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> GamArea3 {
+        <crate::RegValueT<GamArea3_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamgArea4_SPEC;
-impl crate::sealed::RegSpec for GamgArea4_SPEC {
+pub struct GamArea4_SPEC;
+impl crate::sealed::RegSpec for GamArea4_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Gamma G Correction Block Area Setting Register 4"]
-pub type GamgArea4 = crate::RegValueT<GamgArea4_SPEC>;
+#[doc = "Gamma %s Correction Block Area Setting Register 4"]
+pub type GamArea4 = crate::RegValueT<GamArea4_SPEC>;
 
-impl GamgArea4 {
-    #[doc = "Start Threshold of Area 12"]
+impl GamArea4 {
+    #[doc = "Start threshold of area 12Unsigned 10-bit integer"]
     #[inline(always)]
     pub fn th12(
         self,
-    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GamgArea4_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GamArea4_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GamgArea4_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GamArea4_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Start Threshold of Area 11"]
+    #[doc = "Start threshold of area 11Unsigned 10-bit integer"]
     #[inline(always)]
     pub fn th11(
         self,
-    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GamgArea4_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GamArea4_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GamgArea4_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GamArea4_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Start Threshold of Area 10"]
+    #[doc = "Start threshold of area 10Unsigned 10-bit integer"]
     #[inline(always)]
     pub fn th10(
         self,
-    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GamgArea4_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GamArea4_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GamgArea4_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GamArea4_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00. The write value should be 00."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<30, 0x3, 1, 0, u8, u8, GamArea4_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<30,0x3,1,0,u8,u8,GamArea4_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
-impl ::core::default::Default for GamgArea4 {
+impl ::core::default::Default for GamArea4 {
     #[inline(always)]
-    fn default() -> GamgArea4 {
-        <crate::RegValueT<GamgArea4_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> GamArea4 {
+        <crate::RegValueT<GamArea4_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamgArea5_SPEC;
-impl crate::sealed::RegSpec for GamgArea5_SPEC {
+pub struct GamArea5_SPEC;
+impl crate::sealed::RegSpec for GamArea5_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Gamma G Correction Block Area Setting Register 5"]
-pub type GamgArea5 = crate::RegValueT<GamgArea5_SPEC>;
+#[doc = "Gamma %s Correction Block Area Setting Register 5"]
+pub type GamArea5 = crate::RegValueT<GamArea5_SPEC>;
 
-impl GamgArea5 {
-    #[doc = "Start Threshold of Area 15"]
+impl GamArea5 {
+    #[doc = "Start threshold of area 15Unsigned 10-bit integer"]
     #[inline(always)]
     pub fn th15(
         self,
-    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GamgArea5_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GamArea5_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GamgArea5_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GamArea5_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Start Threshold of Area 14"]
+    #[doc = "Start threshold of area 14Unsigned 10-bit integer"]
     #[inline(always)]
     pub fn th14(
         self,
-    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GamgArea5_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GamArea5_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GamgArea5_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GamArea5_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Start Threshold of Area 13"]
+    #[doc = "Start threshold of area 13Unsigned 10-bit integer"]
     #[inline(always)]
     pub fn th13(
         self,
-    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GamgArea5_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GamArea5_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GamgArea5_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GamArea5_SPEC,crate::common::RW>::from_register(self,0)
     }
-}
-impl ::core::default::Default for GamgArea5 {
-    #[inline(always)]
-    fn default() -> GamgArea5 {
-        <crate::RegValueT<GamgArea5_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GambLatch_SPEC;
-impl crate::sealed::RegSpec for GambLatch_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma B Register Update Control Register"]
-pub type GambLatch = crate::RegValueT<GambLatch_SPEC>;
-
-impl GambLatch {
-    #[doc = "Control of Gamma Correction × Module Register Value Reflection to Internal Operations"]
-    #[inline(always)]
-    pub fn ven(
-        self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x1,
-        1,
-        0,
-        gamb_latch::Ven,
-        gamb_latch::Ven,
-        GambLatch_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x1,
-            1,
-            0,
-            gamb_latch::Ven,
-            gamb_latch::Ven,
-            GambLatch_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-}
-impl ::core::default::Default for GambLatch {
-    #[inline(always)]
-    fn default() -> GambLatch {
-        <crate::RegValueT<GambLatch_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-pub mod gamb_latch {
-
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ven_SPEC;
-    pub type Ven = crate::EnumBitfieldStruct<u8, Ven_SPEC>;
-    impl Ven {
-        #[doc = "Disable reflection of register values to internal operations on assertion of vertical synchronization signal (VS)"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable reflection of register values to internal operations on assertion of the vertical synchronization signal (VS)"]
-        pub const _1: Self = Self::new(1);
-    }
-}
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GambLut1_SPEC;
-impl crate::sealed::RegSpec for GambLut1_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma B Correction Block Table Setting Register 1"]
-pub type GambLut1 = crate::RegValueT<GambLut1_SPEC>;
-
-impl GambLut1 {
-    #[doc = "Gain Value of Area 1"]
-    #[inline(always)]
-    pub fn gain01(
-        self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GambLut1_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GambLut1_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Gain Value of Area 0"]
-    #[inline(always)]
-    pub fn gain00(
-        self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GambLut1_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GambLut1_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GambLut1 {
-    #[inline(always)]
-    fn default() -> GambLut1 {
-        <crate::RegValueT<GambLut1_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GambLut2_SPEC;
-impl crate::sealed::RegSpec for GambLut2_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma B Correction Block Table Setting Register 2"]
-pub type GambLut2 = crate::RegValueT<GambLut2_SPEC>;
-
-impl GambLut2 {
-    #[doc = "Gain Value of Area 3"]
-    #[inline(always)]
-    pub fn gain03(
-        self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GambLut2_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GambLut2_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Gain Value of Area 2"]
-    #[inline(always)]
-    pub fn gain02(
-        self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GambLut2_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GambLut2_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GambLut2 {
-    #[inline(always)]
-    fn default() -> GambLut2 {
-        <crate::RegValueT<GambLut2_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GambLut3_SPEC;
-impl crate::sealed::RegSpec for GambLut3_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma B Correction Block Table Setting Register 3"]
-pub type GambLut3 = crate::RegValueT<GambLut3_SPEC>;
-
-impl GambLut3 {
-    #[doc = "Gain Value of Area 5"]
-    #[inline(always)]
-    pub fn gain05(
-        self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GambLut3_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GambLut3_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Gain Value of Area 4"]
-    #[inline(always)]
-    pub fn gain04(
-        self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GambLut3_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GambLut3_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GambLut3 {
-    #[inline(always)]
-    fn default() -> GambLut3 {
-        <crate::RegValueT<GambLut3_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GambLut4_SPEC;
-impl crate::sealed::RegSpec for GambLut4_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma B Correction Block Table Setting Register 4"]
-pub type GambLut4 = crate::RegValueT<GambLut4_SPEC>;
-
-impl GambLut4 {
-    #[doc = "Gain Value of Area 7"]
-    #[inline(always)]
-    pub fn gain07(
-        self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GambLut4_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GambLut4_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Gain Value of Area 6"]
-    #[inline(always)]
-    pub fn gain06(
-        self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GambLut4_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GambLut4_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GambLut4 {
-    #[inline(always)]
-    fn default() -> GambLut4 {
-        <crate::RegValueT<GambLut4_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GambLut5_SPEC;
-impl crate::sealed::RegSpec for GambLut5_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma B Correction Block Table Setting Register 5"]
-pub type GambLut5 = crate::RegValueT<GambLut5_SPEC>;
-
-impl GambLut5 {
-    #[doc = "Gain Value of Area 9"]
-    #[inline(always)]
-    pub fn gain09(
-        self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GambLut5_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GambLut5_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Gain Value of Area 8"]
-    #[inline(always)]
-    pub fn gain08(
-        self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GambLut5_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GambLut5_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GambLut5 {
-    #[inline(always)]
-    fn default() -> GambLut5 {
-        <crate::RegValueT<GambLut5_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GambLut6_SPEC;
-impl crate::sealed::RegSpec for GambLut6_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma B Correction Block Table Setting Register 6"]
-pub type GambLut6 = crate::RegValueT<GambLut6_SPEC>;
-
-impl GambLut6 {
-    #[doc = "Gain Value of Area 11"]
-    #[inline(always)]
-    pub fn gain11(
-        self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GambLut6_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GambLut6_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Gain Value of Area 10"]
-    #[inline(always)]
-    pub fn gain10(
-        self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GambLut6_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GambLut6_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GambLut6 {
-    #[inline(always)]
-    fn default() -> GambLut6 {
-        <crate::RegValueT<GambLut6_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GambLut7_SPEC;
-impl crate::sealed::RegSpec for GambLut7_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma B Correction Block Table Setting Register 7"]
-pub type GambLut7 = crate::RegValueT<GambLut7_SPEC>;
-
-impl GambLut7 {
-    #[doc = "Gain Value of Area 13"]
-    #[inline(always)]
-    pub fn gain13(
-        self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GambLut7_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GambLut7_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Gain Value of Area 12"]
-    #[inline(always)]
-    pub fn gain12(
-        self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GambLut7_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GambLut7_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GambLut7 {
-    #[inline(always)]
-    fn default() -> GambLut7 {
-        <crate::RegValueT<GambLut7_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GambLut8_SPEC;
-impl crate::sealed::RegSpec for GambLut8_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma B Correction Block Table Setting Register 8"]
-pub type GambLut8 = crate::RegValueT<GambLut8_SPEC>;
-
-impl GambLut8 {
-    #[doc = "Gain Value of Area 15"]
-    #[inline(always)]
-    pub fn gain15(
-        self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GambLut8_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GambLut8_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Gain Value of Area 14"]
-    #[inline(always)]
-    pub fn gain14(
-        self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GambLut8_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GambLut8_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GambLut8 {
-    #[inline(always)]
-    fn default() -> GambLut8 {
-        <crate::RegValueT<GambLut8_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GambArea1_SPEC;
-impl crate::sealed::RegSpec for GambArea1_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma B Correction Block Area Setting Register 1"]
-pub type GambArea1 = crate::RegValueT<GambArea1_SPEC>;
-
-impl GambArea1 {
-    #[doc = "Start Threshold of Area 3"]
-    #[inline(always)]
-    pub fn th03(
-        self,
-    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GambArea1_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GambArea1_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Start Threshold of Area 2"]
-    #[inline(always)]
-    pub fn th02(
-        self,
-    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GambArea1_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GambArea1_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Start Threshold of Area 1"]
-    #[inline(always)]
-    pub fn th01(
-        self,
-    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GambArea1_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GambArea1_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GambArea1 {
-    #[inline(always)]
-    fn default() -> GambArea1 {
-        <crate::RegValueT<GambArea1_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GambArea2_SPEC;
-impl crate::sealed::RegSpec for GambArea2_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma B Correction Block Area Setting Register 2"]
-pub type GambArea2 = crate::RegValueT<GambArea2_SPEC>;
-
-impl GambArea2 {
-    #[doc = "Start Threshold of Area 6"]
-    #[inline(always)]
-    pub fn th06(
-        self,
-    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GambArea2_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GambArea2_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Start Threshold of Area 5"]
-    #[inline(always)]
-    pub fn th05(
-        self,
-    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GambArea2_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GambArea2_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Start Threshold of Area 4"]
-    #[inline(always)]
-    pub fn th04(
-        self,
-    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GambArea2_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GambArea2_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GambArea2 {
-    #[inline(always)]
-    fn default() -> GambArea2 {
-        <crate::RegValueT<GambArea2_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GambArea3_SPEC;
-impl crate::sealed::RegSpec for GambArea3_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma B Correction Block Area Setting Register 3"]
-pub type GambArea3 = crate::RegValueT<GambArea3_SPEC>;
-
-impl GambArea3 {
-    #[doc = "Start Threshold of Area 9"]
-    #[inline(always)]
-    pub fn th09(
-        self,
-    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GambArea3_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GambArea3_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Start Threshold of Area 8"]
-    #[inline(always)]
-    pub fn th08(
-        self,
-    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GambArea3_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GambArea3_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Start Threshold of Area 7"]
-    #[inline(always)]
-    pub fn th07(
-        self,
-    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GambArea3_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GambArea3_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GambArea3 {
-    #[inline(always)]
-    fn default() -> GambArea3 {
-        <crate::RegValueT<GambArea3_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GambArea4_SPEC;
-impl crate::sealed::RegSpec for GambArea4_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma B Correction Block Area Setting Register 4"]
-pub type GambArea4 = crate::RegValueT<GambArea4_SPEC>;
-
-impl GambArea4 {
-    #[doc = "Start Threshold of Area 12"]
-    #[inline(always)]
-    pub fn th12(
-        self,
-    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GambArea4_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GambArea4_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Start Threshold of Area 11"]
-    #[inline(always)]
-    pub fn th11(
-        self,
-    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GambArea4_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GambArea4_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Start Threshold of Area 10"]
-    #[inline(always)]
-    pub fn th10(
-        self,
-    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GambArea4_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GambArea4_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GambArea4 {
-    #[inline(always)]
-    fn default() -> GambArea4 {
-        <crate::RegValueT<GambArea4_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GambArea5_SPEC;
-impl crate::sealed::RegSpec for GambArea5_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma B Correction Block Area Setting Register 5"]
-pub type GambArea5 = crate::RegValueT<GambArea5_SPEC>;
-
-impl GambArea5 {
-    #[doc = "Start Threshold of Area 15"]
-    #[inline(always)]
-    pub fn th15(
-        self,
-    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GambArea5_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GambArea5_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Start Threshold of Area 14"]
-    #[inline(always)]
-    pub fn th14(
-        self,
-    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GambArea5_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GambArea5_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Start Threshold of Area 13"]
-    #[inline(always)]
-    pub fn th13(
-        self,
-    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GambArea5_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GambArea5_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GambArea5 {
-    #[inline(always)]
-    fn default() -> GambArea5 {
-        <crate::RegValueT<GambArea5_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamrLatch_SPEC;
-impl crate::sealed::RegSpec for GamrLatch_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma R Register Update Control Register"]
-pub type GamrLatch = crate::RegValueT<GamrLatch_SPEC>;
-
-impl GamrLatch {
-    #[doc = "Control of Gamma Correction × Module Register Value Reflection to Internal Operations"]
-    #[inline(always)]
-    pub fn ven(
-        self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x1,
-        1,
-        0,
-        gamr_latch::Ven,
-        gamr_latch::Ven,
-        GamrLatch_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x1,
-            1,
-            0,
-            gamr_latch::Ven,
-            gamr_latch::Ven,
-            GamrLatch_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-}
-impl ::core::default::Default for GamrLatch {
-    #[inline(always)]
-    fn default() -> GamrLatch {
-        <crate::RegValueT<GamrLatch_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-pub mod gamr_latch {
-
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ven_SPEC;
-    pub type Ven = crate::EnumBitfieldStruct<u8, Ven_SPEC>;
-    impl Ven {
-        #[doc = "Disable reflection of register values to internal operations on assertion of vertical synchronization signal (VS)"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable reflection of register values to internal operations on assertion of the vertical synchronization signal (VS)"]
-        pub const _1: Self = Self::new(1);
-    }
-}
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamrLut1_SPEC;
-impl crate::sealed::RegSpec for GamrLut1_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma R Correction Block Table Setting Register 1"]
-pub type GamrLut1 = crate::RegValueT<GamrLut1_SPEC>;
-
-impl GamrLut1 {
-    #[doc = "Gain Value of Area 1"]
-    #[inline(always)]
-    pub fn gain01(
-        self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamrLut1_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamrLut1_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Gain Value of Area 0"]
-    #[inline(always)]
-    pub fn gain00(
-        self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamrLut1_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamrLut1_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GamrLut1 {
-    #[inline(always)]
-    fn default() -> GamrLut1 {
-        <crate::RegValueT<GamrLut1_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamrLut2_SPEC;
-impl crate::sealed::RegSpec for GamrLut2_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma R Correction Block Table Setting Register 2"]
-pub type GamrLut2 = crate::RegValueT<GamrLut2_SPEC>;
-
-impl GamrLut2 {
-    #[doc = "Gain Value of Area 3"]
-    #[inline(always)]
-    pub fn gain03(
-        self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamrLut2_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamrLut2_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Gain Value of Area 2"]
-    #[inline(always)]
-    pub fn gain02(
-        self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamrLut2_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamrLut2_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GamrLut2 {
-    #[inline(always)]
-    fn default() -> GamrLut2 {
-        <crate::RegValueT<GamrLut2_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamrLut3_SPEC;
-impl crate::sealed::RegSpec for GamrLut3_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma R Correction Block Table Setting Register 3"]
-pub type GamrLut3 = crate::RegValueT<GamrLut3_SPEC>;
-
-impl GamrLut3 {
-    #[doc = "Gain Value of Area 5"]
-    #[inline(always)]
-    pub fn gain05(
-        self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamrLut3_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamrLut3_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Gain Value of Area 4"]
-    #[inline(always)]
-    pub fn gain04(
-        self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamrLut3_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamrLut3_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GamrLut3 {
-    #[inline(always)]
-    fn default() -> GamrLut3 {
-        <crate::RegValueT<GamrLut3_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamrLut4_SPEC;
-impl crate::sealed::RegSpec for GamrLut4_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma R Correction Block Table Setting Register 4"]
-pub type GamrLut4 = crate::RegValueT<GamrLut4_SPEC>;
-
-impl GamrLut4 {
-    #[doc = "Gain Value of Area 7"]
-    #[inline(always)]
-    pub fn gain07(
-        self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamrLut4_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamrLut4_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Gain Value of Area 6"]
-    #[inline(always)]
-    pub fn gain06(
-        self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamrLut4_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamrLut4_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GamrLut4 {
-    #[inline(always)]
-    fn default() -> GamrLut4 {
-        <crate::RegValueT<GamrLut4_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamrLut5_SPEC;
-impl crate::sealed::RegSpec for GamrLut5_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma R Correction Block Table Setting Register 5"]
-pub type GamrLut5 = crate::RegValueT<GamrLut5_SPEC>;
-
-impl GamrLut5 {
-    #[doc = "Gain Value of Area 9"]
-    #[inline(always)]
-    pub fn gain09(
-        self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamrLut5_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamrLut5_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Gain Value of Area 8"]
-    #[inline(always)]
-    pub fn gain08(
-        self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamrLut5_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamrLut5_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GamrLut5 {
-    #[inline(always)]
-    fn default() -> GamrLut5 {
-        <crate::RegValueT<GamrLut5_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamrLut6_SPEC;
-impl crate::sealed::RegSpec for GamrLut6_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma R Correction Block Table Setting Register 6"]
-pub type GamrLut6 = crate::RegValueT<GamrLut6_SPEC>;
-
-impl GamrLut6 {
-    #[doc = "Gain Value of Area 11"]
-    #[inline(always)]
-    pub fn gain11(
-        self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamrLut6_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamrLut6_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Gain Value of Area 10"]
-    #[inline(always)]
-    pub fn gain10(
-        self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamrLut6_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamrLut6_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GamrLut6 {
-    #[inline(always)]
-    fn default() -> GamrLut6 {
-        <crate::RegValueT<GamrLut6_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamrLut7_SPEC;
-impl crate::sealed::RegSpec for GamrLut7_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma R Correction Block Table Setting Register 7"]
-pub type GamrLut7 = crate::RegValueT<GamrLut7_SPEC>;
-
-impl GamrLut7 {
-    #[doc = "Gain Value of Area 13"]
-    #[inline(always)]
-    pub fn gain13(
-        self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamrLut7_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamrLut7_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Gain Value of Area 12"]
-    #[inline(always)]
-    pub fn gain12(
-        self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamrLut7_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamrLut7_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GamrLut7 {
-    #[inline(always)]
-    fn default() -> GamrLut7 {
-        <crate::RegValueT<GamrLut7_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamrLut8_SPEC;
-impl crate::sealed::RegSpec for GamrLut8_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma R Correction Block Table Setting Register 8"]
-pub type GamrLut8 = crate::RegValueT<GamrLut8_SPEC>;
-
-impl GamrLut8 {
-    #[doc = "Gain Value of Area 15"]
-    #[inline(always)]
-    pub fn gain15(
-        self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamrLut8_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamrLut8_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Gain Value of Area 14"]
-    #[inline(always)]
-    pub fn gain14(
-        self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamrLut8_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamrLut8_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GamrLut8 {
-    #[inline(always)]
-    fn default() -> GamrLut8 {
-        <crate::RegValueT<GamrLut8_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamrArea1_SPEC;
-impl crate::sealed::RegSpec for GamrArea1_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma R Correction Block Area Setting Register 1"]
-pub type GamrArea1 = crate::RegValueT<GamrArea1_SPEC>;
-
-impl GamrArea1 {
-    #[doc = "Start Threshold of Area 3"]
-    #[inline(always)]
-    pub fn th03(
-        self,
-    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GamrArea1_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GamrArea1_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Start Threshold of Area 2"]
-    #[inline(always)]
-    pub fn th02(
-        self,
-    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GamrArea1_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GamrArea1_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Start Threshold of Area 1"]
-    #[inline(always)]
-    pub fn th01(
-        self,
-    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GamrArea1_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GamrArea1_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GamrArea1 {
-    #[inline(always)]
-    fn default() -> GamrArea1 {
-        <crate::RegValueT<GamrArea1_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamrArea2_SPEC;
-impl crate::sealed::RegSpec for GamrArea2_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma R Correction Block Area Setting Register 2"]
-pub type GamrArea2 = crate::RegValueT<GamrArea2_SPEC>;
-
-impl GamrArea2 {
-    #[doc = "Start Threshold of Area 6"]
-    #[inline(always)]
-    pub fn th06(
-        self,
-    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GamrArea2_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GamrArea2_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Start Threshold of Area 5"]
-    #[inline(always)]
-    pub fn th05(
-        self,
-    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GamrArea2_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GamrArea2_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Start Threshold of Area 4"]
-    #[inline(always)]
-    pub fn th04(
-        self,
-    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GamrArea2_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GamrArea2_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GamrArea2 {
-    #[inline(always)]
-    fn default() -> GamrArea2 {
-        <crate::RegValueT<GamrArea2_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamrArea3_SPEC;
-impl crate::sealed::RegSpec for GamrArea3_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma R Correction Block Area Setting Register 3"]
-pub type GamrArea3 = crate::RegValueT<GamrArea3_SPEC>;
-
-impl GamrArea3 {
-    #[doc = "Start Threshold of Area 9"]
-    #[inline(always)]
-    pub fn th09(
-        self,
-    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GamrArea3_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GamrArea3_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Start Threshold of Area 8"]
-    #[inline(always)]
-    pub fn th08(
-        self,
-    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GamrArea3_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GamrArea3_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Start Threshold of Area 7"]
-    #[inline(always)]
-    pub fn th07(
-        self,
-    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GamrArea3_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GamrArea3_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GamrArea3 {
-    #[inline(always)]
-    fn default() -> GamrArea3 {
-        <crate::RegValueT<GamrArea3_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamrArea4_SPEC;
-impl crate::sealed::RegSpec for GamrArea4_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma R Correction Block Area Setting Register 4"]
-pub type GamrArea4 = crate::RegValueT<GamrArea4_SPEC>;
-
-impl GamrArea4 {
-    #[doc = "Start Threshold of Area 12"]
-    #[inline(always)]
-    pub fn th12(
-        self,
-    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GamrArea4_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GamrArea4_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Start Threshold of Area 11"]
-    #[inline(always)]
-    pub fn th11(
-        self,
-    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GamrArea4_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GamrArea4_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Start Threshold of Area 10"]
-    #[inline(always)]
-    pub fn th10(
-        self,
-    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GamrArea4_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GamrArea4_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for GamrArea4 {
-    #[inline(always)]
-    fn default() -> GamrArea4 {
-        <crate::RegValueT<GamrArea4_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct GamrArea5_SPEC;
-impl crate::sealed::RegSpec for GamrArea5_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "Gamma R Correction Block Area Setting Register 5"]
-pub type GamrArea5 = crate::RegValueT<GamrArea5_SPEC>;
-
-impl GamrArea5 {
-    #[doc = "Start Threshold of Area 15"]
-    #[inline(always)]
-    pub fn th15(
-        self,
-    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, GamrArea5_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,GamrArea5_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Start Threshold of Area 14"]
-    #[inline(always)]
-    pub fn th14(
-        self,
-    ) -> crate::common::RegisterField<10, 0x3ff, 1, 0, u16, u16, GamrArea5_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<10,0x3ff,1,0,u16,u16,GamrArea5_SPEC,crate::common::RW>::from_register(self,0)
-    }
 
-    #[doc = "Start Threshold of Area 13"]
+    #[doc = "These bits are read as 00. The write value should be 00."]
     #[inline(always)]
-    pub fn th13(
+    pub fn reserved(
         self,
-    ) -> crate::common::RegisterField<20, 0x3ff, 1, 0, u16, u16, GamrArea5_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<20,0x3ff,1,0,u16,u16,GamrArea5_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<30, 0x3, 1, 0, u8, u8, GamArea5_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<30,0x3,1,0,u8,u8,GamArea5_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
-impl ::core::default::Default for GamrArea5 {
+impl ::core::default::Default for GamArea5 {
     #[inline(always)]
-    fn default() -> GamrArea5 {
-        <crate::RegValueT<GamrArea5_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> GamArea5 {
+        <crate::RegValueT<GamArea5_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 
@@ -15402,7 +14675,7 @@ impl crate::sealed::RegSpec for OutVlatch_SPEC {
 pub type OutVlatch = crate::RegValueT<OutVlatch_SPEC>;
 
 impl OutVlatch {
-    #[doc = "Control of Output Control Module Register Value Reflection to Internal Operations"]
+    #[doc = "Control of output control module register value reflection to internal operations.The register values to be reflected to the internal operations at the assertion of the vertical synchronization signal (VS)."]
     #[inline(always)]
     pub fn ven(
         self,
@@ -15427,6 +14700,32 @@ impl OutVlatch {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000000000000000000. The write value should be 0000000000000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<
+        1,
+        0x7fffffff,
+        1,
+        0,
+        u32,
+        u32,
+        OutVlatch_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            1,
+            0x7fffffff,
+            1,
+            0,
+            u32,
+            u32,
+            OutVlatch_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
 }
 impl ::core::default::Default for OutVlatch {
     #[inline(always)]
@@ -15440,11 +14739,11 @@ pub mod out_vlatch {
     pub struct Ven_SPEC;
     pub type Ven = crate::EnumBitfieldStruct<u8, Ven_SPEC>;
     impl Ven {
-        #[doc = "Disable reflection of register values to internal operations on assertion of vertical synchronization signal (VS)"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable reflection of register values to internal operations on assertion of vertical synchronization signal (VS)."]
+        #[doc = "Enables the register values to be reflected to the internal operations at the assertion of the vertical synchronization signal (VS)."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Disables the register values to be reflected to the internal operations at the assertion of the vertical synchronization signal (VS)."]
+        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -15458,7 +14757,7 @@ impl crate::sealed::RegSpec for OutSet_SPEC {
 pub type OutSet = crate::RegValueT<OutSet_SPEC>;
 
 impl OutSet {
-    #[doc = "Data Output Delay Control in Serial RGB Format"]
+    #[doc = "Data delay in serial RGB format (based on OUTCLK)"]
     #[inline(always)]
     pub fn phase(
         self,
@@ -15484,7 +14783,7 @@ impl OutSet {
         >::from_register(self, 0)
     }
 
-    #[doc = "Scan Direction Select of Serial RGB Format"]
+    #[doc = "Invalid data position control in serial RGB format"]
     #[inline(always)]
     pub fn dirsel(
         self,
@@ -15510,7 +14809,7 @@ impl OutSet {
         >::from_register(self, 0)
     }
 
-    #[doc = "Clock Frequency Division Control"]
+    #[doc = "Clock frequency division control"]
     #[inline(always)]
     pub fn frqsel(
         self,
@@ -15536,7 +14835,7 @@ impl OutSet {
         >::from_register(self, 0)
     }
 
-    #[doc = "Output Format Select"]
+    #[doc = "Output format select"]
     #[inline(always)]
     pub fn format(
         self,
@@ -15562,7 +14861,7 @@ impl OutSet {
         >::from_register(self, 0)
     }
 
-    #[doc = "Pixel Order Control"]
+    #[doc = "Pixel order control"]
     #[inline(always)]
     pub fn swapon(
         self,
@@ -15588,7 +14887,7 @@ impl OutSet {
         >::from_register(self, 0)
     }
 
-    #[doc = "Bit Endian Control"]
+    #[doc = "Bit endian change control"]
     #[inline(always)]
     pub fn endianon(
         self,
@@ -15613,6 +14912,14 @@ impl OutSet {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000. The write value should be 000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<29, 0x7, 1, 0, u8, u8, OutSet_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<29,0x7,1,0,u8,u8,OutSet_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for OutSet {
     #[inline(always)]
@@ -15626,79 +14933,79 @@ pub mod out_set {
     pub struct Phase_SPEC;
     pub type Phase = crate::EnumBitfieldStruct<u8, Phase_SPEC>;
     impl Phase {
-        #[doc = "0 cycle"]
-        pub const _00: Self = Self::new(0);
-
-        #[doc = "1 cycle"]
-        pub const _01: Self = Self::new(1);
+        #[doc = "3 cycles"]
+        pub const _11: Self = Self::new(3);
 
         #[doc = "2 cycles"]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "3 cycles"]
-        pub const _11: Self = Self::new(3);
+        #[doc = "1 cycle"]
+        pub const _01: Self = Self::new(1);
+
+        #[doc = "0 cycle"]
+        pub const _00: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dirsel_SPEC;
     pub type Dirsel = crate::EnumBitfieldStruct<u8, Dirsel_SPEC>;
     impl Dirsel {
-        #[doc = "Forward scan"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Reverse scan"]
+        #[doc = "Invalid data is output prior to valid (RGB) data."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Invalid data is output following valid (RGB) data."]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Frqsel_SPEC;
     pub type Frqsel = crate::EnumBitfieldStruct<u8, Frqsel_SPEC>;
     impl Frqsel {
-        #[doc = "No frequency division, parallel RGB"]
-        pub const _00: Self = Self::new(0);
-
         #[doc = "Setting prohibited"]
-        pub const _01: Self = Self::new(1);
+        pub const _11: Self = Self::new(3);
 
         #[doc = "Quarter frequency (serial RGB)"]
         pub const _10: Self = Self::new(2);
 
         #[doc = "Setting prohibited"]
-        pub const _11: Self = Self::new(3);
+        pub const _01: Self = Self::new(1);
+
+        #[doc = "No frequency division, parallel RGB"]
+        pub const _00: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Format_SPEC;
     pub type Format = crate::EnumBitfieldStruct<u8, Format_SPEC>;
     impl Format {
-        #[doc = "RGB888 — select RGB888 as dither output format"]
-        pub const _00: Self = Self::new(0);
+        #[doc = "Serial RGB; select RGB888 as dither output format."]
+        pub const _11: Self = Self::new(3);
 
-        #[doc = "RGB666 — select RGB666 as dither output format"]
-        pub const _01: Self = Self::new(1);
-
-        #[doc = "RGB565 — select RGB565 as dither output format"]
+        #[doc = "RGB565; select RGB565 as dither output format."]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "Serial RGB — select RGB888 as dither output format. Select dither output format in OUT_PDTHA.FORM\\[1:0\\]"]
-        pub const _11: Self = Self::new(3);
+        #[doc = "RGB666; select RGB666 as dither output format."]
+        pub const _01: Self = Self::new(1);
+
+        #[doc = "RGB888; select RGB888 as dither output format."]
+        pub const _00: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Swapon_SPEC;
     pub type Swapon = crate::EnumBitfieldStruct<u8, Swapon_SPEC>;
     impl Swapon {
-        #[doc = "RGB order"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "BGR order"]
+        #[doc = "In the order of BGR"]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "In the order of RGB"]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Endianon_SPEC;
     pub type Endianon = crate::EnumBitfieldStruct<u8, Endianon_SPEC>;
     impl Endianon {
-        #[doc = "Descending order (little endian)"]
-        pub const _0: Self = Self::new(0);
-
         #[doc = "Ascending order (big endian)"]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Descending order (little endian)"]
+        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -15712,13 +15019,39 @@ impl crate::sealed::RegSpec for OutBright1_SPEC {
 pub type OutBright1 = crate::RegValueT<OutBright1_SPEC>;
 
 impl OutBright1 {
-    #[doc = "Brightness Adjustment of G Signal"]
+    #[doc = "Brightness (DC) adjustment of G signalUnsigned; 10 bits; +512 with offset; integer"]
     #[inline(always)]
     pub fn brtg(
         self,
     ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, OutBright1_SPEC, crate::common::RW>
     {
         crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,OutBright1_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000000000. The write value should be 0000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<
+        10,
+        0x3fffff,
+        1,
+        0,
+        u32,
+        u32,
+        OutBright1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            10,
+            0x3fffff,
+            1,
+            0,
+            u32,
+            u32,
+            OutBright1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for OutBright1 {
@@ -15739,7 +15072,7 @@ impl crate::sealed::RegSpec for OutBright2_SPEC {
 pub type OutBright2 = crate::RegValueT<OutBright2_SPEC>;
 
 impl OutBright2 {
-    #[doc = "Brightness Adjustment of R Signal"]
+    #[doc = "Brightness (DC) adjustment of R signalUnsigned; 10 bits; +512 with offset; integer"]
     #[inline(always)]
     pub fn brtr(
         self,
@@ -15748,13 +15081,22 @@ impl OutBright2 {
         crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,OutBright2_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Brightness Adjustment of B Signal"]
+    #[doc = "Brightness (DC) adjustment of B signalUnsigned; 10 bits; +512 with offset; integer"]
     #[inline(always)]
     pub fn brtb(
         self,
     ) -> crate::common::RegisterField<16, 0x3ff, 1, 0, u16, u16, OutBright2_SPEC, crate::common::RW>
     {
         crate::common::RegisterField::<16,0x3ff,1,0,u16,u16,OutBright2_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<26, 0x3f, 1, 0, u8, u8, OutBright2_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<26,0x3f,1,0,u8,u8,OutBright2_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for OutBright2 {
@@ -15775,7 +15117,7 @@ impl crate::sealed::RegSpec for OutContrast_SPEC {
 pub type OutContrast = crate::RegValueT<OutContrast_SPEC>;
 
 impl OutContrast {
-    #[doc = "Contrast Adjustment of R Signal"]
+    #[doc = "Contrast (GAIN) adjustment of R signalUnsigned; 8 bits fixed point"]
     #[inline(always)]
     pub fn contr(
         self,
@@ -15784,7 +15126,7 @@ impl OutContrast {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,OutContrast_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Contrast Adjustment of B Signal"]
+    #[doc = "Contrast (GAIN) adjustment of B signalUnsigned; 8 bits fixed point"]
     #[inline(always)]
     pub fn contb(
         self,
@@ -15793,13 +15135,22 @@ impl OutContrast {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,OutContrast_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Contrast Adjustment of G Signal"]
+    #[doc = "Contrast (GAIN) adjustment of G signalUnsigned; 8 bits fixed point."]
     #[inline(always)]
     pub fn contg(
         self,
     ) -> crate::common::RegisterField<16, 0xff, 1, 0, u8, u8, OutContrast_SPEC, crate::common::RW>
     {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,OutContrast_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, u8, OutContrast_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<24,0xff,1,0,u8,u8,OutContrast_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for OutContrast {
@@ -15820,7 +15171,7 @@ impl crate::sealed::RegSpec for OutPdtha_SPEC {
 pub type OutPdtha = crate::RegValueT<OutPdtha_SPEC>;
 
 impl OutPdtha {
-    #[doc = "Pattern Value (D) of 2×2 Pattern Dither"]
+    #[doc = "Pattern value (D) of 2 x 2 pattern ditherUnsigned 2-bit integer"]
     #[inline(always)]
     pub fn pd(
         self,
@@ -15828,7 +15179,7 @@ impl OutPdtha {
         crate::common::RegisterField::<0,0x3,1,0,u8,u8,OutPdtha_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Pattern Value (C) of 2×2 Pattern Dither"]
+    #[doc = "Pattern value (C) of 2 x 2 pattern ditherUnsigned 2-bit integer"]
     #[inline(always)]
     pub fn pc(
         self,
@@ -15836,7 +15187,7 @@ impl OutPdtha {
         crate::common::RegisterField::<4,0x3,1,0,u8,u8,OutPdtha_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Pattern Value (B) of 2×2 Pattern Dither"]
+    #[doc = "Pattern value (B) of 2 x 2 pattern ditherUnsigned 2-bit integer"]
     #[inline(always)]
     pub fn pb(
         self,
@@ -15844,7 +15195,7 @@ impl OutPdtha {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,OutPdtha_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Pattern Value (A) of 2×2 Pattern Dither"]
+    #[doc = "Pattern value (A) of 2 x 2 pattern ditherUnsigned 2-bit integer"]
     #[inline(always)]
     pub fn pa(
         self,
@@ -15852,7 +15203,7 @@ impl OutPdtha {
         crate::common::RegisterField::<12,0x3,1,0,u8,u8,OutPdtha_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Output Format Select"]
+    #[doc = "Output format select"]
     #[inline(always)]
     pub fn form(
         self,
@@ -15878,7 +15229,7 @@ impl OutPdtha {
         >::from_register(self, 0)
     }
 
-    #[doc = "Operation Mode"]
+    #[doc = "Operation mode"]
     #[inline(always)]
     pub fn sel(
         self,
@@ -15903,6 +15254,15 @@ impl OutPdtha {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000. The write value should be 0000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<22, 0x3ff, 1, 0, u16, u16, OutPdtha_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<22,0x3ff,1,0,u16,u16,OutPdtha_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for OutPdtha {
     #[inline(always)]
@@ -15916,33 +15276,33 @@ pub mod out_pdtha {
     pub struct Form_SPEC;
     pub type Form = crate::EnumBitfieldStruct<u8, Form_SPEC>;
     impl Form {
-        #[doc = "RGB888; select RGB888 or serial RGB as output interface format"]
-        pub const _00: Self = Self::new(0);
+        #[doc = "Setting prohibited"]
+        pub const _11: Self = Self::new(3);
 
-        #[doc = "RGB666; select RGB666 as output interface format"]
-        pub const _01: Self = Self::new(1);
-
-        #[doc = "RGB565; select RGB565 as output interface format"]
+        #[doc = "RGB565; select RGB565 as output interface format."]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "Setting prohibited Select output interface format in OUT_SET.FORMAT\\[1:0\\]."]
-        pub const _11: Self = Self::new(3);
+        #[doc = "RGB666; select RGB666 as output interface format."]
+        pub const _01: Self = Self::new(1);
+
+        #[doc = "RGB888; select RGB888 or serial RGB as output interface format."]
+        pub const _00: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sel_SPEC;
     pub type Sel = crate::EnumBitfieldStruct<u8, Sel_SPEC>;
     impl Sel {
-        #[doc = "Truncate"]
-        pub const _00: Self = Self::new(0);
+        #[doc = "Setting prohibited"]
+        pub const _11: Self = Self::new(3);
+
+        #[doc = "2x2 pattern dither"]
+        pub const _10: Self = Self::new(2);
 
         #[doc = "Round-off"]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "2×2 pattern dither"]
-        pub const _10: Self = Self::new(2);
-
-        #[doc = "Setting prohibited"]
-        pub const _11: Self = Self::new(3);
+        #[doc = "Truncate"]
+        pub const _00: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -16086,7 +15446,7 @@ impl OutClkphase {
         >::from_register(self, 0)
     }
 
-    #[doc = "Correction Control"]
+    #[doc = "Correction control"]
     #[inline(always)]
     pub fn frontgam(
         self,
@@ -16111,6 +15471,24 @@ impl OutClkphase {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, OutClkphase_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<
+            16,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            OutClkphase_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
 }
 impl ::core::default::Default for OutClkphase {
     #[inline(always)]
@@ -16124,63 +15502,97 @@ pub mod out_clkphase {
     pub struct Tcon3Edge_SPEC;
     pub type Tcon3Edge = crate::EnumBitfieldStruct<u8, Tcon3Edge_SPEC>;
     impl Tcon3Edge {
-        #[doc = "Synchronize output with rising edge of LCD_CLK"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Synchronize output with falling edge of LCD_CLK"]
+        #[doc = "In synchronization with the falling edge of LCD_CLK."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "In synchronization with the rising edge of LCD_CLK."]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tcon2Edge_SPEC;
     pub type Tcon2Edge = crate::EnumBitfieldStruct<u8, Tcon2Edge_SPEC>;
     impl Tcon2Edge {
-        #[doc = "Synchronize output with rising edge of LCD_CLK"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Synchronize output with falling edge of LCD_CLK"]
+        #[doc = "In synchronization with the falling edge of LCD_CLK."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "In synchronization with the rising edge of LCD_CLK."]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tcon1Edge_SPEC;
     pub type Tcon1Edge = crate::EnumBitfieldStruct<u8, Tcon1Edge_SPEC>;
     impl Tcon1Edge {
-        #[doc = "Synchronize output with rising edge of LCD_CLK"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Synchronize output with falling edge of LCD_CLK"]
+        #[doc = "In synchronization with the falling edge of LCD_CLK."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "In synchronization with the rising edge of LCD_CLK."]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tcon0Edge_SPEC;
     pub type Tcon0Edge = crate::EnumBitfieldStruct<u8, Tcon0Edge_SPEC>;
     impl Tcon0Edge {
-        #[doc = "Synchronize output with rising edge of LCD_CLK"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Synchronize output with falling edge of LCD_CLK"]
+        #[doc = "In synchronization with the falling edge of LCD_CLK."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "In synchronization with the rising edge of LCD_CLK."]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lcdedge_SPEC;
     pub type Lcdedge = crate::EnumBitfieldStruct<u8, Lcdedge_SPEC>;
     impl Lcdedge {
-        #[doc = "Synchronize output with rising edge of LCD_CLK"]
+        #[doc = "In synchronization with the rising edge of LCD_CLK."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Synchronize output with falling edge of LCD_CLK"]
+        #[doc = "In synchronization with the falling edge of LCD_CLK"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Frontgam_SPEC;
     pub type Frontgam = crate::EnumBitfieldStruct<u8, Frontgam_SPEC>;
     impl Frontgam {
-        #[doc = "Process brightness/contrast correction followed by gamma correction"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Process gamma correction followed by brightness/contrast correction"]
+        #[doc = "Gamma correction is followed by brightness/contrast correction."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Brightness/contrast correction is followed by gamma correction."]
+        pub const _0: Self = Self::new(0);
     }
 }
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct TconVlatch_SPEC;
+impl crate::sealed::RegSpec for TconVlatch_SPEC {
+    type DataType = u32;
+}
+
+#[doc = "TCON VLATCH Register"]
+pub type TconVlatch = crate::RegValueT<TconVlatch_SPEC>;
+
+impl TconVlatch {
+    #[inline(always)]
+    pub fn ven(
+        self,
+    ) -> crate::common::RegisterFieldBool<0, 1, 0, TconVlatch_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<0,1,0,TconVlatch_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, TconVlatch_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,TconVlatch_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
+impl ::core::default::Default for TconVlatch {
+    #[inline(always)]
+    fn default() -> TconVlatch {
+        <crate::RegValueT<TconVlatch_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TconTim_SPEC;
@@ -16192,7 +15604,7 @@ impl crate::sealed::RegSpec for TconTim_SPEC {
 pub type TconTim = crate::RegValueT<TconTim_SPEC>;
 
 impl TconTim {
-    #[doc = "Horizontal Synchronization Signal Generation Reference Timing"]
+    #[doc = "Horizontal synchronization signal generation reference timingSets the offset from the assertion of the internal horizontal synchronization signal in terms of pixels."]
     #[inline(always)]
     pub fn offset(
         self,
@@ -16201,13 +15613,21 @@ impl TconTim {
         crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,TconTim_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Vertical Synchronization Signal Generation Change Timing"]
+    #[doc = "Vertical synchronization signal generation change timing Sets the delay from the assertion of the internal horizontal synchronization signal in terms of pixels."]
     #[inline(always)]
     pub fn half(
         self,
     ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, TconTim_SPEC, crate::common::RW>
     {
         crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,TconTim_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x1f, 1, 0, u8, u8, TconTim_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<27,0x1f,1,0,u8,u8,TconTim_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for TconTim {
@@ -16219,52 +15639,61 @@ impl ::core::default::Default for TconTim {
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct TconStva1_SPEC;
-impl crate::sealed::RegSpec for TconStva1_SPEC {
+pub struct TconStv1_SPEC;
+impl crate::sealed::RegSpec for TconStv1_SPEC {
     type DataType = u32;
 }
 
-#[doc = "TCON Vertical Timing Setting Register x1"]
-pub type TconStva1 = crate::RegValueT<TconStva1_SPEC>;
+#[doc = "TCON Vertical Timing Setting Register %s1"]
+pub type TconStv1 = crate::RegValueT<TconStv1_SPEC>;
 
-impl TconStva1 {
-    #[doc = "Vertical Synchronization Signal STVx1 Second Change Timing"]
+impl TconStv1 {
+    #[doc = "STVx1 second change timingSets the signal assertion width."]
     #[inline(always)]
     pub fn vw(
         self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, TconStva1_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, TconStv1_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,TconStva1_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,TconStv1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Vertical Synchronization Signal STVx1 First Change Timing"]
+    #[doc = "STVx1 first change timing"]
     #[inline(always)]
     pub fn vs(
         self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, TconStva1_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, TconStv1_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,TconStva1_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,TconStv1_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x1f, 1, 0, u8, u8, TconStv1_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<27,0x1f,1,0,u8,u8,TconStv1_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
-impl ::core::default::Default for TconStva1 {
+impl ::core::default::Default for TconStv1 {
     #[inline(always)]
-    fn default() -> TconStva1 {
-        <crate::RegValueT<TconStva1_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> TconStv1 {
+        <crate::RegValueT<TconStv1_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct TconStva2_SPEC;
-impl crate::sealed::RegSpec for TconStva2_SPEC {
+pub struct TconStv2_SPEC;
+impl crate::sealed::RegSpec for TconStv2_SPEC {
     type DataType = u32;
 }
 
-#[doc = "TCON Vertical Timing Setting Register x2"]
-pub type TconStva2 = crate::RegValueT<TconStva2_SPEC>;
+#[doc = "TCON Vertical Timing Setting Register %s2"]
+pub type TconStv2 = crate::RegValueT<TconStv2_SPEC>;
 
-impl TconStva2 {
-    #[doc = "Output Signal Select Control for LCD_TCON0/LCD_TCON1 Pin"]
+impl TconStv2 {
+    #[doc = "Output signal select control for VSOUT (controlled by TCON_STVA2 register)/VEOUT (controlled by the TCON_STVB2 register) pin"]
     #[inline(always)]
     pub fn sel(
         self,
@@ -16273,9 +15702,9 @@ impl TconStva2 {
         0x7,
         1,
         0,
-        tcon_stva2::Sel,
-        tcon_stva2::Sel,
-        TconStva2_SPEC,
+        tcon_stv2::Sel,
+        tcon_stv2::Sel,
+        TconStv2_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -16283,14 +15712,14 @@ impl TconStva2 {
             0x7,
             1,
             0,
-            tcon_stva2::Sel,
-            tcon_stva2::Sel,
-            TconStva2_SPEC,
+            tcon_stv2::Sel,
+            tcon_stv2::Sel,
+            TconStv2_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 
-    #[doc = "Vertical Synchronization Signal STVx Polarity Inversion Control"]
+    #[doc = "STVx signal polarity inversion control"]
     #[inline(always)]
     pub fn inv(
         self,
@@ -16299,9 +15728,9 @@ impl TconStva2 {
         0x1,
         1,
         0,
-        tcon_stva2::Inv,
-        tcon_stva2::Inv,
-        TconStva2_SPEC,
+        tcon_stv2::Inv,
+        tcon_stv2::Inv,
+        TconStv2_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -16309,254 +15738,126 @@ impl TconStva2 {
             0x1,
             1,
             0,
-            tcon_stva2::Inv,
-            tcon_stva2::Inv,
-            TconStva2_SPEC,
+            tcon_stv2::Inv,
+            tcon_stv2::Inv,
+            TconStv2_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-}
-impl ::core::default::Default for TconStva2 {
+
+    #[doc = "These bits are read as 000000000000000000000000000. The write value should be 000000000000000000000000000."]
     #[inline(always)]
-    fn default() -> TconStva2 {
-        <crate::RegValueT<TconStva2_SPEC> as RegisterValue<_>>::new(0)
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<5, 0x7ffffff, 1, 0, u32, u32, TconStv2_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<5,0x7ffffff,1,0,u32,u32,TconStv2_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
-pub mod tcon_stva2 {
+impl ::core::default::Default for TconStv2 {
+    #[inline(always)]
+    fn default() -> TconStv2 {
+        <crate::RegValueT<TconStv2_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+pub mod tcon_stv2 {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sel_SPEC;
     pub type Sel = crate::EnumBitfieldStruct<u8, Sel_SPEC>;
     impl Sel {
-        #[doc = "STVA"]
-        pub const _000: Self = Self::new(0);
-
-        #[doc = "STVB"]
-        pub const _001: Self = Self::new(1);
-
-        #[doc = "STHA"]
-        pub const _010: Self = Self::new(2);
-
-        #[doc = "STHB"]
-        pub const _011: Self = Self::new(3);
+        #[doc = "DE"]
+        pub const _111: Self = Self::new(7);
 
         #[doc = "Setting prohibited"]
-        pub const _100: Self = Self::new(4);
+        pub const _110: Self = Self::new(6);
 
         #[doc = "Setting prohibited"]
         pub const _101: Self = Self::new(5);
 
         #[doc = "Setting prohibited"]
-        pub const _110: Self = Self::new(6);
-
-        #[doc = "DE"]
-        pub const _111: Self = Self::new(7);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Inv_SPEC;
-    pub type Inv = crate::EnumBitfieldStruct<u8, Inv_SPEC>;
-    impl Inv {
-        #[doc = "Do not invert"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Invert"]
-        pub const _1: Self = Self::new(1);
-    }
-}
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct TconStvb1_SPEC;
-impl crate::sealed::RegSpec for TconStvb1_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "TCON Vertical Timing Setting Register x1"]
-pub type TconStvb1 = crate::RegValueT<TconStvb1_SPEC>;
-
-impl TconStvb1 {
-    #[doc = "Vertical Synchronization Signal STVx1 Second Change Timing"]
-    #[inline(always)]
-    pub fn vw(
-        self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, TconStvb1_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,TconStvb1_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Vertical Synchronization Signal STVx1 First Change Timing"]
-    #[inline(always)]
-    pub fn vs(
-        self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, TconStvb1_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,TconStvb1_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for TconStvb1 {
-    #[inline(always)]
-    fn default() -> TconStvb1 {
-        <crate::RegValueT<TconStvb1_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct TconStvb2_SPEC;
-impl crate::sealed::RegSpec for TconStvb2_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "TCON Vertical Timing Setting Register x2"]
-pub type TconStvb2 = crate::RegValueT<TconStvb2_SPEC>;
-
-impl TconStvb2 {
-    #[doc = "Output Signal Select Control for LCD_TCON0/LCD_TCON1 Pin"]
-    #[inline(always)]
-    pub fn sel(
-        self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7,
-        1,
-        0,
-        tcon_stvb2::Sel,
-        tcon_stvb2::Sel,
-        TconStvb2_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7,
-            1,
-            0,
-            tcon_stvb2::Sel,
-            tcon_stvb2::Sel,
-            TconStvb2_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Vertical Synchronization Signal STVx Polarity Inversion Control"]
-    #[inline(always)]
-    pub fn inv(
-        self,
-    ) -> crate::common::RegisterField<
-        4,
-        0x1,
-        1,
-        0,
-        tcon_stvb2::Inv,
-        tcon_stvb2::Inv,
-        TconStvb2_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            4,
-            0x1,
-            1,
-            0,
-            tcon_stvb2::Inv,
-            tcon_stvb2::Inv,
-            TconStvb2_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-}
-impl ::core::default::Default for TconStvb2 {
-    #[inline(always)]
-    fn default() -> TconStvb2 {
-        <crate::RegValueT<TconStvb2_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-pub mod tcon_stvb2 {
-
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Sel_SPEC;
-    pub type Sel = crate::EnumBitfieldStruct<u8, Sel_SPEC>;
-    impl Sel {
-        #[doc = "STVA"]
-        pub const _000: Self = Self::new(0);
-
-        #[doc = "STVB"]
-        pub const _001: Self = Self::new(1);
-
-        #[doc = "STHA"]
-        pub const _010: Self = Self::new(2);
+        pub const _100: Self = Self::new(4);
 
         #[doc = "STHB"]
         pub const _011: Self = Self::new(3);
 
-        #[doc = "Setting prohibited"]
-        pub const _100: Self = Self::new(4);
+        #[doc = "STHA"]
+        pub const _010: Self = Self::new(2);
 
-        #[doc = "Setting prohibited"]
-        pub const _101: Self = Self::new(5);
+        #[doc = "STVB"]
+        pub const _001: Self = Self::new(1);
 
-        #[doc = "Setting prohibited"]
-        pub const _110: Self = Self::new(6);
-
-        #[doc = "DE"]
-        pub const _111: Self = Self::new(7);
+        #[doc = "STVA"]
+        pub const _000: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Inv_SPEC;
     pub type Inv = crate::EnumBitfieldStruct<u8, Inv_SPEC>;
     impl Inv {
-        #[doc = "Do not invert"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Invert"]
+        #[doc = "Inverted"]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Not inverted"]
+        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct TconStha1_SPEC;
-impl crate::sealed::RegSpec for TconStha1_SPEC {
+pub struct TconSth1_SPEC;
+impl crate::sealed::RegSpec for TconSth1_SPEC {
     type DataType = u32;
 }
 
-#[doc = "TCON Horizontal Timing Setting Register x1"]
-pub type TconStha1 = crate::RegValueT<TconStha1_SPEC>;
+#[doc = "TCON Horizontal Timing Setting Register STH%s1"]
+pub type TconSth1 = crate::RegValueT<TconSth1_SPEC>;
 
-impl TconStha1 {
-    #[doc = "Horizontal Synchronization Signal STHx1 Second Change Timing"]
+impl TconSth1 {
+    #[doc = "STHx1 second change timing.Sets the signal assertion width."]
     #[inline(always)]
     pub fn hw(
         self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, TconStha1_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, TconSth1_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,TconStha1_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,TconSth1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Horizontal Synchronization Signal STHx1 First Change Timing"]
+    #[doc = "STHx1 first change timing"]
     #[inline(always)]
     pub fn hs(
         self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, TconStha1_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, TconSth1_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,TconStha1_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,TconSth1_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x1f, 1, 0, u8, u8, TconSth1_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<27,0x1f,1,0,u8,u8,TconSth1_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
-impl ::core::default::Default for TconStha1 {
+impl ::core::default::Default for TconSth1 {
     #[inline(always)]
-    fn default() -> TconStha1 {
-        <crate::RegValueT<TconStha1_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> TconSth1 {
+        <crate::RegValueT<TconSth1_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct TconStha2_SPEC;
-impl crate::sealed::RegSpec for TconStha2_SPEC {
+pub struct TconSth2_SPEC;
+impl crate::sealed::RegSpec for TconSth2_SPEC {
     type DataType = u32;
 }
 
-#[doc = "TCON Horizontal Timing Setting Register x2"]
-pub type TconStha2 = crate::RegValueT<TconStha2_SPEC>;
+#[doc = "TCON Horizontal Timing Setting Register STH%s2"]
+pub type TconSth2 = crate::RegValueT<TconSth2_SPEC>;
 
-impl TconStha2 {
-    #[doc = "Output Signal Select Control for LCD_TCON2/LCD_TCON3 Pin"]
+impl TconSth2 {
+    #[doc = "Output signal select control for LCD_TCON2 (controlled by TCON_STHA2 register)/LCD_TCON3 (controlled by the TCON_STHB2 register) pin."]
     #[inline(always)]
     pub fn sel(
         self,
@@ -16565,9 +15866,9 @@ impl TconStha2 {
         0x7,
         1,
         0,
-        tcon_stha2::Sel,
-        tcon_stha2::Sel,
-        TconStha2_SPEC,
+        tcon_sth2::Sel,
+        tcon_sth2::Sel,
+        TconSth2_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -16575,14 +15876,14 @@ impl TconStha2 {
             0x7,
             1,
             0,
-            tcon_stha2::Sel,
-            tcon_stha2::Sel,
-            TconStha2_SPEC,
+            tcon_sth2::Sel,
+            tcon_sth2::Sel,
+            TconSth2_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 
-    #[doc = "Horizontal Synchronization Signal STHx Polarity Inversion Control"]
+    #[doc = "STVx signal polarity inversion control."]
     #[inline(always)]
     pub fn inv(
         self,
@@ -16591,9 +15892,9 @@ impl TconStha2 {
         0x1,
         1,
         0,
-        tcon_stha2::Inv,
-        tcon_stha2::Inv,
-        TconStha2_SPEC,
+        tcon_sth2::Inv,
+        tcon_sth2::Inv,
+        TconSth2_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -16601,14 +15902,14 @@ impl TconStha2 {
             0x1,
             1,
             0,
-            tcon_stha2::Inv,
-            tcon_stha2::Inv,
-            TconStha2_SPEC,
+            tcon_sth2::Inv,
+            tcon_sth2::Inv,
+            TconSth2_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 
-    #[doc = "Horizontal Synchronization Signal STHx Reference Timing Control"]
+    #[doc = "STHx signal generation reference timing control."]
     #[inline(always)]
     pub fn hssel(
         self,
@@ -16617,9 +15918,9 @@ impl TconStha2 {
         0x1,
         1,
         0,
-        tcon_stha2::Hssel,
-        tcon_stha2::Hssel,
-        TconStha2_SPEC,
+        tcon_sth2::Hssel,
+        tcon_sth2::Hssel,
+        TconSth2_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -16627,250 +15928,77 @@ impl TconStha2 {
             0x1,
             1,
             0,
-            tcon_stha2::Hssel,
-            tcon_stha2::Hssel,
-            TconStha2_SPEC,
+            tcon_sth2::Hssel,
+            tcon_sth2::Hssel,
+            TconSth2_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-}
-impl ::core::default::Default for TconStha2 {
+
+    #[doc = "These bits are read as 00000000000000000000000. The write value should be 00000000000000000000000."]
     #[inline(always)]
-    fn default() -> TconStha2 {
-        <crate::RegValueT<TconStha2_SPEC> as RegisterValue<_>>::new(0)
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<9, 0x7fffff, 1, 0, u32, u32, TconSth2_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<9,0x7fffff,1,0,u32,u32,TconSth2_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
-pub mod tcon_stha2 {
+impl ::core::default::Default for TconSth2 {
+    #[inline(always)]
+    fn default() -> TconSth2 {
+        <crate::RegValueT<TconSth2_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+pub mod tcon_sth2 {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sel_SPEC;
     pub type Sel = crate::EnumBitfieldStruct<u8, Sel_SPEC>;
     impl Sel {
-        #[doc = "STVA"]
-        pub const _000: Self = Self::new(0);
-
-        #[doc = "STVB"]
-        pub const _001: Self = Self::new(1);
-
-        #[doc = "STHA"]
-        pub const _010: Self = Self::new(2);
-
-        #[doc = "STHB"]
-        pub const _011: Self = Self::new(3);
+        #[doc = "DE"]
+        pub const _111: Self = Self::new(7);
 
         #[doc = "Setting prohibited"]
-        pub const _100: Self = Self::new(4);
+        pub const _110: Self = Self::new(6);
 
         #[doc = "Setting prohibited"]
         pub const _101: Self = Self::new(5);
 
         #[doc = "Setting prohibited"]
-        pub const _110: Self = Self::new(6);
-
-        #[doc = "DE"]
-        pub const _111: Self = Self::new(7);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Inv_SPEC;
-    pub type Inv = crate::EnumBitfieldStruct<u8, Inv_SPEC>;
-    impl Inv {
-        #[doc = "Do not invert"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Invert"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Hssel_SPEC;
-    pub type Hssel = crate::EnumBitfieldStruct<u8, Hssel_SPEC>;
-    impl Hssel {
-        #[doc = "Select input horizontal synchronization signal (HSIN) as reference for signal generation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Select offset specified in TCON_TIM.OFFSET\\[10:0\\] (horizontal synchronization generation reference timing) as reference for signal generation"]
-        pub const _1: Self = Self::new(1);
-    }
-}
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct TconSthb1_SPEC;
-impl crate::sealed::RegSpec for TconSthb1_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "TCON Horizontal Timing Setting Register x1"]
-pub type TconSthb1 = crate::RegValueT<TconSthb1_SPEC>;
-
-impl TconSthb1 {
-    #[doc = "Horizontal Synchronization Signal STHx1 Second Change Timing"]
-    #[inline(always)]
-    pub fn hw(
-        self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, TconSthb1_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,TconSthb1_SPEC,crate::common::RW>::from_register(self,0)
-    }
-
-    #[doc = "Horizontal Synchronization Signal STHx1 First Change Timing"]
-    #[inline(always)]
-    pub fn hs(
-        self,
-    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, TconSthb1_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,TconSthb1_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for TconSthb1 {
-    #[inline(always)]
-    fn default() -> TconSthb1 {
-        <crate::RegValueT<TconSthb1_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct TconSthb2_SPEC;
-impl crate::sealed::RegSpec for TconSthb2_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "TCON Horizontal Timing Setting Register x2"]
-pub type TconSthb2 = crate::RegValueT<TconSthb2_SPEC>;
-
-impl TconSthb2 {
-    #[doc = "Output Signal Select Control for LCD_TCON2/LCD_TCON3 Pin"]
-    #[inline(always)]
-    pub fn sel(
-        self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7,
-        1,
-        0,
-        tcon_sthb2::Sel,
-        tcon_sthb2::Sel,
-        TconSthb2_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7,
-            1,
-            0,
-            tcon_sthb2::Sel,
-            tcon_sthb2::Sel,
-            TconSthb2_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Horizontal Synchronization Signal STHx Polarity Inversion Control"]
-    #[inline(always)]
-    pub fn inv(
-        self,
-    ) -> crate::common::RegisterField<
-        4,
-        0x1,
-        1,
-        0,
-        tcon_sthb2::Inv,
-        tcon_sthb2::Inv,
-        TconSthb2_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            4,
-            0x1,
-            1,
-            0,
-            tcon_sthb2::Inv,
-            tcon_sthb2::Inv,
-            TconSthb2_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Horizontal Synchronization Signal STHx Reference Timing Control"]
-    #[inline(always)]
-    pub fn hssel(
-        self,
-    ) -> crate::common::RegisterField<
-        8,
-        0x1,
-        1,
-        0,
-        tcon_sthb2::Hssel,
-        tcon_sthb2::Hssel,
-        TconSthb2_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            8,
-            0x1,
-            1,
-            0,
-            tcon_sthb2::Hssel,
-            tcon_sthb2::Hssel,
-            TconSthb2_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-}
-impl ::core::default::Default for TconSthb2 {
-    #[inline(always)]
-    fn default() -> TconSthb2 {
-        <crate::RegValueT<TconSthb2_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-pub mod tcon_sthb2 {
-
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Sel_SPEC;
-    pub type Sel = crate::EnumBitfieldStruct<u8, Sel_SPEC>;
-    impl Sel {
-        #[doc = "STVA"]
-        pub const _000: Self = Self::new(0);
-
-        #[doc = "STVB"]
-        pub const _001: Self = Self::new(1);
-
-        #[doc = "STHA"]
-        pub const _010: Self = Self::new(2);
+        pub const _100: Self = Self::new(4);
 
         #[doc = "STHB"]
         pub const _011: Self = Self::new(3);
 
-        #[doc = "Setting prohibited"]
-        pub const _100: Self = Self::new(4);
+        #[doc = "STHA"]
+        pub const _010: Self = Self::new(2);
 
-        #[doc = "Setting prohibited"]
-        pub const _101: Self = Self::new(5);
+        #[doc = "STVB"]
+        pub const _001: Self = Self::new(1);
 
-        #[doc = "Setting prohibited"]
-        pub const _110: Self = Self::new(6);
-
-        #[doc = "DE"]
-        pub const _111: Self = Self::new(7);
+        #[doc = "STVA"]
+        pub const _000: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Inv_SPEC;
     pub type Inv = crate::EnumBitfieldStruct<u8, Inv_SPEC>;
     impl Inv {
-        #[doc = "Do not invert"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Invert"]
+        #[doc = "Inverted"]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Not inverted"]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hssel_SPEC;
     pub type Hssel = crate::EnumBitfieldStruct<u8, Hssel_SPEC>;
     impl Hssel {
-        #[doc = "Select input horizontal synchronization signal (HSIN) as reference for signal generation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Select offset specified in TCON_TIM.OFFSET\\[10:0\\] (horizontal synchronization generation reference timing) as reference for signal generation"]
+        #[doc = "Reference timing is the offset set with the TCON_TIM.OFFSET\\[10:0\\] (horizontal synchronization generation reference timing) field"]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Reference timing is the input horizontal synchronization signal (HSIN)"]
+        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -16884,7 +16012,7 @@ impl crate::sealed::RegSpec for TconDe_SPEC {
 pub type TconDe = crate::RegValueT<TconDe_SPEC>;
 
 impl TconDe {
-    #[doc = "Data Enable Signal DE Polarity Inversion Control"]
+    #[doc = "DE signal polarity inversion control."]
     #[inline(always)]
     pub fn inv(
         self,
@@ -16909,6 +16037,15 @@ impl TconDe {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000000000000000000. The write value should be 0000000000000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<1, 0x7fffffff, 1, 0, u32, u32, TconDe_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<1,0x7fffffff,1,0,u32,u32,TconDe_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for TconDe {
     #[inline(always)]
@@ -16922,11 +16059,11 @@ pub mod tcon_de {
     pub struct Inv_SPEC;
     pub type Inv = crate::EnumBitfieldStruct<u8, Inv_SPEC>;
     impl Inv {
-        #[doc = "Do not invert"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Invert"]
+        #[doc = "Inverted"]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Not inverted"]
+        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -16940,7 +16077,7 @@ impl crate::sealed::RegSpec for SyscntDtcten_SPEC {
 pub type SyscntDtcten = crate::RegValueT<SyscntDtcten_SPEC>;
 
 impl SyscntDtcten {
-    #[doc = "Specified Line Detection Control"]
+    #[doc = "Specified line detection control"]
     #[inline(always)]
     pub fn vposdtc(
         self,
@@ -16966,7 +16103,7 @@ impl SyscntDtcten {
         >::from_register(self, 0)
     }
 
-    #[doc = "Graphics 1 Underflow Detection Control"]
+    #[doc = "Graphics 1 underflow detection control"]
     #[inline(always)]
     pub fn l1undfdtc(
         self,
@@ -16992,7 +16129,7 @@ impl SyscntDtcten {
         >::from_register(self, 0)
     }
 
-    #[doc = "Graphics 2 Underflow Detection Control"]
+    #[doc = "Graphics 2 underflow detection control"]
     #[inline(always)]
     pub fn l2undfdtc(
         self,
@@ -17017,6 +16154,32 @@ impl SyscntDtcten {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000000000000000000000000000. The write value should be 00000000000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<
+        3,
+        0x1fffffff,
+        1,
+        0,
+        u32,
+        u32,
+        SyscntDtcten_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            3,
+            0x1fffffff,
+            1,
+            0,
+            u32,
+            u32,
+            SyscntDtcten_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
 }
 impl ::core::default::Default for SyscntDtcten {
     #[inline(always)]
@@ -17030,31 +16193,31 @@ pub mod syscnt_dtcten {
     pub struct Vposdtc_SPEC;
     pub type Vposdtc = crate::EnumBitfieldStruct<u8, Vposdtc_SPEC>;
     impl Vposdtc {
-        #[doc = "Disable detection of specified line"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable detection of specified line"]
+        #[doc = "Enables detection."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Disables detection."]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct L1Undfdtc_SPEC;
     pub type L1Undfdtc = crate::EnumBitfieldStruct<u8, L1Undfdtc_SPEC>;
     impl L1Undfdtc {
-        #[doc = "Disable detection of graphics 1 underflow"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable detection of graphics 1 underflow"]
+        #[doc = "Enables detection."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Disables detection."]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct L2Undfdtc_SPEC;
     pub type L2Undfdtc = crate::EnumBitfieldStruct<u8, L2Undfdtc_SPEC>;
     impl L2Undfdtc {
-        #[doc = "Disable detection of graphics 2 underflow"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable detection of graphics 2 underflow"]
+        #[doc = "Enables detection."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Disables detection."]
+        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -17068,7 +16231,7 @@ impl crate::sealed::RegSpec for SyscntInten_SPEC {
 pub type SyscntInten = crate::RegValueT<SyscntInten_SPEC>;
 
 impl SyscntInten {
-    #[doc = "Interrupt Request Signal GLCDC_VPOS Enable Control"]
+    #[doc = "Interrupt request signal GLCDC_VPOS enable control."]
     #[inline(always)]
     pub fn vposinten(
         self,
@@ -17094,7 +16257,7 @@ impl SyscntInten {
         >::from_register(self, 0)
     }
 
-    #[doc = "Interrupt Request Signal GLCDC_L1UNDF Enable Control"]
+    #[doc = "Interrupt request signal GLCDC_L1UNDF enable control."]
     #[inline(always)]
     pub fn l1undfinten(
         self,
@@ -17120,7 +16283,7 @@ impl SyscntInten {
         >::from_register(self, 0)
     }
 
-    #[doc = "Interrupt Request Signal GLCDC_L2UNDF Enable Control"]
+    #[doc = "Interrupt request signal GLCDC_L2UNDF enable control."]
     #[inline(always)]
     pub fn l2undfinten(
         self,
@@ -17145,6 +16308,32 @@ impl SyscntInten {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000000000000000000000000000. The write value should be 00000000000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<
+        3,
+        0x1fffffff,
+        1,
+        0,
+        u32,
+        u32,
+        SyscntInten_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            3,
+            0x1fffffff,
+            1,
+            0,
+            u32,
+            u32,
+            SyscntInten_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
 }
 impl ::core::default::Default for SyscntInten {
     #[inline(always)]
@@ -17158,31 +16347,31 @@ pub mod syscnt_inten {
     pub struct Vposinten_SPEC;
     pub type Vposinten = crate::EnumBitfieldStruct<u8, Vposinten_SPEC>;
     impl Vposinten {
-        #[doc = "Disable GLCDC_VPOS output"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable GLCDC_VPOS output"]
+        #[doc = "Enables GLCDC_VPOS output"]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Disables GLCDC_VPOS output"]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct L1Undfinten_SPEC;
     pub type L1Undfinten = crate::EnumBitfieldStruct<u8, L1Undfinten_SPEC>;
     impl L1Undfinten {
-        #[doc = "Disable GLCDC_L1UNDF output"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable GLCDC_L1UNDF output"]
+        #[doc = "Enables GLCDC_L1UNDF output"]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Disables GLCDC_L1UNDF output"]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct L2Undfinten_SPEC;
     pub type L2Undfinten = crate::EnumBitfieldStruct<u8, L2Undfinten_SPEC>;
     impl L2Undfinten {
-        #[doc = "Disable GLCDC_L2UNDF output"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable GLCDC_L2UNDF output"]
+        #[doc = "Enables GLCDC_L2UNDF output"]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Disables GLCDC_L2UNDF output"]
+        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -17196,7 +16385,7 @@ impl crate::sealed::RegSpec for SyscntStclr_SPEC {
 pub type SyscntStclr = crate::RegValueT<SyscntStclr_SPEC>;
 
 impl SyscntStclr {
-    #[doc = "Graphics 2 Specified Line Detection Flag Clear"]
+    #[doc = "Graphics 2 specified line detection flag clear field"]
     #[inline(always)]
     pub fn vposclr(
         self,
@@ -17222,7 +16411,7 @@ impl SyscntStclr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Graphics 1 Underflow Detection Flag Clear"]
+    #[doc = "Graphics 1 underflow detection flag clear field"]
     #[inline(always)]
     pub fn l1undfclr(
         self,
@@ -17248,7 +16437,7 @@ impl SyscntStclr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Graphics 2 Underflow Detection Flag Clear"]
+    #[doc = "Graphics 2 underflow detection flag clear field"]
     #[inline(always)]
     pub fn l2undfclr(
         self,
@@ -17273,6 +16462,32 @@ impl SyscntStclr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000000000000000000000000000. The write value should be 00000000000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<
+        3,
+        0x1fffffff,
+        1,
+        0,
+        u32,
+        u32,
+        SyscntStclr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            3,
+            0x1fffffff,
+            1,
+            0,
+            u32,
+            u32,
+            SyscntStclr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
 }
 impl ::core::default::Default for SyscntStclr {
     #[inline(always)]
@@ -17286,31 +16501,31 @@ pub mod syscnt_stclr {
     pub struct Vposclr_SPEC;
     pub type Vposclr = crate::EnumBitfieldStruct<u8, Vposclr_SPEC>;
     impl Vposclr {
+        #[doc = "Clears the specified line detection flag."]
+        pub const _1: Self = Self::new(1);
+
         #[doc = "No operation"]
         pub const _0: Self = Self::new(0);
-
-        #[doc = "Clear the graphics 2 specified line detection flag"]
-        pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct L1Undfclr_SPEC;
     pub type L1Undfclr = crate::EnumBitfieldStruct<u8, L1Undfclr_SPEC>;
     impl L1Undfclr {
+        #[doc = "Clears the graphics 1 underflow detection flag."]
+        pub const _1: Self = Self::new(1);
+
         #[doc = "No operation"]
         pub const _0: Self = Self::new(0);
-
-        #[doc = "Clear the graphics 1 underflow detection flag"]
-        pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct L2Undfclr_SPEC;
     pub type L2Undfclr = crate::EnumBitfieldStruct<u8, L2Undfclr_SPEC>;
     impl L2Undfclr {
+        #[doc = "Clears the graphics 2 underflow detection flag."]
+        pub const _1: Self = Self::new(1);
+
         #[doc = "No operation"]
         pub const _0: Self = Self::new(0);
-
-        #[doc = "Clears the graphics 2 underflow detection flag"]
-        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -17324,7 +16539,7 @@ impl crate::sealed::RegSpec for SyscntStmon_SPEC {
 pub type SyscntStmon = crate::RegValueT<SyscntStmon_SPEC>;
 
 impl SyscntStmon {
-    #[doc = "Graphics 2 Specified Line Detection Flag"]
+    #[doc = "Graphics 2 specified line detection flag"]
     #[inline(always)]
     pub fn vpos(
         self,
@@ -17350,7 +16565,7 @@ impl SyscntStmon {
         >::from_register(self, 0)
     }
 
-    #[doc = "Graphics 1 Underflow Detection Flag"]
+    #[doc = "Graphics 1 underflow detection flag"]
     #[inline(always)]
     pub fn l1undf(
         self,
@@ -17376,7 +16591,7 @@ impl SyscntStmon {
         >::from_register(self, 0)
     }
 
-    #[doc = "Graphics 2 Underflow Detection Flag"]
+    #[doc = "Graphics 2 underflow detection flag"]
     #[inline(always)]
     pub fn l2undf(
         self,
@@ -17401,6 +16616,32 @@ impl SyscntStmon {
             crate::common::R,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000000000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<
+        3,
+        0x1fffffff,
+        1,
+        0,
+        u32,
+        u32,
+        SyscntStmon_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            3,
+            0x1fffffff,
+            1,
+            0,
+            u32,
+            u32,
+            SyscntStmon_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
+    }
 }
 impl ::core::default::Default for SyscntStmon {
     #[inline(always)]
@@ -17414,31 +16655,31 @@ pub mod syscnt_stmon {
     pub struct Vpos_SPEC;
     pub type Vpos = crate::EnumBitfieldStruct<u8, Vpos_SPEC>;
     impl Vpos {
-        #[doc = "Specified line notification not detected in graphics 2"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Specified line notification detected in graphics 2"]
+        #[doc = "A specified line notification has been detected in graphics 2."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "No specified line notification has been detected in graphics 2."]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct L1Undf_SPEC;
     pub type L1Undf = crate::EnumBitfieldStruct<u8, L1Undf_SPEC>;
     impl L1Undf {
-        #[doc = "No underflow detected in graphics 1"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Underflow detected in graphics 1"]
+        #[doc = "An underflow has been detected in graphics 1."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "No underflow has been detected in graphics 1."]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct L2Undf_SPEC;
     pub type L2Undf = crate::EnumBitfieldStruct<u8, L2Undf_SPEC>;
     impl L2Undf {
-        #[doc = "No underflow detected in graphics 2"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Underflow detected in graphics 2"]
+        #[doc = "An underflow has been detected in graphics 2."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "No underflow has been detected in graphics 2."]
+        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -17452,7 +16693,7 @@ impl crate::sealed::RegSpec for SyscntPanelClk_SPEC {
 pub type SyscntPanelClk = crate::RegValueT<SyscntPanelClk_SPEC>;
 
 impl SyscntPanelClk {
-    #[doc = "Clock Division Ratio Setting Control"]
+    #[doc = "Clock division ratio setting controlRefer toTable 2.7.1 for details about setting value.Note: Settings that are not listed in table 2.7.1 are prohibited."]
     #[inline(always)]
     pub fn dcdr(
         self,
@@ -17461,7 +16702,7 @@ impl SyscntPanelClk {
         crate::common::RegisterField::<0,0x3f,1,0,u8,u8,SyscntPanelClk_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Panel Clock Output Enable Control"]
+    #[doc = "Panel clock output enable controlNote: Before changing the PIXSEL,CLKSEL or DCDR bit, this bit must be set to 0."]
     #[inline(always)]
     pub fn clken(
         self,
@@ -17487,7 +16728,7 @@ impl SyscntPanelClk {
         >::from_register(self, 0)
     }
 
-    #[doc = "Panel Clock Supply Source Control"]
+    #[doc = "Panel clock supply source select"]
     #[inline(always)]
     pub fn clksel(
         self,
@@ -17513,7 +16754,7 @@ impl SyscntPanelClk {
         >::from_register(self, 0)
     }
 
-    #[doc = "Pixel Clock Select Control"]
+    #[doc = "Pixel clock select control.Must be set to the same value as OUT_SET.FRQSEL\\[1\\]."]
     #[inline(always)]
     pub fn pixsel(
         self,
@@ -17539,7 +16780,16 @@ impl SyscntPanelClk {
         >::from_register(self, 0)
     }
 
-    #[doc = "Version Information"]
+    #[doc = "These bits are read as 000. The write value should be 000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<13, 0x7, 1, 0, u8, u8, SyscntPanelClk_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<13,0x7,1,0,u8,u8,SyscntPanelClk_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "Version informationVersion information of the GLCD"]
     #[inline(always)]
     pub fn ver(
         self,
@@ -17580,27 +16830,27 @@ pub mod syscnt_panel_clk {
         #[doc = "Disable panel clock output"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable panel clock output Before changing the PIXSEL, CLKSEL, or DCDR bit, this bit must be set to 0."]
+        #[doc = "Enable panel clock output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clksel_SPEC;
     pub type Clksel = crate::EnumBitfieldStruct<u8, Clksel_SPEC>;
     impl Clksel {
-        #[doc = "Select external clock (LCD_EXTCLK)"]
+        #[doc = "External clock select"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select LCDCLK"]
+        #[doc = "PLL output select"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pixsel_SPEC;
     pub type Pixsel = crate::EnumBitfieldStruct<u8, Pixsel_SPEC>;
     impl Pixsel {
-        #[doc = "Select no frequency division, parallel RGB"]
+        #[doc = "No frequency division, parallel RGB"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select quarter frequency, serial RGB This setting must have the same value as OUT_SET.FRQSEL\\[1\\]."]
+        #[doc = "Quarter frequency,serial RGB"]
         pub const _1: Self = Self::new(1);
     }
 }

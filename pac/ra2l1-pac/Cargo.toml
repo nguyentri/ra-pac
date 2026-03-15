@@ -13,11 +13,11 @@
 # following link:
 # http://www.renesas.com/disclaimer
 #
-# Generated from SVD 1.50.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:47:04 +0000
+# Generated from SVD 1.50.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:03:37 +0000
 
 [package]
 name = "ra2l1-pac"
-version = "0.2.0"
+version = "0.3.0"
 edition = "2024"
 description = "Peripheral Access Crate (PAC) for R7FAA2L1."
 authors = ["Tri Nguyen <trongtribk06@gmail.com>"]
@@ -34,7 +34,7 @@ test = false
 bench = false
 
 [dependencies]
-phf = { version = "0.12.1", features = ["macros"], optional = true }
+phf = { version = "0.11", features = ["macros"], optional = true }
 cortex-m-rt = { version = "0.7", optional = true }
 cortex-m = "0.7.6"
 

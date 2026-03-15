@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:16 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:11:44 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -1389,9 +1389,6 @@ pub mod csrec {
     impl Wrcv {
         #[doc = "No recovery cycle is inserted."]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "WRCV recovery cycle is inserted."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rrcv_SPEC;
@@ -1399,9 +1396,6 @@ pub mod csrec {
     impl Rrcv {
         #[doc = "No recovery cycle is inserted."]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "RRCV recovery cycle is inserted."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2329,9 +2323,6 @@ pub mod cswcr1 {
     impl Csrwait {
         #[doc = "No wait is inserted."]
         pub const _0_X_00: Self = Self::new(0);
-
-        #[doc = "Wait with a length of CSRWAIT clock cycle is inserted."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cswwait_SPEC;
@@ -2339,9 +2330,6 @@ pub mod cswcr1 {
     impl Cswwait {
         #[doc = "No wait is inserted."]
         pub const _0_X_00: Self = Self::new(0);
-
-        #[doc = "Wait with a length of CSWWAIT clock cycle is inserted."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Csprwait_SPEC;
@@ -2349,9 +2337,6 @@ pub mod cswcr1 {
     impl Csprwait {
         #[doc = "No wait is inserted."]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "Wait with a length of CSPRWAIT clock cycle is inserted."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cspwwait_SPEC;
@@ -2359,9 +2344,6 @@ pub mod cswcr1 {
     impl Cspwwait {
         #[doc = "No wait is inserted."]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "Wait with a length of CSPWWAIT clock cycle is inserted."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2597,9 +2579,6 @@ pub mod cswcr2 {
     impl Cson {
         #[doc = "No wait is inserted."]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "Wait with a length of CSON clock cycle is inserted."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wdon_SPEC;
@@ -2607,9 +2586,6 @@ pub mod cswcr2 {
     impl Wdon {
         #[doc = "No wait is inserted."]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "Wait with a length of WDON clock cycle is inserted."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wron_SPEC;
@@ -2617,9 +2593,6 @@ pub mod cswcr2 {
     impl Wron {
         #[doc = "No wait is inserted."]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "Wait with a length of WRON clock cycle is inserted."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdon_SPEC;
@@ -2627,9 +2600,6 @@ pub mod cswcr2 {
     impl Rdon {
         #[doc = "No wait is inserted."]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "Wait with a length of RDON clock cycle is inserted."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Await_SPEC;
@@ -2637,9 +2607,6 @@ pub mod cswcr2 {
     impl Await {
         #[doc = "No wait is inserted."]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "Wait with a length of AWAIT clock cycle is inserted."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wdoff_SPEC;
@@ -2647,9 +2614,6 @@ pub mod cswcr2 {
     impl Wdoff {
         #[doc = "No wait is inserted."]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "Wait with a length of WDOFF clock cycle is inserted."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cswoff_SPEC;
@@ -2657,9 +2621,6 @@ pub mod cswcr2 {
     impl Cswoff {
         #[doc = "No wait is inserted."]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "Wait with a length of CSWOFF clock cycle is inserted."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Csroff_SPEC;
@@ -2667,9 +2628,6 @@ pub mod cswcr2 {
     impl Csroff {
         #[doc = "No wait is inserted."]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "Wait with a length of CSROFF clock cycle is inserted."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2997,9 +2955,6 @@ pub mod sdrfcr {
     impl Rfc {
         #[doc = "Setting prohibited"]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "RFC+1 cycles inserted"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -3181,9 +3136,6 @@ pub mod sdir {
     impl Arfc {
         #[doc = "Setting prohibited"]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "ARFC times"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -3377,9 +3329,6 @@ pub mod sdtr {
 
         #[doc = "3 cycles"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -3923,9 +3872,6 @@ pub mod busscntmbiu {
 
         #[doc = "round-robin"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -4018,8 +3964,5 @@ pub mod busscnt {
 
         #[doc = "round-robin"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }

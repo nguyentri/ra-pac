@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:48:57 +0000
+// Generated from SVD 0.90.02, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:05:50 +0000
 #![cfg_attr(not(feature = "tracing"), no_std)]
 #![allow(non_camel_case_types)]
 #![doc = "Arm Cortex-M33 based Microcontroller RA4L1 group"]
@@ -31,8 +31,8 @@ pub mod tracing;
 pub mod acmplp;
 #[cfg(feature = "adc120")]
 pub mod adc120;
-#[cfg(feature = "agtw0")]
-pub mod agtw0;
+#[cfg(feature = "agtw_b0")]
+pub mod agtw_b0;
 #[cfg(feature = "bus")]
 pub mod bus;
 #[cfg(feature = "cac")]
@@ -470,17 +470,17 @@ pub struct Pscu {
 pub const PSCU: self::Pscu = self::Pscu {
     ptr: 0x400e0000u32 as _,
 };
-#[cfg(feature = "agtw0")]
+#[cfg(feature = "agtw_b0")]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Agtw0 {
+pub struct AgtwB0 {
     ptr: *mut u8,
 }
-#[cfg(feature = "agtw0")]
-pub const AGTW0: self::Agtw0 = self::Agtw0 {
+#[cfg(feature = "agtw_b0")]
+pub const AGTW_B0: self::AgtwB0 = self::AgtwB0 {
     ptr: 0x400e8000u32 as _,
 };
-#[cfg(feature = "agtw1")]
-pub const AGTW1: self::Agtw0 = self::Agtw0 {
+#[cfg(feature = "agtw_b1")]
+pub const AGTW_B1: self::AgtwB0 = self::AgtwB0 {
     ptr: 0x400e8100u32 as _,
 };
 #[cfg(feature = "acmplp")]
@@ -1485,10 +1485,10 @@ pub struct Peripherals {
     pub SLCDC: self::Slcdc,
     #[cfg(feature = "pscu")]
     pub PSCU: self::Pscu,
-    #[cfg(feature = "agtw0")]
-    pub AGTW0: self::Agtw0,
-    #[cfg(feature = "agtw1")]
-    pub AGTW1: self::Agtw0,
+    #[cfg(feature = "agtw_b0")]
+    pub AGTW_B0: self::AgtwB0,
+    #[cfg(feature = "agtw_b1")]
+    pub AGTW_B1: self::AgtwB0,
     #[cfg(feature = "acmplp")]
     pub ACMPLP: self::Acmplp,
     #[cfg(feature = "crc")]
@@ -1644,10 +1644,10 @@ impl Peripherals {
             SLCDC: crate::SLCDC,
             #[cfg(feature = "pscu")]
             PSCU: crate::PSCU,
-            #[cfg(feature = "agtw0")]
-            AGTW0: crate::AGTW0,
-            #[cfg(feature = "agtw1")]
-            AGTW1: crate::AGTW1,
+            #[cfg(feature = "agtw_b0")]
+            AGTW_B0: crate::AGTW_B0,
+            #[cfg(feature = "agtw_b1")]
+            AGTW_B1: crate::AGTW_B1,
             #[cfg(feature = "acmplp")]
             ACMPLP: crate::ACMPLP,
             #[cfg(feature = "crc")]

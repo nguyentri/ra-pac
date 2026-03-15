@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:50:30 +0000
+// Generated from SVD 1.20.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:09:37 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -2025,8 +2025,5 @@ pub mod dlmmon {
 
         #[doc = "RMA_ACK"]
         pub const _0_X_8: Self = Self::new(8);
-
-        #[doc = "Reserved"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }

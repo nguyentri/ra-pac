@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -24,7 +24,7 @@ http://www.renesas.com/disclaimer
 use crate::common::sealed;
 #[allow(unused_imports)]
 use crate::common::*;
-#[doc = r"Temperature Sensor Calibration Data"]
+#[doc = r"Temperature Sensor Data"]
 unsafe impl ::core::marker::Send for super::Tsd {}
 unsafe impl ::core::marker::Sync for super::Tsd {}
 impl super::Tsd {
@@ -39,7 +39,7 @@ impl super::Tsd {
     pub const fn tscdr(&self) -> &'static crate::common::Reg<self::Tscdr_SPEC, crate::common::R> {
         unsafe {
             crate::common::Reg::<self::Tscdr_SPEC, crate::common::R>::from_ptr(
-                self._svd2pac_as_ptr().add(380usize),
+                self._svd2pac_as_ptr().add(0usize),
             )
         }
     }
@@ -55,12 +55,21 @@ impl crate::sealed::RegSpec for Tscdr_SPEC {
 pub type Tscdr = crate::RegValueT<Tscdr_SPEC>;
 
 impl Tscdr {
-    #[doc = "Temperature Sensor Calibration Data"]
+    #[doc = "Temperature sensor calibration data is a digital value obtained using the 12-bit A/D converter unit 0 to convert the voltage output by the temperature sensor under the condition Ta = Tj = 127°C and AVCC0 = 3.3 V."]
     #[inline(always)]
-    pub fn tscdr(
+    pub fn tscd(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Tscdr_SPEC, crate::common::R> {
-        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Tscdr_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0xfff, 1, 0, u16, u16, Tscdr_SPEC, crate::common::R> {
+        crate::common::RegisterField::<0,0xfff,1,0,u16,u16,Tscdr_SPEC,crate::common::R>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<12, 0xfffff, 1, 0, u32, u32, Tscdr_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<12,0xfffff,1,0,u32,u32,Tscdr_SPEC,crate::common::R>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Tscdr {

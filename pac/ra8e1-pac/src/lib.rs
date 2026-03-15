@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.00.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:56 +0000
+// Generated from SVD 1.00.01, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:39:07 +0000
 #![cfg_attr(not(feature = "tracing"), no_std)]
 #![allow(non_camel_case_types)]
 #![doc = "Arm Cortex-M85 based Microcontroller RA8E1 group"]
@@ -1544,7 +1544,7 @@ pub use self::Interrupt as interrupt;
 pub use cortex_m_rt::interrupt;
 #[cfg(feature = "rt")]
 pub mod interrupt_handlers {
-    unsafe extern "C" {
+    extern "C" {
         pub fn IEL0();
         pub fn IEL1();
         pub fn IEL2();
@@ -1645,8 +1645,8 @@ pub mod interrupt_handlers {
 }
 #[cfg(feature = "rt")]
 #[doc(hidden)]
-#[unsafe(link_section = ".vector_table.interrupts")]
-#[unsafe(no_mangle)]
+#[link_section = ".vector_table.interrupts"]
+#[no_mangle]
 pub static __INTERRUPTS: [Vector; 96] = [
     Vector {
         _handler: interrupt_handlers::IEL0,

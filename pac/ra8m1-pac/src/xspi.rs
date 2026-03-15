@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:57:20 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -2204,9 +2204,6 @@ pub mod liocfgcs {
 
         #[doc = "4S-4S-4S"]
         pub const _0_010_010_010_B: Self = Self::new(146);
-
-        #[doc = "Reserved"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Latemd_SPEC;
@@ -2284,9 +2281,6 @@ pub mod liocfgcs {
 
         #[doc = "Sample at 1 cycle delay"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "Reserved"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ddrsmpex_SPEC;
@@ -2297,9 +2291,6 @@ pub mod liocfgcs {
 
         #[doc = "Expand 1 cycle"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "Reserved"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -3058,9 +3049,6 @@ pub mod cdtbuf {
     impl Addsize {
         #[doc = "0byte (No address phase)"]
         pub const _0: Self = Self::new(0);
-
-        #[doc = "Reserved"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Datasize_SPEC;
@@ -3068,9 +3056,6 @@ pub mod cdtbuf {
     impl Datasize {
         #[doc = "0 byte (No data phase)"]
         pub const _0: Self = Self::new(0);
-
-        #[doc = "Reserved"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Late_SPEC;

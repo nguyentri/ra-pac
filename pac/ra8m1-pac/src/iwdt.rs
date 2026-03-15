@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:57:20 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -54,18 +54,6 @@ impl super::Iwdt {
         unsafe {
             crate::common::Reg::<self::Iwdtcr_SPEC, crate::common::RW>::from_ptr(
                 self._svd2pac_as_ptr().add(2usize),
-            )
-        }
-    }
-
-    #[doc = "IWDT Status Register"]
-    #[inline(always)]
-    pub const fn iwdtsr(
-        &self,
-    ) -> &'static crate::common::Reg<self::Iwdtsr_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::Iwdtsr_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4usize),
             )
         }
     }
@@ -266,18 +254,6 @@ pub mod iwdtcr {
 
         #[doc = "16384 cycles (3FFFh)."]
         pub const _11: Self = Self::new(3);
-
-        #[doc = "128 cycles (007Fh)"]
-        pub const _00: Self = Self::new(0);
-
-        #[doc = "512 cycles (01FFh)"]
-        pub const _01: Self = Self::new(1);
-
-        #[doc = "1024 cycles (03FFh)"]
-        pub const _10: Self = Self::new(2);
-
-        #[doc = "2048 cycles (07FFh)."]
-        pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cks_SPEC;
@@ -332,107 +308,6 @@ pub mod iwdtcr {
 
         #[doc = "100% (do not specify window start position)."]
         pub const _11: Self = Self::new(3);
-    }
-}
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Iwdtsr_SPEC;
-impl crate::sealed::RegSpec for Iwdtsr_SPEC {
-    type DataType = u16;
-}
-
-#[doc = "IWDT Status Register"]
-pub type Iwdtsr = crate::RegValueT<Iwdtsr_SPEC>;
-
-impl Iwdtsr {
-    #[doc = "Down-Counter Value"]
-    #[inline(always)]
-    pub fn cntval(
-        self,
-    ) -> crate::common::RegisterField<0, 0x3fff, 1, 0, u16, u16, Iwdtsr_SPEC, crate::common::R>
-    {
-        crate::common::RegisterField::<0,0x3fff,1,0,u16,u16,Iwdtsr_SPEC,crate::common::R>::from_register(self,0)
-    }
-
-    #[doc = "Underflow Flag"]
-    #[inline(always)]
-    pub fn undff(
-        self,
-    ) -> crate::common::RegisterField<
-        14,
-        0x1,
-        1,
-        0,
-        iwdtsr::Undff,
-        iwdtsr::Undff,
-        Iwdtsr_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            14,
-            0x1,
-            1,
-            0,
-            iwdtsr::Undff,
-            iwdtsr::Undff,
-            Iwdtsr_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Refresh Error Flag"]
-    #[inline(always)]
-    pub fn refef(
-        self,
-    ) -> crate::common::RegisterField<
-        15,
-        0x1,
-        1,
-        0,
-        iwdtsr::Refef,
-        iwdtsr::Refef,
-        Iwdtsr_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            15,
-            0x1,
-            1,
-            0,
-            iwdtsr::Refef,
-            iwdtsr::Refef,
-            Iwdtsr_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-}
-impl ::core::default::Default for Iwdtsr {
-    #[inline(always)]
-    fn default() -> Iwdtsr {
-        <crate::RegValueT<Iwdtsr_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-pub mod iwdtsr {
-
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Undff_SPEC;
-    pub type Undff = crate::EnumBitfieldStruct<u8, Undff_SPEC>;
-    impl Undff {
-        #[doc = "No underflow occurred."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Underflow occurred."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Refef_SPEC;
-    pub type Refef = crate::EnumBitfieldStruct<u8, Refef_SPEC>;
-    impl Refef {
-        #[doc = "No refresh error occurred."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Refresh error occurred."]
-        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -510,12 +385,39 @@ impl crate::sealed::RegSpec for Iwdtcstpr_SPEC {
 pub type Iwdtcstpr = crate::RegValueT<Iwdtcstpr_SPEC>;
 
 impl Iwdtcstpr {
-    #[doc = "This bits is read as 1. The write value should be 1."]
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
     pub fn reserved(
         self,
-    ) -> crate::common::RegisterFieldBool<6, 1, 0, Iwdtcstpr_SPEC, crate::common::RW> {
-        crate::common::RegisterFieldBool::<6,1,0,Iwdtcstpr_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, u8, Iwdtcstpr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x3f,1,0,u8,u8,Iwdtcstpr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "Counter Interlocking CPU Select"]
+    #[inline(always)]
+    pub fn cpu0sel(
+        self,
+    ) -> crate::common::RegisterField<
+        6,
+        0x1,
+        1,
+        0,
+        iwdtcstpr::Cpu0Sel,
+        iwdtcstpr::Cpu0Sel,
+        Iwdtcstpr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            6,
+            0x1,
+            1,
+            0,
+            iwdtcstpr::Cpu0Sel,
+            iwdtcstpr::Cpu0Sel,
+            Iwdtcstpr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
     #[doc = "Sleep-Mode Count Stop Control"]
@@ -552,6 +454,16 @@ impl ::core::default::Default for Iwdtcstpr {
 }
 pub mod iwdtcstpr {
 
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cpu0Sel_SPEC;
+    pub type Cpu0Sel = crate::EnumBitfieldStruct<u8, Cpu0Sel_SPEC>;
+    impl Cpu0Sel {
+        #[doc = "Select CPU # 1 as the CPU interlocked with the counter"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Select CPU # 0 as the CPU interlocked with the counter"]
+        pub const _1: Self = Self::new(1);
+    }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Slcstp_SPEC;
     pub type Slcstp = crate::EnumBitfieldStruct<u8, Slcstp_SPEC>;

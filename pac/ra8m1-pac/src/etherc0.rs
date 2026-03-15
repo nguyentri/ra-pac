@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:57:20 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -1368,9 +1368,6 @@ pub mod rdmlr {
     impl Rmd {
         #[doc = "Normal operation"]
         pub const _00000_H: Self = Self::new(0);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1433,9 +1430,6 @@ pub mod ipgr {
     impl Ipg {
         #[doc = "96 bit time (initial value)"]
         pub const _14_H: Self = Self::new(20);
-
-        #[doc = "(IPGx4+16) bit time"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1601,9 +1595,6 @@ pub mod tpauser {
     impl Tpause {
         #[doc = "Number of retransmissions is unlimited"]
         pub const _0_X_0000: Self = Self::new(0);
-
-        #[doc = "Maximum number of retransmissions is (TPAUSE)"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1701,9 +1692,6 @@ pub mod bcfrr {
     impl Bcf {
         #[doc = "Number of receptions is unlimited."]
         pub const _0000_H: Self = Self::new(0);
-
-        #[doc = "Receive (BFC) frame."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

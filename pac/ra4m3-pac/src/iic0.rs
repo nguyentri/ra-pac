@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.50.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:54 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:07:45 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -134,7 +134,7 @@ impl super::Iic0 {
         }
     }
 
-    #[doc = "Slave Address Register L %s"]
+    #[doc = "Slave Address Register Ly"]
     #[inline(always)]
     pub const fn sarl(
         &self,
@@ -172,7 +172,7 @@ impl super::Iic0 {
         }
     }
 
-    #[doc = "Slave Address Register U %s"]
+    #[doc = "Slave Address Register Uy"]
     #[inline(always)]
     pub const fn saru(
         &self,
@@ -2847,7 +2847,7 @@ impl crate::sealed::RegSpec for Sarl_SPEC {
     type DataType = u8;
 }
 
-#[doc = "Slave Address Register L %s"]
+#[doc = "Slave Address Register Ly"]
 pub type Sarl = crate::RegValueT<Sarl_SPEC>;
 
 impl Sarl {
@@ -2881,7 +2881,7 @@ impl crate::sealed::RegSpec for Saru_SPEC {
     type DataType = u8;
 }
 
-#[doc = "Slave Address Register U %s"]
+#[doc = "Slave Address Register Uy"]
 pub type Saru = crate::RegValueT<Saru_SPEC>;
 
 impl Saru {

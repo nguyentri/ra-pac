@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:18 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:06:30 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -903,26 +903,8 @@ impl Ctsumch0 {
     #[inline(always)]
     pub fn ctsumch0(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x3f,
-        1,
-        0,
-        ctsumch0::Ctsumch0,
-        ctsumch0::Ctsumch0,
-        Ctsumch0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x3f,
-            1,
-            0,
-            ctsumch0::Ctsumch0,
-            ctsumch0::Ctsumch0,
-            Ctsumch0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, u8, Ctsumch0_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<0,0x3f,1,0,u8,u8,Ctsumch0_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Ctsumch0 {
@@ -931,16 +913,7 @@ impl ::core::default::Default for Ctsumch0 {
         <crate::RegValueT<Ctsumch0_SPEC> as RegisterValue<_>>::new(63)
     }
 }
-pub mod ctsumch0 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ctsumch0_SPEC;
-    pub type Ctsumch0 = crate::EnumBitfieldStruct<u8, Ctsumch0_SPEC>;
-    impl Ctsumch0 {
-        #[doc = "The value of CTSUMCH0 indicate to channel to be measured."]
-        pub const CTSUMCH_0: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctsumch1_SPEC;
@@ -964,26 +937,8 @@ impl Ctsumch1 {
     #[inline(always)]
     pub fn ctsumch1(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x3f,
-        1,
-        0,
-        ctsumch1::Ctsumch1,
-        ctsumch1::Ctsumch1,
-        Ctsumch1_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x3f,
-            1,
-            0,
-            ctsumch1::Ctsumch1,
-            ctsumch1::Ctsumch1,
-            Ctsumch1_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, u8, Ctsumch1_SPEC, crate::common::R> {
+        crate::common::RegisterField::<0,0x3f,1,0,u8,u8,Ctsumch1_SPEC,crate::common::R>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Ctsumch1 {
@@ -992,16 +947,7 @@ impl ::core::default::Default for Ctsumch1 {
         <crate::RegValueT<Ctsumch1_SPEC> as RegisterValue<_>>::new(63)
     }
 }
-pub mod ctsumch1 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ctsumch1_SPEC;
-    pub type Ctsumch1 = crate::EnumBitfieldStruct<u8, Ctsumch1_SPEC>;
-    impl Ctsumch1 {
-        #[doc = "The value of CTSUMCH1 indicate to channel to be measured."]
-        pub const CTSUMCH_1: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctsuchac0_SPEC;
@@ -1017,26 +963,9 @@ impl Ctsuchac0 {
     #[inline(always)]
     pub fn ctsuchac0(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0xff,
-        1,
-        0,
-        ctsuchac0::Ctsuchac0,
-        ctsuchac0::Ctsuchac0,
-        Ctsuchac0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0xff,
-            1,
-            0,
-            ctsuchac0::Ctsuchac0,
-            ctsuchac0::Ctsuchac0,
-            Ctsuchac0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, Ctsuchac0_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xff,1,0,u8,u8,Ctsuchac0_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Ctsuchac0 {
@@ -1045,16 +974,7 @@ impl ::core::default::Default for Ctsuchac0 {
         <crate::RegValueT<Ctsuchac0_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod ctsuchac0 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ctsuchac0_SPEC;
-    pub type Ctsuchac0 = crate::EnumBitfieldStruct<u8, Ctsuchac0_SPEC>;
-    impl Ctsuchac0 {
-        #[doc = "TS pin which correspond to the bit number of CTSUCHAC0 register set whether the measurement target."]
-        pub const CTSUCHAC_0: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctsuchac1_SPEC;
@@ -1070,26 +990,9 @@ impl Ctsuchac1 {
     #[inline(always)]
     pub fn ctsuchac1(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0xff,
-        1,
-        0,
-        ctsuchac1::Ctsuchac1,
-        ctsuchac1::Ctsuchac1,
-        Ctsuchac1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0xff,
-            1,
-            0,
-            ctsuchac1::Ctsuchac1,
-            ctsuchac1::Ctsuchac1,
-            Ctsuchac1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, Ctsuchac1_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xff,1,0,u8,u8,Ctsuchac1_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Ctsuchac1 {
@@ -1098,16 +1001,7 @@ impl ::core::default::Default for Ctsuchac1 {
         <crate::RegValueT<Ctsuchac1_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod ctsuchac1 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ctsuchac1_SPEC;
-    pub type Ctsuchac1 = crate::EnumBitfieldStruct<u8, Ctsuchac1_SPEC>;
-    impl Ctsuchac1 {
-        #[doc = "TS pin which correspond to the bit number of CTSUCHAC1 register set whether the measurement target."]
-        pub const CTSUCHAC_1: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctsuchac2_SPEC;
@@ -1123,26 +1017,9 @@ impl Ctsuchac2 {
     #[inline(always)]
     pub fn ctsuchac2(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0xff,
-        1,
-        0,
-        ctsuchac2::Ctsuchac2,
-        ctsuchac2::Ctsuchac2,
-        Ctsuchac2_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0xff,
-            1,
-            0,
-            ctsuchac2::Ctsuchac2,
-            ctsuchac2::Ctsuchac2,
-            Ctsuchac2_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, Ctsuchac2_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xff,1,0,u8,u8,Ctsuchac2_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Ctsuchac2 {
@@ -1151,16 +1028,7 @@ impl ::core::default::Default for Ctsuchac2 {
         <crate::RegValueT<Ctsuchac2_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod ctsuchac2 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ctsuchac2_SPEC;
-    pub type Ctsuchac2 = crate::EnumBitfieldStruct<u8, Ctsuchac2_SPEC>;
-    impl Ctsuchac2 {
-        #[doc = "TS pin which correspond to the bit number of CTSUCHAC2 register set whether the measurement target."]
-        pub const CTSUCHAC_2: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctsuchac3_SPEC;
@@ -1176,26 +1044,9 @@ impl Ctsuchac3 {
     #[inline(always)]
     pub fn ctsuchac3(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0xff,
-        1,
-        0,
-        ctsuchac3::Ctsuchac3,
-        ctsuchac3::Ctsuchac3,
-        Ctsuchac3_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0xff,
-            1,
-            0,
-            ctsuchac3::Ctsuchac3,
-            ctsuchac3::Ctsuchac3,
-            Ctsuchac3_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, Ctsuchac3_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xff,1,0,u8,u8,Ctsuchac3_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Ctsuchac3 {
@@ -1204,16 +1055,7 @@ impl ::core::default::Default for Ctsuchac3 {
         <crate::RegValueT<Ctsuchac3_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod ctsuchac3 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ctsuchac3_SPEC;
-    pub type Ctsuchac3 = crate::EnumBitfieldStruct<u8, Ctsuchac3_SPEC>;
-    impl Ctsuchac3 {
-        #[doc = "TS pin which correspond to the bit number of CTSUCHAC3 register set whether the measurement target."]
-        pub const CTSUCHAC_3: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctsuchac4_SPEC;
@@ -1237,26 +1079,8 @@ impl Ctsuchac4 {
     #[inline(always)]
     pub fn ctsuchac4(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0xf,
-        1,
-        0,
-        ctsuchac4::Ctsuchac4,
-        ctsuchac4::Ctsuchac4,
-        Ctsuchac4_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0xf,
-            1,
-            0,
-            ctsuchac4::Ctsuchac4,
-            ctsuchac4::Ctsuchac4,
-            Ctsuchac4_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, Ctsuchac4_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,Ctsuchac4_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Ctsuchac4 {
@@ -1265,16 +1089,7 @@ impl ::core::default::Default for Ctsuchac4 {
         <crate::RegValueT<Ctsuchac4_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod ctsuchac4 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ctsuchac4_SPEC;
-    pub type Ctsuchac4 = crate::EnumBitfieldStruct<u8, Ctsuchac4_SPEC>;
-    impl Ctsuchac4 {
-        #[doc = "TS pin which correspond to the bit number of CTSUCHAC4 register set whether the measurement target."]
-        pub const CTSUCHAC_4: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctsuchtrc0_SPEC;

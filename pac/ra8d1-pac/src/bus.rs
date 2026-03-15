@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -24,7 +24,7 @@ http://www.renesas.com/disclaimer
 use crate::common::sealed;
 #[allow(unused_imports)]
 use crate::common::*;
-#[doc = r"Bus Control"]
+#[doc = r"BUS Control"]
 unsafe impl ::core::marker::Send for super::Bus {}
 unsafe impl ::core::marker::Sync for super::Bus {}
 impl super::Bus {
@@ -34,7 +34,7 @@ impl super::Bus {
         self.ptr
     }
 
-    #[doc = "CS%s Mode Register (n = 0 to 7)"]
+    #[doc = "CS%s Mode Register"]
     #[inline(always)]
     pub const fn csmod(
         &self,
@@ -112,7 +112,7 @@ impl super::Bus {
         }
     }
 
-    #[doc = "CS%s Wait Control Register 1 (n = 0 to 7)"]
+    #[doc = "CS%s Wait Control Register 1"]
     #[inline(always)]
     pub const fn cswcr1(
         &self,
@@ -206,7 +206,7 @@ impl super::Bus {
         }
     }
 
-    #[doc = "CS%s Wait Control Register 2 (n = 0 to 7)"]
+    #[doc = "CS%s Wait Control Register 2"]
     #[inline(always)]
     pub const fn cswcr2(
         &self,
@@ -310,7 +310,7 @@ impl super::Bus {
         }
     }
 
-    #[doc = "CS%s Recovery Cycle Register (n = 0 to 7)"]
+    #[doc = "CS%s Recovery Cycle Register"]
     #[inline(always)]
     pub const fn csrec(
         &self,
@@ -600,7 +600,7 @@ impl super::Bus {
         }
     }
 
-    #[doc = "BUS Operation After Detection Register"]
+    #[doc = "BUS_Operation_After_Detection Register"]
     #[inline(always)]
     pub const fn busoad(
         &self,
@@ -612,7 +612,7 @@ impl super::Bus {
         }
     }
 
-    #[doc = "BUS Operation After Detection Protect Register"]
+    #[doc = "BUS_Operation_After_Detection Protect Register"]
     #[inline(always)]
     pub const fn busoadpt(
         &self,
@@ -620,28 +620,6 @@ impl super::Bus {
         unsafe {
             crate::common::Reg::<self::Busoadpt_SPEC, crate::common::RW>::from_ptr(
                 self._svd2pac_as_ptr().add(4100usize),
-            )
-        }
-    }
-
-    #[doc = "Master Security Attribution Operation After Detection Register"]
-    #[inline(always)]
-    pub const fn msaoad(
-        &self,
-    ) -> &'static crate::common::Reg<self::Msaoad_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::Msaoad_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4112usize),
-            )
-        }
-    }
-
-    #[doc = "Master Security Attribution Protect Register"]
-    #[inline(always)]
-    pub const fn msapt(&self) -> &'static crate::common::Reg<self::Msapt_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::Msapt_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(4116usize),
             )
         }
     }
@@ -658,7 +636,7 @@ impl super::Bus {
         }
     }
 
-    #[doc = "Bus Slave Arbitration Control Register 1(x = FHBI, S0BI, S1BI)"]
+    #[doc = "Bus Slave Arbitration Control Register 1 FHBI"]
     #[inline(always)]
     pub const fn bussabt1fhbi(
         &self,
@@ -670,7 +648,7 @@ impl super::Bus {
         }
     }
 
-    #[doc = "Bus Slave Arbitration Control Register 0"]
+    #[doc = "Bus Slave Arbitration Control Register 0 FLBI"]
     #[inline(always)]
     pub const fn bussabt0flbi(
         &self,
@@ -682,7 +660,7 @@ impl super::Bus {
         }
     }
 
-    #[doc = "Bus Slave Arbitration Control Register 1(x = FHBI, S0BI, S1BI)"]
+    #[doc = "Bus Slave Arbitration Control Register 1 S0BI"]
     #[inline(always)]
     pub const fn bussabt1s0bi(
         &self,
@@ -694,7 +672,7 @@ impl super::Bus {
         }
     }
 
-    #[doc = "Bus Slave Arbitration Control Register 1(x = FHBI, S0BI, S1BI)"]
+    #[doc = "Bus Slave Arbitration Control Register 1 S1BI"]
     #[inline(always)]
     pub const fn bussabt1s1bi(
         &self,
@@ -706,7 +684,7 @@ impl super::Bus {
         }
     }
 
-    #[doc = "Bus Slave Arbitration Control Register 0"]
+    #[doc = "Bus Slave Arbitration Control Register 0 STBYSBI"]
     #[inline(always)]
     pub const fn bussabt0stbysbi(
         &self,
@@ -718,31 +696,31 @@ impl super::Bus {
         }
     }
 
-    #[doc = "Bus Slave Arbitration Control Register 0"]
+    #[doc = "Bus Slave Arbitration Control Register 2 ECBI"]
     #[inline(always)]
-    pub const fn bussabt0ecbi(
+    pub const fn bussabt2ecbi(
         &self,
-    ) -> &'static crate::common::Reg<self::Bussabt0Ecbi_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::Bussabt2Ecbi_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::Bussabt0Ecbi_SPEC, crate::common::RW>::from_ptr(
+            crate::common::Reg::<self::Bussabt2Ecbi_SPEC, crate::common::RW>::from_ptr(
                 self._svd2pac_as_ptr().add(4688usize),
             )
         }
     }
 
-    #[doc = "Bus Slave Arbitration Control Register 0"]
+    #[doc = "Bus Slave Arbitration Control Register 2 EOBI"]
     #[inline(always)]
-    pub const fn bussabt0eobi(
+    pub const fn bussabt2eobi(
         &self,
-    ) -> &'static crate::common::Reg<self::Bussabt0Eobi_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::Bussabt2Eobi_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::Bussabt0Eobi_SPEC, crate::common::RW>::from_ptr(
+            crate::common::Reg::<self::Bussabt2Eobi_SPEC, crate::common::RW>::from_ptr(
                 self._svd2pac_as_ptr().add(4696usize),
             )
         }
     }
 
-    #[doc = "Bus Slave Arbitration Control Register 0"]
+    #[doc = "Bus Slave Arbitration Control Register 0 PBBI"]
     #[inline(always)]
     pub const fn bussabt0pbbi(
         &self,
@@ -754,7 +732,7 @@ impl super::Bus {
         }
     }
 
-    #[doc = "Bus Slave Arbitration Control Register 0"]
+    #[doc = "Bus Slave Arbitration Control Register 0 PABI"]
     #[inline(always)]
     pub const fn bussabt0pabi(
         &self,
@@ -766,7 +744,7 @@ impl super::Bus {
         }
     }
 
-    #[doc = "Bus Slave Arbitration Control Register 0"]
+    #[doc = "Bus Slave Arbitration Control Register 0 PIBI"]
     #[inline(always)]
     pub const fn bussabt0pibi(
         &self,
@@ -778,7 +756,7 @@ impl super::Bus {
         }
     }
 
-    #[doc = "Bus Slave Arbitration Control Register 0"]
+    #[doc = "Bus Slave Arbitration Control Register 0 PSBI"]
     #[inline(always)]
     pub const fn bussabt0psbi(
         &self,
@@ -802,7 +780,229 @@ impl super::Bus {
         }
     }
 
-    #[doc = "BUS Error Address Register (n = 4 to 9 )"]
+    #[doc = "QoS Priority Setting After Reach Threshold"]
+    #[inline(always)]
+    pub const fn qospri(
+        &self,
+    ) -> &'static crate::common::Reg<self::Qospri_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Qospri_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(5120usize),
+            )
+        }
+    }
+
+    #[doc = "QoS Cycle Setting Register %s"]
+    #[inline(always)]
+    pub const fn qoscyc(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::Qoscyc_SPEC, crate::common::RW>,
+        4,
+        0x8,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1410usize))
+        }
+    }
+    #[inline(always)]
+    pub const fn qoscyc0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Qoscyc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Qoscyc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1410usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn qoscyc1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Qoscyc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Qoscyc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1418usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn qoscyc2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Qoscyc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Qoscyc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1420usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn qoscyc3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Qoscyc_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Qoscyc_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1428usize),
+            )
+        }
+    }
+
+    #[doc = "Bus Master priority setting register"]
+    #[inline(always)]
+    pub const fn busmpri(
+        &self,
+    ) -> &'static crate::common::Reg<self::Busmpri_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Busmpri_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(5168usize),
+            )
+        }
+    }
+
+    #[doc = "QoS Cycle Setting Register 4"]
+    #[inline(always)]
+    pub const fn qoscyc4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Qoscyc4_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Qoscyc4_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(5176usize),
+            )
+        }
+    }
+
+    #[doc = "QoS Threshold Setting Register %s"]
+    #[inline(always)]
+    pub const fn qosthd(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::Qosthd_SPEC, crate::common::RW>,
+        4,
+        0x8,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1500usize))
+        }
+    }
+    #[inline(always)]
+    pub const fn qosthd0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Qosthd_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Qosthd_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1500usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn qosthd1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Qosthd_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Qosthd_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1508usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn qosthd2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Qosthd_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Qosthd_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1510usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn qosthd3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Qosthd_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Qosthd_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1518usize),
+            )
+        }
+    }
+
+    #[doc = "QoS Threshold Setting Register 4"]
+    #[inline(always)]
+    pub const fn qosthd4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Qosthd4_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Qosthd4_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(5416usize),
+            )
+        }
+    }
+
+    #[doc = "QoS Data Transferred Amount Monitor Register %s"]
+    #[inline(always)]
+    pub const fn qosdmon(
+        &self,
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::Qosdmon_SPEC, crate::common::RW>,
+        4,
+        0x8,
+    > {
+        unsafe {
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1600usize))
+        }
+    }
+    #[inline(always)]
+    pub const fn qosdmon0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Qosdmon_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Qosdmon_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1600usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn qosdmon1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Qosdmon_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Qosdmon_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1608usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn qosdmon2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Qosdmon_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Qosdmon_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1610usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn qosdmon3(
+        &self,
+    ) -> &'static crate::common::Reg<self::Qosdmon_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Qosdmon_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1618usize),
+            )
+        }
+    }
+
+    #[doc = "QoS Data Transferred Amount Monitor Register 4"]
+    #[inline(always)]
+    pub const fn qosdmon4(
+        &self,
+    ) -> &'static crate::common::Reg<self::Qosdmon4_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Qosdmon4_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(5672usize),
+            )
+        }
+    }
+
+    #[doc = "Bus Error Address Register %s"]
     #[inline(always)]
     pub const fn buserradd(
         &self,
@@ -812,41 +1012,11 @@ impl super::Bus {
         0x10,
     > {
         unsafe {
-            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1800usize))
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1830usize))
         }
     }
     #[inline(always)]
     pub const fn bus4erradd(
-        &self,
-    ) -> &'static crate::common::Reg<self::Buserradd_SPEC, crate::common::R> {
-        unsafe {
-            crate::common::Reg::<self::Buserradd_SPEC, crate::common::R>::from_ptr(
-                self._svd2pac_as_ptr().add(0x1800usize),
-            )
-        }
-    }
-    #[inline(always)]
-    pub const fn bus5erradd(
-        &self,
-    ) -> &'static crate::common::Reg<self::Buserradd_SPEC, crate::common::R> {
-        unsafe {
-            crate::common::Reg::<self::Buserradd_SPEC, crate::common::R>::from_ptr(
-                self._svd2pac_as_ptr().add(0x1810usize),
-            )
-        }
-    }
-    #[inline(always)]
-    pub const fn bus6erradd(
-        &self,
-    ) -> &'static crate::common::Reg<self::Buserradd_SPEC, crate::common::R> {
-        unsafe {
-            crate::common::Reg::<self::Buserradd_SPEC, crate::common::R>::from_ptr(
-                self._svd2pac_as_ptr().add(0x1820usize),
-            )
-        }
-    }
-    #[inline(always)]
-    pub const fn bus7erradd(
         &self,
     ) -> &'static crate::common::Reg<self::Buserradd_SPEC, crate::common::R> {
         unsafe {
@@ -856,7 +1026,7 @@ impl super::Bus {
         }
     }
     #[inline(always)]
-    pub const fn bus8erradd(
+    pub const fn bus5erradd(
         &self,
     ) -> &'static crate::common::Reg<self::Buserradd_SPEC, crate::common::R> {
         unsafe {
@@ -866,7 +1036,7 @@ impl super::Bus {
         }
     }
     #[inline(always)]
-    pub const fn bus9erradd(
+    pub const fn bus6erradd(
         &self,
     ) -> &'static crate::common::Reg<self::Buserradd_SPEC, crate::common::R> {
         unsafe {
@@ -875,8 +1045,38 @@ impl super::Bus {
             )
         }
     }
+    #[inline(always)]
+    pub const fn bus7erradd(
+        &self,
+    ) -> &'static crate::common::Reg<self::Buserradd_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Buserradd_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1860usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bus8erradd(
+        &self,
+    ) -> &'static crate::common::Reg<self::Buserradd_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Buserradd_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1870usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bus9erradd(
+        &self,
+    ) -> &'static crate::common::Reg<self::Buserradd_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Buserradd_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1880usize),
+            )
+        }
+    }
 
-    #[doc = "BUS Error Read Write (n = 4 to 9)"]
+    #[doc = "Bus Error RW Register %s"]
     #[inline(always)]
     pub const fn buserrrw(
         &self,
@@ -886,41 +1086,11 @@ impl super::Bus {
         0x10,
     > {
         unsafe {
-            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1804usize))
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1834usize))
         }
     }
     #[inline(always)]
     pub const fn bus4errrw(
-        &self,
-    ) -> &'static crate::common::Reg<self::Buserrrw_SPEC, crate::common::R> {
-        unsafe {
-            crate::common::Reg::<self::Buserrrw_SPEC, crate::common::R>::from_ptr(
-                self._svd2pac_as_ptr().add(0x1804usize),
-            )
-        }
-    }
-    #[inline(always)]
-    pub const fn bus5errrw(
-        &self,
-    ) -> &'static crate::common::Reg<self::Buserrrw_SPEC, crate::common::R> {
-        unsafe {
-            crate::common::Reg::<self::Buserrrw_SPEC, crate::common::R>::from_ptr(
-                self._svd2pac_as_ptr().add(0x1814usize),
-            )
-        }
-    }
-    #[inline(always)]
-    pub const fn bus6errrw(
-        &self,
-    ) -> &'static crate::common::Reg<self::Buserrrw_SPEC, crate::common::R> {
-        unsafe {
-            crate::common::Reg::<self::Buserrrw_SPEC, crate::common::R>::from_ptr(
-                self._svd2pac_as_ptr().add(0x1824usize),
-            )
-        }
-    }
-    #[inline(always)]
-    pub const fn bus7errrw(
         &self,
     ) -> &'static crate::common::Reg<self::Buserrrw_SPEC, crate::common::R> {
         unsafe {
@@ -930,7 +1100,7 @@ impl super::Bus {
         }
     }
     #[inline(always)]
-    pub const fn bus8errrw(
+    pub const fn bus5errrw(
         &self,
     ) -> &'static crate::common::Reg<self::Buserrrw_SPEC, crate::common::R> {
         unsafe {
@@ -940,7 +1110,7 @@ impl super::Bus {
         }
     }
     #[inline(always)]
-    pub const fn bus9errrw(
+    pub const fn bus6errrw(
         &self,
     ) -> &'static crate::common::Reg<self::Buserrrw_SPEC, crate::common::R> {
         unsafe {
@@ -949,156 +1119,186 @@ impl super::Bus {
             )
         }
     }
-
-    #[doc = "Bus Master Security Attribution Unit Error Address (n = 4 to 9)"]
     #[inline(always)]
-    pub const fn bmsaerradd(
+    pub const fn bus7errrw(
+        &self,
+    ) -> &'static crate::common::Reg<self::Buserrrw_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Buserrrw_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1864usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bus8errrw(
+        &self,
+    ) -> &'static crate::common::Reg<self::Buserrrw_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Buserrrw_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1874usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn bus9errrw(
+        &self,
+    ) -> &'static crate::common::Reg<self::Buserrrw_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Buserrrw_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1884usize),
+            )
+        }
+    }
+
+    #[doc = "Bus TZF Error Address Register %s"]
+    #[inline(always)]
+    pub const fn btzferradd(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
-        crate::common::Reg<self::Bmsaerradd_SPEC, crate::common::R>,
+        crate::common::Reg<self::Btzferradd_SPEC, crate::common::R>,
         6,
         0x10,
     > {
         unsafe {
-            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1900usize))
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1930usize))
         }
     }
     #[inline(always)]
-    pub const fn bmsa4erradd(
+    pub const fn btzf4erradd(
         &self,
-    ) -> &'static crate::common::Reg<self::Bmsaerradd_SPEC, crate::common::R> {
+    ) -> &'static crate::common::Reg<self::Btzferradd_SPEC, crate::common::R> {
         unsafe {
-            crate::common::Reg::<self::Bmsaerradd_SPEC, crate::common::R>::from_ptr(
-                self._svd2pac_as_ptr().add(0x1900usize),
-            )
-        }
-    }
-    #[inline(always)]
-    pub const fn bmsa5erradd(
-        &self,
-    ) -> &'static crate::common::Reg<self::Bmsaerradd_SPEC, crate::common::R> {
-        unsafe {
-            crate::common::Reg::<self::Bmsaerradd_SPEC, crate::common::R>::from_ptr(
-                self._svd2pac_as_ptr().add(0x1910usize),
-            )
-        }
-    }
-    #[inline(always)]
-    pub const fn bmsa6erradd(
-        &self,
-    ) -> &'static crate::common::Reg<self::Bmsaerradd_SPEC, crate::common::R> {
-        unsafe {
-            crate::common::Reg::<self::Bmsaerradd_SPEC, crate::common::R>::from_ptr(
-                self._svd2pac_as_ptr().add(0x1920usize),
-            )
-        }
-    }
-    #[inline(always)]
-    pub const fn bmsa7erradd(
-        &self,
-    ) -> &'static crate::common::Reg<self::Bmsaerradd_SPEC, crate::common::R> {
-        unsafe {
-            crate::common::Reg::<self::Bmsaerradd_SPEC, crate::common::R>::from_ptr(
+            crate::common::Reg::<self::Btzferradd_SPEC, crate::common::R>::from_ptr(
                 self._svd2pac_as_ptr().add(0x1930usize),
             )
         }
     }
     #[inline(always)]
-    pub const fn bmsa8erradd(
+    pub const fn btzf5erradd(
         &self,
-    ) -> &'static crate::common::Reg<self::Bmsaerradd_SPEC, crate::common::R> {
+    ) -> &'static crate::common::Reg<self::Btzferradd_SPEC, crate::common::R> {
         unsafe {
-            crate::common::Reg::<self::Bmsaerradd_SPEC, crate::common::R>::from_ptr(
+            crate::common::Reg::<self::Btzferradd_SPEC, crate::common::R>::from_ptr(
                 self._svd2pac_as_ptr().add(0x1940usize),
             )
         }
     }
     #[inline(always)]
-    pub const fn bmsa9erradd(
+    pub const fn btzf6erradd(
         &self,
-    ) -> &'static crate::common::Reg<self::Bmsaerradd_SPEC, crate::common::R> {
+    ) -> &'static crate::common::Reg<self::Btzferradd_SPEC, crate::common::R> {
         unsafe {
-            crate::common::Reg::<self::Bmsaerradd_SPEC, crate::common::R>::from_ptr(
+            crate::common::Reg::<self::Btzferradd_SPEC, crate::common::R>::from_ptr(
                 self._svd2pac_as_ptr().add(0x1950usize),
             )
         }
     }
-
-    #[doc = "BUS Master Security Attribution Unit Error Read Write (n = 4 to 9)"]
     #[inline(always)]
-    pub const fn bmsaerrrw(
+    pub const fn btzf7erradd(
+        &self,
+    ) -> &'static crate::common::Reg<self::Btzferradd_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Btzferradd_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1960usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn btzf8erradd(
+        &self,
+    ) -> &'static crate::common::Reg<self::Btzferradd_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Btzferradd_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1970usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn btzf9erradd(
+        &self,
+    ) -> &'static crate::common::Reg<self::Btzferradd_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Btzferradd_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1980usize),
+            )
+        }
+    }
+
+    #[doc = "Bus ZTF Error RW Register %s"]
+    #[inline(always)]
+    pub const fn btzferrrw(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
-        crate::common::Reg<self::Bmsaerrrw_SPEC, crate::common::R>,
+        crate::common::Reg<self::Btzferrrw_SPEC, crate::common::R>,
         6,
         0x10,
     > {
         unsafe {
-            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1904usize))
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x1934usize))
         }
     }
     #[inline(always)]
-    pub const fn bmsa4errrw(
+    pub const fn btzf4errrw(
         &self,
-    ) -> &'static crate::common::Reg<self::Bmsaerrrw_SPEC, crate::common::R> {
+    ) -> &'static crate::common::Reg<self::Btzferrrw_SPEC, crate::common::R> {
         unsafe {
-            crate::common::Reg::<self::Bmsaerrrw_SPEC, crate::common::R>::from_ptr(
-                self._svd2pac_as_ptr().add(0x1904usize),
-            )
-        }
-    }
-    #[inline(always)]
-    pub const fn bmsa5errrw(
-        &self,
-    ) -> &'static crate::common::Reg<self::Bmsaerrrw_SPEC, crate::common::R> {
-        unsafe {
-            crate::common::Reg::<self::Bmsaerrrw_SPEC, crate::common::R>::from_ptr(
-                self._svd2pac_as_ptr().add(0x1914usize),
-            )
-        }
-    }
-    #[inline(always)]
-    pub const fn bmsa6errrw(
-        &self,
-    ) -> &'static crate::common::Reg<self::Bmsaerrrw_SPEC, crate::common::R> {
-        unsafe {
-            crate::common::Reg::<self::Bmsaerrrw_SPEC, crate::common::R>::from_ptr(
-                self._svd2pac_as_ptr().add(0x1924usize),
-            )
-        }
-    }
-    #[inline(always)]
-    pub const fn bmsa7errrw(
-        &self,
-    ) -> &'static crate::common::Reg<self::Bmsaerrrw_SPEC, crate::common::R> {
-        unsafe {
-            crate::common::Reg::<self::Bmsaerrrw_SPEC, crate::common::R>::from_ptr(
+            crate::common::Reg::<self::Btzferrrw_SPEC, crate::common::R>::from_ptr(
                 self._svd2pac_as_ptr().add(0x1934usize),
             )
         }
     }
     #[inline(always)]
-    pub const fn bmsa8errrw(
+    pub const fn btzf5errrw(
         &self,
-    ) -> &'static crate::common::Reg<self::Bmsaerrrw_SPEC, crate::common::R> {
+    ) -> &'static crate::common::Reg<self::Btzferrrw_SPEC, crate::common::R> {
         unsafe {
-            crate::common::Reg::<self::Bmsaerrrw_SPEC, crate::common::R>::from_ptr(
+            crate::common::Reg::<self::Btzferrrw_SPEC, crate::common::R>::from_ptr(
                 self._svd2pac_as_ptr().add(0x1944usize),
             )
         }
     }
     #[inline(always)]
-    pub const fn bmsa9errrw(
+    pub const fn btzf6errrw(
         &self,
-    ) -> &'static crate::common::Reg<self::Bmsaerrrw_SPEC, crate::common::R> {
+    ) -> &'static crate::common::Reg<self::Btzferrrw_SPEC, crate::common::R> {
         unsafe {
-            crate::common::Reg::<self::Bmsaerrrw_SPEC, crate::common::R>::from_ptr(
+            crate::common::Reg::<self::Btzferrrw_SPEC, crate::common::R>::from_ptr(
                 self._svd2pac_as_ptr().add(0x1954usize),
             )
         }
     }
+    #[inline(always)]
+    pub const fn btzf7errrw(
+        &self,
+    ) -> &'static crate::common::Reg<self::Btzferrrw_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Btzferrrw_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1964usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn btzf8errrw(
+        &self,
+    ) -> &'static crate::common::Reg<self::Btzferrrw_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Btzferrrw_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1974usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn btzf9errrw(
+        &self,
+    ) -> &'static crate::common::Reg<self::Btzferrrw_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Btzferrrw_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1984usize),
+            )
+        }
+    }
 
-    #[doc = "BUS Error Status Register"]
+    #[doc = "Bus Error Status Register %s"]
     #[inline(always)]
     pub const fn buserrstat(
         &self,
@@ -1232,7 +1432,7 @@ impl super::Bus {
         }
     }
 
-    #[doc = "BUS Error Clear Register"]
+    #[doc = "Bus Error Status Register %s"]
     #[inline(always)]
     pub const fn buserrclr(
         &self,
@@ -1421,7 +1621,7 @@ impl crate::sealed::RegSpec for Csmod_SPEC {
     type DataType = u16;
 }
 
-#[doc = "CS%s Mode Register (n = 0 to 7)"]
+#[doc = "CS%s Mode Register"]
 pub type Csmod = crate::RegValueT<Csmod_SPEC>;
 
 impl Csmod {
@@ -1529,6 +1729,14 @@ impl Csmod {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<10, 0x1f, 1, 0, u8, u8, Csmod_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<10,0x1f,1,0,u8,u8,Csmod_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
     #[doc = "Page Read Access Mode Select"]
     #[inline(always)]
     pub fn prmod(
@@ -1570,7 +1778,7 @@ pub mod csmod {
         #[doc = "Byte strobe mode"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Single-write strobe mode"]
+        #[doc = "Single write strobe mode"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -1621,40 +1829,120 @@ impl crate::sealed::RegSpec for Cswcr1_SPEC {
     type DataType = u32;
 }
 
-#[doc = "CS%s Wait Control Register 1 (n = 0 to 7)"]
+#[doc = "CS%s Wait Control Register 1"]
 pub type Cswcr1 = crate::RegValueT<Cswcr1_SPEC>;
 
 impl Cswcr1 {
-    #[doc = "Page Write Cycle Wait Select"]
+    #[doc = "Page Write Cycle Wait SelectNOTE: The CSPWWAIT value is valid only when the PWENB bit in CSnMOD is set to 1."]
     #[inline(always)]
     pub fn cspwwait(
         self,
-    ) -> crate::common::RegisterField<0, 0x7, 1, 0, u8, u8, Cswcr1_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0x7,1,0,u8,u8,Cswcr1_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x7,
+        1,
+        0,
+        cswcr1::Cspwwait,
+        cswcr1::Cspwwait,
+        Cswcr1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x7,
+            1,
+            0,
+            cswcr1::Cspwwait,
+            cswcr1::Cspwwait,
+            Cswcr1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
-    #[doc = "Page Read Cycle Wait Select"]
+    #[doc = "Page Read Cycle Wait SelectNOTE: The CSPRWAIT value is valid only when the PRENB bit in CSnMOD is set to 1."]
     #[inline(always)]
     pub fn csprwait(
         self,
-    ) -> crate::common::RegisterField<8, 0x7, 1, 0, u8, u8, Cswcr1_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<8,0x7,1,0,u8,u8,Cswcr1_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        8,
+        0x7,
+        1,
+        0,
+        cswcr1::Csprwait,
+        cswcr1::Csprwait,
+        Cswcr1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            8,
+            0x7,
+            1,
+            0,
+            cswcr1::Csprwait,
+            cswcr1::Csprwait,
+            Cswcr1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
     #[doc = "Normal Write Cycle Wait Select"]
     #[inline(always)]
     pub fn cswwait(
         self,
-    ) -> crate::common::RegisterField<16, 0x1f, 1, 0, u8, u8, Cswcr1_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<16,0x1f,1,0,u8,u8,Cswcr1_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        16,
+        0x1f,
+        1,
+        0,
+        cswcr1::Cswwait,
+        cswcr1::Cswwait,
+        Cswcr1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0x1f,
+            1,
+            0,
+            cswcr1::Cswwait,
+            cswcr1::Cswwait,
+            Cswcr1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
     #[doc = "Normal Read Cycle Wait Select"]
     #[inline(always)]
     pub fn csrwait(
         self,
-    ) -> crate::common::RegisterField<24, 0x1f, 1, 0, u8, u8, Cswcr1_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<24,0x1f,1,0,u8,u8,Cswcr1_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        24,
+        0x1f,
+        1,
+        0,
+        cswcr1::Csrwait,
+        cswcr1::Csrwait,
+        Cswcr1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            24,
+            0x1f,
+            1,
+            0,
+            cswcr1::Csrwait,
+            cswcr1::Csrwait,
+            Cswcr1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 000. The write value should be 000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<29, 0x7, 1, 0, u8, u8, Cswcr1_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<29,0x7,1,0,u8,u8,Cswcr1_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Cswcr1 {
@@ -1663,7 +1951,37 @@ impl ::core::default::Default for Cswcr1 {
         <crate::RegValueT<Cswcr1_SPEC> as RegisterValue<_>>::new(117901063)
     }
 }
+pub mod cswcr1 {
 
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cspwwait_SPEC;
+    pub type Cspwwait = crate::EnumBitfieldStruct<u8, Cspwwait_SPEC>;
+    impl Cspwwait {
+        #[doc = "No wait is inserted."]
+        pub const _0_X_0: Self = Self::new(0);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Csprwait_SPEC;
+    pub type Csprwait = crate::EnumBitfieldStruct<u8, Csprwait_SPEC>;
+    impl Csprwait {
+        #[doc = "No wait is inserted."]
+        pub const _0_X_0: Self = Self::new(0);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cswwait_SPEC;
+    pub type Cswwait = crate::EnumBitfieldStruct<u8, Cswwait_SPEC>;
+    impl Cswwait {
+        #[doc = "No wait is inserted."]
+        pub const _0_X_00: Self = Self::new(0);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Csrwait_SPEC;
+    pub type Csrwait = crate::EnumBitfieldStruct<u8, Csrwait_SPEC>;
+    impl Csrwait {
+        #[doc = "No wait is inserted."]
+        pub const _0_X_00: Self = Self::new(0);
+    }
+}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cswcr2_SPEC;
@@ -1671,7 +1989,7 @@ impl crate::sealed::RegSpec for Cswcr2_SPEC {
     type DataType = u32;
 }
 
-#[doc = "CS%s Wait Control Register 2 (n = 0 to 7)"]
+#[doc = "CS%s Wait Control Register 2"]
 pub type Cswcr2 = crate::RegValueT<Cswcr2_SPEC>;
 
 impl Cswcr2 {
@@ -1679,64 +1997,218 @@ impl Cswcr2 {
     #[inline(always)]
     pub fn csroff(
         self,
-    ) -> crate::common::RegisterField<0, 0x7, 1, 0, u8, u8, Cswcr2_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0x7,1,0,u8,u8,Cswcr2_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x7,
+        1,
+        0,
+        cswcr2::Csroff,
+        cswcr2::Csroff,
+        Cswcr2_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x7,
+            1,
+            0,
+            cswcr2::Csroff,
+            cswcr2::Csroff,
+            Cswcr2_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
     #[doc = "Write Access CS Extension Cycle Select"]
     #[inline(always)]
     pub fn cswoff(
         self,
-    ) -> crate::common::RegisterField<4, 0x7, 1, 0, u8, u8, Cswcr2_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<4,0x7,1,0,u8,u8,Cswcr2_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        4,
+        0x7,
+        1,
+        0,
+        cswcr2::Cswoff,
+        cswcr2::Cswoff,
+        Cswcr2_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            4,
+            0x7,
+            1,
+            0,
+            cswcr2::Cswoff,
+            cswcr2::Cswoff,
+            Cswcr2_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
     #[doc = "Write Data Output Extension Cycle Select"]
     #[inline(always)]
     pub fn wdoff(
         self,
-    ) -> crate::common::RegisterField<8, 0x7, 1, 0, u8, u8, Cswcr2_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<8,0x7,1,0,u8,u8,Cswcr2_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        8,
+        0x7,
+        1,
+        0,
+        cswcr2::Wdoff,
+        cswcr2::Wdoff,
+        Cswcr2_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            8,
+            0x7,
+            1,
+            0,
+            cswcr2::Wdoff,
+            cswcr2::Wdoff,
+            Cswcr2_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
     #[doc = "Address Cycle Wait Select"]
     #[inline(always)]
     pub fn r#await(
         self,
-    ) -> crate::common::RegisterField<12, 0x3, 1, 0, u8, u8, Cswcr2_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<12,0x3,1,0,u8,u8,Cswcr2_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        12,
+        0x3,
+        1,
+        0,
+        cswcr2::Await,
+        cswcr2::Await,
+        Cswcr2_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            12,
+            0x3,
+            1,
+            0,
+            cswcr2::Await,
+            cswcr2::Await,
+            Cswcr2_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
     #[doc = "RD Assert Wait Select"]
     #[inline(always)]
     pub fn rdon(
         self,
-    ) -> crate::common::RegisterField<16, 0x7, 1, 0, u8, u8, Cswcr2_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<16,0x7,1,0,u8,u8,Cswcr2_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        16,
+        0x7,
+        1,
+        0,
+        cswcr2::Rdon,
+        cswcr2::Rdon,
+        Cswcr2_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0x7,
+            1,
+            0,
+            cswcr2::Rdon,
+            cswcr2::Rdon,
+            Cswcr2_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
     #[doc = "WR Assert Wait Select"]
     #[inline(always)]
     pub fn wron(
         self,
-    ) -> crate::common::RegisterField<20, 0x7, 1, 0, u8, u8, Cswcr2_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<20,0x7,1,0,u8,u8,Cswcr2_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        20,
+        0x7,
+        1,
+        0,
+        cswcr2::Wron,
+        cswcr2::Wron,
+        Cswcr2_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            20,
+            0x7,
+            1,
+            0,
+            cswcr2::Wron,
+            cswcr2::Wron,
+            Cswcr2_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
     #[doc = "Write Data Output Wait Select"]
     #[inline(always)]
     pub fn wdon(
         self,
-    ) -> crate::common::RegisterField<24, 0x7, 1, 0, u8, u8, Cswcr2_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<24,0x7,1,0,u8,u8,Cswcr2_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        24,
+        0x7,
+        1,
+        0,
+        cswcr2::Wdon,
+        cswcr2::Wdon,
+        Cswcr2_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            24,
+            0x7,
+            1,
+            0,
+            cswcr2::Wdon,
+            cswcr2::Wdon,
+            Cswcr2_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
     #[doc = "CS Assert Wait Select"]
     #[inline(always)]
     pub fn cson(
         self,
-    ) -> crate::common::RegisterField<28, 0x7, 1, 0, u8, u8, Cswcr2_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<28,0x7,1,0,u8,u8,Cswcr2_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        28,
+        0x7,
+        1,
+        0,
+        cswcr2::Cson,
+        cswcr2::Cson,
+        Cswcr2_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            28,
+            0x7,
+            1,
+            0,
+            cswcr2::Cson,
+            cswcr2::Cson,
+            Cswcr2_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<31, 1, 0, Cswcr2_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<31, 1, 0, Cswcr2_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
     }
 }
 impl ::core::default::Default for Cswcr2 {
@@ -1745,7 +2217,65 @@ impl ::core::default::Default for Cswcr2 {
         <crate::RegValueT<Cswcr2_SPEC> as RegisterValue<_>>::new(7)
     }
 }
+pub mod cswcr2 {
 
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Csroff_SPEC;
+    pub type Csroff = crate::EnumBitfieldStruct<u8, Csroff_SPEC>;
+    impl Csroff {
+        #[doc = "No wait is inserted."]
+        pub const _0_X_0: Self = Self::new(0);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cswoff_SPEC;
+    pub type Cswoff = crate::EnumBitfieldStruct<u8, Cswoff_SPEC>;
+    impl Cswoff {
+        #[doc = "No wait is inserted."]
+        pub const _0_X_0: Self = Self::new(0);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Wdoff_SPEC;
+    pub type Wdoff = crate::EnumBitfieldStruct<u8, Wdoff_SPEC>;
+    impl Wdoff {
+        #[doc = "No wait is inserted."]
+        pub const _0_X_0: Self = Self::new(0);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Await_SPEC;
+    pub type Await = crate::EnumBitfieldStruct<u8, Await_SPEC>;
+    impl Await {
+        #[doc = "No wait is inserted."]
+        pub const _0_X_0: Self = Self::new(0);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Rdon_SPEC;
+    pub type Rdon = crate::EnumBitfieldStruct<u8, Rdon_SPEC>;
+    impl Rdon {
+        #[doc = "No wait is inserted."]
+        pub const _0_X_0: Self = Self::new(0);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Wron_SPEC;
+    pub type Wron = crate::EnumBitfieldStruct<u8, Wron_SPEC>;
+    impl Wron {
+        #[doc = "No wait is inserted."]
+        pub const _0_X_0: Self = Self::new(0);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Wdon_SPEC;
+    pub type Wdon = crate::EnumBitfieldStruct<u8, Wdon_SPEC>;
+    impl Wdon {
+        #[doc = "No wait is inserted."]
+        pub const _0_X_0: Self = Self::new(0);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cson_SPEC;
+    pub type Cson = crate::EnumBitfieldStruct<u8, Cson_SPEC>;
+    impl Cson {
+        #[doc = "No wait is inserted."]
+        pub const _0_X_0: Self = Self::new(0);
+    }
+}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs0Cr_SPEC;
@@ -1860,11 +2390,19 @@ impl Cs0Cr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000. The write value should be 000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<13, 0x7, 1, 0, u8, u8, Cs0Cr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<13,0x7,1,0,u8,u8,Cs0Cr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Cs0Cr {
     #[inline(always)]
     fn default() -> Cs0Cr {
-        <crate::RegValueT<Cs0Cr_SPEC> as RegisterValue<_>>::new(1)
+        <crate::RegValueT<Cs0Cr_SPEC> as RegisterValue<_>>::new(33)
     }
 }
 pub mod cs0cr {
@@ -1891,9 +2429,6 @@ pub mod cs0cr {
 
         #[doc = "8-bit bus space"]
         pub const _10: Self = Self::new(2);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Emode_SPEC;
@@ -1909,10 +2444,10 @@ pub mod cs0cr {
     pub struct Mpxen_SPEC;
     pub type Mpxen = crate::EnumBitfieldStruct<u8, Mpxen_SPEC>;
     impl Mpxen {
-        #[doc = "Separate bus interface is selected for area n."]
+        #[doc = "Separate bus interface is selected for area n"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Address/data multiplexed I/O interface is selected for area n."]
+        #[doc = "Address/data multiplexed I/O interface is selected for area n. (n = 0 to 7)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1923,7 +2458,7 @@ impl crate::sealed::RegSpec for Csrec_SPEC {
     type DataType = u16;
 }
 
-#[doc = "CS%s Recovery Cycle Register (n = 0 to 7)"]
+#[doc = "CS%s Recovery Cycle Register"]
 pub type Csrec = crate::RegValueT<Csrec_SPEC>;
 
 impl Csrec {
@@ -1931,16 +2466,60 @@ impl Csrec {
     #[inline(always)]
     pub fn rrcv(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, Csrec_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0xf,1,0,u8,u8,Csrec_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0xf,
+        1,
+        0,
+        csrec::Rrcv,
+        csrec::Rrcv,
+        Csrec_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xf,
+            1,
+            0,
+            csrec::Rrcv,
+            csrec::Rrcv,
+            Csrec_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
     #[doc = "Write Recovery"]
     #[inline(always)]
     pub fn wrcv(
         self,
-    ) -> crate::common::RegisterField<8, 0xf, 1, 0, u8, u8, Csrec_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<8,0xf,1,0,u8,u8,Csrec_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        8,
+        0xf,
+        1,
+        0,
+        csrec::Wrcv,
+        csrec::Wrcv,
+        Csrec_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            8,
+            0xf,
+            1,
+            0,
+            csrec::Wrcv,
+            csrec::Wrcv,
+            Csrec_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<12, 0xf, 1, 0, u8, u8, Csrec_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<12,0xf,1,0,u8,u8,Csrec_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Csrec {
@@ -1949,7 +2528,23 @@ impl ::core::default::Default for Csrec {
         <crate::RegValueT<Csrec_SPEC> as RegisterValue<_>>::new(0)
     }
 }
+pub mod csrec {
 
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Rrcv_SPEC;
+    pub type Rrcv = crate::EnumBitfieldStruct<u8, Rrcv_SPEC>;
+    impl Rrcv {
+        #[doc = "No recovery cycle is inserted."]
+        pub const _0_X_0: Self = Self::new(0);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Wrcv_SPEC;
+    pub type Wrcv = crate::EnumBitfieldStruct<u8, Wrcv_SPEC>;
+    impl Wrcv {
+        #[doc = "No recovery cycle is inserted."]
+        pub const _0_X_0: Self = Self::new(0);
+    }
+}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cscr_SPEC;
@@ -2064,6 +2659,14 @@ impl Cscr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000. The write value should be 000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<13, 0x7, 1, 0, u8, u8, Cscr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<13,0x7,1,0,u8,u8,Cscr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Cscr {
     #[inline(always)]
@@ -2095,9 +2698,6 @@ pub mod cscr {
 
         #[doc = "8-bit bus space"]
         pub const _10: Self = Self::new(2);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Emode_SPEC;
@@ -2113,10 +2713,10 @@ pub mod cscr {
     pub struct Mpxen_SPEC;
     pub type Mpxen = crate::EnumBitfieldStruct<u8, Mpxen_SPEC>;
     impl Mpxen {
-        #[doc = "Separate bus interface is selected for area n."]
+        #[doc = "Separate bus interface is selected for area n"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Address/data multiplexed I/O interface is selected for area n."]
+        #[doc = "Address/data multiplexed I/O interface is selected for area n. (n = 0 to 7)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2778,6 +3378,14 @@ impl Sdccr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00. The write value should be 00."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<6, 0x3, 1, 0, u8, u8, Sdccr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<6,0x3,1,0,u8,u8,Sdccr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Sdccr {
     #[inline(always)]
@@ -2809,9 +3417,6 @@ pub mod sdccr {
 
         #[doc = "8-bit bus space"]
         pub const _10: Self = Self::new(2);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2850,6 +3455,14 @@ impl Sdcmod {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<1, 0x7f, 1, 0, u8, u8, Sdcmod_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Sdcmod_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Sdcmod {
     #[inline(always)]
@@ -2863,7 +3476,7 @@ pub mod sdcmod {
     pub struct Emode_SPEC;
     pub type Emode = crate::EnumBitfieldStruct<u8, Emode_SPEC>;
     impl Emode {
-        #[doc = "Endian order of SDRAM address space is the same as the endian order of the operating mode."]
+        #[doc = "Endian order of SDRAM address space is the same as the endian order of the operating mode"]
         pub const _0: Self = Self::new(0);
 
         #[doc = "Endian order of SDRAM address space is not the endian order of the operating mode."]
@@ -2905,6 +3518,14 @@ impl Sdamod {
             Sdamod_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<1, 0x7f, 1, 0, u8, u8, Sdamod_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Sdamod_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Sdamod {
@@ -2962,6 +3583,14 @@ impl Sdself {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<1, 0x7f, 1, 0, u8, u8, Sdself_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Sdself_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Sdself {
     #[inline(always)]
@@ -2997,12 +3626,29 @@ impl Sdrfcr {
     #[inline(always)]
     pub fn rfc(
         self,
-    ) -> crate::common::RegisterField<0, 0xfff, 1, 0, u16, u16, Sdrfcr_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0xfff,1,0,u16,u16,Sdrfcr_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0xfff,
+        1,
+        0,
+        sdrfcr::Rfc,
+        sdrfcr::Rfc,
+        Sdrfcr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xfff,
+            1,
+            0,
+            sdrfcr::Rfc,
+            sdrfcr::Rfc,
+            Sdrfcr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
-    #[doc = "Auto-Refresh Cycle/Self-Refresh Clearing Cycle Count Setting"]
+    #[doc = "Auto-Refresh Cycle/ Self-Refresh Clearing Cycle Count Setting. ( REFW+1 Cycles )"]
     #[inline(always)]
     pub fn refw(
         self,
@@ -3016,7 +3662,16 @@ impl ::core::default::Default for Sdrfcr {
         <crate::RegValueT<Sdrfcr_SPEC> as RegisterValue<_>>::new(1)
     }
 }
+pub mod sdrfcr {
 
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Rfc_SPEC;
+    pub type Rfc = crate::EnumBitfieldStruct<u8, Rfc_SPEC>;
+    impl Rfc {
+        #[doc = "Setting prohibited"]
+        pub const _0_X_0: Self = Self::new(0);
+    }
+}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sdrfen_SPEC;
@@ -3052,6 +3707,14 @@ impl Sdrfen {
             Sdrfen_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<1, 0x7f, 1, 0, u8, u8, Sdrfen_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Sdrfen_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Sdrfen {
@@ -3109,6 +3772,14 @@ impl Sdicr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<1, 0x7f, 1, 0, u8, u8, Sdicr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Sdicr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Sdicr {
     #[inline(always)]
@@ -3125,7 +3796,7 @@ pub mod sdicr {
         #[doc = "Invalid"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Start initialization sequence"]
+        #[doc = "Initialization sequence starts"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3140,7 +3811,7 @@ impl crate::sealed::RegSpec for Sdir_SPEC {
 pub type Sdir = crate::RegValueT<Sdir_SPEC>;
 
 impl Sdir {
-    #[doc = "Initialization Auto-Refresh Interval"]
+    #[doc = "Initialization Auto-Refresh Interval ( PRF+3 cycles )"]
     #[inline(always)]
     pub fn arfi(
         self,
@@ -3152,16 +3823,42 @@ impl Sdir {
     #[inline(always)]
     pub fn arfc(
         self,
-    ) -> crate::common::RegisterField<4, 0xf, 1, 0, u8, u8, Sdir_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<4,0xf,1,0,u8,u8,Sdir_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        4,
+        0xf,
+        1,
+        0,
+        sdir::Arfc,
+        sdir::Arfc,
+        Sdir_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            4,
+            0xf,
+            1,
+            0,
+            sdir::Arfc,
+            sdir::Arfc,
+            Sdir_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
-    #[doc = "Initialization Precharge Cycle Count"]
+    #[doc = "Initialization Precharge Cycle Count   ( PRF+3 cycles )"]
     #[inline(always)]
     pub fn prc(
         self,
     ) -> crate::common::RegisterField<8, 0x7, 1, 0, u8, u8, Sdir_SPEC, crate::common::RW> {
         crate::common::RegisterField::<8,0x7,1,0,u8,u8,Sdir_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<11, 0x1f, 1, 0, u8, u8, Sdir_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<11,0x1f,1,0,u8,u8,Sdir_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Sdir {
@@ -3170,7 +3867,16 @@ impl ::core::default::Default for Sdir {
         <crate::RegValueT<Sdir_SPEC> as RegisterValue<_>>::new(16)
     }
 }
+pub mod sdir {
 
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Arfc_SPEC;
+    pub type Arfc = crate::EnumBitfieldStruct<u8, Arfc_SPEC>;
+    impl Arfc {
+        #[doc = "Setting prohibited"]
+        pub const _0_X_0: Self = Self::new(0);
+    }
+}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sdadr_SPEC;
@@ -3206,6 +3912,14 @@ impl Sdadr {
             Sdadr_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<2, 0x3f, 1, 0, u8, u8, Sdadr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<2,0x3f,1,0,u8,u8,Sdadr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Sdadr {
@@ -3248,8 +3962,9 @@ impl Sdtr {
     #[inline(always)]
     pub fn cl(
         self,
-    ) -> crate::common::RegisterField<0, 0x7, 1, 0, u8, u8, Sdtr_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0x7,1,0,u8,u8,Sdtr_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0x7, 1, 0, sdtr::Cl, sdtr::Cl, Sdtr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7,1,0,sdtr::Cl,sdtr::Cl,Sdtr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Write Recovery Interval"]
@@ -3261,7 +3976,7 @@ impl Sdtr {
         crate::common::RegisterField::<8,0x1,1,0,sdtr::Wr,sdtr::Wr,Sdtr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Row Precharge Interval"]
+    #[doc = "Row Precharge Interval ( RP+1  cycles )"]
     #[inline(always)]
     pub fn rp(
         self,
@@ -3269,38 +3984,47 @@ impl Sdtr {
         crate::common::RegisterField::<9,0x7,1,0,u8,u8,Sdtr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Row Column Latency"]
+    #[doc = "Row Column Latency ( RCD+1  cycles )"]
     #[inline(always)]
     pub fn rcd(
         self,
-    ) -> crate::common::RegisterField<
-        12,
-        0x3,
-        1,
-        0,
-        sdtr::Rcd,
-        sdtr::Rcd,
-        Sdtr_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            12,
-            0x3,
-            1,
-            0,
-            sdtr::Rcd,
-            sdtr::Rcd,
-            Sdtr_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<12, 0x3, 1, 0, u8, u8, Sdtr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<12,0x3,1,0,u8,u8,Sdtr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Row Active Interval"]
     #[inline(always)]
     pub fn rai(
         self,
-    ) -> crate::common::RegisterField<16, 0x7, 1, 0, u8, u8, Sdtr_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<16,0x7,1,0,u8,u8,Sdtr_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        16,
+        0x7,
+        1,
+        0,
+        sdtr::Rai,
+        sdtr::Rai,
+        Sdtr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0x7,
+            1,
+            0,
+            sdtr::Rai,
+            sdtr::Rai,
+            Sdtr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000. The write value should be 0000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<19, 0x1fff, 1, 0, u16, u16, Sdtr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<19,0x1fff,1,0,u16,u16,Sdtr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Sdtr {
@@ -3312,6 +4036,19 @@ impl ::core::default::Default for Sdtr {
 pub mod sdtr {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cl_SPEC;
+    pub type Cl = crate::EnumBitfieldStruct<u8, Cl_SPEC>;
+    impl Cl {
+        #[doc = "1 cycle"]
+        pub const _001: Self = Self::new(1);
+
+        #[doc = "2 cycles"]
+        pub const _010: Self = Self::new(2);
+
+        #[doc = "3 cycles"]
+        pub const _011: Self = Self::new(3);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wr_SPEC;
     pub type Wr = crate::EnumBitfieldStruct<u8, Wr_SPEC>;
     impl Wr {
@@ -3322,20 +4059,32 @@ pub mod sdtr {
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Rcd_SPEC;
-    pub type Rcd = crate::EnumBitfieldStruct<u8, Rcd_SPEC>;
-    impl Rcd {
+    pub struct Rai_SPEC;
+    pub type Rai = crate::EnumBitfieldStruct<u8, Rai_SPEC>;
+    impl Rai {
         #[doc = "1 cycle"]
-        pub const _00: Self = Self::new(0);
+        pub const _000: Self = Self::new(0);
 
         #[doc = "2 cycles"]
-        pub const _01: Self = Self::new(1);
+        pub const _001: Self = Self::new(1);
 
         #[doc = "3 cycles"]
-        pub const _10: Self = Self::new(2);
+        pub const _010: Self = Self::new(2);
 
         #[doc = "4 cycles"]
-        pub const _11: Self = Self::new(3);
+        pub const _011: Self = Self::new(3);
+
+        #[doc = "5 cycles"]
+        pub const _100: Self = Self::new(4);
+
+        #[doc = "6 cycles"]
+        pub const _101: Self = Self::new(5);
+
+        #[doc = "7 cycles"]
+        pub const _110: Self = Self::new(6);
+
+        #[doc = "Setting prohibited"]
+        pub const _111: Self = Self::new(7);
     }
 }
 #[doc(hidden)]
@@ -3349,13 +4098,23 @@ impl crate::sealed::RegSpec for Sdmod_SPEC {
 pub type Sdmod = crate::RegValueT<Sdmod_SPEC>;
 
 impl Sdmod {
-    #[doc = "Mode Register Setting"]
+    #[doc = "Mode Register SettingWriting to these bits: Mode register set command is issued."]
     #[inline(always)]
     pub fn mr(
         self,
     ) -> crate::common::RegisterField<0, 0x7fff, 1, 0, u16, u16, Sdmod_SPEC, crate::common::RW>
     {
         crate::common::RegisterField::<0,0x7fff,1,0,u16,u16,Sdmod_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<15, 1, 0, Sdmod_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<15, 1, 0, Sdmod_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
     }
 }
 impl ::core::default::Default for Sdmod {
@@ -3453,6 +4212,14 @@ impl Sdsr {
             crate::common::R,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<5, 0x7, 1, 0, u8, u8, Sdsr_SPEC, crate::common::R> {
+        crate::common::RegisterField::<5,0x7,1,0,u8,u8,Sdsr_SPEC,crate::common::R>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Sdsr {
     #[inline(always)]
@@ -3500,7 +4267,7 @@ impl crate::sealed::RegSpec for Busoad_SPEC {
     type DataType = u16;
 }
 
-#[doc = "BUS Operation After Detection Register"]
+#[doc = "BUS_Operation_After_Detection Register"]
 pub type Busoad = crate::RegValueT<Busoad_SPEC>;
 
 impl Busoad {
@@ -3508,30 +4275,87 @@ impl Busoad {
     #[inline(always)]
     pub fn ilerroad(
         self,
-    ) -> crate::common::RegisterFieldBool<0, 1, 0, Busoad_SPEC, crate::common::RW> {
-        crate::common::RegisterFieldBool::<0, 1, 0, Busoad_SPEC, crate::common::RW>::from_register(
-            self, 0,
-        )
+    ) -> crate::common::RegisterField<
+        0,
+        0x1,
+        1,
+        0,
+        busoad::Ilerroad,
+        busoad::Ilerroad,
+        Busoad_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x1,
+            1,
+            0,
+            busoad::Ilerroad,
+            busoad::Ilerroad,
+            Busoad_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
     #[doc = "Slave bus error operation after detection"]
     #[inline(always)]
     pub fn slerroad(
         self,
-    ) -> crate::common::RegisterFieldBool<1, 1, 0, Busoad_SPEC, crate::common::RW> {
-        crate::common::RegisterFieldBool::<1, 1, 0, Busoad_SPEC, crate::common::RW>::from_register(
-            self, 0,
-        )
+    ) -> crate::common::RegisterField<
+        1,
+        0x1,
+        1,
+        0,
+        busoad::Slerroad,
+        busoad::Slerroad,
+        Busoad_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            1,
+            0x1,
+            1,
+            0,
+            busoad::Slerroad,
+            busoad::Slerroad,
+            Busoad_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
     #[doc = "Bufferable write error operation after detection"]
     #[inline(always)]
     pub fn bwerroad(
         self,
-    ) -> crate::common::RegisterFieldBool<2, 1, 0, Busoad_SPEC, crate::common::RW> {
-        crate::common::RegisterFieldBool::<2, 1, 0, Busoad_SPEC, crate::common::RW>::from_register(
-            self, 0,
-        )
+    ) -> crate::common::RegisterField<
+        2,
+        0x1,
+        1,
+        0,
+        busoad::Bwerroad,
+        busoad::Bwerroad,
+        Busoad_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            2,
+            0x1,
+            1,
+            0,
+            busoad::Bwerroad,
+            busoad::Bwerroad,
+            Busoad_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000. The write value should be 0000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<3, 0x1fff, 1, 0, u16, u16, Busoad_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<3,0x1fff,1,0,u16,u16,Busoad_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Busoad {
@@ -3540,7 +4364,39 @@ impl ::core::default::Default for Busoad {
         <crate::RegValueT<Busoad_SPEC> as RegisterValue<_>>::new(0)
     }
 }
+pub mod busoad {
 
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Ilerroad_SPEC;
+    pub type Ilerroad = crate::EnumBitfieldStruct<u8, Ilerroad_SPEC>;
+    impl Ilerroad {
+        #[doc = "Only error response is returned"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Reset"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Slerroad_SPEC;
+    pub type Slerroad = crate::EnumBitfieldStruct<u8, Slerroad_SPEC>;
+    impl Slerroad {
+        #[doc = "Only error response is returned"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Reset"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Bwerroad_SPEC;
+    pub type Bwerroad = crate::EnumBitfieldStruct<u8, Bwerroad_SPEC>;
+    impl Bwerroad {
+        #[doc = "NMI"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Reset"]
+        pub const _1: Self = Self::new(1);
+    }
+}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Busoadpt_SPEC;
@@ -3548,7 +4404,7 @@ impl crate::sealed::RegSpec for Busoadpt_SPEC {
     type DataType = u16;
 }
 
-#[doc = "BUS Operation After Detection Protect Register"]
+#[doc = "BUS_Operation_After_Detection Protect Register"]
 pub type Busoadpt = crate::RegValueT<Busoadpt_SPEC>;
 
 impl Busoadpt {
@@ -3576,6 +4432,14 @@ impl Busoadpt {
             Busoadpt_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<1, 0x7f, 1, 0, u8, u8, Busoadpt_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Busoadpt_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Key code"]
@@ -3607,134 +4471,6 @@ pub mod busoadpt {
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Msaoad_SPEC;
-impl crate::sealed::RegSpec for Msaoad_SPEC {
-    type DataType = u16;
-}
-
-#[doc = "Master Security Attribution Operation After Detection Register"]
-pub type Msaoad = crate::RegValueT<Msaoad_SPEC>;
-
-impl Msaoad {
-    #[doc = "Operation after detection"]
-    #[inline(always)]
-    pub fn oad(
-        self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x1,
-        1,
-        0,
-        msaoad::Oad,
-        msaoad::Oad,
-        Msaoad_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x1,
-            1,
-            0,
-            msaoad::Oad,
-            msaoad::Oad,
-            Msaoad_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Key Code"]
-    #[inline(always)]
-    pub fn key(
-        self,
-    ) -> crate::common::RegisterField<8, 0xff, 1, 0, u8, u8, Msaoad_SPEC, crate::common::W> {
-        crate::common::RegisterField::<8,0xff,1,0,u8,u8,Msaoad_SPEC,crate::common::W>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for Msaoad {
-    #[inline(always)]
-    fn default() -> Msaoad {
-        <crate::RegValueT<Msaoad_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-pub mod msaoad {
-
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Oad_SPEC;
-    pub type Oad = crate::EnumBitfieldStruct<u8, Oad_SPEC>;
-    impl Oad {
-        #[doc = "NMI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Reset"]
-        pub const _1: Self = Self::new(1);
-    }
-}
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Msapt_SPEC;
-impl crate::sealed::RegSpec for Msapt_SPEC {
-    type DataType = u16;
-}
-
-#[doc = "Master Security Attribution Protect Register"]
-pub type Msapt = crate::RegValueT<Msapt_SPEC>;
-
-impl Msapt {
-    #[doc = "Protection of register"]
-    #[inline(always)]
-    pub fn protect(
-        self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x1,
-        1,
-        0,
-        msapt::Protect,
-        msapt::Protect,
-        Msapt_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x1,
-            1,
-            0,
-            msapt::Protect,
-            msapt::Protect,
-            Msapt_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Key Code"]
-    #[inline(always)]
-    pub fn key(
-        self,
-    ) -> crate::common::RegisterField<8, 0xff, 1, 0, u8, u8, Msapt_SPEC, crate::common::W> {
-        crate::common::RegisterField::<8,0xff,1,0,u8,u8,Msapt_SPEC,crate::common::W>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for Msapt {
-    #[inline(always)]
-    fn default() -> Msapt {
-        <crate::RegValueT<Msapt_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-pub mod msapt {
-
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Protect_SPEC;
-    pub type Protect = crate::EnumBitfieldStruct<u8, Protect_SPEC>;
-    impl Protect {
-        #[doc = "MSAOAD register writing is possible."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "MSAOAD register writing is protected. Read is possible."]
-        pub const _1: Self = Self::new(1);
-    }
-}
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Busmabt_SPEC;
 impl crate::sealed::RegSpec for Busmabt_SPEC {
     type DataType = u32;
@@ -3744,7 +4480,7 @@ impl crate::sealed::RegSpec for Busmabt_SPEC {
 pub type Busmabt = crate::RegValueT<Busmabt_SPEC>;
 
 impl Busmabt {
-    #[doc = "Arbitration Select for GDSSBI"]
+    #[doc = "Arbitration Select"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -3768,6 +4504,15 @@ impl Busmabt {
             Busmabt_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Busmabt_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Busmabt_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Busmabt {
@@ -3796,11 +4541,11 @@ impl crate::sealed::RegSpec for Bussabt1Fhbi_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Bus Slave Arbitration Control Register 1(x = FHBI, S0BI, S1BI)"]
+#[doc = "Bus Slave Arbitration Control Register 1 FHBI"]
 pub type Bussabt1Fhbi = crate::RegValueT<Bussabt1Fhbi_SPEC>;
 
 impl Bussabt1Fhbi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -3821,6 +4566,32 @@ impl Bussabt1Fhbi {
             0,
             bussabt1fhbi::Arbs,
             bussabt1fhbi::Arbs,
+            Bussabt1Fhbi_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<
+        16,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        Bussabt1Fhbi_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
             Bussabt1Fhbi_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
@@ -3858,11 +4629,11 @@ impl crate::sealed::RegSpec for Bussabt0Flbi_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Bus Slave Arbitration Control Register 0"]
+#[doc = "Bus Slave Arbitration Control Register 0 FLBI"]
 pub type Bussabt0Flbi = crate::RegValueT<Bussabt0Flbi_SPEC>;
 
 impl Bussabt0Flbi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -3883,6 +4654,32 @@ impl Bussabt0Flbi {
             0,
             bussabt0flbi::Arbs,
             bussabt0flbi::Arbs,
+            Bussabt0Flbi_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<
+        16,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        Bussabt0Flbi_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
             Bussabt0Flbi_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
@@ -3914,11 +4711,11 @@ impl crate::sealed::RegSpec for Bussabt1S0Bi_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Bus Slave Arbitration Control Register 1(x = FHBI, S0BI, S1BI)"]
+#[doc = "Bus Slave Arbitration Control Register 1 S0BI"]
 pub type Bussabt1S0Bi = crate::RegValueT<Bussabt1S0Bi_SPEC>;
 
 impl Bussabt1S0Bi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -3939,6 +4736,32 @@ impl Bussabt1S0Bi {
             0,
             bussabt1s0bi::Arbs,
             bussabt1s0bi::Arbs,
+            Bussabt1S0Bi_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<
+        16,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        Bussabt1S0Bi_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
             Bussabt1S0Bi_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
@@ -3976,11 +4799,11 @@ impl crate::sealed::RegSpec for Bussabt1S1Bi_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Bus Slave Arbitration Control Register 1(x = FHBI, S0BI, S1BI)"]
+#[doc = "Bus Slave Arbitration Control Register 1 S1BI"]
 pub type Bussabt1S1Bi = crate::RegValueT<Bussabt1S1Bi_SPEC>;
 
 impl Bussabt1S1Bi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -4001,6 +4824,32 @@ impl Bussabt1S1Bi {
             0,
             bussabt1s1bi::Arbs,
             bussabt1s1bi::Arbs,
+            Bussabt1S1Bi_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<
+        16,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        Bussabt1S1Bi_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
             Bussabt1S1Bi_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
@@ -4038,11 +4887,11 @@ impl crate::sealed::RegSpec for Bussabt0Stbysbi_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Bus Slave Arbitration Control Register 0"]
+#[doc = "Bus Slave Arbitration Control Register 0 STBYSBI"]
 pub type Bussabt0Stbysbi = crate::RegValueT<Bussabt0Stbysbi_SPEC>;
 
 impl Bussabt0Stbysbi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -4063,6 +4912,32 @@ impl Bussabt0Stbysbi {
             0,
             bussabt0stbysbi::Arbs,
             bussabt0stbysbi::Arbs,
+            Bussabt0Stbysbi_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<
+        16,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        Bussabt0Stbysbi_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
             Bussabt0Stbysbi_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
@@ -4089,27 +4964,27 @@ pub mod bussabt0stbysbi {
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Bussabt0Ecbi_SPEC;
-impl crate::sealed::RegSpec for Bussabt0Ecbi_SPEC {
+pub struct Bussabt2Ecbi_SPEC;
+impl crate::sealed::RegSpec for Bussabt2Ecbi_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Bus Slave Arbitration Control Register 0"]
-pub type Bussabt0Ecbi = crate::RegValueT<Bussabt0Ecbi_SPEC>;
+#[doc = "Bus Slave Arbitration Control Register 2 ECBI"]
+pub type Bussabt2Ecbi = crate::RegValueT<Bussabt2Ecbi_SPEC>;
 
-impl Bussabt0Ecbi {
-    #[doc = "Arbitration Select for <slave>"]
+impl Bussabt2Ecbi {
+    #[doc = "Arbitration Select"]
     #[inline(always)]
-    pub fn arbs(
+    pub fn arbs0(
         self,
     ) -> crate::common::RegisterField<
         0,
         0x1,
         1,
         0,
-        bussabt0ecbi::Arbs,
-        bussabt0ecbi::Arbs,
-        Bussabt0Ecbi_SPEC,
+        bussabt2ecbi::Arbs0,
+        bussabt2ecbi::Arbs0,
+        Bussabt2Ecbi_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -4117,25 +4992,123 @@ impl Bussabt0Ecbi {
             0x1,
             1,
             0,
-            bussabt0ecbi::Arbs,
-            bussabt0ecbi::Arbs,
-            Bussabt0Ecbi_SPEC,
+            bussabt2ecbi::Arbs0,
+            bussabt2ecbi::Arbs0,
+            Bussabt2Ecbi_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Arbitration Select"]
+    #[inline(always)]
+    pub fn arbs1(
+        self,
+    ) -> crate::common::RegisterField<
+        1,
+        0x1,
+        1,
+        0,
+        bussabt2ecbi::Arbs1,
+        bussabt2ecbi::Arbs1,
+        Bussabt2Ecbi_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            1,
+            0x1,
+            1,
+            0,
+            bussabt2ecbi::Arbs1,
+            bussabt2ecbi::Arbs1,
+            Bussabt2Ecbi_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Arbitration Select"]
+    #[inline(always)]
+    pub fn arbs2(
+        self,
+    ) -> crate::common::RegisterField<
+        2,
+        0x1,
+        1,
+        0,
+        bussabt2ecbi::Arbs2,
+        bussabt2ecbi::Arbs2,
+        Bussabt2Ecbi_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            2,
+            0x1,
+            1,
+            0,
+            bussabt2ecbi::Arbs2,
+            bussabt2ecbi::Arbs2,
+            Bussabt2Ecbi_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<
+        16,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        Bussabt2Ecbi_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            Bussabt2Ecbi_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 }
-impl ::core::default::Default for Bussabt0Ecbi {
+impl ::core::default::Default for Bussabt2Ecbi {
     #[inline(always)]
-    fn default() -> Bussabt0Ecbi {
-        <crate::RegValueT<Bussabt0Ecbi_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> Bussabt2Ecbi {
+        <crate::RegValueT<Bussabt2Ecbi_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod bussabt0ecbi {
+pub mod bussabt2ecbi {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Arbs_SPEC;
-    pub type Arbs = crate::EnumBitfieldStruct<u8, Arbs_SPEC>;
-    impl Arbs {
+    pub struct Arbs0_SPEC;
+    pub type Arbs0 = crate::EnumBitfieldStruct<u8, Arbs0_SPEC>;
+    impl Arbs0 {
+        #[doc = "Fixed priority"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Round-robin"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Arbs1_SPEC;
+    pub type Arbs1 = crate::EnumBitfieldStruct<u8, Arbs1_SPEC>;
+    impl Arbs1 {
+        #[doc = "Fixed priority"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Round-robin"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Arbs2_SPEC;
+    pub type Arbs2 = crate::EnumBitfieldStruct<u8, Arbs2_SPEC>;
+    impl Arbs2 {
         #[doc = "Fixed priority"]
         pub const _0: Self = Self::new(0);
 
@@ -4145,27 +5118,27 @@ pub mod bussabt0ecbi {
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Bussabt0Eobi_SPEC;
-impl crate::sealed::RegSpec for Bussabt0Eobi_SPEC {
+pub struct Bussabt2Eobi_SPEC;
+impl crate::sealed::RegSpec for Bussabt2Eobi_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Bus Slave Arbitration Control Register 0"]
-pub type Bussabt0Eobi = crate::RegValueT<Bussabt0Eobi_SPEC>;
+#[doc = "Bus Slave Arbitration Control Register 2 EOBI"]
+pub type Bussabt2Eobi = crate::RegValueT<Bussabt2Eobi_SPEC>;
 
-impl Bussabt0Eobi {
-    #[doc = "Arbitration Select for <slave>"]
+impl Bussabt2Eobi {
+    #[doc = "Arbitration Select"]
     #[inline(always)]
-    pub fn arbs(
+    pub fn arbs0(
         self,
     ) -> crate::common::RegisterField<
         0,
         0x1,
         1,
         0,
-        bussabt0eobi::Arbs,
-        bussabt0eobi::Arbs,
-        Bussabt0Eobi_SPEC,
+        bussabt2eobi::Arbs0,
+        bussabt2eobi::Arbs0,
+        Bussabt2Eobi_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -4173,25 +5146,123 @@ impl Bussabt0Eobi {
             0x1,
             1,
             0,
-            bussabt0eobi::Arbs,
-            bussabt0eobi::Arbs,
-            Bussabt0Eobi_SPEC,
+            bussabt2eobi::Arbs0,
+            bussabt2eobi::Arbs0,
+            Bussabt2Eobi_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Arbitration Select"]
+    #[inline(always)]
+    pub fn arbs1(
+        self,
+    ) -> crate::common::RegisterField<
+        1,
+        0x1,
+        1,
+        0,
+        bussabt2eobi::Arbs1,
+        bussabt2eobi::Arbs1,
+        Bussabt2Eobi_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            1,
+            0x1,
+            1,
+            0,
+            bussabt2eobi::Arbs1,
+            bussabt2eobi::Arbs1,
+            Bussabt2Eobi_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Arbitration Select"]
+    #[inline(always)]
+    pub fn arbs2(
+        self,
+    ) -> crate::common::RegisterField<
+        2,
+        0x1,
+        1,
+        0,
+        bussabt2eobi::Arbs2,
+        bussabt2eobi::Arbs2,
+        Bussabt2Eobi_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            2,
+            0x1,
+            1,
+            0,
+            bussabt2eobi::Arbs2,
+            bussabt2eobi::Arbs2,
+            Bussabt2Eobi_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<
+        16,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        Bussabt2Eobi_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            Bussabt2Eobi_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 }
-impl ::core::default::Default for Bussabt0Eobi {
+impl ::core::default::Default for Bussabt2Eobi {
     #[inline(always)]
-    fn default() -> Bussabt0Eobi {
-        <crate::RegValueT<Bussabt0Eobi_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> Bussabt2Eobi {
+        <crate::RegValueT<Bussabt2Eobi_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod bussabt0eobi {
+pub mod bussabt2eobi {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Arbs_SPEC;
-    pub type Arbs = crate::EnumBitfieldStruct<u8, Arbs_SPEC>;
-    impl Arbs {
+    pub struct Arbs0_SPEC;
+    pub type Arbs0 = crate::EnumBitfieldStruct<u8, Arbs0_SPEC>;
+    impl Arbs0 {
+        #[doc = "Fixed priority"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Round-robin"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Arbs1_SPEC;
+    pub type Arbs1 = crate::EnumBitfieldStruct<u8, Arbs1_SPEC>;
+    impl Arbs1 {
+        #[doc = "Fixed priority"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Round-robin"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Arbs2_SPEC;
+    pub type Arbs2 = crate::EnumBitfieldStruct<u8, Arbs2_SPEC>;
+    impl Arbs2 {
         #[doc = "Fixed priority"]
         pub const _0: Self = Self::new(0);
 
@@ -4206,11 +5277,11 @@ impl crate::sealed::RegSpec for Bussabt0Pbbi_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Bus Slave Arbitration Control Register 0"]
+#[doc = "Bus Slave Arbitration Control Register 0 PBBI"]
 pub type Bussabt0Pbbi = crate::RegValueT<Bussabt0Pbbi_SPEC>;
 
 impl Bussabt0Pbbi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -4231,6 +5302,32 @@ impl Bussabt0Pbbi {
             0,
             bussabt0pbbi::Arbs,
             bussabt0pbbi::Arbs,
+            Bussabt0Pbbi_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<
+        16,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        Bussabt0Pbbi_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
             Bussabt0Pbbi_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
@@ -4262,11 +5359,11 @@ impl crate::sealed::RegSpec for Bussabt0Pabi_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Bus Slave Arbitration Control Register 0"]
+#[doc = "Bus Slave Arbitration Control Register 0 PABI"]
 pub type Bussabt0Pabi = crate::RegValueT<Bussabt0Pabi_SPEC>;
 
 impl Bussabt0Pabi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -4287,6 +5384,32 @@ impl Bussabt0Pabi {
             0,
             bussabt0pabi::Arbs,
             bussabt0pabi::Arbs,
+            Bussabt0Pabi_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<
+        16,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        Bussabt0Pabi_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
             Bussabt0Pabi_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
@@ -4318,11 +5441,11 @@ impl crate::sealed::RegSpec for Bussabt0Pibi_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Bus Slave Arbitration Control Register 0"]
+#[doc = "Bus Slave Arbitration Control Register 0 PIBI"]
 pub type Bussabt0Pibi = crate::RegValueT<Bussabt0Pibi_SPEC>;
 
 impl Bussabt0Pibi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -4343,6 +5466,32 @@ impl Bussabt0Pibi {
             0,
             bussabt0pibi::Arbs,
             bussabt0pibi::Arbs,
+            Bussabt0Pibi_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<
+        16,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        Bussabt0Pibi_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
             Bussabt0Pibi_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
@@ -4374,11 +5523,11 @@ impl crate::sealed::RegSpec for Bussabt0Psbi_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Bus Slave Arbitration Control Register 0"]
+#[doc = "Bus Slave Arbitration Control Register 0 PSBI"]
 pub type Bussabt0Psbi = crate::RegValueT<Bussabt0Psbi_SPEC>;
 
 impl Bussabt0Psbi {
-    #[doc = "Arbitration Select for <slave>"]
+    #[doc = "Arbitration Select"]
     #[inline(always)]
     pub fn arbs(
         self,
@@ -4399,6 +5548,32 @@ impl Bussabt0Psbi {
             0,
             bussabt0psbi::Arbs,
             bussabt0psbi::Arbs,
+            Bussabt0Psbi_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<
+        16,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        Bussabt0Psbi_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
             Bussabt0Psbi_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
@@ -4460,6 +5635,58 @@ impl Busdivbyp {
         >::from_register(self, 0)
     }
 
+    #[doc = "Divider for GLCDC0BI bypass enable"]
+    #[inline(always)]
+    pub fn lcdc0bpe(
+        self,
+    ) -> crate::common::RegisterField<
+        1,
+        0x1,
+        1,
+        0,
+        busdivbyp::Lcdc0Bpe,
+        busdivbyp::Lcdc0Bpe,
+        Busdivbyp_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            1,
+            0x1,
+            1,
+            0,
+            busdivbyp::Lcdc0Bpe,
+            busdivbyp::Lcdc0Bpe,
+            Busdivbyp_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Divider for GLCDC1BI bypass enable"]
+    #[inline(always)]
+    pub fn lcdc1bpe(
+        self,
+    ) -> crate::common::RegisterField<
+        2,
+        0x1,
+        1,
+        0,
+        busdivbyp::Lcdc1Bpe,
+        busdivbyp::Lcdc1Bpe,
+        Busdivbyp_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            2,
+            0x1,
+            1,
+            0,
+            busdivbyp::Lcdc1Bpe,
+            busdivbyp::Lcdc1Bpe,
+            Busdivbyp_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
     #[doc = "Divider for GDSSBI bypass enable"]
     #[inline(always)]
     pub fn gdssbpe(
@@ -4511,6 +5738,15 @@ impl Busdivbyp {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000000000000. The write value should be 000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<17, 0x7fff, 1, 0, u16, u16, Busdivbyp_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<17,0x7fff,1,0,u16,u16,Busdivbyp_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Busdivbyp {
     #[inline(always)]
@@ -4524,6 +5760,26 @@ pub mod busdivbyp {
     pub struct Edmabpe_SPEC;
     pub type Edmabpe = crate::EnumBitfieldStruct<u8, Edmabpe_SPEC>;
     impl Edmabpe {
+        #[doc = "Disable"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Enable"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Lcdc0Bpe_SPEC;
+    pub type Lcdc0Bpe = crate::EnumBitfieldStruct<u8, Lcdc0Bpe_SPEC>;
+    impl Lcdc0Bpe {
+        #[doc = "Disable"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Enable"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Lcdc1Bpe_SPEC;
+    pub type Lcdc1Bpe = crate::EnumBitfieldStruct<u8, Lcdc1Bpe_SPEC>;
+    impl Lcdc1Bpe {
         #[doc = "Disable"]
         pub const _0: Self = Self::new(0);
 
@@ -4553,16 +5809,729 @@ pub mod busdivbyp {
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Qospri_SPEC;
+impl crate::sealed::RegSpec for Qospri_SPEC {
+    type DataType = u32;
+}
+
+#[doc = "QoS Priority Setting After Reach Threshold"]
+pub type Qospri = crate::RegValueT<Qospri_SPEC>;
+
+impl Qospri {
+    #[inline(always)]
+    pub fn qplcd0(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0x1,
+        1,
+        0,
+        qospri::Qplcd0,
+        qospri::Qplcd0,
+        Qospri_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x1,
+            1,
+            0,
+            qospri::Qplcd0,
+            qospri::Qplcd0,
+            Qospri_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[inline(always)]
+    pub fn qplcd1(
+        self,
+    ) -> crate::common::RegisterField<
+        2,
+        0x1,
+        1,
+        0,
+        qospri::Qplcd1,
+        qospri::Qplcd1,
+        Qospri_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            2,
+            0x1,
+            1,
+            0,
+            qospri::Qplcd1,
+            qospri::Qplcd1,
+            Qospri_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[inline(always)]
+    pub fn qpdrw0(
+        self,
+    ) -> crate::common::RegisterField<
+        4,
+        0x1,
+        1,
+        0,
+        qospri::Qpdrw0,
+        qospri::Qpdrw0,
+        Qospri_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            4,
+            0x1,
+            1,
+            0,
+            qospri::Qpdrw0,
+            qospri::Qpdrw0,
+            Qospri_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[inline(always)]
+    pub fn qpdrw1(
+        self,
+    ) -> crate::common::RegisterField<
+        6,
+        0x1,
+        1,
+        0,
+        qospri::Qpdrw1,
+        qospri::Qpdrw1,
+        Qospri_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            6,
+            0x1,
+            1,
+            0,
+            qospri::Qpdrw1,
+            qospri::Qpdrw1,
+            Qospri_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[inline(always)]
+    pub fn qpceu(
+        self,
+    ) -> crate::common::RegisterField<
+        10,
+        0x1,
+        1,
+        0,
+        qospri::Qpceu,
+        qospri::Qpceu,
+        Qospri_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            10,
+            0x1,
+            1,
+            0,
+            qospri::Qpceu,
+            qospri::Qpceu,
+            Qospri_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Qospri_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Qospri_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
+impl ::core::default::Default for Qospri {
+    #[inline(always)]
+    fn default() -> Qospri {
+        <crate::RegValueT<Qospri_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+pub mod qospri {
+
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Qplcd0_SPEC;
+    pub type Qplcd0 = crate::EnumBitfieldStruct<u8, Qplcd0_SPEC>;
+    impl Qplcd0 {
+        #[doc = "Priority LOW"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Priority MIDDLE"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Qplcd1_SPEC;
+    pub type Qplcd1 = crate::EnumBitfieldStruct<u8, Qplcd1_SPEC>;
+    impl Qplcd1 {
+        #[doc = "Priority LOW"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Priority MIDDLE"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Qpdrw0_SPEC;
+    pub type Qpdrw0 = crate::EnumBitfieldStruct<u8, Qpdrw0_SPEC>;
+    impl Qpdrw0 {
+        #[doc = "Priority LOW"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Priority MIDDLE"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Qpdrw1_SPEC;
+    pub type Qpdrw1 = crate::EnumBitfieldStruct<u8, Qpdrw1_SPEC>;
+    impl Qpdrw1 {
+        #[doc = "Priority LOW"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Priority MIDDLE"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Qpceu_SPEC;
+    pub type Qpceu = crate::EnumBitfieldStruct<u8, Qpceu_SPEC>;
+    impl Qpceu {
+        #[doc = "Priority LOW"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Priority MIDDLE"]
+        pub const _1: Self = Self::new(1);
+    }
+}
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Qoscyc_SPEC;
+impl crate::sealed::RegSpec for Qoscyc_SPEC {
+    type DataType = u32;
+}
+
+#[doc = "QoS Cycle Setting Register %s"]
+pub type Qoscyc = crate::RegValueT<Qoscyc_SPEC>;
+
+impl Qoscyc {
+    #[doc = "QoS Unit Cycle Setting"]
+    #[inline(always)]
+    pub fn qoscyc(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        qoscyc::Qoscyc,
+        qoscyc::Qoscyc,
+        Qoscyc_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            qoscyc::Qoscyc,
+            qoscyc::Qoscyc,
+            Qoscyc_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Qoscyc_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Qoscyc_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
+impl ::core::default::Default for Qoscyc {
+    #[inline(always)]
+    fn default() -> Qoscyc {
+        <crate::RegValueT<Qoscyc_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+pub mod qoscyc {
+
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Qoscyc_SPEC;
+    pub type Qoscyc = crate::EnumBitfieldStruct<u16, Qoscyc_SPEC>;
+    impl Qoscyc {
+        #[doc = "QoS circuit is disabled."]
+        pub const _0000000000000000: Self = Self::new(0);
+
+        #[doc = "QoS unit cycle is 16"]
+        pub const _0000000000000001: Self = Self::new(1);
+
+        #[doc = "QoS unit cycle is 32"]
+        pub const _0000000000000010: Self = Self::new(2);
+
+        #[doc = "QoS unit cycle is 48"]
+        pub const _0000000000000011: Self = Self::new(3);
+
+        #[doc = "QoS unit cycle is 1,048,560"]
+        pub const _1111111111111111: Self = Self::new(65535);
+    }
+}
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Busmpri_SPEC;
+impl crate::sealed::RegSpec for Busmpri_SPEC {
+    type DataType = u32;
+}
+
+#[doc = "Bus Master priority setting register"]
+pub type Busmpri = crate::RegValueT<Busmpri_SPEC>;
+
+impl Busmpri {
+    #[doc = "Priority Select"]
+    #[inline(always)]
+    pub fn pri(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0xf,
+        1,
+        0,
+        busmpri::Pri,
+        busmpri::Pri,
+        Busmpri_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xf,
+            1,
+            0,
+            busmpri::Pri,
+            busmpri::Pri,
+            Busmpri_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Busmpri_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Busmpri_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
+impl ::core::default::Default for Busmpri {
+    #[inline(always)]
+    fn default() -> Busmpri {
+        <crate::RegValueT<Busmpri_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+pub mod busmpri {
+
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Pri_SPEC;
+    pub type Pri = crate::EnumBitfieldStruct<u8, Pri_SPEC>;
+    impl Pri {
+        #[doc = "Priority of MIPI is MIDDLE"]
+        pub const _0000: Self = Self::new(0);
+
+        #[doc = "Priority of MIPI is LOW"]
+        pub const _1111: Self = Self::new(15);
+    }
+}
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Qoscyc4_SPEC;
+impl crate::sealed::RegSpec for Qoscyc4_SPEC {
+    type DataType = u32;
+}
+
+#[doc = "QoS Cycle Setting Register 4"]
+pub type Qoscyc4 = crate::RegValueT<Qoscyc4_SPEC>;
+
+impl Qoscyc4 {
+    #[doc = "QoS Unit Cycle Setting"]
+    #[inline(always)]
+    pub fn qoscyc(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        qoscyc4::Qoscyc,
+        qoscyc4::Qoscyc,
+        Qoscyc4_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            qoscyc4::Qoscyc,
+            qoscyc4::Qoscyc,
+            Qoscyc4_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Qoscyc4_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Qoscyc4_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
+impl ::core::default::Default for Qoscyc4 {
+    #[inline(always)]
+    fn default() -> Qoscyc4 {
+        <crate::RegValueT<Qoscyc4_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+pub mod qoscyc4 {
+
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Qoscyc_SPEC;
+    pub type Qoscyc = crate::EnumBitfieldStruct<u16, Qoscyc_SPEC>;
+    impl Qoscyc {
+        #[doc = "QoS circuit is disabled."]
+        pub const _0000000000000000: Self = Self::new(0);
+
+        #[doc = "QoS unit cycle is 16"]
+        pub const _0000000000000001: Self = Self::new(1);
+
+        #[doc = "QoS unit cycle is 32"]
+        pub const _0000000000000010: Self = Self::new(2);
+
+        #[doc = "QoS unit cycle is 48"]
+        pub const _0000000000000011: Self = Self::new(3);
+
+        #[doc = "QoS unit cycle is 1,048,560"]
+        pub const _1111111111111111: Self = Self::new(65535);
+    }
+}
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Qosthd_SPEC;
+impl crate::sealed::RegSpec for Qosthd_SPEC {
+    type DataType = u32;
+}
+
+#[doc = "QoS Threshold Setting Register %s"]
+pub type Qosthd = crate::RegValueT<Qosthd_SPEC>;
+
+impl Qosthd {
+    #[doc = "QoS Threshold Setting"]
+    #[inline(always)]
+    pub fn qosthd(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        qosthd::Qosthd,
+        qosthd::Qosthd,
+        Qosthd_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            qosthd::Qosthd,
+            qosthd::Qosthd,
+            Qosthd_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Qosthd_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Qosthd_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
+impl ::core::default::Default for Qosthd {
+    #[inline(always)]
+    fn default() -> Qosthd {
+        <crate::RegValueT<Qosthd_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+pub mod qosthd {
+
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Qosthd_SPEC;
+    pub type Qosthd = crate::EnumBitfieldStruct<u16, Qosthd_SPEC>;
+    impl Qosthd {
+        #[doc = "Threshold is 0 byte"]
+        pub const _0000000000000000: Self = Self::new(0);
+
+        #[doc = "Threshold is 1 byte"]
+        pub const _0000000000000001: Self = Self::new(1);
+
+        #[doc = "Threshold is 2 bytes"]
+        pub const _0000000000000010: Self = Self::new(2);
+
+        #[doc = "Threshold is 3 bytes"]
+        pub const _0000000000000011: Self = Self::new(3);
+
+        #[doc = "Threshold is 65,535 bytes"]
+        pub const _1111111111111111: Self = Self::new(65535);
+    }
+}
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Qosthd4_SPEC;
+impl crate::sealed::RegSpec for Qosthd4_SPEC {
+    type DataType = u32;
+}
+
+#[doc = "QoS Threshold Setting Register 4"]
+pub type Qosthd4 = crate::RegValueT<Qosthd4_SPEC>;
+
+impl Qosthd4 {
+    #[doc = "QoS Threshold Setting"]
+    #[inline(always)]
+    pub fn qosthd(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        qosthd4::Qosthd,
+        qosthd4::Qosthd,
+        Qosthd4_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            qosthd4::Qosthd,
+            qosthd4::Qosthd,
+            Qosthd4_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Qosthd4_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Qosthd4_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
+impl ::core::default::Default for Qosthd4 {
+    #[inline(always)]
+    fn default() -> Qosthd4 {
+        <crate::RegValueT<Qosthd4_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+pub mod qosthd4 {
+
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Qosthd_SPEC;
+    pub type Qosthd = crate::EnumBitfieldStruct<u16, Qosthd_SPEC>;
+    impl Qosthd {
+        #[doc = "Threshold is 0 byte"]
+        pub const _0000000000000000: Self = Self::new(0);
+
+        #[doc = "Threshold is 1 byte"]
+        pub const _0000000000000001: Self = Self::new(1);
+
+        #[doc = "Threshold is 2 bytes"]
+        pub const _0000000000000010: Self = Self::new(2);
+
+        #[doc = "Threshold is 3 bytes"]
+        pub const _0000000000000011: Self = Self::new(3);
+
+        #[doc = "Threshold is 65,535 bytes"]
+        pub const _1111111111111111: Self = Self::new(65535);
+    }
+}
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Qosdmon_SPEC;
+impl crate::sealed::RegSpec for Qosdmon_SPEC {
+    type DataType = u32;
+}
+
+#[doc = "QoS Data Transferred Amount Monitor Register %s"]
+pub type Qosdmon = crate::RegValueT<Qosdmon_SPEC>;
+
+impl Qosdmon {
+    #[doc = "QoS data transferred amount within a unit cycle"]
+    #[inline(always)]
+    pub fn qosdmon(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        qosdmon::Qosdmon,
+        qosdmon::Qosdmon,
+        Qosdmon_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            qosdmon::Qosdmon,
+            qosdmon::Qosdmon,
+            Qosdmon_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Qosdmon_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Qosdmon_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
+impl ::core::default::Default for Qosdmon {
+    #[inline(always)]
+    fn default() -> Qosdmon {
+        <crate::RegValueT<Qosdmon_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+pub mod qosdmon {
+
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Qosdmon_SPEC;
+    pub type Qosdmon = crate::EnumBitfieldStruct<u16, Qosdmon_SPEC>;
+    impl Qosdmon {
+        #[doc = "0 byte"]
+        pub const _0000000000000000: Self = Self::new(0);
+
+        #[doc = "1 byte"]
+        pub const _0000000000000001: Self = Self::new(1);
+
+        #[doc = "2 bytes"]
+        pub const _0000000000000010: Self = Self::new(2);
+
+        #[doc = "3 bytes"]
+        pub const _0000000000000011: Self = Self::new(3);
+
+        #[doc = "65,535 or more bytes."]
+        pub const _1111111111111111: Self = Self::new(65535);
+    }
+}
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Qosdmon4_SPEC;
+impl crate::sealed::RegSpec for Qosdmon4_SPEC {
+    type DataType = u32;
+}
+
+#[doc = "QoS Data Transferred Amount Monitor Register 4"]
+pub type Qosdmon4 = crate::RegValueT<Qosdmon4_SPEC>;
+
+impl Qosdmon4 {
+    #[doc = "QoS data transferred amount within a unit cycle"]
+    #[inline(always)]
+    pub fn qosdmon(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        qosdmon4::Qosdmon,
+        qosdmon4::Qosdmon,
+        Qosdmon4_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            qosdmon4::Qosdmon,
+            qosdmon4::Qosdmon,
+            Qosdmon4_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Qosdmon4_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Qosdmon4_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
+impl ::core::default::Default for Qosdmon4 {
+    #[inline(always)]
+    fn default() -> Qosdmon4 {
+        <crate::RegValueT<Qosdmon4_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+pub mod qosdmon4 {
+
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Qosdmon_SPEC;
+    pub type Qosdmon = crate::EnumBitfieldStruct<u16, Qosdmon_SPEC>;
+    impl Qosdmon {
+        #[doc = "0 byte"]
+        pub const _0000000000000000: Self = Self::new(0);
+
+        #[doc = "1 byte"]
+        pub const _0000000000000001: Self = Self::new(1);
+
+        #[doc = "2 bytes"]
+        pub const _0000000000000010: Self = Self::new(2);
+
+        #[doc = "3 bytes"]
+        pub const _0000000000000011: Self = Self::new(3);
+
+        #[doc = "65,535 or more bytes."]
+        pub const _1111111111111111: Self = Self::new(65535);
+    }
+}
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Buserradd_SPEC;
 impl crate::sealed::RegSpec for Buserradd_SPEC {
     type DataType = u32;
 }
 
-#[doc = "BUS Error Address Register (n = 4 to 9 )"]
+#[doc = "Bus Error Address Register %s"]
 pub type Buserradd = crate::RegValueT<Buserradd_SPEC>;
 
 impl Buserradd {
-    #[doc = "Bus Error Address"]
+    #[doc = "Bus Error AddressWhen a bus error occurs, It stores an error address."]
     #[inline(always)]
     pub fn berad(
         self,
@@ -4594,11 +6563,11 @@ impl crate::sealed::RegSpec for Buserrrw_SPEC {
     type DataType = u8;
 }
 
-#[doc = "BUS Error Read Write (n = 4 to 9)"]
+#[doc = "Bus Error RW Register %s"]
 pub type Buserrrw = crate::RegValueT<Buserrrw_SPEC>;
 
 impl Buserrrw {
-    #[doc = "Error access Read/Write Status"]
+    #[doc = "error access Read/Write STAtus"]
     #[inline(always)]
     pub fn rwstat(
         self,
@@ -4623,6 +6592,14 @@ impl Buserrrw {
             crate::common::R,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<1, 0x7f, 1, 0, u8, u8, Buserrrw_SPEC, crate::common::R> {
+        crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Buserrrw_SPEC,crate::common::R>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Buserrrw {
     #[inline(always)]
@@ -4645,18 +6622,18 @@ pub mod buserrrw {
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Bmsaerradd_SPEC;
-impl crate::sealed::RegSpec for Bmsaerradd_SPEC {
+pub struct Btzferradd_SPEC;
+impl crate::sealed::RegSpec for Btzferradd_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Bus Master Security Attribution Unit Error Address (n = 4 to 9)"]
-pub type Bmsaerradd = crate::RegValueT<Bmsaerradd_SPEC>;
+#[doc = "Bus TZF Error Address Register %s"]
+pub type Btzferradd = crate::RegValueT<Btzferradd_SPEC>;
 
-impl Bmsaerradd {
-    #[doc = "Bus Master Security Attribution Unit Error Address"]
+impl Btzferradd {
+    #[doc = "Bus TZF Error Adress When a TZF error occurs, It stores an error address."]
     #[inline(always)]
-    pub fn mserad(
+    pub fn btzferad(
         self,
     ) -> crate::common::RegisterField<
         0,
@@ -4665,7 +6642,7 @@ impl Bmsaerradd {
         0,
         u32,
         u32,
-        Bmsaerradd_SPEC,
+        Btzferradd_SPEC,
         crate::common::R,
     > {
         crate::common::RegisterField::<
@@ -4675,41 +6652,41 @@ impl Bmsaerradd {
             0,
             u32,
             u32,
-            Bmsaerradd_SPEC,
+            Btzferradd_SPEC,
             crate::common::R,
         >::from_register(self, 0)
     }
 }
-impl ::core::default::Default for Bmsaerradd {
+impl ::core::default::Default for Btzferradd {
     #[inline(always)]
-    fn default() -> Bmsaerradd {
-        <crate::RegValueT<Bmsaerradd_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> Btzferradd {
+        <crate::RegValueT<Btzferradd_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Bmsaerrrw_SPEC;
-impl crate::sealed::RegSpec for Bmsaerrrw_SPEC {
+pub struct Btzferrrw_SPEC;
+impl crate::sealed::RegSpec for Btzferrrw_SPEC {
     type DataType = u8;
 }
 
-#[doc = "BUS Master Security Attribution Unit Error Read Write (n = 4 to 9)"]
-pub type Bmsaerrrw = crate::RegValueT<Bmsaerrrw_SPEC>;
+#[doc = "Bus ZTF Error RW Register %s"]
+pub type Btzferrrw = crate::RegValueT<Btzferrrw_SPEC>;
 
-impl Bmsaerrrw {
-    #[doc = "Master Security Attribution Unit error access Read/Write Status"]
+impl Btzferrrw {
+    #[doc = "TrustZone filter error access Read/Write STAtus"]
     #[inline(always)]
-    pub fn msarwstat(
+    pub fn trwstat(
         self,
     ) -> crate::common::RegisterField<
         0,
         0x1,
         1,
         0,
-        bmsaerrrw::Msarwstat,
-        bmsaerrrw::Msarwstat,
-        Bmsaerrrw_SPEC,
+        btzferrrw::Trwstat,
+        btzferrrw::Trwstat,
+        Btzferrrw_SPEC,
         crate::common::R,
     > {
         crate::common::RegisterField::<
@@ -4717,25 +6694,33 @@ impl Bmsaerrrw {
             0x1,
             1,
             0,
-            bmsaerrrw::Msarwstat,
-            bmsaerrrw::Msarwstat,
-            Bmsaerrrw_SPEC,
+            btzferrrw::Trwstat,
+            btzferrrw::Trwstat,
+            Btzferrrw_SPEC,
             crate::common::R,
         >::from_register(self, 0)
     }
-}
-impl ::core::default::Default for Bmsaerrrw {
+
+    #[doc = "These bits are read as 0000000."]
     #[inline(always)]
-    fn default() -> Bmsaerrrw {
-        <crate::RegValueT<Bmsaerrrw_SPEC> as RegisterValue<_>>::new(0)
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<1, 0x7f, 1, 0, u8, u8, Btzferrrw_SPEC, crate::common::R> {
+        crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Btzferrrw_SPEC,crate::common::R>::from_register(self,0)
     }
 }
-pub mod bmsaerrrw {
+impl ::core::default::Default for Btzferrrw {
+    #[inline(always)]
+    fn default() -> Btzferrrw {
+        <crate::RegValueT<Btzferrrw_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+pub mod btzferrrw {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Msarwstat_SPEC;
-    pub type Msarwstat = crate::EnumBitfieldStruct<u8, Msarwstat_SPEC>;
-    impl Msarwstat {
+    pub struct Trwstat_SPEC;
+    pub type Trwstat = crate::EnumBitfieldStruct<u8, Trwstat_SPEC>;
+    impl Trwstat {
         #[doc = "Read access"]
         pub const _0: Self = Self::new(0);
 
@@ -4750,11 +6735,11 @@ impl crate::sealed::RegSpec for Buserrstat_SPEC {
     type DataType = u8;
 }
 
-#[doc = "BUS Error Status Register"]
+#[doc = "Bus Error Status Register %s"]
 pub type Buserrstat = crate::RegValueT<Buserrstat_SPEC>;
 
 impl Buserrstat {
-    #[doc = "Slave Bus Error Status"]
+    #[doc = "Slave bus ERRor STATus"]
     #[inline(always)]
     pub fn slerrstat(
         self,
@@ -4780,7 +6765,33 @@ impl Buserrstat {
         >::from_register(self, 0)
     }
 
-    #[doc = "Master MPU Error Status"]
+    #[doc = "Slave TrustZone filter ERRor STATus"]
+    #[inline(always)]
+    pub fn sterrstat(
+        self,
+    ) -> crate::common::RegisterField<
+        1,
+        0x1,
+        1,
+        0,
+        buserrstat::Sterrstat,
+        buserrstat::Sterrstat,
+        Buserrstat_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            1,
+            0x1,
+            1,
+            0,
+            buserrstat::Sterrstat,
+            buserrstat::Sterrstat,
+            Buserrstat_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Master MPU ERRor STATus"]
     #[inline(always)]
     pub fn mmerrstat(
         self,
@@ -4806,7 +6817,7 @@ impl Buserrstat {
         >::from_register(self, 0)
     }
 
-    #[doc = "Illegal Address Access Error Status"]
+    #[doc = "Illegal address access ERRor STATus"]
     #[inline(always)]
     pub fn ilerrstat(
         self,
@@ -4832,7 +6843,7 @@ impl Buserrstat {
         >::from_register(self, 0)
     }
 
-    #[doc = "Master Security Attribution Unit Error Status"]
+    #[doc = "Master Security attribution unit ERRor STATus"]
     #[inline(always)]
     pub fn mserrstat(
         self,
@@ -4857,6 +6868,14 @@ impl Buserrstat {
             crate::common::R,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<6, 0x3, 1, 0, u8, u8, Buserrstat_SPEC, crate::common::R> {
+        crate::common::RegisterField::<6,0x3,1,0,u8,u8,Buserrstat_SPEC,crate::common::R>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Buserrstat {
     #[inline(always)]
@@ -4870,6 +6889,16 @@ pub mod buserrstat {
     pub struct Slerrstat_SPEC;
     pub type Slerrstat = crate::EnumBitfieldStruct<u8, Slerrstat_SPEC>;
     impl Slerrstat {
+        #[doc = "No error occurred"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Error occurred"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Sterrstat_SPEC;
+    pub type Sterrstat = crate::EnumBitfieldStruct<u8, Sterrstat_SPEC>;
+    impl Sterrstat {
         #[doc = "No error occurred"]
         pub const _0: Self = Self::new(0);
 
@@ -4914,11 +6943,11 @@ impl crate::sealed::RegSpec for Buserrclr_SPEC {
     type DataType = u8;
 }
 
-#[doc = "BUS Error Clear Register"]
+#[doc = "Bus Error Status Register %s"]
 pub type Buserrclr = crate::RegValueT<Buserrclr_SPEC>;
 
 impl Buserrclr {
-    #[doc = "Slave Bus Error Clear"]
+    #[doc = "Slave bus ERRor CleaR"]
     #[inline(always)]
     pub fn slerrclr(
         self,
@@ -4926,7 +6955,15 @@ impl Buserrclr {
         crate::common::RegisterFieldBool::<0,1,0,Buserrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Master MPU Error Clear"]
+    #[doc = "Slave TrustZone filter ERRor CleaR"]
+    #[inline(always)]
+    pub fn sterrclr(
+        self,
+    ) -> crate::common::RegisterFieldBool<1, 1, 0, Buserrclr_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<1,1,0,Buserrclr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "Master MPU ERRor CleaR"]
     #[inline(always)]
     pub fn mmerrclr(
         self,
@@ -4934,7 +6971,7 @@ impl Buserrclr {
         crate::common::RegisterFieldBool::<3,1,0,Buserrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Illegal Address Access Error Clear"]
+    #[doc = "Illegal address access ERRor CleaR"]
     #[inline(always)]
     pub fn ilerrclr(
         self,
@@ -4942,12 +6979,20 @@ impl Buserrclr {
         crate::common::RegisterFieldBool::<4,1,0,Buserrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Master Security Attribution Unit Error Clear"]
+    #[doc = "Master Security attribution unit ERRor CleaR"]
     #[inline(always)]
     pub fn mserrclr(
         self,
     ) -> crate::common::RegisterFieldBool<5, 1, 0, Buserrclr_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<5,1,0,Buserrclr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00. The write value should be 00."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<6, 0x3, 1, 0, u8, u8, Buserrclr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<6,0x3,1,0,u8,u8,Buserrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Buserrclr {
@@ -5253,6 +7298,15 @@ impl Mbwerrstat {
             crate::common::R,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, u8, Mbwerrstat_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<24,0xff,1,0,u8,u8,Mbwerrstat_SPEC,crate::common::R>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Mbwerrstat {
     #[inline(always)]
@@ -5470,6 +7524,15 @@ impl Mbwerrclr {
         self,
     ) -> crate::common::RegisterFieldBool<23, 1, 0, Mbwerrclr_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<23,1,0,Mbwerrclr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, u8, Mbwerrclr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<24,0xff,1,0,u8,u8,Mbwerrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Mbwerrclr {
@@ -5827,6 +7890,15 @@ impl Sbwerrstat {
             crate::common::R,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Sbwerrstat_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Sbwerrstat_SPEC,crate::common::R>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Sbwerrstat {
     #[inline(always)]
@@ -6080,6 +8152,15 @@ impl Sbwerrclr {
         self,
     ) -> crate::common::RegisterFieldBool<12, 1, 0, Sbwerrclr_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<12,1,0,Sbwerrclr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Sbwerrclr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Sbwerrclr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Sbwerrclr {

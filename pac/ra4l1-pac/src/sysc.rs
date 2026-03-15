@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:48:57 +0000
+// Generated from SVD 0.90.02, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:05:50 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -122,18 +122,6 @@ impl super::Sysc {
         unsafe {
             crate::common::Reg::<self::Hococr_SPEC, crate::common::RW>::from_ptr(
                 self._svd2pac_as_ptr().add(54usize),
-            )
-        }
-    }
-
-    #[doc = "High-Speed On-Chip Oscillator Control Register 2"]
-    #[inline(always)]
-    pub const fn hococr2(
-        &self,
-    ) -> &'static crate::common::Reg<self::Hococr2_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::Hococr2_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(55usize),
             )
         }
     }
@@ -925,9 +913,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pckc_SPEC;
@@ -953,9 +938,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pckb_SPEC;
@@ -981,9 +963,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcka_SPEC;
@@ -1009,9 +988,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ick_SPEC;
@@ -1037,9 +1013,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Fck_SPEC;
@@ -1065,9 +1038,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1235,9 +1205,6 @@ pub mod pllccr {
 
         #[doc = "/6"]
         pub const _10: Self = Self::new(2);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Plsrcsel_SPEC;
@@ -1363,9 +1330,6 @@ pub mod memwait {
 
         #[doc = "Two waits"]
         pub const _10: Self = Self::new(2);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1478,77 +1442,6 @@ pub mod hococr {
 
         #[doc = "Stop the HOCO clock"]
         pub const _1: Self = Self::new(1);
-    }
-}
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Hococr2_SPEC;
-impl crate::sealed::RegSpec for Hococr2_SPEC {
-    type DataType = u8;
-}
-
-#[doc = "High-Speed On-Chip Oscillator Control Register 2"]
-pub type Hococr2 = crate::RegValueT<Hococr2_SPEC>;
-
-impl Hococr2 {
-    #[doc = "HOCO Frequency Setting 0"]
-    #[inline(always)]
-    pub fn hcfrq0(
-        self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7,
-        1,
-        0,
-        hococr2::Hcfrq0,
-        hococr2::Hcfrq0,
-        Hococr2_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7,
-            1,
-            0,
-            hococr2::Hcfrq0,
-            hococr2::Hcfrq0,
-            Hococr2_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-}
-impl ::core::default::Default for Hococr2 {
-    #[inline(always)]
-    fn default() -> Hococr2 {
-        <crate::RegValueT<Hococr2_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-pub mod hococr2 {
-
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Hcfrq0_SPEC;
-    pub type Hcfrq0 = crate::EnumBitfieldStruct<u8, Hcfrq0_SPEC>;
-    impl Hcfrq0 {
-        #[doc = "48 MHz"]
-        pub const _000: Self = Self::new(0);
-
-        #[doc = "64 MHz"]
-        pub const _001: Self = Self::new(1);
-
-        #[doc = "80 MHz"]
-        pub const _010: Self = Self::new(2);
-
-        #[doc = "24 MHz"]
-        pub const _100: Self = Self::new(4);
-
-        #[doc = "32 MHz"]
-        pub const _101: Self = Self::new(5);
-
-        #[doc = "40 MHz"]
-        pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1850,9 +1743,6 @@ pub mod ckocr {
 
         #[doc = "SOSC"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ckodiv_SPEC;
@@ -2300,9 +2190,6 @@ pub mod slcdsckcr {
 
         #[doc = "HOCO"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lcdscken_SPEC;
@@ -2430,9 +2317,6 @@ pub mod canfdckdivcr {
 
         #[doc = "/8"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2504,9 +2388,6 @@ pub mod i3cckdivcr {
 
         #[doc = "/5"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2612,9 +2493,6 @@ pub mod usbckcr {
     impl Usbcksel {
         #[doc = "PLL"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Usbcksreq_SPEC;
@@ -2755,9 +2633,6 @@ pub mod canfdckcr {
 
         #[doc = "PLL"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Canfdcksreq_SPEC;
@@ -4492,9 +4367,6 @@ pub mod moscwtcr {
 
         #[doc = "Wait time = 262144 cycles (32768 us)"]
         pub const _0_X_9: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -6818,9 +6690,6 @@ pub mod lvd1cmpcr {
 
         #[doc = "Vdet1_B"]
         pub const _0_X_0_B: Self = Self::new(11);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lvd1E_SPEC;

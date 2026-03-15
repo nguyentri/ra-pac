@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:18 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:06:30 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -4193,9 +4193,6 @@ pub mod mb_dl {
 
         #[doc = "Data length = 7 bytes"]
         pub const _0111: Self = Self::new(7);
-
-        #[doc = "Data length = 8 bytes"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -9519,9 +9516,6 @@ pub mod bcr {
 
         #[doc = "16 Tq"]
         pub const _1111: Self = Self::new(15);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sjw_SPEC;
@@ -9811,9 +9805,6 @@ pub mod rfcr {
 
         #[doc = "4 unread messages"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfe_SPEC;
@@ -10021,9 +10012,6 @@ pub mod tfcr {
 
         #[doc = "4 unsent messages"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tfe_SPEC;

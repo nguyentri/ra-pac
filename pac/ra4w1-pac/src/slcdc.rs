@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.0, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:50:19 +0000
+// Generated from SVD 1.0, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:09:02 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -687,9 +687,6 @@ pub mod lcdm0 {
 
         #[doc = "8-time slice"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lbas_SPEC;
@@ -1063,9 +1060,6 @@ pub mod lcdc0 {
 
         #[doc = "(Main clock)/219 or  (HOCO clock)/219"]
         pub const _101011: Self = Self::new(43);
-
-        #[doc = "Other than above Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1164,9 +1158,6 @@ pub mod vlcd {
 
         #[doc = "Reference voltageselection(contrast adjustment):  1.75 V   VL4 voltage:  5.25 V(1/3 bias method)/Setting prohibited(1/4 bias method)"]
         pub const _10011: Self = Self::new(19);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

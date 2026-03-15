@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.50.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:54 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:07:45 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -2218,9 +2218,6 @@ pub mod rcr1 {
 
         #[doc = "Generate periodic interrupt every 2 seconds"]
         pub const _0_X_F: Self = Self::new(15);
-
-        #[doc = "Do not generate periodic interrupts"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2507,7 +2504,7 @@ pub mod rcr2 {
         #[doc = "The RADJ.ADJ\\[5:0\\] setting from the count value of the prescaler every minute."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "The RADJ.ADJ\\[5:0\\] setting value is adjusted from the count value of the prescaler every 10 seconds."]
+        #[doc = "The RADJ.ADJ\\[5:0\\] setting value is adjusted from the coun tvalue of the prescaler every 10 seconds."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -2753,7 +2750,7 @@ pub mod rcr2_bcnt {
         #[doc = "Add or subtract RADJ.ADJ \\[5:0\\] bits from prescaler count value every 32 seconds"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Add or subtract RADJ.ADJ \\[5:0\\] bits from prescaler count value every 8 seconds."]
+        #[doc = "Add or subtract RADJ.ADJ \\[5:0\\] bits from prescaler countvalue every 8 seconds."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]

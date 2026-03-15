@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -55,6 +55,7 @@ impl crate::sealed::RegSpec for Opscr_SPEC {
 pub type Opscr = crate::RegValueT<Opscr_SPEC>;
 
 impl Opscr {
+    #[doc = "Input Phase Soft Setting UFThis bit sets the input phase by the software settings.This bit setting is valid when the OPSCR.FB bit = 1."]
     #[inline(always)]
     pub fn uf(self) -> crate::common::RegisterFieldBool<0, 1, 0, Opscr_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<0, 1, 0, Opscr_SPEC, crate::common::RW>::from_register(
@@ -62,6 +63,7 @@ impl Opscr {
         )
     }
 
+    #[doc = "Input Phase Soft Setting VFThis bit sets the input phase by the software settings.This bit setting is valid when the OPSCR.FB bit = 1."]
     #[inline(always)]
     pub fn vf(self) -> crate::common::RegisterFieldBool<1, 1, 0, Opscr_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1, 1, 0, Opscr_SPEC, crate::common::RW>::from_register(
@@ -69,6 +71,7 @@ impl Opscr {
         )
     }
 
+    #[doc = "Input Phase Soft Setting WFThis bit sets the input phase by the software settings.This bit setting is valid when the OPSCR.FB bit = 1."]
     #[inline(always)]
     pub fn wf(self) -> crate::common::RegisterFieldBool<2, 1, 0, Opscr_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<2, 1, 0, Opscr_SPEC, crate::common::RW>::from_register(
@@ -76,7 +79,7 @@ impl Opscr {
         )
     }
 
-    #[doc = "Input U-Phase Monitor"]
+    #[doc = "Input U-Phase MonitorThis bit monitors the state of the input phase.OPSCR.FB=0:External input monitoring by PCLKGPT0OPSCR.FB=1:Software settings (UF/VF/WF)"]
     #[inline(always)]
     pub fn u(self) -> crate::common::RegisterFieldBool<4, 1, 0, Opscr_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<4, 1, 0, Opscr_SPEC, crate::common::R>::from_register(
@@ -84,7 +87,7 @@ impl Opscr {
         )
     }
 
-    #[doc = "Input V-Phase Monitor"]
+    #[doc = "Input V-Phase MonitorThis bit monitors the state of the input phase.OPSCR.FB=0:External input monitoring by PCLKGPT0OPSCR.FB=1:Software settings (UF/VF/WF)"]
     #[inline(always)]
     pub fn v(self) -> crate::common::RegisterFieldBool<5, 1, 0, Opscr_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<5, 1, 0, Opscr_SPEC, crate::common::R>::from_register(
@@ -92,7 +95,7 @@ impl Opscr {
         )
     }
 
-    #[doc = "Input W-Phase Monitor"]
+    #[doc = "Input W-Phase MonitorThis bit monitors the state of the input phase.OPSCR.FB=0:External input monitoring by PCLKGPT0OPSCR.FB=1:Software settings (UF/VF/WF)"]
     #[inline(always)]
     pub fn w(self) -> crate::common::RegisterFieldBool<6, 1, 0, Opscr_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<6, 1, 0, Opscr_SPEC, crate::common::R>::from_register(
@@ -100,7 +103,7 @@ impl Opscr {
         )
     }
 
-    #[doc = "Output Phase Enable"]
+    #[doc = "Enable-Phase Output Control"]
     #[inline(always)]
     pub fn en(
         self,
@@ -126,7 +129,7 @@ impl Opscr {
         >::from_register(self, 0)
     }
 
-    #[doc = "External Feedback Signal Enable"]
+    #[doc = "External Feedback Signal EnableThis bit selects the input phase from the software settings and external input."]
     #[inline(always)]
     pub fn fb(
         self,
@@ -204,7 +207,7 @@ impl Opscr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Output Phase Invert Control"]
+    #[doc = "Invert-Phase Output Control"]
     #[inline(always)]
     pub fn inv(
         self,
@@ -230,33 +233,15 @@ impl Opscr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Output Phase Rotation Direction Reversal Control"]
+    #[doc = "Output phase rotation direction reversal"]
     #[inline(always)]
-    pub fn rv(
-        self,
-    ) -> crate::common::RegisterField<
-        20,
-        0x1,
-        1,
-        0,
-        opscr::Rv,
-        opscr::Rv,
-        Opscr_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            20,
-            0x1,
-            1,
-            0,
-            opscr::Rv,
-            opscr::Rv,
-            Opscr_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    pub fn rv(self) -> crate::common::RegisterFieldBool<20, 1, 0, Opscr_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<20, 1, 0, Opscr_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
     }
 
-    #[doc = "Input Phase Alignment"]
+    #[doc = "Input phase alignment"]
     #[inline(always)]
     pub fn align(
         self,
@@ -282,15 +267,33 @@ impl Opscr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Output Disabled Source Selection"]
+    #[doc = "Output disabled source selection"]
     #[inline(always)]
     pub fn grp(
         self,
-    ) -> crate::common::RegisterField<24, 0x3, 1, 0, u8, u8, Opscr_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<24,0x3,1,0,u8,u8,Opscr_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        24,
+        0x3,
+        1,
+        0,
+        opscr::Grp,
+        opscr::Grp,
+        Opscr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            24,
+            0x3,
+            1,
+            0,
+            opscr::Grp,
+            opscr::Grp,
+            Opscr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
-    #[doc = "Group Output Disable Function"]
+    #[doc = "Group output disable function"]
     #[inline(always)]
     pub fn godf(
         self,
@@ -314,6 +317,16 @@ impl Opscr {
             Opscr_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<28, 1, 0, Opscr_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<28, 1, 0, Opscr_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
     }
 
     #[doc = "External Input Noise Filter Enable"]
@@ -342,7 +355,7 @@ impl Opscr {
         >::from_register(self, 0)
     }
 
-    #[doc = "External Input Noise Filter Clock Selection"]
+    #[doc = "External Input Noise Filter Clock selectionNoise filter sampling clock setting of the external input."]
     #[inline(always)]
     pub fn nfcs(
         self,
@@ -380,7 +393,7 @@ pub mod opscr {
     pub struct En_SPEC;
     pub type En = crate::EnumBitfieldStruct<u8, En_SPEC>;
     impl En {
-        #[doc = "Do not output (Hi-Z external pin)"]
+        #[doc = "Not Output(Hi-Z external terminals)."]
         pub const _0: Self = Self::new(0);
 
         #[doc = "Output"]
@@ -390,10 +403,10 @@ pub mod opscr {
     pub struct Fb_SPEC;
     pub type Fb = crate::EnumBitfieldStruct<u8, Fb_SPEC>;
     impl Fb {
-        #[doc = "Select the external input"]
+        #[doc = "Select the external input."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select the soft setting (OPSCR.UF, VF, WF)"]
+        #[doc = "Select the soft setting(OPSCR.UF, VF, WF)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -403,7 +416,7 @@ pub mod opscr {
         #[doc = "Level signal output"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "PWM signal output"]
+        #[doc = "PWM signal output (PWM of GPT0)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -413,73 +426,79 @@ pub mod opscr {
         #[doc = "Level signal output"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "PWM signal output"]
+        #[doc = "PWM signal output (PWM of GPT0)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Inv_SPEC;
     pub type Inv = crate::EnumBitfieldStruct<u8, Inv_SPEC>;
     impl Inv {
-        #[doc = "Positive logic (active-high) output"]
+        #[doc = "Positive Logic (Active High)output"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Negative logic (active-low) output"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Rv_SPEC;
-    pub type Rv = crate::EnumBitfieldStruct<u8, Rv_SPEC>;
-    impl Rv {
-        #[doc = "Positive rotation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Reverse rotation"]
+        #[doc = "Negative Logic (Active Low)output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Align_SPEC;
     pub type Align = crate::EnumBitfieldStruct<u8, Align_SPEC>;
     impl Align {
-        #[doc = "Input phase aligned to PCLKD"]
+        #[doc = "Input phase is aligned to PCLK."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Input phase aligned to the falling edge of PWM"]
+        #[doc = "Input phase is aligned PWM."]
         pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Grp_SPEC;
+    pub type Grp = crate::EnumBitfieldStruct<u8, Grp_SPEC>;
+    impl Grp {
+        #[doc = "Select Group A output disable source"]
+        pub const _00: Self = Self::new(0);
+
+        #[doc = "Select Group B output disable source"]
+        pub const _01: Self = Self::new(1);
+
+        #[doc = "Select Group C output disable source"]
+        pub const _10: Self = Self::new(2);
+
+        #[doc = "Select Group D output disable source"]
+        pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Godf_SPEC;
     pub type Godf = crate::EnumBitfieldStruct<u8, Godf_SPEC>;
     impl Godf {
-        #[doc = "This bit function is ignored"]
+        #[doc = "This bit function is ignored."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Group disable clears the OPSCR.EN bit"]
+        #[doc = "Group disable will clear OPSCR.EN Bit."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfen_SPEC;
     pub type Nfen = crate::EnumBitfieldStruct<u8, Nfen_SPEC>;
     impl Nfen {
-        #[doc = "Do not use a noise filter on the external input"]
+        #[doc = "Do not use a noise filter to the external input."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Use a noise filter on the external input"]
+        #[doc = "Use a noise filter to the external input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfcs_SPEC;
     pub type Nfcs = crate::EnumBitfieldStruct<u8, Nfcs_SPEC>;
     impl Nfcs {
-        #[doc = "PCLKD/1"]
+        #[doc = "PCLKGPT0/1"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "PCLKD/4"]
+        #[doc = "PCLKGPT0/4"]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "PCLKD/16"]
+        #[doc = "PCLKGPT0/16"]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "PCLKD/64"]
+        #[doc = "PCLKGPT0/64"]
         pub const _11: Self = Self::new(3);
     }
 }

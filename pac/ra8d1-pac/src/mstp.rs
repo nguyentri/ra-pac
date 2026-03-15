@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -24,7 +24,7 @@ http://www.renesas.com/disclaimer
 use crate::common::sealed;
 #[allow(unused_imports)]
 use crate::common::*;
-#[doc = r"Module Stop Control"]
+#[doc = r"Module Stop Control A,B,C,D,E"]
 unsafe impl ::core::marker::Send for super::Mstp {}
 unsafe impl ::core::marker::Sync for super::Mstp {}
 impl super::Mstp {
@@ -157,7 +157,7 @@ impl Mstpcra {
         >::from_register(self, 0)
     }
 
-    #[doc = "Standby SRAM Module Stop"]
+    #[doc = "Standby SRAM Module Module Stop"]
     #[inline(always)]
     pub fn mstpa15(
         self,
@@ -183,7 +183,7 @@ impl Mstpcra {
         >::from_register(self, 0)
     }
 
-    #[doc = "DMA Controller and Data Transfer Controller Module Stop"]
+    #[doc = "DMA Controller/Data Transfer Controller unit0 Module Stop"]
     #[inline(always)]
     pub fn mstpa22(
         self,
@@ -207,6 +207,15 @@ impl Mstpcra {
             Mstpcra_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 111111111. The write value should be 111111111."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<23, 0x1ff, 1, 0, u16, u16, Mstpcra_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<23,0x1ff,1,0,u16,u16,Mstpcra_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Mstpcra {
@@ -347,7 +356,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
-    #[doc = "Universal Serial Bus 2.0 FS Interface Module Stop"]
+    #[doc = "Universal Serial Bus 2.0 FS0 Interface Module Stop"]
     #[inline(always)]
     pub fn mstpb11(
         self,
@@ -399,7 +408,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
-    #[doc = "ETHERC0 and EDMAC0 Controller Module Stop"]
+    #[doc = "ETHERC0 and EDMAC0 Module Stop"]
     #[inline(always)]
     pub fn mstpb15(
         self,
@@ -425,7 +434,7 @@ impl Mstpcrb {
         >::from_register(self, 0)
     }
 
-    #[doc = "Octal Serial Peripheral Interface and Decryption On The Fly Module Stop"]
+    #[doc = "Octa Memory Controller Module Stop"]
     #[inline(always)]
     pub fn mstpb16(
         self,
@@ -527,6 +536,16 @@ impl Mstpcrb {
             Mstpcrb_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "This bit is read as 1. The write value should be 1."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<26, 1, 0, Mstpcrb_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<26, 1, 0, Mstpcrb_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
     }
 
     #[doc = "Serial Communication Interface 4 Module Stop"]
@@ -734,7 +753,7 @@ pub mod mstpcrb {
         #[doc = "Cancel the module-stop state"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enter the module-stop state"]
+        #[doc = "Enter the module-stop state."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -933,7 +952,7 @@ impl Mstpcrc {
         >::from_register(self, 0)
     }
 
-    #[doc = "Serial Sound Interface Enhanced 1 Module Stop"]
+    #[doc = "Serial Sound Interface1 Enhanced Module Stop"]
     #[inline(always)]
     pub fn mstpc7(
         self,
@@ -959,7 +978,7 @@ impl Mstpcrc {
         >::from_register(self, 0)
     }
 
-    #[doc = "Serial Sound Interface Enhanced 0 Module Stop"]
+    #[doc = "Serial Sound Interface0 Enhanced Module Stop"]
     #[inline(always)]
     pub fn mstpc8(
         self,
@@ -1011,7 +1030,7 @@ impl Mstpcrc {
         >::from_register(self, 0)
     }
 
-    #[doc = "Secure Digital Host IF / Multi Media Card 1 Module Stop"]
+    #[doc = "Secure Digital Host IF 1  Module Stop"]
     #[inline(always)]
     pub fn mstpc11(
         self,
@@ -1037,7 +1056,7 @@ impl Mstpcrc {
         >::from_register(self, 0)
     }
 
-    #[doc = "Secure Digital Host IF / Multi Media Card 0 Module Stop"]
+    #[doc = "Secure Digital Host IF 0  Module Stop"]
     #[inline(always)]
     pub fn mstpc12(
         self,
@@ -1115,7 +1134,7 @@ impl Mstpcrc {
         >::from_register(self, 0)
     }
 
-    #[doc = "Capture Engine Unit Module Stop"]
+    #[doc = "CEU Module Stop"]
     #[inline(always)]
     pub fn mstpc16(
         self,
@@ -1141,7 +1160,7 @@ impl Mstpcrc {
         >::from_register(self, 0)
     }
 
-    #[doc = "Controller Area Network with Flexible Data-Rate 1 Module Stop"]
+    #[doc = "Controller Area Network with Flexible  Data-Rate 1 Module Stop"]
     #[inline(always)]
     pub fn mstpc26(
         self,
@@ -1167,7 +1186,7 @@ impl Mstpcrc {
         >::from_register(self, 0)
     }
 
-    #[doc = "Controller Area Network with Flexible Data-Rate 0 Module Stop"]
+    #[doc = "Controller Area Network with Flexible  Data-Rate 0 Module Stop"]
     #[inline(always)]
     pub fn mstpc27(
         self,
@@ -1193,7 +1212,15 @@ impl Mstpcrc {
         >::from_register(self, 0)
     }
 
-    #[doc = "Renesas Secure IP Module Stop"]
+    #[doc = "These bits are read as 111. The write value should be 111."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<28, 0x7, 1, 0, u8, u8, Mstpcrc_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<28,0x7,1,0,u8,u8,Mstpcrc_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "SHIP Module Stop"]
     #[inline(always)]
     pub fn mstpc31(
         self,
@@ -1389,7 +1416,7 @@ impl crate::sealed::RegSpec for Mstpcrd_SPEC {
 pub type Mstpcrd = crate::RegValueT<Mstpcrd_SPEC>;
 
 impl Mstpcrd {
-    #[doc = "Low Power Asynchronous General Purpose Timer 1 Module Stop"]
+    #[doc = "Asynchronous General Purpose Timer 1 Module Stop"]
     #[inline(always)]
     pub fn mstpd4(
         self,
@@ -1415,7 +1442,7 @@ impl Mstpcrd {
         >::from_register(self, 0)
     }
 
-    #[doc = "Low Power Asynchronous General Purpose Timer 0 Module Stop"]
+    #[doc = "Asynchronous General Purpose Timer 0 Module Stop"]
     #[inline(always)]
     pub fn mstpd5(
         self,
@@ -1441,7 +1468,7 @@ impl Mstpcrd {
         >::from_register(self, 0)
     }
 
-    #[doc = "Port Output Enable for GPT Group D Module Stop"]
+    #[doc = "Port Output Enable for GPT3 Module Stop"]
     #[inline(always)]
     pub fn mstpd11(
         self,
@@ -1467,7 +1494,7 @@ impl Mstpcrd {
         >::from_register(self, 0)
     }
 
-    #[doc = "Port Output Enable for GPT Group C Module Stop"]
+    #[doc = "Port Output Enable for GPT2 Module Stop"]
     #[inline(always)]
     pub fn mstpd12(
         self,
@@ -1493,7 +1520,7 @@ impl Mstpcrd {
         >::from_register(self, 0)
     }
 
-    #[doc = "Port Output Enable for GPT Group B Module Stop"]
+    #[doc = "Port Output Enable for GPT1 Module Stop"]
     #[inline(always)]
     pub fn mstpd13(
         self,
@@ -1519,7 +1546,7 @@ impl Mstpcrd {
         >::from_register(self, 0)
     }
 
-    #[doc = "Port Output Enable for GPT Group A Module Stop"]
+    #[doc = "Port Output Enable for GPT0 Module Stop"]
     #[inline(always)]
     pub fn mstpd14(
         self,
@@ -1597,7 +1624,7 @@ impl Mstpcrd {
         >::from_register(self, 0)
     }
 
-    #[doc = "12-bit D/A Converter Module Stop"]
+    #[doc = "12-Bit D/A Converter Module Stop"]
     #[inline(always)]
     pub fn mstpd20(
         self,
@@ -1649,7 +1676,7 @@ impl Mstpcrd {
         >::from_register(self, 0)
     }
 
-    #[doc = "High-Speed Analog Comparator 1 Module Stop"]
+    #[doc = "High-Speed Analog Com-parator 1 Module Stop"]
     #[inline(always)]
     pub fn mstpd27(
         self,
@@ -1675,7 +1702,7 @@ impl Mstpcrd {
         >::from_register(self, 0)
     }
 
-    #[doc = "High-Speed Analog Comparator 0 Module Stop"]
+    #[doc = "High-Speed Analog Com-parator 0 Module Stop"]
     #[inline(always)]
     pub fn mstpd28(
         self,
@@ -1699,6 +1726,14 @@ impl Mstpcrd {
             Mstpcrd_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 111. The write value should be 111."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<29, 0x7, 1, 0, u8, u8, Mstpcrd_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<29,0x7,1,0,u8,u8,Mstpcrd_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Mstpcrd {
@@ -1893,7 +1928,15 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
-    #[doc = "General PWM Timer 13 Module"]
+    #[doc = "These bits are read as 11. The write value should be 11."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0x3, 1, 0, u8, u8, Mstpcre_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<16,0x3,1,0,u8,u8,Mstpcre_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "General PWM Timer 13 Module Stop"]
     #[inline(always)]
     pub fn mstpe18(
         self,
@@ -1919,7 +1962,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
-    #[doc = "General PWM Timer 12 Module"]
+    #[doc = "General PWM Timer 12 Module Stop"]
     #[inline(always)]
     pub fn mstpe19(
         self,
@@ -1945,7 +1988,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
-    #[doc = "General PWM Timer 11 Module"]
+    #[doc = "General PWM Timer 11 Module Stop"]
     #[inline(always)]
     pub fn mstpe20(
         self,
@@ -1971,7 +2014,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
-    #[doc = "General PWM Timer 10 Module"]
+    #[doc = "General PWM Timer 10 Module Stop"]
     #[inline(always)]
     pub fn mstpe21(
         self,
@@ -1997,7 +2040,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
-    #[doc = "General PWM Timer 9 Module"]
+    #[doc = "General PWM Timer 9 Module Stop"]
     #[inline(always)]
     pub fn mstpe22(
         self,
@@ -2023,7 +2066,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
-    #[doc = "General PWM Timer 8 Module"]
+    #[doc = "General PWM Timer 8 Module Stop"]
     #[inline(always)]
     pub fn mstpe23(
         self,
@@ -2049,7 +2092,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
-    #[doc = "General PWM Timer 7 Module"]
+    #[doc = "General PWM Timer 7 Module Stop"]
     #[inline(always)]
     pub fn mstpe24(
         self,
@@ -2075,7 +2118,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
-    #[doc = "General PWM Timer 6 Module"]
+    #[doc = "General PWM Timer 6 Module Stop"]
     #[inline(always)]
     pub fn mstpe25(
         self,
@@ -2101,7 +2144,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
-    #[doc = "General PWM Timer 5 Module"]
+    #[doc = "General PWM Timer 5 Module Stop"]
     #[inline(always)]
     pub fn mstpe26(
         self,
@@ -2127,7 +2170,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
-    #[doc = "General PWM Timer 4 Module"]
+    #[doc = "General PWM Timer 4 Module Stop"]
     #[inline(always)]
     pub fn mstpe27(
         self,
@@ -2153,7 +2196,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
-    #[doc = "General PWM Timer 3 Module"]
+    #[doc = "General PWM Timer 3 Module Stop"]
     #[inline(always)]
     pub fn mstpe28(
         self,
@@ -2179,7 +2222,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
-    #[doc = "General PWM Timer 2 Module"]
+    #[doc = "General PWM Timer 2 Module Stop"]
     #[inline(always)]
     pub fn mstpe29(
         self,
@@ -2205,7 +2248,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
-    #[doc = "General PWM Timer 1 Module"]
+    #[doc = "General PWM Timer 1 Module Stop"]
     #[inline(always)]
     pub fn mstpe30(
         self,
@@ -2231,7 +2274,7 @@ impl Mstpcre {
         >::from_register(self, 0)
     }
 
-    #[doc = "General PWM Timer 0 Module"]
+    #[doc = "General PWM Timer 0 Module Stop"]
     #[inline(always)]
     pub fn mstpe31(
         self,

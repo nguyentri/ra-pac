@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:48:57 +0000
+// Generated from SVD 0.90.02, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:05:50 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -3344,9 +3344,6 @@ pub mod delsr {
     impl Dels {
         #[doc = "Disable interrupts to the associated DMAC module."]
         pub const _0_X_00: Self = Self::new(0);
-
-        #[doc = "Event signal number to be linked. For details, see ."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ir_SPEC;

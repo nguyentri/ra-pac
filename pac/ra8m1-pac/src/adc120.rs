@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:57:20 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -2619,9 +2619,6 @@ pub mod adadc {
 
         #[doc = "16-time conversion (addition 15 times), can be set when selecting 12-bit accuracy."]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Avee_SPEC;
@@ -4149,9 +4146,6 @@ pub mod addiscr {
 
         #[doc = "Setting prohibited"]
         pub const _0001: Self = Self::new(1);
-
-        #[doc = "( 1 / ADCLK ) x ADNDIS"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pchg_SPEC;
@@ -5000,7 +4994,7 @@ pub mod adcmpler {
     pub struct Cmploca_SPEC;
     pub type Cmploca = crate::EnumBitfieldStruct<u8, Cmploca_SPEC>;
     impl Cmploca {
-        #[doc = "ADCMPDR0 value > A/D converted value(ADCMPCR.WCMPE=0) / A/D converted value < ADCMPDR0 value or A/D converted value > ADCMPDR1 value (ADCMPCR.WCMPE=1)"]
+        #[doc = "ADCMPDR0 value > A/D converted value(ADCMPCR.WCMPE=0) / A/D converted value &lt; ADCMPDR0 value or A/D converted value &gt; ADCMPDR1 value (ADCMPCR.WCMPE=1)"]
         pub const _0: Self = Self::new(0);
 
         #[doc = "ADCMPDR0 value < A/D converted value(ADCMPCR.WCMPE=0) / ADCMPDR0 value < A/D converted value < ADCMPDR1 value(ADCMPCR.WCMPE=1)"]
@@ -6863,9 +6857,6 @@ pub mod adcmpbnsr {
 
         #[doc = "No channel is selected"]
         pub const _0_X_3_F: Self = Self::new(63);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmplb_SPEC;

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:50 +0000
+// Generated from SVD 1.20.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:02:40 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -1936,9 +1936,6 @@ pub mod spcmd0 {
 
         #[doc = "SSL1"]
         pub const _001: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spb_SPEC;
@@ -1979,9 +1976,6 @@ pub mod spcmd0 {
 
         #[doc = "16 bits"]
         pub const _0_X_F: Self = Self::new(15);
-
-        #[doc = "8 bits"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lsbf_SPEC;

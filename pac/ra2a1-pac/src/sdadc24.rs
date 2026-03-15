@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.1, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:11 +0000
+// Generated from SVD 1.1, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:00:31 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -351,9 +351,6 @@ pub mod stc1 {
 
         #[doc = "2.4 V (This voltage can be set only if VREFSEL = 1.  When VREFSEL = 0, 2.2 V is set (rather than 2.4 V))"]
         pub const _1111: Self = Self::new(15);
-
-        #[doc = "Settings are prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdadlpm_SPEC;
@@ -395,9 +392,6 @@ pub mod stc1 {
 
         #[doc = "SDADCCLK/16 (1/16)."]
         pub const _1000: Self = Self::new(8);
-
-        #[doc = "Settings are prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -972,9 +966,6 @@ pub mod pgac {
 
         #[doc = "2048"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Settings are prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pgagc_SPEC;
@@ -1036,9 +1027,6 @@ pub mod pgac {
 
         #[doc = "(4, 8, 32)."]
         pub const _01111: Self = Self::new(15);
-
-        #[doc = "Settings are prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

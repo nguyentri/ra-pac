@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:50:08 +0000
+// Generated from SVD 1.20.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:08:27 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -1039,9 +1039,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pckc_SPEC;
@@ -1067,9 +1064,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pckb_SPEC;
@@ -1095,9 +1089,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcka_SPEC;
@@ -1123,9 +1114,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ick_SPEC;
@@ -1151,9 +1139,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Fck_SPEC;
@@ -1179,9 +1164,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1349,9 +1331,6 @@ pub mod pllccr {
 
         #[doc = "/3"]
         pub const _10: Self = Self::new(2);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Plsrcsel_SPEC;
@@ -1979,9 +1958,6 @@ pub mod ckocr {
 
         #[doc = "Setting prohibited"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ckodiv_SPEC;
@@ -2338,9 +2314,6 @@ pub mod i3cckdivcr {
 
         #[doc = "/8"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2446,9 +2419,6 @@ pub mod canfdckcr {
     impl Canfdcksel {
         #[doc = "PLL"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Canfdcksreq_SPEC;
@@ -2589,9 +2559,6 @@ pub mod i3cckcr {
 
         #[doc = "PLL"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct I3Ccksreq_SPEC;
@@ -3858,9 +3825,6 @@ pub mod moscwtcr {
 
         #[doc = "Wait time = 8163 cycles (31139.4 us)"]
         pub const _0_X_9: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -6398,9 +6362,6 @@ pub mod dpswcr {
 
         #[doc = "Wait cycle for slow recovery"]
         pub const _0_X_19: Self = Self::new(25);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -8906,9 +8867,6 @@ pub mod lvd1cmpcr {
 
         #[doc = "2.85 V (Vdet1_3)"]
         pub const _0_X_13: Self = Self::new(19);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lvd1E_SPEC;
@@ -9004,9 +8962,6 @@ pub mod lvd2cmpcr {
 
         #[doc = "2.85 V (Vdet2_3)"]
         pub const _111: Self = Self::new(7);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lvd2E_SPEC;

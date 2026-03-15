@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:48:57 +0000
+// Generated from SVD 0.90.02, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:05:50 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -10675,105 +10675,27 @@ impl crate::sealed::RegSpec for Cfdtmtrsts_SPEC {
 pub type Cfdtmtrsts = crate::RegValueT<Cfdtmtrsts_SPEC>;
 
 impl Cfdtmtrsts {
-    #[doc = "TX Message Buffer n Transmission Request Status (n = 0 to 3)"]
+    #[doc = "TX Message Buffer Transmission Request Status"]
     #[inline(always)]
-    pub fn cfdtmtrsts0(
+    pub fn cfdtmtrsts(
         self,
     ) -> crate::common::RegisterField<
         0,
-        0x1,
+        0xf,
         1,
         0,
-        cfdtmtrsts::Cfdtmtrsts0,
-        cfdtmtrsts::Cfdtmtrsts0,
+        cfdtmtrsts::Cfdtmtrsts,
+        cfdtmtrsts::Cfdtmtrsts,
         Cfdtmtrsts_SPEC,
         crate::common::R,
     > {
         crate::common::RegisterField::<
             0,
-            0x1,
+            0xf,
             1,
             0,
-            cfdtmtrsts::Cfdtmtrsts0,
-            cfdtmtrsts::Cfdtmtrsts0,
-            Cfdtmtrsts_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "TX Message Buffer n Transmission Request Status (n = 0 to 3)"]
-    #[inline(always)]
-    pub fn cfdtmtrsts1(
-        self,
-    ) -> crate::common::RegisterField<
-        1,
-        0x1,
-        1,
-        0,
-        cfdtmtrsts::Cfdtmtrsts1,
-        cfdtmtrsts::Cfdtmtrsts1,
-        Cfdtmtrsts_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            1,
-            0x1,
-            1,
-            0,
-            cfdtmtrsts::Cfdtmtrsts1,
-            cfdtmtrsts::Cfdtmtrsts1,
-            Cfdtmtrsts_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "TX Message Buffer n Transmission Request Status (n = 0 to 3)"]
-    #[inline(always)]
-    pub fn cfdtmtrsts2(
-        self,
-    ) -> crate::common::RegisterField<
-        2,
-        0x1,
-        1,
-        0,
-        cfdtmtrsts::Cfdtmtrsts2,
-        cfdtmtrsts::Cfdtmtrsts2,
-        Cfdtmtrsts_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            2,
-            0x1,
-            1,
-            0,
-            cfdtmtrsts::Cfdtmtrsts2,
-            cfdtmtrsts::Cfdtmtrsts2,
-            Cfdtmtrsts_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "TX Message Buffer n Transmission Request Status (n = 0 to 3)"]
-    #[inline(always)]
-    pub fn cfdtmtrsts3(
-        self,
-    ) -> crate::common::RegisterField<
-        3,
-        0x1,
-        1,
-        0,
-        cfdtmtrsts::Cfdtmtrsts3,
-        cfdtmtrsts::Cfdtmtrsts3,
-        Cfdtmtrsts_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            3,
-            0x1,
-            1,
-            0,
-            cfdtmtrsts::Cfdtmtrsts3,
-            cfdtmtrsts::Cfdtmtrsts3,
+            cfdtmtrsts::Cfdtmtrsts,
+            cfdtmtrsts::Cfdtmtrsts,
             Cfdtmtrsts_SPEC,
             crate::common::R,
         >::from_register(self, 0)
@@ -10788,43 +10710,13 @@ impl ::core::default::Default for Cfdtmtrsts {
 pub mod cfdtmtrsts {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cfdtmtrsts0_SPEC;
-    pub type Cfdtmtrsts0 = crate::EnumBitfieldStruct<u8, Cfdtmtrsts0_SPEC>;
-    impl Cfdtmtrsts0 {
-        #[doc = "Transmission not requested"]
+    pub struct Cfdtmtrsts_SPEC;
+    pub type Cfdtmtrsts = crate::EnumBitfieldStruct<u8, Cfdtmtrsts_SPEC>;
+    impl Cfdtmtrsts {
+        #[doc = "Transmission not requested for corresponding TX message buffer"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Transmission requested"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cfdtmtrsts1_SPEC;
-    pub type Cfdtmtrsts1 = crate::EnumBitfieldStruct<u8, Cfdtmtrsts1_SPEC>;
-    impl Cfdtmtrsts1 {
-        #[doc = "Transmission not requested"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Transmission requested"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cfdtmtrsts2_SPEC;
-    pub type Cfdtmtrsts2 = crate::EnumBitfieldStruct<u8, Cfdtmtrsts2_SPEC>;
-    impl Cfdtmtrsts2 {
-        #[doc = "Transmission not requested"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Transmission requested"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cfdtmtrsts3_SPEC;
-    pub type Cfdtmtrsts3 = crate::EnumBitfieldStruct<u8, Cfdtmtrsts3_SPEC>;
-    impl Cfdtmtrsts3 {
-        #[doc = "Transmission not requested"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Transmission requested"]
+        #[doc = "Transmission requested for corresponding TX message buffer"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10839,105 +10731,27 @@ impl crate::sealed::RegSpec for Cfdtmtarsts_SPEC {
 pub type Cfdtmtarsts = crate::RegValueT<Cfdtmtarsts_SPEC>;
 
 impl Cfdtmtarsts {
-    #[doc = "TX Message Buffer n Transmission Abort Request Status (n = 0 to 3)"]
+    #[doc = "TX Message Buffer Transmission Abort Request Status"]
     #[inline(always)]
-    pub fn cfdtmtarsts0(
+    pub fn cfdtmtarsts(
         self,
     ) -> crate::common::RegisterField<
         0,
-        0x1,
+        0xf,
         1,
         0,
-        cfdtmtarsts::Cfdtmtarsts0,
-        cfdtmtarsts::Cfdtmtarsts0,
+        cfdtmtarsts::Cfdtmtarsts,
+        cfdtmtarsts::Cfdtmtarsts,
         Cfdtmtarsts_SPEC,
         crate::common::R,
     > {
         crate::common::RegisterField::<
             0,
-            0x1,
+            0xf,
             1,
             0,
-            cfdtmtarsts::Cfdtmtarsts0,
-            cfdtmtarsts::Cfdtmtarsts0,
-            Cfdtmtarsts_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "TX Message Buffer n Transmission Abort Request Status (n = 0 to 3)"]
-    #[inline(always)]
-    pub fn cfdtmtarsts1(
-        self,
-    ) -> crate::common::RegisterField<
-        1,
-        0x1,
-        1,
-        0,
-        cfdtmtarsts::Cfdtmtarsts1,
-        cfdtmtarsts::Cfdtmtarsts1,
-        Cfdtmtarsts_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            1,
-            0x1,
-            1,
-            0,
-            cfdtmtarsts::Cfdtmtarsts1,
-            cfdtmtarsts::Cfdtmtarsts1,
-            Cfdtmtarsts_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "TX Message Buffer n Transmission Abort Request Status (n = 0 to 3)"]
-    #[inline(always)]
-    pub fn cfdtmtarsts2(
-        self,
-    ) -> crate::common::RegisterField<
-        2,
-        0x1,
-        1,
-        0,
-        cfdtmtarsts::Cfdtmtarsts2,
-        cfdtmtarsts::Cfdtmtarsts2,
-        Cfdtmtarsts_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            2,
-            0x1,
-            1,
-            0,
-            cfdtmtarsts::Cfdtmtarsts2,
-            cfdtmtarsts::Cfdtmtarsts2,
-            Cfdtmtarsts_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "TX Message Buffer n Transmission Abort Request Status (n = 0 to 3)"]
-    #[inline(always)]
-    pub fn cfdtmtarsts3(
-        self,
-    ) -> crate::common::RegisterField<
-        3,
-        0x1,
-        1,
-        0,
-        cfdtmtarsts::Cfdtmtarsts3,
-        cfdtmtarsts::Cfdtmtarsts3,
-        Cfdtmtarsts_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            3,
-            0x1,
-            1,
-            0,
-            cfdtmtarsts::Cfdtmtarsts3,
-            cfdtmtarsts::Cfdtmtarsts3,
+            cfdtmtarsts::Cfdtmtarsts,
+            cfdtmtarsts::Cfdtmtarsts,
             Cfdtmtarsts_SPEC,
             crate::common::R,
         >::from_register(self, 0)
@@ -10952,43 +10766,13 @@ impl ::core::default::Default for Cfdtmtarsts {
 pub mod cfdtmtarsts {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cfdtmtarsts0_SPEC;
-    pub type Cfdtmtarsts0 = crate::EnumBitfieldStruct<u8, Cfdtmtarsts0_SPEC>;
-    impl Cfdtmtarsts0 {
-        #[doc = "Transmission abort not requested"]
+    pub struct Cfdtmtarsts_SPEC;
+    pub type Cfdtmtarsts = crate::EnumBitfieldStruct<u8, Cfdtmtarsts_SPEC>;
+    impl Cfdtmtarsts {
+        #[doc = "Transmission abort not requested for corresponding TX message buffer"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Transmission abort requested"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cfdtmtarsts1_SPEC;
-    pub type Cfdtmtarsts1 = crate::EnumBitfieldStruct<u8, Cfdtmtarsts1_SPEC>;
-    impl Cfdtmtarsts1 {
-        #[doc = "Transmission abort not requested"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Transmission abort requested"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cfdtmtarsts2_SPEC;
-    pub type Cfdtmtarsts2 = crate::EnumBitfieldStruct<u8, Cfdtmtarsts2_SPEC>;
-    impl Cfdtmtarsts2 {
-        #[doc = "Transmission abort not requested"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Transmission abort requested"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cfdtmtarsts3_SPEC;
-    pub type Cfdtmtarsts3 = crate::EnumBitfieldStruct<u8, Cfdtmtarsts3_SPEC>;
-    impl Cfdtmtarsts3 {
-        #[doc = "Transmission abort not requested"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Transmission abort requested"]
+        #[doc = "Transmission abort requested for corresponding TX message buffer"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -11003,105 +10787,27 @@ impl crate::sealed::RegSpec for Cfdtmtcsts_SPEC {
 pub type Cfdtmtcsts = crate::RegValueT<Cfdtmtcsts_SPEC>;
 
 impl Cfdtmtcsts {
-    #[doc = "TX Message Buffer n Transmission Completion Status (n = 0 to 3)"]
+    #[doc = "TX Message Buffer Transmission Completion Status"]
     #[inline(always)]
-    pub fn cfdtmtcsts0(
+    pub fn cfdtmtcsts(
         self,
     ) -> crate::common::RegisterField<
         0,
-        0x1,
+        0xf,
         1,
         0,
-        cfdtmtcsts::Cfdtmtcsts0,
-        cfdtmtcsts::Cfdtmtcsts0,
+        cfdtmtcsts::Cfdtmtcsts,
+        cfdtmtcsts::Cfdtmtcsts,
         Cfdtmtcsts_SPEC,
         crate::common::R,
     > {
         crate::common::RegisterField::<
             0,
-            0x1,
+            0xf,
             1,
             0,
-            cfdtmtcsts::Cfdtmtcsts0,
-            cfdtmtcsts::Cfdtmtcsts0,
-            Cfdtmtcsts_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "TX Message Buffer n Transmission Completion Status (n = 0 to 3)"]
-    #[inline(always)]
-    pub fn cfdtmtcsts1(
-        self,
-    ) -> crate::common::RegisterField<
-        1,
-        0x1,
-        1,
-        0,
-        cfdtmtcsts::Cfdtmtcsts1,
-        cfdtmtcsts::Cfdtmtcsts1,
-        Cfdtmtcsts_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            1,
-            0x1,
-            1,
-            0,
-            cfdtmtcsts::Cfdtmtcsts1,
-            cfdtmtcsts::Cfdtmtcsts1,
-            Cfdtmtcsts_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "TX Message Buffer n Transmission Completion Status (n = 0 to 3)"]
-    #[inline(always)]
-    pub fn cfdtmtcsts2(
-        self,
-    ) -> crate::common::RegisterField<
-        2,
-        0x1,
-        1,
-        0,
-        cfdtmtcsts::Cfdtmtcsts2,
-        cfdtmtcsts::Cfdtmtcsts2,
-        Cfdtmtcsts_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            2,
-            0x1,
-            1,
-            0,
-            cfdtmtcsts::Cfdtmtcsts2,
-            cfdtmtcsts::Cfdtmtcsts2,
-            Cfdtmtcsts_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "TX Message Buffer n Transmission Completion Status (n = 0 to 3)"]
-    #[inline(always)]
-    pub fn cfdtmtcsts3(
-        self,
-    ) -> crate::common::RegisterField<
-        3,
-        0x1,
-        1,
-        0,
-        cfdtmtcsts::Cfdtmtcsts3,
-        cfdtmtcsts::Cfdtmtcsts3,
-        Cfdtmtcsts_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            3,
-            0x1,
-            1,
-            0,
-            cfdtmtcsts::Cfdtmtcsts3,
-            cfdtmtcsts::Cfdtmtcsts3,
+            cfdtmtcsts::Cfdtmtcsts,
+            cfdtmtcsts::Cfdtmtcsts,
             Cfdtmtcsts_SPEC,
             crate::common::R,
         >::from_register(self, 0)
@@ -11116,43 +10822,13 @@ impl ::core::default::Default for Cfdtmtcsts {
 pub mod cfdtmtcsts {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cfdtmtcsts0_SPEC;
-    pub type Cfdtmtcsts0 = crate::EnumBitfieldStruct<u8, Cfdtmtcsts0_SPEC>;
-    impl Cfdtmtcsts0 {
-        #[doc = "Transmission not complete"]
+    pub struct Cfdtmtcsts_SPEC;
+    pub type Cfdtmtcsts = crate::EnumBitfieldStruct<u8, Cfdtmtcsts_SPEC>;
+    impl Cfdtmtcsts {
+        #[doc = "Transmission not complete for corresponding TX message buffer"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Transmission completed"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cfdtmtcsts1_SPEC;
-    pub type Cfdtmtcsts1 = crate::EnumBitfieldStruct<u8, Cfdtmtcsts1_SPEC>;
-    impl Cfdtmtcsts1 {
-        #[doc = "Transmission not complete"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Transmission completed"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cfdtmtcsts2_SPEC;
-    pub type Cfdtmtcsts2 = crate::EnumBitfieldStruct<u8, Cfdtmtcsts2_SPEC>;
-    impl Cfdtmtcsts2 {
-        #[doc = "Transmission not complete"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Transmission completed"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cfdtmtcsts3_SPEC;
-    pub type Cfdtmtcsts3 = crate::EnumBitfieldStruct<u8, Cfdtmtcsts3_SPEC>;
-    impl Cfdtmtcsts3 {
-        #[doc = "Transmission not complete"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Transmission completed"]
+        #[doc = "Transmission completed for corresponding TX message buffer"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -11167,105 +10843,27 @@ impl crate::sealed::RegSpec for Cfdtmtasts_SPEC {
 pub type Cfdtmtasts = crate::RegValueT<Cfdtmtasts_SPEC>;
 
 impl Cfdtmtasts {
-    #[doc = "TX Message Buffer n Transmission Abort Status (n = 0 to 3)"]
+    #[doc = "TX Message Buffer Transmission Abort Status"]
     #[inline(always)]
-    pub fn cfdtmtasts0(
+    pub fn cfdtmtasts(
         self,
     ) -> crate::common::RegisterField<
         0,
-        0x1,
+        0xf,
         1,
         0,
-        cfdtmtasts::Cfdtmtasts0,
-        cfdtmtasts::Cfdtmtasts0,
+        cfdtmtasts::Cfdtmtasts,
+        cfdtmtasts::Cfdtmtasts,
         Cfdtmtasts_SPEC,
         crate::common::R,
     > {
         crate::common::RegisterField::<
             0,
-            0x1,
+            0xf,
             1,
             0,
-            cfdtmtasts::Cfdtmtasts0,
-            cfdtmtasts::Cfdtmtasts0,
-            Cfdtmtasts_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "TX Message Buffer n Transmission Abort Status (n = 0 to 3)"]
-    #[inline(always)]
-    pub fn cfdtmtasts1(
-        self,
-    ) -> crate::common::RegisterField<
-        1,
-        0x1,
-        1,
-        0,
-        cfdtmtasts::Cfdtmtasts1,
-        cfdtmtasts::Cfdtmtasts1,
-        Cfdtmtasts_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            1,
-            0x1,
-            1,
-            0,
-            cfdtmtasts::Cfdtmtasts1,
-            cfdtmtasts::Cfdtmtasts1,
-            Cfdtmtasts_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "TX Message Buffer n Transmission Abort Status (n = 0 to 3)"]
-    #[inline(always)]
-    pub fn cfdtmtasts2(
-        self,
-    ) -> crate::common::RegisterField<
-        2,
-        0x1,
-        1,
-        0,
-        cfdtmtasts::Cfdtmtasts2,
-        cfdtmtasts::Cfdtmtasts2,
-        Cfdtmtasts_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            2,
-            0x1,
-            1,
-            0,
-            cfdtmtasts::Cfdtmtasts2,
-            cfdtmtasts::Cfdtmtasts2,
-            Cfdtmtasts_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "TX Message Buffer n Transmission Abort Status (n = 0 to 3)"]
-    #[inline(always)]
-    pub fn cfdtmtasts3(
-        self,
-    ) -> crate::common::RegisterField<
-        3,
-        0x1,
-        1,
-        0,
-        cfdtmtasts::Cfdtmtasts3,
-        cfdtmtasts::Cfdtmtasts3,
-        Cfdtmtasts_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            3,
-            0x1,
-            1,
-            0,
-            cfdtmtasts::Cfdtmtasts3,
-            cfdtmtasts::Cfdtmtasts3,
+            cfdtmtasts::Cfdtmtasts,
+            cfdtmtasts::Cfdtmtasts,
             Cfdtmtasts_SPEC,
             crate::common::R,
         >::from_register(self, 0)
@@ -11280,43 +10878,13 @@ impl ::core::default::Default for Cfdtmtasts {
 pub mod cfdtmtasts {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cfdtmtasts0_SPEC;
-    pub type Cfdtmtasts0 = crate::EnumBitfieldStruct<u8, Cfdtmtasts0_SPEC>;
-    impl Cfdtmtasts0 {
-        #[doc = "Transmission not aborted"]
+    pub struct Cfdtmtasts_SPEC;
+    pub type Cfdtmtasts = crate::EnumBitfieldStruct<u8, Cfdtmtasts_SPEC>;
+    impl Cfdtmtasts {
+        #[doc = "Transmission not aborted for corresponding TX message buffer"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Transmission aborted"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cfdtmtasts1_SPEC;
-    pub type Cfdtmtasts1 = crate::EnumBitfieldStruct<u8, Cfdtmtasts1_SPEC>;
-    impl Cfdtmtasts1 {
-        #[doc = "Transmission not aborted"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Transmission aborted"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cfdtmtasts2_SPEC;
-    pub type Cfdtmtasts2 = crate::EnumBitfieldStruct<u8, Cfdtmtasts2_SPEC>;
-    impl Cfdtmtasts2 {
-        #[doc = "Transmission not aborted"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Transmission aborted"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cfdtmtasts3_SPEC;
-    pub type Cfdtmtasts3 = crate::EnumBitfieldStruct<u8, Cfdtmtasts3_SPEC>;
-    impl Cfdtmtasts3 {
-        #[doc = "Transmission not aborted"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Transmission aborted"]
+        #[doc = "Transmission aborted for corresponding TX message buffer"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -11331,105 +10899,27 @@ impl crate::sealed::RegSpec for Cfdtmiec_SPEC {
 pub type Cfdtmiec = crate::RegValueT<Cfdtmiec_SPEC>;
 
 impl Cfdtmiec {
-    #[doc = "TX Message Buffer n Interrupt Enable (n = 0 to 3)"]
+    #[doc = "TX Message Buffer Interrupt Enable"]
     #[inline(always)]
-    pub fn tmie0(
+    pub fn tmieg(
         self,
     ) -> crate::common::RegisterField<
         0,
-        0x1,
+        0xf,
         1,
         0,
-        cfdtmiec::Tmie0,
-        cfdtmiec::Tmie0,
+        cfdtmiec::TmiEg,
+        cfdtmiec::TmiEg,
         Cfdtmiec_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
             0,
-            0x1,
+            0xf,
             1,
             0,
-            cfdtmiec::Tmie0,
-            cfdtmiec::Tmie0,
-            Cfdtmiec_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "TX Message Buffer n Interrupt Enable (n = 0 to 3)"]
-    #[inline(always)]
-    pub fn tmie1(
-        self,
-    ) -> crate::common::RegisterField<
-        1,
-        0x1,
-        1,
-        0,
-        cfdtmiec::Tmie1,
-        cfdtmiec::Tmie1,
-        Cfdtmiec_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            1,
-            0x1,
-            1,
-            0,
-            cfdtmiec::Tmie1,
-            cfdtmiec::Tmie1,
-            Cfdtmiec_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "TX Message Buffer n Interrupt Enable (n = 0 to 3)"]
-    #[inline(always)]
-    pub fn tmie2(
-        self,
-    ) -> crate::common::RegisterField<
-        2,
-        0x1,
-        1,
-        0,
-        cfdtmiec::Tmie2,
-        cfdtmiec::Tmie2,
-        Cfdtmiec_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            2,
-            0x1,
-            1,
-            0,
-            cfdtmiec::Tmie2,
-            cfdtmiec::Tmie2,
-            Cfdtmiec_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "TX Message Buffer n Interrupt Enable (n = 0 to 3)"]
-    #[inline(always)]
-    pub fn tmie3(
-        self,
-    ) -> crate::common::RegisterField<
-        3,
-        0x1,
-        1,
-        0,
-        cfdtmiec::Tmie3,
-        cfdtmiec::Tmie3,
-        Cfdtmiec_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            3,
-            0x1,
-            1,
-            0,
-            cfdtmiec::Tmie3,
-            cfdtmiec::Tmie3,
+            cfdtmiec::TmiEg,
+            cfdtmiec::TmiEg,
             Cfdtmiec_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
@@ -11444,43 +10934,13 @@ impl ::core::default::Default for Cfdtmiec {
 pub mod cfdtmiec {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Tmie0_SPEC;
-    pub type Tmie0 = crate::EnumBitfieldStruct<u8, Tmie0_SPEC>;
-    impl Tmie0 {
-        #[doc = "TX message buffer interrupt disabled"]
+    pub struct TmiEg_SPEC;
+    pub type TmiEg = crate::EnumBitfieldStruct<u8, TmiEg_SPEC>;
+    impl TmiEg {
+        #[doc = "TX message buffer interrupt disabled for corresponding TX message buffer"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "TX message buffer interrupt enabled"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Tmie1_SPEC;
-    pub type Tmie1 = crate::EnumBitfieldStruct<u8, Tmie1_SPEC>;
-    impl Tmie1 {
-        #[doc = "TX message buffer interrupt disabled"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "TX message buffer interrupt enabled"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Tmie2_SPEC;
-    pub type Tmie2 = crate::EnumBitfieldStruct<u8, Tmie2_SPEC>;
-    impl Tmie2 {
-        #[doc = "TX message buffer interrupt disabled"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "TX message buffer interrupt enabled"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Tmie3_SPEC;
-    pub type Tmie3 = crate::EnumBitfieldStruct<u8, Tmie3_SPEC>;
-    impl Tmie3 {
-        #[doc = "TX message buffer interrupt disabled"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "TX message buffer interrupt enabled"]
+        #[doc = "TX message buffer interrupt enabled for corresponding TX message buffer"]
         pub const _1: Self = Self::new(1);
     }
 }

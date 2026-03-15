@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:01 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:11:03 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -285,9 +285,6 @@ pub mod dmcrb {
     impl Dmcrb {
         #[doc = "65,536 blocks"]
         pub const _0000: Self = Self::new(0);
-
-        #[doc = "DMCRB blocks"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -470,9 +467,6 @@ pub mod dmtmd {
 
         #[doc = "Interrupts from peripheral modules or external interrupt input pins"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

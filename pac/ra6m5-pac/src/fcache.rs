@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.41.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:06 +0000
+// Generated from SVD 1.30.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:13:42 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -205,26 +205,8 @@ impl Flwt {
     #[inline(always)]
     pub fn flwt(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7,
-        1,
-        0,
-        flwt::Flwt,
-        flwt::Flwt,
-        Flwt_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7,
-            1,
-            0,
-            flwt::Flwt,
-            flwt::Flwt,
-            Flwt_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7, 1, 0, u8, u8, Flwt_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<0,0x7,1,0,u8,u8,Flwt_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Flwt {
@@ -233,28 +215,7 @@ impl ::core::default::Default for Flwt {
         <crate::RegValueT<Flwt_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod flwt {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Flwt_SPEC;
-    pub type Flwt = crate::EnumBitfieldStruct<u8, Flwt_SPEC>;
-    impl Flwt {
-        #[doc = "0 wait (ICLK ≤ 50 MHz)"]
-        pub const _000: Self = Self::new(0);
-
-        #[doc = "1 wait (50 MHz < ICLK ≤ 100 MHz)"]
-        pub const _001: Self = Self::new(1);
-
-        #[doc = "2 wait (100 MHz < ICLK ≤ 150 MHz)"]
-        pub const _010: Self = Self::new(2);
-
-        #[doc = "3 wait (ICLK > 150 MHz)"]
-        pub const _011: Self = Self::new(3);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fsar_SPEC;

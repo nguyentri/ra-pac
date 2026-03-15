@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.00.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:56 +0000
+// Generated from SVD 1.00.01, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:39:07 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -1472,9 +1472,6 @@ pub mod ccr1 {
 
         #[doc = "The on-chip baud rate generator source clock divided by 8"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfen_SPEC;
@@ -2613,9 +2610,6 @@ pub mod ccr4 {
 
         #[doc = "4-TCLK delay"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ajd_SPEC;
@@ -3597,9 +3591,6 @@ pub mod mcr {
     impl Tplen {
         #[doc = "Disables the transmit preface generation"]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "Transmit preface length (bit length)"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tppat_SPEC;
@@ -3623,9 +3614,6 @@ pub mod mcr {
     impl Rplen {
         #[doc = "Disables the receive preface generation"]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "Receive preface length (bit length)"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rppat_SPEC;

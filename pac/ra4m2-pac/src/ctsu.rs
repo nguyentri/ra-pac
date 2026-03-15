@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.30.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:36 +0000
+// Generated from SVD 1.30.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:07:12 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -765,9 +765,6 @@ pub mod ctsuerrs {
 
         #[doc = "Calibration mode"]
         pub const _10: Self = Self::new(2);
-
-        #[doc = "Seting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ctsutsod_SPEC;

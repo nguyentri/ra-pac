@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:32 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:12:21 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -12331,52 +12331,18 @@ impl BgPeri {
     #[inline(always)]
     pub fn fv(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        bg_peri::Fv,
-        bg_peri::Fv,
-        BgPeri_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            bg_peri::Fv,
-            bg_peri::Fv,
-            BgPeri_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, BgPeri_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,BgPeri_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Background plane horizontal synchronization signal period on the basis of pixel clock (PXCLK)."]
     #[inline(always)]
     pub fn fh(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        bg_peri::Fh,
-        bg_peri::Fh,
-        BgPeri_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            bg_peri::Fh,
-            bg_peri::Fh,
-            BgPeri_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, BgPeri_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,BgPeri_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for BgPeri {
@@ -12385,23 +12351,7 @@ impl ::core::default::Default for BgPeri {
         <crate::RegValueT<BgPeri_SPEC> as RegisterValue<_>>::new(1507351)
     }
 }
-pub mod bg_peri {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Fv_SPEC;
-    pub type Fv = crate::EnumBitfieldStruct<u8, Fv_SPEC>;
-    impl Fv {
-        #[doc = "FV lines.The valid range is 0x013 to 0x3FF."]
-        pub const FV: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Fh_SPEC;
-    pub type Fh = crate::EnumBitfieldStruct<u8, Fh_SPEC>;
-    impl Fh {
-        #[doc = "FH lines. The valid range is 0x017 to 0x3FF."]
-        pub const FH: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct BgSync_SPEC;
@@ -12479,9 +12429,6 @@ pub mod bg_sync {
     impl Vp {
         #[doc = "Setting prohibited"]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "(VP)th line"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Hp_SPEC;
@@ -12489,9 +12436,6 @@ pub mod bg_sync {
     impl Hp {
         #[doc = "Setting prohibited"]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "(HP)th line (pixels)"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -12509,52 +12453,18 @@ impl BgVsize {
     #[inline(always)]
     pub fn vp(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        bg_vsize::Vp,
-        bg_vsize::Vp,
-        BgVsize_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            bg_vsize::Vp,
-            bg_vsize::Vp,
-            BgVsize_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, BgVsize_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,BgVsize_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Background plane vertical valid pixel width on the basis of line"]
     #[inline(always)]
     pub fn vw(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        bg_vsize::Vw,
-        bg_vsize::Vw,
-        BgVsize_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            bg_vsize::Vw,
-            bg_vsize::Vw,
-            BgVsize_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, BgVsize_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,BgVsize_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for BgVsize {
@@ -12563,23 +12473,7 @@ impl ::core::default::Default for BgVsize {
         <crate::RegValueT<BgVsize_SPEC> as RegisterValue<_>>::new(458768)
     }
 }
-pub mod bg_vsize {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Vp_SPEC;
-    pub type Vp = crate::EnumBitfieldStruct<u8, Vp_SPEC>;
-    impl Vp {
-        #[doc = "VP lines. The valid range is 0x003 to 0x3EF."]
-        pub const VP: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Vw_SPEC;
-    pub type Vw = crate::EnumBitfieldStruct<u8, Vw_SPEC>;
-    impl Vw {
-        #[doc = "VW lines. The valid range is 0x010 to 0x3F0."]
-        pub const VW: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct BgHsize_SPEC;
@@ -12595,52 +12489,18 @@ impl BgHsize {
     #[inline(always)]
     pub fn hp(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        bg_hsize::Hp,
-        bg_hsize::Hp,
-        BgHsize_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            bg_hsize::Hp,
-            bg_hsize::Hp,
-            BgHsize_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, BgHsize_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,BgHsize_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Background plane horizontall valid pixel width on the basis of pixel clock (PXCLK)Note: When serial RGB is selected as the output format for the output control block, add two to the horizontal enable signal width and set the resulting value to this field."]
     #[inline(always)]
     pub fn hw(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        bg_hsize::Hw,
-        bg_hsize::Hw,
-        BgHsize_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            bg_hsize::Hw,
-            bg_hsize::Hw,
-            BgHsize_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, BgHsize_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,BgHsize_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for BgHsize {
@@ -12649,23 +12509,7 @@ impl ::core::default::Default for BgHsize {
         <crate::RegValueT<BgHsize_SPEC> as RegisterValue<_>>::new(393232)
     }
 }
-pub mod bg_hsize {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Hp_SPEC;
-    pub type Hp = crate::EnumBitfieldStruct<u8, Hp_SPEC>;
-    impl Hp {
-        #[doc = "HP cycle(pixel). The valid range is 0x006 to 0x3EE."]
-        pub const HP: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Hw_SPEC;
-    pub type Hw = crate::EnumBitfieldStruct<u8, Hw_SPEC>;
-    impl Hw {
-        #[doc = "HW cycles. The valid range is 0x010 to 0x3F8."]
-        pub const HW: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct BgBgc_SPEC;
@@ -12999,9 +12843,6 @@ pub mod gr_flm1 {
     impl Bstmd {
         #[doc = "16-beat increment burst transfer (64-byte boundary)"]
         pub const _11: Self = Self::new(3);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -13073,52 +12914,18 @@ impl GrFlm5 {
     #[inline(always)]
     pub fn lnnum(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        gr_flm5::Lnnum,
-        gr_flm5::Lnnum,
-        GrFlm5_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            gr_flm5::Lnnum,
-            gr_flm5::Lnnum,
-            GrFlm5_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GrFlm5_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GrFlm5_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Number of data transfer times per line for accessing graphics data (frame buffer data), where one transfer is defined as 16-beat burst access (64-byte boundary)"]
     #[inline(always)]
     pub fn datanum(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0xffff,
-        1,
-        0,
-        gr_flm5::Datanum,
-        gr_flm5::Datanum,
-        GrFlm5_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0xffff,
-            1,
-            0,
-            gr_flm5::Datanum,
-            gr_flm5::Datanum,
-            GrFlm5_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, GrFlm5_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,GrFlm5_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GrFlm5 {
@@ -13127,23 +12934,7 @@ impl ::core::default::Default for GrFlm5 {
         <crate::RegValueT<GrFlm5_SPEC> as RegisterValue<_>>::new(983040)
     }
 }
-pub mod gr_flm5 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Lnnum_SPEC;
-    pub type Lnnum = crate::EnumBitfieldStruct<u8, Lnnum_SPEC>;
-    impl Lnnum {
-        #[doc = "LNNUM lines.  The valid range is 0x00F to 0x3FF."]
-        pub const LNNUM: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Datanum_SPEC;
-    pub type Datanum = crate::EnumBitfieldStruct<u8, Datanum_SPEC>;
-    impl Datanum {
-        #[doc = "DATAUM+1 times."]
-        pub const DATAUM: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GrFlm6_SPEC;
@@ -13216,9 +13007,6 @@ pub mod gr_flm6 {
 
         #[doc = "RGB565 (16 bits/pix)"]
         pub const _000: Self = Self::new(0);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -13406,52 +13194,17 @@ impl GrAb2 {
     #[inline(always)]
     pub fn grcvs(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        gr_ab2::Grcvs,
-        gr_ab2::Grcvs,
-        GrAb2_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            gr_ab2::Grcvs,
-            gr_ab2::Grcvs,
-            GrAb2_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GrAb2_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GrAb2_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Vertical width of graphics image area."]
     #[inline(always)]
     pub fn grcvw(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        gr_ab2::Grcvw,
-        gr_ab2::Grcvw,
-        GrAb2_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            gr_ab2::Grcvw,
-            gr_ab2::Grcvw,
-            GrAb2_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GrAb2_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GrAb2_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GrAb2 {
@@ -13460,23 +13213,7 @@ impl ::core::default::Default for GrAb2 {
         <crate::RegValueT<GrAb2_SPEC> as RegisterValue<_>>::new(393232)
     }
 }
-pub mod gr_ab2 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Grcvs_SPEC;
-    pub type Grcvs = crate::EnumBitfieldStruct<u8, Grcvs_SPEC>;
-    impl Grcvs {
-        #[doc = "GRCVS lines. The valid range is 0x002 to 0x3EE."]
-        pub const GRCVS: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Grcvw_SPEC;
-    pub type Grcvw = crate::EnumBitfieldStruct<u8, Grcvw_SPEC>;
-    impl Grcvw {
-        #[doc = "GRCVW lines.  The valid range is 0x010 to 0x3F0."]
-        pub const GRCVW: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GrAb3_SPEC;
@@ -13492,52 +13229,17 @@ impl GrAb3 {
     #[inline(always)]
     pub fn grchs(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        gr_ab3::Grchs,
-        gr_ab3::Grchs,
-        GrAb3_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            gr_ab3::Grchs,
-            gr_ab3::Grchs,
-            GrAb3_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GrAb3_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GrAb3_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Horizontal width of graphics image area."]
     #[inline(always)]
     pub fn grchw(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        gr_ab3::Grchw,
-        gr_ab3::Grchw,
-        GrAb3_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            gr_ab3::Grchw,
-            gr_ab3::Grchw,
-            GrAb3_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GrAb3_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GrAb3_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GrAb3 {
@@ -13546,23 +13248,7 @@ impl ::core::default::Default for GrAb3 {
         <crate::RegValueT<GrAb3_SPEC> as RegisterValue<_>>::new(327696)
     }
 }
-pub mod gr_ab3 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Grchs_SPEC;
-    pub type Grchs = crate::EnumBitfieldStruct<u8, Grchs_SPEC>;
-    impl Grchs {
-        #[doc = "GRCHS lines. The valid range is 0x005 to 0x3ED."]
-        pub const GRCHS: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Grchw_SPEC;
-    pub type Grchw = crate::EnumBitfieldStruct<u8, Grchw_SPEC>;
-    impl Grchw {
-        #[doc = "GRCHW pixels. The valid range is 0x010 to 0x3F0."]
-        pub const GRCHW: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GrAb4_SPEC;
@@ -13578,52 +13264,17 @@ impl GrAb4 {
     #[inline(always)]
     pub fn arcvs(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        gr_ab4::Arcvs,
-        gr_ab4::Arcvs,
-        GrAb4_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            gr_ab4::Arcvs,
-            gr_ab4::Arcvs,
-            GrAb4_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GrAb4_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GrAb4_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Vertical width of rectangular area alpha blending image area."]
     #[inline(always)]
     pub fn arcvw(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        gr_ab4::Arcvw,
-        gr_ab4::Arcvw,
-        GrAb4_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            gr_ab4::Arcvw,
-            gr_ab4::Arcvw,
-            GrAb4_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GrAb4_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GrAb4_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GrAb4 {
@@ -13632,23 +13283,7 @@ impl ::core::default::Default for GrAb4 {
         <crate::RegValueT<GrAb4_SPEC> as RegisterValue<_>>::new(393232)
     }
 }
-pub mod gr_ab4 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Arcvs_SPEC;
-    pub type Arcvs = crate::EnumBitfieldStruct<u8, Arcvs_SPEC>;
-    impl Arcvs {
-        #[doc = "ARCVS linels. The valid range is 0x002 to 0x3EE."]
-        pub const ARCVS: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Arcvw_SPEC;
-    pub type Arcvw = crate::EnumBitfieldStruct<u8, Arcvw_SPEC>;
-    impl Arcvw {
-        #[doc = "ARCVW linels. The valid range is 0x001 to 0x3F0."]
-        pub const ARCVW: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GrAb5_SPEC;
@@ -13664,52 +13299,17 @@ impl GrAb5 {
     #[inline(always)]
     pub fn archs(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        gr_ab5::Archs,
-        gr_ab5::Archs,
-        GrAb5_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            gr_ab5::Archs,
-            gr_ab5::Archs,
-            GrAb5_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GrAb5_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GrAb5_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Horizontal width of rectangular area alpha blending image area."]
     #[inline(always)]
     pub fn archw(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        gr_ab5::Archw,
-        gr_ab5::Archw,
-        GrAb5_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            gr_ab5::Archw,
-            gr_ab5::Archw,
-            GrAb5_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GrAb5_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GrAb5_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GrAb5 {
@@ -13718,23 +13318,7 @@ impl ::core::default::Default for GrAb5 {
         <crate::RegValueT<GrAb5_SPEC> as RegisterValue<_>>::new(327696)
     }
 }
-pub mod gr_ab5 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Archs_SPEC;
-    pub type Archs = crate::EnumBitfieldStruct<u8, Archs_SPEC>;
-    impl Archs {
-        #[doc = "ARCHS pixel. The valid range is 0x005 to 0x3ED."]
-        pub const ARCHS: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Archw_SPEC;
-    pub type Archw = crate::EnumBitfieldStruct<u8, Archw_SPEC>;
-    impl Archw {
-        #[doc = "ARCHW pixels. The valid range is 0x001 to 0x3F0."]
-        pub const ARCHW: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GrAb6_SPEC;
@@ -13759,26 +13343,8 @@ impl GrAb6 {
     #[inline(always)]
     pub fn arcrate(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0xff,
-        1,
-        0,
-        gr_ab6::Arcrate,
-        gr_ab6::Arcrate,
-        GrAb6_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0xff,
-            1,
-            0,
-            gr_ab6::Arcrate,
-            gr_ab6::Arcrate,
-            GrAb6_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, GrAb6_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<0,0xff,1,0,u8,u8,GrAb6_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GrAb6 {
@@ -13787,16 +13353,7 @@ impl ::core::default::Default for GrAb6 {
         <crate::RegValueT<GrAb6_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod gr_ab6 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Arcrate_SPEC;
-    pub type Arcrate = crate::EnumBitfieldStruct<u8, Arcrate_SPEC>;
-    impl Arcrate {
-        #[doc = "ARCRATE+1 frames"]
-        pub const ARCRATE: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GrAb7_SPEC;
@@ -14036,26 +13593,9 @@ impl GrClutint {
     #[inline(always)]
     pub fn line(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        gr_clutint::Line,
-        gr_clutint::Line,
-        GrClutint_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            gr_clutint::Line,
-            gr_clutint::Line,
-            GrClutint_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GrClutint_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GrClutint_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GrClutint {
@@ -14075,16 +13615,6 @@ pub mod gr_clutint {
 
         #[doc = "Uses CLUT0 plane for internal operations."]
         pub const _0: Self = Self::new(0);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Line_SPEC;
-    pub type Line = crate::EnumBitfieldStruct<u8, Line_SPEC>;
-    impl Line {
-        #[doc = "LINE+1 lines. The valid range is 0x000 to 0x400."]
-        pub const LINE: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -14306,52 +13836,18 @@ impl GamLut1 {
     #[inline(always)]
     pub fn gain00(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        gam_lut1::Gain00,
-        gam_lut1::Gain00,
-        GamLut1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            gam_lut1::Gain00,
-            gam_lut1::Gain00,
-            GamLut1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamLut1_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamLut1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Gain value of area 1Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain01(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        gam_lut1::Gain01,
-        gam_lut1::Gain01,
-        GamLut1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            gam_lut1::Gain01,
-            gam_lut1::Gain01,
-            GamLut1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamLut1_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamLut1_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GamLut1 {
@@ -14360,23 +13856,7 @@ impl ::core::default::Default for GamLut1 {
         <crate::RegValueT<GamLut1_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod gam_lut1 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Gain00_SPEC;
-    pub type Gain00 = crate::EnumBitfieldStruct<u8, Gain00_SPEC>;
-    impl Gain00 {
-        #[doc = "GAIN00/1024"]
-        pub const GAIN_00: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Gain01_SPEC;
-    pub type Gain01 = crate::EnumBitfieldStruct<u8, Gain01_SPEC>;
-    impl Gain01 {
-        #[doc = "GAIN01/1024"]
-        pub const GAIN_01: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GamLut2_SPEC;
@@ -14392,52 +13872,18 @@ impl GamLut2 {
     #[inline(always)]
     pub fn gain02(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        gam_lut2::Gain02,
-        gam_lut2::Gain02,
-        GamLut2_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            gam_lut2::Gain02,
-            gam_lut2::Gain02,
-            GamLut2_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamLut2_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamLut2_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Gain value of area 3Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain03(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        gam_lut2::Gain03,
-        gam_lut2::Gain03,
-        GamLut2_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            gam_lut2::Gain03,
-            gam_lut2::Gain03,
-            GamLut2_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamLut2_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamLut2_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GamLut2 {
@@ -14446,23 +13892,7 @@ impl ::core::default::Default for GamLut2 {
         <crate::RegValueT<GamLut2_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod gam_lut2 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Gain02_SPEC;
-    pub type Gain02 = crate::EnumBitfieldStruct<u8, Gain02_SPEC>;
-    impl Gain02 {
-        #[doc = "GAIN02/1024"]
-        pub const GAIN_02: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Gain03_SPEC;
-    pub type Gain03 = crate::EnumBitfieldStruct<u8, Gain03_SPEC>;
-    impl Gain03 {
-        #[doc = "GAIN03/1024"]
-        pub const GAIN_03: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GamLut3_SPEC;
@@ -14478,52 +13908,18 @@ impl GamLut3 {
     #[inline(always)]
     pub fn gain04(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        gam_lut3::Gain04,
-        gam_lut3::Gain04,
-        GamLut3_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            gam_lut3::Gain04,
-            gam_lut3::Gain04,
-            GamLut3_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamLut3_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamLut3_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Gain value of area 5Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain05(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        gam_lut3::Gain05,
-        gam_lut3::Gain05,
-        GamLut3_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            gam_lut3::Gain05,
-            gam_lut3::Gain05,
-            GamLut3_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamLut3_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamLut3_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GamLut3 {
@@ -14532,23 +13928,7 @@ impl ::core::default::Default for GamLut3 {
         <crate::RegValueT<GamLut3_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod gam_lut3 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Gain04_SPEC;
-    pub type Gain04 = crate::EnumBitfieldStruct<u8, Gain04_SPEC>;
-    impl Gain04 {
-        #[doc = "GAIN04/1024"]
-        pub const GAIN_04: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Gain05_SPEC;
-    pub type Gain05 = crate::EnumBitfieldStruct<u8, Gain05_SPEC>;
-    impl Gain05 {
-        #[doc = "GAIN05/1024"]
-        pub const GAIN_05: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GamLut4_SPEC;
@@ -14564,52 +13944,18 @@ impl GamLut4 {
     #[inline(always)]
     pub fn gain06(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        gam_lut4::Gain06,
-        gam_lut4::Gain06,
-        GamLut4_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            gam_lut4::Gain06,
-            gam_lut4::Gain06,
-            GamLut4_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamLut4_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamLut4_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Gain value of area 7Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain07(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        gam_lut4::Gain07,
-        gam_lut4::Gain07,
-        GamLut4_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            gam_lut4::Gain07,
-            gam_lut4::Gain07,
-            GamLut4_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamLut4_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamLut4_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GamLut4 {
@@ -14618,23 +13964,7 @@ impl ::core::default::Default for GamLut4 {
         <crate::RegValueT<GamLut4_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod gam_lut4 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Gain06_SPEC;
-    pub type Gain06 = crate::EnumBitfieldStruct<u8, Gain06_SPEC>;
-    impl Gain06 {
-        #[doc = "GAIN06/1024"]
-        pub const GAIN_06: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Gain07_SPEC;
-    pub type Gain07 = crate::EnumBitfieldStruct<u8, Gain07_SPEC>;
-    impl Gain07 {
-        #[doc = "GAIN07/1024"]
-        pub const GAIN_07: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GamLut5_SPEC;
@@ -14650,52 +13980,18 @@ impl GamLut5 {
     #[inline(always)]
     pub fn gain08(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        gam_lut5::Gain08,
-        gam_lut5::Gain08,
-        GamLut5_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            gam_lut5::Gain08,
-            gam_lut5::Gain08,
-            GamLut5_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamLut5_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamLut5_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Gain value of area 9Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain09(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        gam_lut5::Gain09,
-        gam_lut5::Gain09,
-        GamLut5_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            gam_lut5::Gain09,
-            gam_lut5::Gain09,
-            GamLut5_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamLut5_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamLut5_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GamLut5 {
@@ -14704,23 +14000,7 @@ impl ::core::default::Default for GamLut5 {
         <crate::RegValueT<GamLut5_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod gam_lut5 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Gain08_SPEC;
-    pub type Gain08 = crate::EnumBitfieldStruct<u8, Gain08_SPEC>;
-    impl Gain08 {
-        #[doc = "GAIN08/1024"]
-        pub const GAIN_08: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Gain09_SPEC;
-    pub type Gain09 = crate::EnumBitfieldStruct<u8, Gain09_SPEC>;
-    impl Gain09 {
-        #[doc = "GAIN09/1024"]
-        pub const GAIN_09: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GamLut6_SPEC;
@@ -14736,52 +14016,18 @@ impl GamLut6 {
     #[inline(always)]
     pub fn gain10(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        gam_lut6::Gain10,
-        gam_lut6::Gain10,
-        GamLut6_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            gam_lut6::Gain10,
-            gam_lut6::Gain10,
-            GamLut6_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamLut6_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamLut6_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Gain value of area 11Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain11(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        gam_lut6::Gain11,
-        gam_lut6::Gain11,
-        GamLut6_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            gam_lut6::Gain11,
-            gam_lut6::Gain11,
-            GamLut6_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamLut6_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamLut6_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GamLut6 {
@@ -14790,23 +14036,7 @@ impl ::core::default::Default for GamLut6 {
         <crate::RegValueT<GamLut6_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod gam_lut6 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Gain10_SPEC;
-    pub type Gain10 = crate::EnumBitfieldStruct<u8, Gain10_SPEC>;
-    impl Gain10 {
-        #[doc = "GAIN10/1024"]
-        pub const GAIN_10: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Gain11_SPEC;
-    pub type Gain11 = crate::EnumBitfieldStruct<u8, Gain11_SPEC>;
-    impl Gain11 {
-        #[doc = "GAIN11/1024"]
-        pub const GAIN_11: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GamLut7_SPEC;
@@ -14822,52 +14052,18 @@ impl GamLut7 {
     #[inline(always)]
     pub fn gain12(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        gam_lut7::Gain12,
-        gam_lut7::Gain12,
-        GamLut7_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            gam_lut7::Gain12,
-            gam_lut7::Gain12,
-            GamLut7_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamLut7_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamLut7_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Gain value of area 13Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain13(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        gam_lut7::Gain13,
-        gam_lut7::Gain13,
-        GamLut7_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            gam_lut7::Gain13,
-            gam_lut7::Gain13,
-            GamLut7_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamLut7_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamLut7_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GamLut7 {
@@ -14876,23 +14072,7 @@ impl ::core::default::Default for GamLut7 {
         <crate::RegValueT<GamLut7_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod gam_lut7 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Gain12_SPEC;
-    pub type Gain12 = crate::EnumBitfieldStruct<u8, Gain12_SPEC>;
-    impl Gain12 {
-        #[doc = "GAIN12/1024"]
-        pub const GAIN_12: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Gain13_SPEC;
-    pub type Gain13 = crate::EnumBitfieldStruct<u8, Gain13_SPEC>;
-    impl Gain13 {
-        #[doc = "GAIN13/1024"]
-        pub const GAIN_13: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GamLut8_SPEC;
@@ -14908,52 +14088,18 @@ impl GamLut8 {
     #[inline(always)]
     pub fn gain14(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        gam_lut8::Gain14,
-        gam_lut8::Gain14,
-        GamLut8_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            gam_lut8::Gain14,
-            gam_lut8::Gain14,
-            GamLut8_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, GamLut8_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,GamLut8_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Gain value of area 15Unsigned 11-bit fixed point"]
     #[inline(always)]
     pub fn gain15(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        gam_lut8::Gain15,
-        gam_lut8::Gain15,
-        GamLut8_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            gam_lut8::Gain15,
-            gam_lut8::Gain15,
-            GamLut8_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, GamLut8_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,GamLut8_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GamLut8 {
@@ -14962,23 +14108,7 @@ impl ::core::default::Default for GamLut8 {
         <crate::RegValueT<GamLut8_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod gam_lut8 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Gain14_SPEC;
-    pub type Gain14 = crate::EnumBitfieldStruct<u8, Gain14_SPEC>;
-    impl Gain14 {
-        #[doc = "GAIN14/1024"]
-        pub const GAIN_14: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Gain15_SPEC;
-    pub type Gain15 = crate::EnumBitfieldStruct<u8, Gain15_SPEC>;
-    impl Gain15 {
-        #[doc = "GAIN15/1024"]
-        pub const GAIN_15: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GamArea1_SPEC;
@@ -15592,78 +14722,27 @@ impl OutContrast {
     #[inline(always)]
     pub fn contg(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0xff,
-        1,
-        0,
-        out_contrast::Contg,
-        out_contrast::Contg,
-        OutContrast_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0xff,
-            1,
-            0,
-            out_contrast::Contg,
-            out_contrast::Contg,
-            OutContrast_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0xff, 1, 0, u8, u8, OutContrast_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xff,1,0,u8,u8,OutContrast_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Contrast (GAIN) adjustment of B signalUnsigned; 8 bits fixed point"]
     #[inline(always)]
     pub fn contb(
         self,
-    ) -> crate::common::RegisterField<
-        8,
-        0xff,
-        1,
-        0,
-        out_contrast::Contb,
-        out_contrast::Contb,
-        OutContrast_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            8,
-            0xff,
-            1,
-            0,
-            out_contrast::Contb,
-            out_contrast::Contb,
-            OutContrast_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<8, 0xff, 1, 0, u8, u8, OutContrast_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<8,0xff,1,0,u8,u8,OutContrast_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Contrast (GAIN) adjustment of R signalUnsigned; 8 bits fixed point"]
     #[inline(always)]
     pub fn contr(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0xff,
-        1,
-        0,
-        out_contrast::Contr,
-        out_contrast::Contr,
-        OutContrast_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0xff,
-            1,
-            0,
-            out_contrast::Contr,
-            out_contrast::Contr,
-            OutContrast_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, OutContrast_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xff,1,0,u8,u8,OutContrast_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for OutContrast {
@@ -15672,30 +14751,7 @@ impl ::core::default::Default for OutContrast {
         <crate::RegValueT<OutContrast_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod out_contrast {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Contg_SPEC;
-    pub type Contg = crate::EnumBitfieldStruct<u8, Contg_SPEC>;
-    impl Contg {
-        #[doc = "CONTG/128"]
-        pub const CONTG: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Contb_SPEC;
-    pub type Contb = crate::EnumBitfieldStruct<u8, Contb_SPEC>;
-    impl Contb {
-        #[doc = "CONTB/128"]
-        pub const CONTB: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Contr_SPEC;
-    pub type Contr = crate::EnumBitfieldStruct<u8, Contr_SPEC>;
-    impl Contr {
-        #[doc = "CONTR/128"]
-        pub const CONTR: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutPdtha_SPEC;
@@ -16083,52 +15139,18 @@ impl TconTim {
     #[inline(always)]
     pub fn half(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        tcon_tim::Half,
-        tcon_tim::Half,
-        TconTim_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            tcon_tim::Half,
-            tcon_tim::Half,
-            TconTim_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, TconTim_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,TconTim_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Horizontal synchronization signal generation reference timingSets the offset from the assertion of the internal horizontal synchronization signal in terms of pixels."]
     #[inline(always)]
     pub fn offset(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        tcon_tim::Offset,
-        tcon_tim::Offset,
-        TconTim_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            tcon_tim::Offset,
-            tcon_tim::Offset,
-            TconTim_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, TconTim_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,TconTim_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for TconTim {
@@ -16137,23 +15159,7 @@ impl ::core::default::Default for TconTim {
         <crate::RegValueT<TconTim_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod tcon_tim {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Half_SPEC;
-    pub type Half = crate::EnumBitfieldStruct<u8, Half_SPEC>;
-    impl Half {
-        #[doc = "HALF pixels. The valid range is 0x000 to 0x3FF."]
-        pub const HALF: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Offset_SPEC;
-    pub type Offset = crate::EnumBitfieldStruct<u8, Offset_SPEC>;
-    impl Offset {
-        #[doc = "OFFSET+1 pixels. The valid range is 0x000 to 0x3FF."]
-        pub const OFFSET: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TconStv1_SPEC;
@@ -16169,52 +15175,18 @@ impl TconStv1 {
     #[inline(always)]
     pub fn vs(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        tcon_stv1::Vs,
-        tcon_stv1::Vs,
-        TconStv1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            tcon_stv1::Vs,
-            tcon_stv1::Vs,
-            TconStv1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, TconStv1_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,TconStv1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "STVx1 second change timingSets the signal assertion width."]
     #[inline(always)]
     pub fn vw(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        tcon_stv1::Vw,
-        tcon_stv1::Vw,
-        TconStv1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            tcon_stv1::Vw,
-            tcon_stv1::Vw,
-            TconStv1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, TconStv1_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,TconStv1_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for TconStv1 {
@@ -16223,23 +15195,7 @@ impl ::core::default::Default for TconStv1 {
         <crate::RegValueT<TconStv1_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod tcon_stv1 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Vs_SPEC;
-    pub type Vs = crate::EnumBitfieldStruct<u8, Vs_SPEC>;
-    impl Vs {
-        #[doc = "VS pixels. The valid range is 0x000 to 0x3FF."]
-        pub const VS: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Vw_SPEC;
-    pub type Vw = crate::EnumBitfieldStruct<u8, Vw_SPEC>;
-    impl Vw {
-        #[doc = "VW pixels. The valid range is 0x000 to 0x3FF."]
-        pub const VW: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TconStv2_SPEC;
@@ -16365,52 +15321,18 @@ impl TconSth1 {
     #[inline(always)]
     pub fn hs(
         self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7ff,
-        1,
-        0,
-        tcon_sth1::Hs,
-        tcon_sth1::Hs,
-        TconSth1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7ff,
-            1,
-            0,
-            tcon_sth1::Hs,
-            tcon_sth1::Hs,
-            TconSth1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<16, 0x7ff, 1, 0, u16, u16, TconSth1_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0x7ff,1,0,u16,u16,TconSth1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "STHx1 second change timing.Sets the signal assertion width."]
     #[inline(always)]
     pub fn hw(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        tcon_sth1::Hw,
-        tcon_sth1::Hw,
-        TconSth1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            tcon_sth1::Hw,
-            tcon_sth1::Hw,
-            TconSth1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, TconSth1_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,TconSth1_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for TconSth1 {
@@ -16419,23 +15341,7 @@ impl ::core::default::Default for TconSth1 {
         <crate::RegValueT<TconSth1_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod tcon_sth1 {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Hs_SPEC;
-    pub type Hs = crate::EnumBitfieldStruct<u8, Hs_SPEC>;
-    impl Hs {
-        #[doc = "HS lines. The valid range is 0x000 to 0x3FF."]
-        pub const HS: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Hw_SPEC;
-    pub type Hw = crate::EnumBitfieldStruct<u8, Hw_SPEC>;
-    impl Hw {
-        #[doc = "HW pixels. The valid range is 0x000 to 0x3FF."]
-        pub const HW: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TconSth2_SPEC;

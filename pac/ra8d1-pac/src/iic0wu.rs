@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,7 +34,7 @@ impl super::Iic0Wu {
         self.ptr
     }
 
-    #[doc = "I2C Bus Wakeup Unit Register"]
+    #[doc = "I2C Bus Wake Up Unit Register"]
     #[inline(always)]
     pub const fn icwur(&self) -> &'static crate::common::Reg<self::Icwur_SPEC, crate::common::RW> {
         unsafe {
@@ -44,7 +44,7 @@ impl super::Iic0Wu {
         }
     }
 
-    #[doc = "I2C Bus Wakeup Unit Register 2"]
+    #[doc = "I2C Bus Wake Up Unit Register 2"]
     #[inline(always)]
     pub const fn icwur2(
         &self,
@@ -63,11 +63,11 @@ impl crate::sealed::RegSpec for Icwur_SPEC {
     type DataType = u8;
 }
 
-#[doc = "I2C Bus Wakeup Unit Register"]
+#[doc = "I2C Bus Wake Up Unit Register"]
 pub type Icwur = crate::RegValueT<Icwur_SPEC>;
 
 impl Icwur {
-    #[doc = "Wakeup Analog Filter Additional Selection"]
+    #[doc = "Wake-Up Analog Filter Additional Selection"]
     #[inline(always)]
     pub fn wuafa(
         self,
@@ -93,15 +93,69 @@ impl Icwur {
         >::from_register(self, 0)
     }
 
-    #[doc = "ACK Bit for Wakeup Mode"]
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
-    pub fn wuack(self) -> crate::common::RegisterFieldBool<4, 1, 0, Icwur_SPEC, crate::common::RW> {
-        crate::common::RegisterFieldBool::<4, 1, 0, Icwur_SPEC, crate::common::RW>::from_register(
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<2, 1, 0, Icwur_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<2, 1, 0, Icwur_SPEC, crate::common::RW>::from_register(
             self, 0,
         )
     }
 
-    #[doc = "Wakeup Event Occurrence Flag"]
+    #[doc = "Bus Free During Wake-Up Mode"]
+    #[inline(always)]
+    pub fn wubfr(
+        self,
+    ) -> crate::common::RegisterField<
+        3,
+        0x1,
+        1,
+        0,
+        icwur::Wubfr,
+        icwur::Wubfr,
+        Icwur_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            3,
+            0x1,
+            1,
+            0,
+            icwur::Wubfr,
+            icwur::Wubfr,
+            Icwur_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Asynchronous/Synchronous Operation State Flag"]
+    #[inline(always)]
+    pub fn wuack(
+        self,
+    ) -> crate::common::RegisterField<
+        4,
+        0x1,
+        1,
+        0,
+        icwur::Wuack,
+        icwur::Wuack,
+        Icwur_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            4,
+            0x1,
+            1,
+            0,
+            icwur::Wuack,
+            icwur::Wuack,
+            Icwur_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Wake-Up Event Occurrence Flag"]
     #[inline(always)]
     pub fn wuf(
         self,
@@ -127,7 +181,7 @@ impl Icwur {
         >::from_register(self, 0)
     }
 
-    #[doc = "Wakeup Interrupt Request Enable"]
+    #[doc = "Wake Up Interrupt Request Enable"]
     #[inline(always)]
     pub fn wuie(
         self,
@@ -153,7 +207,7 @@ impl Icwur {
         >::from_register(self, 0)
     }
 
-    #[doc = "Wakeup Function Enable"]
+    #[doc = "Wake Up function Enable"]
     #[inline(always)]
     pub fn wue(
         self,
@@ -182,7 +236,7 @@ impl Icwur {
 impl ::core::default::Default for Icwur {
     #[inline(always)]
     fn default() -> Icwur {
-        <crate::RegValueT<Icwur_SPEC> as RegisterValue<_>>::new(16)
+        <crate::RegValueT<Icwur_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 pub mod icwur {
@@ -191,40 +245,60 @@ pub mod icwur {
     pub struct Wuafa_SPEC;
     pub type Wuafa = crate::EnumBitfieldStruct<u8, Wuafa_SPEC>;
     impl Wuafa {
-        #[doc = "Do not add the wakeup analog filter"]
+        #[doc = "Do not add the Wake Up analog filter."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Add the wakeup analog filter"]
+        #[doc = "Add the Wake Up analog filter."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Wubfr_SPEC;
+    pub type Wubfr = crate::EnumBitfieldStruct<u8, Wubfr_SPEC>;
+    impl Wubfr {
+        #[doc = "IIC bus is busy during Wake-Up mode"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "IIC bus is free during Wake-Up mode"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Wuack_SPEC;
+    pub type Wuack = crate::EnumBitfieldStruct<u8, Wuack_SPEC>;
+    impl Wuack {
+        #[doc = "State of synchronous operation"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "State of asynchronous operation"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wuf_SPEC;
     pub type Wuf = crate::EnumBitfieldStruct<u8, Wuf_SPEC>;
     impl Wuf {
-        #[doc = "Slave address not matching during wakeup"]
+        #[doc = "Slave address match during Wake-Up function."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Slave address matching during wakeup"]
+        #[doc = "Slave address not match during Wake-Up function."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wuie_SPEC;
     pub type Wuie = crate::EnumBitfieldStruct<u8, Wuie_SPEC>;
     impl Wuie {
-        #[doc = "Disable wakeup interrupt request (IIC0_WUI)"]
+        #[doc = "Wake Up Interrupt Request (WUI) is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable wakeup interrupt request (IIC0_WUI)"]
+        #[doc = "Wake Up Interrupt Request (WUI) is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wue_SPEC;
     pub type Wue = crate::EnumBitfieldStruct<u8, Wue_SPEC>;
     impl Wue {
-        #[doc = "Disable wakeup function"]
+        #[doc = "Wake-up function is disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable wakeup function"]
+        #[doc = "Wake-up function is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -235,11 +309,11 @@ impl crate::sealed::RegSpec for Icwur2_SPEC {
     type DataType = u8;
 }
 
-#[doc = "I2C Bus Wakeup Unit Register 2"]
+#[doc = "I2C Bus Wake Up Unit Register 2"]
 pub type Icwur2 = crate::RegValueT<Icwur2_SPEC>;
 
 impl Icwur2 {
-    #[doc = "Wakeup Function Synchronous Enable"]
+    #[doc = "Wake-Up function synchronous enable"]
     #[inline(always)]
     pub fn wusen(
         self,
@@ -265,7 +339,7 @@ impl Icwur2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Wakeup Function Asynchronous Operation Status Flag"]
+    #[doc = "Wake-Up function asynchronous operation status flag"]
     #[inline(always)]
     pub fn wuasyf(
         self,
@@ -291,7 +365,7 @@ impl Icwur2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Wakeup Function Synchronous Operation Status Flag"]
+    #[doc = "Wake-Up function synchronous operation status flag"]
     #[inline(always)]
     pub fn wusyf(
         self,
@@ -316,11 +390,19 @@ impl Icwur2 {
             crate::common::R,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<3, 0x1f, 1, 0, u8, u8, Icwur2_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<3,0x1f,1,0,u8,u8,Icwur2_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Icwur2 {
     #[inline(always)]
     fn default() -> Icwur2 {
-        <crate::RegValueT<Icwur2_SPEC> as RegisterValue<_>>::new(253)
+        <crate::RegValueT<Icwur2_SPEC> as RegisterValue<_>>::new(3)
     }
 }
 pub mod icwur2 {

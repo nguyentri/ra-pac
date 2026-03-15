@@ -2,6 +2,15 @@
 
 import os
 import sys
+
+# Reconfigure stdout/stderr to UTF-8 so SVD description strings containing
+# non-ASCII characters (e.g. Greek φ U+03C6) don't crash print() on Windows
+# where the default console encoding is cp1252.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 import shutil
 import subprocess
 import glob
@@ -21,7 +30,7 @@ RUST_LOG = "info"
 FIX_ACCESS_TYPES_NESTED = True
 FIX_ACCESS_TYPES = False
 FIX_DERIVED_FROM = False
-FIX_ENUMERATED_VALUES = False
+FIX_ENUMERATED_VALUES = True
 FIX_ENUMERATED_VALUE_RANGES = True
 FIX_WRITE_CONSTRAINTS = True
 FIX_EMPTY_NAME_ENUMERATED_VALUES = True
@@ -52,7 +61,11 @@ license = "MIT OR Apache-2.0"
 '''
 
 DEFAULT_ONLY_ENUM_BLOCK_RE = re.compile(
-    r'<enumeratedValue>.*?<isDefault>true</isDefault>(?:(?!<value>).)*?</enumeratedValue>',
+    r'<enumeratedValue>'
+    r'(?:(?!</enumeratedValue>)(?!<value>).)*'   # before isDefault: no </enumeratedValue> crossing, no <value>
+    r'<isDefault>true</isDefault>'
+    r'(?:(?!</enumeratedValue>)(?!<value>).)*'   # after isDefault: same constraints
+    r'</enumeratedValue>',
     re.DOTALL,
 )
 EMPTY_ENUM_VALUES_RE = re.compile(
@@ -144,6 +157,14 @@ def fix_rust_file(file_path):
         )
 
         content = re.sub(specific_pattern, specific_replacement, content, flags=re.MULTILINE)
+
+        # svd2pac 0.6.x: #[must_use] immediately above from_ptr — insert #[allow(dead_code)] between them
+        content = re.sub(
+            r'([ \t]*#\[must_use\]\n)([ \t]*)(pub\(crate\)\s+const\s+(?:unsafe\s+)?fn\s+from_ptr\()',
+            r'\1\2#[allow(dead_code)]\n\2\3',
+            content,
+            flags=re.MULTILINE,
+        )
 
         # Fix for from_ptr functions without #[allow(dead_code)] - only if not already fixed
         pattern1 = r'^(\s*)(pub\(crate\)\s+const\s+fn\s+from_ptr\(ptr:\s+\*mut\s+u8\)\s+->.*?\{)'
@@ -1867,11 +1888,14 @@ def process_device(device_name, patch_only=False, pac_only=False):
         # Format files in src directory
         src_dir_path = pac_dir / "src"
         if src_dir_path.exists():
-            print(f"Formatting all Rust files in {src_dir_path}...")
             rs_files = list(src_dir_path.glob("**/*.rs"))
             if rs_files:
+                # Apply clippy/edition fixes before formatting/cargo-fix
+                print(f"Applying clippy fixes to {len(rs_files)} Rust files in {src_dir_path}...")
+                for rs_file in rs_files:
+                    fix_rust_file(str(rs_file))
+                print(f"Formatting all Rust files in {src_dir_path}...")
                 formatted_files = [str(file) for file in rs_files]
-                print(f"Found {len(formatted_files)} Rust files to format")
                 run_command(f"rustfmt {' '.join(formatted_files)}", check=False)
             else:
                 print(f"No Rust files found in {src_dir_path}")

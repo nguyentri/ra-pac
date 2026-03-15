@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:32 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:12:21 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -1008,9 +1008,6 @@ pub mod eesr {
 
         #[doc = "Management"]
         pub const _1101: Self = Self::new(13);
-
-        #[doc = "Settings other than above are prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1543,9 +1540,6 @@ pub mod tftr {
     impl Tft {
         #[doc = "Store and forward mode"]
         pub const _0_X_000: Self = Self::new(0);
-
-        #[doc = "The threshold is the set value multiplied by 4. (001h to 00Ch and 201h to 7FFh: Setting prohibited)"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1591,9 +1585,6 @@ pub mod fdr {
     impl Tfd {
         #[doc = "4096 bytes"]
         pub const _01111: Self = Self::new(15);
-
-        #[doc = "Settings other than above are prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rfd_SPEC;
@@ -1601,9 +1592,6 @@ pub mod fdr {
     impl Rfd {
         #[doc = "2048 bytes"]
         pub const _00111: Self = Self::new(7);
-
-        #[doc = "Settings other than above are prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1993,9 +1981,6 @@ pub mod rpadir {
     impl Padr {
         #[doc = "Padding is inserted at the head of received data."]
         pub const _00_H: Self = Self::new(0);
-
-        #[doc = "Padding is inserted between the (PADR)th byte and (PADR+1)th byte of received data."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

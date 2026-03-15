@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.0, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:24 +0000
+// Generated from SVD 1.0, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:14:52 +0000
 
 use std::sync::OnceLock;
 
@@ -61,20 +61,8 @@ macro_rules! set_access_fn {
     };
 }
 
-set_access_fn!(
-    READ_FN,
-    set_read_fn,
-    "read_fn",
-    fn(usize, usize) -> u64,
-    "Set the function that is called when a read to a register happens\n through the PAC API.\n The function is called with the following arguments (in order):\n - a u64 representing the register address\n - a u64 representing the read mask (i.e. how many bits are read)\n This is necessary due to the way that the generated PACs handle\n generic register sizes.\n"
-);
-set_access_fn!(
-    WRITE_FN,
-    set_write_fn,
-    "write_fn",
-    fn(usize, usize, u64),
-    "Set the function that is called when a write to a register happens\n through the PAC API.\n The function is called with the following arguments (in order):\n - a u64 representing the register address\n - a u64 representing the write mask (i.e. how many bits are read)\n This is necessary due to the way that the generated PACs handle\n generic register sizes.\n - a u64 representing the value that gets written to the register\n"
-);
+set_access_fn!(READ_FN, set_read_fn, "read_fn", fn(usize, usize) -> u64, "Set the function that is called when a read to a register happens\n through the PAC API.\n The function is called with the following arguments (in order):\n - a u64 representing the register address\n - a u64 representing the read mask (i.e. how many bits are read)\n This is necessary due to the way that the generated PACs handle\n generic register sizes.\n");
+set_access_fn!(WRITE_FN, set_write_fn, "write_fn", fn(usize, usize, u64),"Set the function that is called when a write to a register happens\n through the PAC API.\n The function is called with the following arguments (in order):\n - a u64 representing the register address\n - a u64 representing the write mask (i.e. how many bits are read)\n This is necessary due to the way that the generated PACs handle\n generic register sizes.\n - a u64 representing the value that gets written to the register\n");
 
 // # Why does this exist?
 //
@@ -139,7 +127,7 @@ set_access_fn!(
 #[cfg(feature = "tracing")]
 pub mod insanely_unsafe {
     use crate::common::sealed::{CastFrom, RegSpec};
-    use crate::common::{Access, R, Read, Reg, W, Write};
+    use crate::common::{Access, Read, Reg, Write, R, W};
     use crate::{RegValueT, RegisterValue};
 
     pub trait WriteOnlyRead: Access {}

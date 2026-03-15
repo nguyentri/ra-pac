@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -54,7 +54,7 @@ impl super::Ceu {
         }
     }
 
-    #[doc = "Capture Interface Control Register"]
+    #[doc = "Capture interface control register"]
     #[inline(always)]
     pub const fn camcr(&self) -> &'static crate::common::Reg<self::Camcr_SPEC, crate::common::RW> {
         unsafe {
@@ -326,11 +326,13 @@ impl super::Ceu {
         }
     }
 
-    #[doc = "CEU Bufferable Write Enable Register"]
+    #[doc = "AXI Bus Control Register 2"]
     #[inline(always)]
-    pub const fn cbwer(&self) -> &'static crate::common::Reg<self::Cbwer_SPEC, crate::common::RW> {
+    pub const fn axibusctl2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Axibusctl2_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::Cbwer_SPEC, crate::common::RW>::from_ptr(
+            crate::common::Reg::<self::Axibusctl2_SPEC, crate::common::RW>::from_ptr(
                 self._svd2pac_as_ptr().add(160usize),
             )
         }
@@ -757,7 +759,7 @@ impl Capsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Software reset of capturing"]
+    #[doc = "Write 1 to this bit to perform a software reset of capturing."]
     #[inline(always)]
     pub fn cpkil(
         self,
@@ -823,7 +825,7 @@ impl crate::sealed::RegSpec for Capcr_SPEC {
 pub type Capcr = crate::RegValueT<Capcr_SPEC>;
 
 impl Capcr {
-    #[doc = "Continuous capture"]
+    #[doc = "When capturing is started with this bit set to 1, capturing continues until the CE bit in CAPSR is cleared to 0 or a software reset is initiated by the CPKIL bit in CAPSR (see ). Continuous capture must be set before capturing is started."]
     #[inline(always)]
     pub fn ctncp(
         self,
@@ -895,10 +897,10 @@ pub mod capcr {
     pub struct Ctncp_SPEC;
     pub type Ctncp = crate::EnumBitfieldStruct<u8, Ctncp_SPEC>;
     impl Ctncp {
-        #[doc = "One-frame capture when CAPSR.CE = 1"]
+        #[doc = "One-frame capture when the CE bit is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Continuous capture until CAPSR.CE = 0"]
+        #[doc = "Continuous capture until the CE bit is cleared to 0"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -925,11 +927,11 @@ impl crate::sealed::RegSpec for Camcr_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Capture Interface Control Register"]
+#[doc = "Capture interface control register"]
 pub type Camcr = crate::RegValueT<Camcr_SPEC>;
 
 impl Camcr {
-    #[doc = "Sets the polarity for detection of the horizontal sync signal (HD) input from an external module."]
+    #[doc = "Sets the polarity for detection of the horizontal sync signal input from an external module."]
     #[inline(always)]
     pub fn hdpol(
         self,
@@ -955,7 +957,7 @@ impl Camcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Sets the polarity for detection of the vertical sync signal (VD) input from an external module."]
+    #[doc = "Sets the polarity for detection of the vertical sync signal input from an external module."]
     #[inline(always)]
     pub fn vdpol(
         self,
@@ -1085,7 +1087,7 @@ impl Camcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Sets the edge for fetching the image data (D15 to D0) from an external module."]
+    #[doc = "Sets the edge for fetching the image data (D7 to D0) from an external module."]
     #[inline(always)]
     pub fn dsel(
         self,
@@ -1111,7 +1113,7 @@ impl Camcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Sets the edge for capturing FLD from an external module."]
+    #[doc = "Sets the edge for capturing the field identification signal (FLD) from an external module."]
     #[inline(always)]
     pub fn fldsel(
         self,
@@ -1137,7 +1139,7 @@ impl Camcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Sets the edge for capturing HD from an external module."]
+    #[doc = "Sets the edge for capturing the horizontal sync signal (HD) from an external module."]
     #[inline(always)]
     pub fn hdsel(
         self,
@@ -1163,7 +1165,7 @@ impl Camcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Sets the edge for capturing VD from an external module."]
+    #[doc = "Sets the edge for capturing the vertical sync signal (VD) from an external module."]
     #[inline(always)]
     pub fn vdsel(
         self,
@@ -1201,27 +1203,27 @@ pub mod camcr {
     pub struct Hdpol_SPEC;
     pub type Hdpol = crate::EnumBitfieldStruct<u8, Hdpol_SPEC>;
     impl Hdpol {
-        #[doc = "Horizontal sync signal (HD) from an external module is detected as high active"]
+        #[doc = "Horizontal sync signal (HD) from an external module is detected as highactive"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Horizontal sync signal (HD) from an external module is detected as low active"]
+        #[doc = "Horizontal sync signal (HD) from an external module is detected as lowactive"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vdpol_SPEC;
     pub type Vdpol = crate::EnumBitfieldStruct<u8, Vdpol_SPEC>;
     impl Vdpol {
-        #[doc = "Vertical sync signal (VD) from an external module is detected as high active"]
+        #[doc = "Vertical sync signal (VD) from an external module is detected as highactive"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Vertical sync signal (VD) from an external module is detected as low active"]
+        #[doc = "Vertical sync signal (VD) from an external module is detected as low-active"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Jpg_SPEC;
     pub type Jpg = crate::EnumBitfieldStruct<u8, Jpg_SPEC>;
     impl Jpg {
-        #[doc = "Image capture mode (input data are separated into the luminance component data (Y) and the chrominance component data (CbCr) for output to the memory)"]
+        #[doc = "Image capture mode (input data are separated into Y data and CbCr data for output to the memory)"]
         pub const _00: Self = Self::new(0);
 
         #[doc = "Data synchronous fetch mode (specified size of input data are output to the specified memory addresses in order of input and in synchronization with the sync signal)"]
@@ -1273,10 +1275,10 @@ pub mod camcr {
     pub struct Dsel_SPEC;
     pub type Dsel = crate::EnumBitfieldStruct<u8, Dsel_SPEC>;
     impl Dsel {
-        #[doc = "D15 to D0 are fetched at the rising edge of the camera clock."]
+        #[doc = "D7 to D0 are fetched at the rising edge of the camera clock."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "D15 to D0 are fetched at the falling edge of the camera clock."]
+        #[doc = "D7 to D0 are fetched at the falling edge of the camera clock."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -1798,7 +1800,7 @@ impl crate::sealed::RegSpec for Cfszr_SPEC {
 pub type Cfszr = crate::RegValueT<Cfszr_SPEC>;
 
 impl Cfszr {
-    #[doc = "Specify the horizontal clipping value of the filter output size (8-pixel units)."]
+    #[doc = "Specify the horizontal clipping value of the filter output size (4-pixel units)."]
     #[inline(always)]
     pub fn hfclp(
         self,
@@ -1806,7 +1808,7 @@ impl Cfszr {
         crate::common::RegisterField::<0,0xfff,1,0,u16,u16,Cfszr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Specify the vertical clipping value of the filter output size (4-pixel units)."]
+    #[doc = "Set the vertical clipping value of the filter output size (4-pixel units)."]
     #[inline(always)]
     pub fn vfclp(
         self,
@@ -1833,7 +1835,7 @@ impl crate::sealed::RegSpec for Cdwdr_SPEC {
 pub type Cdwdr = crate::RegValueT<Cdwdr_SPEC>;
 
 impl Cdwdr {
-    #[doc = "Specify the horizontal image size in the memory area where the captured image is to be stored (8-byte units)."]
+    #[doc = "Specify the horizontal image size in the memory area where the captured image is to be stored (4-byte units)."]
     #[inline(always)]
     pub fn chdw(
         self,
@@ -1914,7 +1916,7 @@ impl crate::sealed::RegSpec for Cdbyr_SPEC {
 pub type Cdbyr = crate::RegValueT<Cdbyr_SPEC>;
 
 impl Cdbyr {
-    #[doc = "Set the address for storing the luminance component data of the captured bottom-field data (8-pixel units)."]
+    #[doc = "Set the address for storing the Y (luminance) component data of the captured bottom-field data (4-pixel units)."]
     #[inline(always)]
     pub fn cbyr(
         self,
@@ -1941,7 +1943,7 @@ impl crate::sealed::RegSpec for Cdbcr_SPEC {
 pub type Cdbcr = crate::RegValueT<Cdbcr_SPEC>;
 
 impl Cdbcr {
-    #[doc = "Set the address for storing the chrominance component data of the captured bottom-field data (8-pixel units)."]
+    #[doc = "Set the address for storing the C (chrominance) component data of the captured bottom-field data (4-pixel units)."]
     #[inline(always)]
     pub fn cbcr(
         self,
@@ -1995,7 +1997,7 @@ impl crate::sealed::RegSpec for Cfwcr_SPEC {
 pub type Cfwcr = crate::RegValueT<Cfwcr_SPEC>;
 
 impl Cfwcr {
-    #[doc = "Firewall Operation"]
+    #[doc = "With the setting of FWE = 1, when an address exceeds the value set with FWV, the address is retained and an interrupt source FWF is set. After this, the address is not incremented and data is overwritten on the upper limit address."]
     #[inline(always)]
     pub fn fwe(
         self,
@@ -3222,7 +3224,7 @@ impl crate::sealed::RegSpec for Cdacr2_SPEC {
 pub type Cdacr2 = crate::RegValueT<Cdacr2_SPEC>;
 
 impl Cdacr2 {
-    #[doc = "Capture Data Address C"]
+    #[doc = "Capture Data Address C2"]
     #[inline(always)]
     pub fn cacr2(
         self,
@@ -3249,7 +3251,7 @@ impl crate::sealed::RegSpec for Cdbyr2_SPEC {
 pub type Cdbyr2 = crate::RegValueT<Cdbyr2_SPEC>;
 
 impl Cdbyr2 {
-    #[doc = "Set the address for storing the luminance component data of the captured bottom-field data (8-pixel units)."]
+    #[doc = "Set the address for storing the Y component data of the captured bottom-field data (4-pixel units)."]
     #[inline(always)]
     pub fn cbyr2(
         self,
@@ -3276,7 +3278,7 @@ impl crate::sealed::RegSpec for Cdbcr2_SPEC {
 pub type Cdbcr2 = crate::RegValueT<Cdbcr2_SPEC>;
 
 impl Cdbcr2 {
-    #[doc = "Set the address for storing the chrominance component data of the captured bottom-field data (8-pixel units)."]
+    #[doc = "Set the address for storing the C component data of the captured bottom-field data (4-pixel units)."]
     #[inline(always)]
     pub fn cbcr2(
         self,
@@ -3294,59 +3296,31 @@ impl ::core::default::Default for Cdbcr2 {
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Cbwer_SPEC;
-impl crate::sealed::RegSpec for Cbwer_SPEC {
+pub struct Axibusctl2_SPEC;
+impl crate::sealed::RegSpec for Axibusctl2_SPEC {
     type DataType = u32;
 }
 
-#[doc = "CEU Bufferable Write Enable Register"]
-pub type Cbwer = crate::RegValueT<Cbwer_SPEC>;
+#[doc = "AXI Bus Control Register 2"]
+pub type Axibusctl2 = crate::RegValueT<Axibusctl2_SPEC>;
 
-impl Cbwer {
+impl Axibusctl2 {
+    #[doc = "AWCACHE\\[3:0\\] Signals for Capture Engine Unit"]
     #[inline(always)]
-    pub fn bwe(
+    pub fn awcache(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x1,
-        1,
-        0,
-        cbwer::Bwe,
-        cbwer::Bwe,
-        Cbwer_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x1,
-            1,
-            0,
-            cbwer::Bwe,
-            cbwer::Bwe,
-            Cbwer_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, Axibusctl2_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,Axibusctl2_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
-impl ::core::default::Default for Cbwer {
+impl ::core::default::Default for Axibusctl2 {
     #[inline(always)]
-    fn default() -> Cbwer {
-        <crate::RegValueT<Cbwer_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> Axibusctl2 {
+        <crate::RegValueT<Axibusctl2_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod cbwer {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Bwe_SPEC;
-    pub type Bwe = crate::EnumBitfieldStruct<u8, Bwe_SPEC>;
-    impl Bwe {
-        #[doc = "Disables Bufferable Write"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enables Bufferable Write"]
-        pub const _1: Self = Self::new(1);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CamorB_SPEC;
@@ -3482,7 +3456,7 @@ impl crate::sealed::RegSpec for CfszrB_SPEC {
 pub type CfszrB = crate::RegValueT<CfszrB_SPEC>;
 
 impl CfszrB {
-    #[doc = "Specify the horizontal clipping value of the filter output size (8-pixel units)."]
+    #[doc = "Specify the horizontal clipping value of the filter output size (4-pixel units)."]
     #[inline(always)]
     pub fn hfclp(
         self,
@@ -3491,7 +3465,7 @@ impl CfszrB {
         crate::common::RegisterField::<0,0xfff,1,0,u16,u16,CfszrB_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Specify the vertical clipping value of the filter output size (4-pixel units)."]
+    #[doc = "Set the vertical clipping value of the filter output size (4-pixel units)."]
     #[inline(always)]
     pub fn vfclp(
         self,
@@ -3518,7 +3492,7 @@ impl crate::sealed::RegSpec for CdwdrB_SPEC {
 pub type CdwdrB = crate::RegValueT<CdwdrB_SPEC>;
 
 impl CdwdrB {
-    #[doc = "Specify the horizontal image size in the memory area where the captured image is to be stored (8-byte units)."]
+    #[doc = "Specify the horizontal image size in the memory area where the captured image is to be stored (4-byte units)."]
     #[inline(always)]
     pub fn chdw(
         self,
@@ -3599,7 +3573,7 @@ impl crate::sealed::RegSpec for CdbyrB_SPEC {
 pub type CdbyrB = crate::RegValueT<CdbyrB_SPEC>;
 
 impl CdbyrB {
-    #[doc = "Set the address for storing the luminance component data of the captured bottom-field data (8-pixel units)."]
+    #[doc = "Set the address for storing the Y (luminance) component data of the captured bottom-field data (4-pixel units)."]
     #[inline(always)]
     pub fn cbyr(
         self,
@@ -3626,7 +3600,7 @@ impl crate::sealed::RegSpec for CdbcrB_SPEC {
 pub type CdbcrB = crate::RegValueT<CdbcrB_SPEC>;
 
 impl CdbcrB {
-    #[doc = "Set the address for storing the chrominance component data of the captured bottom-field data (8-pixel units)."]
+    #[doc = "Set the address for storing the C (chrominance) component data of the captured bottom-field data (4-pixel units)."]
     #[inline(always)]
     pub fn cbcr(
         self,
@@ -3963,7 +3937,7 @@ impl crate::sealed::RegSpec for Cdacr2B_SPEC {
 pub type Cdacr2B = crate::RegValueT<Cdacr2B_SPEC>;
 
 impl Cdacr2B {
-    #[doc = "Capture Data Address C"]
+    #[doc = "Capture Data Address C2"]
     #[inline(always)]
     pub fn cacr2(
         self,
@@ -3990,7 +3964,7 @@ impl crate::sealed::RegSpec for Cdbyr2B_SPEC {
 pub type Cdbyr2B = crate::RegValueT<Cdbyr2B_SPEC>;
 
 impl Cdbyr2B {
-    #[doc = "Set the address for storing the luminance component data of the captured bottom-field data (8-pixel units)."]
+    #[doc = "Set the address for storing the Y component data of the captured bottom-field data (4-pixel units)."]
     #[inline(always)]
     pub fn cbyr2(
         self,
@@ -4017,7 +3991,7 @@ impl crate::sealed::RegSpec for Cdbcr2B_SPEC {
 pub type Cdbcr2B = crate::RegValueT<Cdbcr2B_SPEC>;
 
 impl Cdbcr2B {
-    #[doc = "Set the address for storing the chrominance component data of the captured bottom-field data (8-pixel units)."]
+    #[doc = "Set the address for storing the C component data of the captured bottom-field data (4-pixel units)."]
     #[inline(always)]
     pub fn cbcr2(
         self,
@@ -4168,7 +4142,7 @@ impl crate::sealed::RegSpec for CfszrM_SPEC {
 pub type CfszrM = crate::RegValueT<CfszrM_SPEC>;
 
 impl CfszrM {
-    #[doc = "Specify the horizontal clipping value of the filter output size (8-pixel units)."]
+    #[doc = "Specify the horizontal clipping value of the filter output size (4-pixel units)."]
     #[inline(always)]
     pub fn hfclp(
         self,
@@ -4177,7 +4151,7 @@ impl CfszrM {
         crate::common::RegisterField::<0,0xfff,1,0,u16,u16,CfszrM_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Specify the vertical clipping value of the filter output size (4-pixel units)."]
+    #[doc = "Set the vertical clipping value of the filter output size (4-pixel units)."]
     #[inline(always)]
     pub fn vfclp(
         self,
@@ -4204,7 +4178,7 @@ impl crate::sealed::RegSpec for CdwdrM_SPEC {
 pub type CdwdrM = crate::RegValueT<CdwdrM_SPEC>;
 
 impl CdwdrM {
-    #[doc = "Specify the horizontal image size in the memory area where the captured image is to be stored (8-byte units)."]
+    #[doc = "Specify the horizontal image size in the memory area where the captured image is to be stored (4-byte units)."]
     #[inline(always)]
     pub fn chdw(
         self,
@@ -4285,7 +4259,7 @@ impl crate::sealed::RegSpec for CdbyrM_SPEC {
 pub type CdbyrM = crate::RegValueT<CdbyrM_SPEC>;
 
 impl CdbyrM {
-    #[doc = "Set the address for storing the luminance component data of the captured bottom-field data (8-pixel units)."]
+    #[doc = "Set the address for storing the Y (luminance) component data of the captured bottom-field data (4-pixel units)."]
     #[inline(always)]
     pub fn cbyr(
         self,
@@ -4312,7 +4286,7 @@ impl crate::sealed::RegSpec for CdbcrM_SPEC {
 pub type CdbcrM = crate::RegValueT<CdbcrM_SPEC>;
 
 impl CdbcrM {
-    #[doc = "Set the address for storing the chrominance component data of the captured bottom-field data (8-pixel units)."]
+    #[doc = "Set the address for storing the C (chrominance) component data of the captured bottom-field data (4-pixel units)."]
     #[inline(always)]
     pub fn cbcr(
         self,
@@ -4649,7 +4623,7 @@ impl crate::sealed::RegSpec for Cdacr2M_SPEC {
 pub type Cdacr2M = crate::RegValueT<Cdacr2M_SPEC>;
 
 impl Cdacr2M {
-    #[doc = "Capture Data Address C"]
+    #[doc = "Capture Data Address C2"]
     #[inline(always)]
     pub fn cacr2(
         self,
@@ -4676,7 +4650,7 @@ impl crate::sealed::RegSpec for Cdbyr2M_SPEC {
 pub type Cdbyr2M = crate::RegValueT<Cdbyr2M_SPEC>;
 
 impl Cdbyr2M {
-    #[doc = "Set the address for storing the luminance component data of the captured bottom-field data (8-pixel units)."]
+    #[doc = "Set the address for storing the Y component data of the captured bottom-field data (4-pixel units)."]
     #[inline(always)]
     pub fn cbyr2(
         self,
@@ -4703,7 +4677,7 @@ impl crate::sealed::RegSpec for Cdbcr2M_SPEC {
 pub type Cdbcr2M = crate::RegValueT<Cdbcr2M_SPEC>;
 
 impl Cdbcr2M {
-    #[doc = "Set the address for storing the chrominance component data of the captured bottom-field data (8-pixel units)."]
+    #[doc = "Set the address for storing the C component data of the captured bottom-field data (4-pixel units)."]
     #[inline(always)]
     pub fn cbcr2(
         self,

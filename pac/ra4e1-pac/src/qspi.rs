@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:48:16 +0000
+// Generated from SVD 1.20.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:04:18 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -462,9 +462,6 @@ pub mod sfmsmd {
 
         #[doc = "Fast Read Quad I/O"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sfmse_SPEC;
@@ -1062,9 +1059,6 @@ pub mod sfmsst {
 
         #[doc = "18 bytes"]
         pub const _0_X_12: Self = Self::new(18);
-
-        #[doc = "Reserved"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pfful_SPEC;

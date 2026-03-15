@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.50.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:51 +0000
+// Generated from SVD 1.30.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:13:05 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -1458,9 +1458,6 @@ pub mod dvstctr0 {
 
         #[doc = "Setting prohibited"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "In host controller mode: USB bus reset in progress In device controller mode: Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uact_SPEC;
@@ -1570,15 +1567,7 @@ impl crate::sealed::RegSpec for Cfifol_SPEC {
 #[doc = "CFIFO Port Register"]
 pub type Cfifol = crate::RegValueT<Cfifol_SPEC>;
 
-impl Cfifol {
-    #[doc = "FIFO Port"]
-    #[inline(always)]
-    pub fn fifoport(
-        self,
-    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, Cfifol_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfifol_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
+impl NoBitfieldReg<Cfifol_SPEC> for Cfifol {}
 impl ::core::default::Default for Cfifol {
     #[inline(always)]
     fn default() -> Cfifol {
@@ -1623,15 +1612,7 @@ impl crate::sealed::RegSpec for Dfifol_SPEC {
 #[doc = "D%sFIFO Port Register"]
 pub type Dfifol = crate::RegValueT<Dfifol_SPEC>;
 
-impl Dfifol {
-    #[doc = "FIFO Port"]
-    #[inline(always)]
-    pub fn fifoport(
-        self,
-    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, Dfifol_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0xff,1,0,u8,u8,Dfifol_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
+impl NoBitfieldReg<Dfifol_SPEC> for Dfifol {}
 impl ::core::default::Default for Dfifol {
     #[inline(always)]
     fn default() -> Dfifol {
@@ -1847,9 +1828,6 @@ pub mod cfifosel {
 
         #[doc = "Pipe 9"]
         pub const _0_X_9: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Isel_SPEC;
@@ -2273,9 +2251,6 @@ pub mod dfifosel {
 
         #[doc = "Pipe 9"]
         pub const _0_X_9: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bigend_SPEC;
@@ -4714,9 +4689,6 @@ pub mod intsts0 {
 
         #[doc = "Configured state"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "Suspend state"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vbsts_SPEC;
@@ -6484,9 +6456,6 @@ pub mod usbaddr {
 
         #[doc = "Recovery in device controller mode: Return to the full-speed state (bits DVSTCTR0.RHST\\[2:0\\] = 010b), bits INTSTS0.DVSQ\\[2:0\\] = 011b (configured state) Recovery in host controller mode: Setting prohibited"]
         pub const _0_X_B: Self = Self::new(11);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -6770,9 +6739,6 @@ pub mod dcpmaxp {
 
         #[doc = "Address 0101b"]
         pub const _0_X_5: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -7071,7 +7037,7 @@ pub mod dcpctr {
         #[doc = "DATA0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "DATA1"]
+        #[doc = "ATA1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7203,9 +7169,6 @@ pub mod pipesel {
 
         #[doc = "Pipe 9"]
         pub const _0_X_9: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -7497,9 +7460,6 @@ pub mod pipemaxp {
 
         #[doc = "Address 0101b"]
         pub const _0_X_5: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -7774,7 +7734,7 @@ pub mod pipectr {
         #[doc = "NAK response"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "BUF response (depends on buffer state)"]
+        #[doc = "BUF response (depends buffer state)"]
         pub const _01: Self = Self::new(1);
 
         #[doc = "STALL response"]

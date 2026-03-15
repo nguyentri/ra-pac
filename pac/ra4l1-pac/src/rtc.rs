@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:48:57 +0000
+// Generated from SVD 0.90.02, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:05:50 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -2227,9 +2227,6 @@ pub mod rcr1 {
 
         #[doc = "Generate periodic interrupt every 2 seconds"]
         pub const _0_X_F: Self = Self::new(15);
-
-        #[doc = "Do not generate periodic interrupts"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

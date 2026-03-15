@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:58 +0000
+// Generated from SVD 1.20.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:37:45 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -250,9 +250,6 @@ pub mod flwt {
 
         #[doc = "3 wait (ICLK > 150 MHz)"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.41.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:06 +0000
+// Generated from SVD 1.30.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:13:42 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -597,10 +597,10 @@ pub mod dcsr {
     pub struct Pren_SPEC;
     pub type Pren = crate::EnumBitfieldStruct<u8, Pren_SPEC>;
     impl Pren {
-        #[doc = "No check for the preamble bit from OctaRAM"]
+        #[doc = "No check preamble bit from OctaRAM"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Check for the preamble bit from OctaRAM"]
+        #[doc = "Check preamble bit from OctaRAM"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1934,7 +1934,7 @@ impl Cdsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Device0_memory pre-cycle setting"]
+    #[doc = "Device0_memory precycle setting"]
     #[inline(always)]
     pub fn dv0pc(
         self,
@@ -1960,7 +1960,7 @@ impl Cdsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Device1_memory pre-cycle setting"]
+    #[doc = "Device1_memory precycle setting"]
     #[inline(always)]
     pub fn dv1pc(
         self,
@@ -2600,10 +2600,10 @@ pub mod mrwcsr {
     pub struct Pren0_SPEC;
     pub type Pren0 = crate::EnumBitfieldStruct<u8, Pren0_SPEC>;
     impl Pren0 {
-        #[doc = "No check for the preamble bit"]
+        #[doc = "No check preamble bit"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Check for the preamble bit from OctaFlash (if OctaFlash is connected to device 0)"]
+        #[doc = "Check preamble bit from OctaFlash (if OctaFlash is connected to device 0)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -2630,10 +2630,10 @@ pub mod mrwcsr {
     pub struct Pren1_SPEC;
     pub type Pren1 = crate::EnumBitfieldStruct<u8, Pren1_SPEC>;
     impl Pren1 {
-        #[doc = "No check for the preamble bit"]
+        #[doc = "No check preamble bit"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Check for the preamble bit from OctaFlash (if OctaFlash is connected to device 1)"]
+        #[doc = "Check preamble bit from OctaFlash (if OctaFlash is connected to device 1)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -2733,9 +2733,6 @@ pub mod esr {
 
         #[doc = "Invalid command"]
         pub const _0_X_80: Self = Self::new(128);
-
-        #[doc = "Reserved"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mwesr_SPEC;
@@ -2743,9 +2740,6 @@ pub mod esr {
     impl Mwesr {
         #[doc = "Invalid command"]
         pub const _0_X_80: Self = Self::new(128);
-
-        #[doc = "Reserved"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

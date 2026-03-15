@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:32 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:12:21 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -725,9 +725,6 @@ pub mod gtdlyra {
     impl Dly {
         #[doc = "No delay on rising edges"]
         pub const _00000: Self = Self::new(0);
-
-        #[doc = "Delay of DLY/32 times the PCLKD period is applied."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -781,9 +778,6 @@ pub mod gtdlyrb {
     impl Dly {
         #[doc = "No delay on rising edges"]
         pub const _00000: Self = Self::new(0);
-
-        #[doc = "Delay of DLY/32 times the PCLKD period is applied."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -837,9 +831,6 @@ pub mod gtdlyfa {
     impl Dly {
         #[doc = "No delay on rising edges"]
         pub const _00000: Self = Self::new(0);
-
-        #[doc = "Delay of DLY/32 times the PCLKD period is applied."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -893,8 +884,5 @@ pub mod gtdlyfb {
     impl Dly {
         #[doc = "No delay on rising edges"]
         pub const _00000: Self = Self::new(0);
-
-        #[doc = "Delay of DLY/32 times the PCLKD period is applied."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }

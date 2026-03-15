@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.50.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:51 +0000
+// Generated from SVD 1.30.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:13:05 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -1632,7 +1632,7 @@ pub mod dwcstr {
     pub struct Dvwcmd1_SPEC;
     pub type Dvwcmd1 = crate::EnumBitfieldStruct<u8, Dvwcmd1_SPEC>;
     impl Dvwcmd1 {
-        #[doc = "Setting prohibited"]
+        #[doc = "setting prohibited"]
         pub const _000: Self = Self::new(0);
 
         #[doc = "5 clock cycles"]
@@ -1934,7 +1934,7 @@ impl Cdsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Device0_memory pre-cycle setting"]
+    #[doc = "Device0_memory precycle setting"]
     #[inline(always)]
     pub fn dv0pc(
         self,
@@ -1960,7 +1960,7 @@ impl Cdsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Device1_memory pre-cycle setting"]
+    #[doc = "Device1_memory precycle setting"]
     #[inline(always)]
     pub fn dv1pc(
         self,
@@ -2733,9 +2733,6 @@ pub mod esr {
 
         #[doc = "Invalid command"]
         pub const _0_X_80: Self = Self::new(128);
-
-        #[doc = "Reserved"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mwesr_SPEC;
@@ -2743,9 +2740,6 @@ pub mod esr {
     impl Mwesr {
         #[doc = "Invalid command"]
         pub const _0_X_80: Self = Self::new(128);
-
-        #[doc = "Reserved"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -131,7 +131,7 @@ impl crate::sealed::RegSpec for Cacr0_SPEC {
 pub type Cacr0 = crate::RegValueT<Cacr0_SPEC>;
 
 impl Cacr0 {
-    #[doc = "Clock Frequency Measurement Enable"]
+    #[doc = "Clock Frequency Measurement Enable."]
     #[inline(always)]
     pub fn cfme(
         self,
@@ -155,6 +155,14 @@ impl Cacr0 {
             Cacr0_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<1, 0x7f, 1, 0, u8, u8, Cacr0_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Cacr0_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Cacr0 {
@@ -239,7 +247,7 @@ impl Cacr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Timer Count Clock Source Select"]
+    #[doc = "Measurement Target Clock Frequency Division Ratio Select"]
     #[inline(always)]
     pub fn tcss(
         self,
@@ -313,25 +321,25 @@ pub mod cacr1 {
     pub struct Fmcs_SPEC;
     pub type Fmcs = crate::EnumBitfieldStruct<u8, Fmcs_SPEC>;
     impl Fmcs {
-        #[doc = "Main clock oscillator (CACMCLK)"]
+        #[doc = "Main clock"]
         pub const _000: Self = Self::new(0);
 
-        #[doc = "Sub-clock oscillator (CACSCLK)"]
+        #[doc = "Sub-clock"]
         pub const _001: Self = Self::new(1);
 
-        #[doc = "HOCO clock (CACHCLK)"]
+        #[doc = "HOCO clock"]
         pub const _010: Self = Self::new(2);
 
-        #[doc = "MOCO clock (CACMOCLK)"]
+        #[doc = "MOCO clock"]
         pub const _011: Self = Self::new(3);
 
-        #[doc = "LOCO clock (CACLCLK)"]
+        #[doc = "LOCO clock"]
         pub const _100: Self = Self::new(4);
 
-        #[doc = "Peripheral module clock B (PCLKB)"]
+        #[doc = "Peripheral module clock(PCLKB)"]
         pub const _101: Self = Self::new(5);
 
-        #[doc = "Setting prohibited"]
+        #[doc = "IWDTCLK clock"]
         pub const _110: Self = Self::new(6);
 
         #[doc = "Setting prohibited"]
@@ -459,7 +467,7 @@ impl Cacr2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Digital Filter Select"]
+    #[doc = "Digital Filter Selection"]
     #[inline(always)]
     pub fn dfs(
         self,
@@ -507,25 +515,25 @@ pub mod cacr2 {
     pub struct Rscs_SPEC;
     pub type Rscs = crate::EnumBitfieldStruct<u8, Rscs_SPEC>;
     impl Rscs {
-        #[doc = "Main clock oscillator (CACMCLK)"]
+        #[doc = "Main clock"]
         pub const _000: Self = Self::new(0);
 
-        #[doc = "Sub-clock oscillator (CACSCLK)"]
+        #[doc = "Sub-clock"]
         pub const _001: Self = Self::new(1);
 
-        #[doc = "HOCO clock (CACHCLK)"]
+        #[doc = "HOCO clock"]
         pub const _010: Self = Self::new(2);
 
-        #[doc = "MOCO clock (CACMOCLK)"]
+        #[doc = "MOCO clock"]
         pub const _011: Self = Self::new(3);
 
-        #[doc = "LOCO clock (CACLCLK)"]
+        #[doc = "LOCO clock"]
         pub const _100: Self = Self::new(4);
 
-        #[doc = "Peripheral module clock B (PCLKB)"]
+        #[doc = "Peripheral module clock(PCLKB)"]
         pub const _101: Self = Self::new(5);
 
-        #[doc = "Setting prohibited"]
+        #[doc = "IWDTCLK clock"]
         pub const _110: Self = Self::new(6);
 
         #[doc = "Setting prohibited"]
@@ -535,32 +543,32 @@ pub mod cacr2 {
     pub struct Rcds_SPEC;
     pub type Rcds = crate::EnumBitfieldStruct<u8, Rcds_SPEC>;
     impl Rcds {
-        #[doc = "x 1/32 clock"]
+        #[doc = "1/32 clock"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "x 1/128 clock"]
+        #[doc = "1/128 clock"]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "x 1/1024 clock"]
+        #[doc = "1/1024 clock"]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "x 1/8192 clock"]
+        #[doc = "1/8192 clock"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dfs_SPEC;
     pub type Dfs = crate::EnumBitfieldStruct<u8, Dfs_SPEC>;
     impl Dfs {
-        #[doc = "Disable digital filtering"]
+        #[doc = "Digital filtering is disabled."]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "Use sampling clock for the digital filter as the frequency measuring clock"]
+        #[doc = "The sampling clock for the digital filter is the frequency measuring clock."]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "Use sampling clock for the digital filter as the frequency measuring clock divided by 4"]
+        #[doc = "The sampling clock for the digital filter is the frequency measuring clock divided by 4."]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "Use sampling clock for the digital filter as the frequency measuring clock divided by 16."]
+        #[doc = "The sampling clock for the digital filter is the frequency measuring clock divided by 16."]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -627,7 +635,7 @@ impl Caicr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Overflow Interrupt Request Enable"]
+    #[doc = "Overflow Interrupt Request  Enable"]
     #[inline(always)]
     pub fn ovfie(
         self,
@@ -730,6 +738,16 @@ impl Caicr {
             crate::common::W,
         >::from_register(self, 0)
     }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<7, 1, 0, Caicr_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<7, 1, 0, Caicr_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
 }
 impl ::core::default::Default for Caicr {
     #[inline(always)]
@@ -773,30 +791,30 @@ pub mod caicr {
     pub struct Ferrfcl_SPEC;
     pub type Ferrfcl = crate::EnumBitfieldStruct<u8, Ferrfcl_SPEC>;
     impl Ferrfcl {
-        #[doc = "No effect"]
+        #[doc = "No effect on operations"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "The CASTR.FERRF flag is cleared"]
+        #[doc = "Clears the FERRF flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mendfcl_SPEC;
     pub type Mendfcl = crate::EnumBitfieldStruct<u8, Mendfcl_SPEC>;
     impl Mendfcl {
-        #[doc = "No effect"]
+        #[doc = "No effect on operations"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "The CASTR.MENDF flag is cleared"]
+        #[doc = "Clears the MENDF flag"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ovffcl_SPEC;
     pub type Ovffcl = crate::EnumBitfieldStruct<u8, Ovffcl_SPEC>;
     impl Ovffcl {
-        #[doc = "No effect"]
+        #[doc = "No effect on operations"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "The CASTR.OVFF flag is cleared."]
+        #[doc = "Clears the OVFF flag"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -863,7 +881,7 @@ impl Castr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Overflow Flag"]
+    #[doc = "Counter Overflow Flag"]
     #[inline(always)]
     pub fn ovff(
         self,
@@ -901,30 +919,30 @@ pub mod castr {
     pub struct Ferrf_SPEC;
     pub type Ferrf = crate::EnumBitfieldStruct<u8, Ferrf_SPEC>;
     impl Ferrf {
-        #[doc = "Clock frequency is within the allowable range"]
+        #[doc = "The clock frequency is within the range corresponding to the settings."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clock frequency has deviated beyond the allowable range (frequency error)."]
+        #[doc = "The clock frequency has deviated beyond the range corresponding to the settings (frequency error)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mendf_SPEC;
     pub type Mendf = crate::EnumBitfieldStruct<u8, Mendf_SPEC>;
     impl Mendf {
-        #[doc = "Measurement is in progress"]
+        #[doc = "Measurement is in progress."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Measurement ended"]
+        #[doc = "Measurement has ended."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ovff_SPEC;
     pub type Ovff = crate::EnumBitfieldStruct<u8, Ovff_SPEC>;
     impl Ovff {
-        #[doc = "Counter has not overflowed"]
+        #[doc = "The counter has not overflowed."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter overflowed"]
+        #[doc = "The counter has overflowed."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -938,7 +956,16 @@ impl crate::sealed::RegSpec for Caulvr_SPEC {
 #[doc = "CAC Upper-Limit Value Setting Register"]
 pub type Caulvr = crate::RegValueT<Caulvr_SPEC>;
 
-impl NoBitfieldReg<Caulvr_SPEC> for Caulvr {}
+impl Caulvr {
+    #[doc = "CAULVR is a 16-bit readable/writable register that stores the upper-limit value of the frequency."]
+    #[inline(always)]
+    pub fn caulvr(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Caulvr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Caulvr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Caulvr {
     #[inline(always)]
     fn default() -> Caulvr {
@@ -956,7 +983,16 @@ impl crate::sealed::RegSpec for Callvr_SPEC {
 #[doc = "CAC Lower-Limit Value Setting Register"]
 pub type Callvr = crate::RegValueT<Callvr_SPEC>;
 
-impl NoBitfieldReg<Callvr_SPEC> for Callvr {}
+impl Callvr {
+    #[doc = "CALLVR is a 16-bit readable/writable register that stores the lower-limit value of the frequency."]
+    #[inline(always)]
+    pub fn callvr(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Callvr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Callvr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Callvr {
     #[inline(always)]
     fn default() -> Callvr {
@@ -974,7 +1010,16 @@ impl crate::sealed::RegSpec for Cacntbr_SPEC {
 #[doc = "CAC Counter Buffer Register"]
 pub type Cacntbr = crate::RegValueT<Cacntbr_SPEC>;
 
-impl NoBitfieldReg<Cacntbr_SPEC> for Cacntbr {}
+impl Cacntbr {
+    #[doc = "CACNTBR is a 16-bit read-only register that retains the counter value at the time a valid reference signal edge is input"]
+    #[inline(always)]
+    pub fn cacntbr(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Cacntbr_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Cacntbr_SPEC,crate::common::R>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Cacntbr {
     #[inline(always)]
     fn default() -> Cacntbr {

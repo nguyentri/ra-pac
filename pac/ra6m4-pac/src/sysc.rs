@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.50.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:51 +0000
+// Generated from SVD 1.30.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:13:05 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -124,18 +124,6 @@ impl super::Sysc {
         }
     }
 
-    #[doc = "High-Speed On-Chip Oscillator Control Register 2"]
-    #[inline(always)]
-    pub const fn hococr2(
-        &self,
-    ) -> &'static crate::common::Reg<self::Hococr2_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::Hococr2_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(55usize),
-            )
-        }
-    }
-
     #[doc = "Middle-Speed On-Chip Oscillator Control Register"]
     #[inline(always)]
     pub const fn mococr(
@@ -148,7 +136,7 @@ impl super::Sysc {
         }
     }
 
-    #[doc = "FLL Control Register 1"]
+    #[doc = "FLL Control Register1"]
     #[inline(always)]
     pub const fn fllcr1(
         &self,
@@ -160,7 +148,7 @@ impl super::Sysc {
         }
     }
 
-    #[doc = "FLL Control Register 2"]
+    #[doc = "FLL Control Register2"]
     #[inline(always)]
     pub const fn fllcr2(
         &self,
@@ -1147,32 +1135,6 @@ impl Sckdivcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "External Bus Clock (BCLK) Select"]
-    #[inline(always)]
-    pub fn bck(
-        self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x7,
-        1,
-        0,
-        sckdivcr::Bck,
-        sckdivcr::Bck,
-        Sckdivcr_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x7,
-            1,
-            0,
-            sckdivcr::Bck,
-            sckdivcr::Bck,
-            Sckdivcr_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
     #[doc = "System Clock (ICLK) Select"]
     #[inline(always)]
     pub fn ick(
@@ -1257,9 +1219,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pckc_SPEC;
@@ -1285,9 +1244,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pckb_SPEC;
@@ -1313,9 +1269,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcka_SPEC;
@@ -1341,37 +1294,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Bck_SPEC;
-    pub type Bck = crate::EnumBitfieldStruct<u8, Bck_SPEC>;
-    impl Bck {
-        #[doc = "x 1/1"]
-        pub const _000: Self = Self::new(0);
-
-        #[doc = "x 1/2"]
-        pub const _001: Self = Self::new(1);
-
-        #[doc = "x 1/4"]
-        pub const _010: Self = Self::new(2);
-
-        #[doc = "x 1/8"]
-        pub const _011: Self = Self::new(3);
-
-        #[doc = "x 1/16"]
-        pub const _100: Self = Self::new(4);
-
-        #[doc = "x 1/32"]
-        pub const _101: Self = Self::new(5);
-
-        #[doc = "x 1/64"]
-        pub const _110: Self = Self::new(6);
-
-        #[doc = "Settings prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ick_SPEC;
@@ -1397,9 +1319,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Fck_SPEC;
@@ -1425,9 +1344,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1595,9 +1511,6 @@ pub mod pllccr {
 
         #[doc = "/3"]
         pub const _10: Self = Self::new(2);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Plsrcsel_SPEC;
@@ -1827,73 +1740,11 @@ pub mod hococr {
     pub struct Hcstp_SPEC;
     pub type Hcstp = crate::EnumBitfieldStruct<u8, Hcstp_SPEC>;
     impl Hcstp {
-        #[doc = "Operate the HOCO clock"]
+        #[doc = "Operate the HOCO clock ,"]
         pub const _0: Self = Self::new(0);
 
         #[doc = "Stop the HOCO clock"]
         pub const _1: Self = Self::new(1);
-    }
-}
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Hococr2_SPEC;
-impl crate::sealed::RegSpec for Hococr2_SPEC {
-    type DataType = u8;
-}
-
-#[doc = "High-Speed On-Chip Oscillator Control Register 2"]
-pub type Hococr2 = crate::RegValueT<Hococr2_SPEC>;
-
-impl Hococr2 {
-    #[doc = "HOCO Frequency Setting 0"]
-    #[inline(always)]
-    pub fn hcfrq0(
-        self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x3,
-        1,
-        0,
-        hococr2::Hcfrq0,
-        hococr2::Hcfrq0,
-        Hococr2_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x3,
-            1,
-            0,
-            hococr2::Hcfrq0,
-            hococr2::Hcfrq0,
-            Hococr2_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-}
-impl ::core::default::Default for Hococr2 {
-    #[inline(always)]
-    fn default() -> Hococr2 {
-        <crate::RegValueT<Hococr2_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-pub mod hococr2 {
-
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Hcfrq0_SPEC;
-    pub type Hcfrq0 = crate::EnumBitfieldStruct<u8, Hcfrq0_SPEC>;
-    impl Hcfrq0 {
-        #[doc = "16 MHz"]
-        pub const _00: Self = Self::new(0);
-
-        #[doc = "18 MHz"]
-        pub const _01: Self = Self::new(1);
-
-        #[doc = "20 MHz"]
-        pub const _10: Self = Self::new(2);
-
-        #[doc = "Setting prohibited"]
-        pub const _11: Self = Self::new(3);
     }
 }
 #[doc(hidden)]
@@ -1959,7 +1810,7 @@ impl crate::sealed::RegSpec for Fllcr1_SPEC {
     type DataType = u8;
 }
 
-#[doc = "FLL Control Register 1"]
+#[doc = "FLL Control Register1"]
 pub type Fllcr1 = crate::RegValueT<Fllcr1_SPEC>;
 
 impl Fllcr1 {
@@ -2015,7 +1866,7 @@ impl crate::sealed::RegSpec for Fllcr2_SPEC {
     type DataType = u16;
 }
 
-#[doc = "FLL Control Register 2"]
+#[doc = "FLL Control Register2"]
 pub type Fllcr2 = crate::RegValueT<Fllcr2_SPEC>;
 
 impl Fllcr2 {
@@ -2317,9 +2168,6 @@ pub mod ckocr {
 
         #[doc = "Setting prohibited"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ckodiv_SPEC;
@@ -2443,9 +2291,6 @@ pub mod trckcr {
 
         #[doc = "/4"]
         pub const _0_X_2: Self = Self::new(2);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Trcken_SPEC;
@@ -2697,9 +2542,6 @@ pub mod pll2ccr {
 
         #[doc = "∕ 3"]
         pub const _10: Self = Self::new(2);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pl2Srcsel_SPEC;
@@ -2933,9 +2775,6 @@ pub mod usbckdivcr {
 
         #[doc = "∕ 5"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -3001,9 +2840,6 @@ pub mod octackdivcr {
 
         #[doc = "∕ 8"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -3112,9 +2948,6 @@ pub mod usbckcr {
 
         #[doc = "PLL2"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Usbcksreq_SPEC;
@@ -3258,9 +3091,6 @@ pub mod octackcr {
 
         #[doc = "PLL2"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Octacksreq_SPEC;
@@ -4855,9 +4685,6 @@ pub mod moscwtcr {
 
         #[doc = "Wait time = 8163 cycles (31139.4 us)"]
         pub const _0_X_9: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -5651,7 +5478,7 @@ impl crate::sealed::RegSpec for Cgfsar_SPEC {
 pub type Cgfsar = crate::RegValueT<Cgfsar_SPEC>;
 
 impl Cgfsar {
-    #[doc = "Non-secure Attribute bit 00"]
+    #[doc = "Non Secure Attribute bit 00"]
     #[inline(always)]
     pub fn nonsec00(
         self,
@@ -5677,7 +5504,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 02"]
+    #[doc = "Non Secure Attribute bit 02"]
     #[inline(always)]
     pub fn nonsec02(
         self,
@@ -5703,7 +5530,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 03"]
+    #[doc = "Non Secure Attribute bit 03"]
     #[inline(always)]
     pub fn nonsec03(
         self,
@@ -5729,7 +5556,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 04"]
+    #[doc = "Non Secure Attribute bit 04"]
     #[inline(always)]
     pub fn nonsec04(
         self,
@@ -5755,7 +5582,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 05"]
+    #[doc = "Non Secure Attribute bit 05"]
     #[inline(always)]
     pub fn nonsec05(
         self,
@@ -5781,7 +5608,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 06"]
+    #[doc = "Non Secure Attribute bit 06"]
     #[inline(always)]
     pub fn nonsec06(
         self,
@@ -5807,7 +5634,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 07"]
+    #[doc = "Non Secure Attribute bit 07"]
     #[inline(always)]
     pub fn nonsec07(
         self,
@@ -5833,7 +5660,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 08"]
+    #[doc = "Non Secure Attribute bit 08"]
     #[inline(always)]
     pub fn nonsec08(
         self,
@@ -5859,7 +5686,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 09"]
+    #[doc = "Non Secure Attribute bit 09"]
     #[inline(always)]
     pub fn nonsec09(
         self,
@@ -5885,7 +5712,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 11"]
+    #[doc = "Non Secure Attribute bit 11"]
     #[inline(always)]
     pub fn nonsec11(
         self,
@@ -5911,7 +5738,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 12"]
+    #[doc = "Non Secure Attribute bit 12"]
     #[inline(always)]
     pub fn nonsec12(
         self,
@@ -5937,7 +5764,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 16"]
+    #[doc = "Non Secure Attribute bit 16"]
     #[inline(always)]
     pub fn nonsec16(
         self,
@@ -5963,7 +5790,7 @@ impl Cgfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 17"]
+    #[doc = "Non Secure Attribute bit 17"]
     #[inline(always)]
     pub fn nonsec17(
         self,
@@ -6004,7 +5831,7 @@ pub mod cgfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6014,7 +5841,7 @@ pub mod cgfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6024,7 +5851,7 @@ pub mod cgfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6034,7 +5861,7 @@ pub mod cgfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6044,7 +5871,7 @@ pub mod cgfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6054,7 +5881,7 @@ pub mod cgfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6064,7 +5891,7 @@ pub mod cgfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6074,7 +5901,7 @@ pub mod cgfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6084,7 +5911,7 @@ pub mod cgfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6094,7 +5921,7 @@ pub mod cgfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6104,7 +5931,7 @@ pub mod cgfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6114,7 +5941,7 @@ pub mod cgfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6124,7 +5951,7 @@ pub mod cgfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6139,7 +5966,7 @@ impl crate::sealed::RegSpec for Rstsar_SPEC {
 pub type Rstsar = crate::RegValueT<Rstsar_SPEC>;
 
 impl Rstsar {
-    #[doc = "Non-secure Attribute bit 0"]
+    #[doc = "Non Secure Attribute bit 0"]
     #[inline(always)]
     pub fn nonsec0(
         self,
@@ -6165,7 +5992,7 @@ impl Rstsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 1"]
+    #[doc = "Non Secure Attribute bit 1"]
     #[inline(always)]
     pub fn nonsec1(
         self,
@@ -6191,7 +6018,7 @@ impl Rstsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 2"]
+    #[doc = "Non Secure Attribute bit 2"]
     #[inline(always)]
     pub fn nonsec2(
         self,
@@ -6232,7 +6059,7 @@ pub mod rstsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6242,7 +6069,7 @@ pub mod rstsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6252,7 +6079,7 @@ pub mod rstsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6267,7 +6094,7 @@ impl crate::sealed::RegSpec for Lpmsar_SPEC {
 pub type Lpmsar = crate::RegValueT<Lpmsar_SPEC>;
 
 impl Lpmsar {
-    #[doc = "Non-secure Attribute bit 0"]
+    #[doc = "Non Secure Attribute bit 0"]
     #[inline(always)]
     pub fn nonsec0(
         self,
@@ -6293,7 +6120,7 @@ impl Lpmsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 2"]
+    #[doc = "Non Secure Attribute bit 2"]
     #[inline(always)]
     pub fn nonsec2(
         self,
@@ -6319,7 +6146,7 @@ impl Lpmsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 4"]
+    #[doc = "Non Secure Attribute bit 4"]
     #[inline(always)]
     pub fn nonsec4(
         self,
@@ -6345,7 +6172,7 @@ impl Lpmsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 8"]
+    #[doc = "Non Secure Attribute bit 8"]
     #[inline(always)]
     pub fn nonsec8(
         self,
@@ -6371,7 +6198,7 @@ impl Lpmsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 9"]
+    #[doc = "Non Secure Attribute bit 9"]
     #[inline(always)]
     pub fn nonsec9(
         self,
@@ -6412,7 +6239,7 @@ pub mod lpmsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6422,7 +6249,7 @@ pub mod lpmsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6432,7 +6259,7 @@ pub mod lpmsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6442,7 +6269,7 @@ pub mod lpmsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6452,7 +6279,7 @@ pub mod lpmsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6467,7 +6294,7 @@ impl crate::sealed::RegSpec for Lvdsar_SPEC {
 pub type Lvdsar = crate::RegValueT<Lvdsar_SPEC>;
 
 impl Lvdsar {
-    #[doc = "Non-secure Attribute bit 0"]
+    #[doc = "Non Secure Attribute bit 0"]
     #[inline(always)]
     pub fn nonsec0(
         self,
@@ -6493,7 +6320,7 @@ impl Lvdsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 1"]
+    #[doc = "Non Secure Attribute bit 1"]
     #[inline(always)]
     pub fn nonsec1(
         self,
@@ -6534,7 +6361,7 @@ pub mod lvdsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6544,7 +6371,7 @@ pub mod lvdsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6559,7 +6386,7 @@ impl crate::sealed::RegSpec for Bbfsar_SPEC {
 pub type Bbfsar = crate::RegValueT<Bbfsar_SPEC>;
 
 impl Bbfsar {
-    #[doc = "Non-secure Attribute bit 0"]
+    #[doc = "Non Secure Attribute bit 0"]
     #[inline(always)]
     pub fn nonsec0(
         self,
@@ -6585,7 +6412,7 @@ impl Bbfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 1"]
+    #[doc = "Non Secure Attribute bit 1"]
     #[inline(always)]
     pub fn nonsec1(
         self,
@@ -6611,7 +6438,7 @@ impl Bbfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 2"]
+    #[doc = "Non Secure Attribute bit 2"]
     #[inline(always)]
     pub fn nonsec2(
         self,
@@ -6637,7 +6464,7 @@ impl Bbfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 16"]
+    #[doc = "Non Secure Attribute bit 16"]
     #[inline(always)]
     pub fn nonsec16(
         self,
@@ -6663,7 +6490,7 @@ impl Bbfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 17"]
+    #[doc = "Non Secure Attribute bit 17"]
     #[inline(always)]
     pub fn nonsec17(
         self,
@@ -6689,7 +6516,7 @@ impl Bbfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 18"]
+    #[doc = "Non Secure Attribute bit 18"]
     #[inline(always)]
     pub fn nonsec18(
         self,
@@ -6715,7 +6542,7 @@ impl Bbfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 19"]
+    #[doc = "Non Secure Attribute bit 19"]
     #[inline(always)]
     pub fn nonsec19(
         self,
@@ -6741,7 +6568,7 @@ impl Bbfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 20"]
+    #[doc = "Non Secure Attribute bit 20"]
     #[inline(always)]
     pub fn nonsec20(
         self,
@@ -6767,7 +6594,7 @@ impl Bbfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 21"]
+    #[doc = "Non Secure Attribute bit 21"]
     #[inline(always)]
     pub fn nonsec21(
         self,
@@ -6793,7 +6620,7 @@ impl Bbfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 22"]
+    #[doc = "Non Secure Attribute bit 22"]
     #[inline(always)]
     pub fn nonsec22(
         self,
@@ -6819,7 +6646,7 @@ impl Bbfsar {
         >::from_register(self, 0)
     }
 
-    #[doc = "Non-secure Attribute bit 23"]
+    #[doc = "Non Secure Attribute bit 23"]
     #[inline(always)]
     pub fn nonsec23(
         self,
@@ -6860,7 +6687,7 @@ pub mod bbfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6870,7 +6697,7 @@ pub mod bbfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6880,7 +6707,7 @@ pub mod bbfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6890,7 +6717,7 @@ pub mod bbfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6900,7 +6727,7 @@ pub mod bbfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6910,7 +6737,7 @@ pub mod bbfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6920,7 +6747,7 @@ pub mod bbfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6930,7 +6757,7 @@ pub mod bbfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6940,7 +6767,7 @@ pub mod bbfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6950,7 +6777,7 @@ pub mod bbfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6960,7 +6787,7 @@ pub mod bbfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7614,7 +7441,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7624,7 +7451,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7634,7 +7461,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7644,7 +7471,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7654,7 +7481,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7664,7 +7491,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7674,7 +7501,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7684,7 +7511,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7694,7 +7521,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7704,7 +7531,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7714,7 +7541,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7724,7 +7551,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7734,7 +7561,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7744,7 +7571,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7754,7 +7581,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7764,7 +7591,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7774,7 +7601,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7784,7 +7611,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7794,7 +7621,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7804,7 +7631,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7814,7 +7641,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7824,7 +7651,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7834,7 +7661,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7844,7 +7671,7 @@ pub mod dpfsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non Secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8207,9 +8034,6 @@ pub mod dpswcr {
 
         #[doc = "Wait cycle for slow recovery"]
         pub const _0_X_19: Self = Self::new(25);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -11435,9 +11259,6 @@ pub mod lvd1cmpcr {
 
         #[doc = "2.85 V (Vdet1_3)"]
         pub const _0_X_13: Self = Self::new(19);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lvd1E_SPEC;
@@ -11533,9 +11354,6 @@ pub mod lvd2cmpcr {
 
         #[doc = "2.85 V (Vdet2_3)"]
         pub const _111: Self = Self::new(7);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lvd2E_SPEC;

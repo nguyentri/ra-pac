@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.1, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:11 +0000
+// Generated from SVD 1.1, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:00:31 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -868,9 +868,6 @@ pub mod dvstctr0 {
 
         #[doc = "USB bus reset in progress or full-speed connection"]
         pub const _010: Self = Self::new(2);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1186,9 +1183,6 @@ pub mod cfifosel {
 
         #[doc = "Pipe9"]
         pub const _1001: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -3388,9 +3382,6 @@ pub mod intsts0 {
 
         #[doc = "Configured state"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "Suspended state"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Valid_SPEC;
@@ -3426,9 +3417,6 @@ pub mod intsts0 {
 
         #[doc = "Control transfer sequence error"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -5018,9 +5006,6 @@ pub mod dcpmaxp {
 
         #[doc = "Address 0101"]
         pub const _0101: Self = Self::new(5);
-
-        #[doc = "Settings prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mxps_SPEC;
@@ -5070,9 +5055,6 @@ pub mod dcpmaxp {
 
         #[doc = "120bytes"]
         pub const _1111000: Self = Self::new(120);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -5505,9 +5487,6 @@ pub mod pipesel {
 
         #[doc = "PIPE7"]
         pub const _0111: Self = Self::new(7);
-
-        #[doc = "Settings prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -5817,9 +5796,6 @@ pub mod pipemaxp {
 
         #[doc = "Address 0101"]
         pub const _0101: Self = Self::new(5);
-
-        #[doc = "Settings prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

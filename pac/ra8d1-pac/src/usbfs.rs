@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -24,7 +24,7 @@ http://www.renesas.com/disclaimer
 use crate::common::sealed;
 #[allow(unused_imports)]
 use crate::common::*;
-#[doc = r"USB 2.0 Full-Speed Module"]
+#[doc = r"USB 2.0 FS Module"]
 unsafe impl ::core::marker::Send for super::Usbfs {}
 unsafe impl ::core::marker::Sync for super::Usbfs {}
 impl super::Usbfs {
@@ -80,7 +80,7 @@ impl super::Usbfs {
         }
     }
 
-    #[doc = "CFIFO Port Register"]
+    #[doc = "CFIFO Port Register L"]
     #[inline(always)]
     pub const fn cfifol(
         &self,
@@ -92,66 +92,86 @@ impl super::Usbfs {
         }
     }
 
-    #[doc = "D%sFIFO Port Register"]
+    #[doc = "CFIFO Port Register H"]
     #[inline(always)]
-    pub const fn dfifo(
+    pub const fn cfifoh(
         &self,
-    ) -> &'static crate::common::ClusterRegisterArray<
-        crate::common::Reg<self::Dfifo_SPEC, crate::common::RW>,
-        2,
-        0x4,
-    > {
+    ) -> &'static crate::common::Reg<self::Cfifoh_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x18usize))
-        }
-    }
-    #[inline(always)]
-    pub const fn d0fifo(&self) -> &'static crate::common::Reg<self::Dfifo_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::Dfifo_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(0x18usize),
-            )
-        }
-    }
-    #[inline(always)]
-    pub const fn d1fifo(&self) -> &'static crate::common::Reg<self::Dfifo_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::Dfifo_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(0x1cusize),
+            crate::common::Reg::<self::Cfifoh_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(21usize),
             )
         }
     }
 
-    #[doc = "D%sFIFO Port Register"]
+    #[doc = "D0FIFO Port Register"]
     #[inline(always)]
-    pub const fn dfifol(
+    pub const fn d0fifo(
         &self,
-    ) -> &'static crate::common::ClusterRegisterArray<
-        crate::common::Reg<self::Dfifol_SPEC, crate::common::RW>,
-        2,
-        0x4,
-    > {
+    ) -> &'static crate::common::Reg<self::D0Fifo_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x18usize))
-        }
-    }
-    #[inline(always)]
-    pub const fn d0fifol(
-        &self,
-    ) -> &'static crate::common::Reg<self::Dfifol_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::Dfifol_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(0x18usize),
+            crate::common::Reg::<self::D0Fifo_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(24usize),
             )
         }
     }
+
+    #[doc = "D0FIFO Port Register L"]
+    #[inline(always)]
+    pub const fn d0fifol(
+        &self,
+    ) -> &'static crate::common::Reg<self::D0Fifol_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::D0Fifol_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(24usize),
+            )
+        }
+    }
+
+    #[doc = "D0FIFO Port Register H"]
+    #[inline(always)]
+    pub const fn d0fifoh(
+        &self,
+    ) -> &'static crate::common::Reg<self::D0Fifoh_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::D0Fifoh_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(25usize),
+            )
+        }
+    }
+
+    #[doc = "D1FIFO Port Register"]
+    #[inline(always)]
+    pub const fn d1fifo(
+        &self,
+    ) -> &'static crate::common::Reg<self::D1Fifo_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::D1Fifo_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(28usize),
+            )
+        }
+    }
+
+    #[doc = "D1FIFO Port Register L"]
     #[inline(always)]
     pub const fn d1fifol(
         &self,
-    ) -> &'static crate::common::Reg<self::Dfifol_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::D1Fifol_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::Dfifol_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(0x1cusize),
+            crate::common::Reg::<self::D1Fifol_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(28usize),
+            )
+        }
+    }
+
+    #[doc = "D1FIFO Port Register H"]
+    #[inline(always)]
+    pub const fn d1fifoh(
+        &self,
+    ) -> &'static crate::common::Reg<self::D1Fifoh_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::D1Fifoh_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(29usize),
             )
         }
     }
@@ -180,70 +200,50 @@ impl super::Usbfs {
         }
     }
 
-    #[doc = "D%sFIFO Port Select Register"]
-    #[inline(always)]
-    pub const fn dfifosel(
-        &self,
-    ) -> &'static crate::common::ClusterRegisterArray<
-        crate::common::Reg<self::Dfifosel_SPEC, crate::common::RW>,
-        2,
-        0x4,
-    > {
-        unsafe {
-            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x28usize))
-        }
-    }
+    #[doc = "D0FIFO Port Select Register"]
     #[inline(always)]
     pub const fn d0fifosel(
         &self,
-    ) -> &'static crate::common::Reg<self::Dfifosel_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::D0Fifosel_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::Dfifosel_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(0x28usize),
-            )
-        }
-    }
-    #[inline(always)]
-    pub const fn d1fifosel(
-        &self,
-    ) -> &'static crate::common::Reg<self::Dfifosel_SPEC, crate::common::RW> {
-        unsafe {
-            crate::common::Reg::<self::Dfifosel_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(0x2cusize),
+            crate::common::Reg::<self::D0Fifosel_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(40usize),
             )
         }
     }
 
-    #[doc = "D%sFIFO Port Control Register"]
-    #[inline(always)]
-    pub const fn dfifoctr(
-        &self,
-    ) -> &'static crate::common::ClusterRegisterArray<
-        crate::common::Reg<self::Dfifoctr_SPEC, crate::common::RW>,
-        2,
-        0x4,
-    > {
-        unsafe {
-            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x2ausize))
-        }
-    }
+    #[doc = "D0FIFO Port Control Register"]
     #[inline(always)]
     pub const fn d0fifoctr(
         &self,
-    ) -> &'static crate::common::Reg<self::Dfifoctr_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::D0Fifoctr_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::Dfifoctr_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(0x2ausize),
+            crate::common::Reg::<self::D0Fifoctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(42usize),
             )
         }
     }
+
+    #[doc = "D1FIFO Port Select Register"]
+    #[inline(always)]
+    pub const fn d1fifosel(
+        &self,
+    ) -> &'static crate::common::Reg<self::D1Fifosel_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::D1Fifosel_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(44usize),
+            )
+        }
+    }
+
+    #[doc = "D1FIFO Port Control Register"]
     #[inline(always)]
     pub const fn d1fifoctr(
         &self,
-    ) -> &'static crate::common::Reg<self::Dfifoctr_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::D1Fifoctr_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::Dfifoctr_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(0x2eusize),
+            crate::common::Reg::<self::D1Fifoctr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(46usize),
             )
         }
     }
@@ -548,7 +548,7 @@ impl super::Usbfs {
         }
     }
 
-    #[doc = "PIPE%s Control Registers"]
+    #[doc = "Pipe %s Control Register"]
     #[inline(always)]
     pub const fn pipectr(
         &self,
@@ -602,7 +602,7 @@ impl super::Usbfs {
         }
     }
 
-    #[doc = "PIPE%s Transaction Counter Enable Register"]
+    #[doc = "Pipe %s Transaction Counter Enable Register"]
     #[inline(always)]
     pub const fn pipetre(
         &self,
@@ -666,7 +666,7 @@ impl super::Usbfs {
         }
     }
 
-    #[doc = "PIPE%s Transaction Counter Register"]
+    #[doc = "Pipe %s Transaction Counter Register"]
     #[inline(always)]
     pub const fn pipetrn(
         &self,
@@ -726,6 +726,30 @@ impl super::Usbfs {
         unsafe {
             crate::common::Reg::<self::Pipetrn_SPEC, crate::common::RW>::from_ptr(
                 self._svd2pac_as_ptr().add(0xa2usize),
+            )
+        }
+    }
+
+    #[doc = "Battery Charging signal control register 1"]
+    #[inline(always)]
+    pub const fn bcctrl1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcctrl1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Bcctrl1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(176usize),
+            )
+        }
+    }
+
+    #[doc = "Battery Charging signal control register 2"]
+    #[inline(always)]
+    pub const fn bcctrl2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Bcctrl2_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Bcctrl2_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(180usize),
             )
         }
     }
@@ -804,6 +828,18 @@ impl super::Usbfs {
         }
     }
 
+    #[doc = "VRCORE clock gating set register"]
+    #[inline(always)]
+    pub const fn vrcgctrl(
+        &self,
+    ) -> &'static crate::common::Reg<self::Vrcgctrl_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Vrcgctrl_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(248usize),
+            )
+        }
+    }
+
     #[doc = "Deep Software Standby USB Transceiver Control/Pin Monitor Register"]
     #[inline(always)]
     pub const fn dpusr0r(
@@ -827,6 +863,18 @@ impl super::Usbfs {
             )
         }
     }
+
+    #[doc = "Deep standby USB Battery Charging function register"]
+    #[inline(always)]
+    pub const fn dpbcctrl(
+        &self,
+    ) -> &'static crate::common::Reg<self::Dpbcctrl_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Dpbcctrl_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(1032usize),
+            )
+        }
+    }
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -839,7 +887,7 @@ impl crate::sealed::RegSpec for Syscfg_SPEC {
 pub type Syscfg = crate::RegValueT<Syscfg_SPEC>;
 
 impl Syscfg {
-    #[doc = "USBFS Operation Enable"]
+    #[doc = "USB Operation Enable"]
     #[inline(always)]
     pub fn usbe(
         self,
@@ -891,7 +939,7 @@ impl Syscfg {
         >::from_register(self, 0)
     }
 
-    #[doc = "D+/D– Line Resistor Control"]
+    #[doc = "D+/D- Line Resistor Control"]
     #[inline(always)]
     pub fn drpd(
         self,
@@ -968,6 +1016,14 @@ impl Syscfg {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<11, 0x1f, 1, 0, u8, u8, Syscfg_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<11,0x1f,1,0,u8,u8,Syscfg_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Syscfg {
     #[inline(always)]
@@ -981,50 +1037,50 @@ pub mod syscfg {
     pub struct Usbe_SPEC;
     pub type Usbe = crate::EnumBitfieldStruct<u8, Usbe_SPEC>;
     impl Usbe {
-        #[doc = "Disable"]
+        #[doc = "USB operation is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable"]
+        #[doc = "USB operation is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dprpu_SPEC;
     pub type Dprpu = crate::EnumBitfieldStruct<u8, Dprpu_SPEC>;
     impl Dprpu {
-        #[doc = "Disable line pull-up"]
+        #[doc = "Pulling up the line is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable line pull-up"]
+        #[doc = "Pulling up the line is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Drpd_SPEC;
     pub type Drpd = crate::EnumBitfieldStruct<u8, Drpd_SPEC>;
     impl Drpd {
-        #[doc = "Disable line pull-down"]
+        #[doc = "Pulling down the lines is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable line pull-down"]
+        #[doc = "Pulling down the lines is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dcfm_SPEC;
     pub type Dcfm = crate::EnumBitfieldStruct<u8, Dcfm_SPEC>;
     impl Dcfm {
-        #[doc = "Select device controller"]
+        #[doc = "Function controller is selected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select host controller"]
+        #[doc = "Host controller is selected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Scke_SPEC;
     pub type Scke = crate::EnumBitfieldStruct<u8, Scke_SPEC>;
     impl Scke {
-        #[doc = "Stop clock supply to the USBFS"]
+        #[doc = "Stops supplying the clock signal to the USB."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable clock supply to the USBFS"]
+        #[doc = "Enables supplying the clock signal to the USB."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1043,8 +1099,26 @@ impl Syssts0 {
     #[inline(always)]
     pub fn lnst(
         self,
-    ) -> crate::common::RegisterField<0, 0x3, 1, 0, u8, u8, Syssts0_SPEC, crate::common::R> {
-        crate::common::RegisterField::<0,0x3,1,0,u8,u8,Syssts0_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x3,
+        1,
+        0,
+        syssts0::Lnst,
+        syssts0::Lnst,
+        Syssts0_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x3,
+            1,
+            0,
+            syssts0::Lnst,
+            syssts0::Lnst,
+            Syssts0_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
     }
 
     #[doc = "External ID0 Input Pin Monitor"]
@@ -1073,7 +1147,7 @@ impl Syssts0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Active Monitor When the Host Controller Is Selected"]
+    #[doc = "Active Monitor When the Host Controller is Selected."]
     #[inline(always)]
     pub fn sofea(
         self,
@@ -1125,7 +1199,15 @@ impl Syssts0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "External USB_OVRCURA, USB_OVRCURA-DS, USB_OVRCURB or USB_OVRCURB-DS Input Pin Monitor"]
+    #[doc = "These bits are read as 0000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<7, 0x7f, 1, 0, u8, u8, Syssts0_SPEC, crate::common::R> {
+        crate::common::RegisterField::<7,0x7f,1,0,u8,u8,Syssts0_SPEC,crate::common::R>::from_register(self,0)
+    }
+
+    #[doc = "External USB0_OVRCURA/ USB0_OVRCURB Input Pin MonitorThe OCVMON\\[1\\] bit indicates the status of the USBHS_OVRCURA pin. The OCVMON\\[0\\] bit indicates the status of the USBHS_OVRCURB pin."]
     #[inline(always)]
     pub fn ovcmon(
         self,
@@ -1142,33 +1224,49 @@ impl ::core::default::Default for Syssts0 {
 pub mod syssts0 {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Lnst_SPEC;
+    pub type Lnst = crate::EnumBitfieldStruct<u8, Lnst_SPEC>;
+    impl Lnst {
+        #[doc = "SE0"]
+        pub const _00: Self = Self::new(0);
+
+        #[doc = "J-State"]
+        pub const _01: Self = Self::new(1);
+
+        #[doc = "K-State"]
+        pub const _10: Self = Self::new(2);
+
+        #[doc = "SE1"]
+        pub const _11: Self = Self::new(3);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Idmon_SPEC;
     pub type Idmon = crate::EnumBitfieldStruct<u8, Idmon_SPEC>;
     impl Idmon {
-        #[doc = "USB_ID pin is low"]
+        #[doc = "USB0_ID pin is low"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "USB_ID pin is high"]
+        #[doc = "USB0_ID pin is high"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sofea_SPEC;
     pub type Sofea = crate::EnumBitfieldStruct<u8, Sofea_SPEC>;
     impl Sofea {
-        #[doc = "SOF output stopped"]
+        #[doc = "SOF output is stopped."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "SOF output operating"]
+        #[doc = "SOF output is operating."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Htact_SPEC;
     pub type Htact = crate::EnumBitfieldStruct<u8, Htact_SPEC>;
     impl Htact {
-        #[doc = "Host sequencer completely stopped"]
+        #[doc = "Host sequencer of the USB is completely stopped."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Host sequencer not completely stopped"]
+        #[doc = "Host sequencer of the USB is not completely stopped."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1339,7 +1437,7 @@ impl Dvstctr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "USB_VBUSEN Output Pin Control"]
+    #[doc = "USB0_VBUSEN Output Pin Control"]
     #[inline(always)]
     pub fn vbusen(
         self,
@@ -1365,7 +1463,7 @@ impl Dvstctr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "USB_EXICEN Output Pin Control"]
+    #[doc = "USB0_EXICEN Output Pin Control"]
     #[inline(always)]
     pub fn exicen(
         self,
@@ -1391,12 +1489,38 @@ impl Dvstctr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Host Negotiation Protocol (HNP) Control"]
+    #[doc = "Host Negotiation Protocol (HNP) Control     This bit is used when switching from device B to device A while in OTG mode. If the HNPBTOA bit is 1, the internal function control keeps the suspended state until the HNP processing ends even  though SYSCFG.DPRPU = 0 or SYSCFG.DCFM = 1 is set."]
     #[inline(always)]
     pub fn hnpbtoa(
         self,
-    ) -> crate::common::RegisterFieldBool<11, 1, 0, Dvstctr0_SPEC, crate::common::RW> {
-        crate::common::RegisterFieldBool::<11,1,0,Dvstctr0_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        11,
+        0x1,
+        1,
+        0,
+        dvstctr0::Hnpbtoa,
+        dvstctr0::Hnpbtoa,
+        Dvstctr0_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            11,
+            0x1,
+            1,
+            0,
+            dvstctr0::Hnpbtoa,
+            dvstctr0::Hnpbtoa,
+            Dvstctr0_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<12, 0xf, 1, 0, u8, u8, Dvstctr0_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<12,0xf,1,0,u8,u8,Dvstctr0_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Dvstctr0 {
@@ -1411,89 +1535,96 @@ pub mod dvstctr0 {
     pub struct Rhst_SPEC;
     pub type Rhst = crate::EnumBitfieldStruct<u8, Rhst_SPEC>;
     impl Rhst {
-        #[doc = "In host controller mode: Communication speed indeterminate (powered state or no connection) In device controller mode: Communication speed indeterminate"]
+        #[doc = "Communication speed not determined"]
         pub const _000: Self = Self::new(0);
 
-        #[doc = "In host controller mode: Low-speed connection In device controller mode: USB bus reset in progress"]
+        #[doc = "Low-speed connection(When the host controller is selected) /USB bus reset in progress( When the function controller is selected)"]
         pub const _001: Self = Self::new(1);
 
-        #[doc = "In host controller mode: Full-speed connection In device controller mode: USB bus reset in progress or full-speed connection"]
+        #[doc = "Full-speed connection(When the host controller is selected) /USB bus reset in progress or full-speed connection(When the function controller is selected)"]
         pub const _010: Self = Self::new(2);
 
         #[doc = "Setting prohibited"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "In host controller mode: USB bus reset in progress In device controller mode: Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uact_SPEC;
     pub type Uact = crate::EnumBitfieldStruct<u8, Uact_SPEC>;
     impl Uact {
-        #[doc = "Disable downstream port (disable SOF transmission)"]
+        #[doc = "Downstream port is disabled (SOF transmission is disabled)."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable downstream port (enable SOF transmission)"]
+        #[doc = "Downstream port is enabled (SOF transmission is enabled)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Resume_SPEC;
     pub type Resume = crate::EnumBitfieldStruct<u8, Resume_SPEC>;
     impl Resume {
-        #[doc = "Do not output resume signal"]
+        #[doc = "Resume signal is not output."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Output resume signal"]
+        #[doc = "Resume signal is output."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Usbrst_SPEC;
     pub type Usbrst = crate::EnumBitfieldStruct<u8, Usbrst_SPEC>;
     impl Usbrst {
-        #[doc = "Do not output USB bus reset signal"]
+        #[doc = "USB bus reset signal is not output."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Output USB bus reset signal"]
+        #[doc = "USB bus reset signal is output."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rwupe_SPEC;
     pub type Rwupe = crate::EnumBitfieldStruct<u8, Rwupe_SPEC>;
     impl Rwupe {
-        #[doc = "Disable downstream port remote wakeup"]
+        #[doc = "Downstream port wakeup is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable downstream port remote wakeup"]
+        #[doc = "Downstream port wakeup is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wkup_SPEC;
     pub type Wkup = crate::EnumBitfieldStruct<u8, Wkup_SPEC>;
     impl Wkup {
-        #[doc = "Do not output remote wakeup signal"]
+        #[doc = "Remote wakeup signal is not output."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Output remote wakeup signal"]
+        #[doc = "Remote wakeup signal is output."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vbusen_SPEC;
     pub type Vbusen = crate::EnumBitfieldStruct<u8, Vbusen_SPEC>;
     impl Vbusen {
-        #[doc = "Output low on external USB_VBUSEN pin"]
+        #[doc = "External USB0_VBUSEN pin outputs low"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Output high on external USB_VBUSEN pin"]
+        #[doc = "External USB0_VBUSEN pin outputs high"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Exicen_SPEC;
     pub type Exicen = crate::EnumBitfieldStruct<u8, Exicen_SPEC>;
     impl Exicen {
-        #[doc = "Output low on external USB_EXICEN pin"]
+        #[doc = "External USB0_EXICEN pin outputs low"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Output high on external USB_EXICEN pin"]
+        #[doc = "External USB0_EXICEN pin outputs high"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Hnpbtoa_SPEC;
+    pub type Hnpbtoa = crate::EnumBitfieldStruct<u8, Hnpbtoa_SPEC>;
+    impl Hnpbtoa {
+        #[doc = "Normal Operation"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Switching from device B to device A is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1508,7 +1639,7 @@ impl crate::sealed::RegSpec for Cfifo_SPEC {
 pub type Cfifo = crate::RegValueT<Cfifo_SPEC>;
 
 impl Cfifo {
-    #[doc = "FIFO Port"]
+    #[doc = "FIFO PortRead receive data from the FIFO buffer or write transmit data to the FIFO buffer by accessing these bits."]
     #[inline(always)]
     pub fn fifoport(
         self,
@@ -1531,18 +1662,10 @@ impl crate::sealed::RegSpec for Cfifol_SPEC {
     type DataType = u8;
 }
 
-#[doc = "CFIFO Port Register"]
+#[doc = "CFIFO Port Register L"]
 pub type Cfifol = crate::RegValueT<Cfifol_SPEC>;
 
-impl Cfifol {
-    #[doc = "FIFO Port"]
-    #[inline(always)]
-    pub fn fifoport(
-        self,
-    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, Cfifol_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfifol_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
+impl NoBitfieldReg<Cfifol_SPEC> for Cfifol {}
 impl ::core::default::Default for Cfifol {
     #[inline(always)]
     fn default() -> Cfifol {
@@ -1552,54 +1675,145 @@ impl ::core::default::Default for Cfifol {
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Dfifo_SPEC;
-impl crate::sealed::RegSpec for Dfifo_SPEC {
-    type DataType = u16;
+pub struct Cfifoh_SPEC;
+impl crate::sealed::RegSpec for Cfifoh_SPEC {
+    type DataType = u8;
 }
 
-#[doc = "D%sFIFO Port Register"]
-pub type Dfifo = crate::RegValueT<Dfifo_SPEC>;
+#[doc = "CFIFO Port Register H"]
+pub type Cfifoh = crate::RegValueT<Cfifoh_SPEC>;
 
-impl Dfifo {
-    #[doc = "FIFO Port"]
+impl NoBitfieldReg<Cfifoh_SPEC> for Cfifoh {}
+impl ::core::default::Default for Cfifoh {
     #[inline(always)]
-    pub fn fifoport(
-        self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Dfifo_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Dfifo_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for Dfifo {
-    #[inline(always)]
-    fn default() -> Dfifo {
-        <crate::RegValueT<Dfifo_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> Cfifoh {
+        <crate::RegValueT<Cfifoh_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Dfifol_SPEC;
-impl crate::sealed::RegSpec for Dfifol_SPEC {
-    type DataType = u8;
+pub struct D0Fifo_SPEC;
+impl crate::sealed::RegSpec for D0Fifo_SPEC {
+    type DataType = u16;
 }
 
-#[doc = "D%sFIFO Port Register"]
-pub type Dfifol = crate::RegValueT<Dfifol_SPEC>;
+#[doc = "D0FIFO Port Register"]
+pub type D0Fifo = crate::RegValueT<D0Fifo_SPEC>;
 
-impl Dfifol {
-    #[doc = "FIFO Port"]
+impl D0Fifo {
+    #[doc = "FIFO PortRead receive data from the FIFO buffer or write transmit data to the FIFO buffer by accessing these bits."]
     #[inline(always)]
     pub fn fifoport(
         self,
-    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, Dfifol_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0xff,1,0,u8,u8,Dfifol_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, D0Fifo_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,D0Fifo_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
-impl ::core::default::Default for Dfifol {
+impl ::core::default::Default for D0Fifo {
     #[inline(always)]
-    fn default() -> Dfifol {
-        <crate::RegValueT<Dfifol_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> D0Fifo {
+        <crate::RegValueT<D0Fifo_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct D0Fifol_SPEC;
+impl crate::sealed::RegSpec for D0Fifol_SPEC {
+    type DataType = u8;
+}
+
+#[doc = "D0FIFO Port Register L"]
+pub type D0Fifol = crate::RegValueT<D0Fifol_SPEC>;
+
+impl NoBitfieldReg<D0Fifol_SPEC> for D0Fifol {}
+impl ::core::default::Default for D0Fifol {
+    #[inline(always)]
+    fn default() -> D0Fifol {
+        <crate::RegValueT<D0Fifol_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct D0Fifoh_SPEC;
+impl crate::sealed::RegSpec for D0Fifoh_SPEC {
+    type DataType = u8;
+}
+
+#[doc = "D0FIFO Port Register H"]
+pub type D0Fifoh = crate::RegValueT<D0Fifoh_SPEC>;
+
+impl NoBitfieldReg<D0Fifoh_SPEC> for D0Fifoh {}
+impl ::core::default::Default for D0Fifoh {
+    #[inline(always)]
+    fn default() -> D0Fifoh {
+        <crate::RegValueT<D0Fifoh_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct D1Fifo_SPEC;
+impl crate::sealed::RegSpec for D1Fifo_SPEC {
+    type DataType = u16;
+}
+
+#[doc = "D1FIFO Port Register"]
+pub type D1Fifo = crate::RegValueT<D1Fifo_SPEC>;
+
+impl D1Fifo {
+    #[doc = "FIFO PortRead receive data from the FIFO buffer or write transmit data to the FIFO buffer by accessing these bits."]
+    #[inline(always)]
+    pub fn fifoport(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, D1Fifo_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,D1Fifo_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
+impl ::core::default::Default for D1Fifo {
+    #[inline(always)]
+    fn default() -> D1Fifo {
+        <crate::RegValueT<D1Fifo_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct D1Fifol_SPEC;
+impl crate::sealed::RegSpec for D1Fifol_SPEC {
+    type DataType = u8;
+}
+
+#[doc = "D1FIFO Port Register L"]
+pub type D1Fifol = crate::RegValueT<D1Fifol_SPEC>;
+
+impl NoBitfieldReg<D1Fifol_SPEC> for D1Fifol {}
+impl ::core::default::Default for D1Fifol {
+    #[inline(always)]
+    fn default() -> D1Fifol {
+        <crate::RegValueT<D1Fifol_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct D1Fifoh_SPEC;
+impl crate::sealed::RegSpec for D1Fifoh_SPEC {
+    type DataType = u8;
+}
+
+#[doc = "D1FIFO Port Register H"]
+pub type D1Fifoh = crate::RegValueT<D1Fifoh_SPEC>;
+
+impl NoBitfieldReg<D1Fifoh_SPEC> for D1Fifoh {}
+impl ::core::default::Default for D1Fifoh {
+    #[inline(always)]
+    fn default() -> D1Fifoh {
+        <crate::RegValueT<D1Fifoh_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 
@@ -1640,7 +1854,7 @@ impl Cfifosel {
         >::from_register(self, 0)
     }
 
-    #[doc = "CFIFO Port Access Direction When DCP Is Selected"]
+    #[doc = "CFIFO Port Access Direction When DCP is Selected"]
     #[inline(always)]
     pub fn isel(
         self,
@@ -1718,6 +1932,14 @@ impl Cfifosel {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<11, 0x7, 1, 0, u8, u8, Cfifosel_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<11,0x7,1,0,u8,u8,Cfifosel_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
     #[doc = "Buffer Pointer Rewind"]
     #[inline(always)]
     pub fn rew(
@@ -1730,7 +1952,7 @@ impl Cfifosel {
         cfifosel::Rew,
         cfifosel::Rew,
         Cfifosel_SPEC,
-        crate::common::W,
+        crate::common::R,
     > {
         crate::common::RegisterField::<
             14,
@@ -1740,7 +1962,7 @@ impl Cfifosel {
             cfifosel::Rew,
             cfifosel::Rew,
             Cfifosel_SPEC,
-            crate::common::W,
+            crate::common::R,
         >::from_register(self, 0)
     }
 
@@ -1782,47 +2004,44 @@ pub mod cfifosel {
     pub struct Curpipe_SPEC;
     pub type Curpipe = crate::EnumBitfieldStruct<u8, Curpipe_SPEC>;
     impl Curpipe {
-        #[doc = "Default Control Pipe"]
-        pub const _0_X_0: Self = Self::new(0);
+        #[doc = "DCP (Default control pipe)"]
+        pub const _0000: Self = Self::new(0);
 
         #[doc = "Pipe 1"]
-        pub const _0_X_1: Self = Self::new(1);
+        pub const _0001: Self = Self::new(1);
 
         #[doc = "Pipe 2"]
-        pub const _0_X_2: Self = Self::new(2);
+        pub const _0010: Self = Self::new(2);
 
         #[doc = "Pipe 3"]
-        pub const _0_X_3: Self = Self::new(3);
+        pub const _0011: Self = Self::new(3);
 
         #[doc = "Pipe 4"]
-        pub const _0_X_4: Self = Self::new(4);
+        pub const _0100: Self = Self::new(4);
 
         #[doc = "Pipe 5"]
-        pub const _0_X_5: Self = Self::new(5);
+        pub const _0101: Self = Self::new(5);
 
         #[doc = "Pipe 6"]
-        pub const _0_X_6: Self = Self::new(6);
+        pub const _0110: Self = Self::new(6);
 
         #[doc = "Pipe 7"]
-        pub const _0_X_7: Self = Self::new(7);
+        pub const _0111: Self = Self::new(7);
 
         #[doc = "Pipe 8"]
-        pub const _0_X_8: Self = Self::new(8);
+        pub const _1000: Self = Self::new(8);
 
         #[doc = "Pipe 9"]
-        pub const _0_X_9: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
+        pub const _1001: Self = Self::new(9);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Isel_SPEC;
     pub type Isel = crate::EnumBitfieldStruct<u8, Isel_SPEC>;
     impl Isel {
-        #[doc = "Select reading from the FIFO buffer"]
+        #[doc = "Reading from the buffer memory is selected"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select writing to the FIFO buffer"]
+        #[doc = "Writing to the buffer memory is selected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -1849,17 +2068,17 @@ pub mod cfifosel {
     pub struct Rew_SPEC;
     pub type Rew = crate::EnumBitfieldStruct<u8, Rew_SPEC>;
     impl Rew {
-        #[doc = "Do not rewind buffer pointer"]
+        #[doc = "The buffer pointer is not rewound."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Rewind buffer pointer"]
+        #[doc = "The buffer pointer is rewound."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rcnt_SPEC;
     pub type Rcnt = crate::EnumBitfieldStruct<u8, Rcnt_SPEC>;
     impl Rcnt {
-        #[doc = "The DTLN\\[8:0\\] bits (CFIFOCTR.DTLN\\[8:0\\], D0FIFOCTR.DTLN\\[8:0\\], D1FIFOCTR.DTLN\\[8:0\\]) are cleared when all receive data is read from the CFIFO. In double buffer mode, the DTLN\\[8:0\\] value is cleared when all data is read from only a single plane."]
+        #[doc = "The DTLN\\[8:0\\] bits (CFIFOCRT.DTLN\\[8:0\\], D0FIFOCRT.DTLN\\[8:0\\], D1FIFOCRT.DTLN\\[8:0\\]) are cleared when all of the receive data has been read from the CFIFO.(In double buffer mode, the DTLN\\[8:0\\] bit value is cleared when all the data has been read from only a single plane.)"]
         pub const _0: Self = Self::new(0);
 
         #[doc = "The DTLN\\[8:0\\] bits are decremented each time the receive data is read from the CFIFO."]
@@ -1877,13 +2096,21 @@ impl crate::sealed::RegSpec for Cfifoctr_SPEC {
 pub type Cfifoctr = crate::RegValueT<Cfifoctr_SPEC>;
 
 impl Cfifoctr {
-    #[doc = "Receive Data Length"]
+    #[doc = "Receive Data LengthIndicates the length of the receive data."]
     #[inline(always)]
     pub fn dtln(
         self,
     ) -> crate::common::RegisterField<0, 0x1ff, 1, 0, u16, u16, Cfifoctr_SPEC, crate::common::R>
     {
         crate::common::RegisterField::<0,0x1ff,1,0,u16,u16,Cfifoctr_SPEC,crate::common::R>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<9, 0xf, 1, 0, u8, u8, Cfifoctr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<9,0xf,1,0,u8,u8,Cfifoctr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "FIFO Port Ready"]
@@ -1924,7 +2151,7 @@ impl Cfifoctr {
         cfifoctr::Bclr,
         cfifoctr::Bclr,
         Cfifoctr_SPEC,
-        crate::common::W,
+        crate::common::R,
     > {
         crate::common::RegisterField::<
             14,
@@ -1934,7 +2161,7 @@ impl Cfifoctr {
             cfifoctr::Bclr,
             cfifoctr::Bclr,
             Cfifoctr_SPEC,
-            crate::common::W,
+            crate::common::R,
         >::from_register(self, 0)
     }
 
@@ -1976,27 +2203,27 @@ pub mod cfifoctr {
     pub struct Frdy_SPEC;
     pub type Frdy = crate::EnumBitfieldStruct<u8, Frdy_SPEC>;
     impl Frdy {
-        #[doc = "FIFO port access disabled"]
+        #[doc = "FIFO port access is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "FIFO port access enabled"]
+        #[doc = "FIFO port access is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bclr_SPEC;
     pub type Bclr = crate::EnumBitfieldStruct<u8, Bclr_SPEC>;
     impl Bclr {
-        #[doc = "No operation"]
+        #[doc = "Invalid"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear FIFO buffer on the CPU side"]
+        #[doc = "Clears the buffer memory on the CPU side"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bval_SPEC;
     pub type Bval = crate::EnumBitfieldStruct<u8, Bval_SPEC>;
     impl Bval {
-        #[doc = "Invalid (writing 0 has no effect)"]
+        #[doc = "Invalid"]
         pub const _0: Self = Self::new(0);
 
         #[doc = "Writing ended"]
@@ -2005,15 +2232,15 @@ pub mod cfifoctr {
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Dfifosel_SPEC;
-impl crate::sealed::RegSpec for Dfifosel_SPEC {
+pub struct D0Fifosel_SPEC;
+impl crate::sealed::RegSpec for D0Fifosel_SPEC {
     type DataType = u16;
 }
 
-#[doc = "D%sFIFO Port Select Register"]
-pub type Dfifosel = crate::RegValueT<Dfifosel_SPEC>;
+#[doc = "D0FIFO Port Select Register"]
+pub type D0Fifosel = crate::RegValueT<D0Fifosel_SPEC>;
 
-impl Dfifosel {
+impl D0Fifosel {
     #[doc = "FIFO Port Access Pipe Specification"]
     #[inline(always)]
     pub fn curpipe(
@@ -2023,9 +2250,9 @@ impl Dfifosel {
         0xf,
         1,
         0,
-        dfifosel::Curpipe,
-        dfifosel::Curpipe,
-        Dfifosel_SPEC,
+        d0fifosel::Curpipe,
+        d0fifosel::Curpipe,
+        D0Fifosel_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -2033,9 +2260,9 @@ impl Dfifosel {
             0xf,
             1,
             0,
-            dfifosel::Curpipe,
-            dfifosel::Curpipe,
-            Dfifosel_SPEC,
+            d0fifosel::Curpipe,
+            d0fifosel::Curpipe,
+            D0Fifosel_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
@@ -2049,9 +2276,9 @@ impl Dfifosel {
         0x1,
         1,
         0,
-        dfifosel::Bigend,
-        dfifosel::Bigend,
-        Dfifosel_SPEC,
+        d0fifosel::Bigend,
+        d0fifosel::Bigend,
+        D0Fifosel_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -2059,9 +2286,9 @@ impl Dfifosel {
             0x1,
             1,
             0,
-            dfifosel::Bigend,
-            dfifosel::Bigend,
-            Dfifosel_SPEC,
+            d0fifosel::Bigend,
+            d0fifosel::Bigend,
+            D0Fifosel_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
@@ -2075,9 +2302,9 @@ impl Dfifosel {
         0x1,
         1,
         0,
-        dfifosel::Mbw,
-        dfifosel::Mbw,
-        Dfifosel_SPEC,
+        d0fifosel::Mbw,
+        d0fifosel::Mbw,
+        D0Fifosel_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -2085,11 +2312,19 @@ impl Dfifosel {
             0x1,
             1,
             0,
-            dfifosel::Mbw,
-            dfifosel::Mbw,
-            Dfifosel_SPEC,
+            d0fifosel::Mbw,
+            d0fifosel::Mbw,
+            D0Fifosel_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<11, 1, 0, D0Fifosel_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<11,1,0,D0Fifosel_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "DMA/DTC Transfer Request Enable"]
@@ -2101,9 +2336,9 @@ impl Dfifosel {
         0x1,
         1,
         0,
-        dfifosel::Dreqe,
-        dfifosel::Dreqe,
-        Dfifosel_SPEC,
+        d0fifosel::Dreqe,
+        d0fifosel::Dreqe,
+        D0Fifosel_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -2111,9 +2346,9 @@ impl Dfifosel {
             0x1,
             1,
             0,
-            dfifosel::Dreqe,
-            dfifosel::Dreqe,
-            Dfifosel_SPEC,
+            d0fifosel::Dreqe,
+            d0fifosel::Dreqe,
+            D0Fifosel_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
@@ -2127,9 +2362,9 @@ impl Dfifosel {
         0x1,
         1,
         0,
-        dfifosel::Dclrm,
-        dfifosel::Dclrm,
-        Dfifosel_SPEC,
+        d0fifosel::Dclrm,
+        d0fifosel::Dclrm,
+        D0Fifosel_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -2137,9 +2372,9 @@ impl Dfifosel {
             0x1,
             1,
             0,
-            dfifosel::Dclrm,
-            dfifosel::Dclrm,
-            Dfifosel_SPEC,
+            d0fifosel::Dclrm,
+            d0fifosel::Dclrm,
+            D0Fifosel_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
@@ -2153,20 +2388,20 @@ impl Dfifosel {
         0x1,
         1,
         0,
-        dfifosel::Rew,
-        dfifosel::Rew,
-        Dfifosel_SPEC,
-        crate::common::W,
+        d0fifosel::Rew,
+        d0fifosel::Rew,
+        D0Fifosel_SPEC,
+        crate::common::R,
     > {
         crate::common::RegisterField::<
             14,
             0x1,
             1,
             0,
-            dfifosel::Rew,
-            dfifosel::Rew,
-            Dfifosel_SPEC,
-            crate::common::W,
+            d0fifosel::Rew,
+            d0fifosel::Rew,
+            D0Fifosel_SPEC,
+            crate::common::R,
         >::from_register(self, 0)
     }
 
@@ -2179,9 +2414,9 @@ impl Dfifosel {
         0x1,
         1,
         0,
-        dfifosel::Rcnt,
-        dfifosel::Rcnt,
-        Dfifosel_SPEC,
+        d0fifosel::Rcnt,
+        d0fifosel::Rcnt,
+        D0Fifosel_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -2189,57 +2424,54 @@ impl Dfifosel {
             0x1,
             1,
             0,
-            dfifosel::Rcnt,
-            dfifosel::Rcnt,
-            Dfifosel_SPEC,
+            d0fifosel::Rcnt,
+            d0fifosel::Rcnt,
+            D0Fifosel_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 }
-impl ::core::default::Default for Dfifosel {
+impl ::core::default::Default for D0Fifosel {
     #[inline(always)]
-    fn default() -> Dfifosel {
-        <crate::RegValueT<Dfifosel_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> D0Fifosel {
+        <crate::RegValueT<D0Fifosel_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod dfifosel {
+pub mod d0fifosel {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Curpipe_SPEC;
     pub type Curpipe = crate::EnumBitfieldStruct<u8, Curpipe_SPEC>;
     impl Curpipe {
-        #[doc = "Default Control Pipe"]
-        pub const _0_X_0: Self = Self::new(0);
+        #[doc = "DCP (Default control pipe)"]
+        pub const _0000: Self = Self::new(0);
 
         #[doc = "Pipe 1"]
-        pub const _0_X_1: Self = Self::new(1);
+        pub const _0001: Self = Self::new(1);
 
         #[doc = "Pipe 2"]
-        pub const _0_X_2: Self = Self::new(2);
+        pub const _0010: Self = Self::new(2);
 
         #[doc = "Pipe 3"]
-        pub const _0_X_3: Self = Self::new(3);
+        pub const _0011: Self = Self::new(3);
 
         #[doc = "Pipe 4"]
-        pub const _0_X_4: Self = Self::new(4);
+        pub const _0100: Self = Self::new(4);
 
         #[doc = "Pipe 5"]
-        pub const _0_X_5: Self = Self::new(5);
+        pub const _0101: Self = Self::new(5);
 
         #[doc = "Pipe 6"]
-        pub const _0_X_6: Self = Self::new(6);
+        pub const _0110: Self = Self::new(6);
 
         #[doc = "Pipe 7"]
-        pub const _0_X_7: Self = Self::new(7);
+        pub const _0111: Self = Self::new(7);
 
         #[doc = "Pipe 8"]
-        pub const _0_X_8: Self = Self::new(8);
+        pub const _1000: Self = Self::new(8);
 
         #[doc = "Pipe 9"]
-        pub const _0_X_9: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
+        pub const _1001: Self = Self::new(9);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bigend_SPEC;
@@ -2265,61 +2497,69 @@ pub mod dfifosel {
     pub struct Dreqe_SPEC;
     pub type Dreqe = crate::EnumBitfieldStruct<u8, Dreqe_SPEC>;
     impl Dreqe {
-        #[doc = "Disable DMA/DTC transfer request"]
+        #[doc = "DMA/DTC transfer request is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable DMA/DTC transfer request"]
+        #[doc = "DMA/DTC transfer request is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dclrm_SPEC;
     pub type Dclrm = crate::EnumBitfieldStruct<u8, Dclrm_SPEC>;
     impl Dclrm {
-        #[doc = "Disable auto buffer clear mode"]
+        #[doc = "Auto buffer clear mode is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable auto buffer clear mode"]
+        #[doc = "Auto buffer clear mode is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rew_SPEC;
     pub type Rew = crate::EnumBitfieldStruct<u8, Rew_SPEC>;
     impl Rew {
-        #[doc = "Do not rewind buffer pointer"]
+        #[doc = "The buffer pointer is not rewound."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Rewind buffer pointer"]
+        #[doc = "The buffer pointer is rewound."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rcnt_SPEC;
     pub type Rcnt = crate::EnumBitfieldStruct<u8, Rcnt_SPEC>;
     impl Rcnt {
-        #[doc = "Clear DTLN\\[8:0\\] bits in (CFIFOCTR.DTLN\\[8:0\\], D0FIFOCTR.DTLN\\[8:0\\], D1FIFOCTR.DTLN\\[8:0\\]) when all receive data is read from DnFIFO (after read of a single plane in double buffer mode)"]
+        #[doc = "The DTLN\\[8:0\\] bits (CFIFOCRT.DTLN\\[8:0\\], D0FIFOCRT.DTLN\\[8:0\\], D1FIFOCRT.DTLN\\[8:0\\]) are cleared when all of the receive data has been read from the DnFIFO.(In double buffer mode, the DTLN bit Value is cleared when all the data has been read from only a single plane.)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Decrement DTLN\\[8:0\\] bits each time receive data is read from DnFIFO"]
+        #[doc = "The DTLN\\[8:0\\] bits are decremented each time the receive data is read from the DnFIFO. (n = 0, 1)"]
         pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Dfifoctr_SPEC;
-impl crate::sealed::RegSpec for Dfifoctr_SPEC {
+pub struct D0Fifoctr_SPEC;
+impl crate::sealed::RegSpec for D0Fifoctr_SPEC {
     type DataType = u16;
 }
 
-#[doc = "D%sFIFO Port Control Register"]
-pub type Dfifoctr = crate::RegValueT<Dfifoctr_SPEC>;
+#[doc = "D0FIFO Port Control Register"]
+pub type D0Fifoctr = crate::RegValueT<D0Fifoctr_SPEC>;
 
-impl Dfifoctr {
-    #[doc = "Receive Data Length"]
+impl D0Fifoctr {
+    #[doc = "Receive Data LengthIndicates the length of the receive data."]
     #[inline(always)]
     pub fn dtln(
         self,
-    ) -> crate::common::RegisterField<0, 0x1ff, 1, 0, u16, u16, Dfifoctr_SPEC, crate::common::R>
+    ) -> crate::common::RegisterField<0, 0x1ff, 1, 0, u16, u16, D0Fifoctr_SPEC, crate::common::R>
     {
-        crate::common::RegisterField::<0,0x1ff,1,0,u16,u16,Dfifoctr_SPEC,crate::common::R>::from_register(self,0)
+        crate::common::RegisterField::<0,0x1ff,1,0,u16,u16,D0Fifoctr_SPEC,crate::common::R>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<9, 0xf, 1, 0, u8, u8, D0Fifoctr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<9,0xf,1,0,u8,u8,D0Fifoctr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "FIFO Port Ready"]
@@ -2331,9 +2571,9 @@ impl Dfifoctr {
         0x1,
         1,
         0,
-        dfifoctr::Frdy,
-        dfifoctr::Frdy,
-        Dfifoctr_SPEC,
+        d0fifoctr::Frdy,
+        d0fifoctr::Frdy,
+        D0Fifoctr_SPEC,
         crate::common::R,
     > {
         crate::common::RegisterField::<
@@ -2341,9 +2581,9 @@ impl Dfifoctr {
             0x1,
             1,
             0,
-            dfifoctr::Frdy,
-            dfifoctr::Frdy,
-            Dfifoctr_SPEC,
+            d0fifoctr::Frdy,
+            d0fifoctr::Frdy,
+            D0Fifoctr_SPEC,
             crate::common::R,
         >::from_register(self, 0)
     }
@@ -2357,20 +2597,20 @@ impl Dfifoctr {
         0x1,
         1,
         0,
-        dfifoctr::Bclr,
-        dfifoctr::Bclr,
-        Dfifoctr_SPEC,
-        crate::common::RW,
+        d0fifoctr::Bclr,
+        d0fifoctr::Bclr,
+        D0Fifoctr_SPEC,
+        crate::common::R,
     > {
         crate::common::RegisterField::<
             14,
             0x1,
             1,
             0,
-            dfifoctr::Bclr,
-            dfifoctr::Bclr,
-            Dfifoctr_SPEC,
-            crate::common::RW,
+            d0fifoctr::Bclr,
+            d0fifoctr::Bclr,
+            D0Fifoctr_SPEC,
+            crate::common::R,
         >::from_register(self, 0)
     }
 
@@ -2383,9 +2623,9 @@ impl Dfifoctr {
         0x1,
         1,
         0,
-        dfifoctr::Bval,
-        dfifoctr::Bval,
-        Dfifoctr_SPEC,
+        d0fifoctr::Bval,
+        d0fifoctr::Bval,
+        D0Fifoctr_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -2393,46 +2633,495 @@ impl Dfifoctr {
             0x1,
             1,
             0,
-            dfifoctr::Bval,
-            dfifoctr::Bval,
-            Dfifoctr_SPEC,
+            d0fifoctr::Bval,
+            d0fifoctr::Bval,
+            D0Fifoctr_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 }
-impl ::core::default::Default for Dfifoctr {
+impl ::core::default::Default for D0Fifoctr {
     #[inline(always)]
-    fn default() -> Dfifoctr {
-        <crate::RegValueT<Dfifoctr_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> D0Fifoctr {
+        <crate::RegValueT<D0Fifoctr_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod dfifoctr {
+pub mod d0fifoctr {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Frdy_SPEC;
     pub type Frdy = crate::EnumBitfieldStruct<u8, Frdy_SPEC>;
     impl Frdy {
-        #[doc = "FIFO port access disabled"]
+        #[doc = "FIFO port access is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "FIFO port access enabled"]
+        #[doc = "FIFO port access is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bclr_SPEC;
     pub type Bclr = crate::EnumBitfieldStruct<u8, Bclr_SPEC>;
     impl Bclr {
-        #[doc = "No operation"]
+        #[doc = "Invalid"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear FIFO buffer on the CPU side"]
+        #[doc = "Clears the buffer memory on the CPU side"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bval_SPEC;
     pub type Bval = crate::EnumBitfieldStruct<u8, Bval_SPEC>;
     impl Bval {
-        #[doc = "Invalid (writing 0 has no effect)"]
+        #[doc = "Invalid"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Writing ended"]
+        pub const _1: Self = Self::new(1);
+    }
+}
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct D1Fifosel_SPEC;
+impl crate::sealed::RegSpec for D1Fifosel_SPEC {
+    type DataType = u16;
+}
+
+#[doc = "D1FIFO Port Select Register"]
+pub type D1Fifosel = crate::RegValueT<D1Fifosel_SPEC>;
+
+impl D1Fifosel {
+    #[doc = "FIFO Port Access Pipe Specification"]
+    #[inline(always)]
+    pub fn curpipe(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0xf,
+        1,
+        0,
+        d1fifosel::Curpipe,
+        d1fifosel::Curpipe,
+        D1Fifosel_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xf,
+            1,
+            0,
+            d1fifosel::Curpipe,
+            d1fifosel::Curpipe,
+            D1Fifosel_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "FIFO Port Endian Control"]
+    #[inline(always)]
+    pub fn bigend(
+        self,
+    ) -> crate::common::RegisterField<
+        8,
+        0x1,
+        1,
+        0,
+        d1fifosel::Bigend,
+        d1fifosel::Bigend,
+        D1Fifosel_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            8,
+            0x1,
+            1,
+            0,
+            d1fifosel::Bigend,
+            d1fifosel::Bigend,
+            D1Fifosel_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "FIFO Port Access Bit Width"]
+    #[inline(always)]
+    pub fn mbw(
+        self,
+    ) -> crate::common::RegisterField<
+        10,
+        0x1,
+        1,
+        0,
+        d1fifosel::Mbw,
+        d1fifosel::Mbw,
+        D1Fifosel_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            10,
+            0x1,
+            1,
+            0,
+            d1fifosel::Mbw,
+            d1fifosel::Mbw,
+            D1Fifosel_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<11, 1, 0, D1Fifosel_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<11,1,0,D1Fifosel_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "DMA/DTC Transfer Request Enable"]
+    #[inline(always)]
+    pub fn dreqe(
+        self,
+    ) -> crate::common::RegisterField<
+        12,
+        0x1,
+        1,
+        0,
+        d1fifosel::Dreqe,
+        d1fifosel::Dreqe,
+        D1Fifosel_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            12,
+            0x1,
+            1,
+            0,
+            d1fifosel::Dreqe,
+            d1fifosel::Dreqe,
+            D1Fifosel_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Auto Buffer Memory Clear Mode Accessed after Specified Pipe Data is Read"]
+    #[inline(always)]
+    pub fn dclrm(
+        self,
+    ) -> crate::common::RegisterField<
+        13,
+        0x1,
+        1,
+        0,
+        d1fifosel::Dclrm,
+        d1fifosel::Dclrm,
+        D1Fifosel_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            13,
+            0x1,
+            1,
+            0,
+            d1fifosel::Dclrm,
+            d1fifosel::Dclrm,
+            D1Fifosel_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Buffer Pointer Rewind"]
+    #[inline(always)]
+    pub fn rew(
+        self,
+    ) -> crate::common::RegisterField<
+        14,
+        0x1,
+        1,
+        0,
+        d1fifosel::Rew,
+        d1fifosel::Rew,
+        D1Fifosel_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            14,
+            0x1,
+            1,
+            0,
+            d1fifosel::Rew,
+            d1fifosel::Rew,
+            D1Fifosel_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Read Count Mode"]
+    #[inline(always)]
+    pub fn rcnt(
+        self,
+    ) -> crate::common::RegisterField<
+        15,
+        0x1,
+        1,
+        0,
+        d1fifosel::Rcnt,
+        d1fifosel::Rcnt,
+        D1Fifosel_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            15,
+            0x1,
+            1,
+            0,
+            d1fifosel::Rcnt,
+            d1fifosel::Rcnt,
+            D1Fifosel_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+}
+impl ::core::default::Default for D1Fifosel {
+    #[inline(always)]
+    fn default() -> D1Fifosel {
+        <crate::RegValueT<D1Fifosel_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+pub mod d1fifosel {
+
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Curpipe_SPEC;
+    pub type Curpipe = crate::EnumBitfieldStruct<u8, Curpipe_SPEC>;
+    impl Curpipe {
+        #[doc = "DCP (Default control pipe)"]
+        pub const _0000: Self = Self::new(0);
+
+        #[doc = "Pipe 1"]
+        pub const _0001: Self = Self::new(1);
+
+        #[doc = "Pipe 2"]
+        pub const _0010: Self = Self::new(2);
+
+        #[doc = "Pipe 3"]
+        pub const _0011: Self = Self::new(3);
+
+        #[doc = "Pipe 4"]
+        pub const _0100: Self = Self::new(4);
+
+        #[doc = "Pipe 5"]
+        pub const _0101: Self = Self::new(5);
+
+        #[doc = "Pipe 6"]
+        pub const _0110: Self = Self::new(6);
+
+        #[doc = "Pipe 7"]
+        pub const _0111: Self = Self::new(7);
+
+        #[doc = "Pipe 8"]
+        pub const _1000: Self = Self::new(8);
+
+        #[doc = "Pipe 9"]
+        pub const _1001: Self = Self::new(9);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Bigend_SPEC;
+    pub type Bigend = crate::EnumBitfieldStruct<u8, Bigend_SPEC>;
+    impl Bigend {
+        #[doc = "Little endian"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Big endian"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Mbw_SPEC;
+    pub type Mbw = crate::EnumBitfieldStruct<u8, Mbw_SPEC>;
+    impl Mbw {
+        #[doc = "8-bit width"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "16-bit width"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Dreqe_SPEC;
+    pub type Dreqe = crate::EnumBitfieldStruct<u8, Dreqe_SPEC>;
+    impl Dreqe {
+        #[doc = "DMA/DTC transfer request is disabled."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "DMA/DTC transfer request is enabled."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Dclrm_SPEC;
+    pub type Dclrm = crate::EnumBitfieldStruct<u8, Dclrm_SPEC>;
+    impl Dclrm {
+        #[doc = "Auto buffer clear mode is disabled."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Auto buffer clear mode is enabled."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Rew_SPEC;
+    pub type Rew = crate::EnumBitfieldStruct<u8, Rew_SPEC>;
+    impl Rew {
+        #[doc = "The buffer pointer is not rewound."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "The buffer pointer is rewound."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Rcnt_SPEC;
+    pub type Rcnt = crate::EnumBitfieldStruct<u8, Rcnt_SPEC>;
+    impl Rcnt {
+        #[doc = "The DTLN\\[8:0\\] bits (CFIFOCRT.DTLN\\[8:0\\], D0FIFOCRT.DTLN\\[8:0\\], D1FIFOCRT.DTLN\\[8:0\\]) are cleared when all of the receive data has been read from the DnFIFO.(In double buffer mode, the DTLN bit Value is cleared when all the data has been read from only a single plane.)"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "The DTLN\\[8:0\\] bits are decremented each time the receive data is read from the DnFIFO. (n = 0, 1)"]
+        pub const _1: Self = Self::new(1);
+    }
+}
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct D1Fifoctr_SPEC;
+impl crate::sealed::RegSpec for D1Fifoctr_SPEC {
+    type DataType = u16;
+}
+
+#[doc = "D1FIFO Port Control Register"]
+pub type D1Fifoctr = crate::RegValueT<D1Fifoctr_SPEC>;
+
+impl D1Fifoctr {
+    #[doc = "Receive Data LengthIndicates the length of the receive data."]
+    #[inline(always)]
+    pub fn dtln(
+        self,
+    ) -> crate::common::RegisterField<0, 0x1ff, 1, 0, u16, u16, D1Fifoctr_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<0,0x1ff,1,0,u16,u16,D1Fifoctr_SPEC,crate::common::R>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<9, 0xf, 1, 0, u8, u8, D1Fifoctr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<9,0xf,1,0,u8,u8,D1Fifoctr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "FIFO Port Ready"]
+    #[inline(always)]
+    pub fn frdy(
+        self,
+    ) -> crate::common::RegisterField<
+        13,
+        0x1,
+        1,
+        0,
+        d1fifoctr::Frdy,
+        d1fifoctr::Frdy,
+        D1Fifoctr_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            13,
+            0x1,
+            1,
+            0,
+            d1fifoctr::Frdy,
+            d1fifoctr::Frdy,
+            D1Fifoctr_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "CPU Buffer Clear"]
+    #[inline(always)]
+    pub fn bclr(
+        self,
+    ) -> crate::common::RegisterField<
+        14,
+        0x1,
+        1,
+        0,
+        d1fifoctr::Bclr,
+        d1fifoctr::Bclr,
+        D1Fifoctr_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            14,
+            0x1,
+            1,
+            0,
+            d1fifoctr::Bclr,
+            d1fifoctr::Bclr,
+            D1Fifoctr_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Buffer Memory Valid Flag"]
+    #[inline(always)]
+    pub fn bval(
+        self,
+    ) -> crate::common::RegisterField<
+        15,
+        0x1,
+        1,
+        0,
+        d1fifoctr::Bval,
+        d1fifoctr::Bval,
+        D1Fifoctr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            15,
+            0x1,
+            1,
+            0,
+            d1fifoctr::Bval,
+            d1fifoctr::Bval,
+            D1Fifoctr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+}
+impl ::core::default::Default for D1Fifoctr {
+    #[inline(always)]
+    fn default() -> D1Fifoctr {
+        <crate::RegValueT<D1Fifoctr_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+pub mod d1fifoctr {
+
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Frdy_SPEC;
+    pub type Frdy = crate::EnumBitfieldStruct<u8, Frdy_SPEC>;
+    impl Frdy {
+        #[doc = "FIFO port access is disabled."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "FIFO port access is enabled."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Bclr_SPEC;
+    pub type Bclr = crate::EnumBitfieldStruct<u8, Bclr_SPEC>;
+    impl Bclr {
+        #[doc = "Invalid"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Clears the buffer memory on the CPU side"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Bval_SPEC;
+    pub type Bval = crate::EnumBitfieldStruct<u8, Bval_SPEC>;
+    impl Bval {
+        #[doc = "Invalid"]
         pub const _0: Self = Self::new(0);
 
         #[doc = "Writing ended"]
@@ -2450,6 +3139,14 @@ impl crate::sealed::RegSpec for Intenb0_SPEC {
 pub type Intenb0 = crate::RegValueT<Intenb0_SPEC>;
 
 impl Intenb0 {
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, Intenb0_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<0,0xff,1,0,u8,u8,Intenb0_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
     #[doc = "Buffer Ready Interrupt Enable"]
     #[inline(always)]
     pub fn brdye(
@@ -2670,80 +3367,80 @@ pub mod intenb0 {
     pub struct Brdye_SPEC;
     pub type Brdye = crate::EnumBitfieldStruct<u8, Brdye_SPEC>;
     impl Brdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nrdye_SPEC;
     pub type Nrdye = crate::EnumBitfieldStruct<u8, Nrdye_SPEC>;
     impl Nrdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bempe_SPEC;
     pub type Bempe = crate::EnumBitfieldStruct<u8, Bempe_SPEC>;
     impl Bempe {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ctre_SPEC;
     pub type Ctre = crate::EnumBitfieldStruct<u8, Ctre_SPEC>;
     impl Ctre {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvse_SPEC;
     pub type Dvse = crate::EnumBitfieldStruct<u8, Dvse_SPEC>;
     impl Dvse {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sofe_SPEC;
     pub type Sofe = crate::EnumBitfieldStruct<u8, Sofe_SPEC>;
     impl Sofe {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rsme_SPEC;
     pub type Rsme = crate::EnumBitfieldStruct<u8, Rsme_SPEC>;
     impl Rsme {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vbse_SPEC;
     pub type Vbse = crate::EnumBitfieldStruct<u8, Vbse_SPEC>;
     impl Vbse {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2758,6 +3455,32 @@ impl crate::sealed::RegSpec for Intenb1_SPEC {
 pub type Intenb1 = crate::RegValueT<Intenb1_SPEC>;
 
 impl Intenb1 {
+    #[doc = "Port 0 Portable Device detection interrupt enabled.When PDDETINT interrupt is detected, specify disable / enable USB interrupt output."]
+    #[inline(always)]
+    pub fn pddetinte(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0x1,
+        1,
+        0,
+        intenb1::Pddetinte,
+        intenb1::Pddetinte,
+        Intenb1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x1,
+            1,
+            0,
+            intenb1::Pddetinte,
+            intenb1::Pddetinte,
+            Intenb1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
     #[doc = "Setup Transaction Normal Response Interrupt Enable"]
     #[inline(always)]
     pub fn sacke(
@@ -2888,6 +3611,16 @@ impl Intenb1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<13, 1, 0, Intenb1_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<13, 1, 0, Intenb1_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
+
     #[doc = "USB Bus Change Interrupt Enable"]
     #[inline(always)]
     pub fn bchge(
@@ -2949,73 +3682,83 @@ impl ::core::default::Default for Intenb1 {
 pub mod intenb1 {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Pddetinte_SPEC;
+    pub type Pddetinte = crate::EnumBitfieldStruct<u8, Pddetinte_SPEC>;
+    impl Pddetinte {
+        #[doc = "Interrupt output disabled"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Enable interrupt output"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sacke_SPEC;
     pub type Sacke = crate::EnumBitfieldStruct<u8, Sacke_SPEC>;
     impl Sacke {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Signe_SPEC;
     pub type Signe = crate::EnumBitfieldStruct<u8, Signe_SPEC>;
     impl Signe {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eoferre_SPEC;
     pub type Eoferre = crate::EnumBitfieldStruct<u8, Eoferre_SPEC>;
     impl Eoferre {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Attche_SPEC;
     pub type Attche = crate::EnumBitfieldStruct<u8, Attche_SPEC>;
     impl Attche {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dtche_SPEC;
     pub type Dtche = crate::EnumBitfieldStruct<u8, Dtche_SPEC>;
     impl Dtche {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bchge_SPEC;
     pub type Bchge = crate::EnumBitfieldStruct<u8, Bchge_SPEC>;
     impl Bchge {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ovrcre_SPEC;
     pub type Ovrcre = crate::EnumBitfieldStruct<u8, Ovrcre_SPEC>;
     impl Ovrcre {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3030,7 +3773,7 @@ impl crate::sealed::RegSpec for Brdyenb_SPEC {
 pub type Brdyenb = crate::RegValueT<Brdyenb_SPEC>;
 
 impl Brdyenb {
-    #[doc = "BRDY Interrupt Enable for Pipe 0"]
+    #[doc = "BRDY Interrupt Enable for PIPE0"]
     #[inline(always)]
     pub fn pipe0brdye(
         self,
@@ -3056,7 +3799,7 @@ impl Brdyenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "BRDY Interrupt Enable for Pipe 1"]
+    #[doc = "BRDY Interrupt Enable for PIPE1"]
     #[inline(always)]
     pub fn pipe1brdye(
         self,
@@ -3082,7 +3825,7 @@ impl Brdyenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "BRDY Interrupt Enable for Pipe 2"]
+    #[doc = "BRDY Interrupt Enable for PIPE2"]
     #[inline(always)]
     pub fn pipe2brdye(
         self,
@@ -3108,7 +3851,7 @@ impl Brdyenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "BRDY Interrupt Enable for Pipe 3"]
+    #[doc = "BRDY Interrupt Enable for PIPE3"]
     #[inline(always)]
     pub fn pipe3brdye(
         self,
@@ -3134,7 +3877,7 @@ impl Brdyenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "BRDY Interrupt Enable for Pipe 4"]
+    #[doc = "BRDY Interrupt Enable for PIPE4"]
     #[inline(always)]
     pub fn pipe4brdye(
         self,
@@ -3160,7 +3903,7 @@ impl Brdyenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "BRDY Interrupt Enable for Pipe 5"]
+    #[doc = "BRDY Interrupt Enable for PIPE5"]
     #[inline(always)]
     pub fn pipe5brdye(
         self,
@@ -3186,7 +3929,7 @@ impl Brdyenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "BRDY Interrupt Enable for Pipe 6"]
+    #[doc = "BRDY Interrupt Enable for PIPE6"]
     #[inline(always)]
     pub fn pipe6brdye(
         self,
@@ -3212,7 +3955,7 @@ impl Brdyenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "BRDY Interrupt Enable for Pipe 7"]
+    #[doc = "BRDY Interrupt Enable for PIPE7"]
     #[inline(always)]
     pub fn pipe7brdye(
         self,
@@ -3238,7 +3981,7 @@ impl Brdyenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "BRDY Interrupt Enable for Pipe 8"]
+    #[doc = "BRDY Interrupt Enable for PIPE8"]
     #[inline(always)]
     pub fn pipe8brdye(
         self,
@@ -3264,7 +4007,7 @@ impl Brdyenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "BRDY Interrupt Enable for Pipe 9"]
+    #[doc = "BRDY Interrupt Enable for PIPE9"]
     #[inline(always)]
     pub fn pipe9brdye(
         self,
@@ -3289,6 +4032,14 @@ impl Brdyenb {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<10, 0x3f, 1, 0, u8, u8, Brdyenb_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<10,0x3f,1,0,u8,u8,Brdyenb_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Brdyenb {
     #[inline(always)]
@@ -3302,100 +4053,100 @@ pub mod brdyenb {
     pub struct Pipe0Brdye_SPEC;
     pub type Pipe0Brdye = crate::EnumBitfieldStruct<u8, Pipe0Brdye_SPEC>;
     impl Pipe0Brdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe1Brdye_SPEC;
     pub type Pipe1Brdye = crate::EnumBitfieldStruct<u8, Pipe1Brdye_SPEC>;
     impl Pipe1Brdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe2Brdye_SPEC;
     pub type Pipe2Brdye = crate::EnumBitfieldStruct<u8, Pipe2Brdye_SPEC>;
     impl Pipe2Brdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe3Brdye_SPEC;
     pub type Pipe3Brdye = crate::EnumBitfieldStruct<u8, Pipe3Brdye_SPEC>;
     impl Pipe3Brdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe4Brdye_SPEC;
     pub type Pipe4Brdye = crate::EnumBitfieldStruct<u8, Pipe4Brdye_SPEC>;
     impl Pipe4Brdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe5Brdye_SPEC;
     pub type Pipe5Brdye = crate::EnumBitfieldStruct<u8, Pipe5Brdye_SPEC>;
     impl Pipe5Brdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe6Brdye_SPEC;
     pub type Pipe6Brdye = crate::EnumBitfieldStruct<u8, Pipe6Brdye_SPEC>;
     impl Pipe6Brdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe7Brdye_SPEC;
     pub type Pipe7Brdye = crate::EnumBitfieldStruct<u8, Pipe7Brdye_SPEC>;
     impl Pipe7Brdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe8Brdye_SPEC;
     pub type Pipe8Brdye = crate::EnumBitfieldStruct<u8, Pipe8Brdye_SPEC>;
     impl Pipe8Brdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe9Brdye_SPEC;
     pub type Pipe9Brdye = crate::EnumBitfieldStruct<u8, Pipe9Brdye_SPEC>;
     impl Pipe9Brdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3410,7 +4161,7 @@ impl crate::sealed::RegSpec for Nrdyenb_SPEC {
 pub type Nrdyenb = crate::RegValueT<Nrdyenb_SPEC>;
 
 impl Nrdyenb {
-    #[doc = "NRDY Interrupt Enable for Pipe 0"]
+    #[doc = "NRDY Interrupt Enable for PIPE0"]
     #[inline(always)]
     pub fn pipe0nrdye(
         self,
@@ -3436,7 +4187,7 @@ impl Nrdyenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "NRDY Interrupt Enable for Pipe 1"]
+    #[doc = "NRDY Interrupt Enable for PIPE1"]
     #[inline(always)]
     pub fn pipe1nrdye(
         self,
@@ -3462,7 +4213,7 @@ impl Nrdyenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "NRDY Interrupt Enable for Pipe 2"]
+    #[doc = "NRDY Interrupt Enable for PIPE2"]
     #[inline(always)]
     pub fn pipe2nrdye(
         self,
@@ -3488,7 +4239,7 @@ impl Nrdyenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "NRDY Interrupt Enable for Pipe 3"]
+    #[doc = "NRDY Interrupt Enable for PIPE3"]
     #[inline(always)]
     pub fn pipe3nrdye(
         self,
@@ -3514,7 +4265,7 @@ impl Nrdyenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "NRDY Interrupt Enable for Pipe 4"]
+    #[doc = "NRDY Interrupt Enable for PIPE4"]
     #[inline(always)]
     pub fn pipe4nrdye(
         self,
@@ -3540,7 +4291,7 @@ impl Nrdyenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "NRDY Interrupt Enable for Pipe 5"]
+    #[doc = "NRDY Interrupt Enable for PIPE5"]
     #[inline(always)]
     pub fn pipe5nrdye(
         self,
@@ -3566,7 +4317,7 @@ impl Nrdyenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "NRDY Interrupt Enable for Pipe 6"]
+    #[doc = "NRDY Interrupt Enable for PIPE6"]
     #[inline(always)]
     pub fn pipe6nrdye(
         self,
@@ -3592,7 +4343,7 @@ impl Nrdyenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "NRDY Interrupt Enable for Pipe 7"]
+    #[doc = "NRDY Interrupt Enable for PIPE7"]
     #[inline(always)]
     pub fn pipe7nrdye(
         self,
@@ -3618,7 +4369,7 @@ impl Nrdyenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "NRDY Interrupt Enable for Pipe 8"]
+    #[doc = "NRDY Interrupt Enable for PIPE8"]
     #[inline(always)]
     pub fn pipe8nrdye(
         self,
@@ -3644,7 +4395,7 @@ impl Nrdyenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "NRDY Interrupt Enable for Pipe 9"]
+    #[doc = "NRDY Interrupt Enable for PIPE9"]
     #[inline(always)]
     pub fn pipe9nrdye(
         self,
@@ -3669,6 +4420,14 @@ impl Nrdyenb {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<10, 0x3f, 1, 0, u8, u8, Nrdyenb_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<10,0x3f,1,0,u8,u8,Nrdyenb_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Nrdyenb {
     #[inline(always)]
@@ -3682,100 +4441,100 @@ pub mod nrdyenb {
     pub struct Pipe0Nrdye_SPEC;
     pub type Pipe0Nrdye = crate::EnumBitfieldStruct<u8, Pipe0Nrdye_SPEC>;
     impl Pipe0Nrdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe1Nrdye_SPEC;
     pub type Pipe1Nrdye = crate::EnumBitfieldStruct<u8, Pipe1Nrdye_SPEC>;
     impl Pipe1Nrdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe2Nrdye_SPEC;
     pub type Pipe2Nrdye = crate::EnumBitfieldStruct<u8, Pipe2Nrdye_SPEC>;
     impl Pipe2Nrdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe3Nrdye_SPEC;
     pub type Pipe3Nrdye = crate::EnumBitfieldStruct<u8, Pipe3Nrdye_SPEC>;
     impl Pipe3Nrdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe4Nrdye_SPEC;
     pub type Pipe4Nrdye = crate::EnumBitfieldStruct<u8, Pipe4Nrdye_SPEC>;
     impl Pipe4Nrdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe5Nrdye_SPEC;
     pub type Pipe5Nrdye = crate::EnumBitfieldStruct<u8, Pipe5Nrdye_SPEC>;
     impl Pipe5Nrdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe6Nrdye_SPEC;
     pub type Pipe6Nrdye = crate::EnumBitfieldStruct<u8, Pipe6Nrdye_SPEC>;
     impl Pipe6Nrdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe7Nrdye_SPEC;
     pub type Pipe7Nrdye = crate::EnumBitfieldStruct<u8, Pipe7Nrdye_SPEC>;
     impl Pipe7Nrdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe8Nrdye_SPEC;
     pub type Pipe8Nrdye = crate::EnumBitfieldStruct<u8, Pipe8Nrdye_SPEC>;
     impl Pipe8Nrdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe9Nrdye_SPEC;
     pub type Pipe9Nrdye = crate::EnumBitfieldStruct<u8, Pipe9Nrdye_SPEC>;
     impl Pipe9Nrdye {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3790,7 +4549,7 @@ impl crate::sealed::RegSpec for Bempenb_SPEC {
 pub type Bempenb = crate::RegValueT<Bempenb_SPEC>;
 
 impl Bempenb {
-    #[doc = "BEMP Interrupt Enable for Pipe 0"]
+    #[doc = "BEMP Interrupt Enable for PIPE0"]
     #[inline(always)]
     pub fn pipe0bempe(
         self,
@@ -3816,7 +4575,7 @@ impl Bempenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "BEMP Interrupt Enable for Pipe 1"]
+    #[doc = "BEMP Interrupt Enable for PIPE1"]
     #[inline(always)]
     pub fn pipe1bempe(
         self,
@@ -3842,7 +4601,7 @@ impl Bempenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "BEMP Interrupt Enable for Pipe 2"]
+    #[doc = "BEMP Interrupt Enable for PIPE2"]
     #[inline(always)]
     pub fn pipe2bempe(
         self,
@@ -3868,7 +4627,7 @@ impl Bempenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "BEMP Interrupt Enable for Pipe 3"]
+    #[doc = "BEMP Interrupt Enable for PIPE3"]
     #[inline(always)]
     pub fn pipe3bempe(
         self,
@@ -3894,7 +4653,7 @@ impl Bempenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "BEMP Interrupt Enable for Pipe 4"]
+    #[doc = "BEMP Interrupt Enable for PIPE4"]
     #[inline(always)]
     pub fn pipe4bempe(
         self,
@@ -3920,7 +4679,7 @@ impl Bempenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "BEMP Interrupt Enable for Pipe 5"]
+    #[doc = "BEMP Interrupt Enable for PIPE5"]
     #[inline(always)]
     pub fn pipe5bempe(
         self,
@@ -3946,7 +4705,7 @@ impl Bempenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "BEMP Interrupt Enable for Pipe 6"]
+    #[doc = "BEMP Interrupt Enable for PIPE6"]
     #[inline(always)]
     pub fn pipe6bempe(
         self,
@@ -3972,7 +4731,7 @@ impl Bempenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "BEMP Interrupt Enable for Pipe 7"]
+    #[doc = "BEMP Interrupt Enable for PIPE7"]
     #[inline(always)]
     pub fn pipe7bempe(
         self,
@@ -3998,7 +4757,7 @@ impl Bempenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "BEMP Interrupt Enable for Pipe 8"]
+    #[doc = "BEMP Interrupt Enable for PIPE8"]
     #[inline(always)]
     pub fn pipe8bempe(
         self,
@@ -4024,7 +4783,7 @@ impl Bempenb {
         >::from_register(self, 0)
     }
 
-    #[doc = "BEMP Interrupt Enable for Pipe 9"]
+    #[doc = "BEMP Interrupt Enable for PIPE9"]
     #[inline(always)]
     pub fn pipe9bempe(
         self,
@@ -4049,6 +4808,14 @@ impl Bempenb {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<10, 0x3f, 1, 0, u8, u8, Bempenb_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<10,0x3f,1,0,u8,u8,Bempenb_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Bempenb {
     #[inline(always)]
@@ -4062,100 +4829,100 @@ pub mod bempenb {
     pub struct Pipe0Bempe_SPEC;
     pub type Pipe0Bempe = crate::EnumBitfieldStruct<u8, Pipe0Bempe_SPEC>;
     impl Pipe0Bempe {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe1Bempe_SPEC;
     pub type Pipe1Bempe = crate::EnumBitfieldStruct<u8, Pipe1Bempe_SPEC>;
     impl Pipe1Bempe {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe2Bempe_SPEC;
     pub type Pipe2Bempe = crate::EnumBitfieldStruct<u8, Pipe2Bempe_SPEC>;
     impl Pipe2Bempe {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe3Bempe_SPEC;
     pub type Pipe3Bempe = crate::EnumBitfieldStruct<u8, Pipe3Bempe_SPEC>;
     impl Pipe3Bempe {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe4Bempe_SPEC;
     pub type Pipe4Bempe = crate::EnumBitfieldStruct<u8, Pipe4Bempe_SPEC>;
     impl Pipe4Bempe {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe5Bempe_SPEC;
     pub type Pipe5Bempe = crate::EnumBitfieldStruct<u8, Pipe5Bempe_SPEC>;
     impl Pipe5Bempe {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe6Bempe_SPEC;
     pub type Pipe6Bempe = crate::EnumBitfieldStruct<u8, Pipe6Bempe_SPEC>;
     impl Pipe6Bempe {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe7Bempe_SPEC;
     pub type Pipe7Bempe = crate::EnumBitfieldStruct<u8, Pipe7Bempe_SPEC>;
     impl Pipe7Bempe {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe8Bempe_SPEC;
     pub type Pipe8Bempe = crate::EnumBitfieldStruct<u8, Pipe8Bempe_SPEC>;
     impl Pipe8Bempe {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe9Bempe_SPEC;
     pub type Pipe9Bempe = crate::EnumBitfieldStruct<u8, Pipe9Bempe_SPEC>;
     impl Pipe9Bempe {
-        #[doc = "Disable interrupt request"]
+        #[doc = "Interrupt output disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt request"]
+        #[doc = "Interrupt output enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4174,10 +4941,26 @@ impl Sofcfg {
     #[inline(always)]
     pub fn edgests(
         self,
-    ) -> crate::common::RegisterFieldBool<4, 1, 0, Sofcfg_SPEC, crate::common::R> {
-        crate::common::RegisterFieldBool::<4, 1, 0, Sofcfg_SPEC, crate::common::R>::from_register(
-            self, 0,
-        )
+    ) -> crate::common::RegisterField<
+        4,
+        0x1,
+        1,
+        0,
+        sofcfg::Edgests,
+        sofcfg::Edgests,
+        Sofcfg_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            4,
+            0x1,
+            1,
+            0,
+            sofcfg::Edgests,
+            sofcfg::Edgests,
+            Sofcfg_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
     }
 
     #[doc = "BRDY Interrupt Status Clear Timing"]
@@ -4231,6 +5014,14 @@ impl Sofcfg {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<9, 0x7f, 1, 0, u8, u8, Sofcfg_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<9,0x7f,1,0,u8,u8,Sofcfg_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Sofcfg {
     #[inline(always)]
@@ -4241,23 +5032,33 @@ impl ::core::default::Default for Sofcfg {
 pub mod sofcfg {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Edgests_SPEC;
+    pub type Edgests = crate::EnumBitfieldStruct<u8, Edgests_SPEC>;
+    impl Edgests {
+        #[doc = "before stopping the clock supply to the USB module"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "the edge interrupt output signal is in the middle of the edge processing"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Brdym_SPEC;
     pub type Brdym = crate::EnumBitfieldStruct<u8, Brdym_SPEC>;
     impl Brdym {
-        #[doc = "Clear BRDY flag by software"]
+        #[doc = "Software clears the status."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear BRDY flag by the USBFS through a data read from the FIFO buffer or data write to the FIFO buffer"]
+        #[doc = "The USB clears the status when data has been read from the FIFO buffer or data has been written to the FIFO buffer."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Trnensel_SPEC;
     pub type Trnensel = crate::EnumBitfieldStruct<u8, Trnensel_SPEC>;
     impl Trnensel {
-        #[doc = "Not low-speed communication"]
+        #[doc = "For non-low-speed communication"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Low-speed communication"]
+        #[doc = "For low-speed communication"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4621,10 +5422,10 @@ pub mod intsts0 {
     pub struct Valid_SPEC;
     pub type Valid = crate::EnumBitfieldStruct<u8, Valid_SPEC>;
     impl Valid {
-        #[doc = "Setup packet not received"]
+        #[doc = "Setup packet is not received"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Setup packet received"]
+        #[doc = "Setup packet is received"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -4642,98 +5443,95 @@ pub mod intsts0 {
 
         #[doc = "Configured state"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "Suspend state"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vbsts_SPEC;
     pub type Vbsts = crate::EnumBitfieldStruct<u8, Vbsts_SPEC>;
     impl Vbsts {
-        #[doc = "USB_VBUS pin is low"]
+        #[doc = "USB0_VBUS pin is low."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "USB_VBUS pin is high"]
+        #[doc = "USB0_VBUS pin is high."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Brdy_SPEC;
     pub type Brdy = crate::EnumBitfieldStruct<u8, Brdy_SPEC>;
     impl Brdy {
-        #[doc = "No BRDY interrupt occurred"]
+        #[doc = "BRDY interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BRDY interrupt occurred"]
+        #[doc = "BRDY interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nrdy_SPEC;
     pub type Nrdy = crate::EnumBitfieldStruct<u8, Nrdy_SPEC>;
     impl Nrdy {
-        #[doc = "No NRDY interrupt occurred"]
+        #[doc = "NRDY interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "NRDY interrupt occurred"]
+        #[doc = "NRDY interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bemp_SPEC;
     pub type Bemp = crate::EnumBitfieldStruct<u8, Bemp_SPEC>;
     impl Bemp {
-        #[doc = "No BEMP interrupt occurred"]
+        #[doc = "BEMP interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BEMP interrupt occurred"]
+        #[doc = "BEMP interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ctrt_SPEC;
     pub type Ctrt = crate::EnumBitfieldStruct<u8, Ctrt_SPEC>;
     impl Ctrt {
-        #[doc = "No control transfer stage transition interrupt occurred"]
+        #[doc = "Control transfer stage transition interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Control transfer stage transition interrupt occurred"]
+        #[doc = "Control transfer stage transition interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvst_SPEC;
     pub type Dvst = crate::EnumBitfieldStruct<u8, Dvst_SPEC>;
     impl Dvst {
-        #[doc = "No device state transition interrupt occurred"]
+        #[doc = "Device state transition interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Device state transition interrupt occurred"]
+        #[doc = "Device state transition interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sofr_SPEC;
     pub type Sofr = crate::EnumBitfieldStruct<u8, Sofr_SPEC>;
     impl Sofr {
-        #[doc = "No SOF interrupt occurred"]
+        #[doc = "SOF interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "SOF interrupt occurred"]
+        #[doc = "SOF interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Resm_SPEC;
     pub type Resm = crate::EnumBitfieldStruct<u8, Resm_SPEC>;
     impl Resm {
-        #[doc = "No resume interrupt occurred"]
+        #[doc = "Resume interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Resume interrupt occurred"]
+        #[doc = "Resume interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vbint_SPEC;
     pub type Vbint = crate::EnumBitfieldStruct<u8, Vbint_SPEC>;
     impl Vbint {
-        #[doc = "No VBUS interrupt occurred"]
+        #[doc = "VBUS interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "VBUS interrupt occurred"]
+        #[doc = "VBUS interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4748,6 +5546,32 @@ impl crate::sealed::RegSpec for Intsts1_SPEC {
 pub type Intsts1 = crate::RegValueT<Intsts1_SPEC>;
 
 impl Intsts1 {
+    #[doc = "Port 0 Portable Device Detection Interrupt Status.When the host controller function is selected, Portable Device detection interrupt status is displayed."]
+    #[inline(always)]
+    pub fn pddetint(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0x1,
+        1,
+        0,
+        intsts1::Pddetint,
+        intsts1::Pddetint,
+        Intsts1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x1,
+            1,
+            0,
+            intsts1::Pddetint,
+            intsts1::Pddetint,
+            Intsts1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
     #[doc = "Setup Transaction Normal Response Interrupt Status"]
     #[inline(always)]
     pub fn sack(
@@ -4878,6 +5702,16 @@ impl Intsts1 {
         >::from_register(self, 0)
     }
 
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<13, 1, 0, Intsts1_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<13, 1, 0, Intsts1_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
+
     #[doc = "USB Bus Change Interrupt Status"]
     #[inline(always)]
     pub fn bchg(
@@ -4939,73 +5773,83 @@ impl ::core::default::Default for Intsts1 {
 pub mod intsts1 {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Pddetint_SPEC;
+    pub type Pddetint = crate::EnumBitfieldStruct<u8, Pddetint_SPEC>;
+    impl Pddetint {
+        #[doc = "PDDETINT interrupt not occurred"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "PDDETINT interrupt generated"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sack_SPEC;
     pub type Sack = crate::EnumBitfieldStruct<u8, Sack_SPEC>;
     impl Sack {
-        #[doc = "No SACK interrupt occurred"]
+        #[doc = "SACK interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "SACK interrupt occurred"]
+        #[doc = "SACK interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sign_SPEC;
     pub type Sign = crate::EnumBitfieldStruct<u8, Sign_SPEC>;
     impl Sign {
-        #[doc = "No SIGN interrupt occurred"]
+        #[doc = "SIGN interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "SIGN interrupt occurred"]
+        #[doc = "SIGN interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eoferr_SPEC;
     pub type Eoferr = crate::EnumBitfieldStruct<u8, Eoferr_SPEC>;
     impl Eoferr {
-        #[doc = "No EOFERR interrupt occurred"]
+        #[doc = "EOFERR interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "EOFERR interrupt occurred"]
+        #[doc = "EOFERR interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Attch_SPEC;
     pub type Attch = crate::EnumBitfieldStruct<u8, Attch_SPEC>;
     impl Attch {
-        #[doc = "No ATTCH interrupt occurred"]
+        #[doc = "ATTCH interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "ATTCH interrupt occurred"]
+        #[doc = "ATTCH interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dtch_SPEC;
     pub type Dtch = crate::EnumBitfieldStruct<u8, Dtch_SPEC>;
     impl Dtch {
-        #[doc = "No DTCH interrupt occurred"]
+        #[doc = "DTCH interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "DTCH interrupt occurred"]
+        #[doc = "DTCH interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bchg_SPEC;
     pub type Bchg = crate::EnumBitfieldStruct<u8, Bchg_SPEC>;
     impl Bchg {
-        #[doc = "No BCHG interrupt occurred"]
+        #[doc = "BCHG interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BCHG interrupt occurred"]
+        #[doc = "BCHG interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ovrcr_SPEC;
     pub type Ovrcr = crate::EnumBitfieldStruct<u8, Ovrcr_SPEC>;
     impl Ovrcr {
-        #[doc = "No OVRCR interrupt occurred"]
+        #[doc = "OVRCR interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "OVRCR interrupt occurred"]
+        #[doc = "OVRCR interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5020,7 +5864,7 @@ impl crate::sealed::RegSpec for Brdysts_SPEC {
 pub type Brdysts = crate::RegValueT<Brdysts_SPEC>;
 
 impl Brdysts {
-    #[doc = "BRDY Interrupt Status for Pipe 0"]
+    #[doc = "BRDY Interrupt Status for PIPE0"]
     #[inline(always)]
     pub fn pipe0brdy(
         self,
@@ -5046,7 +5890,7 @@ impl Brdysts {
         >::from_register(self, 0)
     }
 
-    #[doc = "BRDY Interrupt Status for Pipe 1"]
+    #[doc = "BRDY Interrupt Status for PIPE1"]
     #[inline(always)]
     pub fn pipe1brdy(
         self,
@@ -5072,7 +5916,7 @@ impl Brdysts {
         >::from_register(self, 0)
     }
 
-    #[doc = "BRDY Interrupt Status for Pipe 2"]
+    #[doc = "BRDY Interrupt Status for PIPE2"]
     #[inline(always)]
     pub fn pipe2brdy(
         self,
@@ -5098,7 +5942,7 @@ impl Brdysts {
         >::from_register(self, 0)
     }
 
-    #[doc = "BRDY Interrupt Status for Pipe 3"]
+    #[doc = "BRDY Interrupt Status for PIPE3"]
     #[inline(always)]
     pub fn pipe3brdy(
         self,
@@ -5124,7 +5968,7 @@ impl Brdysts {
         >::from_register(self, 0)
     }
 
-    #[doc = "BRDY Interrupt Status for Pipe 4"]
+    #[doc = "BRDY Interrupt Status for PIPE4"]
     #[inline(always)]
     pub fn pipe4brdy(
         self,
@@ -5150,7 +5994,7 @@ impl Brdysts {
         >::from_register(self, 0)
     }
 
-    #[doc = "BRDY Interrupt Status for Pipe 5"]
+    #[doc = "BRDY Interrupt Status for PIPE5"]
     #[inline(always)]
     pub fn pipe5brdy(
         self,
@@ -5176,7 +6020,7 @@ impl Brdysts {
         >::from_register(self, 0)
     }
 
-    #[doc = "BRDY Interrupt Status for Pipe 6"]
+    #[doc = "BRDY Interrupt Status for PIPE6"]
     #[inline(always)]
     pub fn pipe6brdy(
         self,
@@ -5202,7 +6046,7 @@ impl Brdysts {
         >::from_register(self, 0)
     }
 
-    #[doc = "BRDY Interrupt Status for Pipe 7"]
+    #[doc = "BRDY Interrupt Status for PIPE7"]
     #[inline(always)]
     pub fn pipe7brdy(
         self,
@@ -5228,7 +6072,7 @@ impl Brdysts {
         >::from_register(self, 0)
     }
 
-    #[doc = "BRDY Interrupt Status for Pipe 8"]
+    #[doc = "BRDY Interrupt Status for PIPE8"]
     #[inline(always)]
     pub fn pipe8brdy(
         self,
@@ -5254,7 +6098,7 @@ impl Brdysts {
         >::from_register(self, 0)
     }
 
-    #[doc = "BRDY Interrupt Status for Pipe 9"]
+    #[doc = "BRDY Interrupt Status for PIPE9"]
     #[inline(always)]
     pub fn pipe9brdy(
         self,
@@ -5279,6 +6123,14 @@ impl Brdysts {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<10, 0x3f, 1, 0, u8, u8, Brdysts_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<10,0x3f,1,0,u8,u8,Brdysts_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Brdysts {
     #[inline(always)]
@@ -5292,100 +6144,100 @@ pub mod brdysts {
     pub struct Pipe0Brdy_SPEC;
     pub type Pipe0Brdy = crate::EnumBitfieldStruct<u8, Pipe0Brdy_SPEC>;
     impl Pipe0Brdy {
-        #[doc = "No BRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe1Brdy_SPEC;
     pub type Pipe1Brdy = crate::EnumBitfieldStruct<u8, Pipe1Brdy_SPEC>;
     impl Pipe1Brdy {
-        #[doc = "No BRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe2Brdy_SPEC;
     pub type Pipe2Brdy = crate::EnumBitfieldStruct<u8, Pipe2Brdy_SPEC>;
     impl Pipe2Brdy {
-        #[doc = "No BRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe3Brdy_SPEC;
     pub type Pipe3Brdy = crate::EnumBitfieldStruct<u8, Pipe3Brdy_SPEC>;
     impl Pipe3Brdy {
-        #[doc = "No BRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe4Brdy_SPEC;
     pub type Pipe4Brdy = crate::EnumBitfieldStruct<u8, Pipe4Brdy_SPEC>;
     impl Pipe4Brdy {
-        #[doc = "No BRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe5Brdy_SPEC;
     pub type Pipe5Brdy = crate::EnumBitfieldStruct<u8, Pipe5Brdy_SPEC>;
     impl Pipe5Brdy {
-        #[doc = "No BRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe6Brdy_SPEC;
     pub type Pipe6Brdy = crate::EnumBitfieldStruct<u8, Pipe6Brdy_SPEC>;
     impl Pipe6Brdy {
-        #[doc = "No BRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe7Brdy_SPEC;
     pub type Pipe7Brdy = crate::EnumBitfieldStruct<u8, Pipe7Brdy_SPEC>;
     impl Pipe7Brdy {
-        #[doc = "No BRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe8Brdy_SPEC;
     pub type Pipe8Brdy = crate::EnumBitfieldStruct<u8, Pipe8Brdy_SPEC>;
     impl Pipe8Brdy {
-        #[doc = "No BRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe9Brdy_SPEC;
     pub type Pipe9Brdy = crate::EnumBitfieldStruct<u8, Pipe9Brdy_SPEC>;
     impl Pipe9Brdy {
-        #[doc = "No BRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5400,7 +6252,7 @@ impl crate::sealed::RegSpec for Nrdysts_SPEC {
 pub type Nrdysts = crate::RegValueT<Nrdysts_SPEC>;
 
 impl Nrdysts {
-    #[doc = "NRDY Interrupt Status for Pipe 0"]
+    #[doc = "NRDY Interrupt Status for PIPE0"]
     #[inline(always)]
     pub fn pipe0nrdy(
         self,
@@ -5426,7 +6278,7 @@ impl Nrdysts {
         >::from_register(self, 0)
     }
 
-    #[doc = "NRDY Interrupt Status for Pipe 1"]
+    #[doc = "NRDY Interrupt Status for PIPE1"]
     #[inline(always)]
     pub fn pipe1nrdy(
         self,
@@ -5452,7 +6304,7 @@ impl Nrdysts {
         >::from_register(self, 0)
     }
 
-    #[doc = "NRDY Interrupt Status for Pipe 2"]
+    #[doc = "NRDY Interrupt Status for PIPE2"]
     #[inline(always)]
     pub fn pipe2nrdy(
         self,
@@ -5478,7 +6330,7 @@ impl Nrdysts {
         >::from_register(self, 0)
     }
 
-    #[doc = "NRDY Interrupt Status for Pipe 3"]
+    #[doc = "NRDY Interrupt Status for PIPE3"]
     #[inline(always)]
     pub fn pipe3nrdy(
         self,
@@ -5504,7 +6356,7 @@ impl Nrdysts {
         >::from_register(self, 0)
     }
 
-    #[doc = "NRDY Interrupt Status for Pipe 4"]
+    #[doc = "NRDY Interrupt Status for PIPE4"]
     #[inline(always)]
     pub fn pipe4nrdy(
         self,
@@ -5530,7 +6382,7 @@ impl Nrdysts {
         >::from_register(self, 0)
     }
 
-    #[doc = "NRDY Interrupt Status for Pipe 5"]
+    #[doc = "NRDY Interrupt Status for PIPE5"]
     #[inline(always)]
     pub fn pipe5nrdy(
         self,
@@ -5556,7 +6408,7 @@ impl Nrdysts {
         >::from_register(self, 0)
     }
 
-    #[doc = "NRDY Interrupt Status for Pipe 6"]
+    #[doc = "NRDY Interrupt Status for PIPE6"]
     #[inline(always)]
     pub fn pipe6nrdy(
         self,
@@ -5582,7 +6434,7 @@ impl Nrdysts {
         >::from_register(self, 0)
     }
 
-    #[doc = "NRDY Interrupt Status for Pipe 7"]
+    #[doc = "NRDY Interrupt Status for PIPE7"]
     #[inline(always)]
     pub fn pipe7nrdy(
         self,
@@ -5608,7 +6460,7 @@ impl Nrdysts {
         >::from_register(self, 0)
     }
 
-    #[doc = "NRDY Interrupt Status for Pipe 8"]
+    #[doc = "NRDY Interrupt Status for PIPE8"]
     #[inline(always)]
     pub fn pipe8nrdy(
         self,
@@ -5634,7 +6486,7 @@ impl Nrdysts {
         >::from_register(self, 0)
     }
 
-    #[doc = "NRDY Interrupt Status for Pipe 9"]
+    #[doc = "NRDY Interrupt Status for PIPE9"]
     #[inline(always)]
     pub fn pipe9nrdy(
         self,
@@ -5659,6 +6511,14 @@ impl Nrdysts {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<10, 0x3f, 1, 0, u8, u8, Nrdysts_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<10,0x3f,1,0,u8,u8,Nrdysts_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Nrdysts {
     #[inline(always)]
@@ -5672,100 +6532,100 @@ pub mod nrdysts {
     pub struct Pipe0Nrdy_SPEC;
     pub type Pipe0Nrdy = crate::EnumBitfieldStruct<u8, Pipe0Nrdy_SPEC>;
     impl Pipe0Nrdy {
-        #[doc = "No NRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "NRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe1Nrdy_SPEC;
     pub type Pipe1Nrdy = crate::EnumBitfieldStruct<u8, Pipe1Nrdy_SPEC>;
     impl Pipe1Nrdy {
-        #[doc = "No NRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "NRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe2Nrdy_SPEC;
     pub type Pipe2Nrdy = crate::EnumBitfieldStruct<u8, Pipe2Nrdy_SPEC>;
     impl Pipe2Nrdy {
-        #[doc = "No NRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "NRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe3Nrdy_SPEC;
     pub type Pipe3Nrdy = crate::EnumBitfieldStruct<u8, Pipe3Nrdy_SPEC>;
     impl Pipe3Nrdy {
-        #[doc = "No NRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "NRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe4Nrdy_SPEC;
     pub type Pipe4Nrdy = crate::EnumBitfieldStruct<u8, Pipe4Nrdy_SPEC>;
     impl Pipe4Nrdy {
-        #[doc = "No NRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "NRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe5Nrdy_SPEC;
     pub type Pipe5Nrdy = crate::EnumBitfieldStruct<u8, Pipe5Nrdy_SPEC>;
     impl Pipe5Nrdy {
-        #[doc = "No NRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "NRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe6Nrdy_SPEC;
     pub type Pipe6Nrdy = crate::EnumBitfieldStruct<u8, Pipe6Nrdy_SPEC>;
     impl Pipe6Nrdy {
-        #[doc = "No NRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "NRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe7Nrdy_SPEC;
     pub type Pipe7Nrdy = crate::EnumBitfieldStruct<u8, Pipe7Nrdy_SPEC>;
     impl Pipe7Nrdy {
-        #[doc = "No NRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "NRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe8Nrdy_SPEC;
     pub type Pipe8Nrdy = crate::EnumBitfieldStruct<u8, Pipe8Nrdy_SPEC>;
     impl Pipe8Nrdy {
-        #[doc = "No NRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "NRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe9Nrdy_SPEC;
     pub type Pipe9Nrdy = crate::EnumBitfieldStruct<u8, Pipe9Nrdy_SPEC>;
     impl Pipe9Nrdy {
-        #[doc = "No NRDY interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "NRDY interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5780,7 +6640,7 @@ impl crate::sealed::RegSpec for Bempsts_SPEC {
 pub type Bempsts = crate::RegValueT<Bempsts_SPEC>;
 
 impl Bempsts {
-    #[doc = "BEMP Interrupt Status for Pipe 0"]
+    #[doc = "BEMP Interrupt Status for PIPE0"]
     #[inline(always)]
     pub fn pipe0bemp(
         self,
@@ -5806,7 +6666,7 @@ impl Bempsts {
         >::from_register(self, 0)
     }
 
-    #[doc = "BEMP Interrupt Status for Pipe 1"]
+    #[doc = "BEMP Interrupt Status for PIPE1"]
     #[inline(always)]
     pub fn pipe1bemp(
         self,
@@ -5832,7 +6692,7 @@ impl Bempsts {
         >::from_register(self, 0)
     }
 
-    #[doc = "BEMP Interrupt Status for Pipe 2"]
+    #[doc = "BEMP Interrupt Status for PIPE2"]
     #[inline(always)]
     pub fn pipe2bemp(
         self,
@@ -5858,7 +6718,7 @@ impl Bempsts {
         >::from_register(self, 0)
     }
 
-    #[doc = "BEMP Interrupt Status for Pipe 3"]
+    #[doc = "BEMP Interrupt Status for PIPE3"]
     #[inline(always)]
     pub fn pipe3bemp(
         self,
@@ -5884,7 +6744,7 @@ impl Bempsts {
         >::from_register(self, 0)
     }
 
-    #[doc = "BEMP Interrupt Status for Pipe 4"]
+    #[doc = "BEMP Interrupt Status for PIPE4"]
     #[inline(always)]
     pub fn pipe4bemp(
         self,
@@ -5910,7 +6770,7 @@ impl Bempsts {
         >::from_register(self, 0)
     }
 
-    #[doc = "BEMP Interrupt Status for Pipe 5"]
+    #[doc = "BEMP Interrupt Status for PIPE5"]
     #[inline(always)]
     pub fn pipe5bemp(
         self,
@@ -5936,7 +6796,7 @@ impl Bempsts {
         >::from_register(self, 0)
     }
 
-    #[doc = "BEMP Interrupt Status for Pipe 6"]
+    #[doc = "BEMP Interrupt Status for PIPE6"]
     #[inline(always)]
     pub fn pipe6bemp(
         self,
@@ -5962,7 +6822,7 @@ impl Bempsts {
         >::from_register(self, 0)
     }
 
-    #[doc = "BEMP Interrupt Status for Pipe 7"]
+    #[doc = "BEMP Interrupt Status for PIPE7"]
     #[inline(always)]
     pub fn pipe7bemp(
         self,
@@ -5988,7 +6848,7 @@ impl Bempsts {
         >::from_register(self, 0)
     }
 
-    #[doc = "BEMP Interrupt Status for Pipe 8"]
+    #[doc = "BEMP Interrupt Status for PIPE8"]
     #[inline(always)]
     pub fn pipe8bemp(
         self,
@@ -6014,7 +6874,7 @@ impl Bempsts {
         >::from_register(self, 0)
     }
 
-    #[doc = "BEMP Interrupt Status for Pipe 9"]
+    #[doc = "BEMP Interrupt Status for PIPE9"]
     #[inline(always)]
     pub fn pipe9bemp(
         self,
@@ -6039,6 +6899,14 @@ impl Bempsts {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<10, 0x3f, 1, 0, u8, u8, Bempsts_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<10,0x3f,1,0,u8,u8,Bempsts_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Bempsts {
     #[inline(always)]
@@ -6052,100 +6920,100 @@ pub mod bempsts {
     pub struct Pipe0Bemp_SPEC;
     pub type Pipe0Bemp = crate::EnumBitfieldStruct<u8, Pipe0Bemp_SPEC>;
     impl Pipe0Bemp {
-        #[doc = "No BEMP interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BEMP interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe1Bemp_SPEC;
     pub type Pipe1Bemp = crate::EnumBitfieldStruct<u8, Pipe1Bemp_SPEC>;
     impl Pipe1Bemp {
-        #[doc = "No BEMP interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BEMP interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe2Bemp_SPEC;
     pub type Pipe2Bemp = crate::EnumBitfieldStruct<u8, Pipe2Bemp_SPEC>;
     impl Pipe2Bemp {
-        #[doc = "No BEMP interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BEMP interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe3Bemp_SPEC;
     pub type Pipe3Bemp = crate::EnumBitfieldStruct<u8, Pipe3Bemp_SPEC>;
     impl Pipe3Bemp {
-        #[doc = "No BEMP interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BEMP interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe4Bemp_SPEC;
     pub type Pipe4Bemp = crate::EnumBitfieldStruct<u8, Pipe4Bemp_SPEC>;
     impl Pipe4Bemp {
-        #[doc = "No BEMP interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BEMP interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe5Bemp_SPEC;
     pub type Pipe5Bemp = crate::EnumBitfieldStruct<u8, Pipe5Bemp_SPEC>;
     impl Pipe5Bemp {
-        #[doc = "No BEMP interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BEMP interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe6Bemp_SPEC;
     pub type Pipe6Bemp = crate::EnumBitfieldStruct<u8, Pipe6Bemp_SPEC>;
     impl Pipe6Bemp {
-        #[doc = "No BEMP interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BEMP interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe7Bemp_SPEC;
     pub type Pipe7Bemp = crate::EnumBitfieldStruct<u8, Pipe7Bemp_SPEC>;
     impl Pipe7Bemp {
-        #[doc = "No BEMP interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BEMP interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe8Bemp_SPEC;
     pub type Pipe8Bemp = crate::EnumBitfieldStruct<u8, Pipe8Bemp_SPEC>;
     impl Pipe8Bemp {
-        #[doc = "No BEMP interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BEMP interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pipe9Bemp_SPEC;
     pub type Pipe9Bemp = crate::EnumBitfieldStruct<u8, Pipe9Bemp_SPEC>;
     impl Pipe9Bemp {
-        #[doc = "No BEMP interrupt occurred"]
+        #[doc = "Interrupts are not generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "BEMP interrupt occurred"]
+        #[doc = "Interrupts are generated."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6160,12 +7028,20 @@ impl crate::sealed::RegSpec for Frmnum_SPEC {
 pub type Frmnum = crate::RegValueT<Frmnum_SPEC>;
 
 impl Frmnum {
-    #[doc = "Frame Number"]
+    #[doc = "Frame NumberLatest frame number"]
     #[inline(always)]
     pub fn frnm(
         self,
     ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, Frmnum_SPEC, crate::common::R> {
         crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,Frmnum_SPEC,crate::common::R>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 000. The write value should be 000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<11, 0x7, 1, 0, u8, u8, Frmnum_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<11,0x7,1,0,u8,u8,Frmnum_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Receive Data Error"]
@@ -6232,20 +7108,20 @@ pub mod frmnum {
     pub struct Crce_SPEC;
     pub type Crce = crate::EnumBitfieldStruct<u8, Crce_SPEC>;
     impl Crce {
-        #[doc = "No error occurred"]
+        #[doc = "No error"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Error occurred"]
+        #[doc = "An error occurred"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ovrn_SPEC;
     pub type Ovrn = crate::EnumBitfieldStruct<u8, Ovrn_SPEC>;
     impl Ovrn {
-        #[doc = "No error occurred"]
+        #[doc = "No error"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Error occurred"]
+        #[doc = "An error occurred"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6260,6 +7136,15 @@ impl crate::sealed::RegSpec for Dvchgr_SPEC {
 pub type Dvchgr = crate::RegValueT<Dvchgr_SPEC>;
 
 impl Dvchgr {
+    #[doc = "These bits are read as 000000000000000. The write value should be 000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<0, 0x7fff, 1, 0, u16, u16, Dvchgr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7fff,1,0,u16,u16,Dvchgr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
     #[doc = "Device State Change"]
     #[inline(always)]
     pub fn dvchg(
@@ -6298,10 +7183,10 @@ pub mod dvchgr {
     pub struct Dvchg_SPEC;
     pub type Dvchg = crate::EnumBitfieldStruct<u8, Dvchg_SPEC>;
     impl Dvchg {
-        #[doc = "Disable writes to the USBADDR.STSRECOV\\[3:0\\] and USBADDR.USBADDR\\[6:0\\] bits"]
+        #[doc = "Disables the writing to the USBADDR.STSRECOV\\[3:0\\] bits and USBADDR.USBADDR\\[6:0\\]."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable writes to the USBADDR.STSRECOV\\[3:0\\] and USBADDR.USBADDR\\[6:0\\] bits"]
+        #[doc = "Enables the writing to the USBADDR.STSRECOV\\[3:0\\] bits and USBADDR.USBADDR\\[6:0\\]."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6316,7 +7201,7 @@ impl crate::sealed::RegSpec for Usbaddr_SPEC {
 pub type Usbaddr = crate::RegValueT<Usbaddr_SPEC>;
 
 impl Usbaddr {
-    #[doc = "USB Address"]
+    #[doc = "USB AddressWhen the function controller is selected, these bits indicate the USB address assigned by the host when the SET_ADDRESS request is successfully processed."]
     #[inline(always)]
     pub fn usbaddr(
         self,
@@ -6349,6 +7234,14 @@ impl Usbaddr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<12, 0xf, 1, 0, u8, u8, Usbaddr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<12,0xf,1,0,u8,u8,Usbaddr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Usbaddr {
     #[inline(always)]
@@ -6362,23 +7255,20 @@ pub mod usbaddr {
     pub struct Stsrecov_SPEC;
     pub type Stsrecov = crate::EnumBitfieldStruct<u8, Stsrecov_SPEC>;
     impl Stsrecov {
-        #[doc = "Recovery in device controller mode: Setting prohibited Recovery in host controller mode: Return to the low-speed state (bits DVSTCTR0.RHST\\[2:0\\] = 001b)"]
-        pub const _0_X_4: Self = Self::new(4);
+        #[doc = "Return to the low-speed state (bits DVSTCTR0.RHST\\[2:0\\] = 001b;(Recovery when the host controller is selected))"]
+        pub const _0100: Self = Self::new(4);
 
-        #[doc = "Recovery in device controller mode: Setting prohibited Recovery in host controller mode: Return to the full-speed state (bits DVSTCTR0.RHST\\[2:0\\] = 010b)"]
-        pub const _0_X_8: Self = Self::new(8);
+        #[doc = "Return to the full-speed state (bits DVSTCTR0.RHST\\[2:0\\] = 010b;(Recovery when the host controller is selected))"]
+        pub const _1000: Self = Self::new(8);
 
-        #[doc = "Recovery in device controller mode: Return to the full-speed state (bits DVSTCTR0.RHST\\[2:0\\] = 010b), bits INTSTS0.DVSQ\\[2:0\\] = 001b (default state) Recovery in host controller mode: Setting prohibited"]
-        pub const _0_X_9: Self = Self::new(9);
+        #[doc = "Return to the full-speed state (bits DVSTCTR0.RHST\\[2:0\\] = 010b), bits INTSTS0.DVSQ\\[2:0\\] = 001b (Default state);(Recovery when the function controller is selected)"]
+        pub const _1001: Self = Self::new(9);
 
-        #[doc = "Recovery in device controller mode: Return to the full-speed state (bits DVSTCTR0.RHST\\[2:0\\] = 010b), bits INTSTS0.DVSQ\\[2:0\\] = 010b (address state) Recovery in host controller mode: Setting prohibited"]
-        pub const _0_X_A: Self = Self::new(10);
+        #[doc = "Return to the full-speed state (bits DVSTCTR0.RHST\\[2:0\\] = 010b), bits INTSTS0.DVSQ\\[2:0\\] = 010b (Address state);(Recovery when the function controller is selected)"]
+        pub const _1010: Self = Self::new(10);
 
-        #[doc = "Recovery in device controller mode: Return to the full-speed state (bits DVSTCTR0.RHST\\[2:0\\] = 010b), bits INTSTS0.DVSQ\\[2:0\\] = 011b (configured state) Recovery in host controller mode: Setting prohibited"]
-        pub const _0_X_B: Self = Self::new(11);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
+        #[doc = "Return to the full-speed state (bits DVSTCTR0.RHST\\[2:0\\] = 010b), bits INTSTS0.DVSQ\\[2:0\\] = 011b (Configured state);(Recovery when the function controller is selected)"]
+        pub const _1011: Self = Self::new(11);
     }
 }
 #[doc(hidden)]
@@ -6392,7 +7282,7 @@ impl crate::sealed::RegSpec for Usbreq_SPEC {
 pub type Usbreq = crate::RegValueT<Usbreq_SPEC>;
 
 impl Usbreq {
-    #[doc = "Request Type"]
+    #[doc = "Request TypeThese bits store the USB request bmRequestType value."]
     #[inline(always)]
     pub fn bmrequesttype(
         self,
@@ -6400,7 +7290,7 @@ impl Usbreq {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Usbreq_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Request"]
+    #[doc = "RequestThese bits store the USB request bRequest value."]
     #[inline(always)]
     pub fn brequest(
         self,
@@ -6426,7 +7316,7 @@ impl crate::sealed::RegSpec for Usbval_SPEC {
 pub type Usbval = crate::RegValueT<Usbval_SPEC>;
 
 impl Usbval {
-    #[doc = "Value"]
+    #[doc = "ValueThese bits store the USB request wValue value."]
     #[inline(always)]
     pub fn wvalue(
         self,
@@ -6453,7 +7343,7 @@ impl crate::sealed::RegSpec for Usbindx_SPEC {
 pub type Usbindx = crate::RegValueT<Usbindx_SPEC>;
 
 impl Usbindx {
-    #[doc = "Index"]
+    #[doc = "IndexThese bits store the USB request wIndex value."]
     #[inline(always)]
     pub fn windex(
         self,
@@ -6480,9 +7370,9 @@ impl crate::sealed::RegSpec for Usbleng_SPEC {
 pub type Usbleng = crate::RegValueT<Usbleng_SPEC>;
 
 impl Usbleng {
-    #[doc = "Length"]
+    #[doc = "LengthThese bits store the USB request wLength value."]
     #[inline(always)]
-    pub fn wlentuh(
+    pub fn wlengtuh(
         self,
     ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Usbleng_SPEC, crate::common::RW>
     {
@@ -6558,6 +7448,14 @@ impl Dcpcfg {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<8, 0xff, 1, 0, u8, u8, Dcpcfg_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<8,0xff,1,0,u8,u8,Dcpcfg_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Dcpcfg {
     #[inline(always)]
@@ -6581,10 +7479,10 @@ pub mod dcpcfg {
     pub struct Shtnak_SPEC;
     pub type Shtnak = crate::EnumBitfieldStruct<u8, Shtnak_SPEC>;
     impl Shtnak {
-        #[doc = "Keep pipe open after transfer ends"]
+        #[doc = "Pipe continued at the end of transfer"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Disable pipe after transfer ends"]
+        #[doc = "Pipe disabled at the end of transfer"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6599,12 +7497,20 @@ impl crate::sealed::RegSpec for Dcpmaxp_SPEC {
 pub type Dcpmaxp = crate::RegValueT<Dcpmaxp_SPEC>;
 
 impl Dcpmaxp {
-    #[doc = "Maximum Packet Size"]
+    #[doc = "Maximum Packet SizeThese bits set the maximum amount of data (maximum packet size) in payloads for the DCP."]
     #[inline(always)]
     pub fn mxps(
         self,
     ) -> crate::common::RegisterField<0, 0x7f, 1, 0, u8, u8, Dcpmaxp_SPEC, crate::common::RW> {
         crate::common::RegisterField::<0,0x7f,1,0,u8,u8,Dcpmaxp_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<7, 0x1f, 1, 0, u8, u8, Dcpmaxp_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<7,0x1f,1,0,u8,u8,Dcpmaxp_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Device Select"]
@@ -6645,26 +7551,23 @@ pub mod dcpmaxp {
     pub struct Devsel_SPEC;
     pub type Devsel = crate::EnumBitfieldStruct<u8, Devsel_SPEC>;
     impl Devsel {
-        #[doc = "Address 0000b"]
-        pub const _0_X_0: Self = Self::new(0);
+        #[doc = "Address 0000"]
+        pub const _0000: Self = Self::new(0);
 
-        #[doc = "Address 0001b"]
-        pub const _0_X_1: Self = Self::new(1);
+        #[doc = "Address 0001"]
+        pub const _0001: Self = Self::new(1);
 
-        #[doc = "Address 0010b"]
-        pub const _0_X_2: Self = Self::new(2);
+        #[doc = "Address 0010"]
+        pub const _0010: Self = Self::new(2);
 
-        #[doc = "Address 0011b"]
-        pub const _0_X_3: Self = Self::new(3);
+        #[doc = "Address 0011"]
+        pub const _0011: Self = Self::new(3);
 
-        #[doc = "Address 0100b"]
-        pub const _0_X_4: Self = Self::new(4);
+        #[doc = "Address 0100"]
+        pub const _0100: Self = Self::new(4);
 
-        #[doc = "Address 0101b"]
-        pub const _0_X_5: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
+        #[doc = "Address 0101"]
+        pub const _0101: Self = Self::new(5);
     }
 }
 #[doc(hidden)]
@@ -6860,6 +7763,14 @@ impl Dcpctr {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00. The write value should be 00."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<12, 0x3, 1, 0, u8, u8, Dcpctr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<12,0x3,1,0,u8,u8,Dcpctr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
     #[doc = "Setup Token Transmission"]
     #[inline(always)]
     pub fn sureq(
@@ -6927,7 +7838,7 @@ pub mod dcpctr {
         #[doc = "NAK response"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "BUF response (depends on the buffer state)"]
+        #[doc = "BUF response (depending on the buffer state)"]
         pub const _01: Self = Self::new(1);
 
         #[doc = "STALL response"]
@@ -6940,20 +7851,20 @@ pub mod dcpctr {
     pub struct Ccpl_SPEC;
     pub type Ccpl = crate::EnumBitfieldStruct<u8, Ccpl_SPEC>;
     impl Ccpl {
-        #[doc = "Disable control transfer completion"]
+        #[doc = "Invalid"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable control transfer completion"]
+        #[doc = "Completion of control transfer is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pbusy_SPEC;
     pub type Pbusy = crate::EnumBitfieldStruct<u8, Pbusy_SPEC>;
     impl Pbusy {
-        #[doc = "DCP not used for the USB bus"]
+        #[doc = "DCP is not used for the transaction."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "DCP in use for the USB bus"]
+        #[doc = "DCP is used for the transaction."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -6970,50 +7881,50 @@ pub mod dcpctr {
     pub struct Sqset_SPEC;
     pub type Sqset = crate::EnumBitfieldStruct<u8, Sqset_SPEC>;
     impl Sqset {
-        #[doc = "Invalid (writing 0 has no effect)"]
+        #[doc = "Invalid"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Set the expected value for the next transaction to DATA1"]
+        #[doc = "Specifies DATA1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sqclr_SPEC;
     pub type Sqclr = crate::EnumBitfieldStruct<u8, Sqclr_SPEC>;
     impl Sqclr {
-        #[doc = "Invalid (writing 0 has no effect)"]
+        #[doc = "Invalid"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the expected value for the next transaction to DATA0"]
+        #[doc = "Specifies DATA0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sureqclr_SPEC;
     pub type Sureqclr = crate::EnumBitfieldStruct<u8, Sureqclr_SPEC>;
     impl Sureqclr {
-        #[doc = "Invalid (writing 0 has no effect)"]
+        #[doc = "Invalid"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear SUREQ to 0"]
+        #[doc = "Clears the SUREQ bit to 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sureq_SPEC;
     pub type Sureq = crate::EnumBitfieldStruct<u8, Sureq_SPEC>;
     impl Sureq {
-        #[doc = "Invalid (writing 0 has no effect)"]
+        #[doc = "Invalid"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Transmit setup packet"]
+        #[doc = "Transmits the setup packet."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bsts_SPEC;
     pub type Bsts = crate::EnumBitfieldStruct<u8, Bsts_SPEC>;
     impl Bsts {
-        #[doc = "Buffer access disabled"]
+        #[doc = "Buffer access is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Buffer access enabled"]
+        #[doc = "Buffer access is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7053,6 +7964,15 @@ impl Pipesel {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000000000. The write value should be 000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<4, 0xfff, 1, 0, u16, u16, Pipesel_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<4,0xfff,1,0,u16,u16,Pipesel_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Pipesel {
     #[inline(always)]
@@ -7067,37 +7987,34 @@ pub mod pipesel {
     pub type Pipesel = crate::EnumBitfieldStruct<u8, Pipesel_SPEC>;
     impl Pipesel {
         #[doc = "No pipe selected"]
-        pub const _0_X_0: Self = Self::new(0);
+        pub const _0000: Self = Self::new(0);
 
-        #[doc = "Pipe 1"]
-        pub const _0_X_1: Self = Self::new(1);
+        #[doc = "PIPE1"]
+        pub const _0001: Self = Self::new(1);
 
-        #[doc = "Pipe 2"]
-        pub const _0_X_2: Self = Self::new(2);
+        #[doc = "PIPE2"]
+        pub const _0010: Self = Self::new(2);
 
-        #[doc = "Pipe 3"]
-        pub const _0_X_3: Self = Self::new(3);
+        #[doc = "PIPE3"]
+        pub const _0011: Self = Self::new(3);
 
-        #[doc = "Pipe 4"]
-        pub const _0_X_4: Self = Self::new(4);
+        #[doc = "PIPE4"]
+        pub const _0100: Self = Self::new(4);
 
-        #[doc = "Pipe 5"]
-        pub const _0_X_5: Self = Self::new(5);
+        #[doc = "PIPE5"]
+        pub const _0101: Self = Self::new(5);
 
-        #[doc = "Pipe 6"]
-        pub const _0_X_6: Self = Self::new(6);
+        #[doc = "PIPE6"]
+        pub const _0110: Self = Self::new(6);
 
-        #[doc = "Pipe 7"]
-        pub const _0_X_7: Self = Self::new(7);
+        #[doc = "PIPE7"]
+        pub const _0111: Self = Self::new(7);
 
-        #[doc = "Pipe 8"]
-        pub const _0_X_8: Self = Self::new(8);
+        #[doc = "PIPE8"]
+        pub const _1000: Self = Self::new(8);
 
-        #[doc = "Pipe 9"]
-        pub const _0_X_9: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
+        #[doc = "PIPE9"]
+        pub const _1001: Self = Self::new(9);
     }
 }
 #[doc(hidden)]
@@ -7111,7 +8028,7 @@ impl crate::sealed::RegSpec for Pipecfg_SPEC {
 pub type Pipecfg = crate::RegValueT<Pipecfg_SPEC>;
 
 impl Pipecfg {
-    #[doc = "Endpoint Number"]
+    #[doc = "Endpoint NumberThese bits specify the endpoint number for the selected pipe.Setting 0000b means unused pipe."]
     #[inline(always)]
     pub fn epnum(
         self,
@@ -7223,6 +8140,14 @@ impl Pipecfg {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<11, 0x7, 1, 0, u8, u8, Pipecfg_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<11,0x7,1,0,u8,u8,Pipecfg_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
     #[doc = "Transfer Type"]
     #[inline(always)]
     pub fn r#type(
@@ -7271,10 +8196,10 @@ pub mod pipecfg {
     pub struct Shtnak_SPEC;
     pub type Shtnak = crate::EnumBitfieldStruct<u8, Shtnak_SPEC>;
     impl Shtnak {
-        #[doc = "Continue pipe operation after transfer ends"]
+        #[doc = "Pipe assignment continued at the end of transfer"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Disable pipe after transfer ends"]
+        #[doc = "Pipe assignment disabled at the end of transfer"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7291,10 +8216,10 @@ pub mod pipecfg {
     pub struct Bfre_SPEC;
     pub type Bfre = crate::EnumBitfieldStruct<u8, Bfre_SPEC>;
     impl Bfre {
-        #[doc = "Generate BRDY interrupt on transmitting or receiving data"]
+        #[doc = "BRDY interrupt upon transmitting or receiving data"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Generate BRDY interrupt on completion of reading data"]
+        #[doc = "BRDY interrupt upon completion of reading data"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7304,13 +8229,13 @@ pub mod pipecfg {
         #[doc = "Pipe not used"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "Pipes 1 and 2: Bulk transfer Pipes 3 to 5: Bulk transfer Pipes 6 to 9: Setting prohibited"]
+        #[doc = "Bulk transfer(PIPE1 and PIPE5) /Setting prohibited(PIPE6 to PIPE9)"]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "Pipes 1 and 2: Setting prohibited Pipes 3 to 5: Setting prohibited Pipes 6 to 9: Interrupt transfer"]
+        #[doc = "Setting prohibited(PIPE1 and PIPE5) /Interrupt transfer(PIPE6 to PIPE9)"]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "Pipes 1 and 2: Isochronous transfer Pipes 3 to 5: Setting prohibited Pipes 6 to 9: Setting prohibited"]
+        #[doc = "Isochronous transfer(PIPE1 and PIPE2) /Setting prohibited(PIPE3 to PIPE9)"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -7325,13 +8250,21 @@ impl crate::sealed::RegSpec for Pipemaxp_SPEC {
 pub type Pipemaxp = crate::RegValueT<Pipemaxp_SPEC>;
 
 impl Pipemaxp {
-    #[doc = "Maximum Packet Size"]
+    #[doc = "Maximum Packet SizePIPE1 and PIPE2:  1 byte (001h) to 256 bytes (100h)PIPE3 to PIPE5:   8 bytes (008h), 16 bytes (010h),  32 bytes (020h), 64 bytes (040h)   (Bits \\[8:7\\] and \\[2:0\\] are not provided.)PIPE6 to PIPE9:  1 byte (001h) to 64 bytes (040h)  (Bits \\[8:7\\] are not provided.)"]
     #[inline(always)]
     pub fn mxps(
         self,
     ) -> crate::common::RegisterField<0, 0x1ff, 1, 0, u16, u16, Pipemaxp_SPEC, crate::common::RW>
     {
         crate::common::RegisterField::<0,0x1ff,1,0,u16,u16,Pipemaxp_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 000. The write value should be 000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<9, 0x7, 1, 0, u8, u8, Pipemaxp_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<9,0x7,1,0,u8,u8,Pipemaxp_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Device Select"]
@@ -7372,26 +8305,23 @@ pub mod pipemaxp {
     pub struct Devsel_SPEC;
     pub type Devsel = crate::EnumBitfieldStruct<u8, Devsel_SPEC>;
     impl Devsel {
-        #[doc = "Address 0000b"]
-        pub const _0_X_0: Self = Self::new(0);
+        #[doc = "Address 0000"]
+        pub const _0000: Self = Self::new(0);
 
-        #[doc = "Address 0001b"]
-        pub const _0_X_1: Self = Self::new(1);
+        #[doc = "Address 0001"]
+        pub const _0001: Self = Self::new(1);
 
-        #[doc = "Address 0010b"]
-        pub const _0_X_2: Self = Self::new(2);
+        #[doc = "Address 0010"]
+        pub const _0010: Self = Self::new(2);
 
-        #[doc = "Address 0011b"]
-        pub const _0_X_3: Self = Self::new(3);
+        #[doc = "Address 0011"]
+        pub const _0011: Self = Self::new(3);
 
-        #[doc = "Address 0100b"]
-        pub const _0_X_4: Self = Self::new(4);
+        #[doc = "Address 0100"]
+        pub const _0100: Self = Self::new(4);
 
-        #[doc = "Address 0101b"]
-        pub const _0_X_5: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
+        #[doc = "Address 0101"]
+        pub const _0101: Self = Self::new(5);
     }
 }
 #[doc(hidden)]
@@ -7405,7 +8335,7 @@ impl crate::sealed::RegSpec for Pipeperi_SPEC {
 pub type Pipeperi = crate::RegValueT<Pipeperi_SPEC>;
 
 impl Pipeperi {
-    #[doc = "Interval Error Detection Interval"]
+    #[doc = "Interval Error Detection IntervalSpecifies the interval error detection timing for the selected pipe in terms of frames, which is expressed as nth power of 2."]
     #[inline(always)]
     pub fn iitv(
         self,
@@ -7438,6 +8368,14 @@ impl Pipeperi {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000. The write value should be 000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<13, 0x7, 1, 0, u8, u8, Pipeperi_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<13,0x7,1,0,u8,u8,Pipeperi_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Pipeperi {
     #[inline(always)]
@@ -7451,10 +8389,10 @@ pub mod pipeperi {
     pub struct Ifis_SPEC;
     pub type Ifis = crate::EnumBitfieldStruct<u8, Ifis_SPEC>;
     impl Ifis {
-        #[doc = "Do not flush buffer"]
+        #[doc = "The buffer is not flushed."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Flush buffer"]
+        #[doc = "The buffer is flushed."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7465,7 +8403,7 @@ impl crate::sealed::RegSpec for Pipectr_SPEC {
     type DataType = u16;
 }
 
-#[doc = "PIPE%s Control Registers"]
+#[doc = "Pipe %s Control Register"]
 pub type Pipectr = crate::RegValueT<Pipectr_SPEC>;
 
 impl Pipectr {
@@ -7625,6 +8563,14 @@ impl Pipectr {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<10, 0x1f, 1, 0, u8, u8, Pipectr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<10,0x1f,1,0,u8,u8,Pipectr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
     #[doc = "Buffer Status"]
     #[inline(always)]
     pub fn bsts(
@@ -7666,7 +8612,7 @@ pub mod pipectr {
         #[doc = "NAK response"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "BUF response (depends buffer state)"]
+        #[doc = "BUF response (depending on the buffer state)"]
         pub const _01: Self = Self::new(1);
 
         #[doc = "STALL response"]
@@ -7679,10 +8625,10 @@ pub mod pipectr {
     pub struct Pbusy_SPEC;
     pub type Pbusy = crate::EnumBitfieldStruct<u8, Pbusy_SPEC>;
     impl Pbusy {
-        #[doc = "Pipe n not in use for the transaction"]
+        #[doc = "The relevant pipe is not used at the USB bus."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Pipe n in use for the transaction"]
+        #[doc = "The relevant pipe is used at the USB bus."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -7699,40 +8645,40 @@ pub mod pipectr {
     pub struct Sqset_SPEC;
     pub type Sqset = crate::EnumBitfieldStruct<u8, Sqset_SPEC>;
     impl Sqset {
-        #[doc = "Invalid (writing 0 has no effect)"]
+        #[doc = "Invalid"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Set the expected value for the next transaction to DATA0"]
+        #[doc = "Specifies DATA1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sqclr_SPEC;
     pub type Sqclr = crate::EnumBitfieldStruct<u8, Sqclr_SPEC>;
     impl Sqclr {
-        #[doc = "Invalid (writing 0 has no effect)"]
+        #[doc = "Invalid"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear the expected value for the next transaction to DATA0"]
+        #[doc = "Specifies DATA0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aclrm_SPEC;
     pub type Aclrm = crate::EnumBitfieldStruct<u8, Aclrm_SPEC>;
     impl Aclrm {
-        #[doc = "Disable"]
+        #[doc = "Auto buffer clear mode is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable (all buffers initialized)"]
+        #[doc = "Auto buffer clear mode is enabled (all buffers are initialized)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bsts_SPEC;
     pub type Bsts = crate::EnumBitfieldStruct<u8, Bsts_SPEC>;
     impl Bsts {
-        #[doc = "Buffer access disabled"]
+        #[doc = "Buffer access is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Buffer access enabled"]
+        #[doc = "Buffer access is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7743,7 +8689,7 @@ impl crate::sealed::RegSpec for Pipetre_SPEC {
     type DataType = u16;
 }
 
-#[doc = "PIPE%s Transaction Counter Enable Register"]
+#[doc = "Pipe %s Transaction Counter Enable Register"]
 pub type Pipetre = crate::RegValueT<Pipetre_SPEC>;
 
 impl Pipetre {
@@ -7798,6 +8744,14 @@ impl Pipetre {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<10, 0x3f, 1, 0, u8, u8, Pipetre_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<10,0x3f,1,0,u8,u8,Pipetre_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Pipetre {
     #[inline(always)]
@@ -7811,20 +8765,20 @@ pub mod pipetre {
     pub struct Trclr_SPEC;
     pub type Trclr = crate::EnumBitfieldStruct<u8, Trclr_SPEC>;
     impl Trclr {
-        #[doc = "Invalid (writing 0 has no effect)"]
+        #[doc = "Invalid"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Clear counter value"]
+        #[doc = "The current counter value is cleared."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Trenb_SPEC;
     pub type Trenb = crate::EnumBitfieldStruct<u8, Trenb_SPEC>;
     impl Trenb {
-        #[doc = "Disable transaction counter"]
+        #[doc = "Transaction counter is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable transaction counter"]
+        #[doc = "Transaction counter is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7835,7 +8789,7 @@ impl crate::sealed::RegSpec for Pipetrn_SPEC {
     type DataType = u16;
 }
 
-#[doc = "PIPE%s Transaction Counter Register"]
+#[doc = "Pipe %s Transaction Counter Register"]
 pub type Pipetrn = crate::RegValueT<Pipetrn_SPEC>;
 
 impl Pipetrn {
@@ -7855,6 +8809,432 @@ impl ::core::default::Default for Pipetrn {
     }
 }
 
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Bcctrl1_SPEC;
+impl crate::sealed::RegSpec for Bcctrl1_SPEC {
+    type DataType = u32;
+}
+
+#[doc = "Battery Charging signal control register 1"]
+pub type Bcctrl1 = crate::RegValueT<Bcctrl1_SPEC>;
+
+impl Bcctrl1 {
+    #[doc = "UDM pulldown control.Control the pull-down resistance of the UDM terminal."]
+    #[inline(always)]
+    pub fn rpdme(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0x1,
+        1,
+        0,
+        bcctrl1::Rpdme,
+        bcctrl1::Rpdme,
+        Bcctrl1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x1,
+            1,
+            0,
+            bcctrl1::Rpdme,
+            bcctrl1::Rpdme,
+            Bcctrl1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "IDP_SRC enabled"]
+    #[inline(always)]
+    pub fn idpsrce(
+        self,
+    ) -> crate::common::RegisterField<
+        1,
+        0x1,
+        1,
+        0,
+        bcctrl1::Idpsrce,
+        bcctrl1::Idpsrce,
+        Bcctrl1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            1,
+            0x1,
+            1,
+            0,
+            bcctrl1::Idpsrce,
+            bcctrl1::Idpsrce,
+            Bcctrl1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "VDM_SRC, IDM_SINK enable"]
+    #[inline(always)]
+    pub fn vdmsrce(
+        self,
+    ) -> crate::common::RegisterField<
+        2,
+        0x1,
+        1,
+        0,
+        bcctrl1::Vdmsrce,
+        bcctrl1::Vdmsrce,
+        Bcctrl1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            2,
+            0x1,
+            1,
+            0,
+            bcctrl1::Vdmsrce,
+            bcctrl1::Vdmsrce,
+            Bcctrl1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "VDP_SRC, IDP_SINK enable"]
+    #[inline(always)]
+    pub fn vdpsrce(
+        self,
+    ) -> crate::common::RegisterField<
+        3,
+        0x1,
+        1,
+        0,
+        bcctrl1::Vdpsrce,
+        bcctrl1::Vdpsrce,
+        Bcctrl1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            3,
+            0x1,
+            1,
+            0,
+            bcctrl1::Vdpsrce,
+            bcctrl1::Vdpsrce,
+            Bcctrl1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Portable Device Detection Enable"]
+    #[inline(always)]
+    pub fn pddete(
+        self,
+    ) -> crate::common::RegisterField<
+        4,
+        0x1,
+        1,
+        0,
+        bcctrl1::Pddete,
+        bcctrl1::Pddete,
+        Bcctrl1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            4,
+            0x1,
+            1,
+            0,
+            bcctrl1::Pddete,
+            bcctrl1::Pddete,
+            Bcctrl1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Charging Down Stream Port detection Enable"]
+    #[inline(always)]
+    pub fn chgdete(
+        self,
+    ) -> crate::common::RegisterField<
+        5,
+        0x1,
+        1,
+        0,
+        bcctrl1::Chgdete,
+        bcctrl1::Chgdete,
+        Bcctrl1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            5,
+            0x1,
+            1,
+            0,
+            bcctrl1::Chgdete,
+            bcctrl1::Chgdete,
+            Bcctrl1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Portable Device Detection Flag(Valid when UPDATE = 1)PRTBLDET input status from the USB-PHY is displayed."]
+    #[inline(always)]
+    pub fn pddetsts(
+        self,
+    ) -> crate::common::RegisterField<
+        8,
+        0x1,
+        1,
+        0,
+        bcctrl1::Pddetsts,
+        bcctrl1::Pddetsts,
+        Bcctrl1_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            8,
+            0x1,
+            1,
+            0,
+            bcctrl1::Pddetsts,
+            bcctrl1::Pddetsts,
+            Bcctrl1_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Charging Down Stream Port detection flag(Valid when CHGDETE = 1)The CHGDET input status from the USB-PHY is displayed."]
+    #[inline(always)]
+    pub fn chgdetst(
+        self,
+    ) -> crate::common::RegisterField<
+        9,
+        0x1,
+        1,
+        0,
+        bcctrl1::Chgdetst,
+        bcctrl1::Chgdetst,
+        Bcctrl1_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            9,
+            0x1,
+            1,
+            0,
+            bcctrl1::Chgdetst,
+            bcctrl1::Chgdetst,
+            Bcctrl1_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Bcctrl1_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Bcctrl1_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
+impl ::core::default::Default for Bcctrl1 {
+    #[inline(always)]
+    fn default() -> Bcctrl1 {
+        <crate::RegValueT<Bcctrl1_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+pub mod bcctrl1 {
+
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Rpdme_SPEC;
+    pub type Rpdme = crate::EnumBitfieldStruct<u8, Rpdme_SPEC>;
+    impl Rpdme {
+        #[doc = "Pull down OFF"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Pull down ON"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Idpsrce_SPEC;
+    pub type Idpsrce = crate::EnumBitfieldStruct<u8, Idpsrce_SPEC>;
+    impl Idpsrce {
+        #[doc = "IDP blocking"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "IDP output"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Vdmsrce_SPEC;
+    pub type Vdmsrce = crate::EnumBitfieldStruct<u8, Vdmsrce_SPEC>;
+    impl Vdmsrce {
+        #[doc = "VDM_SRC, IDM_SINK blocking"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "VDM_SRC, IDM_SINK output"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Vdpsrce_SPEC;
+    pub type Vdpsrce = crate::EnumBitfieldStruct<u8, Vdpsrce_SPEC>;
+    impl Vdpsrce {
+        #[doc = "VDP_SRC, IDP_SINK shutdown"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "VDP_SRC, IDP_SINK output"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Pddete_SPEC;
+    pub type Pddete = crate::EnumBitfieldStruct<u8, Pddete_SPEC>;
+    impl Pddete {
+        #[doc = "Portable device detection stops"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Portable Device detection permission"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Chgdete_SPEC;
+    pub type Chgdete = crate::EnumBitfieldStruct<u8, Chgdete_SPEC>;
+    impl Chgdete {
+        #[doc = "Charging Down Stream Port detection stop"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Charging Down Stream Port detection permission"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Pddetsts_SPEC;
+    pub type Pddetsts = crate::EnumBitfieldStruct<u8, Pddetsts_SPEC>;
+    impl Pddetsts {
+        #[doc = "Not detected"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "detection"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Chgdetst_SPEC;
+    pub type Chgdetst = crate::EnumBitfieldStruct<u8, Chgdetst_SPEC>;
+    impl Chgdetst {
+        #[doc = "Not detected"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "detection"]
+        pub const _1: Self = Self::new(1);
+    }
+}
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Bcctrl2_SPEC;
+impl crate::sealed::RegSpec for Bcctrl2_SPEC {
+    type DataType = u32;
+}
+
+#[doc = "Battery Charging signal control register 2"]
+pub type Bcctrl2 = crate::RegValueT<Bcctrl2_SPEC>;
+
+impl Bcctrl2 {
+    #[doc = "DCP operation enableSet it to 0 when using the Peripheral Controller function."]
+    #[inline(always)]
+    pub fn dcpmode(
+        self,
+    ) -> crate::common::RegisterField<
+        6,
+        0x1,
+        1,
+        0,
+        bcctrl2::Dcpmode,
+        bcctrl2::Dcpmode,
+        Bcctrl2_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            6,
+            0x1,
+            1,
+            0,
+            bcctrl2::Dcpmode,
+            bcctrl2::Dcpmode,
+            Bcctrl2_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Battery Charging operation enabled"]
+    #[inline(always)]
+    pub fn batchge(
+        self,
+    ) -> crate::common::RegisterField<
+        7,
+        0x1,
+        1,
+        0,
+        bcctrl2::Batchge,
+        bcctrl2::Batchge,
+        Bcctrl2_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            7,
+            0x1,
+            1,
+            0,
+            bcctrl2::Batchge,
+            bcctrl2::Batchge,
+            Bcctrl2_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Detection sensitivity variable bit.USB-PHY Portable Device Detection, Charging D-Port Detection Sensitivity Adjust.Initial value: 10"]
+    #[inline(always)]
+    pub fn phydet(
+        self,
+    ) -> crate::common::RegisterField<12, 0x3, 1, 0, u8, u8, Bcctrl2_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<12,0x3,1,0,u8,u8,Bcctrl2_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Bcctrl2_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Bcctrl2_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
+impl ::core::default::Default for Bcctrl2 {
+    #[inline(always)]
+    fn default() -> Bcctrl2 {
+        <crate::RegValueT<Bcctrl2_SPEC> as RegisterValue<_>>::new(8192)
+    }
+}
+pub mod bcctrl2 {
+
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Dcpmode_SPEC;
+    pub type Dcpmode = crate::EnumBitfieldStruct<u8, Dcpmode_SPEC>;
+    impl Dcpmode {
+        #[doc = "DCP operation stops"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "DCP operation enabled"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Batchge_SPEC;
+    pub type Batchge = crate::EnumBitfieldStruct<u8, Batchge_SPEC>;
+    impl Batchge {
+        #[doc = "Battery Charging operation prohibited"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Battery Charging operation enabled"]
+        pub const _1: Self = Self::new(1);
+    }
+}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Devadd_SPEC;
@@ -7891,6 +9271,14 @@ impl Devadd {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<8, 0xff, 1, 0, u8, u8, Devadd_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<8,0xff,1,0,u8,u8,Devadd_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Devadd {
     #[inline(always)]
@@ -7904,17 +9292,91 @@ pub mod devadd {
     pub struct Usbspd_SPEC;
     pub type Usbspd = crate::EnumBitfieldStruct<u8, Usbspd_SPEC>;
     impl Usbspd {
-        #[doc = "Do not use DEVADDn"]
+        #[doc = "DEVADDn is not used"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "Low-speed"]
+        #[doc = "Low speed"]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "Full-speed"]
+        #[doc = "Full speed"]
         pub const _10: Self = Self::new(2);
 
         #[doc = "Setting prohibited"]
         pub const _11: Self = Self::new(3);
+    }
+}
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Vrcgctrl_SPEC;
+impl crate::sealed::RegSpec for Vrcgctrl_SPEC {
+    type DataType = u32;
+}
+
+#[doc = "VRCORE clock gating set register"]
+pub type Vrcgctrl = crate::RegValueT<Vrcgctrl_SPEC>;
+
+impl Vrcgctrl {
+    #[doc = "VRCORE clock gating enable"]
+    #[inline(always)]
+    pub fn vrcgen(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0x1,
+        1,
+        0,
+        vrcgctrl::Vrcgen,
+        vrcgctrl::Vrcgen,
+        Vrcgctrl_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x1,
+            1,
+            0,
+            vrcgctrl::Vrcgen,
+            vrcgctrl::Vrcgen,
+            Vrcgctrl_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "VRCORE clock gating mask count"]
+    #[inline(always)]
+    pub fn vrcg_mskcnt(
+        self,
+    ) -> crate::common::RegisterField<16, 0xff, 1, 0, u8, u8, Vrcgctrl_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xff,1,0,u8,u8,Vrcgctrl_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, u8, Vrcgctrl_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<24,0xff,1,0,u8,u8,Vrcgctrl_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
+impl ::core::default::Default for Vrcgctrl {
+    #[inline(always)]
+    fn default() -> Vrcgctrl {
+        <crate::RegValueT<Vrcgctrl_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+pub mod vrcgctrl {
+
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Vrcgen_SPEC;
+    pub type Vrcgen = crate::EnumBitfieldStruct<u8, Vrcgen_SPEC>;
+    impl Vrcgen {
+        #[doc = "diable"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "enable"]
+        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -7928,7 +9390,7 @@ impl crate::sealed::RegSpec for Dpusr0R_SPEC {
 pub type Dpusr0R = crate::RegValueT<Dpusr0R_SPEC>;
 
 impl Dpusr0R {
-    #[doc = "USB Single-ended Receiver Control"]
+    #[doc = "USB Single End Receiver Control"]
     #[inline(always)]
     pub fn srpc0(
         self,
@@ -8032,7 +9494,7 @@ impl Dpusr0R {
         >::from_register(self, 0)
     }
 
-    #[doc = "USB D+ Input"]
+    #[doc = "USB0 D+ InputIndicates the D+ input signal of the USB."]
     #[inline(always)]
     pub fn dp0(self) -> crate::common::RegisterFieldBool<16, 1, 0, Dpusr0R_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<16, 1, 0, Dpusr0R_SPEC, crate::common::R>::from_register(
@@ -8040,7 +9502,7 @@ impl Dpusr0R {
         )
     }
 
-    #[doc = "USB D- Input"]
+    #[doc = "USB D-InputIndicates the D- input signal of the USB."]
     #[inline(always)]
     pub fn dm0(self) -> crate::common::RegisterFieldBool<17, 1, 0, Dpusr0R_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<17, 1, 0, Dpusr0R_SPEC, crate::common::R>::from_register(
@@ -8048,7 +9510,7 @@ impl Dpusr0R {
         )
     }
 
-    #[doc = "USB OVRCURA-DS Input"]
+    #[doc = "USB OVRCURA InputIndicates the OVRCURA input signal of the USB."]
     #[inline(always)]
     pub fn dovca0(
         self,
@@ -8058,7 +9520,7 @@ impl Dpusr0R {
         )
     }
 
-    #[doc = "USB OVRCURB-DS Input"]
+    #[doc = "USB OVRCURB InputIndicates the OVRCURB input signal of the USB."]
     #[inline(always)]
     pub fn dovcb0(
         self,
@@ -8068,7 +9530,17 @@ impl Dpusr0R {
         )
     }
 
-    #[doc = "USB VBUS Input"]
+    #[doc = "USB 0 PRTBLDET input"]
+    #[inline(always)]
+    pub fn dpddet0(
+        self,
+    ) -> crate::common::RegisterFieldBool<22, 1, 0, Dpusr0R_SPEC, crate::common::R> {
+        crate::common::RegisterFieldBool::<22, 1, 0, Dpusr0R_SPEC, crate::common::R>::from_register(
+            self, 0,
+        )
+    }
+
+    #[doc = "USB VBUS InputIndicates the VBUS input signal of the USB."]
     #[inline(always)]
     pub fn dvbsts0(
         self,
@@ -8076,6 +9548,14 @@ impl Dpusr0R {
         crate::common::RegisterFieldBool::<23, 1, 0, Dpusr0R_SPEC, crate::common::R>::from_register(
             self, 0,
         )
+    }
+
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, u8, Dpusr0R_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<24,0xff,1,0,u8,u8,Dpusr0R_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Dpusr0R {
@@ -8090,40 +9570,40 @@ pub mod dpusr0r {
     pub struct Srpc0_SPEC;
     pub type Srpc0 = crate::EnumBitfieldStruct<u8, Srpc0_SPEC>;
     impl Srpc0 {
-        #[doc = "Disable input through DP and DM inputs"]
+        #[doc = "Input through the DP and DM inputs is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable input through DP and DM inputs"]
+        #[doc = "Input through the DP and DM inputs is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rpue0_SPEC;
     pub type Rpue0 = crate::EnumBitfieldStruct<u8, Rpue0_SPEC>;
     impl Rpue0 {
-        #[doc = "Disable DP pull-up resistor"]
+        #[doc = "Disables DP pull-up resistor."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable DP pull-up resistor"]
+        #[doc = "Enables DP pull-up resistor."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Drpd0_SPEC;
     pub type Drpd0 = crate::EnumBitfieldStruct<u8, Drpd0_SPEC>;
     impl Drpd0 {
-        #[doc = "Disable DP/DM pull-down resistor"]
+        #[doc = "Disables DP/DM pull-down resistor."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable DP/DM pull-down resistor"]
+        #[doc = "Enables DP/DM pull-down resistor."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Fixphy0_SPEC;
     pub type Fixphy0 = crate::EnumBitfieldStruct<u8, Fixphy0_SPEC>;
     impl Fixphy0 {
-        #[doc = "Fix outputs in Normal mode and on return from Deep Software Standby mode 1"]
+        #[doc = "The outputs are fixed in normal mode and on return from deep software standby mode."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Fix outputs on transition to Deep Software Standby mode 1"]
+        #[doc = "The outputs are fixed on transitions to deep software standby mode."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8190,7 +9670,7 @@ impl Dpusr1R {
         >::from_register(self, 0)
     }
 
-    #[doc = "USB OVRCURA-DS Interrupt Enable/Clear"]
+    #[doc = "USB OVRCURA Interrupt Enable/Clear"]
     #[inline(always)]
     pub fn dovrcrae0(
         self,
@@ -8216,7 +9696,7 @@ impl Dpusr1R {
         >::from_register(self, 0)
     }
 
-    #[doc = "USB OVRCURB-DS Interrupt Enable/Clear"]
+    #[doc = "USB OVRCURB Interrupt Enable/Clear"]
     #[inline(always)]
     pub fn dovrcrbe0(
         self,
@@ -8237,6 +9717,32 @@ impl Dpusr1R {
             0,
             dpusr1r::Dovrcrbe0,
             dpusr1r::Dovrcrbe0,
+            Dpusr1R_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "USB PDDET Interrupt Enable/Clear"]
+    #[inline(always)]
+    pub fn dpddete0(
+        self,
+    ) -> crate::common::RegisterField<
+        6,
+        0x1,
+        1,
+        0,
+        dpusr1r::Dpddete0,
+        dpusr1r::Dpddete0,
+        Dpusr1R_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            6,
+            0x1,
+            1,
+            0,
+            dpusr1r::Dpddete0,
+            dpusr1r::Dpddete0,
             Dpusr1R_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
@@ -8320,7 +9826,7 @@ impl Dpusr1R {
         >::from_register(self, 0)
     }
 
-    #[doc = "USB OVRCURA-DS Interrupt Source Recovery"]
+    #[doc = "USB OVRCURA Interrupt Source Recovery"]
     #[inline(always)]
     pub fn dovrcra0(
         self,
@@ -8346,7 +9852,7 @@ impl Dpusr1R {
         >::from_register(self, 0)
     }
 
-    #[doc = "USB OVRCURB-DS Interrupt Source Recovery"]
+    #[doc = "USB OVRCURB Interrupt Source Recovery"]
     #[inline(always)]
     pub fn dovrcrb0(
         self,
@@ -8367,6 +9873,32 @@ impl Dpusr1R {
             0,
             dpusr1r::Dovrcrb0,
             dpusr1r::Dovrcrb0,
+            Dpusr1R_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "USB PDDET Interrupt Source Recovery"]
+    #[inline(always)]
+    pub fn dpddetint0(
+        self,
+    ) -> crate::common::RegisterField<
+        22,
+        0x1,
+        1,
+        0,
+        dpusr1r::Dpddetint0,
+        dpusr1r::Dpddetint0,
+        Dpusr1R_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            22,
+            0x1,
+            1,
+            0,
+            dpusr1r::Dpddetint0,
+            dpusr1r::Dpddetint0,
             Dpusr1R_SPEC,
             crate::common::R,
         >::from_register(self, 0)
@@ -8397,6 +9929,14 @@ impl Dpusr1R {
             crate::common::R,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, u8, Dpusr1R_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<24,0xff,1,0,u8,u8,Dpusr1R_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Dpusr1R {
     #[inline(always)]
@@ -8410,100 +9950,265 @@ pub mod dpusr1r {
     pub struct Dpinte0_SPEC;
     pub type Dpinte0 = crate::EnumBitfieldStruct<u8, Dpinte0_SPEC>;
     impl Dpinte0 {
-        #[doc = "Disable recovery from Deep Software Standby mode 1 by DP input"]
+        #[doc = "Recovery from deep software standby mode is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable recovery from Deep Software Standby mode 1 by DP input"]
+        #[doc = "Recovery from deep software standby mode is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dminte0_SPEC;
     pub type Dminte0 = crate::EnumBitfieldStruct<u8, Dminte0_SPEC>;
     impl Dminte0 {
-        #[doc = "Disable recovery from Deep Software Standby mode 1 by DM input"]
+        #[doc = "Recovery from deep software standby mode is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable recovery from Deep Software Standby mode by DM input"]
+        #[doc = "Recovery from deep software standby mode is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dovrcrae0_SPEC;
     pub type Dovrcrae0 = crate::EnumBitfieldStruct<u8, Dovrcrae0_SPEC>;
     impl Dovrcrae0 {
-        #[doc = "Disable recovery from Deep Software Standby mode 1 by OVRCURA-DS input"]
+        #[doc = "Recovery from deep software standby mode is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable recovery from Deep Software Standby mode 1 by OVRCURA-DS input"]
+        #[doc = "Recovery from deep software standby mode is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dovrcrbe0_SPEC;
     pub type Dovrcrbe0 = crate::EnumBitfieldStruct<u8, Dovrcrbe0_SPEC>;
     impl Dovrcrbe0 {
-        #[doc = "Disable recovery from Deep Software Standby mode 1 by OVRCURB-DS input"]
+        #[doc = "Recovery from deep software standby mode is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable recovery from Deep Software Standby mode 1 by OVRCURB-DS input"]
+        #[doc = "Recovery from deep software standby mode is enabled."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Dpddete0_SPEC;
+    pub type Dpddete0 = crate::EnumBitfieldStruct<u8, Dpddete0_SPEC>;
+    impl Dpddete0 {
+        #[doc = "Recovery from deep software standby mode is disabled."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Recovery from deep software standby mode is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvbse0_SPEC;
     pub type Dvbse0 = crate::EnumBitfieldStruct<u8, Dvbse0_SPEC>;
     impl Dvbse0 {
-        #[doc = "Disable recovery from Deep Software Standby mode 1 by VBUS input"]
+        #[doc = "Recovery from deep software standby mode is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable recovery from Deep Software Standby mode 1 by VBUS input"]
+        #[doc = "Recovery from deep software standby mode is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dpint0_SPEC;
     pub type Dpint0 = crate::EnumBitfieldStruct<u8, Dpint0_SPEC>;
     impl Dpint0 {
-        #[doc = "System has not recovered from Deep Software Standby mode 1"]
+        #[doc = "The system has not returned from deep software standby mode."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "System recovered from Deep Software Standby mode 1 because of DP"]
+        #[doc = "The system has returned from deep software standby mode."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dmint0_SPEC;
     pub type Dmint0 = crate::EnumBitfieldStruct<u8, Dmint0_SPEC>;
     impl Dmint0 {
-        #[doc = "System has not recovered from Deep Software Standby mode 1"]
+        #[doc = "The system has not returned from deep software standby mode."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "System recovered from Deep Software Standby mode 1 because of DM input"]
+        #[doc = "The system has returned from deep software standby mode."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dovrcra0_SPEC;
     pub type Dovrcra0 = crate::EnumBitfieldStruct<u8, Dovrcra0_SPEC>;
     impl Dovrcra0 {
-        #[doc = "System has not recovered from Deep Software Standby mode 1"]
+        #[doc = "The system has not returned from deep software standby mode."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "System recovered from Deep Software Standby mode 1 because of OVRCURA-DS input"]
+        #[doc = "The system has returned from deep software standby mode."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dovrcrb0_SPEC;
     pub type Dovrcrb0 = crate::EnumBitfieldStruct<u8, Dovrcrb0_SPEC>;
     impl Dovrcrb0 {
-        #[doc = "System has not recovered from Deep Software Standby mode 1"]
+        #[doc = "The system has not returned from deep software standby mode."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "System recovered from Deep Software Standby mode 1 because of OVRCURB-DS input"]
+        #[doc = "The system has returned from deep software standby mode."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Dpddetint0_SPEC;
+    pub type Dpddetint0 = crate::EnumBitfieldStruct<u8, Dpddetint0_SPEC>;
+    impl Dpddetint0 {
+        #[doc = "The system has not returned from deep software standby mode."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "The system has returned from deep software standby mode."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dvbint0_SPEC;
     pub type Dvbint0 = crate::EnumBitfieldStruct<u8, Dvbint0_SPEC>;
     impl Dvbint0 {
-        #[doc = "System has not recovered from Deep Software Standby mode 1"]
+        #[doc = "The system has not returned from deep software standby mode."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "System recovered from Deep Software Standby mode 1 because of VBUS input"]
+        #[doc = "The system has returned from deep software standby mode."]
+        pub const _1: Self = Self::new(1);
+    }
+}
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Dpbcctrl_SPEC;
+impl crate::sealed::RegSpec for Dpbcctrl_SPEC {
+    type DataType = u32;
+}
+
+#[doc = "Deep standby USB Battery Charging function register"]
+pub type Dpbcctrl = crate::RegValueT<Dpbcctrl_SPEC>;
+
+impl Dpbcctrl {
+    #[doc = "Portable Device Detection Enable"]
+    #[inline(always)]
+    pub fn dppddete(
+        self,
+    ) -> crate::common::RegisterField<
+        4,
+        0x1,
+        1,
+        0,
+        dpbcctrl::Dppddete,
+        dpbcctrl::Dppddete,
+        Dpbcctrl_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            4,
+            0x1,
+            1,
+            0,
+            dpbcctrl::Dppddete,
+            dpbcctrl::Dppddete,
+            Dpbcctrl_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "DCP operation enable.Set it to 0 when using the Peripheral Controller function."]
+    #[inline(always)]
+    pub fn dpdcpmode(
+        self,
+    ) -> crate::common::RegisterField<
+        6,
+        0x1,
+        1,
+        0,
+        dpbcctrl::Dpdcpmode,
+        dpbcctrl::Dpdcpmode,
+        Dpbcctrl_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            6,
+            0x1,
+            1,
+            0,
+            dpbcctrl::Dpdcpmode,
+            dpbcctrl::Dpdcpmode,
+            Dpbcctrl_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "USBattery Charging operation enabled"]
+    #[inline(always)]
+    pub fn dpbatchge(
+        self,
+    ) -> crate::common::RegisterField<
+        7,
+        0x1,
+        1,
+        0,
+        dpbcctrl::Dpbatchge,
+        dpbcctrl::Dpbatchge,
+        Dpbcctrl_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            7,
+            0x1,
+            1,
+            0,
+            dpbcctrl::Dpbatchge,
+            dpbcctrl::Dpbatchge,
+            Dpbcctrl_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Detection sensitivity variable bit.USB-PHY Portable Device Detection, Charging D-Port Detection Sensitivity Adjust.Initial value: 10"]
+    #[inline(always)]
+    pub fn dpphydet(
+        self,
+    ) -> crate::common::RegisterField<12, 0x3, 1, 0, u8, u8, Dpbcctrl_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<12,0x3,1,0,u8,u8,Dpbcctrl_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Dpbcctrl_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Dpbcctrl_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
+impl ::core::default::Default for Dpbcctrl {
+    #[inline(always)]
+    fn default() -> Dpbcctrl {
+        <crate::RegValueT<Dpbcctrl_SPEC> as RegisterValue<_>>::new(8192)
+    }
+}
+pub mod dpbcctrl {
+
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Dppddete_SPEC;
+    pub type Dppddete = crate::EnumBitfieldStruct<u8, Dppddete_SPEC>;
+    impl Dppddete {
+        #[doc = "Portable device detection stops"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Portable Device detection permission"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Dpdcpmode_SPEC;
+    pub type Dpdcpmode = crate::EnumBitfieldStruct<u8, Dpdcpmode_SPEC>;
+    impl Dpdcpmode {
+        #[doc = "DCP operation stops"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "DCP operation enabled"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Dpbatchge_SPEC;
+    pub type Dpbatchge = crate::EnumBitfieldStruct<u8, Dpbatchge_SPEC>;
+    impl Dpbatchge {
+        #[doc = "Battery Charging operation prohibited"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Battery Charging operation enabled"]
         pub const _1: Self = Self::new(1);
     }
 }

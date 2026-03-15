@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:58 +0000
+// Generated from SVD 1.20.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:37:45 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -1592,7 +1592,7 @@ impl super::Pfs {
         0x4,
     > {
         unsafe {
-            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x238usize))
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x200usize))
         }
     }
     #[inline(always)]
@@ -1601,7 +1601,7 @@ impl super::Pfs {
     ) -> &'static crate::common::Reg<self::P80Pfs_SPEC, crate::common::RW> {
         unsafe {
             crate::common::Reg::<self::P80Pfs_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(0x238usize),
+                self._svd2pac_as_ptr().add(0x200usize),
             )
         }
     }
@@ -1611,7 +1611,7 @@ impl super::Pfs {
     ) -> &'static crate::common::Reg<self::P80Pfs_SPEC, crate::common::RW> {
         unsafe {
             crate::common::Reg::<self::P80Pfs_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(0x23cusize),
+                self._svd2pac_as_ptr().add(0x204usize),
             )
         }
     }
@@ -1626,7 +1626,7 @@ impl super::Pfs {
         0x4,
     > {
         unsafe {
-            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x23ausize))
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x202usize))
         }
     }
     #[inline(always)]
@@ -1635,7 +1635,7 @@ impl super::Pfs {
     ) -> &'static crate::common::Reg<self::P80PfsHa_SPEC, crate::common::RW> {
         unsafe {
             crate::common::Reg::<self::P80PfsHa_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(0x23ausize),
+                self._svd2pac_as_ptr().add(0x202usize),
             )
         }
     }
@@ -1645,7 +1645,7 @@ impl super::Pfs {
     ) -> &'static crate::common::Reg<self::P80PfsHa_SPEC, crate::common::RW> {
         unsafe {
             crate::common::Reg::<self::P80PfsHa_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(0x23eusize),
+                self._svd2pac_as_ptr().add(0x206usize),
             )
         }
     }
@@ -1660,7 +1660,7 @@ impl super::Pfs {
         0x4,
     > {
         unsafe {
-            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x23busize))
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x203usize))
         }
     }
     #[inline(always)]
@@ -1669,7 +1669,7 @@ impl super::Pfs {
     ) -> &'static crate::common::Reg<self::P80PfsBy_SPEC, crate::common::RW> {
         unsafe {
             crate::common::Reg::<self::P80PfsBy_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(0x23busize),
+                self._svd2pac_as_ptr().add(0x203usize),
             )
         }
     }
@@ -1679,7 +1679,7 @@ impl super::Pfs {
     ) -> &'static crate::common::Reg<self::P80PfsBy_SPEC, crate::common::RW> {
         unsafe {
             crate::common::Reg::<self::P80PfsBy_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(0x23fusize),
+                self._svd2pac_as_ptr().add(0x207usize),
             )
         }
     }

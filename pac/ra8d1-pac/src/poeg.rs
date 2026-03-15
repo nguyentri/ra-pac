@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,65 +34,63 @@ impl super::Poeg {
         self.ptr
     }
 
-    #[doc = "POEG Group A Setting Register"]
+    #[doc = "POEG Group %s Setting Register"]
     #[inline(always)]
-    pub const fn poegga(
+    pub const fn poegg(
         &self,
-    ) -> &'static crate::common::Reg<self::Poegga_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::ClusterRegisterArray<
+        crate::common::Reg<self::Poegg_SPEC, crate::common::RW>,
+        4,
+        0x100,
+    > {
         unsafe {
-            crate::common::Reg::<self::Poegga_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(0usize),
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x0usize))
+        }
+    }
+    #[inline(always)]
+    pub const fn poegga(&self) -> &'static crate::common::Reg<self::Poegg_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Poegg_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x0usize),
             )
         }
     }
-
-    #[doc = "POEG Group B Setting Register"]
     #[inline(always)]
-    pub const fn poeggb(
-        &self,
-    ) -> &'static crate::common::Reg<self::Poeggb_SPEC, crate::common::RW> {
+    pub const fn poeggb(&self) -> &'static crate::common::Reg<self::Poegg_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::Poeggb_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(256usize),
+            crate::common::Reg::<self::Poegg_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x100usize),
             )
         }
     }
-
-    #[doc = "POEG Group C Setting Register"]
     #[inline(always)]
-    pub const fn poeggc(
-        &self,
-    ) -> &'static crate::common::Reg<self::Poeggc_SPEC, crate::common::RW> {
+    pub const fn poeggc(&self) -> &'static crate::common::Reg<self::Poegg_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::Poeggc_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(512usize),
+            crate::common::Reg::<self::Poegg_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x200usize),
             )
         }
     }
-
-    #[doc = "POEG Group D Setting Register"]
     #[inline(always)]
-    pub const fn poeggd(
-        &self,
-    ) -> &'static crate::common::Reg<self::Poeggd_SPEC, crate::common::RW> {
+    pub const fn poeggd(&self) -> &'static crate::common::Reg<self::Poegg_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::Poeggd_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(768usize),
+            crate::common::Reg::<self::Poegg_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x300usize),
             )
         }
     }
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Poegga_SPEC;
-impl crate::sealed::RegSpec for Poegga_SPEC {
+pub struct Poegg_SPEC;
+impl crate::sealed::RegSpec for Poegg_SPEC {
     type DataType = u32;
 }
 
-#[doc = "POEG Group A Setting Register"]
-pub type Poegga = crate::RegValueT<Poegga_SPEC>;
+#[doc = "POEG Group %s Setting Register"]
+pub type Poegg = crate::RegValueT<Poegg_SPEC>;
 
-impl Poegga {
+impl Poegg {
     #[doc = "Port Input Detection Flag"]
     #[inline(always)]
     pub fn pidf(
@@ -102,9 +100,9 @@ impl Poegga {
         0x1,
         1,
         0,
-        poegga::Pidf,
-        poegga::Pidf,
-        Poegga_SPEC,
+        poegg::Pidf,
+        poegg::Pidf,
+        Poegg_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -112,14 +110,14 @@ impl Poegga {
             0x1,
             1,
             0,
-            poegga::Pidf,
-            poegga::Pidf,
-            Poegga_SPEC,
+            poegg::Pidf,
+            poegg::Pidf,
+            Poegg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 
-    #[doc = "Detection Flag for GPT or ACMPHS Output-Disable Request"]
+    #[doc = "Real Time Overcurrent Detection Flag"]
     #[inline(always)]
     pub fn iocf(
         self,
@@ -128,9 +126,9 @@ impl Poegga {
         0x1,
         1,
         0,
-        poegga::Iocf,
-        poegga::Iocf,
-        Poegga_SPEC,
+        poegg::Iocf,
+        poegg::Iocf,
+        Poegg_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -138,9 +136,9 @@ impl Poegga {
             0x1,
             1,
             0,
-            poegga::Iocf,
-            poegga::Iocf,
-            Poegga_SPEC,
+            poegg::Iocf,
+            poegg::Iocf,
+            Poegg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
@@ -154,9 +152,9 @@ impl Poegga {
         0x1,
         1,
         0,
-        poegga::Ostpf,
-        poegga::Ostpf,
-        Poegga_SPEC,
+        poegg::Ostpf,
+        poegg::Ostpf,
+        Poegg_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -164,9 +162,9 @@ impl Poegga {
             0x1,
             1,
             0,
-            poegga::Ostpf,
-            poegga::Ostpf,
-            Poegga_SPEC,
+            poegg::Ostpf,
+            poegg::Ostpf,
+            Poegg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
@@ -180,9 +178,9 @@ impl Poegga {
         0x1,
         1,
         0,
-        poegga::Ssf,
-        poegga::Ssf,
-        Poegga_SPEC,
+        poegg::Ssf,
+        poegg::Ssf,
+        Poegg_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -190,14 +188,14 @@ impl Poegga {
             0x1,
             1,
             0,
-            poegga::Ssf,
-            poegga::Ssf,
-            Poegga_SPEC,
+            poegg::Ssf,
+            poegg::Ssf,
+            Poegg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 
-    #[doc = "Port Input Detection Enable"]
+    #[doc = "Port Input Detection EnableNote: Can be modified only once after a reset."]
     #[inline(always)]
     pub fn pide(
         self,
@@ -206,9 +204,9 @@ impl Poegga {
         0x1,
         1,
         0,
-        poegga::Pide,
-        poegga::Pide,
-        Poegga_SPEC,
+        poegg::Pide,
+        poegg::Pide,
+        Poegg_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -216,14 +214,14 @@ impl Poegga {
             0x1,
             1,
             0,
-            poegga::Pide,
-            poegga::Pide,
-            Poegga_SPEC,
+            poegg::Pide,
+            poegg::Pide,
+            Poegg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 
-    #[doc = "Enable for GPT Output-Disable Request"]
+    #[doc = "Enable for GPT Output-Disable RequestNote: Can be modified only once after a reset."]
     #[inline(always)]
     pub fn ioce(
         self,
@@ -232,9 +230,9 @@ impl Poegga {
         0x1,
         1,
         0,
-        poegga::Ioce,
-        poegga::Ioce,
-        Poegga_SPEC,
+        poegg::Ioce,
+        poegg::Ioce,
+        Poegg_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -242,14 +240,14 @@ impl Poegga {
             0x1,
             1,
             0,
-            poegga::Ioce,
-            poegga::Ioce,
-            Poegga_SPEC,
+            poegg::Ioce,
+            poegg::Ioce,
+            Poegg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 
-    #[doc = "Oscillation Stop Detection Enable"]
+    #[doc = "Oscillation Stop Detection EnableNote: Can be modified only once after a reset."]
     #[inline(always)]
     pub fn ostpe(
         self,
@@ -258,9 +256,9 @@ impl Poegga {
         0x1,
         1,
         0,
-        poegga::Ostpe,
-        poegga::Ostpe,
-        Poegga_SPEC,
+        poegg::Ostpe,
+        poegg::Ostpe,
+        Poegg_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -268,13 +266,14 @@ impl Poegga {
             0x1,
             1,
             0,
-            poegga::Ostpe,
-            poegga::Ostpe,
-            Poegga_SPEC,
+            poegg::Ostpe,
+            poegg::Ostpe,
+            Poegg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 
+    #[doc = "Comparator Disable Request Enable 0Note: Can be modified only once after a reset."]
     #[inline(always)]
     pub fn cdre0(
         self,
@@ -283,9 +282,9 @@ impl Poegga {
         0x1,
         1,
         0,
-        poegga::Cdre0,
-        poegga::Cdre0,
-        Poegga_SPEC,
+        poegg::Cdre0,
+        poegg::Cdre0,
+        Poegg_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -293,13 +292,14 @@ impl Poegga {
             0x1,
             1,
             0,
-            poegga::Cdre0,
-            poegga::Cdre0,
-            Poegga_SPEC,
+            poegg::Cdre0,
+            poegg::Cdre0,
+            Poegg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 
+    #[doc = "Comparator Disable Request Enable 1Note: Can be modified only once after a reset."]
     #[inline(always)]
     pub fn cdre1(
         self,
@@ -308,9 +308,9 @@ impl Poegga {
         0x1,
         1,
         0,
-        poegga::Cdre1,
-        poegga::Cdre1,
-        Poegga_SPEC,
+        poegg::Cdre1,
+        poegg::Cdre1,
+        Poegg_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -318,14 +318,118 @@ impl Poegga {
             0x1,
             1,
             0,
-            poegga::Cdre1,
-            poegga::Cdre1,
-            Poegga_SPEC,
+            poegg::Cdre1,
+            poegg::Cdre1,
+            Poegg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 
-    #[doc = "GTETRGn Input Status Flag"]
+    #[doc = "Comparator Disable Request Enable 2Note: Can be modified only once after a reset."]
+    #[inline(always)]
+    pub fn cdre2(
+        self,
+    ) -> crate::common::RegisterField<
+        10,
+        0x1,
+        1,
+        0,
+        poegg::Cdre2,
+        poegg::Cdre2,
+        Poegg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            10,
+            0x1,
+            1,
+            0,
+            poegg::Cdre2,
+            poegg::Cdre2,
+            Poegg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Comparator Disable Request Enable 3Note: Can be modified only once after a reset."]
+    #[inline(always)]
+    pub fn cdre3(
+        self,
+    ) -> crate::common::RegisterField<
+        11,
+        0x1,
+        1,
+        0,
+        poegg::Cdre3,
+        poegg::Cdre3,
+        Poegg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            11,
+            0x1,
+            1,
+            0,
+            poegg::Cdre3,
+            poegg::Cdre3,
+            Poegg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Comparator Disable Request Enable 4Note: Can be modified only once after a reset."]
+    #[inline(always)]
+    pub fn cdre4(
+        self,
+    ) -> crate::common::RegisterField<
+        12,
+        0x1,
+        1,
+        0,
+        poegg::Cdre4,
+        poegg::Cdre4,
+        Poegg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            12,
+            0x1,
+            1,
+            0,
+            poegg::Cdre4,
+            poegg::Cdre4,
+            Poegg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Comparator Disable Request Enable 5Note: Can be modified only once after a reset."]
+    #[inline(always)]
+    pub fn cdre5(
+        self,
+    ) -> crate::common::RegisterField<
+        13,
+        0x1,
+        1,
+        0,
+        poegg::Cdre5,
+        poegg::Cdre5,
+        Poegg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            13,
+            0x1,
+            1,
+            0,
+            poegg::Cdre5,
+            poegg::Cdre5,
+            Poegg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "GTETRG Input Status Flag"]
     #[inline(always)]
     pub fn st(
         self,
@@ -334,9 +438,9 @@ impl Poegga {
         0x1,
         1,
         0,
-        poegga::St,
-        poegga::St,
-        Poegga_SPEC,
+        poegg::St,
+        poegg::St,
+        Poegg_SPEC,
         crate::common::R,
     > {
         crate::common::RegisterField::<
@@ -344,14 +448,126 @@ impl Poegga {
             0x1,
             1,
             0,
-            poegga::St,
-            poegga::St,
-            Poegga_SPEC,
+            poegg::St,
+            poegg::St,
+            Poegg_SPEC,
             crate::common::R,
         >::from_register(self, 0)
     }
 
-    #[doc = "GTETRGn Input Reverse"]
+    #[doc = "POEG group A Cooperation Enable"]
+    #[inline(always)]
+    pub fn coopa(
+        self,
+    ) -> crate::common::RegisterField<
+        20,
+        0x1,
+        1,
+        0,
+        poegg::Coopa,
+        poegg::Coopa,
+        Poegg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            20,
+            0x1,
+            1,
+            0,
+            poegg::Coopa,
+            poegg::Coopa,
+            Poegg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "POEG group B Cooperation Enable"]
+    #[inline(always)]
+    pub fn coopb(
+        self,
+    ) -> crate::common::RegisterField<
+        21,
+        0x1,
+        1,
+        0,
+        poegg::Coopb,
+        poegg::Coopb,
+        Poegg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            21,
+            0x1,
+            1,
+            0,
+            poegg::Coopb,
+            poegg::Coopb,
+            Poegg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "POEG group C Cooperation Enable"]
+    #[inline(always)]
+    pub fn coopc(
+        self,
+    ) -> crate::common::RegisterField<
+        22,
+        0x1,
+        1,
+        0,
+        poegg::Coopc,
+        poegg::Coopc,
+        Poegg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            22,
+            0x1,
+            1,
+            0,
+            poegg::Coopc,
+            poegg::Coopc,
+            Poegg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "POEG group D Cooperation Enable"]
+    #[inline(always)]
+    pub fn coopd(
+        self,
+    ) -> crate::common::RegisterField<
+        23,
+        0x1,
+        1,
+        0,
+        poegg::Coopd,
+        poegg::Coopd,
+        Poegg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            23,
+            0x1,
+            1,
+            0,
+            poegg::Coopd,
+            poegg::Coopd,
+            Poegg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<24, 0xf, 1, 0, u8, u8, Poegg_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<24,0xf,1,0,u8,u8,Poegg_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "GTETRG Input Reverse"]
     #[inline(always)]
     pub fn inv(
         self,
@@ -360,9 +576,9 @@ impl Poegga {
         0x1,
         1,
         0,
-        poegga::Inv,
-        poegga::Inv,
-        Poegga_SPEC,
+        poegg::Inv,
+        poegg::Inv,
+        Poegg_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -370,9 +586,9 @@ impl Poegga {
             0x1,
             1,
             0,
-            poegga::Inv,
-            poegga::Inv,
-            Poegga_SPEC,
+            poegg::Inv,
+            poegg::Inv,
+            Poegg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
@@ -386,9 +602,9 @@ impl Poegga {
         0x1,
         1,
         0,
-        poegga::Nfen,
-        poegga::Nfen,
-        Poegga_SPEC,
+        poegg::Nfen,
+        poegg::Nfen,
+        Poegg_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -396,9 +612,9 @@ impl Poegga {
             0x1,
             1,
             0,
-            poegga::Nfen,
-            poegga::Nfen,
-            Poegga_SPEC,
+            poegg::Nfen,
+            poegg::Nfen,
+            Poegg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
@@ -412,9 +628,9 @@ impl Poegga {
         0x3,
         1,
         0,
-        poegga::Nfcs,
-        poegga::Nfcs,
-        Poegga_SPEC,
+        poegg::Nfcs,
+        poegg::Nfcs,
+        Poegg_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
@@ -422,1631 +638,235 @@ impl Poegga {
             0x3,
             1,
             0,
-            poegga::Nfcs,
-            poegga::Nfcs,
-            Poegga_SPEC,
+            poegg::Nfcs,
+            poegg::Nfcs,
+            Poegg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 }
-impl ::core::default::Default for Poegga {
+impl ::core::default::Default for Poegg {
     #[inline(always)]
-    fn default() -> Poegga {
-        <crate::RegValueT<Poegga_SPEC> as RegisterValue<_>>::new(0)
+    fn default() -> Poegg {
+        <crate::RegValueT<Poegg_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod poegga {
+pub mod poegg {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pidf_SPEC;
     pub type Pidf = crate::EnumBitfieldStruct<u8, Pidf_SPEC>;
     impl Pidf {
-        #[doc = "No output-disable request from the GTETRGn pin occurred"]
+        #[doc = "A output-disable request from the GTETRG pin has not been generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Output-disable request from the GTETRGn pin occurred."]
+        #[doc = "A output-disable request from the GTETRG pin has been generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Iocf_SPEC;
     pub type Iocf = crate::EnumBitfieldStruct<u8, Iocf_SPEC>;
     impl Iocf {
-        #[doc = "No output-disable request from GPT or comparator interrupt occurred."]
+        #[doc = "A output-disable request from GPT disable request or comparator interrupt has not been generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Output-disable request from GPT or comparator interrupt occurred."]
+        #[doc = "A output-disable request from GPT disable request or comparator interrupt has been generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ostpf_SPEC;
     pub type Ostpf = crate::EnumBitfieldStruct<u8, Ostpf_SPEC>;
     impl Ostpf {
-        #[doc = "No output-disable request from oscillation stop detection occurred"]
+        #[doc = "A output-disable request from the oscillation stop detection has not been generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Output-disable request from oscillation stop detection occurred"]
+        #[doc = "A output-disable request from the oscillation stop detection has been generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ssf_SPEC;
     pub type Ssf = crate::EnumBitfieldStruct<u8, Ssf_SPEC>;
     impl Ssf {
-        #[doc = "No output-disable request from software occurred"]
+        #[doc = "A output-disable request from software has not been generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Output-disable request from software occurred"]
+        #[doc = "A output-disable request from software has been generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pide_SPEC;
     pub type Pide = crate::EnumBitfieldStruct<u8, Pide_SPEC>;
     impl Pide {
-        #[doc = "Disable output-disable requests from the GTETRGn pins"]
+        #[doc = "A output-disable request from the GTETRG pins disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable output-disable requests from the GTETRGn pins"]
+        #[doc = "A output-disable request from the GTETRG pins enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ioce_SPEC;
     pub type Ioce = crate::EnumBitfieldStruct<u8, Ioce_SPEC>;
     impl Ioce {
-        #[doc = "Disable output-disable requests from GPT"]
+        #[doc = "Disable output-disable requests from GPT disable request"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable output-disable requests from GPT"]
+        #[doc = "Enable output-disable requests from GPT disable request"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ostpe_SPEC;
     pub type Ostpe = crate::EnumBitfieldStruct<u8, Ostpe_SPEC>;
     impl Ostpe {
-        #[doc = "Disable output-disable requests from oscillation stop detection"]
+        #[doc = "A output-disable request from the oscillation stop detection disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable output-disable requests from oscillation stop detection"]
+        #[doc = "A output-disable request from the oscillation stop detection enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre0_SPEC;
     pub type Cdre0 = crate::EnumBitfieldStruct<u8, Cdre0_SPEC>;
     impl Cdre0 {
-        #[doc = "Disable output-disable request from ACMPHS0"]
+        #[doc = "A disable request of comparator 0 disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable output-disable request from ACMPHS0"]
+        #[doc = "A disable request of comparator 0 enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdre1_SPEC;
     pub type Cdre1 = crate::EnumBitfieldStruct<u8, Cdre1_SPEC>;
     impl Cdre1 {
-        #[doc = "Disable output-disable request from ACMPHS1"]
+        #[doc = "A disable request of comparator 1 disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable output-disable request from ACMPHS1"]
+        #[doc = "A disable request of comparator 1 enabled."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cdre2_SPEC;
+    pub type Cdre2 = crate::EnumBitfieldStruct<u8, Cdre2_SPEC>;
+    impl Cdre2 {
+        #[doc = "A disable request of comparator 2 disabled."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "A disable request of comparator 2 enabled."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cdre3_SPEC;
+    pub type Cdre3 = crate::EnumBitfieldStruct<u8, Cdre3_SPEC>;
+    impl Cdre3 {
+        #[doc = "A disable request of comparator 3 disabled."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "A disable request of comparator 3 enabled."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cdre4_SPEC;
+    pub type Cdre4 = crate::EnumBitfieldStruct<u8, Cdre4_SPEC>;
+    impl Cdre4 {
+        #[doc = "A disable request of comparator 4 disabled."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "A disable request of comparator 4 enabled."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cdre5_SPEC;
+    pub type Cdre5 = crate::EnumBitfieldStruct<u8, Cdre5_SPEC>;
+    impl Cdre5 {
+        #[doc = "A disable request of comparator 5 disabled."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "A disable request of comparator 5 enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct St_SPEC;
     pub type St = crate::EnumBitfieldStruct<u8, St_SPEC>;
     impl St {
-        #[doc = "GTETRGn input after filtering was 0"]
+        #[doc = "GTETRG input after filtering is 0."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTETRGn input after filtering was 1"]
+        #[doc = "GTETRG input after filtering is 1."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Coopa_SPEC;
+    pub type Coopa = crate::EnumBitfieldStruct<u8, Coopa_SPEC>;
+    impl Coopa {
+        #[doc = "Disable cooperation with POEG group A"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Enable cooperation with POEG group A."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Coopb_SPEC;
+    pub type Coopb = crate::EnumBitfieldStruct<u8, Coopb_SPEC>;
+    impl Coopb {
+        #[doc = "Disable cooperation with POEG group B"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Enable cooperation with POEG group B."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Coopc_SPEC;
+    pub type Coopc = crate::EnumBitfieldStruct<u8, Coopc_SPEC>;
+    impl Coopc {
+        #[doc = "Disable cooperation with POEG group C"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Enable cooperation with POEG group C."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Coopd_SPEC;
+    pub type Coopd = crate::EnumBitfieldStruct<u8, Coopd_SPEC>;
+    impl Coopd {
+        #[doc = "Disable cooperation with POEG group D"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Enable cooperation with POEG group D."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Inv_SPEC;
     pub type Inv = crate::EnumBitfieldStruct<u8, Inv_SPEC>;
     impl Inv {
-        #[doc = "Input GTETRGn as-is"]
+        #[doc = "GTETRG Input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Input GTETRGn in reverse"]
+        #[doc = "GTETRG Input Reversed."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfen_SPEC;
     pub type Nfen = crate::EnumBitfieldStruct<u8, Nfen_SPEC>;
     impl Nfen {
-        #[doc = "Disable noise filtering"]
+        #[doc = "Filtering noise disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable noise filtering"]
+        #[doc = "Filtering noise enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfcs_SPEC;
     pub type Nfcs = crate::EnumBitfieldStruct<u8, Nfcs_SPEC>;
     impl Nfcs {
-        #[doc = "Sample GTETRGn pin input level three times every PCLKB"]
+        #[doc = "Sampling GTETRG pin input level for three times in every PCLKB."]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "Sample GTETRGn pin input level three times every PCLKB/8"]
+        #[doc = "Sampling GTETRG pin input level for three times in every PCLKB /8."]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "Sample GTETRGn pin input level three times every PCLKB/32"]
+        #[doc = "Sampling GTETRG pin input level for three times in every PCLKB /32."]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "Sample GTETRGn pin input level three times every PCLKB/128"]
-        pub const _11: Self = Self::new(3);
-    }
-}
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Poeggb_SPEC;
-impl crate::sealed::RegSpec for Poeggb_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "POEG Group B Setting Register"]
-pub type Poeggb = crate::RegValueT<Poeggb_SPEC>;
-
-impl Poeggb {
-    #[doc = "Port Input Detection Flag"]
-    #[inline(always)]
-    pub fn pidf(
-        self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x1,
-        1,
-        0,
-        poeggb::Pidf,
-        poeggb::Pidf,
-        Poeggb_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x1,
-            1,
-            0,
-            poeggb::Pidf,
-            poeggb::Pidf,
-            Poeggb_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Detection Flag for GPT or ACMPHS Output-Disable Request"]
-    #[inline(always)]
-    pub fn iocf(
-        self,
-    ) -> crate::common::RegisterField<
-        1,
-        0x1,
-        1,
-        0,
-        poeggb::Iocf,
-        poeggb::Iocf,
-        Poeggb_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            1,
-            0x1,
-            1,
-            0,
-            poeggb::Iocf,
-            poeggb::Iocf,
-            Poeggb_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Oscillation Stop Detection Flag"]
-    #[inline(always)]
-    pub fn ostpf(
-        self,
-    ) -> crate::common::RegisterField<
-        2,
-        0x1,
-        1,
-        0,
-        poeggb::Ostpf,
-        poeggb::Ostpf,
-        Poeggb_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            2,
-            0x1,
-            1,
-            0,
-            poeggb::Ostpf,
-            poeggb::Ostpf,
-            Poeggb_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Software Stop Flag"]
-    #[inline(always)]
-    pub fn ssf(
-        self,
-    ) -> crate::common::RegisterField<
-        3,
-        0x1,
-        1,
-        0,
-        poeggb::Ssf,
-        poeggb::Ssf,
-        Poeggb_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            3,
-            0x1,
-            1,
-            0,
-            poeggb::Ssf,
-            poeggb::Ssf,
-            Poeggb_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Port Input Detection Enable"]
-    #[inline(always)]
-    pub fn pide(
-        self,
-    ) -> crate::common::RegisterField<
-        4,
-        0x1,
-        1,
-        0,
-        poeggb::Pide,
-        poeggb::Pide,
-        Poeggb_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            4,
-            0x1,
-            1,
-            0,
-            poeggb::Pide,
-            poeggb::Pide,
-            Poeggb_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Enable for GPT Output-Disable Request"]
-    #[inline(always)]
-    pub fn ioce(
-        self,
-    ) -> crate::common::RegisterField<
-        5,
-        0x1,
-        1,
-        0,
-        poeggb::Ioce,
-        poeggb::Ioce,
-        Poeggb_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            5,
-            0x1,
-            1,
-            0,
-            poeggb::Ioce,
-            poeggb::Ioce,
-            Poeggb_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Oscillation Stop Detection Enable"]
-    #[inline(always)]
-    pub fn ostpe(
-        self,
-    ) -> crate::common::RegisterField<
-        6,
-        0x1,
-        1,
-        0,
-        poeggb::Ostpe,
-        poeggb::Ostpe,
-        Poeggb_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            6,
-            0x1,
-            1,
-            0,
-            poeggb::Ostpe,
-            poeggb::Ostpe,
-            Poeggb_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[inline(always)]
-    pub fn cdre0(
-        self,
-    ) -> crate::common::RegisterField<
-        8,
-        0x1,
-        1,
-        0,
-        poeggb::Cdre0,
-        poeggb::Cdre0,
-        Poeggb_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            8,
-            0x1,
-            1,
-            0,
-            poeggb::Cdre0,
-            poeggb::Cdre0,
-            Poeggb_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[inline(always)]
-    pub fn cdre1(
-        self,
-    ) -> crate::common::RegisterField<
-        9,
-        0x1,
-        1,
-        0,
-        poeggb::Cdre1,
-        poeggb::Cdre1,
-        Poeggb_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            9,
-            0x1,
-            1,
-            0,
-            poeggb::Cdre1,
-            poeggb::Cdre1,
-            Poeggb_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "GTETRGn Input Status Flag"]
-    #[inline(always)]
-    pub fn st(
-        self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x1,
-        1,
-        0,
-        poeggb::St,
-        poeggb::St,
-        Poeggb_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x1,
-            1,
-            0,
-            poeggb::St,
-            poeggb::St,
-            Poeggb_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "GTETRGn Input Reverse"]
-    #[inline(always)]
-    pub fn inv(
-        self,
-    ) -> crate::common::RegisterField<
-        28,
-        0x1,
-        1,
-        0,
-        poeggb::Inv,
-        poeggb::Inv,
-        Poeggb_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            28,
-            0x1,
-            1,
-            0,
-            poeggb::Inv,
-            poeggb::Inv,
-            Poeggb_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Noise Filter Enable"]
-    #[inline(always)]
-    pub fn nfen(
-        self,
-    ) -> crate::common::RegisterField<
-        29,
-        0x1,
-        1,
-        0,
-        poeggb::Nfen,
-        poeggb::Nfen,
-        Poeggb_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            29,
-            0x1,
-            1,
-            0,
-            poeggb::Nfen,
-            poeggb::Nfen,
-            Poeggb_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Noise Filter Clock Select"]
-    #[inline(always)]
-    pub fn nfcs(
-        self,
-    ) -> crate::common::RegisterField<
-        30,
-        0x3,
-        1,
-        0,
-        poeggb::Nfcs,
-        poeggb::Nfcs,
-        Poeggb_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            30,
-            0x3,
-            1,
-            0,
-            poeggb::Nfcs,
-            poeggb::Nfcs,
-            Poeggb_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-}
-impl ::core::default::Default for Poeggb {
-    #[inline(always)]
-    fn default() -> Poeggb {
-        <crate::RegValueT<Poeggb_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-pub mod poeggb {
-
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Pidf_SPEC;
-    pub type Pidf = crate::EnumBitfieldStruct<u8, Pidf_SPEC>;
-    impl Pidf {
-        #[doc = "No output-disable request from the GTETRGn pin occurred"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Output-disable request from the GTETRGn pin occurred."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Iocf_SPEC;
-    pub type Iocf = crate::EnumBitfieldStruct<u8, Iocf_SPEC>;
-    impl Iocf {
-        #[doc = "No output-disable request from GPT or comparator interrupt occurred."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Output-disable request from GPT or comparator interrupt occurred."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ostpf_SPEC;
-    pub type Ostpf = crate::EnumBitfieldStruct<u8, Ostpf_SPEC>;
-    impl Ostpf {
-        #[doc = "No output-disable request from oscillation stop detection occurred"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Output-disable request from oscillation stop detection occurred"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ssf_SPEC;
-    pub type Ssf = crate::EnumBitfieldStruct<u8, Ssf_SPEC>;
-    impl Ssf {
-        #[doc = "No output-disable request from software occurred"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Output-disable request from software occurred"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Pide_SPEC;
-    pub type Pide = crate::EnumBitfieldStruct<u8, Pide_SPEC>;
-    impl Pide {
-        #[doc = "Disable output-disable requests from the GTETRGn pins"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable output-disable requests from the GTETRGn pins"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ioce_SPEC;
-    pub type Ioce = crate::EnumBitfieldStruct<u8, Ioce_SPEC>;
-    impl Ioce {
-        #[doc = "Disable output-disable requests from GPT"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable output-disable requests from GPT"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ostpe_SPEC;
-    pub type Ostpe = crate::EnumBitfieldStruct<u8, Ostpe_SPEC>;
-    impl Ostpe {
-        #[doc = "Disable output-disable requests from oscillation stop detection"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable output-disable requests from oscillation stop detection"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cdre0_SPEC;
-    pub type Cdre0 = crate::EnumBitfieldStruct<u8, Cdre0_SPEC>;
-    impl Cdre0 {
-        #[doc = "Disable output-disable request from ACMPHS0"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable output-disable request from ACMPHS0"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cdre1_SPEC;
-    pub type Cdre1 = crate::EnumBitfieldStruct<u8, Cdre1_SPEC>;
-    impl Cdre1 {
-        #[doc = "Disable output-disable request from ACMPHS1"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable output-disable request from ACMPHS1"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct St_SPEC;
-    pub type St = crate::EnumBitfieldStruct<u8, St_SPEC>;
-    impl St {
-        #[doc = "GTETRGn input after filtering was 0"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "GTETRGn input after filtering was 1"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Inv_SPEC;
-    pub type Inv = crate::EnumBitfieldStruct<u8, Inv_SPEC>;
-    impl Inv {
-        #[doc = "Input GTETRGn as-is"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Input GTETRGn in reverse"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Nfen_SPEC;
-    pub type Nfen = crate::EnumBitfieldStruct<u8, Nfen_SPEC>;
-    impl Nfen {
-        #[doc = "Disable noise filtering"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable noise filtering"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Nfcs_SPEC;
-    pub type Nfcs = crate::EnumBitfieldStruct<u8, Nfcs_SPEC>;
-    impl Nfcs {
-        #[doc = "Sample GTETRGn pin input level three times every PCLKB"]
-        pub const _00: Self = Self::new(0);
-
-        #[doc = "Sample GTETRGn pin input level three times every PCLKB/8"]
-        pub const _01: Self = Self::new(1);
-
-        #[doc = "Sample GTETRGn pin input level three times every PCLKB/32"]
-        pub const _10: Self = Self::new(2);
-
-        #[doc = "Sample GTETRGn pin input level three times every PCLKB/128"]
-        pub const _11: Self = Self::new(3);
-    }
-}
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Poeggc_SPEC;
-impl crate::sealed::RegSpec for Poeggc_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "POEG Group C Setting Register"]
-pub type Poeggc = crate::RegValueT<Poeggc_SPEC>;
-
-impl Poeggc {
-    #[doc = "Port Input Detection Flag"]
-    #[inline(always)]
-    pub fn pidf(
-        self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x1,
-        1,
-        0,
-        poeggc::Pidf,
-        poeggc::Pidf,
-        Poeggc_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x1,
-            1,
-            0,
-            poeggc::Pidf,
-            poeggc::Pidf,
-            Poeggc_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Detection Flag for GPT or ACMPHS Output-Disable Request"]
-    #[inline(always)]
-    pub fn iocf(
-        self,
-    ) -> crate::common::RegisterField<
-        1,
-        0x1,
-        1,
-        0,
-        poeggc::Iocf,
-        poeggc::Iocf,
-        Poeggc_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            1,
-            0x1,
-            1,
-            0,
-            poeggc::Iocf,
-            poeggc::Iocf,
-            Poeggc_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Oscillation Stop Detection Flag"]
-    #[inline(always)]
-    pub fn ostpf(
-        self,
-    ) -> crate::common::RegisterField<
-        2,
-        0x1,
-        1,
-        0,
-        poeggc::Ostpf,
-        poeggc::Ostpf,
-        Poeggc_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            2,
-            0x1,
-            1,
-            0,
-            poeggc::Ostpf,
-            poeggc::Ostpf,
-            Poeggc_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Software Stop Flag"]
-    #[inline(always)]
-    pub fn ssf(
-        self,
-    ) -> crate::common::RegisterField<
-        3,
-        0x1,
-        1,
-        0,
-        poeggc::Ssf,
-        poeggc::Ssf,
-        Poeggc_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            3,
-            0x1,
-            1,
-            0,
-            poeggc::Ssf,
-            poeggc::Ssf,
-            Poeggc_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Port Input Detection Enable"]
-    #[inline(always)]
-    pub fn pide(
-        self,
-    ) -> crate::common::RegisterField<
-        4,
-        0x1,
-        1,
-        0,
-        poeggc::Pide,
-        poeggc::Pide,
-        Poeggc_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            4,
-            0x1,
-            1,
-            0,
-            poeggc::Pide,
-            poeggc::Pide,
-            Poeggc_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Enable for GPT Output-Disable Request"]
-    #[inline(always)]
-    pub fn ioce(
-        self,
-    ) -> crate::common::RegisterField<
-        5,
-        0x1,
-        1,
-        0,
-        poeggc::Ioce,
-        poeggc::Ioce,
-        Poeggc_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            5,
-            0x1,
-            1,
-            0,
-            poeggc::Ioce,
-            poeggc::Ioce,
-            Poeggc_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Oscillation Stop Detection Enable"]
-    #[inline(always)]
-    pub fn ostpe(
-        self,
-    ) -> crate::common::RegisterField<
-        6,
-        0x1,
-        1,
-        0,
-        poeggc::Ostpe,
-        poeggc::Ostpe,
-        Poeggc_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            6,
-            0x1,
-            1,
-            0,
-            poeggc::Ostpe,
-            poeggc::Ostpe,
-            Poeggc_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[inline(always)]
-    pub fn cdre0(
-        self,
-    ) -> crate::common::RegisterField<
-        8,
-        0x1,
-        1,
-        0,
-        poeggc::Cdre0,
-        poeggc::Cdre0,
-        Poeggc_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            8,
-            0x1,
-            1,
-            0,
-            poeggc::Cdre0,
-            poeggc::Cdre0,
-            Poeggc_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[inline(always)]
-    pub fn cdre1(
-        self,
-    ) -> crate::common::RegisterField<
-        9,
-        0x1,
-        1,
-        0,
-        poeggc::Cdre1,
-        poeggc::Cdre1,
-        Poeggc_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            9,
-            0x1,
-            1,
-            0,
-            poeggc::Cdre1,
-            poeggc::Cdre1,
-            Poeggc_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "GTETRGn Input Status Flag"]
-    #[inline(always)]
-    pub fn st(
-        self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x1,
-        1,
-        0,
-        poeggc::St,
-        poeggc::St,
-        Poeggc_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x1,
-            1,
-            0,
-            poeggc::St,
-            poeggc::St,
-            Poeggc_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "GTETRGn Input Reverse"]
-    #[inline(always)]
-    pub fn inv(
-        self,
-    ) -> crate::common::RegisterField<
-        28,
-        0x1,
-        1,
-        0,
-        poeggc::Inv,
-        poeggc::Inv,
-        Poeggc_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            28,
-            0x1,
-            1,
-            0,
-            poeggc::Inv,
-            poeggc::Inv,
-            Poeggc_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Noise Filter Enable"]
-    #[inline(always)]
-    pub fn nfen(
-        self,
-    ) -> crate::common::RegisterField<
-        29,
-        0x1,
-        1,
-        0,
-        poeggc::Nfen,
-        poeggc::Nfen,
-        Poeggc_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            29,
-            0x1,
-            1,
-            0,
-            poeggc::Nfen,
-            poeggc::Nfen,
-            Poeggc_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Noise Filter Clock Select"]
-    #[inline(always)]
-    pub fn nfcs(
-        self,
-    ) -> crate::common::RegisterField<
-        30,
-        0x3,
-        1,
-        0,
-        poeggc::Nfcs,
-        poeggc::Nfcs,
-        Poeggc_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            30,
-            0x3,
-            1,
-            0,
-            poeggc::Nfcs,
-            poeggc::Nfcs,
-            Poeggc_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-}
-impl ::core::default::Default for Poeggc {
-    #[inline(always)]
-    fn default() -> Poeggc {
-        <crate::RegValueT<Poeggc_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-pub mod poeggc {
-
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Pidf_SPEC;
-    pub type Pidf = crate::EnumBitfieldStruct<u8, Pidf_SPEC>;
-    impl Pidf {
-        #[doc = "No output-disable request from the GTETRGn pin occurred"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Output-disable request from the GTETRGn pin occurred."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Iocf_SPEC;
-    pub type Iocf = crate::EnumBitfieldStruct<u8, Iocf_SPEC>;
-    impl Iocf {
-        #[doc = "No output-disable request from GPT or comparator interrupt occurred."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Output-disable request from GPT or comparator interrupt occurred."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ostpf_SPEC;
-    pub type Ostpf = crate::EnumBitfieldStruct<u8, Ostpf_SPEC>;
-    impl Ostpf {
-        #[doc = "No output-disable request from oscillation stop detection occurred"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Output-disable request from oscillation stop detection occurred"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ssf_SPEC;
-    pub type Ssf = crate::EnumBitfieldStruct<u8, Ssf_SPEC>;
-    impl Ssf {
-        #[doc = "No output-disable request from software occurred"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Output-disable request from software occurred"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Pide_SPEC;
-    pub type Pide = crate::EnumBitfieldStruct<u8, Pide_SPEC>;
-    impl Pide {
-        #[doc = "Disable output-disable requests from the GTETRGn pins"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable output-disable requests from the GTETRGn pins"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ioce_SPEC;
-    pub type Ioce = crate::EnumBitfieldStruct<u8, Ioce_SPEC>;
-    impl Ioce {
-        #[doc = "Disable output-disable requests from GPT"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable output-disable requests from GPT"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ostpe_SPEC;
-    pub type Ostpe = crate::EnumBitfieldStruct<u8, Ostpe_SPEC>;
-    impl Ostpe {
-        #[doc = "Disable output-disable requests from oscillation stop detection"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable output-disable requests from oscillation stop detection"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cdre0_SPEC;
-    pub type Cdre0 = crate::EnumBitfieldStruct<u8, Cdre0_SPEC>;
-    impl Cdre0 {
-        #[doc = "Disable output-disable request from ACMPHS0"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable output-disable request from ACMPHS0"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cdre1_SPEC;
-    pub type Cdre1 = crate::EnumBitfieldStruct<u8, Cdre1_SPEC>;
-    impl Cdre1 {
-        #[doc = "Disable output-disable request from ACMPHS1"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable output-disable request from ACMPHS1"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct St_SPEC;
-    pub type St = crate::EnumBitfieldStruct<u8, St_SPEC>;
-    impl St {
-        #[doc = "GTETRGn input after filtering was 0"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "GTETRGn input after filtering was 1"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Inv_SPEC;
-    pub type Inv = crate::EnumBitfieldStruct<u8, Inv_SPEC>;
-    impl Inv {
-        #[doc = "Input GTETRGn as-is"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Input GTETRGn in reverse"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Nfen_SPEC;
-    pub type Nfen = crate::EnumBitfieldStruct<u8, Nfen_SPEC>;
-    impl Nfen {
-        #[doc = "Disable noise filtering"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable noise filtering"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Nfcs_SPEC;
-    pub type Nfcs = crate::EnumBitfieldStruct<u8, Nfcs_SPEC>;
-    impl Nfcs {
-        #[doc = "Sample GTETRGn pin input level three times every PCLKB"]
-        pub const _00: Self = Self::new(0);
-
-        #[doc = "Sample GTETRGn pin input level three times every PCLKB/8"]
-        pub const _01: Self = Self::new(1);
-
-        #[doc = "Sample GTETRGn pin input level three times every PCLKB/32"]
-        pub const _10: Self = Self::new(2);
-
-        #[doc = "Sample GTETRGn pin input level three times every PCLKB/128"]
-        pub const _11: Self = Self::new(3);
-    }
-}
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Poeggd_SPEC;
-impl crate::sealed::RegSpec for Poeggd_SPEC {
-    type DataType = u32;
-}
-
-#[doc = "POEG Group D Setting Register"]
-pub type Poeggd = crate::RegValueT<Poeggd_SPEC>;
-
-impl Poeggd {
-    #[doc = "Port Input Detection Flag"]
-    #[inline(always)]
-    pub fn pidf(
-        self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x1,
-        1,
-        0,
-        poeggd::Pidf,
-        poeggd::Pidf,
-        Poeggd_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x1,
-            1,
-            0,
-            poeggd::Pidf,
-            poeggd::Pidf,
-            Poeggd_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Detection Flag for GPT or ACMPHS Output-Disable Request"]
-    #[inline(always)]
-    pub fn iocf(
-        self,
-    ) -> crate::common::RegisterField<
-        1,
-        0x1,
-        1,
-        0,
-        poeggd::Iocf,
-        poeggd::Iocf,
-        Poeggd_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            1,
-            0x1,
-            1,
-            0,
-            poeggd::Iocf,
-            poeggd::Iocf,
-            Poeggd_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Oscillation Stop Detection Flag"]
-    #[inline(always)]
-    pub fn ostpf(
-        self,
-    ) -> crate::common::RegisterField<
-        2,
-        0x1,
-        1,
-        0,
-        poeggd::Ostpf,
-        poeggd::Ostpf,
-        Poeggd_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            2,
-            0x1,
-            1,
-            0,
-            poeggd::Ostpf,
-            poeggd::Ostpf,
-            Poeggd_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Software Stop Flag"]
-    #[inline(always)]
-    pub fn ssf(
-        self,
-    ) -> crate::common::RegisterField<
-        3,
-        0x1,
-        1,
-        0,
-        poeggd::Ssf,
-        poeggd::Ssf,
-        Poeggd_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            3,
-            0x1,
-            1,
-            0,
-            poeggd::Ssf,
-            poeggd::Ssf,
-            Poeggd_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Port Input Detection Enable"]
-    #[inline(always)]
-    pub fn pide(
-        self,
-    ) -> crate::common::RegisterField<
-        4,
-        0x1,
-        1,
-        0,
-        poeggd::Pide,
-        poeggd::Pide,
-        Poeggd_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            4,
-            0x1,
-            1,
-            0,
-            poeggd::Pide,
-            poeggd::Pide,
-            Poeggd_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Enable for GPT Output-Disable Request"]
-    #[inline(always)]
-    pub fn ioce(
-        self,
-    ) -> crate::common::RegisterField<
-        5,
-        0x1,
-        1,
-        0,
-        poeggd::Ioce,
-        poeggd::Ioce,
-        Poeggd_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            5,
-            0x1,
-            1,
-            0,
-            poeggd::Ioce,
-            poeggd::Ioce,
-            Poeggd_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Oscillation Stop Detection Enable"]
-    #[inline(always)]
-    pub fn ostpe(
-        self,
-    ) -> crate::common::RegisterField<
-        6,
-        0x1,
-        1,
-        0,
-        poeggd::Ostpe,
-        poeggd::Ostpe,
-        Poeggd_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            6,
-            0x1,
-            1,
-            0,
-            poeggd::Ostpe,
-            poeggd::Ostpe,
-            Poeggd_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[inline(always)]
-    pub fn cdre0(
-        self,
-    ) -> crate::common::RegisterField<
-        8,
-        0x1,
-        1,
-        0,
-        poeggd::Cdre0,
-        poeggd::Cdre0,
-        Poeggd_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            8,
-            0x1,
-            1,
-            0,
-            poeggd::Cdre0,
-            poeggd::Cdre0,
-            Poeggd_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[inline(always)]
-    pub fn cdre1(
-        self,
-    ) -> crate::common::RegisterField<
-        9,
-        0x1,
-        1,
-        0,
-        poeggd::Cdre1,
-        poeggd::Cdre1,
-        Poeggd_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            9,
-            0x1,
-            1,
-            0,
-            poeggd::Cdre1,
-            poeggd::Cdre1,
-            Poeggd_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "GTETRGn Input Status Flag"]
-    #[inline(always)]
-    pub fn st(
-        self,
-    ) -> crate::common::RegisterField<
-        16,
-        0x1,
-        1,
-        0,
-        poeggd::St,
-        poeggd::St,
-        Poeggd_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            16,
-            0x1,
-            1,
-            0,
-            poeggd::St,
-            poeggd::St,
-            Poeggd_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "GTETRGn Input Reverse"]
-    #[inline(always)]
-    pub fn inv(
-        self,
-    ) -> crate::common::RegisterField<
-        28,
-        0x1,
-        1,
-        0,
-        poeggd::Inv,
-        poeggd::Inv,
-        Poeggd_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            28,
-            0x1,
-            1,
-            0,
-            poeggd::Inv,
-            poeggd::Inv,
-            Poeggd_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Noise Filter Enable"]
-    #[inline(always)]
-    pub fn nfen(
-        self,
-    ) -> crate::common::RegisterField<
-        29,
-        0x1,
-        1,
-        0,
-        poeggd::Nfen,
-        poeggd::Nfen,
-        Poeggd_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            29,
-            0x1,
-            1,
-            0,
-            poeggd::Nfen,
-            poeggd::Nfen,
-            Poeggd_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Noise Filter Clock Select"]
-    #[inline(always)]
-    pub fn nfcs(
-        self,
-    ) -> crate::common::RegisterField<
-        30,
-        0x3,
-        1,
-        0,
-        poeggd::Nfcs,
-        poeggd::Nfcs,
-        Poeggd_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            30,
-            0x3,
-            1,
-            0,
-            poeggd::Nfcs,
-            poeggd::Nfcs,
-            Poeggd_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-}
-impl ::core::default::Default for Poeggd {
-    #[inline(always)]
-    fn default() -> Poeggd {
-        <crate::RegValueT<Poeggd_SPEC> as RegisterValue<_>>::new(0)
-    }
-}
-pub mod poeggd {
-
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Pidf_SPEC;
-    pub type Pidf = crate::EnumBitfieldStruct<u8, Pidf_SPEC>;
-    impl Pidf {
-        #[doc = "No output-disable request from the GTETRGn pin occurred"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Output-disable request from the GTETRGn pin occurred."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Iocf_SPEC;
-    pub type Iocf = crate::EnumBitfieldStruct<u8, Iocf_SPEC>;
-    impl Iocf {
-        #[doc = "No output-disable request from GPT or comparator interrupt occurred."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Output-disable request from GPT or comparator interrupt occurred."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ostpf_SPEC;
-    pub type Ostpf = crate::EnumBitfieldStruct<u8, Ostpf_SPEC>;
-    impl Ostpf {
-        #[doc = "No output-disable request from oscillation stop detection occurred"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Output-disable request from oscillation stop detection occurred"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ssf_SPEC;
-    pub type Ssf = crate::EnumBitfieldStruct<u8, Ssf_SPEC>;
-    impl Ssf {
-        #[doc = "No output-disable request from software occurred"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Output-disable request from software occurred"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Pide_SPEC;
-    pub type Pide = crate::EnumBitfieldStruct<u8, Pide_SPEC>;
-    impl Pide {
-        #[doc = "Disable output-disable requests from the GTETRGn pins"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable output-disable requests from the GTETRGn pins"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ioce_SPEC;
-    pub type Ioce = crate::EnumBitfieldStruct<u8, Ioce_SPEC>;
-    impl Ioce {
-        #[doc = "Disable output-disable requests from GPT"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable output-disable requests from GPT"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ostpe_SPEC;
-    pub type Ostpe = crate::EnumBitfieldStruct<u8, Ostpe_SPEC>;
-    impl Ostpe {
-        #[doc = "Disable output-disable requests from oscillation stop detection"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable output-disable requests from oscillation stop detection"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cdre0_SPEC;
-    pub type Cdre0 = crate::EnumBitfieldStruct<u8, Cdre0_SPEC>;
-    impl Cdre0 {
-        #[doc = "Disable output-disable request from ACMPHS0"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable output-disable request from ACMPHS0"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cdre1_SPEC;
-    pub type Cdre1 = crate::EnumBitfieldStruct<u8, Cdre1_SPEC>;
-    impl Cdre1 {
-        #[doc = "Disable output-disable request from ACMPHS1"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable output-disable request from ACMPHS1"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct St_SPEC;
-    pub type St = crate::EnumBitfieldStruct<u8, St_SPEC>;
-    impl St {
-        #[doc = "GTETRGn input after filtering was 0"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "GTETRGn input after filtering was 1"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Inv_SPEC;
-    pub type Inv = crate::EnumBitfieldStruct<u8, Inv_SPEC>;
-    impl Inv {
-        #[doc = "Input GTETRGn as-is"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Input GTETRGn in reverse"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Nfen_SPEC;
-    pub type Nfen = crate::EnumBitfieldStruct<u8, Nfen_SPEC>;
-    impl Nfen {
-        #[doc = "Disable noise filtering"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable noise filtering"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Nfcs_SPEC;
-    pub type Nfcs = crate::EnumBitfieldStruct<u8, Nfcs_SPEC>;
-    impl Nfcs {
-        #[doc = "Sample GTETRGn pin input level three times every PCLKB"]
-        pub const _00: Self = Self::new(0);
-
-        #[doc = "Sample GTETRGn pin input level three times every PCLKB/8"]
-        pub const _01: Self = Self::new(1);
-
-        #[doc = "Sample GTETRGn pin input level three times every PCLKB/32"]
-        pub const _10: Self = Self::new(2);
-
-        #[doc = "Sample GTETRGn pin input level three times every PCLKB/128"]
+        #[doc = "Sampling GTETRG pin input level for three times in every PCLKB /128."]
         pub const _11: Self = Self::new(3);
     }
 }

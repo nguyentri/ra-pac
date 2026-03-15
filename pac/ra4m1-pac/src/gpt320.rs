@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:18 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:06:30 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -408,9 +408,6 @@ pub mod gtwp {
     impl Prkey {
         #[doc = "Written to these bits, the WP bits write is permitted."]
         pub const _0_X_A_5: Self = Self::new(165);
-
-        #[doc = "The WP bits write is not permitted."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wp_SPEC;
@@ -6804,9 +6801,6 @@ pub mod gtcr {
 
         #[doc = "PCLK/1024"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Setting prohibied"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Md_SPEC;
@@ -8048,9 +8042,6 @@ pub mod gtintad {
 
         #[doc = "Group B output disable request"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -8681,9 +8672,6 @@ pub mod gtber {
 
         #[doc = "Single buffer operation (GTPBR --> GTPR)"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ccrb_SPEC;

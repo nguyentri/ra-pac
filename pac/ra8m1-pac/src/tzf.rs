@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:57:20 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -122,12 +122,6 @@ pub mod tzfoad {
     pub type Oad = crate::EnumBitfieldStruct<u8, Oad_SPEC>;
     impl Oad {
         #[doc = "Only error response is returned"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Reset"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "NMI"]
         pub const _0: Self = Self::new(0);
 
         #[doc = "Reset"]

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:57:20 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -3444,9 +3444,6 @@ pub mod ccr1 {
 
         #[doc = "The on-chip baud rate generator clock divided by 8 is used"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Settings other than above are prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfen_SPEC;
@@ -4288,9 +4285,6 @@ pub mod ccr1_ha_h {
 
         #[doc = "The on-chip baud rate generator clock divided by 8 is used"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Settings other than above are prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfen_SPEC;
@@ -4500,9 +4494,6 @@ pub mod ccr1_by_hh {
 
         #[doc = "The on-chip baud rate generator clock divided by 8 is used"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Settings other than above are prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfen_SPEC;
@@ -5804,9 +5795,6 @@ pub mod ccr3 {
     impl Den {
         #[doc = "RS-485 driver control function is enable"]
         pub const _0: Self = Self::new(0);
-
-        #[doc = "RS-485 driver control function is disable"]
-        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cke_SPEC;
@@ -5817,18 +5805,6 @@ pub mod ccr3 {
 
         #[doc = "On-chip baud rate generator"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "On-chip baud rate generator The SCKn pin functions as I/O port."]
-        pub const _00: Self = Self::new(0);
-
-        #[doc = "Output disabled (The SCKn pin is available for use as an I/O port"]
-        pub const _00: Self = Self::new(0);
-
-        #[doc = "Clock output"]
-        pub const _01: Self = Self::new(1);
-
-        #[doc = "Output fixed low"]
-        pub const _00: Self = Self::new(0);
 
         #[doc = "Output fixed high"]
         pub const _10: Self = Self::new(2);
@@ -6825,9 +6801,6 @@ pub mod ccr3_ha_h {
     impl Den {
         #[doc = "RS-485 driver control function is enable"]
         pub const _0: Self = Self::new(0);
-
-        #[doc = "RS-485 driver control function is disable"]
-        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cke_SPEC;
@@ -6838,18 +6811,6 @@ pub mod ccr3_ha_h {
 
         #[doc = "On-chip baud rate generator"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "On-chip baud rate generator The SCKn pin functions as I/O port."]
-        pub const _00: Self = Self::new(0);
-
-        #[doc = "Output disabled (The SCKn pin is available for use as an I/O port"]
-        pub const _00: Self = Self::new(0);
-
-        #[doc = "Clock output"]
-        pub const _01: Self = Self::new(1);
-
-        #[doc = "Output fixed low"]
-        pub const _00: Self = Self::new(0);
 
         #[doc = "Output fixed high"]
         pub const _10: Self = Self::new(2);
@@ -7070,9 +7031,6 @@ pub mod ccr3_by_hl {
     impl Den {
         #[doc = "RS-485 driver control function is enable"]
         pub const _0: Self = Self::new(0);
-
-        #[doc = "RS-485 driver control function is disable"]
-        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -7215,18 +7173,6 @@ pub mod ccr3_by_hh {
 
         #[doc = "On-chip baud rate generator"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "On-chip baud rate generator The SCKn pin functions as I/O port."]
-        pub const _00: Self = Self::new(0);
-
-        #[doc = "Output disabled (The SCKn pin is available for use as an I/O port"]
-        pub const _00: Self = Self::new(0);
-
-        #[doc = "Clock output"]
-        pub const _01: Self = Self::new(1);
-
-        #[doc = "Output fixed low"]
-        pub const _00: Self = Self::new(0);
 
         #[doc = "Output fixed high"]
         pub const _10: Self = Self::new(2);
@@ -7479,9 +7425,6 @@ pub mod ccr4 {
     impl Ast {
         #[doc = "No adjustment (The sampling at default timing)"]
         pub const _000: Self = Self::new(0);
-
-        #[doc = "internal base clock * the setting value of AST\\[2:0\\]."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ajd_SPEC;
@@ -7499,9 +7442,6 @@ pub mod ccr4 {
     impl Att {
         #[doc = "No adjustment"]
         pub const _000: Self = Self::new(0);
-
-        #[doc = "internal base clock * the value of ATT\\[2:0\\]"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aet_SPEC;
@@ -7822,9 +7762,6 @@ pub mod ccr4_ha_h {
     impl Ast {
         #[doc = "No adjustment (The sampling at default timing)"]
         pub const _000: Self = Self::new(0);
-
-        #[doc = "internal base clock * the setting value of AST\\[2:0\\]."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ajd_SPEC;
@@ -7842,9 +7779,6 @@ pub mod ccr4_ha_h {
     impl Att {
         #[doc = "No adjustment"]
         pub const _000: Self = Self::new(0);
-
-        #[doc = "internal base clock * the value of ATT\\[2:0\\]"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aet_SPEC;
@@ -8086,9 +8020,6 @@ pub mod ccr4_by_hh {
     impl Ast {
         #[doc = "No adjustment (The sampling at default timing)"]
         pub const _000: Self = Self::new(0);
-
-        #[doc = "internal base clock * the setting value of AST\\[2:0\\]."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ajd_SPEC;
@@ -8106,9 +8037,6 @@ pub mod ccr4_by_hh {
     impl Att {
         #[doc = "No adjustment"]
         pub const _000: Self = Self::new(0);
-
-        #[doc = "internal base clock * the value of ATT\\[2:0\\]"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aet_SPEC;
@@ -8628,9 +8556,6 @@ pub mod icr {
     impl Iicdl {
         #[doc = "No output delay"]
         pub const _00000: Self = Self::new(0);
-
-        #[doc = "（IICDL-1 ) to IIDCDL cycles."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Iicintm_SPEC;
@@ -8862,9 +8787,6 @@ pub mod icr_ha_l {
     impl Iicdl {
         #[doc = "No output delay"]
         pub const _00000: Self = Self::new(0);
-
-        #[doc = "（IICDL-1 ) to IIDCDL cycles."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Iicintm_SPEC;
@@ -8956,9 +8878,6 @@ pub mod icr_by_ll {
     impl Iicdl {
         #[doc = "No output delay"]
         pub const _00000: Self = Self::new(0);
-
-        #[doc = "（IICDL-1 ) to IIDCDL cycles."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -10520,10 +10439,10 @@ pub mod mcr {
     pub struct Synval_SPEC;
     pub type Synval = crate::EnumBitfieldStruct<u8, Synval_SPEC>;
     impl Synval {
-        #[doc = "Start bit is added as <0 → 1 transition> with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <0 → 1 transition> pattern,Otherwise it is judged as an error.(SBSEL=0 Receive)/Start bit is added as <0 → 1 transition> with 3 bits(SBSEL=1 Transmission)"]
+        #[doc = "Start bit is added as &lt;0 → 1 transition&gt; with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <0 → 1 transition> pattern,Otherwise it is judged as an error.(SBSEL=0 Receive)/Start bit is added as <0 → 1 transition> with 3 bits(SBSEL=1 Transmission)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Start bit is added as <1 → 0 transition> with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <1 → 0 transition> pattern.Otherwise it is judged as an error.(SEBSEL=0,Receive)/ Start bit is added as <1 → 0 transition> with 3 bits(SBSEL=1 Transmission)"]
+        #[doc = "Start bit is added as &lt;1 → 0 transition&gt; with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <1 → 0 transition> pattern.Otherwise it is judged as an error.(SEBSEL=0,Receive)/ Start bit is added as <1 → 0 transition> with 3 bits(SBSEL=1 Transmission)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -10552,9 +10471,6 @@ pub mod mcr {
     impl Tplen {
         #[doc = "Transmit preface generation disabled."]
         pub const _0: Self = Self::new(0);
-
-        #[doc = "Transmission preface length (bit length)."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tppat_SPEC;
@@ -10572,9 +10488,6 @@ pub mod mcr {
     impl Rplen {
         #[doc = "Receive preface generation disabled."]
         pub const _0: Self = Self::new(0);
-
-        #[doc = "Receive preface length (bit length)."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rppat_SPEC;
@@ -10892,10 +10805,10 @@ pub mod mcr_ha_l {
     pub struct Synval_SPEC;
     pub type Synval = crate::EnumBitfieldStruct<u8, Synval_SPEC>;
     impl Synval {
-        #[doc = "Start bit is added as <0 → 1 transition> with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <0 → 1 transition> pattern,Otherwise it is judged as an error.(SBSEL=0 Receive)/Start bit is added as <0 → 1 transition> with 3 bits(SBSEL=1 Transmission)"]
+        #[doc = "Start bit is added as &lt;0 → 1 transition&gt; with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <0 → 1 transition> pattern,Otherwise it is judged as an error.(SBSEL=0 Receive)/Start bit is added as <0 → 1 transition> with 3 bits(SBSEL=1 Transmission)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Start bit is added as <1 → 0 transition> with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <1 → 0 transition> pattern.Otherwise it is judged as an error.(SEBSEL=0,Receive)/ Start bit is added as <1 → 0 transition> with 3 bits(SBSEL=1 Transmission)"]
+        #[doc = "Start bit is added as &lt;1 → 0 transition&gt; with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <1 → 0 transition> pattern.Otherwise it is judged as an error.(SEBSEL=0,Receive)/ Start bit is added as <1 → 0 transition> with 3 bits(SBSEL=1 Transmission)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -10924,9 +10837,6 @@ pub mod mcr_ha_l {
     impl Tplen {
         #[doc = "Transmit preface generation disabled."]
         pub const _0: Self = Self::new(0);
-
-        #[doc = "Transmission preface length (bit length)."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tppat_SPEC;
@@ -11158,10 +11068,10 @@ pub mod mcr_by_ll {
     pub struct Synval_SPEC;
     pub type Synval = crate::EnumBitfieldStruct<u8, Synval_SPEC>;
     impl Synval {
-        #[doc = "Start bit is added as <0 → 1 transition> with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <0 → 1 transition> pattern,Otherwise it is judged as an error.(SBSEL=0 Receive)/Start bit is added as <0 → 1 transition> with 3 bits(SBSEL=1 Transmission)"]
+        #[doc = "Start bit is added as &lt;0 → 1 transition&gt; with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <0 → 1 transition> pattern,Otherwise it is judged as an error.(SBSEL=0 Receive)/Start bit is added as <0 → 1 transition> with 3 bits(SBSEL=1 Transmission)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Start bit is added as <1 → 0 transition> with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <1 → 0 transition> pattern.Otherwise it is judged as an error.(SEBSEL=0,Receive)/ Start bit is added as <1 → 0 transition> with 3 bits(SBSEL=1 Transmission)"]
+        #[doc = "Start bit is added as &lt;1 → 0 transition&gt; with 1 bit.(SBSEL=0 Transmission )/ Receive only when the start bit is 1 bit <1 → 0 transition> pattern.Otherwise it is judged as an error.(SEBSEL=0,Receive)/ Start bit is added as <1 → 0 transition> with 3 bits(SBSEL=1 Transmission)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -11270,9 +11180,6 @@ pub mod mcr_by_lh {
     impl Tplen {
         #[doc = "Transmit preface generation disabled."]
         pub const _0: Self = Self::new(0);
-
-        #[doc = "Transmission preface length (bit length)."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tppat_SPEC;
@@ -11448,9 +11355,6 @@ pub mod mcr_ha_h {
     impl Rplen {
         #[doc = "Receive preface generation disabled."]
         pub const _0: Self = Self::new(0);
-
-        #[doc = "Receive preface length (bit length)."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rppat_SPEC;
@@ -11584,9 +11488,6 @@ pub mod mcr_by_hl {
     impl Rplen {
         #[doc = "Receive preface generation disabled."]
         pub const _0: Self = Self::new(0);
-
-        #[doc = "Receive preface length (bit length)."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rppat_SPEC;

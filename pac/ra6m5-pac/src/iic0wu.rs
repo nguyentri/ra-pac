@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.41.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:06 +0000
+// Generated from SVD 1.30.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:13:42 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -24,7 +24,7 @@ http://www.renesas.com/disclaimer
 use crate::common::sealed;
 #[allow(unused_imports)]
 use crate::common::*;
-#[doc = r"Inter-Integrated Circuit0 Wake-up Unit"]
+#[doc = r"Inter-Integrated Circuit 0 Wake-up Unit"]
 unsafe impl ::core::marker::Send for super::Iic0Wu {}
 unsafe impl ::core::marker::Sync for super::Iic0Wu {}
 impl super::Iic0Wu {

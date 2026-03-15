@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:19 +0000
+// Generated from SVD 1.20.02, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:01:00 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -591,9 +591,6 @@ pub mod eccprcr {
     impl Kw {
         #[doc = "Enable write to the ECCPRCR bit"]
         pub const _0_X_78: Self = Self::new(120);
-
-        #[doc = "Disable write to the ECCPRCR bit"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -683,9 +680,6 @@ pub mod eccprcr2 {
     impl Kw2 {
         #[doc = "Enable write to the ECCPRCR2 bit"]
         pub const _0_X_78: Self = Self::new(120);
-
-        #[doc = "Disable write to the ECCPRCR2 bit"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

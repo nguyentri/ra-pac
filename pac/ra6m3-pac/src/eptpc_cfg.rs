@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:32 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:12:21 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -206,9 +206,6 @@ pub mod stcselr {
 
         #[doc = "Input clock from the REF50CK0 pin"]
         pub const _010: Self = Self::new(2);
-
-        #[doc = "Settings other than above are prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sclkdiv_SPEC;
@@ -231,9 +228,6 @@ pub mod stcselr {
 
         #[doc = "1/6"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Settings other than above are prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

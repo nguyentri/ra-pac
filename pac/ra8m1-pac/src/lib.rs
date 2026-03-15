@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:57:20 +0000
 #![cfg_attr(not(feature = "tracing"), no_std)]
 #![allow(non_camel_case_types)]
 #![doc = "ARM 32-bit Olympus Microcontroller based device, CPU clock up to 480MHz, etc."]

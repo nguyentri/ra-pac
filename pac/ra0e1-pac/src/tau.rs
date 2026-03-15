@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.10.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:59 +0000
+// Generated from SVD 1.10.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:00:13 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -887,9 +887,6 @@ pub mod tmr00 {
 
         #[doc = "Capture and one-count mode"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cis_SPEC;
@@ -922,9 +919,6 @@ pub mod tmr00 {
 
         #[doc = "Interrupt signal of the master channel is used (when the channel is used as a slave channel with the simultaneous channel operation function)."]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ccs_SPEC;
@@ -1154,9 +1148,6 @@ pub mod tmr01 {
 
         #[doc = "Capture & one-count mode"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cis_SPEC;
@@ -1189,9 +1180,6 @@ pub mod tmr01 {
 
         #[doc = "Interrupt signal of the master channel is used (when the channel is used as a slave channel with the simultaneous channel operation function)."]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Split_SPEC;
@@ -1431,9 +1419,6 @@ pub mod tmr02 {
 
         #[doc = "Capture and one-count mode"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cis_SPEC;
@@ -1466,9 +1451,6 @@ pub mod tmr02 {
 
         #[doc = "Interrupt signal of the master channel is used (when the channel is used as a slave channel with the simultaneous channel operation function)."]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Master_SPEC;
@@ -1708,9 +1690,6 @@ pub mod tmr03 {
 
         #[doc = "Capture & one-count mode"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cis_SPEC;
@@ -1743,9 +1722,6 @@ pub mod tmr03 {
 
         #[doc = "Interrupt signal of the master channel is used (when the channel is used as a slave channel with the simultaneous channel operation function)."]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Split_SPEC;
@@ -1985,9 +1961,6 @@ pub mod tmr04 {
 
         #[doc = "Capture and one-count mode"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cis_SPEC;
@@ -2020,9 +1993,6 @@ pub mod tmr04 {
 
         #[doc = "Interrupt signal of the master channel is used (when the channel is used as a slave channel with the simultaneous channel operation function)."]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Master_SPEC;
@@ -2236,9 +2206,6 @@ pub mod tmr05 {
 
         #[doc = "Capture and one-count mode"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cis_SPEC;
@@ -2271,9 +2238,6 @@ pub mod tmr05 {
 
         #[doc = "Interrupt signal of the master channel is used (when the channel is used as a slave channel with the simultaneous channel operation function)."]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ccs_SPEC;
@@ -2503,9 +2467,6 @@ pub mod tmr06 {
 
         #[doc = "Capture and one-count mode"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cis_SPEC;
@@ -2538,9 +2499,6 @@ pub mod tmr06 {
 
         #[doc = "Interrupt signal of the master channel is used (when the channel is used as a slave channel with the simultaneous channel operation function)."]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Master_SPEC;
@@ -2754,9 +2712,6 @@ pub mod tmr07 {
 
         #[doc = "Capture and one-count mode"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cis_SPEC;
@@ -2789,9 +2744,6 @@ pub mod tmr07 {
 
         #[doc = "Interrupt signal of the master channel is used (when the channel is used as a slave channel with the simultaneous channel operation function)."]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ccs_SPEC;

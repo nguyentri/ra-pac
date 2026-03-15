@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.0, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:50:19 +0000
+// Generated from SVD 1.0, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:09:02 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -1556,9 +1556,6 @@ pub mod dvstctr0 {
 
         #[doc = "Setting prohibited"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "USB bus reset in progress(When the host controller function is selected)"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1964,9 +1961,6 @@ pub mod cfifosel {
 
         #[doc = "Pipe 9"]
         pub const _1001: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2416,9 +2410,6 @@ pub mod d0fifosel {
 
         #[doc = "Pipe 9"]
         pub const _1001: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2868,9 +2859,6 @@ pub mod d1fifosel {
 
         #[doc = "Pipe 9"]
         pub const _1001: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -5386,9 +5374,6 @@ pub mod intsts0 {
 
         #[doc = "Configured state"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "Suspended state"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Valid_SPEC;
@@ -5424,9 +5409,6 @@ pub mod intsts0 {
 
         #[doc = "Control transfer sequence error"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -7332,9 +7314,6 @@ pub mod dcpmaxp {
 
         #[doc = "Address 0101"]
         pub const _0101: Self = Self::new(5);
-
-        #[doc = "Settings prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mxps_SPEC;
@@ -7384,9 +7363,6 @@ pub mod dcpmaxp {
 
         #[doc = "120 bytes"]
         pub const _0_X_78: Self = Self::new(120);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -7834,9 +7810,6 @@ pub mod pipesel {
 
         #[doc = "PIPE9"]
         pub const _1001: Self = Self::new(9);
-
-        #[doc = "Settings prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -8146,9 +8119,6 @@ pub mod pipemaxp {
 
         #[doc = "Address 0101"]
         pub const _0101: Self = Self::new(5);
-
-        #[doc = "Settings prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

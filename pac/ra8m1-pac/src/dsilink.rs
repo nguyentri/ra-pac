@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:57:20 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -49093,9 +49093,6 @@ pub mod sqch0dsccr {
         #[doc = "Slot-3 (RXRSS3R)"]
         pub const _00000011: Self = Self::new(3);
 
-        #[doc = "Send Reset-Trigger"]
-        pub const _00000000: Self = Self::new(0);
-
         #[doc = "Send Initial Skew calibration"]
         pub const _00000100: Self = Self::new(4);
 
@@ -49341,9 +49338,6 @@ pub mod sqch0dsccr_h {
         #[doc = "Slot-3 (RXRSS3R)"]
         pub const _00000011: Self = Self::new(3);
 
-        #[doc = "Send Reset-Trigger"]
-        pub const _00000000: Self = Self::new(0);
-
         #[doc = "Send Initial Skew calibration"]
         pub const _00000100: Self = Self::new(4);
 
@@ -49478,9 +49472,6 @@ pub mod sqch0dsccr_hh {
 
         #[doc = "Slot-3 (RXRSS3R)"]
         pub const _00000011: Self = Self::new(3);
-
-        #[doc = "Send Reset-Trigger"]
-        pub const _00000000: Self = Self::new(0);
 
         #[doc = "Send Initial Skew calibration"]
         pub const _00000100: Self = Self::new(4);
@@ -50621,9 +50612,6 @@ pub mod sqch1dsccr {
         #[doc = "Slot-3 (RXRSS3R)"]
         pub const _00000011: Self = Self::new(3);
 
-        #[doc = "Send Reset-Trigger"]
-        pub const _00000000: Self = Self::new(0);
-
         #[doc = "Send Initial Skew calibration"]
         pub const _00000100: Self = Self::new(4);
 
@@ -50869,9 +50857,6 @@ pub mod sqch1dsccr_h {
         #[doc = "Slot-3 (RXRSS3R)"]
         pub const _00000011: Self = Self::new(3);
 
-        #[doc = "Send Reset-Trigger"]
-        pub const _00000000: Self = Self::new(0);
-
         #[doc = "Send Initial Skew calibration"]
         pub const _00000100: Self = Self::new(4);
 
@@ -51006,9 +50991,6 @@ pub mod sqch1dsccr_hh {
 
         #[doc = "Slot-3 (RXRSS3R)"]
         pub const _00000011: Self = Self::new(3);
-
-        #[doc = "Send Reset-Trigger"]
-        pub const _00000000: Self = Self::new(0);
 
         #[doc = "Send Initial Skew calibration"]
         pub const _00000100: Self = Self::new(4);

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:19 +0000
+// Generated from SVD 1.20.02, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:01:00 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -248,9 +248,6 @@ pub mod lcdm0 {
 
         #[doc = "8-time slice"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lwave_SPEC;
@@ -629,9 +626,6 @@ pub mod lcdc0 {
 
         #[doc = "(MOSC)/220, (HOCO)/220, or (MOCO)/220"]
         pub const _0_X_3_B: Self = Self::new(59);
-
-        #[doc = "Settings are prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -777,9 +771,6 @@ pub mod vlcd {
 
         #[doc = "1.74 V (VL1 reference voltage) 3.49 V (VL2 reference voltage)"]
         pub const _0_X_1_A: Self = Self::new(26);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mdset2_SPEC;

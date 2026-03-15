@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.41.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:06 +0000
+// Generated from SVD 1.30.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:13:42 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -8180,16 +8180,16 @@ pub mod gtcr {
         #[doc = "Setting prohibited"]
         pub const _0_X_B: Self = Self::new(11);
 
-        #[doc = "GTETRGA (through the POEG)"]
+        #[doc = "GTETRGA (Via the POEG)"]
         pub const _0_X_C: Self = Self::new(12);
 
-        #[doc = "GTETRGB (through the POEG)"]
+        #[doc = "GTETRGB (Via the POEG)"]
         pub const _0_X_D: Self = Self::new(13);
 
-        #[doc = "GTETRGC (through the POEG)"]
+        #[doc = "GTETRGC (Via the POEG)"]
         pub const _0_X_E: Self = Self::new(14);
 
-        #[doc = "GTETRGD (through the POEG)"]
+        #[doc = "GTETRGD (Via the POEG)"]
         pub const _0_X_F: Self = Self::new(15);
     }
 }
@@ -9815,9 +9815,6 @@ pub mod gtber {
 
         #[doc = "Single buffer operation (GTCCRA <---->GTCCRC)"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Double buffer operation (GTCCRA <----> GTCCRC <----> GTCCRD)"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ccrb_SPEC;
@@ -9828,9 +9825,6 @@ pub mod gtber {
 
         #[doc = "Single buffer operation (GTCCRB <----> GTCCRE)"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Double buffer operation (GTCCRB <----> GTCCRE <----> GTCCRF)"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pr_SPEC;
@@ -9841,9 +9835,6 @@ pub mod gtber {
 
         #[doc = "Single buffer operation (GTPBR --> GTPR)"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -10296,9 +10287,6 @@ pub mod gticlf {
 
         #[doc = "GTIOC9B"]
         pub const _0_X_13: Self = Self::new(19);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Iclfb_SPEC;
@@ -10391,9 +10379,6 @@ pub mod gticlf {
 
         #[doc = "GTIOC9B"]
         pub const _0_X_13: Self = Self::new(19);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

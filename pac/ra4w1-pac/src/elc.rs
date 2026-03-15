@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.0, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:50:19 +0000
+// Generated from SVD 1.0, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:09:02 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -403,9 +403,6 @@ pub mod elsr12 {
     impl Els {
         #[doc = "Event output to the corresponding peripheral module is disabled."]
         pub const _0_X_00: Self = Self::new(0);
-
-        #[doc = "Set the number for the event signal to be linked."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -467,8 +464,5 @@ pub mod elsr {
     impl Els {
         #[doc = "Event output to the corresponding peripheral module is disabled."]
         pub const _0_X_00: Self = Self::new(0);
-
-        #[doc = "Set the number for the event signal to be linked."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }

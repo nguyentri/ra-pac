@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:18 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:06:30 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -40,11 +40,131 @@ impl super::Icu {
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Irqcr_SPEC, crate::common::RW>,
-        2,
+        16,
         0x1,
     > {
         unsafe {
-            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0xeusize))
+            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x0usize))
+        }
+    }
+    #[inline(always)]
+    pub const fn irqcr0(&self) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x0usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn irqcr1(&self) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x1usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn irqcr2(&self) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn irqcr3(&self) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn irqcr4(&self) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x4usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn irqcr5(&self) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x5usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn irqcr6(&self) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x6usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn irqcr7(&self) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x7usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn irqcr8(&self) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn irqcr9(&self) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x9usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn irqcr10(
+        &self,
+    ) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xausize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn irqcr11(
+        &self,
+    ) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xbusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn irqcr12(
+        &self,
+    ) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xcusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn irqcr13(
+        &self,
+    ) -> &'static crate::common::Reg<self::Irqcr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Irqcr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xdusize),
+            )
         }
     }
     #[inline(always)]
@@ -2299,9 +2419,6 @@ pub mod ielsr {
     impl Iels {
         #[doc = "Nothing is selected"]
         pub const _0_X_000: Self = Self::new(0);
-
-        #[doc = "See Event Table"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2363,9 +2480,6 @@ pub mod delsr {
     impl Dels {
         #[doc = "Nothing is selected."]
         pub const _0_X_000: Self = Self::new(0);
-
-        #[doc = "See Event Table"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2427,9 +2541,6 @@ pub mod selsr0 {
     impl Sels {
         #[doc = "Disable event output to the associated low-power mode module"]
         pub const _0_X_00: Self = Self::new(0);
-
-        #[doc = "Event signal number to be linked"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

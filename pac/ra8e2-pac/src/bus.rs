@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.00.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:54:26 +0000
+// Generated from SVD 1.00.01, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:40:06 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -1648,9 +1648,6 @@ pub mod cs0cr {
 
         #[doc = "8-bit bus space"]
         pub const _10: Self = Self::new(2);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Emode_SPEC;
@@ -1849,9 +1846,6 @@ pub mod cscr {
 
         #[doc = "8-bit bus space"]
         pub const _10: Self = Self::new(2);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Emode_SPEC;
@@ -2560,9 +2554,6 @@ pub mod sdccr {
 
         #[doc = "8-bit bus space"]
         pub const _10: Self = Self::new(2);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.40.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:37 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:02:12 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -659,9 +659,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Settings prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pckb_SPEC;
@@ -687,9 +684,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Settings prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ick_SPEC;
@@ -715,9 +709,6 @@ pub mod sckdivcr {
 
         #[doc = "x 1/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Settings prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1136,9 +1127,6 @@ pub mod ckocr {
 
         #[doc = "Setting prohibited"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ckodiv_SPEC;
@@ -1318,9 +1306,6 @@ pub mod lpopt {
     impl Dclkdis {
         #[doc = "Debug clock does not stop"]
         pub const _00: Self = Self::new(0);
-
-        #[doc = "Debug clock stops (valid only when LPOPT.LPOPTEN = 1)"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bpfclkdis_SPEC;
@@ -2353,9 +2338,6 @@ pub mod hocowtcr {
 
         #[doc = "Before starting high-speed on-chip oscillator by setting HOCOCR.HCSTP bit, the HSTS\\[2:0\\] bits must be set to 011b beforehand. Wait time = 46 cycles (5.75 µs) Wait time is calculated at MOCO = 8 MHz (typically 0.125 µs)."]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -3728,9 +3710,6 @@ pub mod lvdlvlr {
 
         #[doc = "Vdet1_F"]
         pub const _0_X_0_F: Self = Self::new(15);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lvd2Lvl_SPEC;
@@ -3747,9 +3726,6 @@ pub mod lvdlvlr {
 
         #[doc = "Vdet2_3"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

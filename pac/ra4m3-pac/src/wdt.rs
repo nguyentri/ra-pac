@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.50.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:54 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:07:45 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -266,9 +266,6 @@ pub mod wdtcr {
 
         #[doc = "PCLKB/8192"]
         pub const _0_X_8: Self = Self::new(8);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rpes_SPEC;
@@ -470,7 +467,7 @@ impl crate::sealed::RegSpec for Wdtcstpr_SPEC {
 pub type Wdtcstpr = crate::RegValueT<Wdtcstpr_SPEC>;
 
 impl Wdtcstpr {
-    #[doc = "Sleep-Mode Count Stop Control"]
+    #[doc = "Sleep-Mode Count Stop Control Register"]
     #[inline(always)]
     pub fn slcstp(
         self,

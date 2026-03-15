@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -24,7 +24,7 @@ http://www.renesas.com/disclaimer
 use crate::common::sealed;
 #[allow(unused_imports)]
 use crate::common::*;
-#[doc = r"SYSTEM/FLASH"]
+#[doc = r"Flash Cache"]
 unsafe impl ::core::marker::Send for super::Fcache {}
 unsafe impl ::core::marker::Sync for super::Fcache {}
 impl super::Fcache {
@@ -114,6 +114,15 @@ impl Fcachee {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000000000000. The write value should be 000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<1, 0x7fff, 1, 0, u16, u16, Fcachee_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<1,0x7fff,1,0,u16,u16,Fcachee_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Fcachee {
     #[inline(always)]
@@ -170,6 +179,15 @@ impl Fcacheiv {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000000000000. The write value should be 000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<1, 0x7fff, 1, 0, u16, u16, Fcacheiv_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<1,0x7fff,1,0,u16,u16,Fcacheiv_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Fcacheiv {
     #[inline(always)]
@@ -183,10 +201,10 @@ pub mod fcacheiv {
     pub struct Fcacheiv_SPEC;
     pub type Fcacheiv = crate::EnumBitfieldStruct<u8, Fcacheiv_SPEC>;
     impl Fcacheiv {
-        #[doc = "Read: Do not invalidate. Write: The setting is ignored."]
+        #[doc = "Read : Do not invalidate. Write: the setting is ignored."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Invalidate FCACHE is invalidated."]
+        #[doc = "FCACHE is invalidated."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -205,8 +223,34 @@ impl Flwt {
     #[inline(always)]
     pub fn flwt(
         self,
-    ) -> crate::common::RegisterField<0, 0x7, 1, 0, u8, u8, Flwt_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0x7,1,0,u8,u8,Flwt_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x7,
+        1,
+        0,
+        flwt::Flwt,
+        flwt::Flwt,
+        Flwt_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x7,
+            1,
+            0,
+            flwt::Flwt,
+            flwt::Flwt,
+            Flwt_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<3, 0x1f, 1, 0, u8, u8, Flwt_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<3,0x1f,1,0,u8,u8,Flwt_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Flwt {
@@ -215,7 +259,28 @@ impl ::core::default::Default for Flwt {
         <crate::RegValueT<Flwt_SPEC> as RegisterValue<_>>::new(0)
     }
 }
+pub mod flwt {
 
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Flwt_SPEC;
+    pub type Flwt = crate::EnumBitfieldStruct<u8, Flwt_SPEC>;
+    impl Flwt {
+        #[doc = "0 wait (ICLK <= 48MHz)"]
+        pub const _000: Self = Self::new(0);
+
+        #[doc = "1 wait (48MHz < ICLK <= 96MHz)"]
+        pub const _001: Self = Self::new(1);
+
+        #[doc = "2 waits (96MHz < ICLK <= 144MHz)"]
+        pub const _010: Self = Self::new(2);
+
+        #[doc = "3 waits (144Hz < ICLK <= 192MHz)"]
+        pub const _011: Self = Self::new(3);
+
+        #[doc = "4 waits (192Hz < ICLK <= 240MHz)"]
+        pub const _100: Self = Self::new(4);
+    }
+}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fsar_SPEC;
@@ -255,15 +320,15 @@ impl Fsar {
 
     #[doc = "FCHACHEEN Security Attribution"]
     #[inline(always)]
-    pub fn fcachesa(
+    pub fn fcacheensa(
         self,
     ) -> crate::common::RegisterField<
         1,
         0x1,
         1,
         0,
-        fsar::Fcachesa,
-        fsar::Fcachesa,
+        fsar::Fcacheensa,
+        fsar::Fcacheensa,
         Fsar_SPEC,
         crate::common::RW,
     > {
@@ -272,8 +337,8 @@ impl Fsar {
             0x1,
             1,
             0,
-            fsar::Fcachesa,
-            fsar::Fcachesa,
+            fsar::Fcacheensa,
+            fsar::Fcacheensa,
             Fsar_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
@@ -307,15 +372,15 @@ impl Fsar {
 
     #[doc = "FACI command Issuing Security Attribution"]
     #[inline(always)]
-    pub fn facicmisa(
+    pub fn facicomisa(
         self,
     ) -> crate::common::RegisterField<
         9,
         0x1,
         1,
         0,
-        fsar::Facicmisa,
-        fsar::Facicmisa,
+        fsar::Facicomisa,
+        fsar::Facicomisa,
         Fsar_SPEC,
         crate::common::RW,
     > {
@@ -324,8 +389,8 @@ impl Fsar {
             0x1,
             1,
             0,
-            fsar::Facicmisa,
-            fsar::Facicmisa,
+            fsar::Facicomisa,
+            fsar::Facicomisa,
             Fsar_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
@@ -333,15 +398,15 @@ impl Fsar {
 
     #[doc = "FACI command Registers Security Attribution"]
     #[inline(always)]
-    pub fn facicmrsa(
+    pub fn facicomrsa(
         self,
     ) -> crate::common::RegisterField<
         10,
         0x1,
         1,
         0,
-        fsar::Facicmrsa,
-        fsar::Facicmrsa,
+        fsar::Facicomrsa,
+        fsar::Facicomrsa,
         Fsar_SPEC,
         crate::common::RW,
     > {
@@ -350,11 +415,45 @@ impl Fsar {
             0x1,
             1,
             0,
-            fsar::Facicmrsa,
-            fsar::Facicmrsa,
+            fsar::Facicomrsa,
+            fsar::Facicomrsa,
             Fsar_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "FACI transfer Security Attribution"]
+    #[inline(always)]
+    pub fn facitrsa(
+        self,
+    ) -> crate::common::RegisterField<
+        11,
+        0x1,
+        1,
+        0,
+        fsar::Facitrsa,
+        fsar::Facitrsa,
+        Fsar_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            11,
+            0x1,
+            1,
+            0,
+            fsar::Facitrsa,
+            fsar::Facitrsa,
+            Fsar_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 1111. The write value should be 1111."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<12, 0xf, 1, 0, u8, u8, Fsar_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<12,0xf,1,0,u8,u8,Fsar_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Fsar {
@@ -372,17 +471,17 @@ pub mod fsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non-Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Fcachesa_SPEC;
-    pub type Fcachesa = crate::EnumBitfieldStruct<u8, Fcachesa_SPEC>;
-    impl Fcachesa {
+    pub struct Fcacheensa_SPEC;
+    pub type Fcacheensa = crate::EnumBitfieldStruct<u8, Fcacheensa_SPEC>;
+    impl Fcacheensa {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non-Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -392,27 +491,37 @@ pub mod fsar {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non-Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Facicmisa_SPEC;
-    pub type Facicmisa = crate::EnumBitfieldStruct<u8, Facicmisa_SPEC>;
-    impl Facicmisa {
+    pub struct Facicomisa_SPEC;
+    pub type Facicomisa = crate::EnumBitfieldStruct<u8, Facicomisa_SPEC>;
+    impl Facicomisa {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non-Secure"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Facicmrsa_SPEC;
-    pub type Facicmrsa = crate::EnumBitfieldStruct<u8, Facicmrsa_SPEC>;
-    impl Facicmrsa {
+    pub struct Facicomrsa_SPEC;
+    pub type Facicomrsa = crate::EnumBitfieldStruct<u8, Facicomrsa_SPEC>;
+    impl Facicomrsa {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non-Secure"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Facitrsa_SPEC;
+    pub type Facitrsa = crate::EnumBitfieldStruct<u8, Facitrsa_SPEC>;
+    impl Facitrsa {
+        #[doc = "Secure"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Non-Secure"]
         pub const _1: Self = Self::new(1);
     }
 }

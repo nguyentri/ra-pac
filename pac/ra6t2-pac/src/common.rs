@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.40.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:39 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:37:20 +0000
 
 use core::convert::From;
 use core::marker::PhantomData;
@@ -253,7 +253,6 @@ where
     #[allow(dead_code)]
     #[inline(always)]
     #[must_use]
-    #[allow(dead_code)]
     pub(crate) const fn from_ptr(ptr: *mut u8) -> &'static Self {
         unsafe { &*(ptr as *const Self) }
     }

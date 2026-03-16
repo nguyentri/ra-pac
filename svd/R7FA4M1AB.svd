@@ -19532,117 +19532,12 @@ These bits select the peripheral function. For individual pin functions, see the
             </interrupt>
             <registers>
                 <register>
-                    <dim>13</dim>
+                    <dim>16</dim>
                     <dimIncrement>0x1</dimIncrement>
-                    <dimIndex>0-12</dimIndex>
+                    <dimIndex>0-15</dimIndex>
                     <name>IRQCR%s</name>
                     <description>IRQ Control Register %s</description>
                     <addressOffset>0x000</addressOffset>
-                    <size>8</size>
-                    <access>read-write</access>
-                    <resetValue>0x00</resetValue>
-                    <resetMask>0xFF</resetMask>
-                    <fields>
-                        <field>
-                            <name>FLTEN</name>
-                            <description>IRQ Digital Filter Enable</description>
-                            <lsb>7</lsb>
-                            <msb>7</msb>
-                            <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>0</name>
-                                    <description>Digital filter disabled.</description>
-                                    <value>#0</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>1</name>
-                                    <description>Digital filter enabled.</description>
-                                    <value>#1</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
-                        </field>
-                        <field>
-                            <name>Reserved</name>
-                            <description>This bit is read as 0. The write value should be 0.</description>
-                            <lsb>6</lsb>
-                            <msb>6</msb>
-                            <access>read-write</access>
-                        </field>
-                        <field>
-                            <name>FCLKSEL</name>
-                            <description>IRQ Digital Filter Sampling Clock Select</description>
-                            <lsb>4</lsb>
-                            <msb>5</msb>
-                            <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>00</name>
-                                    <description>PCLKB</description>
-                                    <value>#00</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>01</name>
-                                    <description>PCLKB/8</description>
-                                    <value>#01</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>10</name>
-                                    <description>PCLKB/32</description>
-                                    <value>#10</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>11</name>
-                                    <description>PCLKB/64</description>
-                                    <value>#11</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
-                        </field>
-                        <field>
-                            <name>Reserved</name>
-                            <description>These bits are read as 00. The write value should be 00.</description>
-                            <lsb>2</lsb>
-                            <msb>3</msb>
-                            <access>read-write</access>
-                        </field>
-                        <field>
-                            <name>IRQMD</name>
-                            <description>IRQ Detection Sense Select</description>
-                            <lsb>0</lsb>
-                            <msb>1</msb>
-                            <access>read-write</access>
-                            <enumeratedValues>
-                                <enumeratedValue>
-                                    <name>00</name>
-                                    <description>Falling edge</description>
-                                    <value>#00</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>01</name>
-                                    <description>Rising edge</description>
-                                    <value>#01</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>10</name>
-                                    <description>Rising and falling edges</description>
-                                    <value>#10</value>
-                                </enumeratedValue>
-                                <enumeratedValue>
-                                    <name>11</name>
-                                    <description>Low level</description>
-                                    <value>#11</value>
-                                </enumeratedValue>
-                            </enumeratedValues>
-                        </field>
-                    </fields>
-                </register>
-                <register>
-                    <dim>2</dim>
-                    <dimIncrement>0x1</dimIncrement>
-                    <dimIndex>14,15</dimIndex>
-                    <name>IRQCR%s</name>
-                    <description>IRQ Control Register %s</description>
-                    <addressOffset>0x00E</addressOffset>
                     <size>8</size>
                     <access>read-write</access>
                     <resetValue>0x00</resetValue>

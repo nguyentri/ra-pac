@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.1, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:11 +0000
+// Generated from SVD 1.1, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:00:31 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -665,9 +665,6 @@ pub mod sckdivcr {
 
         #[doc = "/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ick_SPEC;
@@ -693,9 +690,6 @@ pub mod sckdivcr {
 
         #[doc = "/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pckb_SPEC;
@@ -721,9 +715,6 @@ pub mod sckdivcr {
 
         #[doc = "/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pckd_SPEC;
@@ -749,9 +740,6 @@ pub mod sckdivcr {
 
         #[doc = "/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -825,9 +813,6 @@ pub mod sckscr {
 
         #[doc = "Sub-clock oscillator"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1349,9 +1334,6 @@ pub mod ckocr {
 
         #[doc = "SOSC"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2081,9 +2063,6 @@ pub mod moscwtcr {
 
         #[doc = "Wait time= 8163 cycles (31139.4us: calculated at LOCO=262.144KHz (3.81us TYP.))"]
         pub const _1001: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2148,9 +2127,6 @@ pub mod hocowtcr {
 
         #[doc = "If HOCO frequency = 64MHz, should set the value to 110b."]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -3436,9 +3412,6 @@ pub mod opccr {
 
         #[doc = "Low-speed mode"]
         pub const _11: Self = Self::new(3);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -3727,9 +3700,6 @@ pub mod lvdlvlr {
 
         #[doc = "3.84V(Vdet2_3)"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "Settingprohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lvd1Lvl_SPEC;
@@ -3782,9 +3752,6 @@ pub mod lvdlvlr {
 
         #[doc = "1.65V(Vdet1_F)"]
         pub const _01111: Self = Self::new(15);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -4750,9 +4717,6 @@ pub mod prcr {
     impl Prkey {
         #[doc = "Enables writing to the PRCR register."]
         pub const _0_X_5_A: Self = Self::new(90);
-
-        #[doc = "Disables writing to the PRCR register."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Prc3_SPEC;

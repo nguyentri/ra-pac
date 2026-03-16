@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:18 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:06:30 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -295,9 +295,6 @@ pub mod sramprcr {
     impl Kw {
         #[doc = "Writing to the RAMPRCR bit is valid, when the KEY bits are written 1111000b."]
         pub const _1111000: Self = Self::new(120);
-
-        #[doc = "Writing to the RAMPRCR bit is invalid."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sramprcr_SPEC;
@@ -650,9 +647,6 @@ pub mod eccprcr {
     impl Kw {
         #[doc = "Writing to the ECCRAMPRCR bit is valid, when the KEY bits are written 1111000b."]
         pub const _1111000: Self = Self::new(120);
-
-        #[doc = "Writing to the ECCRAMPRCR bit is invalid."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eccprcr_SPEC;
@@ -742,9 +736,6 @@ pub mod eccprcr2 {
     impl Kw2 {
         #[doc = "These bits enable or disable writes to the ECCPRCR2 bit.."]
         pub const _1111000: Self = Self::new(120);
-
-        #[doc = "Writing to the ECCRAMPRCR2 bit is invalid."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Eccprcr2_SPEC;

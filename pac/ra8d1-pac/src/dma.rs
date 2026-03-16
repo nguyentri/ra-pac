@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:21:54 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Dma {
         self.ptr
     }
 
+    #[doc = "DMA  Module Activation Register"]
     #[inline(always)]
     pub const fn dmast(&self) -> &'static crate::common::Reg<self::Dmast_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Dma {
         }
     }
 
+    #[doc = "DMACA Error Channel Register"]
     #[inline(always)]
     pub const fn dmechr(
         &self,
@@ -54,6 +56,7 @@ impl super::Dma {
         }
     }
 
+    #[doc = "DMAC Event Link Setting Register %s"]
     #[inline(always)]
     pub const fn delsr(
         &self,
@@ -66,6 +69,70 @@ impl super::Dma {
             crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x80usize))
         }
     }
+    #[inline(always)]
+    pub const fn delsr0(&self) -> &'static crate::common::Reg<self::Delsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Delsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x80usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn delsr1(&self) -> &'static crate::common::Reg<self::Delsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Delsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x84usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn delsr2(&self) -> &'static crate::common::Reg<self::Delsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Delsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x88usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn delsr3(&self) -> &'static crate::common::Reg<self::Delsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Delsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x8cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn delsr4(&self) -> &'static crate::common::Reg<self::Delsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Delsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x90usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn delsr5(&self) -> &'static crate::common::Reg<self::Delsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Delsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x94usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn delsr6(&self) -> &'static crate::common::Reg<self::Delsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Delsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x98usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn delsr7(&self) -> &'static crate::common::Reg<self::Delsr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Delsr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x9cusize),
+            )
+        }
+    }
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -74,9 +141,11 @@ impl crate::sealed::RegSpec for Dmast_SPEC {
     type DataType = u8;
 }
 
+#[doc = "DMA  Module Activation Register"]
 pub type Dmast = crate::RegValueT<Dmast_SPEC>;
 
 impl Dmast {
+    #[doc = "DMAC Operation Enable"]
     #[inline(always)]
     pub fn dmst(
         self,
@@ -102,6 +171,7 @@ impl Dmast {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -121,8 +191,10 @@ pub mod dmast {
     pub struct Dmst_SPEC;
     pub type Dmst = crate::EnumBitfieldStruct<u8, Dmst_SPEC>;
     impl Dmst {
+        #[doc = "DMAC activation is disabled."]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMAC activation is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -133,9 +205,11 @@ impl crate::sealed::RegSpec for Dmechr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DMACA Error Channel Register"]
 pub type Dmechr = crate::RegValueT<Dmechr_SPEC>;
 
 impl Dmechr {
+    #[doc = "DMAC Error channel"]
     #[inline(always)]
     pub fn dmech(
         self,
@@ -143,6 +217,7 @@ impl Dmechr {
         crate::common::RegisterField::<0,0x7,1,0,u8,u8,Dmechr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "DMAC Error channel SA Monitor"]
     #[inline(always)]
     pub fn dmechsam(
         self,
@@ -152,6 +227,7 @@ impl Dmechr {
         )
     }
 
+    #[doc = "DMAC Error Status"]
     #[inline(always)]
     pub fn dmesta(
         self,
@@ -177,6 +253,7 @@ impl Dmechr {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000000. The write value should be 000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -197,8 +274,10 @@ pub mod dmechr {
     pub struct Dmesta_SPEC;
     pub type Dmesta = crate::EnumBitfieldStruct<u8, Dmesta_SPEC>;
     impl Dmesta {
+        #[doc = "No DMA transfer error occurred"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMA transfer error occurred"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -209,9 +288,11 @@ impl crate::sealed::RegSpec for Delsr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "DMAC Event Link Setting Register %s"]
 pub type Delsr = crate::RegValueT<Delsr_SPEC>;
 
 impl Delsr {
+    #[doc = "DMAC Event Link Select"]
     #[inline(always)]
     pub fn dels(
         self,
@@ -237,6 +318,7 @@ impl Delsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "DMAC Activation Request Status flag"]
     #[inline(always)]
     pub fn ir(
         self,
@@ -262,6 +344,7 @@ impl Delsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000000000000000. The write value should be 000000000000000."]
     #[inline(always)]
     pub fn reserved(
         self,
@@ -282,16 +365,17 @@ pub mod delsr {
     pub struct Dels_SPEC;
     pub type Dels = crate::EnumBitfieldStruct<u8, Dels_SPEC>;
     impl Dels {
+        #[doc = "Disable interrupts to the associated DMAC module"]
         pub const _0_X_00: Self = Self::new(0);
-
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ir_SPEC;
     pub type Ir = crate::EnumBitfieldStruct<u8, Ir_SPEC>;
     impl Ir {
+        #[doc = "No DMAC activation request occurred"]
         pub const _0: Self = Self::new(0);
 
+        #[doc = "DMAC activation request occurred. ( \"1\" write to the IR bit is prohibited. )"]
         pub const _1: Self = Self::new(1);
     }
 }

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.00.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:54:26 +0000
+// Generated from SVD 1.00.01, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:40:06 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -2664,9 +2664,6 @@ pub mod control2 {
         pub const _01: Self = Self::new(1);
 
         #[doc = "(USEACB = 0) Use 0.0 as alpha (USEACB = 1) BC2A = 0: Use alpha from framebuffer as destination (DST_A)"]
-        pub const _10: Self = Self::new(2);
-
-        #[doc = "(USEACB = 0) Use alpha from framebuffer (USEACB = 1) BC2A = 0: Use alpha from framebuffer as destination (DST_A)"]
         pub const _10: Self = Self::new(2);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]

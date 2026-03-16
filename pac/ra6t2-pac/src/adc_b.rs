@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.40.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:39 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:37:20 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -4698,9 +4698,6 @@ pub mod admdr {
 
         #[doc = "Hybrid mode – Background continuous scan mode"]
         pub const _0_X_A: Self = Self::new(10);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Admd1_SPEC;
@@ -4726,9 +4723,6 @@ pub mod admdr {
 
         #[doc = "Hybrid mode – Background continuous scan mode"]
         pub const _0_X_A: Self = Self::new(10);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -5515,9 +5509,6 @@ pub mod adsgcr0 {
 
         #[doc = "Select ADC1"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sgads1_SPEC;
@@ -5528,9 +5519,6 @@ pub mod adsgcr0 {
 
         #[doc = "Select ADC1"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sgads2_SPEC;
@@ -5541,9 +5529,6 @@ pub mod adsgcr0 {
 
         #[doc = "Select ADC1"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sgads3_SPEC;
@@ -5554,9 +5539,6 @@ pub mod adsgcr0 {
 
         #[doc = "Select ADC1"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -5691,9 +5673,6 @@ pub mod adsgcr1 {
 
         #[doc = "Select ADC1"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sgads5_SPEC;
@@ -5704,9 +5683,6 @@ pub mod adsgcr1 {
 
         #[doc = "Select ADC1"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sgads6_SPEC;
@@ -5717,9 +5693,6 @@ pub mod adsgcr1 {
 
         #[doc = "Select ADC1"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sgads7_SPEC;
@@ -5730,9 +5703,6 @@ pub mod adsgcr1 {
 
         #[doc = "Select ADC1"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -5789,9 +5759,6 @@ pub mod adsgcr2 {
 
         #[doc = "Select ADC1"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -7541,9 +7508,6 @@ pub mod adsgdcr {
 
         #[doc = "Self-diagnosis mode 3"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Addisen_SPEC;
@@ -7587,9 +7551,6 @@ pub mod adsgdcr {
 
         #[doc = "Setting prohibited"]
         pub const _0_X_2: Self = Self::new(2);
-
-        #[doc = "The number of states for the discharge or precharge period"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -8968,9 +8929,6 @@ pub mod adpgamoncr {
 
         #[doc = "PGA output"]
         pub const _0_X_1: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Monsel0_SPEC;
@@ -9201,9 +9159,6 @@ pub mod addfsr {
 
         #[doc = "Minimum phase filter"]
         pub const _10: Self = Self::new(2);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dfsel1_SPEC;
@@ -9214,9 +9169,6 @@ pub mod addfsr {
 
         #[doc = "Minimum phase filter"]
         pub const _10: Self = Self::new(2);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dfsel2_SPEC;
@@ -9227,9 +9179,6 @@ pub mod addfsr {
 
         #[doc = "Minimum phase filter"]
         pub const _10: Self = Self::new(2);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dfsel3_SPEC;
@@ -9240,9 +9189,6 @@ pub mod addfsr {
 
         #[doc = "Minimum phase filter"]
         pub const _10: Self = Self::new(2);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -11931,9 +11877,6 @@ pub mod addopcra {
 
         #[doc = "Use the 4th digital filter"]
         pub const _0_X_4: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -12267,9 +12210,6 @@ pub mod addopcrb {
 
         #[doc = "1024-time conversion (1023 additions)"]
         pub const _0_X_B: Self = Self::new(11);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmptble0_SPEC;

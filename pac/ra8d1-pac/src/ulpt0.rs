@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -24,7 +24,7 @@ http://www.renesas.com/disclaimer
 use crate::common::sealed;
 #[allow(unused_imports)]
 use crate::common::*;
-#[doc = r"ULPT0"]
+#[doc = r"Ultra-Low Power Timer 0"]
 unsafe impl ::core::marker::Send for super::Ulpt0 {}
 unsafe impl ::core::marker::Sync for super::Ulpt0 {}
 impl super::Ulpt0 {
@@ -165,7 +165,7 @@ impl crate::sealed::RegSpec for Ulptcnt_SPEC {
 pub type Ulptcnt = crate::RegValueT<Ulptcnt_SPEC>;
 
 impl Ulptcnt {
-    #[doc = "Setting range : 0x00000000 to 0xFFFFFFFF"]
+    #[doc = "32bit counter and reload registerNOTE : When 1 is written to the TSTOP bit in the ULPTCR register, the 32-bit counter is forcibly stopped and set to FFFFFFFFH."]
     #[inline(always)]
     pub fn ulptcnt(
         self,
@@ -192,7 +192,7 @@ impl crate::sealed::RegSpec for Ulptcma_SPEC {
 pub type Ulptcma = crate::RegValueT<Ulptcma_SPEC>;
 
 impl Ulptcma {
-    #[doc = "32-bit Compare Match A Data"]
+    #[doc = "ULPT Compare Match A RegisterNOTE : When 1 is written to the TSTOP bit in the ULPTCR register, set to FFFFFFFFH"]
     #[inline(always)]
     pub fn ulptcma(
         self,
@@ -219,7 +219,7 @@ impl crate::sealed::RegSpec for Ulptcmb_SPEC {
 pub type Ulptcmb = crate::RegValueT<Ulptcmb_SPEC>;
 
 impl Ulptcmb {
-    #[doc = "32-bit Compare Match B Data"]
+    #[doc = "AGT Compare Match B RegisterNOTE : When 1 is written to the TSTOP bit in the ULPTCR register, set to FFFFFFFFH"]
     #[inline(always)]
     pub fn ulptcmb(
         self,
@@ -246,7 +246,7 @@ impl crate::sealed::RegSpec for Ulptcr_SPEC {
 pub type Ulptcr = crate::RegValueT<Ulptcr_SPEC>;
 
 impl Ulptcr {
-    #[doc = "Counter Start"]
+    #[doc = "ULPT count start"]
     #[inline(always)]
     pub fn tstart(
         self,
@@ -272,7 +272,7 @@ impl Ulptcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Counter Status Flag"]
+    #[doc = "ULPT count status flag"]
     #[inline(always)]
     pub fn tcstf(
         self,
@@ -298,7 +298,7 @@ impl Ulptcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Counter Forcible Stop"]
+    #[doc = "ULPT count forced stop"]
     #[inline(always)]
     pub fn tstop(
         self,
@@ -324,7 +324,15 @@ impl Ulptcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Underflow Flag"]
+    #[doc = "These bits are read as 00. The write value should be 00."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<3, 0x3, 1, 0, u8, u8, Ulptcr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<3,0x3,1,0,u8,u8,Ulptcr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "ULPT underflow flag"]
     #[inline(always)]
     pub fn tundf(
         self,
@@ -350,7 +358,7 @@ impl Ulptcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Match A Flag"]
+    #[doc = "ULPT compare match A flag"]
     #[inline(always)]
     pub fn tcmaf(
         self,
@@ -376,7 +384,7 @@ impl Ulptcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Match B Flag"]
+    #[doc = "ULPT compare match B flag"]
     #[inline(always)]
     pub fn tcmbf(
         self,
@@ -414,60 +422,60 @@ pub mod ulptcr {
     pub struct Tstart_SPEC;
     pub type Tstart = crate::EnumBitfieldStruct<u8, Tstart_SPEC>;
     impl Tstart {
-        #[doc = "Stop the counter."]
+        #[doc = "Count stops"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Start the counter."]
+        #[doc = "Count starts"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tcstf_SPEC;
     pub type Tcstf = crate::EnumBitfieldStruct<u8, Tcstf_SPEC>;
     impl Tcstf {
-        #[doc = "Counter stopped"]
+        #[doc = "Count stops"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter running"]
+        #[doc = "Count running"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tstop_SPEC;
     pub type Tstop = crate::EnumBitfieldStruct<u8, Tstop_SPEC>;
     impl Tstop {
-        #[doc = "Writing is invalid."]
+        #[doc = "no effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Stop the counter forcibly."]
+        #[doc = "The count is forcibly stopped."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tundf_SPEC;
     pub type Tundf = crate::EnumBitfieldStruct<u8, Tundf_SPEC>;
     impl Tundf {
-        #[doc = "No underflow occurred (counter ≠ 0x00000000)."]
+        #[doc = "No underflow"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Underflow occurred (counter = 0x00000000)."]
+        #[doc = "Underflow"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tcmaf_SPEC;
     pub type Tcmaf = crate::EnumBitfieldStruct<u8, Tcmaf_SPEC>;
     impl Tcmaf {
-        #[doc = "Not matched (counter ≠ ULPTCMA\\[31:0\\])"]
+        #[doc = "No Match"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Matched (counter = ULPTCMA\\[31:0\\])"]
+        #[doc = "Match"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tcmbf_SPEC;
     pub type Tcmbf = crate::EnumBitfieldStruct<u8, Tcmbf_SPEC>;
     impl Tcmbf {
-        #[doc = "Not matched (counter ≠ ULPTCMB\\[31:0\\])"]
+        #[doc = "No Match"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Matched (counter = ULPTCMB\\[31:0\\])"]
+        #[doc = "Match"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -482,7 +490,7 @@ impl crate::sealed::RegSpec for Ulptmr1_SPEC {
 pub type Ulptmr1 = crate::RegValueT<Ulptmr1_SPEC>;
 
 impl Ulptmr1 {
-    #[doc = "Operating Mode"]
+    #[doc = "ULPT operating mode select"]
     #[inline(always)]
     pub fn tmod1(
         self,
@@ -508,7 +516,7 @@ impl Ulptmr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "ULPTEVIn Edge Polarity"]
+    #[doc = "ULPTEVI edge polarity select"]
     #[inline(always)]
     pub fn tedgpl(
         self,
@@ -534,7 +542,7 @@ impl Ulptmr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Count Source"]
+    #[doc = "ULPT count source select"]
     #[inline(always)]
     pub fn tck1(
         self,
@@ -559,6 +567,14 @@ impl Ulptmr1 {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00. The write value should be 00."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<6, 0x3, 1, 0, u8, u8, Ulptmr1_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<6,0x3,1,0,u8,u8,Ulptmr1_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Ulptmr1 {
     #[inline(always)]
@@ -582,7 +598,7 @@ pub mod ulptmr1 {
     pub struct Tedgpl_SPEC;
     pub type Tedgpl = crate::EnumBitfieldStruct<u8, Tedgpl_SPEC>;
     impl Tedgpl {
-        #[doc = "Either edge (rising)"]
+        #[doc = "One edge(rise)"]
         pub const _0: Self = Self::new(0);
 
         #[doc = "Both edges"]
@@ -592,10 +608,10 @@ pub mod ulptmr1 {
     pub struct Tck1_SPEC;
     pub type Tck1 = crate::EnumBitfieldStruct<u8, Tck1_SPEC>;
     impl Tck1 {
-        #[doc = "Divided clock specified by the ULPTMR2.CKS\\[2:0\\] bits (ULPTLCLK)"]
+        #[doc = "Divided clock LOCO specified by ULPTMR2.CKS bit."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Divided clock specified by the ULPTMR2.CKS\\[2:0\\] bits (ULPTSCLK)"]
+        #[doc = "Divided clock fSUB specified by ULPTMR2.CKS bit."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -610,7 +626,7 @@ impl crate::sealed::RegSpec for Ulptmr2_SPEC {
 pub type Ulptmr2 = crate::RegValueT<Ulptmr2_SPEC>;
 
 impl Ulptmr2 {
-    #[doc = "ULPTLCLK/ULPTSCLK Count Source Clock Division Ratio"]
+    #[doc = "fsub/LOCO count source clock frequency division ratio select"]
     #[inline(always)]
     pub fn cks(
         self,
@@ -636,7 +652,15 @@ impl Ulptmr2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Low Power Mode"]
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<3, 0xf, 1, 0, u8, u8, Ulptmr2_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<3,0xf,1,0,u8,u8,Ulptmr2_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "ULPT Low Power Mode"]
     #[inline(always)]
     pub fn lpm(
         self,
@@ -705,7 +729,7 @@ pub mod ulptmr2 {
         #[doc = "Normal mode"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Low power mode"]
+        #[doc = "Low Power mode"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -720,7 +744,7 @@ impl crate::sealed::RegSpec for Ulptmr3_SPEC {
 pub type Ulptmr3 = crate::RegValueT<Ulptmr3_SPEC>;
 
 impl Ulptmr3 {
-    #[doc = "Count Function Select"]
+    #[doc = "ULPT count function select"]
     #[inline(always)]
     pub fn tcntctl(
         self,
@@ -746,7 +770,7 @@ impl Ulptmr3 {
         >::from_register(self, 0)
     }
 
-    #[doc = "ULPTEVIn Polarity Switch"]
+    #[doc = "ULPTEVI polarity switch"]
     #[inline(always)]
     pub fn tevpol(
         self,
@@ -772,7 +796,7 @@ impl Ulptmr3 {
         >::from_register(self, 0)
     }
 
-    #[doc = "ULPTOn Polarity Select"]
+    #[doc = "ULPTO polarity select"]
     #[inline(always)]
     pub fn topol(
         self,
@@ -798,7 +822,17 @@ impl Ulptmr3 {
         >::from_register(self, 0)
     }
 
-    #[doc = "ULPTEEn Function Select"]
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<3, 1, 0, Ulptmr3_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<3, 1, 0, Ulptmr3_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
+
+    #[doc = "ULPTEE function select"]
     #[inline(always)]
     pub fn teectl(
         self,
@@ -824,7 +858,7 @@ impl Ulptmr3 {
         >::from_register(self, 0)
     }
 
-    #[doc = "ULPTEEn Edge Polarity Select"]
+    #[doc = "ULPTEE edge polarity select"]
     #[inline(always)]
     pub fn teepol(
         self,
@@ -865,27 +899,27 @@ pub mod ulptmr3 {
         #[doc = "Continuous mode"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "One-shot mode"]
+        #[doc = "One shot mode"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tevpol_SPEC;
     pub type Tevpol = crate::EnumBitfieldStruct<u8, Tevpol_SPEC>;
     impl Tevpol {
-        #[doc = "External event input (ULPTEVIn pin)"]
+        #[doc = "Extarnal event input(ULPTEVI port) forward rotation"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "External event input (ULPTEVIn pin) in reverse"]
+        #[doc = "Extarnal event input(ULPTEVI port) inversion"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Topol_SPEC;
     pub type Topol = crate::EnumBitfieldStruct<u8, Topol_SPEC>;
     impl Topol {
-        #[doc = "Start the ULPTOn output with low level."]
+        #[doc = "ULPTO Output is started at low"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Start the ULPTOn output with high level."]
+        #[doc = "ULPTO Output is started at high"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -905,10 +939,10 @@ pub mod ulptmr3 {
     pub struct Teepol_SPEC;
     pub type Teepol = crate::EnumBitfieldStruct<u8, Teepol_SPEC>;
     impl Teepol {
-        #[doc = "Rising edge"]
+        #[doc = "Rise edge"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "Falling edge"]
+        #[doc = "Fall edge"]
         pub const _01: Self = Self::new(1);
 
         #[doc = "Both edges"]
@@ -926,7 +960,7 @@ impl crate::sealed::RegSpec for Ulptioc_SPEC {
 pub type Ulptioc = crate::RegValueT<Ulptioc_SPEC>;
 
 impl Ulptioc {
-    #[doc = "ULPTOn Output Enable"]
+    #[doc = "ULPTO output enable"]
     #[inline(always)]
     pub fn toe(
         self,
@@ -952,7 +986,7 @@ impl Ulptioc {
         >::from_register(self, 0)
     }
 
-    #[doc = "ULPTEVIn Input Filter"]
+    #[doc = "ULPTEVI input filter select"]
     #[inline(always)]
     pub fn tipf(
         self,
@@ -978,7 +1012,7 @@ impl Ulptioc {
         >::from_register(self, 0)
     }
 
-    #[doc = "ULPTEVIn Count Control"]
+    #[doc = "ULPTEVI count control"]
     #[inline(always)]
     pub fn tiogt0(
         self,
@@ -1003,6 +1037,16 @@ impl Ulptioc {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<7, 1, 0, Ulptioc_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<7, 1, 0, Ulptioc_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
 }
 impl ::core::default::Default for Ulptioc {
     #[inline(always)]
@@ -1016,10 +1060,10 @@ pub mod ulptioc {
     pub struct Toe_SPEC;
     pub type Toe = crate::EnumBitfieldStruct<u8, Toe_SPEC>;
     impl Toe {
-        #[doc = "Disable the ULPTOn output."]
+        #[doc = "ULPTO output disabled (port)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable the ULPTOn output."]
+        #[doc = "ULPTO output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -1029,23 +1073,23 @@ pub mod ulptioc {
         #[doc = "No filter"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "Filter sampling at PCLKB"]
+        #[doc = "Filter sampled at PCLKB"]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "Filter sampling at PCLKB/8"]
+        #[doc = "Filter sampled at PCLKB/8"]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "Filter sampling at PCLKB/32"]
+        #[doc = "Filter sampled at PCLKB/32"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tiogt0_SPEC;
     pub type Tiogt0 = crate::EnumBitfieldStruct<u8, Tiogt0_SPEC>;
     impl Tiogt0 {
-        #[doc = "Always count external events."]
+        #[doc = "Extarnal event is always counted"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Count external events while the ULPTEVIn pin is valid."]
+        #[doc = "Extarnal event is counted while the ULPTEE pin is active"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1060,7 +1104,7 @@ impl crate::sealed::RegSpec for Ulptisr_SPEC {
 pub type Ulptisr = crate::RegValueT<Ulptisr_SPEC>;
 
 impl Ulptisr {
-    #[doc = "ULPTEEn Polarity Select"]
+    #[doc = "ULPTEE polarty selection"]
     #[inline(always)]
     pub fn rccpsel2(
         self,
@@ -1085,6 +1129,14 @@ impl Ulptisr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<3, 0x1f, 1, 0, u8, u8, Ulptisr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<3,0x1f,1,0,u8,u8,Ulptisr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Ulptisr {
     #[inline(always)]
@@ -1098,10 +1150,10 @@ pub mod ulptisr {
     pub struct Rccpsel2_SPEC;
     pub type Rccpsel2 = crate::EnumBitfieldStruct<u8, Rccpsel2_SPEC>;
     impl Rccpsel2 {
-        #[doc = "Count external events when low level."]
+        #[doc = "An external event is counted during the low-level period"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Count external events when high level."]
+        #[doc = "An external event is counted during the high-level period"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1116,7 +1168,7 @@ impl crate::sealed::RegSpec for Ulptcmsr_SPEC {
 pub type Ulptcmsr = crate::RegValueT<Ulptcmsr_SPEC>;
 
 impl Ulptcmsr {
-    #[doc = "Compare Match A Register Enable"]
+    #[doc = "Compare match A register enable"]
     #[inline(always)]
     pub fn tcmea(
         self,
@@ -1142,7 +1194,7 @@ impl Ulptcmsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "ULPTOAn Output Enable"]
+    #[doc = "ULPTOA output enable"]
     #[inline(always)]
     pub fn toea(
         self,
@@ -1168,7 +1220,7 @@ impl Ulptcmsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "ULPTOAn Polarity Select"]
+    #[doc = "ULPTOA polarity select"]
     #[inline(always)]
     pub fn topola(
         self,
@@ -1194,7 +1246,7 @@ impl Ulptcmsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Match B Register Enable"]
+    #[doc = "Compare match B register enable"]
     #[inline(always)]
     pub fn tcmeb(
         self,
@@ -1220,7 +1272,7 @@ impl Ulptcmsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "ULPTOBn Output Enable"]
+    #[doc = "ULPTOB output enable"]
     #[inline(always)]
     pub fn toeb(
         self,
@@ -1246,7 +1298,7 @@ impl Ulptcmsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "ULPTOBn Polarity Select"]
+    #[doc = "ULPTOB polarity select"]
     #[inline(always)]
     pub fn topolb(
         self,
@@ -1271,6 +1323,16 @@ impl Ulptcmsr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<7, 1, 0, Ulptcmsr_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<7, 1, 0, Ulptcmsr_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
 }
 impl ::core::default::Default for Ulptcmsr {
     #[inline(always)]
@@ -1284,60 +1346,60 @@ pub mod ulptcmsr {
     pub struct Tcmea_SPEC;
     pub type Tcmea = crate::EnumBitfieldStruct<u8, Tcmea_SPEC>;
     impl Tcmea {
-        #[doc = "Disable compare match A register."]
+        #[doc = "Disable compare match A register"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable compare match A register."]
+        #[doc = "Enable compare match A register"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Toea_SPEC;
     pub type Toea = crate::EnumBitfieldStruct<u8, Toea_SPEC>;
     impl Toea {
-        #[doc = "Disable the ULPTOAn output."]
+        #[doc = "ULPTOA output disabled (port)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable the ULPTOAn output."]
+        #[doc = "ULPTOA output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Topola_SPEC;
     pub type Topola = crate::EnumBitfieldStruct<u8, Topola_SPEC>;
     impl Topola {
-        #[doc = "Start the ULPTOAn output with low."]
+        #[doc = "ULPTOA Output is started at low"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Start the ULPTOAn output with high."]
+        #[doc = "ULPTOA Output is started at high"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tcmeb_SPEC;
     pub type Tcmeb = crate::EnumBitfieldStruct<u8, Tcmeb_SPEC>;
     impl Tcmeb {
-        #[doc = "Disable compare match B register."]
+        #[doc = "Disable compare match B register"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable compare match B register."]
+        #[doc = "Enable compare match B register"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Toeb_SPEC;
     pub type Toeb = crate::EnumBitfieldStruct<u8, Toeb_SPEC>;
     impl Toeb {
-        #[doc = "Disable the ULPTOBn output."]
+        #[doc = "ULPTOB output disabled (port)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable the ULPTOBn output."]
+        #[doc = "ULPTOB output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Topolb_SPEC;
     pub type Topolb = crate::EnumBitfieldStruct<u8, Topolb_SPEC>;
     impl Topolb {
-        #[doc = "Start the ULPTOBn output with low."]
+        #[doc = "ULPTOB Output is started at low"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Start the ULPTOBn output with high."]
+        #[doc = "ULPTOB Output is started at high"]
         pub const _1: Self = Self::new(1);
     }
 }

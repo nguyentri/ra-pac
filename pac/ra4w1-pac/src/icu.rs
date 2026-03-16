@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.0, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:50:19 +0000
+// Generated from SVD 1.0, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:09:02 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -2419,9 +2419,6 @@ pub mod ielsr {
     impl Iels {
         #[doc = "Nothing is selected"]
         pub const _0_X_000: Self = Self::new(0);
-
-        #[doc = "See Event Table"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2483,9 +2480,6 @@ pub mod delsr {
     impl Dels {
         #[doc = "Nothing is selected."]
         pub const _0_X_000: Self = Self::new(0);
-
-        #[doc = "See Event Table"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2568,9 +2562,6 @@ pub mod selsr0 {
 
         #[doc = "SCI0_RXI_OR_ERI"]
         pub const _0_X_0_B_1: Self = Self::new(177);
-
-        #[doc = "Settings  prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.50.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:47:04 +0000
+// Generated from SVD 1.50.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:03:37 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -1904,9 +1904,6 @@ pub mod ctsucrb {
 
         #[doc = "31.3 kHz"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "No spreading"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sscnt_SPEC;

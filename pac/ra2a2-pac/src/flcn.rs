@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:19 +0000
+// Generated from SVD 1.20.02, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:01:00 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -712,9 +712,6 @@ pub mod fcr {
 
         #[doc = "Blank check (data flash)"]
         pub const _0_X_B: Self = Self::new(11);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Drc_SPEC;
@@ -1387,9 +1384,6 @@ pub mod fisr {
 
         #[doc = "The startup area is switched to the alternate area temporarily"]
         pub const _11: Self = Self::new(3);
-
-        #[doc = "The startup area is selected according to the settings of the extra area"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1484,9 +1478,6 @@ pub mod fexcr {
 
         #[doc = "OCDID4 program"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Opst_SPEC;

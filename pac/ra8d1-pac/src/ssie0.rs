@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -137,7 +137,7 @@ impl crate::sealed::RegSpec for Ssicr_SPEC {
 pub type Ssicr = crate::RegValueT<Ssicr_SPEC>;
 
 impl Ssicr {
-    #[doc = "Reception Enable"]
+    #[doc = "Receive Enable"]
     #[inline(always)]
     pub fn ren(
         self,
@@ -163,7 +163,7 @@ impl Ssicr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Transmission Enable"]
+    #[doc = "Transmit Enable"]
     #[inline(always)]
     pub fn ten(
         self,
@@ -189,7 +189,7 @@ impl Ssicr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Mute Enable"]
+    #[doc = "Mute EnableNOTE: When this module is muted, the value of outputting serial data is rewritten to 0 but data transmission is not stopped. Write dummy data to the SSIFTDR not to generate a transmit underflow because the number of data in the transmit FIFO is decreasing."]
     #[inline(always)]
     pub fn muen(
         self,
@@ -215,7 +215,7 @@ impl Ssicr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Selects Bit Clock Division Ratio"]
+    #[doc = "Serial Oversampling Clock Division Ratio"]
     #[inline(always)]
     pub fn ckdv(
         self,
@@ -241,7 +241,7 @@ impl Ssicr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Selects Serial Data Delay"]
+    #[doc = "Serial Data Delay"]
     #[inline(always)]
     pub fn del(
         self,
@@ -267,7 +267,7 @@ impl Ssicr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Selects Placement Data Alignment"]
+    #[doc = "Parallel Data Alignment"]
     #[inline(always)]
     pub fn pdta(
         self,
@@ -293,7 +293,7 @@ impl Ssicr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Selects Serial Data Alignment"]
+    #[doc = "Serial Data Alignment"]
     #[inline(always)]
     pub fn sdta(
         self,
@@ -319,7 +319,7 @@ impl Ssicr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Selects Serial Padding Polarity"]
+    #[doc = "Serial Padding Polarity"]
     #[inline(always)]
     pub fn spdp(
         self,
@@ -345,17 +345,17 @@ impl Ssicr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Selects the Initial Value and Polarity of LR Clock/Frame Synchronization Signal"]
+    #[doc = "Serial WS Polarity"]
     #[inline(always)]
-    pub fn lrckp(
+    pub fn swsp(
         self,
     ) -> crate::common::RegisterField<
         12,
         0x1,
         1,
         0,
-        ssicr::Lrckp,
-        ssicr::Lrckp,
+        ssicr::Swsp,
+        ssicr::Swsp,
         Ssicr_SPEC,
         crate::common::RW,
     > {
@@ -364,24 +364,24 @@ impl Ssicr {
             0x1,
             1,
             0,
-            ssicr::Lrckp,
-            ssicr::Lrckp,
+            ssicr::Swsp,
+            ssicr::Swsp,
             Ssicr_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 
-    #[doc = "Selects Bit Clock Polarity"]
+    #[doc = "Serial Bit Clock Polarity"]
     #[inline(always)]
-    pub fn bckp(
+    pub fn sckp(
         self,
     ) -> crate::common::RegisterField<
         13,
         0x1,
         1,
         0,
-        ssicr::Bckp,
-        ssicr::Bckp,
+        ssicr::Sckp,
+        ssicr::Sckp,
         Ssicr_SPEC,
         crate::common::RW,
     > {
@@ -390,24 +390,24 @@ impl Ssicr {
             0x1,
             1,
             0,
-            ssicr::Bckp,
-            ssicr::Bckp,
+            ssicr::Sckp,
+            ssicr::Sckp,
             Ssicr_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 
-    #[doc = "Master Enable"]
+    #[doc = "Serial WS Direction NOTE: Only the following settings are allowed: (SCKD, SWSD) = (0, 0) and (1, 1). Other settings are prohibited."]
     #[inline(always)]
-    pub fn mst(
+    pub fn swsd(
         self,
     ) -> crate::common::RegisterField<
         14,
         0x1,
         1,
         0,
-        ssicr::Mst,
-        ssicr::Mst,
+        ssicr::Swsd,
+        ssicr::Swsd,
         Ssicr_SPEC,
         crate::common::RW,
     > {
@@ -416,14 +416,14 @@ impl Ssicr {
             0x1,
             1,
             0,
-            ssicr::Mst,
-            ssicr::Mst,
+            ssicr::Swsd,
+            ssicr::Swsd,
             Ssicr_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 
-    #[doc = "Selects System Word Length"]
+    #[doc = "System Word LengthSet the system word length to the bit clock frequency/2 fs."]
     #[inline(always)]
     pub fn swl(
         self,
@@ -449,7 +449,7 @@ impl Ssicr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Selects Data Word Length"]
+    #[doc = "Data Word Length"]
     #[inline(always)]
     pub fn dwl(
         self,
@@ -475,15 +475,33 @@ impl Ssicr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Selects Frame Word Number"]
+    #[doc = "Channels"]
     #[inline(always)]
-    pub fn frm(
+    pub fn chnl(
         self,
-    ) -> crate::common::RegisterField<22, 0x3, 1, 0, u8, u8, Ssicr_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<22,0x3,1,0,u8,u8,Ssicr_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        22,
+        0x3,
+        1,
+        0,
+        ssicr::Chnl,
+        ssicr::Chnl,
+        Ssicr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            22,
+            0x3,
+            1,
+            0,
+            ssicr::Chnl,
+            ssicr::Chnl,
+            Ssicr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
-    #[doc = "Idle Mode Interrupt Output Enable"]
+    #[doc = "Idle Mode Interrupt Enable"]
     #[inline(always)]
     pub fn iien(
         self,
@@ -509,7 +527,7 @@ impl Ssicr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Receive Overflow Interrupt Output Enable"]
+    #[doc = "Receive Overflow Interrupt Enable"]
     #[inline(always)]
     pub fn roien(
         self,
@@ -535,7 +553,7 @@ impl Ssicr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Receive Underflow Interrupt Output Enable"]
+    #[doc = "Receive Underflow Interrupt Enable"]
     #[inline(always)]
     pub fn ruien(
         self,
@@ -561,7 +579,7 @@ impl Ssicr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Transmit Overflow Interrupt Output Enable"]
+    #[doc = "Transmit Overflow Interrupt Enable"]
     #[inline(always)]
     pub fn toien(
         self,
@@ -587,7 +605,7 @@ impl Ssicr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Transmit Underflow Interrupt Output Enable"]
+    #[doc = "Transmit Underflow Interrupt Enable"]
     #[inline(always)]
     pub fn tuien(
         self,
@@ -613,7 +631,7 @@ impl Ssicr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Selects an Audio Clock for Master-mode Communication"]
+    #[doc = "Oversampling Clock Select"]
     #[inline(always)]
     pub fn cks(
         self,
@@ -638,6 +656,16 @@ impl Ssicr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<31, 1, 0, Ssicr_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<31, 1, 0, Ssicr_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
 }
 impl ::core::default::Default for Ssicr {
     #[inline(always)]
@@ -651,175 +679,160 @@ pub mod ssicr {
     pub struct Ren_SPEC;
     pub type Ren = crate::EnumBitfieldStruct<u8, Ren_SPEC>;
     impl Ren {
-        #[doc = "Disables reception"]
+        #[doc = "Disables the receive operation."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enables reception (starts reception)"]
+        #[doc = "Enables the receive operation."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ten_SPEC;
     pub type Ten = crate::EnumBitfieldStruct<u8, Ten_SPEC>;
     impl Ten {
-        #[doc = "Disables transmission"]
+        #[doc = "Disables the transmit operation."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enables transmission (starts transmission)"]
+        #[doc = "Enables the transmit operation."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Muen_SPEC;
     pub type Muen = crate::EnumBitfieldStruct<u8, Muen_SPEC>;
     impl Muen {
-        #[doc = "Disables muting on the next frame boundary"]
+        #[doc = "This module is not muted."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enables muting on the next frame boundary"]
+        #[doc = "This module is muted."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ckdv_SPEC;
     pub type Ckdv = crate::EnumBitfieldStruct<u8, Ckdv_SPEC>;
     impl Ckdv {
-        #[doc = "AUDIO_MCK"]
+        #[doc = "CLK"]
         pub const _0_X_0: Self = Self::new(0);
 
-        #[doc = "AUDIO_MCK/2"]
+        #[doc = "CLK/2"]
         pub const _0_X_1: Self = Self::new(1);
 
-        #[doc = "AUDIO_MCK/4"]
+        #[doc = "CLK/4"]
         pub const _0_X_2: Self = Self::new(2);
 
-        #[doc = "AUDIO_MCK/8"]
+        #[doc = "CLK/8"]
         pub const _0_X_3: Self = Self::new(3);
 
-        #[doc = "AUDIO_MCK/16"]
+        #[doc = "CLK/16"]
         pub const _0_X_4: Self = Self::new(4);
 
-        #[doc = "AUDIO_MCK/32"]
+        #[doc = "CLK/32"]
         pub const _0_X_5: Self = Self::new(5);
 
-        #[doc = "AUDIO_MCK/64"]
+        #[doc = "CLK/64"]
         pub const _0_X_6: Self = Self::new(6);
 
-        #[doc = "AUDIO_MCK/128"]
+        #[doc = "CLK/128"]
         pub const _0_X_7: Self = Self::new(7);
 
-        #[doc = "AUDIO_MCK/6"]
+        #[doc = "CLK/6"]
         pub const _0_X_8: Self = Self::new(8);
 
-        #[doc = "AUDIO_MCK/12"]
+        #[doc = "CLK/12 (These bits are only settable for channel 0. Setting these bits in the register for channel 1 is prohibited.)"]
         pub const _0_X_9: Self = Self::new(9);
 
-        #[doc = "AUDIO_MCK/24"]
+        #[doc = "CLK/24"]
         pub const _0_X_A: Self = Self::new(10);
 
-        #[doc = "AUDIO_MCK/48"]
+        #[doc = "CLK/48(These bits are only settable for channel 0. Setting these bits in the register for channel 1 is prohibited.)"]
         pub const _0_X_B: Self = Self::new(11);
 
-        #[doc = "AUDIO_MCK/96"]
+        #[doc = "CLK/96(These bits are only settable for channel 0. Setting these bits in the register for channel 1 is prohibited.)"]
         pub const _0_X_C: Self = Self::new(12);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Del_SPEC;
     pub type Del = crate::EnumBitfieldStruct<u8, Del_SPEC>;
     impl Del {
-        #[doc = "Delay of 1 cycle of SSIBCKn (n = 0, 1) between SSILRCKn/SSIFSn (n = 0, 1) and SSITXD0/SSIRXD0/SSIDATA1"]
+        #[doc = "1 clock cycle delay between SSIWS and SSIDATA"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "No delay between SSILRCKn/SSIFSn (n = 0, 1) and SSITXD0/SSIRXD0/SSIDATA1"]
+        #[doc = "No delay between SSIWS and SSIDATA"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pdta_SPEC;
     pub type Pdta = crate::EnumBitfieldStruct<u8, Pdta_SPEC>;
     impl Pdta {
-        #[doc = "Left-justifies placement data (SSIFTDR, SSIFRDR)"]
+        #[doc = "The lower bits of parallel data (SSITDR, SSIRDR) are transferred prior to the upper bits.(When data word length is 8 or 16 bits) / Parallel data (SSITDR, SSIRDR) is left-aligned.(When data word length is 18, 20, 22, or 24 bits)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Right-justifies placement data (SSIFTDR, SSIFRDR)"]
+        #[doc = "The upper bits of parallel data (SSITDR, SSIRDR) are transferred prior to the lower bits.(When data word length is 8 or 16 bits) / Parallel data (SSITDR, SSIRDR) is right-aligned.(When data word length is 18, 20, 22, or 24 bits)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdta_SPEC;
     pub type Sdta = crate::EnumBitfieldStruct<u8, Sdta_SPEC>;
     impl Sdta {
-        #[doc = "Transmits and receives serial data first and then padding bits"]
+        #[doc = "Transmitting and receiving in the order of serial data and padding bits"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Transmit and receives padding bits first and then serial data"]
+        #[doc = "Transmitting and receiving in the order of padding bits and serial data"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Spdp_SPEC;
     pub type Spdp = crate::EnumBitfieldStruct<u8, Spdp_SPEC>;
     impl Spdp {
-        #[doc = "Padding data is at a low level"]
+        #[doc = "Padding bits are low."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Padding data is at a high level"]
+        #[doc = "Padding bits are high."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Lrckp_SPEC;
-    pub type Lrckp = crate::EnumBitfieldStruct<u8, Lrckp_SPEC>;
-    impl Lrckp {
-        #[doc = "The initial value is at a high level. The start trigger for a frame is synchronized with a falling edge of SSILRCKn/SSIFSn (n = 0, 1)."]
+    pub struct Swsp_SPEC;
+    pub type Swsp = crate::EnumBitfieldStruct<u8, Swsp_SPEC>;
+    impl Swsp {
+        #[doc = "SSIWS is low for 1st channel, high for 2nd channel."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "The initial value is at a low level. The start trigger for a frame is synchronized with a rising edge of SSILRCKn/SSIFSn (n = 0, 1)."]
+        #[doc = "SSIWS is high for 1st channel, low for 2nd channel."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Bckp_SPEC;
-    pub type Bckp = crate::EnumBitfieldStruct<u8, Bckp_SPEC>;
-    impl Bckp {
-        #[doc = "SSILRCKn/SSIFSn (n = 0, 1) and SSITXD0/SSIRXD0/SSIDATA1 change at a falling edge (SSILRCKn/SSIFSn (n = 0, 1) and SSIRXD0/SSIDATA1 are sampled at a rising edge of SSIBCKn (n = 0, 1))."]
+    pub struct Sckp_SPEC;
+    pub type Sckp = crate::EnumBitfieldStruct<u8, Sckp_SPEC>;
+    impl Sckp {
+        #[doc = "SSIWS and SSIDATA change at the SSISCK falling edge (sampled at the SCK rising edge)."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "SSILRCKn/SSIFSn (n = 0, 1) and SSITXD0/SSIRXD0/SSIDATA1 change at a rising edge (SSILRCKn/SSIFSn (n = 0, 1) and SSIRXD0/SSIDATA1 are sampled at a falling edge of SSIBCKn (n = 0, 1))."]
+        #[doc = "SSIWS and SSIDATA change at the SSISCK rising edge (sampled at the SCK falling edge)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Mst_SPEC;
-    pub type Mst = crate::EnumBitfieldStruct<u8, Mst_SPEC>;
-    impl Mst {
-        #[doc = "Slave-mode communication"]
+    pub struct Swsd_SPEC;
+    pub type Swsd = crate::EnumBitfieldStruct<u8, Swsd_SPEC>;
+    impl Swsd {
+        #[doc = "Serial word select is input, slave mode."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Master-mode communication"]
+        #[doc = "Serial word select is output, master mode."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Swl_SPEC;
     pub type Swl = crate::EnumBitfieldStruct<u8, Swl_SPEC>;
     impl Swl {
-        #[doc = "8 bits"]
+        #[doc = "8 bits (serial bit clock frequency = 16fs )"]
         pub const _000: Self = Self::new(0);
 
-        #[doc = "16 bits"]
+        #[doc = "16 bits (serial bit clock frequency = 32fs )"]
         pub const _001: Self = Self::new(1);
 
-        #[doc = "24 bits"]
+        #[doc = "24 bits (serial bit clock frequency = 48fs )"]
         pub const _010: Self = Self::new(2);
 
-        #[doc = "32 bits"]
+        #[doc = "32 bits (serial bit clock frequency = 64fs )"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "48 bits"]
-        pub const _100: Self = Self::new(4);
-
-        #[doc = "64 bits"]
-        pub const _101: Self = Self::new(5);
-
-        #[doc = "128 bits"]
-        pub const _110: Self = Self::new(6);
-
-        #[doc = "256 bits"]
-        pub const _111: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dwl_SPEC;
@@ -842,71 +855,72 @@ pub mod ssicr {
 
         #[doc = "24 bits"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "32 bits"]
-        pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const _111: Self = Self::new(7);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Chnl_SPEC;
+    pub type Chnl = crate::EnumBitfieldStruct<u8, Chnl_SPEC>;
+    impl Chnl {
+        #[doc = "One channel"]
+        pub const _00: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Iien_SPEC;
     pub type Iien = crate::EnumBitfieldStruct<u8, Iien_SPEC>;
     impl Iien {
-        #[doc = "Disables idle mode interrupt output"]
+        #[doc = "Disables an idle mode interrupt."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enables idle mode interrupt output"]
+        #[doc = "Enables an idle mode interrupt."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Roien_SPEC;
     pub type Roien = crate::EnumBitfieldStruct<u8, Roien_SPEC>;
     impl Roien {
-        #[doc = "Disables receive overflow interrupt output"]
+        #[doc = "Disables an overflow interrupt."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enables receive overflow interrupt output"]
+        #[doc = "Enables an overflow interrupt."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ruien_SPEC;
     pub type Ruien = crate::EnumBitfieldStruct<u8, Ruien_SPEC>;
     impl Ruien {
-        #[doc = "Disables receive underflow interrupt output"]
+        #[doc = "Disables an underflow interrupt."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enables receive underflow interrupt output"]
+        #[doc = "Enables an underflow interrupt."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Toien_SPEC;
     pub type Toien = crate::EnumBitfieldStruct<u8, Toien_SPEC>;
     impl Toien {
-        #[doc = "Disables transmit overflow interrupt output"]
+        #[doc = "Disables an overflow interrupt."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enables transmit overflow interrupt output"]
+        #[doc = "Enables an overflow interrupt."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tuien_SPEC;
     pub type Tuien = crate::EnumBitfieldStruct<u8, Tuien_SPEC>;
     impl Tuien {
-        #[doc = "Disables transmit underflow interrupt output"]
+        #[doc = "Disables an underflow interrupt."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enables transmit underflow interrupt output"]
+        #[doc = "Enables an underflow interrupt."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cks_SPEC;
     pub type Cks = crate::EnumBitfieldStruct<u8, Cks_SPEC>;
     impl Cks {
-        #[doc = "Selects the AUDIO_CLK input"]
+        #[doc = "AUDIO_CLK input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Selects the GTIOC2A (GPT output)"]
+        #[doc = "Setting prohibited"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -922,6 +936,64 @@ pub type Ssisr = crate::RegValueT<Ssisr_SPEC>;
 
 impl Ssisr {
     #[doc = "Idle Mode Status Flag"]
+    #[inline(always)]
+    pub fn idst(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0x1,
+        1,
+        0,
+        ssisr::Idst,
+        ssisr::Idst,
+        Ssisr_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x1,
+            1,
+            0,
+            ssisr::Idst,
+            ssisr::Idst,
+            Ssisr_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Receive Serial Word Number"]
+    #[inline(always)]
+    pub fn rswno(self) -> crate::common::RegisterFieldBool<1, 1, 0, Ssisr_SPEC, crate::common::R> {
+        crate::common::RegisterFieldBool::<1, 1, 0, Ssisr_SPEC, crate::common::R>::from_register(
+            self, 0,
+        )
+    }
+
+    #[doc = "Receive Channel Number.These bits are read as 00b."]
+    #[inline(always)]
+    pub fn rchno(
+        self,
+    ) -> crate::common::RegisterField<2, 0x3, 1, 0, u8, u8, Ssisr_SPEC, crate::common::R> {
+        crate::common::RegisterField::<2,0x3,1,0,u8,u8,Ssisr_SPEC,crate::common::R>::from_register(self,0)
+    }
+
+    #[doc = "Transmit Serial Word Number"]
+    #[inline(always)]
+    pub fn tswno(self) -> crate::common::RegisterFieldBool<4, 1, 0, Ssisr_SPEC, crate::common::R> {
+        crate::common::RegisterFieldBool::<4, 1, 0, Ssisr_SPEC, crate::common::R>::from_register(
+            self, 0,
+        )
+    }
+
+    #[doc = "Transmit Channel Number"]
+    #[inline(always)]
+    pub fn tchno(
+        self,
+    ) -> crate::common::RegisterField<5, 0x3, 1, 0, u8, u8, Ssisr_SPEC, crate::common::R> {
+        crate::common::RegisterField::<5,0x3,1,0,u8,u8,Ssisr_SPEC,crate::common::R>::from_register(self,0)
+    }
+
+    #[doc = "Idle Mode Interrupt Status Flag"]
     #[inline(always)]
     pub fn iirq(
         self,
@@ -947,7 +1019,7 @@ impl Ssisr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Receive Overflow Error Status Flag"]
+    #[doc = "Receive Overflow Error Interrupt Status Flag NOTE: Writable only to clear the flag. Confirm the value is 1 and then write 0."]
     #[inline(always)]
     pub fn roirq(
         self,
@@ -973,7 +1045,7 @@ impl Ssisr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Receive Underflow Error Status Flag"]
+    #[doc = "Receive Underflow Error Interrupt Status Flag NOTE: Writable only to clear the flag. Confirm the value is 1 and then write 0."]
     #[inline(always)]
     pub fn ruirq(
         self,
@@ -999,7 +1071,7 @@ impl Ssisr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Transmit Overflow Error Status Flag"]
+    #[doc = "Transmit Overflow Error Interrupt Status Flag NOTE: Writable only to clear the flag. Confirm the value is 1 and then write 0."]
     #[inline(always)]
     pub fn toirq(
         self,
@@ -1025,7 +1097,7 @@ impl Ssisr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Transmit Underflow Error Status flag"]
+    #[doc = "Transmit Underflow Error Interrupt Status Flag NOTE: Writable only to clear the flag. Confirm the value is 1 and then write 0."]
     #[inline(always)]
     pub fn tuirq(
         self,
@@ -1050,63 +1122,81 @@ impl Ssisr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00. The write value should be 00."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<30, 0x3, 1, 0, u8, u8, Ssisr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<30,0x3,1,0,u8,u8,Ssisr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Ssisr {
     #[inline(always)]
     fn default() -> Ssisr {
-        <crate::RegValueT<Ssisr_SPEC> as RegisterValue<_>>::new(33554432)
+        <crate::RegValueT<Ssisr_SPEC> as RegisterValue<_>>::new(33554451)
     }
 }
 pub mod ssisr {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Idst_SPEC;
+    pub type Idst = crate::EnumBitfieldStruct<u8, Idst_SPEC>;
+    impl Idst {
+        #[doc = "Serial bus is operating."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "The current communication is stopped."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Iirq_SPEC;
     pub type Iirq = crate::EnumBitfieldStruct<u8, Iirq_SPEC>;
     impl Iirq {
-        #[doc = "In the communication state"]
+        #[doc = "This module is not in idle state."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "In the idle state"]
+        #[doc = "This module is in idle state."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Roirq_SPEC;
     pub type Roirq = crate::EnumBitfieldStruct<u8, Roirq_SPEC>;
     impl Roirq {
-        #[doc = "No receive overflow error is generated."]
+        #[doc = "No receive overflow has occurred."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "A receive overflow error is generated."]
+        #[doc = "A receive overflow has occurred."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ruirq_SPEC;
     pub type Ruirq = crate::EnumBitfieldStruct<u8, Ruirq_SPEC>;
     impl Ruirq {
-        #[doc = "No receive underflow error is generated."]
+        #[doc = "No receive underflow has occurred."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "A receive underflow error is generated."]
+        #[doc = "A receive underflow has occurred."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Toirq_SPEC;
     pub type Toirq = crate::EnumBitfieldStruct<u8, Toirq_SPEC>;
     impl Toirq {
-        #[doc = "No transmit overflow error is generated."]
+        #[doc = "No transmit overflow has occurred."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "A transmit overflow error is generated."]
+        #[doc = "A transmit overflow has occurred."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tuirq_SPEC;
     pub type Tuirq = crate::EnumBitfieldStruct<u8, Tuirq_SPEC>;
     impl Tuirq {
-        #[doc = "No transmit underflow error is generated."]
+        #[doc = "No transmit underflow has occurred."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "A transmit underflow error is generated."]
+        #[doc = "A transmit underflow has occurred."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1173,7 +1263,7 @@ impl Ssifcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Receive Data Full Interrupt Output Enable"]
+    #[doc = "Receive Interrupt Enable NOTE: RXI can be cleared by clearing either the RDF flag (see the description of the RDF bit for details) or RIE bit."]
     #[inline(always)]
     pub fn rie(
         self,
@@ -1199,7 +1289,7 @@ impl Ssifcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Transmit Data Empty Interrupt Output Enable"]
+    #[doc = "Transmit Interrupt Enable NOTE: TXI can be cleared by clearing either the TDE flag (see the description of the TDE bit for details) or TIE bit."]
     #[inline(always)]
     pub fn tie(
         self,
@@ -1225,33 +1315,59 @@ impl Ssifcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Byte Swap Enable"]
+    #[doc = "Receive Data Trigger Number"]
     #[inline(always)]
-    pub fn bsw(
+    pub fn rtrg(
         self,
     ) -> crate::common::RegisterField<
-        11,
-        0x1,
+        4,
+        0x3,
         1,
         0,
-        ssifcr::Bsw,
-        ssifcr::Bsw,
+        ssifcr::Rtrg,
+        ssifcr::Rtrg,
         Ssifcr_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
-            11,
-            0x1,
+            4,
+            0x3,
             1,
             0,
-            ssifcr::Bsw,
-            ssifcr::Bsw,
+            ssifcr::Rtrg,
+            ssifcr::Rtrg,
             Ssifcr_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
 
-    #[doc = "Software Reset"]
+    #[doc = "Transmit Data Trigger Number NOTE: The values in parenthesis are the number of empty stages in SSIFTDR at which the TDE flag is set."]
+    #[inline(always)]
+    pub fn ttrg(
+        self,
+    ) -> crate::common::RegisterField<
+        6,
+        0x3,
+        1,
+        0,
+        ssifcr::Ttrg,
+        ssifcr::Ttrg,
+        Ssifcr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            6,
+            0x3,
+            1,
+            0,
+            ssifcr::Ttrg,
+            ssifcr::Ttrg,
+            Ssifcr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "SSI soft ware reset"]
     #[inline(always)]
     pub fn ssirst(
         self,
@@ -1277,7 +1393,16 @@ impl Ssifcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "AUDIO_MCK Enable in Mastermode Communication"]
+    #[doc = "These bits are read as 00000000000000. The write value should be 00000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<17, 0x3fff, 1, 0, u16, u16, Ssifcr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<17,0x3fff,1,0,u16,u16,Ssifcr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "Oversampling Clock Enable"]
     #[inline(always)]
     pub fn aucke(
         self,
@@ -1315,70 +1440,92 @@ pub mod ssifcr {
     pub struct Rfrst_SPEC;
     pub type Rfrst = crate::EnumBitfieldStruct<u8, Rfrst_SPEC>;
     impl Rfrst {
-        #[doc = "Clears a receive data FIFO reset condition"]
+        #[doc = "Clears the receive data FIFO reset."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Sets a receive data FIFO reset condition"]
+        #[doc = "Initiates the receive data FIFO reset."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tfrst_SPEC;
     pub type Tfrst = crate::EnumBitfieldStruct<u8, Tfrst_SPEC>;
     impl Tfrst {
-        #[doc = "Clears a transmit data FIFO reset condition"]
+        #[doc = "Clears the transmit data FIFO reset."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Sets a transmit data FIFO reset condition"]
+        #[doc = "Initiates the transmit data FIFO reset."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rie_SPEC;
     pub type Rie = crate::EnumBitfieldStruct<u8, Rie_SPEC>;
     impl Rie {
-        #[doc = "Disables receive data full interrupts"]
+        #[doc = "Receive data full interrupt (RXI) request is disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enables receive data full interrupts"]
+        #[doc = "Receive data full interrupt (RXI) request is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tie_SPEC;
     pub type Tie = crate::EnumBitfieldStruct<u8, Tie_SPEC>;
     impl Tie {
-        #[doc = "Disables transmit data empty interrupts"]
+        #[doc = "Transmit data empty interrupt (TXI) request is disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enables transmit data empty interrupts"]
+        #[doc = "Transmit data empty interrupt (TXI) request is enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Bsw_SPEC;
-    pub type Bsw = crate::EnumBitfieldStruct<u8, Bsw_SPEC>;
-    impl Bsw {
-        #[doc = "Disables byte swap"]
-        pub const _0: Self = Self::new(0);
+    pub struct Rtrg_SPEC;
+    pub type Rtrg = crate::EnumBitfieldStruct<u8, Rtrg_SPEC>;
+    impl Rtrg {
+        #[doc = "1"]
+        pub const _00: Self = Self::new(0);
 
-        #[doc = "Enables byte swap"]
-        pub const _1: Self = Self::new(1);
+        #[doc = "2"]
+        pub const _01: Self = Self::new(1);
+
+        #[doc = "4"]
+        pub const _10: Self = Self::new(2);
+
+        #[doc = "6"]
+        pub const _11: Self = Self::new(3);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Ttrg_SPEC;
+    pub type Ttrg = crate::EnumBitfieldStruct<u8, Ttrg_SPEC>;
+    impl Ttrg {
+        #[doc = "7 (1)"]
+        pub const _00: Self = Self::new(0);
+
+        #[doc = "6 (2)"]
+        pub const _01: Self = Self::new(1);
+
+        #[doc = "4 (4)"]
+        pub const _10: Self = Self::new(2);
+
+        #[doc = "2 (6)"]
+        pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ssirst_SPEC;
     pub type Ssirst = crate::EnumBitfieldStruct<u8, Ssirst_SPEC>;
     impl Ssirst {
-        #[doc = "Clears a software reset condition"]
+        #[doc = "Clears the SSI software reset."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Sets a software reset condition"]
+        #[doc = "initiates the SSI software reset."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aucke_SPEC;
     pub type Aucke = crate::EnumBitfieldStruct<u8, Aucke_SPEC>;
     impl Aucke {
-        #[doc = "Disables supply of AUDIO_MCK"]
+        #[doc = "The oversampling clock is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enables supply of AUDIO_MCK"]
+        #[doc = "The oversampling clock is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1393,7 +1540,7 @@ impl crate::sealed::RegSpec for Ssifsr_SPEC {
 pub type Ssifsr = crate::RegValueT<Ssifsr_SPEC>;
 
 impl Ssifsr {
-    #[doc = "Receive Data Full Flag"]
+    #[doc = "Receive Data Full Flag NOTE:  Since the SSIFRDR register is a 32-byte FIFO register, the maximum number of data bytes that can be read from it while the RDF flag is 1 is indicated in the RDC\\[3:0\\] flags. If reading data from the SSIFRDR register is continued after all the data is read, undefined values will be read."]
     #[inline(always)]
     pub fn rdf(
         self,
@@ -1419,15 +1566,15 @@ impl Ssifsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Receive Data Count"]
+    #[doc = "Receive Data Indicate Flag(Indicates the number of data units stored in SSIFRDR)"]
     #[inline(always)]
     pub fn rdc(
         self,
-    ) -> crate::common::RegisterField<8, 0x3f, 1, 0, u8, u8, Ssifsr_SPEC, crate::common::R> {
-        crate::common::RegisterField::<8,0x3f,1,0,u8,u8,Ssifsr_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<8, 0xf, 1, 0, u8, u8, Ssifsr_SPEC, crate::common::R> {
+        crate::common::RegisterField::<8,0xf,1,0,u8,u8,Ssifsr_SPEC,crate::common::R>::from_register(self,0)
     }
 
-    #[doc = "Transmit Data Empty Flag"]
+    #[doc = "Transmit Data Empty Flag NOTE: Since the SSIFTDR register is a 32-byte FIFO register, the maximum number of bytes that can be written to it while the TDE flag is 1 is 8 - TDC\\[3:0\\]. If writing data to the SSIFTDR register is continued after all the data is written, writing will be invalid and an overflow occurs."]
     #[inline(always)]
     pub fn tde(
         self,
@@ -1453,12 +1600,20 @@ impl Ssifsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Transmit Data Count"]
+    #[doc = "Transmit Data Indicate Flag(Indicates the number of data units stored in SSIFTDR)"]
     #[inline(always)]
     pub fn tdc(
         self,
-    ) -> crate::common::RegisterField<24, 0x3f, 1, 0, u8, u8, Ssifsr_SPEC, crate::common::R> {
-        crate::common::RegisterField::<24,0x3f,1,0,u8,u8,Ssifsr_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<24, 0xf, 1, 0, u8, u8, Ssifsr_SPEC, crate::common::R> {
+        crate::common::RegisterField::<24,0xf,1,0,u8,u8,Ssifsr_SPEC,crate::common::R>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<28, 0xf, 1, 0, u8, u8, Ssifsr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<28,0xf,1,0,u8,u8,Ssifsr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Ssifsr {
@@ -1473,20 +1628,20 @@ pub mod ssifsr {
     pub struct Rdf_SPEC;
     pub type Rdf = crate::EnumBitfieldStruct<u8, Rdf_SPEC>;
     impl Rdf {
-        #[doc = "The size of received data in SSIFRDR is not more than the value of SSISCR.RDFS."]
+        #[doc = "Number of received data bytes in SSIFRDR is less than the set receive trigger number."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "The size of received data in SSIFRDR is not less than the value of SSISCR.RDFS plus one."]
+        #[doc = "Number of received data bytes in SSIFRDR is equal to or greater than the set receive trigger number."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tde_SPEC;
     pub type Tde = crate::EnumBitfieldStruct<u8, Tde_SPEC>;
     impl Tde {
-        #[doc = "The free space of SSIFTDR is not more than the value of SSISCR.TDES."]
+        #[doc = "Number of data bytes for transmission in SSIFTDR is greater than the set transmit trigger number."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "The free space of SSIFTDR is not less than the value of SSISCR.TDES plus one."]
+        #[doc = "Number of data bytes for transmission in SSIFTDR is equal to or less than the set transmit trigger number."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1501,7 +1656,7 @@ impl crate::sealed::RegSpec for Ssiftdr_SPEC {
 pub type Ssiftdr = crate::RegValueT<Ssiftdr_SPEC>;
 
 impl Ssiftdr {
-    #[doc = "Transmit FIFO Data"]
+    #[doc = "SSIFTDR is a write-only FIFO register consisting of eight stages of 32-bit registers for storing data to be serially transmitted.  NOTE: that when the SSIFTDR register is full of data (32 bytes), the next data cannot be written to it. If writing is attempted, it will be ignored and an overflow occurs."]
     #[inline(always)]
     pub fn ssiftdr(
         self,
@@ -1528,7 +1683,7 @@ impl crate::sealed::RegSpec for Ssifrdr_SPEC {
 pub type Ssifrdr = crate::RegValueT<Ssifrdr_SPEC>;
 
 impl Ssifrdr {
-    #[doc = "Receive FIFO Data"]
+    #[doc = "SSIFRDR is a read-only FIFO register consisting of eight stages of 32-bit registers for storing serially received data."]
     #[inline(always)]
     pub fn ssifrdr(
         self,
@@ -1632,6 +1787,15 @@ impl Ssiofr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Ssiofr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Ssiofr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Ssiofr {
     #[inline(always)]
@@ -1654,27 +1818,27 @@ pub mod ssiofr {
         #[doc = "Monaural format"]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "Setting prohibited"]
+        #[doc = "Setting prohibited."]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lrcont_SPEC;
     pub type Lrcont = crate::EnumBitfieldStruct<u8, Lrcont_SPEC>;
     impl Lrcont {
-        #[doc = "Disables LRCK/FS continuation"]
+        #[doc = "Disables LRCK/FS continuation."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enables LRCK/FS continuation"]
+        #[doc = "Enables LRCK/FS continuation."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bckastp_SPEC;
     pub type Bckastp = crate::EnumBitfieldStruct<u8, Bckastp_SPEC>;
     impl Bckastp {
-        #[doc = "Always outputs BCK to the SSIBCKn (n = 0, 1) pin"]
+        #[doc = "Always outputs BCK to the SSIBCK pin."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Automatically controls output of BCK to the SSIBCKn (n = 0, 1) pin"]
+        #[doc = "Automatically controls output of BCK to the SSIBCK pin."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1693,21 +1857,101 @@ impl Ssiscr {
     #[inline(always)]
     pub fn rdfs(
         self,
-    ) -> crate::common::RegisterField<0, 0x1f, 1, 0, u8, u8, Ssiscr_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0x1f,1,0,u8,u8,Ssiscr_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x1f,
+        1,
+        0,
+        ssiscr::Rdfs,
+        ssiscr::Rdfs,
+        Ssiscr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x1f,
+            1,
+            0,
+            ssiscr::Rdfs,
+            ssiscr::Rdfs,
+            Ssiscr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
     #[doc = "TDE Setting Condition Select"]
     #[inline(always)]
     pub fn tdes(
         self,
-    ) -> crate::common::RegisterField<8, 0x1f, 1, 0, u8, u8, Ssiscr_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<8,0x1f,1,0,u8,u8,Ssiscr_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        8,
+        0x1f,
+        1,
+        0,
+        ssiscr::Tdes,
+        ssiscr::Tdes,
+        Ssiscr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            8,
+            0x1f,
+            1,
+            0,
+            ssiscr::Tdes,
+            ssiscr::Tdes,
+            Ssiscr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Ssiscr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Ssiscr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Ssiscr {
     #[inline(always)]
     fn default() -> Ssiscr {
         <crate::RegValueT<Ssiscr_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+pub mod ssiscr {
+
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Rdfs_SPEC;
+    pub type Rdfs = crate::EnumBitfieldStruct<u8, Rdfs_SPEC>;
+    impl Rdfs {
+        #[doc = "SSIFRDR has one stage or more data size"]
+        pub const _00000: Self = Self::new(0);
+
+        #[doc = "SSIFRDR has two stages or more data size (snip)"]
+        pub const _00001: Self = Self::new(1);
+
+        #[doc = "SSIFRDR has thirty-one stages or more data size"]
+        pub const _11110: Self = Self::new(30);
+
+        #[doc = "SSIFRDR has thirty-two stages or more data size."]
+        pub const _11111: Self = Self::new(31);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Tdes_SPEC;
+    pub type Tdes = crate::EnumBitfieldStruct<u8, Tdes_SPEC>;
+    impl Tdes {
+        #[doc = "SSIFTDR has one stage or more free space"]
+        pub const _00000: Self = Self::new(0);
+
+        #[doc = "SSIFTDR has two stages or more free space (snip)"]
+        pub const _00001: Self = Self::new(1);
+
+        #[doc = "SSIFTDR has thirty-one stages or more free space"]
+        pub const _11110: Self = Self::new(30);
+
+        #[doc = "SSIFTDR has thirty-two stages or more free space."]
+        pub const _11111: Self = Self::new(31);
     }
 }

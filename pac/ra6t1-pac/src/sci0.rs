@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.0, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:24 +0000
+// Generated from SVD 1.0, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:14:52 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -983,9 +983,6 @@ pub mod scr {
 
         #[doc = "The clock with the same frequency as the bit rate is output from the SCKn pin.(Asynchronous mode) / The SCKn pin functions as the clock output pin(Clock synchronous mode)"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "The clock with a frequency 16 times the bit rate should be input from the SCKn pin. (when SEMR.ABCS bit is 0) Input a clock signal with a frequency 8 times the bit rate when the SEMR.ABCS bit is 1.(Asynchronous mode) / The SCKn pin functions as the clock input pin(Clock synchronous mode)"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2537,9 +2534,6 @@ pub mod snfr {
 
         #[doc = "The clock signal divided by 8 is used with the noise filter.(In simple I2C mode)"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Settings prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2627,9 +2621,6 @@ pub mod simr1 {
     impl Iicdl {
         #[doc = "No output delay"]
         pub const _00000: Self = Self::new(0);
-
-        #[doc = "(IICDL - 1 ) to IIDCDL cycles. The delay is in the clock cycles from the on-chip baud rate generator."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Iicm_SPEC;
@@ -4495,9 +4486,6 @@ pub mod fcr {
     impl Rstrg {
         #[doc = "Trigger number 0"]
         pub const _0000: Self = Self::new(0);
-
-        #[doc = "Triger number n (n= 0-15)"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rtrg_SPEC;
@@ -4505,9 +4493,6 @@ pub mod fcr {
     impl Rtrg {
         #[doc = "Trigger number 0"]
         pub const _0000: Self = Self::new(0);
-
-        #[doc = "Triger number n (n= 0-15)"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ttrg_SPEC;
@@ -4515,9 +4500,6 @@ pub mod fcr {
     impl Ttrg {
         #[doc = "Trigger number 0"]
         pub const _0000: Self = Self::new(0);
-
-        #[doc = "Triger number n (n= 0-15)"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dres_SPEC;

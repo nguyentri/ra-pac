@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.50.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:54 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:07:45 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -949,9 +949,6 @@ pub mod scr {
 
         #[doc = "In asynchronous mode, a clock with the same frequency as the bit rate is output from the SCKn pin. In clock synchronous mode, the SCKn pin functions as the clock output pin."]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "In asynchronous mode, input a clock with a frequency 16 times the bit rate from the SCKn pin when the SEMR.ABCS bit is 0. Input a clock signal with a frequency eight times the bit rate when the SEMR.ABCS bit is 1. The SCKn pin is available for use as an I/O port based on the I/O port settings when the GPT clock is used. In clock synchronous mode, the SCKn pin functions as the clock input pin."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Teie_SPEC;
@@ -2724,7 +2721,7 @@ pub mod semr {
         #[doc = "External clock input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Logical AND of compare matches output from the internal GPT. These bits for the other SCI channels than SCIn (n = 1, 2) are reserved."]
+        #[doc = "Logical AND of compare matches output from the internal GPT. These bit for the other SCI channels than SCIn (n = 1, 2) are reserved."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -2861,9 +2858,6 @@ pub mod snfr {
 
         #[doc = "In asynchronous mode: Setting prohibited In simple I2C mode: Use clock signal divided by 8 with noise filter"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2953,9 +2947,6 @@ pub mod simr1 {
     impl Iicdl {
         #[doc = "No output delay"]
         pub const _0_X_00: Self = Self::new(0);
-
-        #[doc = "(IICDL - 1) to (IICDL) cycles"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -3864,14 +3855,6 @@ impl crate::sealed::RegSpec for Ftdrh_SPEC {
 pub type Ftdrh = crate::RegValueT<Ftdrh_SPEC>;
 
 impl Ftdrh {
-    #[doc = "Serial transmit data"]
-    #[inline(always)]
-    pub fn tdat(self) -> crate::common::RegisterFieldBool<0, 1, 0, Ftdrh_SPEC, crate::common::W> {
-        crate::common::RegisterFieldBool::<0, 1, 0, Ftdrh_SPEC, crate::common::W>::from_register(
-            self, 0,
-        )
-    }
-
     #[doc = "Multi-Processor Transfer Bit Flag"]
     #[inline(always)]
     pub fn mpbt(
@@ -4325,14 +4308,6 @@ impl crate::sealed::RegSpec for Frdrh_SPEC {
 pub type Frdrh = crate::RegValueT<Frdrh_SPEC>;
 
 impl Frdrh {
-    #[doc = "Serial receive data"]
-    #[inline(always)]
-    pub fn rdat(self) -> crate::common::RegisterFieldBool<0, 1, 0, Frdrh_SPEC, crate::common::R> {
-        crate::common::RegisterFieldBool::<0, 1, 0, Frdrh_SPEC, crate::common::R>::from_register(
-            self, 0,
-        )
-    }
-
     #[doc = "Multi-Processor Bit Flag"]
     #[inline(always)]
     pub fn mpb(
@@ -5753,9 +5728,6 @@ pub mod tmpr {
     impl Tplen {
         #[doc = "Disables the transmit preface generation"]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "Transmit preface length (bit length)"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tppat_SPEC;
@@ -5851,9 +5823,6 @@ pub mod rmpr {
     impl Rplen {
         #[doc = "Disables the receive preface generation"]
         pub const _0: Self = Self::new(0);
-
-        #[doc = "Receive preface length (bit length)"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rppat_SPEC;

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:57:20 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -1449,26 +1449,8 @@ impl Buswait {
     #[inline(always)]
     pub fn bwait(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0xf,
-        1,
-        0,
-        buswait::Bwait,
-        buswait::Bwait,
-        Buswait_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0xf,
-            1,
-            0,
-            buswait::Bwait,
-            buswait::Bwait,
-            Buswait_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, Buswait_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,Buswait_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "These bits are read as 000000000000. The write value should be 000000000000."]
@@ -1486,16 +1468,7 @@ impl ::core::default::Default for Buswait {
         <crate::RegValueT<Buswait_SPEC> as RegisterValue<_>>::new(15)
     }
 }
-pub mod buswait {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Bwait_SPEC;
-    pub type Bwait = crate::EnumBitfieldStruct<u8, Bwait_SPEC>;
-    impl Bwait {
-        #[doc = "BWAIT wait(s) ( BWAIT + 2 access cycles )"]
-        pub const BWAIT: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Syssts0_SPEC;
@@ -1989,9 +1962,6 @@ pub mod dvstctr0 {
 
         #[doc = "Setting prohibited"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "USB bus reset in progress(When the host controller function is selected)"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uact_SPEC;
@@ -2671,9 +2641,6 @@ pub mod cfifosel {
 
         #[doc = "PIPE9"]
         pub const _1001: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Isel_SPEC;
@@ -3119,9 +3086,6 @@ pub mod d0fifosel {
 
         #[doc = "Pipe 9"]
         pub const _1001: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bigend_SPEC;
@@ -3577,9 +3541,6 @@ pub mod d1fifosel {
 
         #[doc = "Pipe 9"]
         pub const _1001: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bigend_SPEC;
@@ -5539,9 +5500,6 @@ pub mod intsts0 {
 
         #[doc = "Configured state"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "Suspended state(1xx)"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vbsts_SPEC;
@@ -6482,9 +6440,6 @@ pub mod usbaddr {
 
         #[doc = "Return to the high-speed state (bits DVSTCTR0.RHST\\[2:0\\] = 011b), bits INTSTS0.DVSQ\\[2:0\\] = 011b (Configured state)(function controller selected)"]
         pub const _111: Self = Self::new(7);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -6820,9 +6775,6 @@ pub mod dcpmaxp {
 
         #[doc = "Address 0101"]
         pub const _0101: Self = Self::new(5);
-
-        #[doc = "setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -7378,9 +7330,6 @@ pub mod pipesel {
 
         #[doc = "PIPE9"]
         pub const _1001: Self = Self::new(9);
-
-        #[doc = "setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -7598,9 +7547,6 @@ pub mod pipecfg {
     impl Epnum {
         #[doc = "the selected pipe is not used"]
         pub const _000: Self = Self::new(0);
-
-        #[doc = "specify the endpoint number for the selected pipe."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dir_SPEC;
@@ -7684,52 +7630,16 @@ impl Pipebuf {
     #[inline(always)]
     pub fn bufnmb(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0xff,
-        1,
-        0,
-        pipebuf::Bufnmb,
-        pipebuf::Bufnmb,
-        Pipebuf_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0xff,
-            1,
-            0,
-            pipebuf::Bufnmb,
-            pipebuf::Bufnmb,
-            Pipebuf_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, Pipebuf_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<0,0xff,1,0,u8,u8,Pipebuf_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Buffer Size    00h: 64 bytes    01h: 128 bytes      :    1Fh: 2 Kbytes"]
     #[inline(always)]
     pub fn bufsize(
         self,
-    ) -> crate::common::RegisterField<
-        10,
-        0x1f,
-        1,
-        0,
-        pipebuf::Bufsize,
-        pipebuf::Bufsize,
-        Pipebuf_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            10,
-            0x1f,
-            1,
-            0,
-            pipebuf::Bufsize,
-            pipebuf::Bufsize,
-            Pipebuf_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<10, 0x1f, 1, 0, u8, u8, Pipebuf_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<10,0x1f,1,0,u8,u8,Pipebuf_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "This bit is read as 0. The write value should be 0."]
@@ -7748,23 +7658,7 @@ impl ::core::default::Default for Pipebuf {
         <crate::RegValueT<Pipebuf_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod pipebuf {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Bufnmb_SPEC;
-    pub type Bufnmb = crate::EnumBitfieldStruct<u8, Bufnmb_SPEC>;
-    impl Bufnmb {
-        #[doc = "specify the FIFO buffer number of the selected pipe (04h to 87h)."]
-        pub const BUFNMB: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Bufsize_SPEC;
-    pub type Bufsize = crate::EnumBitfieldStruct<u8, Bufsize_SPEC>;
-    impl Bufsize {
-        #[doc = "( BUFSIZE + 1 ) x 64 kbytes"]
-        pub const BUFSIZE: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pipemaxp_SPEC;
@@ -7780,26 +7674,9 @@ impl Pipemaxp {
     #[inline(always)]
     pub fn mxps(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x7ff,
-        1,
-        0,
-        pipemaxp::Mxps,
-        pipemaxp::Mxps,
-        Pipemaxp_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x7ff,
-            1,
-            0,
-            pipemaxp::Mxps,
-            pipemaxp::Mxps,
-            Pipemaxp_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, Pipemaxp_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7ff,1,0,u16,u16,Pipemaxp_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "This bit is read as 0. The write value should be 0."]
@@ -7814,26 +7691,8 @@ impl Pipemaxp {
     #[inline(always)]
     pub fn devsel(
         self,
-    ) -> crate::common::RegisterField<
-        12,
-        0xf,
-        1,
-        0,
-        pipemaxp::Devsel,
-        pipemaxp::Devsel,
-        Pipemaxp_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            12,
-            0xf,
-            1,
-            0,
-            pipemaxp::Devsel,
-            pipemaxp::Devsel,
-            Pipemaxp_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<12, 0xf, 1, 0, u8, u8, Pipemaxp_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<12,0xf,1,0,u8,u8,Pipemaxp_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Pipemaxp {
@@ -7842,23 +7701,7 @@ impl ::core::default::Default for Pipemaxp {
         <crate::RegValueT<Pipemaxp_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod pipemaxp {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Mxps_SPEC;
-    pub type Mxps = crate::EnumBitfieldStruct<u8, Mxps_SPEC>;
-    impl Mxps {
-        #[doc = "Maximum packet size"]
-        pub const MXPS: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Devsel_SPEC;
-    pub type Devsel = crate::EnumBitfieldStruct<u8, Devsel_SPEC>;
-    impl Devsel {
-        #[doc = "Address=DEVSEL"]
-        pub const DEVSEL: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pipeperi_SPEC;
@@ -8619,9 +8462,6 @@ pub mod devadd {
     impl Hubport {
         #[doc = "Directly connected to the port of the USBHS."]
         pub const _000: Self = Self::new(0);
-
-        #[doc = "Port number of the hub"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Upphub_SPEC;
@@ -8629,9 +8469,6 @@ pub mod devadd {
     impl Upphub {
         #[doc = "Directly connected to the port of the USBHS."]
         pub const _0000: Self = Self::new(0);
-
-        #[doc = "USB address of the hub"]
-        pub const UPPHUB: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -8763,9 +8600,6 @@ pub mod devadda {
     impl Hubport {
         #[doc = "Directly connected to the port of the USBHS."]
         pub const _000: Self = Self::new(0);
-
-        #[doc = "Port number of the hub"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Upphub_SPEC;
@@ -8773,9 +8607,6 @@ pub mod devadda {
     impl Upphub {
         #[doc = "Directly connected to the port of the USBHS."]
         pub const _0000: Self = Self::new(0);
-
-        #[doc = "USB address of the hub"]
-        pub const UPPHUB: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -9464,9 +9295,6 @@ pub mod pl1ctrl1 {
 
         #[doc = "L1 state"]
         pub const _1011: Self = Self::new(11);
-
-        #[doc = "setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct L1Extmd_SPEC;

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.0, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:50:19 +0000
+// Generated from SVD 1.0, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:09:02 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -8626,9 +8626,6 @@ pub mod prcr {
     impl Prkey {
         #[doc = "Enables writing to the PRCR register."]
         pub const _0_X_5_A: Self = Self::new(90);
-
-        #[doc = "Disables writing to the PRCR register."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Prc3_SPEC;
@@ -10196,9 +10193,6 @@ pub mod psmcr {
 
         #[doc = "48KB RAM is on in Software Standby mode."]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -10806,9 +10800,6 @@ pub mod sckdivcr {
 
         #[doc = "/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ick_SPEC;
@@ -10834,9 +10825,6 @@ pub mod sckdivcr {
 
         #[doc = "/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bck_SPEC;
@@ -10862,9 +10850,6 @@ pub mod sckdivcr {
 
         #[doc = "/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcka_SPEC;
@@ -10890,9 +10875,6 @@ pub mod sckdivcr {
 
         #[doc = "/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pckb_SPEC;
@@ -10918,9 +10900,6 @@ pub mod sckdivcr {
 
         #[doc = "/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pckc_SPEC;
@@ -10946,9 +10925,6 @@ pub mod sckdivcr {
 
         #[doc = "/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pckd_SPEC;
@@ -10974,9 +10950,6 @@ pub mod sckdivcr {
 
         #[doc = "/64"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -11053,9 +11026,6 @@ pub mod sckscr {
 
         #[doc = "PLL"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -11225,9 +11195,6 @@ pub mod pllccr2 {
     impl Pllmul {
         #[doc = "Settings prohibited."]
         pub const _1111: Self = Self::new(15);
-
-        #[doc = "x PLLMUL\\[4:0\\] +1"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -11849,9 +11816,6 @@ pub mod ckocr {
 
         #[doc = "SOSC"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -11955,9 +11919,6 @@ pub mod trckcr {
 
         #[doc = "/4"]
         pub const _0010: Self = Self::new(2);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -12228,9 +12189,6 @@ pub mod slcdsckcr {
 
         #[doc = "HOCO"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Settings other than above are prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -12435,9 +12393,6 @@ pub mod moscwtcr {
 
         #[doc = "Wait time = 262144 cycles (32768 us)."]
         pub const _1001: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -12502,9 +12457,6 @@ pub mod hocowtcr {
 
         #[doc = "If HOCO frequency = 64MHz, should set the value to 110b."]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -12957,9 +12909,6 @@ pub mod bkracr {
 
         #[doc = "Access control enable. System clock source is other than SOSC or LOCO."]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -13148,9 +13097,6 @@ pub mod lvdlvlr {
 
         #[doc = "3.84V (Vdet2_3)"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "Setting prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lvd1Lvl_SPEC;
@@ -13203,9 +13149,6 @@ pub mod lvdlvlr {
 
         #[doc = "1.65V (Vdet1_F)"]
         pub const _01111: Self = Self::new(15);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

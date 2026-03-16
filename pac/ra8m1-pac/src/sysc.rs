@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:57:20 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -8672,9 +8672,6 @@ pub mod opccr {
 
         #[doc = "Low-speed mode"]
         pub const _11: Self = Self::new(3);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Opcmtsf_SPEC;
@@ -12869,9 +12866,6 @@ pub mod prcr_s {
     impl Prkey {
         #[doc = "Enables writing to the PRCR_S register."]
         pub const _0_X_A_5: Self = Self::new(165);
-
-        #[doc = "Disables writing to the PRCR_S register."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -13079,9 +13073,6 @@ pub mod prcr_ns {
     impl Prkey {
         #[doc = "Enables writing to the PRCR_NS register."]
         pub const _0_X_A_5: Self = Self::new(165);
-
-        #[doc = "Disables writing to the PRCR_NS register."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -13417,9 +13408,6 @@ pub mod dpswcr {
 
         #[doc = "Wait cycle for slow recovery"]
         pub const _0_X_9_A: Self = Self::new(154);
-
-        #[doc = ": Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

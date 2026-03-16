@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.50.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:54 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:07:45 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -199,7 +199,7 @@ impl crate::sealed::RegSpec for Sfmsmd_SPEC {
 pub type Sfmsmd = crate::RegValueT<Sfmsmd_SPEC>;
 
 impl Sfmsmd {
-    #[doc = "Serial interface read mode selection"]
+    #[doc = "Serial interface read mode select"]
     #[inline(always)]
     pub fn sfmrm(
         self,
@@ -225,7 +225,7 @@ impl Sfmsmd {
         >::from_register(self, 0)
     }
 
-    #[doc = "QSSL extension function selection after SPI bus access"]
+    #[doc = "QSSL extension function select after SPI bus access"]
     #[inline(always)]
     pub fn sfmse(
         self,
@@ -251,7 +251,7 @@ impl Sfmsmd {
         >::from_register(self, 0)
     }
 
-    #[doc = "Prefetch function selection"]
+    #[doc = "Prefetch function select"]
     #[inline(always)]
     pub fn sfmpfe(
         self,
@@ -277,7 +277,7 @@ impl Sfmsmd {
         >::from_register(self, 0)
     }
 
-    #[doc = "Function selection for stopping prefetch at locations other than on byte boundaries"]
+    #[doc = "Function select for stopping prefetch at locations other than on byte boundaries"]
     #[inline(always)]
     pub fn sfmpae(
         self,
@@ -303,7 +303,7 @@ impl Sfmsmd {
         >::from_register(self, 0)
     }
 
-    #[doc = "SPI mode selection"]
+    #[doc = "SPI mode select."]
     #[inline(always)]
     pub fn sfmmd3(
         self,
@@ -329,7 +329,7 @@ impl Sfmsmd {
         >::from_register(self, 0)
     }
 
-    #[doc = "Extension selection for the I/O buffer output enable signal for the serial interface"]
+    #[doc = "Extension select for the I/O buffer output enable signal for the serial interface"]
     #[inline(always)]
     pub fn sfmoex(
         self,
@@ -407,7 +407,7 @@ impl Sfmsmd {
         >::from_register(self, 0)
     }
 
-    #[doc = "Read instruction code selection"]
+    #[doc = "Read instruction code select"]
     #[inline(always)]
     pub fn sfmcce(
         self,
@@ -462,9 +462,6 @@ pub mod sfmsmd {
 
         #[doc = "Fast Read Quad I/O"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sfmse_SPEC;
@@ -1062,9 +1059,6 @@ pub mod sfmsst {
 
         #[doc = "18 bytes"]
         pub const _0_X_12: Self = Self::new(18);
-
-        #[doc = "Reserved"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pfful_SPEC;
@@ -1124,7 +1118,7 @@ impl crate::sealed::RegSpec for Sfmcmd_SPEC {
 pub type Sfmcmd = crate::RegValueT<Sfmcmd_SPEC>;
 
 impl Sfmcmd {
-    #[doc = "Mode selection for communication with the SPI bus"]
+    #[doc = "Mode select for communication with the SPI bus"]
     #[inline(always)]
     pub fn dcom(
         self,

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.40.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:37 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:02:12 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -4046,9 +4046,6 @@ pub mod nqthctl {
     impl Cmdqth {
         #[doc = "Interrupt is issued when Command Queue is completely empty."]
         pub const _0_X_00: Self = Self::new(0);
-
-        #[doc = "Interrupt is issued when Command Queue contains N empties. (N = CMDQTH\\[7:0\\])"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqth_SPEC;
@@ -4056,9 +4053,6 @@ pub mod nqthctl {
     impl Rspqth {
         #[doc = "Interrupt is issued when Response Queue contains 1 entry (DWORD)."]
         pub const _0_X_00: Self = Self::new(0);
-
-        #[doc = "Interrupt is triggered when Response Queue contains N+1 entries (DWORD). (N = CMDQTH\\[7:0\\])"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ibiqth_SPEC;
@@ -4066,9 +4060,6 @@ pub mod nqthctl {
     impl Ibiqth {
         #[doc = "I3C Protocol mode (Master): Interrupt is generated when the Outstanding IBI Status count is 1 or more. I3C Protocol mode (Slave): Interrupt is issued when IBI Data Buffer is completely empty."]
         pub const _0_X_00: Self = Self::new(0);
-
-        #[doc = "I3C Protocol mode (Master): Interrupt is generated when the Outstanding IBI Status count is N + 1 or more. (N = CMDQTH\\[7:0\\]) I3C Protocol mode (Slave): Interrupt is issued when IBI Data Buffer contains N empties."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -4203,9 +4194,6 @@ pub mod ntbthctl0 {
 
         #[doc = "Reserved"]
         pub const _001: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rxdbth_SPEC;
@@ -4216,9 +4204,6 @@ pub mod ntbthctl0 {
 
         #[doc = "Reserved"]
         pub const _001: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txstth_SPEC;
@@ -4229,9 +4214,6 @@ pub mod ntbthctl0 {
 
         #[doc = "Reserved"]
         pub const _001: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rxstth_SPEC;
@@ -4242,9 +4224,6 @@ pub mod ntbthctl0 {
 
         #[doc = "Reserved"]
         pub const _001: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -4298,9 +4277,6 @@ pub mod nrqthctl {
     impl Rsqth {
         #[doc = "Interrupt is issued when Receive Status Queue contains 1 entry (DWORD)."]
         pub const _0_X_00: Self = Self::new(0);
-
-        #[doc = "Interrupt is triggered when Receive Status Queue contains N+1 entries (DWORD). (N = RSQTH\\[7:0\\])"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -7511,9 +7487,6 @@ pub mod msdct {
 
         #[doc = "I3C Master"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -8091,9 +8064,6 @@ pub mod ceactst {
 
         #[doc = "ENTAS3 (50 ms: Lowest-activity operation)"]
         pub const _0_X_8: Self = Self::new(8);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -8212,9 +8182,6 @@ pub mod cetstmd {
 
         #[doc = "Vendor Test Mode This value indicates that I3C devices shall return a random 32bit value in the provisional ID during the Dynamic Address Assignment procedure."]
         pub const _0_X_01: Self = Self::new(1);
-
-        #[doc = "MIPI reserved Reserved for future use by the MIPI Alliance"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -8394,9 +8361,6 @@ pub mod cmdspw {
 
         #[doc = "2 MHz"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -8488,9 +8452,6 @@ pub mod cmdspr {
 
         #[doc = "2 MHz"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cdttim_SPEC;
@@ -8513,9 +8474,6 @@ pub mod cmdspr {
 
         #[doc = "TSCO is more than 12 ns, and is reported by private agreement."]
         pub const _111: Self = Self::new(7);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -8684,9 +8642,6 @@ pub mod cetsm {
 
         #[doc = "63.5 MHz"]
         pub const _0_X_7_F: Self = Self::new(127);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Inac_SPEC;

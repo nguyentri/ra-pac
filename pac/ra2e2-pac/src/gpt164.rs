@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.40.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:37 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:02:12 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -5955,9 +5955,6 @@ pub mod gtcr {
 
         #[doc = "PCLKD/1024"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -6878,9 +6875,6 @@ pub mod gtintad {
 
         #[doc = "Group B output disable request is selected"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Grpabh_SPEC;
@@ -7543,9 +7537,6 @@ pub mod gtber {
 
         #[doc = "Single buffer operation (GTCCRA <---->GTCCRC)"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Double buffer operation (GTCCRA <----> GTCCRC <----> GTCCRD)"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ccrb_SPEC;
@@ -7556,9 +7547,6 @@ pub mod gtber {
 
         #[doc = "Single buffer operation (GTCCRB <----> GTCCRE)"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Double buffer operation (GTCCRB <----> GTCCRE <----> GTCCRF)"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pr_SPEC;
@@ -7569,9 +7557,6 @@ pub mod gtber {
 
         #[doc = "Single buffer operation (GTPBR --> GTPR)"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

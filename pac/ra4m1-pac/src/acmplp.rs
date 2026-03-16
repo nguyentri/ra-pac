@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:18 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:06:30 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -953,9 +953,6 @@ pub mod compsel0 {
 
         #[doc = "CMPIN1 (P501)"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "settings prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpsel20_SPEC;
@@ -969,9 +966,6 @@ pub mod compsel0 {
 
         #[doc = "CMPIN0 (P503)"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "settings prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1106,9 +1100,6 @@ pub mod compsel1 {
 
         #[doc = "CMPREF1 (P500)"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "settings prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Crvs20_SPEC;
@@ -1125,8 +1116,5 @@ pub mod compsel1 {
 
         #[doc = "CMPREF0 (P502)"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "settings prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }

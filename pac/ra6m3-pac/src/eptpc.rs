@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:32 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:12:21 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -3069,9 +3069,6 @@ pub mod stmr {
     impl Dvth {
         #[doc = "None"]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "(DVTH) time"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Syth_SPEC;
@@ -3079,9 +3076,6 @@ pub mod stmr {
     impl Syth {
         #[doc = "None"]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "(SYTH) time"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct W10S_SPEC;
@@ -3109,9 +3103,6 @@ pub mod stmr {
     impl Wint {
         #[doc = "The worst 10 values are not acquired."]
         pub const _0_X_00: Self = Self::new(0);
-
-        #[doc = "Sync message reception: (WINT) time"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -318,7 +318,7 @@ impl super::Gpt320 {
         }
     }
 
-    #[doc = "A/D Conversion Start Request Timing Register A"]
+    #[doc = "A/D Converter Start Request Timing Register A"]
     #[inline(always)]
     pub const fn gtadtra(
         &self,
@@ -330,7 +330,7 @@ impl super::Gpt320 {
         }
     }
 
-    #[doc = "A/D Conversion Start Request Timing Buffer Register A"]
+    #[doc = "A/D Converter Start Request Timing Buffer Register A"]
     #[inline(always)]
     pub const fn gtadtbra(
         &self,
@@ -342,7 +342,7 @@ impl super::Gpt320 {
         }
     }
 
-    #[doc = "A/D Conversion Start Request Timing Double-Buffer Register A"]
+    #[doc = "A/D Converter Start Request Timing Double-Buffer Register A"]
     #[inline(always)]
     pub const fn gtadtdbra(
         &self,
@@ -354,7 +354,7 @@ impl super::Gpt320 {
         }
     }
 
-    #[doc = "A/D Conversion Start Request Timing Register B"]
+    #[doc = "A/D Converter Start Request Timing Register B"]
     #[inline(always)]
     pub const fn gtadtrb(
         &self,
@@ -366,7 +366,7 @@ impl super::Gpt320 {
         }
     }
 
-    #[doc = "A/D Conversion Start Request Timing Buffer Register B"]
+    #[doc = "A/D Converter Start Request Timing Buffer Register B"]
     #[inline(always)]
     pub const fn gtadtbrb(
         &self,
@@ -378,7 +378,7 @@ impl super::Gpt320 {
         }
     }
 
-    #[doc = "A/D Conversion Start Request Timing Double-Buffer Register B"]
+    #[doc = "A/D Converter Start Request Timing Double-Buffer Register B"]
     #[inline(always)]
     pub const fn gtadtdbrb(
         &self,
@@ -490,7 +490,7 @@ impl Gtwp {
         crate::common::RegisterField::<0,0x1,1,0,gtwp::Wp,gtwp::Wp,Gtwp_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "GTSTR.CSTRT Bit Write Disable"]
+    #[doc = "GTSTR.CSTRT Bit Write Disabled"]
     #[inline(always)]
     pub fn strwp(
         self,
@@ -516,7 +516,7 @@ impl Gtwp {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTSTP.CSTOP Bit Write Disable"]
+    #[doc = "GTSTP.CSTOP Bit Write Disabled"]
     #[inline(always)]
     pub fn stpwp(
         self,
@@ -542,7 +542,7 @@ impl Gtwp {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTCLR.CCLR Bit Write Disable"]
+    #[doc = "GTCLR.CCLR Bit Write Disabled"]
     #[inline(always)]
     pub fn clrwp(
         self,
@@ -598,8 +598,35 @@ impl Gtwp {
     #[inline(always)]
     pub fn prkey(
         self,
-    ) -> crate::common::RegisterField<8, 0xff, 1, 0, u8, u8, Gtwp_SPEC, crate::common::W> {
-        crate::common::RegisterField::<8,0xff,1,0,u8,u8,Gtwp_SPEC,crate::common::W>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        8,
+        0xff,
+        1,
+        0,
+        gtwp::Prkey,
+        gtwp::Prkey,
+        Gtwp_SPEC,
+        crate::common::W,
+    > {
+        crate::common::RegisterField::<
+            8,
+            0xff,
+            1,
+            0,
+            gtwp::Prkey,
+            gtwp::Prkey,
+            Gtwp_SPEC,
+            crate::common::W,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Gtwp_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Gtwp_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Gtwp {
@@ -614,10 +641,10 @@ pub mod gtwp {
     pub struct Wp_SPEC;
     pub type Wp = crate::EnumBitfieldStruct<u8, Wp_SPEC>;
     impl Wp {
-        #[doc = "Write to the register enabled"]
+        #[doc = "Enable writes to the register"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Write to the register disabled"]
+        #[doc = "Disable writes to the register"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -660,6 +687,13 @@ pub mod gtwp {
         #[doc = "Write to the register is disabled"]
         pub const _1: Self = Self::new(1);
     }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Prkey_SPEC;
+    pub type Prkey = crate::EnumBitfieldStruct<u8, Prkey_SPEC>;
+    impl Prkey {
+        #[doc = "Written to these bits, the WP bits write is permitted."]
+        pub const _0_X_A_5: Self = Self::new(165);
+    }
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -672,7 +706,7 @@ impl crate::sealed::RegSpec for Gtstr_SPEC {
 pub type Gtstr = crate::RegValueT<Gtstr_SPEC>;
 
 impl Gtstr {
-    #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)"]
+    #[doc = "Channel 0 GTCNT Count StartRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter stop. 1 means counter running."]
     #[inline(always)]
     pub fn cstrt0(
         self,
@@ -698,7 +732,7 @@ impl Gtstr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)"]
+    #[doc = "Channel 1 GTCNT Count StartRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter stop. 1 means counter running."]
     #[inline(always)]
     pub fn cstrt1(
         self,
@@ -724,7 +758,7 @@ impl Gtstr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)"]
+    #[doc = "Channel 2 GTCNT Count StartRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter stop. 1 means counter running."]
     #[inline(always)]
     pub fn cstrt2(
         self,
@@ -750,7 +784,7 @@ impl Gtstr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)"]
+    #[doc = "Channel 3 GTCNT Count StartRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter stop. 1 means counter running."]
     #[inline(always)]
     pub fn cstrt3(
         self,
@@ -776,7 +810,7 @@ impl Gtstr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)"]
+    #[doc = "Channel 4 GTCNT Count StartRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter stop. 1 means counter running."]
     #[inline(always)]
     pub fn cstrt4(
         self,
@@ -802,7 +836,7 @@ impl Gtstr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)"]
+    #[doc = "Channel 5 GTCNT Count StartRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter stop. 1 means counter running."]
     #[inline(always)]
     pub fn cstrt5(
         self,
@@ -828,7 +862,7 @@ impl Gtstr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)"]
+    #[doc = "Channel 6 GTCNT Count StartRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter stop. 1 means counter running."]
     #[inline(always)]
     pub fn cstrt6(
         self,
@@ -854,7 +888,7 @@ impl Gtstr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)"]
+    #[doc = "Channel 7 GTCNT Count StartRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter stop. 1 means counter running."]
     #[inline(always)]
     pub fn cstrt7(
         self,
@@ -880,7 +914,7 @@ impl Gtstr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)"]
+    #[doc = "Channel 8 GTCNT Count StartRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter stop. 1 means counter running."]
     #[inline(always)]
     pub fn cstrt8(
         self,
@@ -906,7 +940,7 @@ impl Gtstr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Start (n : the same as bit position value)"]
+    #[doc = "Channel 9 GTCNT Count StartRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter stop. 1 means counter running."]
     #[inline(always)]
     pub fn cstrt9(
         self,
@@ -931,6 +965,119 @@ impl Gtstr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "Channel 10 GTCNT Count StartRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter stop. 1 means counter running."]
+    #[inline(always)]
+    pub fn cstrt10(
+        self,
+    ) -> crate::common::RegisterField<
+        10,
+        0x1,
+        1,
+        0,
+        gtstr::Cstrt10,
+        gtstr::Cstrt10,
+        Gtstr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            10,
+            0x1,
+            1,
+            0,
+            gtstr::Cstrt10,
+            gtstr::Cstrt10,
+            Gtstr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Channel 11 GTCNT Count StartRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter stop. 1 means counter running."]
+    #[inline(always)]
+    pub fn cstrt11(
+        self,
+    ) -> crate::common::RegisterField<
+        11,
+        0x1,
+        1,
+        0,
+        gtstr::Cstrt11,
+        gtstr::Cstrt11,
+        Gtstr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            11,
+            0x1,
+            1,
+            0,
+            gtstr::Cstrt11,
+            gtstr::Cstrt11,
+            Gtstr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Channel 12 GTCNT Count StartRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter stop. 1 means counter running."]
+    #[inline(always)]
+    pub fn cstrt12(
+        self,
+    ) -> crate::common::RegisterField<
+        12,
+        0x1,
+        1,
+        0,
+        gtstr::Cstrt12,
+        gtstr::Cstrt12,
+        Gtstr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            12,
+            0x1,
+            1,
+            0,
+            gtstr::Cstrt12,
+            gtstr::Cstrt12,
+            Gtstr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Channel 13 GTCNT Count StartRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter stop. 1 means counter running."]
+    #[inline(always)]
+    pub fn cstrt13(
+        self,
+    ) -> crate::common::RegisterField<
+        13,
+        0x1,
+        1,
+        0,
+        gtstr::Cstrt13,
+        gtstr::Cstrt13,
+        Gtstr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            13,
+            0x1,
+            1,
+            0,
+            gtstr::Cstrt13,
+            gtstr::Cstrt13,
+            Gtstr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Gtstr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Gtstr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Gtstr {
     #[inline(always)]
@@ -944,100 +1091,140 @@ pub mod gtstr {
     pub struct Cstrt0_SPEC;
     pub type Cstrt0 = crate::EnumBitfieldStruct<u8, Cstrt0_SPEC>;
     impl Cstrt0 {
-        #[doc = "GTCNT counter not start"]
+        #[doc = "No effect (write) / counter stop (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter start"]
+        #[doc = "GTCNT counter starts (write) / Counter running (read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstrt1_SPEC;
     pub type Cstrt1 = crate::EnumBitfieldStruct<u8, Cstrt1_SPEC>;
     impl Cstrt1 {
-        #[doc = "GTCNT counter not start"]
+        #[doc = "No effect (write) / counter stop (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter start"]
+        #[doc = "GTCNT counter starts (write) / Counter running (read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstrt2_SPEC;
     pub type Cstrt2 = crate::EnumBitfieldStruct<u8, Cstrt2_SPEC>;
     impl Cstrt2 {
-        #[doc = "GTCNT counter not start"]
+        #[doc = "No effect (write) / counter stop (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter start"]
+        #[doc = "GTCNT counter starts (write) / Counter running (read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstrt3_SPEC;
     pub type Cstrt3 = crate::EnumBitfieldStruct<u8, Cstrt3_SPEC>;
     impl Cstrt3 {
-        #[doc = "GTCNT counter not start"]
+        #[doc = "No effect (write) / counter stop (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter start"]
+        #[doc = "GTCNT counter starts (write) / Counter running (read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstrt4_SPEC;
     pub type Cstrt4 = crate::EnumBitfieldStruct<u8, Cstrt4_SPEC>;
     impl Cstrt4 {
-        #[doc = "GTCNT counter not start"]
+        #[doc = "No effect (write) / counter stop (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter start"]
+        #[doc = "GTCNT counter starts (write) / Counter running (read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstrt5_SPEC;
     pub type Cstrt5 = crate::EnumBitfieldStruct<u8, Cstrt5_SPEC>;
     impl Cstrt5 {
-        #[doc = "GTCNT counter not start"]
+        #[doc = "No effect (write) / counter stop (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter start"]
+        #[doc = "GTCNT counter starts (write) / Counter running (read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstrt6_SPEC;
     pub type Cstrt6 = crate::EnumBitfieldStruct<u8, Cstrt6_SPEC>;
     impl Cstrt6 {
-        #[doc = "GTCNT counter not start"]
+        #[doc = "No effect (write) / counter stop (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter start"]
+        #[doc = "GTCNT counter starts (write) / Counter running (read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstrt7_SPEC;
     pub type Cstrt7 = crate::EnumBitfieldStruct<u8, Cstrt7_SPEC>;
     impl Cstrt7 {
-        #[doc = "GTCNT counter not start"]
+        #[doc = "No effect (write) / counter stop (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter start"]
+        #[doc = "GTCNT counter starts (write) / Counter running (read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstrt8_SPEC;
     pub type Cstrt8 = crate::EnumBitfieldStruct<u8, Cstrt8_SPEC>;
     impl Cstrt8 {
-        #[doc = "GTCNT counter not start"]
+        #[doc = "No effect (write) / counter stop (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter start"]
+        #[doc = "GTCNT counter starts (write) / Counter running (read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstrt9_SPEC;
     pub type Cstrt9 = crate::EnumBitfieldStruct<u8, Cstrt9_SPEC>;
     impl Cstrt9 {
-        #[doc = "GTCNT counter not start"]
+        #[doc = "No effect (write) / counter stop (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter start"]
+        #[doc = "GTCNT counter starts (write) / Counter running (read)"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cstrt10_SPEC;
+    pub type Cstrt10 = crate::EnumBitfieldStruct<u8, Cstrt10_SPEC>;
+    impl Cstrt10 {
+        #[doc = "No effect (write) / counter stop (read)"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "GTCNT counter starts (write) / Counter running (read)"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cstrt11_SPEC;
+    pub type Cstrt11 = crate::EnumBitfieldStruct<u8, Cstrt11_SPEC>;
+    impl Cstrt11 {
+        #[doc = "No effect (write) / counter stop (read)"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "GTCNT counter starts (write) / Counter running (read)"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cstrt12_SPEC;
+    pub type Cstrt12 = crate::EnumBitfieldStruct<u8, Cstrt12_SPEC>;
+    impl Cstrt12 {
+        #[doc = "No effect (write) / counter stop (read)"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "GTCNT counter starts (write) / Counter running (read)"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cstrt13_SPEC;
+    pub type Cstrt13 = crate::EnumBitfieldStruct<u8, Cstrt13_SPEC>;
+    impl Cstrt13 {
+        #[doc = "No effect (write) / counter stop (read)"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "GTCNT counter starts (write) / Counter running (read)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1052,7 +1239,7 @@ impl crate::sealed::RegSpec for Gtstp_SPEC {
 pub type Gtstp = crate::RegValueT<Gtstp_SPEC>;
 
 impl Gtstp {
-    #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)"]
+    #[doc = "Channel 0 GTCNT Count StopRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter runnning. 1 means counter stop."]
     #[inline(always)]
     pub fn cstop0(
         self,
@@ -1078,7 +1265,7 @@ impl Gtstp {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)"]
+    #[doc = "Channel 1 GTCNT Count StopRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter runnning. 1 means counter stop."]
     #[inline(always)]
     pub fn cstop1(
         self,
@@ -1104,7 +1291,7 @@ impl Gtstp {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)"]
+    #[doc = "Channel 2 GTCNT Count StopRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter runnning. 1 means counter stop."]
     #[inline(always)]
     pub fn cstop2(
         self,
@@ -1130,7 +1317,7 @@ impl Gtstp {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)"]
+    #[doc = "Channel 3 GTCNT Count StopRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter runnning. 1 means counter stop."]
     #[inline(always)]
     pub fn cstop3(
         self,
@@ -1156,7 +1343,7 @@ impl Gtstp {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)"]
+    #[doc = "Channel 4 GTCNT Count StopRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter runnning. 1 means counter stop."]
     #[inline(always)]
     pub fn cstop4(
         self,
@@ -1182,7 +1369,7 @@ impl Gtstp {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)"]
+    #[doc = "Channel 5 GTCNT Count StopRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter runnning. 1 means counter stop."]
     #[inline(always)]
     pub fn cstop5(
         self,
@@ -1208,7 +1395,7 @@ impl Gtstp {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)"]
+    #[doc = "Channel 6 GTCNT Count StopRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter runnning. 1 means counter stop."]
     #[inline(always)]
     pub fn cstop6(
         self,
@@ -1234,7 +1421,7 @@ impl Gtstp {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)"]
+    #[doc = "Channel 7 GTCNT Count StopRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter runnning. 1 means counter stop."]
     #[inline(always)]
     pub fn cstop7(
         self,
@@ -1260,7 +1447,7 @@ impl Gtstp {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)"]
+    #[doc = "Channel 8 GTCNT Count StopRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter runnning. 1 means counter stop."]
     #[inline(always)]
     pub fn cstop8(
         self,
@@ -1286,7 +1473,7 @@ impl Gtstp {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Stop (n : the same as bit position value)"]
+    #[doc = "Channel 9 GTCNT Count StopRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter runnning. 1 means counter stop."]
     #[inline(always)]
     pub fn cstop9(
         self,
@@ -1311,6 +1498,119 @@ impl Gtstp {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "Channel 10 GTCNT Count StopRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter runnning. 1 means counter stop."]
+    #[inline(always)]
+    pub fn cstop10(
+        self,
+    ) -> crate::common::RegisterField<
+        10,
+        0x1,
+        1,
+        0,
+        gtstp::Cstop10,
+        gtstp::Cstop10,
+        Gtstp_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            10,
+            0x1,
+            1,
+            0,
+            gtstp::Cstop10,
+            gtstp::Cstop10,
+            Gtstp_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Channel 11 GTCNT Count StopRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter runnning. 1 means counter stop."]
+    #[inline(always)]
+    pub fn cstop11(
+        self,
+    ) -> crate::common::RegisterField<
+        11,
+        0x1,
+        1,
+        0,
+        gtstp::Cstop11,
+        gtstp::Cstop11,
+        Gtstp_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            11,
+            0x1,
+            1,
+            0,
+            gtstp::Cstop11,
+            gtstp::Cstop11,
+            Gtstp_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Channel 12 GTCNT Count StopRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter runnning. 1 means counter stop."]
+    #[inline(always)]
+    pub fn cstop12(
+        self,
+    ) -> crate::common::RegisterField<
+        12,
+        0x1,
+        1,
+        0,
+        gtstp::Cstop12,
+        gtstp::Cstop12,
+        Gtstp_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            12,
+            0x1,
+            1,
+            0,
+            gtstp::Cstop12,
+            gtstp::Cstop12,
+            Gtstp_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Channel 13 GTCNT Count StopRead data shows each channel\'s counter status (GTCR.CST bit). 0 means counter runnning. 1 means counter stop."]
+    #[inline(always)]
+    pub fn cstop13(
+        self,
+    ) -> crate::common::RegisterField<
+        13,
+        0x1,
+        1,
+        0,
+        gtstp::Cstop13,
+        gtstp::Cstop13,
+        Gtstp_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            13,
+            0x1,
+            1,
+            0,
+            gtstp::Cstop13,
+            gtstp::Cstop13,
+            Gtstp_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 1111111111111111. The write value should be 1111111111111111."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Gtstp_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Gtstp_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Gtstp {
     #[inline(always)]
@@ -1324,100 +1624,140 @@ pub mod gtstp {
     pub struct Cstop0_SPEC;
     pub type Cstop0 = crate::EnumBitfieldStruct<u8, Cstop0_SPEC>;
     impl Cstop0 {
-        #[doc = "GTCNT counter not stop"]
+        #[doc = "No effect (write) / counter running (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter stop"]
+        #[doc = "GTCNT counter stops (write) / Counter stop (read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstop1_SPEC;
     pub type Cstop1 = crate::EnumBitfieldStruct<u8, Cstop1_SPEC>;
     impl Cstop1 {
-        #[doc = "GTCNT counter not stop"]
+        #[doc = "No effect (write) / counter running (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter stop"]
+        #[doc = "GTCNT counter stops (write) / Counter stop (read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstop2_SPEC;
     pub type Cstop2 = crate::EnumBitfieldStruct<u8, Cstop2_SPEC>;
     impl Cstop2 {
-        #[doc = "GTCNT counter not stop"]
+        #[doc = "No effect (write) / counter running (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter stop"]
+        #[doc = "GTCNT counter stops (write) / Counter stop (read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstop3_SPEC;
     pub type Cstop3 = crate::EnumBitfieldStruct<u8, Cstop3_SPEC>;
     impl Cstop3 {
-        #[doc = "GTCNT counter not stop"]
+        #[doc = "No effect (write) / counter running (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter stop"]
+        #[doc = "GTCNT counter stops (write) / Counter stop (read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstop4_SPEC;
     pub type Cstop4 = crate::EnumBitfieldStruct<u8, Cstop4_SPEC>;
     impl Cstop4 {
-        #[doc = "GTCNT counter not stop"]
+        #[doc = "No effect (write) / counter running (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter stop"]
+        #[doc = "GTCNT counter stops (write) / Counter stop (read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstop5_SPEC;
     pub type Cstop5 = crate::EnumBitfieldStruct<u8, Cstop5_SPEC>;
     impl Cstop5 {
-        #[doc = "GTCNT counter not stop"]
+        #[doc = "No effect (write) / counter running (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter stop"]
+        #[doc = "GTCNT counter stops (write) / Counter stop (read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstop6_SPEC;
     pub type Cstop6 = crate::EnumBitfieldStruct<u8, Cstop6_SPEC>;
     impl Cstop6 {
-        #[doc = "GTCNT counter not stop"]
+        #[doc = "No effect (write) / counter running (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter stop"]
+        #[doc = "GTCNT counter stops (write) / Counter stop (read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstop7_SPEC;
     pub type Cstop7 = crate::EnumBitfieldStruct<u8, Cstop7_SPEC>;
     impl Cstop7 {
-        #[doc = "GTCNT counter not stop"]
+        #[doc = "No effect (write) / counter running (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter stop"]
+        #[doc = "GTCNT counter stops (write) / Counter stop (read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstop8_SPEC;
     pub type Cstop8 = crate::EnumBitfieldStruct<u8, Cstop8_SPEC>;
     impl Cstop8 {
-        #[doc = "GTCNT counter not stop"]
+        #[doc = "No effect (write) / counter running (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter stop"]
+        #[doc = "GTCNT counter stops (write) / Counter stop (read)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstop9_SPEC;
     pub type Cstop9 = crate::EnumBitfieldStruct<u8, Cstop9_SPEC>;
     impl Cstop9 {
-        #[doc = "GTCNT counter not stop"]
+        #[doc = "No effect (write) / counter running (read)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter stop"]
+        #[doc = "GTCNT counter stops (write) / Counter stop (read)"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cstop10_SPEC;
+    pub type Cstop10 = crate::EnumBitfieldStruct<u8, Cstop10_SPEC>;
+    impl Cstop10 {
+        #[doc = "No effect (write) / counter running (read)"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "GTCNT counter stops (write) / Counter stop (read)"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cstop11_SPEC;
+    pub type Cstop11 = crate::EnumBitfieldStruct<u8, Cstop11_SPEC>;
+    impl Cstop11 {
+        #[doc = "No effect (write) / counter running (read)"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "GTCNT counter stops (write) / Counter stop (read)"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cstop12_SPEC;
+    pub type Cstop12 = crate::EnumBitfieldStruct<u8, Cstop12_SPEC>;
+    impl Cstop12 {
+        #[doc = "No effect (write) / counter running (read)"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "GTCNT counter stops (write) / Counter stop (read)"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cstop13_SPEC;
+    pub type Cstop13 = crate::EnumBitfieldStruct<u8, Cstop13_SPEC>;
+    impl Cstop13 {
+        #[doc = "No effect (write) / counter running (read)"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "GTCNT counter stops (write) / Counter stop (read)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1432,7 +1772,7 @@ impl crate::sealed::RegSpec for Gtclr_SPEC {
 pub type Gtclr = crate::RegValueT<Gtclr_SPEC>;
 
 impl Gtclr {
-    #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)"]
+    #[doc = "Channel 0 GTCNT Count Clear"]
     #[inline(always)]
     pub fn cclr0(
         self,
@@ -1458,7 +1798,7 @@ impl Gtclr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)"]
+    #[doc = "Channel 1 GTCNT Count Clear"]
     #[inline(always)]
     pub fn cclr1(
         self,
@@ -1484,7 +1824,7 @@ impl Gtclr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)"]
+    #[doc = "Channel 2 GTCNT Count Clear"]
     #[inline(always)]
     pub fn cclr2(
         self,
@@ -1510,7 +1850,7 @@ impl Gtclr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)"]
+    #[doc = "Channel 3 GTCNT Count Clear"]
     #[inline(always)]
     pub fn cclr3(
         self,
@@ -1536,7 +1876,7 @@ impl Gtclr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)"]
+    #[doc = "Channel 4 GTCNT Count Clear"]
     #[inline(always)]
     pub fn cclr4(
         self,
@@ -1562,7 +1902,7 @@ impl Gtclr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)"]
+    #[doc = "Channel 5 GTCNT Count Clear"]
     #[inline(always)]
     pub fn cclr5(
         self,
@@ -1588,7 +1928,7 @@ impl Gtclr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)"]
+    #[doc = "Channel 6 GTCNT Count Clear"]
     #[inline(always)]
     pub fn cclr6(
         self,
@@ -1614,7 +1954,7 @@ impl Gtclr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)"]
+    #[doc = "Channel 7 GTCNT Count Clear"]
     #[inline(always)]
     pub fn cclr7(
         self,
@@ -1640,7 +1980,7 @@ impl Gtclr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)"]
+    #[doc = "Channel 8 GTCNT Count Clear"]
     #[inline(always)]
     pub fn cclr8(
         self,
@@ -1666,7 +2006,7 @@ impl Gtclr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel n GTCNT Count Clear (n : the same as bit position value)"]
+    #[doc = "Channel 9 GTCNT Count Clear"]
     #[inline(always)]
     pub fn cclr9(
         self,
@@ -1691,6 +2031,119 @@ impl Gtclr {
             crate::common::W,
         >::from_register(self, 0)
     }
+
+    #[doc = "Channel 10 GTCNT Count Clear"]
+    #[inline(always)]
+    pub fn cclr10(
+        self,
+    ) -> crate::common::RegisterField<
+        10,
+        0x1,
+        1,
+        0,
+        gtclr::Cclr10,
+        gtclr::Cclr10,
+        Gtclr_SPEC,
+        crate::common::W,
+    > {
+        crate::common::RegisterField::<
+            10,
+            0x1,
+            1,
+            0,
+            gtclr::Cclr10,
+            gtclr::Cclr10,
+            Gtclr_SPEC,
+            crate::common::W,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Channel 11 GTCNT Count Clear"]
+    #[inline(always)]
+    pub fn cclr11(
+        self,
+    ) -> crate::common::RegisterField<
+        11,
+        0x1,
+        1,
+        0,
+        gtclr::Cclr11,
+        gtclr::Cclr11,
+        Gtclr_SPEC,
+        crate::common::W,
+    > {
+        crate::common::RegisterField::<
+            11,
+            0x1,
+            1,
+            0,
+            gtclr::Cclr11,
+            gtclr::Cclr11,
+            Gtclr_SPEC,
+            crate::common::W,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Channel 12 GTCNT Count Clear"]
+    #[inline(always)]
+    pub fn cclr12(
+        self,
+    ) -> crate::common::RegisterField<
+        12,
+        0x1,
+        1,
+        0,
+        gtclr::Cclr12,
+        gtclr::Cclr12,
+        Gtclr_SPEC,
+        crate::common::W,
+    > {
+        crate::common::RegisterField::<
+            12,
+            0x1,
+            1,
+            0,
+            gtclr::Cclr12,
+            gtclr::Cclr12,
+            Gtclr_SPEC,
+            crate::common::W,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "Channel 13 GTCNT Count Clear"]
+    #[inline(always)]
+    pub fn cclr13(
+        self,
+    ) -> crate::common::RegisterField<
+        13,
+        0x1,
+        1,
+        0,
+        gtclr::Cclr13,
+        gtclr::Cclr13,
+        Gtclr_SPEC,
+        crate::common::W,
+    > {
+        crate::common::RegisterField::<
+            13,
+            0x1,
+            1,
+            0,
+            gtclr::Cclr13,
+            gtclr::Cclr13,
+            Gtclr_SPEC,
+            crate::common::W,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "The write value should be 000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<14, 0x3ffff, 1, 0, u32, u32, Gtclr_SPEC, crate::common::W>
+    {
+        crate::common::RegisterField::<14,0x3ffff,1,0,u32,u32,Gtclr_SPEC,crate::common::W>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Gtclr {
     #[inline(always)]
@@ -1704,100 +2157,140 @@ pub mod gtclr {
     pub struct Cclr0_SPEC;
     pub type Cclr0 = crate::EnumBitfieldStruct<u8, Cclr0_SPEC>;
     impl Cclr0 {
-        #[doc = "GTCNT counter is not cleared"]
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter is cleared"]
+        #[doc = "GTCNT counter clears"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cclr1_SPEC;
     pub type Cclr1 = crate::EnumBitfieldStruct<u8, Cclr1_SPEC>;
     impl Cclr1 {
-        #[doc = "GTCNT counter is not cleared"]
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter is cleared"]
+        #[doc = "GTCNT counter clears"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cclr2_SPEC;
     pub type Cclr2 = crate::EnumBitfieldStruct<u8, Cclr2_SPEC>;
     impl Cclr2 {
-        #[doc = "GTCNT counter is not cleared"]
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter is cleared"]
+        #[doc = "GTCNT counter clears"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cclr3_SPEC;
     pub type Cclr3 = crate::EnumBitfieldStruct<u8, Cclr3_SPEC>;
     impl Cclr3 {
-        #[doc = "GTCNT counter is not cleared"]
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter is cleared"]
+        #[doc = "GTCNT counter clears"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cclr4_SPEC;
     pub type Cclr4 = crate::EnumBitfieldStruct<u8, Cclr4_SPEC>;
     impl Cclr4 {
-        #[doc = "GTCNT counter is not cleared"]
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter is cleared"]
+        #[doc = "GTCNT counter clears"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cclr5_SPEC;
     pub type Cclr5 = crate::EnumBitfieldStruct<u8, Cclr5_SPEC>;
     impl Cclr5 {
-        #[doc = "GTCNT counter is not cleared"]
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter is cleared"]
+        #[doc = "GTCNT counter clears"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cclr6_SPEC;
     pub type Cclr6 = crate::EnumBitfieldStruct<u8, Cclr6_SPEC>;
     impl Cclr6 {
-        #[doc = "GTCNT counter is not cleared"]
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter is cleared"]
+        #[doc = "GTCNT counter clears"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cclr7_SPEC;
     pub type Cclr7 = crate::EnumBitfieldStruct<u8, Cclr7_SPEC>;
     impl Cclr7 {
-        #[doc = "GTCNT counter is not cleared"]
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter is cleared"]
+        #[doc = "GTCNT counter clears"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cclr8_SPEC;
     pub type Cclr8 = crate::EnumBitfieldStruct<u8, Cclr8_SPEC>;
     impl Cclr8 {
-        #[doc = "GTCNT counter is not cleared"]
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter is cleared"]
+        #[doc = "GTCNT counter clears"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cclr9_SPEC;
     pub type Cclr9 = crate::EnumBitfieldStruct<u8, Cclr9_SPEC>;
     impl Cclr9 {
-        #[doc = "GTCNT counter is not cleared"]
+        #[doc = "No effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter is cleared"]
+        #[doc = "GTCNT counter clears"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cclr10_SPEC;
+    pub type Cclr10 = crate::EnumBitfieldStruct<u8, Cclr10_SPEC>;
+    impl Cclr10 {
+        #[doc = "No effect"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "GTCNT counter clears"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cclr11_SPEC;
+    pub type Cclr11 = crate::EnumBitfieldStruct<u8, Cclr11_SPEC>;
+    impl Cclr11 {
+        #[doc = "No effect"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "GTCNT counter clears"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cclr12_SPEC;
+    pub type Cclr12 = crate::EnumBitfieldStruct<u8, Cclr12_SPEC>;
+    impl Cclr12 {
+        #[doc = "No effect"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "GTCNT counter clears"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cclr13_SPEC;
+    pub type Cclr13 = crate::EnumBitfieldStruct<u8, Cclr13_SPEC>;
+    impl Cclr13 {
+        #[doc = "No effect"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "GTCNT counter clears"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2020,7 +2513,7 @@ impl Gtssr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value Low Source Counter Start Enable"]
+    #[doc = "GTIOCA Pin Rising Input during GTIOCB Value Low Source Counter Start Enable"]
     #[inline(always)]
     pub fn sscarbl(
         self,
@@ -2046,7 +2539,7 @@ impl Gtssr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value High Source Counter Start Enable"]
+    #[doc = "GTIOCA Pin Rising Input during GTIOCB Value High Source Counter Start Enable"]
     #[inline(always)]
     pub fn sscarbh(
         self,
@@ -2072,7 +2565,7 @@ impl Gtssr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value Low Source Counter Start Enable"]
+    #[doc = "GTIOCA Pin Falling Input during GTIOCB Value Low Source Counter Start Enable"]
     #[inline(always)]
     pub fn sscafbl(
         self,
@@ -2098,7 +2591,7 @@ impl Gtssr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value High Source Counter Start Enable"]
+    #[doc = "GTIOCA Pin Falling Input during GTIOCB Value High Source Counter Start Enable"]
     #[inline(always)]
     pub fn sscafbh(
         self,
@@ -2124,7 +2617,7 @@ impl Gtssr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value Low Source Counter Start Enable"]
+    #[doc = "GTIOCB Pin Rising Input during GTIOCA Value Low Source Counter Start Enable"]
     #[inline(always)]
     pub fn sscbral(
         self,
@@ -2150,7 +2643,7 @@ impl Gtssr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value High Source Counter Start Enable"]
+    #[doc = "GTIOCB Pin Rising Input during GTIOCA Value High Source Counter Start Enable"]
     #[inline(always)]
     pub fn sscbrah(
         self,
@@ -2176,7 +2669,7 @@ impl Gtssr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value Low Source Counter Start Enable"]
+    #[doc = "GTIOCB Pin Falling Input during GTIOCA Value Low Source Counter Start Enable"]
     #[inline(always)]
     pub fn sscbfal(
         self,
@@ -2202,7 +2695,7 @@ impl Gtssr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value High Source Counter Start Enable"]
+    #[doc = "GTIOCB Pin Falling Input during GTIOCA Value High Source Counter Start Enable"]
     #[inline(always)]
     pub fn sscbfah(
         self,
@@ -2436,6 +2929,14 @@ impl Gtssr {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<24, 0x7f, 1, 0, u8, u8, Gtssr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<24,0x7f,1,0,u8,u8,Gtssr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
     #[doc = "Software Source Counter Start Enable"]
     #[inline(always)]
     pub fn cstrt(
@@ -2474,250 +2975,250 @@ pub mod gtssr {
     pub struct Ssgtrgar_SPEC;
     pub type Ssgtrgar = crate::EnumBitfieldStruct<u8, Ssgtrgar_SPEC>;
     impl Ssgtrgar {
-        #[doc = "Counter start disabled on the rising edge of GTETRGA input"]
+        #[doc = "Disable counter start on the rising edge of GTETRGA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled on the rising edge of GTETRGA input"]
+        #[doc = "Enable counter start on the rising edge of GTETRGA input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ssgtrgaf_SPEC;
     pub type Ssgtrgaf = crate::EnumBitfieldStruct<u8, Ssgtrgaf_SPEC>;
     impl Ssgtrgaf {
-        #[doc = "Counter start disabled on the falling edge of GTETRGA input"]
+        #[doc = "Disable counter start on the falling edge of GTETRGA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled on the falling edge of GTETRGA input"]
+        #[doc = "Enable counter start on the falling edge of GTETRGA input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ssgtrgbr_SPEC;
     pub type Ssgtrgbr = crate::EnumBitfieldStruct<u8, Ssgtrgbr_SPEC>;
     impl Ssgtrgbr {
-        #[doc = "Counter start disabled on the rising edge of GTETRGB input"]
+        #[doc = "Disable counter start on the rising edge of GTETRGB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled on the rising edge of GTETRGB input"]
+        #[doc = "Enable counter start on the rising edge of GTETRGB input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ssgtrgbf_SPEC;
     pub type Ssgtrgbf = crate::EnumBitfieldStruct<u8, Ssgtrgbf_SPEC>;
     impl Ssgtrgbf {
-        #[doc = "Counter start disabled on the falling edge of GTETRGB input"]
+        #[doc = "Disable counter start on the falling edge of GTETRGB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled on the falling edge of GTETRGB input"]
+        #[doc = "Enable counter start on the falling edge of GTETRGB input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ssgtrgcr_SPEC;
     pub type Ssgtrgcr = crate::EnumBitfieldStruct<u8, Ssgtrgcr_SPEC>;
     impl Ssgtrgcr {
-        #[doc = "Counter start disabled on the rising edge of GTETRGC input"]
+        #[doc = "Disable counter start on the rising edge of GTETRGC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled on the rising edge of GTETRGC input"]
+        #[doc = "Enable counter start on the rising edge of GTETRGC input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ssgtrgcf_SPEC;
     pub type Ssgtrgcf = crate::EnumBitfieldStruct<u8, Ssgtrgcf_SPEC>;
     impl Ssgtrgcf {
-        #[doc = "Counter start disabled on the falling edge of GTETRGC input"]
+        #[doc = "Disable counter start on the falling edge of GTETRGC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled on the falling edge of GTETRGC input"]
+        #[doc = "Enable counter start on the falling edge of GTETRGC input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ssgtrgdr_SPEC;
     pub type Ssgtrgdr = crate::EnumBitfieldStruct<u8, Ssgtrgdr_SPEC>;
     impl Ssgtrgdr {
-        #[doc = "Counter start disabled on the rising edge of GTETRGD input"]
+        #[doc = "Disable counter start on the rising edge of GTETRGD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled on the rising edge of GTETRGD input"]
+        #[doc = "Enable counter start on the rising edge of GTETRGD input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ssgtrgdf_SPEC;
     pub type Ssgtrgdf = crate::EnumBitfieldStruct<u8, Ssgtrgdf_SPEC>;
     impl Ssgtrgdf {
-        #[doc = "Counter start disabled on the falling edge of GTETRGD input"]
+        #[doc = "Disable counter start on the falling edge of GTETRGD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled on the falling edge of GTETRGD input"]
+        #[doc = "Enable counter start on the falling edge of GTETRGD input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sscarbl_SPEC;
     pub type Sscarbl = crate::EnumBitfieldStruct<u8, Sscarbl_SPEC>;
     impl Sscarbl {
-        #[doc = "Counter start disabled on the rising edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Disable counter start on the rising edge of GTIOCA input when GTIOCB input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled on the rising edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Enable counter start on the rising edge of GTIOCA input when GTIOCB input is 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sscarbh_SPEC;
     pub type Sscarbh = crate::EnumBitfieldStruct<u8, Sscarbh_SPEC>;
     impl Sscarbh {
-        #[doc = "Counter start disabled on the rising edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Disable counter start on the rising edge of GTIOCA input when GTIOCB input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled on the rising edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Enable counter start on the rising edge of GTIOCA input when GTIOCB input is 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sscafbl_SPEC;
     pub type Sscafbl = crate::EnumBitfieldStruct<u8, Sscafbl_SPEC>;
     impl Sscafbl {
-        #[doc = "Counter start disabled on the falling edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Disable counter start on the falling edge of GTIOCA input when GTIOCB input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled on the falling edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Enable counter start on the falling edge of GTIOCA input when GTIOCB input is 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sscafbh_SPEC;
     pub type Sscafbh = crate::EnumBitfieldStruct<u8, Sscafbh_SPEC>;
     impl Sscafbh {
-        #[doc = "Counter start disabled on the falling edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Disable counter start on the falling edge of GTIOCA input when GTIOCB input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled on the falling edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Enable counter start on the falling edge of GTIOCA input when GTIOCB input is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sscbral_SPEC;
     pub type Sscbral = crate::EnumBitfieldStruct<u8, Sscbral_SPEC>;
     impl Sscbral {
-        #[doc = "Counter start disabled on the rising edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Disable counter start on the rising edge of GTIOCB input when GTIOCA input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled on the rising edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Enable counter start on the rising edge of GTIOCB input when GTIOCA input is 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sscbrah_SPEC;
     pub type Sscbrah = crate::EnumBitfieldStruct<u8, Sscbrah_SPEC>;
     impl Sscbrah {
-        #[doc = "Counter start disabled on the rising edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Disable counter start on the rising edge of GTIOCB input when GTIOCA input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled on the rising edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Enable counter start on the rising edge of GTIOCB input when GTIOCA input is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sscbfal_SPEC;
     pub type Sscbfal = crate::EnumBitfieldStruct<u8, Sscbfal_SPEC>;
     impl Sscbfal {
-        #[doc = "Counter start disabled on the falling edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Disable counter start on the falling edge of GTIOCB input when GTIOCA input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled on the falling edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Enable counter start on the falling edge of GTIOCB input when GTIOCA input is 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sscbfah_SPEC;
     pub type Sscbfah = crate::EnumBitfieldStruct<u8, Sscbfah_SPEC>;
     impl Sscbfah {
-        #[doc = "Counter start disabled on the falling edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Disable counter start on the falling edge of GTIOCB input when GTIOCA input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled on the falling edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Enable counter start on the falling edge of GTIOCB input when GTIOCA input is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sselca_SPEC;
     pub type Sselca = crate::EnumBitfieldStruct<u8, Sselca_SPEC>;
     impl Sselca {
-        #[doc = "Counter start disabled at the ELC_GPTA input"]
+        #[doc = "Disable counter start on ELC_GPTA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled at the ELC_GPTA input"]
+        #[doc = "Enable counter start on ELC_GPTA input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sselcb_SPEC;
     pub type Sselcb = crate::EnumBitfieldStruct<u8, Sselcb_SPEC>;
     impl Sselcb {
-        #[doc = "Counter start disabled at the ELC_GPTB input"]
+        #[doc = "Disable counter start on ELC_GPTB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled at the ELC_GPTB input"]
+        #[doc = "Enable counter start on ELC_GPTB input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sselcc_SPEC;
     pub type Sselcc = crate::EnumBitfieldStruct<u8, Sselcc_SPEC>;
     impl Sselcc {
-        #[doc = "Counter start disabled at the ELC_GPTC input"]
+        #[doc = "Disable counter start on ELC_GPTC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled at the ELC_GPTC input"]
+        #[doc = "Enable counter start on ELC_GPTC input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sselcd_SPEC;
     pub type Sselcd = crate::EnumBitfieldStruct<u8, Sselcd_SPEC>;
     impl Sselcd {
-        #[doc = "Counter start disabled at the ELC_GPTD input"]
+        #[doc = "Disable counter start on ELC_GPTD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled at the ELC_GPTD input"]
+        #[doc = "Enable counter start on ELC_GPTD input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sselce_SPEC;
     pub type Sselce = crate::EnumBitfieldStruct<u8, Sselce_SPEC>;
     impl Sselce {
-        #[doc = "Counter start disabled at the ELC_GPTE input"]
+        #[doc = "Disable counter start on ELC_GPTE input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled at the ELC_GPTE input"]
+        #[doc = "Enable counter start on ELC_GPTE input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sselcf_SPEC;
     pub type Sselcf = crate::EnumBitfieldStruct<u8, Sselcf_SPEC>;
     impl Sselcf {
-        #[doc = "Counter start disabled at the ELC_GPTF input"]
+        #[doc = "Disable counter start on ELC_GPTF input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled at the ELC_GPTF input"]
+        #[doc = "Enable counter start on ELC_GPTF input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sselcg_SPEC;
     pub type Sselcg = crate::EnumBitfieldStruct<u8, Sselcg_SPEC>;
     impl Sselcg {
-        #[doc = "Counter start disabled at the ELC_GPTG input"]
+        #[doc = "Disable counter start on ELC_GPTG input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled at the ELC_GPTG input"]
+        #[doc = "Enable counter start on ELC_GPTG input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sselch_SPEC;
     pub type Sselch = crate::EnumBitfieldStruct<u8, Sselch_SPEC>;
     impl Sselch {
-        #[doc = "Counter start disabled at the ELC_GPTH input"]
+        #[doc = "Disable counter start on ELC_GPTH input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled at the ELC_GPTH input"]
+        #[doc = "Enable counter start on ELC_GPTH input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstrt_SPEC;
     pub type Cstrt = crate::EnumBitfieldStruct<u8, Cstrt_SPEC>;
     impl Cstrt {
-        #[doc = "Counter start disabled by the GTSTR register"]
+        #[doc = "Disable counter start by the GTSTR register"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter start enabled by the GTSTR register"]
+        #[doc = "Enable counter start by the GTSTR register"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2940,7 +3441,7 @@ impl Gtpsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value Low Source Counter Stop Enable"]
+    #[doc = "GTIOCA Pin Rising Input during GTIOCB Value Low Source Counter Stop Enable"]
     #[inline(always)]
     pub fn pscarbl(
         self,
@@ -2966,7 +3467,7 @@ impl Gtpsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value High Source Counter Stop Enable"]
+    #[doc = "GTIOCA Pin Rising Input during GTIOCB Value High Source Counter Stop Enable"]
     #[inline(always)]
     pub fn pscarbh(
         self,
@@ -2992,7 +3493,7 @@ impl Gtpsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value Low Source Counter Stop Enable"]
+    #[doc = "GTIOCA Pin Falling Input during GTIOCB Value Low Source Counter Stop Enable"]
     #[inline(always)]
     pub fn pscafbl(
         self,
@@ -3018,7 +3519,7 @@ impl Gtpsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value High Source Counter Stop Enable"]
+    #[doc = "GTIOCA Pin Falling Input during GTIOCB Value High Source Counter Stop Enable"]
     #[inline(always)]
     pub fn pscafbh(
         self,
@@ -3044,7 +3545,7 @@ impl Gtpsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value Low Source Counter Stop Enable"]
+    #[doc = "GTIOCB Pin Rising Input during GTIOCA Value Low Source Counter Stop Enable"]
     #[inline(always)]
     pub fn pscbral(
         self,
@@ -3070,7 +3571,7 @@ impl Gtpsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value High Source Counter Stop Enable"]
+    #[doc = "GTIOCB Pin Rising Input during GTIOCA Value High Source Counter Stop Enable"]
     #[inline(always)]
     pub fn pscbrah(
         self,
@@ -3096,7 +3597,7 @@ impl Gtpsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value Low Source Counter Stop Enable"]
+    #[doc = "GTIOCB Pin Falling Input during GTIOCA Value Low Source Counter Stop Enable"]
     #[inline(always)]
     pub fn pscbfal(
         self,
@@ -3122,7 +3623,7 @@ impl Gtpsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value High Source Counter Stop Enable"]
+    #[doc = "GTIOCB Pin Falling Input during GTIOCA Value High Source Counter Stop Enable"]
     #[inline(always)]
     pub fn pscbfah(
         self,
@@ -3356,6 +3857,14 @@ impl Gtpsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<24, 0x7f, 1, 0, u8, u8, Gtpsr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<24,0x7f,1,0,u8,u8,Gtpsr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
     #[doc = "Software Source Counter Stop Enable"]
     #[inline(always)]
     pub fn cstop(
@@ -3394,250 +3903,250 @@ pub mod gtpsr {
     pub struct Psgtrgar_SPEC;
     pub type Psgtrgar = crate::EnumBitfieldStruct<u8, Psgtrgar_SPEC>;
     impl Psgtrgar {
-        #[doc = "Counter stop disabled on the rising edge of GTETRGA input"]
+        #[doc = "Disable counter stop on the rising edge of GTETRGA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled on the rising edge of GTETRGA input"]
+        #[doc = "Enable counter stop on the rising edge of GTETRGA input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psgtrgaf_SPEC;
     pub type Psgtrgaf = crate::EnumBitfieldStruct<u8, Psgtrgaf_SPEC>;
     impl Psgtrgaf {
-        #[doc = "Counter stop disabled on the falling edge of GTETRGA input"]
+        #[doc = "Disable counter stop on the falling edge of GTETRGA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled on the falling edge of GTETRGA input"]
+        #[doc = "Enable counter stop on the falling edge of GTETRGA input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psgtrgbr_SPEC;
     pub type Psgtrgbr = crate::EnumBitfieldStruct<u8, Psgtrgbr_SPEC>;
     impl Psgtrgbr {
-        #[doc = "Counter stop disabled on the rising edge of GTETRGB input"]
+        #[doc = "Disable counter stop on the rising edge of GTETRGB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled on the rising edge of GTETRGB input"]
+        #[doc = "Enable counter stop on the rising edge of GTETRGB input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psgtrgbf_SPEC;
     pub type Psgtrgbf = crate::EnumBitfieldStruct<u8, Psgtrgbf_SPEC>;
     impl Psgtrgbf {
-        #[doc = "Counter stop disabled on the falling edge of GTETRGB input"]
+        #[doc = "Disable counter stop on the falling edge of GTETRGB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled on the falling edge of GTETRGB input"]
+        #[doc = "Enable counter stop on the falling edge of GTETRGB input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psgtrgcr_SPEC;
     pub type Psgtrgcr = crate::EnumBitfieldStruct<u8, Psgtrgcr_SPEC>;
     impl Psgtrgcr {
-        #[doc = "Counter stop disabled on the rising edge of GTETRGC input"]
+        #[doc = "Disable counter stop on the rising edge of GTETRGC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled on the rising edge of GTETRGC input"]
+        #[doc = "Enable counter stop on the rising edge of GTETRGC input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psgtrgcf_SPEC;
     pub type Psgtrgcf = crate::EnumBitfieldStruct<u8, Psgtrgcf_SPEC>;
     impl Psgtrgcf {
-        #[doc = "Counter stop disabled on the falling edge of GTETRGC input"]
+        #[doc = "Disable counter stop on the falling edge of GTETRGC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled on the falling edge of GTETRGC input"]
+        #[doc = "Enable counter stop on the falling edge of GTETRGC input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psgtrgdr_SPEC;
     pub type Psgtrgdr = crate::EnumBitfieldStruct<u8, Psgtrgdr_SPEC>;
     impl Psgtrgdr {
-        #[doc = "Counter stop disabled on the rising edge of GTETRGD input"]
+        #[doc = "Disable counter stop on the rising edge of GTETRGD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled on the rising edge of GTETRGD input"]
+        #[doc = "Enable counter stop on the rising edge of GTETRGD input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psgtrgdf_SPEC;
     pub type Psgtrgdf = crate::EnumBitfieldStruct<u8, Psgtrgdf_SPEC>;
     impl Psgtrgdf {
-        #[doc = "Counter stop disabled on the falling edge of GTETRGD input"]
+        #[doc = "Disable counter stop on the falling edge of GTETRGD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled on the falling edge of GTETRGD input"]
+        #[doc = "Enable counter stop on the falling edge of GTETRGD input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pscarbl_SPEC;
     pub type Pscarbl = crate::EnumBitfieldStruct<u8, Pscarbl_SPEC>;
     impl Pscarbl {
-        #[doc = "Counter stop disabled on the rising edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Disable counter stop on the rising edge of GTIOCA input when GTIOCB input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled on the rising edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Enable counter stop on the rising edge of GTIOCA input when GTIOCB input is 0"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pscarbh_SPEC;
     pub type Pscarbh = crate::EnumBitfieldStruct<u8, Pscarbh_SPEC>;
     impl Pscarbh {
-        #[doc = "Counter stop disabled on the rising edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Disable counter stop on the rising edge of GTIOCA input when GTIOCB input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled on the rising edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Enable counter stop on the rising edge of GTIOCA input when GTIOCB input is 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pscafbl_SPEC;
     pub type Pscafbl = crate::EnumBitfieldStruct<u8, Pscafbl_SPEC>;
     impl Pscafbl {
-        #[doc = "Counter stop disabled on the falling edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Disable counter stop on the falling edge of GTIOCA input when GTIOCB input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled on the falling edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Enable counter stop on the falling edge of GTIOCA input when GTIOCB input is 0"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pscafbh_SPEC;
     pub type Pscafbh = crate::EnumBitfieldStruct<u8, Pscafbh_SPEC>;
     impl Pscafbh {
-        #[doc = "Counter stop disabled on the falling edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Disable counter stop on the falling edge of GTIOCA input when GTIOCB input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled on the falling edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Enable counter stop on the falling edge of GTIOCA input when GTIOCB input is 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pscbral_SPEC;
     pub type Pscbral = crate::EnumBitfieldStruct<u8, Pscbral_SPEC>;
     impl Pscbral {
-        #[doc = "Counter stop disabled on the rising edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Disable counter stop on the rising edge of GTIOCB input when GTIOCA input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled on the rising edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Enable counter stop on the rising edge of GTIOCB input when GTIOCA input is 0"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pscbrah_SPEC;
     pub type Pscbrah = crate::EnumBitfieldStruct<u8, Pscbrah_SPEC>;
     impl Pscbrah {
-        #[doc = "Counter stop disabled on the rising edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Disable counter stop on the rising edge of GTIOCB input when GTIOCA input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled on the rising edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Enable counter stop on the rising edge of GTIOCB input when GTIOCA input is 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pscbfal_SPEC;
     pub type Pscbfal = crate::EnumBitfieldStruct<u8, Pscbfal_SPEC>;
     impl Pscbfal {
-        #[doc = "Counter stop disabled on the falling edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Disable counter stop on the falling edge of GTIOCB input when GTIOCA input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled on the falling edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Enable counter stop on the falling edge of GTIOCB input when GTIOCA input is 0"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pscbfah_SPEC;
     pub type Pscbfah = crate::EnumBitfieldStruct<u8, Pscbfah_SPEC>;
     impl Pscbfah {
-        #[doc = "Counter stop disabled on the falling edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Disable counter stop on the falling edge of GTIOCB input when GTIOCA input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled on the falling edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Enable counter stop on the falling edge of GTIOCB input when GTIOCA input is 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pselca_SPEC;
     pub type Pselca = crate::EnumBitfieldStruct<u8, Pselca_SPEC>;
     impl Pselca {
-        #[doc = "Counter stop disabled at the ELC_GPTA input"]
+        #[doc = "Disable counter stop on ELC_GPTA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled at the ELC_GPTA input"]
+        #[doc = "Enable counter stop on ELC_GPTA input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pselcb_SPEC;
     pub type Pselcb = crate::EnumBitfieldStruct<u8, Pselcb_SPEC>;
     impl Pselcb {
-        #[doc = "Counter stop disabled at the ELC_GPTB input"]
+        #[doc = "Disable counter stop on ELC_GPTB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled at the ELC_GPTB input"]
+        #[doc = "Enable counter stop on ELC_GPTB input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pselcc_SPEC;
     pub type Pselcc = crate::EnumBitfieldStruct<u8, Pselcc_SPEC>;
     impl Pselcc {
-        #[doc = "Counter stop disabled at the ELC_GPTC input"]
+        #[doc = "Disable counter stop on ELC_GPTC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled at the ELC_GPTC input"]
+        #[doc = "Enable counter stop on ELC_GPTC input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pselcd_SPEC;
     pub type Pselcd = crate::EnumBitfieldStruct<u8, Pselcd_SPEC>;
     impl Pselcd {
-        #[doc = "Counter stop disabled at the ELC_GPTD input"]
+        #[doc = "Disable counter stop on ELC_GPTD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled at the ELC_GPTD input"]
+        #[doc = "Enable counter stop on ELC_GPTD input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pselce_SPEC;
     pub type Pselce = crate::EnumBitfieldStruct<u8, Pselce_SPEC>;
     impl Pselce {
-        #[doc = "Counter stop disabled at the ELC_GPTE input"]
+        #[doc = "Disable counter stop on ELC_GPTE input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled at the ELC_GPTE input"]
+        #[doc = "Enable counter stop on ELC_GPTE input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pselcf_SPEC;
     pub type Pselcf = crate::EnumBitfieldStruct<u8, Pselcf_SPEC>;
     impl Pselcf {
-        #[doc = "Counter stop disabled at the ELC_GPTF input"]
+        #[doc = "Disable counter stop on ELC_GPTF input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled at the ELC_GPTF input"]
+        #[doc = "Enable counter stop on ELC_GPTF input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pselcg_SPEC;
     pub type Pselcg = crate::EnumBitfieldStruct<u8, Pselcg_SPEC>;
     impl Pselcg {
-        #[doc = "Counter stop disabled at the ELC_GPTG input"]
+        #[doc = "Disable counter stop on ELC_GPTG input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled at the ELC_GPTG input"]
+        #[doc = "Enable counter stop on ELC_GPTG input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pselch_SPEC;
     pub type Pselch = crate::EnumBitfieldStruct<u8, Pselch_SPEC>;
     impl Pselch {
-        #[doc = "Counter stop disabled at the ELC_GPTH input"]
+        #[doc = "Disable counter stop on ELC_GPTH input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled at the ELC_GPTH input"]
+        #[doc = "Enable counter stop on ELC_GPTH input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cstop_SPEC;
     pub type Cstop = crate::EnumBitfieldStruct<u8, Cstop_SPEC>;
     impl Cstop {
-        #[doc = "Counter stop disabled by the GTSTP register"]
+        #[doc = "Disable counter stop by the GTSTP register"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter stop enabled by the GTSTP register"]
+        #[doc = "Enable counter stop by the GTSTP register"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3860,7 +4369,7 @@ impl Gtcsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value Low Source Counter Clear Enable"]
+    #[doc = "GTIOCA Pin Rising Input during GTIOCB Value Low Source Counter Clear Enable"]
     #[inline(always)]
     pub fn cscarbl(
         self,
@@ -3886,7 +4395,7 @@ impl Gtcsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value High Source Counter Clear Enable"]
+    #[doc = "GTIOCA Pin Rising Input during GTIOCB Value High Source Counter Clear Enable"]
     #[inline(always)]
     pub fn cscarbh(
         self,
@@ -3912,7 +4421,7 @@ impl Gtcsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value Low Source Counter Clear Enable"]
+    #[doc = "GTIOCA Pin Falling Input during GTIOCB Value Low Source Counter Clear Enable"]
     #[inline(always)]
     pub fn cscafbl(
         self,
@@ -3938,7 +4447,7 @@ impl Gtcsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value High Source Counter Clear Enable"]
+    #[doc = "GTIOCA Pin Falling Input during GTIOCB Value High Source Counter Clear Enable"]
     #[inline(always)]
     pub fn cscafbh(
         self,
@@ -3964,7 +4473,7 @@ impl Gtcsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value Low Source Counter Clear Enable"]
+    #[doc = "GTIOCB Pin Rising Input during GTIOCA Value Low Source Counter Clear Enable"]
     #[inline(always)]
     pub fn cscbral(
         self,
@@ -3990,7 +4499,7 @@ impl Gtcsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value High Source Counter Clear Enable"]
+    #[doc = "GTIOCB Pin Rising Input during GTIOCA Value High Source Counter Clear Enable"]
     #[inline(always)]
     pub fn cscbrah(
         self,
@@ -4016,7 +4525,7 @@ impl Gtcsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value Low Source Counter Clear Enable"]
+    #[doc = "GTIOCB Pin Falling Input during GTIOCA Value Low Source Counter Clear Enable"]
     #[inline(always)]
     pub fn cscbfal(
         self,
@@ -4042,7 +4551,7 @@ impl Gtcsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value High Source Counter Clear Enable"]
+    #[doc = "GTIOCB Pin Falling Input during GTIOCA Value High Source Counter Clear Enable"]
     #[inline(always)]
     pub fn cscbfah(
         self,
@@ -4276,6 +4785,14 @@ impl Gtcsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<24, 0x7f, 1, 0, u8, u8, Gtcsr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<24,0x7f,1,0,u8,u8,Gtcsr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
     #[doc = "Software Source Counter Clear Enable"]
     #[inline(always)]
     pub fn cclr(
@@ -4314,20 +4831,20 @@ pub mod gtcsr {
     pub struct Csgtrgar_SPEC;
     pub type Csgtrgar = crate::EnumBitfieldStruct<u8, Csgtrgar_SPEC>;
     impl Csgtrgar {
-        #[doc = "Counter clear disabled on the rising edge of GTETRGA input"]
+        #[doc = "Disable counter clear on the rising edge of GTETRGA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled on the rising edge of GTETRGA input"]
+        #[doc = "Enable counter clear on the rising edge of GTETRGA input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Csgtrgaf_SPEC;
     pub type Csgtrgaf = crate::EnumBitfieldStruct<u8, Csgtrgaf_SPEC>;
     impl Csgtrgaf {
-        #[doc = "Counter clear disabled on the falling edge of GTETRGA input"]
+        #[doc = "Disable counter clear on the falling edge of GTETRGA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled on the falling edge of GTETRGA input"]
+        #[doc = "Enable counter clear on the falling edge of GTETRGA input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -4344,10 +4861,10 @@ pub mod gtcsr {
     pub struct Csgtrgbf_SPEC;
     pub type Csgtrgbf = crate::EnumBitfieldStruct<u8, Csgtrgbf_SPEC>;
     impl Csgtrgbf {
-        #[doc = "Counter clear disabled on the falling edge of GTETRGB input"]
+        #[doc = "Disable counter clear on the falling edge of GTETRGB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled on the falling edge of GTETRGB input"]
+        #[doc = "Enable counter clear on the falling edge of GTETRGB input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -4364,10 +4881,10 @@ pub mod gtcsr {
     pub struct Csgtrgcf_SPEC;
     pub type Csgtrgcf = crate::EnumBitfieldStruct<u8, Csgtrgcf_SPEC>;
     impl Csgtrgcf {
-        #[doc = "Counter clear disabled on the falling edge of GTETRGC input"]
+        #[doc = "Disable counter clear on the falling edge of GTETRGC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled on the falling edge of GTETRGC input"]
+        #[doc = "Enable counter clear on the falling edge of GTETRGC input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -4384,180 +4901,180 @@ pub mod gtcsr {
     pub struct Csgtrgdf_SPEC;
     pub type Csgtrgdf = crate::EnumBitfieldStruct<u8, Csgtrgdf_SPEC>;
     impl Csgtrgdf {
-        #[doc = "Counter clear disabled on the falling edge of GTETRGD input"]
+        #[doc = "Disable counter clear on the falling edge of GTETRGD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled on the falling edge of GTETRGD input"]
+        #[doc = "Enable counter clear on the falling edge of GTETRGD input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cscarbl_SPEC;
     pub type Cscarbl = crate::EnumBitfieldStruct<u8, Cscarbl_SPEC>;
     impl Cscarbl {
-        #[doc = "Counter clear disabled on the rising edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Disable counter clear on the rising edge of GTIOCA input when GTIOCB input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled on the rising edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Enable counter clear on the rising edge of GTIOCA input when GTIOCB input is 0"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cscarbh_SPEC;
     pub type Cscarbh = crate::EnumBitfieldStruct<u8, Cscarbh_SPEC>;
     impl Cscarbh {
-        #[doc = "Counter clear disabled on the rising edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Disable counter clear on the rising edge of GTIOCA input when GTIOCB input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled on the rising edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Enable counter clear on the rising edge of GTIOCA input when GTIOCB input is 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cscafbl_SPEC;
     pub type Cscafbl = crate::EnumBitfieldStruct<u8, Cscafbl_SPEC>;
     impl Cscafbl {
-        #[doc = "Counter clear disabled on the falling edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Disable counter clear on the falling edge of GTIOCA input when GTIOCB input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled on the falling edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Enable counter clear on the falling edge of GTIOCA input when GTIOCB input is 0"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cscafbh_SPEC;
     pub type Cscafbh = crate::EnumBitfieldStruct<u8, Cscafbh_SPEC>;
     impl Cscafbh {
-        #[doc = "Counter clear disabled on the falling edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Disable counter clear on the falling edge of GTIOCA input when GTIOCB input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled on the falling edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Enable counter clear on the falling edge of GTIOCA input when GTIOCB input is 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cscbral_SPEC;
     pub type Cscbral = crate::EnumBitfieldStruct<u8, Cscbral_SPEC>;
     impl Cscbral {
-        #[doc = "Counter clear disabled on the rising edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Disable counter clear on the rising edge of GTIOCB input when GTIOCA input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled on the rising edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Enable counter clear on the rising edge of GTIOCB input when GTIOCA input is 0"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cscbrah_SPEC;
     pub type Cscbrah = crate::EnumBitfieldStruct<u8, Cscbrah_SPEC>;
     impl Cscbrah {
-        #[doc = "Counter clear disabled on the rising edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Disable counter clear on the rising edge of GTIOCB input when GTIOCA input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled on the rising edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Enable counter clear on the rising edge of GTIOCB input when GTIOCA input is 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cscbfal_SPEC;
     pub type Cscbfal = crate::EnumBitfieldStruct<u8, Cscbfal_SPEC>;
     impl Cscbfal {
-        #[doc = "Counter clear disabled on the falling edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Disable counter clear on the falling edge of GTIOCB input when GTIOCA input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled on the falling edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Enable counter clear on the falling edge of GTIOCB input when GTIOCA input is 0"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cscbfah_SPEC;
     pub type Cscbfah = crate::EnumBitfieldStruct<u8, Cscbfah_SPEC>;
     impl Cscbfah {
-        #[doc = "Counter clear disabled on the falling edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Disable counter clear on the falling edge of GTIOCB input when GTIOCA input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled on the falling edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Enable counter clear on the falling edge of GTIOCB input when GTIOCA input is 1"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cselca_SPEC;
     pub type Cselca = crate::EnumBitfieldStruct<u8, Cselca_SPEC>;
     impl Cselca {
-        #[doc = "Counter clear disabled at the ELC_GPTA input"]
+        #[doc = "Disable counter clear on ELC_GPTA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled at the ELC_GPTA input"]
+        #[doc = "Enable counter clear on ELC_GPTA input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cselcb_SPEC;
     pub type Cselcb = crate::EnumBitfieldStruct<u8, Cselcb_SPEC>;
     impl Cselcb {
-        #[doc = "Counter clear disabled at the ELC_GPTB input"]
+        #[doc = "Disable counter clear on ELC_GPTB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled at the ELC_GPTB input"]
+        #[doc = "Enable counter clear on ELC_GPTB input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cselcc_SPEC;
     pub type Cselcc = crate::EnumBitfieldStruct<u8, Cselcc_SPEC>;
     impl Cselcc {
-        #[doc = "Counter clear disabled at the ELC_GPTC input"]
+        #[doc = "Disable counter clear on ELC_GPTC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled at the ELC_GPTC input"]
+        #[doc = "Enable counter clear on ELC_GPTC input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cselcd_SPEC;
     pub type Cselcd = crate::EnumBitfieldStruct<u8, Cselcd_SPEC>;
     impl Cselcd {
-        #[doc = "Counter clear disabled at the ELC_GPTD input"]
+        #[doc = "Disable counter clear on ELC_GPTD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled at the ELC_GPTD input"]
+        #[doc = "Enable counter clear on ELC_GPTD input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cselce_SPEC;
     pub type Cselce = crate::EnumBitfieldStruct<u8, Cselce_SPEC>;
     impl Cselce {
-        #[doc = "Counter clear disabled at the ELC_GPTE input"]
+        #[doc = "Disable counter clear on ELC_GPTE input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled at the ELC_GPTE input"]
+        #[doc = "Enable counter clear on ELC_GPTE input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cselcf_SPEC;
     pub type Cselcf = crate::EnumBitfieldStruct<u8, Cselcf_SPEC>;
     impl Cselcf {
-        #[doc = "Counter clear disabled at the ELC_GPTF input"]
+        #[doc = "Disable counter clear on ELC_GPTF input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled at the ELC_GPTF input"]
+        #[doc = "Enable counter clear on ELC_GPTF input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cselcg_SPEC;
     pub type Cselcg = crate::EnumBitfieldStruct<u8, Cselcg_SPEC>;
     impl Cselcg {
-        #[doc = "Counter clear disabled at the ELC_GPTG input"]
+        #[doc = "Disable counter clear on ELC_GPTG input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled at the ELC_GPTG input"]
+        #[doc = "Enable counter clear on ELC_GPTG input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cselch_SPEC;
     pub type Cselch = crate::EnumBitfieldStruct<u8, Cselch_SPEC>;
     impl Cselch {
-        #[doc = "Counter clear disabled at the ELC_GPTH input"]
+        #[doc = "Disable counter clear on ELC_GPTH input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled at the ELC_GPTH input"]
+        #[doc = "Enable counter clear on ELC_GPTH input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cclr_SPEC;
     pub type Cclr = crate::EnumBitfieldStruct<u8, Cclr_SPEC>;
     impl Cclr {
-        #[doc = "Counter clear disabled by the GTCLR register"]
+        #[doc = "Disable counter clear by the GTCLR register"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter clear enabled by the GTCLR register"]
+        #[doc = "Enable counter clear by the GTCLR register"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4780,7 +5297,7 @@ impl Gtupsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value Low Source Counter Count Up Enable"]
+    #[doc = "GTIOCA Pin Rising Input during GTIOCB Value Low Source Counter Count Up Enable"]
     #[inline(always)]
     pub fn uscarbl(
         self,
@@ -4806,7 +5323,7 @@ impl Gtupsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value High Source Counter Count Up Enable"]
+    #[doc = "GTIOCA Pin Rising Input during GTIOCB Value High Source Counter Count Up Enable"]
     #[inline(always)]
     pub fn uscarbh(
         self,
@@ -4832,7 +5349,7 @@ impl Gtupsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value Low Source Counter Count Up Enable"]
+    #[doc = "GTIOCA Pin Falling Input during GTIOCB Value Low Source Counter Count Up Enable"]
     #[inline(always)]
     pub fn uscafbl(
         self,
@@ -4858,7 +5375,7 @@ impl Gtupsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value High Source Counter Count Up Enable"]
+    #[doc = "GTIOCA Pin Falling Input during GTIOCB Value High Source Counter Count Up Enable"]
     #[inline(always)]
     pub fn uscafbh(
         self,
@@ -4884,7 +5401,7 @@ impl Gtupsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value Low Source Counter Count Up Enable"]
+    #[doc = "GTIOCB Pin Rising Input during GTIOCA Value Low Source Counter Count Up Enable"]
     #[inline(always)]
     pub fn uscbral(
         self,
@@ -4910,7 +5427,7 @@ impl Gtupsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value High Source Counter Count Up Enable"]
+    #[doc = "GTIOCB Pin Rising Input during GTIOCA Value High Source Counter Count Up Enable"]
     #[inline(always)]
     pub fn uscbrah(
         self,
@@ -4936,7 +5453,7 @@ impl Gtupsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value Low Source Counter Count Up Enable"]
+    #[doc = "GTIOCB Pin Falling Input during GTIOCA Value Low Source Counter Count Up Enable"]
     #[inline(always)]
     pub fn uscbfal(
         self,
@@ -4962,7 +5479,7 @@ impl Gtupsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value High Source Counter Count Up Enable"]
+    #[doc = "GTIOCB Pin Falling Input during GTIOCA Value High Source Counter Count Up Enable"]
     #[inline(always)]
     pub fn uscbfah(
         self,
@@ -5195,6 +5712,14 @@ impl Gtupsr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, u8, Gtupsr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<24,0xff,1,0,u8,u8,Gtupsr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Gtupsr {
     #[inline(always)]
@@ -5208,240 +5733,240 @@ pub mod gtupsr {
     pub struct Usgtrgar_SPEC;
     pub type Usgtrgar = crate::EnumBitfieldStruct<u8, Usgtrgar_SPEC>;
     impl Usgtrgar {
-        #[doc = "Counter count up disabled on the rising edge of GTETRGA input"]
+        #[doc = "Disable counter count up on the rising edge of GTETRGA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled on the rising edge of GTETRGA input"]
+        #[doc = "Enable counter count up on the rising edge of GTETRGA input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Usgtrgaf_SPEC;
     pub type Usgtrgaf = crate::EnumBitfieldStruct<u8, Usgtrgaf_SPEC>;
     impl Usgtrgaf {
-        #[doc = "Counter count up disabled on the falling edge of GTETRGA input"]
+        #[doc = "Disable counter count up on the falling edge of GTETRGA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled on the falling edge of GTETRGA input"]
+        #[doc = "Enable counter count up on the falling edge of GTETRGA input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Usgtrgbr_SPEC;
     pub type Usgtrgbr = crate::EnumBitfieldStruct<u8, Usgtrgbr_SPEC>;
     impl Usgtrgbr {
-        #[doc = "Counter count up disabled on the rising edge of GTETRGB input"]
+        #[doc = "Disable counter count up on the rising edge of GTETRGB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled on the rising edge of GTETRGB input"]
+        #[doc = "Enable counter count up on the rising edge of GTETRGB input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Usgtrgbf_SPEC;
     pub type Usgtrgbf = crate::EnumBitfieldStruct<u8, Usgtrgbf_SPEC>;
     impl Usgtrgbf {
-        #[doc = "Counter count up disabled on the falling edge of GTETRGB input"]
+        #[doc = "Disable counter count up on the falling edge of GTETRGB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled on the falling edge of GTETRGB input"]
+        #[doc = "Enable counter count up on the falling edge of GTETRGB input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Usgtrgcr_SPEC;
     pub type Usgtrgcr = crate::EnumBitfieldStruct<u8, Usgtrgcr_SPEC>;
     impl Usgtrgcr {
-        #[doc = "Counter count up disabled on the rising edge of GTETRGC input"]
+        #[doc = "Disable counter count up on the rising edge of GTETRGC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled on the rising edge of GTETRGC input"]
+        #[doc = "Enable counter count up on the rising edge of GTETRGC input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Usgtrgcf_SPEC;
     pub type Usgtrgcf = crate::EnumBitfieldStruct<u8, Usgtrgcf_SPEC>;
     impl Usgtrgcf {
-        #[doc = "Counter count up disabled on the falling edge of GTETRGC input"]
+        #[doc = "Disable counter count up on the falling edge of GTETRGC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled on the falling edge of GTETRGC input"]
+        #[doc = "Enable counter count up on the falling edge of GTETRGC input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Usgtrgdr_SPEC;
     pub type Usgtrgdr = crate::EnumBitfieldStruct<u8, Usgtrgdr_SPEC>;
     impl Usgtrgdr {
-        #[doc = "Counter count up disabled on the rising edge of GTETRGD input"]
+        #[doc = "Disable counter count up on the rising edge of GTETRGD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled on the rising edge of GTETRGD input"]
+        #[doc = "Enable counter count up on the rising edge of GTETRGD input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Usgtrgdf_SPEC;
     pub type Usgtrgdf = crate::EnumBitfieldStruct<u8, Usgtrgdf_SPEC>;
     impl Usgtrgdf {
-        #[doc = "Counter count up disabled on the falling edge of GTETRGD input"]
+        #[doc = "Disable counter count up on the falling edge of GTETRGD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled on the falling edge of GTETRGD input"]
+        #[doc = "Enable counter count up on the falling edge of GTETRGD input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uscarbl_SPEC;
     pub type Uscarbl = crate::EnumBitfieldStruct<u8, Uscarbl_SPEC>;
     impl Uscarbl {
-        #[doc = "Counter count up disabled on the rising edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Disable counter count up on the rising edge of GTIOCA input when GTIOCB input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled on the rising edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Enable counter count up on the rising edge of GTIOCA input when GTIOCB input is 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uscarbh_SPEC;
     pub type Uscarbh = crate::EnumBitfieldStruct<u8, Uscarbh_SPEC>;
     impl Uscarbh {
-        #[doc = "Counter count up disabled on the rising edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Disable counter count up on the rising edge of GTIOCA input when GTIOCB input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled on the rising edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Enable counter count up on the rising edge of GTIOCA input when GTIOCB input is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uscafbl_SPEC;
     pub type Uscafbl = crate::EnumBitfieldStruct<u8, Uscafbl_SPEC>;
     impl Uscafbl {
-        #[doc = "Counter count up disabled on the falling edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Disable counter count up on the falling edge of GTIOCA input when GTIOCB input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled on the falling edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Enable counter count up on the falling edge of GTIOCA input when GTIOCB input is 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uscafbh_SPEC;
     pub type Uscafbh = crate::EnumBitfieldStruct<u8, Uscafbh_SPEC>;
     impl Uscafbh {
-        #[doc = "Counter count up disabled on the falling edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Disable counter count up on the falling edge of GTIOCA input when GTIOCB input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled on the falling edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Enable counter count up on the falling edge of GTIOCA input when GTIOCB input is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uscbral_SPEC;
     pub type Uscbral = crate::EnumBitfieldStruct<u8, Uscbral_SPEC>;
     impl Uscbral {
-        #[doc = "Counter count up disabled on the rising edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Disable counter count up on the rising edge of GTIOCB input when GTIOCA input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled on the rising edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Enable counter count up on the rising edge of GTIOCB input when GTIOCA input is 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uscbrah_SPEC;
     pub type Uscbrah = crate::EnumBitfieldStruct<u8, Uscbrah_SPEC>;
     impl Uscbrah {
-        #[doc = "Counter count up disabled on the rising edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Disable counter count up on the rising edge of GTIOCB input when GTIOCA input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled on the rising edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Enable counter count up on the rising edge of GTIOCB input when GTIOCA input is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uscbfal_SPEC;
     pub type Uscbfal = crate::EnumBitfieldStruct<u8, Uscbfal_SPEC>;
     impl Uscbfal {
-        #[doc = "Counter count up disabled on the falling edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Disable counter count up on the falling edge of GTIOCB input when GTIOCA input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled on the falling edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Enable counter count up on the falling edge of GTIOCB input when GTIOCA input is 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uscbfah_SPEC;
     pub type Uscbfah = crate::EnumBitfieldStruct<u8, Uscbfah_SPEC>;
     impl Uscbfah {
-        #[doc = "Counter count up disabled on the falling edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Disable counter count up on the falling edge of GTIOCB input when GTIOCA input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled on the falling edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Enable counter count up on the falling edge of GTIOCB input when GTIOCA input is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uselca_SPEC;
     pub type Uselca = crate::EnumBitfieldStruct<u8, Uselca_SPEC>;
     impl Uselca {
-        #[doc = "Counter count up disabled at the ELC_GPTA input"]
+        #[doc = "Disable counter count up on ELC_GPTA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled at the ELC_GPTA input"]
+        #[doc = "Enable counter count up on ELC_GPTA input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uselcb_SPEC;
     pub type Uselcb = crate::EnumBitfieldStruct<u8, Uselcb_SPEC>;
     impl Uselcb {
-        #[doc = "Counter count up disabled at the ELC_GPTB input"]
+        #[doc = "Disable counter count up on ELC_GPTB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled at the ELC_GPTB input"]
+        #[doc = "Enable counter count up on ELC_GPTB input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uselcc_SPEC;
     pub type Uselcc = crate::EnumBitfieldStruct<u8, Uselcc_SPEC>;
     impl Uselcc {
-        #[doc = "Counter count up disabled at the ELC_GPTC input"]
+        #[doc = "Disable counter count up on ELC_GPTC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled at the ELC_GPTC input"]
+        #[doc = "Enable counter count up on ELC_GPTC input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uselcd_SPEC;
     pub type Uselcd = crate::EnumBitfieldStruct<u8, Uselcd_SPEC>;
     impl Uselcd {
-        #[doc = "Counter count up disabled at the ELC_GPTD input"]
+        #[doc = "Disable counter count up on ELC_GPTD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled at the ELC_GPTD input"]
+        #[doc = "Enable counter count up on ELC_GPTD input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uselce_SPEC;
     pub type Uselce = crate::EnumBitfieldStruct<u8, Uselce_SPEC>;
     impl Uselce {
-        #[doc = "Counter count up disabled at the ELC_GPTE input"]
+        #[doc = "Disable counter count up on ELC_GPTE input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled at the ELC_GPTE input"]
+        #[doc = "Enable counter count up on ELC_GPTE input.put"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uselcf_SPEC;
     pub type Uselcf = crate::EnumBitfieldStruct<u8, Uselcf_SPEC>;
     impl Uselcf {
-        #[doc = "Counter count up disabled at the ELC_GPTF input"]
+        #[doc = "Disable counter count up on ELC_GPTF input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled at the ELC_GPTF input"]
+        #[doc = "Enable counter count up on ELC_GPTF input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uselcg_SPEC;
     pub type Uselcg = crate::EnumBitfieldStruct<u8, Uselcg_SPEC>;
     impl Uselcg {
-        #[doc = "Counter count up disabled at the ELC_GPTG input"]
+        #[doc = "Disable counter count up on ELC_GPTG input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled at the ELC_GPTG input"]
+        #[doc = "Enable counter count up on ELC_GPTG input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uselch_SPEC;
     pub type Uselch = crate::EnumBitfieldStruct<u8, Uselch_SPEC>;
     impl Uselch {
-        #[doc = "Counter count up disabled at the ELC_GPTH input"]
+        #[doc = "Disable counter count up on ELC_GPTH input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count up enabled at the ELC_GPTH input"]
+        #[doc = "Enable counter count up on ELC_GPTH input."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5664,7 +6189,7 @@ impl Gtdnsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value Low Source Counter Count Down Enable"]
+    #[doc = "GTIOCA Pin Rising Input during GTIOCB Value Low Source Counter Count Down Enable"]
     #[inline(always)]
     pub fn dscarbl(
         self,
@@ -5690,7 +6215,7 @@ impl Gtdnsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value High Source Counter Count Down Enable"]
+    #[doc = "GTIOCA Pin Rising Input during GTIOCB Value High Source Counter Count Down Enable"]
     #[inline(always)]
     pub fn dscarbh(
         self,
@@ -5716,7 +6241,7 @@ impl Gtdnsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value Low Source Counter Count Down Enable"]
+    #[doc = "GTIOCA Pin Falling Input during GTIOCB Value Low Source Counter Count Down Enable"]
     #[inline(always)]
     pub fn dscafbl(
         self,
@@ -5742,7 +6267,7 @@ impl Gtdnsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value High Source Counter Count Down Enable"]
+    #[doc = "GTIOCA Pin Falling Input during GTIOCB Value High Source Counter Count Down Enable"]
     #[inline(always)]
     pub fn dscafbh(
         self,
@@ -5768,7 +6293,7 @@ impl Gtdnsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value Low Source Counter Count Down Enable"]
+    #[doc = "GTIOCB Pin Rising Input during GTIOCA Value Low Source Counter Count Down Enable"]
     #[inline(always)]
     pub fn dscbral(
         self,
@@ -5794,7 +6319,7 @@ impl Gtdnsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value High Source Counter Count Down Enable"]
+    #[doc = "GTIOCB Pin Rising Input during GTIOCA Value High Source Counter Count Down Enable"]
     #[inline(always)]
     pub fn dscbrah(
         self,
@@ -5820,7 +6345,7 @@ impl Gtdnsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value Low Source Counter Count Down Enable"]
+    #[doc = "GTIOCB Pin Falling Input during GTIOCA Value Low Source Counter Count Down Enable"]
     #[inline(always)]
     pub fn dscbfal(
         self,
@@ -5846,7 +6371,7 @@ impl Gtdnsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value High Source Counter Count Down Enable"]
+    #[doc = "GTIOCB Pin Falling Input during GTIOCA Value High Source Counter Count Down Enable"]
     #[inline(always)]
     pub fn dscbfah(
         self,
@@ -6054,7 +6579,7 @@ impl Gtdnsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "ELC_GPTF Event Source Counter Count Down Enable"]
+    #[doc = "ELC_GPTH Event Source Counter Count Down Enable"]
     #[inline(always)]
     pub fn dselch(
         self,
@@ -6079,6 +6604,14 @@ impl Gtdnsr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, u8, Gtdnsr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<24,0xff,1,0,u8,u8,Gtdnsr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Gtdnsr {
     #[inline(always)]
@@ -6092,240 +6625,240 @@ pub mod gtdnsr {
     pub struct Dsgtrgar_SPEC;
     pub type Dsgtrgar = crate::EnumBitfieldStruct<u8, Dsgtrgar_SPEC>;
     impl Dsgtrgar {
-        #[doc = "Counter count down disabled on the rising edge of GTETRGA input"]
+        #[doc = "Disable counter count down on the rising edge of GTETRGA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled on the rising edge of GTETRGA input"]
+        #[doc = "Enable counter count down on the rising edge of GTETRGA input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dsgtrgaf_SPEC;
     pub type Dsgtrgaf = crate::EnumBitfieldStruct<u8, Dsgtrgaf_SPEC>;
     impl Dsgtrgaf {
-        #[doc = "Counter count down disabled on the falling edge of GTETRGA input"]
+        #[doc = "Disable counter count down on the falling edge of GTETRGA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled on the falling edge of GTETRGA input"]
+        #[doc = "Enable counter count down on the falling edge of GTETRGA input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dsgtrgbr_SPEC;
     pub type Dsgtrgbr = crate::EnumBitfieldStruct<u8, Dsgtrgbr_SPEC>;
     impl Dsgtrgbr {
-        #[doc = "Counter count down disabled on the rising edge of GTETRGB input"]
+        #[doc = "Disable counter count down on the rising edge of GTETRGB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled on the rising edge of GTETRGB input"]
+        #[doc = "Enable counter count down on the rising edge of GTETRGB input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dsgtrgbf_SPEC;
     pub type Dsgtrgbf = crate::EnumBitfieldStruct<u8, Dsgtrgbf_SPEC>;
     impl Dsgtrgbf {
-        #[doc = "Counter count down disabled on the falling edge of GTETRGB input"]
+        #[doc = "Disable counter count down on the falling edge of GTETRGB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled on the falling edge of GTETRGB input"]
+        #[doc = "Enable counter count down on the falling edge of GTETRGB input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dsgtrgcr_SPEC;
     pub type Dsgtrgcr = crate::EnumBitfieldStruct<u8, Dsgtrgcr_SPEC>;
     impl Dsgtrgcr {
-        #[doc = "Counter count down disabled on the rising edge of GTETRGC input"]
+        #[doc = "Disable counter count down on the rising edge of GTETRGC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled on the rising edge of GTETRGC input"]
+        #[doc = "Enable counter count down on the rising edge of GTETRGC input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dsgtrgcf_SPEC;
     pub type Dsgtrgcf = crate::EnumBitfieldStruct<u8, Dsgtrgcf_SPEC>;
     impl Dsgtrgcf {
-        #[doc = "Counter count down disabled on the falling edge of GTETRGC input"]
+        #[doc = "Disable counter count down on the falling edge of GTETRGC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled on the falling edge of GTETRGC input"]
+        #[doc = "Enable counter count down on the falling edge of GTETRGC input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dsgtrgdr_SPEC;
     pub type Dsgtrgdr = crate::EnumBitfieldStruct<u8, Dsgtrgdr_SPEC>;
     impl Dsgtrgdr {
-        #[doc = "Counter count down disabled on the rising edge of GTETRGD input"]
+        #[doc = "Disable counter count down on the rising edge of GTETRGD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled on the rising edge of GTETRGD input"]
+        #[doc = "Enable counter count down on the rising edge of GTETRGD input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dsgtrgdf_SPEC;
     pub type Dsgtrgdf = crate::EnumBitfieldStruct<u8, Dsgtrgdf_SPEC>;
     impl Dsgtrgdf {
-        #[doc = "Counter count down disabled on the falling edge of GTETRGD input"]
+        #[doc = "Disable counter count down on the falling edge of GTETRGD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled on the falling edge of GTETRGD input"]
+        #[doc = "Enable counter count down on the falling edge of GTETRGD input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dscarbl_SPEC;
     pub type Dscarbl = crate::EnumBitfieldStruct<u8, Dscarbl_SPEC>;
     impl Dscarbl {
-        #[doc = "Counter count down disabled on the rising edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Disable counter count down on the rising edge of GTIOCA input when GTIOCB input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled on the rising edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Enable counter count down on the rising edge of GTIOCA input when GTIOCB input is 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dscarbh_SPEC;
     pub type Dscarbh = crate::EnumBitfieldStruct<u8, Dscarbh_SPEC>;
     impl Dscarbh {
-        #[doc = "Counter count down disabled on the rising edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Disable counter count down on the rising edge of GTIOCA input when GTIOCB input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled on the rising edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Enable counter count down on the rising edge of GTIOCA input when GTIOCB input is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dscafbl_SPEC;
     pub type Dscafbl = crate::EnumBitfieldStruct<u8, Dscafbl_SPEC>;
     impl Dscafbl {
-        #[doc = "Counter count down disabled on the falling edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Disable counter count down on the falling edge of GTIOCA input when GTIOCB input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled on the falling edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Enable counter count down on the falling edge of GTIOCA input when GTIOCB input is 0"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dscafbh_SPEC;
     pub type Dscafbh = crate::EnumBitfieldStruct<u8, Dscafbh_SPEC>;
     impl Dscafbh {
-        #[doc = "Counter count down disabled on the falling edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Disable counter count down on the falling edge of GTIOCA input when GTIOCB input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled on the falling edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Enable counter count down on the falling edge of GTIOCA input when GTIOCB input is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dscbral_SPEC;
     pub type Dscbral = crate::EnumBitfieldStruct<u8, Dscbral_SPEC>;
     impl Dscbral {
-        #[doc = "Counter count down disabled on the rising edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Disable counter count down on the rising edge of GTIOCB input when GTIOCA input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled on the rising edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Enable counter count down on the rising edge of GTIOCB input when GTIOCA input is 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dscbrah_SPEC;
     pub type Dscbrah = crate::EnumBitfieldStruct<u8, Dscbrah_SPEC>;
     impl Dscbrah {
-        #[doc = "Counter count down disabled on the rising edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Disable counter count down on the rising edge of GTIOCB input when GTIOCA input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled on the rising edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Enable counter count down on the rising edge of GTIOCB input when GTIOCA input is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dscbfal_SPEC;
     pub type Dscbfal = crate::EnumBitfieldStruct<u8, Dscbfal_SPEC>;
     impl Dscbfal {
-        #[doc = "Counter count down disabled on the falling edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Disable counter count down on the falling edge of GTIOCB input when GTIOCA input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled on the falling edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Enable counter count down on the falling edge of GTIOCB input when GTIOCA input is 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dscbfah_SPEC;
     pub type Dscbfah = crate::EnumBitfieldStruct<u8, Dscbfah_SPEC>;
     impl Dscbfah {
-        #[doc = "Counter count down disabled on the falling edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Disable counter count down on the falling edge of GTIOCB input when GTIOCA input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled on the falling edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Enable counter count down on the falling edge of GTIOCB input when GTIOCA input is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dselca_SPEC;
     pub type Dselca = crate::EnumBitfieldStruct<u8, Dselca_SPEC>;
     impl Dselca {
-        #[doc = "Counter count down disabled at the ELC_GPTA input"]
+        #[doc = "Disable counter count down on ELC_GPTA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled at the ELC_GPTA input"]
+        #[doc = "Enable counter count down on ELC_GPTA input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dselcb_SPEC;
     pub type Dselcb = crate::EnumBitfieldStruct<u8, Dselcb_SPEC>;
     impl Dselcb {
-        #[doc = "Counter count down disabled at the ELC_GPTB input"]
+        #[doc = "Disable counter count down on ELC_GPTB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled at the ELC_GPTB input"]
+        #[doc = "Enable counter count down on ELC_GPTB input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dselcc_SPEC;
     pub type Dselcc = crate::EnumBitfieldStruct<u8, Dselcc_SPEC>;
     impl Dselcc {
-        #[doc = "Counter count down disabled at the ELC_GPTC input"]
+        #[doc = "Disable counter count down on ELC_GPTC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled at the ELC_GPTC input"]
+        #[doc = "Enable counter count down on ELC_GPTC input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dselcd_SPEC;
     pub type Dselcd = crate::EnumBitfieldStruct<u8, Dselcd_SPEC>;
     impl Dselcd {
-        #[doc = "Counter count down disabled at the ELC_GPTD input"]
+        #[doc = "Disable counter count down on ELC_GPTD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled at the ELC_GPTD input"]
+        #[doc = "Enable counter count down on ELC_GPTD input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dselce_SPEC;
     pub type Dselce = crate::EnumBitfieldStruct<u8, Dselce_SPEC>;
     impl Dselce {
-        #[doc = "Counter count down disabled at the ELC_GPTE input"]
+        #[doc = "Disable counter count down on ELC_GPTE input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled at the ELC_GPTE input"]
+        #[doc = "Enable counter count down on ELC_GPTE input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dselcf_SPEC;
     pub type Dselcf = crate::EnumBitfieldStruct<u8, Dselcf_SPEC>;
     impl Dselcf {
-        #[doc = "Counter count down disabled at the ELC_GPTF input"]
+        #[doc = "Disable counter count down on ELC_GPTF input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled at the ELC_GPTF input"]
+        #[doc = "Enable counter count down on ELC_GPTF input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dselcg_SPEC;
     pub type Dselcg = crate::EnumBitfieldStruct<u8, Dselcg_SPEC>;
     impl Dselcg {
-        #[doc = "Counter count down disabled at the ELC_GPTG input"]
+        #[doc = "Disable counter count down on ELC_GPTG input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled at the ELC_GPTG input"]
+        #[doc = "Enable counter count down on ELC_GPTG input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dselch_SPEC;
     pub type Dselch = crate::EnumBitfieldStruct<u8, Dselch_SPEC>;
     impl Dselch {
-        #[doc = "Counter count down disabled at the ELC_GPTF input"]
+        #[doc = "Disable counter count down on ELC_GPTH input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Counter count down enabled at the ELC_GPTF input"]
+        #[doc = "Enable counter count down on ELC_GPTH input."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6548,7 +7081,7 @@ impl Gticasr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value Low Source GTCCRA Input Capture Enable"]
+    #[doc = "GTIOCA Pin Rising Input during GTIOCB Value Low Source GTCCRA Input Capture Enable"]
     #[inline(always)]
     pub fn ascarbl(
         self,
@@ -6574,7 +7107,7 @@ impl Gticasr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value High Source GTCCRA Input Capture Enable"]
+    #[doc = "GTIOCA Pin Rising Input during GTIOCB Value High Source GTCCRA Input Capture Enable"]
     #[inline(always)]
     pub fn ascarbh(
         self,
@@ -6600,7 +7133,7 @@ impl Gticasr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value Low Source GTCCRA Input Capture Enable"]
+    #[doc = "GTIOCA Pin Falling Input during GTIOCB Value Low Source GTCCRA Input Capture Enable"]
     #[inline(always)]
     pub fn ascafbl(
         self,
@@ -6626,7 +7159,7 @@ impl Gticasr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value High Source GTCCRA Input Capture Enable"]
+    #[doc = "GTIOCA Pin Falling Input during GTIOCB Value High Source GTCCRA Input Capture Enable"]
     #[inline(always)]
     pub fn ascafbh(
         self,
@@ -6652,7 +7185,7 @@ impl Gticasr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value Low Source GTCCRA Input Capture Enable"]
+    #[doc = "GTIOCB Pin Rising Input during GTIOCA Value Low Source GTCCRA Input Capture Enable"]
     #[inline(always)]
     pub fn ascbral(
         self,
@@ -6678,7 +7211,7 @@ impl Gticasr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value High Source GTCCRA Input Capture Enable"]
+    #[doc = "GTIOCB Pin Rising Input during GTIOCA Value High Source GTCCRA Input Capture Enable"]
     #[inline(always)]
     pub fn ascbrah(
         self,
@@ -6704,7 +7237,7 @@ impl Gticasr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value Low Source GTCCRA Input Capture Enable"]
+    #[doc = "GTIOCB Pin Falling Input during GTIOCA Value Low Source GTCCRA Input Capture Enable"]
     #[inline(always)]
     pub fn ascbfal(
         self,
@@ -6730,7 +7263,7 @@ impl Gticasr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value High Source GTCCRA Input Capture Enable"]
+    #[doc = "GTIOCB Pin Falling Input during GTIOCA Value High Source GTCCRA Input Capture Enable"]
     #[inline(always)]
     pub fn ascbfah(
         self,
@@ -6963,6 +7496,14 @@ impl Gticasr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, u8, Gticasr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<24,0xff,1,0,u8,u8,Gticasr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Gticasr {
     #[inline(always)]
@@ -6976,240 +7517,240 @@ pub mod gticasr {
     pub struct Asgtrgar_SPEC;
     pub type Asgtrgar = crate::EnumBitfieldStruct<u8, Asgtrgar_SPEC>;
     impl Asgtrgar {
-        #[doc = "GTCCRA input capture disabled on the rising edge of GTETRGA input"]
+        #[doc = "Disable GTCCRA input capture on the rising edge of GTETRGA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled on the rising edge of GTETRGA input"]
+        #[doc = "Enable GTCCRA input capture on the rising edge of GTETRGA input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asgtrgaf_SPEC;
     pub type Asgtrgaf = crate::EnumBitfieldStruct<u8, Asgtrgaf_SPEC>;
     impl Asgtrgaf {
-        #[doc = "GTCCRA input capture disabled on the falling edge of GTETRGA input"]
+        #[doc = "Disable GTCCRA input capture on the falling edge of GTETRGA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled on the falling edge of GTETRGA input"]
+        #[doc = "Enable GTCCRA input capture on the falling edge of GTETRGA input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asgtrgbr_SPEC;
     pub type Asgtrgbr = crate::EnumBitfieldStruct<u8, Asgtrgbr_SPEC>;
     impl Asgtrgbr {
-        #[doc = "GTCCRA input capture disabled on the rising edge of GTETRGB input"]
+        #[doc = "Disable GTCCRA input capture on the rising edge of GTETRGB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled on the rising edge of GTETRGB input"]
+        #[doc = "Enable GTCCRA input capture on the rising edge of GTETRGB input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asgtrgbf_SPEC;
     pub type Asgtrgbf = crate::EnumBitfieldStruct<u8, Asgtrgbf_SPEC>;
     impl Asgtrgbf {
-        #[doc = "GTCCRA input capture disabled on the falling edge of GTETRGB input"]
+        #[doc = "Disable GTCCRA input capture on the falling edge of GTETRGB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled on the falling edge of GTETRGB input"]
+        #[doc = "Enable GTCCRA input capture on the falling edge of GTETRGB input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asgtrgcr_SPEC;
     pub type Asgtrgcr = crate::EnumBitfieldStruct<u8, Asgtrgcr_SPEC>;
     impl Asgtrgcr {
-        #[doc = "GTCCRA input capture disabled on the rising edge of GTETRGC input"]
+        #[doc = "Disable GTCCRA input capture on the rising edge of GTETRGC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled on the rising edge of GTETRGC input"]
+        #[doc = "Enable GTCCRA input capture on the rising edge of GTETRGC input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asgtrgcf_SPEC;
     pub type Asgtrgcf = crate::EnumBitfieldStruct<u8, Asgtrgcf_SPEC>;
     impl Asgtrgcf {
-        #[doc = "GTCCRA input capture disabled on the falling edge of GTETRGC input"]
+        #[doc = "Disable GTCCRA input capture on the falling edge of GTETRGC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled on the falling edge of GTETRGC input"]
+        #[doc = "Enable GTCCRA input capture on the falling edge of GTETRGC input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asgtrgdr_SPEC;
     pub type Asgtrgdr = crate::EnumBitfieldStruct<u8, Asgtrgdr_SPEC>;
     impl Asgtrgdr {
-        #[doc = "GTCCRA input capture disabled on the rising edge of GTETRGD input"]
+        #[doc = "Disable GTCCRA input capture on the rising edge of GTETRGD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled on the rising edge of GTETRGD input"]
+        #[doc = "Enable GTCCRA input capture on the rising edge of GTETRGD input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Asgtrgdf_SPEC;
     pub type Asgtrgdf = crate::EnumBitfieldStruct<u8, Asgtrgdf_SPEC>;
     impl Asgtrgdf {
-        #[doc = "GTCCRA input capture disabled on the falling edge of GTETRGD input"]
+        #[doc = "Disable GTCCRA input capture on the falling edge of GTETRGD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled on the falling edge of GTETRGD input"]
+        #[doc = "Enable GTCCRA input capture on the falling edge of GTETRGD input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ascarbl_SPEC;
     pub type Ascarbl = crate::EnumBitfieldStruct<u8, Ascarbl_SPEC>;
     impl Ascarbl {
-        #[doc = "GTCCRA input capture disabled on the rising edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Disable GTCCRA input capture on the rising edge of GTIOCA input when GTIOCB input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled on the rising edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Enable GTCCRA input capture on the rising edge of GTIOCA input when GTIOCB input is 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ascarbh_SPEC;
     pub type Ascarbh = crate::EnumBitfieldStruct<u8, Ascarbh_SPEC>;
     impl Ascarbh {
-        #[doc = "GTCCRA input capture disabled on the rising edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Disable GTCCRA input capture on the rising edge of GTIOCA input when GTIOCB input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled on the rising edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Enable GTCCRA input capture on the rising edge of GTIOCA input when GTIOCB input is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ascafbl_SPEC;
     pub type Ascafbl = crate::EnumBitfieldStruct<u8, Ascafbl_SPEC>;
     impl Ascafbl {
-        #[doc = "GTCCRA input capture disabled on the falling edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Disable GTCCRA input capture on the falling edge of GTIOCA input when GTIOCB input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled on the falling edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Enable GTCCRA input capture on the falling edge of GTIOCA input when GTIOCB input is 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ascafbh_SPEC;
     pub type Ascafbh = crate::EnumBitfieldStruct<u8, Ascafbh_SPEC>;
     impl Ascafbh {
-        #[doc = "GTCCRA input capture disabled on the falling edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Disable GTCCRA input capture on the falling edge of GTIOCA input when GTIOCB input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled on the falling edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Enable GTCCRA input capture on the falling edge of GTIOCA input when GTIOCB input is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ascbral_SPEC;
     pub type Ascbral = crate::EnumBitfieldStruct<u8, Ascbral_SPEC>;
     impl Ascbral {
-        #[doc = "GTCCRA input capture disabled on the rising edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Disable GTCCRA input capture on the rising edge of GTIOCB input when GTIOCA input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled on the rising edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Enable GTCCRA input capture on the rising edge of GTIOCB input when GTIOCA input is 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ascbrah_SPEC;
     pub type Ascbrah = crate::EnumBitfieldStruct<u8, Ascbrah_SPEC>;
     impl Ascbrah {
-        #[doc = "GTCCRA input capture disabled on the rising edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Disable GTCCRA input capture on the rising edge of GTIOCB input when GTIOCA input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled on the rising edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Enable GTCCRA input capture on the rising edge of GTIOCB input when GTIOCA input is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ascbfal_SPEC;
     pub type Ascbfal = crate::EnumBitfieldStruct<u8, Ascbfal_SPEC>;
     impl Ascbfal {
-        #[doc = "GTCCRA input capture disabled on the falling edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Disable GTCCRA input capture on the falling edge of GTIOCB input when GTIOCA input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled on the falling edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Enable GTCCRA input capture on the falling edge of GTIOCB input when GTIOCA input is 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ascbfah_SPEC;
     pub type Ascbfah = crate::EnumBitfieldStruct<u8, Ascbfah_SPEC>;
     impl Ascbfah {
-        #[doc = "GTCCRA input capture disabled on the falling edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Disable GTCCRA input capture on the falling edge of GTIOCB input when GTIOCA input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled on the falling edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Enable GTCCRA input capture on the falling edge of GTIOCB input when GTIOCA input is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aselca_SPEC;
     pub type Aselca = crate::EnumBitfieldStruct<u8, Aselca_SPEC>;
     impl Aselca {
-        #[doc = "GTCCRA input capture disabled at the ELC_GPTA input"]
+        #[doc = "Disable GTCCRA input capture on ELC_GPTA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled at the ELC_GPTA input"]
+        #[doc = "Enable GTCCRA input capture on ELC_GPTA input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aselcb_SPEC;
     pub type Aselcb = crate::EnumBitfieldStruct<u8, Aselcb_SPEC>;
     impl Aselcb {
-        #[doc = "GTCCRA input capture disabled at the ELC_GPTB input"]
+        #[doc = "Disable GTCCRA input capture on ELC_GPTB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled at the ELC_GPTB input"]
+        #[doc = "Enable GTCCRA input capture on ELC_GPTB input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aselcc_SPEC;
     pub type Aselcc = crate::EnumBitfieldStruct<u8, Aselcc_SPEC>;
     impl Aselcc {
-        #[doc = "GTCCRA input capture disabled at the ELC_GPTC input"]
+        #[doc = "Disable GTCCRA input capture on ELC_GPTC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled at the ELC_GPTC input"]
+        #[doc = "Enable GTCCRA input capture on ELC_GPTC input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aselcd_SPEC;
     pub type Aselcd = crate::EnumBitfieldStruct<u8, Aselcd_SPEC>;
     impl Aselcd {
-        #[doc = "GTCCRA input capture disabled at the ELC_GPTD input"]
+        #[doc = "Disable GTCCRA input capture on ELC_GPTD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled at the ELC_GPTD input"]
+        #[doc = "Enable GTCCRA input capture on ELC_GPTD input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aselce_SPEC;
     pub type Aselce = crate::EnumBitfieldStruct<u8, Aselce_SPEC>;
     impl Aselce {
-        #[doc = "GTCCRA input capture disabled at the ELC_GPTE input"]
+        #[doc = "Disable GTCCRA input capture on ELC_GPTE input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled at the ELC_GPTE input"]
+        #[doc = "Enable GTCCRA input capture on ELC_GPTE input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aselcf_SPEC;
     pub type Aselcf = crate::EnumBitfieldStruct<u8, Aselcf_SPEC>;
     impl Aselcf {
-        #[doc = "GTCCRA input capture disabled at the ELC_GPTF input"]
+        #[doc = "Disable GTCCRA input capture on ELC_GPTF input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled at the ELC_GPTF input"]
+        #[doc = "Enable GTCCRA input capture on ELC_GPTF input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aselcg_SPEC;
     pub type Aselcg = crate::EnumBitfieldStruct<u8, Aselcg_SPEC>;
     impl Aselcg {
-        #[doc = "GTCCRA input capture disabled at the ELC_GPTG input"]
+        #[doc = "Disable GTCCRA input capture on ELC_GPTG input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled at the ELC_GPTG input"]
+        #[doc = "Enable GTCCRA input capture on ELC_GPTG input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Aselch_SPEC;
     pub type Aselch = crate::EnumBitfieldStruct<u8, Aselch_SPEC>;
     impl Aselch {
-        #[doc = "GTCCRA input capture disabled at the ELC_GPTH input"]
+        #[doc = "Disable GTCCRA input capture on ELC_GPTH input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRA input capture enabled at the ELC_GPTH input"]
+        #[doc = "Enable GTCCRA input capture on ELC_GPTH input"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7432,7 +7973,7 @@ impl Gticbsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value Low Source GTCCRB Input Capture Enable"]
+    #[doc = "GTIOCA Pin Rising Input during GTIOCB Value Low Source GTCCRB Input Capture Enable"]
     #[inline(always)]
     pub fn bscarbl(
         self,
@@ -7458,7 +7999,7 @@ impl Gticbsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Rising Input during GTIOCnB Value High Source GTCCRB Input Capture Enable"]
+    #[doc = "GTIOCA Pin Rising Input during GTIOCB Value High Source GTCCRB Input Capture Enable"]
     #[inline(always)]
     pub fn bscarbh(
         self,
@@ -7484,7 +8025,7 @@ impl Gticbsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value Low Source GTCCRB Input Capture Enable"]
+    #[doc = "GTIOCA Pin Falling Input during GTIOCB Value Low Source GTCCRB Input Capture Enable"]
     #[inline(always)]
     pub fn bscafbl(
         self,
@@ -7510,7 +8051,7 @@ impl Gticbsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Falling Input during GTIOCnB Value High Source GTCCRB Input Capture Enable"]
+    #[doc = "GTIOCA Pin Falling Input during GTIOCB Value High Source GTCCRB Input Capture Enable"]
     #[inline(always)]
     pub fn bscafbh(
         self,
@@ -7536,7 +8077,7 @@ impl Gticbsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value Low Source GTCCRB Input Capture Enable"]
+    #[doc = "GTIOCB Pin Rising Input during GTIOCA Value Low Source GTCCRB Input Capture Enable"]
     #[inline(always)]
     pub fn bscbral(
         self,
@@ -7562,7 +8103,7 @@ impl Gticbsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Rising Input during GTIOCnA Value High Source GTCCRB Input Capture Enable"]
+    #[doc = "GTIOCB Pin Rising Input during GTIOCA Value High Source GTCCRB Input Capture Enable"]
     #[inline(always)]
     pub fn bscbrah(
         self,
@@ -7588,7 +8129,7 @@ impl Gticbsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value Low Source GTCCRB Input Capture Enable"]
+    #[doc = "GTIOCB Pin Falling Input during GTIOCA Value Low Source GTCCRB Input Capture Enable"]
     #[inline(always)]
     pub fn bscbfal(
         self,
@@ -7614,7 +8155,7 @@ impl Gticbsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Falling Input during GTIOCnA Value High Source GTCCRB Input Capture Enable"]
+    #[doc = "GTIOCB Pin Falling Input during GTIOCA Value High Source GTCCRB Input Capture Enable"]
     #[inline(always)]
     pub fn bscbfah(
         self,
@@ -7847,6 +8388,14 @@ impl Gticbsr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000000. The write value should be 00000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, u8, Gticbsr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<24,0xff,1,0,u8,u8,Gticbsr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Gticbsr {
     #[inline(always)]
@@ -7860,240 +8409,240 @@ pub mod gticbsr {
     pub struct Bsgtrgar_SPEC;
     pub type Bsgtrgar = crate::EnumBitfieldStruct<u8, Bsgtrgar_SPEC>;
     impl Bsgtrgar {
-        #[doc = "GTCCRB input capture disabled on the rising edge of GTETRGA input"]
+        #[doc = "Disable GTCCRB input capture on the rising edge of GTETRGA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled on the rising edge of GTETRGA input"]
+        #[doc = "Enable GTCCRB input capture on the rising edge of GTETRGA input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bsgtrgaf_SPEC;
     pub type Bsgtrgaf = crate::EnumBitfieldStruct<u8, Bsgtrgaf_SPEC>;
     impl Bsgtrgaf {
-        #[doc = "GTCCRB input capture disabled on the falling edge of GTETRGA input"]
+        #[doc = "Disable GTCCRB input capture on the falling edge of GTETRGA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled on the falling edge of GTETRGA input"]
+        #[doc = "Enable GTCCRB input capture on the falling edge of GTETRGA input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bsgtrgbr_SPEC;
     pub type Bsgtrgbr = crate::EnumBitfieldStruct<u8, Bsgtrgbr_SPEC>;
     impl Bsgtrgbr {
-        #[doc = "GTCCRB input capture disabled on the rising edge of GTETRGB input"]
+        #[doc = "Disable GTCCRB input capture on the rising edge of GTETRGB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled on the rising edge of GTETRGB input"]
+        #[doc = "Enable GTCCRB input capture on the rising edge of GTETRGB input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bsgtrgbf_SPEC;
     pub type Bsgtrgbf = crate::EnumBitfieldStruct<u8, Bsgtrgbf_SPEC>;
     impl Bsgtrgbf {
-        #[doc = "GTCCRB input capture disabled on the falling edge of GTETRGB input"]
+        #[doc = "Disable GTCCRB input capture on the falling edge of GTETRGB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled on the falling edge of GTETRGB input"]
+        #[doc = "Enable GTCCRB input capture on the falling edge of GTETRGB input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bsgtrgcr_SPEC;
     pub type Bsgtrgcr = crate::EnumBitfieldStruct<u8, Bsgtrgcr_SPEC>;
     impl Bsgtrgcr {
-        #[doc = "GTCCRB input capture disabled on the rising edge of GTETRGC input"]
+        #[doc = "Disable GTCCRB input capture on the rising edge of GTETRGC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled on the rising edge of GTETRGC input"]
+        #[doc = "Enable GTCCRB input capture on the rising edge of GTETRGC input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bsgtrgcf_SPEC;
     pub type Bsgtrgcf = crate::EnumBitfieldStruct<u8, Bsgtrgcf_SPEC>;
     impl Bsgtrgcf {
-        #[doc = "GTCCRB input capture disabled on the falling edge of GTETRGC input"]
+        #[doc = "Disable GTCCRB input capture on the falling edge of GTETRGC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled on the falling edge of GTETRGC input"]
+        #[doc = "Enable GTCCRB input capture on the falling edge of GTETRGC input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bsgtrgdr_SPEC;
     pub type Bsgtrgdr = crate::EnumBitfieldStruct<u8, Bsgtrgdr_SPEC>;
     impl Bsgtrgdr {
-        #[doc = "GTCCRB input capture disabled on the rising edge of GTETRGD input"]
+        #[doc = "Disable GTCCRB input capture on the rising edge of GTETRGD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled on the rising edge of GTETRGD input"]
+        #[doc = "Enable GTCCRB input capture on the rising edge of GTETRGD input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bsgtrgdf_SPEC;
     pub type Bsgtrgdf = crate::EnumBitfieldStruct<u8, Bsgtrgdf_SPEC>;
     impl Bsgtrgdf {
-        #[doc = "GTCCRB input capture disabled on the falling edge of GTETRGD input"]
+        #[doc = "Disable GTCCRB input capture on the falling edge of GTETRGD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled on the falling edge of GTETRGD input"]
+        #[doc = "Enable GTCCRB input capture on the falling edge of GTETRGD input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bscarbl_SPEC;
     pub type Bscarbl = crate::EnumBitfieldStruct<u8, Bscarbl_SPEC>;
     impl Bscarbl {
-        #[doc = "GTCCRB input capture disabled on the rising edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Disable GTCCRB input capture on the rising edge of GTIOCA input when GTIOCB input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled on the rising edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Enable GTCCRB input capture on the rising edge of GTIOCA input when GTIOCB input is 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bscarbh_SPEC;
     pub type Bscarbh = crate::EnumBitfieldStruct<u8, Bscarbh_SPEC>;
     impl Bscarbh {
-        #[doc = "GTCCRB input capture disabled on the rising edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Disable GTCCRB input capture on the rising edge of GTIOCA input when GTIOCB input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled on the rising edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Enable GTCCRB input capture on the rising edge of GTIOCA input when GTIOCB input is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bscafbl_SPEC;
     pub type Bscafbl = crate::EnumBitfieldStruct<u8, Bscafbl_SPEC>;
     impl Bscafbl {
-        #[doc = "GTCCRB input capture disabled on the falling edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Disable GTCCRB input capture on the falling edge of GTIOCA input when GTIOCB input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled on the falling edge of GTIOCnA input when GTIOCnB input is 0"]
+        #[doc = "Enable GTCCRB input capture on the falling edge of GTIOCA input when GTIOCB input is 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bscafbh_SPEC;
     pub type Bscafbh = crate::EnumBitfieldStruct<u8, Bscafbh_SPEC>;
     impl Bscafbh {
-        #[doc = "GTCCRB input capture disabled on the falling edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Disable GTCCRB input capture on the falling edge of GTIOCA input when GTIOCB input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled on the falling edge of GTIOCnA input when GTIOCnB input is 1"]
+        #[doc = "Enable GTCCRB input capture on the falling edge of GTIOCA input when GTIOCB input is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bscbral_SPEC;
     pub type Bscbral = crate::EnumBitfieldStruct<u8, Bscbral_SPEC>;
     impl Bscbral {
-        #[doc = "GTCCRB input capture disabled on the rising edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Disable GTCCRB input capture on the rising edge of GTIOCB input when GTIOCA input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled on the rising edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Enable GTCCRB input capture on the rising edge of GTIOCB input when GTIOCA input is 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bscbrah_SPEC;
     pub type Bscbrah = crate::EnumBitfieldStruct<u8, Bscbrah_SPEC>;
     impl Bscbrah {
-        #[doc = "GTCCRB input capture disabled on the rising edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Disable GTCCRB input capture on the rising edge of GTIOCB input when GTIOCA input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled on the rising edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Enable GTCCRB input capture on the rising edge of GTIOCB input when GTIOCA input is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bscbfal_SPEC;
     pub type Bscbfal = crate::EnumBitfieldStruct<u8, Bscbfal_SPEC>;
     impl Bscbfal {
-        #[doc = "GTCCRB input capture disabled on the falling edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Disable GTCCRB input capture on the falling edge of GTIOCB input when GTIOCA input is 0"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled on the falling edge of GTIOCnB input when GTIOCnA input is 0"]
+        #[doc = "Enable GTCCRB input capture on the falling edge of GTIOCB input when GTIOCA input is 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bscbfah_SPEC;
     pub type Bscbfah = crate::EnumBitfieldStruct<u8, Bscbfah_SPEC>;
     impl Bscbfah {
-        #[doc = "GTCCRB input capture disabled on the falling edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Disable GTCCRB input capture on the falling edge of GTIOCB input when GTIOCA input is 1"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled on the falling edge of GTIOCnB input when GTIOCnA input is 1"]
+        #[doc = "Enable GTCCRB input capture on the falling edge of GTIOCB input when GTIOCA input is 1."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bselca_SPEC;
     pub type Bselca = crate::EnumBitfieldStruct<u8, Bselca_SPEC>;
     impl Bselca {
-        #[doc = "GTCCRB input capture disabled at the ELC_GPTA input"]
+        #[doc = "Disable GTCCRB input capture on ELC_GPTA input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled at the ELC_GPTA input"]
+        #[doc = "Enable GTCCRB input capture on ELC_GPTA input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bselcb_SPEC;
     pub type Bselcb = crate::EnumBitfieldStruct<u8, Bselcb_SPEC>;
     impl Bselcb {
-        #[doc = "GTCCRB input capture disabled at the ELC_GPTB input"]
+        #[doc = "Disable GTCCRB input capture on ELC_GPTB input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled at the ELC_GPTB input"]
+        #[doc = "Enable GTCCRB input capture on ELC_GPTB input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bselcc_SPEC;
     pub type Bselcc = crate::EnumBitfieldStruct<u8, Bselcc_SPEC>;
     impl Bselcc {
-        #[doc = "GTCCRB input capture disabled at the ELC_GPTC input"]
+        #[doc = "Disable GTCCRB input capture on ELC_GPTC input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled at the ELC_GPTC input"]
+        #[doc = "Enable GTCCRB input capture on ELC_GPTC input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bselcd_SPEC;
     pub type Bselcd = crate::EnumBitfieldStruct<u8, Bselcd_SPEC>;
     impl Bselcd {
-        #[doc = "GTCCRB input capture disabled at the ELC_GPTD input"]
+        #[doc = "Disable GTCCRB input capture on ELC_GPTD input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled at the ELC_GPTD input"]
+        #[doc = "Enable GTCCRB input capture on ELC_GPTD input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bselce_SPEC;
     pub type Bselce = crate::EnumBitfieldStruct<u8, Bselce_SPEC>;
     impl Bselce {
-        #[doc = "GTCCRB input capture disabled at the ELC_GPTE input"]
+        #[doc = "Disable GTCCRB input capture on ELC_GPTE input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled at the ELC_GPTE input"]
+        #[doc = "Enable GTCCRB input capture on ELC_GPTE input"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bselcf_SPEC;
     pub type Bselcf = crate::EnumBitfieldStruct<u8, Bselcf_SPEC>;
     impl Bselcf {
-        #[doc = "GTCCRB input capture disabled at the ELC_GPTF input"]
+        #[doc = "Disable GTCCRB input capture on ELC_GPTF input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled at the ELC_GPTF input"]
+        #[doc = "Enable GTCCRB input capture on ELC_GPTF input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bselcg_SPEC;
     pub type Bselcg = crate::EnumBitfieldStruct<u8, Bselcg_SPEC>;
     impl Bselcg {
-        #[doc = "GTCCRB input capture disabled at the ELC_GPTG input"]
+        #[doc = "Disable GTCCRB input capture on ELC_GPTG input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled at the ELC_GPTG input"]
+        #[doc = "Enable GTCCRB input capture on ELC_GPTG input."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bselch_SPEC;
     pub type Bselch = crate::EnumBitfieldStruct<u8, Bselch_SPEC>;
     impl Bselch {
-        #[doc = "GTCCRB input capture disabled at the ELC_GPTH input"]
+        #[doc = "Disable GTCCRB input capture on ELC_GPTH input"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCCRB input capture enabled at the ELC_GPTH input"]
+        #[doc = "Enable GTCCRB input capture on ELC_GPTH input."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8177,6 +8726,14 @@ impl Gtcr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x1f, 1, 0, u8, u8, Gtcr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<27,0x1f,1,0,u8,u8,Gtcr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Gtcr {
     #[inline(always)]
@@ -8212,13 +8769,13 @@ pub mod gtcr {
         #[doc = "Setting prohibited"]
         pub const _011: Self = Self::new(3);
 
-        #[doc = "Triangle-wave PWM mode 1 (32-bit transfer at trough) (single buffer or double buffer is possible)"]
+        #[doc = "Triangle-wave PWM mode 1 (32-bit transfer at crest) (single buffer or double buffer possible)"]
         pub const _100: Self = Self::new(4);
 
-        #[doc = "Triangle-wave PWM mode 2 (32-bit transfer at crest and trough) (single buffer or double buffer is possible)"]
+        #[doc = "Triangle-wave PWM mode 2 (32-bit transfer at crest and trough) (single buffer or double buffer possible)"]
         pub const _101: Self = Self::new(5);
 
-        #[doc = "Triangle-wave PWM mode 3 (64-bit transfer at trough) (fixed buffer operation)"]
+        #[doc = "Triangle-wave PWM mode 3 (64-bit transfer at trough) fixed buffer operation)"]
         pub const _110: Self = Self::new(6);
 
         #[doc = "Setting prohibited"]
@@ -8228,53 +8785,53 @@ pub mod gtcr {
     pub struct Tpcs_SPEC;
     pub type Tpcs = crate::EnumBitfieldStruct<u8, Tpcs_SPEC>;
     impl Tpcs {
-        #[doc = "PCLKD/1"]
-        pub const _0_X_0: Self = Self::new(0);
+        #[doc = "PCLKGPTnPCLKC/1"]
+        pub const _0000: Self = Self::new(0);
 
-        #[doc = "PCLKD/2"]
-        pub const _0_X_1: Self = Self::new(1);
+        #[doc = "PCLKGPTnPCLKC/2"]
+        pub const _0001: Self = Self::new(1);
 
-        #[doc = "PCLKD/4"]
-        pub const _0_X_2: Self = Self::new(2);
+        #[doc = "PCLKGPTnPCLKC/4"]
+        pub const _0010: Self = Self::new(2);
 
-        #[doc = "PCLKD/8"]
-        pub const _0_X_3: Self = Self::new(3);
+        #[doc = "PCLKGPTnPCLKC/8"]
+        pub const _0011: Self = Self::new(3);
 
-        #[doc = "PCLKD/16"]
-        pub const _0_X_4: Self = Self::new(4);
+        #[doc = "PCLKGPTnPCLKC/16"]
+        pub const _0100: Self = Self::new(4);
 
-        #[doc = "PCLKD/32"]
-        pub const _0_X_5: Self = Self::new(5);
+        #[doc = "PCLKGPTnPCLKC/32"]
+        pub const _0101: Self = Self::new(5);
 
-        #[doc = "PCLKD/64"]
-        pub const _0_X_6: Self = Self::new(6);
+        #[doc = "PCLKGPTnPCLKC/64"]
+        pub const _0110: Self = Self::new(6);
 
-        #[doc = "Setting prohibited"]
-        pub const _0_X_7: Self = Self::new(7);
+        #[doc = "Setting prohibited(PCLKGPTn)"]
+        pub const _0111: Self = Self::new(7);
 
-        #[doc = "PCLKD/256"]
-        pub const _0_X_8: Self = Self::new(8);
+        #[doc = "PCLKGPTnPCLKC/256"]
+        pub const _1000: Self = Self::new(8);
 
-        #[doc = "Setting prohibited"]
-        pub const _0_X_9: Self = Self::new(9);
+        #[doc = "Setting prohibited(PCLKGPTn)"]
+        pub const _1001: Self = Self::new(9);
 
-        #[doc = "PCLKD/1024"]
-        pub const _0_X_A: Self = Self::new(10);
+        #[doc = "PCLKGPTnPCLKC/1024"]
+        pub const _1010: Self = Self::new(10);
 
-        #[doc = "Setting prohibited"]
-        pub const _0_X_B: Self = Self::new(11);
+        #[doc = "Setting prohibited(PCLKGPTn)"]
+        pub const _1011: Self = Self::new(11);
 
-        #[doc = "GTETRGA (Via the POEG)"]
-        pub const _0_X_C: Self = Self::new(12);
+        #[doc = "GTETRGA (via the POEG)"]
+        pub const _1100: Self = Self::new(12);
 
-        #[doc = "GTETRGB (Via the POEG)"]
-        pub const _0_X_D: Self = Self::new(13);
+        #[doc = "GTETRGB (via the POEG)"]
+        pub const _1101: Self = Self::new(13);
 
-        #[doc = "GTETRGC (Via the POEG)"]
-        pub const _0_X_E: Self = Self::new(14);
+        #[doc = "GTETRGC (via the POEG)"]
+        pub const _1110: Self = Self::new(14);
 
-        #[doc = "GTETRGD (Via the POEG)"]
-        pub const _0_X_F: Self = Self::new(15);
+        #[doc = "GTETRGD (via the POEG)"]
+        pub const _1111: Self = Self::new(15);
     }
 }
 #[doc(hidden)]
@@ -8340,7 +8897,7 @@ impl Gtuddtyc {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Output Duty Setting"]
+    #[doc = "GTIOCA Output Duty Setting"]
     #[inline(always)]
     pub fn oadty(
         self,
@@ -8366,7 +8923,7 @@ impl Gtuddtyc {
         >::from_register(self, 0)
     }
 
-    #[doc = "Forcible GTIOCnA Output Duty Setting"]
+    #[doc = "Forcible GTIOCA Output Duty Setting"]
     #[inline(always)]
     pub fn oadtyf(
         self,
@@ -8392,7 +8949,7 @@ impl Gtuddtyc {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Output Value Selecting after Releasing 0%/100% Duty Setting"]
+    #[doc = "GTIOCA Output Value Selecting after Releasing  0 percent/100 percent Duty Setting"]
     #[inline(always)]
     pub fn oadtyr(
         self,
@@ -8418,7 +8975,7 @@ impl Gtuddtyc {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Output Duty Setting"]
+    #[doc = "GTIOCB Output Duty Setting"]
     #[inline(always)]
     pub fn obdty(
         self,
@@ -8444,7 +9001,7 @@ impl Gtuddtyc {
         >::from_register(self, 0)
     }
 
-    #[doc = "Forcible GTIOCnB Output Duty Setting"]
+    #[doc = "Forcible GTIOCB Output Duty Setting"]
     #[inline(always)]
     pub fn obdtyf(
         self,
@@ -8470,7 +9027,7 @@ impl Gtuddtyc {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Output Value Selecting after Releasing 0%/100% Duty Setting"]
+    #[doc = "GTIOCB Output Value Selecting after Releasing  0 percent/100 percent Duty Setting"]
     #[inline(always)]
     pub fn obdtyr(
         self,
@@ -8495,6 +9052,14 @@ impl Gtuddtyc {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<28, 0xf, 1, 0, u8, u8, Gtuddtyc_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<28,0xf,1,0,u8,u8,Gtuddtyc_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Gtuddtyc {
     #[inline(always)]
@@ -8508,92 +9073,92 @@ pub mod gtuddtyc {
     pub struct Ud_SPEC;
     pub type Ud = crate::EnumBitfieldStruct<u8, Ud_SPEC>;
     impl Ud {
-        #[doc = "GTCNT counts down"]
+        #[doc = "Count down on GTCNT"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counts up"]
+        #[doc = "Counts up on GTCNT"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Udf_SPEC;
     pub type Udf = crate::EnumBitfieldStruct<u8, Udf_SPEC>;
     impl Udf {
-        #[doc = "Not forcibly set"]
+        #[doc = "Do not force setting"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Forcibly set"]
+        #[doc = "Force setting"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Oadty_SPEC;
     pub type Oadty = crate::EnumBitfieldStruct<u8, Oadty_SPEC>;
     impl Oadty {
-        #[doc = "GTIOCnA pin duty depends on the compare match"]
+        #[doc = "GTIOCA pin duty is depend on compare match"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "GTIOCnA pin duty depends on the compare match"]
+        #[doc = "GTIOCA pin duty is depend on compare match"]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "GTIOCnA pin duty 0%"]
+        #[doc = "GTIOCA pin duty 0 percent"]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "GTIOCnA pin duty 100%"]
+        #[doc = "GTIOCA pin duty 100 percent"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Oadtyf_SPEC;
     pub type Oadtyf = crate::EnumBitfieldStruct<u8, Oadtyf_SPEC>;
     impl Oadtyf {
-        #[doc = "Not forcibly set"]
+        #[doc = "Do not force setting"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Forcibly set"]
+        #[doc = "Force setting"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Oadtyr_SPEC;
     pub type Oadtyr = crate::EnumBitfieldStruct<u8, Oadtyr_SPEC>;
     impl Oadtyr {
-        #[doc = "The function selected by the GTIOA\\[3:2\\] bits is applied to the output value when the duty cycle is set after release from the 0 or 100% duty-cycle setting."]
+        #[doc = "Apply output value set in 0 percent/100 percent duty to GTIOA\\[3:2\\] function after releasing 0 percent/100 percent duty setting."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "The function selected by the GTIOA\\[3:2\\] bits is applied to the compare match output value which is masked after release from the 0 or 100% duty-cycle setting."]
+        #[doc = "Apply masked compare match output value to GTIOA\\[3:2\\] function after releasing 0 percent/100 percent duty setting."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Obdty_SPEC;
     pub type Obdty = crate::EnumBitfieldStruct<u8, Obdty_SPEC>;
     impl Obdty {
-        #[doc = "GTIOCnB pin duty depends on the compare match"]
+        #[doc = "GTIOCB pin duty is depend on compare match"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "GTIOCnB pin duty depends on the compare match"]
+        #[doc = "GTIOCB pin duty is depend on compare match"]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "GTIOCnB pin duty 0%"]
+        #[doc = "GTIOCB pin duty 0percent"]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "GTIOCnB pin duty 100%"]
+        #[doc = "GTIOCB pin duty 100percent"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Obdtyf_SPEC;
     pub type Obdtyf = crate::EnumBitfieldStruct<u8, Obdtyf_SPEC>;
     impl Obdtyf {
-        #[doc = "Not forcibly set"]
+        #[doc = "Do not force setting"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Forcibly set"]
+        #[doc = "Force setting"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Obdtyr_SPEC;
     pub type Obdtyr = crate::EnumBitfieldStruct<u8, Obdtyr_SPEC>;
     impl Obdtyr {
-        #[doc = "The function selected by the GTIOB\\[3:2\\] bits is applied to the output value when the duty cycle is set after release from the 0 or 100% duty-cycle setting."]
+        #[doc = "Apply output value set in 0 percent/100 percent duty to GTIOB\\[3:2\\] function after releasing 0percent/100percent duty setting."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "The function selected by the GTIOB\\[3:2\\] bits is applied to the compare match output value which is masked after release from the 0 or 100% duty-cycle setting."]
+        #[doc = "Apply masked compare match output value to GTIOB\\[3:2\\] function after releasing 0percent/100percent duty setting."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -8608,15 +9173,33 @@ impl crate::sealed::RegSpec for Gtior_SPEC {
 pub type Gtior = crate::RegValueT<Gtior_SPEC>;
 
 impl Gtior {
-    #[doc = "GTIOCnA Pin Function Select"]
+    #[doc = "GTIOCA Pin Function Select"]
     #[inline(always)]
     pub fn gtioa(
         self,
-    ) -> crate::common::RegisterField<0, 0x1f, 1, 0, u8, u8, Gtior_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0x1f,1,0,u8,u8,Gtior_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x1f,
+        1,
+        0,
+        gtior::Gtioa,
+        gtior::Gtioa,
+        Gtior_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x1f,
+            1,
+            0,
+            gtior::Gtioa,
+            gtior::Gtioa,
+            Gtior_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Output Value Setting at the Count Stop"]
+    #[doc = "GTIOCA Pin Output Value Setting at the Count Stop"]
     #[inline(always)]
     pub fn oadflt(
         self,
@@ -8642,7 +9225,7 @@ impl Gtior {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Output Setting at the Start/Stop Count"]
+    #[doc = "GTIOCA Pin Output Setting at the Start/Stop Count"]
     #[inline(always)]
     pub fn oahld(
         self,
@@ -8668,7 +9251,7 @@ impl Gtior {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Output Enable"]
+    #[doc = "GTIOCA Pin Output Enable"]
     #[inline(always)]
     pub fn oae(
         self,
@@ -8694,7 +9277,7 @@ impl Gtior {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnA Pin Disable Value Setting"]
+    #[doc = "GTIOCA Pin Disable Value Setting"]
     #[inline(always)]
     pub fn oadf(
         self,
@@ -8772,15 +9355,33 @@ impl Gtior {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Function Select"]
+    #[doc = "GTIOCB Pin Function Select"]
     #[inline(always)]
     pub fn gtiob(
         self,
-    ) -> crate::common::RegisterField<16, 0x1f, 1, 0, u8, u8, Gtior_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<16,0x1f,1,0,u8,u8,Gtior_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        16,
+        0x1f,
+        1,
+        0,
+        gtior::Gtiob,
+        gtior::Gtiob,
+        Gtior_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0x1f,
+            1,
+            0,
+            gtior::Gtiob,
+            gtior::Gtiob,
+            Gtior_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Output Value Setting at the Count Stop"]
+    #[doc = "GTIOCB Pin Output Value Setting at the Count Stop"]
     #[inline(always)]
     pub fn obdflt(
         self,
@@ -8806,7 +9407,7 @@ impl Gtior {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Output Setting at the Start/Stop Count"]
+    #[doc = "GTIOCB Pin Output Setting at the Start/Stop Count"]
     #[inline(always)]
     pub fn obhld(
         self,
@@ -8832,7 +9433,7 @@ impl Gtior {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Output Enable"]
+    #[doc = "GTIOCB Pin Output Enable"]
     #[inline(always)]
     pub fn obe(
         self,
@@ -8858,7 +9459,7 @@ impl Gtior {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTIOCnB Pin Disable Value Setting"]
+    #[doc = "GTIOCB Pin Disable Value Setting"]
     #[inline(always)]
     pub fn obdf(
         self,
@@ -8882,6 +9483,14 @@ impl Gtior {
             Gtior_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 00. The write value should be 00."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<27, 0x3, 1, 0, u8, u8, Gtior_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<27,0x3,1,0,u8,u8,Gtior_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Noise Filter B Enable"]
@@ -8945,147 +9554,347 @@ impl ::core::default::Default for Gtior {
 pub mod gtior {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Gtioa_SPEC;
+    pub type Gtioa = crate::EnumBitfieldStruct<u8, Gtioa_SPEC>;
+    impl Gtioa {
+        #[doc = "Initial output is Low. Output retained at cycle end. Output retained at GTCCRA compare match."]
+        pub const _00000: Self = Self::new(0);
+
+        #[doc = "Initial output is Low. Output retained at cycle end. Low output at GTCCRA compare match."]
+        pub const _00001: Self = Self::new(1);
+
+        #[doc = "Initial output is Low. Output retained at cycle end. High output at GTCCRA compare match."]
+        pub const _00010: Self = Self::new(2);
+
+        #[doc = "Initial output is Low. Output retained at cycle end. Output toggled at GTCCRA compare match."]
+        pub const _00011: Self = Self::new(3);
+
+        #[doc = "Initial output is Low. Low output at cycle end. Output retained at GTCCRA compare match."]
+        pub const _00100: Self = Self::new(4);
+
+        #[doc = "Initial output is Low. Low output at cycle end. Low output at GTCCRA compare match."]
+        pub const _00101: Self = Self::new(5);
+
+        #[doc = "Initial output is Low. Low output at cycle end. High output at GTCCRA compare match."]
+        pub const _00110: Self = Self::new(6);
+
+        #[doc = "Initial output is Low. Low output at cycle end. Output toggled at GTCCRA compare match."]
+        pub const _00111: Self = Self::new(7);
+
+        #[doc = "Initial output is Low. High output at cycle end. Output retained at GTCCRA compare match."]
+        pub const _01000: Self = Self::new(8);
+
+        #[doc = "Initial output is Low. High output at cycle end. Low output at GTCCRA compare match."]
+        pub const _01001: Self = Self::new(9);
+
+        #[doc = "Initial output is Low. High output at cycle end. High output at GTCCRA compare match."]
+        pub const _01010: Self = Self::new(10);
+
+        #[doc = "Initial output is Low. High output at cycle end. Output toggled at GTCCRA compare match."]
+        pub const _01011: Self = Self::new(11);
+
+        #[doc = "Initial output is Low. Output toggled at cycle end. Output retained at GTCCRA compare match."]
+        pub const _01100: Self = Self::new(12);
+
+        #[doc = "Initial output is Low. Output toggled at cycle end. Low output at GTCCRA compare match."]
+        pub const _01101: Self = Self::new(13);
+
+        #[doc = "Initial output is Low. Output toggled at cycle end. High output at GTCCRA compare match."]
+        pub const _01110: Self = Self::new(14);
+
+        #[doc = "Initial output is Low. Output toggled at cycle end. Output toggled at GTCCRA compare match."]
+        pub const _01111: Self = Self::new(15);
+
+        #[doc = "Initial output is High. Output retained at cycle end. Output retained at GTCCRA compare match."]
+        pub const _10000: Self = Self::new(16);
+
+        #[doc = "Initial output is High. Output retained at cycle end. Low output at GTCCRA compare match."]
+        pub const _10001: Self = Self::new(17);
+
+        #[doc = "Initial output is High. Output retained at cycle end. High output at GTCCRA compare match."]
+        pub const _10010: Self = Self::new(18);
+
+        #[doc = "Initial output is High. Output retained at cycle end. Output toggled at GTCCRA compare match."]
+        pub const _10011: Self = Self::new(19);
+
+        #[doc = "Initial output is High. Low output at cycle end. Output retained at GTCCRA compare match."]
+        pub const _10100: Self = Self::new(20);
+
+        #[doc = "Initial output is High. Low output at cycle end. Low output at GTCCRA compare match."]
+        pub const _10101: Self = Self::new(21);
+
+        #[doc = "Initial output is High. Low output at cycle end. High output at GTCCRA compare match."]
+        pub const _10110: Self = Self::new(22);
+
+        #[doc = "Initial output is High. Low output at cycle end. Output toggled at GTCCRA compare match."]
+        pub const _10111: Self = Self::new(23);
+
+        #[doc = "Initial output is High. High output at cycle end. Output retained at GTCCRA compare match."]
+        pub const _11000: Self = Self::new(24);
+
+        #[doc = "Initial output is High. High output at cycle end. Low output at GTCCRA compare match."]
+        pub const _11001: Self = Self::new(25);
+
+        #[doc = "Initial output is High. High output at cycle end. High output at GTCCRA compare match."]
+        pub const _11010: Self = Self::new(26);
+
+        #[doc = "Initial output is High. High output at cycle end. Output toggled at GTCCRA compare match."]
+        pub const _11011: Self = Self::new(27);
+
+        #[doc = "Initial output is High. Output toggled at cycle end. Output retained at GTCCRA compare match."]
+        pub const _11100: Self = Self::new(28);
+
+        #[doc = "Initial output is High. Output toggled at cycle end. Low output at GTCCRA compare match."]
+        pub const _11101: Self = Self::new(29);
+
+        #[doc = "Initial output is High. Output toggled at cycle end. High output at GTCCRA compare match."]
+        pub const _11110: Self = Self::new(30);
+
+        #[doc = "Initial output is High. Output toggled at cycle end. Output toggled at GTCCRA compare match."]
+        pub const _11111: Self = Self::new(31);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Oadflt_SPEC;
     pub type Oadflt = crate::EnumBitfieldStruct<u8, Oadflt_SPEC>;
     impl Oadflt {
-        #[doc = "The GTIOCnA pin outputs low when counting stops"]
+        #[doc = "Output low on GTIOCA pin when counting stops"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "The GTIOCnA pin outputs high when counting stops"]
+        #[doc = "Output high on GTIOCA pin when counting stops."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Oahld_SPEC;
     pub type Oahld = crate::EnumBitfieldStruct<u8, Oahld_SPEC>;
     impl Oahld {
-        #[doc = "The GTIOCnA pin output level at the start or stop of counting depends on the register setting"]
+        #[doc = "Set GTIOCA pin output level on counting start and stop based on the register setting."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "The GTIOCnA pin output level is retained at the start or stop of counting"]
+        #[doc = "Retain GTIOCA pin output level on counting start and stop"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Oae_SPEC;
     pub type Oae = crate::EnumBitfieldStruct<u8, Oae_SPEC>;
     impl Oae {
-        #[doc = "Output is disabled"]
+        #[doc = "Disable output"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Output is enabled"]
+        #[doc = "Enable output."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Oadf_SPEC;
     pub type Oadf = crate::EnumBitfieldStruct<u8, Oadf_SPEC>;
     impl Oadf {
-        #[doc = "None of the below options are specified"]
+        #[doc = "Prohibit output disable"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "GTIOCnA pin is set to Hi-Z in response to controlling the output negation"]
+        #[doc = "Set GTIOCA pin to Hi-Z on output disable"]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "GTIOCnA pin is set to 0 in response to controlling the output negation"]
+        #[doc = "Set GTIOCA pin to 0 on output disable"]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "GTIOCnA pin is set to 1 in response to controlling the output negation"]
+        #[doc = "Set GTIOCA pin to 1 on output disable."]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfaen_SPEC;
     pub type Nfaen = crate::EnumBitfieldStruct<u8, Nfaen_SPEC>;
     impl Nfaen {
-        #[doc = "The noise filter for the GTIOCnA pin is disabled"]
+        #[doc = "Disable noise filter for GTIOCA pin"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "The noise filter for the GTIOCnA pin is enabled"]
+        #[doc = "Enable noise filter for GTIOCA pin."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfcsa_SPEC;
     pub type Nfcsa = crate::EnumBitfieldStruct<u8, Nfcsa_SPEC>;
     impl Nfcsa {
-        #[doc = "PCLKD/1"]
+        #[doc = "PCLKGPTn/1"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "PCLKD/4"]
+        #[doc = "PCLKGPTn/4"]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "PCLKD/16"]
+        #[doc = "PCLKGPTn/16"]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "PCLKD/64"]
+        #[doc = "PCLKGPTn/64"]
         pub const _11: Self = Self::new(3);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Gtiob_SPEC;
+    pub type Gtiob = crate::EnumBitfieldStruct<u8, Gtiob_SPEC>;
+    impl Gtiob {
+        #[doc = "Initial output is Low. Output retained at cycle end. Output retained at GTCCRB compare match."]
+        pub const _00000: Self = Self::new(0);
+
+        #[doc = "Initial output is Low. Output retained at cycle end. Low output at GTCCRB compare match."]
+        pub const _00001: Self = Self::new(1);
+
+        #[doc = "Initial output is Low. Output retained at cycle end. High output at GTCCRB compare match."]
+        pub const _00010: Self = Self::new(2);
+
+        #[doc = "Initial output is Low. Output retained at cycle end. Output toggled at GTCCRB compare match."]
+        pub const _00011: Self = Self::new(3);
+
+        #[doc = "Initial output is Low. Low output at cycle end. Output retained at GTCCRB compare match."]
+        pub const _00100: Self = Self::new(4);
+
+        #[doc = "Initial output is Low. Low output at cycle end. Low output at GTCCRB compare match."]
+        pub const _00101: Self = Self::new(5);
+
+        #[doc = "Initial output is Low. Low output at cycle end. High output at GTCCRB compare match."]
+        pub const _00110: Self = Self::new(6);
+
+        #[doc = "Initial output is Low. Low output at cycle end. Output toggled at GTCCRB compare match."]
+        pub const _00111: Self = Self::new(7);
+
+        #[doc = "Initial output is Low. High output at cycle end. Output retained at GTCCRB compare match."]
+        pub const _01000: Self = Self::new(8);
+
+        #[doc = "Initial output is Low. High output at cycle end. Low output at GTCCRB compare match."]
+        pub const _01001: Self = Self::new(9);
+
+        #[doc = "Initial output is Low. High output at cycle end. High output at GTCCRB compare match."]
+        pub const _01010: Self = Self::new(10);
+
+        #[doc = "Initial output is Low. High output at cycle end. Output toggled at GTCCRB compare match."]
+        pub const _01011: Self = Self::new(11);
+
+        #[doc = "Initial output is Low. Output toggled at cycle end. Output retained at GTCCRB compare match."]
+        pub const _01100: Self = Self::new(12);
+
+        #[doc = "Initial output is Low. Output toggled at cycle end. Low output at GTCCRB compare match."]
+        pub const _01101: Self = Self::new(13);
+
+        #[doc = "Initial output is Low. Output toggled at cycle end. High output at GTCCRB compare match."]
+        pub const _01110: Self = Self::new(14);
+
+        #[doc = "Initial output is Low. Output toggled at cycle end. Output toggled at GTCCRB compare match."]
+        pub const _01111: Self = Self::new(15);
+
+        #[doc = "Initial output is High. Output retained at cycle end. Output retained at GTCCRB compare match."]
+        pub const _10000: Self = Self::new(16);
+
+        #[doc = "Initial output is High. Output retained at cycle end. Low output at GTCCRB compare match."]
+        pub const _10001: Self = Self::new(17);
+
+        #[doc = "Initial output is High. Output retained at cycle end. High output at GTCCRB compare match."]
+        pub const _10010: Self = Self::new(18);
+
+        #[doc = "Initial output is High. Output retained at cycle end. Output toggled at GTCCRB compare match."]
+        pub const _10011: Self = Self::new(19);
+
+        #[doc = "Initial output is High. Low output at cycle end. Output retained at GTCCRB compare match."]
+        pub const _10100: Self = Self::new(20);
+
+        #[doc = "Initial output is High. Low output at cycle end. Low output at GTCCRB compare match."]
+        pub const _10101: Self = Self::new(21);
+
+        #[doc = "Initial output is High. Low output at cycle end. High output at GTCCRB compare match."]
+        pub const _10110: Self = Self::new(22);
+
+        #[doc = "Initial output is High. Low output at cycle end. Output toggled at GTCCRB compare match."]
+        pub const _10111: Self = Self::new(23);
+
+        #[doc = "Initial output is High. High output at cycle end. Output retained at GTCCRB compare match."]
+        pub const _11000: Self = Self::new(24);
+
+        #[doc = "Initial output is High. High output at cycle end. Low output at GTCCRB compare match."]
+        pub const _11001: Self = Self::new(25);
+
+        #[doc = "Initial output is High. High output at cycle end. High output at GTCCRB compare match."]
+        pub const _11010: Self = Self::new(26);
+
+        #[doc = "Initial output is High. High output at cycle end. Output toggled at GTCCRB compare match."]
+        pub const _11011: Self = Self::new(27);
+
+        #[doc = "Initial output is High. Output toggled at cycle end. Output retained at GTCCRB compare match."]
+        pub const _11100: Self = Self::new(28);
+
+        #[doc = "Initial output is High. Output toggled at cycle end. Low output at GTCCRB compare match."]
+        pub const _11101: Self = Self::new(29);
+
+        #[doc = "Initial output is High. Output toggled at cycle end. High output at GTCCRB compare match."]
+        pub const _11110: Self = Self::new(30);
+
+        #[doc = "Initial output is High. Output toggled at cycle end. Output toggled at GTCCRB compare match."]
+        pub const _11111: Self = Self::new(31);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Obdflt_SPEC;
     pub type Obdflt = crate::EnumBitfieldStruct<u8, Obdflt_SPEC>;
     impl Obdflt {
-        #[doc = "The GTIOCnB pin outputs low when counting stops"]
+        #[doc = "Output low on GTIOCB pin when counting stops"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "The GTIOCnB pin outputs high when counting stops"]
+        #[doc = "Output high on GTIOCB pin when counting stops"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Obhld_SPEC;
     pub type Obhld = crate::EnumBitfieldStruct<u8, Obhld_SPEC>;
     impl Obhld {
-        #[doc = "The GTIOCnB pin output level at the start/stop of counting depends on the register setting"]
+        #[doc = "Set GTIOCB pin output level on counting start and stop based on the register setting"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "The GTIOCnB pin output level is retained at the start/stop of counting"]
+        #[doc = "Retain GTIOCB pin output level on counting start and stop"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Obe_SPEC;
     pub type Obe = crate::EnumBitfieldStruct<u8, Obe_SPEC>;
     impl Obe {
-        #[doc = "Output is disabled"]
+        #[doc = "Disable output"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Output is enabled"]
+        #[doc = "Enable output"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Obdf_SPEC;
     pub type Obdf = crate::EnumBitfieldStruct<u8, Obdf_SPEC>;
     impl Obdf {
-        #[doc = "None of the below options are specified"]
+        #[doc = "Prohibit output disable"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "GTIOCnB pin is set to Hi-Z in response to controlling the output negation"]
+        #[doc = "Set GTIOCB pin to Hi-Z on output disable"]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "GTIOCnB pin is set to 0 in response to controlling the output negation"]
+        #[doc = "Set GTIOCB pin to 0 on output disable"]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "GTIOCnB pin is set to 1 in response to controlling the output negation"]
+        #[doc = "Set GTIOCB pin to 1 on output disable."]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfben_SPEC;
     pub type Nfben = crate::EnumBitfieldStruct<u8, Nfben_SPEC>;
     impl Nfben {
-        #[doc = "The noise filter for the GTIOCnB pin is disabled"]
+        #[doc = "Disable noise filter for GTIOCB pin"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "The noise filter for the GTIOCnB pin is enabled"]
+        #[doc = "Enable noise filter for GTIOCB pin"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Nfcsb_SPEC;
     pub type Nfcsb = crate::EnumBitfieldStruct<u8, Nfcsb_SPEC>;
     impl Nfcsb {
-        #[doc = "PCLKD/1"]
+        #[doc = "PCLKGPTn/1"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "PCLKD/4"]
+        #[doc = "PCLKGPTn/4"]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "PCLKD/16"]
+        #[doc = "PCLKGPTn/16"]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "PCLKD/64"]
+        #[doc = "PCLKGPTn/64"]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -9100,6 +9909,110 @@ impl crate::sealed::RegSpec for Gtintad_SPEC {
 pub type Gtintad = crate::RegValueT<Gtintad_SPEC>;
 
 impl Gtintad {
+    #[doc = "GTADTRA Compare Match (Up-Counting) A/D Converter Start Request Interrupt Enable"]
+    #[inline(always)]
+    pub fn adtrauen(
+        self,
+    ) -> crate::common::RegisterField<
+        16,
+        0x1,
+        1,
+        0,
+        gtintad::Adtrauen,
+        gtintad::Adtrauen,
+        Gtintad_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0x1,
+            1,
+            0,
+            gtintad::Adtrauen,
+            gtintad::Adtrauen,
+            Gtintad_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "GTADTRA Compare Match (Down-Counting) A/D Converter Start Request Interrupt Enable"]
+    #[inline(always)]
+    pub fn adtraden(
+        self,
+    ) -> crate::common::RegisterField<
+        17,
+        0x1,
+        1,
+        0,
+        gtintad::Adtraden,
+        gtintad::Adtraden,
+        Gtintad_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            17,
+            0x1,
+            1,
+            0,
+            gtintad::Adtraden,
+            gtintad::Adtraden,
+            Gtintad_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "GTADTRB Compare Match (Up-Counting) A/D Converter Start Request Interrupt Enable"]
+    #[inline(always)]
+    pub fn adtrbuen(
+        self,
+    ) -> crate::common::RegisterField<
+        18,
+        0x1,
+        1,
+        0,
+        gtintad::Adtrbuen,
+        gtintad::Adtrbuen,
+        Gtintad_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            18,
+            0x1,
+            1,
+            0,
+            gtintad::Adtrbuen,
+            gtintad::Adtrbuen,
+            Gtintad_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "GTADTRB Compare Match (Down-Counting) A/D Converter Start Request Interrupt Enable"]
+    #[inline(always)]
+    pub fn adtrbden(
+        self,
+    ) -> crate::common::RegisterField<
+        19,
+        0x1,
+        1,
+        0,
+        gtintad::Adtrbden,
+        gtintad::Adtrbden,
+        Gtintad_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            19,
+            0x1,
+            1,
+            0,
+            gtintad::Adtrbden,
+            gtintad::Adtrbden,
+            Gtintad_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
     #[doc = "Output Disable Source Select"]
     #[inline(always)]
     pub fn grp(
@@ -9177,6 +10090,16 @@ impl Gtintad {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<31, 1, 0, Gtintad_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<31, 1, 0, Gtintad_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
 }
 impl ::core::default::Default for Gtintad {
     #[inline(always)]
@@ -9187,39 +10110,79 @@ impl ::core::default::Default for Gtintad {
 pub mod gtintad {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Adtrauen_SPEC;
+    pub type Adtrauen = crate::EnumBitfieldStruct<u8, Adtrauen_SPEC>;
+    impl Adtrauen {
+        #[doc = "Disable A/D converter start request"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Enable A/D converter start request."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Adtraden_SPEC;
+    pub type Adtraden = crate::EnumBitfieldStruct<u8, Adtraden_SPEC>;
+    impl Adtraden {
+        #[doc = "Disable A/D converter start request"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Enable A/D converter start request."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Adtrbuen_SPEC;
+    pub type Adtrbuen = crate::EnumBitfieldStruct<u8, Adtrbuen_SPEC>;
+    impl Adtrbuen {
+        #[doc = "Disable A/D converter start request"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Enable A/D converter start request."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Adtrbden_SPEC;
+    pub type Adtrbden = crate::EnumBitfieldStruct<u8, Adtrbden_SPEC>;
+    impl Adtrbden {
+        #[doc = "Disable A/D converter start request"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Enable A/D converter start request."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Grp_SPEC;
     pub type Grp = crate::EnumBitfieldStruct<u8, Grp_SPEC>;
     impl Grp {
-        #[doc = "Group A output disable request is selected"]
+        #[doc = "Select Group A output disable request"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "Group B output disable request is selected"]
+        #[doc = "Select Group B output disable request"]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "Group C output disable request is selected"]
+        #[doc = "Select Group C output disable request"]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "Group D output disable request is selected"]
+        #[doc = "Select Group D output disable request."]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Grpabh_SPEC;
     pub type Grpabh = crate::EnumBitfieldStruct<u8, Grpabh_SPEC>;
     impl Grpabh {
-        #[doc = "Same time output level high disable request disabled"]
+        #[doc = "Disable same time output level high disable request"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Same time output level high disable request enabled"]
+        #[doc = "Enable same time output level high disable request"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Grpabl_SPEC;
     pub type Grpabl = crate::EnumBitfieldStruct<u8, Grpabl_SPEC>;
     impl Grpabl {
-        #[doc = "Same time output level low disable request disabled"]
+        #[doc = "Disable same time output level low disable request"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Same time output level low disable request enabled"]
+        #[doc = "Enable same time output level low disable request"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -9468,7 +10431,7 @@ impl Gtst {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTADTRA Register Compare Match (Up-Counting) A/D Conversion Start Request Flag"]
+    #[doc = "GTADTRA Register Compare Match(Up-Counting) A/D Converter Start Request Flag"]
     #[inline(always)]
     pub fn adtrauf(
         self,
@@ -9494,7 +10457,7 @@ impl Gtst {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTADTRA Register Compare Match (Down-Counting) A/D Conversion Start Request Flag"]
+    #[doc = "GTADTRA Register Compare Match(Down-Counting) A/D Converter Start Request Flag"]
     #[inline(always)]
     pub fn adtradf(
         self,
@@ -9520,7 +10483,7 @@ impl Gtst {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTADTRB Register Compare Match (Up-Counting) A/D Conversion Start Request Flag"]
+    #[doc = "GTADTRB Register Compare Match(Up-Counting) A/D Converter Start Request Flag"]
     #[inline(always)]
     pub fn adtrbuf(
         self,
@@ -9546,7 +10509,7 @@ impl Gtst {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTADTRB Register Compare Match (Down-Counting) A/D Conversion Start Request Flag"]
+    #[doc = "GTADTRB Register Compare Match(Down-Counting) A/D Converter Start Request Flag"]
     #[inline(always)]
     pub fn adtrbdf(
         self,
@@ -9598,7 +10561,17 @@ impl Gtst {
         >::from_register(self, 0)
     }
 
-    #[doc = "Same Time Output Level High Flag"]
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<28, 1, 0, Gtst_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<28, 1, 0, Gtst_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
+
+    #[doc = "Same Time Output Level High Disable Request Enable"]
     #[inline(always)]
     pub fn oabhf(
         self,
@@ -9624,7 +10597,7 @@ impl Gtst {
         >::from_register(self, 0)
     }
 
-    #[doc = "Same Time Output Level Low Flag"]
+    #[doc = "Same Time Output Level Low Disable Request Enable"]
     #[inline(always)]
     pub fn oablf(
         self,
@@ -9688,90 +10661,90 @@ pub mod gtst {
     pub struct Tcfa_SPEC;
     pub type Tcfa = crate::EnumBitfieldStruct<u8, Tcfa_SPEC>;
     impl Tcfa {
-        #[doc = "No input capture/compare match of GTCCRA is generated"]
+        #[doc = "No input capture/compare match of GTCCRA is generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "An input capture/compare match of GTCCRA is generated"]
+        #[doc = "An input capture/compare match of GTCCRA is generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tcfb_SPEC;
     pub type Tcfb = crate::EnumBitfieldStruct<u8, Tcfb_SPEC>;
     impl Tcfb {
-        #[doc = "No input capture/compare match of GTCCRB is generated"]
+        #[doc = "No input capture/compare match of GTCCRB is generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "An input capture/compare match of GTCCRB is generated"]
+        #[doc = "An input capture/compare match of GTCCRB is generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tcfc_SPEC;
     pub type Tcfc = crate::EnumBitfieldStruct<u8, Tcfc_SPEC>;
     impl Tcfc {
-        #[doc = "No compare match of GTCCRC is generated"]
+        #[doc = "No compare match of GTCCRC is generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "A compare match of GTCCRC is generated"]
+        #[doc = "A compare match of GTCCRC is generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tcfd_SPEC;
     pub type Tcfd = crate::EnumBitfieldStruct<u8, Tcfd_SPEC>;
     impl Tcfd {
-        #[doc = "No compare match of GTCCRD is generated"]
+        #[doc = "No compare match of GTCCRD is generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "A compare match of GTCCRD is generated"]
+        #[doc = "A compare match of GTCCRD is generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tcfe_SPEC;
     pub type Tcfe = crate::EnumBitfieldStruct<u8, Tcfe_SPEC>;
     impl Tcfe {
-        #[doc = "No compare match of GTCCRE is generated"]
+        #[doc = "No compare match of GTCCRE is generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "A compare match of GTCCRE is generated"]
+        #[doc = "A compare match of GTCCRE is generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tcff_SPEC;
     pub type Tcff = crate::EnumBitfieldStruct<u8, Tcff_SPEC>;
     impl Tcff {
-        #[doc = "No compare match of GTCCRF is generated"]
+        #[doc = "No compare match of GTCCRF is generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "A compare match of GTCCRF is generated"]
+        #[doc = "A compare match of GTCCRF is generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tcfpo_SPEC;
     pub type Tcfpo = crate::EnumBitfieldStruct<u8, Tcfpo_SPEC>;
     impl Tcfpo {
-        #[doc = "No overflow (crest) occurred"]
+        #[doc = "No overflow (crest) has occurred."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "An overflow (crest) occurred"]
+        #[doc = "An overflow (crest) has occurred."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tcfpu_SPEC;
     pub type Tcfpu = crate::EnumBitfieldStruct<u8, Tcfpu_SPEC>;
     impl Tcfpu {
-        #[doc = "No underflow (trough) occurred"]
+        #[doc = "No underflow (trough) has occurred."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "An underflow (trough) occurred"]
+        #[doc = "An underflow (trough) has occurred."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tucf_SPEC;
     pub type Tucf = crate::EnumBitfieldStruct<u8, Tucf_SPEC>;
     impl Tucf {
-        #[doc = "GTCNT counter counts downward"]
+        #[doc = "GTCNT counter is counting down"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTCNT counter counts upward"]
+        #[doc = "GTCNT counter is counting up."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -9818,40 +10791,40 @@ pub mod gtst {
     pub struct Odf_SPEC;
     pub type Odf = crate::EnumBitfieldStruct<u8, Odf_SPEC>;
     impl Odf {
-        #[doc = "No output disable request is generated"]
+        #[doc = "No output disable request is generated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "An output disable request is generated"]
+        #[doc = "An output disable request is generated."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Oabhf_SPEC;
     pub type Oabhf = crate::EnumBitfieldStruct<u8, Oabhf_SPEC>;
     impl Oabhf {
-        #[doc = "No simultaneous generation of 1 both for the GTIOCA and GTIOCB pins has occurred."]
+        #[doc = "GTIOCA pin and GTIOCB pin don\'t output 1 at the same time."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "A simultaneous generation of 1 both for the GTIOCA and GTIOCB pins has occurred."]
+        #[doc = "GTIOCA pin and GTIOCB pin output 1 at the same time."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Oablf_SPEC;
     pub type Oablf = crate::EnumBitfieldStruct<u8, Oablf_SPEC>;
     impl Oablf {
-        #[doc = "No simultaneous generation of 0 both for the GTIOCA and GTIOCB pins has occurred."]
+        #[doc = "GTIOCA pin and GTIOCB pin don\'t output 0 at the same time."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "A simultaneous generation of 0 both for the GTIOCA and GTIOCB pins has occurred."]
+        #[doc = "GTIOCA pin and GTIOCB pin output 0 at the same time."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pcf_SPEC;
     pub type Pcf = crate::EnumBitfieldStruct<u8, Pcf_SPEC>;
     impl Pcf {
-        #[doc = "No period count function finish has occurred"]
+        #[doc = "No period count function finish has occurred."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "A period count function finish has occurred"]
+        #[doc = "A period count function finish has occurred."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -9866,79 +10839,27 @@ impl crate::sealed::RegSpec for Gtber_SPEC {
 pub type Gtber = crate::RegValueT<Gtber_SPEC>;
 
 impl Gtber {
-    #[doc = "GTCCR Buffer Operation Disable"]
+    #[doc = "BD\\[2\\]: GTADTR Buffer Operation DisableBD\\[1\\]: GTPR Buffer Operation DisableBD\\[0\\]: GTCCR Buffer Operation Disable"]
     #[inline(always)]
-    pub fn bd0(
+    pub fn bd(
         self,
     ) -> crate::common::RegisterField<
         0,
-        0x1,
+        0x7,
         1,
         0,
-        gtber::Bd0,
-        gtber::Bd0,
+        gtber::Bd,
+        gtber::Bd,
         Gtber_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
             0,
-            0x1,
+            0x7,
             1,
             0,
-            gtber::Bd0,
-            gtber::Bd0,
-            Gtber_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "GTPR Buffer Operation Disable"]
-    #[inline(always)]
-    pub fn bd1(
-        self,
-    ) -> crate::common::RegisterField<
-        1,
-        0x1,
-        1,
-        0,
-        gtber::Bd1,
-        gtber::Bd1,
-        Gtber_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            1,
-            0x1,
-            1,
-            0,
-            gtber::Bd1,
-            gtber::Bd1,
-            Gtber_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "GTADTRA/GTADTRB Registers Buffer Operation Disable"]
-    #[inline(always)]
-    pub fn bd2(
-        self,
-    ) -> crate::common::RegisterField<
-        2,
-        0x1,
-        1,
-        0,
-        gtber::Bd2,
-        gtber::Bd2,
-        Gtber_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            2,
-            0x1,
-            1,
-            0,
-            gtber::Bd2,
-            gtber::Bd2,
+            gtber::Bd,
+            gtber::Bd,
             Gtber_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
@@ -10022,17 +10943,33 @@ impl Gtber {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTCCRA and GTCCRB Forcible Buffer Operation"]
+    #[doc = "GTCCRA and GTCCRB Forcible Buffer OperationThis bit is read as 0."]
     #[inline(always)]
     pub fn ccrswt(
         self,
-    ) -> crate::common::RegisterFieldBool<22, 1, 0, Gtber_SPEC, crate::common::W> {
-        crate::common::RegisterFieldBool::<22, 1, 0, Gtber_SPEC, crate::common::W>::from_register(
-            self, 0,
-        )
+    ) -> crate::common::RegisterField<
+        22,
+        0x1,
+        1,
+        0,
+        gtber::Ccrswt,
+        gtber::Ccrswt,
+        Gtber_SPEC,
+        crate::common::W,
+    > {
+        crate::common::RegisterField::<
+            22,
+            0x1,
+            1,
+            0,
+            gtber::Ccrswt,
+            gtber::Ccrswt,
+            Gtber_SPEC,
+            crate::common::W,
+        >::from_register(self, 0)
     }
 
-    #[doc = "GTADTRA Register Buffer Transfer Timing Select"]
+    #[doc = "GTADTRA Buffer Transfer Timing Select  in the Triangle wavesNOTE: In the Saw waves, values other than 0 0: Transfer at an underflow (in down-counting) or overflow (in up-counting) is performed."]
     #[inline(always)]
     pub fn adtta(
         self,
@@ -10058,7 +10995,7 @@ impl Gtber {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTADTRA Register Double Buffer Operation"]
+    #[doc = "GTADTRA Double Buffer Operation"]
     #[inline(always)]
     pub fn adtda(
         self,
@@ -10084,7 +11021,7 @@ impl Gtber {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTADTRB Register Buffer Transfer Timing Select"]
+    #[doc = "GTADTRB Buffer Transfer Timing Select in the Triangle wavesNOTE: In the Saw waves, values other than 0 0: Transfer at an underflow (in down-counting) or overflow (in up-counting) is performed."]
     #[inline(always)]
     pub fn adttb(
         self,
@@ -10110,7 +11047,7 @@ impl Gtber {
         >::from_register(self, 0)
     }
 
-    #[doc = "GTADTRB Register Double Buffer Operation"]
+    #[doc = "GTADTRB Double Buffer Operation"]
     #[inline(always)]
     pub fn adtdb(
         self,
@@ -10135,6 +11072,16 @@ impl Gtber {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<31, 1, 0, Gtber_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<31, 1, 0, Gtber_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
 }
 impl ::core::default::Default for Gtber {
     #[inline(always)]
@@ -10145,88 +11092,69 @@ impl ::core::default::Default for Gtber {
 pub mod gtber {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Bd0_SPEC;
-    pub type Bd0 = crate::EnumBitfieldStruct<u8, Bd0_SPEC>;
-    impl Bd0 {
-        #[doc = "Buffer operation is enabled"]
+    pub struct Bd_SPEC;
+    pub type Bd = crate::EnumBitfieldStruct<u8, Bd_SPEC>;
+    impl Bd {
+        #[doc = "Enable buffer operation"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Buffer operation is disabled"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Bd1_SPEC;
-    pub type Bd1 = crate::EnumBitfieldStruct<u8, Bd1_SPEC>;
-    impl Bd1 {
-        #[doc = "Buffer operation is enabled"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Buffer operation is disabled"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Bd2_SPEC;
-    pub type Bd2 = crate::EnumBitfieldStruct<u8, Bd2_SPEC>;
-    impl Bd2 {
-        #[doc = "Buffer operation is enabled"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Buffer operation is disabled"]
+        #[doc = "Disable buffer operation"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ccra_SPEC;
     pub type Ccra = crate::EnumBitfieldStruct<u8, Ccra_SPEC>;
     impl Ccra {
-        #[doc = "No buffer operation"]
+        #[doc = "Buffer operation is not performed"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "Single buffer operation (GTCCRA <---->GTCCRC)"]
+        #[doc = "Single buffer operation (GTCCRA register to GTCCRC register)"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Double buffer operation (GTCCRA <----> GTCCRC <----> GTCCRD)"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ccrb_SPEC;
     pub type Ccrb = crate::EnumBitfieldStruct<u8, Ccrb_SPEC>;
     impl Ccrb {
-        #[doc = "No buffer operation"]
+        #[doc = "Buffer operation is not performed"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "Single buffer operation (GTCCRB <----> GTCCRE)"]
+        #[doc = "Single buffer operation (GTCCRB register to GTCCRE register)"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Double buffer operation (GTCCRB <----> GTCCRE <----> GTCCRF)"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pr_SPEC;
     pub type Pr = crate::EnumBitfieldStruct<u8, Pr_SPEC>;
     impl Pr {
-        #[doc = "No buffer operation"]
+        #[doc = "Buffer operation is not performed"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "Single buffer operation (GTPBR --> GTPR)"]
+        #[doc = "Buffer operation (GTPBR register  to GTPR register)"]
         pub const _01: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Ccrswt_SPEC;
+    pub type Ccrswt = crate::EnumBitfieldStruct<u8, Ccrswt_SPEC>;
+    impl Ccrswt {
+        #[doc = "no effect"]
+        pub const _0: Self = Self::new(0);
 
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
+        #[doc = "Forcibly performs buffer transfer of GTCCRA and GTCCRB. This bit automatically returns to 0 after the writing of 1."]
+        pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Adtta_SPEC;
     pub type Adtta = crate::EnumBitfieldStruct<u8, Adtta_SPEC>;
     impl Adtta {
-        #[doc = "In triangle wave mode, no transfer. In saw-wave mode, no transfer."]
+        #[doc = "No transfer"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "In triangle wave mode, transfer at crest. In saw-wave mode, transfer at underflow (in down-counting), overflow (in up-counting), or counter clearing."]
+        #[doc = "Transfer at crest"]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "In triangle wave mode, transfer at trough. In saw-wave mode, transfer at underflow (in down-counting), overflow (in up-counting), or counter clearing."]
+        #[doc = "Transfer at trough"]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "In triangle wave, transfer at both crest and trough. In saw-wave mode, transfer at underflow (in down-counting), overflow (in up-counting), or counter clearing."]
+        #[doc = "Transfer at both crest and trough"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -10236,23 +11164,23 @@ pub mod gtber {
         #[doc = "Single buffer operation (GTADTBRA --> GTADTRA)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Double buffer operation (GTADTDBRA --> GTADTBRA --> GTADTRA)"]
+        #[doc = "Double buffer operation (GTADTDBRA --> GTADTBRA --> GTADTDRA)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Adttb_SPEC;
     pub type Adttb = crate::EnumBitfieldStruct<u8, Adttb_SPEC>;
     impl Adttb {
-        #[doc = "In triangle wave mode, no transfer. In saw-wave mode, no transfer."]
+        #[doc = "No transfer"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "In triangle wave mode, transfer at crest. In saw-wave mode, transfer at underflow (in down-counting), overflow (in up-counting), or counter clearing."]
+        #[doc = "Transfer at crest"]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "In triangle wave mode, transfer at trough. In saw-wave mode, transfer at underflow (in down-counting), overflow (in up-counting), or counter clearing."]
+        #[doc = "Transfer at trough"]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "In triangle wave mode, transfer at both crest and trough. In saw-wave mode, transfer at underflow (in down-counting), overflow (in up-counting), or counter clearing."]
+        #[doc = "Transfer at both crest and trough"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -10262,7 +11190,7 @@ pub mod gtber {
         #[doc = "Single buffer operation (GTADTBRB --> GTADTRB)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Double buffer operation (GTADTDBRB --> GTADTBRB --> GTADTRB)"]
+        #[doc = "Double buffer operation (GTADTDBRB --> GTADTBRB --> GTADTDRB)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10276,7 +11204,16 @@ impl crate::sealed::RegSpec for Gtcnt_SPEC {
 #[doc = "General PWM Timer Counter"]
 pub type Gtcnt = crate::RegValueT<Gtcnt_SPEC>;
 
-impl NoBitfieldReg<Gtcnt_SPEC> for Gtcnt {}
+impl Gtcnt {
+    #[doc = "Counter"]
+    #[inline(always)]
+    pub fn gtcnt(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, Gtcnt_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffffffff,1,0,u32,u32,Gtcnt_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Gtcnt {
     #[inline(always)]
     fn default() -> Gtcnt {
@@ -10294,7 +11231,16 @@ impl crate::sealed::RegSpec for Gtccra_SPEC {
 #[doc = "General PWM Timer Compare Capture Register A"]
 pub type Gtccra = crate::RegValueT<Gtccra_SPEC>;
 
-impl NoBitfieldReg<Gtccra_SPEC> for Gtccra {}
+impl Gtccra {
+    #[doc = "Compare Capture Register A"]
+    #[inline(always)]
+    pub fn gtccra(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, Gtccra_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffffffff,1,0,u32,u32,Gtccra_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Gtccra {
     #[inline(always)]
     fn default() -> Gtccra {
@@ -10312,7 +11258,16 @@ impl crate::sealed::RegSpec for Gtccrb_SPEC {
 #[doc = "General PWM Timer Compare Capture Register B"]
 pub type Gtccrb = crate::RegValueT<Gtccrb_SPEC>;
 
-impl NoBitfieldReg<Gtccrb_SPEC> for Gtccrb {}
+impl Gtccrb {
+    #[doc = "Compare Capture Register B"]
+    #[inline(always)]
+    pub fn gtccrb(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, Gtccrb_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffffffff,1,0,u32,u32,Gtccrb_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Gtccrb {
     #[inline(always)]
     fn default() -> Gtccrb {
@@ -10330,7 +11285,16 @@ impl crate::sealed::RegSpec for Gtccrc_SPEC {
 #[doc = "General PWM Timer Compare Capture Register C"]
 pub type Gtccrc = crate::RegValueT<Gtccrc_SPEC>;
 
-impl NoBitfieldReg<Gtccrc_SPEC> for Gtccrc {}
+impl Gtccrc {
+    #[doc = "Compare Capture Register C"]
+    #[inline(always)]
+    pub fn gtccrc(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, Gtccrc_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffffffff,1,0,u32,u32,Gtccrc_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Gtccrc {
     #[inline(always)]
     fn default() -> Gtccrc {
@@ -10348,7 +11312,16 @@ impl crate::sealed::RegSpec for Gtccre_SPEC {
 #[doc = "General PWM Timer Compare Capture Register E"]
 pub type Gtccre = crate::RegValueT<Gtccre_SPEC>;
 
-impl NoBitfieldReg<Gtccre_SPEC> for Gtccre {}
+impl Gtccre {
+    #[doc = "Compare Capture Register E"]
+    #[inline(always)]
+    pub fn gtccre(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, Gtccre_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffffffff,1,0,u32,u32,Gtccre_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Gtccre {
     #[inline(always)]
     fn default() -> Gtccre {
@@ -10366,7 +11339,16 @@ impl crate::sealed::RegSpec for Gtccrd_SPEC {
 #[doc = "General PWM Timer Compare Capture Register D"]
 pub type Gtccrd = crate::RegValueT<Gtccrd_SPEC>;
 
-impl NoBitfieldReg<Gtccrd_SPEC> for Gtccrd {}
+impl Gtccrd {
+    #[doc = "Compare Capture Register D"]
+    #[inline(always)]
+    pub fn gtccrd(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, Gtccrd_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffffffff,1,0,u32,u32,Gtccrd_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Gtccrd {
     #[inline(always)]
     fn default() -> Gtccrd {
@@ -10384,7 +11366,16 @@ impl crate::sealed::RegSpec for Gtccrf_SPEC {
 #[doc = "General PWM Timer Compare Capture Register F"]
 pub type Gtccrf = crate::RegValueT<Gtccrf_SPEC>;
 
-impl NoBitfieldReg<Gtccrf_SPEC> for Gtccrf {}
+impl Gtccrf {
+    #[doc = "Compare Capture Register F"]
+    #[inline(always)]
+    pub fn gtccrf(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, Gtccrf_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffffffff,1,0,u32,u32,Gtccrf_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Gtccrf {
     #[inline(always)]
     fn default() -> Gtccrf {
@@ -10402,7 +11393,16 @@ impl crate::sealed::RegSpec for Gtpr_SPEC {
 #[doc = "General PWM Timer Cycle Setting Register"]
 pub type Gtpr = crate::RegValueT<Gtpr_SPEC>;
 
-impl NoBitfieldReg<Gtpr_SPEC> for Gtpr {}
+impl Gtpr {
+    #[doc = "Cycle Setting Register"]
+    #[inline(always)]
+    pub fn gtpr(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, Gtpr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffffffff,1,0,u32,u32,Gtpr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Gtpr {
     #[inline(always)]
     fn default() -> Gtpr {
@@ -10420,7 +11420,16 @@ impl crate::sealed::RegSpec for Gtpbr_SPEC {
 #[doc = "General PWM Timer Cycle Setting Buffer Register"]
 pub type Gtpbr = crate::RegValueT<Gtpbr_SPEC>;
 
-impl NoBitfieldReg<Gtpbr_SPEC> for Gtpbr {}
+impl Gtpbr {
+    #[doc = "Cycle Setting Buffer Register"]
+    #[inline(always)]
+    pub fn gtpbr(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, Gtpbr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffffffff,1,0,u32,u32,Gtpbr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Gtpbr {
     #[inline(always)]
     fn default() -> Gtpbr {
@@ -10435,10 +11444,19 @@ impl crate::sealed::RegSpec for Gtadtra_SPEC {
     type DataType = u32;
 }
 
-#[doc = "A/D Conversion Start Request Timing Register A"]
+#[doc = "A/D Converter Start Request Timing Register A"]
 pub type Gtadtra = crate::RegValueT<Gtadtra_SPEC>;
 
-impl NoBitfieldReg<Gtadtra_SPEC> for Gtadtra {}
+impl Gtadtra {
+    #[doc = "A/D Converter Start Request Timing Register A"]
+    #[inline(always)]
+    pub fn gtadtra(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, Gtadtra_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffffffff,1,0,u32,u32,Gtadtra_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Gtadtra {
     #[inline(always)]
     fn default() -> Gtadtra {
@@ -10453,10 +11471,28 @@ impl crate::sealed::RegSpec for Gtadtbra_SPEC {
     type DataType = u32;
 }
 
-#[doc = "A/D Conversion Start Request Timing Buffer Register A"]
+#[doc = "A/D Converter Start Request Timing Buffer Register A"]
 pub type Gtadtbra = crate::RegValueT<Gtadtbra_SPEC>;
 
-impl NoBitfieldReg<Gtadtbra_SPEC> for Gtadtbra {}
+impl Gtadtbra {
+    #[doc = "A/D Converter Start Request Timing Buffer Register A"]
+    #[inline(always)]
+    pub fn gtadtbra(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, Gtadtbra_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<
+            0,
+            0xffffffff,
+            1,
+            0,
+            u32,
+            u32,
+            Gtadtbra_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+}
 impl ::core::default::Default for Gtadtbra {
     #[inline(always)]
     fn default() -> Gtadtbra {
@@ -10471,10 +11507,36 @@ impl crate::sealed::RegSpec for Gtadtdbra_SPEC {
     type DataType = u32;
 }
 
-#[doc = "A/D Conversion Start Request Timing Double-Buffer Register A"]
+#[doc = "A/D Converter Start Request Timing Double-Buffer Register A"]
 pub type Gtadtdbra = crate::RegValueT<Gtadtdbra_SPEC>;
 
-impl NoBitfieldReg<Gtadtdbra_SPEC> for Gtadtdbra {}
+impl Gtadtdbra {
+    #[doc = "A/D Converter Start Request Timing Double-Buffer Register A"]
+    #[inline(always)]
+    pub fn gtadtdbra(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0xffffffff,
+        1,
+        0,
+        u32,
+        u32,
+        Gtadtdbra_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffffffff,
+            1,
+            0,
+            u32,
+            u32,
+            Gtadtdbra_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+}
 impl ::core::default::Default for Gtadtdbra {
     #[inline(always)]
     fn default() -> Gtadtdbra {
@@ -10489,10 +11551,19 @@ impl crate::sealed::RegSpec for Gtadtrb_SPEC {
     type DataType = u32;
 }
 
-#[doc = "A/D Conversion Start Request Timing Register B"]
+#[doc = "A/D Converter Start Request Timing Register B"]
 pub type Gtadtrb = crate::RegValueT<Gtadtrb_SPEC>;
 
-impl NoBitfieldReg<Gtadtrb_SPEC> for Gtadtrb {}
+impl Gtadtrb {
+    #[doc = "A/D Converter Start Request Timing Register B"]
+    #[inline(always)]
+    pub fn gtadtrb(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, Gtadtrb_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffffffff,1,0,u32,u32,Gtadtrb_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Gtadtrb {
     #[inline(always)]
     fn default() -> Gtadtrb {
@@ -10507,10 +11578,28 @@ impl crate::sealed::RegSpec for Gtadtbrb_SPEC {
     type DataType = u32;
 }
 
-#[doc = "A/D Conversion Start Request Timing Buffer Register B"]
+#[doc = "A/D Converter Start Request Timing Buffer Register B"]
 pub type Gtadtbrb = crate::RegValueT<Gtadtbrb_SPEC>;
 
-impl NoBitfieldReg<Gtadtbrb_SPEC> for Gtadtbrb {}
+impl Gtadtbrb {
+    #[doc = "A/D Converter Start Request Timing Buffer Register B"]
+    #[inline(always)]
+    pub fn gtadtbrb(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, Gtadtbrb_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<
+            0,
+            0xffffffff,
+            1,
+            0,
+            u32,
+            u32,
+            Gtadtbrb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+}
 impl ::core::default::Default for Gtadtbrb {
     #[inline(always)]
     fn default() -> Gtadtbrb {
@@ -10525,10 +11614,36 @@ impl crate::sealed::RegSpec for Gtadtdbrb_SPEC {
     type DataType = u32;
 }
 
-#[doc = "A/D Conversion Start Request Timing Double-Buffer Register B"]
+#[doc = "A/D Converter Start Request Timing Double-Buffer Register B"]
 pub type Gtadtdbrb = crate::RegValueT<Gtadtdbrb_SPEC>;
 
-impl NoBitfieldReg<Gtadtdbrb_SPEC> for Gtadtdbrb {}
+impl Gtadtdbrb {
+    #[doc = "A/D Converter Start Request Timing Double-Buffer Register B"]
+    #[inline(always)]
+    pub fn gtadtdbrb(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0xffffffff,
+        1,
+        0,
+        u32,
+        u32,
+        Gtadtdbrb_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffffffff,
+            1,
+            0,
+            u32,
+            u32,
+            Gtadtdbrb_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+}
 impl ::core::default::Default for Gtadtdbrb {
     #[inline(always)]
     fn default() -> Gtadtdbrb {
@@ -10572,6 +11687,15 @@ impl Gtdtcr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000000000000000000000. The write value should be 00000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<9, 0x7fffff, 1, 0, u32, u32, Gtdtcr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<9,0x7fffff,1,0,u32,u32,Gtdtcr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Gtdtcr {
     #[inline(always)]
@@ -10585,10 +11709,10 @@ pub mod gtdtcr {
     pub struct Tde_SPEC;
     pub type Tde = crate::EnumBitfieldStruct<u8, Tde_SPEC>;
     impl Tde {
-        #[doc = "GTCCRB is set without using GTDVU"]
+        #[doc = "Set GTCCRB without using GTDVU and GTDVD."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "GTDVU is used to set the compare match value for negative-phase waveform with dead time automatically in GTCCRB"]
+        #[doc = "Use GTDVU and GTDVD to set the compare match value for negative-phase waveform with automatic dead time in GTCCRB."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -10602,7 +11726,16 @@ impl crate::sealed::RegSpec for Gtdvu_SPEC {
 #[doc = "General PWM Timer Dead Time Value Register U"]
 pub type Gtdvu = crate::RegValueT<Gtdvu_SPEC>;
 
-impl NoBitfieldReg<Gtdvu_SPEC> for Gtdvu {}
+impl Gtdvu {
+    #[doc = "Dead Time Value Register U"]
+    #[inline(always)]
+    pub fn gtdvu(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, Gtdvu_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffffffff,1,0,u32,u32,Gtdvu_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Gtdvu {
     #[inline(always)]
     fn default() -> Gtdvu {
@@ -10724,6 +11857,14 @@ impl Gtadsmr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<25, 0x7f, 1, 0, u8, u8, Gtadsmr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<25,0x7f,1,0,u8,u8,Gtadsmr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Gtadsmr {
     #[inline(always)]
@@ -10737,16 +11878,16 @@ pub mod gtadsmr {
     pub struct Adsms0_SPEC;
     pub type Adsms0 = crate::EnumBitfieldStruct<u8, Adsms0_SPEC>;
     impl Adsms0 {
-        #[doc = "A/D conversion start request signal generated by the GTADTRA register during up-counting."]
+        #[doc = "A/D conversion start request signal generated by the GTADTRA register during up-counting"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "A/D conversion start request signal generated by the GTADTRA register during down-counting."]
+        #[doc = "A/D conversion start request signal generated by the GTADTRA register during down-counting"]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "A/D conversion start request signal generated by the GTADTRB register during up-counting."]
+        #[doc = "A/D conversion start request signal generated by the GTADTRB register during up-counting"]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "A/D conversion start request signal generated by the GTADTRB register during down-counting."]
+        #[doc = "A/D conversion start request signal generated by the GTADTRB register during down-counting"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -10763,16 +11904,16 @@ pub mod gtadsmr {
     pub struct Adsms1_SPEC;
     pub type Adsms1 = crate::EnumBitfieldStruct<u8, Adsms1_SPEC>;
     impl Adsms1 {
-        #[doc = "A/D conversion start request signal generated by the GTADTRA register during up-counting."]
+        #[doc = "A/D conversion start request signal generated by the GTADTRA register during up-counting"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "A/D conversion start request signal generated by the GTADTRA register during down-counting."]
+        #[doc = "A/D conversion start request signal generated by the GTADTRA register during down-counting"]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "A/D conversion start request signal generated by the GTADTRB register during up-counting."]
+        #[doc = "A/D conversion start request signal generated by the GTADTRB register during up-counting"]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "A/D conversion start request signal generated by the GTADTRB register during down-counting."]
+        #[doc = "A/D conversion start request signal generated by the GTADTRB register during down-counting"]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -10900,6 +12041,14 @@ impl Gticlf {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<26, 0x3f, 1, 0, u8, u8, Gticlf_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<26,0x3f,1,0,u8,u8,Gticlf_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Gticlf {
     #[inline(always)]
@@ -10919,22 +12068,22 @@ pub mod gticlf {
         #[doc = "NOT A (no delay)"]
         pub const _001: Self = Self::new(1);
 
-        #[doc = "C (1PCLKD delay)"]
+        #[doc = "C (1PCLKGPTn delay)"]
         pub const _010: Self = Self::new(2);
 
-        #[doc = "NOT C (1PCLKD delay)"]
+        #[doc = "NOT C (1PCLKGPTn delay)"]
         pub const _011: Self = Self::new(3);
 
-        #[doc = "A AND C (1PCLKD delay)"]
+        #[doc = "A AND C (1PCLKGPTndelay)"]
         pub const _100: Self = Self::new(4);
 
-        #[doc = "A OR C (1PCLKD delay)"]
+        #[doc = "A OR C (1PCLKGPTndelay)"]
         pub const _101: Self = Self::new(5);
 
-        #[doc = "A EXOR C (1PCLKD delay)"]
+        #[doc = "A EXOR C (1PCLKGPTn delay)"]
         pub const _110: Self = Self::new(6);
 
-        #[doc = "A NOR C (1PCLKD delay)"]
+        #[doc = "A NOR C (1PCLKGPTndelay)"]
         pub const _111: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -10942,67 +12091,34 @@ pub mod gticlf {
     pub type Iclfselc = crate::EnumBitfieldStruct<u8, Iclfselc_SPEC>;
     impl Iclfselc {
         #[doc = "GTIOC0A"]
-        pub const _0_X_00: Self = Self::new(0);
+        pub const _000000: Self = Self::new(0);
 
         #[doc = "GTIOC0B"]
-        pub const _0_X_01: Self = Self::new(1);
+        pub const _000001: Self = Self::new(1);
 
         #[doc = "GTIOC1A"]
-        pub const _0_X_02: Self = Self::new(2);
+        pub const _000010: Self = Self::new(2);
 
         #[doc = "GTIOC1B"]
-        pub const _0_X_03: Self = Self::new(3);
+        pub const _000011: Self = Self::new(3);
 
         #[doc = "GTIOC2A"]
-        pub const _0_X_04: Self = Self::new(4);
+        pub const _000100: Self = Self::new(4);
 
         #[doc = "GTIOC2B"]
-        pub const _0_X_05: Self = Self::new(5);
+        pub const _000101: Self = Self::new(5);
 
         #[doc = "GTIOC3A"]
-        pub const _0_X_06: Self = Self::new(6);
+        pub const _000110: Self = Self::new(6);
 
         #[doc = "GTIOC3B"]
-        pub const _0_X_07: Self = Self::new(7);
+        pub const _000111: Self = Self::new(7);
 
-        #[doc = "GTIOC4A"]
-        pub const _0_X_08: Self = Self::new(8);
+        #[doc = "GTIOC31A"]
+        pub const _111110: Self = Self::new(62);
 
-        #[doc = "GTIOC4B"]
-        pub const _0_X_09: Self = Self::new(9);
-
-        #[doc = "GTIOC5A"]
-        pub const _0_X_0_A: Self = Self::new(10);
-
-        #[doc = "GTIOC5B"]
-        pub const _0_X_0_B: Self = Self::new(11);
-
-        #[doc = "GTIOC6A"]
-        pub const _0_X_0_C: Self = Self::new(12);
-
-        #[doc = "GTIOC6B"]
-        pub const _0_X_0_D: Self = Self::new(13);
-
-        #[doc = "GTIOC7A"]
-        pub const _0_X_0_E: Self = Self::new(14);
-
-        #[doc = "GTIOC7B"]
-        pub const _0_X_0_F: Self = Self::new(15);
-
-        #[doc = "GTIOC8A"]
-        pub const _0_X_10: Self = Self::new(16);
-
-        #[doc = "GTIOC8B"]
-        pub const _0_X_11: Self = Self::new(17);
-
-        #[doc = "GTIOC9A"]
-        pub const _0_X_12: Self = Self::new(18);
-
-        #[doc = "GTIOC9B"]
-        pub const _0_X_13: Self = Self::new(19);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
+        #[doc = "GTIOC31B"]
+        pub const _111111: Self = Self::new(63);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Iclfb_SPEC;
@@ -11014,22 +12130,22 @@ pub mod gticlf {
         #[doc = "NOT B (no delay)"]
         pub const _001: Self = Self::new(1);
 
-        #[doc = "D (1PCLKD delay)"]
+        #[doc = "D (1PCLKGPTn delay)"]
         pub const _010: Self = Self::new(2);
 
-        #[doc = "NOT D (1PCLKD delay)"]
+        #[doc = "NOT D (1PCLKGPTn delay)"]
         pub const _011: Self = Self::new(3);
 
-        #[doc = "B AND D (1PCLKD delay)"]
+        #[doc = "B AND D (1PCLKGPTn delay)"]
         pub const _100: Self = Self::new(4);
 
-        #[doc = "B OR D (1PCLKDn delay)"]
+        #[doc = "B OR D (1PCLKGPTn delay)"]
         pub const _101: Self = Self::new(5);
 
-        #[doc = "B EXOR D (1PCLKD delay)"]
+        #[doc = "B EXOR D (1PCLKGPTn delay)"]
         pub const _110: Self = Self::new(6);
 
-        #[doc = "B NOR D (1PCLKD delay)"]
+        #[doc = "B NOR D (1PCLKGPTn delay)"]
         pub const _111: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -11037,67 +12153,34 @@ pub mod gticlf {
     pub type Iclfseld = crate::EnumBitfieldStruct<u8, Iclfseld_SPEC>;
     impl Iclfseld {
         #[doc = "GTIOC0A"]
-        pub const _0_X_00: Self = Self::new(0);
+        pub const _000000: Self = Self::new(0);
 
         #[doc = "GTIOC0B"]
-        pub const _0_X_01: Self = Self::new(1);
+        pub const _000001: Self = Self::new(1);
 
         #[doc = "GTIOC1A"]
-        pub const _0_X_02: Self = Self::new(2);
+        pub const _000010: Self = Self::new(2);
 
         #[doc = "GTIOC1B"]
-        pub const _0_X_03: Self = Self::new(3);
+        pub const _000011: Self = Self::new(3);
 
         #[doc = "GTIOC2A"]
-        pub const _0_X_04: Self = Self::new(4);
+        pub const _000100: Self = Self::new(4);
 
         #[doc = "GTIOC2B"]
-        pub const _0_X_05: Self = Self::new(5);
+        pub const _000101: Self = Self::new(5);
 
         #[doc = "GTIOC3A"]
-        pub const _0_X_06: Self = Self::new(6);
+        pub const _000110: Self = Self::new(6);
 
         #[doc = "GTIOC3B"]
-        pub const _0_X_07: Self = Self::new(7);
+        pub const _000111: Self = Self::new(7);
 
-        #[doc = "GTIOC4A"]
-        pub const _0_X_08: Self = Self::new(8);
+        #[doc = "GTIOC31A"]
+        pub const _111110: Self = Self::new(62);
 
-        #[doc = "GTIOC4B"]
-        pub const _0_X_09: Self = Self::new(9);
-
-        #[doc = "GTIOC5A"]
-        pub const _0_X_0_A: Self = Self::new(10);
-
-        #[doc = "GTIOC5B"]
-        pub const _0_X_0_B: Self = Self::new(11);
-
-        #[doc = "GTIOC6A"]
-        pub const _0_X_0_C: Self = Self::new(12);
-
-        #[doc = "GTIOC6B"]
-        pub const _0_X_0_D: Self = Self::new(13);
-
-        #[doc = "GTIOC7A"]
-        pub const _0_X_0_E: Self = Self::new(14);
-
-        #[doc = "GTIOC7B"]
-        pub const _0_X_0_F: Self = Self::new(15);
-
-        #[doc = "GTIOC8A"]
-        pub const _0_X_10: Self = Self::new(16);
-
-        #[doc = "GTIOC8B"]
-        pub const _0_X_11: Self = Self::new(17);
-
-        #[doc = "GTIOC9A"]
-        pub const _0_X_12: Self = Self::new(18);
-
-        #[doc = "GTIOC9B"]
-        pub const _0_X_13: Self = Self::new(19);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
+        #[doc = "GTIOC31B"]
+        pub const _111111: Self = Self::new(63);
     }
 }
 #[doc(hidden)]
@@ -11170,6 +12253,14 @@ impl Gtpc {
     ) -> crate::common::RegisterField<16, 0xfff, 1, 0, u16, u16, Gtpc_SPEC, crate::common::RW> {
         crate::common::RegisterField::<16,0xfff,1,0,u16,u16,Gtpc_SPEC,crate::common::RW>::from_register(self,0)
     }
+
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<28, 0xf, 1, 0, u8, u8, Gtpc_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<28,0xf,1,0,u8,u8,Gtpc_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Gtpc {
     #[inline(always)]
@@ -11183,20 +12274,20 @@ pub mod gtpc {
     pub struct Pcen_SPEC;
     pub type Pcen = crate::EnumBitfieldStruct<u8, Pcen_SPEC>;
     impl Pcen {
-        #[doc = "Period count function is disabled"]
+        #[doc = "Period count function is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Period count function is enabled"]
+        #[doc = "Period count function is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Astp_SPEC;
     pub type Astp = crate::EnumBitfieldStruct<u8, Astp_SPEC>;
     impl Astp {
-        #[doc = "Automatic stop function is disabled"]
+        #[doc = "Automatic stop function is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Automatic stop function is enabled"]
+        #[doc = "Automatic stop function is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -11211,7 +12302,7 @@ impl crate::sealed::RegSpec for Gtsecsr_SPEC {
 pub type Gtsecsr = crate::RegValueT<Gtsecsr_SPEC>;
 
 impl Gtsecsr {
-    #[doc = "Channel 0 Operation Enable Bit Simultaneous Control Channel Select"]
+    #[doc = "Channel 0 Operation Enable BitSimultaneous Control Channel Select"]
     #[inline(always)]
     pub fn secsel0(
         self,
@@ -11237,7 +12328,7 @@ impl Gtsecsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel 1 Operation Enable Bit Simultaneous Control Channel Select"]
+    #[doc = "Channel 1 Operation Enable BitSimultaneous Control Channel Select"]
     #[inline(always)]
     pub fn secsel1(
         self,
@@ -11263,7 +12354,7 @@ impl Gtsecsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel 2 Operation Enable Bit Simultaneous Control Channel Select"]
+    #[doc = "Channel 2 Operation Enable BitSimultaneous Control Channel Select"]
     #[inline(always)]
     pub fn secsel2(
         self,
@@ -11289,7 +12380,7 @@ impl Gtsecsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel 3 Operation Enable Bit Simultaneous Control Channel Select"]
+    #[doc = "Channel 3 Operation Enable BitSimultaneous Control Channel Select"]
     #[inline(always)]
     pub fn secsel3(
         self,
@@ -11315,7 +12406,7 @@ impl Gtsecsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel 4 Operation Enable Bit Simultaneous Control Channel Select"]
+    #[doc = "Channel 4 Operation Enable BitSimultaneous Control Channel Select"]
     #[inline(always)]
     pub fn secsel4(
         self,
@@ -11341,7 +12432,7 @@ impl Gtsecsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel 5 Operation Enable Bit Simultaneous Control Channel Select"]
+    #[doc = "Channel 5 Operation Enable BitSimultaneous Control Channel Select"]
     #[inline(always)]
     pub fn secsel5(
         self,
@@ -11367,7 +12458,7 @@ impl Gtsecsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel 6 Operation Enable Bit Simultaneous Control Channel Select"]
+    #[doc = "Channel 6 Operation Enable BitSimultaneous Control Channel Select"]
     #[inline(always)]
     pub fn secsel6(
         self,
@@ -11393,7 +12484,7 @@ impl Gtsecsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel 7 Operation Enable Bit Simultaneous Control Channel Select"]
+    #[doc = "Channel 7 Operation Enable BitSimultaneous Control Channel Select"]
     #[inline(always)]
     pub fn secsel7(
         self,
@@ -11419,7 +12510,7 @@ impl Gtsecsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel 8 Operation Enable Bit Simultaneous Control Channel Select"]
+    #[doc = "Channel 8 Operation Enable BitSimultaneous Control Channel Select"]
     #[inline(always)]
     pub fn secsel8(
         self,
@@ -11445,7 +12536,7 @@ impl Gtsecsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel 9 Operation Enable Bit Simultaneous Control Channel Select"]
+    #[doc = "Channel 9 Operation Enable BitSimultaneous Control Channel Select"]
     #[inline(always)]
     pub fn secsel9(
         self,
@@ -11471,7 +12562,7 @@ impl Gtsecsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel 10 Operation Enable Bit Simultaneous Control Channel Select"]
+    #[doc = "Channel 10 Operation Enable BitSimultaneous Control Channel Select"]
     #[inline(always)]
     pub fn secsel10(
         self,
@@ -11497,7 +12588,7 @@ impl Gtsecsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel 11 Operation Enable Bit Simultaneous Control Channel Select"]
+    #[doc = "Channel 11 Operation Enable BitSimultaneous Control Channel Select"]
     #[inline(always)]
     pub fn secsel11(
         self,
@@ -11523,7 +12614,7 @@ impl Gtsecsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel 12 Operation Enable Bit Simultaneous Control Channel Select"]
+    #[doc = "Channel 12 Operation Enable BitSimultaneous Control Channel Select"]
     #[inline(always)]
     pub fn secsel12(
         self,
@@ -11549,7 +12640,7 @@ impl Gtsecsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Channel 13 Operation Enable Bit Simultaneous Control Channel Select"]
+    #[doc = "Channel 13 Operation Enable BitSimultaneous Control Channel Select"]
     #[inline(always)]
     pub fn secsel13(
         self,
@@ -11574,6 +12665,15 @@ impl Gtsecsr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Gtsecsr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Gtsecsr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Gtsecsr {
     #[inline(always)]
@@ -11587,140 +12687,140 @@ pub mod gtsecsr {
     pub struct Secsel0_SPEC;
     pub type Secsel0 = crate::EnumBitfieldStruct<u8, Secsel0_SPEC>;
     impl Secsel0 {
-        #[doc = "Disable simultaneous control"]
+        #[doc = "Disable simultaneous control."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable simultaneous control"]
+        #[doc = "Enable simultaneous control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Secsel1_SPEC;
     pub type Secsel1 = crate::EnumBitfieldStruct<u8, Secsel1_SPEC>;
     impl Secsel1 {
-        #[doc = "Disable simultaneous control"]
+        #[doc = "Disable simultaneous control."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable simultaneous control"]
+        #[doc = "Enable simultaneous control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Secsel2_SPEC;
     pub type Secsel2 = crate::EnumBitfieldStruct<u8, Secsel2_SPEC>;
     impl Secsel2 {
-        #[doc = "Disable simultaneous control"]
+        #[doc = "Disable simultaneous control."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable simultaneous control"]
+        #[doc = "Enable simultaneous control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Secsel3_SPEC;
     pub type Secsel3 = crate::EnumBitfieldStruct<u8, Secsel3_SPEC>;
     impl Secsel3 {
-        #[doc = "Disable simultaneous control"]
+        #[doc = "Disable simultaneous control."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable simultaneous control"]
+        #[doc = "Enable simultaneous control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Secsel4_SPEC;
     pub type Secsel4 = crate::EnumBitfieldStruct<u8, Secsel4_SPEC>;
     impl Secsel4 {
-        #[doc = "Disable simultaneous control"]
+        #[doc = "Disable simultaneous control."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable simultaneous control"]
+        #[doc = "Enable simultaneous control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Secsel5_SPEC;
     pub type Secsel5 = crate::EnumBitfieldStruct<u8, Secsel5_SPEC>;
     impl Secsel5 {
-        #[doc = "Disable simultaneous control"]
+        #[doc = "Disable simultaneous control."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable simultaneous control"]
+        #[doc = "Enable simultaneous control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Secsel6_SPEC;
     pub type Secsel6 = crate::EnumBitfieldStruct<u8, Secsel6_SPEC>;
     impl Secsel6 {
-        #[doc = "Disable simultaneous control"]
+        #[doc = "Disable simultaneous control."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable simultaneous control"]
+        #[doc = "Enable simultaneous control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Secsel7_SPEC;
     pub type Secsel7 = crate::EnumBitfieldStruct<u8, Secsel7_SPEC>;
     impl Secsel7 {
-        #[doc = "Disable simultaneous control"]
+        #[doc = "Disable simultaneous control."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable simultaneous control"]
+        #[doc = "Enable simultaneous control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Secsel8_SPEC;
     pub type Secsel8 = crate::EnumBitfieldStruct<u8, Secsel8_SPEC>;
     impl Secsel8 {
-        #[doc = "Disable simultaneous control"]
+        #[doc = "Disable simultaneous control."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable simultaneous control"]
+        #[doc = "Enable simultaneous control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Secsel9_SPEC;
     pub type Secsel9 = crate::EnumBitfieldStruct<u8, Secsel9_SPEC>;
     impl Secsel9 {
-        #[doc = "Disable simultaneous control"]
+        #[doc = "Disable simultaneous control."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable simultaneous control"]
+        #[doc = "Enable simultaneous control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Secsel10_SPEC;
     pub type Secsel10 = crate::EnumBitfieldStruct<u8, Secsel10_SPEC>;
     impl Secsel10 {
-        #[doc = "Disable simultaneous control"]
+        #[doc = "Disable simultaneous control."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable simultaneous control"]
+        #[doc = "Enable simultaneous control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Secsel11_SPEC;
     pub type Secsel11 = crate::EnumBitfieldStruct<u8, Secsel11_SPEC>;
     impl Secsel11 {
-        #[doc = "Disable simultaneous control"]
+        #[doc = "Disable simultaneous control."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable simultaneous control"]
+        #[doc = "Enable simultaneous control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Secsel12_SPEC;
     pub type Secsel12 = crate::EnumBitfieldStruct<u8, Secsel12_SPEC>;
     impl Secsel12 {
-        #[doc = "Disable simultaneous control"]
+        #[doc = "Disable simultaneous control."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable simultaneous control"]
+        #[doc = "Enable simultaneous control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Secsel13_SPEC;
     pub type Secsel13 = crate::EnumBitfieldStruct<u8, Secsel13_SPEC>;
     impl Secsel13 {
-        #[doc = "Disable simultaneous control"]
+        #[doc = "Disable simultaneous control."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable simultaneous control"]
+        #[doc = "Enable simultaneous control."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -11941,6 +13041,14 @@ impl Gtsecr {
             Gtsecr_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<26, 0x3f, 1, 0, u8, u8, Gtsecr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<26,0x3f,1,0,u8,u8,Gtsecr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Gtsecr {

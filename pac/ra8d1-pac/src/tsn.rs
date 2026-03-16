@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -43,6 +43,40 @@ impl super::Tsn {
             )
         }
     }
+
+    #[doc = "TSTRM0"]
+    #[inline(always)]
+    pub const fn tstrm0(
+        &self,
+    ) -> &'static crate::common::Reg<self::Tstrm0_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Tstrm0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(1usize),
+            )
+        }
+    }
+
+    #[doc = "TSTRM1"]
+    #[inline(always)]
+    pub const fn tstrm1(
+        &self,
+    ) -> &'static crate::common::Reg<self::Tstrm1_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Tstrm1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(2usize),
+            )
+        }
+    }
+
+    #[doc = "TSTST"]
+    #[inline(always)]
+    pub const fn tstst(&self) -> &'static crate::common::Reg<self::Tstst_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Tstst_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(3usize),
+            )
+        }
+    }
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -55,7 +89,7 @@ impl crate::sealed::RegSpec for Tscr_SPEC {
 pub type Tscr = crate::RegValueT<Tscr_SPEC>;
 
 impl Tscr {
-    #[doc = "Temperature Sensor Output Enable"]
+    #[doc = "Temperature Sensor Enable"]
     #[inline(always)]
     pub fn tsoe(
         self,
@@ -81,7 +115,15 @@ impl Tscr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Temperature Sensor Enable"]
+    #[doc = "These bits are read as 00. The write value should be 00."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<5, 0x3, 1, 0, u8, u8, Tscr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<5,0x3,1,0,u8,u8,Tscr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "Temperature Sensor Output Enable"]
     #[inline(always)]
     pub fn tsen(
         self,
@@ -119,20 +161,73 @@ pub mod tscr {
     pub struct Tsoe_SPEC;
     pub type Tsoe = crate::EnumBitfieldStruct<u8, Tsoe_SPEC>;
     impl Tsoe {
-        #[doc = "Disable output from the temperature sensor to the ADC12"]
+        #[doc = "Disables output from the temperature sensor to the 12-bit A/D converter."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable output from the temperature sensor to the ADC12"]
+        #[doc = "Enables output from the temperature sensor to the 12-bit A/D converter."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tsen_SPEC;
     pub type Tsen = crate::EnumBitfieldStruct<u8, Tsen_SPEC>;
     impl Tsen {
-        #[doc = "Stop the temperature sensor"]
+        #[doc = "Stops the temperature sensor."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Start the temperature sensor."]
+        #[doc = "Starts the temperature sensor."]
         pub const _1: Self = Self::new(1);
+    }
+}
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Tstrm0_SPEC;
+impl crate::sealed::RegSpec for Tstrm0_SPEC {
+    type DataType = u8;
+}
+
+#[doc = "TSTRM0"]
+pub type Tstrm0 = crate::RegValueT<Tstrm0_SPEC>;
+
+impl NoBitfieldReg<Tstrm0_SPEC> for Tstrm0 {}
+impl ::core::default::Default for Tstrm0 {
+    #[inline(always)]
+    fn default() -> Tstrm0 {
+        <crate::RegValueT<Tstrm0_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Tstrm1_SPEC;
+impl crate::sealed::RegSpec for Tstrm1_SPEC {
+    type DataType = u8;
+}
+
+#[doc = "TSTRM1"]
+pub type Tstrm1 = crate::RegValueT<Tstrm1_SPEC>;
+
+impl NoBitfieldReg<Tstrm1_SPEC> for Tstrm1 {}
+impl ::core::default::Default for Tstrm1 {
+    #[inline(always)]
+    fn default() -> Tstrm1 {
+        <crate::RegValueT<Tstrm1_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Tstst_SPEC;
+impl crate::sealed::RegSpec for Tstst_SPEC {
+    type DataType = u8;
+}
+
+#[doc = "TSTST"]
+pub type Tstst = crate::RegValueT<Tstst_SPEC>;
+
+impl NoBitfieldReg<Tstst_SPEC> for Tstst {}
+impl ::core::default::Default for Tstst {
+    #[inline(always)]
+    fn default() -> Tstst {
+        <crate::RegValueT<Tstst_SPEC> as RegisterValue<_>>::new(0)
     }
 }

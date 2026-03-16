@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -24,7 +24,7 @@ http://www.renesas.com/disclaimer
 use crate::common::sealed;
 #[allow(unused_imports)]
 use crate::common::*;
-#[doc = r"12-bit A/D Converter"]
+#[doc = r"12bit A/D Converter 1"]
 unsafe impl ::core::marker::Send for super::Adc121 {}
 unsafe impl ::core::marker::Sync for super::Adc121 {}
 impl super::Adc121 {
@@ -124,7 +124,7 @@ impl super::Adc121 {
         }
     }
 
-    #[doc = "A/D Conversion Extended Input Control Registers"]
+    #[doc = "A/D Conversion Extended Input Control Register"]
     #[inline(always)]
     pub const fn adexicr(
         &self,
@@ -160,7 +160,7 @@ impl super::Adc121 {
         }
     }
 
-    #[doc = "A/D Data Duplexing Register"]
+    #[doc = "A/D Data Duplication Register"]
     #[inline(always)]
     pub const fn addbldr(
         &self,
@@ -202,13 +202,13 @@ impl super::Adc121 {
         }
     }
 
-    #[doc = "A/D Data Registers %s"]
+    #[doc = "A/D Data Register %s"]
     #[inline(always)]
     pub const fn addr(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Addr_SPEC, crate::common::R>,
-        7,
+        32,
         0x2,
     > {
         unsafe {
@@ -216,7 +216,7 @@ impl super::Adc121 {
         }
     }
     #[inline(always)]
-    pub const fn addr16(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+    pub const fn addr0(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
         unsafe {
             crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
                 self._svd2pac_as_ptr().add(0x20usize),
@@ -224,7 +224,7 @@ impl super::Adc121 {
         }
     }
     #[inline(always)]
-    pub const fn addr17(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+    pub const fn addr1(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
         unsafe {
             crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
                 self._svd2pac_as_ptr().add(0x22usize),
@@ -232,7 +232,7 @@ impl super::Adc121 {
         }
     }
     #[inline(always)]
-    pub const fn addr18(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+    pub const fn addr2(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
         unsafe {
             crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
                 self._svd2pac_as_ptr().add(0x24usize),
@@ -240,7 +240,7 @@ impl super::Adc121 {
         }
     }
     #[inline(always)]
-    pub const fn addr19(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+    pub const fn addr3(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
         unsafe {
             crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
                 self._svd2pac_as_ptr().add(0x26usize),
@@ -248,7 +248,7 @@ impl super::Adc121 {
         }
     }
     #[inline(always)]
-    pub const fn addr20(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+    pub const fn addr4(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
         unsafe {
             crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
                 self._svd2pac_as_ptr().add(0x28usize),
@@ -256,7 +256,7 @@ impl super::Adc121 {
         }
     }
     #[inline(always)]
-    pub const fn addr21(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+    pub const fn addr5(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
         unsafe {
             crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
                 self._svd2pac_as_ptr().add(0x2ausize),
@@ -264,15 +264,215 @@ impl super::Adc121 {
         }
     }
     #[inline(always)]
-    pub const fn addr22(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+    pub const fn addr6(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
         unsafe {
             crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
                 self._svd2pac_as_ptr().add(0x2cusize),
             )
         }
     }
+    #[inline(always)]
+    pub const fn addr7(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x2eusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr8(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x30usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr9(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x32usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr10(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x34usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr11(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x36usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr12(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x38usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr13(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3ausize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr14(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr15(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x3eusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr16(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x40usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr17(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x42usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr18(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x44usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr19(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x46usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr20(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x48usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr21(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x4ausize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr22(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x4cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr23(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x4eusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr24(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x50usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr25(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x52usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr26(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x54usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr27(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x56usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr28(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x58usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr29(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x5ausize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr30(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x5cusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn addr31(&self) -> &'static crate::common::Reg<self::Addr_SPEC, crate::common::R> {
+        unsafe {
+            crate::common::Reg::<self::Addr_SPEC, crate::common::R>::from_ptr(
+                self._svd2pac_as_ptr().add(0x5eusize),
+            )
+        }
+    }
 
-    #[doc = "A/D VBATT Monitor Data Register"]
+    #[doc = "A/D VBATMONITOR Data Register"]
     #[inline(always)]
     pub const fn advmdr(&self) -> &'static crate::common::Reg<self::Advmdr_SPEC, crate::common::R> {
         unsafe {
@@ -306,7 +506,7 @@ impl super::Adc121 {
         }
     }
 
-    #[doc = "A/D Sample and Hold Operation Mode Selection Register"]
+    #[doc = "A/D Sample and Hold Operation Mode Select Register"]
     #[inline(always)]
     pub const fn adshmsr(
         &self,
@@ -330,7 +530,7 @@ impl super::Adc121 {
         }
     }
 
-    #[doc = "A/D Data Duplexing Register A"]
+    #[doc = "A/D Data Duplication Register A"]
     #[inline(always)]
     pub const fn addbldra(
         &self,
@@ -342,7 +542,7 @@ impl super::Adc121 {
         }
     }
 
-    #[doc = "A/D Data Duplexing Register B"]
+    #[doc = "A/D Data Duplication Register B"]
     #[inline(always)]
     pub const fn addbldrb(
         &self,
@@ -450,36 +650,26 @@ impl super::Adc121 {
         }
     }
 
-    #[doc = "A/D Compare Function Window A Lower-Side/Upper-Side Level Setting Register"]
-    #[inline(always)]
-    pub const fn adcmpdr(
-        &self,
-    ) -> &'static crate::common::ClusterRegisterArray<
-        crate::common::Reg<self::Adcmpdr_SPEC, crate::common::RW>,
-        2,
-        0x2,
-    > {
-        unsafe {
-            crate::common::ClusterRegisterArray::from_ptr(self._svd2pac_as_ptr().add(0x9cusize))
-        }
-    }
+    #[doc = "A/D Compare Function Window A Lower-Side Level Setting Register"]
     #[inline(always)]
     pub const fn adcmpdr0(
         &self,
-    ) -> &'static crate::common::Reg<self::Adcmpdr_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::Adcmpdr0_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::Adcmpdr_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(0x9cusize),
+            crate::common::Reg::<self::Adcmpdr0_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(156usize),
             )
         }
     }
+
+    #[doc = "A/D Compare Function Window A Upper-Side Level Setting Register"]
     #[inline(always)]
     pub const fn adcmpdr1(
         &self,
-    ) -> &'static crate::common::Reg<self::Adcmpdr_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::Adcmpdr1_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::Adcmpdr_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(0x9eusize),
+            crate::common::Reg::<self::Adcmpdr1_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(158usize),
             )
         }
     }
@@ -496,7 +686,7 @@ impl super::Adc121 {
         }
     }
 
-    #[doc = "A/D Compare Function Window A Channel Status Register1"]
+    #[doc = "A/D Compare Function Window A Channel Status Register 1"]
     #[inline(always)]
     pub const fn adcmpsr1(
         &self,
@@ -520,7 +710,7 @@ impl super::Adc121 {
         }
     }
 
-    #[doc = "A/D Compare Function Window B Channel Select Register"]
+    #[doc = "A/D Compare Function Window B Channel Selection Register"]
     #[inline(always)]
     pub const fn adcmpbnsr(
         &self,
@@ -532,7 +722,7 @@ impl super::Adc121 {
         }
     }
 
-    #[doc = "A/D Compare Function Window B Lower-Side/Upper-Side Level Setting Register"]
+    #[doc = "A/D Compare Function Window B Lower-Side Level Setting Register"]
     #[inline(always)]
     pub const fn adwinllb(
         &self,
@@ -544,7 +734,7 @@ impl super::Adc121 {
         }
     }
 
-    #[doc = "A/D Compare Function Window B Lower-Side/Upper-Side Level Setting Register"]
+    #[doc = "A/D Compare Function Window B Upper-Side Level Setting Register"]
     #[inline(always)]
     pub const fn adwinulb(
         &self,
@@ -568,7 +758,7 @@ impl super::Adc121 {
         }
     }
 
-    #[doc = "A/D Data Buffer Registers %s"]
+    #[doc = "A/D Data Buffer Register %s"]
     #[inline(always)]
     pub const fn adbuf(
         &self,
@@ -734,7 +924,7 @@ impl super::Adc121 {
         }
     }
 
-    #[doc = "A/D Sampling State Register"]
+    #[doc = "A/D Sampling State Register L"]
     #[inline(always)]
     pub const fn adsstrl(
         &self,
@@ -746,7 +936,7 @@ impl super::Adc121 {
         }
     }
 
-    #[doc = "A/D Sampling State Register"]
+    #[doc = "A/D Sampling State Register T"]
     #[inline(always)]
     pub const fn adsstrt(
         &self,
@@ -758,7 +948,7 @@ impl super::Adc121 {
         }
     }
 
-    #[doc = "A/D Sampling State Register"]
+    #[doc = "A/D Sampling State Register O"]
     #[inline(always)]
     pub const fn adsstro(
         &self,
@@ -770,13 +960,13 @@ impl super::Adc121 {
         }
     }
 
-    #[doc = "A/D Sampling State Register"]
+    #[doc = "A/D Sampling State Register %s"]
     #[inline(always)]
     pub const fn adsstr(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Adsstr_SPEC, crate::common::RW>,
-        7,
+        16,
         0x1,
     > {
         unsafe {
@@ -853,15 +1043,93 @@ impl super::Adc121 {
             )
         }
     }
-
-    #[doc = "A/D Sampling State Register"]
     #[inline(always)]
-    pub const fn adsstrv(
+    pub const fn adsstr7(
         &self,
-    ) -> &'static crate::common::Reg<self::Adsstrv_SPEC, crate::common::RW> {
+    ) -> &'static crate::common::Reg<self::Adsstr_SPEC, crate::common::RW> {
         unsafe {
-            crate::common::Reg::<self::Adsstrv_SPEC, crate::common::RW>::from_ptr(
-                self._svd2pac_as_ptr().add(227usize),
+            crate::common::Reg::<self::Adsstr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe7usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn adsstr8(
+        &self,
+    ) -> &'static crate::common::Reg<self::Adsstr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Adsstr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe8usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn adsstr9(
+        &self,
+    ) -> &'static crate::common::Reg<self::Adsstr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Adsstr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xe9usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn adsstr10(
+        &self,
+    ) -> &'static crate::common::Reg<self::Adsstr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Adsstr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xeausize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn adsstr11(
+        &self,
+    ) -> &'static crate::common::Reg<self::Adsstr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Adsstr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xebusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn adsstr12(
+        &self,
+    ) -> &'static crate::common::Reg<self::Adsstr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Adsstr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xecusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn adsstr13(
+        &self,
+    ) -> &'static crate::common::Reg<self::Adsstr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Adsstr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xedusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn adsstr14(
+        &self,
+    ) -> &'static crate::common::Reg<self::Adsstr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Adsstr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xeeusize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn adsstr15(
+        &self,
+    ) -> &'static crate::common::Reg<self::Adsstr_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Adsstr_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0xefusize),
             )
         }
     }
@@ -877,7 +1145,7 @@ impl crate::sealed::RegSpec for Adcsr_SPEC {
 pub type Adcsr = crate::RegValueT<Adcsr_SPEC>;
 
 impl Adcsr {
-    #[doc = "Double Trigger Channel Select"]
+    #[doc = "Double Trigger Channel SelectThese bits select one analog input channel for double triggered operation. The setting is only effective while double trigger mode is selected."]
     #[inline(always)]
     pub fn dblans(
         self,
@@ -885,7 +1153,7 @@ impl Adcsr {
         crate::common::RegisterField::<0,0x1f,1,0,u8,u8,Adcsr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Group B Scan End Interrupt and ELC Event Enable"]
+    #[doc = "Group B Scan End Interrupt Enable"]
     #[inline(always)]
     pub fn gbadie(
         self,
@@ -989,6 +1257,68 @@ impl Adcsr {
         >::from_register(self, 0)
     }
 
+    #[doc = "A/D Conversion Operation Mode Select"]
+    #[inline(always)]
+    pub fn adhsc(
+        self,
+    ) -> crate::common::RegisterField<
+        10,
+        0x1,
+        1,
+        0,
+        adcsr::Adhsc,
+        adcsr::Adhsc,
+        Adcsr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            10,
+            0x1,
+            1,
+            0,
+            adcsr::Adhsc,
+            adcsr::Adhsc,
+            Adcsr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<11, 1, 0, Adcsr_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<11, 1, 0, Adcsr_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
+
+    #[doc = "Scan End Interrupt Enable"]
+    #[inline(always)]
+    pub fn adie(
+        self,
+    ) -> crate::common::RegisterField<
+        12,
+        0x1,
+        1,
+        0,
+        adcsr::Adie,
+        adcsr::Adie,
+        Adcsr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            12,
+            0x1,
+            1,
+            0,
+            adcsr::Adie,
+            adcsr::Adie,
+            Adcsr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
     #[doc = "Scan Mode Select"]
     #[inline(always)]
     pub fn adcs(
@@ -1053,40 +1383,60 @@ pub mod adcsr {
     pub struct Gbadie_SPEC;
     pub type Gbadie = crate::EnumBitfieldStruct<u8, Gbadie_SPEC>;
     impl Gbadie {
-        #[doc = "Disable ADC12i_GBADI (i = 0, 1) interrupt generation on group B scan completion."]
+        #[doc = "Disables S12GBADI1 interrupt generation upon group B scan completion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable ADC12i_GBADI (i = 0, 1) interrupt generation on group B scan completion."]
+        #[doc = "Enables S12GBADI1 interrupt generation upon group B scan completion."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dble_SPEC;
     pub type Dble = crate::EnumBitfieldStruct<u8, Dble_SPEC>;
     impl Dble {
-        #[doc = "Deselect double-trigger mode."]
+        #[doc = "Double trigger mode non-selection"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select double-trigger mode."]
+        #[doc = "Double trigger mode selection"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Extrg_SPEC;
     pub type Extrg = crate::EnumBitfieldStruct<u8, Extrg_SPEC>;
     impl Extrg {
-        #[doc = "Start A/D conversion by the synchronous trigger (GPT, ELC)."]
+        #[doc = "A/D conversion is started by the synchronous trigger (ELCTRG1)."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Start A/D conversion by the asynchronous trigger (ADTRGn)."]
+        #[doc = "A/D conversion is started by the asynchronous trigger (ADTRG1#)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Trge_SPEC;
     pub type Trge = crate::EnumBitfieldStruct<u8, Trge_SPEC>;
     impl Trge {
-        #[doc = "Disable A/D conversion to be started by the synchronous or asynchronous trigger"]
+        #[doc = "Disables A/D conversion to be started by the synchronous or asynchronous trigger."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable A/D conversion to be started by the synchronous or asynchronous trigger"]
+        #[doc = "Enables A/D conversion to be started by the synchronous or asynchronous trigger."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Adhsc_SPEC;
+    pub type Adhsc = crate::EnumBitfieldStruct<u8, Adhsc_SPEC>;
+    impl Adhsc {
+        #[doc = "High speed A/D conversion mode"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Low current A/D conversion mode"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Adie_SPEC;
+    pub type Adie = crate::EnumBitfieldStruct<u8, Adie_SPEC>;
+    impl Adie {
+        #[doc = "Disables S12ADI1 interrupt generation upon scan completion."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Enables S12ADI1 interrupt generation upon scan completion."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -1109,10 +1459,10 @@ pub mod adcsr {
     pub struct Adst_SPEC;
     pub type Adst = crate::EnumBitfieldStruct<u8, Adst_SPEC>;
     impl Adst {
-        #[doc = "Stop A/D conversion process."]
+        #[doc = "Stops A/D conversion process."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Start A/D conversion process."]
+        #[doc = "Starts A/D conversion process."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1127,7 +1477,7 @@ impl crate::sealed::RegSpec for Adansa0_SPEC {
 pub type Adansa0 = crate::RegValueT<Adansa0_SPEC>;
 
 impl Adansa0 {
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN100 Select"]
     #[inline(always)]
     pub fn ansa00(
         self,
@@ -1153,7 +1503,7 @@ impl Adansa0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN101 Select"]
     #[inline(always)]
     pub fn ansa01(
         self,
@@ -1179,7 +1529,7 @@ impl Adansa0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN102 Select"]
     #[inline(always)]
     pub fn ansa02(
         self,
@@ -1205,33 +1555,7 @@ impl Adansa0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D Conversion Channels Select"]
-    #[inline(always)]
-    pub fn ansa03(
-        self,
-    ) -> crate::common::RegisterField<
-        3,
-        0x1,
-        1,
-        0,
-        adansa0::Ansa03,
-        adansa0::Ansa03,
-        Adansa0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            3,
-            0x1,
-            1,
-            0,
-            adansa0::Ansa03,
-            adansa0::Ansa03,
-            Adansa0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN104 Select"]
     #[inline(always)]
     pub fn ansa04(
         self,
@@ -1257,7 +1581,7 @@ impl Adansa0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN105 Select"]
     #[inline(always)]
     pub fn ansa05(
         self,
@@ -1283,7 +1607,7 @@ impl Adansa0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN106 Select"]
     #[inline(always)]
     pub fn ansa06(
         self,
@@ -1308,6 +1632,16 @@ impl Adansa0 {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<15, 1, 0, Adansa0_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<15, 1, 0, Adansa0_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
 }
 impl ::core::default::Default for Adansa0 {
     #[inline(always)]
@@ -1321,70 +1655,60 @@ pub mod adansa0 {
     pub struct Ansa00_SPEC;
     pub type Ansa00 = crate::EnumBitfieldStruct<u8, Ansa00_SPEC>;
     impl Ansa00 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN100 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN100 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ansa01_SPEC;
     pub type Ansa01 = crate::EnumBitfieldStruct<u8, Ansa01_SPEC>;
     impl Ansa01 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN101 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN101 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ansa02_SPEC;
     pub type Ansa02 = crate::EnumBitfieldStruct<u8, Ansa02_SPEC>;
     impl Ansa02 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN102 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ansa03_SPEC;
-    pub type Ansa03 = crate::EnumBitfieldStruct<u8, Ansa03_SPEC>;
-    impl Ansa03 {
-        #[doc = "Do not select associated input channel."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Select associated input channel."]
+        #[doc = "AN102 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ansa04_SPEC;
     pub type Ansa04 = crate::EnumBitfieldStruct<u8, Ansa04_SPEC>;
     impl Ansa04 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN104 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN104 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ansa05_SPEC;
     pub type Ansa05 = crate::EnumBitfieldStruct<u8, Ansa05_SPEC>;
     impl Ansa05 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN105 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN105 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ansa06_SPEC;
     pub type Ansa06 = crate::EnumBitfieldStruct<u8, Ansa06_SPEC>;
     impl Ansa06 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN106 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN106 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1399,7 +1723,7 @@ impl crate::sealed::RegSpec for Adansa1_SPEC {
 pub type Adansa1 = crate::RegValueT<Adansa1_SPEC>;
 
 impl Adansa1 {
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN116 Select"]
     #[inline(always)]
     pub fn ansa16(
         self,
@@ -1425,7 +1749,7 @@ impl Adansa1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN117 Select"]
     #[inline(always)]
     pub fn ansa17(
         self,
@@ -1451,7 +1775,7 @@ impl Adansa1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN118 Select"]
     #[inline(always)]
     pub fn ansa18(
         self,
@@ -1477,7 +1801,7 @@ impl Adansa1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN119 Select"]
     #[inline(always)]
     pub fn ansa19(
         self,
@@ -1502,6 +1826,94 @@ impl Adansa1 {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "AN120 Select"]
+    #[inline(always)]
+    pub fn ansa20(
+        self,
+    ) -> crate::common::RegisterField<
+        4,
+        0x1,
+        1,
+        0,
+        adansa1::Ansa20,
+        adansa1::Ansa20,
+        Adansa1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            4,
+            0x1,
+            1,
+            0,
+            adansa1::Ansa20,
+            adansa1::Ansa20,
+            Adansa1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "AN121 Select"]
+    #[inline(always)]
+    pub fn ansa21(
+        self,
+    ) -> crate::common::RegisterField<
+        5,
+        0x1,
+        1,
+        0,
+        adansa1::Ansa21,
+        adansa1::Ansa21,
+        Adansa1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            5,
+            0x1,
+            1,
+            0,
+            adansa1::Ansa21,
+            adansa1::Ansa21,
+            Adansa1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "AN122 Select"]
+    #[inline(always)]
+    pub fn ansa22(
+        self,
+    ) -> crate::common::RegisterField<
+        6,
+        0x1,
+        1,
+        0,
+        adansa1::Ansa22,
+        adansa1::Ansa22,
+        Adansa1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            6,
+            0x1,
+            1,
+            0,
+            adansa1::Ansa22,
+            adansa1::Ansa22,
+            Adansa1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<15, 1, 0, Adansa1_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<15, 1, 0, Adansa1_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
 }
 impl ::core::default::Default for Adansa1 {
     #[inline(always)]
@@ -1515,40 +1927,70 @@ pub mod adansa1 {
     pub struct Ansa16_SPEC;
     pub type Ansa16 = crate::EnumBitfieldStruct<u8, Ansa16_SPEC>;
     impl Ansa16 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN116 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN116 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ansa17_SPEC;
     pub type Ansa17 = crate::EnumBitfieldStruct<u8, Ansa17_SPEC>;
     impl Ansa17 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN117 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN117 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ansa18_SPEC;
     pub type Ansa18 = crate::EnumBitfieldStruct<u8, Ansa18_SPEC>;
     impl Ansa18 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN118 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN118 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ansa19_SPEC;
     pub type Ansa19 = crate::EnumBitfieldStruct<u8, Ansa19_SPEC>;
     impl Ansa19 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN119 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN119 is subjected to conversion."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Ansa20_SPEC;
+    pub type Ansa20 = crate::EnumBitfieldStruct<u8, Ansa20_SPEC>;
+    impl Ansa20 {
+        #[doc = "AN120 is not subjected to conversion."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AN120 is subjected to conversion."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Ansa21_SPEC;
+    pub type Ansa21 = crate::EnumBitfieldStruct<u8, Ansa21_SPEC>;
+    impl Ansa21 {
+        #[doc = "AN121 is not subjected to conversion."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AN121 is subjected to conversion."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Ansa22_SPEC;
+    pub type Ansa22 = crate::EnumBitfieldStruct<u8, Ansa22_SPEC>;
+    impl Ansa22 {
+        #[doc = "AN122 is not subjected to conversion."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AN122 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1563,7 +2005,7 @@ impl crate::sealed::RegSpec for Adads0_SPEC {
 pub type Adads0 = crate::RegValueT<Adads0_SPEC>;
 
 impl Adads0 {
-    #[doc = "A/D-Converted Value Addition/Average Channel Select"]
+    #[doc = "A/D-Converted Value Addition/Average Channel AN100 Select"]
     #[inline(always)]
     pub fn ads00(
         self,
@@ -1589,7 +2031,7 @@ impl Adads0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D-Converted Value Addition/Average Channel Select"]
+    #[doc = "A/D-Converted Value Addition/Average Channel AN101 Select"]
     #[inline(always)]
     pub fn ads01(
         self,
@@ -1615,7 +2057,7 @@ impl Adads0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D-Converted Value Addition/Average Channel Select"]
+    #[doc = "A/D-Converted Value Addition/Average Channel AN102 Select"]
     #[inline(always)]
     pub fn ads02(
         self,
@@ -1641,33 +2083,7 @@ impl Adads0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D-Converted Value Addition/Average Channel Select"]
-    #[inline(always)]
-    pub fn ads03(
-        self,
-    ) -> crate::common::RegisterField<
-        3,
-        0x1,
-        1,
-        0,
-        adads0::Ads03,
-        adads0::Ads03,
-        Adads0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            3,
-            0x1,
-            1,
-            0,
-            adads0::Ads03,
-            adads0::Ads03,
-            Adads0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "A/D-Converted Value Addition/Average Channel Select"]
+    #[doc = "A/D-Converted Value Addition/Average Channel AN104 Select"]
     #[inline(always)]
     pub fn ads04(
         self,
@@ -1693,7 +2109,7 @@ impl Adads0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D-Converted Value Addition/Average Channel Select"]
+    #[doc = "A/D-Converted Value Addition/Average Channel AN105 Select"]
     #[inline(always)]
     pub fn ads05(
         self,
@@ -1719,7 +2135,7 @@ impl Adads0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D-Converted Value Addition/Average Channel Select"]
+    #[doc = "A/D-Converted Value Addition/Average Channel AN106 Select"]
     #[inline(always)]
     pub fn ads06(
         self,
@@ -1744,6 +2160,16 @@ impl Adads0 {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<15, 1, 0, Adads0_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<15, 1, 0, Adads0_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
 }
 impl ::core::default::Default for Adads0 {
     #[inline(always)]
@@ -1757,70 +2183,60 @@ pub mod adads0 {
     pub struct Ads00_SPEC;
     pub type Ads00 = crate::EnumBitfieldStruct<u8, Ads00_SPEC>;
     impl Ads00 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN100 is not selected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN100 is selected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ads01_SPEC;
     pub type Ads01 = crate::EnumBitfieldStruct<u8, Ads01_SPEC>;
     impl Ads01 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN101 is not selected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN101 is selected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ads02_SPEC;
     pub type Ads02 = crate::EnumBitfieldStruct<u8, Ads02_SPEC>;
     impl Ads02 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN102 is not selected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ads03_SPEC;
-    pub type Ads03 = crate::EnumBitfieldStruct<u8, Ads03_SPEC>;
-    impl Ads03 {
-        #[doc = "Do not select associated input channel."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Select associated input channel."]
+        #[doc = "AN102 is selected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ads04_SPEC;
     pub type Ads04 = crate::EnumBitfieldStruct<u8, Ads04_SPEC>;
     impl Ads04 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN104 is not selected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN104 is selected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ads05_SPEC;
     pub type Ads05 = crate::EnumBitfieldStruct<u8, Ads05_SPEC>;
     impl Ads05 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN105 is not selected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN105 is selected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ads06_SPEC;
     pub type Ads06 = crate::EnumBitfieldStruct<u8, Ads06_SPEC>;
     impl Ads06 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN106 is not selected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN106 is selected."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1835,7 +2251,7 @@ impl crate::sealed::RegSpec for Adads1_SPEC {
 pub type Adads1 = crate::RegValueT<Adads1_SPEC>;
 
 impl Adads1 {
-    #[doc = "A/D Conversion Channels Select/Average Channel Select"]
+    #[doc = "A/D-Converted Value Addition/Average Channel AN116 Select"]
     #[inline(always)]
     pub fn ads16(
         self,
@@ -1861,7 +2277,7 @@ impl Adads1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D Conversion Channels Select/Average Channel Select"]
+    #[doc = "A/D-Converted Value Addition/Average Channel AN117 Select"]
     #[inline(always)]
     pub fn ads17(
         self,
@@ -1887,7 +2303,7 @@ impl Adads1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D Conversion Channels Select/Average Channel Select"]
+    #[doc = "A/D-Converted Value Addition/Average Channel AN118 Select"]
     #[inline(always)]
     pub fn ads18(
         self,
@@ -1913,7 +2329,7 @@ impl Adads1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D Conversion Channels Select/Average Channel Select"]
+    #[doc = "A/D-Converted Value Addition/Average Channel AN119 Select"]
     #[inline(always)]
     pub fn ads19(
         self,
@@ -1938,6 +2354,94 @@ impl Adads1 {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "A/D-Converted Value Addition/Average Channel AN120 Select"]
+    #[inline(always)]
+    pub fn ads20(
+        self,
+    ) -> crate::common::RegisterField<
+        4,
+        0x1,
+        1,
+        0,
+        adads1::Ads20,
+        adads1::Ads20,
+        Adads1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            4,
+            0x1,
+            1,
+            0,
+            adads1::Ads20,
+            adads1::Ads20,
+            Adads1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "A/D-Converted Value Addition/Average Channel AN121 Select"]
+    #[inline(always)]
+    pub fn ads21(
+        self,
+    ) -> crate::common::RegisterField<
+        5,
+        0x1,
+        1,
+        0,
+        adads1::Ads21,
+        adads1::Ads21,
+        Adads1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            5,
+            0x1,
+            1,
+            0,
+            adads1::Ads21,
+            adads1::Ads21,
+            Adads1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "A/D-Converted Value Addition/Average Channel AN122 Select"]
+    #[inline(always)]
+    pub fn ads22(
+        self,
+    ) -> crate::common::RegisterField<
+        6,
+        0x1,
+        1,
+        0,
+        adads1::Ads22,
+        adads1::Ads22,
+        Adads1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            6,
+            0x1,
+            1,
+            0,
+            adads1::Ads22,
+            adads1::Ads22,
+            Adads1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<15, 1, 0, Adads1_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<15, 1, 0, Adads1_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
 }
 impl ::core::default::Default for Adads1 {
     #[inline(always)]
@@ -1951,40 +2455,70 @@ pub mod adads1 {
     pub struct Ads16_SPEC;
     pub type Ads16 = crate::EnumBitfieldStruct<u8, Ads16_SPEC>;
     impl Ads16 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN116 is not selected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN116 is selected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ads17_SPEC;
     pub type Ads17 = crate::EnumBitfieldStruct<u8, Ads17_SPEC>;
     impl Ads17 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN117 is not selected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN117 is selected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ads18_SPEC;
     pub type Ads18 = crate::EnumBitfieldStruct<u8, Ads18_SPEC>;
     impl Ads18 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN118 is not selected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN118 is selected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ads19_SPEC;
     pub type Ads19 = crate::EnumBitfieldStruct<u8, Ads19_SPEC>;
     impl Ads19 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN119 is not selected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN119 is selected."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Ads20_SPEC;
+    pub type Ads20 = crate::EnumBitfieldStruct<u8, Ads20_SPEC>;
+    impl Ads20 {
+        #[doc = "AN120 is not selected."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AN120 is selected."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Ads21_SPEC;
+    pub type Ads21 = crate::EnumBitfieldStruct<u8, Ads21_SPEC>;
+    impl Ads21 {
+        #[doc = "AN121 is not selected."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AN121 is selected."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Ads22_SPEC;
+    pub type Ads22 = crate::EnumBitfieldStruct<u8, Ads22_SPEC>;
+    impl Ads22 {
+        #[doc = "AN122 is not selected."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AN122 is selected."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1999,7 +2533,7 @@ impl crate::sealed::RegSpec for Adadc_SPEC {
 pub type Adadc = crate::RegValueT<Adadc_SPEC>;
 
 impl Adadc {
-    #[doc = "Addition/Average Count Select"]
+    #[doc = "Addition frequency selection bit.NOTE: AVEE bit is valid at the only setting of ADC\\[2:0\\] bits = 001b or 011b. When average mode is selected by setting the ADADC.AVEE bit to 1, do not set the addition count to three times (ADADC.ADC\\[2:0\\] = 010b)"]
     #[inline(always)]
     pub fn adc(
         self,
@@ -2025,7 +2559,15 @@ impl Adadc {
         >::from_register(self, 0)
     }
 
-    #[doc = "Average Mode Select"]
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<3, 0xf, 1, 0, u8, u8, Adadc_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<3,0xf,1,0,u8,u8,Adadc_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "Average mode enable bit.Note: The AVEE bit converts twice, and only when converting it four times, is effective. Please do not set (ADADC.AVEE=1) to conversion (ADADC.ADC 2:0=010b) three times when you select the average mode."]
     #[inline(always)]
     pub fn avee(
         self,
@@ -2063,32 +2605,29 @@ pub mod adadc {
     pub struct Adc_SPEC;
     pub type Adc = crate::EnumBitfieldStruct<u8, Adc_SPEC>;
     impl Adc {
-        #[doc = "1-time conversion (no addition, same as normal conversion)"]
+        #[doc = "1-time conversion (no addition; same as normal conversion)"]
         pub const _000: Self = Self::new(0);
 
-        #[doc = "2-time conversion (1 addition)"]
+        #[doc = "2-time conversion (addition once)"]
         pub const _001: Self = Self::new(1);
 
-        #[doc = "3-time conversion (2 additions)"]
+        #[doc = "3-time conversion (addition twice)"]
         pub const _010: Self = Self::new(2);
 
-        #[doc = "4-time conversion (3 additions)"]
+        #[doc = "4-time conversion (addition three times)"]
         pub const _011: Self = Self::new(3);
 
-        #[doc = "16-time conversion (15 additions)"]
+        #[doc = "16-time conversion (addition 15 times), can be set when selecting 12-bit accuracy."]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Avee_SPEC;
     pub type Avee = crate::EnumBitfieldStruct<u8, Avee_SPEC>;
     impl Avee {
-        #[doc = "Enable addition mode"]
+        #[doc = "Disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable average mode"]
+        #[doc = "Enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2103,6 +2642,7 @@ impl crate::sealed::RegSpec for Adcer_SPEC {
 pub type Adcer = crate::RegValueT<Adcer_SPEC>;
 
 impl Adcer {
+    #[doc = "A/D Conversion Accuracy Specify"]
     #[inline(always)]
     pub fn adprc(
         self,
@@ -2232,6 +2772,14 @@ impl Adcer {
         >::from_register(self, 0)
     }
 
+    #[doc = "These bits are read as 000. The write value should be 000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<12, 0x7, 1, 0, u8, u8, Adcer_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<12,0x7,1,0,u8,u8,Adcer_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
     #[doc = "A/D Data Register Format Select"]
     #[inline(always)]
     pub fn adrfmt(
@@ -2270,13 +2818,13 @@ pub mod adcer {
     pub struct Adprc_SPEC;
     pub type Adprc = crate::EnumBitfieldStruct<u8, Adprc_SPEC>;
     impl Adprc {
-        #[doc = "12-bit accuracy"]
+        #[doc = "A/D conversion is performed with 12-bit accuracy."]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "10-bit accuracy"]
+        #[doc = "A/D conversion is performed with 10-bit accuracy."]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "8-bit accuracy"]
+        #[doc = "A/D conversion is performed with 8-bit accuracy."]
         pub const _10: Self = Self::new(2);
 
         #[doc = "Setting prohibited"]
@@ -2286,56 +2834,56 @@ pub mod adcer {
     pub struct Ace_SPEC;
     pub type Ace = crate::EnumBitfieldStruct<u8, Ace_SPEC>;
     impl Ace {
-        #[doc = "Disable automatic clearing"]
+        #[doc = "Disables automatic clearing."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable automatic clearing"]
+        #[doc = "Enables automatic clearing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Diagval_SPEC;
     pub type Diagval = crate::EnumBitfieldStruct<u8, Diagval_SPEC>;
     impl Diagval {
-        #[doc = "Setting prohibited when self-diagnosis is enabled"]
+        #[doc = "When the self-diagnosis fixation mode is selected, it set prohibits it."]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "0 volts"]
+        #[doc = "The self-diagnosis by using the voltage of  0V."]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "Reference voltage × 1/2"]
+        #[doc = "The self-diagnosis by using the voltage of reference supply x 1/2."]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "Reference voltage"]
+        #[doc = "The self-diagnosis by using the voltage of the reference supply."]
         pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Diagld_SPEC;
     pub type Diagld = crate::EnumBitfieldStruct<u8, Diagld_SPEC>;
     impl Diagld {
-        #[doc = "Select rotation mode for self-diagnosis voltage"]
+        #[doc = "Rotation mode for self-diagnosis voltage"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select mixed mode for self-diagnosis voltage"]
+        #[doc = "Fixed mode for self-diagnosis voltage"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Diagm_SPEC;
     pub type Diagm = crate::EnumBitfieldStruct<u8, Diagm_SPEC>;
     impl Diagm {
-        #[doc = "Disable ADC12 self-diagnosis"]
+        #[doc = "Disables self-diagnosis of ADC12."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable ADC12 self-diagnosis"]
+        #[doc = "Enables self-diagnosis of ADC12."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Adrfmt_SPEC;
     pub type Adrfmt = crate::EnumBitfieldStruct<u8, Adrfmt_SPEC>;
     impl Adrfmt {
-        #[doc = "Select right-justified for the A/D data register format"]
+        #[doc = "Flush-right is selected for the A/D data register format."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select left-justified for the A/D data register format"]
+        #[doc = "Flush-left is selected for the A/D data register format."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2350,7 +2898,7 @@ impl crate::sealed::RegSpec for Adstrgr_SPEC {
 pub type Adstrgr = crate::RegValueT<Adstrgr_SPEC>;
 
 impl Adstrgr {
-    #[doc = "A/D Conversion Start Trigger Select for Group B"]
+    #[doc = "A/D Conversion Start Trigger Select for Group BSelect the A/D conversion start trigger for group B in group scan mode."]
     #[inline(always)]
     pub fn trsb(
         self,
@@ -2358,12 +2906,20 @@ impl Adstrgr {
         crate::common::RegisterField::<0,0x3f,1,0,u8,u8,Adstrgr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "A/D Conversion Start Trigger Select"]
+    #[doc = "A/D Conversion Start Trigger SelectSelect the A/D conversion start trigger in single scan mode and continuous mode. In group scan mode, the A/D conversion start trigger for group A is selected."]
     #[inline(always)]
     pub fn trsa(
         self,
     ) -> crate::common::RegisterField<8, 0x3f, 1, 0, u8, u8, Adstrgr_SPEC, crate::common::RW> {
         crate::common::RegisterField::<8,0x3f,1,0,u8,u8,Adstrgr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00. The write value should be 00."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<14, 0x3, 1, 0, u8, u8, Adstrgr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<14,0x3,1,0,u8,u8,Adstrgr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Adstrgr {
@@ -2380,11 +2936,11 @@ impl crate::sealed::RegSpec for Adexicr_SPEC {
     type DataType = u16;
 }
 
-#[doc = "A/D Conversion Extended Input Control Registers"]
+#[doc = "A/D Conversion Extended Input Control Register"]
 pub type Adexicr = crate::RegValueT<Adexicr_SPEC>;
 
 impl Adexicr {
-    #[doc = "Temperature Sensor Output A/D-Converted Value Addition/Average Mode Select"]
+    #[doc = "Temperature Sensor Output A/D converted Value Addition/Average Mode Select"]
     #[inline(always)]
     pub fn tssad(
         self,
@@ -2410,7 +2966,7 @@ impl Adexicr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Internal Reference Voltage A/D-Converted Value Addition/Average Mode Select"]
+    #[doc = "Internal Reference Voltage A/D converted Value Addition/Average Mode Select"]
     #[inline(always)]
     pub fn ocsad(
         self,
@@ -2539,6 +3095,16 @@ impl Adexicr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<15, 1, 0, Adexicr_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<15, 1, 0, Adexicr_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
 }
 impl ::core::default::Default for Adexicr {
     #[inline(always)]
@@ -2552,60 +3118,60 @@ pub mod adexicr {
     pub struct Tssad_SPEC;
     pub type Tssad = crate::EnumBitfieldStruct<u8, Tssad_SPEC>;
     impl Tssad {
-        #[doc = "Do not select addition/average mode for temperature sensor output."]
+        #[doc = "Temperature sensor output A/D-converted value addition/average mode is not selected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select addition/average mode for temperature sensor output."]
+        #[doc = "Temperature sensor output A/D-converted value addition/average mode is selected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ocsad_SPEC;
     pub type Ocsad = crate::EnumBitfieldStruct<u8, Ocsad_SPEC>;
     impl Ocsad {
-        #[doc = "Do not select addition/average mode for internal reference voltage."]
+        #[doc = "Internal reference voltage A/D-converted value addition/average mode is not selected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select addition/average mode for internal reference voltage."]
+        #[doc = "Internal reference voltage A/D-converted value addition/average mode is selected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tssa_SPEC;
     pub type Tssa = crate::EnumBitfieldStruct<u8, Tssa_SPEC>;
     impl Tssa {
-        #[doc = "Disable A/D conversion of temperature sensor output"]
+        #[doc = "The temperature sensor output is not selected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable A/D conversion of temperature sensor output"]
+        #[doc = "The temperature sensor output is selected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ocsa_SPEC;
     pub type Ocsa = crate::EnumBitfieldStruct<u8, Ocsa_SPEC>;
     impl Ocsa {
-        #[doc = "Disable A/D conversion of internal reference voltage"]
+        #[doc = "The internal reference voltage is not selected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable A/D conversion of internal reference voltage"]
+        #[doc = "The internal reference voltage is selected for group A in single scan mode, continuous scan mode, or group scan mode."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tssb_SPEC;
     pub type Tssb = crate::EnumBitfieldStruct<u8, Tssb_SPEC>;
     impl Tssb {
-        #[doc = "Disable A/D conversion of temperature sensor output"]
+        #[doc = "The temperature sensor output is not selected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable A/D conversion of temperature sensor output"]
+        #[doc = "The temperature sensor output is not selected for group B in group scan mode."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ocsb_SPEC;
     pub type Ocsb = crate::EnumBitfieldStruct<u8, Ocsb_SPEC>;
     impl Ocsb {
-        #[doc = "Disable A/D conversion of internal reference voltage"]
+        #[doc = "The internal reference voltage is not selected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable A/D conversion of internal reference voltage"]
+        #[doc = "The internal reference voltage is selected for group B in group scan mode."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2620,7 +3186,7 @@ impl crate::sealed::RegSpec for Adansb0_SPEC {
 pub type Adansb0 = crate::RegValueT<Adansb0_SPEC>;
 
 impl Adansb0 {
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN100 Select"]
     #[inline(always)]
     pub fn ansb00(
         self,
@@ -2646,7 +3212,7 @@ impl Adansb0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN101 Select"]
     #[inline(always)]
     pub fn ansb01(
         self,
@@ -2672,7 +3238,7 @@ impl Adansb0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN102 Select"]
     #[inline(always)]
     pub fn ansb02(
         self,
@@ -2698,33 +3264,7 @@ impl Adansb0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D Conversion Channels Select"]
-    #[inline(always)]
-    pub fn ansb03(
-        self,
-    ) -> crate::common::RegisterField<
-        3,
-        0x1,
-        1,
-        0,
-        adansb0::Ansb03,
-        adansb0::Ansb03,
-        Adansb0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            3,
-            0x1,
-            1,
-            0,
-            adansb0::Ansb03,
-            adansb0::Ansb03,
-            Adansb0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN104 Select"]
     #[inline(always)]
     pub fn ansb04(
         self,
@@ -2750,7 +3290,7 @@ impl Adansb0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN105 Select"]
     #[inline(always)]
     pub fn ansb05(
         self,
@@ -2776,7 +3316,7 @@ impl Adansb0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN106 Select"]
     #[inline(always)]
     pub fn ansb06(
         self,
@@ -2801,6 +3341,16 @@ impl Adansb0 {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<15, 1, 0, Adansb0_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<15, 1, 0, Adansb0_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
 }
 impl ::core::default::Default for Adansb0 {
     #[inline(always)]
@@ -2814,70 +3364,60 @@ pub mod adansb0 {
     pub struct Ansb00_SPEC;
     pub type Ansb00 = crate::EnumBitfieldStruct<u8, Ansb00_SPEC>;
     impl Ansb00 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN100 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN100 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ansb01_SPEC;
     pub type Ansb01 = crate::EnumBitfieldStruct<u8, Ansb01_SPEC>;
     impl Ansb01 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN101 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN101 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ansb02_SPEC;
     pub type Ansb02 = crate::EnumBitfieldStruct<u8, Ansb02_SPEC>;
     impl Ansb02 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN102 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ansb03_SPEC;
-    pub type Ansb03 = crate::EnumBitfieldStruct<u8, Ansb03_SPEC>;
-    impl Ansb03 {
-        #[doc = "Do not select associated input channel."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Select associated input channel."]
+        #[doc = "AN102 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ansb04_SPEC;
     pub type Ansb04 = crate::EnumBitfieldStruct<u8, Ansb04_SPEC>;
     impl Ansb04 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN104 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN104 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ansb05_SPEC;
     pub type Ansb05 = crate::EnumBitfieldStruct<u8, Ansb05_SPEC>;
     impl Ansb05 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN105 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN105 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ansb06_SPEC;
     pub type Ansb06 = crate::EnumBitfieldStruct<u8, Ansb06_SPEC>;
     impl Ansb06 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN106 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN106 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2892,7 +3432,7 @@ impl crate::sealed::RegSpec for Adansb1_SPEC {
 pub type Adansb1 = crate::RegValueT<Adansb1_SPEC>;
 
 impl Adansb1 {
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN116 Select"]
     #[inline(always)]
     pub fn ansb16(
         self,
@@ -2918,7 +3458,7 @@ impl Adansb1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN117 Select"]
     #[inline(always)]
     pub fn ansb17(
         self,
@@ -2944,7 +3484,7 @@ impl Adansb1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN118 Select"]
     #[inline(always)]
     pub fn ansb18(
         self,
@@ -2970,7 +3510,7 @@ impl Adansb1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "A/D Conversion Channels Select"]
+    #[doc = "AN119 Select"]
     #[inline(always)]
     pub fn ansb19(
         self,
@@ -2995,6 +3535,94 @@ impl Adansb1 {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "AN120 Select"]
+    #[inline(always)]
+    pub fn ansb20(
+        self,
+    ) -> crate::common::RegisterField<
+        4,
+        0x1,
+        1,
+        0,
+        adansb1::Ansb20,
+        adansb1::Ansb20,
+        Adansb1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            4,
+            0x1,
+            1,
+            0,
+            adansb1::Ansb20,
+            adansb1::Ansb20,
+            Adansb1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "AN121 Select"]
+    #[inline(always)]
+    pub fn ansb21(
+        self,
+    ) -> crate::common::RegisterField<
+        5,
+        0x1,
+        1,
+        0,
+        adansb1::Ansb21,
+        adansb1::Ansb21,
+        Adansb1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            5,
+            0x1,
+            1,
+            0,
+            adansb1::Ansb21,
+            adansb1::Ansb21,
+            Adansb1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "AN122 Select"]
+    #[inline(always)]
+    pub fn ansb22(
+        self,
+    ) -> crate::common::RegisterField<
+        6,
+        0x1,
+        1,
+        0,
+        adansb1::Ansb22,
+        adansb1::Ansb22,
+        Adansb1_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            6,
+            0x1,
+            1,
+            0,
+            adansb1::Ansb22,
+            adansb1::Ansb22,
+            Adansb1_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<15, 1, 0, Adansb1_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<15, 1, 0, Adansb1_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
 }
 impl ::core::default::Default for Adansb1 {
     #[inline(always)]
@@ -3008,40 +3636,70 @@ pub mod adansb1 {
     pub struct Ansb16_SPEC;
     pub type Ansb16 = crate::EnumBitfieldStruct<u8, Ansb16_SPEC>;
     impl Ansb16 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN116 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN116 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ansb17_SPEC;
     pub type Ansb17 = crate::EnumBitfieldStruct<u8, Ansb17_SPEC>;
     impl Ansb17 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN117 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN117 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ansb18_SPEC;
     pub type Ansb18 = crate::EnumBitfieldStruct<u8, Ansb18_SPEC>;
     impl Ansb18 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN118 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN118 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ansb19_SPEC;
     pub type Ansb19 = crate::EnumBitfieldStruct<u8, Ansb19_SPEC>;
     impl Ansb19 {
-        #[doc = "Do not select associated input channel."]
+        #[doc = "AN119 is not subjected to conversion."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Select associated input channel."]
+        #[doc = "AN119 is subjected to conversion."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Ansb20_SPEC;
+    pub type Ansb20 = crate::EnumBitfieldStruct<u8, Ansb20_SPEC>;
+    impl Ansb20 {
+        #[doc = "AN120 is not subjected to conversion."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AN120 is subjected to conversion."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Ansb21_SPEC;
+    pub type Ansb21 = crate::EnumBitfieldStruct<u8, Ansb21_SPEC>;
+    impl Ansb21 {
+        #[doc = "AN121 is not subjected to conversion."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AN121 is subjected to conversion."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Ansb22_SPEC;
+    pub type Ansb22 = crate::EnumBitfieldStruct<u8, Ansb22_SPEC>;
+    impl Ansb22 {
+        #[doc = "AN122 is not subjected to conversion."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "AN122 is subjected to conversion."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3052,11 +3710,11 @@ impl crate::sealed::RegSpec for Addbldr_SPEC {
     type DataType = u16;
 }
 
-#[doc = "A/D Data Duplexing Register"]
+#[doc = "A/D Data Duplication Register"]
 pub type Addbldr = crate::RegValueT<Addbldr_SPEC>;
 
 impl Addbldr {
-    #[doc = "Converted Value 15 to 0"]
+    #[doc = "This is a 16-bit read-only register for storing the result of A/D conversion in response to the second trigger in double trigger mode."]
     #[inline(always)]
     pub fn addbldr(
         self,
@@ -3083,7 +3741,7 @@ impl crate::sealed::RegSpec for Adtsdr_SPEC {
 pub type Adtsdr = crate::RegValueT<Adtsdr_SPEC>;
 
 impl Adtsdr {
-    #[doc = "Converted Value 15 to 0"]
+    #[doc = "This is a 16-bit read-only register for storing the A/D conversion result of temperature sensor output."]
     #[inline(always)]
     pub fn adtsdr(
         self,
@@ -3110,7 +3768,7 @@ impl crate::sealed::RegSpec for Adocdr_SPEC {
 pub type Adocdr = crate::RegValueT<Adocdr_SPEC>;
 
 impl Adocdr {
-    #[doc = "Converted Value 15 to 0"]
+    #[doc = "This is a 16-bit read-only register for storing the A/D result of internal reference voltage."]
     #[inline(always)]
     pub fn adocdr(
         self,
@@ -3137,12 +3795,20 @@ impl crate::sealed::RegSpec for Adrd_SPEC {
 pub type Adrd = crate::RegValueT<Adrd_SPEC>;
 
 impl Adrd {
-    #[doc = "Converted Value 11 to 0"]
+    #[doc = "A/D-converted value (right-justified)NOTE: Unused bits in the AD bit field are fixed \"0\""]
     #[inline(always)]
     pub fn ad(
         self,
     ) -> crate::common::RegisterField<0, 0xfff, 1, 0, u16, u16, Adrd_SPEC, crate::common::R> {
         crate::common::RegisterField::<0,0xfff,1,0,u16,u16,Adrd_SPEC,crate::common::R>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<12, 0x3, 1, 0, u8, u8, Adrd_SPEC, crate::common::R> {
+        crate::common::RegisterField::<12,0x3,1,0,u8,u8,Adrd_SPEC,crate::common::R>::from_register(self,0)
     }
 
     #[doc = "Self-Diagnosis Status"]
@@ -3183,16 +3849,16 @@ pub mod adrd {
     pub struct Diagst_SPEC;
     pub type Diagst = crate::EnumBitfieldStruct<u8, Diagst_SPEC>;
     impl Diagst {
-        #[doc = "Self-diagnosis not executed after power-on."]
+        #[doc = "Self-diagnosis has never been executed since power-on."]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "Self-diagnosis was executed using the 0 V voltage."]
+        #[doc = "Self-diagnosis using the voltage of 0 V has been executed."]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "Self-diagnosis was executed using the reference voltage × 1/2."]
+        #[doc = "Self-diagnosis using the voltage of reference power supply(VREFH) x 1/2 has been executed."]
         pub const _10: Self = Self::new(2);
 
-        #[doc = "Self-diagnosis was executed using the reference voltage ."]
+        #[doc = "Self-diagnosis using the voltage of reference power supply(VREFH) has been executed."]
         pub const _11: Self = Self::new(3);
     }
 }
@@ -3203,11 +3869,11 @@ impl crate::sealed::RegSpec for Addr_SPEC {
     type DataType = u16;
 }
 
-#[doc = "A/D Data Registers %s"]
+#[doc = "A/D Data Register %s"]
 pub type Addr = crate::RegValueT<Addr_SPEC>;
 
 impl Addr {
-    #[doc = "Converted Value 15 to 0"]
+    #[doc = "The ADDR register is a 16-bit read-only registers for storing the result of A/D conversion."]
     #[inline(always)]
     pub fn addr(
         self,
@@ -3229,11 +3895,10 @@ impl crate::sealed::RegSpec for Advmdr_SPEC {
     type DataType = u16;
 }
 
-#[doc = "A/D VBATT Monitor Data Register"]
+#[doc = "A/D VBATMONITOR Data Register"]
 pub type Advmdr = crate::RegValueT<Advmdr_SPEC>;
 
 impl Advmdr {
-    #[doc = "Converted Value 15 to 0"]
     #[inline(always)]
     pub fn addr(
         self,
@@ -3260,7 +3925,7 @@ impl crate::sealed::RegSpec for Adshcr_SPEC {
 pub type Adshcr = crate::RegValueT<Adshcr_SPEC>;
 
 impl Adshcr {
-    #[doc = "Channel-Dedicated Sample-and-Hold Circuit Sampling Time Setting"]
+    #[doc = "Channel-Dedicated Sample-and-Hold Circuit Sampling Time Setting  Set the sampling time (4 to 255 states)"]
     #[inline(always)]
     pub fn sstsh(
         self,
@@ -3268,30 +3933,90 @@ impl Adshcr {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Adshcr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Channel-Dedicated Sample-and-Hold Circuit Bypass Select"]
+    #[doc = "AN100 sample-and-hold circuit Select"]
     #[inline(always)]
-    pub fn shans(
+    pub fn shans0(
         self,
     ) -> crate::common::RegisterField<
         8,
-        0x7,
+        0x1,
         1,
         0,
-        adshcr::Shans,
-        adshcr::Shans,
+        adshcr::Shans0,
+        adshcr::Shans0,
         Adshcr_SPEC,
         crate::common::RW,
     > {
         crate::common::RegisterField::<
             8,
-            0x7,
+            0x1,
             1,
             0,
-            adshcr::Shans,
-            adshcr::Shans,
+            adshcr::Shans0,
+            adshcr::Shans0,
             Adshcr_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "AN101 sample-and-hold circuit Select"]
+    #[inline(always)]
+    pub fn shans1(
+        self,
+    ) -> crate::common::RegisterField<
+        9,
+        0x1,
+        1,
+        0,
+        adshcr::Shans1,
+        adshcr::Shans1,
+        Adshcr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            9,
+            0x1,
+            1,
+            0,
+            adshcr::Shans1,
+            adshcr::Shans1,
+            Adshcr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "AN102 sample-and-hold circuit Select"]
+    #[inline(always)]
+    pub fn shans2(
+        self,
+    ) -> crate::common::RegisterField<
+        10,
+        0x1,
+        1,
+        0,
+        adshcr::Shans2,
+        adshcr::Shans2,
+        Adshcr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            10,
+            0x1,
+            1,
+            0,
+            adshcr::Shans2,
+            adshcr::Shans2,
+            Adshcr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<11, 0x1f, 1, 0, u8, u8, Adshcr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<11,0x1f,1,0,u8,u8,Adshcr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Adshcr {
@@ -3303,13 +4028,33 @@ impl ::core::default::Default for Adshcr {
 pub mod adshcr {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Shans_SPEC;
-    pub type Shans = crate::EnumBitfieldStruct<u8, Shans_SPEC>;
-    impl Shans {
-        #[doc = "Bypass the circuits"]
+    pub struct Shans0_SPEC;
+    pub type Shans0 = crate::EnumBitfieldStruct<u8, Shans0_SPEC>;
+    impl Shans0 {
+        #[doc = "Bypass the sample-and-hold circuit."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Use the circuits"]
+        #[doc = "Use the sample-and-hold circuit."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Shans1_SPEC;
+    pub type Shans1 = crate::EnumBitfieldStruct<u8, Shans1_SPEC>;
+    impl Shans1 {
+        #[doc = "Bypass the sample-and-hold circuit."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Use the sample-and-hold circuit."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Shans2_SPEC;
+    pub type Shans2 = crate::EnumBitfieldStruct<u8, Shans2_SPEC>;
+    impl Shans2 {
+        #[doc = "Bypass the sample-and-hold circuit."]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "Use the sample-and-hold circuit."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3324,7 +4069,7 @@ impl crate::sealed::RegSpec for Addiscr_SPEC {
 pub type Addiscr = crate::RegValueT<Addiscr_SPEC>;
 
 impl Addiscr {
-    #[doc = "Disconnection Detection Assist Setting"]
+    #[doc = "The charging time"]
     #[inline(always)]
     pub fn adndis(
         self,
@@ -3350,7 +4095,7 @@ impl Addiscr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Precharge/discharge select"]
+    #[doc = "Selection of Precharge or Discharge"]
     #[inline(always)]
     pub fn pchg(
         self,
@@ -3375,6 +4120,14 @@ impl Addiscr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000. The write value should be 000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<5, 0x7, 1, 0, u8, u8, Addiscr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<5,0x7,1,0,u8,u8,Addiscr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Addiscr {
     #[inline(always)]
@@ -3388,14 +4141,11 @@ pub mod addiscr {
     pub struct Adndis_SPEC;
     pub type Adndis = crate::EnumBitfieldStruct<u8, Adndis_SPEC>;
     impl Adndis {
-        #[doc = "The disconnection detection assist function is disabled"]
-        pub const _0_X_0: Self = Self::new(0);
+        #[doc = "Disconnection detection is disabled"]
+        pub const _0000: Self = Self::new(0);
 
         #[doc = "Setting prohibited"]
-        pub const _0_X_1: Self = Self::new(1);
-
-        #[doc = "The number of states for the discharge or precharge period."]
-        pub const OTHERS: Self = Self::new(0);
+        pub const _0001: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pchg_SPEC;
@@ -3415,11 +4165,11 @@ impl crate::sealed::RegSpec for Adshmsr_SPEC {
     type DataType = u8;
 }
 
-#[doc = "A/D Sample and Hold Operation Mode Selection Register"]
+#[doc = "A/D Sample and Hold Operation Mode Select Register"]
 pub type Adshmsr = crate::RegValueT<Adshmsr_SPEC>;
 
 impl Adshmsr {
-    #[doc = "Sampling Operation Selection"]
+    #[doc = "Channel-Dedicated Sample-and-Hold Circuit Operation Mode Select"]
     #[inline(always)]
     pub fn shmd(
         self,
@@ -3444,6 +4194,14 @@ impl Adshmsr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<1, 0x7f, 1, 0, u8, u8, Adshmsr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Adshmsr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Adshmsr {
     #[inline(always)]
@@ -3457,10 +4215,10 @@ pub mod adshmsr {
     pub struct Shmd_SPEC;
     pub type Shmd = crate::EnumBitfieldStruct<u8, Shmd_SPEC>;
     impl Shmd {
-        #[doc = "Sampling Operation Selection"]
+        #[doc = "Sampling by channel-dedicated sample-and-hold circuit is disable."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable continuous sampling function"]
+        #[doc = "Sampling by channel-dedicated sample-and-hold circuit is enable."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3475,7 +4233,7 @@ impl crate::sealed::RegSpec for Adgspcr_SPEC {
 pub type Adgspcr = crate::RegValueT<Adgspcr_SPEC>;
 
 impl Adgspcr {
-    #[doc = "Group Priority Operation Setting"]
+    #[doc = "Group A priority control setting bit.Note: When the PGS bit is to be set to 1, the ADCSR.ADCS\\[1:0\\] bits must be set to 01b (group scan mode). If the bits are set to any other values, proper operation is not guaranteed."]
     #[inline(always)]
     pub fn pgs(
         self,
@@ -3501,7 +4259,7 @@ impl Adgspcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Lower-Priority Group Restart Setting"]
+    #[doc = "Group B Restart Setting(Enabled only when PGS = 1. Reserved when PGS = 0.)"]
     #[inline(always)]
     pub fn gbrscn(
         self,
@@ -3527,33 +4285,15 @@ impl Adgspcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Enabled only when PGS = 1 and GBRSCN = 1."]
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
     #[inline(always)]
-    pub fn lgrrs(
+    pub fn reserved(
         self,
-    ) -> crate::common::RegisterField<
-        14,
-        0x1,
-        1,
-        0,
-        adgspcr::Lgrrs,
-        adgspcr::Lgrrs,
-        Adgspcr_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            14,
-            0x1,
-            1,
-            0,
-            adgspcr::Lgrrs,
-            adgspcr::Lgrrs,
-            Adgspcr_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<9, 0x3f, 1, 0, u8, u8, Adgspcr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<9,0x3f,1,0,u8,u8,Adgspcr_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Single Scan Continuous Start"]
+    #[doc = "Group B Single Scan Continuous Start(Enabled only when PGS = 1. Reserved when PGS = 0.)Note: When the GBRP bit has been set to 1, single scan is performed continuously for group B regardless of the setting of the GBRSCN bit."]
     #[inline(always)]
     pub fn gbrp(
         self,
@@ -3591,40 +4331,30 @@ pub mod adgspcr {
     pub struct Pgs_SPEC;
     pub type Pgs = crate::EnumBitfieldStruct<u8, Pgs_SPEC>;
     impl Pgs {
-        #[doc = "Operate without group priority control."]
+        #[doc = "Operation is without group A priority control"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Operate with group priority control."]
+        #[doc = "Operation is with group A priority control"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Gbrscn_SPEC;
     pub type Gbrscn = crate::EnumBitfieldStruct<u8, Gbrscn_SPEC>;
     impl Gbrscn {
-        #[doc = "Disable rescanning of the group that was stopped in group priority operation"]
+        #[doc = "Scanning for group B is not restarted after having been discontinued due to group A priority control."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable rescanning of the group that was stopped in group priority operation."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Lgrrs_SPEC;
-    pub type Lgrrs = crate::EnumBitfieldStruct<u8, Lgrrs_SPEC>;
-    impl Lgrrs {
-        #[doc = "Start rescanning from the first channel for scanning"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Start rescanning from the channel for which A/D conversion is not completed."]
+        #[doc = "Scanning for group B is restarted after having been discontinued due to group A priority control."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Gbrp_SPEC;
     pub type Gbrp = crate::EnumBitfieldStruct<u8, Gbrp_SPEC>;
     impl Gbrp {
-        #[doc = "Single scan is not continuously activated."]
+        #[doc = "Single scan for group B is not continuously activated."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Single scan for the group with the lower-priority is continuously activated."]
+        #[doc = "Single scan for group B is continuously activated."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3635,13 +4365,13 @@ impl crate::sealed::RegSpec for Addbldra_SPEC {
     type DataType = u16;
 }
 
-#[doc = "A/D Data Duplexing Register A"]
+#[doc = "A/D Data Duplication Register A"]
 pub type Addbldra = crate::RegValueT<Addbldra_SPEC>;
 
 impl Addbldra {
-    #[doc = "Converted Value 15 to 0"]
+    #[doc = "This register is a 16-bit read-only registers for storing the result of A/D conversion in response to the respective triggers during extended operation in double trigger mode."]
     #[inline(always)]
-    pub fn addbldr(
+    pub fn addbldra(
         self,
     ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Addbldra_SPEC, crate::common::R>
     {
@@ -3662,13 +4392,13 @@ impl crate::sealed::RegSpec for Addbldrb_SPEC {
     type DataType = u16;
 }
 
-#[doc = "A/D Data Duplexing Register B"]
+#[doc = "A/D Data Duplication Register B"]
 pub type Addbldrb = crate::RegValueT<Addbldrb_SPEC>;
 
 impl Addbldrb {
-    #[doc = "Converted Value 15 to 0"]
+    #[doc = "This register is a 16-bit read-only registers for storing the result of A/D conversion in response to the respective triggers during extended operation in double trigger mode."]
     #[inline(always)]
-    pub fn addbldr(
+    pub fn addbldrb(
         self,
     ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Addbldrb_SPEC, crate::common::R>
     {
@@ -3693,7 +4423,7 @@ impl crate::sealed::RegSpec for Adwinmon_SPEC {
 pub type Adwinmon = crate::RegValueT<Adwinmon_SPEC>;
 
 impl Adwinmon {
-    #[doc = "Combination Result Monitor"]
+    #[doc = "Combination result monitorThis bit indicates the combination result.This bit is valid when both window A operation and window B operation are enabled."]
     #[inline(always)]
     pub fn moncomb(
         self,
@@ -3770,6 +4500,14 @@ impl Adwinmon {
             crate::common::R,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<6, 0x3, 1, 0, u8, u8, Adwinmon_SPEC, crate::common::R> {
+        crate::common::RegisterField::<6,0x3,1,0,u8,u8,Adwinmon_SPEC,crate::common::R>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Adwinmon {
     #[inline(always)]
@@ -3783,10 +4521,10 @@ pub mod adwinmon {
     pub struct Moncomb_SPEC;
     pub type Moncomb = crate::EnumBitfieldStruct<u8, Moncomb_SPEC>;
     impl Moncomb {
-        #[doc = "Window A/B composite conditions are not met."]
+        #[doc = "Window A / window B composite conditions are not met."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Window A/B composite conditions are met."]
+        #[doc = "Window A / window B composite conditions are met."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -3821,7 +4559,7 @@ impl crate::sealed::RegSpec for Adcmpcr_SPEC {
 pub type Adcmpcr = crate::RegValueT<Adcmpcr_SPEC>;
 
 impl Adcmpcr {
-    #[doc = "Window A/B Composite Conditions Setting"]
+    #[doc = "Window A/B Composite Conditions SettingNOTE: These bits are valid when both window A and window B are enabled (CMPAE = 1 and CMPBE = 1)."]
     #[inline(always)]
     pub fn cmpab(
         self,
@@ -3897,6 +4635,16 @@ impl Adcmpcr {
             Adcmpcr_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<12, 1, 0, Adcmpcr_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<12, 1, 0, Adcmpcr_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
     }
 
     #[doc = "Compare B Interrupt Enable"]
@@ -3989,13 +4737,13 @@ pub mod adcmpcr {
     pub struct Cmpab_SPEC;
     pub type Cmpab = crate::EnumBitfieldStruct<u8, Cmpab_SPEC>;
     impl Cmpab {
-        #[doc = "Output ADC12i_WCMPM (i = 0, 1) when window A OR window B comparison conditions are met. Otherwise, output ADC12i_WCMPUM (i = 0, 1)."]
+        #[doc = "S12ADWMELC is output when window A comparison conditions are met OR window B comparison conditions are met. S12ADWUMELC is output in other cases."]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "Output ADC12i_WCMPM (i = 0, 1) when window A EXOR window B comparison conditions are met. Otherwise, output ADC12i_WCMPUM (i = 0, 1)."]
+        #[doc = "S12ADWMELC is output when window A comparison conditions are met EXOR window B comparison conditions are met. S12ADWUMELC is output in other cases."]
         pub const _01: Self = Self::new(1);
 
-        #[doc = "Output ADC12i_WCMPM (i = 0, 1) when window A AND window B comparison conditions are met. Otherwise, output ADC12i_WCMPUM (i = 0, 1)."]
+        #[doc = "S12ADWMELC is output when window A comparison conditions are met and window B comparison conditions are met. S12ADWUMELC is output in other cases."]
         pub const _10: Self = Self::new(2);
 
         #[doc = "Setting prohibited."]
@@ -4005,50 +4753,50 @@ pub mod adcmpcr {
     pub struct Cmpbe_SPEC;
     pub type Cmpbe = crate::EnumBitfieldStruct<u8, Cmpbe_SPEC>;
     impl Cmpbe {
-        #[doc = "Disable compare window B operation. Disable ADC12i_WCMPM (i = 0, 1) and ADC12i_WCMPUM (i = 0, 1) outputs."]
+        #[doc = "Compare window B operation is disabled. S12ADWMELC and S12ADWUMELC outputs are disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable compare window B operation."]
+        #[doc = "Compare window B operation is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpae_SPEC;
     pub type Cmpae = crate::EnumBitfieldStruct<u8, Cmpae_SPEC>;
     impl Cmpae {
-        #[doc = "Disable compare window A operation. Disable ADC12i_WCMPM (i = 0, 1) and ADC12i_WCMPUM (i = 0, 1) outputs."]
+        #[doc = "Compare window A operation is disabled. S12ADWMELC and S12ADWUMELC outputs are disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable compare window A operation."]
+        #[doc = "Compare window A operation is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpbie_SPEC;
     pub type Cmpbie = crate::EnumBitfieldStruct<u8, Cmpbie_SPEC>;
     impl Cmpbie {
-        #[doc = "Disable ADC12i_CMPBI (i = 0, 1) interrupt when comparison conditions (window B) are met."]
+        #[doc = "S12ADCMPBIi interrupt is disabled when comparison conditions (window B) are met."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable ADC12i_CMPBI (i = 0, 1) interrupt when comparison conditions (window B) are met."]
+        #[doc = "S12ADCMPBIi interrupt is enabled when comparison conditions (window B) are met."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Wcmpe_SPEC;
     pub type Wcmpe = crate::EnumBitfieldStruct<u8, Wcmpe_SPEC>;
     impl Wcmpe {
-        #[doc = "Disable window function Window A and window B operate as a comparator to compare the single value on the lower side with the A/D conversion result."]
+        #[doc = "Window function is disabled. Window A and window B operate as a comparator to comparator the single value on the lower side with the A/D conversion result."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable window function Window A and window B operate as a comparator to compare the two values on the upper and lower sides with the A/D conversion result."]
+        #[doc = "Window function is enabled. Window A and window B operate as a comparator to comparator the two values on the upper and lower sides with the A/D conversion result."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpaie_SPEC;
     pub type Cmpaie = crate::EnumBitfieldStruct<u8, Cmpaie_SPEC>;
     impl Cmpaie {
-        #[doc = "Disable ADC12i_CMPAI (i = 0, 1) interrupt when comparison conditions (window A) are met."]
+        #[doc = "S12ADCMPAIi interrupt is disabled when comparison conditions (window A) are met."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable ADC12i_CMPAI (i = 0, 1) interrupt when comparison conditions (window A) are met."]
+        #[doc = "S12ADCMPAIi interrupt is enabled when comparison conditions (window A) are met."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4063,7 +4811,7 @@ impl crate::sealed::RegSpec for Adcmpanser_SPEC {
 pub type Adcmpanser = crate::RegValueT<Adcmpanser_SPEC>;
 
 impl Adcmpanser {
-    #[doc = "Temperature Sensor Output Compare Select"]
+    #[doc = "Temperature sensor output Compare selection bit."]
     #[inline(always)]
     pub fn cmptsa(
         self,
@@ -4089,7 +4837,7 @@ impl Adcmpanser {
         >::from_register(self, 0)
     }
 
-    #[doc = "Internal Reference Voltage Compare Select"]
+    #[doc = "Internal reference voltage Compare selection bit."]
     #[inline(always)]
     pub fn cmpoca(
         self,
@@ -4114,6 +4862,15 @@ impl Adcmpanser {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<2, 0x3f, 1, 0, u8, u8, Adcmpanser_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<2,0x3f,1,0,u8,u8,Adcmpanser_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Adcmpanser {
     #[inline(always)]
@@ -4127,20 +4884,20 @@ pub mod adcmpanser {
     pub struct Cmptsa_SPEC;
     pub type Cmptsa = crate::EnumBitfieldStruct<u8, Cmptsa_SPEC>;
     impl Cmptsa {
-        #[doc = "Exclude the temperature sensor output from the compare Window A target range."]
+        #[doc = "Excludes the temperature sensor output from the compare window A target range."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Include the temperature sensor output in the compare Window A target range."]
+        #[doc = "Includes the temperature sensor output in the compare window A target range."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpoca_SPEC;
     pub type Cmpoca = crate::EnumBitfieldStruct<u8, Cmpoca_SPEC>;
     impl Cmpoca {
-        #[doc = "Exclude the internal reference voltage from the compare Window A target range."]
+        #[doc = "Excludes the internal reference voltage from the compare window A target range."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Include the internal reference voltage in the compare Window A target range."]
+        #[doc = "Includes the internal reference voltage in the compare window A target range."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4181,7 +4938,7 @@ impl Adcmpler {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Internal Reference Voltage Comparison Condition Select"]
+    #[doc = "Compare Window A Internal Reference Voltage ComparisonCondition Select"]
     #[inline(always)]
     pub fn cmploca(
         self,
@@ -4206,6 +4963,14 @@ impl Adcmpler {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<2, 0x3f, 1, 0, u8, u8, Adcmpler_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<2,0x3f,1,0,u8,u8,Adcmpler_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Adcmpler {
     #[inline(always)]
@@ -4219,20 +4984,20 @@ pub mod adcmpler {
     pub struct Cmpltsa_SPEC;
     pub type Cmpltsa = crate::EnumBitfieldStruct<u8, Cmpltsa_SPEC>;
     impl Cmpltsa {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0) : ADCMPDR0 value > A/D-converted valueCompare Window A Temperature Sensor Output Comparison Condition Select When window function is enabled (ADCMPCR.WCMPE = 1) : Compare Window A Temperature Sensor Output Comparison ConditionA/D-converted value < ADCMPDR0 value, or A/D-converted value > ADCMPDR1 value"]
+        #[doc = "ADCMPDR0 register value > A/D-converted value(ADCMPCR.WCMPE=0) / AD-converted value < ADCMPDR0 register value or A/D-converted value > ADCMPDR1 register value(ADCMPCR.WCMPE=1)."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0) : ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1) : ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
+        #[doc = "ADCMPDR0 register value < A/D-converted value(ADCMPCR.WCMPE=0) / ADCMPDR0 register value < A/D-converted value < ADCMPDR1 register value(ADCMPCR.WCMPE=1)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmploca_SPEC;
     pub type Cmploca = crate::EnumBitfieldStruct<u8, Cmploca_SPEC>;
     impl Cmploca {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0) : ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or A/D-converted value > ADCMPDR1 value"]
+        #[doc = "ADCMPDR0 value > A/D converted value(ADCMPCR.WCMPE=0) / A/D converted value < ADCMPDR0 value or A/D converted value > ADCMPDR1 value (ADCMPCR.WCMPE=1)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
+        #[doc = "ADCMPDR0 value < A/D converted value(ADCMPCR.WCMPE=0) / ADCMPDR0 value < A/D converted value < ADCMPDR1 value(ADCMPCR.WCMPE=1)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4247,7 +5012,7 @@ impl crate::sealed::RegSpec for Adcmpansr0_SPEC {
 pub type Adcmpansr0 = crate::RegValueT<Adcmpansr0_SPEC>;
 
 impl Adcmpansr0 {
-    #[doc = "Compare Window A Channel Select"]
+    #[doc = "Compare Window A Channel AN100 Select"]
     #[inline(always)]
     pub fn cmpcha00(
         self,
@@ -4273,7 +5038,7 @@ impl Adcmpansr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Channel Select"]
+    #[doc = "Compare Window A Channel AN101 Select"]
     #[inline(always)]
     pub fn cmpcha01(
         self,
@@ -4299,7 +5064,7 @@ impl Adcmpansr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Channel Select"]
+    #[doc = "Compare Window A Channel AN102 Select"]
     #[inline(always)]
     pub fn cmpcha02(
         self,
@@ -4325,33 +5090,7 @@ impl Adcmpansr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Channel Select"]
-    #[inline(always)]
-    pub fn cmpcha03(
-        self,
-    ) -> crate::common::RegisterField<
-        3,
-        0x1,
-        1,
-        0,
-        adcmpansr0::Cmpcha03,
-        adcmpansr0::Cmpcha03,
-        Adcmpansr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            3,
-            0x1,
-            1,
-            0,
-            adcmpansr0::Cmpcha03,
-            adcmpansr0::Cmpcha03,
-            Adcmpansr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Channel Select"]
+    #[doc = "Compare Window A Channel AN104 Select"]
     #[inline(always)]
     pub fn cmpcha04(
         self,
@@ -4377,7 +5116,7 @@ impl Adcmpansr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Channel Select"]
+    #[doc = "Compare Window A Channel AN105 Select"]
     #[inline(always)]
     pub fn cmpcha05(
         self,
@@ -4403,7 +5142,7 @@ impl Adcmpansr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Channel Select"]
+    #[doc = "Compare Window A Channel AN106 Select"]
     #[inline(always)]
     pub fn cmpcha06(
         self,
@@ -4429,238 +5168,12 @@ impl Adcmpansr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Channel Select"]
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
-    pub fn cmpcha07(
+    pub fn reserved(
         self,
-    ) -> crate::common::RegisterField<
-        7,
-        0x1,
-        1,
-        0,
-        adcmpansr0::Cmpcha07,
-        adcmpansr0::Cmpcha07,
-        Adcmpansr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            7,
-            0x1,
-            1,
-            0,
-            adcmpansr0::Cmpcha07,
-            adcmpansr0::Cmpcha07,
-            Adcmpansr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Channel Select"]
-    #[inline(always)]
-    pub fn cmpcha08(
-        self,
-    ) -> crate::common::RegisterField<
-        8,
-        0x1,
-        1,
-        0,
-        adcmpansr0::Cmpcha08,
-        adcmpansr0::Cmpcha08,
-        Adcmpansr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            8,
-            0x1,
-            1,
-            0,
-            adcmpansr0::Cmpcha08,
-            adcmpansr0::Cmpcha08,
-            Adcmpansr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Channel Select"]
-    #[inline(always)]
-    pub fn cmpcha09(
-        self,
-    ) -> crate::common::RegisterField<
-        9,
-        0x1,
-        1,
-        0,
-        adcmpansr0::Cmpcha09,
-        adcmpansr0::Cmpcha09,
-        Adcmpansr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            9,
-            0x1,
-            1,
-            0,
-            adcmpansr0::Cmpcha09,
-            adcmpansr0::Cmpcha09,
-            Adcmpansr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Channel Select"]
-    #[inline(always)]
-    pub fn cmpcha10(
-        self,
-    ) -> crate::common::RegisterField<
-        10,
-        0x1,
-        1,
-        0,
-        adcmpansr0::Cmpcha10,
-        adcmpansr0::Cmpcha10,
-        Adcmpansr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            10,
-            0x1,
-            1,
-            0,
-            adcmpansr0::Cmpcha10,
-            adcmpansr0::Cmpcha10,
-            Adcmpansr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Channel Select"]
-    #[inline(always)]
-    pub fn cmpcha11(
-        self,
-    ) -> crate::common::RegisterField<
-        11,
-        0x1,
-        1,
-        0,
-        adcmpansr0::Cmpcha11,
-        adcmpansr0::Cmpcha11,
-        Adcmpansr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            11,
-            0x1,
-            1,
-            0,
-            adcmpansr0::Cmpcha11,
-            adcmpansr0::Cmpcha11,
-            Adcmpansr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Channel Select"]
-    #[inline(always)]
-    pub fn cmpcha12(
-        self,
-    ) -> crate::common::RegisterField<
-        12,
-        0x1,
-        1,
-        0,
-        adcmpansr0::Cmpcha12,
-        adcmpansr0::Cmpcha12,
-        Adcmpansr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            12,
-            0x1,
-            1,
-            0,
-            adcmpansr0::Cmpcha12,
-            adcmpansr0::Cmpcha12,
-            Adcmpansr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Channel Select"]
-    #[inline(always)]
-    pub fn cmpcha13(
-        self,
-    ) -> crate::common::RegisterField<
-        13,
-        0x1,
-        1,
-        0,
-        adcmpansr0::Cmpcha13,
-        adcmpansr0::Cmpcha13,
-        Adcmpansr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            13,
-            0x1,
-            1,
-            0,
-            adcmpansr0::Cmpcha13,
-            adcmpansr0::Cmpcha13,
-            Adcmpansr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Channel Select"]
-    #[inline(always)]
-    pub fn cmpcha14(
-        self,
-    ) -> crate::common::RegisterField<
-        14,
-        0x1,
-        1,
-        0,
-        adcmpansr0::Cmpcha14,
-        adcmpansr0::Cmpcha14,
-        Adcmpansr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            14,
-            0x1,
-            1,
-            0,
-            adcmpansr0::Cmpcha14,
-            adcmpansr0::Cmpcha14,
-            Adcmpansr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Channel Select"]
-    #[inline(always)]
-    pub fn cmpcha15(
-        self,
-    ) -> crate::common::RegisterField<
-        15,
-        0x1,
-        1,
-        0,
-        adcmpansr0::Cmpcha15,
-        adcmpansr0::Cmpcha15,
-        Adcmpansr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            15,
-            0x1,
-            1,
-            0,
-            adcmpansr0::Cmpcha15,
-            adcmpansr0::Cmpcha15,
-            Adcmpansr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterFieldBool<15, 1, 0, Adcmpansr0_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<15,1,0,Adcmpansr0_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Adcmpansr0 {
@@ -4675,160 +5188,60 @@ pub mod adcmpansr0 {
     pub struct Cmpcha00_SPEC;
     pub type Cmpcha00 = crate::EnumBitfieldStruct<u8, Cmpcha00_SPEC>;
     impl Cmpcha00 {
-        #[doc = "Disable compare function for associated input channel"]
+        #[doc = "Disable compare function for AN100"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable compare function for associated input channel"]
+        #[doc = "Enable compare function for AN100"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpcha01_SPEC;
     pub type Cmpcha01 = crate::EnumBitfieldStruct<u8, Cmpcha01_SPEC>;
     impl Cmpcha01 {
-        #[doc = "Disable compare function for associated input channel"]
+        #[doc = "Disable compare function for AN101"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable compare function for associated input channel"]
+        #[doc = "Enable compare function for AN101"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpcha02_SPEC;
     pub type Cmpcha02 = crate::EnumBitfieldStruct<u8, Cmpcha02_SPEC>;
     impl Cmpcha02 {
-        #[doc = "Disable compare function for associated input channel"]
+        #[doc = "Disable compare function for AN102"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable compare function for associated input channel"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpcha03_SPEC;
-    pub type Cmpcha03 = crate::EnumBitfieldStruct<u8, Cmpcha03_SPEC>;
-    impl Cmpcha03 {
-        #[doc = "Disable compare function for associated input channel"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable compare function for associated input channel"]
+        #[doc = "Enable compare function for AN102"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpcha04_SPEC;
     pub type Cmpcha04 = crate::EnumBitfieldStruct<u8, Cmpcha04_SPEC>;
     impl Cmpcha04 {
-        #[doc = "Disable compare function for associated input channel"]
+        #[doc = "Disable compare function for AN104"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable compare function for associated input channel"]
+        #[doc = "Enable compare function for AN104"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpcha05_SPEC;
     pub type Cmpcha05 = crate::EnumBitfieldStruct<u8, Cmpcha05_SPEC>;
     impl Cmpcha05 {
-        #[doc = "Disable compare function for associated input channel"]
+        #[doc = "Disable compare function for AN105"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable compare function for associated input channel"]
+        #[doc = "Enable compare function for AN105"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpcha06_SPEC;
     pub type Cmpcha06 = crate::EnumBitfieldStruct<u8, Cmpcha06_SPEC>;
     impl Cmpcha06 {
-        #[doc = "Disable compare function for associated input channel"]
+        #[doc = "Disable compare function for AN106"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable compare function for associated input channel"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpcha07_SPEC;
-    pub type Cmpcha07 = crate::EnumBitfieldStruct<u8, Cmpcha07_SPEC>;
-    impl Cmpcha07 {
-        #[doc = "Disable compare function for associated input channel"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable compare function for associated input channel"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpcha08_SPEC;
-    pub type Cmpcha08 = crate::EnumBitfieldStruct<u8, Cmpcha08_SPEC>;
-    impl Cmpcha08 {
-        #[doc = "Disable compare function for associated input channel"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable compare function for associated input channel"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpcha09_SPEC;
-    pub type Cmpcha09 = crate::EnumBitfieldStruct<u8, Cmpcha09_SPEC>;
-    impl Cmpcha09 {
-        #[doc = "Disable compare function for associated input channel"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable compare function for associated input channel"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpcha10_SPEC;
-    pub type Cmpcha10 = crate::EnumBitfieldStruct<u8, Cmpcha10_SPEC>;
-    impl Cmpcha10 {
-        #[doc = "Disable compare function for associated input channel"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable compare function for associated input channel"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpcha11_SPEC;
-    pub type Cmpcha11 = crate::EnumBitfieldStruct<u8, Cmpcha11_SPEC>;
-    impl Cmpcha11 {
-        #[doc = "Disable compare function for associated input channel"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable compare function for associated input channel"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpcha12_SPEC;
-    pub type Cmpcha12 = crate::EnumBitfieldStruct<u8, Cmpcha12_SPEC>;
-    impl Cmpcha12 {
-        #[doc = "Disable compare function for associated input channel"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable compare function for associated input channel"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpcha13_SPEC;
-    pub type Cmpcha13 = crate::EnumBitfieldStruct<u8, Cmpcha13_SPEC>;
-    impl Cmpcha13 {
-        #[doc = "Disable compare function for associated input channel"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable compare function for associated input channel"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpcha14_SPEC;
-    pub type Cmpcha14 = crate::EnumBitfieldStruct<u8, Cmpcha14_SPEC>;
-    impl Cmpcha14 {
-        #[doc = "Disable compare function for associated input channel"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable compare function for associated input channel"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpcha15_SPEC;
-    pub type Cmpcha15 = crate::EnumBitfieldStruct<u8, Cmpcha15_SPEC>;
-    impl Cmpcha15 {
-        #[doc = "Disable compare function for associated input channel"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable compare function for associated input channel"]
+        #[doc = "Enable compare function for AN106"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4843,7 +5256,7 @@ impl crate::sealed::RegSpec for Adcmpansr1_SPEC {
 pub type Adcmpansr1 = crate::RegValueT<Adcmpansr1_SPEC>;
 
 impl Adcmpansr1 {
-    #[doc = "Compare Window A Channel Select"]
+    #[doc = "AN116 Select"]
     #[inline(always)]
     pub fn cmpcha16(
         self,
@@ -4869,7 +5282,7 @@ impl Adcmpansr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Channel Select"]
+    #[doc = "AN117 Select"]
     #[inline(always)]
     pub fn cmpcha17(
         self,
@@ -4895,7 +5308,7 @@ impl Adcmpansr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Channel Select"]
+    #[doc = "AN118 Select"]
     #[inline(always)]
     pub fn cmpcha18(
         self,
@@ -4921,7 +5334,7 @@ impl Adcmpansr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Channel Select"]
+    #[doc = "AN119 Select"]
     #[inline(always)]
     pub fn cmpcha19(
         self,
@@ -4947,7 +5360,7 @@ impl Adcmpansr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Channel Select"]
+    #[doc = "AN120 Select"]
     #[inline(always)]
     pub fn cmpcha20(
         self,
@@ -4973,7 +5386,7 @@ impl Adcmpansr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Channel Select"]
+    #[doc = "AN121 Select"]
     #[inline(always)]
     pub fn cmpcha21(
         self,
@@ -4999,7 +5412,7 @@ impl Adcmpansr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Channel Select"]
+    #[doc = "AN122 Select"]
     #[inline(always)]
     pub fn cmpcha22(
         self,
@@ -5025,238 +5438,12 @@ impl Adcmpansr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Channel Select"]
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
-    pub fn cmpcha23(
+    pub fn reserved(
         self,
-    ) -> crate::common::RegisterField<
-        7,
-        0x1,
-        1,
-        0,
-        adcmpansr1::Cmpcha23,
-        adcmpansr1::Cmpcha23,
-        Adcmpansr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            7,
-            0x1,
-            1,
-            0,
-            adcmpansr1::Cmpcha23,
-            adcmpansr1::Cmpcha23,
-            Adcmpansr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Channel Select"]
-    #[inline(always)]
-    pub fn cmpcha24(
-        self,
-    ) -> crate::common::RegisterField<
-        8,
-        0x1,
-        1,
-        0,
-        adcmpansr1::Cmpcha24,
-        adcmpansr1::Cmpcha24,
-        Adcmpansr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            8,
-            0x1,
-            1,
-            0,
-            adcmpansr1::Cmpcha24,
-            adcmpansr1::Cmpcha24,
-            Adcmpansr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Channel Select"]
-    #[inline(always)]
-    pub fn cmpcha25(
-        self,
-    ) -> crate::common::RegisterField<
-        9,
-        0x1,
-        1,
-        0,
-        adcmpansr1::Cmpcha25,
-        adcmpansr1::Cmpcha25,
-        Adcmpansr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            9,
-            0x1,
-            1,
-            0,
-            adcmpansr1::Cmpcha25,
-            adcmpansr1::Cmpcha25,
-            Adcmpansr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Channel Select"]
-    #[inline(always)]
-    pub fn cmpcha26(
-        self,
-    ) -> crate::common::RegisterField<
-        10,
-        0x1,
-        1,
-        0,
-        adcmpansr1::Cmpcha26,
-        adcmpansr1::Cmpcha26,
-        Adcmpansr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            10,
-            0x1,
-            1,
-            0,
-            adcmpansr1::Cmpcha26,
-            adcmpansr1::Cmpcha26,
-            Adcmpansr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Channel Select"]
-    #[inline(always)]
-    pub fn cmpcha27(
-        self,
-    ) -> crate::common::RegisterField<
-        11,
-        0x1,
-        1,
-        0,
-        adcmpansr1::Cmpcha27,
-        adcmpansr1::Cmpcha27,
-        Adcmpansr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            11,
-            0x1,
-            1,
-            0,
-            adcmpansr1::Cmpcha27,
-            adcmpansr1::Cmpcha27,
-            Adcmpansr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Channel Select"]
-    #[inline(always)]
-    pub fn cmpcha28(
-        self,
-    ) -> crate::common::RegisterField<
-        12,
-        0x1,
-        1,
-        0,
-        adcmpansr1::Cmpcha28,
-        adcmpansr1::Cmpcha28,
-        Adcmpansr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            12,
-            0x1,
-            1,
-            0,
-            adcmpansr1::Cmpcha28,
-            adcmpansr1::Cmpcha28,
-            Adcmpansr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Channel Select"]
-    #[inline(always)]
-    pub fn cmpcha29(
-        self,
-    ) -> crate::common::RegisterField<
-        13,
-        0x1,
-        1,
-        0,
-        adcmpansr1::Cmpcha29,
-        adcmpansr1::Cmpcha29,
-        Adcmpansr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            13,
-            0x1,
-            1,
-            0,
-            adcmpansr1::Cmpcha29,
-            adcmpansr1::Cmpcha29,
-            Adcmpansr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Channel Select"]
-    #[inline(always)]
-    pub fn cmpcha30(
-        self,
-    ) -> crate::common::RegisterField<
-        14,
-        0x1,
-        1,
-        0,
-        adcmpansr1::Cmpcha30,
-        adcmpansr1::Cmpcha30,
-        Adcmpansr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            14,
-            0x1,
-            1,
-            0,
-            adcmpansr1::Cmpcha30,
-            adcmpansr1::Cmpcha30,
-            Adcmpansr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Channel Select"]
-    #[inline(always)]
-    pub fn cmpcha31(
-        self,
-    ) -> crate::common::RegisterField<
-        15,
-        0x1,
-        1,
-        0,
-        adcmpansr1::Cmpcha31,
-        adcmpansr1::Cmpcha31,
-        Adcmpansr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            15,
-            0x1,
-            1,
-            0,
-            adcmpansr1::Cmpcha31,
-            adcmpansr1::Cmpcha31,
-            Adcmpansr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterFieldBool<15, 1, 0, Adcmpansr1_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<15,1,0,Adcmpansr1_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Adcmpansr1 {
@@ -5271,160 +5458,70 @@ pub mod adcmpansr1 {
     pub struct Cmpcha16_SPEC;
     pub type Cmpcha16 = crate::EnumBitfieldStruct<u8, Cmpcha16_SPEC>;
     impl Cmpcha16 {
-        #[doc = "Disable compare function for associated input channel"]
+        #[doc = "Excludes AN116 from the compare window A target range."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable compare function for associated input channel"]
+        #[doc = "Includes AN116  from the compare window A target range."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpcha17_SPEC;
     pub type Cmpcha17 = crate::EnumBitfieldStruct<u8, Cmpcha17_SPEC>;
     impl Cmpcha17 {
-        #[doc = "Disable compare function for associated input channel"]
+        #[doc = "Excludes AN117 from the compare window A target range."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable compare function for associated input channel"]
+        #[doc = "Includes AN117  from the compare window A target range."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpcha18_SPEC;
     pub type Cmpcha18 = crate::EnumBitfieldStruct<u8, Cmpcha18_SPEC>;
     impl Cmpcha18 {
-        #[doc = "Disable compare function for associated input channel"]
+        #[doc = "Excludes AN118 from the compare window A target range."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable compare function for associated input channel"]
+        #[doc = "Includes AN118  from the compare window A target range."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpcha19_SPEC;
     pub type Cmpcha19 = crate::EnumBitfieldStruct<u8, Cmpcha19_SPEC>;
     impl Cmpcha19 {
-        #[doc = "Disable compare function for associated input channel"]
+        #[doc = "Excludes AN119 from the compare window A target range."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable compare function for associated input channel"]
+        #[doc = "Includes AN119  from the compare window A target range."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpcha20_SPEC;
     pub type Cmpcha20 = crate::EnumBitfieldStruct<u8, Cmpcha20_SPEC>;
     impl Cmpcha20 {
-        #[doc = "Disable compare function for associated input channel"]
+        #[doc = "Excludes AN120 from the compare window A target range."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable compare function for associated input channel"]
+        #[doc = "Includes AN120  from the compare window A target range."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpcha21_SPEC;
     pub type Cmpcha21 = crate::EnumBitfieldStruct<u8, Cmpcha21_SPEC>;
     impl Cmpcha21 {
-        #[doc = "Disable compare function for associated input channel"]
+        #[doc = "Excludes AN121 from the compare window A target range."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable compare function for associated input channel"]
+        #[doc = "Includes AN121  from the compare window A target range."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpcha22_SPEC;
     pub type Cmpcha22 = crate::EnumBitfieldStruct<u8, Cmpcha22_SPEC>;
     impl Cmpcha22 {
-        #[doc = "Disable compare function for associated input channel"]
+        #[doc = "Excludes AN122 from the compare window A target range."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable compare function for associated input channel"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpcha23_SPEC;
-    pub type Cmpcha23 = crate::EnumBitfieldStruct<u8, Cmpcha23_SPEC>;
-    impl Cmpcha23 {
-        #[doc = "Disable compare function for associated input channel"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable compare function for associated input channel"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpcha24_SPEC;
-    pub type Cmpcha24 = crate::EnumBitfieldStruct<u8, Cmpcha24_SPEC>;
-    impl Cmpcha24 {
-        #[doc = "Disable compare function for associated input channel"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable compare function for associated input channel"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpcha25_SPEC;
-    pub type Cmpcha25 = crate::EnumBitfieldStruct<u8, Cmpcha25_SPEC>;
-    impl Cmpcha25 {
-        #[doc = "Disable compare function for associated input channel"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable compare function for associated input channel"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpcha26_SPEC;
-    pub type Cmpcha26 = crate::EnumBitfieldStruct<u8, Cmpcha26_SPEC>;
-    impl Cmpcha26 {
-        #[doc = "Disable compare function for associated input channel"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable compare function for associated input channel"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpcha27_SPEC;
-    pub type Cmpcha27 = crate::EnumBitfieldStruct<u8, Cmpcha27_SPEC>;
-    impl Cmpcha27 {
-        #[doc = "Disable compare function for associated input channel"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable compare function for associated input channel"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpcha28_SPEC;
-    pub type Cmpcha28 = crate::EnumBitfieldStruct<u8, Cmpcha28_SPEC>;
-    impl Cmpcha28 {
-        #[doc = "Disable compare function for associated input channel"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable compare function for associated input channel"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpcha29_SPEC;
-    pub type Cmpcha29 = crate::EnumBitfieldStruct<u8, Cmpcha29_SPEC>;
-    impl Cmpcha29 {
-        #[doc = "Disable compare function for associated input channel"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable compare function for associated input channel"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpcha30_SPEC;
-    pub type Cmpcha30 = crate::EnumBitfieldStruct<u8, Cmpcha30_SPEC>;
-    impl Cmpcha30 {
-        #[doc = "Disable compare function for associated input channel"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable compare function for associated input channel"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpcha31_SPEC;
-    pub type Cmpcha31 = crate::EnumBitfieldStruct<u8, Cmpcha31_SPEC>;
-    impl Cmpcha31 {
-        #[doc = "Disable compare function for associated input channel"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable compare function for associated input channel"]
+        #[doc = "Includes AN122  from the compare window A target range."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5439,7 +5536,7 @@ impl crate::sealed::RegSpec for Adcmplr0_SPEC {
 pub type Adcmplr0 = crate::RegValueT<Adcmplr0_SPEC>;
 
 impl Adcmplr0 {
-    #[doc = "Compare Window A Comparison Condition Select"]
+    #[doc = "Comparison condition of AN100"]
     #[inline(always)]
     pub fn cmplcha00(
         self,
@@ -5465,7 +5562,7 @@ impl Adcmplr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Comparison Condition Select"]
+    #[doc = "Comparison condition of AN101"]
     #[inline(always)]
     pub fn cmplcha01(
         self,
@@ -5491,7 +5588,7 @@ impl Adcmplr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Comparison Condition Select"]
+    #[doc = "Comparison condition of AN102"]
     #[inline(always)]
     pub fn cmplcha02(
         self,
@@ -5517,33 +5614,7 @@ impl Adcmplr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Comparison Condition Select"]
-    #[inline(always)]
-    pub fn cmplcha03(
-        self,
-    ) -> crate::common::RegisterField<
-        3,
-        0x1,
-        1,
-        0,
-        adcmplr0::Cmplcha03,
-        adcmplr0::Cmplcha03,
-        Adcmplr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            3,
-            0x1,
-            1,
-            0,
-            adcmplr0::Cmplcha03,
-            adcmplr0::Cmplcha03,
-            Adcmplr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Comparison Condition Select"]
+    #[doc = "Comparison condition of AN104"]
     #[inline(always)]
     pub fn cmplcha04(
         self,
@@ -5569,7 +5640,7 @@ impl Adcmplr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Comparison Condition Select"]
+    #[doc = "Comparison condition of AN105"]
     #[inline(always)]
     pub fn cmplcha05(
         self,
@@ -5595,7 +5666,7 @@ impl Adcmplr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Comparison Condition Select"]
+    #[doc = "Comparison condition of AN106"]
     #[inline(always)]
     pub fn cmplcha06(
         self,
@@ -5621,238 +5692,12 @@ impl Adcmplr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Comparison Condition Select"]
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
-    pub fn cmplcha07(
+    pub fn reserved(
         self,
-    ) -> crate::common::RegisterField<
-        7,
-        0x1,
-        1,
-        0,
-        adcmplr0::Cmplcha07,
-        adcmplr0::Cmplcha07,
-        Adcmplr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            7,
-            0x1,
-            1,
-            0,
-            adcmplr0::Cmplcha07,
-            adcmplr0::Cmplcha07,
-            Adcmplr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Comparison Condition Select"]
-    #[inline(always)]
-    pub fn cmplcha08(
-        self,
-    ) -> crate::common::RegisterField<
-        8,
-        0x1,
-        1,
-        0,
-        adcmplr0::Cmplcha08,
-        adcmplr0::Cmplcha08,
-        Adcmplr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            8,
-            0x1,
-            1,
-            0,
-            adcmplr0::Cmplcha08,
-            adcmplr0::Cmplcha08,
-            Adcmplr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Comparison Condition Select"]
-    #[inline(always)]
-    pub fn cmplcha09(
-        self,
-    ) -> crate::common::RegisterField<
-        9,
-        0x1,
-        1,
-        0,
-        adcmplr0::Cmplcha09,
-        adcmplr0::Cmplcha09,
-        Adcmplr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            9,
-            0x1,
-            1,
-            0,
-            adcmplr0::Cmplcha09,
-            adcmplr0::Cmplcha09,
-            Adcmplr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Comparison Condition Select"]
-    #[inline(always)]
-    pub fn cmplcha10(
-        self,
-    ) -> crate::common::RegisterField<
-        10,
-        0x1,
-        1,
-        0,
-        adcmplr0::Cmplcha10,
-        adcmplr0::Cmplcha10,
-        Adcmplr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            10,
-            0x1,
-            1,
-            0,
-            adcmplr0::Cmplcha10,
-            adcmplr0::Cmplcha10,
-            Adcmplr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Comparison Condition Select"]
-    #[inline(always)]
-    pub fn cmplcha11(
-        self,
-    ) -> crate::common::RegisterField<
-        11,
-        0x1,
-        1,
-        0,
-        adcmplr0::Cmplcha11,
-        adcmplr0::Cmplcha11,
-        Adcmplr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            11,
-            0x1,
-            1,
-            0,
-            adcmplr0::Cmplcha11,
-            adcmplr0::Cmplcha11,
-            Adcmplr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Comparison Condition Select"]
-    #[inline(always)]
-    pub fn cmplcha12(
-        self,
-    ) -> crate::common::RegisterField<
-        12,
-        0x1,
-        1,
-        0,
-        adcmplr0::Cmplcha12,
-        adcmplr0::Cmplcha12,
-        Adcmplr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            12,
-            0x1,
-            1,
-            0,
-            adcmplr0::Cmplcha12,
-            adcmplr0::Cmplcha12,
-            Adcmplr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Comparison Condition Select"]
-    #[inline(always)]
-    pub fn cmplcha13(
-        self,
-    ) -> crate::common::RegisterField<
-        13,
-        0x1,
-        1,
-        0,
-        adcmplr0::Cmplcha13,
-        adcmplr0::Cmplcha13,
-        Adcmplr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            13,
-            0x1,
-            1,
-            0,
-            adcmplr0::Cmplcha13,
-            adcmplr0::Cmplcha13,
-            Adcmplr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Comparison Condition Select"]
-    #[inline(always)]
-    pub fn cmplcha14(
-        self,
-    ) -> crate::common::RegisterField<
-        14,
-        0x1,
-        1,
-        0,
-        adcmplr0::Cmplcha14,
-        adcmplr0::Cmplcha14,
-        Adcmplr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            14,
-            0x1,
-            1,
-            0,
-            adcmplr0::Cmplcha14,
-            adcmplr0::Cmplcha14,
-            Adcmplr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Comparison Condition Select"]
-    #[inline(always)]
-    pub fn cmplcha15(
-        self,
-    ) -> crate::common::RegisterField<
-        15,
-        0x1,
-        1,
-        0,
-        adcmplr0::Cmplcha15,
-        adcmplr0::Cmplcha15,
-        Adcmplr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            15,
-            0x1,
-            1,
-            0,
-            adcmplr0::Cmplcha15,
-            adcmplr0::Cmplcha15,
-            Adcmplr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterFieldBool<15, 1, 0, Adcmplr0_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<15,1,0,Adcmplr0_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Adcmplr0 {
@@ -5867,160 +5712,60 @@ pub mod adcmplr0 {
     pub struct Cmplcha00_SPEC;
     pub type Cmplcha00 = crate::EnumBitfieldStruct<u8, Cmplcha00_SPEC>;
     impl Cmplcha00 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
+        #[doc = "ADCMPDR0 value > A/D converted value (ADCMPCR.WCMPE=0) / A/D converted value < ADCMPDR0 value or, ADCMPDR1 value < A/D converted value (ADCMPCR.WCMPE=1)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
+        #[doc = "ADCMPDR0 value < A/D converted value (ADCMPCR.WCMPE=0) / A/DCMPDR0 value < A/D converted value < ADCMPDR1 value (ADCMPCR.WCMPE=1)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmplcha01_SPEC;
     pub type Cmplcha01 = crate::EnumBitfieldStruct<u8, Cmplcha01_SPEC>;
     impl Cmplcha01 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
+        #[doc = "ADCMPDR0 value > A/D converted value (ADCMPCR.WCMPE=0) / A/D converted value < ADCMPDR0 value or, ADCMPDR1 value < A/D converted value (ADCMPCR.WCMPE=1)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
+        #[doc = "ADCMPDR0 value < A/D converted value (ADCMPCR.WCMPE=0) / A/DCMPDR0 value < A/D converted value < ADCMPDR1 value (ADCMPCR.WCMPE=1)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmplcha02_SPEC;
     pub type Cmplcha02 = crate::EnumBitfieldStruct<u8, Cmplcha02_SPEC>;
     impl Cmplcha02 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
+        #[doc = "ADCMPDR0 value > A/D converted value (ADCMPCR.WCMPE=0) / A/D converted value < ADCMPDR0 value or, ADCMPDR1 value < A/D converted value (ADCMPCR.WCMPE=1)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmplcha03_SPEC;
-    pub type Cmplcha03 = crate::EnumBitfieldStruct<u8, Cmplcha03_SPEC>;
-    impl Cmplcha03 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
+        #[doc = "ADCMPDR0 value < A/D converted value (ADCMPCR.WCMPE=0) / A/DCMPDR0 value < A/D converted value < ADCMPDR1 value (ADCMPCR.WCMPE=1)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmplcha04_SPEC;
     pub type Cmplcha04 = crate::EnumBitfieldStruct<u8, Cmplcha04_SPEC>;
     impl Cmplcha04 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
+        #[doc = "ADCMPDR0 value > A/D converted value (ADCMPCR.WCMPE=0) / A/D converted value < ADCMPDR0 value or, ADCMPDR1 value < A/D converted value (ADCMPCR.WCMPE=1)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
+        #[doc = "ADCMPDR0 value < A/D converted value (ADCMPCR.WCMPE=0) / A/DCMPDR0 value < A/D converted value < ADCMPDR1 value (ADCMPCR.WCMPE=1)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmplcha05_SPEC;
     pub type Cmplcha05 = crate::EnumBitfieldStruct<u8, Cmplcha05_SPEC>;
     impl Cmplcha05 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
+        #[doc = "ADCMPDR0 value > A/D converted value (ADCMPCR.WCMPE=0) / A/D converted value < ADCMPDR0 value or, ADCMPDR1 value < A/D converted value (ADCMPCR.WCMPE=1)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
+        #[doc = "ADCMPDR0 value < A/D converted value (ADCMPCR.WCMPE=0) / A/DCMPDR0 value < A/D converted value < ADCMPDR1 value (ADCMPCR.WCMPE=1)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmplcha06_SPEC;
     pub type Cmplcha06 = crate::EnumBitfieldStruct<u8, Cmplcha06_SPEC>;
     impl Cmplcha06 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
+        #[doc = "ADCMPDR0 value > A/D converted value (ADCMPCR.WCMPE=0) / A/D converted value < ADCMPDR0 value or, ADCMPDR1 value < A/D converted value (ADCMPCR.WCMPE=1)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmplcha07_SPEC;
-    pub type Cmplcha07 = crate::EnumBitfieldStruct<u8, Cmplcha07_SPEC>;
-    impl Cmplcha07 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmplcha08_SPEC;
-    pub type Cmplcha08 = crate::EnumBitfieldStruct<u8, Cmplcha08_SPEC>;
-    impl Cmplcha08 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmplcha09_SPEC;
-    pub type Cmplcha09 = crate::EnumBitfieldStruct<u8, Cmplcha09_SPEC>;
-    impl Cmplcha09 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmplcha10_SPEC;
-    pub type Cmplcha10 = crate::EnumBitfieldStruct<u8, Cmplcha10_SPEC>;
-    impl Cmplcha10 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmplcha11_SPEC;
-    pub type Cmplcha11 = crate::EnumBitfieldStruct<u8, Cmplcha11_SPEC>;
-    impl Cmplcha11 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmplcha12_SPEC;
-    pub type Cmplcha12 = crate::EnumBitfieldStruct<u8, Cmplcha12_SPEC>;
-    impl Cmplcha12 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmplcha13_SPEC;
-    pub type Cmplcha13 = crate::EnumBitfieldStruct<u8, Cmplcha13_SPEC>;
-    impl Cmplcha13 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmplcha14_SPEC;
-    pub type Cmplcha14 = crate::EnumBitfieldStruct<u8, Cmplcha14_SPEC>;
-    impl Cmplcha14 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmplcha15_SPEC;
-    pub type Cmplcha15 = crate::EnumBitfieldStruct<u8, Cmplcha15_SPEC>;
-    impl Cmplcha15 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
+        #[doc = "ADCMPDR0 value < A/D converted value (ADCMPCR.WCMPE=0) / A/DCMPDR0 value < A/D converted value < ADCMPDR1 value (ADCMPCR.WCMPE=1)."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -6035,7 +5780,7 @@ impl crate::sealed::RegSpec for Adcmplr1_SPEC {
 pub type Adcmplr1 = crate::RegValueT<Adcmplr1_SPEC>;
 
 impl Adcmplr1 {
-    #[doc = "Compare Window A Comparison Condition Select"]
+    #[doc = "Comparison condition of AN116"]
     #[inline(always)]
     pub fn cmplcha16(
         self,
@@ -6061,7 +5806,7 @@ impl Adcmplr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Comparison Condition Select"]
+    #[doc = "Comparison condition of AN117"]
     #[inline(always)]
     pub fn cmplcha17(
         self,
@@ -6087,7 +5832,7 @@ impl Adcmplr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Comparison Condition Select"]
+    #[doc = "Comparison condition of AN118"]
     #[inline(always)]
     pub fn cmplcha18(
         self,
@@ -6113,7 +5858,7 @@ impl Adcmplr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Comparison Condition Select"]
+    #[doc = "Comparison condition of AN119"]
     #[inline(always)]
     pub fn cmplcha19(
         self,
@@ -6139,7 +5884,7 @@ impl Adcmplr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Comparison Condition Select"]
+    #[doc = "Comparison condition of AN120"]
     #[inline(always)]
     pub fn cmplcha20(
         self,
@@ -6165,7 +5910,7 @@ impl Adcmplr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Comparison Condition Select"]
+    #[doc = "Comparison condition of AN121"]
     #[inline(always)]
     pub fn cmplcha21(
         self,
@@ -6191,7 +5936,7 @@ impl Adcmplr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Comparison Condition Select"]
+    #[doc = "Comparison condition of AN122"]
     #[inline(always)]
     pub fn cmplcha22(
         self,
@@ -6217,238 +5962,12 @@ impl Adcmplr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Comparison Condition Select"]
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
-    pub fn cmplcha23(
+    pub fn reserved(
         self,
-    ) -> crate::common::RegisterField<
-        7,
-        0x1,
-        1,
-        0,
-        adcmplr1::Cmplcha23,
-        adcmplr1::Cmplcha23,
-        Adcmplr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            7,
-            0x1,
-            1,
-            0,
-            adcmplr1::Cmplcha23,
-            adcmplr1::Cmplcha23,
-            Adcmplr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Comparison Condition Select"]
-    #[inline(always)]
-    pub fn cmplcha24(
-        self,
-    ) -> crate::common::RegisterField<
-        8,
-        0x1,
-        1,
-        0,
-        adcmplr1::Cmplcha24,
-        adcmplr1::Cmplcha24,
-        Adcmplr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            8,
-            0x1,
-            1,
-            0,
-            adcmplr1::Cmplcha24,
-            adcmplr1::Cmplcha24,
-            Adcmplr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Comparison Condition Select"]
-    #[inline(always)]
-    pub fn cmplcha25(
-        self,
-    ) -> crate::common::RegisterField<
-        9,
-        0x1,
-        1,
-        0,
-        adcmplr1::Cmplcha25,
-        adcmplr1::Cmplcha25,
-        Adcmplr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            9,
-            0x1,
-            1,
-            0,
-            adcmplr1::Cmplcha25,
-            adcmplr1::Cmplcha25,
-            Adcmplr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Comparison Condition Select"]
-    #[inline(always)]
-    pub fn cmplcha26(
-        self,
-    ) -> crate::common::RegisterField<
-        10,
-        0x1,
-        1,
-        0,
-        adcmplr1::Cmplcha26,
-        adcmplr1::Cmplcha26,
-        Adcmplr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            10,
-            0x1,
-            1,
-            0,
-            adcmplr1::Cmplcha26,
-            adcmplr1::Cmplcha26,
-            Adcmplr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Comparison Condition Select"]
-    #[inline(always)]
-    pub fn cmplcha27(
-        self,
-    ) -> crate::common::RegisterField<
-        11,
-        0x1,
-        1,
-        0,
-        adcmplr1::Cmplcha27,
-        adcmplr1::Cmplcha27,
-        Adcmplr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            11,
-            0x1,
-            1,
-            0,
-            adcmplr1::Cmplcha27,
-            adcmplr1::Cmplcha27,
-            Adcmplr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Comparison Condition Select"]
-    #[inline(always)]
-    pub fn cmplcha28(
-        self,
-    ) -> crate::common::RegisterField<
-        12,
-        0x1,
-        1,
-        0,
-        adcmplr1::Cmplcha28,
-        adcmplr1::Cmplcha28,
-        Adcmplr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            12,
-            0x1,
-            1,
-            0,
-            adcmplr1::Cmplcha28,
-            adcmplr1::Cmplcha28,
-            Adcmplr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Comparison Condition Select"]
-    #[inline(always)]
-    pub fn cmplcha29(
-        self,
-    ) -> crate::common::RegisterField<
-        13,
-        0x1,
-        1,
-        0,
-        adcmplr1::Cmplcha29,
-        adcmplr1::Cmplcha29,
-        Adcmplr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            13,
-            0x1,
-            1,
-            0,
-            adcmplr1::Cmplcha29,
-            adcmplr1::Cmplcha29,
-            Adcmplr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Comparison Condition Select"]
-    #[inline(always)]
-    pub fn cmplcha30(
-        self,
-    ) -> crate::common::RegisterField<
-        14,
-        0x1,
-        1,
-        0,
-        adcmplr1::Cmplcha30,
-        adcmplr1::Cmplcha30,
-        Adcmplr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            14,
-            0x1,
-            1,
-            0,
-            adcmplr1::Cmplcha30,
-            adcmplr1::Cmplcha30,
-            Adcmplr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Comparison Condition Select"]
-    #[inline(always)]
-    pub fn cmplcha31(
-        self,
-    ) -> crate::common::RegisterField<
-        15,
-        0x1,
-        1,
-        0,
-        adcmplr1::Cmplcha31,
-        adcmplr1::Cmplcha31,
-        Adcmplr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            15,
-            0x1,
-            1,
-            0,
-            adcmplr1::Cmplcha31,
-            adcmplr1::Cmplcha31,
-            Adcmplr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterFieldBool<15, 1, 0, Adcmplr1_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<15,1,0,Adcmplr1_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Adcmplr1 {
@@ -6463,178 +5982,124 @@ pub mod adcmplr1 {
     pub struct Cmplcha16_SPEC;
     pub type Cmplcha16 = crate::EnumBitfieldStruct<u8, Cmplcha16_SPEC>;
     impl Cmplcha16 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
+        #[doc = "ADCMPDR0 value > A/D converted value (ADCMPCR.WCMPE=0) / A/D converted value < ADCMPDR0 value or, ADCMPDR1 value < A/D converted value (ADCMPCR.WCMPE=1)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
+        #[doc = "ADCMPDR0 value < A/D converted value (ADCMPCR.WCMPE=0) / A/DCMPDR0 value < A/D converted value < ADCMPDR1 value (ADCMPCR.WCMPE=1)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmplcha17_SPEC;
     pub type Cmplcha17 = crate::EnumBitfieldStruct<u8, Cmplcha17_SPEC>;
     impl Cmplcha17 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
+        #[doc = "ADCMPDR0 value > A/D converted value (ADCMPCR.WCMPE=0) / A/D converted value < ADCMPDR0 value or, ADCMPDR1 value < A/D converted value (ADCMPCR.WCMPE=1)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
+        #[doc = "ADCMPDR0 value < A/D converted value (ADCMPCR.WCMPE=0) / A/DCMPDR0 value < A/D converted value < ADCMPDR1 value (ADCMPCR.WCMPE=1)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmplcha18_SPEC;
     pub type Cmplcha18 = crate::EnumBitfieldStruct<u8, Cmplcha18_SPEC>;
     impl Cmplcha18 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
+        #[doc = "ADCMPDR0 value > A/D converted value (ADCMPCR.WCMPE=0) / A/D converted value < ADCMPDR0 value or, ADCMPDR1 value < A/D converted value (ADCMPCR.WCMPE=1)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
+        #[doc = "ADCMPDR0 value < A/D converted value (ADCMPCR.WCMPE=0) / A/DCMPDR0 value < A/D converted value < ADCMPDR1 value (ADCMPCR.WCMPE=1)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmplcha19_SPEC;
     pub type Cmplcha19 = crate::EnumBitfieldStruct<u8, Cmplcha19_SPEC>;
     impl Cmplcha19 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
+        #[doc = "ADCMPDR0 value > A/D converted value (ADCMPCR.WCMPE=0) / A/D converted value < ADCMPDR0 value or, ADCMPDR1 value < A/D converted value (ADCMPCR.WCMPE=1)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
+        #[doc = "ADCMPDR0 value < A/D converted value (ADCMPCR.WCMPE=0) / A/DCMPDR0 value < A/D converted value < ADCMPDR1 value (ADCMPCR.WCMPE=1)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmplcha20_SPEC;
     pub type Cmplcha20 = crate::EnumBitfieldStruct<u8, Cmplcha20_SPEC>;
     impl Cmplcha20 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
+        #[doc = "ADCMPDR0 value > A/D converted value (ADCMPCR.WCMPE=0) / A/D converted value < ADCMPDR0 value or, ADCMPDR1 value < A/D converted value (ADCMPCR.WCMPE=1)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
+        #[doc = "ADCMPDR0 value < A/D converted value (ADCMPCR.WCMPE=0) / A/DCMPDR0 value < A/D converted value < ADCMPDR1 value (ADCMPCR.WCMPE=1)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmplcha21_SPEC;
     pub type Cmplcha21 = crate::EnumBitfieldStruct<u8, Cmplcha21_SPEC>;
     impl Cmplcha21 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
+        #[doc = "ADCMPDR0 value > A/D converted value (ADCMPCR.WCMPE=0) / A/D converted value < ADCMPDR0 value or, ADCMPDR1 value < A/D converted value (ADCMPCR.WCMPE=1)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
+        #[doc = "ADCMPDR0 value < A/D converted value (ADCMPCR.WCMPE=0) / A/DCMPDR0 value < A/D converted value < ADCMPDR1 value (ADCMPCR.WCMPE=1)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmplcha22_SPEC;
     pub type Cmplcha22 = crate::EnumBitfieldStruct<u8, Cmplcha22_SPEC>;
     impl Cmplcha22 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
+        #[doc = "ADCMPDR0 value > A/D converted value (ADCMPCR.WCMPE=0) / A/D converted value < ADCMPDR0 value or, ADCMPDR1 value < A/D converted value (ADCMPCR.WCMPE=1)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmplcha23_SPEC;
-    pub type Cmplcha23 = crate::EnumBitfieldStruct<u8, Cmplcha23_SPEC>;
-    impl Cmplcha23 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmplcha24_SPEC;
-    pub type Cmplcha24 = crate::EnumBitfieldStruct<u8, Cmplcha24_SPEC>;
-    impl Cmplcha24 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmplcha25_SPEC;
-    pub type Cmplcha25 = crate::EnumBitfieldStruct<u8, Cmplcha25_SPEC>;
-    impl Cmplcha25 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmplcha26_SPEC;
-    pub type Cmplcha26 = crate::EnumBitfieldStruct<u8, Cmplcha26_SPEC>;
-    impl Cmplcha26 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmplcha27_SPEC;
-    pub type Cmplcha27 = crate::EnumBitfieldStruct<u8, Cmplcha27_SPEC>;
-    impl Cmplcha27 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmplcha28_SPEC;
-    pub type Cmplcha28 = crate::EnumBitfieldStruct<u8, Cmplcha28_SPEC>;
-    impl Cmplcha28 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmplcha29_SPEC;
-    pub type Cmplcha29 = crate::EnumBitfieldStruct<u8, Cmplcha29_SPEC>;
-    impl Cmplcha29 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmplcha30_SPEC;
-    pub type Cmplcha30 = crate::EnumBitfieldStruct<u8, Cmplcha30_SPEC>;
-    impl Cmplcha30 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmplcha31_SPEC;
-    pub type Cmplcha31 = crate::EnumBitfieldStruct<u8, Cmplcha31_SPEC>;
-    impl Cmplcha31 {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADCMPDR0 value, or ADCMPDR1 value < A/D-converted value"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADCMPDR0 value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADCMPDR0 value < A/D-converted value < ADCMPDR1 value"]
+        #[doc = "ADCMPDR0 value < A/D converted value (ADCMPCR.WCMPE=0) / A/DCMPDR0 value < A/D converted value < ADCMPDR1 value (ADCMPCR.WCMPE=1)."]
         pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Adcmpdr_SPEC;
-impl crate::sealed::RegSpec for Adcmpdr_SPEC {
+pub struct Adcmpdr0_SPEC;
+impl crate::sealed::RegSpec for Adcmpdr0_SPEC {
     type DataType = u16;
 }
 
-#[doc = "A/D Compare Function Window A Lower-Side/Upper-Side Level Setting Register"]
-pub type Adcmpdr = crate::RegValueT<Adcmpdr_SPEC>;
+#[doc = "A/D Compare Function Window A Lower-Side Level Setting Register"]
+pub type Adcmpdr0 = crate::RegValueT<Adcmpdr0_SPEC>;
 
-impl NoBitfieldReg<Adcmpdr_SPEC> for Adcmpdr {}
-impl ::core::default::Default for Adcmpdr {
+impl Adcmpdr0 {
+    #[doc = "The ADCMPDR0 register sets the reference data when the compare window A function is used. ADCMPDR0 sets the lower-side level of window A."]
     #[inline(always)]
-    fn default() -> Adcmpdr {
-        <crate::RegValueT<Adcmpdr_SPEC> as RegisterValue<_>>::new(0)
+    pub fn adcmpdr0(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Adcmpdr0_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Adcmpdr0_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
+impl ::core::default::Default for Adcmpdr0 {
+    #[inline(always)]
+    fn default() -> Adcmpdr0 {
+        <crate::RegValueT<Adcmpdr0_SPEC> as RegisterValue<_>>::new(0)
+    }
+}
+
+#[doc(hidden)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Adcmpdr1_SPEC;
+impl crate::sealed::RegSpec for Adcmpdr1_SPEC {
+    type DataType = u16;
+}
+
+#[doc = "A/D Compare Function Window A Upper-Side Level Setting Register"]
+pub type Adcmpdr1 = crate::RegValueT<Adcmpdr1_SPEC>;
+
+impl Adcmpdr1 {
+    #[doc = "The ADCMPDR1 register sets the reference data when the compare window A function is used. ADCMPDR1 sets the upper-side level of window A.."]
+    #[inline(always)]
+    pub fn adcmpdr1(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Adcmpdr1_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Adcmpdr1_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
+impl ::core::default::Default for Adcmpdr1 {
+    #[inline(always)]
+    fn default() -> Adcmpdr1 {
+        <crate::RegValueT<Adcmpdr1_SPEC> as RegisterValue<_>>::new(0)
     }
 }
 
@@ -6649,7 +6114,7 @@ impl crate::sealed::RegSpec for Adcmpsr0_SPEC {
 pub type Adcmpsr0 = crate::RegValueT<Adcmpsr0_SPEC>;
 
 impl Adcmpsr0 {
-    #[doc = "Compare Window A Flag"]
+    #[doc = "Compare window A flag of AN100"]
     #[inline(always)]
     pub fn cmpstcha00(
         self,
@@ -6675,7 +6140,7 @@ impl Adcmpsr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Flag"]
+    #[doc = "Compare window A flag of AN101"]
     #[inline(always)]
     pub fn cmpstcha01(
         self,
@@ -6701,7 +6166,7 @@ impl Adcmpsr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Flag"]
+    #[doc = "Compare window A flag of AN102"]
     #[inline(always)]
     pub fn cmpstcha02(
         self,
@@ -6727,33 +6192,7 @@ impl Adcmpsr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Flag"]
-    #[inline(always)]
-    pub fn cmpstcha03(
-        self,
-    ) -> crate::common::RegisterField<
-        3,
-        0x1,
-        1,
-        0,
-        adcmpsr0::Cmpstcha03,
-        adcmpsr0::Cmpstcha03,
-        Adcmpsr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            3,
-            0x1,
-            1,
-            0,
-            adcmpsr0::Cmpstcha03,
-            adcmpsr0::Cmpstcha03,
-            Adcmpsr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Flag"]
+    #[doc = "Compare window A flag of AN104"]
     #[inline(always)]
     pub fn cmpstcha04(
         self,
@@ -6779,7 +6218,7 @@ impl Adcmpsr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Flag"]
+    #[doc = "Compare window A flag of AN105"]
     #[inline(always)]
     pub fn cmpstcha05(
         self,
@@ -6805,7 +6244,7 @@ impl Adcmpsr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Flag"]
+    #[doc = "Compare window A flag of AN106"]
     #[inline(always)]
     pub fn cmpstcha06(
         self,
@@ -6831,238 +6270,12 @@ impl Adcmpsr0 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Flag"]
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
-    pub fn cmpstcha07(
+    pub fn reserved(
         self,
-    ) -> crate::common::RegisterField<
-        7,
-        0x1,
-        1,
-        0,
-        adcmpsr0::Cmpstcha07,
-        adcmpsr0::Cmpstcha07,
-        Adcmpsr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            7,
-            0x1,
-            1,
-            0,
-            adcmpsr0::Cmpstcha07,
-            adcmpsr0::Cmpstcha07,
-            Adcmpsr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Flag"]
-    #[inline(always)]
-    pub fn cmpstcha08(
-        self,
-    ) -> crate::common::RegisterField<
-        8,
-        0x1,
-        1,
-        0,
-        adcmpsr0::Cmpstcha08,
-        adcmpsr0::Cmpstcha08,
-        Adcmpsr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            8,
-            0x1,
-            1,
-            0,
-            adcmpsr0::Cmpstcha08,
-            adcmpsr0::Cmpstcha08,
-            Adcmpsr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Flag"]
-    #[inline(always)]
-    pub fn cmpstcha09(
-        self,
-    ) -> crate::common::RegisterField<
-        9,
-        0x1,
-        1,
-        0,
-        adcmpsr0::Cmpstcha09,
-        adcmpsr0::Cmpstcha09,
-        Adcmpsr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            9,
-            0x1,
-            1,
-            0,
-            adcmpsr0::Cmpstcha09,
-            adcmpsr0::Cmpstcha09,
-            Adcmpsr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Flag"]
-    #[inline(always)]
-    pub fn cmpstcha10(
-        self,
-    ) -> crate::common::RegisterField<
-        10,
-        0x1,
-        1,
-        0,
-        adcmpsr0::Cmpstcha10,
-        adcmpsr0::Cmpstcha10,
-        Adcmpsr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            10,
-            0x1,
-            1,
-            0,
-            adcmpsr0::Cmpstcha10,
-            adcmpsr0::Cmpstcha10,
-            Adcmpsr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Flag"]
-    #[inline(always)]
-    pub fn cmpstcha11(
-        self,
-    ) -> crate::common::RegisterField<
-        11,
-        0x1,
-        1,
-        0,
-        adcmpsr0::Cmpstcha11,
-        adcmpsr0::Cmpstcha11,
-        Adcmpsr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            11,
-            0x1,
-            1,
-            0,
-            adcmpsr0::Cmpstcha11,
-            adcmpsr0::Cmpstcha11,
-            Adcmpsr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Flag"]
-    #[inline(always)]
-    pub fn cmpstcha12(
-        self,
-    ) -> crate::common::RegisterField<
-        12,
-        0x1,
-        1,
-        0,
-        adcmpsr0::Cmpstcha12,
-        adcmpsr0::Cmpstcha12,
-        Adcmpsr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            12,
-            0x1,
-            1,
-            0,
-            adcmpsr0::Cmpstcha12,
-            adcmpsr0::Cmpstcha12,
-            Adcmpsr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Flag"]
-    #[inline(always)]
-    pub fn cmpstcha13(
-        self,
-    ) -> crate::common::RegisterField<
-        13,
-        0x1,
-        1,
-        0,
-        adcmpsr0::Cmpstcha13,
-        adcmpsr0::Cmpstcha13,
-        Adcmpsr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            13,
-            0x1,
-            1,
-            0,
-            adcmpsr0::Cmpstcha13,
-            adcmpsr0::Cmpstcha13,
-            Adcmpsr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Flag"]
-    #[inline(always)]
-    pub fn cmpstcha14(
-        self,
-    ) -> crate::common::RegisterField<
-        14,
-        0x1,
-        1,
-        0,
-        adcmpsr0::Cmpstcha14,
-        adcmpsr0::Cmpstcha14,
-        Adcmpsr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            14,
-            0x1,
-            1,
-            0,
-            adcmpsr0::Cmpstcha14,
-            adcmpsr0::Cmpstcha14,
-            Adcmpsr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Flag"]
-    #[inline(always)]
-    pub fn cmpstcha15(
-        self,
-    ) -> crate::common::RegisterField<
-        15,
-        0x1,
-        1,
-        0,
-        adcmpsr0::Cmpstcha15,
-        adcmpsr0::Cmpstcha15,
-        Adcmpsr0_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            15,
-            0x1,
-            1,
-            0,
-            adcmpsr0::Cmpstcha15,
-            adcmpsr0::Cmpstcha15,
-            Adcmpsr0_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterFieldBool<15, 1, 0, Adcmpsr0_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<15,1,0,Adcmpsr0_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Adcmpsr0 {
@@ -7104,16 +6317,6 @@ pub mod adcmpsr0 {
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpstcha03_SPEC;
-    pub type Cmpstcha03 = crate::EnumBitfieldStruct<u8, Cmpstcha03_SPEC>;
-    impl Cmpstcha03 {
-        #[doc = "Comparison conditions are not met."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Comparison conditions are met."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmpstcha04_SPEC;
     pub type Cmpstcha04 = crate::EnumBitfieldStruct<u8, Cmpstcha04_SPEC>;
     impl Cmpstcha04 {
@@ -7143,96 +6346,6 @@ pub mod adcmpsr0 {
         #[doc = "Comparison conditions are met."]
         pub const _1: Self = Self::new(1);
     }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpstcha07_SPEC;
-    pub type Cmpstcha07 = crate::EnumBitfieldStruct<u8, Cmpstcha07_SPEC>;
-    impl Cmpstcha07 {
-        #[doc = "Comparison conditions are not met."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Comparison conditions are met."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpstcha08_SPEC;
-    pub type Cmpstcha08 = crate::EnumBitfieldStruct<u8, Cmpstcha08_SPEC>;
-    impl Cmpstcha08 {
-        #[doc = "Comparison conditions are not met."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Comparison conditions are met."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpstcha09_SPEC;
-    pub type Cmpstcha09 = crate::EnumBitfieldStruct<u8, Cmpstcha09_SPEC>;
-    impl Cmpstcha09 {
-        #[doc = "Comparison conditions are not met."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Comparison conditions are met."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpstcha10_SPEC;
-    pub type Cmpstcha10 = crate::EnumBitfieldStruct<u8, Cmpstcha10_SPEC>;
-    impl Cmpstcha10 {
-        #[doc = "Comparison conditions are not met."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Comparison conditions are met."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpstcha11_SPEC;
-    pub type Cmpstcha11 = crate::EnumBitfieldStruct<u8, Cmpstcha11_SPEC>;
-    impl Cmpstcha11 {
-        #[doc = "Comparison conditions are not met."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Comparison conditions are met."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpstcha12_SPEC;
-    pub type Cmpstcha12 = crate::EnumBitfieldStruct<u8, Cmpstcha12_SPEC>;
-    impl Cmpstcha12 {
-        #[doc = "Comparison conditions are not met."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Comparison conditions are met."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpstcha13_SPEC;
-    pub type Cmpstcha13 = crate::EnumBitfieldStruct<u8, Cmpstcha13_SPEC>;
-    impl Cmpstcha13 {
-        #[doc = "Comparison conditions are not met."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Comparison conditions are met."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpstcha14_SPEC;
-    pub type Cmpstcha14 = crate::EnumBitfieldStruct<u8, Cmpstcha14_SPEC>;
-    impl Cmpstcha14 {
-        #[doc = "Comparison conditions are not met."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Comparison conditions are met."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpstcha15_SPEC;
-    pub type Cmpstcha15 = crate::EnumBitfieldStruct<u8, Cmpstcha15_SPEC>;
-    impl Cmpstcha15 {
-        #[doc = "Comparison conditions are not met."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Comparison conditions are met."]
-        pub const _1: Self = Self::new(1);
-    }
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -7241,11 +6354,11 @@ impl crate::sealed::RegSpec for Adcmpsr1_SPEC {
     type DataType = u16;
 }
 
-#[doc = "A/D Compare Function Window A Channel Status Register1"]
+#[doc = "A/D Compare Function Window A Channel Status Register 1"]
 pub type Adcmpsr1 = crate::RegValueT<Adcmpsr1_SPEC>;
 
 impl Adcmpsr1 {
-    #[doc = "Compare Window A Flag"]
+    #[doc = "Compare window A flag of AN016"]
     #[inline(always)]
     pub fn cmpstcha16(
         self,
@@ -7271,7 +6384,7 @@ impl Adcmpsr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Flag"]
+    #[doc = "Compare window A flag of AN017"]
     #[inline(always)]
     pub fn cmpstcha17(
         self,
@@ -7297,7 +6410,7 @@ impl Adcmpsr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Flag"]
+    #[doc = "Compare window A flag of AN018"]
     #[inline(always)]
     pub fn cmpstcha18(
         self,
@@ -7323,7 +6436,7 @@ impl Adcmpsr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Flag"]
+    #[doc = "Compare window A flag of AN119"]
     #[inline(always)]
     pub fn cmpstcha19(
         self,
@@ -7349,7 +6462,7 @@ impl Adcmpsr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Flag"]
+    #[doc = "Compare window A flag of AN120"]
     #[inline(always)]
     pub fn cmpstcha20(
         self,
@@ -7375,7 +6488,7 @@ impl Adcmpsr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Flag"]
+    #[doc = "Compare window A flag of AN121"]
     #[inline(always)]
     pub fn cmpstcha21(
         self,
@@ -7401,7 +6514,7 @@ impl Adcmpsr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Flag"]
+    #[doc = "Compare window A flag of AN122"]
     #[inline(always)]
     pub fn cmpstcha22(
         self,
@@ -7427,238 +6540,12 @@ impl Adcmpsr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Flag"]
+    #[doc = "This bit is read as 0. The write value should be 0."]
     #[inline(always)]
-    pub fn cmpstcha23(
+    pub fn reserved(
         self,
-    ) -> crate::common::RegisterField<
-        7,
-        0x1,
-        1,
-        0,
-        adcmpsr1::Cmpstcha23,
-        adcmpsr1::Cmpstcha23,
-        Adcmpsr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            7,
-            0x1,
-            1,
-            0,
-            adcmpsr1::Cmpstcha23,
-            adcmpsr1::Cmpstcha23,
-            Adcmpsr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Flag"]
-    #[inline(always)]
-    pub fn cmpstcha24(
-        self,
-    ) -> crate::common::RegisterField<
-        8,
-        0x1,
-        1,
-        0,
-        adcmpsr1::Cmpstcha24,
-        adcmpsr1::Cmpstcha24,
-        Adcmpsr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            8,
-            0x1,
-            1,
-            0,
-            adcmpsr1::Cmpstcha24,
-            adcmpsr1::Cmpstcha24,
-            Adcmpsr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Flag"]
-    #[inline(always)]
-    pub fn cmpstcha25(
-        self,
-    ) -> crate::common::RegisterField<
-        9,
-        0x1,
-        1,
-        0,
-        adcmpsr1::Cmpstcha25,
-        adcmpsr1::Cmpstcha25,
-        Adcmpsr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            9,
-            0x1,
-            1,
-            0,
-            adcmpsr1::Cmpstcha25,
-            adcmpsr1::Cmpstcha25,
-            Adcmpsr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Flag"]
-    #[inline(always)]
-    pub fn cmpstcha26(
-        self,
-    ) -> crate::common::RegisterField<
-        10,
-        0x1,
-        1,
-        0,
-        adcmpsr1::Cmpstcha26,
-        adcmpsr1::Cmpstcha26,
-        Adcmpsr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            10,
-            0x1,
-            1,
-            0,
-            adcmpsr1::Cmpstcha26,
-            adcmpsr1::Cmpstcha26,
-            Adcmpsr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Flag"]
-    #[inline(always)]
-    pub fn cmpstcha27(
-        self,
-    ) -> crate::common::RegisterField<
-        11,
-        0x1,
-        1,
-        0,
-        adcmpsr1::Cmpstcha27,
-        adcmpsr1::Cmpstcha27,
-        Adcmpsr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            11,
-            0x1,
-            1,
-            0,
-            adcmpsr1::Cmpstcha27,
-            adcmpsr1::Cmpstcha27,
-            Adcmpsr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Flag"]
-    #[inline(always)]
-    pub fn cmpstcha28(
-        self,
-    ) -> crate::common::RegisterField<
-        12,
-        0x1,
-        1,
-        0,
-        adcmpsr1::Cmpstcha28,
-        adcmpsr1::Cmpstcha28,
-        Adcmpsr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            12,
-            0x1,
-            1,
-            0,
-            adcmpsr1::Cmpstcha28,
-            adcmpsr1::Cmpstcha28,
-            Adcmpsr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Flag"]
-    #[inline(always)]
-    pub fn cmpstcha29(
-        self,
-    ) -> crate::common::RegisterField<
-        13,
-        0x1,
-        1,
-        0,
-        adcmpsr1::Cmpstcha29,
-        adcmpsr1::Cmpstcha29,
-        Adcmpsr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            13,
-            0x1,
-            1,
-            0,
-            adcmpsr1::Cmpstcha29,
-            adcmpsr1::Cmpstcha29,
-            Adcmpsr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Flag"]
-    #[inline(always)]
-    pub fn cmpstcha30(
-        self,
-    ) -> crate::common::RegisterField<
-        14,
-        0x1,
-        1,
-        0,
-        adcmpsr1::Cmpstcha30,
-        adcmpsr1::Cmpstcha30,
-        Adcmpsr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            14,
-            0x1,
-            1,
-            0,
-            adcmpsr1::Cmpstcha30,
-            adcmpsr1::Cmpstcha30,
-            Adcmpsr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
-    }
-
-    #[doc = "Compare Window A Flag"]
-    #[inline(always)]
-    pub fn cmpstcha31(
-        self,
-    ) -> crate::common::RegisterField<
-        15,
-        0x1,
-        1,
-        0,
-        adcmpsr1::Cmpstcha31,
-        adcmpsr1::Cmpstcha31,
-        Adcmpsr1_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            15,
-            0x1,
-            1,
-            0,
-            adcmpsr1::Cmpstcha31,
-            adcmpsr1::Cmpstcha31,
-            Adcmpsr1_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterFieldBool<15, 1, 0, Adcmpsr1_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<15,1,0,Adcmpsr1_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Adcmpsr1 {
@@ -7739,96 +6626,6 @@ pub mod adcmpsr1 {
         #[doc = "Comparison conditions are met."]
         pub const _1: Self = Self::new(1);
     }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpstcha23_SPEC;
-    pub type Cmpstcha23 = crate::EnumBitfieldStruct<u8, Cmpstcha23_SPEC>;
-    impl Cmpstcha23 {
-        #[doc = "Comparison conditions are not met."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Comparison conditions are met."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpstcha24_SPEC;
-    pub type Cmpstcha24 = crate::EnumBitfieldStruct<u8, Cmpstcha24_SPEC>;
-    impl Cmpstcha24 {
-        #[doc = "Comparison conditions are not met."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Comparison conditions are met."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpstcha25_SPEC;
-    pub type Cmpstcha25 = crate::EnumBitfieldStruct<u8, Cmpstcha25_SPEC>;
-    impl Cmpstcha25 {
-        #[doc = "Comparison conditions are not met."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Comparison conditions are met."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpstcha26_SPEC;
-    pub type Cmpstcha26 = crate::EnumBitfieldStruct<u8, Cmpstcha26_SPEC>;
-    impl Cmpstcha26 {
-        #[doc = "Comparison conditions are not met."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Comparison conditions are met."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpstcha27_SPEC;
-    pub type Cmpstcha27 = crate::EnumBitfieldStruct<u8, Cmpstcha27_SPEC>;
-    impl Cmpstcha27 {
-        #[doc = "Comparison conditions are not met."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Comparison conditions are met."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpstcha28_SPEC;
-    pub type Cmpstcha28 = crate::EnumBitfieldStruct<u8, Cmpstcha28_SPEC>;
-    impl Cmpstcha28 {
-        #[doc = "Comparison conditions are not met."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Comparison conditions are met."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpstcha29_SPEC;
-    pub type Cmpstcha29 = crate::EnumBitfieldStruct<u8, Cmpstcha29_SPEC>;
-    impl Cmpstcha29 {
-        #[doc = "Comparison conditions are not met."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Comparison conditions are met."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpstcha30_SPEC;
-    pub type Cmpstcha30 = crate::EnumBitfieldStruct<u8, Cmpstcha30_SPEC>;
-    impl Cmpstcha30 {
-        #[doc = "Comparison conditions are not met."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Comparison conditions are met."]
-        pub const _1: Self = Self::new(1);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmpstcha31_SPEC;
-    pub type Cmpstcha31 = crate::EnumBitfieldStruct<u8, Cmpstcha31_SPEC>;
-    impl Cmpstcha31 {
-        #[doc = "Comparison conditions are not met."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Comparison conditions are met."]
-        pub const _1: Self = Self::new(1);
-    }
 }
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -7841,7 +6638,7 @@ impl crate::sealed::RegSpec for Adcmpser_SPEC {
 pub type Adcmpser = crate::RegValueT<Adcmpser_SPEC>;
 
 impl Adcmpser {
-    #[doc = "Compare Window A Temperature Sensor Output Compare Flag"]
+    #[doc = "Compare Window A Temperature Sensor Output Compare Flag When window A operation is enabled (ADCMPCR.CMPAE = 1b), this bit indicates the temperature sensor output comparison result. When window A operation is disabled (ADCMPCR.CMPAE = 0b), comparison conditions for CMPSTTSA are not met any time."]
     #[inline(always)]
     pub fn cmpsttsa(
         self,
@@ -7867,7 +6664,7 @@ impl Adcmpser {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window A Internal Reference Voltage Compare Flag"]
+    #[doc = "Compare Window A Internal Reference Voltage Compare Flag When window A operation is enabled (ADCMPCR.CMPAE = 1b), this bit indicates the temperature sensor output comparison result. When window A operation is disabled (ADCMPCR.CMPAE = 0b), comparison conditions for CMPSTTSA are not met any time."]
     #[inline(always)]
     pub fn cmpstoca(
         self,
@@ -7891,6 +6688,14 @@ impl Adcmpser {
             Adcmpser_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 000000. The write value should be 000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<2, 0x3f, 1, 0, u8, u8, Adcmpser_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<2,0x3f,1,0,u8,u8,Adcmpser_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Adcmpser {
@@ -7929,20 +6734,45 @@ impl crate::sealed::RegSpec for Adcmpbnsr_SPEC {
     type DataType = u8;
 }
 
-#[doc = "A/D Compare Function Window B Channel Select Register"]
+#[doc = "A/D Compare Function Window B Channel Selection Register"]
 pub type Adcmpbnsr = crate::RegValueT<Adcmpbnsr_SPEC>;
 
 impl Adcmpbnsr {
-    #[doc = "Compare Window B Channel Select"]
+    #[doc = "Compare window B channel selection bit.The channel that compares it on the condition of compare window B is selected."]
     #[inline(always)]
     pub fn cmpchb(
         self,
-    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, u8, Adcmpbnsr_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x3f,1,0,u8,u8,Adcmpbnsr_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x3f,
+        1,
+        0,
+        adcmpbnsr::Cmpchb,
+        adcmpbnsr::Cmpchb,
+        Adcmpbnsr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x3f,
+            1,
+            0,
+            adcmpbnsr::Cmpchb,
+            adcmpbnsr::Cmpchb,
+            Adcmpbnsr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 
-    #[doc = "Compare Window B Comparison Condition Setting"]
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<6, 1, 0, Adcmpbnsr_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<6,1,0,Adcmpbnsr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "Compare window B Compare condition setting bit."]
     #[inline(always)]
     pub fn cmplb(
         self,
@@ -7977,13 +6807,65 @@ impl ::core::default::Default for Adcmpbnsr {
 pub mod adcmpbnsr {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Cmpchb_SPEC;
+    pub type Cmpchb = crate::EnumBitfieldStruct<u8, Cmpchb_SPEC>;
+    impl Cmpchb {
+        #[doc = "AN100"]
+        pub const _0_X_00: Self = Self::new(0);
+
+        #[doc = "AN101"]
+        pub const _0_X_01: Self = Self::new(1);
+
+        #[doc = "AN102"]
+        pub const _0_X_02: Self = Self::new(2);
+
+        #[doc = "AN104"]
+        pub const _0_X_04: Self = Self::new(4);
+
+        #[doc = "AN105"]
+        pub const _0_X_05: Self = Self::new(5);
+
+        #[doc = "AN106"]
+        pub const _0_X_06: Self = Self::new(6);
+
+        #[doc = "AN116"]
+        pub const _0_X_10: Self = Self::new(16);
+
+        #[doc = "AN117"]
+        pub const _0_X_11: Self = Self::new(17);
+
+        #[doc = "AN118"]
+        pub const _0_X_12: Self = Self::new(18);
+
+        #[doc = "AN119"]
+        pub const _0_X_13: Self = Self::new(19);
+
+        #[doc = "AN120"]
+        pub const _0_X_14: Self = Self::new(20);
+
+        #[doc = "AN121"]
+        pub const _0_X_15: Self = Self::new(21);
+
+        #[doc = "AN122"]
+        pub const _0_X_16: Self = Self::new(22);
+
+        #[doc = "Temperature sensor"]
+        pub const _0_X_20: Self = Self::new(32);
+
+        #[doc = "Internal reference voltage"]
+        pub const _0_X_21: Self = Self::new(33);
+
+        #[doc = "No channel is selected"]
+        pub const _0_X_3_F: Self = Self::new(63);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmplb_SPEC;
     pub type Cmplb = crate::EnumBitfieldStruct<u8, Cmplb_SPEC>;
     impl Cmplb {
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADWINLLB value > A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): A/D-converted value < ADWINLLB value, or ADWINULB value < A/D-converted value"]
+        #[doc = "CMPLLB value > A/D converted value (ADCMPCR.WCMPE=0) / A/D converted value < CMPLLB value or CMPULB value < A/D converted value  (ADCMPCR.WCMPE=1)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "When window function is disabled (ADCMPCR.WCMPE = 0): ADWINLLB value < A/D-converted value When window function is enabled (ADCMPCR.WCMPE = 1): ADWINLLB value < A/D-converted value < ADWINULB value"]
+        #[doc = "CMPLLB value < A/D converted value(ADCMPCR.WCMPE=0) / CMPLLB value < A/D converted value < CMPULB value (ADCMPCR.WCMPE=1)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -7994,10 +6876,19 @@ impl crate::sealed::RegSpec for Adwinllb_SPEC {
     type DataType = u16;
 }
 
-#[doc = "A/D Compare Function Window B Lower-Side/Upper-Side Level Setting Register"]
+#[doc = "A/D Compare Function Window B Lower-Side Level Setting Register"]
 pub type Adwinllb = crate::RegValueT<Adwinllb_SPEC>;
 
-impl NoBitfieldReg<Adwinllb_SPEC> for Adwinllb {}
+impl Adwinllb {
+    #[doc = "This register is used to compare A window function is used to set the lower level of the window B."]
+    #[inline(always)]
+    pub fn adwinllb(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Adwinllb_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Adwinllb_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Adwinllb {
     #[inline(always)]
     fn default() -> Adwinllb {
@@ -8012,10 +6903,19 @@ impl crate::sealed::RegSpec for Adwinulb_SPEC {
     type DataType = u16;
 }
 
-#[doc = "A/D Compare Function Window B Lower-Side/Upper-Side Level Setting Register"]
+#[doc = "A/D Compare Function Window B Upper-Side Level Setting Register"]
 pub type Adwinulb = crate::RegValueT<Adwinulb_SPEC>;
 
-impl NoBitfieldReg<Adwinulb_SPEC> for Adwinulb {}
+impl Adwinulb {
+    #[doc = "This register is used to compare A window function is used to set the higher level of the window B."]
+    #[inline(always)]
+    pub fn adwinulb(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Adwinulb_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Adwinulb_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Adwinulb {
     #[inline(always)]
     fn default() -> Adwinulb {
@@ -8034,7 +6934,7 @@ impl crate::sealed::RegSpec for Adcmpbsr_SPEC {
 pub type Adcmpbsr = crate::RegValueT<Adcmpbsr_SPEC>;
 
 impl Adcmpbsr {
-    #[doc = "Compare Window B Flag"]
+    #[doc = "Compare window B flag.It is a status flag that shows the comparative result of CH (AN100-AN102, AN104-AN106, AN116-AN122, temperature sensor, and internal reference voltage) made the object of window B relation condition."]
     #[inline(always)]
     pub fn cmpstb(
         self,
@@ -8058,6 +6958,14 @@ impl Adcmpbsr {
             Adcmpbsr_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<1, 0x7f, 1, 0, u8, u8, Adcmpbsr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Adcmpbsr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Adcmpbsr {
@@ -8086,11 +6994,11 @@ impl crate::sealed::RegSpec for Adbuf_SPEC {
     type DataType = u16;
 }
 
-#[doc = "A/D Data Buffer Registers %s"]
+#[doc = "A/D Data Buffer Register %s"]
 pub type Adbuf = crate::RegValueT<Adbuf_SPEC>;
 
 impl Adbuf {
-    #[doc = "Converted Value 15 to 0"]
+    #[doc = "A/D data buffer registers (ADBUF) are 16-bit read-only registers that sequentially store all A/D converted values. The automatic clear function is not applied to these registers."]
     #[inline(always)]
     pub fn adbuf(
         self,
@@ -8141,6 +7049,14 @@ impl Adbufen {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000. The write value should be 0000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<1, 0x7f, 1, 0, u8, u8, Adbufen_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<1,0x7f,1,0,u8,u8,Adbufen_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Adbufen {
     #[inline(always)]
@@ -8172,12 +7088,12 @@ impl crate::sealed::RegSpec for Adbufptr_SPEC {
 pub type Adbufptr = crate::RegValueT<Adbufptr_SPEC>;
 
 impl Adbufptr {
-    #[doc = "Data Buffer Pointer"]
+    #[doc = "Data Buffer PointerThese bits indicate the number of data buffer to which the next A/D converted data is transferred."]
     #[inline(always)]
     pub fn bufptr(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, Adbufptr_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0xf,1,0,u8,u8,Adbufptr_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, Adbufptr_SPEC, crate::common::R> {
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,Adbufptr_SPEC,crate::common::R>::from_register(self,0)
     }
 
     #[doc = "Pointer Overflow Flag"]
@@ -8192,7 +7108,7 @@ impl Adbufptr {
         adbufptr::Ptrovf,
         adbufptr::Ptrovf,
         Adbufptr_SPEC,
-        crate::common::RW,
+        crate::common::R,
     > {
         crate::common::RegisterField::<
             4,
@@ -8202,8 +7118,16 @@ impl Adbufptr {
             adbufptr::Ptrovf,
             adbufptr::Ptrovf,
             Adbufptr_SPEC,
-            crate::common::RW,
+            crate::common::R,
         >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 000. The write value should be 000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<5, 0x7, 1, 0, u8, u8, Adbufptr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<5,0x7,1,0,u8,u8,Adbufptr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Adbufptr {
@@ -8232,11 +7156,11 @@ impl crate::sealed::RegSpec for Adsstrl_SPEC {
     type DataType = u8;
 }
 
-#[doc = "A/D Sampling State Register"]
+#[doc = "A/D Sampling State Register L"]
 pub type Adsstrl = crate::RegValueT<Adsstrl_SPEC>;
 
 impl Adsstrl {
-    #[doc = "Sampling Time Setting"]
+    #[doc = "Sampling Time Setting (AN116-AN122)"]
     #[inline(always)]
     pub fn sst(
         self,
@@ -8258,11 +7182,11 @@ impl crate::sealed::RegSpec for Adsstrt_SPEC {
     type DataType = u8;
 }
 
-#[doc = "A/D Sampling State Register"]
+#[doc = "A/D Sampling State Register T"]
 pub type Adsstrt = crate::RegValueT<Adsstrt_SPEC>;
 
 impl Adsstrt {
-    #[doc = "Sampling Time Setting"]
+    #[doc = "Sampling Time Setting (temperature sensor output)"]
     #[inline(always)]
     pub fn sst(
         self,
@@ -8284,11 +7208,11 @@ impl crate::sealed::RegSpec for Adsstro_SPEC {
     type DataType = u8;
 }
 
-#[doc = "A/D Sampling State Register"]
+#[doc = "A/D Sampling State Register O"]
 pub type Adsstro = crate::RegValueT<Adsstro_SPEC>;
 
 impl Adsstro {
-    #[doc = "Sampling Time Setting"]
+    #[doc = "Sampling Time Setting (Internal reference voltage)"]
     #[inline(always)]
     pub fn sst(
         self,
@@ -8310,11 +7234,11 @@ impl crate::sealed::RegSpec for Adsstr_SPEC {
     type DataType = u8;
 }
 
-#[doc = "A/D Sampling State Register"]
+#[doc = "A/D Sampling State Register %s"]
 pub type Adsstr = crate::RegValueT<Adsstr_SPEC>;
 
 impl Adsstr {
-    #[doc = "Sampling Time Setting"]
+    #[doc = "Sampling time setting"]
     #[inline(always)]
     pub fn sst(
         self,
@@ -8326,31 +7250,5 @@ impl ::core::default::Default for Adsstr {
     #[inline(always)]
     fn default() -> Adsstr {
         <crate::RegValueT<Adsstr_SPEC> as RegisterValue<_>>::new(11)
-    }
-}
-
-#[doc(hidden)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Adsstrv_SPEC;
-impl crate::sealed::RegSpec for Adsstrv_SPEC {
-    type DataType = u8;
-}
-
-#[doc = "A/D Sampling State Register"]
-pub type Adsstrv = crate::RegValueT<Adsstrv_SPEC>;
-
-impl Adsstrv {
-    #[doc = "Sampling Time Setting"]
-    #[inline(always)]
-    pub fn sst(
-        self,
-    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, Adsstrv_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0xff,1,0,u8,u8,Adsstrv_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
-impl ::core::default::Default for Adsstrv {
-    #[inline(always)]
-    fn default() -> Adsstrv {
-        <crate::RegValueT<Adsstrv_SPEC> as RegisterValue<_>>::new(11)
     }
 }

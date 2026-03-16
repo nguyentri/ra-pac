@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -210,7 +210,7 @@ impl super::Sdhi0 {
         }
     }
 
-    #[doc = "SD INFO1 Interrupt Mask Register"]
+    #[doc = "SD_INFO1 Interrupt Mask Register"]
     #[inline(always)]
     pub const fn sd_info1_mask(
         &self,
@@ -222,7 +222,7 @@ impl super::Sdhi0 {
         }
     }
 
-    #[doc = "SD INFO2 Interrupt Mask Register"]
+    #[doc = "SD_INFO2 Interrupt Mask Register"]
     #[inline(always)]
     pub const fn sd_info2_mask(
         &self,
@@ -318,7 +318,7 @@ impl super::Sdhi0 {
         }
     }
 
-    #[doc = "SDIO Interrupt Flag Register"]
+    #[doc = "SDIO Interrupt Flag Register 1"]
     #[inline(always)]
     pub const fn sdio_info1(
         &self,
@@ -330,7 +330,7 @@ impl super::Sdhi0 {
         }
     }
 
-    #[doc = "SDIO INFO1 Interrupt Mask Register"]
+    #[doc = "SDIO_INFO1 Interrupt Mask Register"]
     #[inline(always)]
     pub const fn sdio_info1_mask(
         &self,
@@ -401,30 +401,12 @@ impl crate::sealed::RegSpec for SdCmd_SPEC {
 pub type SdCmd = crate::RegValueT<SdCmd_SPEC>;
 
 impl SdCmd {
-    #[doc = "Command Index Field Value Select"]
+    #[doc = "Command IndexThese bits specify Command Format\\[45:40\\] (command index).\\[Examples\\]CMD6: SD_CMD\\[7:0\\] = 8\'b00_000110CMD18: SD_CMD\\[7:0\\] = 8\'b00_010010ACMD13: SD_CMD\\[7:0\\] = 8\'b01_001101"]
     #[inline(always)]
     pub fn cmdidx(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0x3f,
-        1,
-        0,
-        sd_cmd::Cmdidx,
-        sd_cmd::Cmdidx,
-        SdCmd_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0x3f,
-            1,
-            0,
-            sd_cmd::Cmdidx,
-            sd_cmd::Cmdidx,
-            SdCmd_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, u8, SdCmd_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<0,0x3f,1,0,u8,u8,SdCmd_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "Command Type Select"]
@@ -453,7 +435,7 @@ impl SdCmd {
         >::from_register(self, 0)
     }
 
-    #[doc = "Response Type Select"]
+    #[doc = "Mode/Response TypeNOTE: As some commands cannot be used in normal mode, see section 1.4.10, Example of SD_CMD Register Setting to select mode/response type."]
     #[inline(always)]
     pub fn rsptp(
         self,
@@ -479,7 +461,7 @@ impl SdCmd {
         >::from_register(self, 0)
     }
 
-    #[doc = "Data Transfer Select"]
+    #[doc = "Data Mode (Command Type)"]
     #[inline(always)]
     pub fn cmdtp(
         self,
@@ -505,7 +487,7 @@ impl SdCmd {
         >::from_register(self, 0)
     }
 
-    #[doc = "Data Transfer Direction Select"]
+    #[doc = "Write/Read Mode (enabled when the command with data is handled)"]
     #[inline(always)]
     pub fn cmdrw(
         self,
@@ -531,7 +513,7 @@ impl SdCmd {
         >::from_register(self, 0)
     }
 
-    #[doc = "Block Transfer Select"]
+    #[doc = "Single/Multiple Block Transfer (enabled when the command with data is handled)"]
     #[inline(always)]
     pub fn trstp(
         self,
@@ -557,7 +539,7 @@ impl SdCmd {
         >::from_register(self, 0)
     }
 
-    #[doc = "CMD12 Automatic Issue Select"]
+    #[doc = "Multiple Block Transfer Mode (enabled at multiple block transfer)"]
     #[inline(always)]
     pub fn cmd12at(
         self,
@@ -582,6 +564,15 @@ impl SdCmd {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, SdCmd_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,SdCmd_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for SdCmd {
     #[inline(always)]
@@ -592,19 +583,6 @@ impl ::core::default::Default for SdCmd {
 pub mod sd_cmd {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmdidx_SPEC;
-    pub type Cmdidx = crate::EnumBitfieldStruct<u8, Cmdidx_SPEC>;
-    impl Cmdidx {
-        #[doc = "CMD6"]
-        pub const _0_X_06: Self = Self::new(6);
-
-        #[doc = "CMD18"]
-        pub const _0_X_12: Self = Self::new(18);
-
-        #[doc = "ACMD13"]
-        pub const _0_X_4_D: Self = Self::new(13);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Acmd_SPEC;
     pub type Acmd = crate::EnumBitfieldStruct<u8, Acmd_SPEC>;
     impl Acmd {
@@ -613,53 +591,47 @@ pub mod sd_cmd {
 
         #[doc = "ACMD"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rsptp_SPEC;
     pub type Rsptp = crate::EnumBitfieldStruct<u8, Rsptp_SPEC>;
     impl Rsptp {
-        #[doc = "Normal mode Depending on the command, the response type and transfer method are selected in the ACMD\\[1:0\\] and CMDIDX\\[5:0\\] bits. At this time, the values for bits 15 to 11 in this register are invalid."]
+        #[doc = "Normal mode The response type and the transfer mode are selected by SD_CMD\\[7:0\\], and the SD_CMD\\[15:11\\] setting is disabled."]
         pub const _000: Self = Self::new(0);
 
-        #[doc = "Extended mode and no response"]
+        #[doc = "Expansion mode and no response"]
         pub const _011: Self = Self::new(3);
 
-        #[doc = "Extended mode and R1, R5, R6, or R7 response"]
+        #[doc = "Expansion mode and R1, R5, R6, or R7 response"]
         pub const _100: Self = Self::new(4);
 
-        #[doc = "Extended mode and R1b response"]
+        #[doc = "Expansion mode and R1b response"]
         pub const _101: Self = Self::new(5);
 
-        #[doc = "Extended mode and R2 response"]
+        #[doc = "Expansion mode and R2 response"]
         pub const _110: Self = Self::new(6);
 
-        #[doc = "Extended mode and R3 or R4 response"]
+        #[doc = "Expansion mode and R3 or R4 response"]
         pub const _111: Self = Self::new(7);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdtp_SPEC;
     pub type Cmdtp = crate::EnumBitfieldStruct<u8, Cmdtp_SPEC>;
     impl Cmdtp {
-        #[doc = "Do not include data transfer (bc, bcr, or ac) in command"]
+        #[doc = "Command does not include data transfer (bc, bcr, or ac)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Include data transfer (adtc) in command"]
+        #[doc = "Command includes data transfer (adtc)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdrw_SPEC;
     pub type Cmdrw = crate::EnumBitfieldStruct<u8, Cmdrw_SPEC>;
     impl Cmdrw {
-        #[doc = "Write (SD/MMC Host Interface → SD card/MMC)"]
+        #[doc = "Write (SD/MMC host interface -> SD card/MMC)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Read (SD/MMC Host Interface ← SD card/MMC)"]
+        #[doc = "Read (SD/MMC host interface <- SD card/MMC)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -669,21 +641,24 @@ pub mod sd_cmd {
         #[doc = "Single block transfer"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Multiple blocks transfer"]
+        #[doc = "Multiple block transfer"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmd12At_SPEC;
     pub type Cmd12At = crate::EnumBitfieldStruct<u8, Cmd12At_SPEC>;
     impl Cmd12At {
-        #[doc = "Automatically issue CMD12 during multiblock transfer"]
+        #[doc = "CMD12 is automatically issued at multiple block transfer."]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "Do not automatically issue CMD12 during multiblock transfer"]
+        #[doc = "CMD12 is not automatically issued at multiple block transfer."]
         pub const _01: Self = Self::new(1);
 
         #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
+        pub const _10: Self = Self::new(2);
+
+        #[doc = "Setting prohibited"]
+        pub const _11: Self = Self::new(3);
     }
 }
 #[doc(hidden)]
@@ -696,7 +671,16 @@ impl crate::sealed::RegSpec for SdArg_SPEC {
 #[doc = "SD Command Argument Register"]
 pub type SdArg = crate::RegValueT<SdArg_SPEC>;
 
-impl NoBitfieldReg<SdArg_SPEC> for SdArg {}
+impl SdArg {
+    #[doc = "Argument RegisterSet command format\\[39:8\\] (argument)"]
+    #[inline(always)]
+    pub fn sd_arg(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, SdArg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffffffff,1,0,u32,u32,SdArg_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for SdArg {
     #[inline(always)]
     fn default() -> SdArg {
@@ -714,7 +698,25 @@ impl crate::sealed::RegSpec for SdArg1_SPEC {
 #[doc = "SD Command Argument Register 1"]
 pub type SdArg1 = crate::RegValueT<SdArg1_SPEC>;
 
-impl NoBitfieldReg<SdArg1_SPEC> for SdArg1 {}
+impl SdArg1 {
+    #[doc = "Argument Register 1Set command format\\[39:24\\] (argument)"]
+    #[inline(always)]
+    pub fn sd_arg1(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, SdArg1_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,SdArg1_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, SdArg1_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,SdArg1_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for SdArg1 {
     #[inline(always)]
     fn default() -> SdArg1 {
@@ -733,7 +735,7 @@ impl crate::sealed::RegSpec for SdStop_SPEC {
 pub type SdStop = crate::RegValueT<SdStop_SPEC>;
 
 impl SdStop {
-    #[doc = "Transfer Stop"]
+    #[doc = "Stop- When STP is set to 1 during multiple block transfer, CMD12 is issued to halt the transfer through the SD host interface.However, if a command sequence is halted because of a communications error or timeout, CMD12 is not issued. Although continued buffer access is possible even after STP has been set to 1, the buffer access error bit (ERR5 or ERR4) in SD_INFO2 will be set accordingly.- When STP has been set to 1 during transfer for single block write, the access end flag is set when SD_BUF becomes empty, and CMD12 is not issued. If SD_BUF does contain data, the access end flag is set on completion of reception of the busy state without CMD12 having been issued.- When STP has been set to 1 during transfer for single block read, the access end flag is set immediately after setting of the STP bit and CMD12 is not issued.- When STP is set to 1 during reception of the busy state after an R1b response, the access end flag is set on completion of reception of the busy state without CMD12 having been issued.- When STP is set to 1 after a command sequence has been completed, CMD12 is not issued and the access end flag is not set.- Set STP to 1 after the response end flag has been set.- Set STP to 0 after the response end flag has been set."]
     #[inline(always)]
     pub fn stp(self) -> crate::common::RegisterFieldBool<0, 1, 0, SdStop_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<0, 1, 0, SdStop_SPEC, crate::common::RW>::from_register(
@@ -741,7 +743,7 @@ impl SdStop {
         )
     }
 
-    #[doc = "Block Count Register Value Select"]
+    #[doc = "Block Count EnableSet SEC to 1 at multiple block transfer.When SD_CMD is set as follows to start the command sequence while SEC is set to 1, CMD12 is automatically issued to stop multi-block transfer with the number of blocks which is set to SD_SECCNT.1. CMD18 or CMD25 in normal mode (SD_CMD\\[10:8\\] = 000)2. SD_CMD\\[15:13\\] = 001 in extended mode (CMD12 is automatically issued, multiple block transfer)When the command sequence is halted because of a communications error or timeout, CMD12 is not automatically issued.NOTE: Do not change the value of this bit when the CBSY bit in SD_INFO2 is set to 1."]
     #[inline(always)]
     pub fn sec(
         self,
@@ -766,6 +768,15 @@ impl SdStop {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000000000000000000000. The write value should be 00000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<9, 0x7fffff, 1, 0, u32, u32, SdStop_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<9,0x7fffff,1,0,u32,u32,SdStop_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for SdStop {
     #[inline(always)]
@@ -779,10 +790,10 @@ pub mod sd_stop {
     pub struct Sec_SPEC;
     pub type Sec = crate::EnumBitfieldStruct<u8, Sec_SPEC>;
     impl Sec {
-        #[doc = "Disable SD_SECCNT register value"]
+        #[doc = "Disables SD_SECCNT setting value."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable SD_SECCNT register value"]
+        #[doc = "Enables SD_SECCNT setting value."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -796,7 +807,25 @@ impl crate::sealed::RegSpec for SdSeccnt_SPEC {
 #[doc = "Block Count Register"]
 pub type SdSeccnt = crate::RegValueT<SdSeccnt_SPEC>;
 
-impl NoBitfieldReg<SdSeccnt_SPEC> for SdSeccnt {}
+impl SdSeccnt {
+    #[doc = "Number of Transfer BlocksNOTE: Do not change the value of this bit when the CBSY bit in SD_INFO2 is set to 1."]
+    #[inline(always)]
+    pub fn sd_seccnt(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, SdSeccnt_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<
+            0,
+            0xffffffff,
+            1,
+            0,
+            u32,
+            u32,
+            SdSeccnt_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+}
 impl ::core::default::Default for SdSeccnt {
     #[inline(always)]
     fn default() -> SdSeccnt {
@@ -814,7 +843,16 @@ impl crate::sealed::RegSpec for SdRsp10_SPEC {
 #[doc = "SD Card Response Register 10"]
 pub type SdRsp10 = crate::RegValueT<SdRsp10_SPEC>;
 
-impl NoBitfieldReg<SdRsp10_SPEC> for SdRsp10 {}
+impl SdRsp10 {
+    #[doc = "Store the response from the SD card/MMC"]
+    #[inline(always)]
+    pub fn sd_rsp10(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, SdRsp10_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<0,0xffffffff,1,0,u32,u32,SdRsp10_SPEC,crate::common::R>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for SdRsp10 {
     #[inline(always)]
     fn default() -> SdRsp10 {
@@ -832,7 +870,25 @@ impl crate::sealed::RegSpec for SdRsp1_SPEC {
 #[doc = "SD Card Response Register 1"]
 pub type SdRsp1 = crate::RegValueT<SdRsp1_SPEC>;
 
-impl NoBitfieldReg<SdRsp1_SPEC> for SdRsp1 {}
+impl SdRsp1 {
+    #[doc = "Store the response from the SD card/MMC"]
+    #[inline(always)]
+    pub fn sd_rsp1(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, SdRsp1_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,SdRsp1_SPEC,crate::common::R>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, SdRsp1_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,SdRsp1_SPEC,crate::common::R>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for SdRsp1 {
     #[inline(always)]
     fn default() -> SdRsp1 {
@@ -850,7 +906,16 @@ impl crate::sealed::RegSpec for SdRsp32_SPEC {
 #[doc = "SD Card Response Register 32"]
 pub type SdRsp32 = crate::RegValueT<SdRsp32_SPEC>;
 
-impl NoBitfieldReg<SdRsp32_SPEC> for SdRsp32 {}
+impl SdRsp32 {
+    #[doc = "Store the response from the SD card/MMC"]
+    #[inline(always)]
+    pub fn sd_rsp32(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, SdRsp32_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<0,0xffffffff,1,0,u32,u32,SdRsp32_SPEC,crate::common::R>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for SdRsp32 {
     #[inline(always)]
     fn default() -> SdRsp32 {
@@ -868,7 +933,25 @@ impl crate::sealed::RegSpec for SdRsp3_SPEC {
 #[doc = "SD Card Response Register 3"]
 pub type SdRsp3 = crate::RegValueT<SdRsp3_SPEC>;
 
-impl NoBitfieldReg<SdRsp3_SPEC> for SdRsp3 {}
+impl SdRsp3 {
+    #[doc = "Store the response from the SD card/MMC"]
+    #[inline(always)]
+    pub fn sd_rsp3(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, SdRsp3_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,SdRsp3_SPEC,crate::common::R>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, SdRsp3_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,SdRsp3_SPEC,crate::common::R>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for SdRsp3 {
     #[inline(always)]
     fn default() -> SdRsp3 {
@@ -886,7 +969,16 @@ impl crate::sealed::RegSpec for SdRsp54_SPEC {
 #[doc = "SD Card Response Register 54"]
 pub type SdRsp54 = crate::RegValueT<SdRsp54_SPEC>;
 
-impl NoBitfieldReg<SdRsp54_SPEC> for SdRsp54 {}
+impl SdRsp54 {
+    #[doc = "Store the response from the SD card/MMC"]
+    #[inline(always)]
+    pub fn sd_rsp54(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, SdRsp54_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<0,0xffffffff,1,0,u32,u32,SdRsp54_SPEC,crate::common::R>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for SdRsp54 {
     #[inline(always)]
     fn default() -> SdRsp54 {
@@ -904,7 +996,25 @@ impl crate::sealed::RegSpec for SdRsp5_SPEC {
 #[doc = "SD Card Response Register 5"]
 pub type SdRsp5 = crate::RegValueT<SdRsp5_SPEC>;
 
-impl NoBitfieldReg<SdRsp5_SPEC> for SdRsp5 {}
+impl SdRsp5 {
+    #[doc = "Store the response from the SD card/MMC"]
+    #[inline(always)]
+    pub fn sd_rsp5(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, SdRsp5_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,SdRsp5_SPEC,crate::common::R>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, SdRsp5_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,SdRsp5_SPEC,crate::common::R>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for SdRsp5 {
     #[inline(always)]
     fn default() -> SdRsp5 {
@@ -923,13 +1033,21 @@ impl crate::sealed::RegSpec for SdRsp76_SPEC {
 pub type SdRsp76 = crate::RegValueT<SdRsp76_SPEC>;
 
 impl SdRsp76 {
-    #[doc = "These bits store the response from the SD card/MMC."]
+    #[doc = "Store the response from the SD card/MMC"]
     #[inline(always)]
     pub fn sd_rsp76(
         self,
     ) -> crate::common::RegisterField<0, 0xffffff, 1, 0, u32, u32, SdRsp76_SPEC, crate::common::R>
     {
         crate::common::RegisterField::<0,0xffffff,1,0,u32,u32,SdRsp76_SPEC,crate::common::R>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, u8, SdRsp76_SPEC, crate::common::R> {
+        crate::common::RegisterField::<24,0xff,1,0,u8,u8,SdRsp76_SPEC,crate::common::R>::from_register(self,0)
     }
 }
 impl ::core::default::Default for SdRsp76 {
@@ -950,12 +1068,21 @@ impl crate::sealed::RegSpec for SdRsp7_SPEC {
 pub type SdRsp7 = crate::RegValueT<SdRsp7_SPEC>;
 
 impl SdRsp7 {
-    #[doc = "These bits store the response from the SD card/MMC."]
+    #[doc = "Store the response from the SD card/MMC"]
     #[inline(always)]
     pub fn sd_rsp7(
         self,
     ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, SdRsp7_SPEC, crate::common::R> {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,SdRsp7_SPEC,crate::common::R>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 000000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<8, 0xffffff, 1, 0, u32, u32, SdRsp7_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<8,0xffffff,1,0,u32,u32,SdRsp7_SPEC,crate::common::R>::from_register(self,0)
     }
 }
 impl ::core::default::Default for SdRsp7 {
@@ -976,7 +1103,7 @@ impl crate::sealed::RegSpec for SdInfo1_SPEC {
 pub type SdInfo1 = crate::RegValueT<SdInfo1_SPEC>;
 
 impl SdInfo1 {
-    #[doc = "Response End Detection Flag"]
+    #[doc = "Response End Detection"]
     #[inline(always)]
     pub fn rspend(
         self,
@@ -1002,7 +1129,7 @@ impl SdInfo1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Access End Detection Flag"]
+    #[doc = "Access End"]
     #[inline(always)]
     pub fn acend(
         self,
@@ -1028,7 +1155,7 @@ impl SdInfo1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "SDnCD Removal Flag"]
+    #[doc = "SDnCD  Card Removal"]
     #[inline(always)]
     pub fn sdcdrm(
         self,
@@ -1054,7 +1181,7 @@ impl SdInfo1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "SDnCD Insertion Flag"]
+    #[doc = "SDnCD Card Insertion"]
     #[inline(always)]
     pub fn sdcdin(
         self,
@@ -1080,7 +1207,7 @@ impl SdInfo1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "SDnCD Pin Monitor Flag"]
+    #[doc = "Indicates the SDnCD state"]
     #[inline(always)]
     pub fn sdcdmon(
         self,
@@ -1106,7 +1233,7 @@ impl SdInfo1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "SDnWP Pin Monitor Flag"]
+    #[doc = "Indicates the SDnWP state"]
     #[inline(always)]
     pub fn sdwpmon(
         self,
@@ -1132,7 +1259,7 @@ impl SdInfo1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "SDnDAT3 Removal Flag"]
+    #[doc = "SDnDAT3 Card Removal"]
     #[inline(always)]
     pub fn sdd3rm(
         self,
@@ -1158,7 +1285,7 @@ impl SdInfo1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "SDnDAT3 Insertion Flag"]
+    #[doc = "SDnDAT3 Card Insertion"]
     #[inline(always)]
     pub fn sdd3in(
         self,
@@ -1184,7 +1311,7 @@ impl SdInfo1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "SDnDAT3 Pin Monitor Flag"]
+    #[doc = "Inticates the SDnDAT3 State"]
     #[inline(always)]
     pub fn sdd3mon(
         self,
@@ -1209,6 +1336,15 @@ impl SdInfo1 {
             crate::common::R,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, SdInfo1_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,SdInfo1_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for SdInfo1 {
     #[inline(always)]
@@ -1222,90 +1358,90 @@ pub mod sd_info1 {
     pub struct Rspend_SPEC;
     pub type Rspend = crate::EnumBitfieldStruct<u8, Rspend_SPEC>;
     impl Rspend {
-        #[doc = "Response end not detected"]
+        #[doc = "Response end is not detected"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Response end detected"]
+        #[doc = "Response end is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Acend_SPEC;
     pub type Acend = crate::EnumBitfieldStruct<u8, Acend_SPEC>;
     impl Acend {
-        #[doc = "Access end not detected"]
+        #[doc = "Access end is not detected"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Access end detected"]
+        #[doc = "Access end is detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdcdrm_SPEC;
     pub type Sdcdrm = crate::EnumBitfieldStruct<u8, Sdcdrm_SPEC>;
     impl Sdcdrm {
-        #[doc = "SD card/MMC removal not detected by the SDnCD pin"]
+        #[doc = "Card removal not detected"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "SD card/MMC removal detected by the SDnCD pin"]
+        #[doc = "Card removal detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdcdin_SPEC;
     pub type Sdcdin = crate::EnumBitfieldStruct<u8, Sdcdin_SPEC>;
     impl Sdcdin {
-        #[doc = "SD card/MMC insertion not detected by the SDnCD pin"]
+        #[doc = "Card insertion not detected"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "SD card/MMC insertion detected by the SDnCD pin"]
+        #[doc = "Card insertion detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdcdmon_SPEC;
     pub type Sdcdmon = crate::EnumBitfieldStruct<u8, Sdcdmon_SPEC>;
     impl Sdcdmon {
-        #[doc = "SDnCD pin level is high"]
+        #[doc = "Indicates that Mcycle has elapsed with SDnCD held 1.(Mcycle is set by bits 3 to 0 in SD_OPTION.)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "SDnCD pin level is low"]
+        #[doc = "Indicates that Mcycle has elapsed with SDnCD held 0. (Mcycle is set by bits 3 to 0 in SD_OPTION.)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdwpmon_SPEC;
     pub type Sdwpmon = crate::EnumBitfieldStruct<u8, Sdwpmon_SPEC>;
     impl Sdwpmon {
-        #[doc = "SDnWP pin level is high"]
+        #[doc = "SDnWP is set to 1."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "SDnWP pin level is low"]
+        #[doc = "SDnWP is set to 0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdd3Rm_SPEC;
     pub type Sdd3Rm = crate::EnumBitfieldStruct<u8, Sdd3Rm_SPEC>;
     impl Sdd3Rm {
-        #[doc = "SD card/MMC removal not detected by the SDnDAT3 pin"]
+        #[doc = "SD card removal not detected"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "SD card/MMC removal detected by the SDnDAT3 pin"]
+        #[doc = "SD card removal detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdd3In_SPEC;
     pub type Sdd3In = crate::EnumBitfieldStruct<u8, Sdd3In_SPEC>;
     impl Sdd3In {
-        #[doc = "SD card/MMC insertion not detected by the SDnDAT3 pin"]
+        #[doc = "SD card insertion not detected"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "SD card/MMC insertion detected by the SDnDAT3 pin"]
+        #[doc = "SD card insertion detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdd3Mon_SPEC;
     pub type Sdd3Mon = crate::EnumBitfieldStruct<u8, Sdd3Mon_SPEC>;
     impl Sdd3Mon {
-        #[doc = "SDnDAT3 pin level is low"]
+        #[doc = "SDnDAT3 is set to 0."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "SDnDAT3 pin level is high"]
+        #[doc = "SDnDAT3 is set to 1."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1320,7 +1456,7 @@ impl crate::sealed::RegSpec for SdInfo2_SPEC {
 pub type SdInfo2 = crate::RegValueT<SdInfo2_SPEC>;
 
 impl SdInfo2 {
-    #[doc = "Command Error Detection Flag"]
+    #[doc = "Command Error"]
     #[inline(always)]
     pub fn cmde(
         self,
@@ -1346,7 +1482,7 @@ impl SdInfo2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "CRC Error Detection Flag"]
+    #[doc = "CRC Error"]
     #[inline(always)]
     pub fn crce(
         self,
@@ -1372,7 +1508,7 @@ impl SdInfo2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "End Bit Error Detection Flag"]
+    #[doc = "END Error"]
     #[inline(always)]
     pub fn ende(
         self,
@@ -1398,7 +1534,7 @@ impl SdInfo2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Data Timeout Detection Flag"]
+    #[doc = "Data Timeout"]
     #[inline(always)]
     pub fn dto(
         self,
@@ -1424,7 +1560,7 @@ impl SdInfo2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "SD_BUF0 Illegal Write Access Detection Flag"]
+    #[doc = "SD_BUF Illegal Write Access"]
     #[inline(always)]
     pub fn ilw(
         self,
@@ -1450,7 +1586,7 @@ impl SdInfo2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "SD_BUF0 Illegal Read Access Detection Flag"]
+    #[doc = "SD_BUF Illegal Read Access"]
     #[inline(always)]
     pub fn ilr(
         self,
@@ -1476,7 +1612,7 @@ impl SdInfo2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Response Timeout Detection Flag"]
+    #[doc = "Response Timeout"]
     #[inline(always)]
     pub fn rspto(
         self,
@@ -1502,7 +1638,7 @@ impl SdInfo2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "SDnDAT0 Pin Status Flag"]
+    #[doc = "SDDAT0Indicates the SDDAT0 state of the port specified by SD_PORTSEL."]
     #[inline(always)]
     pub fn sdd0mon(
         self,
@@ -1528,7 +1664,7 @@ impl SdInfo2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "SD_BUF0 Read Enable Flag"]
+    #[doc = "SD_BUF Read Enable"]
     #[inline(always)]
     pub fn bre(
         self,
@@ -1554,7 +1690,7 @@ impl SdInfo2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "SD_BUF0 Write Enable Flag"]
+    #[doc = "SD_BUF Write Enable"]
     #[inline(always)]
     pub fn bwe(
         self,
@@ -1580,7 +1716,7 @@ impl SdInfo2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "SD_CLK_CTRL Write Enable Flag"]
+    #[doc = "When a command sequence is started by writing to SD_CMD, the CBSY bit is set to 1 and, at the same time, the SCLKDIVEN bit is set to 0. The SCLKDIVEN bit is set to 1 after 8 cycles of SDCLK have elapsed after setting of the CBSY bit to 0 due to completion of the command sequence."]
     #[inline(always)]
     pub fn sd_clk_ctrlen(
         self,
@@ -1606,7 +1742,7 @@ impl SdInfo2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Command Sequence Status Flag"]
+    #[doc = "Command Type Register Busy"]
     #[inline(always)]
     pub fn cbsy(
         self,
@@ -1632,7 +1768,7 @@ impl SdInfo2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Illegal Access Error Detection Flag"]
+    #[doc = "Illegal Access Error"]
     #[inline(always)]
     pub fn ila(
         self,
@@ -1656,6 +1792,15 @@ impl SdInfo2 {
             SdInfo2_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, SdInfo2_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,SdInfo2_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for SdInfo2 {
@@ -1710,20 +1855,20 @@ pub mod sd_info2 {
     pub struct Ilw_SPEC;
     pub type Ilw = crate::EnumBitfieldStruct<u8, Ilw_SPEC>;
     impl Ilw {
-        #[doc = "Illegal write access to the SD_BUF0 register not detected"]
+        #[doc = "Illegal write access to the SD_BUF register not detected"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Illegal write access to the SD_BUF0 register detected"]
+        #[doc = "Illegal write access to the SD_BUF register detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ilr_SPEC;
     pub type Ilr = crate::EnumBitfieldStruct<u8, Ilr_SPEC>;
     impl Ilr {
-        #[doc = "Illegal read access to the SD_BUF0 register not detected"]
+        #[doc = "Illegal read access to the SD_BUF register not detected"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Illegal read access to the SD_BUF0 register detected"]
+        #[doc = "Illegal read access to the SD_BUF register detected"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -1740,50 +1885,50 @@ pub mod sd_info2 {
     pub struct Sdd0Mon_SPEC;
     pub type Sdd0Mon = crate::EnumBitfieldStruct<u8, Sdd0Mon_SPEC>;
     impl Sdd0Mon {
-        #[doc = "SDnDAT0 pin is low"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "SDnDAT0 pin is high"]
+        #[doc = "SDDAT0 is set to 1."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "SDDAT0 is set to 0."]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bre_SPEC;
     pub type Bre = crate::EnumBitfieldStruct<u8, Bre_SPEC>;
     impl Bre {
-        #[doc = "Disable read access to the SD_BUF0 register"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable read access to the SD_BUF0 register"]
+        #[doc = "Data can be read from SD_BUF0."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Data cannot be read from SD_BUF0."]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bwe_SPEC;
     pub type Bwe = crate::EnumBitfieldStruct<u8, Bwe_SPEC>;
     impl Bwe {
-        #[doc = "Disable write access to the SD_BUF0 register"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable write access to the SD_BUF0 register"]
+        #[doc = "Data can be written in SD_BUF0."]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Data cannot be written in SD_BUF0."]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct SdClkCtrlen_SPEC;
     pub type SdClkCtrlen = crate::EnumBitfieldStruct<u8, SdClkCtrlen_SPEC>;
     impl SdClkCtrlen {
-        #[doc = "SD/MMC bus (CMD and DAT lines) is busy, so write access to the SD_CLK_CTRL.CLKEN and CLKSEL\\[7:0\\] bits is disabled"]
+        #[doc = "The SD/MMC bus (CMD, DAT) is busy. Writing to the SCLKEN and DIV bits in SD_CLK_CTRL is not possible."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "SD/MMC bus (CMD and DAT lines) is not busy, so write access to the SD_CLK_CTRL.CLKEN and CLKSEL\\[7:0\\] bits is enabled"]
+        #[doc = "The SD/MMC bus (CMD, DAT) is not busy."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cbsy_SPEC;
     pub type Cbsy = crate::EnumBitfieldStruct<u8, Cbsy_SPEC>;
     impl Cbsy {
-        #[doc = "Command sequence complete"]
+        #[doc = "A command sequence is being executed."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Command sequence in progress (busy)"]
+        #[doc = "A command sequence has been completed."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -1804,7 +1949,7 @@ impl crate::sealed::RegSpec for SdInfo1Mask_SPEC {
     type DataType = u32;
 }
 
-#[doc = "SD INFO1 Interrupt Mask Register"]
+#[doc = "SD_INFO1 Interrupt Mask Register"]
 pub type SdInfo1Mask = crate::RegValueT<SdInfo1Mask_SPEC>;
 
 impl SdInfo1Mask {
@@ -1860,7 +2005,7 @@ impl SdInfo1Mask {
         >::from_register(self, 0)
     }
 
-    #[doc = "SDnCD Removal Interrupt Request Mask"]
+    #[doc = "SDnCD card Removal Interrupt Request Mask"]
     #[inline(always)]
     pub fn sdcdrmm(
         self,
@@ -1886,7 +2031,7 @@ impl SdInfo1Mask {
         >::from_register(self, 0)
     }
 
-    #[doc = "SDnCD Insertion Interrupt Request Mask"]
+    #[doc = "SDnCD card Insertion Interrupt Request Mask"]
     #[inline(always)]
     pub fn sdcdinm(
         self,
@@ -1912,7 +2057,7 @@ impl SdInfo1Mask {
         >::from_register(self, 0)
     }
 
-    #[doc = "SDnDAT3 Removal Interrupt Request Mask"]
+    #[doc = "SDnDAT3 Card Removal Interrupt Request Mask"]
     #[inline(always)]
     pub fn sdd3rmm(
         self,
@@ -1938,7 +2083,7 @@ impl SdInfo1Mask {
         >::from_register(self, 0)
     }
 
-    #[doc = "SDnDAT3 Insertion Interrupt Request Mask"]
+    #[doc = "SDnDAT3 Card Insertion Interrupt Request Mask"]
     #[inline(always)]
     pub fn sdd3inm(
         self,
@@ -1963,6 +2108,24 @@ impl SdInfo1Mask {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, SdInfo1Mask_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<
+            16,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            SdInfo1Mask_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
 }
 impl ::core::default::Default for SdInfo1Mask {
     #[inline(always)]
@@ -1976,60 +2139,60 @@ pub mod sd_info1_mask {
     pub struct Rspendm_SPEC;
     pub type Rspendm = crate::EnumBitfieldStruct<u8, Rspendm_SPEC>;
     impl Rspendm {
-        #[doc = "Do not mask response end interrupt request"]
+        #[doc = "Response end interrupt request is not masked"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Mask response end interrupt request"]
+        #[doc = "Response end interrupt request is masked"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Acendm_SPEC;
     pub type Acendm = crate::EnumBitfieldStruct<u8, Acendm_SPEC>;
     impl Acendm {
-        #[doc = "Do not mask access end interrupt request"]
+        #[doc = "Access end interrupt request is not masked"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Mask access end interrupt request"]
+        #[doc = "Access end interrupt request is masked"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdcdrmm_SPEC;
     pub type Sdcdrmm = crate::EnumBitfieldStruct<u8, Sdcdrmm_SPEC>;
     impl Sdcdrmm {
-        #[doc = "Do not mask SD card/MMC removal interrupt request by the SDnCD pin"]
+        #[doc = "Card removal interrupt request by the by the SDnCD is not masked"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Mask SD card/MMC removal interrupt request by the SDnCD pin"]
+        #[doc = "Card removal interrupt request by the by the SDnCD is masked"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdcdinm_SPEC;
     pub type Sdcdinm = crate::EnumBitfieldStruct<u8, Sdcdinm_SPEC>;
     impl Sdcdinm {
-        #[doc = "Do not mask SD card/MMC insertion interrupt request by the SDnCD pin"]
+        #[doc = "Card insertion interrupt request by the SDnCD is not masked"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Mask SD card/MMC insertion interrupt request by the SDnCD pin"]
+        #[doc = "Card insertion interrupt request by the SDnCD is masked"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdd3Rmm_SPEC;
     pub type Sdd3Rmm = crate::EnumBitfieldStruct<u8, Sdd3Rmm_SPEC>;
     impl Sdd3Rmm {
-        #[doc = "Do not mask SD card/MMC removal interrupt request by the SDnDAT3 pin"]
+        #[doc = "SD card removal interrupt request by the SDnDAT3 is not masked"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Mask SD card/MMC removal interrupt request by the SDnDAT3 pin"]
+        #[doc = "SD card removal interrupt request by the SDnDAT3 is masked"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdd3Inm_SPEC;
     pub type Sdd3Inm = crate::EnumBitfieldStruct<u8, Sdd3Inm_SPEC>;
     impl Sdd3Inm {
-        #[doc = "Do not mask SD card/MMC insertion interrupt request by the SDnDAT3 pin"]
+        #[doc = "SD card insertion interrupt request by the SDnDAT3  is not masked"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Mask SD card/MMC insertion interrupt request by the SDnDAT3 pin"]
+        #[doc = "SD card insertion interrupt request by the SDnDAT3 is masked"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2040,7 +2203,7 @@ impl crate::sealed::RegSpec for SdInfo2Mask_SPEC {
     type DataType = u32;
 }
 
-#[doc = "SD INFO2 Interrupt Mask Register"]
+#[doc = "SD_INFO2 Interrupt Mask Register"]
 pub type SdInfo2Mask = crate::RegValueT<SdInfo2Mask_SPEC>;
 
 impl SdInfo2Mask {
@@ -2148,7 +2311,7 @@ impl SdInfo2Mask {
         >::from_register(self, 0)
     }
 
-    #[doc = "SD_BUF0 Register Illegal Write Interrupt Request Mask"]
+    #[doc = "SD_BUF Register Illegal Write Interrupt Request Mask"]
     #[inline(always)]
     pub fn ilwm(
         self,
@@ -2174,7 +2337,7 @@ impl SdInfo2Mask {
         >::from_register(self, 0)
     }
 
-    #[doc = "SD_BUF0 Register Illegal Read Interrupt Request Mask"]
+    #[doc = "SD_BUF Register Illegal Read Interrupt Request Mask"]
     #[inline(always)]
     pub fn ilrm(
         self,
@@ -2303,6 +2466,24 @@ impl SdInfo2Mask {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, SdInfo2Mask_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<
+            16,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            SdInfo2Mask_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
 }
 impl ::core::default::Default for SdInfo2Mask {
     #[inline(always)]
@@ -2316,100 +2497,100 @@ pub mod sd_info2_mask {
     pub struct Cmdem_SPEC;
     pub type Cmdem = crate::EnumBitfieldStruct<u8, Cmdem_SPEC>;
     impl Cmdem {
-        #[doc = "Do not mask command error interrupt request"]
+        #[doc = "Command error interrupt request not masked"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Mask command error interrupt request"]
+        #[doc = "Command error interrupt request masked"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Crcem_SPEC;
     pub type Crcem = crate::EnumBitfieldStruct<u8, Crcem_SPEC>;
     impl Crcem {
-        #[doc = "Do not mask CRC error interrupt request"]
+        #[doc = "CRC error interrupt request not masked"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Mask CRC error interrupt request"]
+        #[doc = "CRC error interrupt request masked"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Endem_SPEC;
     pub type Endem = crate::EnumBitfieldStruct<u8, Endem_SPEC>;
     impl Endem {
-        #[doc = "Do not mask end bit detection error interrupt request"]
+        #[doc = "End bit detection error interrupt request not masked"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Mask end bit detection error interrupt request"]
+        #[doc = "End bit detection error interrupt request masked"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dtom_SPEC;
     pub type Dtom = crate::EnumBitfieldStruct<u8, Dtom_SPEC>;
     impl Dtom {
-        #[doc = "Do not mask data timeout interrupt request"]
+        #[doc = "Data timeout interrupt request not masked"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Mask data timeout interrupt request"]
+        #[doc = "Data timeout interrupt request masked"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ilwm_SPEC;
     pub type Ilwm = crate::EnumBitfieldStruct<u8, Ilwm_SPEC>;
     impl Ilwm {
-        #[doc = "Do not mask illegal write detection interrupt request for the SD_BUF0 register"]
+        #[doc = "Illegal write detection interrupt request for the SD_BUF register not masked"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Mask illegal write detection interrupt request for the SD_BUF0 register"]
+        #[doc = "Illegal write detection interrupt request for the SD_BUF register masked"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ilrm_SPEC;
     pub type Ilrm = crate::EnumBitfieldStruct<u8, Ilrm_SPEC>;
     impl Ilrm {
-        #[doc = "Do not mask illegal read detection interrupt request for the SD_BUF0 register"]
+        #[doc = "Illegal read detection interrupt request for the SD_BUF register not masked"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Mask illegal read detection interrupt request for the SD_BUF0 register"]
+        #[doc = "Illegal read detection interrupt request for the SD_BUF register masked"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rsptom_SPEC;
     pub type Rsptom = crate::EnumBitfieldStruct<u8, Rsptom_SPEC>;
     impl Rsptom {
-        #[doc = "Do not mask response timeout interrupt request"]
+        #[doc = "Response timeout interrupt request not masked"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Mask response timeout interrupt request"]
+        #[doc = "Response timeout interrupt request masked"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Brem_SPEC;
     pub type Brem = crate::EnumBitfieldStruct<u8, Brem_SPEC>;
     impl Brem {
-        #[doc = "Do not mask read enable interrupt request for the SD buffer"]
+        #[doc = "Read enable interrupt request for the SD buffer not masked"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Mask read enable interrupt request for the SD buffer"]
+        #[doc = "Read enable interrupt request for the SD buffer masked"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bwem_SPEC;
     pub type Bwem = crate::EnumBitfieldStruct<u8, Bwem_SPEC>;
     impl Bwem {
-        #[doc = "Do not mask write enable interrupt request for the SD_BUF0 register"]
+        #[doc = "Write enable interrupt request for the SD_BUF register not masked"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Mask write enable interrupt request for the SD_BUF0 register"]
+        #[doc = "Write enable interrupt request for the SD_BUF register masked"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ilam_SPEC;
     pub type Ilam = crate::EnumBitfieldStruct<u8, Ilam_SPEC>;
     impl Ilam {
-        #[doc = "Do not mask illegal access error interrupt request"]
+        #[doc = "Illegal access error interrupt request not masked"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Mask illegal access error interrupt request"]
+        #[doc = "Illegal access error interrupt request masked"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2450,7 +2631,7 @@ impl SdClkCtrl {
         >::from_register(self, 0)
     }
 
-    #[doc = "SD/MMC Clock Output Control"]
+    #[doc = "SD/MMC Clock Output Control Enable"]
     #[inline(always)]
     pub fn clken(
         self,
@@ -2476,7 +2657,7 @@ impl SdClkCtrl {
         >::from_register(self, 0)
     }
 
-    #[doc = "SD/MMC Clock Output Automatic Control Select"]
+    #[doc = "SD/MMC Clock Output Automatic Control Enable"]
     #[inline(always)]
     pub fn clkctrlen(
         self,
@@ -2501,6 +2682,15 @@ impl SdClkCtrl {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, SdClkCtrl_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,SdClkCtrl_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for SdClkCtrl {
     #[inline(always)]
@@ -2514,57 +2704,51 @@ pub mod sd_clk_ctrl {
     pub struct Clksel_SPEC;
     pub type Clksel = crate::EnumBitfieldStruct<u8, Clksel_SPEC>;
     impl Clksel {
-        #[doc = "PCLKB"]
-        pub const _0_X_FF: Self = Self::new(255);
-
-        #[doc = "PCLKB/2"]
+        #[doc = "PCLKA divided by 2"]
         pub const _0_X_00: Self = Self::new(0);
 
-        #[doc = "PCLKB/4"]
+        #[doc = "PCLKA divided by 4"]
         pub const _0_X_01: Self = Self::new(1);
 
-        #[doc = "PCLKB/8"]
+        #[doc = "PCLKA divided by 8"]
         pub const _0_X_02: Self = Self::new(2);
 
-        #[doc = "PCLKB/16"]
+        #[doc = "PCLKA divided by 16"]
         pub const _0_X_04: Self = Self::new(4);
 
-        #[doc = "PCLKB/32"]
+        #[doc = "PCLKA divided by 32"]
         pub const _0_X_08: Self = Self::new(8);
 
-        #[doc = "PCLKB/64"]
+        #[doc = "PCLKA divided by 64"]
         pub const _0_X_10: Self = Self::new(16);
 
-        #[doc = "PCLKB/128"]
+        #[doc = "PCLKA divided by 128"]
         pub const _0_X_20: Self = Self::new(32);
 
-        #[doc = "PCLKB/256"]
+        #[doc = "PCLKA divided by 256"]
         pub const _0_X_40: Self = Self::new(64);
 
-        #[doc = "PCLKB/512"]
+        #[doc = "PCLKA divided by 512"]
         pub const _0_X_80: Self = Self::new(128);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clken_SPEC;
     pub type Clken = crate::EnumBitfieldStruct<u8, Clken_SPEC>;
     impl Clken {
-        #[doc = "Disable SD/MMC clock output (fix SDnCLK signal low)"]
+        #[doc = "SD/MMC Clock output is disabled. The SDCLK signal is fixed 0."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable SD/MMC clock output"]
+        #[doc = "SD/MMC Clock output is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clkctrlen_SPEC;
     pub type Clkctrlen = crate::EnumBitfieldStruct<u8, Clkctrlen_SPEC>;
     impl Clkctrlen {
-        #[doc = "Disable automatic control of SD/MMC clock output"]
+        #[doc = "Automatic control for SD/MMC Clock output is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable automatic control of SD/MMC clock output"]
+        #[doc = "Automatic control for SD/MMC Clock output is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2579,13 +2763,22 @@ impl crate::sealed::RegSpec for SdSize_SPEC {
 pub type SdSize = crate::RegValueT<SdSize_SPEC>;
 
 impl SdSize {
-    #[doc = "Transfer Data Size Setting"]
+    #[doc = "Transfer Data SizeThese bits specify a size between 1 and 512 bytes for the transfer of single blocks.In cases of multiple block transfer with automatic issuing of CMD12 (CMD18 and CMD25), the only specifiable transfer data size is 512 bytes. Furthermore, in cases of multiple block transfer without automatic issuing of CMD12, as well as 512 bytes, 32, 64, 128, and 256 bytes are specifiable. However, in the reading of 32, 64, 128, and 256 bytes for the transfer of multiple blocks, this is restricted to multiple block transfer by CMD53.Additionally, if a command accompanies data transfer, do not set these bits to 0."]
     #[inline(always)]
     pub fn len(
         self,
     ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, u16, SdSize_SPEC, crate::common::RW>
     {
         crate::common::RegisterField::<0,0x3ff,1,0,u16,u16,SdSize_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000000000. The write value should be 0000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<10, 0x3fffff, 1, 0, u32, u32, SdSize_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<10,0x3fffff,1,0,u32,u32,SdSize_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for SdSize {
@@ -2606,7 +2799,7 @@ impl crate::sealed::RegSpec for SdOption_SPEC {
 pub type SdOption = crate::RegValueT<SdOption_SPEC>;
 
 impl SdOption {
-    #[doc = "Card Detection Time Counter"]
+    #[doc = "Card Detect Time Counter"]
     #[inline(always)]
     pub fn ctop(
         self,
@@ -2658,7 +2851,7 @@ impl SdOption {
         >::from_register(self, 0)
     }
 
-    #[doc = "Timeout Mask"]
+    #[doc = "Timeout MASKWhen timeout occurs in case of inactivating timeout, software reset should be executed to terminate command sequence."]
     #[inline(always)]
     pub fn toutmask(
         self,
@@ -2684,7 +2877,7 @@ impl SdOption {
         >::from_register(self, 0)
     }
 
-    #[doc = "Bus Width"]
+    #[doc = "Bus Widthsee b15, WIDTH bit"]
     #[inline(always)]
     pub fn width8(
         self,
@@ -2692,12 +2885,39 @@ impl SdOption {
         crate::common::RegisterFieldBool::<13,1,0,SdOption_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Bus Width"]
+    #[doc = "Bus WidthNOTE: The initial value is applied at a reset and when the SOFT_RST.SDRST flag is 0."]
     #[inline(always)]
     pub fn width(
         self,
-    ) -> crate::common::RegisterFieldBool<15, 1, 0, SdOption_SPEC, crate::common::RW> {
-        crate::common::RegisterFieldBool::<15,1,0,SdOption_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        15,
+        0x1,
+        1,
+        0,
+        sd_option::Width,
+        sd_option::Width,
+        SdOption_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            15,
+            0x1,
+            1,
+            0,
+            sd_option::Width,
+            sd_option::Width,
+            SdOption_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, SdOption_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,SdOption_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for SdOption {
@@ -2712,114 +2932,34 @@ pub mod sd_option {
     pub struct Ctop_SPEC;
     pub type Ctop = crate::EnumBitfieldStruct<u8, Ctop_SPEC>;
     impl Ctop {
-        #[doc = "PCLKB × 210"]
-        pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "PCLKB × 211"]
-        pub const _0_X_1: Self = Self::new(1);
-
-        #[doc = "PCLKB × 212"]
-        pub const _0_X_2: Self = Self::new(2);
-
-        #[doc = "PCLKB × 213"]
-        pub const _0_X_3: Self = Self::new(3);
-
-        #[doc = "PCLKB × 214"]
-        pub const _0_X_4: Self = Self::new(4);
-
-        #[doc = "PCLKB × 215"]
-        pub const _0_X_5: Self = Self::new(5);
-
-        #[doc = "PCLKB × 216"]
-        pub const _0_X_6: Self = Self::new(6);
-
-        #[doc = "PCLKB × 217"]
-        pub const _0_X_7: Self = Self::new(7);
-
-        #[doc = "PCLKB × 218"]
-        pub const _0_X_8: Self = Self::new(8);
-
-        #[doc = "PCLKB × 219"]
-        pub const _0_X_9: Self = Self::new(9);
-
-        #[doc = "PCLKB × 220"]
-        pub const _0_X_A: Self = Self::new(10);
-
-        #[doc = "PCLKB × 221"]
-        pub const _0_X_B: Self = Self::new(11);
-
-        #[doc = "PCLKB × 222"]
-        pub const _0_X_C: Self = Self::new(12);
-
-        #[doc = "PCLKB × 223"]
-        pub const _0_X_D: Self = Self::new(13);
-
-        #[doc = "PCLKB × 224"]
-        pub const _0_X_E: Self = Self::new(14);
-
         #[doc = "Setting prohibited"]
-        pub const _0_X_F: Self = Self::new(15);
+        pub const _1111: Self = Self::new(15);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Top_SPEC;
     pub type Top = crate::EnumBitfieldStruct<u8, Top_SPEC>;
     impl Top {
-        #[doc = "SDHI clock × 213"]
-        pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "SDHI clock × 214"]
-        pub const _0_X_1: Self = Self::new(1);
-
-        #[doc = "SDHI clock × 215"]
-        pub const _0_X_2: Self = Self::new(2);
-
-        #[doc = "SDHI clock × 216"]
-        pub const _0_X_3: Self = Self::new(3);
-
-        #[doc = "SDHI clock × 217"]
-        pub const _0_X_4: Self = Self::new(4);
-
-        #[doc = "SDHI clock × 218"]
-        pub const _0_X_5: Self = Self::new(5);
-
-        #[doc = "SDHI clock × 219"]
-        pub const _0_X_6: Self = Self::new(6);
-
-        #[doc = "SDHI clock × 220"]
-        pub const _0_X_7: Self = Self::new(7);
-
-        #[doc = "SDHI clock × 221"]
-        pub const _0_X_8: Self = Self::new(8);
-
-        #[doc = "SDHI clock × 222"]
-        pub const _0_X_9: Self = Self::new(9);
-
-        #[doc = "SDHI clock × 223"]
-        pub const _0_X_A: Self = Self::new(10);
-
-        #[doc = "SDHI clock × 224"]
-        pub const _0_X_B: Self = Self::new(11);
-
-        #[doc = "SDHI clock × 225"]
-        pub const _0_X_C: Self = Self::new(12);
-
-        #[doc = "SDHI clock × 226"]
-        pub const _0_X_D: Self = Self::new(13);
-
-        #[doc = "SDHI clock × 227"]
-        pub const _0_X_E: Self = Self::new(14);
-
         #[doc = "Setting prohibited"]
-        pub const _0_X_F: Self = Self::new(15);
+        pub const _1111: Self = Self::new(15);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Toutmask_SPEC;
     pub type Toutmask = crate::EnumBitfieldStruct<u8, Toutmask_SPEC>;
     impl Toutmask {
-        #[doc = "Activate timeout"]
+        #[doc = "Activate Timeout"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Inactivate timeout (do not set RSPTO and DTO bits of SD_INFO2 or CRCBSYTO, CRCTO, RDTO, BSYTO1, BSYTO0, RSPTO1 and RSPTO0 bits of SD_ERR_STS2) When timeout occurs because of an inactivated timeout, execute a software reset to terminate the command sequence."]
+        #[doc = "Inactivate Timeout(RSPTO bit and DTO bit of SD_INFO2 and SD_ERR_STS2 won\'t be set)"]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Width_SPEC;
+    pub type Width = crate::EnumBitfieldStruct<u8, Width_SPEC>;
+    impl Width {
+        #[doc = "4-bit width (WIDTH8=0) / 8-bit width (WIDTH8=1)"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "1-bit width (WIDTH8=0 or 1 )"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -2834,7 +2974,7 @@ impl crate::sealed::RegSpec for SdErrSts1_SPEC {
 pub type SdErrSts1 = crate::RegValueT<SdErrSts1_SPEC>;
 
 impl SdErrSts1 {
-    #[doc = "Command Error Flag 0"]
+    #[doc = "Command Error 0NOTE: other than a response to a command issued within a command sequence"]
     #[inline(always)]
     pub fn cmde0(
         self,
@@ -2860,7 +3000,7 @@ impl SdErrSts1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Command Error Flag 1"]
+    #[doc = "Command Error 1NOTE: In cases where CMD12 is issued by setting a command index in SD_CMD, this is Indicated in CMDE0."]
     #[inline(always)]
     pub fn cmde1(
         self,
@@ -2886,7 +3026,7 @@ impl SdErrSts1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Response Length Error Flag 0"]
+    #[doc = "Response Length Error 0NOTE: other than a response to a command issued within a command sequence"]
     #[inline(always)]
     pub fn rsplene0(
         self,
@@ -2912,7 +3052,7 @@ impl SdErrSts1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Response Length Error Flag 1"]
+    #[doc = "Response Length Error 1NOTE: In cases where CMD12 is issued by setting a command index in SD_CMD, this is indicated in RSPLENE0."]
     #[inline(always)]
     pub fn rsplene1(
         self,
@@ -2938,7 +3078,7 @@ impl SdErrSts1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Read Data Length Error Flag"]
+    #[doc = "Read Data Length Error"]
     #[inline(always)]
     pub fn rdlene(
         self,
@@ -2964,7 +3104,7 @@ impl SdErrSts1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "CRC Status Token Length Error Flag"]
+    #[doc = "CRC Status Token Length Error"]
     #[inline(always)]
     pub fn crclene(
         self,
@@ -2990,7 +3130,7 @@ impl SdErrSts1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Response CRC Error Flag 0"]
+    #[doc = "Response CRC Error 0NOTE: other than a response to a command issued within a command sequence"]
     #[inline(always)]
     pub fn rspcrce0(
         self,
@@ -3016,7 +3156,7 @@ impl SdErrSts1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Response CRC Error Flag 1"]
+    #[doc = "Response CRC Error 1NOTE: In cases where CMD12 is issued by setting a command index in SD_CMD, this is indicated in RSPCRCE0."]
     #[inline(always)]
     pub fn rspcrce1(
         self,
@@ -3042,7 +3182,7 @@ impl SdErrSts1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Read Data CRC Error Flag"]
+    #[doc = "Read Data CRC Error"]
     #[inline(always)]
     pub fn rdcrce(
         self,
@@ -3068,7 +3208,7 @@ impl SdErrSts1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "CRC Status Token Error Flag"]
+    #[doc = "CRC Status Token Error"]
     #[inline(always)]
     pub fn crctke(
         self,
@@ -3094,12 +3234,21 @@ impl SdErrSts1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "CRC Status Token"]
+    #[doc = "CRC Status TokenStore the CRC status token value (normal value is 010b)"]
     #[inline(always)]
     pub fn crctk(
         self,
     ) -> crate::common::RegisterField<12, 0x7, 1, 0, u8, u8, SdErrSts1_SPEC, crate::common::R> {
         crate::common::RegisterField::<12,0x7,1,0,u8,u8,SdErrSts1_SPEC,crate::common::R>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 00000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<15, 0x1ffff, 1, 0, u32, u32, SdErrSts1_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<15,0x1ffff,1,0,u32,u32,SdErrSts1_SPEC,crate::common::R>::from_register(self,0)
     }
 }
 impl ::core::default::Default for SdErrSts1 {
@@ -3114,100 +3263,100 @@ pub mod sd_err_sts1 {
     pub struct Cmde0_SPEC;
     pub type Cmde0 = crate::EnumBitfieldStruct<u8, Cmde0_SPEC>;
     impl Cmde0 {
-        #[doc = "No error exists in command index field value of a command response"]
+        #[doc = "An error has not occured in the command index of a response."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Error exists in command index field value of a command response"]
+        #[doc = "An error has occured in the command index of a response."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmde1_SPEC;
     pub type Cmde1 = crate::EnumBitfieldStruct<u8, Cmde1_SPEC>;
     impl Cmde1 {
-        #[doc = "No error exists in command index field value of a command response"]
+        #[doc = "An error has not occurs in the command index of the response to a command issued within a command sequence."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Error exists in command index field value of a command response (with SD_CMD.CMDIDX\\[5:0\\] setting, an error that occurs with CMD12 issue is indicated in the CMDE0 flag)"]
+        #[doc = "An error has occured in the command index of the response to a command issued within a command sequence."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rsplene0_SPEC;
     pub type Rsplene0 = crate::EnumBitfieldStruct<u8, Rsplene0_SPEC>;
     impl Rsplene0 {
-        #[doc = "No error exists in command response length"]
+        #[doc = "An error has not occured in the response length"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Error exists in command response length"]
+        #[doc = "An error has occured in the response length"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rsplene1_SPEC;
     pub type Rsplene1 = crate::EnumBitfieldStruct<u8, Rsplene1_SPEC>;
     impl Rsplene1 {
-        #[doc = "No error exists in command response length"]
+        #[doc = "An error has not occurred in the response length to a command issued within a command sequence."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Error exists in command response length (with SD_CMD.CMDIDX\\[5:0\\] setting, an error that occurs with CMD12 issue is indicated in the RSPLENE0 flag)"]
+        #[doc = "An error has occured in the response length to a command issued within a command sequence."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdlene_SPEC;
     pub type Rdlene = crate::EnumBitfieldStruct<u8, Rdlene_SPEC>;
     impl Rdlene {
-        #[doc = "No read data length error occurred"]
+        #[doc = "An error has occurred not in the read data length."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Read data length error occurred"]
+        #[doc = "An error has occured in the read data length (and the end bit has not been detected among the valid bits)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Crclene_SPEC;
     pub type Crclene = crate::EnumBitfieldStruct<u8, Crclene_SPEC>;
     impl Crclene {
-        #[doc = "No CRC status token length error occurred"]
+        #[doc = "An error has not occured in the CRC status length."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "CRC status token length error occurred"]
+        #[doc = "An error has occured in the CRC status length (and the end bit has not been detected)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspcrce0_SPEC;
     pub type Rspcrce0 = crate::EnumBitfieldStruct<u8, Rspcrce0_SPEC>;
     impl Rspcrce0 {
-        #[doc = "No CRC error detected in command response"]
+        #[doc = "A CRC error has not occur in a response"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "CRC error detected in command response"]
+        #[doc = "A CRC error has occured in a response"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspcrce1_SPEC;
     pub type Rspcrce1 = crate::EnumBitfieldStruct<u8, Rspcrce1_SPEC>;
     impl Rspcrce1 {
-        #[doc = "No CRC error detected in command response (with SD_CMD.CMDIDX\\[5:0\\] setting, an error that occurs with CMD12 issue is indicated in the RSPCRCE0 flag)"]
+        #[doc = "CRC error has not occured."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "CRC error detected in command response"]
+        #[doc = "CRC error has occured in the response to a command issued within a command sequence."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdcrce_SPEC;
     pub type Rdcrce = crate::EnumBitfieldStruct<u8, Rdcrce_SPEC>;
     impl Rdcrce {
-        #[doc = "No CRC error detected in read data"]
+        #[doc = "CRC error has detected in read data"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "CRC error detected in read data"]
+        #[doc = "CRC error has not detected in read data"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Crctke_SPEC;
     pub type Crctke = crate::EnumBitfieldStruct<u8, Crctke_SPEC>;
     impl Crctke {
-        #[doc = "No error detected in CRC status token"]
+        #[doc = "An error has not occured in the CRC status."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Error detected in CRC status token"]
+        #[doc = "An error has occured in the CRC status."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3222,7 +3371,7 @@ impl crate::sealed::RegSpec for SdErrSts2_SPEC {
 pub type SdErrSts2 = crate::RegValueT<SdErrSts2_SPEC>;
 
 impl SdErrSts2 {
-    #[doc = "Response Timeout Flag 0"]
+    #[doc = "Response Timeout 0"]
     #[inline(always)]
     pub fn rspto0(
         self,
@@ -3248,7 +3397,7 @@ impl SdErrSts2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Response Timeout Flag 1"]
+    #[doc = "Response Timeout 1"]
     #[inline(always)]
     pub fn rspto1(
         self,
@@ -3274,7 +3423,7 @@ impl SdErrSts2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Busy Timeout Flag 0"]
+    #[doc = "Busy Timeout 0"]
     #[inline(always)]
     pub fn bsyto0(
         self,
@@ -3300,7 +3449,7 @@ impl SdErrSts2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Busy Timeout Flag 1"]
+    #[doc = "Busy Timeout 1"]
     #[inline(always)]
     pub fn bsyto1(
         self,
@@ -3326,17 +3475,33 @@ impl SdErrSts2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Read Data Timeout Flag"]
+    #[doc = "Read Data Timeout"]
     #[inline(always)]
     pub fn rdto(
         self,
-    ) -> crate::common::RegisterFieldBool<4, 1, 0, SdErrSts2_SPEC, crate::common::R> {
-        crate::common::RegisterFieldBool::<4, 1, 0, SdErrSts2_SPEC, crate::common::R>::from_register(
-            self, 0,
-        )
+    ) -> crate::common::RegisterField<
+        4,
+        0x1,
+        1,
+        0,
+        sd_err_sts2::Rdto,
+        sd_err_sts2::Rdto,
+        SdErrSts2_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            4,
+            0x1,
+            1,
+            0,
+            sd_err_sts2::Rdto,
+            sd_err_sts2::Rdto,
+            SdErrSts2_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
     }
 
-    #[doc = "CRC Status Token Timeout Flag"]
+    #[doc = "CRC Status Token Timeout"]
     #[inline(always)]
     pub fn crcto(
         self,
@@ -3362,7 +3527,7 @@ impl SdErrSts2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "CRC Status Token Busy Timeout Flag"]
+    #[doc = "CRC Status Token Busy Timeout"]
     #[inline(always)]
     pub fn crcbsyto(
         self,
@@ -3387,6 +3552,15 @@ impl SdErrSts2 {
             crate::common::R,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<7, 0x1ffffff, 1, 0, u32, u32, SdErrSts2_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<7,0x1ffffff,1,0,u32,u32,SdErrSts2_SPEC,crate::common::R>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for SdErrSts2 {
     #[inline(always)]
@@ -3400,60 +3574,70 @@ pub mod sd_err_sts2 {
     pub struct Rspto0_SPEC;
     pub type Rspto0 = crate::EnumBitfieldStruct<u8, Rspto0_SPEC>;
     impl Rspto0 {
-        #[doc = "After command was issued, response was received in less than 640 cycles of the SD/MMC clock"]
+        #[doc = "Not timeout."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "After command was issued, response was not received in 640 or more cycles of the SD/MMC clock"]
+        #[doc = "The response (other than a response to a command issued within a command sequence) is not received though a longer time than 640 cycles of SD/MMC clock has elapsed."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspto1_SPEC;
     pub type Rspto1 = crate::EnumBitfieldStruct<u8, Rspto1_SPEC>;
     impl Rspto1 {
-        #[doc = "After command was issued, response was received in less than 640 cycles of the SD/MMC clock"]
+        #[doc = "Not timeout."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "After command was issued, response was not received after 640 or more cycles of the SD/MMC clock (with SD_CMD.CMDIDX\\[5:0\\] setting, an error that occurs with CMD12 issue is indicated in the RSPTO0 flag)"]
+        #[doc = "The response to a command issued within a command sequence*2 is not received though a longer time than 640 cycles of SD/MMC clock has elapsed. In cases where CMD12 is issued by setting a command index in SD_CMD, this is indicated in RSPTO0."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bsyto0_SPEC;
     pub type Bsyto0 = crate::EnumBitfieldStruct<u8, Bsyto0_SPEC>;
     impl Bsyto0 {
-        #[doc = "After R1b response was received, SD/MMC was released from the busy state during the specified period"]
+        #[doc = "Not timeout."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "After R1b response was received, SD/MMC was in the busy state after the specified period elapsed"]
+        #[doc = "The busy state for longer than N-cycle continues after R1b response."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bsyto1_SPEC;
     pub type Bsyto1 = crate::EnumBitfieldStruct<u8, Bsyto1_SPEC>;
     impl Bsyto1 {
-        #[doc = "After CMD12 was automatically issued, SD/MMC was released from the busy state during the specified period"]
+        #[doc = "Not timeout."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "After CMD12 was automatically issued, SD/MMC was in the busy state after the specified period elapsed (with SD_CMD.CMDIDX\\[5:0\\] setting, an error that occurs with CMD12 issue is indicated in the BSYTO0 flag)"]
+        #[doc = "The busy state for longer than N-cycle continues after CMD12 has been issued within a command sequence. In cases where CMD12 is issued by setting a command index in SD_CMD, this is indicated in BSYTO0."]
+        pub const _1: Self = Self::new(1);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Rdto_SPEC;
+    pub type Rdto = crate::EnumBitfieldStruct<u8, Rdto_SPEC>;
+    impl Rdto {
+        #[doc = "Not timeout"]
+        pub const _0: Self = Self::new(0);
+
+        #[doc = "The read data is not received though a longer time than N-cycle has elapsed after read command. / The read data for the next block are not received though a longer time than N-cycle has elapsed after the reception of read data. / The read data for the next block are not received though a longer time than N-cycle has elapsed after release of the read wait state."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Crcto_SPEC;
     pub type Crcto = crate::EnumBitfieldStruct<u8, Crcto_SPEC>;
     impl Crcto {
-        #[doc = "After CRC data was written to the SD card/MMC, a CRC status token was received during the specified period"]
+        #[doc = "Not timeout"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "After CRC data was written to the SD card/MMC, a CRC status token was not received after the specified period elapsed"]
+        #[doc = "The CRC status is not received though a longer time than N-cycle has elapsed after data writing."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Crcbsyto_SPEC;
     pub type Crcbsyto = crate::EnumBitfieldStruct<u8, Crcbsyto_SPEC>;
     impl Crcbsyto {
-        #[doc = "After a CRC status token was received, the SD/MMC was released from the busy state during the specified period"]
+        #[doc = "Not timeout"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "After a CRC status token was received, the SD/MMC was in the busy state after the specified period elapsed"]
+        #[doc = "The busy state continues for longer than N-cycle after the CRC status"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3467,7 +3651,16 @@ impl crate::sealed::RegSpec for SdBuf0_SPEC {
 #[doc = "SD Buffer Register"]
 pub type SdBuf0 = crate::RegValueT<SdBuf0_SPEC>;
 
-impl NoBitfieldReg<SdBuf0_SPEC> for SdBuf0 {}
+impl SdBuf0 {
+    #[doc = "SD Buffer RegisterWhen writing to the SD card, the write data is written to this register. When reading from the SD card, the read data is read from this register. This register is internally connected to two 512-byte buffers.If both buffers are not empty when executing multiple block read, SD/MMC clock is stopped to suspend receiving data. When one of buffers is empty, SD/MMC clock is supplied to resume receiving data."]
+    #[inline(always)]
+    pub fn sd_buf(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, SdBuf0_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffffffff,1,0,u32,u32,SdBuf0_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for SdBuf0 {
     #[inline(always)]
     fn default() -> SdBuf0 {
@@ -3486,7 +3679,7 @@ impl crate::sealed::RegSpec for SdioMode_SPEC {
 pub type SdioMode = crate::RegValueT<SdioMode_SPEC>;
 
 impl SdioMode {
-    #[doc = "SDIO Interrupt Acceptance Enable"]
+    #[doc = "SDIO Mode"]
     #[inline(always)]
     pub fn inten(
         self,
@@ -3538,7 +3731,7 @@ impl SdioMode {
         >::from_register(self, 0)
     }
 
-    #[doc = "SDIO Abort"]
+    #[doc = "SDIO AbortNOTE: See manual"]
     #[inline(always)]
     pub fn ioabt(
         self,
@@ -3548,7 +3741,7 @@ impl SdioMode {
         )
     }
 
-    #[doc = "SDIO None Abort"]
+    #[doc = "SDIO None AbortNOTE: See manual"]
     #[inline(always)]
     pub fn c52pub(
         self,
@@ -3556,6 +3749,15 @@ impl SdioMode {
         crate::common::RegisterFieldBool::<9, 1, 0, SdioMode_SPEC, crate::common::RW>::from_register(
             self, 0,
         )
+    }
+
+    #[doc = "These bits are read as 0000000000000000000000. The write value should be 0000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<10, 0x3fffff, 1, 0, u32, u32, SdioMode_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<10,0x3fffff,1,0,u32,u32,SdioMode_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for SdioMode {
@@ -3570,11 +3772,11 @@ pub mod sdio_mode {
     pub struct Inten_SPEC;
     pub type Inten = crate::EnumBitfieldStruct<u8, Inten_SPEC>;
     impl Inten {
-        #[doc = "Disable SDIO interrupt acceptance"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Enable SDIO interrupt acceptance"]
+        #[doc = "Enables the SD host interface to receive SDIO interrupt from the SDIO card"]
         pub const _1: Self = Self::new(1);
+
+        #[doc = "Disables the SD host interface to receive SDIO interrupt from the SDIO card"]
+        pub const _0: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rwreq_SPEC;
@@ -3583,7 +3785,7 @@ pub mod sdio_mode {
         #[doc = "Allow SD/MMC to exit read wait state"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Request for SD/MMC to enter read wait state"]
+        #[doc = "Request for SD/MMC to enter read wait state."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3594,11 +3796,11 @@ impl crate::sealed::RegSpec for SdioInfo1_SPEC {
     type DataType = u32;
 }
 
-#[doc = "SDIO Interrupt Flag Register"]
+#[doc = "SDIO Interrupt Flag Register 1"]
 pub type SdioInfo1 = crate::RegValueT<SdioInfo1_SPEC>;
 
 impl SdioInfo1 {
-    #[doc = "SDIO Interrupt Status Flag"]
+    #[doc = "SDIO Interrupt Status"]
     #[inline(always)]
     pub fn ioirq(
         self,
@@ -3624,7 +3826,7 @@ impl SdioInfo1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "EXPUB52 Status Flag"]
+    #[doc = "EXPUB52 Status FlagNOTE: See manual"]
     #[inline(always)]
     pub fn expub52(
         self,
@@ -3632,12 +3834,21 @@ impl SdioInfo1 {
         crate::common::RegisterFieldBool::<14,1,0,SdioInfo1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "EXWT Status Flag"]
+    #[doc = "EXWT Status FlagNOTE: See manual"]
     #[inline(always)]
     pub fn exwt(
         self,
     ) -> crate::common::RegisterFieldBool<15, 1, 0, SdioInfo1_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<15,1,0,SdioInfo1_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, SdioInfo1_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,SdioInfo1_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for SdioInfo1 {
@@ -3652,10 +3863,10 @@ pub mod sdio_info1 {
     pub struct Ioirq_SPEC;
     pub type Ioirq = crate::EnumBitfieldStruct<u8, Ioirq_SPEC>;
     impl Ioirq {
-        #[doc = "No SDIO interrupt detected"]
+        #[doc = "SDIO interrupt not accepted"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "SDIO interrupt detected"]
+        #[doc = "SDIO interrupt accepted"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3666,7 +3877,7 @@ impl crate::sealed::RegSpec for SdioInfo1Mask_SPEC {
     type DataType = u32;
 }
 
-#[doc = "SDIO INFO1 Interrupt Mask Register"]
+#[doc = "SDIO_INFO1 Interrupt Mask Register"]
 pub type SdioInfo1Mask = crate::RegValueT<SdioInfo1Mask_SPEC>;
 
 impl SdioInfo1Mask {
@@ -3747,6 +3958,32 @@ impl SdioInfo1Mask {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<
+        16,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        SdioInfo1Mask_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            SdioInfo1Mask_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
 }
 impl ::core::default::Default for SdioInfo1Mask {
     #[inline(always)]
@@ -3760,30 +3997,30 @@ pub mod sdio_info1_mask {
     pub struct Ioirqm_SPEC;
     pub type Ioirqm = crate::EnumBitfieldStruct<u8, Ioirqm_SPEC>;
     impl Ioirqm {
-        #[doc = "Do not mask IOIRQ interrupts"]
+        #[doc = "IOIRQ interrupt not masked"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Mask IOIRQ interrupts"]
+        #[doc = "IOIRQ interrupt masked"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Expub52M_SPEC;
     pub type Expub52M = crate::EnumBitfieldStruct<u8, Expub52M_SPEC>;
     impl Expub52M {
-        #[doc = "Do not mask EXPUB52 interrupt requests"]
+        #[doc = "EXPUB52 interrupt request not masked"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Mask EXPUB52 interrupt requests"]
+        #[doc = "EXPUB52 interrupt request masked"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Exwtm_SPEC;
     pub type Exwtm = crate::EnumBitfieldStruct<u8, Exwtm_SPEC>;
     impl Exwtm {
-        #[doc = "Do not mask EXWT interrupt requests"]
+        #[doc = "EXWT interrupt request not masked"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Mask EXWT interrupt requests"]
+        #[doc = "EXWT interrupt request masked"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3798,7 +4035,7 @@ impl crate::sealed::RegSpec for SdDmaen_SPEC {
 pub type SdDmaen = crate::RegValueT<SdDmaen_SPEC>;
 
 impl SdDmaen {
-    #[doc = "DMA Transfer Enable"]
+    #[doc = "SD_BUF Read/Write DMA Transfer"]
     #[inline(always)]
     pub fn dmaen(
         self,
@@ -3823,6 +4060,15 @@ impl SdDmaen {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000000. The write value should be 0000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<13, 0x7ffff, 1, 0, u32, u32, SdDmaen_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<13,0x7ffff,1,0,u32,u32,SdDmaen_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for SdDmaen {
     #[inline(always)]
@@ -3836,10 +4082,10 @@ pub mod sd_dmaen {
     pub struct Dmaen_SPEC;
     pub type Dmaen = crate::EnumBitfieldStruct<u8, Dmaen_SPEC>;
     impl Dmaen {
-        #[doc = "Disable use of DMA transfer to access SD_BUF0 register"]
+        #[doc = "The SD_BUF read/write DMA transfer is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable use of DMA transfer to access SD_BUF0 register"]
+        #[doc = "The SD_BUF read/write DMA transfer is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3854,7 +4100,7 @@ impl crate::sealed::RegSpec for SoftRst_SPEC {
 pub type SoftRst = crate::RegValueT<SoftRst_SPEC>;
 
 impl SoftRst {
-    #[doc = "Software Reset Control"]
+    #[doc = "Software Reset of SD I/F Unit"]
     #[inline(always)]
     pub fn sdrst(
         self,
@@ -3879,6 +4125,15 @@ impl SoftRst {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000000000000000000000000000. The write value should be 00000000000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<3, 0x1fffffff, 1, 0, u32, u32, SoftRst_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<3,0x1fffffff,1,0,u32,u32,SoftRst_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for SoftRst {
     #[inline(always)]
@@ -3892,10 +4147,10 @@ pub mod soft_rst {
     pub struct Sdrst_SPEC;
     pub type Sdrst = crate::EnumBitfieldStruct<u8, Sdrst_SPEC>;
     impl Sdrst {
-        #[doc = "Reset SD/MMC Host Interface software"]
+        #[doc = "Reset"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Cancel reset of SD/MMC Host Interface software"]
+        #[doc = "Reset released"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -3910,7 +4165,7 @@ impl crate::sealed::RegSpec for SdifMode_SPEC {
 pub type SdifMode = crate::RegValueT<SdifMode_SPEC>;
 
 impl SdifMode {
-    #[doc = "CRC Check Mask"]
+    #[doc = "CRC Check Mask (for MMC test commands)"]
     #[inline(always)]
     pub fn nochkcr(
         self,
@@ -3935,6 +4190,15 @@ impl SdifMode {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000000000000000000000. The write value should be 00000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<9, 0x7fffff, 1, 0, u32, u32, SdifMode_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<9,0x7fffff,1,0,u32,u32,SdifMode_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for SdifMode {
     #[inline(always)]
@@ -3948,10 +4212,10 @@ pub mod sdif_mode {
     pub struct Nochkcr_SPEC;
     pub type Nochkcr = crate::EnumBitfieldStruct<u8, Nochkcr_SPEC>;
     impl Nochkcr {
-        #[doc = "Enable CRC check"]
+        #[doc = "CRC check is valid"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Disable CRC Check (ignore CRC16 valued when reading and ignore CRC status value when writing)"]
+        #[doc = "CRC check is invalid(CRC16 value is ignored when read and CRC Status value is ignored when write)"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -4017,6 +4281,15 @@ impl ExtSwap {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000000000000000000000000. The write value should be 000000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<8, 0xffffff, 1, 0, u32, u32, ExtSwap_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<8,0xffffff,1,0,u32,u32,ExtSwap_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for ExtSwap {
     #[inline(always)]
@@ -4030,20 +4303,20 @@ pub mod ext_swap {
     pub struct Bwswp_SPEC;
     pub type Bwswp = crate::EnumBitfieldStruct<u8, Bwswp_SPEC>;
     impl Bwswp {
-        #[doc = "Normal write operation"]
+        #[doc = "The current data are written without swapping."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Swap the byte endian order before writing to SD_BUF0 register"]
+        #[doc = "Swapping of the positions of the higher- and lower-order bytes of data for writing proceeds."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Brswp_SPEC;
     pub type Brswp = crate::EnumBitfieldStruct<u8, Brswp_SPEC>;
     impl Brswp {
-        #[doc = "Normal read operation"]
+        #[doc = "The current data are read without swapping."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Swap the byte endian order before reading SD_BUF0 register"]
+        #[doc = "Swapping of the positions of the higher- and lower-order bytes of data for reading proceeds."]
         pub const _1: Self = Self::new(1);
     }
 }

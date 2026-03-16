@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:18 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:06:30 +0000
 
 //! Contains perfect hash function that maps form raw addresses to
 //! a string containing the names of all registers that point to an address.
@@ -4127,6 +4127,12 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x40040d03u64 => "
       PMISC.pwpr(),
     ",
+  0x40006000u64 => "
+      ICU.irqcr()[0],
+    ",
+  0x40006001u64 => "
+      ICU.irqcr()[1],
+    ",
   0x40006002u64 => "
       ICU.irqcr()[2],
     ",
@@ -4160,11 +4166,14 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x4000600cu64 => "
       ICU.irqcr()[12],
     ",
+  0x4000600du64 => "
+      ICU.irqcr()[13],
+    ",
   0x4000600eu64 => "
-      ICU.irqcr()[0],
+      ICU.irqcr()[14],
     ",
   0x4000600fu64 => "
-      ICU.irqcr()[1],
+      ICU.irqcr()[15],
     ",
   0x40006140u64 => "
       ICU.nmisr(),

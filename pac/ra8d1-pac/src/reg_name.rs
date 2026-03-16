@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 //! Contains perfect hash function that maps form raw addresses to
 //! a string containing the names of all registers that point to an address.
@@ -46,6 +46,9 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
     ",
   0x40000104u64 => "
       RMPU.mmpuenptdmac(),
+    ",
+  0x40000108u64 => "
+      RMPU.mmpurptdmac(),
     ",
   0x4000010cu64 => "
       RMPU.mmpurptdmac_sec(),
@@ -227,9 +230,6 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x40000a18u64 => "
       RMPU.mmpuedrw()[1],
     ",
-  0x40000a28u64 => "
-      RMPU.mmpuedrw()[2],
-    ",
   0x40000b00u64 => "
       RMPU.mmpuenmipi(),
     ",
@@ -277,6 +277,9 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
     ",
   0x40002000u64 => "
       SRAM.sramprcr_s(),
+    ",
+  0x40002004u64 => "
+      SRAM.sramprcr_ns(),
     ",
   0x40002008u64 => "
       SRAM.sramwtsc(),
@@ -476,12 +479,6 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x40004004u64 => "
       BUS.busoadpt(),
     ",
-  0x40004010u64 => "
-      BUS.msaoad(),
-    ",
-  0x40004014u64 => "
-      BUS.msapt(),
-    ",
   0x40004100u64 => "
       BUS.busmabt(),
     ",
@@ -501,10 +498,10 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       BUS.bussabt0stbysbi(),
     ",
   0x40004250u64 => "
-      BUS.bussabt0ecbi(),
+      BUS.bussabt2ecbi(),
     ",
   0x40004258u64 => "
-      BUS.bussabt0eobi(),
+      BUS.bussabt2eobi(),
     ",
   0x40004260u64 => "
       BUS.bussabt0pbbi(),
@@ -521,77 +518,128 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x40004300u64 => "
       BUS.busdivbyp(),
     ",
-  0x40004800u64 => "
-      BUS.buserradd()[0],
+  0x40004400u64 => "
+      BUS.qospri(),
     ",
-  0x40004810u64 => "
-      BUS.buserradd()[1],
+  0x40004410u64 => "
+      BUS.qoscyc()[0],
     ",
-  0x40004820u64 => "
-      BUS.buserradd()[2],
+  0x40004418u64 => "
+      BUS.qoscyc()[1],
+    ",
+  0x40004420u64 => "
+      BUS.qoscyc()[2],
+    ",
+  0x40004428u64 => "
+      BUS.qoscyc()[3],
+    ",
+  0x40004430u64 => "
+      BUS.busmpri(),
+    ",
+  0x40004438u64 => "
+      BUS.qoscyc4(),
+    ",
+  0x40004500u64 => "
+      BUS.qosthd()[0],
+    ",
+  0x40004508u64 => "
+      BUS.qosthd()[1],
+    ",
+  0x40004510u64 => "
+      BUS.qosthd()[2],
+    ",
+  0x40004518u64 => "
+      BUS.qosthd()[3],
+    ",
+  0x40004528u64 => "
+      BUS.qosthd4(),
+    ",
+  0x40004600u64 => "
+      BUS.qosdmon()[0],
+    ",
+  0x40004608u64 => "
+      BUS.qosdmon()[1],
+    ",
+  0x40004610u64 => "
+      BUS.qosdmon()[2],
+    ",
+  0x40004618u64 => "
+      BUS.qosdmon()[3],
+    ",
+  0x40004628u64 => "
+      BUS.qosdmon4(),
     ",
   0x40004830u64 => "
-      BUS.buserradd()[3],
+      BUS.buserradd()[0],
     ",
   0x40004840u64 => "
-      BUS.buserradd()[4],
+      BUS.buserradd()[1],
     ",
   0x40004850u64 => "
+      BUS.buserradd()[2],
+    ",
+  0x40004860u64 => "
+      BUS.buserradd()[3],
+    ",
+  0x40004870u64 => "
+      BUS.buserradd()[4],
+    ",
+  0x40004880u64 => "
       BUS.buserradd()[5],
     ",
-  0x40004804u64 => "
+  0x40004834u64 => "
       BUS.buserrrw()[0],
     ",
-  0x40004814u64 => "
+  0x40004844u64 => "
       BUS.buserrrw()[1],
     ",
-  0x40004824u64 => "
+  0x40004854u64 => "
       BUS.buserrrw()[2],
     ",
-  0x40004834u64 => "
+  0x40004864u64 => "
       BUS.buserrrw()[3],
     ",
-  0x40004844u64 => "
+  0x40004874u64 => "
       BUS.buserrrw()[4],
     ",
-  0x40004854u64 => "
+  0x40004884u64 => "
       BUS.buserrrw()[5],
     ",
-  0x40004900u64 => "
-      BUS.bmsaerradd()[0],
-    ",
-  0x40004910u64 => "
-      BUS.bmsaerradd()[1],
-    ",
-  0x40004920u64 => "
-      BUS.bmsaerradd()[2],
-    ",
   0x40004930u64 => "
-      BUS.bmsaerradd()[3],
+      BUS.btzferradd()[0],
     ",
   0x40004940u64 => "
-      BUS.bmsaerradd()[4],
+      BUS.btzferradd()[1],
     ",
   0x40004950u64 => "
-      BUS.bmsaerradd()[5],
+      BUS.btzferradd()[2],
     ",
-  0x40004904u64 => "
-      BUS.bmsaerrrw()[0],
+  0x40004960u64 => "
+      BUS.btzferradd()[3],
     ",
-  0x40004914u64 => "
-      BUS.bmsaerrrw()[1],
+  0x40004970u64 => "
+      BUS.btzferradd()[4],
     ",
-  0x40004924u64 => "
-      BUS.bmsaerrrw()[2],
+  0x40004980u64 => "
+      BUS.btzferradd()[5],
     ",
   0x40004934u64 => "
-      BUS.bmsaerrrw()[3],
+      BUS.btzferrrw()[0],
     ",
   0x40004944u64 => "
-      BUS.bmsaerrrw()[4],
+      BUS.btzferrrw()[1],
     ",
   0x40004954u64 => "
-      BUS.bmsaerrrw()[5],
+      BUS.btzferrrw()[2],
+    ",
+  0x40004964u64 => "
+      BUS.btzferrrw()[3],
+    ",
+  0x40004974u64 => "
+      BUS.btzferrrw()[4],
+    ",
+  0x40004984u64 => "
+      BUS.btzferrrw()[5],
     ",
   0x40004a00u64 => "
       BUS.buserrstat()[0],
@@ -676,6 +724,12 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
     ",
   0x40004b28u64 => "
       BUS.sbwerrclr(),
+    ",
+  0x40004010u64 => "
+      TZF.tzfoad(),
+    ",
+  0x40004014u64 => "
+      TZF.tzfpt(),
     ",
   0x40006000u64 => "
       ICU_COMMON.irqcr()[0],
@@ -776,9 +830,6 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x40008134u64 => "
       CPSCU.mmpusarb(),
     ",
-  0x40008170u64 => "
-      CPSCU.cpusar(),
-    ",
   0x40008180u64 => "
       CPSCU.debugsar(),
     ",
@@ -797,104 +848,129 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x40008420u64 => "
       CPSCU.stbramsabar(),
     ",
+  0x40008490u64 => "
+      CPSCU.stbrampabar_ns(),
+    ",
   0x40008494u64 => "
       CPSCU.stbrampabar_s(),
     ",
   0x40008600u64 => "
       CPSCU.tevtrcr(),
     ",
+  0x40008d00u64 => "
+      CPSCU.busmemerrsts(),
+    ",
   0x4000a000u64 => "
-      DMAC_00.dmsar(),
+      DMAC_0.dmsar(),
     ",
   0x4000a004u64 => "
-      DMAC_00.dmdar(),
+      DMAC_0.dmdar(),
     ",
   0x4000a008u64 => "
-      DMAC_00.dmcra(),
+      DMAC_0.dmcra(),
     ",
   0x4000a00cu64 => "
-      DMAC_00.dmcrb(),
+      DMAC_0.dmcrb(),
     ",
   0x4000a010u64 => "
-      DMAC_00.dmtmd(),
+      DMAC_0.dmtmd(),
     ",
   0x4000a013u64 => "
-      DMAC_00.dmint(),
+      DMAC_0.dmint(),
     ",
   0x4000a014u64 => "
-      DMAC_00.dmamd(),
+      DMAC_0.dmamd(),
     ",
   0x4000a018u64 => "
-      DMAC_00.dmofr(),
+      DMAC_0.dmofr(),
     ",
   0x4000a01cu64 => "
-      DMAC_00.dmcnt(),
+      DMAC_0.dmcnt(),
     ",
   0x4000a01du64 => "
-      DMAC_00.dmreq(),
+      DMAC_0.dmreq(),
     ",
   0x4000a01eu64 => "
-      DMAC_00.dmsts(),
+      DMAC_0.dmsts(),
     ",
   0x4000a020u64 => "
-      DMAC_00.dmsrr(),
+      DMAC_0.dmsrr(),
     ",
   0x4000a024u64 => "
-      DMAC_00.dmdrr(),
+      DMAC_0.dmdrr(),
     ",
   0x4000a028u64 => "
-      DMAC_00.dmsbs(),
+      DMAC_0.dmsbs(),
     ",
   0x4000a02cu64 => "
-      DMAC_00.dmdbs(),
+      DMAC_0.dmdbs(),
     ",
   0x4000a030u64 => "
-      DMAC_00.dmbwr(),
+      DMAC_0.dmbwr(),
     ",
   0x4000a800u64 => "
-      DMA_0.dmast(),
+      DMA.dmast(),
     ",
   0x4000a840u64 => "
-      DMA_0.dmechr(),
+      DMA.dmechr(),
     ",
   0x4000a880u64 => "
-      DMA_0.delsr()[0],
+      DMA.delsr()[0],
     ",
   0x4000a884u64 => "
-      DMA_0.delsr()[1],
+      DMA.delsr()[1],
     ",
   0x4000a888u64 => "
-      DMA_0.delsr()[2],
+      DMA.delsr()[2],
     ",
   0x4000a88cu64 => "
-      DMA_0.delsr()[3],
+      DMA.delsr()[3],
     ",
   0x4000a890u64 => "
-      DMA_0.delsr()[4],
+      DMA.delsr()[4],
     ",
   0x4000a894u64 => "
-      DMA_0.delsr()[5],
+      DMA.delsr()[5],
     ",
   0x4000a898u64 => "
-      DMA_0.delsr()[6],
+      DMA.delsr()[6],
     ",
   0x4000a89cu64 => "
-      DMA_0.delsr()[7],
+      DMA.delsr()[7],
+    ",
+  0x4000ac00u64 => "
+      DTC.dtccr(),
+      DTC.dtccr_ns(),
+    ",
+  0x4000ac04u64 => "
+      DTC.dtcvbr(),
+      DTC.dtcvbr_ns(),
     ",
   0x4000ac0cu64 => "
-      DTC_0.dtcst(),
+      DTC.dtcst(),
     ",
   0x4000ac0eu64 => "
-      DTC_0.dtcsts(),
+      DTC.dtcsts(),
     ",
   0x4000ac10u64 => "
-      DTC_0.dtccr_sec(),
+      DTC.dtccr_s(),
+      DTC.dtccr_sec(),
     ",
   0x4000ac14u64 => "
-      DTC_0.dtcvbr_sec(),
+      DTC.dtcvbr_s(),
+      DTC.dtcvbr_sec(),
     ",
   0x4000ac20u64 => "
-      DTC_0.dtevr(),
+      DTC.dtevr(),
+    ",
+  0x4000c010u64 => "
+      ICU.swirq_s(),
+    ",
+  0x4000c020u64 => "
+      ICU.swirq_ns(),
+    ",
+  0x4000c060u64 => "
+      ICU.ienmier(),
     ",
   0x4000c100u64 => "
       ICU.nmier(),
@@ -910,6 +986,9 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
     ",
   0x4000c1a4u64 => "
       ICU.wupen1(),
+    ",
+  0x4000c200u64 => "
+      ICU.selsr0(),
     ",
   0x4000c300u64 => "
       ICU.ielsr()[0],
@@ -1199,35 +1278,26 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x4000c47cu64 => "
       ICU.ielsr()[95],
     ",
-  0x4000f030u64 => "
-      CPU_CTRL.cpulckupcr(),
-    ",
-  0x4000f400u64 => "
-      CPU_CTRL.cpulockcr(),
-    ",
-  0x4000f840u64 => "
-      CPU_CTRL.cpucrpt(),
-    ",
   0x40011004u64 => "
-      OCD_CPU.mcuctrl(),
+      CPU_OCD.mcuctrl(),
     ",
   0x40011100u64 => "
-      OCD_CPU.jbmdr(),
+      CPU_OCD.jbmdr(),
     ",
   0x40011120u64 => "
-      OCD_CPU.jbrdr(),
+      CPU_OCD.jbrdr(),
     ",
   0x40011130u64 => "
-      OCD_CPU.jbtdr(),
+      CPU_OCD.jbtdr(),
     ",
   0x40011140u64 => "
-      OCD_CPU.jbstr(),
+      CPU_OCD.jbstr(),
     ",
   0x40011150u64 => "
-      OCD_CPU.jbicr(),
+      CPU_OCD.jbicr(),
     ",
   0x40011300u64 => "
-      OCD_CPU.fsblstatm(),
+      CPU_OCD.fsblstatm(),
     ",
   0x4001b000u64 => "
       CPU_DBG.dbgstr(),
@@ -1244,8 +1314,17 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x4001b030u64 => "
       CPU_DBG.trportcr(),
     ",
+  0x4001b034u64 => "
+      CPU_DBG.tracecr(),
+    ",
   0x4001b040u64 => "
       CPU_DBG.cachedbgcr(),
+    ",
+  0x4001b100u64 => "
+      CPU_DBG.alctrl(),
+    ",
+  0x4001b200u64 => "
+      CPU_DBG.fsblstat(),
     ",
   0x4001b300u64 => "
       CPU_DBG.dbgmocoen(),
@@ -1267,6 +1346,12 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
     ",
   0x4001e00cu64 => "
       SYSC.sbycr(),
+    ",
+  0x4001e00eu64 => "
+      SYSC.sscr2(),
+    ",
+  0x4001e010u64 => "
+      SYSC.flscr(),
     ",
   0x4001e020u64 => "
       SYSC.sckdivcr(),
@@ -1291,9 +1376,6 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
     ",
   0x4001e036u64 => "
       SYSC.hococr(),
-    ",
-  0x4001e037u64 => "
-      SYSC.hococr2(),
     ",
   0x4001e038u64 => "
       SYSC.mococr(),
@@ -1351,6 +1433,18 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
     ",
   0x4001e057u64 => "
       SYSC.spickcr(),
+    ",
+  0x4001e05au64 => "
+      SYSC.adcckdivcr(),
+    ",
+  0x4001e05bu64 => "
+      SYSC.adcckcr(),
+    ",
+  0x4001e05cu64 => "
+      SYSC.gptckdivcr(),
+    ",
+  0x4001e05du64 => "
+      SYSC.gptckcr(),
     ",
   0x4001e05eu64 => "
       SYSC.lcdckdivcr(),
@@ -1424,6 +1518,9 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x4001e0e3u64 => "
       SYSC.pvdsr()[1],
     ",
+  0x4001e0f0u64 => "
+      SYSC.crvsyscr(),
+    ",
   0x4001e110u64 => "
       SYSC.pdctrgd(),
     ",
@@ -1438,6 +1535,9 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
     ",
   0x4001e3b4u64 => "
       SYSC.vbrpabars(),
+    ",
+  0x4001e3b8u64 => "
+      SYSC.vbrpabarns(),
     ",
   0x4001e3c0u64 => "
       SYSC.cgfsar(),
@@ -1465,6 +1565,9 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
     ",
   0x4001e3fau64 => "
       SYSC.prcr_s(),
+    ",
+  0x4001e3feu64 => "
+      SYSC.prcr_ns(),
     ",
   0x4001e400u64 => "
       SYSC.lococr(),
@@ -1520,6 +1623,9 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x4001ea44u64 => "
       SYSC.rstsr2(),
     ",
+  0x4001ea48u64 => "
+      SYSC.rstsr3(),
+    ",
   0x4001ea50u64 => "
       SYSC.momcr(),
     ",
@@ -1527,10 +1633,10 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       SYSC.fwepror(),
     ",
   0x4001ea58u64 => "
-      SYSC.pvdcmpcr()[0],
+      SYSC.pvd1cmpcr(),
     ",
   0x4001ea5cu64 => "
-      SYSC.pvdcmpcr()[1],
+      SYSC.pvd2cmpcr(),
     ",
   0x4001ea70u64 => "
       SYSC.pvdcr0()[0],
@@ -1556,6 +1662,9 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x4001ead0u64 => "
       SYSC.syrstmsk0(),
     ",
+  0x4001ead4u64 => "
+      SYSC.syrstmsk1(),
+    ",
   0x4001ead8u64 => "
       SYSC.syrstmsk2(),
     ",
@@ -1568,11 +1677,8 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x4001eb0cu64 => "
       SYSC.hocoldocr(),
     ",
-  0x4001eb20u64 => "
-      SYSC.pvdfcr()[0],
-    ",
-  0x4001eb24u64 => "
-      SYSC.pvdfcr()[1],
+  0x4001eb10u64 => "
+      SYSC.momcr2(),
     ",
   0x4001ec00u64 => "
       SYSC.sosccr(),
@@ -2019,10 +2125,22 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       FACI.fcntselr(),
     ",
   0x4011e04cu64 => "
-      FACI.fcntdatar()[0],
+      FACI.fcntdatar0(),
     ",
   0x4011e050u64 => "
-      FACI.fcntdatar()[1],
+      FACI.fcntdatar1(),
+    ",
+  0x4011e060u64 => "
+      FACI.fctrcntr(),
+    ",
+  0x4011e064u64 => "
+      FACI.fctrlsr(),
+    ",
+  0x4011e068u64 => "
+      FACI.fctraddr(),
+    ",
+  0x4011e06cu64 => "
+      FACI.fctrstatr(),
     ",
   0x4011e078u64 => "
       FACI.fbprot0(),
@@ -2145,19 +2263,19 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       RTC.r64cnt(),
     ",
   0x40202002u64 => "
-      RTC.bcnt()[0],
+      RTC.bcnt0(),
       RTC.rseccnt(),
     ",
   0x40202004u64 => "
-      RTC.bcnt()[1],
+      RTC.bcnt1(),
       RTC.rmincnt(),
     ",
   0x40202006u64 => "
-      RTC.bcnt()[2],
+      RTC.bcnt2(),
       RTC.rhrcnt(),
     ",
   0x40202008u64 => "
-      RTC.bcnt()[3],
+      RTC.bcnt3(),
       RTC.rwkcnt(),
     ",
   0x4020200au64 => "
@@ -2170,43 +2288,48 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       RTC.ryrcnt(),
     ",
   0x40202010u64 => "
-      RTC.bcntar()[0],
+      RTC.bcnt0ar(),
       RTC.rsecar(),
     ",
   0x40202012u64 => "
-      RTC.bcntar()[1],
+      RTC.bcnt1ar(),
       RTC.rminar(),
     ",
   0x40202014u64 => "
-      RTC.bcntar()[2],
+      RTC.bcnt2ar(),
       RTC.rhrar(),
     ",
   0x40202016u64 => "
-      RTC.bcntar()[3],
+      RTC.bcnt3ar(),
       RTC.rwkar(),
     ",
   0x40202018u64 => "
-      RTC.bcntaer()[0],
+      RTC.bcnt0aer(),
       RTC.rdayar(),
     ",
   0x4020201au64 => "
-      RTC.bcntaer()[1],
+      RTC.bcnt1aer(),
       RTC.rmonar(),
     ",
   0x4020201cu64 => "
-      RTC.bcntaer()[2],
+      RTC.bcnt2aer(),
       RTC.ryrar(),
     ",
   0x4020201eu64 => "
-      RTC.bcntaer()[3],
+      RTC.bcnt3aer(),
       RTC.ryraren(),
+    ",
+  0x40202020u64 => "
+      RTC.rsr(),
     ",
   0x40202022u64 => "
       RTC.rcr1(),
     ",
   0x40202024u64 => "
       RTC.rcr2(),
-      RTC.rcr2_bcnt(),
+    ",
+  0x40202026u64 => "
+      RTC.rcr3(),
     ",
   0x40202028u64 => "
       RTC.rcr4(),
@@ -2219,6 +2342,12 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
     ",
   0x4020202eu64 => "
       RTC.radj(),
+    ",
+  0x40202032u64 => "
+      RTC.rtest(),
+    ",
+  0x40202038u64 => "
+      RTC.rkey(),
     ",
   0x40202040u64 => "
       RTC.rtccr()[0],
@@ -2292,9 +2421,6 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x40202202u64 => "
       IWDT.iwdtcr(),
     ",
-  0x40202204u64 => "
-      IWDT.iwdtsr(),
-    ",
   0x40202206u64 => "
       IWDT.iwdtrcr(),
     ",
@@ -2326,19 +2452,19 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       CAC.cacntbr(),
     ",
   0x40202600u64 => "
-      WDT_0.wdtrr(),
+      WDT.wdtrr(),
     ",
   0x40202602u64 => "
-      WDT_0.wdtcr(),
+      WDT.wdtcr(),
     ",
   0x40202604u64 => "
-      WDT_0.wdtsr(),
+      WDT.wdtsr(),
     ",
   0x40202606u64 => "
-      WDT_0.wdtrcr(),
+      WDT.wdtrcr(),
     ",
   0x40202608u64 => "
-      WDT_0.wdtcstpr(),
+      WDT.wdtcstpr(),
     ",
   0x40203000u64 => "
       MSTP.mstpcra(),
@@ -2395,16 +2521,16 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       PSCU.dlmmon(),
     ",
   0x40212000u64 => "
-      POEG.poegga(),
+      POEG.poegg()[0],
     ",
   0x40212100u64 => "
-      POEG.poeggb(),
+      POEG.poegg()[1],
     ",
   0x40212200u64 => "
-      POEG.poeggc(),
+      POEG.poegg()[2],
     ",
   0x40212300u64 => "
-      POEG.poeggd(),
+      POEG.poegg()[3],
     ",
   0x40220000u64 => "
       ULPT_0.ulptcnt(),
@@ -2469,6 +2595,15 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x40235000u64 => "
       TSN.tscr(),
     ",
+  0x40235001u64 => "
+      TSN.tstrm0(),
+    ",
+  0x40235002u64 => "
+      TSN.tstrm1(),
+    ",
+  0x40235003u64 => "
+      TSN.tstst(),
+    ",
   0x40236000u64 => "
       ACMPHS_0.cmpctl(),
     ",
@@ -2503,13 +2638,22 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       USBFS.cfifo(),
       USBFS.cfifol(),
     ",
+  0x40250015u64 => "
+      USBFS.cfifoh(),
+    ",
   0x40250018u64 => "
-      USBFS.dfifo()[0],
-      USBFS.dfifol()[0],
+      USBFS.d0fifo(),
+      USBFS.d0fifol(),
+    ",
+  0x40250019u64 => "
+      USBFS.d0fifoh(),
     ",
   0x4025001cu64 => "
-      USBFS.dfifo()[1],
-      USBFS.dfifol()[1],
+      USBFS.d1fifo(),
+      USBFS.d1fifol(),
+    ",
+  0x4025001du64 => "
+      USBFS.d1fifoh(),
     ",
   0x40250020u64 => "
       USBFS.cfifosel(),
@@ -2518,16 +2662,16 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       USBFS.cfifoctr(),
     ",
   0x40250028u64 => "
-      USBFS.dfifosel()[0],
-    ",
-  0x4025002cu64 => "
-      USBFS.dfifosel()[1],
+      USBFS.d0fifosel(),
     ",
   0x4025002au64 => "
-      USBFS.dfifoctr()[0],
+      USBFS.d0fifoctr(),
+    ",
+  0x4025002cu64 => "
+      USBFS.d1fifosel(),
     ",
   0x4025002eu64 => "
-      USBFS.dfifoctr()[1],
+      USBFS.d1fifoctr(),
     ",
   0x40250030u64 => "
       USBFS.intenb0(),
@@ -2649,6 +2793,12 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x402500a2u64 => "
       USBFS.pipetrn()[4],
     ",
+  0x402500b0u64 => "
+      USBFS.bcctrl1(),
+    ",
+  0x402500b4u64 => "
+      USBFS.bcctrl2(),
+    ",
   0x402500d0u64 => "
       USBFS.devadd()[0],
     ",
@@ -2667,11 +2817,17 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x402500dau64 => "
       USBFS.devadd()[5],
     ",
+  0x402500f8u64 => "
+      USBFS.vrcgctrl(),
+    ",
   0x40250400u64 => "
       USBFS.dpusr0r(),
     ",
   0x40250404u64 => "
       USBFS.dpusr1r(),
+    ",
+  0x40250408u64 => "
+      USBFS.dpbcctrl(),
     ",
   0x40252000u64 => "
       SDHI_0.sd_cmd(),
@@ -2853,185 +3009,275 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x4025e017u64 => "
       IIC_0_WU.icwur2(),
     ",
+  0x4025e100u64 => "
+      IIC_1.iccr1(),
+    ",
+  0x4025e101u64 => "
+      IIC_1.iccr2(),
+    ",
+  0x4025e102u64 => "
+      IIC_1.icmr1(),
+    ",
+  0x4025e103u64 => "
+      IIC_1.icmr2(),
+    ",
+  0x4025e104u64 => "
+      IIC_1.icmr3(),
+    ",
+  0x4025e105u64 => "
+      IIC_1.icfer(),
+    ",
+  0x4025e106u64 => "
+      IIC_1.icser(),
+    ",
+  0x4025e107u64 => "
+      IIC_1.icier(),
+    ",
+  0x4025e108u64 => "
+      IIC_1.icsr1(),
+    ",
+  0x4025e109u64 => "
+      IIC_1.icsr2(),
+    ",
+  0x4025e10au64 => "
+      IIC_1.sarl()[0],
+    ",
+  0x4025e10cu64 => "
+      IIC_1.sarl()[1],
+    ",
+  0x4025e10eu64 => "
+      IIC_1.sarl()[2],
+    ",
+  0x4025e10bu64 => "
+      IIC_1.saru()[0],
+    ",
+  0x4025e10du64 => "
+      IIC_1.saru()[1],
+    ",
+  0x4025e10fu64 => "
+      IIC_1.saru()[2],
+    ",
+  0x4025e110u64 => "
+      IIC_1.icbrl(),
+    ",
+  0x4025e111u64 => "
+      IIC_1.icbrh(),
+    ",
+  0x4025e112u64 => "
+      IIC_1.icdrt(),
+    ",
+  0x4025e113u64 => "
+      IIC_1.icdrr(),
+    ",
   0x40268000u64 => "
-      OSPI_0_B.wrapcfg(),
+      X_SPI.wrapcfg(),
     ",
   0x40268004u64 => "
-      OSPI_0_B.comcfg(),
+      X_SPI.comcfg(),
     ",
   0x40268008u64 => "
-      OSPI_0_B.bmcfgch()[0],
+      X_SPI.bmcfgch()[0],
     ",
   0x4026800cu64 => "
-      OSPI_0_B.bmcfgch()[1],
+      X_SPI.bmcfgch()[1],
     ",
   0x40268010u64 => "
-      OSPI_0_B.cmcfg0cs()[0],
+      X_SPI.cmcfg0cs()[0],
     ",
   0x40268020u64 => "
-      OSPI_0_B.cmcfg0cs()[1],
+      X_SPI.cmcfg0cs()[1],
     ",
   0x40268014u64 => "
-      OSPI_0_B.cmcfg1cs()[0],
+      X_SPI.cmcfg1cs()[0],
     ",
   0x40268024u64 => "
-      OSPI_0_B.cmcfg1cs()[1],
+      X_SPI.cmcfg1cs()[1],
     ",
   0x40268018u64 => "
-      OSPI_0_B.cmcfg2cs()[0],
+      X_SPI.cmcfg2cs()[0],
     ",
   0x40268028u64 => "
-      OSPI_0_B.cmcfg2cs()[1],
+      X_SPI.cmcfg2cs()[1],
+    ",
+  0x40268030u64 => "
+      X_SPI.aibmcfgch0()[0],
+    ",
+  0x40268034u64 => "
+      X_SPI.aibmcfgch0()[1],
+    ",
+  0x40268038u64 => "
+      X_SPI.aibmcfgch0()[2],
+    ",
+  0x4026803cu64 => "
+      X_SPI.aibmcfgch0()[3],
+    ",
+  0x40268040u64 => "
+      X_SPI.aibmcfgch1()[0],
+    ",
+  0x40268044u64 => "
+      X_SPI.aibmcfgch1()[1],
+    ",
+  0x40268048u64 => "
+      X_SPI.aibmcfgch1()[2],
+    ",
+  0x4026804cu64 => "
+      X_SPI.aibmcfgch1()[3],
     ",
   0x40268050u64 => "
-      OSPI_0_B.liocfgcs()[0],
+      X_SPI.liocfgcs()[0],
     ",
   0x40268054u64 => "
-      OSPI_0_B.liocfgcs()[1],
+      X_SPI.liocfgcs()[1],
+    ",
+  0x40268058u64 => "
+      X_SPI.abmcfg(),
     ",
   0x40268060u64 => "
-      OSPI_0_B.bmctl0(),
+      X_SPI.bmctl0(),
     ",
   0x40268064u64 => "
-      OSPI_0_B.bmctl1(),
+      X_SPI.bmctl1(),
     ",
   0x40268068u64 => "
-      OSPI_0_B.cmctlch()[0],
+      X_SPI.cmctlch()[0],
     ",
   0x4026806cu64 => "
-      OSPI_0_B.cmctlch()[1],
+      X_SPI.cmctlch()[1],
     ",
   0x40268070u64 => "
-      OSPI_0_B.cdctl0(),
+      X_SPI.cdctl0(),
     ",
   0x40268074u64 => "
-      OSPI_0_B.cdctl1(),
+      X_SPI.cdctl1(),
     ",
   0x40268078u64 => "
-      OSPI_0_B.cdctl2(),
+      X_SPI.cdctl2(),
     ",
   0x40268080u64 => "
-      OSPI_0_B.cdtbuf()[0],
+      X_SPI.cdtbuf()[0],
     ",
   0x40268090u64 => "
-      OSPI_0_B.cdtbuf()[1],
+      X_SPI.cdtbuf()[1],
     ",
   0x402680a0u64 => "
-      OSPI_0_B.cdtbuf()[2],
+      X_SPI.cdtbuf()[2],
     ",
   0x402680b0u64 => "
-      OSPI_0_B.cdtbuf()[3],
+      X_SPI.cdtbuf()[3],
     ",
   0x40268084u64 => "
-      OSPI_0_B.cdabuf()[0],
+      X_SPI.cdabuf()[0],
     ",
   0x40268094u64 => "
-      OSPI_0_B.cdabuf()[1],
+      X_SPI.cdabuf()[1],
     ",
   0x402680a4u64 => "
-      OSPI_0_B.cdabuf()[2],
+      X_SPI.cdabuf()[2],
     ",
   0x402680b4u64 => "
-      OSPI_0_B.cdabuf()[3],
+      X_SPI.cdabuf()[3],
     ",
   0x40268088u64 => "
-      OSPI_0_B.cdd0buf()[0],
+      X_SPI.cdd0buf()[0],
     ",
   0x40268098u64 => "
-      OSPI_0_B.cdd0buf()[1],
+      X_SPI.cdd0buf()[1],
     ",
   0x402680a8u64 => "
-      OSPI_0_B.cdd0buf()[2],
+      X_SPI.cdd0buf()[2],
     ",
   0x402680b8u64 => "
-      OSPI_0_B.cdd0buf()[3],
+      X_SPI.cdd0buf()[3],
     ",
   0x4026808cu64 => "
-      OSPI_0_B.cdd1buf()[0],
+      X_SPI.cdd1buf()[0],
     ",
   0x4026809cu64 => "
-      OSPI_0_B.cdd1buf()[1],
+      X_SPI.cdd1buf()[1],
     ",
   0x402680acu64 => "
-      OSPI_0_B.cdd1buf()[2],
+      X_SPI.cdd1buf()[2],
     ",
   0x402680bcu64 => "
-      OSPI_0_B.cdd1buf()[3],
+      X_SPI.cdd1buf()[3],
     ",
   0x40268100u64 => "
-      OSPI_0_B.lpctl0(),
+      X_SPI.lpctl0(),
     ",
   0x40268104u64 => "
-      OSPI_0_B.lpctl1(),
+      X_SPI.lpctl1(),
     ",
   0x40268108u64 => "
-      OSPI_0_B.lioctl(),
+      X_SPI.lioctl(),
     ",
   0x40268130u64 => "
-      OSPI_0_B.ccctl0cs()[0],
+      X_SPI.ccctl0cs()[0],
     ",
   0x40268150u64 => "
-      OSPI_0_B.ccctl0cs()[1],
+      X_SPI.ccctl0cs()[1],
     ",
   0x40268134u64 => "
-      OSPI_0_B.ccctl1cs()[0],
+      X_SPI.ccctl1cs()[0],
     ",
   0x40268154u64 => "
-      OSPI_0_B.ccctl1cs()[1],
+      X_SPI.ccctl1cs()[1],
     ",
   0x40268138u64 => "
-      OSPI_0_B.ccctl2cs()[0],
+      X_SPI.ccctl2cs()[0],
     ",
   0x40268158u64 => "
-      OSPI_0_B.ccctl2cs()[1],
+      X_SPI.ccctl2cs()[1],
     ",
   0x4026813cu64 => "
-      OSPI_0_B.ccctl3cs()[0],
+      X_SPI.ccctl3cs()[0],
     ",
   0x4026815cu64 => "
-      OSPI_0_B.ccctl3cs()[1],
+      X_SPI.ccctl3cs()[1],
     ",
   0x40268140u64 => "
-      OSPI_0_B.ccctl4cs()[0],
+      X_SPI.ccctl4cs()[0],
     ",
   0x40268160u64 => "
-      OSPI_0_B.ccctl4cs()[1],
+      X_SPI.ccctl4cs()[1],
     ",
   0x40268144u64 => "
-      OSPI_0_B.ccctl5cs()[0],
+      X_SPI.ccctl5cs()[0],
     ",
   0x40268164u64 => "
-      OSPI_0_B.ccctl5cs()[1],
+      X_SPI.ccctl5cs()[1],
     ",
   0x40268148u64 => "
-      OSPI_0_B.ccctl6cs()[0],
+      X_SPI.ccctl6cs()[0],
     ",
   0x40268168u64 => "
-      OSPI_0_B.ccctl6cs()[1],
+      X_SPI.ccctl6cs()[1],
     ",
   0x4026814cu64 => "
-      OSPI_0_B.ccctl7cs()[0],
+      X_SPI.ccctl7cs()[0],
     ",
   0x4026816cu64 => "
-      OSPI_0_B.ccctl7cs()[1],
+      X_SPI.ccctl7cs()[1],
+    ",
+  0x40268180u64 => "
+      X_SPI.verstt(),
     ",
   0x40268184u64 => "
-      OSPI_0_B.comstt(),
+      X_SPI.comstt(),
     ",
   0x40268188u64 => "
-      OSPI_0_B.casttcs()[0],
+      X_SPI.casttcs()[0],
     ",
   0x4026818cu64 => "
-      OSPI_0_B.casttcs()[1],
+      X_SPI.casttcs()[1],
     ",
   0x40268190u64 => "
-      OSPI_0_B.ints(),
+      X_SPI.ints(),
     ",
   0x40268194u64 => "
-      OSPI_0_B.intc(),
+      X_SPI.intc(),
     ",
   0x40268198u64 => "
-      OSPI_0_B.inte(),
+      X_SPI.inte(),
     ",
   0x40310000u64 => "
       CRC.crccr0(),
@@ -3052,22 +3298,25 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       CRC.crcsar(),
     ",
   0x40311000u64 => "
-      DOC_B.docr(),
+      DOC.docr(),
     ",
   0x40311004u64 => "
-      DOC_B.dosr(),
+      DOC.dosr(),
     ",
   0x40311008u64 => "
-      DOC_B.doscr(),
+      DOC.doscr(),
     ",
   0x4031100cu64 => "
-      DOC_B.dodir(),
+      DOC.dodir(),
+      DOC.dodir_ha(),
     ",
   0x40311010u64 => "
-      DOC_B.dodsr0(),
+      DOC.dodsr0(),
+      DOC.dodsr0_ha(),
     ",
   0x40311014u64 => "
-      DOC_B.dodsr1(),
+      DOC.dodsr1(),
+      DOC.dodsr1_ha(),
     ",
   0x40322000u64 => "
       GPT_320.gtwp(),
@@ -3186,123 +3435,6 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x403220d4u64 => "
       GPT_320.gtsecr(),
     ",
-  0x40322800u64 => "
-      GPT_168.gtwp(),
-    ",
-  0x40322804u64 => "
-      GPT_168.gtstr(),
-    ",
-  0x40322808u64 => "
-      GPT_168.gtstp(),
-    ",
-  0x4032280cu64 => "
-      GPT_168.gtclr(),
-    ",
-  0x40322810u64 => "
-      GPT_168.gtssr(),
-    ",
-  0x40322814u64 => "
-      GPT_168.gtpsr(),
-    ",
-  0x40322818u64 => "
-      GPT_168.gtcsr(),
-    ",
-  0x4032281cu64 => "
-      GPT_168.gtupsr(),
-    ",
-  0x40322820u64 => "
-      GPT_168.gtdnsr(),
-    ",
-  0x40322824u64 => "
-      GPT_168.gticasr(),
-    ",
-  0x40322828u64 => "
-      GPT_168.gticbsr(),
-    ",
-  0x4032282cu64 => "
-      GPT_168.gtcr(),
-    ",
-  0x40322830u64 => "
-      GPT_168.gtuddtyc(),
-    ",
-  0x40322834u64 => "
-      GPT_168.gtior(),
-    ",
-  0x40322838u64 => "
-      GPT_168.gtintad(),
-    ",
-  0x4032283cu64 => "
-      GPT_168.gtst(),
-    ",
-  0x40322840u64 => "
-      GPT_168.gtber(),
-    ",
-  0x40322848u64 => "
-      GPT_168.gtcnt(),
-    ",
-  0x4032284cu64 => "
-      GPT_168.gtccra(),
-    ",
-  0x40322850u64 => "
-      GPT_168.gtccrb(),
-    ",
-  0x40322854u64 => "
-      GPT_168.gtccrc(),
-    ",
-  0x40322858u64 => "
-      GPT_168.gtccre(),
-    ",
-  0x4032285cu64 => "
-      GPT_168.gtccrd(),
-    ",
-  0x40322860u64 => "
-      GPT_168.gtccrf(),
-    ",
-  0x40322864u64 => "
-      GPT_168.gtpr(),
-    ",
-  0x40322868u64 => "
-      GPT_168.gtpbr(),
-    ",
-  0x40322870u64 => "
-      GPT_168.gtadtra(),
-    ",
-  0x40322874u64 => "
-      GPT_168.gtadtbra(),
-    ",
-  0x40322878u64 => "
-      GPT_168.gtadtdbra(),
-    ",
-  0x4032287cu64 => "
-      GPT_168.gtadtrb(),
-    ",
-  0x40322880u64 => "
-      GPT_168.gtadtbrb(),
-    ",
-  0x40322884u64 => "
-      GPT_168.gtadtdbrb(),
-    ",
-  0x40322888u64 => "
-      GPT_168.gtdtcr(),
-    ",
-  0x4032288cu64 => "
-      GPT_168.gtdvu(),
-    ",
-  0x403228a4u64 => "
-      GPT_168.gtadsmr(),
-    ",
-  0x403228b8u64 => "
-      GPT_168.gticlf(),
-    ",
-  0x403228bcu64 => "
-      GPT_168.gtpc(),
-    ",
-  0x403228d0u64 => "
-      GPT_168.gtsecsr(),
-    ",
-  0x403228d4u64 => "
-      GPT_168.gtsecr(),
-    ",
   0x40323f00u64 => "
       GPT_OPS.opscr(),
     ",
@@ -3351,6 +3483,19 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x4033201eu64 => "
       ADC_120.adrd(),
     ",
+  0x40332020u64 => "
+      ADC_120.addr()[0],
+    ",
+  0x40332022u64 => "
+      ADC_120.addr()[1],
+    ",
+  0x40332024u64 => "
+      ADC_120.addr()[2],
+    ",
+  0x40332026u64 => "
+      ADC_120.addr()[3],
+      ADC_120.advmdr(),
+    ",
   0x40332028u64 => "
       ADC_120.addr()[4],
     ",
@@ -3366,18 +3511,74 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x40332030u64 => "
       ADC_120.addr()[8],
     ",
-  0x40332020u64 => "
-      ADC_120.addr()[0],
+  0x40332032u64 => "
+      ADC_120.addr()[9],
     ",
-  0x40332022u64 => "
-      ADC_120.addr()[1],
+  0x40332034u64 => "
+      ADC_120.addr()[10],
     ",
-  0x40332024u64 => "
-      ADC_120.addr()[2],
+  0x40332036u64 => "
+      ADC_120.addr()[11],
     ",
-  0x40332026u64 => "
-      ADC_120.addr()[3],
-      ADC_120.advmdr(),
+  0x40332038u64 => "
+      ADC_120.addr()[12],
+    ",
+  0x4033203au64 => "
+      ADC_120.addr()[13],
+    ",
+  0x4033203cu64 => "
+      ADC_120.addr()[14],
+    ",
+  0x4033203eu64 => "
+      ADC_120.addr()[15],
+    ",
+  0x40332040u64 => "
+      ADC_120.addr()[16],
+    ",
+  0x40332042u64 => "
+      ADC_120.addr()[17],
+    ",
+  0x40332044u64 => "
+      ADC_120.addr()[18],
+    ",
+  0x40332046u64 => "
+      ADC_120.addr()[19],
+    ",
+  0x40332048u64 => "
+      ADC_120.addr()[20],
+    ",
+  0x4033204au64 => "
+      ADC_120.addr()[21],
+    ",
+  0x4033204cu64 => "
+      ADC_120.addr()[22],
+    ",
+  0x4033204eu64 => "
+      ADC_120.addr()[23],
+    ",
+  0x40332050u64 => "
+      ADC_120.addr()[24],
+    ",
+  0x40332052u64 => "
+      ADC_120.addr()[25],
+    ",
+  0x40332054u64 => "
+      ADC_120.addr()[26],
+    ",
+  0x40332056u64 => "
+      ADC_120.addr()[27],
+    ",
+  0x40332058u64 => "
+      ADC_120.addr()[28],
+    ",
+  0x4033205au64 => "
+      ADC_120.addr()[29],
+    ",
+  0x4033205cu64 => "
+      ADC_120.addr()[30],
+    ",
+  0x4033205eu64 => "
+      ADC_120.addr()[31],
     ",
   0x40332066u64 => "
       ADC_120.adshcr(),
@@ -3422,10 +3623,10 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       ADC_120.adcmplr1(),
     ",
   0x4033209cu64 => "
-      ADC_120.adcmpdr()[0],
+      ADC_120.adcmpdr0(),
     ",
   0x4033209eu64 => "
-      ADC_120.adcmpdr()[1],
+      ADC_120.adcmpdr1(),
     ",
   0x403320a0u64 => "
       ADC_120.adcmpsr0(),
@@ -3511,6 +3712,18 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x403320dfu64 => "
       ADC_120.adsstro(),
     ",
+  0x403320e0u64 => "
+      ADC_120.adsstr()[0],
+    ",
+  0x403320e1u64 => "
+      ADC_120.adsstr()[1],
+    ",
+  0x403320e2u64 => "
+      ADC_120.adsstr()[2],
+    ",
+  0x403320e3u64 => "
+      ADC_120.adsstr()[3],
+    ",
   0x403320e4u64 => "
       ADC_120.adsstr()[4],
     ",
@@ -3526,20 +3739,26 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x403320e8u64 => "
       ADC_120.adsstr()[8],
     ",
-  0x403320e3u64 => "
-      ADC_120.adsstrv(),
+  0x403320e9u64 => "
+      ADC_120.adsstr()[9],
+    ",
+  0x403320eau64 => "
+      ADC_120.adsstr()[10],
+    ",
+  0x403320ebu64 => "
+      ADC_120.adsstr()[11],
     ",
   0x403320ecu64 => "
-      ADC_120.adsstr()[0],
+      ADC_120.adsstr()[12],
     ",
   0x403320edu64 => "
-      ADC_120.adsstr()[1],
+      ADC_120.adsstr()[13],
     ",
   0x403320eeu64 => "
-      ADC_120.adsstr()[2],
+      ADC_120.adsstr()[14],
     ",
   0x403320efu64 => "
-      ADC_120.adsstr()[3],
+      ADC_120.adsstr()[15],
     ",
   0x40332200u64 => "
       ADC_121.adcsr(),
@@ -3608,6 +3827,81 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x4033222cu64 => "
       ADC_121.addr()[6],
     ",
+  0x4033222eu64 => "
+      ADC_121.addr()[7],
+    ",
+  0x40332230u64 => "
+      ADC_121.addr()[8],
+    ",
+  0x40332232u64 => "
+      ADC_121.addr()[9],
+    ",
+  0x40332234u64 => "
+      ADC_121.addr()[10],
+    ",
+  0x40332236u64 => "
+      ADC_121.addr()[11],
+    ",
+  0x40332238u64 => "
+      ADC_121.addr()[12],
+    ",
+  0x4033223au64 => "
+      ADC_121.addr()[13],
+    ",
+  0x4033223cu64 => "
+      ADC_121.addr()[14],
+    ",
+  0x4033223eu64 => "
+      ADC_121.addr()[15],
+    ",
+  0x40332240u64 => "
+      ADC_121.addr()[16],
+    ",
+  0x40332242u64 => "
+      ADC_121.addr()[17],
+    ",
+  0x40332244u64 => "
+      ADC_121.addr()[18],
+    ",
+  0x40332246u64 => "
+      ADC_121.addr()[19],
+    ",
+  0x40332248u64 => "
+      ADC_121.addr()[20],
+    ",
+  0x4033224au64 => "
+      ADC_121.addr()[21],
+    ",
+  0x4033224cu64 => "
+      ADC_121.addr()[22],
+    ",
+  0x4033224eu64 => "
+      ADC_121.addr()[23],
+    ",
+  0x40332250u64 => "
+      ADC_121.addr()[24],
+    ",
+  0x40332252u64 => "
+      ADC_121.addr()[25],
+    ",
+  0x40332254u64 => "
+      ADC_121.addr()[26],
+    ",
+  0x40332256u64 => "
+      ADC_121.addr()[27],
+    ",
+  0x40332258u64 => "
+      ADC_121.addr()[28],
+    ",
+  0x4033225au64 => "
+      ADC_121.addr()[29],
+    ",
+  0x4033225cu64 => "
+      ADC_121.addr()[30],
+    ",
+  0x4033225eu64 => "
+      ADC_121.addr()[31],
+    ",
   0x40332266u64 => "
       ADC_121.adshcr(),
     ",
@@ -3651,10 +3945,10 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       ADC_121.adcmplr1(),
     ",
   0x4033229cu64 => "
-      ADC_121.adcmpdr()[0],
+      ADC_121.adcmpdr0(),
     ",
   0x4033229eu64 => "
-      ADC_121.adcmpdr()[1],
+      ADC_121.adcmpdr1(),
     ",
   0x403322a0u64 => "
       ADC_121.adcmpsr0(),
@@ -3751,7 +4045,6 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
     ",
   0x403322e3u64 => "
       ADC_121.adsstr()[3],
-      ADC_121.adsstrv(),
     ",
   0x403322e4u64 => "
       ADC_121.adsstr()[4],
@@ -3761,6 +4054,33 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
     ",
   0x403322e6u64 => "
       ADC_121.adsstr()[6],
+    ",
+  0x403322e7u64 => "
+      ADC_121.adsstr()[7],
+    ",
+  0x403322e8u64 => "
+      ADC_121.adsstr()[8],
+    ",
+  0x403322e9u64 => "
+      ADC_121.adsstr()[9],
+    ",
+  0x403322eau64 => "
+      ADC_121.adsstr()[10],
+    ",
+  0x403322ebu64 => "
+      ADC_121.adsstr()[11],
+    ",
+  0x403322ecu64 => "
+      ADC_121.adsstr()[12],
+    ",
+  0x403322edu64 => "
+      ADC_121.adsstr()[13],
+    ",
+  0x403322eeu64 => "
+      ADC_121.adsstr()[14],
+    ",
+  0x403322efu64 => "
+      ADC_121.adsstr()[15],
     ",
   0x40333000u64 => "
       DAC_12.dadr()[0],
@@ -6994,133 +7314,140 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       GLCDC.gr_mon()[1],
     ",
   0x40343300u64 => "
-      GLCDC.gamg_latch(),
-    ",
-  0x40343304u64 => "
-      GLCDC.gam_sw(),
-    ",
-  0x40343308u64 => "
-      GLCDC.gamg_lut1(),
-    ",
-  0x4034330cu64 => "
-      GLCDC.gamg_lut2(),
-    ",
-  0x40343310u64 => "
-      GLCDC.gamg_lut3(),
-    ",
-  0x40343314u64 => "
-      GLCDC.gamg_lut4(),
-    ",
-  0x40343318u64 => "
-      GLCDC.gamg_lut5(),
-    ",
-  0x4034331cu64 => "
-      GLCDC.gamg_lut6(),
-    ",
-  0x40343320u64 => "
-      GLCDC.gamg_lut7(),
-    ",
-  0x40343324u64 => "
-      GLCDC.gamg_lut8(),
-    ",
-  0x40343328u64 => "
-      GLCDC.gamg_area1(),
-    ",
-  0x4034332cu64 => "
-      GLCDC.gamg_area2(),
-    ",
-  0x40343330u64 => "
-      GLCDC.gamg_area3(),
-    ",
-  0x40343334u64 => "
-      GLCDC.gamg_area4(),
-    ",
-  0x40343338u64 => "
-      GLCDC.gamg_area5(),
+      GLCDC.gam_latch()[0],
     ",
   0x40343340u64 => "
-      GLCDC.gamb_latch(),
-    ",
-  0x40343348u64 => "
-      GLCDC.gamb_lut1(),
-    ",
-  0x4034334cu64 => "
-      GLCDC.gamb_lut2(),
-    ",
-  0x40343350u64 => "
-      GLCDC.gamb_lut3(),
-    ",
-  0x40343354u64 => "
-      GLCDC.gamb_lut4(),
-    ",
-  0x40343358u64 => "
-      GLCDC.gamb_lut5(),
-    ",
-  0x4034335cu64 => "
-      GLCDC.gamb_lut6(),
-    ",
-  0x40343360u64 => "
-      GLCDC.gamb_lut7(),
-    ",
-  0x40343364u64 => "
-      GLCDC.gamb_lut8(),
-    ",
-  0x40343368u64 => "
-      GLCDC.gamb_area1(),
-    ",
-  0x4034336cu64 => "
-      GLCDC.gamb_area2(),
-    ",
-  0x40343370u64 => "
-      GLCDC.gamb_area3(),
-    ",
-  0x40343374u64 => "
-      GLCDC.gamb_area4(),
-    ",
-  0x40343378u64 => "
-      GLCDC.gamb_area5(),
+      GLCDC.gam_latch()[1],
     ",
   0x40343380u64 => "
-      GLCDC.gamr_latch(),
+      GLCDC.gam_latch()[2],
+    ",
+  0x40343304u64 => "
+      GLCDC.gam_sw()[0],
+      GLCDC.gam_sw(),
+    ",
+  0x40343344u64 => "
+      GLCDC.gam_sw()[1],
+    ",
+  0x40343384u64 => "
+      GLCDC.gam_sw()[2],
+    ",
+  0x40343308u64 => "
+      GLCDC.gam_lut1()[0],
+    ",
+  0x40343348u64 => "
+      GLCDC.gam_lut1()[1],
     ",
   0x40343388u64 => "
-      GLCDC.gamr_lut1(),
+      GLCDC.gam_lut1()[2],
+    ",
+  0x4034330cu64 => "
+      GLCDC.gam_lut2()[0],
+    ",
+  0x4034334cu64 => "
+      GLCDC.gam_lut2()[1],
     ",
   0x4034338cu64 => "
-      GLCDC.gamr_lut2(),
+      GLCDC.gam_lut2()[2],
+    ",
+  0x40343310u64 => "
+      GLCDC.gam_lut3()[0],
+    ",
+  0x40343350u64 => "
+      GLCDC.gam_lut3()[1],
     ",
   0x40343390u64 => "
-      GLCDC.gamr_lut3(),
+      GLCDC.gam_lut3()[2],
+    ",
+  0x40343314u64 => "
+      GLCDC.gam_lut4()[0],
+    ",
+  0x40343354u64 => "
+      GLCDC.gam_lut4()[1],
     ",
   0x40343394u64 => "
-      GLCDC.gamr_lut4(),
+      GLCDC.gam_lut4()[2],
+    ",
+  0x40343318u64 => "
+      GLCDC.gam_lut5()[0],
+    ",
+  0x40343358u64 => "
+      GLCDC.gam_lut5()[1],
     ",
   0x40343398u64 => "
-      GLCDC.gamr_lut5(),
+      GLCDC.gam_lut5()[2],
+    ",
+  0x4034331cu64 => "
+      GLCDC.gam_lut6()[0],
+    ",
+  0x4034335cu64 => "
+      GLCDC.gam_lut6()[1],
     ",
   0x4034339cu64 => "
-      GLCDC.gamr_lut6(),
+      GLCDC.gam_lut6()[2],
+    ",
+  0x40343320u64 => "
+      GLCDC.gam_lut7()[0],
+    ",
+  0x40343360u64 => "
+      GLCDC.gam_lut7()[1],
     ",
   0x403433a0u64 => "
-      GLCDC.gamr_lut7(),
+      GLCDC.gam_lut7()[2],
+    ",
+  0x40343324u64 => "
+      GLCDC.gam_lut8()[0],
+    ",
+  0x40343364u64 => "
+      GLCDC.gam_lut8()[1],
     ",
   0x403433a4u64 => "
-      GLCDC.gamr_lut8(),
+      GLCDC.gam_lut8()[2],
+    ",
+  0x40343328u64 => "
+      GLCDC.gam_area1()[0],
+    ",
+  0x40343368u64 => "
+      GLCDC.gam_area1()[1],
     ",
   0x403433a8u64 => "
-      GLCDC.gamr_area1(),
+      GLCDC.gam_area1()[2],
+    ",
+  0x4034332cu64 => "
+      GLCDC.gam_area2()[0],
+    ",
+  0x4034336cu64 => "
+      GLCDC.gam_area2()[1],
     ",
   0x403433acu64 => "
-      GLCDC.gamr_area2(),
+      GLCDC.gam_area2()[2],
+    ",
+  0x40343330u64 => "
+      GLCDC.gam_area3()[0],
+    ",
+  0x40343370u64 => "
+      GLCDC.gam_area3()[1],
     ",
   0x403433b0u64 => "
-      GLCDC.gamr_area3(),
+      GLCDC.gam_area3()[2],
+    ",
+  0x40343334u64 => "
+      GLCDC.gam_area4()[0],
+    ",
+  0x40343374u64 => "
+      GLCDC.gam_area4()[1],
     ",
   0x403433b4u64 => "
-      GLCDC.gamr_area4(),
+      GLCDC.gam_area4()[2],
+    ",
+  0x40343338u64 => "
+      GLCDC.gam_area5()[0],
+    ",
+  0x40343378u64 => "
+      GLCDC.gam_area5()[1],
     ",
   0x403433b8u64 => "
-      GLCDC.gamr_area5(),
+      GLCDC.gam_area5()[2],
     ",
   0x403433c0u64 => "
       GLCDC.out_vlatch(),
@@ -7143,32 +7470,35 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x403433e4u64 => "
       GLCDC.out_clkphase(),
     ",
+  0x40343400u64 => "
+      GLCDC.tcon_vlatch(),
+    ",
   0x40343404u64 => "
       GLCDC.tcon_tim(),
     ",
   0x40343408u64 => "
-      GLCDC.tcon_stva1(),
-    ",
-  0x4034340cu64 => "
-      GLCDC.tcon_stva2(),
+      GLCDC.tcon_stv1()[0],
     ",
   0x40343410u64 => "
-      GLCDC.tcon_stvb1(),
+      GLCDC.tcon_stv1()[1],
+    ",
+  0x4034340cu64 => "
+      GLCDC.tcon_stv2()[0],
     ",
   0x40343414u64 => "
-      GLCDC.tcon_stvb2(),
+      GLCDC.tcon_stv2()[1],
     ",
   0x40343418u64 => "
-      GLCDC.tcon_stha1(),
-    ",
-  0x4034341cu64 => "
-      GLCDC.tcon_stha2(),
+      GLCDC.tcon_sth1()[0],
     ",
   0x40343420u64 => "
-      GLCDC.tcon_sthb1(),
+      GLCDC.tcon_sth1()[1],
+    ",
+  0x4034341cu64 => "
+      GLCDC.tcon_sth2()[0],
     ",
   0x40343424u64 => "
-      GLCDC.tcon_sthb2(),
+      GLCDC.tcon_sth2()[1],
     ",
   0x40343428u64 => "
       GLCDC.tcon_de(),
@@ -7317,8 +7647,10 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       DRW.dliststart(),
     ",
   0x403440ccu64 => "
-      DRW.perfcount1(),
-      DRW.perfcount2(),
+      DRW.perfcount()[0],
+    ",
+  0x403440d0u64 => "
+      DRW.perfcount()[1],
     ",
   0x403440d4u64 => "
       DRW.perftrigger(),
@@ -7336,424 +7668,1597 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       DRW.colkey(),
     ",
   0x40346000u64 => "
-      MIPI_DSI.isr(),
+      DSILINK.isr(),
+      DSILINK.isr_l(),
+      DSILINK.isr_ll(),
+    ",
+  0x40346001u64 => "
+      DSILINK.isr_lh(),
+    ",
+  0x40346002u64 => "
+      DSILINK.isr_h(),
+      DSILINK.isr_hl(),
+    ",
+  0x40346003u64 => "
+      DSILINK.isr_hh(),
     ",
   0x40346010u64 => "
-      MIPI_DSI.linksr(),
+      DSILINK.linksr_l(),
+      DSILINK.linksr_ll(),
+    ",
+  0x40346011u64 => "
+      DSILINK.linksr_lh(),
+    ",
+  0x40346012u64 => "
+      DSILINK.linksr_h(),
+      DSILINK.linksr_hl(),
+    ",
+  0x40346013u64 => "
+      DSILINK.linksr_hh(),
     ",
   0x40346100u64 => "
-      MIPI_DSI.txsetr(),
+      DSILINK.txsetr_l(),
+      DSILINK.txsetr_ll(),
+    ",
+  0x40346101u64 => "
+      DSILINK.txsetr_lh(),
+    ",
+  0x40346102u64 => "
+      DSILINK.txsetr_h(),
+      DSILINK.txsetr_hl(),
     ",
   0x40346104u64 => "
-      MIPI_DSI.hsclksetr(),
+      DSILINK.hsclksetr(),
+      DSILINK.hsclksetr_l(),
+      DSILINK.hsclksetr_ll(),
     ",
   0x40346108u64 => "
-      MIPI_DSI.ulpssetr(),
+      DSILINK.ulpssetr(),
+      DSILINK.ulpssetr_l(),
+      DSILINK.ulpssetr_ll(),
     ",
   0x4034610cu64 => "
-      MIPI_DSI.ulpscr(),
+      DSILINK.ulpscr(),
+    ",
+  0x4034610eu64 => "
+      DSILINK.ulpscr_h(),
+    ",
+  0x4034610fu64 => "
+      DSILINK.ulpscr_hh(),
     ",
   0x40346110u64 => "
-      MIPI_DSI.rstcr(),
+      DSILINK.rstcr(),
+      DSILINK.rstcr_l(),
+      DSILINK.rstcr_ll(),
+    ",
+  0x40346112u64 => "
+      DSILINK.rstcr_h(),
+      DSILINK.rstcr_hl(),
+    ",
+  0x40346113u64 => "
+      DSILINK.rstcr_hh(),
     ",
   0x40346114u64 => "
-      MIPI_DSI.rstsr(),
+      DSILINK.rstsr(),
+      DSILINK.rstsr_l(),
+      DSILINK.rstsr_ll(),
+    ",
+  0x40346115u64 => "
+      DSILINK.rstsr_lh(),
     ",
   0x40346120u64 => "
-      MIPI_DSI.dsisetr(),
+      DSILINK.dsisetr(),
+      DSILINK.dsisetr_l(),
+      DSILINK.dsisetr_ll(),
+    ",
+  0x40346121u64 => "
+      DSILINK.dsisetr_lh(),
+    ",
+  0x40346122u64 => "
+      DSILINK.dsisetr_h(),
+      DSILINK.dsisetr_hl(),
+    ",
+  0x40346123u64 => "
+      DSILINK.dsisetr_hh(),
     ",
   0x40346160u64 => "
-      MIPI_DSI.txppd0r(),
+      DSILINK.txppd0r(),
+      DSILINK.txppd0r_l(),
+      DSILINK.txppd0r_ll(),
+    ",
+  0x40346161u64 => "
+      DSILINK.txppd0r_lh(),
+    ",
+  0x40346162u64 => "
+      DSILINK.txppd0r_h(),
+      DSILINK.txppd0r_hl(),
+    ",
+  0x40346163u64 => "
+      DSILINK.txppd0r_hh(),
     ",
   0x40346164u64 => "
-      MIPI_DSI.txppd1r(),
+      DSILINK.txppd1r(),
+      DSILINK.txppd1r_l(),
+      DSILINK.txppd1r_ll(),
+    ",
+  0x40346165u64 => "
+      DSILINK.txppd1r_lh(),
+    ",
+  0x40346166u64 => "
+      DSILINK.txppd1r_h(),
+      DSILINK.txppd1r_hl(),
+    ",
+  0x40346167u64 => "
+      DSILINK.txppd1r_hh(),
     ",
   0x40346168u64 => "
-      MIPI_DSI.txppd2r(),
+      DSILINK.txppd2r(),
+      DSILINK.txppd2r_l(),
+      DSILINK.txppd2r_ll(),
+    ",
+  0x40346169u64 => "
+      DSILINK.txppd2r_lh(),
+    ",
+  0x4034616au64 => "
+      DSILINK.txppd2r_h(),
+      DSILINK.txppd2r_hl(),
+    ",
+  0x4034616bu64 => "
+      DSILINK.txppd2r_hh(),
     ",
   0x4034616cu64 => "
-      MIPI_DSI.txppd3r(),
+      DSILINK.txppd3r(),
+      DSILINK.txppd3r_l(),
+      DSILINK.txppd3r_ll(),
+    ",
+  0x4034616du64 => "
+      DSILINK.txppd3r_lh(),
+    ",
+  0x4034616eu64 => "
+      DSILINK.txppd3r_h(),
+      DSILINK.txppd3r_hl(),
+    ",
+  0x4034616fu64 => "
+      DSILINK.txppd3r_hh(),
     ",
   0x40346200u64 => "
-      MIPI_DSI.rxsr(),
+      DSILINK.rxsr(),
+      DSILINK.rxsr_l(),
+      DSILINK.rxsr_ll(),
+    ",
+  0x40346201u64 => "
+      DSILINK.rxsr_lh(),
+    ",
+  0x40346202u64 => "
+      DSILINK.rxsr_h(),
+      DSILINK.rxsr_hl(),
+    ",
+  0x40346203u64 => "
+      DSILINK.rxsr_hh(),
     ",
   0x40346204u64 => "
-      MIPI_DSI.rxscr(),
+      DSILINK.rxscr(),
+      DSILINK.rxscr_l(),
+      DSILINK.rxscr_ll(),
+    ",
+  0x40346205u64 => "
+      DSILINK.rxscr_lh(),
+    ",
+  0x40346206u64 => "
+      DSILINK.rxscr_h(),
+      DSILINK.rxscr_hl(),
+    ",
+  0x40346207u64 => "
+      DSILINK.rxscr_hh(),
     ",
   0x40346208u64 => "
-      MIPI_DSI.rxier(),
+      DSILINK.rxier(),
+      DSILINK.rxier_l(),
+      DSILINK.rxier_ll(),
+    ",
+  0x40346209u64 => "
+      DSILINK.rxier_lh(),
+    ",
+  0x4034620au64 => "
+      DSILINK.rxier_h(),
+      DSILINK.rxier_hl(),
+    ",
+  0x4034620bu64 => "
+      DSILINK.rxier_hh(),
     ",
   0x40346210u64 => "
-      MIPI_DSI.presptobtasetr(),
+      DSILINK.presptobtasetr(),
     ",
   0x40346214u64 => "
-      MIPI_DSI.presptolpsetr(),
+      DSILINK.presptolpsetr(),
+      DSILINK.presptolpsetr_l(),
+    ",
+  0x40346216u64 => "
+      DSILINK.presptolpsetr_h(),
     ",
   0x40346218u64 => "
-      MIPI_DSI.presptohssetr(),
+      DSILINK.presptohssetr(),
+      DSILINK.presptohssetr_l(),
+    ",
+  0x4034621au64 => "
+      DSILINK.presptohssetr_h(),
     ",
   0x40346220u64 => "
-      MIPI_DSI.akeplatir(),
+      DSILINK.akeplatir(),
+      DSILINK.akeplatir_l(),
+      DSILINK.akeplatir_ll(),
+    ",
+  0x40346221u64 => "
+      DSILINK.akeplatir_lh(),
+    ",
+  0x40346222u64 => "
+      DSILINK.akeplatir_h(),
+      DSILINK.akeplatir_hl(),
     ",
   0x40346224u64 => "
-      MIPI_DSI.akepacmsr(),
+      DSILINK.akepacmsr(),
+      DSILINK.akepacmsr_l(),
+      DSILINK.akepacmsr_ll(),
+    ",
+  0x40346225u64 => "
+      DSILINK.akepacmsr_lh(),
+    ",
+  0x40346226u64 => "
+      DSILINK.akepacmsr_h(),
+      DSILINK.akepacmsr_hl(),
     ",
   0x40346228u64 => "
-      MIPI_DSI.akepscr(),
+      DSILINK.akepscr(),
+      DSILINK.akepscr_l(),
+      DSILINK.akepscr_ll(),
+    ",
+  0x40346229u64 => "
+      DSILINK.akepscr_lh(),
+    ",
+  0x4034622au64 => "
+      DSILINK.akepscr_h(),
+      DSILINK.akepscr_hl(),
     ",
   0x40346230u64 => "
-      MIPI_DSI.rxrssr(),
+      DSILINK.rxrssr(),
+      DSILINK.rxrssr_l(),
+      DSILINK.rxrssr_ll(),
+    ",
+  0x40346232u64 => "
+      DSILINK.rxrssr_h(),
+    ",
+  0x40346233u64 => "
+      DSILINK.rxrssr_hh(),
     ",
   0x40346234u64 => "
-      MIPI_DSI.rxrsscr(),
+      DSILINK.rxrsscr(),
+      DSILINK.rxrsscr_l(),
+      DSILINK.rxrsscr_ll(),
+    ",
+  0x40346236u64 => "
+      DSILINK.rxrsscr_h(),
+    ",
+  0x40346237u64 => "
+      DSILINK.rxrsscr_hh(),
     ",
   0x40346238u64 => "
-      MIPI_DSI.rxrinfoowsr(),
+      DSILINK.rxrinfoowsr(),
+      DSILINK.rxrinfoowsr_l(),
+      DSILINK.rxrinfoowsr_ll(),
+    ",
+  0x4034623au64 => "
+      DSILINK.rxrinfoowsr_h(),
+    ",
+  0x4034623bu64 => "
+      DSILINK.rxrinfoowsr_hh(),
     ",
   0x4034623cu64 => "
-      MIPI_DSI.rxrinfoowscr(),
+      DSILINK.rxrinfoowscr(),
+      DSILINK.rxrinfoowscr_l(),
+      DSILINK.rxrinfoowscr_ll(),
+    ",
+  0x4034623eu64 => "
+      DSILINK.rxrinfoowscr_h(),
+    ",
+  0x4034623fu64 => "
+      DSILINK.rxrinfoowscr_hh(),
     ",
   0x40346240u64 => "
-      MIPI_DSI.rxrssr()[0],
+      DSILINK.rxrssr()[0],
+      DSILINK.rxrssr_l()[0],
+      DSILINK.rxrssr_ll()[0],
     ",
   0x40346244u64 => "
-      MIPI_DSI.rxrssr()[1],
+      DSILINK.rxrssr()[1],
+      DSILINK.rxrssr_l()[1],
+      DSILINK.rxrssr_ll()[1],
     ",
   0x40346248u64 => "
-      MIPI_DSI.rxrssr()[2],
+      DSILINK.rxrssr()[2],
+      DSILINK.rxrssr_l()[2],
+      DSILINK.rxrssr_ll()[2],
     ",
   0x4034624cu64 => "
-      MIPI_DSI.rxrssr()[3],
+      DSILINK.rxrssr()[3],
+      DSILINK.rxrssr_l()[3],
+      DSILINK.rxrssr_ll()[3],
+    ",
+  0x40346241u64 => "
+      DSILINK.rxrssr_lh()[0],
+    ",
+  0x40346245u64 => "
+      DSILINK.rxrssr_lh()[1],
+    ",
+  0x40346249u64 => "
+      DSILINK.rxrssr_lh()[2],
+    ",
+  0x4034624du64 => "
+      DSILINK.rxrssr_lh()[3],
+    ",
+  0x40346242u64 => "
+      DSILINK.rxrssr_h()[0],
+      DSILINK.rxrssr_hl()[0],
+    ",
+  0x40346246u64 => "
+      DSILINK.rxrssr_h()[1],
+      DSILINK.rxrssr_hl()[1],
+    ",
+  0x4034624au64 => "
+      DSILINK.rxrssr_h()[2],
+      DSILINK.rxrssr_hl()[2],
+    ",
+  0x4034624eu64 => "
+      DSILINK.rxrssr_h()[3],
+      DSILINK.rxrssr_hl()[3],
+    ",
+  0x40346243u64 => "
+      DSILINK.rxrssr_hh()[0],
+    ",
+  0x40346247u64 => "
+      DSILINK.rxrssr_hh()[1],
+    ",
+  0x4034624bu64 => "
+      DSILINK.rxrssr_hh()[2],
+    ",
+  0x4034624fu64 => "
+      DSILINK.rxrssr_hh()[3],
     ",
   0x403462c0u64 => "
-      MIPI_DSI.rxppd0r(),
+      DSILINK.rxppd0r(),
+      DSILINK.rxppd0r_l(),
+      DSILINK.rxppd0r_ll(),
+    ",
+  0x403462c1u64 => "
+      DSILINK.rxppd0r_lh(),
+    ",
+  0x403462c2u64 => "
+      DSILINK.rxppd0r_h(),
+      DSILINK.rxppd0r_hl(),
+    ",
+  0x403462c3u64 => "
+      DSILINK.rxppd0r_hh(),
     ",
   0x403462c4u64 => "
-      MIPI_DSI.rxppd1r(),
+      DSILINK.rxppd1r(),
+      DSILINK.rxppd1r_l(),
+      DSILINK.rxppd1r_ll(),
+    ",
+  0x403462c5u64 => "
+      DSILINK.rxppd1r_lh(),
+    ",
+  0x403462c6u64 => "
+      DSILINK.rxppd1r_h(),
+      DSILINK.rxppd1r_hl(),
+    ",
+  0x403462c7u64 => "
+      DSILINK.rxppd1r_hh(),
     ",
   0x403462c8u64 => "
-      MIPI_DSI.rxppd2r(),
+      DSILINK.rxppd2r(),
+      DSILINK.rxppd2r_l(),
+      DSILINK.rxppd2r_ll(),
+    ",
+  0x403462c9u64 => "
+      DSILINK.rxppd2r_lh(),
+    ",
+  0x403462cau64 => "
+      DSILINK.rxppd2r_h(),
+      DSILINK.rxppd2r_hl(),
+    ",
+  0x403462cbu64 => "
+      DSILINK.rxppd2r_hh(),
     ",
   0x403462ccu64 => "
-      MIPI_DSI.rxppd3r(),
+      DSILINK.rxppd3r(),
+      DSILINK.rxppd3r_l(),
+      DSILINK.rxppd3r_ll(),
+    ",
+  0x403462cdu64 => "
+      DSILINK.rxppd3r_lh(),
+    ",
+  0x403462ceu64 => "
+      DSILINK.rxppd3r_h(),
+      DSILINK.rxppd3r_hl(),
+    ",
+  0x403462cfu64 => "
+      DSILINK.rxppd3r_hh(),
     ",
   0x403462e0u64 => "
-      MIPI_DSI.hstxtosetr(),
+      DSILINK.hstxtosetr(),
     ",
   0x403462e4u64 => "
-      MIPI_DSI.lrxhtosetr(),
+      DSILINK.lrxhtosetr(),
     ",
   0x403462e8u64 => "
-      MIPI_DSI.tatosetr(),
+      DSILINK.tatosetr(),
     ",
   0x40346300u64 => "
-      MIPI_DSI.ferrsr(),
+      DSILINK.ferrsr(),
+      DSILINK.ferrsr_l(),
+      DSILINK.ferrsr_ll(),
+    ",
+  0x40346302u64 => "
+      DSILINK.ferrsr_h(),
+      DSILINK.ferrsr_hl(),
+    ",
+  0x40346303u64 => "
+      DSILINK.ferrsr_hh(),
     ",
   0x40346304u64 => "
-      MIPI_DSI.ferrscr(),
+      DSILINK.ferrscr(),
+      DSILINK.ferrscr_l(),
+      DSILINK.ferrscr_ll(),
+    ",
+  0x40346306u64 => "
+      DSILINK.ferrscr_h(),
+      DSILINK.ferrscr_hl(),
     ",
   0x40346308u64 => "
-      MIPI_DSI.ferrier(),
+      DSILINK.ferrier(),
+      DSILINK.ferrier_l(),
+      DSILINK.ferrier_ll(),
+    ",
+  0x4034630au64 => "
+      DSILINK.ferrier_h(),
+      DSILINK.ferrier_hl(),
     ",
   0x40346314u64 => "
-      MIPI_DSI.clstptsetr(),
+      DSILINK.clstptsetr(),
+      DSILINK.clstptsetr_l(),
+      DSILINK.clstptsetr_ll(),
+    ",
+  0x40346315u64 => "
+      DSILINK.clstptsetr_lh(),
+    ",
+  0x40346316u64 => "
+      DSILINK.clstptsetr_h(),
+      DSILINK.clstptsetr_hl(),
+    ",
+  0x40346317u64 => "
+      DSILINK.clstptsetr_hh(),
     ",
   0x40346318u64 => "
-      MIPI_DSI.lptrnstsetr(),
+      DSILINK.lptrnstsetr(),
+      DSILINK.lptrnstsetr_l(),
+      DSILINK.lptrnstsetr_ll(),
+    ",
+  0x40346319u64 => "
+      DSILINK.lptrnstsetr_lh(),
     ",
   0x40346320u64 => "
-      MIPI_DSI.plsr(),
+      DSILINK.plsr(),
+      DSILINK.plsr_l(),
+      DSILINK.plsr_ll(),
+    ",
+  0x40346321u64 => "
+      DSILINK.plsr_lh(),
+    ",
+  0x40346322u64 => "
+      DSILINK.plsr_h(),
+    ",
+  0x40346323u64 => "
+      DSILINK.plsr_hh(),
     ",
   0x40346324u64 => "
-      MIPI_DSI.plscr(),
+      DSILINK.plscr(),
+      DSILINK.plscr_l(),
+    ",
+  0x40346325u64 => "
+      DSILINK.plscr_lh(),
+    ",
+  0x40346326u64 => "
+      DSILINK.plscr_h(),
+    ",
+  0x40346327u64 => "
+      DSILINK.plscr_hh(),
     ",
   0x40346328u64 => "
-      MIPI_DSI.plier(),
+      DSILINK.plier(),
+      DSILINK.plier_l(),
+    ",
+  0x40346329u64 => "
+      DSILINK.plier_lh(),
+    ",
+  0x4034632au64 => "
+      DSILINK.plier_h(),
+    ",
+  0x4034632bu64 => "
+      DSILINK.plier_hh(),
     ",
   0x40346400u64 => "
-      MIPI_DSI.vmset0r(),
+      DSILINK.vmset0r(),
+      DSILINK.vmset0r_l(),
+      DSILINK.vmset0r_ll(),
+    ",
+  0x40346401u64 => "
+      DSILINK.vmset0r_lh(),
     ",
   0x40346404u64 => "
-      MIPI_DSI.vmset1r(),
+      DSILINK.vmset1r_l(),
+    ",
+  0x40346406u64 => "
+      DSILINK.vmset1r_h(),
     ",
   0x40346410u64 => "
-      MIPI_DSI.vmsr(),
+      DSILINK.vmsr(),
+      DSILINK.vmsr_l(),
+      DSILINK.vmsr_ll(),
+    ",
+  0x40346411u64 => "
+      DSILINK.vmsr_lh(),
+    ",
+  0x40346412u64 => "
+      DSILINK.vmsr_h(),
+      DSILINK.vmsr_hl(),
+    ",
+  0x40346413u64 => "
+      DSILINK.vmsr_hh(),
     ",
   0x40346414u64 => "
-      MIPI_DSI.vmscr(),
+      DSILINK.vmscr(),
+      DSILINK.vmscr_l(),
+      DSILINK.vmscr_ll(),
+    ",
+  0x40346415u64 => "
+      DSILINK.vmscr_lh(),
+    ",
+  0x40346416u64 => "
+      DSILINK.vmscr_h(),
+      DSILINK.vmscr_hl(),
+    ",
+  0x40346417u64 => "
+      DSILINK.vmscr_hh(),
     ",
   0x40346418u64 => "
-      MIPI_DSI.vmier(),
+      DSILINK.vmier(),
+      DSILINK.vmier_l(),
+      DSILINK.vmier_ll(),
+    ",
+  0x40346419u64 => "
+      DSILINK.vmier_lh(),
+    ",
+  0x4034641au64 => "
+      DSILINK.vmier_h(),
+      DSILINK.vmier_hl(),
+    ",
+  0x4034641bu64 => "
+      DSILINK.vmier_hh(),
     ",
   0x40346420u64 => "
-      MIPI_DSI.vmppsetr(),
+      DSILINK.vmppsetr(),
+      DSILINK.vmppsetr_l(),
+      DSILINK.vmppsetr_ll(),
+    ",
+  0x40346421u64 => "
+      DSILINK.vmppsetr_lh(),
+    ",
+  0x40346422u64 => "
+      DSILINK.vmppsetr_h(),
+      DSILINK.vmppsetr_hl(),
     ",
   0x40346428u64 => "
-      MIPI_DSI.vmvssetr(),
+      DSILINK.vmvssetr(),
+      DSILINK.vmvssetr_l(),
+      DSILINK.vmvssetr_ll(),
+    ",
+  0x40346429u64 => "
+      DSILINK.vmvssetr_lh(),
+    ",
+  0x4034642au64 => "
+      DSILINK.vmvssetr_h(),
+      DSILINK.vmvssetr_hl(),
+    ",
+  0x4034642bu64 => "
+      DSILINK.vmvssetr_hh(),
     ",
   0x4034642cu64 => "
-      MIPI_DSI.vmvpsetr(),
+      DSILINK.vmvpsetr(),
+      DSILINK.vmvpsetr_l(),
+      DSILINK.vmvpsetr_ll(),
+    ",
+  0x4034642du64 => "
+      DSILINK.vmvpsetr_lh(),
+    ",
+  0x4034642eu64 => "
+      DSILINK.vmvpsetr_h(),
+      DSILINK.vmvpsetr_hl(),
+    ",
+  0x4034642fu64 => "
+      DSILINK.vmvpsetr_hh(),
     ",
   0x40346430u64 => "
-      MIPI_DSI.vmhssetr(),
+      DSILINK.vmhssetr(),
+      DSILINK.vmhssetr_l(),
+      DSILINK.vmhssetr_ll(),
+    ",
+  0x40346431u64 => "
+      DSILINK.vmhssetr_lh(),
+    ",
+  0x40346432u64 => "
+      DSILINK.vmhssetr_h(),
+      DSILINK.vmhssetr_hl(),
+    ",
+  0x40346433u64 => "
+      DSILINK.vmhssetr_hh(),
     ",
   0x40346434u64 => "
-      MIPI_DSI.vmhpsetr(),
+      DSILINK.vmhpsetr(),
+      DSILINK.vmhpsetr_l(),
+      DSILINK.vmhpsetr_ll(),
+    ",
+  0x40346435u64 => "
+      DSILINK.vmhpsetr_lh(),
+    ",
+  0x40346436u64 => "
+      DSILINK.vmhpsetr_h(),
+      DSILINK.vmhpsetr_hl(),
+    ",
+  0x40346437u64 => "
+      DSILINK.vmhpsetr_hh(),
     ",
   0x403465c0u64 => "
-      MIPI_DSI.sqch0set0r(),
+      DSILINK.sqch0set0r(),
+      DSILINK.sqch0set0r_l(),
+      DSILINK.sqch0set0r_ll(),
+    ",
+  0x403465c1u64 => "
+      DSILINK.sqch0set0r_lh(),
+    ",
+  0x403465c2u64 => "
+      DSILINK.sqch0set0r_h(),
+      DSILINK.sqch0set0r_hl(),
+    ",
+  0x403465c3u64 => "
+      DSILINK.sqch0set0r_hh(),
     ",
   0x403465d0u64 => "
-      MIPI_DSI.sqch0sr(),
+      DSILINK.sqch0sr(),
+      DSILINK.sqch0sr_l(),
+      DSILINK.sqch0sr_ll(),
+    ",
+  0x403465d1u64 => "
+      DSILINK.sqch0sr_lh(),
+    ",
+  0x403465d2u64 => "
+      DSILINK.sqch0sr_h(),
+      DSILINK.sqch0sr_hl(),
+    ",
+  0x403465d3u64 => "
+      DSILINK.sqch0sr_hh(),
     ",
   0x403465d4u64 => "
-      MIPI_DSI.sqch0scr(),
+      DSILINK.sqch0scr(),
+      DSILINK.sqch0scr_l(),
+      DSILINK.sqch0scr_ll(),
+    ",
+  0x403465d5u64 => "
+      DSILINK.sqch0scr_lh(),
+    ",
+  0x403465d6u64 => "
+      DSILINK.sqch0scr_h(),
+      DSILINK.sqch0scr_hl(),
+    ",
+  0x403465d7u64 => "
+      DSILINK.sqch0scr_hh(),
     ",
   0x403465d8u64 => "
-      MIPI_DSI.sqch0ier(),
+      DSILINK.sqch0ier(),
+      DSILINK.sqch0ier_l(),
+      DSILINK.sqch0ier_ll(),
+    ",
+  0x403465d9u64 => "
+      DSILINK.sqch0ier_lh(),
+    ",
+  0x403465dau64 => "
+      DSILINK.sqch0ier_h(),
+      DSILINK.sqch0ier_hl(),
+    ",
+  0x403465dbu64 => "
+      DSILINK.sqch0ier_hh(),
     ",
   0x40346600u64 => "
-      MIPI_DSI.sqch1set0r(),
+      DSILINK.sqch1set0r(),
+      DSILINK.sqch1set0r_l(),
+      DSILINK.sqch1set0r_ll(),
+    ",
+  0x40346601u64 => "
+      DSILINK.sqch1set0r_lh(),
+    ",
+  0x40346602u64 => "
+      DSILINK.sqch1set0r_h(),
+      DSILINK.sqch1set0r_hl(),
+    ",
+  0x40346603u64 => "
+      DSILINK.sqch1set0r_hh(),
     ",
   0x40346610u64 => "
-      MIPI_DSI.sqch1sr(),
+      DSILINK.sqch1sr(),
+      DSILINK.sqch1sr_l(),
+      DSILINK.sqch1sr_ll(),
+    ",
+  0x40346611u64 => "
+      DSILINK.sqch1sr_lh(),
+    ",
+  0x40346612u64 => "
+      DSILINK.sqch1sr_h(),
+      DSILINK.sqch1sr_hl(),
+    ",
+  0x40346613u64 => "
+      DSILINK.sqch1sr_hh(),
     ",
   0x40346614u64 => "
-      MIPI_DSI.sqch1scr(),
+      DSILINK.sqch1scr(),
+      DSILINK.sqch1scr_l(),
+      DSILINK.sqch1scr_ll(),
+    ",
+  0x40346615u64 => "
+      DSILINK.sqch1scr_lh(),
+    ",
+  0x40346616u64 => "
+      DSILINK.sqch1scr_h(),
+      DSILINK.sqch1scr_hl(),
+    ",
+  0x40346617u64 => "
+      DSILINK.sqch1scr_hh(),
     ",
   0x40346618u64 => "
-      MIPI_DSI.sqch1ier(),
+      DSILINK.sqch1ier(),
+      DSILINK.sqch1ier_l(),
+      DSILINK.sqch1ier_ll(),
+    ",
+  0x40346619u64 => "
+      DSILINK.sqch1ier_lh(),
+    ",
+  0x4034661au64 => "
+      DSILINK.sqch1ier_h(),
+      DSILINK.sqch1ier_hl(),
+    ",
+  0x4034661bu64 => "
+      DSILINK.sqch1ier_hh(),
     ",
   0x40346780u64 => "
-      MIPI_DSI.sqch0dscar()[0],
+      DSILINK.sqch0dscar()[0],
+      DSILINK.sqch0dscar_l()[0],
+      DSILINK.sqch0dscar_ll()[0],
     ",
   0x40346790u64 => "
-      MIPI_DSI.sqch0dscar()[1],
+      DSILINK.sqch0dscar()[1],
+      DSILINK.sqch0dscar_l()[1],
+      DSILINK.sqch0dscar_ll()[1],
     ",
   0x403467a0u64 => "
-      MIPI_DSI.sqch0dscar()[2],
+      DSILINK.sqch0dscar()[2],
+      DSILINK.sqch0dscar_l()[2],
+      DSILINK.sqch0dscar_ll()[2],
     ",
   0x403467b0u64 => "
-      MIPI_DSI.sqch0dscar()[3],
+      DSILINK.sqch0dscar()[3],
+      DSILINK.sqch0dscar_l()[3],
+      DSILINK.sqch0dscar_ll()[3],
     ",
   0x403467c0u64 => "
-      MIPI_DSI.sqch0dscar()[4],
+      DSILINK.sqch0dscar()[4],
+      DSILINK.sqch0dscar_l()[4],
+      DSILINK.sqch0dscar_ll()[4],
     ",
   0x403467d0u64 => "
-      MIPI_DSI.sqch0dscar()[5],
+      DSILINK.sqch0dscar()[5],
+      DSILINK.sqch0dscar_l()[5],
+      DSILINK.sqch0dscar_ll()[5],
     ",
   0x403467e0u64 => "
-      MIPI_DSI.sqch0dscar()[6],
+      DSILINK.sqch0dscar()[6],
+      DSILINK.sqch0dscar_l()[6],
+      DSILINK.sqch0dscar_ll()[6],
     ",
   0x403467f0u64 => "
-      MIPI_DSI.sqch0dscar()[7],
+      DSILINK.sqch0dscar()[7],
+      DSILINK.sqch0dscar_l()[7],
+      DSILINK.sqch0dscar_ll()[7],
+    ",
+  0x40346781u64 => "
+      DSILINK.sqch0dscar_lh()[0],
+    ",
+  0x40346791u64 => "
+      DSILINK.sqch0dscar_lh()[1],
+    ",
+  0x403467a1u64 => "
+      DSILINK.sqch0dscar_lh()[2],
+    ",
+  0x403467b1u64 => "
+      DSILINK.sqch0dscar_lh()[3],
+    ",
+  0x403467c1u64 => "
+      DSILINK.sqch0dscar_lh()[4],
+    ",
+  0x403467d1u64 => "
+      DSILINK.sqch0dscar_lh()[5],
+    ",
+  0x403467e1u64 => "
+      DSILINK.sqch0dscar_lh()[6],
+    ",
+  0x403467f1u64 => "
+      DSILINK.sqch0dscar_lh()[7],
+    ",
+  0x40346782u64 => "
+      DSILINK.sqch0dscar_h()[0],
+      DSILINK.sqch0dscar_hl()[0],
+    ",
+  0x40346792u64 => "
+      DSILINK.sqch0dscar_h()[1],
+      DSILINK.sqch0dscar_hl()[1],
+    ",
+  0x403467a2u64 => "
+      DSILINK.sqch0dscar_h()[2],
+      DSILINK.sqch0dscar_hl()[2],
+    ",
+  0x403467b2u64 => "
+      DSILINK.sqch0dscar_h()[3],
+      DSILINK.sqch0dscar_hl()[3],
+    ",
+  0x403467c2u64 => "
+      DSILINK.sqch0dscar_h()[4],
+      DSILINK.sqch0dscar_hl()[4],
+    ",
+  0x403467d2u64 => "
+      DSILINK.sqch0dscar_h()[5],
+      DSILINK.sqch0dscar_hl()[5],
+    ",
+  0x403467e2u64 => "
+      DSILINK.sqch0dscar_h()[6],
+      DSILINK.sqch0dscar_hl()[6],
+    ",
+  0x403467f2u64 => "
+      DSILINK.sqch0dscar_h()[7],
+      DSILINK.sqch0dscar_hl()[7],
+    ",
+  0x40346783u64 => "
+      DSILINK.sqch0dscar_hh()[0],
+    ",
+  0x40346793u64 => "
+      DSILINK.sqch0dscar_hh()[1],
+    ",
+  0x403467a3u64 => "
+      DSILINK.sqch0dscar_hh()[2],
+    ",
+  0x403467b3u64 => "
+      DSILINK.sqch0dscar_hh()[3],
+    ",
+  0x403467c3u64 => "
+      DSILINK.sqch0dscar_hh()[4],
+    ",
+  0x403467d3u64 => "
+      DSILINK.sqch0dscar_hh()[5],
+    ",
+  0x403467e3u64 => "
+      DSILINK.sqch0dscar_hh()[6],
+    ",
+  0x403467f3u64 => "
+      DSILINK.sqch0dscar_hh()[7],
     ",
   0x40346784u64 => "
-      MIPI_DSI.sqch0dscbr()[0],
+      DSILINK.sqch0dscbr()[0],
     ",
   0x40346794u64 => "
-      MIPI_DSI.sqch0dscbr()[1],
+      DSILINK.sqch0dscbr()[1],
     ",
   0x403467a4u64 => "
-      MIPI_DSI.sqch0dscbr()[2],
+      DSILINK.sqch0dscbr()[2],
     ",
   0x403467b4u64 => "
-      MIPI_DSI.sqch0dscbr()[3],
+      DSILINK.sqch0dscbr()[3],
     ",
   0x403467c4u64 => "
-      MIPI_DSI.sqch0dscbr()[4],
+      DSILINK.sqch0dscbr()[4],
     ",
   0x403467d4u64 => "
-      MIPI_DSI.sqch0dscbr()[5],
+      DSILINK.sqch0dscbr()[5],
     ",
   0x403467e4u64 => "
-      MIPI_DSI.sqch0dscbr()[6],
+      DSILINK.sqch0dscbr()[6],
     ",
   0x403467f4u64 => "
-      MIPI_DSI.sqch0dscbr()[7],
+      DSILINK.sqch0dscbr()[7],
     ",
   0x40346788u64 => "
-      MIPI_DSI.sqch0dsccr()[0],
+      DSILINK.sqch0dsccr()[0],
+      DSILINK.sqch0dsccr_l()[0],
+      DSILINK.sqch0dsccr_ll()[0],
     ",
   0x40346798u64 => "
-      MIPI_DSI.sqch0dsccr()[1],
+      DSILINK.sqch0dsccr()[1],
+      DSILINK.sqch0dsccr_l()[1],
+      DSILINK.sqch0dsccr_ll()[1],
     ",
   0x403467a8u64 => "
-      MIPI_DSI.sqch0dsccr()[2],
+      DSILINK.sqch0dsccr()[2],
+      DSILINK.sqch0dsccr_l()[2],
+      DSILINK.sqch0dsccr_ll()[2],
     ",
   0x403467b8u64 => "
-      MIPI_DSI.sqch0dsccr()[3],
+      DSILINK.sqch0dsccr()[3],
+      DSILINK.sqch0dsccr_l()[3],
+      DSILINK.sqch0dsccr_ll()[3],
     ",
   0x403467c8u64 => "
-      MIPI_DSI.sqch0dsccr()[4],
+      DSILINK.sqch0dsccr()[4],
+      DSILINK.sqch0dsccr_l()[4],
+      DSILINK.sqch0dsccr_ll()[4],
     ",
   0x403467d8u64 => "
-      MIPI_DSI.sqch0dsccr()[5],
+      DSILINK.sqch0dsccr()[5],
+      DSILINK.sqch0dsccr_l()[5],
+      DSILINK.sqch0dsccr_ll()[5],
     ",
   0x403467e8u64 => "
-      MIPI_DSI.sqch0dsccr()[6],
+      DSILINK.sqch0dsccr()[6],
+      DSILINK.sqch0dsccr_l()[6],
+      DSILINK.sqch0dsccr_ll()[6],
     ",
   0x403467f8u64 => "
-      MIPI_DSI.sqch0dsccr()[7],
+      DSILINK.sqch0dsccr()[7],
+      DSILINK.sqch0dsccr_l()[7],
+      DSILINK.sqch0dsccr_ll()[7],
+    ",
+  0x4034678au64 => "
+      DSILINK.sqch0dsccr_h()[0],
+      DSILINK.sqch0dsccr_hl()[0],
+    ",
+  0x4034679au64 => "
+      DSILINK.sqch0dsccr_h()[1],
+      DSILINK.sqch0dsccr_hl()[1],
+    ",
+  0x403467aau64 => "
+      DSILINK.sqch0dsccr_h()[2],
+      DSILINK.sqch0dsccr_hl()[2],
+    ",
+  0x403467bau64 => "
+      DSILINK.sqch0dsccr_h()[3],
+      DSILINK.sqch0dsccr_hl()[3],
+    ",
+  0x403467cau64 => "
+      DSILINK.sqch0dsccr_h()[4],
+      DSILINK.sqch0dsccr_hl()[4],
+    ",
+  0x403467dau64 => "
+      DSILINK.sqch0dsccr_h()[5],
+      DSILINK.sqch0dsccr_hl()[5],
+    ",
+  0x403467eau64 => "
+      DSILINK.sqch0dsccr_h()[6],
+      DSILINK.sqch0dsccr_hl()[6],
+    ",
+  0x403467fau64 => "
+      DSILINK.sqch0dsccr_h()[7],
+      DSILINK.sqch0dsccr_hl()[7],
+    ",
+  0x4034678bu64 => "
+      DSILINK.sqch0dsccr_hh()[0],
+    ",
+  0x4034679bu64 => "
+      DSILINK.sqch0dsccr_hh()[1],
+    ",
+  0x403467abu64 => "
+      DSILINK.sqch0dsccr_hh()[2],
+    ",
+  0x403467bbu64 => "
+      DSILINK.sqch0dsccr_hh()[3],
+    ",
+  0x403467cbu64 => "
+      DSILINK.sqch0dsccr_hh()[4],
+    ",
+  0x403467dbu64 => "
+      DSILINK.sqch0dsccr_hh()[5],
+    ",
+  0x403467ebu64 => "
+      DSILINK.sqch0dsccr_hh()[6],
+    ",
+  0x403467fbu64 => "
+      DSILINK.sqch0dsccr_hh()[7],
     ",
   0x4034678cu64 => "
-      MIPI_DSI.sqch0dscdr()[0],
+      DSILINK.sqch0dscdr()[0],
+      DSILINK.sqch0dscdr_l()[0],
+      DSILINK.sqch0dscdr_ll()[0],
     ",
   0x4034679cu64 => "
-      MIPI_DSI.sqch0dscdr()[1],
+      DSILINK.sqch0dscdr()[1],
+      DSILINK.sqch0dscdr_l()[1],
+      DSILINK.sqch0dscdr_ll()[1],
     ",
   0x403467acu64 => "
-      MIPI_DSI.sqch0dscdr()[2],
+      DSILINK.sqch0dscdr()[2],
+      DSILINK.sqch0dscdr_l()[2],
+      DSILINK.sqch0dscdr_ll()[2],
     ",
   0x403467bcu64 => "
-      MIPI_DSI.sqch0dscdr()[3],
+      DSILINK.sqch0dscdr()[3],
+      DSILINK.sqch0dscdr_l()[3],
+      DSILINK.sqch0dscdr_ll()[3],
     ",
   0x403467ccu64 => "
-      MIPI_DSI.sqch0dscdr()[4],
+      DSILINK.sqch0dscdr()[4],
+      DSILINK.sqch0dscdr_l()[4],
+      DSILINK.sqch0dscdr_ll()[4],
     ",
   0x403467dcu64 => "
-      MIPI_DSI.sqch0dscdr()[5],
+      DSILINK.sqch0dscdr()[5],
+      DSILINK.sqch0dscdr_l()[5],
+      DSILINK.sqch0dscdr_ll()[5],
     ",
   0x403467ecu64 => "
-      MIPI_DSI.sqch0dscdr()[6],
+      DSILINK.sqch0dscdr()[6],
+      DSILINK.sqch0dscdr_l()[6],
+      DSILINK.sqch0dscdr_ll()[6],
     ",
   0x403467fcu64 => "
-      MIPI_DSI.sqch0dscdr()[7],
+      DSILINK.sqch0dscdr()[7],
+      DSILINK.sqch0dscdr_l()[7],
+      DSILINK.sqch0dscdr_ll()[7],
+    ",
+  0x4034678du64 => "
+      DSILINK.sqch0dscdr_lh()[0],
+    ",
+  0x4034679du64 => "
+      DSILINK.sqch0dscdr_lh()[1],
+    ",
+  0x403467adu64 => "
+      DSILINK.sqch0dscdr_lh()[2],
+    ",
+  0x403467bdu64 => "
+      DSILINK.sqch0dscdr_lh()[3],
+    ",
+  0x403467cdu64 => "
+      DSILINK.sqch0dscdr_lh()[4],
+    ",
+  0x403467ddu64 => "
+      DSILINK.sqch0dscdr_lh()[5],
+    ",
+  0x403467edu64 => "
+      DSILINK.sqch0dscdr_lh()[6],
+    ",
+  0x403467fdu64 => "
+      DSILINK.sqch0dscdr_lh()[7],
+    ",
+  0x4034678eu64 => "
+      DSILINK.sqch0dscdr_h()[0],
+      DSILINK.sqch0dscdr_hl()[0],
+    ",
+  0x4034679eu64 => "
+      DSILINK.sqch0dscdr_h()[1],
+      DSILINK.sqch0dscdr_hl()[1],
+    ",
+  0x403467aeu64 => "
+      DSILINK.sqch0dscdr_h()[2],
+      DSILINK.sqch0dscdr_hl()[2],
+    ",
+  0x403467beu64 => "
+      DSILINK.sqch0dscdr_h()[3],
+      DSILINK.sqch0dscdr_hl()[3],
+    ",
+  0x403467ceu64 => "
+      DSILINK.sqch0dscdr_h()[4],
+      DSILINK.sqch0dscdr_hl()[4],
+    ",
+  0x403467deu64 => "
+      DSILINK.sqch0dscdr_h()[5],
+      DSILINK.sqch0dscdr_hl()[5],
+    ",
+  0x403467eeu64 => "
+      DSILINK.sqch0dscdr_h()[6],
+      DSILINK.sqch0dscdr_hl()[6],
+    ",
+  0x403467feu64 => "
+      DSILINK.sqch0dscdr_h()[7],
+      DSILINK.sqch0dscdr_hl()[7],
+    ",
+  0x4034678fu64 => "
+      DSILINK.sqch0dscdr_hh()[0],
+    ",
+  0x4034679fu64 => "
+      DSILINK.sqch0dscdr_hh()[1],
+    ",
+  0x403467afu64 => "
+      DSILINK.sqch0dscdr_hh()[2],
+    ",
+  0x403467bfu64 => "
+      DSILINK.sqch0dscdr_hh()[3],
+    ",
+  0x403467cfu64 => "
+      DSILINK.sqch0dscdr_hh()[4],
+    ",
+  0x403467dfu64 => "
+      DSILINK.sqch0dscdr_hh()[5],
+    ",
+  0x403467efu64 => "
+      DSILINK.sqch0dscdr_hh()[6],
+    ",
+  0x403467ffu64 => "
+      DSILINK.sqch0dscdr_hh()[7],
     ",
   0x40346800u64 => "
-      MIPI_DSI.sqch1dscar()[0],
+      DSILINK.sqch1dscar()[0],
+      DSILINK.sqch1dscar_l()[0],
+      DSILINK.sqch1dscar_ll()[0],
     ",
   0x40346810u64 => "
-      MIPI_DSI.sqch1dscar()[1],
+      DSILINK.sqch1dscar()[1],
+      DSILINK.sqch1dscar_l()[1],
+      DSILINK.sqch1dscar_ll()[1],
     ",
   0x40346820u64 => "
-      MIPI_DSI.sqch1dscar()[2],
+      DSILINK.sqch1dscar()[2],
+      DSILINK.sqch1dscar_l()[2],
+      DSILINK.sqch1dscar_ll()[2],
     ",
   0x40346830u64 => "
-      MIPI_DSI.sqch1dscar()[3],
+      DSILINK.sqch1dscar()[3],
+      DSILINK.sqch1dscar_l()[3],
+      DSILINK.sqch1dscar_ll()[3],
     ",
   0x40346840u64 => "
-      MIPI_DSI.sqch1dscar()[4],
+      DSILINK.sqch1dscar()[4],
+      DSILINK.sqch1dscar_l()[4],
+      DSILINK.sqch1dscar_ll()[4],
     ",
   0x40346850u64 => "
-      MIPI_DSI.sqch1dscar()[5],
+      DSILINK.sqch1dscar()[5],
+      DSILINK.sqch1dscar_l()[5],
+      DSILINK.sqch1dscar_ll()[5],
     ",
   0x40346860u64 => "
-      MIPI_DSI.sqch1dscar()[6],
+      DSILINK.sqch1dscar()[6],
+      DSILINK.sqch1dscar_l()[6],
+      DSILINK.sqch1dscar_ll()[6],
     ",
   0x40346870u64 => "
-      MIPI_DSI.sqch1dscar()[7],
+      DSILINK.sqch1dscar()[7],
+      DSILINK.sqch1dscar_l()[7],
+      DSILINK.sqch1dscar_ll()[7],
+    ",
+  0x40346801u64 => "
+      DSILINK.sqch1dscar_lh()[0],
+    ",
+  0x40346811u64 => "
+      DSILINK.sqch1dscar_lh()[1],
+    ",
+  0x40346821u64 => "
+      DSILINK.sqch1dscar_lh()[2],
+    ",
+  0x40346831u64 => "
+      DSILINK.sqch1dscar_lh()[3],
+    ",
+  0x40346841u64 => "
+      DSILINK.sqch1dscar_lh()[4],
+    ",
+  0x40346851u64 => "
+      DSILINK.sqch1dscar_lh()[5],
+    ",
+  0x40346861u64 => "
+      DSILINK.sqch1dscar_lh()[6],
+    ",
+  0x40346871u64 => "
+      DSILINK.sqch1dscar_lh()[7],
+    ",
+  0x40346802u64 => "
+      DSILINK.sqch1dscar_h()[0],
+      DSILINK.sqch1dscar_hl()[0],
+    ",
+  0x40346812u64 => "
+      DSILINK.sqch1dscar_h()[1],
+      DSILINK.sqch1dscar_hl()[1],
+    ",
+  0x40346822u64 => "
+      DSILINK.sqch1dscar_h()[2],
+      DSILINK.sqch1dscar_hl()[2],
+    ",
+  0x40346832u64 => "
+      DSILINK.sqch1dscar_h()[3],
+      DSILINK.sqch1dscar_hl()[3],
+    ",
+  0x40346842u64 => "
+      DSILINK.sqch1dscar_h()[4],
+      DSILINK.sqch1dscar_hl()[4],
+    ",
+  0x40346852u64 => "
+      DSILINK.sqch1dscar_h()[5],
+      DSILINK.sqch1dscar_hl()[5],
+    ",
+  0x40346862u64 => "
+      DSILINK.sqch1dscar_h()[6],
+      DSILINK.sqch1dscar_hl()[6],
+    ",
+  0x40346872u64 => "
+      DSILINK.sqch1dscar_h()[7],
+      DSILINK.sqch1dscar_hl()[7],
+    ",
+  0x40346803u64 => "
+      DSILINK.sqch1dscar_hh()[0],
+    ",
+  0x40346813u64 => "
+      DSILINK.sqch1dscar_hh()[1],
+    ",
+  0x40346823u64 => "
+      DSILINK.sqch1dscar_hh()[2],
+    ",
+  0x40346833u64 => "
+      DSILINK.sqch1dscar_hh()[3],
+    ",
+  0x40346843u64 => "
+      DSILINK.sqch1dscar_hh()[4],
+    ",
+  0x40346853u64 => "
+      DSILINK.sqch1dscar_hh()[5],
+    ",
+  0x40346863u64 => "
+      DSILINK.sqch1dscar_hh()[6],
+    ",
+  0x40346873u64 => "
+      DSILINK.sqch1dscar_hh()[7],
     ",
   0x40346804u64 => "
-      MIPI_DSI.sqch1dscbr()[0],
+      DSILINK.sqch1dscbr()[0],
     ",
   0x40346814u64 => "
-      MIPI_DSI.sqch1dscbr()[1],
+      DSILINK.sqch1dscbr()[1],
     ",
   0x40346824u64 => "
-      MIPI_DSI.sqch1dscbr()[2],
+      DSILINK.sqch1dscbr()[2],
     ",
   0x40346834u64 => "
-      MIPI_DSI.sqch1dscbr()[3],
+      DSILINK.sqch1dscbr()[3],
     ",
   0x40346844u64 => "
-      MIPI_DSI.sqch1dscbr()[4],
+      DSILINK.sqch1dscbr()[4],
     ",
   0x40346854u64 => "
-      MIPI_DSI.sqch1dscbr()[5],
+      DSILINK.sqch1dscbr()[5],
     ",
   0x40346864u64 => "
-      MIPI_DSI.sqch1dscbr()[6],
+      DSILINK.sqch1dscbr()[6],
     ",
   0x40346874u64 => "
-      MIPI_DSI.sqch1dscbr()[7],
+      DSILINK.sqch1dscbr()[7],
     ",
   0x40346808u64 => "
-      MIPI_DSI.sqch1dsccr()[0],
+      DSILINK.sqch1dsccr()[0],
+      DSILINK.sqch1dsccr_l()[0],
+      DSILINK.sqch1dsccr_ll()[0],
     ",
   0x40346818u64 => "
-      MIPI_DSI.sqch1dsccr()[1],
+      DSILINK.sqch1dsccr()[1],
+      DSILINK.sqch1dsccr_l()[1],
+      DSILINK.sqch1dsccr_ll()[1],
     ",
   0x40346828u64 => "
-      MIPI_DSI.sqch1dsccr()[2],
+      DSILINK.sqch1dsccr()[2],
+      DSILINK.sqch1dsccr_l()[2],
+      DSILINK.sqch1dsccr_ll()[2],
     ",
   0x40346838u64 => "
-      MIPI_DSI.sqch1dsccr()[3],
+      DSILINK.sqch1dsccr()[3],
+      DSILINK.sqch1dsccr_l()[3],
+      DSILINK.sqch1dsccr_ll()[3],
     ",
   0x40346848u64 => "
-      MIPI_DSI.sqch1dsccr()[4],
+      DSILINK.sqch1dsccr()[4],
+      DSILINK.sqch1dsccr_l()[4],
+      DSILINK.sqch1dsccr_ll()[4],
     ",
   0x40346858u64 => "
-      MIPI_DSI.sqch1dsccr()[5],
+      DSILINK.sqch1dsccr()[5],
+      DSILINK.sqch1dsccr_l()[5],
+      DSILINK.sqch1dsccr_ll()[5],
     ",
   0x40346868u64 => "
-      MIPI_DSI.sqch1dsccr()[6],
+      DSILINK.sqch1dsccr()[6],
+      DSILINK.sqch1dsccr_l()[6],
+      DSILINK.sqch1dsccr_ll()[6],
     ",
   0x40346878u64 => "
-      MIPI_DSI.sqch1dsccr()[7],
+      DSILINK.sqch1dsccr()[7],
+      DSILINK.sqch1dsccr_l()[7],
+      DSILINK.sqch1dsccr_ll()[7],
+    ",
+  0x4034680au64 => "
+      DSILINK.sqch1dsccr_h()[0],
+      DSILINK.sqch1dsccr_hl()[0],
+    ",
+  0x4034681au64 => "
+      DSILINK.sqch1dsccr_h()[1],
+      DSILINK.sqch1dsccr_hl()[1],
+    ",
+  0x4034682au64 => "
+      DSILINK.sqch1dsccr_h()[2],
+      DSILINK.sqch1dsccr_hl()[2],
+    ",
+  0x4034683au64 => "
+      DSILINK.sqch1dsccr_h()[3],
+      DSILINK.sqch1dsccr_hl()[3],
+    ",
+  0x4034684au64 => "
+      DSILINK.sqch1dsccr_h()[4],
+      DSILINK.sqch1dsccr_hl()[4],
+    ",
+  0x4034685au64 => "
+      DSILINK.sqch1dsccr_h()[5],
+      DSILINK.sqch1dsccr_hl()[5],
+    ",
+  0x4034686au64 => "
+      DSILINK.sqch1dsccr_h()[6],
+      DSILINK.sqch1dsccr_hl()[6],
+    ",
+  0x4034687au64 => "
+      DSILINK.sqch1dsccr_h()[7],
+      DSILINK.sqch1dsccr_hl()[7],
+    ",
+  0x4034680bu64 => "
+      DSILINK.sqch1dsccr_hh()[0],
+    ",
+  0x4034681bu64 => "
+      DSILINK.sqch1dsccr_hh()[1],
+    ",
+  0x4034682bu64 => "
+      DSILINK.sqch1dsccr_hh()[2],
+    ",
+  0x4034683bu64 => "
+      DSILINK.sqch1dsccr_hh()[3],
+    ",
+  0x4034684bu64 => "
+      DSILINK.sqch1dsccr_hh()[4],
+    ",
+  0x4034685bu64 => "
+      DSILINK.sqch1dsccr_hh()[5],
+    ",
+  0x4034686bu64 => "
+      DSILINK.sqch1dsccr_hh()[6],
+    ",
+  0x4034687bu64 => "
+      DSILINK.sqch1dsccr_hh()[7],
     ",
   0x4034680cu64 => "
-      MIPI_DSI.sqch1dscdr()[0],
+      DSILINK.sqch1dscdr()[0],
+      DSILINK.sqch1dscdr_l()[0],
+      DSILINK.sqch1dscdr_ll()[0],
     ",
   0x4034681cu64 => "
-      MIPI_DSI.sqch1dscdr()[1],
+      DSILINK.sqch1dscdr()[1],
+      DSILINK.sqch1dscdr_l()[1],
+      DSILINK.sqch1dscdr_ll()[1],
     ",
   0x4034682cu64 => "
-      MIPI_DSI.sqch1dscdr()[2],
+      DSILINK.sqch1dscdr()[2],
+      DSILINK.sqch1dscdr_l()[2],
+      DSILINK.sqch1dscdr_ll()[2],
     ",
   0x4034683cu64 => "
-      MIPI_DSI.sqch1dscdr()[3],
+      DSILINK.sqch1dscdr()[3],
+      DSILINK.sqch1dscdr_l()[3],
+      DSILINK.sqch1dscdr_ll()[3],
     ",
   0x4034684cu64 => "
-      MIPI_DSI.sqch1dscdr()[4],
+      DSILINK.sqch1dscdr()[4],
+      DSILINK.sqch1dscdr_l()[4],
+      DSILINK.sqch1dscdr_ll()[4],
     ",
   0x4034685cu64 => "
-      MIPI_DSI.sqch1dscdr()[5],
+      DSILINK.sqch1dscdr()[5],
+      DSILINK.sqch1dscdr_l()[5],
+      DSILINK.sqch1dscdr_ll()[5],
     ",
   0x4034686cu64 => "
-      MIPI_DSI.sqch1dscdr()[6],
+      DSILINK.sqch1dscdr()[6],
+      DSILINK.sqch1dscdr_l()[6],
+      DSILINK.sqch1dscdr_ll()[6],
     ",
   0x4034687cu64 => "
-      MIPI_DSI.sqch1dscdr()[7],
+      DSILINK.sqch1dscdr()[7],
+      DSILINK.sqch1dscdr_l()[7],
+      DSILINK.sqch1dscdr_ll()[7],
+    ",
+  0x4034680du64 => "
+      DSILINK.sqch1dscdr_lh()[0],
+    ",
+  0x4034681du64 => "
+      DSILINK.sqch1dscdr_lh()[1],
+    ",
+  0x4034682du64 => "
+      DSILINK.sqch1dscdr_lh()[2],
+    ",
+  0x4034683du64 => "
+      DSILINK.sqch1dscdr_lh()[3],
+    ",
+  0x4034684du64 => "
+      DSILINK.sqch1dscdr_lh()[4],
+    ",
+  0x4034685du64 => "
+      DSILINK.sqch1dscdr_lh()[5],
+    ",
+  0x4034686du64 => "
+      DSILINK.sqch1dscdr_lh()[6],
+    ",
+  0x4034687du64 => "
+      DSILINK.sqch1dscdr_lh()[7],
+    ",
+  0x4034680eu64 => "
+      DSILINK.sqch1dscdr_h()[0],
+      DSILINK.sqch1dscdr_hl()[0],
+    ",
+  0x4034681eu64 => "
+      DSILINK.sqch1dscdr_h()[1],
+      DSILINK.sqch1dscdr_hl()[1],
+    ",
+  0x4034682eu64 => "
+      DSILINK.sqch1dscdr_h()[2],
+      DSILINK.sqch1dscdr_hl()[2],
+    ",
+  0x4034683eu64 => "
+      DSILINK.sqch1dscdr_h()[3],
+      DSILINK.sqch1dscdr_hl()[3],
+    ",
+  0x4034684eu64 => "
+      DSILINK.sqch1dscdr_h()[4],
+      DSILINK.sqch1dscdr_hl()[4],
+    ",
+  0x4034685eu64 => "
+      DSILINK.sqch1dscdr_h()[5],
+      DSILINK.sqch1dscdr_hl()[5],
+    ",
+  0x4034686eu64 => "
+      DSILINK.sqch1dscdr_h()[6],
+      DSILINK.sqch1dscdr_hl()[6],
+    ",
+  0x4034687eu64 => "
+      DSILINK.sqch1dscdr_h()[7],
+      DSILINK.sqch1dscdr_hl()[7],
+    ",
+  0x4034680fu64 => "
+      DSILINK.sqch1dscdr_hh()[0],
+    ",
+  0x4034681fu64 => "
+      DSILINK.sqch1dscdr_hh()[1],
+    ",
+  0x4034682fu64 => "
+      DSILINK.sqch1dscdr_hh()[2],
+    ",
+  0x4034683fu64 => "
+      DSILINK.sqch1dscdr_hh()[3],
+    ",
+  0x4034684fu64 => "
+      DSILINK.sqch1dscdr_hh()[4],
+    ",
+  0x4034685fu64 => "
+      DSILINK.sqch1dscdr_hh()[5],
+    ",
+  0x4034686fu64 => "
+      DSILINK.sqch1dscdr_hh()[6],
+    ",
+  0x4034687fu64 => "
+      DSILINK.sqch1dscdr_hh()[7],
     ",
   0x40346c00u64 => "
-      MIPI_PHY_0.dphyrefcr(),
+      DPHYCNT.dphyrefcr(),
+      DPHYCNT.dphyrefcr_l(),
+      DPHYCNT.dphyrefcr_ll(),
     ",
   0x40346c04u64 => "
-      MIPI_PHY_0.dphyplfcr(),
+      DPHYCNT.dphyplfcr(),
+      DPHYCNT.dphyplfcr_l(),
+      DPHYCNT.dphyplfcr_ll(),
+    ",
+  0x40346c05u64 => "
+      DPHYCNT.dphyplfcr_lh(),
+    ",
+  0x40346c06u64 => "
+      DPHYCNT.dphyplfcr_h(),
+      DPHYCNT.dphyplfcr_hl(),
     ",
   0x40346c08u64 => "
-      MIPI_PHY_0.dphyplocr(),
+      DPHYCNT.dphyplocr(),
+      DPHYCNT.dphyplocr_l(),
+      DPHYCNT.dphyplocr_ll(),
     ",
   0x40346c0cu64 => "
-      MIPI_PHY_0.dphyesccr(),
+      DPHYCNT.dphyesccr(),
+      DPHYCNT.dphyesccr_l(),
+      DPHYCNT.dphyesccr_ll(),
     ",
   0x40346c10u64 => "
-      MIPI_PHY_0.dphypwrcr(),
+      DPHYCNT.dphypwrcr(),
+      DPHYCNT.dphypwrcr_l(),
+      DPHYCNT.dphypwrcr_ll(),
     ",
   0x40346c1cu64 => "
-      MIPI_PHY_0.dphysfr(),
+      DPHYCNT.dphysfr(),
+      DPHYCNT.dphysfr_l(),
+      DPHYCNT.dphysfr_ll(),
+    ",
+  0x40346c1du64 => "
+      DPHYCNT.dphysfr_lh(),
     ",
   0x40346c20u64 => "
-      MIPI_PHY_0.dphyocr(),
+      DPHYCNT.dphyocr(),
+      DPHYCNT.dphyocr_l(),
+      DPHYCNT.dphyocr_ll(),
     ",
   0x40346c24u64 => "
-      MIPI_PHY_0.dphytim1(),
+      DPHYCNT.dphytim1(),
+      DPHYCNT.dphytim1_l(),
+      DPHYCNT.dphytim1_ll(),
+    ",
+  0x40346c25u64 => "
+      DPHYCNT.dphytim1_lh(),
+    ",
+  0x40346c26u64 => "
+      DPHYCNT.dphytim1_h(),
+      DPHYCNT.dphytim1_hl(),
     ",
   0x40346c28u64 => "
-      MIPI_PHY_0.dphytim2(),
+      DPHYCNT.dphytim2_ll(),
+    ",
+  0x40346c29u64 => "
+      DPHYCNT.dphytim2_lh(),
+    ",
+  0x40346c2au64 => "
+      DPHYCNT.dphytim2_hl(),
     ",
   0x40346c2cu64 => "
-      MIPI_PHY_0.dphytim3(),
+      DPHYCNT.dphytim3_ll(),
+    ",
+  0x40346c2du64 => "
+      DPHYCNT.dphytim3_lh(),
     ",
   0x40346c30u64 => "
-      MIPI_PHY_0.dphytim4(),
+      DPHYCNT.dphytim4(),
+      DPHYCNT.dphytim4_l(),
+      DPHYCNT.dphytim4_ll(),
+    ",
+  0x40346c31u64 => "
+      DPHYCNT.dphytim4_lh(),
+    ",
+  0x40346c32u64 => "
+      DPHYCNT.dphytim4_h(),
+      DPHYCNT.dphytim4_hl(),
+    ",
+  0x40346c33u64 => "
+      DPHYCNT.dphytim4_hh(),
     ",
   0x40346c34u64 => "
-      MIPI_PHY_0.dphytim5(),
+      DPHYCNT.dphytim5(),
+      DPHYCNT.dphytim5_l(),
+      DPHYCNT.dphytim5_ll(),
+    ",
+  0x40346c35u64 => "
+      DPHYCNT.dphytim5_lh(),
+    ",
+  0x40346c36u64 => "
+      DPHYCNT.dphytim5_h(),
+      DPHYCNT.dphytim5_hl(),
     ",
   0x40346c38u64 => "
-      MIPI_PHY_0.dphytim6(),
+      DPHYCNT.dphytim6(),
+      DPHYCNT.dphytim6_l(),
+      DPHYCNT.dphytim6_ll(),
     ",
   0x40348000u64 => "
       CEU.capsr(),
@@ -7840,7 +9345,7 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       CEU.cdbcr2(),
     ",
   0x403480a0u64 => "
-      CEU.cbwer(),
+      CEU.axibusctl2(),
     ",
   0x40349010u64 => "
       CEU.camor_b(),
@@ -7968,21 +9473,25 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       USBHS.cfifohh(),
     ",
   0x40351018u64 => "
-      USBHS.dfifo()[0],
-      USBHS.dfifol()[0],
-      USBHS.dfifoll()[0],
-    ",
-  0x4035101cu64 => "
-      USBHS.dfifo()[1],
-      USBHS.dfifol()[1],
-      USBHS.dfifoll()[1],
+      USBHS.d0fifo(),
+      USBHS.d0fifol(),
+      USBHS.d0fifoll(),
     ",
   0x4035101au64 => "
       USBHS.d0fifoh(),
-      USBHS.d1fifoh(),
     ",
   0x4035101bu64 => "
       USBHS.d0fifohh(),
+    ",
+  0x4035101cu64 => "
+      USBHS.d1fifo(),
+      USBHS.d1fifol(),
+      USBHS.d1fifoll(),
+    ",
+  0x4035101eu64 => "
+      USBHS.d1fifoh(),
+    ",
+  0x4035101fu64 => "
       USBHS.d1fifohh(),
     ",
   0x40351020u64 => "
@@ -7992,16 +9501,16 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       USBHS.cfifoctr(),
     ",
   0x40351028u64 => "
-      USBHS.dfifosel()[0],
-    ",
-  0x4035102cu64 => "
-      USBHS.dfifosel()[1],
+      USBHS.d0fifosel(),
     ",
   0x4035102au64 => "
-      USBHS.dfifoctr()[0],
+      USBHS.d0fifoctr(),
+    ",
+  0x4035102cu64 => "
+      USBHS.d1fifosel(),
     ",
   0x4035102eu64 => "
-      USBHS.dfifoctr()[1],
+      USBHS.d1fifoctr(),
     ",
   0x40351030u64 => "
       USBHS.intenb0(),
@@ -8195,6 +9704,12 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x4035114au64 => "
       USBHS.hl1ctrl2(),
     ",
+  0x40351154u64 => "
+      USBHS.vrcgctrl1(),
+    ",
+  0x40351156u64 => "
+      USBHS.vrcgctrl2(),
+    ",
   0x40351160u64 => "
       USBHS.dpusr0r(),
     ",
@@ -8352,252 +9867,567 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       ETHERC_0.mafcr(),
     ",
   0x40358000u64 => "
-      SCI_0_B.rdr(),
-      SCI_0_B.rdr_by(),
+      SCI_0.rdr(),
     ",
   0x40358004u64 => "
-      SCI_0_B.tdr(),
-      SCI_0_B.tdrll(),
+      SCI_0.tdr(),
+      SCI_0.tdr_ha_l(),
+      SCI_0.tdr_by_ll(),
     ",
   0x40358005u64 => "
-      SCI_0_B.tdrlh(),
+      SCI_0.tdr_by_lh(),
     ",
   0x40358008u64 => "
-      SCI_0_B.ccr0(),
+      SCI_0.ccr0(),
+      SCI_0.ccr0_ha_l(),
+      SCI_0.ccr0_by_ll(),
+    ",
+  0x40358009u64 => "
+      SCI_0.ccr0_by_lh(),
+    ",
+  0x4035800au64 => "
+      SCI_0.ccr0_ha_h(),
+      SCI_0.ccr0_by_hl(),
+    ",
+  0x4035800bu64 => "
+      SCI_0.ccr0_by_hh(),
     ",
   0x4035800cu64 => "
-      SCI_0_B.ccr1(),
+      SCI_0.ccr1(),
+      SCI_0.ccr1_ha_l(),
+      SCI_0.ccr1_by_ll(),
+    ",
+  0x4035800du64 => "
+      SCI_0.ccr1_by_lh(),
+    ",
+  0x4035800eu64 => "
+      SCI_0.ccr1_ha_h(),
+      SCI_0.ccr1_by_hl(),
+    ",
+  0x4035800fu64 => "
+      SCI_0.ccr1_by_hh(),
     ",
   0x40358010u64 => "
-      SCI_0_B.ccr2(),
+      SCI_0.ccr2(),
+      SCI_0.ccr2_ha_l(),
+      SCI_0.ccr2_by_ll(),
+    ",
+  0x40358011u64 => "
+      SCI_0.ccr2_by_lh(),
+    ",
+  0x40358012u64 => "
+      SCI_0.ccr2_ha_h(),
+      SCI_0.ccr2_by_hl(),
+    ",
+  0x40358013u64 => "
+      SCI_0.ccr2_by_hh(),
     ",
   0x40358014u64 => "
-      SCI_0_B.ccr3(),
+      SCI_0.ccr3(),
+      SCI_0.ccr3_ha_l(),
+      SCI_0.ccr3_by_ll(),
+    ",
+  0x40358015u64 => "
+      SCI_0.ccr3_by_lh(),
+    ",
+  0x40358016u64 => "
+      SCI_0.ccr3_ha_h(),
+      SCI_0.ccr3_by_hl(),
+    ",
+  0x40358017u64 => "
+      SCI_0.ccr3_by_hh(),
     ",
   0x40358018u64 => "
-      SCI_0_B.ccr4(),
+      SCI_0.ccr4(),
+      SCI_0.ccr4_ha_l(),
+      SCI_0.ccr4_by_ll(),
+    ",
+  0x40358019u64 => "
+      SCI_0.ccr4_by_lh(),
+    ",
+  0x4035801au64 => "
+      SCI_0.ccr4_ha_h(),
+      SCI_0.ccr4_by_hl(),
+    ",
+  0x4035801bu64 => "
+      SCI_0.ccr4_by_hh(),
     ",
   0x4035801cu64 => "
-      SCI_0_B.cesr(),
+      SCI_0.cesr(),
+    ",
+  0x4035801eu64 => "
+      SCI_0.hcr(),
     ",
   0x40358020u64 => "
-      SCI_0_B.icr(),
+      SCI_0.icr(),
+      SCI_0.icr_ha_l(),
+      SCI_0.icr_by_ll(),
+    ",
+  0x40358021u64 => "
+      SCI_0.icr_by_lh(),
+    ",
+  0x40358022u64 => "
+      SCI_0.icr_ha_h(),
+      SCI_0.icr_by_hl(),
     ",
   0x40358024u64 => "
-      SCI_0_B.fcr(),
+      SCI_0.fcr(),
+      SCI_0.fcr_ha_l(),
+      SCI_0.fcr_by_ll(),
+    ",
+  0x40358025u64 => "
+      SCI_0.fcr_by_lh(),
+    ",
+  0x40358026u64 => "
+      SCI_0.fcr_ha_h(),
+      SCI_0.fcr_by_hl(),
+    ",
+  0x40358027u64 => "
+      SCI_0.fcr_by_hh(),
     ",
   0x4035802cu64 => "
-      SCI_0_B.mcr(),
+      SCI_0.mcr(),
+      SCI_0.mcr_ha_l(),
+      SCI_0.mcr_by_ll(),
+    ",
+  0x4035802du64 => "
+      SCI_0.mcr_by_lh(),
+    ",
+  0x4035802eu64 => "
+      SCI_0.mcr_ha_h(),
+      SCI_0.mcr_by_hl(),
+    ",
+  0x4035802fu64 => "
+      SCI_0.mcr_by_hh(),
     ",
   0x40358030u64 => "
-      SCI_0_B.dcr(),
+      SCI_0.dcr(),
+      SCI_0.dcr_ha_l(),
+      SCI_0.dcr_by_ll(),
+    ",
+  0x40358031u64 => "
+      SCI_0.dcr_by_lh(),
+    ",
+  0x40358032u64 => "
+      SCI_0.dcr_ha_h(),
+      SCI_0.dcr_by_hl(),
     ",
   0x40358034u64 => "
-      SCI_0_B.xcr0(),
+      SCI_0.xcr0(),
+      SCI_0.xcr0_ha_l(),
+      SCI_0.xcr0_by_ll(),
+    ",
+  0x40358035u64 => "
+      SCI_0.xcr0_by_lh(),
+    ",
+  0x40358036u64 => "
+      SCI_0.xcr0_ha_h(),
+      SCI_0.xcr0_by_hl(),
+    ",
+  0x40358037u64 => "
+      SCI_0.xcr0_by_hh(),
     ",
   0x40358038u64 => "
-      SCI_0_B.xcr1(),
+      SCI_0.xcr1(),
+      SCI_0.xcr1_ha_l(),
+      SCI_0.xcr1_by_ll(),
+    ",
+  0x40358039u64 => "
+      SCI_0.xcr1_by_lh(),
+    ",
+  0x4035803au64 => "
+      SCI_0.xcr1_ha_h(),
+      SCI_0.xcr1_by_hl(),
+    ",
+  0x4035803bu64 => "
+      SCI_0.xcr1_by_hh(),
     ",
   0x4035803cu64 => "
-      SCI_0_B.xcr2(),
+      SCI_0.xcr2(),
+      SCI_0.xcr2_ha_l(),
+      SCI_0.xcr2_by_ll(),
+    ",
+  0x4035803du64 => "
+      SCI_0.xcr2_by_lh(),
+    ",
+  0x4035803eu64 => "
+      SCI_0.xcr2_ha_h(),
+      SCI_0.xcr2_by_hl(),
+    ",
+  0x4035803fu64 => "
+      SCI_0.xcr2_by_hh(),
     ",
   0x40358048u64 => "
-      SCI_0_B.csr(),
+      SCI_0.csr(),
     ",
   0x4035804cu64 => "
-      SCI_0_B.isr(),
+      SCI_0.isr(),
     ",
   0x40358050u64 => "
-      SCI_0_B.frsr(),
+      SCI_0.frsr(),
     ",
   0x40358054u64 => "
-      SCI_0_B.ftsr(),
+      SCI_0.ftsr(),
     ",
   0x40358058u64 => "
-      SCI_0_B.msr(),
+      SCI_0.msr(),
     ",
   0x4035805cu64 => "
-      SCI_0_B.xsr0(),
+      SCI_0.xsr0(),
     ",
   0x40358060u64 => "
-      SCI_0_B.xsr1(),
+      SCI_0.xsr1(),
     ",
   0x40358068u64 => "
-      SCI_0_B.cfclr(),
+      SCI_0.cfclr(),
+      SCI_0.cfclr_ha_l(),
+      SCI_0.cfclr_by_ll(),
+    ",
+  0x4035806au64 => "
+      SCI_0.cfclr_ha_h(),
+      SCI_0.cfclr_by_hl(),
+    ",
+  0x4035806bu64 => "
+      SCI_0.cfclr_by_hh(),
     ",
   0x4035806cu64 => "
-      SCI_0_B.icfclr(),
+      SCI_0.icfclr(),
+      SCI_0.icfclr_ha_l(),
+      SCI_0.icfclr_by_ll(),
     ",
   0x40358070u64 => "
-      SCI_0_B.ffclr(),
+      SCI_0.ffclr(),
+      SCI_0.ffclr_ha_l(),
+      SCI_0.ffclr_by_ll(),
     ",
   0x40358074u64 => "
-      SCI_0_B.mfclr(),
+      SCI_0.mfclr(),
+      SCI_0.mfclr_ha_l(),
+      SCI_0.mfclr_by_ll(),
     ",
   0x40358078u64 => "
-      SCI_0_B.xfclr(),
+      SCI_0.xfclr(),
+      SCI_0.xfclr_ha_l(),
+    ",
+  0x40358079u64 => "
+      SCI_0.xfclr_by_lh(),
     ",
   0x4035c000u64 => "
-      SPI_0_B.spdr(),
+      SPI_0.spdr(),
     ",
   0x4035c004u64 => "
-      SPI_0_B.spdecr(),
+      SPI_0.spdecr(),
     ",
   0x4035c008u64 => "
-      SPI_0_B.spcr(),
+      SPI_0.spcr(),
     ",
   0x4035c00cu64 => "
-      SPI_0_B.spcr2(),
+      SPI_0.spcr2(),
     ",
   0x4035c010u64 => "
-      SPI_0_B.spcr3(),
+      SPI_0.spcr3(),
     ",
   0x4035c014u64 => "
-      SPI_0_B.spcmd()[0],
+      SPI_0.spcmd0(),
     ",
   0x4035c018u64 => "
-      SPI_0_B.spcmd()[1],
+      SPI_0.spcmd1(),
     ",
   0x4035c01cu64 => "
-      SPI_0_B.spcmd()[2],
+      SPI_0.spcmd2(),
     ",
   0x4035c020u64 => "
-      SPI_0_B.spcmd()[3],
+      SPI_0.spcmd3(),
     ",
   0x4035c024u64 => "
-      SPI_0_B.spcmd()[4],
+      SPI_0.spcmd4(),
     ",
   0x4035c028u64 => "
-      SPI_0_B.spcmd()[5],
+      SPI_0.spcmd5(),
     ",
   0x4035c02cu64 => "
-      SPI_0_B.spcmd()[6],
+      SPI_0.spcmd6(),
     ",
   0x4035c030u64 => "
-      SPI_0_B.spcmd()[7],
+      SPI_0.spcmd7(),
     ",
   0x4035c040u64 => "
-      SPI_0_B.spdcr(),
+      SPI_0.spdcr(),
     ",
   0x4035c044u64 => "
-      SPI_0_B.spdcr2(),
+      SPI_0.spdcr2(),
     ",
   0x4035c050u64 => "
-      SPI_0_B.spsr(),
+      SPI_0.spsr(),
     ",
   0x4035c058u64 => "
-      SPI_0_B.sptfsr(),
+      SPI_0.sptfsr(),
     ",
   0x4035c05cu64 => "
-      SPI_0_B.sprfsr(),
+      SPI_0.sprfsr(),
     ",
   0x4035c060u64 => "
-      SPI_0_B.sppsr(),
+      SPI_0.sppsr(),
     ",
   0x4035c068u64 => "
-      SPI_0_B.spsrc(),
+      SPI_0.spsrc(),
     ",
   0x4035c06cu64 => "
-      SPI_0_B.spfcr(),
+      SPI_0.spfcr(),
     ",
   0x4035f000u64 => "
       I_3_C.prts(),
-    ",
-  0x4035f010u64 => "
-      I_3_C.cectl(),
+      I_3_C.prts_ha_l(),
+      I_3_C.prts_by_ll(),
     ",
   0x4035f014u64 => "
       I_3_C.bctl(),
+      I_3_C.bctl_ha_l(),
+      I_3_C.bctl_by_ll(),
+    ",
+  0x4035f015u64 => "
+      I_3_C.bctl_by_lh(),
+    ",
+  0x4035f016u64 => "
+      I_3_C.bctl_ha_h(),
+    ",
+  0x4035f017u64 => "
+      I_3_C.bctl_by_hh(),
     ",
   0x4035f018u64 => "
       I_3_C.msdvad(),
     ",
+  0x4035f01au64 => "
+      I_3_C.msdvad_ha_h(),
+      I_3_C.msdvad_by_hl(),
+    ",
+  0x4035f01bu64 => "
+      I_3_C.msdvad_by_hh(),
+    ",
   0x4035f020u64 => "
       I_3_C.rstctl(),
+      I_3_C.rstctl_ha_l(),
+      I_3_C.rstctl_by_ll(),
+    ",
+  0x4035f021u64 => "
+      I_3_C.rstctl_by_lh(),
+    ",
+  0x4035f022u64 => "
+      I_3_C.rstctl_ha_h(),
+      I_3_C.rstctl_by_hl(),
     ",
   0x4035f024u64 => "
       I_3_C.prsst(),
+      I_3_C.prsst_ha_l(),
+      I_3_C.prsst_by_ll(),
     ",
   0x4035f030u64 => "
       I_3_C.inst(),
+      I_3_C.inst_ha_l(),
+    ",
+  0x4035f031u64 => "
+      I_3_C.inst_by_lh(),
     ",
   0x4035f034u64 => "
       I_3_C.inste(),
+      I_3_C.inste_ha_l(),
+    ",
+  0x4035f035u64 => "
+      I_3_C.inste_by_lh(),
     ",
   0x4035f038u64 => "
       I_3_C.inie(),
+      I_3_C.inie_ha_l(),
+    ",
+  0x4035f039u64 => "
+      I_3_C.inie_by_lh(),
     ",
   0x4035f03cu64 => "
       I_3_C.instfc(),
+      I_3_C.instfc_ha_l(),
+    ",
+  0x4035f03du64 => "
+      I_3_C.instfc_by_lh(),
     ",
   0x4035f044u64 => "
       I_3_C.dvct(),
     ",
+  0x4035f046u64 => "
+      I_3_C.dvct_ha_h(),
+      I_3_C.dvct_by_hl(),
+    ",
   0x4035f058u64 => "
       I_3_C.ibinctl(),
+      I_3_C.ibinctl_ha_l(),
+      I_3_C.ibinctl_by_ll(),
     ",
   0x4035f060u64 => "
       I_3_C.bfctl(),
+      I_3_C.bfctl_ha_l(),
+      I_3_C.bfctl_by_ll(),
+    ",
+  0x4035f061u64 => "
+      I_3_C.bfctl_by_lh(),
     ",
   0x4035f064u64 => "
       I_3_C.svctl(),
+      I_3_C.svctl_ha_l(),
+      I_3_C.svctl_by_ll(),
+    ",
+  0x4035f065u64 => "
+      I_3_C.svctl_by_lh(),
+    ",
+  0x4035f066u64 => "
+      I_3_C.svctl_ha_h(),
+      I_3_C.svctl_by_hl(),
     ",
   0x4035f070u64 => "
       I_3_C.refckctl(),
+      I_3_C.refckctl_ha_l(),
+      I_3_C.refckctl_by_ll(),
     ",
   0x4035f074u64 => "
       I_3_C.stdbr(),
+      I_3_C.stdbr_ha_l(),
+      I_3_C.stdbr_by_ll(),
+    ",
+  0x4035f075u64 => "
+      I_3_C.stdbr_by_lh(),
+    ",
+  0x4035f076u64 => "
+      I_3_C.stdbr_ha_h(),
+      I_3_C.stdbr_by_hl(),
+    ",
+  0x4035f077u64 => "
+      I_3_C.stdbr_by_hh(),
     ",
   0x4035f078u64 => "
       I_3_C.extbr(),
+      I_3_C.extbr_ha_l(),
+      I_3_C.extbr_by_ll(),
+    ",
+  0x4035f079u64 => "
+      I_3_C.extbr_by_lh(),
+    ",
+  0x4035f07au64 => "
+      I_3_C.extbr_ha_h(),
+      I_3_C.extbr_by_hl(),
+    ",
+  0x4035f07bu64 => "
+      I_3_C.extbr_by_hh(),
     ",
   0x4035f07cu64 => "
       I_3_C.bfrecdt(),
+      I_3_C.bfrecdt_ha_l(),
+      I_3_C.bfrecdt_by_ll(),
+    ",
+  0x4035f07du64 => "
+      I_3_C.bfrecdt_by_lh(),
     ",
   0x4035f080u64 => "
       I_3_C.bavlcdt(),
+      I_3_C.bavlcdt_ha_l(),
+      I_3_C.bavlcdt_by_ll(),
+    ",
+  0x4035f081u64 => "
+      I_3_C.bavlcdt_by_lh(),
     ",
   0x4035f084u64 => "
       I_3_C.bidlcdt(),
+      I_3_C.bidlcdt_ha_l(),
+      I_3_C.bidlcdt_by_ll(),
+    ",
+  0x4035f085u64 => "
+      I_3_C.bidlcdt_by_lh(),
+    ",
+  0x4035f086u64 => "
+      I_3_C.bidlcdt_ha_h(),
+      I_3_C.bidlcdt_by_hl(),
     ",
   0x4035f088u64 => "
       I_3_C.outctl(),
+      I_3_C.outctl_ha_l(),
+      I_3_C.outctl_by_ll(),
+    ",
+  0x4035f089u64 => "
+      I_3_C.outctl_by_lh(),
     ",
   0x4035f08cu64 => "
       I_3_C.inctl(),
+      I_3_C.inctl_ha_l(),
+      I_3_C.inctl_by_ll(),
     ",
   0x4035f090u64 => "
       I_3_C.tmoctl(),
+      I_3_C.tmoctl_ha_l(),
+      I_3_C.tmoctl_by_ll(),
     ",
   0x4035f098u64 => "
       I_3_C.wuctl(),
+      I_3_C.wuctl_ha_l(),
+      I_3_C.wuctl_by_ll(),
     ",
   0x4035f0a0u64 => "
       I_3_C.ackctl(),
+      I_3_C.ackctl_ha_l(),
+      I_3_C.ackctl_by_ll(),
     ",
   0x4035f0a4u64 => "
       I_3_C.scstrctl(),
+      I_3_C.scstrctl_ha_l(),
+      I_3_C.scstrctl_by_ll(),
     ",
   0x4035f0b0u64 => "
       I_3_C.scstlctl(),
+      I_3_C.scstlctl_ha_l(),
+      I_3_C.scstlctl_by_ll(),
+    ",
+  0x4035f0b1u64 => "
+      I_3_C.scstlctl_by_lh(),
+    ",
+  0x4035f0b2u64 => "
+      I_3_C.scstlctl_ha_h(),
+    ",
+  0x4035f0b3u64 => "
+      I_3_C.scstlctl_by_hh(),
     ",
   0x4035f0c0u64 => "
       I_3_C.svtdlg0(),
     ",
+  0x4035f0c2u64 => "
+      I_3_C.svtdlg0_ha_h(),
+      I_3_C.svtdlg0_by_hl(),
+    ",
+  0x4035f0c3u64 => "
+      I_3_C.svtdlg0_by_hh(),
+    ",
   0x4035f120u64 => "
       I_3_C.stctl(),
+      I_3_C.stctl_ha_l(),
+      I_3_C.stctl_by_ll(),
     ",
   0x4035f124u64 => "
       I_3_C.atctl(),
+      I_3_C.atctl_ha_l(),
+      I_3_C.atctl_by_ll(),
+    ",
+  0x4035f125u64 => "
+      I_3_C.atctl_by_lh(),
     ",
   0x4035f128u64 => "
       I_3_C.attrg(),
+      I_3_C.attrg_ha_l(),
+      I_3_C.attrg_by_ll(),
     ",
   0x4035f12cu64 => "
       I_3_C.atccnte(),
+      I_3_C.atccnte_ha_l(),
+      I_3_C.atccnte_by_ll(),
     ",
   0x4035f140u64 => "
       I_3_C.cndctl(),
+      I_3_C.cndctl_ha_l(),
+      I_3_C.cndctl_by_ll(),
     ",
   0x4035f150u64 => "
       I_3_C.ncmdqp(),
@@ -8607,7 +10437,7 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
     ",
   0x4035f158u64 => "
       I_3_C.ntdtbp0(),
-      I_3_C.ntdtbp0_by(),
+      I_3_C.ntdtbp0_by_ll(),
     ",
   0x4035f17cu64 => "
       I_3_C.nibiqp(),
@@ -8626,210 +10456,681 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
     ",
   0x4035f190u64 => "
       I_3_C.nqthctl(),
+      I_3_C.nqthctl_ha_l(),
+      I_3_C.nqthctl_by_ll(),
+    ",
+  0x4035f191u64 => "
+      I_3_C.nqthctl_by_lh(),
+    ",
+  0x4035f192u64 => "
+      I_3_C.nqthctl_ha_h(),
+      I_3_C.nqthctl_by_hl(),
+    ",
+  0x4035f193u64 => "
+      I_3_C.nqthctl_by_hh(),
     ",
   0x4035f194u64 => "
       I_3_C.ntbthctl0(),
+      I_3_C.ntbthctl0_ha_l(),
+      I_3_C.ntbthctl0_by_ll(),
+    ",
+  0x4035f195u64 => "
+      I_3_C.ntbthctl0_by_lh(),
+    ",
+  0x4035f196u64 => "
+      I_3_C.ntbthctl0_ha_h(),
+      I_3_C.ntbthctl0_by_hl(),
+    ",
+  0x4035f197u64 => "
+      I_3_C.ntbthctl0_by_hh(),
     ",
   0x4035f1c0u64 => "
       I_3_C.nrqthctl(),
+      I_3_C.nrqthctl_ha_l(),
+      I_3_C.nrqthctl_by_ll(),
     ",
   0x4035f1c4u64 => "
       I_3_C.hqthctl(),
+      I_3_C.hqthctl_ha_l(),
+      I_3_C.hqthctl_by_ll(),
+    ",
+  0x4035f1c5u64 => "
+      I_3_C.hqthctl_by_lh(),
     ",
   0x4035f1c8u64 => "
       I_3_C.htbthctl(),
+      I_3_C.htbthctl_ha_l(),
+      I_3_C.htbthctl_by_ll(),
+    ",
+  0x4035f1c9u64 => "
+      I_3_C.htbthctl_by_lh(),
+    ",
+  0x4035f1cau64 => "
+      I_3_C.htbthctl_ha_h(),
+      I_3_C.htbthctl_by_hl(),
+    ",
+  0x4035f1cbu64 => "
+      I_3_C.htbthctl_by_hh(),
     ",
   0x4035f1d0u64 => "
       I_3_C.bst(),
+      I_3_C.bst_ha_l(),
+      I_3_C.bst_by_ll(),
+    ",
+  0x4035f1d1u64 => "
+      I_3_C.bst_by_lh(),
+    ",
+  0x4035f1d2u64 => "
+      I_3_C.bst_ha_h(),
+      I_3_C.bst_by_hl(),
+    ",
+  0x4035f1d3u64 => "
+      I_3_C.bst_by_hh(),
     ",
   0x4035f1d4u64 => "
       I_3_C.bste(),
+      I_3_C.bste_ha_l(),
+      I_3_C.bste_by_ll(),
+    ",
+  0x4035f1d5u64 => "
+      I_3_C.bste_by_lh(),
+    ",
+  0x4035f1d6u64 => "
+      I_3_C.bste_ha_h(),
+      I_3_C.bste_by_hl(),
+    ",
+  0x4035f1d7u64 => "
+      I_3_C.bste_by_hh(),
     ",
   0x4035f1d8u64 => "
       I_3_C.bie(),
+      I_3_C.bie_ha_l(),
+      I_3_C.bie_by_ll(),
+    ",
+  0x4035f1d9u64 => "
+      I_3_C.bie_by_lh(),
+    ",
+  0x4035f1dau64 => "
+      I_3_C.bie_ha_h(),
+      I_3_C.bie_by_hl(),
+    ",
+  0x4035f1dbu64 => "
+      I_3_C.bie_by_hh(),
     ",
   0x4035f1dcu64 => "
       I_3_C.bstfc(),
+      I_3_C.bstfc_ha_l(),
+      I_3_C.bstfc_by_ll(),
+    ",
+  0x4035f1ddu64 => "
+      I_3_C.bstfc_by_lh(),
+    ",
+  0x4035f1deu64 => "
+      I_3_C.bstfc_ha_h(),
+      I_3_C.bstfc_by_hl(),
+    ",
+  0x4035f1dfu64 => "
+      I_3_C.bstfc_by_hh(),
     ",
   0x4035f1e0u64 => "
       I_3_C.ntst(),
+      I_3_C.ntst_ha_l(),
+      I_3_C.ntst_by_ll(),
+    ",
+  0x4035f1e1u64 => "
+      I_3_C.ntst_by_lh(),
+    ",
+  0x4035f1e2u64 => "
+      I_3_C.ntst_ha_h(),
+      I_3_C.ntst_by_hl(),
     ",
   0x4035f1e4u64 => "
       I_3_C.ntste(),
+      I_3_C.ntste_ha_l(),
+      I_3_C.ntste_by_ll(),
+    ",
+  0x4035f1e5u64 => "
+      I_3_C.ntste_by_lh(),
+    ",
+  0x4035f1e6u64 => "
+      I_3_C.ntste_ha_h(),
+      I_3_C.ntste_by_hl(),
     ",
   0x4035f1e8u64 => "
       I_3_C.ntie(),
+      I_3_C.ntie_ha_l(),
+      I_3_C.ntie_by_ll(),
+    ",
+  0x4035f1e9u64 => "
+      I_3_C.ntie_by_lh(),
+    ",
+  0x4035f1eau64 => "
+      I_3_C.ntie_ha_h(),
+      I_3_C.ntie_by_hl(),
     ",
   0x4035f1ecu64 => "
       I_3_C.ntstfc(),
+      I_3_C.ntstfc_ha_l(),
+      I_3_C.ntstfc_by_ll(),
+    ",
+  0x4035f1edu64 => "
+      I_3_C.ntstfc_by_lh(),
+    ",
+  0x4035f1eeu64 => "
+      I_3_C.ntstfc_ha_h(),
+      I_3_C.ntstfc_by_hl(),
     ",
   0x4035f200u64 => "
       I_3_C.htst(),
+      I_3_C.htst_ha_l(),
+      I_3_C.htst_by_ll(),
+    ",
+  0x4035f201u64 => "
+      I_3_C.htst_by_lh(),
     ",
   0x4035f204u64 => "
       I_3_C.htste(),
+      I_3_C.htste_ha_l(),
+      I_3_C.htste_by_ll(),
+    ",
+  0x4035f205u64 => "
+      I_3_C.htste_by_lh(),
     ",
   0x4035f208u64 => "
       I_3_C.htie(),
+      I_3_C.htie_ha_l(),
+      I_3_C.htie_by_ll(),
+    ",
+  0x4035f209u64 => "
+      I_3_C.htie_by_lh(),
     ",
   0x4035f20cu64 => "
       I_3_C.htstfc(),
+      I_3_C.htstfc_ha_l(),
+      I_3_C.htstfc_by_ll(),
+    ",
+  0x4035f20du64 => "
+      I_3_C.htstfc_by_lh(),
     ",
   0x4035f210u64 => "
       I_3_C.bcst(),
+      I_3_C.bcst_ha_l(),
+      I_3_C.bcst_by_ll(),
     ",
   0x4035f214u64 => "
       I_3_C.svst(),
+      I_3_C.svst_ha_l(),
+      I_3_C.svst_by_ll(),
+    ",
+  0x4035f215u64 => "
+      I_3_C.svst_by_lh(),
+    ",
+  0x4035f216u64 => "
+      I_3_C.svst_ha_h(),
+      I_3_C.svst_by_hl(),
     ",
   0x4035f218u64 => "
       I_3_C.wust(),
+      I_3_C.wust_ha_l(),
+      I_3_C.wust_by_ll(),
     ",
   0x4035f21cu64 => "
       I_3_C.mrccpt(),
     ",
   0x4035f224u64 => "
-      I_3_C.datbas()[0],
+      I_3_C.datbas0(),
+      I_3_C.datbas0_ha_l(),
+      I_3_C.datbas0_by_ll(),
+    ",
+  0x4035f225u64 => "
+      I_3_C.datbas0_by_lh(),
+    ",
+  0x4035f226u64 => "
+      I_3_C.datbas0_ha_h(),
+      I_3_C.datbas0_by_hl(),
+    ",
+  0x4035f227u64 => "
+      I_3_C.datbas0_by_hh(),
     ",
   0x4035f22cu64 => "
-      I_3_C.datbas()[1],
+      I_3_C.datbas1(),
+      I_3_C.datbas1_ha_l(),
+      I_3_C.datbas1_by_ll(),
+    ",
+  0x4035f22du64 => "
+      I_3_C.datbas1_by_lh(),
+    ",
+  0x4035f22eu64 => "
+      I_3_C.datbas1_ha_h(),
+      I_3_C.datbas1_by_hl(),
+    ",
+  0x4035f22fu64 => "
+      I_3_C.datbas1_by_hh(),
     ",
   0x4035f234u64 => "
-      I_3_C.datbas()[2],
+      I_3_C.datbas2(),
+      I_3_C.datbas2_ha_l(),
+      I_3_C.datbas2_by_ll(),
+    ",
+  0x4035f235u64 => "
+      I_3_C.datbas2_by_lh(),
+    ",
+  0x4035f236u64 => "
+      I_3_C.datbas2_ha_h(),
+      I_3_C.datbas2_by_hl(),
+    ",
+  0x4035f237u64 => "
+      I_3_C.datbas2_by_hh(),
     ",
   0x4035f23cu64 => "
-      I_3_C.datbas()[3],
+      I_3_C.datbas3(),
+      I_3_C.datbas3_ha_l(),
+      I_3_C.datbas3_by_ll(),
+    ",
+  0x4035f23du64 => "
+      I_3_C.datbas3_by_lh(),
+    ",
+  0x4035f23eu64 => "
+      I_3_C.datbas3_ha_h(),
+      I_3_C.datbas3_by_hl(),
+    ",
+  0x4035f23fu64 => "
+      I_3_C.datbas3_by_hh(),
     ",
   0x4035f244u64 => "
-      I_3_C.datbas()[4],
+      I_3_C.datbas4(),
+      I_3_C.datbas4_ha_l(),
+      I_3_C.datbas4_by_ll(),
+    ",
+  0x4035f245u64 => "
+      I_3_C.datbas4_by_lh(),
+    ",
+  0x4035f246u64 => "
+      I_3_C.datbas4_ha_h(),
+      I_3_C.datbas4_by_hl(),
+    ",
+  0x4035f247u64 => "
+      I_3_C.datbas4_by_hh(),
     ",
   0x4035f24cu64 => "
-      I_3_C.datbas()[5],
+      I_3_C.datbas5(),
+      I_3_C.datbas5_ha_l(),
+      I_3_C.datbas5_by_ll(),
+    ",
+  0x4035f24du64 => "
+      I_3_C.datbas5_by_lh(),
+    ",
+  0x4035f24eu64 => "
+      I_3_C.datbas5_ha_h(),
+      I_3_C.datbas5_by_hl(),
+    ",
+  0x4035f24fu64 => "
+      I_3_C.datbas5_by_hh(),
     ",
   0x4035f254u64 => "
-      I_3_C.datbas()[6],
+      I_3_C.datbas6(),
+      I_3_C.datbas6_ha_l(),
+      I_3_C.datbas6_by_ll(),
+    ",
+  0x4035f255u64 => "
+      I_3_C.datbas6_by_lh(),
+    ",
+  0x4035f256u64 => "
+      I_3_C.datbas6_ha_h(),
+      I_3_C.datbas6_by_hl(),
+    ",
+  0x4035f257u64 => "
+      I_3_C.datbas6_by_hh(),
     ",
   0x4035f25cu64 => "
-      I_3_C.datbas()[7],
+      I_3_C.datbas7(),
+      I_3_C.datbas7_ha_l(),
+      I_3_C.datbas7_by_ll(),
+    ",
+  0x4035f25du64 => "
+      I_3_C.datbas7_by_lh(),
+    ",
+  0x4035f25eu64 => "
+      I_3_C.datbas7_ha_h(),
+      I_3_C.datbas7_by_hl(),
+    ",
+  0x4035f25fu64 => "
+      I_3_C.datbas7_by_hh(),
     ",
   0x4035f2a0u64 => "
       I_3_C.exdatbas(),
+      I_3_C.exdatbas_ha_l(),
+      I_3_C.exdatbas_by_ll(),
+    ",
+  0x4035f2a1u64 => "
+      I_3_C.exdatbas_by_lh(),
+    ",
+  0x4035f2a2u64 => "
+      I_3_C.exdatbas_ha_h(),
+      I_3_C.exdatbas_by_hl(),
+    ",
+  0x4035f2a3u64 => "
+      I_3_C.exdatbas_by_hh(),
     ",
   0x4035f2b0u64 => "
-      I_3_C.sdatbas()[0],
+      I_3_C.sdatbas0(),
+      I_3_C.sdatbas0_ha_l(),
+      I_3_C.sdatbas0_by_ll(),
+    ",
+  0x4035f2b1u64 => "
+      I_3_C.sdatbas0_by_lh(),
+    ",
+  0x4035f2b2u64 => "
+      I_3_C.sdatbas0_ha_h(),
+      I_3_C.sdatbas0_by_hl(),
     ",
   0x4035f2b4u64 => "
-      I_3_C.sdatbas()[1],
+      I_3_C.sdatbas1(),
+      I_3_C.sdatbas1_ha_l(),
+      I_3_C.sdatbas1_by_ll(),
+    ",
+  0x4035f2b5u64 => "
+      I_3_C.sdatbas1_by_lh(),
     ",
   0x4035f2b8u64 => "
-      I_3_C.sdatbas()[2],
+      I_3_C.sdatbas2(),
+      I_3_C.sdatbas2_ha_l(),
+      I_3_C.sdatbas2_by_ll(),
+    ",
+  0x4035f2b9u64 => "
+      I_3_C.sdatbas2_by_lh(),
     ",
   0x4035f2d0u64 => "
-      I_3_C.msdct()[0],
+      I_3_C.msdct0(),
+      I_3_C.msdct0_ha_l(),
+    ",
+  0x4035f2d1u64 => "
+      I_3_C.msdct0_by_lh(),
     ",
   0x4035f2d4u64 => "
-      I_3_C.msdct()[1],
+      I_3_C.msdct1(),
+      I_3_C.msdct1_ha_l(),
+    ",
+  0x4035f2d5u64 => "
+      I_3_C.msdct1_by_lh(),
     ",
   0x4035f2d8u64 => "
-      I_3_C.msdct()[2],
+      I_3_C.msdct2(),
+      I_3_C.msdct2_ha_l(),
+    ",
+  0x4035f2d9u64 => "
+      I_3_C.msdct2_by_lh(),
     ",
   0x4035f2dcu64 => "
-      I_3_C.msdct()[3],
+      I_3_C.msdct3(),
+      I_3_C.msdct3_ha_l(),
+    ",
+  0x4035f2ddu64 => "
+      I_3_C.msdct3_by_lh(),
     ",
   0x4035f2e0u64 => "
-      I_3_C.msdct()[4],
+      I_3_C.msdct4(),
+      I_3_C.msdct4_ha_l(),
+    ",
+  0x4035f2e1u64 => "
+      I_3_C.msdct4_by_lh(),
     ",
   0x4035f2e4u64 => "
-      I_3_C.msdct()[5],
+      I_3_C.msdct5(),
+      I_3_C.msdct5_ha_l(),
+    ",
+  0x4035f2e5u64 => "
+      I_3_C.msdct5_by_lh(),
     ",
   0x4035f2e8u64 => "
-      I_3_C.msdct()[6],
+      I_3_C.msdct6(),
+      I_3_C.msdct6_ha_l(),
+    ",
+  0x4035f2e9u64 => "
+      I_3_C.msdct6_by_lh(),
     ",
   0x4035f2ecu64 => "
-      I_3_C.msdct()[7],
+      I_3_C.msdct7(),
+      I_3_C.msdct7_ha_l(),
+    ",
+  0x4035f2edu64 => "
+      I_3_C.msdct7_by_lh(),
     ",
   0x4035f320u64 => "
       I_3_C.svdct(),
+      I_3_C.svdct_ha_l(),
+      I_3_C.svdct_by_ll(),
+    ",
+  0x4035f321u64 => "
+      I_3_C.svdct_by_lh(),
     ",
   0x4035f324u64 => "
       I_3_C.sdctpidl(),
+      I_3_C.sdctpidl_ha_l(),
+      I_3_C.sdctpidl_by_ll(),
+    ",
+  0x4035f325u64 => "
+      I_3_C.sdctpidl_by_lh(),
     ",
   0x4035f328u64 => "
       I_3_C.sdctpidh(),
+      I_3_C.sdctpidh_ha_l(),
+      I_3_C.sdctpidh_by_ll(),
+    ",
+  0x4035f329u64 => "
+      I_3_C.sdctpidh_by_lh(),
+    ",
+  0x4035f32au64 => "
+      I_3_C.sdctpidh_ha_h(),
+      I_3_C.sdctpidh_by_hl(),
+    ",
+  0x4035f32bu64 => "
+      I_3_C.sdctpidh_by_hh(),
     ",
   0x4035f330u64 => "
-      I_3_C.svdvad()[0],
+      I_3_C.svdvad0(),
+    ",
+  0x4035f332u64 => "
+      I_3_C.svdvad0_ha_h(),
+      I_3_C.svdvad0_by_hl(),
+    ",
+  0x4035f333u64 => "
+      I_3_C.svdvad0_by_hh(),
     ",
   0x4035f334u64 => "
-      I_3_C.svdvad()[1],
+      I_3_C.svdvad1(),
+    ",
+  0x4035f336u64 => "
+      I_3_C.svdvad1_ha_h(),
+      I_3_C.svdvad1_by_hl(),
+    ",
+  0x4035f337u64 => "
+      I_3_C.svdvad1_by_hh(),
     ",
   0x4035f338u64 => "
-      I_3_C.svdvad()[2],
+      I_3_C.svdvad2(),
+    ",
+  0x4035f33au64 => "
+      I_3_C.svdvad2_ha_h(),
+      I_3_C.svdvad2_by_hl(),
+    ",
+  0x4035f33bu64 => "
+      I_3_C.svdvad2_by_hh(),
     ",
   0x4035f350u64 => "
       I_3_C.csecmd(),
+      I_3_C.csecmd_ha_l(),
+      I_3_C.csecmd_by_ll(),
     ",
   0x4035f354u64 => "
       I_3_C.ceactst(),
+      I_3_C.ceactst_ha_l(),
+      I_3_C.ceactst_by_ll(),
     ",
   0x4035f358u64 => "
       I_3_C.cmwlg(),
+      I_3_C.cmwlg_ha_l(),
+      I_3_C.cmwlg_by_ll(),
+    ",
+  0x4035f359u64 => "
+      I_3_C.cmwlg_by_lh(),
     ",
   0x4035f35cu64 => "
       I_3_C.cmrlg(),
+      I_3_C.cmrlg_ha_l(),
+      I_3_C.cmrlg_by_ll(),
+    ",
+  0x4035f35du64 => "
+      I_3_C.cmrlg_by_lh(),
+    ",
+  0x4035f35eu64 => "
+      I_3_C.cmrlg_ha_h(),
+      I_3_C.cmrlg_by_hl(),
     ",
   0x4035f360u64 => "
       I_3_C.cetstmd(),
+      I_3_C.cetstmd_ha_l(),
+      I_3_C.cetstmd_by_ll(),
     ",
   0x4035f364u64 => "
       I_3_C.cgdvst(),
+      I_3_C.cgdvst_ha_l(),
+      I_3_C.cgdvst_by_ll(),
+    ",
+  0x4035f365u64 => "
+      I_3_C.cgdvst_by_lh(),
     ",
   0x4035f368u64 => "
       I_3_C.cmdspw(),
+      I_3_C.cmdspw_ha_l(),
+      I_3_C.cmdspw_by_ll(),
     ",
   0x4035f36cu64 => "
       I_3_C.cmdspr(),
+      I_3_C.cmdspr_ha_l(),
+      I_3_C.cmdspr_by_ll(),
     ",
   0x4035f370u64 => "
       I_3_C.cmdspt(),
+      I_3_C.cmdspt_ha_l(),
+      I_3_C.cmdspt_by_ll(),
+    ",
+  0x4035f371u64 => "
+      I_3_C.cmdspt_by_lh(),
+    ",
+  0x4035f372u64 => "
+      I_3_C.cmdspt_ha_h(),
+      I_3_C.cmdspt_by_hl(),
+    ",
+  0x4035f373u64 => "
+      I_3_C.cmdspt_by_hh(),
     ",
   0x4035f374u64 => "
       I_3_C.cetsm(),
+      I_3_C.cetsm_ha_l(),
+      I_3_C.cetsm_by_ll(),
+    ",
+  0x4035f375u64 => "
+      I_3_C.cetsm_by_lh(),
+    ",
+  0x4035f376u64 => "
+      I_3_C.cetsm_ha_h(),
+      I_3_C.cetsm_by_hl(),
     ",
   0x4035f378u64 => "
       I_3_C.cetss(),
+      I_3_C.cetss_ha_l(),
+      I_3_C.cetss_by_ll(),
     ",
   0x4035f37cu64 => "
       I_3_C.cghdrcap(),
+      I_3_C.cghdrcap_ha_l(),
+      I_3_C.cghdrcap_by_ll(),
     ",
   0x4035f380u64 => "
       I_3_C.bitcnt(),
+      I_3_C.bitcnt_ha_l(),
+      I_3_C.bitcnt_by_ll(),
     ",
   0x4035f394u64 => "
       I_3_C.nqstlv(),
+      I_3_C.nqstlv_ha_l(),
+      I_3_C.nqstlv_by_ll(),
+    ",
+  0x4035f395u64 => "
+      I_3_C.nqstlv_by_lh(),
+    ",
+  0x4035f396u64 => "
+      I_3_C.nqstlv_ha_h(),
+      I_3_C.nqstlv_by_hl(),
+    ",
+  0x4035f397u64 => "
+      I_3_C.nqstlv_by_hh(),
     ",
   0x4035f398u64 => "
       I_3_C.ndbstlv0(),
+      I_3_C.ndbstlv0_ha_l(),
+      I_3_C.ndbstlv0_by_ll(),
+    ",
+  0x4035f399u64 => "
+      I_3_C.ndbstlv0_by_lh(),
     ",
   0x4035f3c0u64 => "
       I_3_C.nrsqstlv(),
+      I_3_C.nrsqstlv_ha_l(),
+      I_3_C.nrsqstlv_by_ll(),
     ",
   0x4035f3c4u64 => "
       I_3_C.hqstlv(),
+      I_3_C.hqstlv_ha_l(),
+      I_3_C.hqstlv_by_ll(),
+    ",
+  0x4035f3c5u64 => "
+      I_3_C.hqstlv_by_lh(),
     ",
   0x4035f3c8u64 => "
       I_3_C.hdbstlv(),
+      I_3_C.hdbstlv_ha_l(),
+      I_3_C.hdbstlv_by_ll(),
+    ",
+  0x4035f3c9u64 => "
+      I_3_C.hdbstlv_by_lh(),
     ",
   0x4035f3ccu64 => "
       I_3_C.prstdbg(),
+      I_3_C.prstdbg_ha_l(),
+      I_3_C.prstdbg_by_ll(),
+    ",
+  0x4035f3cdu64 => "
+      I_3_C.prstdbg_by_lh(),
+    ",
+  0x4035f3ceu64 => "
+      I_3_C.prstdbg_ha_h(),
+      I_3_C.prstdbg_by_hl(),
+    ",
+  0x4035f3cfu64 => "
+      I_3_C.prstdbg_by_hh(),
     ",
   0x4035f3d0u64 => "
       I_3_C.mserrcnt(),
+      I_3_C.mserrcnt_ha_l(),
+      I_3_C.mserrcnt_by_ll(),
     ",
   0x4035f3e0u64 => "
       I_3_C.sc1cpt(),
+      I_3_C.sc1cpt_ha_l(),
+      I_3_C.sc1cpt_by_ll(),
+    ",
+  0x4035f3e1u64 => "
+      I_3_C.sc1cpt_by_lh(),
     ",
   0x4035f3e4u64 => "
       I_3_C.sc2cpt(),
+      I_3_C.sc2cpt_ha_l(),
+      I_3_C.sc2cpt_by_ll(),
+    ",
+  0x4035f3e5u64 => "
+      I_3_C.sc2cpt_by_lh(),
     ",
   0x4036f200u64 => "
       ECCMB_0.ec710ctl(),
@@ -8854,6 +11155,9 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
     ",
   0x4038000cu64 => "
       CANFD_0.cfdc0erfl(),
+    ",
+  0x40380010u64 => "
+      CANFD_0.cfdgipv(),
     ",
   0x40380014u64 => "
       CANFD_0.cfdgcfg(),
@@ -8996,6 +11300,9 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x403800b8u64 => "
       CANFD_0.cfdglockk(),
     ",
+  0x403800bcu64 => "
+      CANFD_0.cfdglotb(),
+    ",
   0x403800c0u64 => "
       CANFD_0.cfdgaflignent(),
     ",
@@ -9007,6 +11314,12 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
     ",
   0x403800ccu64 => "
       CANFD_0.cfdcdtsts(),
+    ",
+  0x403800d0u64 => "
+      CANFD_0.cfdgpflectr(),
+    ",
+  0x403800d4u64 => "
+      CANFD_0.cfdgpflcfg(),
     ",
   0x403800d8u64 => "
       CANFD_0.cfdgrstc(),
@@ -9217,6 +11530,60 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
     ",
   0x4038021cu64 => "
       CANFD_0.cfdgaflp1()[15],
+    ",
+  0x40380220u64 => "
+      CANFD_0.cfdgpflid()[0],
+    ",
+  0x40380244u64 => "
+      CANFD_0.cfdgpflid()[1],
+    ",
+  0x40380224u64 => "
+      CANFD_0.cfdgpflm()[0],
+    ",
+  0x40380248u64 => "
+      CANFD_0.cfdgpflm()[1],
+    ",
+  0x40380228u64 => "
+      CANFD_0.cfdgpflp0()[0],
+    ",
+  0x4038024cu64 => "
+      CANFD_0.cfdgpflp0()[1],
+    ",
+  0x4038022cu64 => "
+      CANFD_0.cfdgpflp1()[0],
+    ",
+  0x40380250u64 => "
+      CANFD_0.cfdgpflp1()[1],
+    ",
+  0x40380230u64 => "
+      CANFD_0.cfdgpflpt()[0],
+    ",
+  0x40380254u64 => "
+      CANFD_0.cfdgpflpt()[1],
+    ",
+  0x40380234u64 => "
+      CANFD_0.cfdgpflpd0()[0],
+    ",
+  0x40380258u64 => "
+      CANFD_0.cfdgpflpd0()[1],
+    ",
+  0x40380238u64 => "
+      CANFD_0.cfdgpflpm0()[0],
+    ",
+  0x4038025cu64 => "
+      CANFD_0.cfdgpflpm0()[1],
+    ",
+  0x4038023cu64 => "
+      CANFD_0.cfdgpflpd1()[0],
+    ",
+  0x40380260u64 => "
+      CANFD_0.cfdgpflpd1()[1],
+    ",
+  0x40380240u64 => "
+      CANFD_0.cfdgpflpm1()[0],
+    ",
+  0x40380264u64 => "
+      CANFD_0.cfdgpflpm1()[1],
     ",
   0x40380280u64 => "
       CANFD_0.cfdrpgacc()[0],
@@ -9429,100 +11796,100 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       CANFD_0.cfdrffdsts()[1],
     ",
   0x4038052cu64 => "
-      CANFD_0.cfdrfdf_0()[0],
-    ",
-  0x40380578u64 => "
-      CANFD_0.cfdrfdf_0()[1],
+      CANFD_0.cfdrfdf0()[0],
     ",
   0x40380530u64 => "
-      CANFD_0.cfdrfdf_1()[0],
-    ",
-  0x4038057cu64 => "
-      CANFD_0.cfdrfdf_1()[1],
+      CANFD_0.cfdrfdf0()[1],
     ",
   0x40380534u64 => "
-      CANFD_0.cfdrfdf_2()[0],
-    ",
-  0x40380580u64 => "
-      CANFD_0.cfdrfdf_2()[1],
+      CANFD_0.cfdrfdf0()[2],
     ",
   0x40380538u64 => "
-      CANFD_0.cfdrfdf_3()[0],
-    ",
-  0x40380584u64 => "
-      CANFD_0.cfdrfdf_3()[1],
+      CANFD_0.cfdrfdf0()[3],
     ",
   0x4038053cu64 => "
-      CANFD_0.cfdrfdf_4()[0],
-    ",
-  0x40380588u64 => "
-      CANFD_0.cfdrfdf_4()[1],
+      CANFD_0.cfdrfdf0()[4],
     ",
   0x40380540u64 => "
-      CANFD_0.cfdrfdf_5()[0],
-    ",
-  0x4038058cu64 => "
-      CANFD_0.cfdrfdf_5()[1],
+      CANFD_0.cfdrfdf0()[5],
     ",
   0x40380544u64 => "
-      CANFD_0.cfdrfdf_6()[0],
-    ",
-  0x40380590u64 => "
-      CANFD_0.cfdrfdf_6()[1],
+      CANFD_0.cfdrfdf0()[6],
     ",
   0x40380548u64 => "
-      CANFD_0.cfdrfdf_7()[0],
-    ",
-  0x40380594u64 => "
-      CANFD_0.cfdrfdf_7()[1],
+      CANFD_0.cfdrfdf0()[7],
     ",
   0x4038054cu64 => "
-      CANFD_0.cfdrfdf_8()[0],
-    ",
-  0x40380598u64 => "
-      CANFD_0.cfdrfdf_8()[1],
+      CANFD_0.cfdrfdf0()[8],
     ",
   0x40380550u64 => "
-      CANFD_0.cfdrfdf_9()[0],
-    ",
-  0x4038059cu64 => "
-      CANFD_0.cfdrfdf_9()[1],
+      CANFD_0.cfdrfdf0()[9],
     ",
   0x40380554u64 => "
-      CANFD_0.cfdrfdf_10()[0],
-    ",
-  0x403805a0u64 => "
-      CANFD_0.cfdrfdf_10()[1],
+      CANFD_0.cfdrfdf0()[10],
     ",
   0x40380558u64 => "
-      CANFD_0.cfdrfdf_11()[0],
-    ",
-  0x403805a4u64 => "
-      CANFD_0.cfdrfdf_11()[1],
+      CANFD_0.cfdrfdf0()[11],
     ",
   0x4038055cu64 => "
-      CANFD_0.cfdrfdf_12()[0],
-    ",
-  0x403805a8u64 => "
-      CANFD_0.cfdrfdf_12()[1],
+      CANFD_0.cfdrfdf0()[12],
     ",
   0x40380560u64 => "
-      CANFD_0.cfdrfdf_13()[0],
-    ",
-  0x403805acu64 => "
-      CANFD_0.cfdrfdf_13()[1],
+      CANFD_0.cfdrfdf0()[13],
     ",
   0x40380564u64 => "
-      CANFD_0.cfdrfdf_14()[0],
-    ",
-  0x403805b0u64 => "
-      CANFD_0.cfdrfdf_14()[1],
+      CANFD_0.cfdrfdf0()[14],
     ",
   0x40380568u64 => "
-      CANFD_0.cfdrfdf_15()[0],
+      CANFD_0.cfdrfdf0()[15],
+    ",
+  0x40380578u64 => "
+      CANFD_0.cfdrfdf1()[0],
+    ",
+  0x4038057cu64 => "
+      CANFD_0.cfdrfdf1()[1],
+    ",
+  0x40380580u64 => "
+      CANFD_0.cfdrfdf1()[2],
+    ",
+  0x40380584u64 => "
+      CANFD_0.cfdrfdf1()[3],
+    ",
+  0x40380588u64 => "
+      CANFD_0.cfdrfdf1()[4],
+    ",
+  0x4038058cu64 => "
+      CANFD_0.cfdrfdf1()[5],
+    ",
+  0x40380590u64 => "
+      CANFD_0.cfdrfdf1()[6],
+    ",
+  0x40380594u64 => "
+      CANFD_0.cfdrfdf1()[7],
+    ",
+  0x40380598u64 => "
+      CANFD_0.cfdrfdf1()[8],
+    ",
+  0x4038059cu64 => "
+      CANFD_0.cfdrfdf1()[9],
+    ",
+  0x403805a0u64 => "
+      CANFD_0.cfdrfdf1()[10],
+    ",
+  0x403805a4u64 => "
+      CANFD_0.cfdrfdf1()[11],
+    ",
+  0x403805a8u64 => "
+      CANFD_0.cfdrfdf1()[12],
+    ",
+  0x403805acu64 => "
+      CANFD_0.cfdrfdf1()[13],
+    ",
+  0x403805b0u64 => "
+      CANFD_0.cfdrfdf1()[14],
     ",
   0x403805b4u64 => "
-      CANFD_0.cfdrfdf_15()[1],
+      CANFD_0.cfdrfdf1()[15],
     ",
   0x403805b8u64 => "
       CANFD_0.cfdcfid(),
@@ -9534,52 +11901,52 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       CANFD_0.cfdcffdcsts(),
     ",
   0x403805c4u64 => "
-      CANFD_0.cfdcfdf()[0],
+      CANFD_0.cfdcfdf0(),
     ",
   0x403805c8u64 => "
-      CANFD_0.cfdcfdf()[1],
+      CANFD_0.cfdcfdf1(),
     ",
   0x403805ccu64 => "
-      CANFD_0.cfdcfdf()[2],
+      CANFD_0.cfdcfdf2(),
     ",
   0x403805d0u64 => "
-      CANFD_0.cfdcfdf()[3],
+      CANFD_0.cfdcfdf3(),
     ",
   0x403805d4u64 => "
-      CANFD_0.cfdcfdf()[4],
+      CANFD_0.cfdcfdf4(),
     ",
   0x403805d8u64 => "
-      CANFD_0.cfdcfdf()[5],
+      CANFD_0.cfdcfdf5(),
     ",
   0x403805dcu64 => "
-      CANFD_0.cfdcfdf()[6],
+      CANFD_0.cfdcfdf6(),
     ",
   0x403805e0u64 => "
-      CANFD_0.cfdcfdf()[7],
+      CANFD_0.cfdcfdf7(),
     ",
   0x403805e4u64 => "
-      CANFD_0.cfdcfdf()[8],
+      CANFD_0.cfdcfdf8(),
     ",
   0x403805e8u64 => "
-      CANFD_0.cfdcfdf()[9],
+      CANFD_0.cfdcfdf9(),
     ",
   0x403805ecu64 => "
-      CANFD_0.cfdcfdf()[10],
+      CANFD_0.cfdcfdf10(),
     ",
   0x403805f0u64 => "
-      CANFD_0.cfdcfdf()[11],
+      CANFD_0.cfdcfdf11(),
     ",
   0x403805f4u64 => "
-      CANFD_0.cfdcfdf()[12],
+      CANFD_0.cfdcfdf12(),
     ",
   0x403805f8u64 => "
-      CANFD_0.cfdcfdf()[13],
+      CANFD_0.cfdcfdf13(),
     ",
   0x403805fcu64 => "
-      CANFD_0.cfdcfdf()[14],
+      CANFD_0.cfdcfdf14(),
     ",
   0x40380600u64 => "
-      CANFD_0.cfdcfdf()[15],
+      CANFD_0.cfdcfdf15(),
     ",
   0x40380604u64 => "
       CANFD_0.cfdtmid()[0],
@@ -9618,196 +11985,196 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       CANFD_0.cfdtmfdctr()[3],
     ",
   0x40380610u64 => "
-      CANFD_0.cfdtmdf_0()[0],
-    ",
-  0x4038065cu64 => "
-      CANFD_0.cfdtmdf_0()[1],
-    ",
-  0x403806a8u64 => "
-      CANFD_0.cfdtmdf_0()[2],
-    ",
-  0x403806f4u64 => "
-      CANFD_0.cfdtmdf_0()[3],
+      CANFD_0.cfdtmdf0_()[0],
     ",
   0x40380614u64 => "
-      CANFD_0.cfdtmdf_1()[0],
-    ",
-  0x40380660u64 => "
-      CANFD_0.cfdtmdf_1()[1],
-    ",
-  0x403806acu64 => "
-      CANFD_0.cfdtmdf_1()[2],
-    ",
-  0x403806f8u64 => "
-      CANFD_0.cfdtmdf_1()[3],
+      CANFD_0.cfdtmdf0_()[1],
     ",
   0x40380618u64 => "
-      CANFD_0.cfdtmdf_2()[0],
-    ",
-  0x40380664u64 => "
-      CANFD_0.cfdtmdf_2()[1],
-    ",
-  0x403806b0u64 => "
-      CANFD_0.cfdtmdf_2()[2],
-    ",
-  0x403806fcu64 => "
-      CANFD_0.cfdtmdf_2()[3],
+      CANFD_0.cfdtmdf0_()[2],
     ",
   0x4038061cu64 => "
-      CANFD_0.cfdtmdf_3()[0],
-    ",
-  0x40380668u64 => "
-      CANFD_0.cfdtmdf_3()[1],
-    ",
-  0x403806b4u64 => "
-      CANFD_0.cfdtmdf_3()[2],
-    ",
-  0x40380700u64 => "
-      CANFD_0.cfdtmdf_3()[3],
+      CANFD_0.cfdtmdf0_()[3],
     ",
   0x40380620u64 => "
-      CANFD_0.cfdtmdf_4()[0],
-    ",
-  0x4038066cu64 => "
-      CANFD_0.cfdtmdf_4()[1],
-    ",
-  0x403806b8u64 => "
-      CANFD_0.cfdtmdf_4()[2],
-    ",
-  0x40380704u64 => "
-      CANFD_0.cfdtmdf_4()[3],
+      CANFD_0.cfdtmdf0_()[4],
     ",
   0x40380624u64 => "
-      CANFD_0.cfdtmdf_5()[0],
-    ",
-  0x40380670u64 => "
-      CANFD_0.cfdtmdf_5()[1],
-    ",
-  0x403806bcu64 => "
-      CANFD_0.cfdtmdf_5()[2],
-    ",
-  0x40380708u64 => "
-      CANFD_0.cfdtmdf_5()[3],
+      CANFD_0.cfdtmdf0_()[5],
     ",
   0x40380628u64 => "
-      CANFD_0.cfdtmdf_6()[0],
-    ",
-  0x40380674u64 => "
-      CANFD_0.cfdtmdf_6()[1],
-    ",
-  0x403806c0u64 => "
-      CANFD_0.cfdtmdf_6()[2],
-    ",
-  0x4038070cu64 => "
-      CANFD_0.cfdtmdf_6()[3],
+      CANFD_0.cfdtmdf0_()[6],
     ",
   0x4038062cu64 => "
-      CANFD_0.cfdtmdf_7()[0],
-    ",
-  0x40380678u64 => "
-      CANFD_0.cfdtmdf_7()[1],
-    ",
-  0x403806c4u64 => "
-      CANFD_0.cfdtmdf_7()[2],
-    ",
-  0x40380710u64 => "
-      CANFD_0.cfdtmdf_7()[3],
+      CANFD_0.cfdtmdf0_()[7],
     ",
   0x40380630u64 => "
-      CANFD_0.cfdtmdf_8()[0],
-    ",
-  0x4038067cu64 => "
-      CANFD_0.cfdtmdf_8()[1],
-    ",
-  0x403806c8u64 => "
-      CANFD_0.cfdtmdf_8()[2],
-    ",
-  0x40380714u64 => "
-      CANFD_0.cfdtmdf_8()[3],
+      CANFD_0.cfdtmdf0_()[8],
     ",
   0x40380634u64 => "
-      CANFD_0.cfdtmdf_9()[0],
-    ",
-  0x40380680u64 => "
-      CANFD_0.cfdtmdf_9()[1],
-    ",
-  0x403806ccu64 => "
-      CANFD_0.cfdtmdf_9()[2],
-    ",
-  0x40380718u64 => "
-      CANFD_0.cfdtmdf_9()[3],
+      CANFD_0.cfdtmdf0_()[9],
     ",
   0x40380638u64 => "
-      CANFD_0.cfdtmdf_10()[0],
-    ",
-  0x40380684u64 => "
-      CANFD_0.cfdtmdf_10()[1],
-    ",
-  0x403806d0u64 => "
-      CANFD_0.cfdtmdf_10()[2],
-    ",
-  0x4038071cu64 => "
-      CANFD_0.cfdtmdf_10()[3],
+      CANFD_0.cfdtmdf0_()[10],
     ",
   0x4038063cu64 => "
-      CANFD_0.cfdtmdf_11()[0],
-    ",
-  0x40380688u64 => "
-      CANFD_0.cfdtmdf_11()[1],
-    ",
-  0x403806d4u64 => "
-      CANFD_0.cfdtmdf_11()[2],
-    ",
-  0x40380720u64 => "
-      CANFD_0.cfdtmdf_11()[3],
+      CANFD_0.cfdtmdf0_()[11],
     ",
   0x40380640u64 => "
-      CANFD_0.cfdtmdf_12()[0],
-    ",
-  0x4038068cu64 => "
-      CANFD_0.cfdtmdf_12()[1],
-    ",
-  0x403806d8u64 => "
-      CANFD_0.cfdtmdf_12()[2],
-    ",
-  0x40380724u64 => "
-      CANFD_0.cfdtmdf_12()[3],
+      CANFD_0.cfdtmdf0_()[12],
     ",
   0x40380644u64 => "
-      CANFD_0.cfdtmdf_13()[0],
-    ",
-  0x40380690u64 => "
-      CANFD_0.cfdtmdf_13()[1],
-    ",
-  0x403806dcu64 => "
-      CANFD_0.cfdtmdf_13()[2],
-    ",
-  0x40380728u64 => "
-      CANFD_0.cfdtmdf_13()[3],
+      CANFD_0.cfdtmdf0_()[13],
     ",
   0x40380648u64 => "
-      CANFD_0.cfdtmdf_14()[0],
-    ",
-  0x40380694u64 => "
-      CANFD_0.cfdtmdf_14()[1],
-    ",
-  0x403806e0u64 => "
-      CANFD_0.cfdtmdf_14()[2],
-    ",
-  0x4038072cu64 => "
-      CANFD_0.cfdtmdf_14()[3],
+      CANFD_0.cfdtmdf0_()[14],
     ",
   0x4038064cu64 => "
-      CANFD_0.cfdtmdf_15()[0],
+      CANFD_0.cfdtmdf0_()[15],
+    ",
+  0x4038065cu64 => "
+      CANFD_0.cfdtmdf1_()[0],
+    ",
+  0x40380660u64 => "
+      CANFD_0.cfdtmdf1_()[1],
+    ",
+  0x40380664u64 => "
+      CANFD_0.cfdtmdf1_()[2],
+    ",
+  0x40380668u64 => "
+      CANFD_0.cfdtmdf1_()[3],
+    ",
+  0x4038066cu64 => "
+      CANFD_0.cfdtmdf1_()[4],
+    ",
+  0x40380670u64 => "
+      CANFD_0.cfdtmdf1_()[5],
+    ",
+  0x40380674u64 => "
+      CANFD_0.cfdtmdf1_()[6],
+    ",
+  0x40380678u64 => "
+      CANFD_0.cfdtmdf1_()[7],
+    ",
+  0x4038067cu64 => "
+      CANFD_0.cfdtmdf1_()[8],
+    ",
+  0x40380680u64 => "
+      CANFD_0.cfdtmdf1_()[9],
+    ",
+  0x40380684u64 => "
+      CANFD_0.cfdtmdf1_()[10],
+    ",
+  0x40380688u64 => "
+      CANFD_0.cfdtmdf1_()[11],
+    ",
+  0x4038068cu64 => "
+      CANFD_0.cfdtmdf1_()[12],
+    ",
+  0x40380690u64 => "
+      CANFD_0.cfdtmdf1_()[13],
+    ",
+  0x40380694u64 => "
+      CANFD_0.cfdtmdf1_()[14],
     ",
   0x40380698u64 => "
-      CANFD_0.cfdtmdf_15()[1],
+      CANFD_0.cfdtmdf1_()[15],
+    ",
+  0x403806a8u64 => "
+      CANFD_0.cfdtmdf2_()[0],
+    ",
+  0x403806acu64 => "
+      CANFD_0.cfdtmdf2_()[1],
+    ",
+  0x403806b0u64 => "
+      CANFD_0.cfdtmdf2_()[2],
+    ",
+  0x403806b4u64 => "
+      CANFD_0.cfdtmdf2_()[3],
+    ",
+  0x403806b8u64 => "
+      CANFD_0.cfdtmdf2_()[4],
+    ",
+  0x403806bcu64 => "
+      CANFD_0.cfdtmdf2_()[5],
+    ",
+  0x403806c0u64 => "
+      CANFD_0.cfdtmdf2_()[6],
+    ",
+  0x403806c4u64 => "
+      CANFD_0.cfdtmdf2_()[7],
+    ",
+  0x403806c8u64 => "
+      CANFD_0.cfdtmdf2_()[8],
+    ",
+  0x403806ccu64 => "
+      CANFD_0.cfdtmdf2_()[9],
+    ",
+  0x403806d0u64 => "
+      CANFD_0.cfdtmdf2_()[10],
+    ",
+  0x403806d4u64 => "
+      CANFD_0.cfdtmdf2_()[11],
+    ",
+  0x403806d8u64 => "
+      CANFD_0.cfdtmdf2_()[12],
+    ",
+  0x403806dcu64 => "
+      CANFD_0.cfdtmdf2_()[13],
+    ",
+  0x403806e0u64 => "
+      CANFD_0.cfdtmdf2_()[14],
     ",
   0x403806e4u64 => "
-      CANFD_0.cfdtmdf_15()[2],
+      CANFD_0.cfdtmdf2_()[15],
+    ",
+  0x403806f4u64 => "
+      CANFD_0.cfdtmdf3_()[0],
+    ",
+  0x403806f8u64 => "
+      CANFD_0.cfdtmdf3_()[1],
+    ",
+  0x403806fcu64 => "
+      CANFD_0.cfdtmdf3_()[2],
+    ",
+  0x40380700u64 => "
+      CANFD_0.cfdtmdf3_()[3],
+    ",
+  0x40380704u64 => "
+      CANFD_0.cfdtmdf3_()[4],
+    ",
+  0x40380708u64 => "
+      CANFD_0.cfdtmdf3_()[5],
+    ",
+  0x4038070cu64 => "
+      CANFD_0.cfdtmdf3_()[6],
+    ",
+  0x40380710u64 => "
+      CANFD_0.cfdtmdf3_()[7],
+    ",
+  0x40380714u64 => "
+      CANFD_0.cfdtmdf3_()[8],
+    ",
+  0x40380718u64 => "
+      CANFD_0.cfdtmdf3_()[9],
+    ",
+  0x4038071cu64 => "
+      CANFD_0.cfdtmdf3_()[10],
+    ",
+  0x40380720u64 => "
+      CANFD_0.cfdtmdf3_()[11],
+    ",
+  0x40380724u64 => "
+      CANFD_0.cfdtmdf3_()[12],
+    ",
+  0x40380728u64 => "
+      CANFD_0.cfdtmdf3_()[13],
+    ",
+  0x4038072cu64 => "
+      CANFD_0.cfdtmdf3_()[14],
     ",
   0x40380730u64 => "
-      CANFD_0.cfdtmdf_15()[3],
+      CANFD_0.cfdtmdf3_()[15],
     ",
   0x40380740u64 => "
       CANFD_0.cfdthlacc0(),
@@ -9815,28 +12182,1180 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x40380744u64 => "
       CANFD_0.cfdthlacc1(),
     ",
-  0x40380d20u64 => "
+  0x4038092cu64 => "
+      CANFD_0.cfdrmdf0_()[0],
+    ",
+  0x40380930u64 => "
+      CANFD_0.cfdrmdf0_()[1],
+    ",
+  0x40380934u64 => "
+      CANFD_0.cfdrmdf0_()[2],
+    ",
+  0x40380938u64 => "
+      CANFD_0.cfdrmdf0_()[3],
+    ",
+  0x4038093cu64 => "
+      CANFD_0.cfdrmdf0_()[4],
+    ",
+  0x40380940u64 => "
+      CANFD_0.cfdrmdf0_()[5],
+    ",
+  0x40380944u64 => "
+      CANFD_0.cfdrmdf0_()[6],
+    ",
+  0x40380948u64 => "
+      CANFD_0.cfdrmdf0_()[7],
+    ",
+  0x4038094cu64 => "
+      CANFD_0.cfdrmdf0_()[8],
+    ",
+  0x40380950u64 => "
+      CANFD_0.cfdrmdf0_()[9],
+    ",
+  0x40380954u64 => "
+      CANFD_0.cfdrmdf0_()[10],
+    ",
+  0x40380958u64 => "
+      CANFD_0.cfdrmdf0_()[11],
+    ",
+  0x4038095cu64 => "
+      CANFD_0.cfdrmdf0_()[12],
+    ",
+  0x40380960u64 => "
+      CANFD_0.cfdrmdf0_()[13],
+    ",
+  0x40380964u64 => "
+      CANFD_0.cfdrmdf0_()[14],
+    ",
+  0x40380968u64 => "
+      CANFD_0.cfdrmdf0_()[15],
+    ",
+  0x40380978u64 => "
+      CANFD_0.cfdrmdf1_()[0],
+    ",
+  0x4038097cu64 => "
+      CANFD_0.cfdrmdf1_()[1],
+    ",
+  0x40380980u64 => "
+      CANFD_0.cfdrmdf1_()[2],
+    ",
+  0x40380984u64 => "
+      CANFD_0.cfdrmdf1_()[3],
+    ",
+  0x40380988u64 => "
+      CANFD_0.cfdrmdf1_()[4],
+    ",
+  0x4038098cu64 => "
+      CANFD_0.cfdrmdf1_()[5],
+    ",
+  0x40380990u64 => "
+      CANFD_0.cfdrmdf1_()[6],
+    ",
+  0x40380994u64 => "
+      CANFD_0.cfdrmdf1_()[7],
+    ",
+  0x40380998u64 => "
+      CANFD_0.cfdrmdf1_()[8],
+    ",
+  0x4038099cu64 => "
+      CANFD_0.cfdrmdf1_()[9],
+    ",
+  0x403809a0u64 => "
+      CANFD_0.cfdrmdf1_()[10],
+    ",
+  0x403809a4u64 => "
+      CANFD_0.cfdrmdf1_()[11],
+    ",
+  0x403809a8u64 => "
+      CANFD_0.cfdrmdf1_()[12],
+    ",
+  0x403809acu64 => "
+      CANFD_0.cfdrmdf1_()[13],
+    ",
+  0x403809b0u64 => "
+      CANFD_0.cfdrmdf1_()[14],
+    ",
+  0x403809b4u64 => "
+      CANFD_0.cfdrmdf1_()[15],
+    ",
+  0x403809c4u64 => "
+      CANFD_0.cfdrmdf2_()[0],
+    ",
+  0x403809c8u64 => "
+      CANFD_0.cfdrmdf2_()[1],
+    ",
+  0x403809ccu64 => "
+      CANFD_0.cfdrmdf2_()[2],
+    ",
+  0x403809d0u64 => "
+      CANFD_0.cfdrmdf2_()[3],
+    ",
+  0x403809d4u64 => "
+      CANFD_0.cfdrmdf2_()[4],
+    ",
+  0x403809d8u64 => "
+      CANFD_0.cfdrmdf2_()[5],
+    ",
+  0x403809dcu64 => "
+      CANFD_0.cfdrmdf2_()[6],
+    ",
+  0x403809e0u64 => "
+      CANFD_0.cfdrmdf2_()[7],
+    ",
+  0x403809e4u64 => "
+      CANFD_0.cfdrmdf2_()[8],
+    ",
+  0x403809e8u64 => "
+      CANFD_0.cfdrmdf2_()[9],
+    ",
+  0x403809ecu64 => "
+      CANFD_0.cfdrmdf2_()[10],
+    ",
+  0x403809f0u64 => "
+      CANFD_0.cfdrmdf2_()[11],
+    ",
+  0x403809f4u64 => "
+      CANFD_0.cfdrmdf2_()[12],
+    ",
+  0x403809f8u64 => "
+      CANFD_0.cfdrmdf2_()[13],
+    ",
+  0x403809fcu64 => "
+      CANFD_0.cfdrmdf2_()[14],
+    ",
+  0x40380a00u64 => "
+      CANFD_0.cfdrmdf2_()[15],
+    ",
+  0x40380a10u64 => "
+      CANFD_0.cfdrmdf3_()[0],
+    ",
+  0x40380a14u64 => "
+      CANFD_0.cfdrmdf3_()[1],
+    ",
+  0x40380a18u64 => "
+      CANFD_0.cfdrmdf3_()[2],
+    ",
+  0x40380a1cu64 => "
+      CANFD_0.cfdrmdf3_()[3],
+    ",
+  0x40380a20u64 => "
+      CANFD_0.cfdrmdf3_()[4],
+    ",
+  0x40380a24u64 => "
+      CANFD_0.cfdrmdf3_()[5],
+    ",
+  0x40380a28u64 => "
+      CANFD_0.cfdrmdf3_()[6],
+    ",
+  0x40380a2cu64 => "
+      CANFD_0.cfdrmdf3_()[7],
+    ",
+  0x40380a30u64 => "
+      CANFD_0.cfdrmdf3_()[8],
+    ",
+  0x40380a34u64 => "
+      CANFD_0.cfdrmdf3_()[9],
+    ",
+  0x40380a38u64 => "
+      CANFD_0.cfdrmdf3_()[10],
+    ",
+  0x40380a3cu64 => "
+      CANFD_0.cfdrmdf3_()[11],
+    ",
+  0x40380a40u64 => "
+      CANFD_0.cfdrmdf3_()[12],
+    ",
+  0x40380a44u64 => "
+      CANFD_0.cfdrmdf3_()[13],
+    ",
+  0x40380a48u64 => "
+      CANFD_0.cfdrmdf3_()[14],
+    ",
+  0x40380a4cu64 => "
+      CANFD_0.cfdrmdf3_()[15],
+    ",
+  0x40380a5cu64 => "
+      CANFD_0.cfdrmdf4_()[0],
+    ",
+  0x40380a60u64 => "
+      CANFD_0.cfdrmdf4_()[1],
+    ",
+  0x40380a64u64 => "
+      CANFD_0.cfdrmdf4_()[2],
+    ",
+  0x40380a68u64 => "
+      CANFD_0.cfdrmdf4_()[3],
+    ",
+  0x40380a6cu64 => "
+      CANFD_0.cfdrmdf4_()[4],
+    ",
+  0x40380a70u64 => "
+      CANFD_0.cfdrmdf4_()[5],
+    ",
+  0x40380a74u64 => "
+      CANFD_0.cfdrmdf4_()[6],
+    ",
+  0x40380a78u64 => "
+      CANFD_0.cfdrmdf4_()[7],
+    ",
+  0x40380a7cu64 => "
+      CANFD_0.cfdrmdf4_()[8],
+    ",
+  0x40380a80u64 => "
+      CANFD_0.cfdrmdf4_()[9],
+    ",
+  0x40380a84u64 => "
+      CANFD_0.cfdrmdf4_()[10],
+    ",
+  0x40380a88u64 => "
+      CANFD_0.cfdrmdf4_()[11],
+    ",
+  0x40380a8cu64 => "
+      CANFD_0.cfdrmdf4_()[12],
+    ",
+  0x40380a90u64 => "
+      CANFD_0.cfdrmdf4_()[13],
+    ",
+  0x40380a94u64 => "
+      CANFD_0.cfdrmdf4_()[14],
+    ",
+  0x40380a98u64 => "
+      CANFD_0.cfdrmdf4_()[15],
+    ",
+  0x40380aa8u64 => "
+      CANFD_0.cfdrmdf5_()[0],
+    ",
+  0x40380aacu64 => "
+      CANFD_0.cfdrmdf5_()[1],
+    ",
+  0x40380ab0u64 => "
+      CANFD_0.cfdrmdf5_()[2],
+    ",
+  0x40380ab4u64 => "
+      CANFD_0.cfdrmdf5_()[3],
+    ",
+  0x40380ab8u64 => "
+      CANFD_0.cfdrmdf5_()[4],
+    ",
+  0x40380abcu64 => "
+      CANFD_0.cfdrmdf5_()[5],
+    ",
+  0x40380ac0u64 => "
+      CANFD_0.cfdrmdf5_()[6],
+    ",
+  0x40380ac4u64 => "
+      CANFD_0.cfdrmdf5_()[7],
+    ",
+  0x40380ac8u64 => "
+      CANFD_0.cfdrmdf5_()[8],
+    ",
+  0x40380accu64 => "
+      CANFD_0.cfdrmdf5_()[9],
+    ",
+  0x40380ad0u64 => "
+      CANFD_0.cfdrmdf5_()[10],
+    ",
+  0x40380ad4u64 => "
+      CANFD_0.cfdrmdf5_()[11],
+    ",
+  0x40380ad8u64 => "
+      CANFD_0.cfdrmdf5_()[12],
+    ",
+  0x40380adcu64 => "
+      CANFD_0.cfdrmdf5_()[13],
+    ",
+  0x40380ae0u64 => "
+      CANFD_0.cfdrmdf5_()[14],
+    ",
+  0x40380ae4u64 => "
+      CANFD_0.cfdrmdf5_()[15],
+    ",
+  0x40380af4u64 => "
+      CANFD_0.cfdrmdf6_()[0],
+    ",
+  0x40380af8u64 => "
+      CANFD_0.cfdrmdf6_()[1],
+    ",
+  0x40380afcu64 => "
+      CANFD_0.cfdrmdf6_()[2],
+    ",
+  0x40380b00u64 => "
+      CANFD_0.cfdrmdf6_()[3],
+    ",
+  0x40380b04u64 => "
+      CANFD_0.cfdrmdf6_()[4],
+    ",
+  0x40380b08u64 => "
+      CANFD_0.cfdrmdf6_()[5],
+    ",
+  0x40380b0cu64 => "
+      CANFD_0.cfdrmdf6_()[6],
+    ",
+  0x40380b10u64 => "
+      CANFD_0.cfdrmdf6_()[7],
+    ",
+  0x40380b14u64 => "
+      CANFD_0.cfdrmdf6_()[8],
+    ",
+  0x40380b18u64 => "
+      CANFD_0.cfdrmdf6_()[9],
+    ",
+  0x40380b1cu64 => "
+      CANFD_0.cfdrmdf6_()[10],
+    ",
+  0x40380b20u64 => "
+      CANFD_0.cfdrmdf6_()[11],
+    ",
+  0x40380b24u64 => "
+      CANFD_0.cfdrmdf6_()[12],
+    ",
+  0x40380b28u64 => "
+      CANFD_0.cfdrmdf6_()[13],
+    ",
+  0x40380b2cu64 => "
+      CANFD_0.cfdrmdf6_()[14],
+    ",
+  0x40380b30u64 => "
+      CANFD_0.cfdrmdf6_()[15],
+    ",
+  0x40380b40u64 => "
+      CANFD_0.cfdrmdf7_()[0],
+    ",
+  0x40380b44u64 => "
+      CANFD_0.cfdrmdf7_()[1],
+    ",
+  0x40380b48u64 => "
+      CANFD_0.cfdrmdf7_()[2],
+    ",
+  0x40380b4cu64 => "
+      CANFD_0.cfdrmdf7_()[3],
+    ",
+  0x40380b50u64 => "
+      CANFD_0.cfdrmdf7_()[4],
+    ",
+  0x40380b54u64 => "
+      CANFD_0.cfdrmdf7_()[5],
+    ",
+  0x40380b58u64 => "
+      CANFD_0.cfdrmdf7_()[6],
+    ",
+  0x40380b5cu64 => "
+      CANFD_0.cfdrmdf7_()[7],
+    ",
+  0x40380b60u64 => "
+      CANFD_0.cfdrmdf7_()[8],
+    ",
+  0x40380b64u64 => "
+      CANFD_0.cfdrmdf7_()[9],
+    ",
+  0x40380b68u64 => "
+      CANFD_0.cfdrmdf7_()[10],
+    ",
+  0x40380b6cu64 => "
+      CANFD_0.cfdrmdf7_()[11],
+    ",
+  0x40380b70u64 => "
+      CANFD_0.cfdrmdf7_()[12],
+    ",
+  0x40380b74u64 => "
+      CANFD_0.cfdrmdf7_()[13],
+    ",
+  0x40380b78u64 => "
+      CANFD_0.cfdrmdf7_()[14],
+    ",
+  0x40380b7cu64 => "
+      CANFD_0.cfdrmdf7_()[15],
+    ",
+  0x40380d2cu64 => "
+      CANFD_0.cfdrmdf8_()[0],
+    ",
+  0x40380d30u64 => "
+      CANFD_0.cfdrmdf8_()[1],
+    ",
+  0x40380d34u64 => "
+      CANFD_0.cfdrmdf8_()[2],
+    ",
+  0x40380d38u64 => "
+      CANFD_0.cfdrmdf8_()[3],
+    ",
+  0x40380d3cu64 => "
+      CANFD_0.cfdrmdf8_()[4],
+    ",
+  0x40380d40u64 => "
+      CANFD_0.cfdrmdf8_()[5],
+    ",
+  0x40380d44u64 => "
+      CANFD_0.cfdrmdf8_()[6],
+    ",
+  0x40380d48u64 => "
+      CANFD_0.cfdrmdf8_()[7],
+    ",
+  0x40380d4cu64 => "
+      CANFD_0.cfdrmdf8_()[8],
+    ",
+  0x40380d50u64 => "
+      CANFD_0.cfdrmdf8_()[9],
+    ",
+  0x40380d54u64 => "
+      CANFD_0.cfdrmdf8_()[10],
+    ",
+  0x40380d58u64 => "
+      CANFD_0.cfdrmdf8_()[11],
+    ",
+  0x40380d5cu64 => "
+      CANFD_0.cfdrmdf8_()[12],
+    ",
+  0x40380d60u64 => "
+      CANFD_0.cfdrmdf8_()[13],
+    ",
+  0x40380d64u64 => "
+      CANFD_0.cfdrmdf8_()[14],
+    ",
+  0x40380d68u64 => "
+      CANFD_0.cfdrmdf8_()[15],
+    ",
+  0x40380d78u64 => "
+      CANFD_0.cfdrmdf9_()[0],
+    ",
+  0x40380d7cu64 => "
+      CANFD_0.cfdrmdf9_()[1],
+    ",
+  0x40380d80u64 => "
+      CANFD_0.cfdrmdf9_()[2],
+    ",
+  0x40380d84u64 => "
+      CANFD_0.cfdrmdf9_()[3],
+    ",
+  0x40380d88u64 => "
+      CANFD_0.cfdrmdf9_()[4],
+    ",
+  0x40380d8cu64 => "
+      CANFD_0.cfdrmdf9_()[5],
+    ",
+  0x40380d90u64 => "
+      CANFD_0.cfdrmdf9_()[6],
+    ",
+  0x40380d94u64 => "
+      CANFD_0.cfdrmdf9_()[7],
+    ",
+  0x40380d98u64 => "
+      CANFD_0.cfdrmdf9_()[8],
+    ",
+  0x40380d9cu64 => "
+      CANFD_0.cfdrmdf9_()[9],
+    ",
+  0x40380da0u64 => "
+      CANFD_0.cfdrmdf9_()[10],
+    ",
+  0x40380da4u64 => "
+      CANFD_0.cfdrmdf9_()[11],
+    ",
+  0x40380da8u64 => "
+      CANFD_0.cfdrmdf9_()[12],
+    ",
+  0x40380dacu64 => "
+      CANFD_0.cfdrmdf9_()[13],
+    ",
+  0x40380db0u64 => "
+      CANFD_0.cfdrmdf9_()[14],
+    ",
+  0x40380db4u64 => "
+      CANFD_0.cfdrmdf9_()[15],
+    ",
+  0x40380dc4u64 => "
+      CANFD_0.cfdrmdf10_()[0],
+    ",
+  0x40380dc8u64 => "
+      CANFD_0.cfdrmdf10_()[1],
+    ",
+  0x40380dccu64 => "
+      CANFD_0.cfdrmdf10_()[2],
+    ",
+  0x40380dd0u64 => "
+      CANFD_0.cfdrmdf10_()[3],
+    ",
+  0x40380dd4u64 => "
+      CANFD_0.cfdrmdf10_()[4],
+    ",
+  0x40380dd8u64 => "
+      CANFD_0.cfdrmdf10_()[5],
+    ",
+  0x40380ddcu64 => "
+      CANFD_0.cfdrmdf10_()[6],
+    ",
+  0x40380de0u64 => "
+      CANFD_0.cfdrmdf10_()[7],
+    ",
+  0x40380de4u64 => "
+      CANFD_0.cfdrmdf10_()[8],
+    ",
+  0x40380de8u64 => "
+      CANFD_0.cfdrmdf10_()[9],
+    ",
+  0x40380decu64 => "
+      CANFD_0.cfdrmdf10_()[10],
+    ",
+  0x40380df0u64 => "
+      CANFD_0.cfdrmdf10_()[11],
+    ",
+  0x40380df4u64 => "
+      CANFD_0.cfdrmdf10_()[12],
+    ",
+  0x40380df8u64 => "
+      CANFD_0.cfdrmdf10_()[13],
+    ",
+  0x40380dfcu64 => "
+      CANFD_0.cfdrmdf10_()[14],
+    ",
+  0x40380e00u64 => "
+      CANFD_0.cfdrmdf10_()[15],
+    ",
+  0x40380e10u64 => "
+      CANFD_0.cfdrmdf11_()[0],
+    ",
+  0x40380e14u64 => "
+      CANFD_0.cfdrmdf11_()[1],
+    ",
+  0x40380e18u64 => "
+      CANFD_0.cfdrmdf11_()[2],
+    ",
+  0x40380e1cu64 => "
+      CANFD_0.cfdrmdf11_()[3],
+    ",
+  0x40380e20u64 => "
+      CANFD_0.cfdrmdf11_()[4],
+    ",
+  0x40380e24u64 => "
+      CANFD_0.cfdrmdf11_()[5],
+    ",
+  0x40380e28u64 => "
+      CANFD_0.cfdrmdf11_()[6],
+    ",
+  0x40380e2cu64 => "
+      CANFD_0.cfdrmdf11_()[7],
+    ",
+  0x40380e30u64 => "
+      CANFD_0.cfdrmdf11_()[8],
+    ",
+  0x40380e34u64 => "
+      CANFD_0.cfdrmdf11_()[9],
+    ",
+  0x40380e38u64 => "
+      CANFD_0.cfdrmdf11_()[10],
+    ",
+  0x40380e3cu64 => "
+      CANFD_0.cfdrmdf11_()[11],
+    ",
+  0x40380e40u64 => "
+      CANFD_0.cfdrmdf11_()[12],
+    ",
+  0x40380e44u64 => "
+      CANFD_0.cfdrmdf11_()[13],
+    ",
+  0x40380e48u64 => "
+      CANFD_0.cfdrmdf11_()[14],
+    ",
+  0x40380e4cu64 => "
+      CANFD_0.cfdrmdf11_()[15],
+    ",
+  0x40380e5cu64 => "
+      CANFD_0.cfdrmdf12_()[0],
+    ",
+  0x40380e60u64 => "
+      CANFD_0.cfdrmdf12_()[1],
+    ",
+  0x40380e64u64 => "
+      CANFD_0.cfdrmdf12_()[2],
+    ",
+  0x40380e68u64 => "
+      CANFD_0.cfdrmdf12_()[3],
+    ",
+  0x40380e6cu64 => "
+      CANFD_0.cfdrmdf12_()[4],
+    ",
+  0x40380e70u64 => "
+      CANFD_0.cfdrmdf12_()[5],
+    ",
+  0x40380e74u64 => "
+      CANFD_0.cfdrmdf12_()[6],
+    ",
+  0x40380e78u64 => "
+      CANFD_0.cfdrmdf12_()[7],
+    ",
+  0x40380e7cu64 => "
+      CANFD_0.cfdrmdf12_()[8],
+    ",
+  0x40380e80u64 => "
+      CANFD_0.cfdrmdf12_()[9],
+    ",
+  0x40380e84u64 => "
+      CANFD_0.cfdrmdf12_()[10],
+    ",
+  0x40380e88u64 => "
+      CANFD_0.cfdrmdf12_()[11],
+    ",
+  0x40380e8cu64 => "
+      CANFD_0.cfdrmdf12_()[12],
+    ",
+  0x40380e90u64 => "
+      CANFD_0.cfdrmdf12_()[13],
+    ",
+  0x40380e94u64 => "
+      CANFD_0.cfdrmdf12_()[14],
+    ",
+  0x40380e98u64 => "
+      CANFD_0.cfdrmdf12_()[15],
+    ",
+  0x40380ea8u64 => "
+      CANFD_0.cfdrmdf13_()[0],
+    ",
+  0x40380eacu64 => "
+      CANFD_0.cfdrmdf13_()[1],
+    ",
+  0x40380eb0u64 => "
+      CANFD_0.cfdrmdf13_()[2],
+    ",
+  0x40380eb4u64 => "
+      CANFD_0.cfdrmdf13_()[3],
+    ",
+  0x40380eb8u64 => "
+      CANFD_0.cfdrmdf13_()[4],
+    ",
+  0x40380ebcu64 => "
+      CANFD_0.cfdrmdf13_()[5],
+    ",
+  0x40380ec0u64 => "
+      CANFD_0.cfdrmdf13_()[6],
+    ",
+  0x40380ec4u64 => "
+      CANFD_0.cfdrmdf13_()[7],
+    ",
+  0x40380ec8u64 => "
+      CANFD_0.cfdrmdf13_()[8],
+    ",
+  0x40380eccu64 => "
+      CANFD_0.cfdrmdf13_()[9],
+    ",
+  0x40380ed0u64 => "
+      CANFD_0.cfdrmdf13_()[10],
+    ",
+  0x40380ed4u64 => "
+      CANFD_0.cfdrmdf13_()[11],
+    ",
+  0x40380ed8u64 => "
+      CANFD_0.cfdrmdf13_()[12],
+    ",
+  0x40380edcu64 => "
+      CANFD_0.cfdrmdf13_()[13],
+    ",
+  0x40380ee0u64 => "
+      CANFD_0.cfdrmdf13_()[14],
+    ",
+  0x40380ee4u64 => "
+      CANFD_0.cfdrmdf13_()[15],
+    ",
+  0x40380ef4u64 => "
+      CANFD_0.cfdrmdf14_()[0],
+    ",
+  0x40380ef8u64 => "
+      CANFD_0.cfdrmdf14_()[1],
+    ",
+  0x40380efcu64 => "
+      CANFD_0.cfdrmdf14_()[2],
+    ",
+  0x40380f00u64 => "
+      CANFD_0.cfdrmdf14_()[3],
+    ",
+  0x40380f04u64 => "
+      CANFD_0.cfdrmdf14_()[4],
+    ",
+  0x40380f08u64 => "
+      CANFD_0.cfdrmdf14_()[5],
+    ",
+  0x40380f0cu64 => "
+      CANFD_0.cfdrmdf14_()[6],
+    ",
+  0x40380f10u64 => "
+      CANFD_0.cfdrmdf14_()[7],
+    ",
+  0x40380f14u64 => "
+      CANFD_0.cfdrmdf14_()[8],
+    ",
+  0x40380f18u64 => "
+      CANFD_0.cfdrmdf14_()[9],
+    ",
+  0x40380f1cu64 => "
+      CANFD_0.cfdrmdf14_()[10],
+    ",
+  0x40380f20u64 => "
+      CANFD_0.cfdrmdf14_()[11],
+    ",
+  0x40380f24u64 => "
+      CANFD_0.cfdrmdf14_()[12],
+    ",
+  0x40380f28u64 => "
+      CANFD_0.cfdrmdf14_()[13],
+    ",
+  0x40380f2cu64 => "
+      CANFD_0.cfdrmdf14_()[14],
+    ",
+  0x40380f30u64 => "
+      CANFD_0.cfdrmdf14_()[15],
+    ",
+  0x40380f40u64 => "
+      CANFD_0.cfdrmdf15_()[0],
+    ",
+  0x40380f44u64 => "
+      CANFD_0.cfdrmdf15_()[1],
+    ",
+  0x40380f48u64 => "
+      CANFD_0.cfdrmdf15_()[2],
+    ",
+  0x40380f4cu64 => "
+      CANFD_0.cfdrmdf15_()[3],
+    ",
+  0x40380f50u64 => "
+      CANFD_0.cfdrmdf15_()[4],
+    ",
+  0x40380f54u64 => "
+      CANFD_0.cfdrmdf15_()[5],
+    ",
+  0x40380f58u64 => "
+      CANFD_0.cfdrmdf15_()[6],
+    ",
+  0x40380f5cu64 => "
+      CANFD_0.cfdrmdf15_()[7],
+    ",
+  0x40380f60u64 => "
+      CANFD_0.cfdrmdf15_()[8],
+    ",
+  0x40380f64u64 => "
+      CANFD_0.cfdrmdf15_()[9],
+    ",
+  0x40380f68u64 => "
+      CANFD_0.cfdrmdf15_()[10],
+    ",
+  0x40380f6cu64 => "
+      CANFD_0.cfdrmdf15_()[11],
+    ",
+  0x40380f70u64 => "
+      CANFD_0.cfdrmdf15_()[12],
+    ",
+  0x40380f74u64 => "
+      CANFD_0.cfdrmdf15_()[13],
+    ",
+  0x40380f78u64 => "
+      CANFD_0.cfdrmdf15_()[14],
+    ",
+  0x40380f7cu64 => "
+      CANFD_0.cfdrmdf15_()[15],
+    ",
+  0x4038112cu64 => "
+      CANFD_0.cfdrmdf16_()[0],
+    ",
+  0x40381130u64 => "
+      CANFD_0.cfdrmdf16_()[1],
+    ",
+  0x40381134u64 => "
+      CANFD_0.cfdrmdf16_()[2],
+    ",
+  0x40381138u64 => "
+      CANFD_0.cfdrmdf16_()[3],
+    ",
+  0x4038113cu64 => "
+      CANFD_0.cfdrmdf16_()[4],
+    ",
+  0x40381140u64 => "
+      CANFD_0.cfdrmdf16_()[5],
+    ",
+  0x40381144u64 => "
+      CANFD_0.cfdrmdf16_()[6],
+    ",
+  0x40381148u64 => "
+      CANFD_0.cfdrmdf16_()[7],
+    ",
+  0x4038114cu64 => "
+      CANFD_0.cfdrmdf16_()[8],
+    ",
+  0x40381150u64 => "
+      CANFD_0.cfdrmdf16_()[9],
+    ",
+  0x40381154u64 => "
+      CANFD_0.cfdrmdf16_()[10],
+    ",
+  0x40381158u64 => "
+      CANFD_0.cfdrmdf16_()[11],
+    ",
+  0x4038115cu64 => "
+      CANFD_0.cfdrmdf16_()[12],
+    ",
+  0x40381160u64 => "
+      CANFD_0.cfdrmdf16_()[13],
+    ",
+  0x40381164u64 => "
+      CANFD_0.cfdrmdf16_()[14],
+    ",
+  0x40381168u64 => "
+      CANFD_0.cfdrmdf16_()[15],
+    ",
+  0x40381178u64 => "
+      CANFD_0.cfdrmdf17_()[0],
+    ",
+  0x4038117cu64 => "
+      CANFD_0.cfdrmdf17_()[1],
+    ",
+  0x40381180u64 => "
+      CANFD_0.cfdrmdf17_()[2],
+    ",
+  0x40381184u64 => "
+      CANFD_0.cfdrmdf17_()[3],
+    ",
+  0x40381188u64 => "
+      CANFD_0.cfdrmdf17_()[4],
+    ",
+  0x4038118cu64 => "
+      CANFD_0.cfdrmdf17_()[5],
+    ",
+  0x40381190u64 => "
+      CANFD_0.cfdrmdf17_()[6],
+    ",
+  0x40381194u64 => "
+      CANFD_0.cfdrmdf17_()[7],
+    ",
+  0x40381198u64 => "
+      CANFD_0.cfdrmdf17_()[8],
+    ",
+  0x4038119cu64 => "
+      CANFD_0.cfdrmdf17_()[9],
+    ",
+  0x403811a0u64 => "
+      CANFD_0.cfdrmdf17_()[10],
+    ",
+  0x403811a4u64 => "
+      CANFD_0.cfdrmdf17_()[11],
+    ",
+  0x403811a8u64 => "
+      CANFD_0.cfdrmdf17_()[12],
+    ",
+  0x403811acu64 => "
+      CANFD_0.cfdrmdf17_()[13],
+    ",
+  0x403811b0u64 => "
+      CANFD_0.cfdrmdf17_()[14],
+    ",
+  0x403811b4u64 => "
+      CANFD_0.cfdrmdf17_()[15],
+    ",
+  0x403811c4u64 => "
+      CANFD_0.cfdrmdf18_()[0],
+    ",
+  0x403811c8u64 => "
+      CANFD_0.cfdrmdf18_()[1],
+    ",
+  0x403811ccu64 => "
+      CANFD_0.cfdrmdf18_()[2],
+    ",
+  0x403811d0u64 => "
+      CANFD_0.cfdrmdf18_()[3],
+    ",
+  0x403811d4u64 => "
+      CANFD_0.cfdrmdf18_()[4],
+    ",
+  0x403811d8u64 => "
+      CANFD_0.cfdrmdf18_()[5],
+    ",
+  0x403811dcu64 => "
+      CANFD_0.cfdrmdf18_()[6],
+    ",
+  0x403811e0u64 => "
+      CANFD_0.cfdrmdf18_()[7],
+    ",
+  0x403811e4u64 => "
+      CANFD_0.cfdrmdf18_()[8],
+    ",
+  0x403811e8u64 => "
+      CANFD_0.cfdrmdf18_()[9],
+    ",
+  0x403811ecu64 => "
+      CANFD_0.cfdrmdf18_()[10],
+    ",
+  0x403811f0u64 => "
+      CANFD_0.cfdrmdf18_()[11],
+    ",
+  0x403811f4u64 => "
+      CANFD_0.cfdrmdf18_()[12],
+    ",
+  0x403811f8u64 => "
+      CANFD_0.cfdrmdf18_()[13],
+    ",
+  0x403811fcu64 => "
+      CANFD_0.cfdrmdf18_()[14],
+    ",
+  0x40381200u64 => "
+      CANFD_0.cfdrmdf18_()[15],
+    ",
+  0x40381210u64 => "
+      CANFD_0.cfdrmdf19_()[0],
+    ",
+  0x40381214u64 => "
+      CANFD_0.cfdrmdf19_()[1],
+    ",
+  0x40381218u64 => "
+      CANFD_0.cfdrmdf19_()[2],
+    ",
+  0x4038121cu64 => "
+      CANFD_0.cfdrmdf19_()[3],
+    ",
+  0x40381220u64 => "
+      CANFD_0.cfdrmdf19_()[4],
+    ",
+  0x40381224u64 => "
+      CANFD_0.cfdrmdf19_()[5],
+    ",
+  0x40381228u64 => "
+      CANFD_0.cfdrmdf19_()[6],
+    ",
+  0x4038122cu64 => "
+      CANFD_0.cfdrmdf19_()[7],
+    ",
+  0x40381230u64 => "
+      CANFD_0.cfdrmdf19_()[8],
+    ",
+  0x40381234u64 => "
+      CANFD_0.cfdrmdf19_()[9],
+    ",
+  0x40381238u64 => "
+      CANFD_0.cfdrmdf19_()[10],
+    ",
+  0x4038123cu64 => "
+      CANFD_0.cfdrmdf19_()[11],
+    ",
+  0x40381240u64 => "
+      CANFD_0.cfdrmdf19_()[12],
+    ",
+  0x40381244u64 => "
+      CANFD_0.cfdrmdf19_()[13],
+    ",
+  0x40381248u64 => "
+      CANFD_0.cfdrmdf19_()[14],
+    ",
+  0x4038124cu64 => "
+      CANFD_0.cfdrmdf19_()[15],
+    ",
+  0x4038125cu64 => "
+      CANFD_0.cfdrmdf20_()[0],
+    ",
+  0x40381260u64 => "
+      CANFD_0.cfdrmdf20_()[1],
+    ",
+  0x40381264u64 => "
+      CANFD_0.cfdrmdf20_()[2],
+    ",
+  0x40381268u64 => "
+      CANFD_0.cfdrmdf20_()[3],
+    ",
+  0x4038126cu64 => "
+      CANFD_0.cfdrmdf20_()[4],
+    ",
+  0x40381270u64 => "
+      CANFD_0.cfdrmdf20_()[5],
+    ",
+  0x40381274u64 => "
+      CANFD_0.cfdrmdf20_()[6],
+    ",
+  0x40381278u64 => "
+      CANFD_0.cfdrmdf20_()[7],
+    ",
+  0x4038127cu64 => "
+      CANFD_0.cfdrmdf20_()[8],
+    ",
+  0x40381280u64 => "
+      CANFD_0.cfdrmdf20_()[9],
+    ",
+  0x40381284u64 => "
+      CANFD_0.cfdrmdf20_()[10],
+    ",
+  0x40381288u64 => "
+      CANFD_0.cfdrmdf20_()[11],
+    ",
+  0x4038128cu64 => "
+      CANFD_0.cfdrmdf20_()[12],
+    ",
+  0x40381290u64 => "
+      CANFD_0.cfdrmdf20_()[13],
+    ",
+  0x40381294u64 => "
+      CANFD_0.cfdrmdf20_()[14],
+    ",
+  0x40381298u64 => "
+      CANFD_0.cfdrmdf20_()[15],
+    ",
+  0x403812a8u64 => "
+      CANFD_0.cfdrmdf21_()[0],
+    ",
+  0x403812acu64 => "
+      CANFD_0.cfdrmdf21_()[1],
+    ",
+  0x403812b0u64 => "
+      CANFD_0.cfdrmdf21_()[2],
+    ",
+  0x403812b4u64 => "
+      CANFD_0.cfdrmdf21_()[3],
+    ",
+  0x403812b8u64 => "
+      CANFD_0.cfdrmdf21_()[4],
+    ",
+  0x403812bcu64 => "
+      CANFD_0.cfdrmdf21_()[5],
+    ",
+  0x403812c0u64 => "
+      CANFD_0.cfdrmdf21_()[6],
+    ",
+  0x403812c4u64 => "
+      CANFD_0.cfdrmdf21_()[7],
+    ",
+  0x403812c8u64 => "
+      CANFD_0.cfdrmdf21_()[8],
+    ",
+  0x403812ccu64 => "
+      CANFD_0.cfdrmdf21_()[9],
+    ",
+  0x403812d0u64 => "
+      CANFD_0.cfdrmdf21_()[10],
+    ",
+  0x403812d4u64 => "
+      CANFD_0.cfdrmdf21_()[11],
+    ",
+  0x403812d8u64 => "
+      CANFD_0.cfdrmdf21_()[12],
+    ",
+  0x403812dcu64 => "
+      CANFD_0.cfdrmdf21_()[13],
+    ",
+  0x403812e0u64 => "
+      CANFD_0.cfdrmdf21_()[14],
+    ",
+  0x403812e4u64 => "
+      CANFD_0.cfdrmdf21_()[15],
+    ",
+  0x403812f4u64 => "
+      CANFD_0.cfdrmdf22_()[0],
+    ",
+  0x403812f8u64 => "
+      CANFD_0.cfdrmdf22_()[1],
+    ",
+  0x403812fcu64 => "
+      CANFD_0.cfdrmdf22_()[2],
+    ",
+  0x40381300u64 => "
+      CANFD_0.cfdrmdf22_()[3],
+    ",
+  0x40381304u64 => "
+      CANFD_0.cfdrmdf22_()[4],
+    ",
+  0x40381308u64 => "
+      CANFD_0.cfdrmdf22_()[5],
+    ",
+  0x4038130cu64 => "
+      CANFD_0.cfdrmdf22_()[6],
+    ",
+  0x40381310u64 => "
+      CANFD_0.cfdrmdf22_()[7],
+    ",
+  0x40381314u64 => "
+      CANFD_0.cfdrmdf22_()[8],
+    ",
+  0x40381318u64 => "
+      CANFD_0.cfdrmdf22_()[9],
+    ",
+  0x4038131cu64 => "
+      CANFD_0.cfdrmdf22_()[10],
+    ",
+  0x40381320u64 => "
+      CANFD_0.cfdrmdf22_()[11],
+    ",
+  0x40381324u64 => "
+      CANFD_0.cfdrmdf22_()[12],
+    ",
+  0x40381328u64 => "
+      CANFD_0.cfdrmdf22_()[13],
+    ",
+  0x4038132cu64 => "
+      CANFD_0.cfdrmdf22_()[14],
+    ",
+  0x40381330u64 => "
+      CANFD_0.cfdrmdf22_()[15],
+    ",
+  0x40381340u64 => "
+      CANFD_0.cfdrmdf23_()[0],
+    ",
+  0x40381344u64 => "
+      CANFD_0.cfdrmdf23_()[1],
+    ",
+  0x40381348u64 => "
+      CANFD_0.cfdrmdf23_()[2],
+    ",
+  0x4038134cu64 => "
+      CANFD_0.cfdrmdf23_()[3],
+    ",
+  0x40381350u64 => "
+      CANFD_0.cfdrmdf23_()[4],
+    ",
+  0x40381354u64 => "
+      CANFD_0.cfdrmdf23_()[5],
+    ",
+  0x40381358u64 => "
+      CANFD_0.cfdrmdf23_()[6],
+    ",
+  0x4038135cu64 => "
+      CANFD_0.cfdrmdf23_()[7],
+    ",
+  0x40381360u64 => "
+      CANFD_0.cfdrmdf23_()[8],
+    ",
+  0x40381364u64 => "
+      CANFD_0.cfdrmdf23_()[9],
+    ",
+  0x40381368u64 => "
+      CANFD_0.cfdrmdf23_()[10],
+    ",
+  0x4038136cu64 => "
+      CANFD_0.cfdrmdf23_()[11],
+    ",
+  0x40381370u64 => "
+      CANFD_0.cfdrmdf23_()[12],
+    ",
+  0x40381374u64 => "
+      CANFD_0.cfdrmdf23_()[13],
+    ",
+  0x40381378u64 => "
+      CANFD_0.cfdrmdf23_()[14],
+    ",
+  0x4038137cu64 => "
+      CANFD_0.cfdrmdf23_()[15],
+    ",
+  0x40381520u64 => "
       CANFD_0.cfdrmid()[0],
     ",
-  0x40380d6cu64 => "
+  0x4038156cu64 => "
       CANFD_0.cfdrmid()[1],
     ",
-  0x40380db8u64 => "
+  0x403815b8u64 => "
       CANFD_0.cfdrmid()[2],
     ",
-  0x40380e04u64 => "
+  0x40381604u64 => "
       CANFD_0.cfdrmid()[3],
     ",
-  0x40380e50u64 => "
+  0x40381650u64 => "
       CANFD_0.cfdrmid()[4],
     ",
-  0x40380e9cu64 => "
+  0x4038169cu64 => "
       CANFD_0.cfdrmid()[5],
     ",
-  0x40380ee8u64 => "
+  0x403816e8u64 => "
       CANFD_0.cfdrmid()[6],
     ",
-  0x40380f34u64 => "
+  0x40381734u64 => "
       CANFD_0.cfdrmid()[7],
     ",
   0x40381524u64 => "
@@ -9888,388 +13407,559 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       CANFD_0.cfdrmfdsts()[7],
     ",
   0x4038152cu64 => "
-      CANFD_0.cfdrmdf_0()[0],
-    ",
-  0x40381578u64 => "
-      CANFD_0.cfdrmdf_0()[1],
-    ",
-  0x403815c4u64 => "
-      CANFD_0.cfdrmdf_0()[2],
-    ",
-  0x40381610u64 => "
-      CANFD_0.cfdrmdf_0()[3],
-    ",
-  0x4038165cu64 => "
-      CANFD_0.cfdrmdf_0()[4],
-    ",
-  0x403816a8u64 => "
-      CANFD_0.cfdrmdf_0()[5],
-    ",
-  0x403816f4u64 => "
-      CANFD_0.cfdrmdf_0()[6],
-    ",
-  0x40381740u64 => "
-      CANFD_0.cfdrmdf_0()[7],
+      CANFD_0.cfdrmdf24_()[0],
     ",
   0x40381530u64 => "
-      CANFD_0.cfdrmdf_1()[0],
-    ",
-  0x4038157cu64 => "
-      CANFD_0.cfdrmdf_1()[1],
-    ",
-  0x403815c8u64 => "
-      CANFD_0.cfdrmdf_1()[2],
-    ",
-  0x40381614u64 => "
-      CANFD_0.cfdrmdf_1()[3],
-    ",
-  0x40381660u64 => "
-      CANFD_0.cfdrmdf_1()[4],
-    ",
-  0x403816acu64 => "
-      CANFD_0.cfdrmdf_1()[5],
-    ",
-  0x403816f8u64 => "
-      CANFD_0.cfdrmdf_1()[6],
-    ",
-  0x40381744u64 => "
-      CANFD_0.cfdrmdf_1()[7],
+      CANFD_0.cfdrmdf24_()[1],
     ",
   0x40381534u64 => "
-      CANFD_0.cfdrmdf_2()[0],
-    ",
-  0x40381580u64 => "
-      CANFD_0.cfdrmdf_2()[1],
-    ",
-  0x403815ccu64 => "
-      CANFD_0.cfdrmdf_2()[2],
-    ",
-  0x40381618u64 => "
-      CANFD_0.cfdrmdf_2()[3],
-    ",
-  0x40381664u64 => "
-      CANFD_0.cfdrmdf_2()[4],
-    ",
-  0x403816b0u64 => "
-      CANFD_0.cfdrmdf_2()[5],
-    ",
-  0x403816fcu64 => "
-      CANFD_0.cfdrmdf_2()[6],
-    ",
-  0x40381748u64 => "
-      CANFD_0.cfdrmdf_2()[7],
+      CANFD_0.cfdrmdf24_()[2],
     ",
   0x40381538u64 => "
-      CANFD_0.cfdrmdf_3()[0],
-    ",
-  0x40381584u64 => "
-      CANFD_0.cfdrmdf_3()[1],
-    ",
-  0x403815d0u64 => "
-      CANFD_0.cfdrmdf_3()[2],
-    ",
-  0x4038161cu64 => "
-      CANFD_0.cfdrmdf_3()[3],
-    ",
-  0x40381668u64 => "
-      CANFD_0.cfdrmdf_3()[4],
-    ",
-  0x403816b4u64 => "
-      CANFD_0.cfdrmdf_3()[5],
-    ",
-  0x40381700u64 => "
-      CANFD_0.cfdrmdf_3()[6],
-    ",
-  0x4038174cu64 => "
-      CANFD_0.cfdrmdf_3()[7],
+      CANFD_0.cfdrmdf24_()[3],
     ",
   0x4038153cu64 => "
-      CANFD_0.cfdrmdf_4()[0],
-    ",
-  0x40381588u64 => "
-      CANFD_0.cfdrmdf_4()[1],
-    ",
-  0x403815d4u64 => "
-      CANFD_0.cfdrmdf_4()[2],
-    ",
-  0x40381620u64 => "
-      CANFD_0.cfdrmdf_4()[3],
-    ",
-  0x4038166cu64 => "
-      CANFD_0.cfdrmdf_4()[4],
-    ",
-  0x403816b8u64 => "
-      CANFD_0.cfdrmdf_4()[5],
-    ",
-  0x40381704u64 => "
-      CANFD_0.cfdrmdf_4()[6],
-    ",
-  0x40381750u64 => "
-      CANFD_0.cfdrmdf_4()[7],
+      CANFD_0.cfdrmdf24_()[4],
     ",
   0x40381540u64 => "
-      CANFD_0.cfdrmdf_5()[0],
-    ",
-  0x4038158cu64 => "
-      CANFD_0.cfdrmdf_5()[1],
-    ",
-  0x403815d8u64 => "
-      CANFD_0.cfdrmdf_5()[2],
-    ",
-  0x40381624u64 => "
-      CANFD_0.cfdrmdf_5()[3],
-    ",
-  0x40381670u64 => "
-      CANFD_0.cfdrmdf_5()[4],
-    ",
-  0x403816bcu64 => "
-      CANFD_0.cfdrmdf_5()[5],
-    ",
-  0x40381708u64 => "
-      CANFD_0.cfdrmdf_5()[6],
-    ",
-  0x40381754u64 => "
-      CANFD_0.cfdrmdf_5()[7],
+      CANFD_0.cfdrmdf24_()[5],
     ",
   0x40381544u64 => "
-      CANFD_0.cfdrmdf_6()[0],
-    ",
-  0x40381590u64 => "
-      CANFD_0.cfdrmdf_6()[1],
-    ",
-  0x403815dcu64 => "
-      CANFD_0.cfdrmdf_6()[2],
-    ",
-  0x40381628u64 => "
-      CANFD_0.cfdrmdf_6()[3],
-    ",
-  0x40381674u64 => "
-      CANFD_0.cfdrmdf_6()[4],
-    ",
-  0x403816c0u64 => "
-      CANFD_0.cfdrmdf_6()[5],
-    ",
-  0x4038170cu64 => "
-      CANFD_0.cfdrmdf_6()[6],
-    ",
-  0x40381758u64 => "
-      CANFD_0.cfdrmdf_6()[7],
+      CANFD_0.cfdrmdf24_()[6],
     ",
   0x40381548u64 => "
-      CANFD_0.cfdrmdf_7()[0],
-    ",
-  0x40381594u64 => "
-      CANFD_0.cfdrmdf_7()[1],
-    ",
-  0x403815e0u64 => "
-      CANFD_0.cfdrmdf_7()[2],
-    ",
-  0x4038162cu64 => "
-      CANFD_0.cfdrmdf_7()[3],
-    ",
-  0x40381678u64 => "
-      CANFD_0.cfdrmdf_7()[4],
-    ",
-  0x403816c4u64 => "
-      CANFD_0.cfdrmdf_7()[5],
-    ",
-  0x40381710u64 => "
-      CANFD_0.cfdrmdf_7()[6],
-    ",
-  0x4038175cu64 => "
-      CANFD_0.cfdrmdf_7()[7],
+      CANFD_0.cfdrmdf24_()[7],
     ",
   0x4038154cu64 => "
-      CANFD_0.cfdrmdf_8()[0],
-    ",
-  0x40381598u64 => "
-      CANFD_0.cfdrmdf_8()[1],
-    ",
-  0x403815e4u64 => "
-      CANFD_0.cfdrmdf_8()[2],
-    ",
-  0x40381630u64 => "
-      CANFD_0.cfdrmdf_8()[3],
-    ",
-  0x4038167cu64 => "
-      CANFD_0.cfdrmdf_8()[4],
-    ",
-  0x403816c8u64 => "
-      CANFD_0.cfdrmdf_8()[5],
-    ",
-  0x40381714u64 => "
-      CANFD_0.cfdrmdf_8()[6],
-    ",
-  0x40381760u64 => "
-      CANFD_0.cfdrmdf_8()[7],
+      CANFD_0.cfdrmdf24_()[8],
     ",
   0x40381550u64 => "
-      CANFD_0.cfdrmdf_9()[0],
-    ",
-  0x4038159cu64 => "
-      CANFD_0.cfdrmdf_9()[1],
-    ",
-  0x403815e8u64 => "
-      CANFD_0.cfdrmdf_9()[2],
-    ",
-  0x40381634u64 => "
-      CANFD_0.cfdrmdf_9()[3],
-    ",
-  0x40381680u64 => "
-      CANFD_0.cfdrmdf_9()[4],
-    ",
-  0x403816ccu64 => "
-      CANFD_0.cfdrmdf_9()[5],
-    ",
-  0x40381718u64 => "
-      CANFD_0.cfdrmdf_9()[6],
-    ",
-  0x40381764u64 => "
-      CANFD_0.cfdrmdf_9()[7],
+      CANFD_0.cfdrmdf24_()[9],
     ",
   0x40381554u64 => "
-      CANFD_0.cfdrmdf_10()[0],
-    ",
-  0x403815a0u64 => "
-      CANFD_0.cfdrmdf_10()[1],
-    ",
-  0x403815ecu64 => "
-      CANFD_0.cfdrmdf_10()[2],
-    ",
-  0x40381638u64 => "
-      CANFD_0.cfdrmdf_10()[3],
-    ",
-  0x40381684u64 => "
-      CANFD_0.cfdrmdf_10()[4],
-    ",
-  0x403816d0u64 => "
-      CANFD_0.cfdrmdf_10()[5],
-    ",
-  0x4038171cu64 => "
-      CANFD_0.cfdrmdf_10()[6],
-    ",
-  0x40381768u64 => "
-      CANFD_0.cfdrmdf_10()[7],
+      CANFD_0.cfdrmdf24_()[10],
     ",
   0x40381558u64 => "
-      CANFD_0.cfdrmdf_11()[0],
-    ",
-  0x403815a4u64 => "
-      CANFD_0.cfdrmdf_11()[1],
-    ",
-  0x403815f0u64 => "
-      CANFD_0.cfdrmdf_11()[2],
-    ",
-  0x4038163cu64 => "
-      CANFD_0.cfdrmdf_11()[3],
-    ",
-  0x40381688u64 => "
-      CANFD_0.cfdrmdf_11()[4],
-    ",
-  0x403816d4u64 => "
-      CANFD_0.cfdrmdf_11()[5],
-    ",
-  0x40381720u64 => "
-      CANFD_0.cfdrmdf_11()[6],
-    ",
-  0x4038176cu64 => "
-      CANFD_0.cfdrmdf_11()[7],
+      CANFD_0.cfdrmdf24_()[11],
     ",
   0x4038155cu64 => "
-      CANFD_0.cfdrmdf_12()[0],
-    ",
-  0x403815a8u64 => "
-      CANFD_0.cfdrmdf_12()[1],
-    ",
-  0x403815f4u64 => "
-      CANFD_0.cfdrmdf_12()[2],
-    ",
-  0x40381640u64 => "
-      CANFD_0.cfdrmdf_12()[3],
-    ",
-  0x4038168cu64 => "
-      CANFD_0.cfdrmdf_12()[4],
-    ",
-  0x403816d8u64 => "
-      CANFD_0.cfdrmdf_12()[5],
-    ",
-  0x40381724u64 => "
-      CANFD_0.cfdrmdf_12()[6],
-    ",
-  0x40381770u64 => "
-      CANFD_0.cfdrmdf_12()[7],
+      CANFD_0.cfdrmdf24_()[12],
     ",
   0x40381560u64 => "
-      CANFD_0.cfdrmdf_13()[0],
-    ",
-  0x403815acu64 => "
-      CANFD_0.cfdrmdf_13()[1],
-    ",
-  0x403815f8u64 => "
-      CANFD_0.cfdrmdf_13()[2],
-    ",
-  0x40381644u64 => "
-      CANFD_0.cfdrmdf_13()[3],
-    ",
-  0x40381690u64 => "
-      CANFD_0.cfdrmdf_13()[4],
-    ",
-  0x403816dcu64 => "
-      CANFD_0.cfdrmdf_13()[5],
-    ",
-  0x40381728u64 => "
-      CANFD_0.cfdrmdf_13()[6],
-    ",
-  0x40381774u64 => "
-      CANFD_0.cfdrmdf_13()[7],
+      CANFD_0.cfdrmdf24_()[13],
     ",
   0x40381564u64 => "
-      CANFD_0.cfdrmdf_14()[0],
-    ",
-  0x403815b0u64 => "
-      CANFD_0.cfdrmdf_14()[1],
-    ",
-  0x403815fcu64 => "
-      CANFD_0.cfdrmdf_14()[2],
-    ",
-  0x40381648u64 => "
-      CANFD_0.cfdrmdf_14()[3],
-    ",
-  0x40381694u64 => "
-      CANFD_0.cfdrmdf_14()[4],
-    ",
-  0x403816e0u64 => "
-      CANFD_0.cfdrmdf_14()[5],
-    ",
-  0x4038172cu64 => "
-      CANFD_0.cfdrmdf_14()[6],
-    ",
-  0x40381778u64 => "
-      CANFD_0.cfdrmdf_14()[7],
+      CANFD_0.cfdrmdf24_()[14],
     ",
   0x40381568u64 => "
-      CANFD_0.cfdrmdf_15()[0],
+      CANFD_0.cfdrmdf24_()[15],
+    ",
+  0x40381578u64 => "
+      CANFD_0.cfdrmdf25_()[0],
+    ",
+  0x4038157cu64 => "
+      CANFD_0.cfdrmdf25_()[1],
+    ",
+  0x40381580u64 => "
+      CANFD_0.cfdrmdf25_()[2],
+    ",
+  0x40381584u64 => "
+      CANFD_0.cfdrmdf25_()[3],
+    ",
+  0x40381588u64 => "
+      CANFD_0.cfdrmdf25_()[4],
+    ",
+  0x4038158cu64 => "
+      CANFD_0.cfdrmdf25_()[5],
+    ",
+  0x40381590u64 => "
+      CANFD_0.cfdrmdf25_()[6],
+    ",
+  0x40381594u64 => "
+      CANFD_0.cfdrmdf25_()[7],
+    ",
+  0x40381598u64 => "
+      CANFD_0.cfdrmdf25_()[8],
+    ",
+  0x4038159cu64 => "
+      CANFD_0.cfdrmdf25_()[9],
+    ",
+  0x403815a0u64 => "
+      CANFD_0.cfdrmdf25_()[10],
+    ",
+  0x403815a4u64 => "
+      CANFD_0.cfdrmdf25_()[11],
+    ",
+  0x403815a8u64 => "
+      CANFD_0.cfdrmdf25_()[12],
+    ",
+  0x403815acu64 => "
+      CANFD_0.cfdrmdf25_()[13],
+    ",
+  0x403815b0u64 => "
+      CANFD_0.cfdrmdf25_()[14],
     ",
   0x403815b4u64 => "
-      CANFD_0.cfdrmdf_15()[1],
+      CANFD_0.cfdrmdf25_()[15],
+    ",
+  0x403815c4u64 => "
+      CANFD_0.cfdrmdf26_()[0],
+    ",
+  0x403815c8u64 => "
+      CANFD_0.cfdrmdf26_()[1],
+    ",
+  0x403815ccu64 => "
+      CANFD_0.cfdrmdf26_()[2],
+    ",
+  0x403815d0u64 => "
+      CANFD_0.cfdrmdf26_()[3],
+    ",
+  0x403815d4u64 => "
+      CANFD_0.cfdrmdf26_()[4],
+    ",
+  0x403815d8u64 => "
+      CANFD_0.cfdrmdf26_()[5],
+    ",
+  0x403815dcu64 => "
+      CANFD_0.cfdrmdf26_()[6],
+    ",
+  0x403815e0u64 => "
+      CANFD_0.cfdrmdf26_()[7],
+    ",
+  0x403815e4u64 => "
+      CANFD_0.cfdrmdf26_()[8],
+    ",
+  0x403815e8u64 => "
+      CANFD_0.cfdrmdf26_()[9],
+    ",
+  0x403815ecu64 => "
+      CANFD_0.cfdrmdf26_()[10],
+    ",
+  0x403815f0u64 => "
+      CANFD_0.cfdrmdf26_()[11],
+    ",
+  0x403815f4u64 => "
+      CANFD_0.cfdrmdf26_()[12],
+    ",
+  0x403815f8u64 => "
+      CANFD_0.cfdrmdf26_()[13],
+    ",
+  0x403815fcu64 => "
+      CANFD_0.cfdrmdf26_()[14],
     ",
   0x40381600u64 => "
-      CANFD_0.cfdrmdf_15()[2],
+      CANFD_0.cfdrmdf26_()[15],
+    ",
+  0x40381610u64 => "
+      CANFD_0.cfdrmdf27_()[0],
+    ",
+  0x40381614u64 => "
+      CANFD_0.cfdrmdf27_()[1],
+    ",
+  0x40381618u64 => "
+      CANFD_0.cfdrmdf27_()[2],
+    ",
+  0x4038161cu64 => "
+      CANFD_0.cfdrmdf27_()[3],
+    ",
+  0x40381620u64 => "
+      CANFD_0.cfdrmdf27_()[4],
+    ",
+  0x40381624u64 => "
+      CANFD_0.cfdrmdf27_()[5],
+    ",
+  0x40381628u64 => "
+      CANFD_0.cfdrmdf27_()[6],
+    ",
+  0x4038162cu64 => "
+      CANFD_0.cfdrmdf27_()[7],
+    ",
+  0x40381630u64 => "
+      CANFD_0.cfdrmdf27_()[8],
+    ",
+  0x40381634u64 => "
+      CANFD_0.cfdrmdf27_()[9],
+    ",
+  0x40381638u64 => "
+      CANFD_0.cfdrmdf27_()[10],
+    ",
+  0x4038163cu64 => "
+      CANFD_0.cfdrmdf27_()[11],
+    ",
+  0x40381640u64 => "
+      CANFD_0.cfdrmdf27_()[12],
+    ",
+  0x40381644u64 => "
+      CANFD_0.cfdrmdf27_()[13],
+    ",
+  0x40381648u64 => "
+      CANFD_0.cfdrmdf27_()[14],
     ",
   0x4038164cu64 => "
-      CANFD_0.cfdrmdf_15()[3],
+      CANFD_0.cfdrmdf27_()[15],
+    ",
+  0x4038165cu64 => "
+      CANFD_0.cfdrmdf28_()[0],
+    ",
+  0x40381660u64 => "
+      CANFD_0.cfdrmdf28_()[1],
+    ",
+  0x40381664u64 => "
+      CANFD_0.cfdrmdf28_()[2],
+    ",
+  0x40381668u64 => "
+      CANFD_0.cfdrmdf28_()[3],
+    ",
+  0x4038166cu64 => "
+      CANFD_0.cfdrmdf28_()[4],
+    ",
+  0x40381670u64 => "
+      CANFD_0.cfdrmdf28_()[5],
+    ",
+  0x40381674u64 => "
+      CANFD_0.cfdrmdf28_()[6],
+    ",
+  0x40381678u64 => "
+      CANFD_0.cfdrmdf28_()[7],
+    ",
+  0x4038167cu64 => "
+      CANFD_0.cfdrmdf28_()[8],
+    ",
+  0x40381680u64 => "
+      CANFD_0.cfdrmdf28_()[9],
+    ",
+  0x40381684u64 => "
+      CANFD_0.cfdrmdf28_()[10],
+    ",
+  0x40381688u64 => "
+      CANFD_0.cfdrmdf28_()[11],
+    ",
+  0x4038168cu64 => "
+      CANFD_0.cfdrmdf28_()[12],
+    ",
+  0x40381690u64 => "
+      CANFD_0.cfdrmdf28_()[13],
+    ",
+  0x40381694u64 => "
+      CANFD_0.cfdrmdf28_()[14],
     ",
   0x40381698u64 => "
-      CANFD_0.cfdrmdf_15()[4],
+      CANFD_0.cfdrmdf28_()[15],
+    ",
+  0x403816a8u64 => "
+      CANFD_0.cfdrmdf29_()[0],
+    ",
+  0x403816acu64 => "
+      CANFD_0.cfdrmdf29_()[1],
+    ",
+  0x403816b0u64 => "
+      CANFD_0.cfdrmdf29_()[2],
+    ",
+  0x403816b4u64 => "
+      CANFD_0.cfdrmdf29_()[3],
+    ",
+  0x403816b8u64 => "
+      CANFD_0.cfdrmdf29_()[4],
+    ",
+  0x403816bcu64 => "
+      CANFD_0.cfdrmdf29_()[5],
+    ",
+  0x403816c0u64 => "
+      CANFD_0.cfdrmdf29_()[6],
+    ",
+  0x403816c4u64 => "
+      CANFD_0.cfdrmdf29_()[7],
+    ",
+  0x403816c8u64 => "
+      CANFD_0.cfdrmdf29_()[8],
+    ",
+  0x403816ccu64 => "
+      CANFD_0.cfdrmdf29_()[9],
+    ",
+  0x403816d0u64 => "
+      CANFD_0.cfdrmdf29_()[10],
+    ",
+  0x403816d4u64 => "
+      CANFD_0.cfdrmdf29_()[11],
+    ",
+  0x403816d8u64 => "
+      CANFD_0.cfdrmdf29_()[12],
+    ",
+  0x403816dcu64 => "
+      CANFD_0.cfdrmdf29_()[13],
+    ",
+  0x403816e0u64 => "
+      CANFD_0.cfdrmdf29_()[14],
     ",
   0x403816e4u64 => "
-      CANFD_0.cfdrmdf_15()[5],
+      CANFD_0.cfdrmdf29_()[15],
+    ",
+  0x403816f4u64 => "
+      CANFD_0.cfdrmdf30_()[0],
+    ",
+  0x403816f8u64 => "
+      CANFD_0.cfdrmdf30_()[1],
+    ",
+  0x403816fcu64 => "
+      CANFD_0.cfdrmdf30_()[2],
+    ",
+  0x40381700u64 => "
+      CANFD_0.cfdrmdf30_()[3],
+    ",
+  0x40381704u64 => "
+      CANFD_0.cfdrmdf30_()[4],
+    ",
+  0x40381708u64 => "
+      CANFD_0.cfdrmdf30_()[5],
+    ",
+  0x4038170cu64 => "
+      CANFD_0.cfdrmdf30_()[6],
+    ",
+  0x40381710u64 => "
+      CANFD_0.cfdrmdf30_()[7],
+    ",
+  0x40381714u64 => "
+      CANFD_0.cfdrmdf30_()[8],
+    ",
+  0x40381718u64 => "
+      CANFD_0.cfdrmdf30_()[9],
+    ",
+  0x4038171cu64 => "
+      CANFD_0.cfdrmdf30_()[10],
+    ",
+  0x40381720u64 => "
+      CANFD_0.cfdrmdf30_()[11],
+    ",
+  0x40381724u64 => "
+      CANFD_0.cfdrmdf30_()[12],
+    ",
+  0x40381728u64 => "
+      CANFD_0.cfdrmdf30_()[13],
+    ",
+  0x4038172cu64 => "
+      CANFD_0.cfdrmdf30_()[14],
     ",
   0x40381730u64 => "
-      CANFD_0.cfdrmdf_15()[6],
+      CANFD_0.cfdrmdf30_()[15],
+    ",
+  0x40381740u64 => "
+      CANFD_0.cfdrmdf31_()[0],
+    ",
+  0x40381744u64 => "
+      CANFD_0.cfdrmdf31_()[1],
+    ",
+  0x40381748u64 => "
+      CANFD_0.cfdrmdf31_()[2],
+    ",
+  0x4038174cu64 => "
+      CANFD_0.cfdrmdf31_()[3],
+    ",
+  0x40381750u64 => "
+      CANFD_0.cfdrmdf31_()[4],
+    ",
+  0x40381754u64 => "
+      CANFD_0.cfdrmdf31_()[5],
+    ",
+  0x40381758u64 => "
+      CANFD_0.cfdrmdf31_()[6],
+    ",
+  0x4038175cu64 => "
+      CANFD_0.cfdrmdf31_()[7],
+    ",
+  0x40381760u64 => "
+      CANFD_0.cfdrmdf31_()[8],
+    ",
+  0x40381764u64 => "
+      CANFD_0.cfdrmdf31_()[9],
+    ",
+  0x40381768u64 => "
+      CANFD_0.cfdrmdf31_()[10],
+    ",
+  0x4038176cu64 => "
+      CANFD_0.cfdrmdf31_()[11],
+    ",
+  0x40381770u64 => "
+      CANFD_0.cfdrmdf31_()[12],
+    ",
+  0x40381774u64 => "
+      CANFD_0.cfdrmdf31_()[13],
+    ",
+  0x40381778u64 => "
+      CANFD_0.cfdrmdf31_()[14],
     ",
   0x4038177cu64 => "
-      CANFD_0.cfdrmdf_15()[7],
+      CANFD_0.cfdrmdf31_()[15],
+    ",
+  0x40381920u64 => "
+      CANFD_0.cfdrfide()[0],
+    ",
+  0x4038196cu64 => "
+      CANFD_0.cfdrfide()[1],
+    ",
+  0x40381924u64 => "
+      CANFD_0.cfdrfptre()[0],
+    ",
+  0x40381970u64 => "
+      CANFD_0.cfdrfptre()[1],
+    ",
+  0x40381928u64 => "
+      CANFD_0.cfdrffdstse()[0],
+    ",
+  0x40381974u64 => "
+      CANFD_0.cfdrffdstse()[1],
+    ",
+  0x4038192cu64 => "
+      CANFD_0.cfdrfdf0e()[0],
+    ",
+  0x40381978u64 => "
+      CANFD_0.cfdrfdf0e()[1],
+    ",
+  0x40381930u64 => "
+      CANFD_0.cfdrfdf1e()[0],
+    ",
+  0x4038197cu64 => "
+      CANFD_0.cfdrfdf1e()[1],
+    ",
+  0x40381934u64 => "
+      CANFD_0.cfdrfdf2e()[0],
+    ",
+  0x40381980u64 => "
+      CANFD_0.cfdrfdf2e()[1],
+    ",
+  0x40381938u64 => "
+      CANFD_0.cfdrfdf3e()[0],
+    ",
+  0x40381984u64 => "
+      CANFD_0.cfdrfdf3e()[1],
+    ",
+  0x4038193cu64 => "
+      CANFD_0.cfdrfdf4e()[0],
+    ",
+  0x40381988u64 => "
+      CANFD_0.cfdrfdf4e()[1],
+    ",
+  0x40381940u64 => "
+      CANFD_0.cfdrfdf5e()[0],
+    ",
+  0x4038198cu64 => "
+      CANFD_0.cfdrfdf5e()[1],
+    ",
+  0x40381944u64 => "
+      CANFD_0.cfdrfdf6e()[0],
+    ",
+  0x40381990u64 => "
+      CANFD_0.cfdrfdf6e()[1],
+    ",
+  0x40381948u64 => "
+      CANFD_0.cfdrfdf7e()[0],
+    ",
+  0x40381994u64 => "
+      CANFD_0.cfdrfdf7e()[1],
+    ",
+  0x4038194cu64 => "
+      CANFD_0.cfdrfdf8e()[0],
+    ",
+  0x40381998u64 => "
+      CANFD_0.cfdrfdf8e()[1],
+    ",
+  0x40381950u64 => "
+      CANFD_0.cfdrfdf9e()[0],
+    ",
+  0x4038199cu64 => "
+      CANFD_0.cfdrfdf9e()[1],
+    ",
+  0x40381954u64 => "
+      CANFD_0.cfdrfdf10e()[0],
+    ",
+  0x403819a0u64 => "
+      CANFD_0.cfdrfdf10e()[1],
+    ",
+  0x40381958u64 => "
+      CANFD_0.cfdrfdf11e()[0],
+    ",
+  0x403819a4u64 => "
+      CANFD_0.cfdrfdf11e()[1],
+    ",
+  0x4038195cu64 => "
+      CANFD_0.cfdrfdf12e()[0],
+    ",
+  0x403819a8u64 => "
+      CANFD_0.cfdrfdf12e()[1],
+    ",
+  0x40381960u64 => "
+      CANFD_0.cfdrfdf13e()[0],
+    ",
+  0x403819acu64 => "
+      CANFD_0.cfdrfdf13e()[1],
+    ",
+  0x40381964u64 => "
+      CANFD_0.cfdrfdf14e()[0],
+    ",
+  0x403819b0u64 => "
+      CANFD_0.cfdrfdf14e()[1],
+    ",
+  0x40381968u64 => "
+      CANFD_0.cfdrfdf15e()[0],
+    ",
+  0x403819b4u64 => "
+      CANFD_0.cfdrfdf15e()[1],
+    ",
+  0x403819b8u64 => "
+      CANFD_0.cfdcfide(),
+    ",
+  0x403819bcu64 => "
+      CANFD_0.cfdcfptre(),
+    ",
+  0x403819c0u64 => "
+      CANFD_0.cfdcffdcstse(),
+    ",
+  0x403819c4u64 => "
+      CANFD_0.cfdcfdfe()[0],
+    ",
+  0x403819c8u64 => "
+      CANFD_0.cfdcfdfe()[1],
+    ",
+  0x403819ccu64 => "
+      CANFD_0.cfdcfdfe()[2],
+    ",
+  0x403819d0u64 => "
+      CANFD_0.cfdcfdfe()[3],
+    ",
+  0x403819d4u64 => "
+      CANFD_0.cfdcfdfe()[4],
+    ",
+  0x403819d8u64 => "
+      CANFD_0.cfdcfdfe()[5],
+    ",
+  0x403819dcu64 => "
+      CANFD_0.cfdcfdfe()[6],
+    ",
+  0x403819e0u64 => "
+      CANFD_0.cfdcfdfe()[7],
+    ",
+  0x403819e4u64 => "
+      CANFD_0.cfdcfdfe()[8],
+    ",
+  0x403819e8u64 => "
+      CANFD_0.cfdcfdfe()[9],
+    ",
+  0x403819ecu64 => "
+      CANFD_0.cfdcfdfe()[10],
+    ",
+  0x403819f0u64 => "
+      CANFD_0.cfdcfdfe()[11],
+    ",
+  0x403819f4u64 => "
+      CANFD_0.cfdcfdfe()[12],
+    ",
+  0x403819f8u64 => "
+      CANFD_0.cfdcfdfe()[13],
+    ",
+  0x403819fcu64 => "
+      CANFD_0.cfdcfdfe()[14],
+    ",
+  0x40381a00u64 => "
+      CANFD_0.cfdcfdfe()[15],
     ",
   0x40400000u64 => "
       PORT_0.pcntr1(),
@@ -10281,6 +13971,9 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x40400004u64 => "
       PORT_0.pcntr2(),
       PORT_0.pidr(),
+    ",
+  0x40400006u64 => "
+      PORT_0.eidr(),
     ",
   0x40400008u64 => "
       PORT_0.pcntr3(),
@@ -10317,161 +14010,155 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x4040002eu64 => "
       PORT_1.eorr(),
     ",
-  0x40400140u64 => "
-      PORTA.pcntr1(),
-      PORTA.pdr(),
-    ",
-  0x40400142u64 => "
-      PORTA.podr(),
-    ",
-  0x40400144u64 => "
-      PORTA.pcntr2(),
-      PORTA.pidr(),
-    ",
-  0x40400148u64 => "
-      PORTA.pcntr3(),
-      PORTA.posr(),
-    ",
-  0x4040014au64 => "
-      PORTA.porr(),
-    ",
-  0x40400160u64 => "
-      PORTB.pcntr1(),
-      PORTB.pdr(),
-    ",
-  0x40400162u64 => "
-      PORTB.podr(),
-    ",
-  0x40400164u64 => "
-      PORTB.pcntr2(),
-      PORTB.pidr(),
-    ",
-  0x40400168u64 => "
-      PORTB.pcntr3(),
-      PORTB.posr(),
-    ",
-  0x4040016au64 => "
-      PORTB.porr(),
-    ",
   0x40400800u64 => "
-      PFS.p00pfs()[0],
-      PFS.p00pfs_ha()[0],
-      PFS.p00pfs_by()[0],
+      PFS.p000pfs(),
+      PFS.p000pfs_ha(),
+      PFS.p000pfs_by(),
     ",
-  0x40400804u64 => "
-      PFS.p00pfs()[1],
-      PFS.p00pfs_ha()[1],
-      PFS.p00pfs_by()[1],
-    ",
-  0x40400808u64 => "
+  0x4040080cu64 => "
       PFS.p00pfs()[2],
       PFS.p00pfs_ha()[2],
       PFS.p00pfs_by()[2],
     ",
-  0x4040080cu64 => "
+  0x40400810u64 => "
       PFS.p00pfs()[3],
       PFS.p00pfs_ha()[3],
       PFS.p00pfs_by()[3],
     ",
-  0x40400810u64 => "
+  0x40400814u64 => "
       PFS.p00pfs()[4],
       PFS.p00pfs_ha()[4],
       PFS.p00pfs_by()[4],
     ",
-  0x40400814u64 => "
+  0x40400818u64 => "
       PFS.p00pfs()[5],
       PFS.p00pfs_ha()[5],
       PFS.p00pfs_by()[5],
     ",
-  0x40400818u64 => "
+  0x4040081cu64 => "
       PFS.p00pfs()[6],
       PFS.p00pfs_ha()[6],
       PFS.p00pfs_by()[6],
     ",
-  0x4040081cu64 => "
-      PFS.p00pfs()[7],
-      PFS.p00pfs_ha()[7],
-      PFS.p00pfs_by()[7],
-    ",
   0x40400820u64 => "
-      PFS.p00pfs()[8],
-      PFS.p00pfs_ha()[8],
-      PFS.p00pfs_by()[8],
+      PFS.p00pfs()[0],
+      PFS.p00pfs_ha()[0],
+      PFS.p00pfs_by()[0],
     ",
   0x40400824u64 => "
-      PFS.p00pfs()[9],
-      PFS.p00pfs_ha()[9],
-      PFS.p00pfs_by()[9],
+      PFS.p00pfs()[1],
+      PFS.p00pfs_ha()[1],
+      PFS.p00pfs_by()[1],
     ",
-  0x40400838u64 => "
+  0x40400828u64 => "
       PFS.p0pfs()[0],
       PFS.p0pfs_ha()[0],
       PFS.p0pfs_by()[0],
     ",
-  0x4040083cu64 => "
+  0x4040082cu64 => "
       PFS.p0pfs()[1],
       PFS.p0pfs_ha()[1],
       PFS.p0pfs_by()[1],
     ",
+  0x40400830u64 => "
+      PFS.p0pfs()[2],
+      PFS.p0pfs_ha()[2],
+      PFS.p0pfs_by()[2],
+    ",
+  0x40400834u64 => "
+      PFS.p0pfs()[3],
+      PFS.p0pfs_ha()[3],
+      PFS.p0pfs_by()[3],
+    ",
+  0x40400838u64 => "
+      PFS.p0pfs()[4],
+      PFS.p0pfs_ha()[4],
+      PFS.p0pfs_by()[4],
+    ",
+  0x4040083cu64 => "
+      PFS.p0pfs()[5],
+      PFS.p0pfs_ha()[5],
+      PFS.p0pfs_by()[5],
+    ",
   0x40400840u64 => "
+      PFS.p100pfs(),
+      PFS.p100pfs_ha(),
+      PFS.p100pfs_by(),
+    ",
+  0x40400844u64 => "
       PFS.p10pfs()[0],
       PFS.p10pfs_ha()[0],
       PFS.p10pfs_by()[0],
     ",
-  0x40400844u64 => "
+  0x40400848u64 => "
       PFS.p10pfs()[1],
       PFS.p10pfs_ha()[1],
       PFS.p10pfs_by()[1],
     ",
-  0x40400848u64 => "
+  0x4040084cu64 => "
       PFS.p10pfs()[2],
       PFS.p10pfs_ha()[2],
       PFS.p10pfs_by()[2],
     ",
-  0x4040084cu64 => "
+  0x40400850u64 => "
       PFS.p10pfs()[3],
       PFS.p10pfs_ha()[3],
       PFS.p10pfs_by()[3],
     ",
-  0x40400850u64 => "
+  0x40400854u64 => "
       PFS.p10pfs()[4],
       PFS.p10pfs_ha()[4],
       PFS.p10pfs_by()[4],
     ",
-  0x40400854u64 => "
+  0x40400858u64 => "
       PFS.p10pfs()[5],
       PFS.p10pfs_ha()[5],
       PFS.p10pfs_by()[5],
     ",
-  0x40400858u64 => "
+  0x4040085cu64 => "
       PFS.p10pfs()[6],
       PFS.p10pfs_ha()[6],
       PFS.p10pfs_by()[6],
     ",
-  0x4040085cu64 => "
-      PFS.p10pfs()[7],
-      PFS.p10pfs_ha()[7],
-      PFS.p10pfs_by()[7],
+  0x40400860u64 => "
+      PFS.p108pfs(),
+      PFS.p108pfs_ha(),
+      PFS.p108pfs_by(),
     ",
-  0x40400870u64 => "
+  0x40400864u64 => "
+      PFS.p109pfs(),
+      PFS.p109pfs_ha(),
+      PFS.p109pfs_by(),
+    ",
+  0x40400868u64 => "
+      PFS.p110pfs(),
+      PFS.p110pfs_ha(),
+      PFS.p110pfs_by(),
+    ",
+  0x4040086cu64 => "
       PFS.p1pfs()[0],
       PFS.p1pfs_ha()[0],
       PFS.p1pfs_by()[0],
     ",
-  0x40400874u64 => "
+  0x40400870u64 => "
       PFS.p1pfs()[1],
       PFS.p1pfs_ha()[1],
       PFS.p1pfs_by()[1],
     ",
-  0x40400878u64 => "
+  0x40400874u64 => "
       PFS.p1pfs()[2],
       PFS.p1pfs_ha()[2],
       PFS.p1pfs_by()[2],
     ",
-  0x4040087cu64 => "
+  0x40400878u64 => "
       PFS.p1pfs()[3],
       PFS.p1pfs_ha()[3],
       PFS.p1pfs_by()[3],
+    ",
+  0x4040087cu64 => "
+      PFS.p1pfs()[4],
+      PFS.p1pfs_ha()[4],
+      PFS.p1pfs_by()[4],
     ",
   0x40400880u64 => "
       PFS.p200pfs(),
@@ -10514,84 +14201,94 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       PFS.p20pfs_by()[5],
     ",
   0x404008a0u64 => "
-      PFS.p208pfs(),
-      PFS.p208pfs_ha(),
-      PFS.p208pfs_by(),
+      PFS.p20pfs()[6],
+      PFS.p20pfs_ha()[6],
+      PFS.p20pfs_by()[6],
     ",
   0x404008a4u64 => "
-      PFS.p209pfs(),
-      PFS.p209pfs_ha(),
-      PFS.p209pfs_by(),
+      PFS.p20pfs()[7],
+      PFS.p20pfs_ha()[7],
+      PFS.p20pfs_by()[7],
     ",
   0x404008a8u64 => "
-      PFS.p210pfs(),
-      PFS.p210pfs_ha(),
-      PFS.p210pfs_by(),
-    ",
-  0x404008acu64 => "
-      PFS.p211pfs(),
-      PFS.p211pfs_ha(),
-      PFS.p211pfs_by(),
-    ",
-  0x404008b0u64 => "
       PFS.p2pfs()[0],
       PFS.p2pfs_ha()[0],
       PFS.p2pfs_by()[0],
     ",
-  0x404008b4u64 => "
+  0x404008acu64 => "
       PFS.p2pfs()[1],
       PFS.p2pfs_ha()[1],
       PFS.p2pfs_by()[1],
     ",
+  0x404008b0u64 => "
+      PFS.p2pfs()[2],
+      PFS.p2pfs_ha()[2],
+      PFS.p2pfs_by()[2],
+    ",
+  0x404008b4u64 => "
+      PFS.p2pfs()[3],
+      PFS.p2pfs_ha()[3],
+      PFS.p2pfs_by()[3],
+    ",
+  0x404008b8u64 => "
+      PFS.p2pfs()[4],
+      PFS.p2pfs_ha()[4],
+      PFS.p2pfs_by()[4],
+    ",
+  0x404008bcu64 => "
+      PFS.p2pfs()[5],
+      PFS.p2pfs_ha()[5],
+      PFS.p2pfs_by()[5],
+    ",
   0x404008c0u64 => "
+      PFS.p300pfs(),
+      PFS.p300pfs_ha(),
+      PFS.p300pfs_by(),
+    ",
+  0x404008c4u64 => "
       PFS.p30pfs()[0],
       PFS.p30pfs_ha()[0],
       PFS.p30pfs_by()[0],
     ",
-  0x404008c4u64 => "
+  0x404008c8u64 => "
       PFS.p30pfs()[1],
       PFS.p30pfs_ha()[1],
       PFS.p30pfs_by()[1],
     ",
-  0x404008c8u64 => "
+  0x404008ccu64 => "
       PFS.p30pfs()[2],
       PFS.p30pfs_ha()[2],
       PFS.p30pfs_by()[2],
     ",
-  0x404008ccu64 => "
+  0x404008d0u64 => "
       PFS.p30pfs()[3],
       PFS.p30pfs_ha()[3],
       PFS.p30pfs_by()[3],
     ",
-  0x404008d0u64 => "
+  0x404008d4u64 => "
       PFS.p30pfs()[4],
       PFS.p30pfs_ha()[4],
       PFS.p30pfs_by()[4],
     ",
-  0x404008d4u64 => "
+  0x404008d8u64 => "
       PFS.p30pfs()[5],
       PFS.p30pfs_ha()[5],
       PFS.p30pfs_by()[5],
     ",
-  0x404008d8u64 => "
+  0x404008dcu64 => "
       PFS.p30pfs()[6],
       PFS.p30pfs_ha()[6],
       PFS.p30pfs_by()[6],
     ",
-  0x404008dcu64 => "
+  0x404008e0u64 => "
       PFS.p30pfs()[7],
       PFS.p30pfs_ha()[7],
       PFS.p30pfs_by()[7],
     ",
-  0x404008e0u64 => "
+  0x404008e4u64 => "
       PFS.p30pfs()[8],
       PFS.p30pfs_ha()[8],
       PFS.p30pfs_by()[8],
-    ",
-  0x404008e4u64 => "
-      PFS.p30pfs()[9],
-      PFS.p30pfs_ha()[9],
-      PFS.p30pfs_by()[9],
     ",
   0x404008e8u64 => "
       PFS.p3pfs()[0],
@@ -10703,16 +14400,6 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       PFS.p4pfs_ha()[5],
       PFS.p4pfs_by()[5],
     ",
-  0x40400940u64 => "
-      PFS.p50pfs()[0],
-      PFS.p50pfs_ha()[0],
-      PFS.p50pfs_by()[0],
-    ",
-  0x40400944u64 => "
-      PFS.p50pfs()[1],
-      PFS.p50pfs_ha()[1],
-      PFS.p50pfs_by()[1],
-    ",
   0x40400948u64 => "
       PFS.p50pfs()[2],
       PFS.p50pfs_ha()[2],
@@ -10744,14 +14431,14 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       PFS.p50pfs_by()[7],
     ",
   0x40400960u64 => "
-      PFS.p50pfs()[8],
-      PFS.p50pfs_ha()[8],
-      PFS.p50pfs_by()[8],
+      PFS.p50pfs()[0],
+      PFS.p50pfs_ha()[0],
+      PFS.p50pfs_by()[0],
     ",
   0x40400964u64 => "
-      PFS.p50pfs()[9],
-      PFS.p50pfs_ha()[9],
-      PFS.p50pfs_by()[9],
+      PFS.p50pfs()[1],
+      PFS.p50pfs_ha()[1],
+      PFS.p50pfs_by()[1],
     ",
   0x40400968u64 => "
       PFS.p5pfs()[0],
@@ -10782,16 +14469,6 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       PFS.p5pfs()[5],
       PFS.p5pfs_ha()[5],
       PFS.p5pfs_by()[5],
-    ",
-  0x40400980u64 => "
-      PFS.p60pfs()[0],
-      PFS.p60pfs_ha()[0],
-      PFS.p60pfs_by()[0],
-    ",
-  0x40400984u64 => "
-      PFS.p60pfs()[1],
-      PFS.p60pfs_ha()[1],
-      PFS.p60pfs_by()[1],
     ",
   0x40400988u64 => "
       PFS.p60pfs()[2],
@@ -10824,14 +14501,14 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       PFS.p60pfs_by()[7],
     ",
   0x404009a0u64 => "
-      PFS.p60pfs()[8],
-      PFS.p60pfs_ha()[8],
-      PFS.p60pfs_by()[8],
+      PFS.p60pfs()[0],
+      PFS.p60pfs_ha()[0],
+      PFS.p60pfs_by()[0],
     ",
   0x404009a4u64 => "
-      PFS.p60pfs()[9],
-      PFS.p60pfs_ha()[9],
-      PFS.p60pfs_by()[9],
+      PFS.p60pfs()[1],
+      PFS.p60pfs_ha()[1],
+      PFS.p60pfs_by()[1],
     ",
   0x404009a8u64 => "
       PFS.p6pfs()[0],
@@ -10993,6 +14670,16 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       PFS.p80pfs_ha()[9],
       PFS.p80pfs_by()[9],
     ",
+  0x40400a28u64 => "
+      PFS.p8pfs()[0],
+      PFS.p8pfs_ha()[0],
+      PFS.p8pfs_by()[0],
+    ",
+  0x40400a2cu64 => "
+      PFS.p8pfs()[1],
+      PFS.p8pfs_ha()[1],
+      PFS.p8pfs_by()[1],
+    ",
   0x40400a30u64 => "
       PFS.p8pfs()[2],
       PFS.p8pfs_ha()[2],
@@ -11004,14 +14691,14 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       PFS.p8pfs_by()[3],
     ",
   0x40400a38u64 => "
-      PFS.p8pfs()[0],
-      PFS.p8pfs_ha()[0],
-      PFS.p8pfs_by()[0],
+      PFS.p8pfs()[4],
+      PFS.p8pfs_ha()[4],
+      PFS.p8pfs_by()[4],
     ",
   0x40400a3cu64 => "
-      PFS.p8pfs()[1],
-      PFS.p8pfs_ha()[1],
-      PFS.p8pfs_by()[1],
+      PFS.p8pfs()[5],
+      PFS.p8pfs_ha()[5],
+      PFS.p8pfs_by()[5],
     ",
   0x40400a40u64 => "
       PFS.p90pfs()[0],
@@ -11213,11215 +14900,107 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       PFS.pb0pfs_ha()[7],
       PFS.pb0pfs_by()[7],
     ",
+  0x40400ae0u64 => "
+      PFS.pb0pfs()[8],
+      PFS.pb0pfs_ha()[8],
+      PFS.pb0pfs_by()[8],
+    ",
+  0x40400ae4u64 => "
+      PFS.pb0pfs()[9],
+      PFS.pb0pfs_ha()[9],
+      PFS.pb0pfs_by()[9],
+    ",
+  0x40400ae8u64 => "
+      PFS.pbpfs()[0],
+      PFS.pbpfs_ha()[0],
+      PFS.pbpfs_by()[0],
+    ",
+  0x40400aecu64 => "
+      PFS.pbpfs()[1],
+      PFS.pbpfs_ha()[1],
+      PFS.pbpfs_by()[1],
+    ",
+  0x40400af0u64 => "
+      PFS.pbpfs()[2],
+      PFS.pbpfs_ha()[2],
+      PFS.pbpfs_by()[2],
+    ",
+  0x40400af4u64 => "
+      PFS.pbpfs()[3],
+      PFS.pbpfs_ha()[3],
+      PFS.pbpfs_by()[3],
+    ",
+  0x40400af8u64 => "
+      PFS.pbpfs()[4],
+      PFS.pbpfs_ha()[4],
+      PFS.pbpfs_by()[4],
+    ",
+  0x40400afcu64 => "
+      PFS.pbpfs()[5],
+      PFS.pbpfs_ha()[5],
+      PFS.pbpfs_by()[5],
+    ",
   0x40400d00u64 => "
       PFS.pfenet(),
+    ",
+  0x40400d0cu64 => "
+      PFS.pwpr_ns(),
     ",
   0x40400d14u64 => "
       PFS.pwpr_s(),
     ",
+  0x40400d20u64 => "
+      PFS.pfi3c(),
+    ",
+  0x40400d30u64 => "
+      PFS.p0sar(),
+    ",
+  0x40400d34u64 => "
+      PFS.p1sar(),
+    ",
   0x40400d38u64 => "
-      PFS.psar()[2],
+      PFS.p2sar(),
     ",
   0x40400d3cu64 => "
-      PFS.psar()[3],
+      PFS.p3sar(),
     ",
   0x40400d40u64 => "
-      PFS.psar()[4],
+      PFS.p4sar(),
     ",
   0x40400d44u64 => "
-      PFS.psar()[5],
+      PFS.p5sar(),
     ",
   0x40400d48u64 => "
-      PFS.psar()[6],
+      PFS.p6sar(),
     ",
   0x40400d4cu64 => "
-      PFS.psar()[7],
+      PFS.p7sar(),
     ",
   0x40400d50u64 => "
-      PFS.psar()[8],
+      PFS.p8sar(),
     ",
   0x40400d54u64 => "
-      PFS.psar()[9],
+      PFS.p9sar(),
     ",
   0x40400d58u64 => "
-      PFS.psar()[0],
+      PFS.pasar(),
     ",
   0x40400d5cu64 => "
-      PFS.psar()[1],
+      PFS.pbsar(),
     ",
-  0x50000000u64 => "
-      RMPU_NS.mmpuoad(),
+  0x40400d60u64 => "
+      PFS.pcsar(),
     ",
-  0x50000004u64 => "
-      RMPU_NS.mmpuoadpt(),
+  0x40400d64u64 => "
+      PFS.pdsar(),
     ",
-  0x50000100u64 => "
-      RMPU_NS.mmpuendmac(),
+  0x40400d68u64 => "
+      PFS.pesar(),
     ",
-  0x50000104u64 => "
-      RMPU_NS.mmpuenptdmac(),
+  0x40400d6cu64 => "
+      PFS.pfsar(),
     ",
-  0x50000108u64 => "
-      RMPU_NS.mmpurptdmac(),
-    ",
-  0x50000200u64 => "
-      RMPU_NS.mmpuacdmac()[0],
-    ",
-  0x50000210u64 => "
-      RMPU_NS.mmpuacdmac()[1],
-    ",
-  0x50000220u64 => "
-      RMPU_NS.mmpuacdmac()[2],
-    ",
-  0x50000230u64 => "
-      RMPU_NS.mmpuacdmac()[3],
-    ",
-  0x50000240u64 => "
-      RMPU_NS.mmpuacdmac()[4],
-    ",
-  0x50000250u64 => "
-      RMPU_NS.mmpuacdmac()[5],
-    ",
-  0x50000260u64 => "
-      RMPU_NS.mmpuacdmac()[6],
-    ",
-  0x50000270u64 => "
-      RMPU_NS.mmpuacdmac()[7],
-    ",
-  0x50000204u64 => "
-      RMPU_NS.mmpusdmac()[0],
-    ",
-  0x50000214u64 => "
-      RMPU_NS.mmpusdmac()[1],
-    ",
-  0x50000224u64 => "
-      RMPU_NS.mmpusdmac()[2],
-    ",
-  0x50000234u64 => "
-      RMPU_NS.mmpusdmac()[3],
-    ",
-  0x50000244u64 => "
-      RMPU_NS.mmpusdmac()[4],
-    ",
-  0x50000254u64 => "
-      RMPU_NS.mmpusdmac()[5],
-    ",
-  0x50000264u64 => "
-      RMPU_NS.mmpusdmac()[6],
-    ",
-  0x50000274u64 => "
-      RMPU_NS.mmpusdmac()[7],
-    ",
-  0x50000208u64 => "
-      RMPU_NS.mmpuedmac()[0],
-    ",
-  0x50000218u64 => "
-      RMPU_NS.mmpuedmac()[1],
-    ",
-  0x50000228u64 => "
-      RMPU_NS.mmpuedmac()[2],
-    ",
-  0x50000238u64 => "
-      RMPU_NS.mmpuedmac()[3],
-    ",
-  0x50000248u64 => "
-      RMPU_NS.mmpuedmac()[4],
-    ",
-  0x50000258u64 => "
-      RMPU_NS.mmpuedmac()[5],
-    ",
-  0x50000268u64 => "
-      RMPU_NS.mmpuedmac()[6],
-    ",
-  0x50000278u64 => "
-      RMPU_NS.mmpuedmac()[7],
-    ",
-  0x50000500u64 => "
-      RMPU_NS.mmpuenedmac(),
-    ",
-  0x50000504u64 => "
-      RMPU_NS.mmpuenptedmac(),
-    ",
-  0x50000508u64 => "
-      RMPU_NS.mmpurptedmac(),
-    ",
-  0x50000600u64 => "
-      RMPU_NS.mmpuacedmac()[0],
-    ",
-  0x50000610u64 => "
-      RMPU_NS.mmpuacedmac()[1],
-    ",
-  0x50000620u64 => "
-      RMPU_NS.mmpuacedmac()[2],
-    ",
-  0x50000630u64 => "
-      RMPU_NS.mmpuacedmac()[3],
-    ",
-  0x50000604u64 => "
-      RMPU_NS.mmpusedmac()[0],
-    ",
-  0x50000614u64 => "
-      RMPU_NS.mmpusedmac()[1],
-    ",
-  0x50000624u64 => "
-      RMPU_NS.mmpusedmac()[2],
-    ",
-  0x50000634u64 => "
-      RMPU_NS.mmpusedmac()[3],
-    ",
-  0x50000608u64 => "
-      RMPU_NS.mmpueedmac()[0],
-    ",
-  0x50000618u64 => "
-      RMPU_NS.mmpueedmac()[1],
-    ",
-  0x50000628u64 => "
-      RMPU_NS.mmpueedmac()[2],
-    ",
-  0x50000638u64 => "
-      RMPU_NS.mmpueedmac()[3],
-    ",
-  0x50000700u64 => "
-      RMPU_NS.mmpuenglcdc(),
-    ",
-  0x50000704u64 => "
-      RMPU_NS.mmpuenptglcdc(),
-    ",
-  0x50000708u64 => "
-      RMPU_NS.mmpurptglcdc(),
-    ",
-  0x50000800u64 => "
-      RMPU_NS.mmpuacglcdc()[0],
-    ",
-  0x50000810u64 => "
-      RMPU_NS.mmpuacglcdc()[1],
-    ",
-  0x50000804u64 => "
-      RMPU_NS.mmpusglcdc()[0],
-    ",
-  0x50000814u64 => "
-      RMPU_NS.mmpusglcdc()[1],
-    ",
-  0x50000808u64 => "
-      RMPU_NS.mmpueglcdc()[0],
-    ",
-  0x50000818u64 => "
-      RMPU_NS.mmpueglcdc()[1],
-    ",
-  0x50000900u64 => "
-      RMPU_NS.mmpuendrw(),
-    ",
-  0x50000904u64 => "
-      RMPU_NS.mmpuenpdrw(),
-    ",
-  0x50000908u64 => "
-      RMPU_NS.mmpurptdrw(),
-    ",
-  0x50000a00u64 => "
-      RMPU_NS.mmpuacdrw()[0],
-    ",
-  0x50000a10u64 => "
-      RMPU_NS.mmpuacdrw()[1],
-    ",
-  0x50000a20u64 => "
-      RMPU_NS.mmpuacdrw()[2],
-    ",
-  0x50000a04u64 => "
-      RMPU_NS.mmpusdrw()[0],
-    ",
-  0x50000a14u64 => "
-      RMPU_NS.mmpusdrw()[1],
-    ",
-  0x50000a24u64 => "
-      RMPU_NS.mmpusdrw()[2],
-    ",
-  0x50000a08u64 => "
-      RMPU_NS.mmpuedrw()[0],
-    ",
-  0x50000a18u64 => "
-      RMPU_NS.mmpuedrw()[1],
-    ",
-  0x50000a28u64 => "
-      RMPU_NS.mmpuedrw()[2],
-    ",
-  0x50000b00u64 => "
-      RMPU_NS.mmpuenmipi(),
-    ",
-  0x50000b04u64 => "
-      RMPU_NS.mmpuenptmipi(),
-    ",
-  0x50000b08u64 => "
-      RMPU_NS.mmpurptmipi(),
-    ",
-  0x50000c00u64 => "
-      RMPU_NS.mmpuacmipi(),
-    ",
-  0x50000c04u64 => "
-      RMPU_NS.mmpusmipi(),
-    ",
-  0x50000c08u64 => "
-      RMPU_NS.mmpuemipi(),
-    ",
-  0x50000d00u64 => "
-      RMPU_NS.mmpuenceu(),
-    ",
-  0x50000d04u64 => "
-      RMPU_NS.mmpuenptceu(),
-    ",
-  0x50000d08u64 => "
-      RMPU_NS.mmpurptceu(),
-    ",
-  0x50000e00u64 => "
-      RMPU_NS.mmpuacceu()[0],
-    ",
-  0x50000e10u64 => "
-      RMPU_NS.mmpuacceu()[1],
-    ",
-  0x50000e04u64 => "
-      RMPU_NS.mmpusceu()[0],
-    ",
-  0x50000e14u64 => "
-      RMPU_NS.mmpusceu()[1],
-    ",
-  0x50000e08u64 => "
-      RMPU_NS.mmpueceu()[0],
-    ",
-  0x50000e18u64 => "
-      RMPU_NS.mmpueceu()[1],
-    ",
-  0x50002004u64 => "
-      SRAM_NS.sramprcr_ns(),
-    ",
-  0x50002008u64 => "
-      SRAM_NS.sramwtsc(),
-    ",
-  0x50002010u64 => "
-      SRAM_NS.sramcr0(),
-    ",
-  0x50002014u64 => "
-      SRAM_NS.sramcr1(),
-    ",
-  0x50002030u64 => "
-      SRAM_NS.srameccrgn0(),
-    ",
-  0x50002040u64 => "
-      SRAM_NS.sramesr(),
-    ",
-  0x50002048u64 => "
-      SRAM_NS.sramesclr(),
-    ",
-  0x50002050u64 => "
-      SRAM_NS.sramear()[0],
-    ",
-  0x50002054u64 => "
-      SRAM_NS.sramear()[1],
-    ",
-  0x50002058u64 => "
-      SRAM_NS.sramear()[2],
-    ",
-  0x50002110u64 => "
-      SRAM_NS.stbramcr(),
-    ",
-  0x50002150u64 => "
-      SRAM_NS.stbramear(),
-    ",
-  0x50003002u64 => "
-      BUS_NS.csmod()[0],
-    ",
-  0x50003012u64 => "
-      BUS_NS.csmod()[1],
-    ",
-  0x50003022u64 => "
-      BUS_NS.csmod()[2],
-    ",
-  0x50003032u64 => "
-      BUS_NS.csmod()[3],
-    ",
-  0x50003042u64 => "
-      BUS_NS.csmod()[4],
-    ",
-  0x50003052u64 => "
-      BUS_NS.csmod()[5],
-    ",
-  0x50003062u64 => "
-      BUS_NS.csmod()[6],
-    ",
-  0x50003072u64 => "
-      BUS_NS.csmod()[7],
-    ",
-  0x50003004u64 => "
-      BUS_NS.cswcr1()[0],
-    ",
-  0x50003014u64 => "
-      BUS_NS.cswcr1()[1],
-    ",
-  0x50003024u64 => "
-      BUS_NS.cswcr1()[2],
-    ",
-  0x50003034u64 => "
-      BUS_NS.cswcr1()[3],
-    ",
-  0x50003044u64 => "
-      BUS_NS.cswcr1()[4],
-    ",
-  0x50003054u64 => "
-      BUS_NS.cswcr1()[5],
-    ",
-  0x50003064u64 => "
-      BUS_NS.cswcr1()[6],
-    ",
-  0x50003074u64 => "
-      BUS_NS.cswcr1()[7],
-    ",
-  0x50003008u64 => "
-      BUS_NS.cswcr2()[0],
-    ",
-  0x50003018u64 => "
-      BUS_NS.cswcr2()[1],
-    ",
-  0x50003028u64 => "
-      BUS_NS.cswcr2()[2],
-    ",
-  0x50003038u64 => "
-      BUS_NS.cswcr2()[3],
-    ",
-  0x50003048u64 => "
-      BUS_NS.cswcr2()[4],
-    ",
-  0x50003058u64 => "
-      BUS_NS.cswcr2()[5],
-    ",
-  0x50003068u64 => "
-      BUS_NS.cswcr2()[6],
-    ",
-  0x50003078u64 => "
-      BUS_NS.cswcr2()[7],
-    ",
-  0x50003802u64 => "
-      BUS_NS.cs0cr(),
-    ",
-  0x5000380au64 => "
-      BUS_NS.csrec()[0],
-    ",
-  0x5000381au64 => "
-      BUS_NS.csrec()[1],
-    ",
-  0x5000382au64 => "
-      BUS_NS.csrec()[2],
-    ",
-  0x5000383au64 => "
-      BUS_NS.csrec()[3],
-    ",
-  0x5000384au64 => "
-      BUS_NS.csrec()[4],
-    ",
-  0x5000385au64 => "
-      BUS_NS.csrec()[5],
-    ",
-  0x5000386au64 => "
-      BUS_NS.csrec()[6],
-    ",
-  0x5000387au64 => "
-      BUS_NS.csrec()[7],
-    ",
-  0x50003812u64 => "
-      BUS_NS.cscr()[0],
-    ",
-  0x50003822u64 => "
-      BUS_NS.cscr()[1],
-    ",
-  0x50003832u64 => "
-      BUS_NS.cscr()[2],
-    ",
-  0x50003842u64 => "
-      BUS_NS.cscr()[3],
-    ",
-  0x50003852u64 => "
-      BUS_NS.cscr()[4],
-    ",
-  0x50003862u64 => "
-      BUS_NS.cscr()[5],
-    ",
-  0x50003872u64 => "
-      BUS_NS.cscr()[6],
-    ",
-  0x50003880u64 => "
-      BUS_NS.csrecen(),
-    ",
-  0x50003c00u64 => "
-      BUS_NS.sdccr(),
-    ",
-  0x50003c01u64 => "
-      BUS_NS.sdcmod(),
-    ",
-  0x50003c02u64 => "
-      BUS_NS.sdamod(),
-    ",
-  0x50003c10u64 => "
-      BUS_NS.sdself(),
-    ",
-  0x50003c14u64 => "
-      BUS_NS.sdrfcr(),
-    ",
-  0x50003c16u64 => "
-      BUS_NS.sdrfen(),
-    ",
-  0x50003c20u64 => "
-      BUS_NS.sdicr(),
-    ",
-  0x50003c24u64 => "
-      BUS_NS.sdir(),
-    ",
-  0x50003c40u64 => "
-      BUS_NS.sdadr(),
-    ",
-  0x50003c44u64 => "
-      BUS_NS.sdtr(),
-    ",
-  0x50003c48u64 => "
-      BUS_NS.sdmod(),
-    ",
-  0x50003c50u64 => "
-      BUS_NS.sdsr(),
-    ",
-  0x50004000u64 => "
-      BUS_NS.busoad(),
-    ",
-  0x50004004u64 => "
-      BUS_NS.busoadpt(),
-    ",
-  0x50004100u64 => "
-      BUS_NS.busmabt(),
-    ",
-  0x50004200u64 => "
-      BUS_NS.bussabt1fhbi(),
-    ",
-  0x50004210u64 => "
-      BUS_NS.bussabt0flbi(),
-    ",
-  0x50004218u64 => "
-      BUS_NS.bussabt1s0bi(),
-    ",
-  0x50004220u64 => "
-      BUS_NS.bussabt1s1bi(),
-    ",
-  0x50004248u64 => "
-      BUS_NS.bussabt0stbysbi(),
-    ",
-  0x50004250u64 => "
-      BUS_NS.bussabt0ecbi(),
-    ",
-  0x50004258u64 => "
-      BUS_NS.bussabt0eobi(),
-    ",
-  0x50004260u64 => "
-      BUS_NS.bussabt0pbbi(),
-    ",
-  0x50004268u64 => "
-      BUS_NS.bussabt0pabi(),
-    ",
-  0x50004270u64 => "
-      BUS_NS.bussabt0pibi(),
-    ",
-  0x50004278u64 => "
-      BUS_NS.bussabt0psbi(),
-    ",
-  0x50004300u64 => "
-      BUS_NS.busdivbyp(),
-    ",
-  0x50004800u64 => "
-      BUS_NS.buserradd()[0],
-    ",
-  0x50004810u64 => "
-      BUS_NS.buserradd()[1],
-    ",
-  0x50004820u64 => "
-      BUS_NS.buserradd()[2],
-    ",
-  0x50004830u64 => "
-      BUS_NS.buserradd()[3],
-    ",
-  0x50004840u64 => "
-      BUS_NS.buserradd()[4],
-    ",
-  0x50004850u64 => "
-      BUS_NS.buserradd()[5],
-    ",
-  0x50004804u64 => "
-      BUS_NS.buserrrw()[0],
-    ",
-  0x50004814u64 => "
-      BUS_NS.buserrrw()[1],
-    ",
-  0x50004824u64 => "
-      BUS_NS.buserrrw()[2],
-    ",
-  0x50004834u64 => "
-      BUS_NS.buserrrw()[3],
-    ",
-  0x50004844u64 => "
-      BUS_NS.buserrrw()[4],
-    ",
-  0x50004854u64 => "
-      BUS_NS.buserrrw()[5],
-    ",
-  0x50004900u64 => "
-      BUS_NS.bmsaerradd()[0],
-    ",
-  0x50004910u64 => "
-      BUS_NS.bmsaerradd()[1],
-    ",
-  0x50004920u64 => "
-      BUS_NS.bmsaerradd()[2],
-    ",
-  0x50004930u64 => "
-      BUS_NS.bmsaerradd()[3],
-    ",
-  0x50004940u64 => "
-      BUS_NS.bmsaerradd()[4],
-    ",
-  0x50004950u64 => "
-      BUS_NS.bmsaerradd()[5],
-    ",
-  0x50004904u64 => "
-      BUS_NS.bmsaerrrw()[0],
-    ",
-  0x50004914u64 => "
-      BUS_NS.bmsaerrrw()[1],
-    ",
-  0x50004924u64 => "
-      BUS_NS.bmsaerrrw()[2],
-    ",
-  0x50004934u64 => "
-      BUS_NS.bmsaerrrw()[3],
-    ",
-  0x50004944u64 => "
-      BUS_NS.bmsaerrrw()[4],
-    ",
-  0x50004954u64 => "
-      BUS_NS.bmsaerrrw()[5],
-    ",
-  0x50004a00u64 => "
-      BUS_NS.buserrstat()[0],
-    ",
-  0x50004a10u64 => "
-      BUS_NS.buserrstat()[1],
-    ",
-  0x50004a20u64 => "
-      BUS_NS.buserrstat()[2],
-    ",
-  0x50004a30u64 => "
-      BUS_NS.buserrstat()[3],
-    ",
-  0x50004a40u64 => "
-      BUS_NS.buserrstat()[4],
-    ",
-  0x50004a50u64 => "
-      BUS_NS.buserrstat()[5],
-    ",
-  0x50004a60u64 => "
-      BUS_NS.buserrstat()[6],
-    ",
-  0x50004a70u64 => "
-      BUS_NS.buserrstat()[7],
-    ",
-  0x50004a80u64 => "
-      BUS_NS.buserrstat()[8],
-    ",
-  0x50004a90u64 => "
-      BUS_NS.buserrstat()[9],
-    ",
-  0x50004aa0u64 => "
-      BUS_NS.buserrstat()[10],
-    ",
-  0x50004ab0u64 => "
-      BUS_NS.buserrstat()[11],
-    ",
-  0x50004a08u64 => "
-      BUS_NS.buserrclr()[0],
-    ",
-  0x50004a18u64 => "
-      BUS_NS.buserrclr()[1],
-    ",
-  0x50004a28u64 => "
-      BUS_NS.buserrclr()[2],
-    ",
-  0x50004a38u64 => "
-      BUS_NS.buserrclr()[3],
-    ",
-  0x50004a48u64 => "
-      BUS_NS.buserrclr()[4],
-    ",
-  0x50004a58u64 => "
-      BUS_NS.buserrclr()[5],
-    ",
-  0x50004a68u64 => "
-      BUS_NS.buserrclr()[6],
-    ",
-  0x50004a78u64 => "
-      BUS_NS.buserrclr()[7],
-    ",
-  0x50004a88u64 => "
-      BUS_NS.buserrclr()[8],
-    ",
-  0x50004a98u64 => "
-      BUS_NS.buserrclr()[9],
-    ",
-  0x50004aa8u64 => "
-      BUS_NS.buserrclr()[10],
-    ",
-  0x50004ab8u64 => "
-      BUS_NS.buserrclr()[11],
-    ",
-  0x50004b00u64 => "
-      BUS_NS.mbwerrstat(),
-    ",
-  0x50004b08u64 => "
-      BUS_NS.mbwerrclr(),
-    ",
-  0x50004b20u64 => "
-      BUS_NS.sbwerrstat(),
-    ",
-  0x50004b28u64 => "
-      BUS_NS.sbwerrclr(),
-    ",
-  0x50006000u64 => "
-      ICU_COMMON_NS.irqcr()[0],
-    ",
-  0x50006001u64 => "
-      ICU_COMMON_NS.irqcr()[1],
-    ",
-  0x50006002u64 => "
-      ICU_COMMON_NS.irqcr()[2],
-    ",
-  0x50006003u64 => "
-      ICU_COMMON_NS.irqcr()[3],
-    ",
-  0x50006004u64 => "
-      ICU_COMMON_NS.irqcr()[4],
-    ",
-  0x50006005u64 => "
-      ICU_COMMON_NS.irqcr()[5],
-    ",
-  0x50006006u64 => "
-      ICU_COMMON_NS.irqcr()[6],
-    ",
-  0x50006007u64 => "
-      ICU_COMMON_NS.irqcr()[7],
-    ",
-  0x50006008u64 => "
-      ICU_COMMON_NS.irqcr()[8],
-    ",
-  0x50006009u64 => "
-      ICU_COMMON_NS.irqcr()[9],
-    ",
-  0x5000600au64 => "
-      ICU_COMMON_NS.irqcr()[10],
-    ",
-  0x5000600bu64 => "
-      ICU_COMMON_NS.irqcr()[11],
-    ",
-  0x5000600cu64 => "
-      ICU_COMMON_NS.irqcr()[12],
-    ",
-  0x5000600du64 => "
-      ICU_COMMON_NS.irqcr()[13],
-    ",
-  0x5000600eu64 => "
-      ICU_COMMON_NS.irqcr()[14],
-    ",
-  0x5000600fu64 => "
-      ICU_COMMON_NS.irqcr()[15],
-    ",
-  0x50006010u64 => "
-      ICU_COMMON_NS.nmicr(),
-    ",
-  0x50008010u64 => "
-      CPSCU_NS.sramsar(),
-    ",
-  0x50008030u64 => "
-      CPSCU_NS.dtcsar(),
-    ",
-  0x50008034u64 => "
-      CPSCU_NS.dmacsar(),
-    ",
-  0x50008040u64 => "
-      CPSCU_NS.icusara(),
-    ",
-  0x50008044u64 => "
-      CPSCU_NS.icusarb(),
-    ",
-  0x50008050u64 => "
-      CPSCU_NS.icusare(),
-    ",
-  0x50008054u64 => "
-      CPSCU_NS.icusarf(),
-    ",
-  0x50008070u64 => "
-      CPSCU_NS.icusarg(),
-    ",
-  0x50008074u64 => "
-      CPSCU_NS.icusarh(),
-    ",
-  0x50008078u64 => "
-      CPSCU_NS.icusari(),
-    ",
-  0x50008100u64 => "
-      CPSCU_NS.bussara(),
-    ",
-  0x50008104u64 => "
-      CPSCU_NS.bussarb(),
-    ",
-  0x50008110u64 => "
-      CPSCU_NS.bussarc(),
-    ",
-  0x50008114u64 => "
-      CPSCU_NS.busparc(),
-    ",
-  0x50008130u64 => "
-      CPSCU_NS.mmpusara(),
-    ",
-  0x50008134u64 => "
-      CPSCU_NS.mmpusarb(),
-    ",
-  0x50008170u64 => "
-      CPSCU_NS.cpusar(),
-    ",
-  0x50008180u64 => "
-      CPSCU_NS.debugsar(),
-    ",
-  0x500081a0u64 => "
-      CPSCU_NS.dmacchsar(),
-    ",
-  0x500081f0u64 => "
-      CPSCU_NS.dmacchpar(),
-    ",
-  0x50008400u64 => "
-      CPSCU_NS.sramsabar()[0],
-    ",
-  0x50008404u64 => "
-      CPSCU_NS.sramsabar()[1],
-    ",
-  0x50008420u64 => "
-      CPSCU_NS.stbramsabar(),
-    ",
-  0x50008490u64 => "
-      CPSCU_NS.stbrampabar_ns(),
-    ",
-  0x50008600u64 => "
-      CPSCU_NS.tevtrcr(),
-    ",
-  0x5000a000u64 => "
-      DMAC_00_NS.dmsar(),
-    ",
-  0x5000a004u64 => "
-      DMAC_00_NS.dmdar(),
-    ",
-  0x5000a008u64 => "
-      DMAC_00_NS.dmcra(),
-    ",
-  0x5000a00cu64 => "
-      DMAC_00_NS.dmcrb(),
-    ",
-  0x5000a010u64 => "
-      DMAC_00_NS.dmtmd(),
-    ",
-  0x5000a013u64 => "
-      DMAC_00_NS.dmint(),
-    ",
-  0x5000a014u64 => "
-      DMAC_00_NS.dmamd(),
-    ",
-  0x5000a018u64 => "
-      DMAC_00_NS.dmofr(),
-    ",
-  0x5000a01cu64 => "
-      DMAC_00_NS.dmcnt(),
-    ",
-  0x5000a01du64 => "
-      DMAC_00_NS.dmreq(),
-    ",
-  0x5000a01eu64 => "
-      DMAC_00_NS.dmsts(),
-    ",
-  0x5000a020u64 => "
-      DMAC_00_NS.dmsrr(),
-    ",
-  0x5000a024u64 => "
-      DMAC_00_NS.dmdrr(),
-    ",
-  0x5000a028u64 => "
-      DMAC_00_NS.dmsbs(),
-    ",
-  0x5000a02cu64 => "
-      DMAC_00_NS.dmdbs(),
-    ",
-  0x5000a030u64 => "
-      DMAC_00_NS.dmbwr(),
-    ",
-  0x5000a800u64 => "
-      DMA_0_NS.dmast(),
-    ",
-  0x5000a840u64 => "
-      DMA_0_NS.dmechr(),
-    ",
-  0x5000a880u64 => "
-      DMA_0_NS.delsr()[0],
-    ",
-  0x5000a884u64 => "
-      DMA_0_NS.delsr()[1],
-    ",
-  0x5000a888u64 => "
-      DMA_0_NS.delsr()[2],
-    ",
-  0x5000a88cu64 => "
-      DMA_0_NS.delsr()[3],
-    ",
-  0x5000a890u64 => "
-      DMA_0_NS.delsr()[4],
-    ",
-  0x5000a894u64 => "
-      DMA_0_NS.delsr()[5],
-    ",
-  0x5000a898u64 => "
-      DMA_0_NS.delsr()[6],
-    ",
-  0x5000a89cu64 => "
-      DMA_0_NS.delsr()[7],
-    ",
-  0x5000ac00u64 => "
-      DTC_0_NS.dtccr(),
-    ",
-  0x5000ac04u64 => "
-      DTC_0_NS.dtcvbr(),
-    ",
-  0x5000ac0cu64 => "
-      DTC_0_NS.dtcst(),
-    ",
-  0x5000ac0eu64 => "
-      DTC_0_NS.dtcsts(),
-    ",
-  0x5000ac20u64 => "
-      DTC_0_NS.dtevr(),
-    ",
-  0x5000c100u64 => "
-      ICU_NS.nmier(),
-    ",
-  0x5000c110u64 => "
-      ICU_NS.nmiclr(),
-    ",
-  0x5000c120u64 => "
-      ICU_NS.nmisr(),
-    ",
-  0x5000c1a0u64 => "
-      ICU_NS.wupen0(),
-    ",
-  0x5000c1a4u64 => "
-      ICU_NS.wupen1(),
-    ",
-  0x5000c300u64 => "
-      ICU_NS.ielsr()[0],
-    ",
-  0x5000c304u64 => "
-      ICU_NS.ielsr()[1],
-    ",
-  0x5000c308u64 => "
-      ICU_NS.ielsr()[2],
-    ",
-  0x5000c30cu64 => "
-      ICU_NS.ielsr()[3],
-    ",
-  0x5000c310u64 => "
-      ICU_NS.ielsr()[4],
-    ",
-  0x5000c314u64 => "
-      ICU_NS.ielsr()[5],
-    ",
-  0x5000c318u64 => "
-      ICU_NS.ielsr()[6],
-    ",
-  0x5000c31cu64 => "
-      ICU_NS.ielsr()[7],
-    ",
-  0x5000c320u64 => "
-      ICU_NS.ielsr()[8],
-    ",
-  0x5000c324u64 => "
-      ICU_NS.ielsr()[9],
-    ",
-  0x5000c328u64 => "
-      ICU_NS.ielsr()[10],
-    ",
-  0x5000c32cu64 => "
-      ICU_NS.ielsr()[11],
-    ",
-  0x5000c330u64 => "
-      ICU_NS.ielsr()[12],
-    ",
-  0x5000c334u64 => "
-      ICU_NS.ielsr()[13],
-    ",
-  0x5000c338u64 => "
-      ICU_NS.ielsr()[14],
-    ",
-  0x5000c33cu64 => "
-      ICU_NS.ielsr()[15],
-    ",
-  0x5000c340u64 => "
-      ICU_NS.ielsr()[16],
-    ",
-  0x5000c344u64 => "
-      ICU_NS.ielsr()[17],
-    ",
-  0x5000c348u64 => "
-      ICU_NS.ielsr()[18],
-    ",
-  0x5000c34cu64 => "
-      ICU_NS.ielsr()[19],
-    ",
-  0x5000c350u64 => "
-      ICU_NS.ielsr()[20],
-    ",
-  0x5000c354u64 => "
-      ICU_NS.ielsr()[21],
-    ",
-  0x5000c358u64 => "
-      ICU_NS.ielsr()[22],
-    ",
-  0x5000c35cu64 => "
-      ICU_NS.ielsr()[23],
-    ",
-  0x5000c360u64 => "
-      ICU_NS.ielsr()[24],
-    ",
-  0x5000c364u64 => "
-      ICU_NS.ielsr()[25],
-    ",
-  0x5000c368u64 => "
-      ICU_NS.ielsr()[26],
-    ",
-  0x5000c36cu64 => "
-      ICU_NS.ielsr()[27],
-    ",
-  0x5000c370u64 => "
-      ICU_NS.ielsr()[28],
-    ",
-  0x5000c374u64 => "
-      ICU_NS.ielsr()[29],
-    ",
-  0x5000c378u64 => "
-      ICU_NS.ielsr()[30],
-    ",
-  0x5000c37cu64 => "
-      ICU_NS.ielsr()[31],
-    ",
-  0x5000c380u64 => "
-      ICU_NS.ielsr()[32],
-    ",
-  0x5000c384u64 => "
-      ICU_NS.ielsr()[33],
-    ",
-  0x5000c388u64 => "
-      ICU_NS.ielsr()[34],
-    ",
-  0x5000c38cu64 => "
-      ICU_NS.ielsr()[35],
-    ",
-  0x5000c390u64 => "
-      ICU_NS.ielsr()[36],
-    ",
-  0x5000c394u64 => "
-      ICU_NS.ielsr()[37],
-    ",
-  0x5000c398u64 => "
-      ICU_NS.ielsr()[38],
-    ",
-  0x5000c39cu64 => "
-      ICU_NS.ielsr()[39],
-    ",
-  0x5000c3a0u64 => "
-      ICU_NS.ielsr()[40],
-    ",
-  0x5000c3a4u64 => "
-      ICU_NS.ielsr()[41],
-    ",
-  0x5000c3a8u64 => "
-      ICU_NS.ielsr()[42],
-    ",
-  0x5000c3acu64 => "
-      ICU_NS.ielsr()[43],
-    ",
-  0x5000c3b0u64 => "
-      ICU_NS.ielsr()[44],
-    ",
-  0x5000c3b4u64 => "
-      ICU_NS.ielsr()[45],
-    ",
-  0x5000c3b8u64 => "
-      ICU_NS.ielsr()[46],
-    ",
-  0x5000c3bcu64 => "
-      ICU_NS.ielsr()[47],
-    ",
-  0x5000c3c0u64 => "
-      ICU_NS.ielsr()[48],
-    ",
-  0x5000c3c4u64 => "
-      ICU_NS.ielsr()[49],
-    ",
-  0x5000c3c8u64 => "
-      ICU_NS.ielsr()[50],
-    ",
-  0x5000c3ccu64 => "
-      ICU_NS.ielsr()[51],
-    ",
-  0x5000c3d0u64 => "
-      ICU_NS.ielsr()[52],
-    ",
-  0x5000c3d4u64 => "
-      ICU_NS.ielsr()[53],
-    ",
-  0x5000c3d8u64 => "
-      ICU_NS.ielsr()[54],
-    ",
-  0x5000c3dcu64 => "
-      ICU_NS.ielsr()[55],
-    ",
-  0x5000c3e0u64 => "
-      ICU_NS.ielsr()[56],
-    ",
-  0x5000c3e4u64 => "
-      ICU_NS.ielsr()[57],
-    ",
-  0x5000c3e8u64 => "
-      ICU_NS.ielsr()[58],
-    ",
-  0x5000c3ecu64 => "
-      ICU_NS.ielsr()[59],
-    ",
-  0x5000c3f0u64 => "
-      ICU_NS.ielsr()[60],
-    ",
-  0x5000c3f4u64 => "
-      ICU_NS.ielsr()[61],
-    ",
-  0x5000c3f8u64 => "
-      ICU_NS.ielsr()[62],
-    ",
-  0x5000c3fcu64 => "
-      ICU_NS.ielsr()[63],
-    ",
-  0x5000c400u64 => "
-      ICU_NS.ielsr()[64],
-    ",
-  0x5000c404u64 => "
-      ICU_NS.ielsr()[65],
-    ",
-  0x5000c408u64 => "
-      ICU_NS.ielsr()[66],
-    ",
-  0x5000c40cu64 => "
-      ICU_NS.ielsr()[67],
-    ",
-  0x5000c410u64 => "
-      ICU_NS.ielsr()[68],
-    ",
-  0x5000c414u64 => "
-      ICU_NS.ielsr()[69],
-    ",
-  0x5000c418u64 => "
-      ICU_NS.ielsr()[70],
-    ",
-  0x5000c41cu64 => "
-      ICU_NS.ielsr()[71],
-    ",
-  0x5000c420u64 => "
-      ICU_NS.ielsr()[72],
-    ",
-  0x5000c424u64 => "
-      ICU_NS.ielsr()[73],
-    ",
-  0x5000c428u64 => "
-      ICU_NS.ielsr()[74],
-    ",
-  0x5000c42cu64 => "
-      ICU_NS.ielsr()[75],
-    ",
-  0x5000c430u64 => "
-      ICU_NS.ielsr()[76],
-    ",
-  0x5000c434u64 => "
-      ICU_NS.ielsr()[77],
-    ",
-  0x5000c438u64 => "
-      ICU_NS.ielsr()[78],
-    ",
-  0x5000c43cu64 => "
-      ICU_NS.ielsr()[79],
-    ",
-  0x5000c440u64 => "
-      ICU_NS.ielsr()[80],
-    ",
-  0x5000c444u64 => "
-      ICU_NS.ielsr()[81],
-    ",
-  0x5000c448u64 => "
-      ICU_NS.ielsr()[82],
-    ",
-  0x5000c44cu64 => "
-      ICU_NS.ielsr()[83],
-    ",
-  0x5000c450u64 => "
-      ICU_NS.ielsr()[84],
-    ",
-  0x5000c454u64 => "
-      ICU_NS.ielsr()[85],
-    ",
-  0x5000c458u64 => "
-      ICU_NS.ielsr()[86],
-    ",
-  0x5000c45cu64 => "
-      ICU_NS.ielsr()[87],
-    ",
-  0x5000c460u64 => "
-      ICU_NS.ielsr()[88],
-    ",
-  0x5000c464u64 => "
-      ICU_NS.ielsr()[89],
-    ",
-  0x5000c468u64 => "
-      ICU_NS.ielsr()[90],
-    ",
-  0x5000c46cu64 => "
-      ICU_NS.ielsr()[91],
-    ",
-  0x5000c470u64 => "
-      ICU_NS.ielsr()[92],
-    ",
-  0x5000c474u64 => "
-      ICU_NS.ielsr()[93],
-    ",
-  0x5000c478u64 => "
-      ICU_NS.ielsr()[94],
-    ",
-  0x5000c47cu64 => "
-      ICU_NS.ielsr()[95],
-    ",
-  0x5000f030u64 => "
-      CPU_CTRL_NS.cpulckupcr(),
-    ",
-  0x5000f500u64 => "
-      CPU_CTRL_NS.cpulockcrns(),
-    ",
-  0x5000f840u64 => "
-      CPU_CTRL_NS.cpucrpt(),
-    ",
-  0x50011004u64 => "
-      OCD_CPU_NS.mcuctrl(),
-    ",
-  0x50011100u64 => "
-      OCD_CPU_NS.jbmdr(),
-    ",
-  0x50011120u64 => "
-      OCD_CPU_NS.jbrdr(),
-    ",
-  0x50011130u64 => "
-      OCD_CPU_NS.jbtdr(),
-    ",
-  0x50011140u64 => "
-      OCD_CPU_NS.jbstr(),
-    ",
-  0x50011150u64 => "
-      OCD_CPU_NS.jbicr(),
-    ",
-  0x50011300u64 => "
-      OCD_CPU_NS.fsblstatm(),
-    ",
-  0x5001b000u64 => "
-      CPU_DBG_NS.dbgstr(),
-    ",
-  0x5001b010u64 => "
-      CPU_DBG_NS.dbgstopcr(),
-    ",
-  0x5001b020u64 => "
-      CPU_DBG_NS.dbgauth0(),
-    ",
-  0x5001b030u64 => "
-      CPU_DBG_NS.trportcr(),
-    ",
-  0x5001b300u64 => "
-      CPU_DBG_NS.dbgmocoen(),
-    ",
-  0x5001b310u64 => "
-      CPU_DBG_NS.dbgfclksel(),
-    ",
-  0x5001c100u64 => "
-      FCACHE_NS.fcachee(),
-    ",
-  0x5001c104u64 => "
-      FCACHE_NS.fcacheiv(),
-    ",
-  0x5001c11cu64 => "
-      FCACHE_NS.flwt(),
-    ",
-  0x5001c140u64 => "
-      FCACHE_NS.fsar(),
-    ",
-  0x5001e00cu64 => "
-      SYSC_NS.sbycr(),
-    ",
-  0x5001e020u64 => "
-      SYSC_NS.sckdivcr(),
-    ",
-  0x5001e024u64 => "
-      SYSC_NS.sckdivcr2(),
-    ",
-  0x5001e026u64 => "
-      SYSC_NS.sckscr(),
-    ",
-  0x5001e028u64 => "
-      SYSC_NS.pllccr(),
-    ",
-  0x5001e02au64 => "
-      SYSC_NS.pllcr(),
-    ",
-  0x5001e030u64 => "
-      SYSC_NS.bckcr(),
-    ",
-  0x5001e032u64 => "
-      SYSC_NS.mosccr(),
-    ",
-  0x5001e036u64 => "
-      SYSC_NS.hococr(),
-    ",
-  0x5001e037u64 => "
-      SYSC_NS.hococr2(),
-    ",
-  0x5001e038u64 => "
-      SYSC_NS.mococr(),
-    ",
-  0x5001e039u64 => "
-      SYSC_NS.fllcr1(),
-    ",
-  0x5001e03au64 => "
-      SYSC_NS.fllcr2(),
-    ",
-  0x5001e03cu64 => "
-      SYSC_NS.oscsf(),
-    ",
-  0x5001e03eu64 => "
-      SYSC_NS.ckocr(),
-    ",
-  0x5001e03fu64 => "
-      SYSC_NS.trckcr(),
-    ",
-  0x5001e040u64 => "
-      SYSC_NS.ostdcr(),
-    ",
-  0x5001e041u64 => "
-      SYSC_NS.ostdsr(),
-    ",
-  0x5001e043u64 => "
-      SYSC_NS.oscmonr(),
-    ",
-  0x5001e048u64 => "
-      SYSC_NS.pll2ccr(),
-    ",
-  0x5001e04au64 => "
-      SYSC_NS.pll2cr(),
-    ",
-  0x5001e04cu64 => "
-      SYSC_NS.pllccr2(),
-    ",
-  0x5001e04eu64 => "
-      SYSC_NS.pll2ccr2(),
-    ",
-  0x5001e052u64 => "
-      SYSC_NS.ebckocr(),
-    ",
-  0x5001e053u64 => "
-      SYSC_NS.sdckocr(),
-    ",
-  0x5001e054u64 => "
-      SYSC_NS.scickdivcr(),
-    ",
-  0x5001e055u64 => "
-      SYSC_NS.scickcr(),
-    ",
-  0x5001e056u64 => "
-      SYSC_NS.spickdivcr(),
-    ",
-  0x5001e057u64 => "
-      SYSC_NS.spickcr(),
-    ",
-  0x5001e05eu64 => "
-      SYSC_NS.lcdckdivcr(),
-    ",
-  0x5001e05fu64 => "
-      SYSC_NS.lcdckcr(),
-    ",
-  0x5001e061u64 => "
-      SYSC_NS.mocoutcr(),
-    ",
-  0x5001e062u64 => "
-      SYSC_NS.hocoutcr(),
-    ",
-  0x5001e06cu64 => "
-      SYSC_NS.usbckdivcr(),
-    ",
-  0x5001e06du64 => "
-      SYSC_NS.octackdivcr(),
-    ",
-  0x5001e06eu64 => "
-      SYSC_NS.canfdckdivcr(),
-    ",
-  0x5001e06fu64 => "
-      SYSC_NS.usb60ckdivcr(),
-    ",
-  0x5001e070u64 => "
-      SYSC_NS.i3cckdivcr(),
-    ",
-  0x5001e074u64 => "
-      SYSC_NS.usbckcr(),
-    ",
-  0x5001e075u64 => "
-      SYSC_NS.octackcr(),
-    ",
-  0x5001e076u64 => "
-      SYSC_NS.canfdckcr(),
-    ",
-  0x5001e077u64 => "
-      SYSC_NS.usb60ckcr(),
-    ",
-  0x5001e078u64 => "
-      SYSC_NS.i3cckcr(),
-    ",
-  0x5001e07cu64 => "
-      SYSC_NS.moscscr(),
-    ",
-  0x5001e07du64 => "
-      SYSC_NS.hocoscr(),
-    ",
-  0x5001e0a0u64 => "
-      SYSC_NS.opccr(),
-    ",
-  0x5001e0a2u64 => "
-      SYSC_NS.moscwtcr(),
-    ",
-  0x5001e0c0u64 => "
-      SYSC_NS.rstsr1(),
-    ",
-  0x5001e0ccu64 => "
-      SYSC_NS.syraccr(),
-    ",
-  0x5001e0e0u64 => "
-      SYSC_NS.pvdcr1()[0],
-    ",
-  0x5001e0e2u64 => "
-      SYSC_NS.pvdcr1()[1],
-    ",
-  0x5001e0e1u64 => "
-      SYSC_NS.pvdsr()[0],
-    ",
-  0x5001e0e3u64 => "
-      SYSC_NS.pvdsr()[1],
-    ",
-  0x5001e110u64 => "
-      SYSC_NS.pdctrgd(),
-    ",
-  0x5001e140u64 => "
-      SYSC_NS.pdramscr0(),
-    ",
-  0x5001e142u64 => "
-      SYSC_NS.pdramscr1(),
-    ",
-  0x5001e3b8u64 => "
-      SYSC_NS.vbrpabarns(),
-    ",
-  0x5001e3c0u64 => "
-      SYSC_NS.cgfsar(),
-    ",
-  0x5001e3c4u64 => "
-      SYSC_NS.rstsar(),
-    ",
-  0x5001e3c8u64 => "
-      SYSC_NS.lpmsar(),
-    ",
-  0x5001e3ccu64 => "
-      SYSC_NS.pvdsar(),
-    ",
-  0x5001e3d0u64 => "
-      SYSC_NS.bbfsar(),
-    ",
-  0x5001e3d8u64 => "
-      SYSC_NS.pgcsar(),
-    ",
-  0x5001e3e0u64 => "
-      SYSC_NS.dpfsar(),
-    ",
-  0x5001e3e4u64 => "
-      SYSC_NS.rscsar(),
-    ",
-  0x5001e3feu64 => "
-      SYSC_NS.prcr_ns(),
-    ",
-  0x5001e400u64 => "
-      SYSC_NS.lococr(),
-    ",
-  0x5001e402u64 => "
-      SYSC_NS.locoutcr(),
-    ",
-  0x5001ea00u64 => "
-      SYSC_NS.dpsbycr(),
-    ",
-  0x5001ea04u64 => "
-      SYSC_NS.dpswcr(),
-    ",
-  0x5001ea08u64 => "
-      SYSC_NS.dpsier0(),
-    ",
-  0x5001ea0cu64 => "
-      SYSC_NS.dpsier1(),
-    ",
-  0x5001ea10u64 => "
-      SYSC_NS.dpsier2(),
-    ",
-  0x5001ea14u64 => "
-      SYSC_NS.dpsier3(),
-    ",
-  0x5001ea18u64 => "
-      SYSC_NS.dpsifr0(),
-    ",
-  0x5001ea1cu64 => "
-      SYSC_NS.dpsifr1(),
-    ",
-  0x5001ea20u64 => "
-      SYSC_NS.dpsifr2(),
-    ",
-  0x5001ea24u64 => "
-      SYSC_NS.dpsifr3(),
-    ",
-  0x5001ea28u64 => "
-      SYSC_NS.dpsiegr0(),
-    ",
-  0x5001ea2cu64 => "
-      SYSC_NS.dpsiegr1(),
-    ",
-  0x5001ea30u64 => "
-      SYSC_NS.dpsiegr2(),
-    ",
-  0x5001ea38u64 => "
-      SYSC_NS.syocdcr(),
-    ",
-  0x5001ea40u64 => "
-      SYSC_NS.rstsr0(),
-    ",
-  0x5001ea44u64 => "
-      SYSC_NS.rstsr2(),
-    ",
-  0x5001ea50u64 => "
-      SYSC_NS.momcr(),
-    ",
-  0x5001ea54u64 => "
-      SYSC_NS.fwepror(),
-    ",
-  0x5001ea58u64 => "
-      SYSC_NS.pvdcmpcr()[0],
-    ",
-  0x5001ea5cu64 => "
-      SYSC_NS.pvdcmpcr()[1],
-    ",
-  0x5001ea70u64 => "
-      SYSC_NS.pvdcr0()[0],
-    ",
-  0x5001ea74u64 => "
-      SYSC_NS.pvdcr0()[1],
-    ",
-  0x5001ea84u64 => "
-      SYSC_NS.vbattmnselr(),
-    ",
-  0x5001ea88u64 => "
-      SYSC_NS.vbtbpcr1(),
-    ",
-  0x5001ea90u64 => "
-      SYSC_NS.lpscr(),
-    ",
-  0x5001ea98u64 => "
-      SYSC_NS.sscr1(),
-    ",
-  0x5001eab0u64 => "
-      SYSC_NS.lvocr(),
-    ",
-  0x5001eb04u64 => "
-      SYSC_NS.pll1ldocr(),
-    ",
-  0x5001eb08u64 => "
-      SYSC_NS.pll2ldocr(),
-    ",
-  0x5001eb0cu64 => "
-      SYSC_NS.hocoldocr(),
-    ",
-  0x5001eb20u64 => "
-      SYSC_NS.pvdfcr()[0],
-    ",
-  0x5001eb24u64 => "
-      SYSC_NS.pvdfcr()[1],
-    ",
-  0x5001ec00u64 => "
-      SYSC_NS.sosccr(),
-    ",
-  0x5001ec01u64 => "
-      SYSC_NS.somcr(),
-    ",
-  0x5001ec40u64 => "
-      SYSC_NS.vbtber(),
-    ",
-  0x5001ec45u64 => "
-      SYSC_NS.vbtbpcr2(),
-    ",
-  0x5001ec46u64 => "
-      SYSC_NS.vbtbpsr(),
-    ",
-  0x5001ec48u64 => "
-      SYSC_NS.vbtadsr(),
-    ",
-  0x5001ec49u64 => "
-      SYSC_NS.vbtadcr1(),
-    ",
-  0x5001ec4au64 => "
-      SYSC_NS.vbtadcr2(),
-    ",
-  0x5001ec4cu64 => "
-      SYSC_NS.vbtictlr(),
-    ",
-  0x5001ec4du64 => "
-      SYSC_NS.vbtictlr2(),
-    ",
-  0x5001ec4eu64 => "
-      SYSC_NS.vbtimonr(),
-    ",
-  0x5001ed00u64 => "
-      SYSC_NS.vbtbkr()[0],
-    ",
-  0x5001ed01u64 => "
-      SYSC_NS.vbtbkr()[1],
-    ",
-  0x5001ed02u64 => "
-      SYSC_NS.vbtbkr()[2],
-    ",
-  0x5001ed03u64 => "
-      SYSC_NS.vbtbkr()[3],
-    ",
-  0x5001ed04u64 => "
-      SYSC_NS.vbtbkr()[4],
-    ",
-  0x5001ed05u64 => "
-      SYSC_NS.vbtbkr()[5],
-    ",
-  0x5001ed06u64 => "
-      SYSC_NS.vbtbkr()[6],
-    ",
-  0x5001ed07u64 => "
-      SYSC_NS.vbtbkr()[7],
-    ",
-  0x5001ed08u64 => "
-      SYSC_NS.vbtbkr()[8],
-    ",
-  0x5001ed09u64 => "
-      SYSC_NS.vbtbkr()[9],
-    ",
-  0x5001ed0au64 => "
-      SYSC_NS.vbtbkr()[10],
-    ",
-  0x5001ed0bu64 => "
-      SYSC_NS.vbtbkr()[11],
-    ",
-  0x5001ed0cu64 => "
-      SYSC_NS.vbtbkr()[12],
-    ",
-  0x5001ed0du64 => "
-      SYSC_NS.vbtbkr()[13],
-    ",
-  0x5001ed0eu64 => "
-      SYSC_NS.vbtbkr()[14],
-    ",
-  0x5001ed0fu64 => "
-      SYSC_NS.vbtbkr()[15],
-    ",
-  0x5001ed10u64 => "
-      SYSC_NS.vbtbkr()[16],
-    ",
-  0x5001ed11u64 => "
-      SYSC_NS.vbtbkr()[17],
-    ",
-  0x5001ed12u64 => "
-      SYSC_NS.vbtbkr()[18],
-    ",
-  0x5001ed13u64 => "
-      SYSC_NS.vbtbkr()[19],
-    ",
-  0x5001ed14u64 => "
-      SYSC_NS.vbtbkr()[20],
-    ",
-  0x5001ed15u64 => "
-      SYSC_NS.vbtbkr()[21],
-    ",
-  0x5001ed16u64 => "
-      SYSC_NS.vbtbkr()[22],
-    ",
-  0x5001ed17u64 => "
-      SYSC_NS.vbtbkr()[23],
-    ",
-  0x5001ed18u64 => "
-      SYSC_NS.vbtbkr()[24],
-    ",
-  0x5001ed19u64 => "
-      SYSC_NS.vbtbkr()[25],
-    ",
-  0x5001ed1au64 => "
-      SYSC_NS.vbtbkr()[26],
-    ",
-  0x5001ed1bu64 => "
-      SYSC_NS.vbtbkr()[27],
-    ",
-  0x5001ed1cu64 => "
-      SYSC_NS.vbtbkr()[28],
-    ",
-  0x5001ed1du64 => "
-      SYSC_NS.vbtbkr()[29],
-    ",
-  0x5001ed1eu64 => "
-      SYSC_NS.vbtbkr()[30],
-    ",
-  0x5001ed1fu64 => "
-      SYSC_NS.vbtbkr()[31],
-    ",
-  0x5001ed20u64 => "
-      SYSC_NS.vbtbkr()[32],
-    ",
-  0x5001ed21u64 => "
-      SYSC_NS.vbtbkr()[33],
-    ",
-  0x5001ed22u64 => "
-      SYSC_NS.vbtbkr()[34],
-    ",
-  0x5001ed23u64 => "
-      SYSC_NS.vbtbkr()[35],
-    ",
-  0x5001ed24u64 => "
-      SYSC_NS.vbtbkr()[36],
-    ",
-  0x5001ed25u64 => "
-      SYSC_NS.vbtbkr()[37],
-    ",
-  0x5001ed26u64 => "
-      SYSC_NS.vbtbkr()[38],
-    ",
-  0x5001ed27u64 => "
-      SYSC_NS.vbtbkr()[39],
-    ",
-  0x5001ed28u64 => "
-      SYSC_NS.vbtbkr()[40],
-    ",
-  0x5001ed29u64 => "
-      SYSC_NS.vbtbkr()[41],
-    ",
-  0x5001ed2au64 => "
-      SYSC_NS.vbtbkr()[42],
-    ",
-  0x5001ed2bu64 => "
-      SYSC_NS.vbtbkr()[43],
-    ",
-  0x5001ed2cu64 => "
-      SYSC_NS.vbtbkr()[44],
-    ",
-  0x5001ed2du64 => "
-      SYSC_NS.vbtbkr()[45],
-    ",
-  0x5001ed2eu64 => "
-      SYSC_NS.vbtbkr()[46],
-    ",
-  0x5001ed2fu64 => "
-      SYSC_NS.vbtbkr()[47],
-    ",
-  0x5001ed30u64 => "
-      SYSC_NS.vbtbkr()[48],
-    ",
-  0x5001ed31u64 => "
-      SYSC_NS.vbtbkr()[49],
-    ",
-  0x5001ed32u64 => "
-      SYSC_NS.vbtbkr()[50],
-    ",
-  0x5001ed33u64 => "
-      SYSC_NS.vbtbkr()[51],
-    ",
-  0x5001ed34u64 => "
-      SYSC_NS.vbtbkr()[52],
-    ",
-  0x5001ed35u64 => "
-      SYSC_NS.vbtbkr()[53],
-    ",
-  0x5001ed36u64 => "
-      SYSC_NS.vbtbkr()[54],
-    ",
-  0x5001ed37u64 => "
-      SYSC_NS.vbtbkr()[55],
-    ",
-  0x5001ed38u64 => "
-      SYSC_NS.vbtbkr()[56],
-    ",
-  0x5001ed39u64 => "
-      SYSC_NS.vbtbkr()[57],
-    ",
-  0x5001ed3au64 => "
-      SYSC_NS.vbtbkr()[58],
-    ",
-  0x5001ed3bu64 => "
-      SYSC_NS.vbtbkr()[59],
-    ",
-  0x5001ed3cu64 => "
-      SYSC_NS.vbtbkr()[60],
-    ",
-  0x5001ed3du64 => "
-      SYSC_NS.vbtbkr()[61],
-    ",
-  0x5001ed3eu64 => "
-      SYSC_NS.vbtbkr()[62],
-    ",
-  0x5001ed3fu64 => "
-      SYSC_NS.vbtbkr()[63],
-    ",
-  0x5001ed40u64 => "
-      SYSC_NS.vbtbkr()[64],
-    ",
-  0x5001ed41u64 => "
-      SYSC_NS.vbtbkr()[65],
-    ",
-  0x5001ed42u64 => "
-      SYSC_NS.vbtbkr()[66],
-    ",
-  0x5001ed43u64 => "
-      SYSC_NS.vbtbkr()[67],
-    ",
-  0x5001ed44u64 => "
-      SYSC_NS.vbtbkr()[68],
-    ",
-  0x5001ed45u64 => "
-      SYSC_NS.vbtbkr()[69],
-    ",
-  0x5001ed46u64 => "
-      SYSC_NS.vbtbkr()[70],
-    ",
-  0x5001ed47u64 => "
-      SYSC_NS.vbtbkr()[71],
-    ",
-  0x5001ed48u64 => "
-      SYSC_NS.vbtbkr()[72],
-    ",
-  0x5001ed49u64 => "
-      SYSC_NS.vbtbkr()[73],
-    ",
-  0x5001ed4au64 => "
-      SYSC_NS.vbtbkr()[74],
-    ",
-  0x5001ed4bu64 => "
-      SYSC_NS.vbtbkr()[75],
-    ",
-  0x5001ed4cu64 => "
-      SYSC_NS.vbtbkr()[76],
-    ",
-  0x5001ed4du64 => "
-      SYSC_NS.vbtbkr()[77],
-    ",
-  0x5001ed4eu64 => "
-      SYSC_NS.vbtbkr()[78],
-    ",
-  0x5001ed4fu64 => "
-      SYSC_NS.vbtbkr()[79],
-    ",
-  0x5001ed50u64 => "
-      SYSC_NS.vbtbkr()[80],
-    ",
-  0x5001ed51u64 => "
-      SYSC_NS.vbtbkr()[81],
-    ",
-  0x5001ed52u64 => "
-      SYSC_NS.vbtbkr()[82],
-    ",
-  0x5001ed53u64 => "
-      SYSC_NS.vbtbkr()[83],
-    ",
-  0x5001ed54u64 => "
-      SYSC_NS.vbtbkr()[84],
-    ",
-  0x5001ed55u64 => "
-      SYSC_NS.vbtbkr()[85],
-    ",
-  0x5001ed56u64 => "
-      SYSC_NS.vbtbkr()[86],
-    ",
-  0x5001ed57u64 => "
-      SYSC_NS.vbtbkr()[87],
-    ",
-  0x5001ed58u64 => "
-      SYSC_NS.vbtbkr()[88],
-    ",
-  0x5001ed59u64 => "
-      SYSC_NS.vbtbkr()[89],
-    ",
-  0x5001ed5au64 => "
-      SYSC_NS.vbtbkr()[90],
-    ",
-  0x5001ed5bu64 => "
-      SYSC_NS.vbtbkr()[91],
-    ",
-  0x5001ed5cu64 => "
-      SYSC_NS.vbtbkr()[92],
-    ",
-  0x5001ed5du64 => "
-      SYSC_NS.vbtbkr()[93],
-    ",
-  0x5001ed5eu64 => "
-      SYSC_NS.vbtbkr()[94],
-    ",
-  0x5001ed5fu64 => "
-      SYSC_NS.vbtbkr()[95],
-    ",
-  0x5001ed60u64 => "
-      SYSC_NS.vbtbkr()[96],
-    ",
-  0x5001ed61u64 => "
-      SYSC_NS.vbtbkr()[97],
-    ",
-  0x5001ed62u64 => "
-      SYSC_NS.vbtbkr()[98],
-    ",
-  0x5001ed63u64 => "
-      SYSC_NS.vbtbkr()[99],
-    ",
-  0x5001ed64u64 => "
-      SYSC_NS.vbtbkr()[100],
-    ",
-  0x5001ed65u64 => "
-      SYSC_NS.vbtbkr()[101],
-    ",
-  0x5001ed66u64 => "
-      SYSC_NS.vbtbkr()[102],
-    ",
-  0x5001ed67u64 => "
-      SYSC_NS.vbtbkr()[103],
-    ",
-  0x5001ed68u64 => "
-      SYSC_NS.vbtbkr()[104],
-    ",
-  0x5001ed69u64 => "
-      SYSC_NS.vbtbkr()[105],
-    ",
-  0x5001ed6au64 => "
-      SYSC_NS.vbtbkr()[106],
-    ",
-  0x5001ed6bu64 => "
-      SYSC_NS.vbtbkr()[107],
-    ",
-  0x5001ed6cu64 => "
-      SYSC_NS.vbtbkr()[108],
-    ",
-  0x5001ed6du64 => "
-      SYSC_NS.vbtbkr()[109],
-    ",
-  0x5001ed6eu64 => "
-      SYSC_NS.vbtbkr()[110],
-    ",
-  0x5001ed6fu64 => "
-      SYSC_NS.vbtbkr()[111],
-    ",
-  0x5001ed70u64 => "
-      SYSC_NS.vbtbkr()[112],
-    ",
-  0x5001ed71u64 => "
-      SYSC_NS.vbtbkr()[113],
-    ",
-  0x5001ed72u64 => "
-      SYSC_NS.vbtbkr()[114],
-    ",
-  0x5001ed73u64 => "
-      SYSC_NS.vbtbkr()[115],
-    ",
-  0x5001ed74u64 => "
-      SYSC_NS.vbtbkr()[116],
-    ",
-  0x5001ed75u64 => "
-      SYSC_NS.vbtbkr()[117],
-    ",
-  0x5001ed76u64 => "
-      SYSC_NS.vbtbkr()[118],
-    ",
-  0x5001ed77u64 => "
-      SYSC_NS.vbtbkr()[119],
-    ",
-  0x5001ed78u64 => "
-      SYSC_NS.vbtbkr()[120],
-    ",
-  0x5001ed79u64 => "
-      SYSC_NS.vbtbkr()[121],
-    ",
-  0x5001ed7au64 => "
-      SYSC_NS.vbtbkr()[122],
-    ",
-  0x5001ed7bu64 => "
-      SYSC_NS.vbtbkr()[123],
-    ",
-  0x5001ed7cu64 => "
-      SYSC_NS.vbtbkr()[124],
-    ",
-  0x5001ed7du64 => "
-      SYSC_NS.vbtbkr()[125],
-    ",
-  0x5001ed7eu64 => "
-      SYSC_NS.vbtbkr()[126],
-    ",
-  0x5001ed7fu64 => "
-      SYSC_NS.vbtbkr()[127],
-    ",
-  0x5011b17cu64 => "
-      TSD_NS.tscdr(),
-    ",
-  0x5011c040u64 => "
-      FLAD_NS.fckmhz(),
-    ",
-  0x5011e010u64 => "
-      FACI_NS.fastat(),
-    ",
-  0x5011e014u64 => "
-      FACI_NS.faeint(),
-    ",
-  0x5011e018u64 => "
-      FACI_NS.frdyie(),
-    ",
-  0x5011e030u64 => "
-      FACI_NS.fsaddr(),
-    ",
-  0x5011e034u64 => "
-      FACI_NS.feaddr(),
-    ",
-  0x5011e078u64 => "
-      FACI_NS.fbprot0(),
-    ",
-  0x5011e080u64 => "
-      FACI_NS.fstatr(),
-    ",
-  0x5011e084u64 => "
-      FACI_NS.fentryr(),
-    ",
-  0x5011e08cu64 => "
-      FACI_NS.fsuinitr(),
-    ",
-  0x5011e0a0u64 => "
-      FACI_NS.fcmdr(),
-    ",
-  0x5011e0d0u64 => "
-      FACI_NS.fbccnt(),
-    ",
-  0x5011e0d4u64 => "
-      FACI_NS.fbcstat(),
-    ",
-  0x5011e0d8u64 => "
-      FACI_NS.fpsaddr(),
-    ",
-  0x5011e0dcu64 => "
-      FACI_NS.fsuasmon(),
-    ",
-  0x5011e0e0u64 => "
-      FACI_NS.fcpsr(),
-    ",
-  0x5011e0e4u64 => "
-      FACI_NS.fpckar(),
-    ",
-  0x50201000u64 => "
-      ELC_NS.elcr(),
-    ",
-  0x50201004u64 => "
-      ELC_NS.elsegr()[0],
-    ",
-  0x50201008u64 => "
-      ELC_NS.elsegr()[1],
-    ",
-  0x50201020u64 => "
-      ELC_NS.elsr()[0],
-    ",
-  0x50201024u64 => "
-      ELC_NS.elsr()[1],
-    ",
-  0x50201028u64 => "
-      ELC_NS.elsr()[2],
-    ",
-  0x5020102cu64 => "
-      ELC_NS.elsr()[3],
-    ",
-  0x50201030u64 => "
-      ELC_NS.elsr()[4],
-    ",
-  0x50201034u64 => "
-      ELC_NS.elsr()[5],
-    ",
-  0x50201038u64 => "
-      ELC_NS.elsr()[6],
-    ",
-  0x5020103cu64 => "
-      ELC_NS.elsr()[7],
-    ",
-  0x50201040u64 => "
-      ELC_NS.elsr()[8],
-    ",
-  0x50201044u64 => "
-      ELC_NS.elsr()[9],
-    ",
-  0x50201048u64 => "
-      ELC_NS.elsr()[10],
-    ",
-  0x5020104cu64 => "
-      ELC_NS.elsr()[11],
-    ",
-  0x50201050u64 => "
-      ELC_NS.elsr()[12],
-    ",
-  0x50201054u64 => "
-      ELC_NS.elsr()[13],
-    ",
-  0x50201058u64 => "
-      ELC_NS.elsr()[14],
-    ",
-  0x5020105cu64 => "
-      ELC_NS.elsr()[15],
-    ",
-  0x50201060u64 => "
-      ELC_NS.elsr()[16],
-    ",
-  0x50201064u64 => "
-      ELC_NS.elsr()[17],
-    ",
-  0x50201098u64 => "
-      ELC_NS.elsr30(),
-    ",
-  0x502010e0u64 => "
-      ELC_NS.elcsara(),
-    ",
-  0x502010e4u64 => "
-      ELC_NS.elcsarb(),
-    ",
-  0x502010f0u64 => "
-      ELC_NS.elcpara(),
-    ",
-  0x502010f4u64 => "
-      ELC_NS.elcparb(),
-    ",
-  0x50202000u64 => "
-      RTC_NS.r64cnt(),
-    ",
-  0x50202002u64 => "
-      RTC_NS.bcnt()[0],
-      RTC_NS.rseccnt(),
-    ",
-  0x50202004u64 => "
-      RTC_NS.bcnt()[1],
-      RTC_NS.rmincnt(),
-    ",
-  0x50202006u64 => "
-      RTC_NS.bcnt()[2],
-      RTC_NS.rhrcnt(),
-    ",
-  0x50202008u64 => "
-      RTC_NS.bcnt()[3],
-      RTC_NS.rwkcnt(),
-    ",
-  0x5020200au64 => "
-      RTC_NS.rdaycnt(),
-    ",
-  0x5020200cu64 => "
-      RTC_NS.rmoncnt(),
-    ",
-  0x5020200eu64 => "
-      RTC_NS.ryrcnt(),
-    ",
-  0x50202010u64 => "
-      RTC_NS.bcntar()[0],
-      RTC_NS.rsecar(),
-    ",
-  0x50202012u64 => "
-      RTC_NS.bcntar()[1],
-      RTC_NS.rminar(),
-    ",
-  0x50202014u64 => "
-      RTC_NS.bcntar()[2],
-      RTC_NS.rhrar(),
-    ",
-  0x50202016u64 => "
-      RTC_NS.bcntar()[3],
-      RTC_NS.rwkar(),
-    ",
-  0x50202018u64 => "
-      RTC_NS.bcntaer()[0],
-      RTC_NS.rdayar(),
-    ",
-  0x5020201au64 => "
-      RTC_NS.bcntaer()[1],
-      RTC_NS.rmonar(),
-    ",
-  0x5020201cu64 => "
-      RTC_NS.bcntaer()[2],
-      RTC_NS.ryrar(),
-    ",
-  0x5020201eu64 => "
-      RTC_NS.bcntaer()[3],
-      RTC_NS.ryraren(),
-    ",
-  0x50202022u64 => "
-      RTC_NS.rcr1(),
-    ",
-  0x50202024u64 => "
-      RTC_NS.rcr2(),
-      RTC_NS.rcr2_bcnt(),
-    ",
-  0x50202028u64 => "
-      RTC_NS.rcr4(),
-    ",
-  0x5020202au64 => "
-      RTC_NS.rfrh(),
-    ",
-  0x5020202cu64 => "
-      RTC_NS.rfrl(),
-    ",
-  0x5020202eu64 => "
-      RTC_NS.radj(),
-    ",
-  0x50202040u64 => "
-      RTC_NS.rtccr()[0],
-    ",
-  0x50202042u64 => "
-      RTC_NS.rtccr()[1],
-    ",
-  0x50202044u64 => "
-      RTC_NS.rtccr()[2],
-    ",
-  0x50202052u64 => "
-      RTC_NS.bcnt0cp()[0],
-      RTC_NS.rseccp()[0],
-    ",
-  0x50202062u64 => "
-      RTC_NS.bcnt0cp()[1],
-      RTC_NS.rseccp()[1],
-    ",
-  0x50202072u64 => "
-      RTC_NS.bcnt0cp()[2],
-      RTC_NS.rseccp()[2],
-    ",
-  0x50202054u64 => "
-      RTC_NS.bcnt1cp()[0],
-      RTC_NS.rmincp()[0],
-    ",
-  0x50202064u64 => "
-      RTC_NS.bcnt1cp()[1],
-      RTC_NS.rmincp()[1],
-    ",
-  0x50202074u64 => "
-      RTC_NS.bcnt1cp()[2],
-      RTC_NS.rmincp()[2],
-    ",
-  0x50202056u64 => "
-      RTC_NS.bcnt2cp()[0],
-      RTC_NS.rhrcp()[0],
-    ",
-  0x50202066u64 => "
-      RTC_NS.bcnt2cp()[1],
-      RTC_NS.rhrcp()[1],
-    ",
-  0x50202076u64 => "
-      RTC_NS.bcnt2cp()[2],
-      RTC_NS.rhrcp()[2],
-    ",
-  0x5020205au64 => "
-      RTC_NS.bcnt3cp()[0],
-      RTC_NS.rdaycp()[0],
-    ",
-  0x5020206au64 => "
-      RTC_NS.bcnt3cp()[1],
-      RTC_NS.rdaycp()[1],
-    ",
-  0x5020207au64 => "
-      RTC_NS.bcnt3cp()[2],
-      RTC_NS.rdaycp()[2],
-    ",
-  0x5020205cu64 => "
-      RTC_NS.rmoncp()[0],
-    ",
-  0x5020206cu64 => "
-      RTC_NS.rmoncp()[1],
-    ",
-  0x5020207cu64 => "
-      RTC_NS.rmoncp()[2],
-    ",
-  0x50202200u64 => "
-      IWDT_NS.iwdtrr(),
-    ",
-  0x50202202u64 => "
-      IWDT_NS.iwdtcr(),
-    ",
-  0x50202204u64 => "
-      IWDT_NS.iwdtsr(),
-    ",
-  0x50202206u64 => "
-      IWDT_NS.iwdtrcr(),
-    ",
-  0x50202208u64 => "
-      IWDT_NS.iwdtcstpr(),
-    ",
-  0x50202400u64 => "
-      CAC_NS.cacr0(),
-    ",
-  0x50202401u64 => "
-      CAC_NS.cacr1(),
-    ",
-  0x50202402u64 => "
-      CAC_NS.cacr2(),
-    ",
-  0x50202403u64 => "
-      CAC_NS.caicr(),
-    ",
-  0x50202404u64 => "
-      CAC_NS.castr(),
-    ",
-  0x50202406u64 => "
-      CAC_NS.caulvr(),
-    ",
-  0x50202408u64 => "
-      CAC_NS.callvr(),
-    ",
-  0x5020240au64 => "
-      CAC_NS.cacntbr(),
-    ",
-  0x50202600u64 => "
-      WDT_0_NS.wdtrr(),
-    ",
-  0x50202602u64 => "
-      WDT_0_NS.wdtcr(),
-    ",
-  0x50202604u64 => "
-      WDT_0_NS.wdtsr(),
-    ",
-  0x50202606u64 => "
-      WDT_0_NS.wdtrcr(),
-    ",
-  0x50202608u64 => "
-      WDT_0_NS.wdtcstpr(),
-    ",
-  0x50203000u64 => "
-      MSTP_NS.mstpcra(),
-    ",
-  0x50203004u64 => "
-      MSTP_NS.mstpcrb(),
-    ",
-  0x50203008u64 => "
-      MSTP_NS.mstpcrc(),
-    ",
-  0x5020300cu64 => "
-      MSTP_NS.mstpcrd(),
-    ",
-  0x50203010u64 => "
-      MSTP_NS.mstpcre(),
-    ",
-  0x50204004u64 => "
-      PSCU_NS.psarb(),
-    ",
-  0x50204008u64 => "
-      PSCU_NS.psarc(),
-    ",
-  0x5020400cu64 => "
-      PSCU_NS.psard(),
-    ",
-  0x50204010u64 => "
-      PSCU_NS.psare(),
-    ",
-  0x50204014u64 => "
-      PSCU_NS.mssar(),
-    ",
-  0x5020401cu64 => "
-      PSCU_NS.pparb(),
-    ",
-  0x50204020u64 => "
-      PSCU_NS.pparc(),
-    ",
-  0x50204024u64 => "
-      PSCU_NS.ppard(),
-    ",
-  0x50204028u64 => "
-      PSCU_NS.ppare(),
-    ",
-  0x5020402cu64 => "
-      PSCU_NS.mspar(),
-    ",
-  0x50204030u64 => "
-      PSCU_NS.cfsamona(),
-    ",
-  0x50204034u64 => "
-      PSCU_NS.dfsamon(),
-    ",
-  0x50204038u64 => "
-      PSCU_NS.dlmmon(),
-    ",
-  0x50212000u64 => "
-      POEG_NS.poegga(),
-    ",
-  0x50212100u64 => "
-      POEG_NS.poeggb(),
-    ",
-  0x50212200u64 => "
-      POEG_NS.poeggc(),
-    ",
-  0x50212300u64 => "
-      POEG_NS.poeggd(),
-    ",
-  0x50220000u64 => "
-      ULPT_0_NS.ulptcnt(),
-    ",
-  0x50220004u64 => "
-      ULPT_0_NS.ulptcma(),
-    ",
-  0x50220008u64 => "
-      ULPT_0_NS.ulptcmb(),
-    ",
-  0x5022000cu64 => "
-      ULPT_0_NS.ulptcr(),
-    ",
-  0x5022000du64 => "
-      ULPT_0_NS.ulptmr1(),
-    ",
-  0x5022000eu64 => "
-      ULPT_0_NS.ulptmr2(),
-    ",
-  0x5022000fu64 => "
-      ULPT_0_NS.ulptmr3(),
-    ",
-  0x50220010u64 => "
-      ULPT_0_NS.ulptioc(),
-    ",
-  0x50220011u64 => "
-      ULPT_0_NS.ulptisr(),
-    ",
-  0x50220012u64 => "
-      ULPT_0_NS.ulptcmsr(),
-    ",
-  0x50221000u64 => "
-      AGT_0_NS.agt(),
-    ",
-  0x50221002u64 => "
-      AGT_0_NS.agtcma(),
-    ",
-  0x50221004u64 => "
-      AGT_0_NS.agtcmb(),
-    ",
-  0x50221008u64 => "
-      AGT_0_NS.agtcr(),
-    ",
-  0x50221009u64 => "
-      AGT_0_NS.agtmr1(),
-    ",
-  0x5022100au64 => "
-      AGT_0_NS.agtmr2(),
-    ",
-  0x5022100cu64 => "
-      AGT_0_NS.agtioc(),
-    ",
-  0x5022100du64 => "
-      AGT_0_NS.agtisr(),
-    ",
-  0x5022100eu64 => "
-      AGT_0_NS.agtcmsr(),
-    ",
-  0x5022100fu64 => "
-      AGT_0_NS.agtiosel(),
-    ",
-  0x50235000u64 => "
-      TSN_NS.tscr(),
-    ",
-  0x50236000u64 => "
-      ACMPHS_0_NS.cmpctl(),
-    ",
-  0x50236004u64 => "
-      ACMPHS_0_NS.cmpsel0(),
-    ",
-  0x50236008u64 => "
-      ACMPHS_0_NS.cmpsel1(),
-    ",
-  0x5023600cu64 => "
-      ACMPHS_0_NS.cmpmon(),
-    ",
-  0x50236010u64 => "
-      ACMPHS_0_NS.cpioc(),
-    ",
-  0x50236040u64 => "
-      ACMPHS_0_NS.cpintctl(),
-    ",
-  0x50236044u64 => "
-      ACMPHS_0_NS.cpmskctl(),
-    ",
-  0x50250000u64 => "
-      USBFS_NS.syscfg(),
-    ",
-  0x50250004u64 => "
-      USBFS_NS.syssts0(),
-    ",
-  0x50250008u64 => "
-      USBFS_NS.dvstctr0(),
-    ",
-  0x50250014u64 => "
-      USBFS_NS.cfifo(),
-      USBFS_NS.cfifol(),
-    ",
-  0x50250018u64 => "
-      USBFS_NS.dfifo()[0],
-      USBFS_NS.dfifol()[0],
-    ",
-  0x5025001cu64 => "
-      USBFS_NS.dfifo()[1],
-      USBFS_NS.dfifol()[1],
-    ",
-  0x50250020u64 => "
-      USBFS_NS.cfifosel(),
-    ",
-  0x50250022u64 => "
-      USBFS_NS.cfifoctr(),
-    ",
-  0x50250028u64 => "
-      USBFS_NS.dfifosel()[0],
-    ",
-  0x5025002cu64 => "
-      USBFS_NS.dfifosel()[1],
-    ",
-  0x5025002au64 => "
-      USBFS_NS.dfifoctr()[0],
-    ",
-  0x5025002eu64 => "
-      USBFS_NS.dfifoctr()[1],
-    ",
-  0x50250030u64 => "
-      USBFS_NS.intenb0(),
-    ",
-  0x50250032u64 => "
-      USBFS_NS.intenb1(),
-    ",
-  0x50250036u64 => "
-      USBFS_NS.brdyenb(),
-    ",
-  0x50250038u64 => "
-      USBFS_NS.nrdyenb(),
-    ",
-  0x5025003au64 => "
-      USBFS_NS.bempenb(),
-    ",
-  0x5025003cu64 => "
-      USBFS_NS.sofcfg(),
-    ",
-  0x50250040u64 => "
-      USBFS_NS.intsts0(),
-    ",
-  0x50250042u64 => "
-      USBFS_NS.intsts1(),
-    ",
-  0x50250046u64 => "
-      USBFS_NS.brdysts(),
-    ",
-  0x50250048u64 => "
-      USBFS_NS.nrdysts(),
-    ",
-  0x5025004au64 => "
-      USBFS_NS.bempsts(),
-    ",
-  0x5025004cu64 => "
-      USBFS_NS.frmnum(),
-    ",
-  0x5025004eu64 => "
-      USBFS_NS.dvchgr(),
-    ",
-  0x50250050u64 => "
-      USBFS_NS.usbaddr(),
-    ",
-  0x50250054u64 => "
-      USBFS_NS.usbreq(),
-    ",
-  0x50250056u64 => "
-      USBFS_NS.usbval(),
-    ",
-  0x50250058u64 => "
-      USBFS_NS.usbindx(),
-    ",
-  0x5025005au64 => "
-      USBFS_NS.usbleng(),
-    ",
-  0x5025005cu64 => "
-      USBFS_NS.dcpcfg(),
-    ",
-  0x5025005eu64 => "
-      USBFS_NS.dcpmaxp(),
-    ",
-  0x50250060u64 => "
-      USBFS_NS.dcpctr(),
-    ",
-  0x50250064u64 => "
-      USBFS_NS.pipesel(),
-    ",
-  0x50250068u64 => "
-      USBFS_NS.pipecfg(),
-    ",
-  0x5025006cu64 => "
-      USBFS_NS.pipemaxp(),
-    ",
-  0x5025006eu64 => "
-      USBFS_NS.pipeperi(),
-    ",
-  0x50250078u64 => "
-      USBFS_NS.pipectr()[4],
-    ",
-  0x5025007au64 => "
-      USBFS_NS.pipectr()[0],
-    ",
-  0x5025007cu64 => "
-      USBFS_NS.pipectr()[1],
-    ",
-  0x5025007eu64 => "
-      USBFS_NS.pipectr()[2],
-    ",
-  0x50250080u64 => "
-      USBFS_NS.pipectr()[3],
-    ",
-  0x50250090u64 => "
-      USBFS_NS.pipetre()[0],
-    ",
-  0x50250094u64 => "
-      USBFS_NS.pipetre()[1],
-    ",
-  0x50250098u64 => "
-      USBFS_NS.pipetre()[2],
-    ",
-  0x5025009cu64 => "
-      USBFS_NS.pipetre()[3],
-    ",
-  0x502500a0u64 => "
-      USBFS_NS.pipetre()[4],
-    ",
-  0x50250092u64 => "
-      USBFS_NS.pipetrn()[0],
-    ",
-  0x50250096u64 => "
-      USBFS_NS.pipetrn()[1],
-    ",
-  0x5025009au64 => "
-      USBFS_NS.pipetrn()[2],
-    ",
-  0x5025009eu64 => "
-      USBFS_NS.pipetrn()[3],
-    ",
-  0x502500a2u64 => "
-      USBFS_NS.pipetrn()[4],
-    ",
-  0x502500d0u64 => "
-      USBFS_NS.devadd()[0],
-    ",
-  0x502500d2u64 => "
-      USBFS_NS.devadd()[1],
-    ",
-  0x502500d4u64 => "
-      USBFS_NS.devadd()[2],
-    ",
-  0x502500d6u64 => "
-      USBFS_NS.devadd()[3],
-    ",
-  0x502500d8u64 => "
-      USBFS_NS.devadd()[4],
-    ",
-  0x502500dau64 => "
-      USBFS_NS.devadd()[5],
-    ",
-  0x50250400u64 => "
-      USBFS_NS.dpusr0r(),
-    ",
-  0x50250404u64 => "
-      USBFS_NS.dpusr1r(),
-    ",
-  0x50252000u64 => "
-      SDHI_0_NS.sd_cmd(),
-    ",
-  0x50252008u64 => "
-      SDHI_0_NS.sd_arg(),
-    ",
-  0x5025200cu64 => "
-      SDHI_0_NS.sd_arg1(),
-    ",
-  0x50252010u64 => "
-      SDHI_0_NS.sd_stop(),
-    ",
-  0x50252014u64 => "
-      SDHI_0_NS.sd_seccnt(),
-    ",
-  0x50252018u64 => "
-      SDHI_0_NS.sd_rsp10(),
-    ",
-  0x5025201cu64 => "
-      SDHI_0_NS.sd_rsp1(),
-    ",
-  0x50252020u64 => "
-      SDHI_0_NS.sd_rsp32(),
-    ",
-  0x50252024u64 => "
-      SDHI_0_NS.sd_rsp3(),
-    ",
-  0x50252028u64 => "
-      SDHI_0_NS.sd_rsp54(),
-    ",
-  0x5025202cu64 => "
-      SDHI_0_NS.sd_rsp5(),
-    ",
-  0x50252030u64 => "
-      SDHI_0_NS.sd_rsp76(),
-    ",
-  0x50252034u64 => "
-      SDHI_0_NS.sd_rsp7(),
-    ",
-  0x50252038u64 => "
-      SDHI_0_NS.sd_info1(),
-    ",
-  0x5025203cu64 => "
-      SDHI_0_NS.sd_info2(),
-    ",
-  0x50252040u64 => "
-      SDHI_0_NS.sd_info1_mask(),
-    ",
-  0x50252044u64 => "
-      SDHI_0_NS.sd_info2_mask(),
-    ",
-  0x50252048u64 => "
-      SDHI_0_NS.sd_clk_ctrl(),
-    ",
-  0x5025204cu64 => "
-      SDHI_0_NS.sd_size(),
-    ",
-  0x50252050u64 => "
-      SDHI_0_NS.sd_option(),
-    ",
-  0x50252058u64 => "
-      SDHI_0_NS.sd_err_sts1(),
-    ",
-  0x5025205cu64 => "
-      SDHI_0_NS.sd_err_sts2(),
-    ",
-  0x50252060u64 => "
-      SDHI_0_NS.sd_buf0(),
-    ",
-  0x50252068u64 => "
-      SDHI_0_NS.sdio_mode(),
-    ",
-  0x5025206cu64 => "
-      SDHI_0_NS.sdio_info1(),
-    ",
-  0x50252070u64 => "
-      SDHI_0_NS.sdio_info1_mask(),
-    ",
-  0x502521b0u64 => "
-      SDHI_0_NS.sd_dmaen(),
-    ",
-  0x502521c0u64 => "
-      SDHI_0_NS.soft_rst(),
-    ",
-  0x502521ccu64 => "
-      SDHI_0_NS.sdif_mode(),
-    ",
-  0x502521e0u64 => "
-      SDHI_0_NS.ext_swap(),
-    ",
-  0x5025d000u64 => "
-      SSIE_0_NS.ssicr(),
-    ",
-  0x5025d004u64 => "
-      SSIE_0_NS.ssisr(),
-    ",
-  0x5025d010u64 => "
-      SSIE_0_NS.ssifcr(),
-    ",
-  0x5025d014u64 => "
-      SSIE_0_NS.ssifsr(),
-    ",
-  0x5025d018u64 => "
-      SSIE_0_NS.ssiftdr(),
-    ",
-  0x5025d01cu64 => "
-      SSIE_0_NS.ssifrdr(),
-    ",
-  0x5025d020u64 => "
-      SSIE_0_NS.ssiofr(),
-    ",
-  0x5025d024u64 => "
-      SSIE_0_NS.ssiscr(),
-    ",
-  0x5025e000u64 => "
-      IIC_0_NS.iccr1(),
-    ",
-  0x5025e001u64 => "
-      IIC_0_NS.iccr2(),
-    ",
-  0x5025e002u64 => "
-      IIC_0_NS.icmr1(),
-    ",
-  0x5025e003u64 => "
-      IIC_0_NS.icmr2(),
-    ",
-  0x5025e004u64 => "
-      IIC_0_NS.icmr3(),
-    ",
-  0x5025e005u64 => "
-      IIC_0_NS.icfer(),
-    ",
-  0x5025e006u64 => "
-      IIC_0_NS.icser(),
-    ",
-  0x5025e007u64 => "
-      IIC_0_NS.icier(),
-    ",
-  0x5025e008u64 => "
-      IIC_0_NS.icsr1(),
-    ",
-  0x5025e009u64 => "
-      IIC_0_NS.icsr2(),
-    ",
-  0x5025e00au64 => "
-      IIC_0_NS.sarl()[0],
-    ",
-  0x5025e00cu64 => "
-      IIC_0_NS.sarl()[1],
-    ",
-  0x5025e00eu64 => "
-      IIC_0_NS.sarl()[2],
-    ",
-  0x5025e00bu64 => "
-      IIC_0_NS.saru()[0],
-    ",
-  0x5025e00du64 => "
-      IIC_0_NS.saru()[1],
-    ",
-  0x5025e00fu64 => "
-      IIC_0_NS.saru()[2],
-    ",
-  0x5025e010u64 => "
-      IIC_0_NS.icbrl(),
-    ",
-  0x5025e011u64 => "
-      IIC_0_NS.icbrh(),
-    ",
-  0x5025e012u64 => "
-      IIC_0_NS.icdrt(),
-    ",
-  0x5025e013u64 => "
-      IIC_0_NS.icdrr(),
-    ",
-  0x5025e016u64 => "
-      IIC_0_WU_NS.icwur(),
-    ",
-  0x5025e017u64 => "
-      IIC_0_WU_NS.icwur2(),
-    ",
-  0x50268000u64 => "
-      OSPI_0_B_NS.wrapcfg(),
-    ",
-  0x50268004u64 => "
-      OSPI_0_B_NS.comcfg(),
-    ",
-  0x50268008u64 => "
-      OSPI_0_B_NS.bmcfgch()[0],
-    ",
-  0x5026800cu64 => "
-      OSPI_0_B_NS.bmcfgch()[1],
-    ",
-  0x50268010u64 => "
-      OSPI_0_B_NS.cmcfg0cs()[0],
-    ",
-  0x50268020u64 => "
-      OSPI_0_B_NS.cmcfg0cs()[1],
-    ",
-  0x50268014u64 => "
-      OSPI_0_B_NS.cmcfg1cs()[0],
-    ",
-  0x50268024u64 => "
-      OSPI_0_B_NS.cmcfg1cs()[1],
-    ",
-  0x50268018u64 => "
-      OSPI_0_B_NS.cmcfg2cs()[0],
-    ",
-  0x50268028u64 => "
-      OSPI_0_B_NS.cmcfg2cs()[1],
-    ",
-  0x50268050u64 => "
-      OSPI_0_B_NS.liocfgcs()[0],
-    ",
-  0x50268054u64 => "
-      OSPI_0_B_NS.liocfgcs()[1],
-    ",
-  0x50268060u64 => "
-      OSPI_0_B_NS.bmctl0(),
-    ",
-  0x50268064u64 => "
-      OSPI_0_B_NS.bmctl1(),
-    ",
-  0x50268068u64 => "
-      OSPI_0_B_NS.cmctlch()[0],
-    ",
-  0x5026806cu64 => "
-      OSPI_0_B_NS.cmctlch()[1],
-    ",
-  0x50268070u64 => "
-      OSPI_0_B_NS.cdctl0(),
-    ",
-  0x50268074u64 => "
-      OSPI_0_B_NS.cdctl1(),
-    ",
-  0x50268078u64 => "
-      OSPI_0_B_NS.cdctl2(),
-    ",
-  0x50268080u64 => "
-      OSPI_0_B_NS.cdtbuf()[0],
-    ",
-  0x50268090u64 => "
-      OSPI_0_B_NS.cdtbuf()[1],
-    ",
-  0x502680a0u64 => "
-      OSPI_0_B_NS.cdtbuf()[2],
-    ",
-  0x502680b0u64 => "
-      OSPI_0_B_NS.cdtbuf()[3],
-    ",
-  0x50268084u64 => "
-      OSPI_0_B_NS.cdabuf()[0],
-    ",
-  0x50268094u64 => "
-      OSPI_0_B_NS.cdabuf()[1],
-    ",
-  0x502680a4u64 => "
-      OSPI_0_B_NS.cdabuf()[2],
-    ",
-  0x502680b4u64 => "
-      OSPI_0_B_NS.cdabuf()[3],
-    ",
-  0x50268088u64 => "
-      OSPI_0_B_NS.cdd0buf()[0],
-    ",
-  0x50268098u64 => "
-      OSPI_0_B_NS.cdd0buf()[1],
-    ",
-  0x502680a8u64 => "
-      OSPI_0_B_NS.cdd0buf()[2],
-    ",
-  0x502680b8u64 => "
-      OSPI_0_B_NS.cdd0buf()[3],
-    ",
-  0x5026808cu64 => "
-      OSPI_0_B_NS.cdd1buf()[0],
-    ",
-  0x5026809cu64 => "
-      OSPI_0_B_NS.cdd1buf()[1],
-    ",
-  0x502680acu64 => "
-      OSPI_0_B_NS.cdd1buf()[2],
-    ",
-  0x502680bcu64 => "
-      OSPI_0_B_NS.cdd1buf()[3],
-    ",
-  0x50268100u64 => "
-      OSPI_0_B_NS.lpctl0(),
-    ",
-  0x50268104u64 => "
-      OSPI_0_B_NS.lpctl1(),
-    ",
-  0x50268108u64 => "
-      OSPI_0_B_NS.lioctl(),
-    ",
-  0x50268130u64 => "
-      OSPI_0_B_NS.ccctl0cs()[0],
-    ",
-  0x50268150u64 => "
-      OSPI_0_B_NS.ccctl0cs()[1],
-    ",
-  0x50268134u64 => "
-      OSPI_0_B_NS.ccctl1cs()[0],
-    ",
-  0x50268154u64 => "
-      OSPI_0_B_NS.ccctl1cs()[1],
-    ",
-  0x50268138u64 => "
-      OSPI_0_B_NS.ccctl2cs()[0],
-    ",
-  0x50268158u64 => "
-      OSPI_0_B_NS.ccctl2cs()[1],
-    ",
-  0x5026813cu64 => "
-      OSPI_0_B_NS.ccctl3cs()[0],
-    ",
-  0x5026815cu64 => "
-      OSPI_0_B_NS.ccctl3cs()[1],
-    ",
-  0x50268140u64 => "
-      OSPI_0_B_NS.ccctl4cs()[0],
-    ",
-  0x50268160u64 => "
-      OSPI_0_B_NS.ccctl4cs()[1],
-    ",
-  0x50268144u64 => "
-      OSPI_0_B_NS.ccctl5cs()[0],
-    ",
-  0x50268164u64 => "
-      OSPI_0_B_NS.ccctl5cs()[1],
-    ",
-  0x50268148u64 => "
-      OSPI_0_B_NS.ccctl6cs()[0],
-    ",
-  0x50268168u64 => "
-      OSPI_0_B_NS.ccctl6cs()[1],
-    ",
-  0x5026814cu64 => "
-      OSPI_0_B_NS.ccctl7cs()[0],
-    ",
-  0x5026816cu64 => "
-      OSPI_0_B_NS.ccctl7cs()[1],
-    ",
-  0x50268184u64 => "
-      OSPI_0_B_NS.comstt(),
-    ",
-  0x50268188u64 => "
-      OSPI_0_B_NS.casttcs()[0],
-    ",
-  0x5026818cu64 => "
-      OSPI_0_B_NS.casttcs()[1],
-    ",
-  0x50268190u64 => "
-      OSPI_0_B_NS.ints(),
-    ",
-  0x50268194u64 => "
-      OSPI_0_B_NS.intc(),
-    ",
-  0x50268198u64 => "
-      OSPI_0_B_NS.inte(),
-    ",
-  0x50310000u64 => "
-      CRC_NS.crccr0(),
-    ",
-  0x50310001u64 => "
-      CRC_NS.crccr1(),
-    ",
-  0x50310004u64 => "
-      CRC_NS.crcdir(),
-      CRC_NS.crcdir_by(),
-    ",
-  0x50310008u64 => "
-      CRC_NS.crcdor(),
-      CRC_NS.crcdor_ha(),
-      CRC_NS.crcdor_by(),
-    ",
-  0x5031000cu64 => "
-      CRC_NS.crcsar(),
-    ",
-  0x50311000u64 => "
-      DOC_B_NS.docr(),
-    ",
-  0x50311004u64 => "
-      DOC_B_NS.dosr(),
-    ",
-  0x50311008u64 => "
-      DOC_B_NS.doscr(),
-    ",
-  0x5031100cu64 => "
-      DOC_B_NS.dodir(),
-    ",
-  0x50311010u64 => "
-      DOC_B_NS.dodsr0(),
-    ",
-  0x50311014u64 => "
-      DOC_B_NS.dodsr1(),
-    ",
-  0x50322000u64 => "
-      GPT_320_NS.gtwp(),
-    ",
-  0x50322004u64 => "
-      GPT_320_NS.gtstr(),
-    ",
-  0x50322008u64 => "
-      GPT_320_NS.gtstp(),
-    ",
-  0x5032200cu64 => "
-      GPT_320_NS.gtclr(),
-    ",
-  0x50322010u64 => "
-      GPT_320_NS.gtssr(),
-    ",
-  0x50322014u64 => "
-      GPT_320_NS.gtpsr(),
-    ",
-  0x50322018u64 => "
-      GPT_320_NS.gtcsr(),
-    ",
-  0x5032201cu64 => "
-      GPT_320_NS.gtupsr(),
-    ",
-  0x50322020u64 => "
-      GPT_320_NS.gtdnsr(),
-    ",
-  0x50322024u64 => "
-      GPT_320_NS.gticasr(),
-    ",
-  0x50322028u64 => "
-      GPT_320_NS.gticbsr(),
-    ",
-  0x5032202cu64 => "
-      GPT_320_NS.gtcr(),
-    ",
-  0x50322030u64 => "
-      GPT_320_NS.gtuddtyc(),
-    ",
-  0x50322034u64 => "
-      GPT_320_NS.gtior(),
-    ",
-  0x50322038u64 => "
-      GPT_320_NS.gtintad(),
-    ",
-  0x5032203cu64 => "
-      GPT_320_NS.gtst(),
-    ",
-  0x50322040u64 => "
-      GPT_320_NS.gtber(),
-    ",
-  0x50322048u64 => "
-      GPT_320_NS.gtcnt(),
-    ",
-  0x5032204cu64 => "
-      GPT_320_NS.gtccra(),
-    ",
-  0x50322050u64 => "
-      GPT_320_NS.gtccrb(),
-    ",
-  0x50322054u64 => "
-      GPT_320_NS.gtccrc(),
-    ",
-  0x50322058u64 => "
-      GPT_320_NS.gtccre(),
-    ",
-  0x5032205cu64 => "
-      GPT_320_NS.gtccrd(),
-    ",
-  0x50322060u64 => "
-      GPT_320_NS.gtccrf(),
-    ",
-  0x50322064u64 => "
-      GPT_320_NS.gtpr(),
-    ",
-  0x50322068u64 => "
-      GPT_320_NS.gtpbr(),
-    ",
-  0x50322070u64 => "
-      GPT_320_NS.gtadtra(),
-    ",
-  0x50322074u64 => "
-      GPT_320_NS.gtadtbra(),
-    ",
-  0x50322078u64 => "
-      GPT_320_NS.gtadtdbra(),
-    ",
-  0x5032207cu64 => "
-      GPT_320_NS.gtadtrb(),
-    ",
-  0x50322080u64 => "
-      GPT_320_NS.gtadtbrb(),
-    ",
-  0x50322084u64 => "
-      GPT_320_NS.gtadtdbrb(),
-    ",
-  0x50322088u64 => "
-      GPT_320_NS.gtdtcr(),
-    ",
-  0x5032208cu64 => "
-      GPT_320_NS.gtdvu(),
-    ",
-  0x503220a4u64 => "
-      GPT_320_NS.gtadsmr(),
-    ",
-  0x503220b8u64 => "
-      GPT_320_NS.gticlf(),
-    ",
-  0x503220bcu64 => "
-      GPT_320_NS.gtpc(),
-    ",
-  0x503220d0u64 => "
-      GPT_320_NS.gtsecsr(),
-    ",
-  0x503220d4u64 => "
-      GPT_320_NS.gtsecr(),
-    ",
-  0x50322800u64 => "
-      GPT_168_NS.gtwp(),
-    ",
-  0x50322804u64 => "
-      GPT_168_NS.gtstr(),
-    ",
-  0x50322808u64 => "
-      GPT_168_NS.gtstp(),
-    ",
-  0x5032280cu64 => "
-      GPT_168_NS.gtclr(),
-    ",
-  0x50322810u64 => "
-      GPT_168_NS.gtssr(),
-    ",
-  0x50322814u64 => "
-      GPT_168_NS.gtpsr(),
-    ",
-  0x50322818u64 => "
-      GPT_168_NS.gtcsr(),
-    ",
-  0x5032281cu64 => "
-      GPT_168_NS.gtupsr(),
-    ",
-  0x50322820u64 => "
-      GPT_168_NS.gtdnsr(),
-    ",
-  0x50322824u64 => "
-      GPT_168_NS.gticasr(),
-    ",
-  0x50322828u64 => "
-      GPT_168_NS.gticbsr(),
-    ",
-  0x5032282cu64 => "
-      GPT_168_NS.gtcr(),
-    ",
-  0x50322830u64 => "
-      GPT_168_NS.gtuddtyc(),
-    ",
-  0x50322834u64 => "
-      GPT_168_NS.gtior(),
-    ",
-  0x50322838u64 => "
-      GPT_168_NS.gtintad(),
-    ",
-  0x5032283cu64 => "
-      GPT_168_NS.gtst(),
-    ",
-  0x50322840u64 => "
-      GPT_168_NS.gtber(),
-    ",
-  0x50322848u64 => "
-      GPT_168_NS.gtcnt(),
-    ",
-  0x5032284cu64 => "
-      GPT_168_NS.gtccra(),
-    ",
-  0x50322850u64 => "
-      GPT_168_NS.gtccrb(),
-    ",
-  0x50322854u64 => "
-      GPT_168_NS.gtccrc(),
-    ",
-  0x50322858u64 => "
-      GPT_168_NS.gtccre(),
-    ",
-  0x5032285cu64 => "
-      GPT_168_NS.gtccrd(),
-    ",
-  0x50322860u64 => "
-      GPT_168_NS.gtccrf(),
-    ",
-  0x50322864u64 => "
-      GPT_168_NS.gtpr(),
-    ",
-  0x50322868u64 => "
-      GPT_168_NS.gtpbr(),
-    ",
-  0x50322870u64 => "
-      GPT_168_NS.gtadtra(),
-    ",
-  0x50322874u64 => "
-      GPT_168_NS.gtadtbra(),
-    ",
-  0x50322878u64 => "
-      GPT_168_NS.gtadtdbra(),
-    ",
-  0x5032287cu64 => "
-      GPT_168_NS.gtadtrb(),
-    ",
-  0x50322880u64 => "
-      GPT_168_NS.gtadtbrb(),
-    ",
-  0x50322884u64 => "
-      GPT_168_NS.gtadtdbrb(),
-    ",
-  0x50322888u64 => "
-      GPT_168_NS.gtdtcr(),
-    ",
-  0x5032288cu64 => "
-      GPT_168_NS.gtdvu(),
-    ",
-  0x503228a4u64 => "
-      GPT_168_NS.gtadsmr(),
-    ",
-  0x503228b8u64 => "
-      GPT_168_NS.gticlf(),
-    ",
-  0x503228bcu64 => "
-      GPT_168_NS.gtpc(),
-    ",
-  0x503228d0u64 => "
-      GPT_168_NS.gtsecsr(),
-    ",
-  0x503228d4u64 => "
-      GPT_168_NS.gtsecr(),
-    ",
-  0x50323f00u64 => "
-      GPT_OPS_NS.opscr(),
-    ",
-  0x50332000u64 => "
-      ADC_120_NS.adcsr(),
-    ",
-  0x50332004u64 => "
-      ADC_120_NS.adansa0(),
-    ",
-  0x50332006u64 => "
-      ADC_120_NS.adansa1(),
-    ",
-  0x50332008u64 => "
-      ADC_120_NS.adads0(),
-    ",
-  0x5033200au64 => "
-      ADC_120_NS.adads1(),
-    ",
-  0x5033200cu64 => "
-      ADC_120_NS.adadc(),
-    ",
-  0x5033200eu64 => "
-      ADC_120_NS.adcer(),
-    ",
-  0x50332010u64 => "
-      ADC_120_NS.adstrgr(),
-    ",
-  0x50332012u64 => "
-      ADC_120_NS.adexicr(),
-    ",
-  0x50332014u64 => "
-      ADC_120_NS.adansb0(),
-    ",
-  0x50332016u64 => "
-      ADC_120_NS.adansb1(),
-    ",
-  0x50332018u64 => "
-      ADC_120_NS.addbldr(),
-    ",
-  0x5033201au64 => "
-      ADC_120_NS.adtsdr(),
-    ",
-  0x5033201cu64 => "
-      ADC_120_NS.adocdr(),
-    ",
-  0x5033201eu64 => "
-      ADC_120_NS.adrd(),
-    ",
-  0x50332028u64 => "
-      ADC_120_NS.addr()[4],
-    ",
-  0x5033202au64 => "
-      ADC_120_NS.addr()[5],
-    ",
-  0x5033202cu64 => "
-      ADC_120_NS.addr()[6],
-    ",
-  0x5033202eu64 => "
-      ADC_120_NS.addr()[7],
-    ",
-  0x50332030u64 => "
-      ADC_120_NS.addr()[8],
-    ",
-  0x50332020u64 => "
-      ADC_120_NS.addr()[0],
-    ",
-  0x50332022u64 => "
-      ADC_120_NS.addr()[1],
-    ",
-  0x50332024u64 => "
-      ADC_120_NS.addr()[2],
-    ",
-  0x50332026u64 => "
-      ADC_120_NS.addr()[3],
-      ADC_120_NS.advmdr(),
-    ",
-  0x50332066u64 => "
-      ADC_120_NS.adshcr(),
-    ",
-  0x5033207au64 => "
-      ADC_120_NS.addiscr(),
-    ",
-  0x5033207cu64 => "
-      ADC_120_NS.adshmsr(),
-    ",
-  0x50332080u64 => "
-      ADC_120_NS.adgspcr(),
-    ",
-  0x50332084u64 => "
-      ADC_120_NS.addbldra(),
-    ",
-  0x50332086u64 => "
-      ADC_120_NS.addbldrb(),
-    ",
-  0x5033208cu64 => "
-      ADC_120_NS.adwinmon(),
-    ",
-  0x50332090u64 => "
-      ADC_120_NS.adcmpcr(),
-    ",
-  0x50332092u64 => "
-      ADC_120_NS.adcmpanser(),
-    ",
-  0x50332093u64 => "
-      ADC_120_NS.adcmpler(),
-    ",
-  0x50332094u64 => "
-      ADC_120_NS.adcmpansr0(),
-    ",
-  0x50332096u64 => "
-      ADC_120_NS.adcmpansr1(),
-    ",
-  0x50332098u64 => "
-      ADC_120_NS.adcmplr0(),
-    ",
-  0x5033209au64 => "
-      ADC_120_NS.adcmplr1(),
-    ",
-  0x5033209cu64 => "
-      ADC_120_NS.adcmpdr()[0],
-    ",
-  0x5033209eu64 => "
-      ADC_120_NS.adcmpdr()[1],
-    ",
-  0x503320a0u64 => "
-      ADC_120_NS.adcmpsr0(),
-    ",
-  0x503320a2u64 => "
-      ADC_120_NS.adcmpsr1(),
-    ",
-  0x503320a4u64 => "
-      ADC_120_NS.adcmpser(),
-    ",
-  0x503320a6u64 => "
-      ADC_120_NS.adcmpbnsr(),
-    ",
-  0x503320a8u64 => "
-      ADC_120_NS.adwinllb(),
-    ",
-  0x503320aau64 => "
-      ADC_120_NS.adwinulb(),
-    ",
-  0x503320acu64 => "
-      ADC_120_NS.adcmpbsr(),
-    ",
-  0x503320b0u64 => "
-      ADC_120_NS.adbuf()[0],
-    ",
-  0x503320b2u64 => "
-      ADC_120_NS.adbuf()[1],
-    ",
-  0x503320b4u64 => "
-      ADC_120_NS.adbuf()[2],
-    ",
-  0x503320b6u64 => "
-      ADC_120_NS.adbuf()[3],
-    ",
-  0x503320b8u64 => "
-      ADC_120_NS.adbuf()[4],
-    ",
-  0x503320bau64 => "
-      ADC_120_NS.adbuf()[5],
-    ",
-  0x503320bcu64 => "
-      ADC_120_NS.adbuf()[6],
-    ",
-  0x503320beu64 => "
-      ADC_120_NS.adbuf()[7],
-    ",
-  0x503320c0u64 => "
-      ADC_120_NS.adbuf()[8],
-    ",
-  0x503320c2u64 => "
-      ADC_120_NS.adbuf()[9],
-    ",
-  0x503320c4u64 => "
-      ADC_120_NS.adbuf()[10],
-    ",
-  0x503320c6u64 => "
-      ADC_120_NS.adbuf()[11],
-    ",
-  0x503320c8u64 => "
-      ADC_120_NS.adbuf()[12],
-    ",
-  0x503320cau64 => "
-      ADC_120_NS.adbuf()[13],
-    ",
-  0x503320ccu64 => "
-      ADC_120_NS.adbuf()[14],
-    ",
-  0x503320ceu64 => "
-      ADC_120_NS.adbuf()[15],
-    ",
-  0x503320d0u64 => "
-      ADC_120_NS.adbufen(),
-    ",
-  0x503320d2u64 => "
-      ADC_120_NS.adbufptr(),
-    ",
-  0x503320ddu64 => "
-      ADC_120_NS.adsstrl(),
-    ",
-  0x503320deu64 => "
-      ADC_120_NS.adsstrt(),
-    ",
-  0x503320dfu64 => "
-      ADC_120_NS.adsstro(),
-    ",
-  0x503320e4u64 => "
-      ADC_120_NS.adsstr()[4],
-    ",
-  0x503320e5u64 => "
-      ADC_120_NS.adsstr()[5],
-    ",
-  0x503320e6u64 => "
-      ADC_120_NS.adsstr()[6],
-    ",
-  0x503320e7u64 => "
-      ADC_120_NS.adsstr()[7],
-    ",
-  0x503320e8u64 => "
-      ADC_120_NS.adsstr()[8],
-    ",
-  0x503320e3u64 => "
-      ADC_120_NS.adsstrv(),
-    ",
-  0x503320ecu64 => "
-      ADC_120_NS.adsstr()[0],
-    ",
-  0x503320edu64 => "
-      ADC_120_NS.adsstr()[1],
-    ",
-  0x503320eeu64 => "
-      ADC_120_NS.adsstr()[2],
-    ",
-  0x503320efu64 => "
-      ADC_120_NS.adsstr()[3],
-    ",
-  0x50332200u64 => "
-      ADC_121_NS.adcsr(),
-    ",
-  0x50332204u64 => "
-      ADC_121_NS.adansa0(),
-    ",
-  0x50332206u64 => "
-      ADC_121_NS.adansa1(),
-    ",
-  0x50332208u64 => "
-      ADC_121_NS.adads0(),
-    ",
-  0x5033220au64 => "
-      ADC_121_NS.adads1(),
-    ",
-  0x5033220cu64 => "
-      ADC_121_NS.adadc(),
-    ",
-  0x5033220eu64 => "
-      ADC_121_NS.adcer(),
-    ",
-  0x50332210u64 => "
-      ADC_121_NS.adstrgr(),
-    ",
-  0x50332212u64 => "
-      ADC_121_NS.adexicr(),
-    ",
-  0x50332214u64 => "
-      ADC_121_NS.adansb0(),
-    ",
-  0x50332216u64 => "
-      ADC_121_NS.adansb1(),
-    ",
-  0x50332218u64 => "
-      ADC_121_NS.addbldr(),
-    ",
-  0x5033221au64 => "
-      ADC_121_NS.adtsdr(),
-    ",
-  0x5033221cu64 => "
-      ADC_121_NS.adocdr(),
-    ",
-  0x5033221eu64 => "
-      ADC_121_NS.adrd(),
-    ",
-  0x50332220u64 => "
-      ADC_121_NS.addr()[0],
-    ",
-  0x50332222u64 => "
-      ADC_121_NS.addr()[1],
-    ",
-  0x50332224u64 => "
-      ADC_121_NS.addr()[2],
-    ",
-  0x50332226u64 => "
-      ADC_121_NS.addr()[3],
-      ADC_121_NS.advmdr(),
-    ",
-  0x50332228u64 => "
-      ADC_121_NS.addr()[4],
-    ",
-  0x5033222au64 => "
-      ADC_121_NS.addr()[5],
-    ",
-  0x5033222cu64 => "
-      ADC_121_NS.addr()[6],
-    ",
-  0x50332266u64 => "
-      ADC_121_NS.adshcr(),
-    ",
-  0x5033227au64 => "
-      ADC_121_NS.addiscr(),
-    ",
-  0x5033227cu64 => "
-      ADC_121_NS.adshmsr(),
-    ",
-  0x50332280u64 => "
-      ADC_121_NS.adgspcr(),
-    ",
-  0x50332284u64 => "
-      ADC_121_NS.addbldra(),
-    ",
-  0x50332286u64 => "
-      ADC_121_NS.addbldrb(),
-    ",
-  0x5033228cu64 => "
-      ADC_121_NS.adwinmon(),
-    ",
-  0x50332290u64 => "
-      ADC_121_NS.adcmpcr(),
-    ",
-  0x50332292u64 => "
-      ADC_121_NS.adcmpanser(),
-    ",
-  0x50332293u64 => "
-      ADC_121_NS.adcmpler(),
-    ",
-  0x50332294u64 => "
-      ADC_121_NS.adcmpansr0(),
-    ",
-  0x50332296u64 => "
-      ADC_121_NS.adcmpansr1(),
-    ",
-  0x50332298u64 => "
-      ADC_121_NS.adcmplr0(),
-    ",
-  0x5033229au64 => "
-      ADC_121_NS.adcmplr1(),
-    ",
-  0x5033229cu64 => "
-      ADC_121_NS.adcmpdr()[0],
-    ",
-  0x5033229eu64 => "
-      ADC_121_NS.adcmpdr()[1],
-    ",
-  0x503322a0u64 => "
-      ADC_121_NS.adcmpsr0(),
-    ",
-  0x503322a2u64 => "
-      ADC_121_NS.adcmpsr1(),
-    ",
-  0x503322a4u64 => "
-      ADC_121_NS.adcmpser(),
-    ",
-  0x503322a6u64 => "
-      ADC_121_NS.adcmpbnsr(),
-    ",
-  0x503322a8u64 => "
-      ADC_121_NS.adwinllb(),
-    ",
-  0x503322aau64 => "
-      ADC_121_NS.adwinulb(),
-    ",
-  0x503322acu64 => "
-      ADC_121_NS.adcmpbsr(),
-    ",
-  0x503322b0u64 => "
-      ADC_121_NS.adbuf()[0],
-    ",
-  0x503322b2u64 => "
-      ADC_121_NS.adbuf()[1],
-    ",
-  0x503322b4u64 => "
-      ADC_121_NS.adbuf()[2],
-    ",
-  0x503322b6u64 => "
-      ADC_121_NS.adbuf()[3],
-    ",
-  0x503322b8u64 => "
-      ADC_121_NS.adbuf()[4],
-    ",
-  0x503322bau64 => "
-      ADC_121_NS.adbuf()[5],
-    ",
-  0x503322bcu64 => "
-      ADC_121_NS.adbuf()[6],
-    ",
-  0x503322beu64 => "
-      ADC_121_NS.adbuf()[7],
-    ",
-  0x503322c0u64 => "
-      ADC_121_NS.adbuf()[8],
-    ",
-  0x503322c2u64 => "
-      ADC_121_NS.adbuf()[9],
-    ",
-  0x503322c4u64 => "
-      ADC_121_NS.adbuf()[10],
-    ",
-  0x503322c6u64 => "
-      ADC_121_NS.adbuf()[11],
-    ",
-  0x503322c8u64 => "
-      ADC_121_NS.adbuf()[12],
-    ",
-  0x503322cau64 => "
-      ADC_121_NS.adbuf()[13],
-    ",
-  0x503322ccu64 => "
-      ADC_121_NS.adbuf()[14],
-    ",
-  0x503322ceu64 => "
-      ADC_121_NS.adbuf()[15],
-    ",
-  0x503322d0u64 => "
-      ADC_121_NS.adbufen(),
-    ",
-  0x503322d2u64 => "
-      ADC_121_NS.adbufptr(),
-    ",
-  0x503322ddu64 => "
-      ADC_121_NS.adsstrl(),
-    ",
-  0x503322deu64 => "
-      ADC_121_NS.adsstrt(),
-    ",
-  0x503322dfu64 => "
-      ADC_121_NS.adsstro(),
-    ",
-  0x503322e0u64 => "
-      ADC_121_NS.adsstr()[0],
-    ",
-  0x503322e1u64 => "
-      ADC_121_NS.adsstr()[1],
-    ",
-  0x503322e2u64 => "
-      ADC_121_NS.adsstr()[2],
-    ",
-  0x503322e3u64 => "
-      ADC_121_NS.adsstr()[3],
-      ADC_121_NS.adsstrv(),
-    ",
-  0x503322e4u64 => "
-      ADC_121_NS.adsstr()[4],
-    ",
-  0x503322e5u64 => "
-      ADC_121_NS.adsstr()[5],
-    ",
-  0x503322e6u64 => "
-      ADC_121_NS.adsstr()[6],
-    ",
-  0x50333000u64 => "
-      DAC_12_NS.dadr()[0],
-    ",
-  0x50333002u64 => "
-      DAC_12_NS.dadr()[1],
-    ",
-  0x50333004u64 => "
-      DAC_12_NS.dacr(),
-    ",
-  0x50333005u64 => "
-      DAC_12_NS.dadpr(),
-    ",
-  0x50333006u64 => "
-      DAC_12_NS.daadscr(),
-    ",
-  0x50333008u64 => "
-      DAC_12_NS.daampcr(),
-    ",
-  0x5033301cu64 => "
-      DAC_12_NS.daaswcr(),
-    ",
-  0x503340c0u64 => "
-      DAC_12_NS.daadusr(),
-    ",
-  0x50342000u64 => "
-      GLCDC_NS.gr1_clut0()[0],
-    ",
-  0x50342004u64 => "
-      GLCDC_NS.gr1_clut0()[1],
-    ",
-  0x50342008u64 => "
-      GLCDC_NS.gr1_clut0()[2],
-    ",
-  0x5034200cu64 => "
-      GLCDC_NS.gr1_clut0()[3],
-    ",
-  0x50342010u64 => "
-      GLCDC_NS.gr1_clut0()[4],
-    ",
-  0x50342014u64 => "
-      GLCDC_NS.gr1_clut0()[5],
-    ",
-  0x50342018u64 => "
-      GLCDC_NS.gr1_clut0()[6],
-    ",
-  0x5034201cu64 => "
-      GLCDC_NS.gr1_clut0()[7],
-    ",
-  0x50342020u64 => "
-      GLCDC_NS.gr1_clut0()[8],
-    ",
-  0x50342024u64 => "
-      GLCDC_NS.gr1_clut0()[9],
-    ",
-  0x50342028u64 => "
-      GLCDC_NS.gr1_clut0()[10],
-    ",
-  0x5034202cu64 => "
-      GLCDC_NS.gr1_clut0()[11],
-    ",
-  0x50342030u64 => "
-      GLCDC_NS.gr1_clut0()[12],
-    ",
-  0x50342034u64 => "
-      GLCDC_NS.gr1_clut0()[13],
-    ",
-  0x50342038u64 => "
-      GLCDC_NS.gr1_clut0()[14],
-    ",
-  0x5034203cu64 => "
-      GLCDC_NS.gr1_clut0()[15],
-    ",
-  0x50342040u64 => "
-      GLCDC_NS.gr1_clut0()[16],
-    ",
-  0x50342044u64 => "
-      GLCDC_NS.gr1_clut0()[17],
-    ",
-  0x50342048u64 => "
-      GLCDC_NS.gr1_clut0()[18],
-    ",
-  0x5034204cu64 => "
-      GLCDC_NS.gr1_clut0()[19],
-    ",
-  0x50342050u64 => "
-      GLCDC_NS.gr1_clut0()[20],
-    ",
-  0x50342054u64 => "
-      GLCDC_NS.gr1_clut0()[21],
-    ",
-  0x50342058u64 => "
-      GLCDC_NS.gr1_clut0()[22],
-    ",
-  0x5034205cu64 => "
-      GLCDC_NS.gr1_clut0()[23],
-    ",
-  0x50342060u64 => "
-      GLCDC_NS.gr1_clut0()[24],
-    ",
-  0x50342064u64 => "
-      GLCDC_NS.gr1_clut0()[25],
-    ",
-  0x50342068u64 => "
-      GLCDC_NS.gr1_clut0()[26],
-    ",
-  0x5034206cu64 => "
-      GLCDC_NS.gr1_clut0()[27],
-    ",
-  0x50342070u64 => "
-      GLCDC_NS.gr1_clut0()[28],
-    ",
-  0x50342074u64 => "
-      GLCDC_NS.gr1_clut0()[29],
-    ",
-  0x50342078u64 => "
-      GLCDC_NS.gr1_clut0()[30],
-    ",
-  0x5034207cu64 => "
-      GLCDC_NS.gr1_clut0()[31],
-    ",
-  0x50342080u64 => "
-      GLCDC_NS.gr1_clut0()[32],
-    ",
-  0x50342084u64 => "
-      GLCDC_NS.gr1_clut0()[33],
-    ",
-  0x50342088u64 => "
-      GLCDC_NS.gr1_clut0()[34],
-    ",
-  0x5034208cu64 => "
-      GLCDC_NS.gr1_clut0()[35],
-    ",
-  0x50342090u64 => "
-      GLCDC_NS.gr1_clut0()[36],
-    ",
-  0x50342094u64 => "
-      GLCDC_NS.gr1_clut0()[37],
-    ",
-  0x50342098u64 => "
-      GLCDC_NS.gr1_clut0()[38],
-    ",
-  0x5034209cu64 => "
-      GLCDC_NS.gr1_clut0()[39],
-    ",
-  0x503420a0u64 => "
-      GLCDC_NS.gr1_clut0()[40],
-    ",
-  0x503420a4u64 => "
-      GLCDC_NS.gr1_clut0()[41],
-    ",
-  0x503420a8u64 => "
-      GLCDC_NS.gr1_clut0()[42],
-    ",
-  0x503420acu64 => "
-      GLCDC_NS.gr1_clut0()[43],
-    ",
-  0x503420b0u64 => "
-      GLCDC_NS.gr1_clut0()[44],
-    ",
-  0x503420b4u64 => "
-      GLCDC_NS.gr1_clut0()[45],
-    ",
-  0x503420b8u64 => "
-      GLCDC_NS.gr1_clut0()[46],
-    ",
-  0x503420bcu64 => "
-      GLCDC_NS.gr1_clut0()[47],
-    ",
-  0x503420c0u64 => "
-      GLCDC_NS.gr1_clut0()[48],
-    ",
-  0x503420c4u64 => "
-      GLCDC_NS.gr1_clut0()[49],
-    ",
-  0x503420c8u64 => "
-      GLCDC_NS.gr1_clut0()[50],
-    ",
-  0x503420ccu64 => "
-      GLCDC_NS.gr1_clut0()[51],
-    ",
-  0x503420d0u64 => "
-      GLCDC_NS.gr1_clut0()[52],
-    ",
-  0x503420d4u64 => "
-      GLCDC_NS.gr1_clut0()[53],
-    ",
-  0x503420d8u64 => "
-      GLCDC_NS.gr1_clut0()[54],
-    ",
-  0x503420dcu64 => "
-      GLCDC_NS.gr1_clut0()[55],
-    ",
-  0x503420e0u64 => "
-      GLCDC_NS.gr1_clut0()[56],
-    ",
-  0x503420e4u64 => "
-      GLCDC_NS.gr1_clut0()[57],
-    ",
-  0x503420e8u64 => "
-      GLCDC_NS.gr1_clut0()[58],
-    ",
-  0x503420ecu64 => "
-      GLCDC_NS.gr1_clut0()[59],
-    ",
-  0x503420f0u64 => "
-      GLCDC_NS.gr1_clut0()[60],
-    ",
-  0x503420f4u64 => "
-      GLCDC_NS.gr1_clut0()[61],
-    ",
-  0x503420f8u64 => "
-      GLCDC_NS.gr1_clut0()[62],
-    ",
-  0x503420fcu64 => "
-      GLCDC_NS.gr1_clut0()[63],
-    ",
-  0x50342100u64 => "
-      GLCDC_NS.gr1_clut0()[64],
-    ",
-  0x50342104u64 => "
-      GLCDC_NS.gr1_clut0()[65],
-    ",
-  0x50342108u64 => "
-      GLCDC_NS.gr1_clut0()[66],
-    ",
-  0x5034210cu64 => "
-      GLCDC_NS.gr1_clut0()[67],
-    ",
-  0x50342110u64 => "
-      GLCDC_NS.gr1_clut0()[68],
-    ",
-  0x50342114u64 => "
-      GLCDC_NS.gr1_clut0()[69],
-    ",
-  0x50342118u64 => "
-      GLCDC_NS.gr1_clut0()[70],
-    ",
-  0x5034211cu64 => "
-      GLCDC_NS.gr1_clut0()[71],
-    ",
-  0x50342120u64 => "
-      GLCDC_NS.gr1_clut0()[72],
-    ",
-  0x50342124u64 => "
-      GLCDC_NS.gr1_clut0()[73],
-    ",
-  0x50342128u64 => "
-      GLCDC_NS.gr1_clut0()[74],
-    ",
-  0x5034212cu64 => "
-      GLCDC_NS.gr1_clut0()[75],
-    ",
-  0x50342130u64 => "
-      GLCDC_NS.gr1_clut0()[76],
-    ",
-  0x50342134u64 => "
-      GLCDC_NS.gr1_clut0()[77],
-    ",
-  0x50342138u64 => "
-      GLCDC_NS.gr1_clut0()[78],
-    ",
-  0x5034213cu64 => "
-      GLCDC_NS.gr1_clut0()[79],
-    ",
-  0x50342140u64 => "
-      GLCDC_NS.gr1_clut0()[80],
-    ",
-  0x50342144u64 => "
-      GLCDC_NS.gr1_clut0()[81],
-    ",
-  0x50342148u64 => "
-      GLCDC_NS.gr1_clut0()[82],
-    ",
-  0x5034214cu64 => "
-      GLCDC_NS.gr1_clut0()[83],
-    ",
-  0x50342150u64 => "
-      GLCDC_NS.gr1_clut0()[84],
-    ",
-  0x50342154u64 => "
-      GLCDC_NS.gr1_clut0()[85],
-    ",
-  0x50342158u64 => "
-      GLCDC_NS.gr1_clut0()[86],
-    ",
-  0x5034215cu64 => "
-      GLCDC_NS.gr1_clut0()[87],
-    ",
-  0x50342160u64 => "
-      GLCDC_NS.gr1_clut0()[88],
-    ",
-  0x50342164u64 => "
-      GLCDC_NS.gr1_clut0()[89],
-    ",
-  0x50342168u64 => "
-      GLCDC_NS.gr1_clut0()[90],
-    ",
-  0x5034216cu64 => "
-      GLCDC_NS.gr1_clut0()[91],
-    ",
-  0x50342170u64 => "
-      GLCDC_NS.gr1_clut0()[92],
-    ",
-  0x50342174u64 => "
-      GLCDC_NS.gr1_clut0()[93],
-    ",
-  0x50342178u64 => "
-      GLCDC_NS.gr1_clut0()[94],
-    ",
-  0x5034217cu64 => "
-      GLCDC_NS.gr1_clut0()[95],
-    ",
-  0x50342180u64 => "
-      GLCDC_NS.gr1_clut0()[96],
-    ",
-  0x50342184u64 => "
-      GLCDC_NS.gr1_clut0()[97],
-    ",
-  0x50342188u64 => "
-      GLCDC_NS.gr1_clut0()[98],
-    ",
-  0x5034218cu64 => "
-      GLCDC_NS.gr1_clut0()[99],
-    ",
-  0x50342190u64 => "
-      GLCDC_NS.gr1_clut0()[100],
-    ",
-  0x50342194u64 => "
-      GLCDC_NS.gr1_clut0()[101],
-    ",
-  0x50342198u64 => "
-      GLCDC_NS.gr1_clut0()[102],
-    ",
-  0x5034219cu64 => "
-      GLCDC_NS.gr1_clut0()[103],
-    ",
-  0x503421a0u64 => "
-      GLCDC_NS.gr1_clut0()[104],
-    ",
-  0x503421a4u64 => "
-      GLCDC_NS.gr1_clut0()[105],
-    ",
-  0x503421a8u64 => "
-      GLCDC_NS.gr1_clut0()[106],
-    ",
-  0x503421acu64 => "
-      GLCDC_NS.gr1_clut0()[107],
-    ",
-  0x503421b0u64 => "
-      GLCDC_NS.gr1_clut0()[108],
-    ",
-  0x503421b4u64 => "
-      GLCDC_NS.gr1_clut0()[109],
-    ",
-  0x503421b8u64 => "
-      GLCDC_NS.gr1_clut0()[110],
-    ",
-  0x503421bcu64 => "
-      GLCDC_NS.gr1_clut0()[111],
-    ",
-  0x503421c0u64 => "
-      GLCDC_NS.gr1_clut0()[112],
-    ",
-  0x503421c4u64 => "
-      GLCDC_NS.gr1_clut0()[113],
-    ",
-  0x503421c8u64 => "
-      GLCDC_NS.gr1_clut0()[114],
-    ",
-  0x503421ccu64 => "
-      GLCDC_NS.gr1_clut0()[115],
-    ",
-  0x503421d0u64 => "
-      GLCDC_NS.gr1_clut0()[116],
-    ",
-  0x503421d4u64 => "
-      GLCDC_NS.gr1_clut0()[117],
-    ",
-  0x503421d8u64 => "
-      GLCDC_NS.gr1_clut0()[118],
-    ",
-  0x503421dcu64 => "
-      GLCDC_NS.gr1_clut0()[119],
-    ",
-  0x503421e0u64 => "
-      GLCDC_NS.gr1_clut0()[120],
-    ",
-  0x503421e4u64 => "
-      GLCDC_NS.gr1_clut0()[121],
-    ",
-  0x503421e8u64 => "
-      GLCDC_NS.gr1_clut0()[122],
-    ",
-  0x503421ecu64 => "
-      GLCDC_NS.gr1_clut0()[123],
-    ",
-  0x503421f0u64 => "
-      GLCDC_NS.gr1_clut0()[124],
-    ",
-  0x503421f4u64 => "
-      GLCDC_NS.gr1_clut0()[125],
-    ",
-  0x503421f8u64 => "
-      GLCDC_NS.gr1_clut0()[126],
-    ",
-  0x503421fcu64 => "
-      GLCDC_NS.gr1_clut0()[127],
-    ",
-  0x50342200u64 => "
-      GLCDC_NS.gr1_clut0()[128],
-    ",
-  0x50342204u64 => "
-      GLCDC_NS.gr1_clut0()[129],
-    ",
-  0x50342208u64 => "
-      GLCDC_NS.gr1_clut0()[130],
-    ",
-  0x5034220cu64 => "
-      GLCDC_NS.gr1_clut0()[131],
-    ",
-  0x50342210u64 => "
-      GLCDC_NS.gr1_clut0()[132],
-    ",
-  0x50342214u64 => "
-      GLCDC_NS.gr1_clut0()[133],
-    ",
-  0x50342218u64 => "
-      GLCDC_NS.gr1_clut0()[134],
-    ",
-  0x5034221cu64 => "
-      GLCDC_NS.gr1_clut0()[135],
-    ",
-  0x50342220u64 => "
-      GLCDC_NS.gr1_clut0()[136],
-    ",
-  0x50342224u64 => "
-      GLCDC_NS.gr1_clut0()[137],
-    ",
-  0x50342228u64 => "
-      GLCDC_NS.gr1_clut0()[138],
-    ",
-  0x5034222cu64 => "
-      GLCDC_NS.gr1_clut0()[139],
-    ",
-  0x50342230u64 => "
-      GLCDC_NS.gr1_clut0()[140],
-    ",
-  0x50342234u64 => "
-      GLCDC_NS.gr1_clut0()[141],
-    ",
-  0x50342238u64 => "
-      GLCDC_NS.gr1_clut0()[142],
-    ",
-  0x5034223cu64 => "
-      GLCDC_NS.gr1_clut0()[143],
-    ",
-  0x50342240u64 => "
-      GLCDC_NS.gr1_clut0()[144],
-    ",
-  0x50342244u64 => "
-      GLCDC_NS.gr1_clut0()[145],
-    ",
-  0x50342248u64 => "
-      GLCDC_NS.gr1_clut0()[146],
-    ",
-  0x5034224cu64 => "
-      GLCDC_NS.gr1_clut0()[147],
-    ",
-  0x50342250u64 => "
-      GLCDC_NS.gr1_clut0()[148],
-    ",
-  0x50342254u64 => "
-      GLCDC_NS.gr1_clut0()[149],
-    ",
-  0x50342258u64 => "
-      GLCDC_NS.gr1_clut0()[150],
-    ",
-  0x5034225cu64 => "
-      GLCDC_NS.gr1_clut0()[151],
-    ",
-  0x50342260u64 => "
-      GLCDC_NS.gr1_clut0()[152],
-    ",
-  0x50342264u64 => "
-      GLCDC_NS.gr1_clut0()[153],
-    ",
-  0x50342268u64 => "
-      GLCDC_NS.gr1_clut0()[154],
-    ",
-  0x5034226cu64 => "
-      GLCDC_NS.gr1_clut0()[155],
-    ",
-  0x50342270u64 => "
-      GLCDC_NS.gr1_clut0()[156],
-    ",
-  0x50342274u64 => "
-      GLCDC_NS.gr1_clut0()[157],
-    ",
-  0x50342278u64 => "
-      GLCDC_NS.gr1_clut0()[158],
-    ",
-  0x5034227cu64 => "
-      GLCDC_NS.gr1_clut0()[159],
-    ",
-  0x50342280u64 => "
-      GLCDC_NS.gr1_clut0()[160],
-    ",
-  0x50342284u64 => "
-      GLCDC_NS.gr1_clut0()[161],
-    ",
-  0x50342288u64 => "
-      GLCDC_NS.gr1_clut0()[162],
-    ",
-  0x5034228cu64 => "
-      GLCDC_NS.gr1_clut0()[163],
-    ",
-  0x50342290u64 => "
-      GLCDC_NS.gr1_clut0()[164],
-    ",
-  0x50342294u64 => "
-      GLCDC_NS.gr1_clut0()[165],
-    ",
-  0x50342298u64 => "
-      GLCDC_NS.gr1_clut0()[166],
-    ",
-  0x5034229cu64 => "
-      GLCDC_NS.gr1_clut0()[167],
-    ",
-  0x503422a0u64 => "
-      GLCDC_NS.gr1_clut0()[168],
-    ",
-  0x503422a4u64 => "
-      GLCDC_NS.gr1_clut0()[169],
-    ",
-  0x503422a8u64 => "
-      GLCDC_NS.gr1_clut0()[170],
-    ",
-  0x503422acu64 => "
-      GLCDC_NS.gr1_clut0()[171],
-    ",
-  0x503422b0u64 => "
-      GLCDC_NS.gr1_clut0()[172],
-    ",
-  0x503422b4u64 => "
-      GLCDC_NS.gr1_clut0()[173],
-    ",
-  0x503422b8u64 => "
-      GLCDC_NS.gr1_clut0()[174],
-    ",
-  0x503422bcu64 => "
-      GLCDC_NS.gr1_clut0()[175],
-    ",
-  0x503422c0u64 => "
-      GLCDC_NS.gr1_clut0()[176],
-    ",
-  0x503422c4u64 => "
-      GLCDC_NS.gr1_clut0()[177],
-    ",
-  0x503422c8u64 => "
-      GLCDC_NS.gr1_clut0()[178],
-    ",
-  0x503422ccu64 => "
-      GLCDC_NS.gr1_clut0()[179],
-    ",
-  0x503422d0u64 => "
-      GLCDC_NS.gr1_clut0()[180],
-    ",
-  0x503422d4u64 => "
-      GLCDC_NS.gr1_clut0()[181],
-    ",
-  0x503422d8u64 => "
-      GLCDC_NS.gr1_clut0()[182],
-    ",
-  0x503422dcu64 => "
-      GLCDC_NS.gr1_clut0()[183],
-    ",
-  0x503422e0u64 => "
-      GLCDC_NS.gr1_clut0()[184],
-    ",
-  0x503422e4u64 => "
-      GLCDC_NS.gr1_clut0()[185],
-    ",
-  0x503422e8u64 => "
-      GLCDC_NS.gr1_clut0()[186],
-    ",
-  0x503422ecu64 => "
-      GLCDC_NS.gr1_clut0()[187],
-    ",
-  0x503422f0u64 => "
-      GLCDC_NS.gr1_clut0()[188],
-    ",
-  0x503422f4u64 => "
-      GLCDC_NS.gr1_clut0()[189],
-    ",
-  0x503422f8u64 => "
-      GLCDC_NS.gr1_clut0()[190],
-    ",
-  0x503422fcu64 => "
-      GLCDC_NS.gr1_clut0()[191],
-    ",
-  0x50342300u64 => "
-      GLCDC_NS.gr1_clut0()[192],
-    ",
-  0x50342304u64 => "
-      GLCDC_NS.gr1_clut0()[193],
-    ",
-  0x50342308u64 => "
-      GLCDC_NS.gr1_clut0()[194],
-    ",
-  0x5034230cu64 => "
-      GLCDC_NS.gr1_clut0()[195],
-    ",
-  0x50342310u64 => "
-      GLCDC_NS.gr1_clut0()[196],
-    ",
-  0x50342314u64 => "
-      GLCDC_NS.gr1_clut0()[197],
-    ",
-  0x50342318u64 => "
-      GLCDC_NS.gr1_clut0()[198],
-    ",
-  0x5034231cu64 => "
-      GLCDC_NS.gr1_clut0()[199],
-    ",
-  0x50342320u64 => "
-      GLCDC_NS.gr1_clut0()[200],
-    ",
-  0x50342324u64 => "
-      GLCDC_NS.gr1_clut0()[201],
-    ",
-  0x50342328u64 => "
-      GLCDC_NS.gr1_clut0()[202],
-    ",
-  0x5034232cu64 => "
-      GLCDC_NS.gr1_clut0()[203],
-    ",
-  0x50342330u64 => "
-      GLCDC_NS.gr1_clut0()[204],
-    ",
-  0x50342334u64 => "
-      GLCDC_NS.gr1_clut0()[205],
-    ",
-  0x50342338u64 => "
-      GLCDC_NS.gr1_clut0()[206],
-    ",
-  0x5034233cu64 => "
-      GLCDC_NS.gr1_clut0()[207],
-    ",
-  0x50342340u64 => "
-      GLCDC_NS.gr1_clut0()[208],
-    ",
-  0x50342344u64 => "
-      GLCDC_NS.gr1_clut0()[209],
-    ",
-  0x50342348u64 => "
-      GLCDC_NS.gr1_clut0()[210],
-    ",
-  0x5034234cu64 => "
-      GLCDC_NS.gr1_clut0()[211],
-    ",
-  0x50342350u64 => "
-      GLCDC_NS.gr1_clut0()[212],
-    ",
-  0x50342354u64 => "
-      GLCDC_NS.gr1_clut0()[213],
-    ",
-  0x50342358u64 => "
-      GLCDC_NS.gr1_clut0()[214],
-    ",
-  0x5034235cu64 => "
-      GLCDC_NS.gr1_clut0()[215],
-    ",
-  0x50342360u64 => "
-      GLCDC_NS.gr1_clut0()[216],
-    ",
-  0x50342364u64 => "
-      GLCDC_NS.gr1_clut0()[217],
-    ",
-  0x50342368u64 => "
-      GLCDC_NS.gr1_clut0()[218],
-    ",
-  0x5034236cu64 => "
-      GLCDC_NS.gr1_clut0()[219],
-    ",
-  0x50342370u64 => "
-      GLCDC_NS.gr1_clut0()[220],
-    ",
-  0x50342374u64 => "
-      GLCDC_NS.gr1_clut0()[221],
-    ",
-  0x50342378u64 => "
-      GLCDC_NS.gr1_clut0()[222],
-    ",
-  0x5034237cu64 => "
-      GLCDC_NS.gr1_clut0()[223],
-    ",
-  0x50342380u64 => "
-      GLCDC_NS.gr1_clut0()[224],
-    ",
-  0x50342384u64 => "
-      GLCDC_NS.gr1_clut0()[225],
-    ",
-  0x50342388u64 => "
-      GLCDC_NS.gr1_clut0()[226],
-    ",
-  0x5034238cu64 => "
-      GLCDC_NS.gr1_clut0()[227],
-    ",
-  0x50342390u64 => "
-      GLCDC_NS.gr1_clut0()[228],
-    ",
-  0x50342394u64 => "
-      GLCDC_NS.gr1_clut0()[229],
-    ",
-  0x50342398u64 => "
-      GLCDC_NS.gr1_clut0()[230],
-    ",
-  0x5034239cu64 => "
-      GLCDC_NS.gr1_clut0()[231],
-    ",
-  0x503423a0u64 => "
-      GLCDC_NS.gr1_clut0()[232],
-    ",
-  0x503423a4u64 => "
-      GLCDC_NS.gr1_clut0()[233],
-    ",
-  0x503423a8u64 => "
-      GLCDC_NS.gr1_clut0()[234],
-    ",
-  0x503423acu64 => "
-      GLCDC_NS.gr1_clut0()[235],
-    ",
-  0x503423b0u64 => "
-      GLCDC_NS.gr1_clut0()[236],
-    ",
-  0x503423b4u64 => "
-      GLCDC_NS.gr1_clut0()[237],
-    ",
-  0x503423b8u64 => "
-      GLCDC_NS.gr1_clut0()[238],
-    ",
-  0x503423bcu64 => "
-      GLCDC_NS.gr1_clut0()[239],
-    ",
-  0x503423c0u64 => "
-      GLCDC_NS.gr1_clut0()[240],
-    ",
-  0x503423c4u64 => "
-      GLCDC_NS.gr1_clut0()[241],
-    ",
-  0x503423c8u64 => "
-      GLCDC_NS.gr1_clut0()[242],
-    ",
-  0x503423ccu64 => "
-      GLCDC_NS.gr1_clut0()[243],
-    ",
-  0x503423d0u64 => "
-      GLCDC_NS.gr1_clut0()[244],
-    ",
-  0x503423d4u64 => "
-      GLCDC_NS.gr1_clut0()[245],
-    ",
-  0x503423d8u64 => "
-      GLCDC_NS.gr1_clut0()[246],
-    ",
-  0x503423dcu64 => "
-      GLCDC_NS.gr1_clut0()[247],
-    ",
-  0x503423e0u64 => "
-      GLCDC_NS.gr1_clut0()[248],
-    ",
-  0x503423e4u64 => "
-      GLCDC_NS.gr1_clut0()[249],
-    ",
-  0x503423e8u64 => "
-      GLCDC_NS.gr1_clut0()[250],
-    ",
-  0x503423ecu64 => "
-      GLCDC_NS.gr1_clut0()[251],
-    ",
-  0x503423f0u64 => "
-      GLCDC_NS.gr1_clut0()[252],
-    ",
-  0x503423f4u64 => "
-      GLCDC_NS.gr1_clut0()[253],
-    ",
-  0x503423f8u64 => "
-      GLCDC_NS.gr1_clut0()[254],
-    ",
-  0x503423fcu64 => "
-      GLCDC_NS.gr1_clut0()[255],
-    ",
-  0x50342400u64 => "
-      GLCDC_NS.gr1_clut1()[0],
-    ",
-  0x50342404u64 => "
-      GLCDC_NS.gr1_clut1()[1],
-    ",
-  0x50342408u64 => "
-      GLCDC_NS.gr1_clut1()[2],
-    ",
-  0x5034240cu64 => "
-      GLCDC_NS.gr1_clut1()[3],
-    ",
-  0x50342410u64 => "
-      GLCDC_NS.gr1_clut1()[4],
-    ",
-  0x50342414u64 => "
-      GLCDC_NS.gr1_clut1()[5],
-    ",
-  0x50342418u64 => "
-      GLCDC_NS.gr1_clut1()[6],
-    ",
-  0x5034241cu64 => "
-      GLCDC_NS.gr1_clut1()[7],
-    ",
-  0x50342420u64 => "
-      GLCDC_NS.gr1_clut1()[8],
-    ",
-  0x50342424u64 => "
-      GLCDC_NS.gr1_clut1()[9],
-    ",
-  0x50342428u64 => "
-      GLCDC_NS.gr1_clut1()[10],
-    ",
-  0x5034242cu64 => "
-      GLCDC_NS.gr1_clut1()[11],
-    ",
-  0x50342430u64 => "
-      GLCDC_NS.gr1_clut1()[12],
-    ",
-  0x50342434u64 => "
-      GLCDC_NS.gr1_clut1()[13],
-    ",
-  0x50342438u64 => "
-      GLCDC_NS.gr1_clut1()[14],
-    ",
-  0x5034243cu64 => "
-      GLCDC_NS.gr1_clut1()[15],
-    ",
-  0x50342440u64 => "
-      GLCDC_NS.gr1_clut1()[16],
-    ",
-  0x50342444u64 => "
-      GLCDC_NS.gr1_clut1()[17],
-    ",
-  0x50342448u64 => "
-      GLCDC_NS.gr1_clut1()[18],
-    ",
-  0x5034244cu64 => "
-      GLCDC_NS.gr1_clut1()[19],
-    ",
-  0x50342450u64 => "
-      GLCDC_NS.gr1_clut1()[20],
-    ",
-  0x50342454u64 => "
-      GLCDC_NS.gr1_clut1()[21],
-    ",
-  0x50342458u64 => "
-      GLCDC_NS.gr1_clut1()[22],
-    ",
-  0x5034245cu64 => "
-      GLCDC_NS.gr1_clut1()[23],
-    ",
-  0x50342460u64 => "
-      GLCDC_NS.gr1_clut1()[24],
-    ",
-  0x50342464u64 => "
-      GLCDC_NS.gr1_clut1()[25],
-    ",
-  0x50342468u64 => "
-      GLCDC_NS.gr1_clut1()[26],
-    ",
-  0x5034246cu64 => "
-      GLCDC_NS.gr1_clut1()[27],
-    ",
-  0x50342470u64 => "
-      GLCDC_NS.gr1_clut1()[28],
-    ",
-  0x50342474u64 => "
-      GLCDC_NS.gr1_clut1()[29],
-    ",
-  0x50342478u64 => "
-      GLCDC_NS.gr1_clut1()[30],
-    ",
-  0x5034247cu64 => "
-      GLCDC_NS.gr1_clut1()[31],
-    ",
-  0x50342480u64 => "
-      GLCDC_NS.gr1_clut1()[32],
-    ",
-  0x50342484u64 => "
-      GLCDC_NS.gr1_clut1()[33],
-    ",
-  0x50342488u64 => "
-      GLCDC_NS.gr1_clut1()[34],
-    ",
-  0x5034248cu64 => "
-      GLCDC_NS.gr1_clut1()[35],
-    ",
-  0x50342490u64 => "
-      GLCDC_NS.gr1_clut1()[36],
-    ",
-  0x50342494u64 => "
-      GLCDC_NS.gr1_clut1()[37],
-    ",
-  0x50342498u64 => "
-      GLCDC_NS.gr1_clut1()[38],
-    ",
-  0x5034249cu64 => "
-      GLCDC_NS.gr1_clut1()[39],
-    ",
-  0x503424a0u64 => "
-      GLCDC_NS.gr1_clut1()[40],
-    ",
-  0x503424a4u64 => "
-      GLCDC_NS.gr1_clut1()[41],
-    ",
-  0x503424a8u64 => "
-      GLCDC_NS.gr1_clut1()[42],
-    ",
-  0x503424acu64 => "
-      GLCDC_NS.gr1_clut1()[43],
-    ",
-  0x503424b0u64 => "
-      GLCDC_NS.gr1_clut1()[44],
-    ",
-  0x503424b4u64 => "
-      GLCDC_NS.gr1_clut1()[45],
-    ",
-  0x503424b8u64 => "
-      GLCDC_NS.gr1_clut1()[46],
-    ",
-  0x503424bcu64 => "
-      GLCDC_NS.gr1_clut1()[47],
-    ",
-  0x503424c0u64 => "
-      GLCDC_NS.gr1_clut1()[48],
-    ",
-  0x503424c4u64 => "
-      GLCDC_NS.gr1_clut1()[49],
-    ",
-  0x503424c8u64 => "
-      GLCDC_NS.gr1_clut1()[50],
-    ",
-  0x503424ccu64 => "
-      GLCDC_NS.gr1_clut1()[51],
-    ",
-  0x503424d0u64 => "
-      GLCDC_NS.gr1_clut1()[52],
-    ",
-  0x503424d4u64 => "
-      GLCDC_NS.gr1_clut1()[53],
-    ",
-  0x503424d8u64 => "
-      GLCDC_NS.gr1_clut1()[54],
-    ",
-  0x503424dcu64 => "
-      GLCDC_NS.gr1_clut1()[55],
-    ",
-  0x503424e0u64 => "
-      GLCDC_NS.gr1_clut1()[56],
-    ",
-  0x503424e4u64 => "
-      GLCDC_NS.gr1_clut1()[57],
-    ",
-  0x503424e8u64 => "
-      GLCDC_NS.gr1_clut1()[58],
-    ",
-  0x503424ecu64 => "
-      GLCDC_NS.gr1_clut1()[59],
-    ",
-  0x503424f0u64 => "
-      GLCDC_NS.gr1_clut1()[60],
-    ",
-  0x503424f4u64 => "
-      GLCDC_NS.gr1_clut1()[61],
-    ",
-  0x503424f8u64 => "
-      GLCDC_NS.gr1_clut1()[62],
-    ",
-  0x503424fcu64 => "
-      GLCDC_NS.gr1_clut1()[63],
-    ",
-  0x50342500u64 => "
-      GLCDC_NS.gr1_clut1()[64],
-    ",
-  0x50342504u64 => "
-      GLCDC_NS.gr1_clut1()[65],
-    ",
-  0x50342508u64 => "
-      GLCDC_NS.gr1_clut1()[66],
-    ",
-  0x5034250cu64 => "
-      GLCDC_NS.gr1_clut1()[67],
-    ",
-  0x50342510u64 => "
-      GLCDC_NS.gr1_clut1()[68],
-    ",
-  0x50342514u64 => "
-      GLCDC_NS.gr1_clut1()[69],
-    ",
-  0x50342518u64 => "
-      GLCDC_NS.gr1_clut1()[70],
-    ",
-  0x5034251cu64 => "
-      GLCDC_NS.gr1_clut1()[71],
-    ",
-  0x50342520u64 => "
-      GLCDC_NS.gr1_clut1()[72],
-    ",
-  0x50342524u64 => "
-      GLCDC_NS.gr1_clut1()[73],
-    ",
-  0x50342528u64 => "
-      GLCDC_NS.gr1_clut1()[74],
-    ",
-  0x5034252cu64 => "
-      GLCDC_NS.gr1_clut1()[75],
-    ",
-  0x50342530u64 => "
-      GLCDC_NS.gr1_clut1()[76],
-    ",
-  0x50342534u64 => "
-      GLCDC_NS.gr1_clut1()[77],
-    ",
-  0x50342538u64 => "
-      GLCDC_NS.gr1_clut1()[78],
-    ",
-  0x5034253cu64 => "
-      GLCDC_NS.gr1_clut1()[79],
-    ",
-  0x50342540u64 => "
-      GLCDC_NS.gr1_clut1()[80],
-    ",
-  0x50342544u64 => "
-      GLCDC_NS.gr1_clut1()[81],
-    ",
-  0x50342548u64 => "
-      GLCDC_NS.gr1_clut1()[82],
-    ",
-  0x5034254cu64 => "
-      GLCDC_NS.gr1_clut1()[83],
-    ",
-  0x50342550u64 => "
-      GLCDC_NS.gr1_clut1()[84],
-    ",
-  0x50342554u64 => "
-      GLCDC_NS.gr1_clut1()[85],
-    ",
-  0x50342558u64 => "
-      GLCDC_NS.gr1_clut1()[86],
-    ",
-  0x5034255cu64 => "
-      GLCDC_NS.gr1_clut1()[87],
-    ",
-  0x50342560u64 => "
-      GLCDC_NS.gr1_clut1()[88],
-    ",
-  0x50342564u64 => "
-      GLCDC_NS.gr1_clut1()[89],
-    ",
-  0x50342568u64 => "
-      GLCDC_NS.gr1_clut1()[90],
-    ",
-  0x5034256cu64 => "
-      GLCDC_NS.gr1_clut1()[91],
-    ",
-  0x50342570u64 => "
-      GLCDC_NS.gr1_clut1()[92],
-    ",
-  0x50342574u64 => "
-      GLCDC_NS.gr1_clut1()[93],
-    ",
-  0x50342578u64 => "
-      GLCDC_NS.gr1_clut1()[94],
-    ",
-  0x5034257cu64 => "
-      GLCDC_NS.gr1_clut1()[95],
-    ",
-  0x50342580u64 => "
-      GLCDC_NS.gr1_clut1()[96],
-    ",
-  0x50342584u64 => "
-      GLCDC_NS.gr1_clut1()[97],
-    ",
-  0x50342588u64 => "
-      GLCDC_NS.gr1_clut1()[98],
-    ",
-  0x5034258cu64 => "
-      GLCDC_NS.gr1_clut1()[99],
-    ",
-  0x50342590u64 => "
-      GLCDC_NS.gr1_clut1()[100],
-    ",
-  0x50342594u64 => "
-      GLCDC_NS.gr1_clut1()[101],
-    ",
-  0x50342598u64 => "
-      GLCDC_NS.gr1_clut1()[102],
-    ",
-  0x5034259cu64 => "
-      GLCDC_NS.gr1_clut1()[103],
-    ",
-  0x503425a0u64 => "
-      GLCDC_NS.gr1_clut1()[104],
-    ",
-  0x503425a4u64 => "
-      GLCDC_NS.gr1_clut1()[105],
-    ",
-  0x503425a8u64 => "
-      GLCDC_NS.gr1_clut1()[106],
-    ",
-  0x503425acu64 => "
-      GLCDC_NS.gr1_clut1()[107],
-    ",
-  0x503425b0u64 => "
-      GLCDC_NS.gr1_clut1()[108],
-    ",
-  0x503425b4u64 => "
-      GLCDC_NS.gr1_clut1()[109],
-    ",
-  0x503425b8u64 => "
-      GLCDC_NS.gr1_clut1()[110],
-    ",
-  0x503425bcu64 => "
-      GLCDC_NS.gr1_clut1()[111],
-    ",
-  0x503425c0u64 => "
-      GLCDC_NS.gr1_clut1()[112],
-    ",
-  0x503425c4u64 => "
-      GLCDC_NS.gr1_clut1()[113],
-    ",
-  0x503425c8u64 => "
-      GLCDC_NS.gr1_clut1()[114],
-    ",
-  0x503425ccu64 => "
-      GLCDC_NS.gr1_clut1()[115],
-    ",
-  0x503425d0u64 => "
-      GLCDC_NS.gr1_clut1()[116],
-    ",
-  0x503425d4u64 => "
-      GLCDC_NS.gr1_clut1()[117],
-    ",
-  0x503425d8u64 => "
-      GLCDC_NS.gr1_clut1()[118],
-    ",
-  0x503425dcu64 => "
-      GLCDC_NS.gr1_clut1()[119],
-    ",
-  0x503425e0u64 => "
-      GLCDC_NS.gr1_clut1()[120],
-    ",
-  0x503425e4u64 => "
-      GLCDC_NS.gr1_clut1()[121],
-    ",
-  0x503425e8u64 => "
-      GLCDC_NS.gr1_clut1()[122],
-    ",
-  0x503425ecu64 => "
-      GLCDC_NS.gr1_clut1()[123],
-    ",
-  0x503425f0u64 => "
-      GLCDC_NS.gr1_clut1()[124],
-    ",
-  0x503425f4u64 => "
-      GLCDC_NS.gr1_clut1()[125],
-    ",
-  0x503425f8u64 => "
-      GLCDC_NS.gr1_clut1()[126],
-    ",
-  0x503425fcu64 => "
-      GLCDC_NS.gr1_clut1()[127],
-    ",
-  0x50342600u64 => "
-      GLCDC_NS.gr1_clut1()[128],
-    ",
-  0x50342604u64 => "
-      GLCDC_NS.gr1_clut1()[129],
-    ",
-  0x50342608u64 => "
-      GLCDC_NS.gr1_clut1()[130],
-    ",
-  0x5034260cu64 => "
-      GLCDC_NS.gr1_clut1()[131],
-    ",
-  0x50342610u64 => "
-      GLCDC_NS.gr1_clut1()[132],
-    ",
-  0x50342614u64 => "
-      GLCDC_NS.gr1_clut1()[133],
-    ",
-  0x50342618u64 => "
-      GLCDC_NS.gr1_clut1()[134],
-    ",
-  0x5034261cu64 => "
-      GLCDC_NS.gr1_clut1()[135],
-    ",
-  0x50342620u64 => "
-      GLCDC_NS.gr1_clut1()[136],
-    ",
-  0x50342624u64 => "
-      GLCDC_NS.gr1_clut1()[137],
-    ",
-  0x50342628u64 => "
-      GLCDC_NS.gr1_clut1()[138],
-    ",
-  0x5034262cu64 => "
-      GLCDC_NS.gr1_clut1()[139],
-    ",
-  0x50342630u64 => "
-      GLCDC_NS.gr1_clut1()[140],
-    ",
-  0x50342634u64 => "
-      GLCDC_NS.gr1_clut1()[141],
-    ",
-  0x50342638u64 => "
-      GLCDC_NS.gr1_clut1()[142],
-    ",
-  0x5034263cu64 => "
-      GLCDC_NS.gr1_clut1()[143],
-    ",
-  0x50342640u64 => "
-      GLCDC_NS.gr1_clut1()[144],
-    ",
-  0x50342644u64 => "
-      GLCDC_NS.gr1_clut1()[145],
-    ",
-  0x50342648u64 => "
-      GLCDC_NS.gr1_clut1()[146],
-    ",
-  0x5034264cu64 => "
-      GLCDC_NS.gr1_clut1()[147],
-    ",
-  0x50342650u64 => "
-      GLCDC_NS.gr1_clut1()[148],
-    ",
-  0x50342654u64 => "
-      GLCDC_NS.gr1_clut1()[149],
-    ",
-  0x50342658u64 => "
-      GLCDC_NS.gr1_clut1()[150],
-    ",
-  0x5034265cu64 => "
-      GLCDC_NS.gr1_clut1()[151],
-    ",
-  0x50342660u64 => "
-      GLCDC_NS.gr1_clut1()[152],
-    ",
-  0x50342664u64 => "
-      GLCDC_NS.gr1_clut1()[153],
-    ",
-  0x50342668u64 => "
-      GLCDC_NS.gr1_clut1()[154],
-    ",
-  0x5034266cu64 => "
-      GLCDC_NS.gr1_clut1()[155],
-    ",
-  0x50342670u64 => "
-      GLCDC_NS.gr1_clut1()[156],
-    ",
-  0x50342674u64 => "
-      GLCDC_NS.gr1_clut1()[157],
-    ",
-  0x50342678u64 => "
-      GLCDC_NS.gr1_clut1()[158],
-    ",
-  0x5034267cu64 => "
-      GLCDC_NS.gr1_clut1()[159],
-    ",
-  0x50342680u64 => "
-      GLCDC_NS.gr1_clut1()[160],
-    ",
-  0x50342684u64 => "
-      GLCDC_NS.gr1_clut1()[161],
-    ",
-  0x50342688u64 => "
-      GLCDC_NS.gr1_clut1()[162],
-    ",
-  0x5034268cu64 => "
-      GLCDC_NS.gr1_clut1()[163],
-    ",
-  0x50342690u64 => "
-      GLCDC_NS.gr1_clut1()[164],
-    ",
-  0x50342694u64 => "
-      GLCDC_NS.gr1_clut1()[165],
-    ",
-  0x50342698u64 => "
-      GLCDC_NS.gr1_clut1()[166],
-    ",
-  0x5034269cu64 => "
-      GLCDC_NS.gr1_clut1()[167],
-    ",
-  0x503426a0u64 => "
-      GLCDC_NS.gr1_clut1()[168],
-    ",
-  0x503426a4u64 => "
-      GLCDC_NS.gr1_clut1()[169],
-    ",
-  0x503426a8u64 => "
-      GLCDC_NS.gr1_clut1()[170],
-    ",
-  0x503426acu64 => "
-      GLCDC_NS.gr1_clut1()[171],
-    ",
-  0x503426b0u64 => "
-      GLCDC_NS.gr1_clut1()[172],
-    ",
-  0x503426b4u64 => "
-      GLCDC_NS.gr1_clut1()[173],
-    ",
-  0x503426b8u64 => "
-      GLCDC_NS.gr1_clut1()[174],
-    ",
-  0x503426bcu64 => "
-      GLCDC_NS.gr1_clut1()[175],
-    ",
-  0x503426c0u64 => "
-      GLCDC_NS.gr1_clut1()[176],
-    ",
-  0x503426c4u64 => "
-      GLCDC_NS.gr1_clut1()[177],
-    ",
-  0x503426c8u64 => "
-      GLCDC_NS.gr1_clut1()[178],
-    ",
-  0x503426ccu64 => "
-      GLCDC_NS.gr1_clut1()[179],
-    ",
-  0x503426d0u64 => "
-      GLCDC_NS.gr1_clut1()[180],
-    ",
-  0x503426d4u64 => "
-      GLCDC_NS.gr1_clut1()[181],
-    ",
-  0x503426d8u64 => "
-      GLCDC_NS.gr1_clut1()[182],
-    ",
-  0x503426dcu64 => "
-      GLCDC_NS.gr1_clut1()[183],
-    ",
-  0x503426e0u64 => "
-      GLCDC_NS.gr1_clut1()[184],
-    ",
-  0x503426e4u64 => "
-      GLCDC_NS.gr1_clut1()[185],
-    ",
-  0x503426e8u64 => "
-      GLCDC_NS.gr1_clut1()[186],
-    ",
-  0x503426ecu64 => "
-      GLCDC_NS.gr1_clut1()[187],
-    ",
-  0x503426f0u64 => "
-      GLCDC_NS.gr1_clut1()[188],
-    ",
-  0x503426f4u64 => "
-      GLCDC_NS.gr1_clut1()[189],
-    ",
-  0x503426f8u64 => "
-      GLCDC_NS.gr1_clut1()[190],
-    ",
-  0x503426fcu64 => "
-      GLCDC_NS.gr1_clut1()[191],
-    ",
-  0x50342700u64 => "
-      GLCDC_NS.gr1_clut1()[192],
-    ",
-  0x50342704u64 => "
-      GLCDC_NS.gr1_clut1()[193],
-    ",
-  0x50342708u64 => "
-      GLCDC_NS.gr1_clut1()[194],
-    ",
-  0x5034270cu64 => "
-      GLCDC_NS.gr1_clut1()[195],
-    ",
-  0x50342710u64 => "
-      GLCDC_NS.gr1_clut1()[196],
-    ",
-  0x50342714u64 => "
-      GLCDC_NS.gr1_clut1()[197],
-    ",
-  0x50342718u64 => "
-      GLCDC_NS.gr1_clut1()[198],
-    ",
-  0x5034271cu64 => "
-      GLCDC_NS.gr1_clut1()[199],
-    ",
-  0x50342720u64 => "
-      GLCDC_NS.gr1_clut1()[200],
-    ",
-  0x50342724u64 => "
-      GLCDC_NS.gr1_clut1()[201],
-    ",
-  0x50342728u64 => "
-      GLCDC_NS.gr1_clut1()[202],
-    ",
-  0x5034272cu64 => "
-      GLCDC_NS.gr1_clut1()[203],
-    ",
-  0x50342730u64 => "
-      GLCDC_NS.gr1_clut1()[204],
-    ",
-  0x50342734u64 => "
-      GLCDC_NS.gr1_clut1()[205],
-    ",
-  0x50342738u64 => "
-      GLCDC_NS.gr1_clut1()[206],
-    ",
-  0x5034273cu64 => "
-      GLCDC_NS.gr1_clut1()[207],
-    ",
-  0x50342740u64 => "
-      GLCDC_NS.gr1_clut1()[208],
-    ",
-  0x50342744u64 => "
-      GLCDC_NS.gr1_clut1()[209],
-    ",
-  0x50342748u64 => "
-      GLCDC_NS.gr1_clut1()[210],
-    ",
-  0x5034274cu64 => "
-      GLCDC_NS.gr1_clut1()[211],
-    ",
-  0x50342750u64 => "
-      GLCDC_NS.gr1_clut1()[212],
-    ",
-  0x50342754u64 => "
-      GLCDC_NS.gr1_clut1()[213],
-    ",
-  0x50342758u64 => "
-      GLCDC_NS.gr1_clut1()[214],
-    ",
-  0x5034275cu64 => "
-      GLCDC_NS.gr1_clut1()[215],
-    ",
-  0x50342760u64 => "
-      GLCDC_NS.gr1_clut1()[216],
-    ",
-  0x50342764u64 => "
-      GLCDC_NS.gr1_clut1()[217],
-    ",
-  0x50342768u64 => "
-      GLCDC_NS.gr1_clut1()[218],
-    ",
-  0x5034276cu64 => "
-      GLCDC_NS.gr1_clut1()[219],
-    ",
-  0x50342770u64 => "
-      GLCDC_NS.gr1_clut1()[220],
-    ",
-  0x50342774u64 => "
-      GLCDC_NS.gr1_clut1()[221],
-    ",
-  0x50342778u64 => "
-      GLCDC_NS.gr1_clut1()[222],
-    ",
-  0x5034277cu64 => "
-      GLCDC_NS.gr1_clut1()[223],
-    ",
-  0x50342780u64 => "
-      GLCDC_NS.gr1_clut1()[224],
-    ",
-  0x50342784u64 => "
-      GLCDC_NS.gr1_clut1()[225],
-    ",
-  0x50342788u64 => "
-      GLCDC_NS.gr1_clut1()[226],
-    ",
-  0x5034278cu64 => "
-      GLCDC_NS.gr1_clut1()[227],
-    ",
-  0x50342790u64 => "
-      GLCDC_NS.gr1_clut1()[228],
-    ",
-  0x50342794u64 => "
-      GLCDC_NS.gr1_clut1()[229],
-    ",
-  0x50342798u64 => "
-      GLCDC_NS.gr1_clut1()[230],
-    ",
-  0x5034279cu64 => "
-      GLCDC_NS.gr1_clut1()[231],
-    ",
-  0x503427a0u64 => "
-      GLCDC_NS.gr1_clut1()[232],
-    ",
-  0x503427a4u64 => "
-      GLCDC_NS.gr1_clut1()[233],
-    ",
-  0x503427a8u64 => "
-      GLCDC_NS.gr1_clut1()[234],
-    ",
-  0x503427acu64 => "
-      GLCDC_NS.gr1_clut1()[235],
-    ",
-  0x503427b0u64 => "
-      GLCDC_NS.gr1_clut1()[236],
-    ",
-  0x503427b4u64 => "
-      GLCDC_NS.gr1_clut1()[237],
-    ",
-  0x503427b8u64 => "
-      GLCDC_NS.gr1_clut1()[238],
-    ",
-  0x503427bcu64 => "
-      GLCDC_NS.gr1_clut1()[239],
-    ",
-  0x503427c0u64 => "
-      GLCDC_NS.gr1_clut1()[240],
-    ",
-  0x503427c4u64 => "
-      GLCDC_NS.gr1_clut1()[241],
-    ",
-  0x503427c8u64 => "
-      GLCDC_NS.gr1_clut1()[242],
-    ",
-  0x503427ccu64 => "
-      GLCDC_NS.gr1_clut1()[243],
-    ",
-  0x503427d0u64 => "
-      GLCDC_NS.gr1_clut1()[244],
-    ",
-  0x503427d4u64 => "
-      GLCDC_NS.gr1_clut1()[245],
-    ",
-  0x503427d8u64 => "
-      GLCDC_NS.gr1_clut1()[246],
-    ",
-  0x503427dcu64 => "
-      GLCDC_NS.gr1_clut1()[247],
-    ",
-  0x503427e0u64 => "
-      GLCDC_NS.gr1_clut1()[248],
-    ",
-  0x503427e4u64 => "
-      GLCDC_NS.gr1_clut1()[249],
-    ",
-  0x503427e8u64 => "
-      GLCDC_NS.gr1_clut1()[250],
-    ",
-  0x503427ecu64 => "
-      GLCDC_NS.gr1_clut1()[251],
-    ",
-  0x503427f0u64 => "
-      GLCDC_NS.gr1_clut1()[252],
-    ",
-  0x503427f4u64 => "
-      GLCDC_NS.gr1_clut1()[253],
-    ",
-  0x503427f8u64 => "
-      GLCDC_NS.gr1_clut1()[254],
-    ",
-  0x503427fcu64 => "
-      GLCDC_NS.gr1_clut1()[255],
-    ",
-  0x50342800u64 => "
-      GLCDC_NS.gr2_clut0()[0],
-    ",
-  0x50342804u64 => "
-      GLCDC_NS.gr2_clut0()[1],
-    ",
-  0x50342808u64 => "
-      GLCDC_NS.gr2_clut0()[2],
-    ",
-  0x5034280cu64 => "
-      GLCDC_NS.gr2_clut0()[3],
-    ",
-  0x50342810u64 => "
-      GLCDC_NS.gr2_clut0()[4],
-    ",
-  0x50342814u64 => "
-      GLCDC_NS.gr2_clut0()[5],
-    ",
-  0x50342818u64 => "
-      GLCDC_NS.gr2_clut0()[6],
-    ",
-  0x5034281cu64 => "
-      GLCDC_NS.gr2_clut0()[7],
-    ",
-  0x50342820u64 => "
-      GLCDC_NS.gr2_clut0()[8],
-    ",
-  0x50342824u64 => "
-      GLCDC_NS.gr2_clut0()[9],
-    ",
-  0x50342828u64 => "
-      GLCDC_NS.gr2_clut0()[10],
-    ",
-  0x5034282cu64 => "
-      GLCDC_NS.gr2_clut0()[11],
-    ",
-  0x50342830u64 => "
-      GLCDC_NS.gr2_clut0()[12],
-    ",
-  0x50342834u64 => "
-      GLCDC_NS.gr2_clut0()[13],
-    ",
-  0x50342838u64 => "
-      GLCDC_NS.gr2_clut0()[14],
-    ",
-  0x5034283cu64 => "
-      GLCDC_NS.gr2_clut0()[15],
-    ",
-  0x50342840u64 => "
-      GLCDC_NS.gr2_clut0()[16],
-    ",
-  0x50342844u64 => "
-      GLCDC_NS.gr2_clut0()[17],
-    ",
-  0x50342848u64 => "
-      GLCDC_NS.gr2_clut0()[18],
-    ",
-  0x5034284cu64 => "
-      GLCDC_NS.gr2_clut0()[19],
-    ",
-  0x50342850u64 => "
-      GLCDC_NS.gr2_clut0()[20],
-    ",
-  0x50342854u64 => "
-      GLCDC_NS.gr2_clut0()[21],
-    ",
-  0x50342858u64 => "
-      GLCDC_NS.gr2_clut0()[22],
-    ",
-  0x5034285cu64 => "
-      GLCDC_NS.gr2_clut0()[23],
-    ",
-  0x50342860u64 => "
-      GLCDC_NS.gr2_clut0()[24],
-    ",
-  0x50342864u64 => "
-      GLCDC_NS.gr2_clut0()[25],
-    ",
-  0x50342868u64 => "
-      GLCDC_NS.gr2_clut0()[26],
-    ",
-  0x5034286cu64 => "
-      GLCDC_NS.gr2_clut0()[27],
-    ",
-  0x50342870u64 => "
-      GLCDC_NS.gr2_clut0()[28],
-    ",
-  0x50342874u64 => "
-      GLCDC_NS.gr2_clut0()[29],
-    ",
-  0x50342878u64 => "
-      GLCDC_NS.gr2_clut0()[30],
-    ",
-  0x5034287cu64 => "
-      GLCDC_NS.gr2_clut0()[31],
-    ",
-  0x50342880u64 => "
-      GLCDC_NS.gr2_clut0()[32],
-    ",
-  0x50342884u64 => "
-      GLCDC_NS.gr2_clut0()[33],
-    ",
-  0x50342888u64 => "
-      GLCDC_NS.gr2_clut0()[34],
-    ",
-  0x5034288cu64 => "
-      GLCDC_NS.gr2_clut0()[35],
-    ",
-  0x50342890u64 => "
-      GLCDC_NS.gr2_clut0()[36],
-    ",
-  0x50342894u64 => "
-      GLCDC_NS.gr2_clut0()[37],
-    ",
-  0x50342898u64 => "
-      GLCDC_NS.gr2_clut0()[38],
-    ",
-  0x5034289cu64 => "
-      GLCDC_NS.gr2_clut0()[39],
-    ",
-  0x503428a0u64 => "
-      GLCDC_NS.gr2_clut0()[40],
-    ",
-  0x503428a4u64 => "
-      GLCDC_NS.gr2_clut0()[41],
-    ",
-  0x503428a8u64 => "
-      GLCDC_NS.gr2_clut0()[42],
-    ",
-  0x503428acu64 => "
-      GLCDC_NS.gr2_clut0()[43],
-    ",
-  0x503428b0u64 => "
-      GLCDC_NS.gr2_clut0()[44],
-    ",
-  0x503428b4u64 => "
-      GLCDC_NS.gr2_clut0()[45],
-    ",
-  0x503428b8u64 => "
-      GLCDC_NS.gr2_clut0()[46],
-    ",
-  0x503428bcu64 => "
-      GLCDC_NS.gr2_clut0()[47],
-    ",
-  0x503428c0u64 => "
-      GLCDC_NS.gr2_clut0()[48],
-    ",
-  0x503428c4u64 => "
-      GLCDC_NS.gr2_clut0()[49],
-    ",
-  0x503428c8u64 => "
-      GLCDC_NS.gr2_clut0()[50],
-    ",
-  0x503428ccu64 => "
-      GLCDC_NS.gr2_clut0()[51],
-    ",
-  0x503428d0u64 => "
-      GLCDC_NS.gr2_clut0()[52],
-    ",
-  0x503428d4u64 => "
-      GLCDC_NS.gr2_clut0()[53],
-    ",
-  0x503428d8u64 => "
-      GLCDC_NS.gr2_clut0()[54],
-    ",
-  0x503428dcu64 => "
-      GLCDC_NS.gr2_clut0()[55],
-    ",
-  0x503428e0u64 => "
-      GLCDC_NS.gr2_clut0()[56],
-    ",
-  0x503428e4u64 => "
-      GLCDC_NS.gr2_clut0()[57],
-    ",
-  0x503428e8u64 => "
-      GLCDC_NS.gr2_clut0()[58],
-    ",
-  0x503428ecu64 => "
-      GLCDC_NS.gr2_clut0()[59],
-    ",
-  0x503428f0u64 => "
-      GLCDC_NS.gr2_clut0()[60],
-    ",
-  0x503428f4u64 => "
-      GLCDC_NS.gr2_clut0()[61],
-    ",
-  0x503428f8u64 => "
-      GLCDC_NS.gr2_clut0()[62],
-    ",
-  0x503428fcu64 => "
-      GLCDC_NS.gr2_clut0()[63],
-    ",
-  0x50342900u64 => "
-      GLCDC_NS.gr2_clut0()[64],
-    ",
-  0x50342904u64 => "
-      GLCDC_NS.gr2_clut0()[65],
-    ",
-  0x50342908u64 => "
-      GLCDC_NS.gr2_clut0()[66],
-    ",
-  0x5034290cu64 => "
-      GLCDC_NS.gr2_clut0()[67],
-    ",
-  0x50342910u64 => "
-      GLCDC_NS.gr2_clut0()[68],
-    ",
-  0x50342914u64 => "
-      GLCDC_NS.gr2_clut0()[69],
-    ",
-  0x50342918u64 => "
-      GLCDC_NS.gr2_clut0()[70],
-    ",
-  0x5034291cu64 => "
-      GLCDC_NS.gr2_clut0()[71],
-    ",
-  0x50342920u64 => "
-      GLCDC_NS.gr2_clut0()[72],
-    ",
-  0x50342924u64 => "
-      GLCDC_NS.gr2_clut0()[73],
-    ",
-  0x50342928u64 => "
-      GLCDC_NS.gr2_clut0()[74],
-    ",
-  0x5034292cu64 => "
-      GLCDC_NS.gr2_clut0()[75],
-    ",
-  0x50342930u64 => "
-      GLCDC_NS.gr2_clut0()[76],
-    ",
-  0x50342934u64 => "
-      GLCDC_NS.gr2_clut0()[77],
-    ",
-  0x50342938u64 => "
-      GLCDC_NS.gr2_clut0()[78],
-    ",
-  0x5034293cu64 => "
-      GLCDC_NS.gr2_clut0()[79],
-    ",
-  0x50342940u64 => "
-      GLCDC_NS.gr2_clut0()[80],
-    ",
-  0x50342944u64 => "
-      GLCDC_NS.gr2_clut0()[81],
-    ",
-  0x50342948u64 => "
-      GLCDC_NS.gr2_clut0()[82],
-    ",
-  0x5034294cu64 => "
-      GLCDC_NS.gr2_clut0()[83],
-    ",
-  0x50342950u64 => "
-      GLCDC_NS.gr2_clut0()[84],
-    ",
-  0x50342954u64 => "
-      GLCDC_NS.gr2_clut0()[85],
-    ",
-  0x50342958u64 => "
-      GLCDC_NS.gr2_clut0()[86],
-    ",
-  0x5034295cu64 => "
-      GLCDC_NS.gr2_clut0()[87],
-    ",
-  0x50342960u64 => "
-      GLCDC_NS.gr2_clut0()[88],
-    ",
-  0x50342964u64 => "
-      GLCDC_NS.gr2_clut0()[89],
-    ",
-  0x50342968u64 => "
-      GLCDC_NS.gr2_clut0()[90],
-    ",
-  0x5034296cu64 => "
-      GLCDC_NS.gr2_clut0()[91],
-    ",
-  0x50342970u64 => "
-      GLCDC_NS.gr2_clut0()[92],
-    ",
-  0x50342974u64 => "
-      GLCDC_NS.gr2_clut0()[93],
-    ",
-  0x50342978u64 => "
-      GLCDC_NS.gr2_clut0()[94],
-    ",
-  0x5034297cu64 => "
-      GLCDC_NS.gr2_clut0()[95],
-    ",
-  0x50342980u64 => "
-      GLCDC_NS.gr2_clut0()[96],
-    ",
-  0x50342984u64 => "
-      GLCDC_NS.gr2_clut0()[97],
-    ",
-  0x50342988u64 => "
-      GLCDC_NS.gr2_clut0()[98],
-    ",
-  0x5034298cu64 => "
-      GLCDC_NS.gr2_clut0()[99],
-    ",
-  0x50342990u64 => "
-      GLCDC_NS.gr2_clut0()[100],
-    ",
-  0x50342994u64 => "
-      GLCDC_NS.gr2_clut0()[101],
-    ",
-  0x50342998u64 => "
-      GLCDC_NS.gr2_clut0()[102],
-    ",
-  0x5034299cu64 => "
-      GLCDC_NS.gr2_clut0()[103],
-    ",
-  0x503429a0u64 => "
-      GLCDC_NS.gr2_clut0()[104],
-    ",
-  0x503429a4u64 => "
-      GLCDC_NS.gr2_clut0()[105],
-    ",
-  0x503429a8u64 => "
-      GLCDC_NS.gr2_clut0()[106],
-    ",
-  0x503429acu64 => "
-      GLCDC_NS.gr2_clut0()[107],
-    ",
-  0x503429b0u64 => "
-      GLCDC_NS.gr2_clut0()[108],
-    ",
-  0x503429b4u64 => "
-      GLCDC_NS.gr2_clut0()[109],
-    ",
-  0x503429b8u64 => "
-      GLCDC_NS.gr2_clut0()[110],
-    ",
-  0x503429bcu64 => "
-      GLCDC_NS.gr2_clut0()[111],
-    ",
-  0x503429c0u64 => "
-      GLCDC_NS.gr2_clut0()[112],
-    ",
-  0x503429c4u64 => "
-      GLCDC_NS.gr2_clut0()[113],
-    ",
-  0x503429c8u64 => "
-      GLCDC_NS.gr2_clut0()[114],
-    ",
-  0x503429ccu64 => "
-      GLCDC_NS.gr2_clut0()[115],
-    ",
-  0x503429d0u64 => "
-      GLCDC_NS.gr2_clut0()[116],
-    ",
-  0x503429d4u64 => "
-      GLCDC_NS.gr2_clut0()[117],
-    ",
-  0x503429d8u64 => "
-      GLCDC_NS.gr2_clut0()[118],
-    ",
-  0x503429dcu64 => "
-      GLCDC_NS.gr2_clut0()[119],
-    ",
-  0x503429e0u64 => "
-      GLCDC_NS.gr2_clut0()[120],
-    ",
-  0x503429e4u64 => "
-      GLCDC_NS.gr2_clut0()[121],
-    ",
-  0x503429e8u64 => "
-      GLCDC_NS.gr2_clut0()[122],
-    ",
-  0x503429ecu64 => "
-      GLCDC_NS.gr2_clut0()[123],
-    ",
-  0x503429f0u64 => "
-      GLCDC_NS.gr2_clut0()[124],
-    ",
-  0x503429f4u64 => "
-      GLCDC_NS.gr2_clut0()[125],
-    ",
-  0x503429f8u64 => "
-      GLCDC_NS.gr2_clut0()[126],
-    ",
-  0x503429fcu64 => "
-      GLCDC_NS.gr2_clut0()[127],
-    ",
-  0x50342a00u64 => "
-      GLCDC_NS.gr2_clut0()[128],
-    ",
-  0x50342a04u64 => "
-      GLCDC_NS.gr2_clut0()[129],
-    ",
-  0x50342a08u64 => "
-      GLCDC_NS.gr2_clut0()[130],
-    ",
-  0x50342a0cu64 => "
-      GLCDC_NS.gr2_clut0()[131],
-    ",
-  0x50342a10u64 => "
-      GLCDC_NS.gr2_clut0()[132],
-    ",
-  0x50342a14u64 => "
-      GLCDC_NS.gr2_clut0()[133],
-    ",
-  0x50342a18u64 => "
-      GLCDC_NS.gr2_clut0()[134],
-    ",
-  0x50342a1cu64 => "
-      GLCDC_NS.gr2_clut0()[135],
-    ",
-  0x50342a20u64 => "
-      GLCDC_NS.gr2_clut0()[136],
-    ",
-  0x50342a24u64 => "
-      GLCDC_NS.gr2_clut0()[137],
-    ",
-  0x50342a28u64 => "
-      GLCDC_NS.gr2_clut0()[138],
-    ",
-  0x50342a2cu64 => "
-      GLCDC_NS.gr2_clut0()[139],
-    ",
-  0x50342a30u64 => "
-      GLCDC_NS.gr2_clut0()[140],
-    ",
-  0x50342a34u64 => "
-      GLCDC_NS.gr2_clut0()[141],
-    ",
-  0x50342a38u64 => "
-      GLCDC_NS.gr2_clut0()[142],
-    ",
-  0x50342a3cu64 => "
-      GLCDC_NS.gr2_clut0()[143],
-    ",
-  0x50342a40u64 => "
-      GLCDC_NS.gr2_clut0()[144],
-    ",
-  0x50342a44u64 => "
-      GLCDC_NS.gr2_clut0()[145],
-    ",
-  0x50342a48u64 => "
-      GLCDC_NS.gr2_clut0()[146],
-    ",
-  0x50342a4cu64 => "
-      GLCDC_NS.gr2_clut0()[147],
-    ",
-  0x50342a50u64 => "
-      GLCDC_NS.gr2_clut0()[148],
-    ",
-  0x50342a54u64 => "
-      GLCDC_NS.gr2_clut0()[149],
-    ",
-  0x50342a58u64 => "
-      GLCDC_NS.gr2_clut0()[150],
-    ",
-  0x50342a5cu64 => "
-      GLCDC_NS.gr2_clut0()[151],
-    ",
-  0x50342a60u64 => "
-      GLCDC_NS.gr2_clut0()[152],
-    ",
-  0x50342a64u64 => "
-      GLCDC_NS.gr2_clut0()[153],
-    ",
-  0x50342a68u64 => "
-      GLCDC_NS.gr2_clut0()[154],
-    ",
-  0x50342a6cu64 => "
-      GLCDC_NS.gr2_clut0()[155],
-    ",
-  0x50342a70u64 => "
-      GLCDC_NS.gr2_clut0()[156],
-    ",
-  0x50342a74u64 => "
-      GLCDC_NS.gr2_clut0()[157],
-    ",
-  0x50342a78u64 => "
-      GLCDC_NS.gr2_clut0()[158],
-    ",
-  0x50342a7cu64 => "
-      GLCDC_NS.gr2_clut0()[159],
-    ",
-  0x50342a80u64 => "
-      GLCDC_NS.gr2_clut0()[160],
-    ",
-  0x50342a84u64 => "
-      GLCDC_NS.gr2_clut0()[161],
-    ",
-  0x50342a88u64 => "
-      GLCDC_NS.gr2_clut0()[162],
-    ",
-  0x50342a8cu64 => "
-      GLCDC_NS.gr2_clut0()[163],
-    ",
-  0x50342a90u64 => "
-      GLCDC_NS.gr2_clut0()[164],
-    ",
-  0x50342a94u64 => "
-      GLCDC_NS.gr2_clut0()[165],
-    ",
-  0x50342a98u64 => "
-      GLCDC_NS.gr2_clut0()[166],
-    ",
-  0x50342a9cu64 => "
-      GLCDC_NS.gr2_clut0()[167],
-    ",
-  0x50342aa0u64 => "
-      GLCDC_NS.gr2_clut0()[168],
-    ",
-  0x50342aa4u64 => "
-      GLCDC_NS.gr2_clut0()[169],
-    ",
-  0x50342aa8u64 => "
-      GLCDC_NS.gr2_clut0()[170],
-    ",
-  0x50342aacu64 => "
-      GLCDC_NS.gr2_clut0()[171],
-    ",
-  0x50342ab0u64 => "
-      GLCDC_NS.gr2_clut0()[172],
-    ",
-  0x50342ab4u64 => "
-      GLCDC_NS.gr2_clut0()[173],
-    ",
-  0x50342ab8u64 => "
-      GLCDC_NS.gr2_clut0()[174],
-    ",
-  0x50342abcu64 => "
-      GLCDC_NS.gr2_clut0()[175],
-    ",
-  0x50342ac0u64 => "
-      GLCDC_NS.gr2_clut0()[176],
-    ",
-  0x50342ac4u64 => "
-      GLCDC_NS.gr2_clut0()[177],
-    ",
-  0x50342ac8u64 => "
-      GLCDC_NS.gr2_clut0()[178],
-    ",
-  0x50342accu64 => "
-      GLCDC_NS.gr2_clut0()[179],
-    ",
-  0x50342ad0u64 => "
-      GLCDC_NS.gr2_clut0()[180],
-    ",
-  0x50342ad4u64 => "
-      GLCDC_NS.gr2_clut0()[181],
-    ",
-  0x50342ad8u64 => "
-      GLCDC_NS.gr2_clut0()[182],
-    ",
-  0x50342adcu64 => "
-      GLCDC_NS.gr2_clut0()[183],
-    ",
-  0x50342ae0u64 => "
-      GLCDC_NS.gr2_clut0()[184],
-    ",
-  0x50342ae4u64 => "
-      GLCDC_NS.gr2_clut0()[185],
-    ",
-  0x50342ae8u64 => "
-      GLCDC_NS.gr2_clut0()[186],
-    ",
-  0x50342aecu64 => "
-      GLCDC_NS.gr2_clut0()[187],
-    ",
-  0x50342af0u64 => "
-      GLCDC_NS.gr2_clut0()[188],
-    ",
-  0x50342af4u64 => "
-      GLCDC_NS.gr2_clut0()[189],
-    ",
-  0x50342af8u64 => "
-      GLCDC_NS.gr2_clut0()[190],
-    ",
-  0x50342afcu64 => "
-      GLCDC_NS.gr2_clut0()[191],
-    ",
-  0x50342b00u64 => "
-      GLCDC_NS.gr2_clut0()[192],
-    ",
-  0x50342b04u64 => "
-      GLCDC_NS.gr2_clut0()[193],
-    ",
-  0x50342b08u64 => "
-      GLCDC_NS.gr2_clut0()[194],
-    ",
-  0x50342b0cu64 => "
-      GLCDC_NS.gr2_clut0()[195],
-    ",
-  0x50342b10u64 => "
-      GLCDC_NS.gr2_clut0()[196],
-    ",
-  0x50342b14u64 => "
-      GLCDC_NS.gr2_clut0()[197],
-    ",
-  0x50342b18u64 => "
-      GLCDC_NS.gr2_clut0()[198],
-    ",
-  0x50342b1cu64 => "
-      GLCDC_NS.gr2_clut0()[199],
-    ",
-  0x50342b20u64 => "
-      GLCDC_NS.gr2_clut0()[200],
-    ",
-  0x50342b24u64 => "
-      GLCDC_NS.gr2_clut0()[201],
-    ",
-  0x50342b28u64 => "
-      GLCDC_NS.gr2_clut0()[202],
-    ",
-  0x50342b2cu64 => "
-      GLCDC_NS.gr2_clut0()[203],
-    ",
-  0x50342b30u64 => "
-      GLCDC_NS.gr2_clut0()[204],
-    ",
-  0x50342b34u64 => "
-      GLCDC_NS.gr2_clut0()[205],
-    ",
-  0x50342b38u64 => "
-      GLCDC_NS.gr2_clut0()[206],
-    ",
-  0x50342b3cu64 => "
-      GLCDC_NS.gr2_clut0()[207],
-    ",
-  0x50342b40u64 => "
-      GLCDC_NS.gr2_clut0()[208],
-    ",
-  0x50342b44u64 => "
-      GLCDC_NS.gr2_clut0()[209],
-    ",
-  0x50342b48u64 => "
-      GLCDC_NS.gr2_clut0()[210],
-    ",
-  0x50342b4cu64 => "
-      GLCDC_NS.gr2_clut0()[211],
-    ",
-  0x50342b50u64 => "
-      GLCDC_NS.gr2_clut0()[212],
-    ",
-  0x50342b54u64 => "
-      GLCDC_NS.gr2_clut0()[213],
-    ",
-  0x50342b58u64 => "
-      GLCDC_NS.gr2_clut0()[214],
-    ",
-  0x50342b5cu64 => "
-      GLCDC_NS.gr2_clut0()[215],
-    ",
-  0x50342b60u64 => "
-      GLCDC_NS.gr2_clut0()[216],
-    ",
-  0x50342b64u64 => "
-      GLCDC_NS.gr2_clut0()[217],
-    ",
-  0x50342b68u64 => "
-      GLCDC_NS.gr2_clut0()[218],
-    ",
-  0x50342b6cu64 => "
-      GLCDC_NS.gr2_clut0()[219],
-    ",
-  0x50342b70u64 => "
-      GLCDC_NS.gr2_clut0()[220],
-    ",
-  0x50342b74u64 => "
-      GLCDC_NS.gr2_clut0()[221],
-    ",
-  0x50342b78u64 => "
-      GLCDC_NS.gr2_clut0()[222],
-    ",
-  0x50342b7cu64 => "
-      GLCDC_NS.gr2_clut0()[223],
-    ",
-  0x50342b80u64 => "
-      GLCDC_NS.gr2_clut0()[224],
-    ",
-  0x50342b84u64 => "
-      GLCDC_NS.gr2_clut0()[225],
-    ",
-  0x50342b88u64 => "
-      GLCDC_NS.gr2_clut0()[226],
-    ",
-  0x50342b8cu64 => "
-      GLCDC_NS.gr2_clut0()[227],
-    ",
-  0x50342b90u64 => "
-      GLCDC_NS.gr2_clut0()[228],
-    ",
-  0x50342b94u64 => "
-      GLCDC_NS.gr2_clut0()[229],
-    ",
-  0x50342b98u64 => "
-      GLCDC_NS.gr2_clut0()[230],
-    ",
-  0x50342b9cu64 => "
-      GLCDC_NS.gr2_clut0()[231],
-    ",
-  0x50342ba0u64 => "
-      GLCDC_NS.gr2_clut0()[232],
-    ",
-  0x50342ba4u64 => "
-      GLCDC_NS.gr2_clut0()[233],
-    ",
-  0x50342ba8u64 => "
-      GLCDC_NS.gr2_clut0()[234],
-    ",
-  0x50342bacu64 => "
-      GLCDC_NS.gr2_clut0()[235],
-    ",
-  0x50342bb0u64 => "
-      GLCDC_NS.gr2_clut0()[236],
-    ",
-  0x50342bb4u64 => "
-      GLCDC_NS.gr2_clut0()[237],
-    ",
-  0x50342bb8u64 => "
-      GLCDC_NS.gr2_clut0()[238],
-    ",
-  0x50342bbcu64 => "
-      GLCDC_NS.gr2_clut0()[239],
-    ",
-  0x50342bc0u64 => "
-      GLCDC_NS.gr2_clut0()[240],
-    ",
-  0x50342bc4u64 => "
-      GLCDC_NS.gr2_clut0()[241],
-    ",
-  0x50342bc8u64 => "
-      GLCDC_NS.gr2_clut0()[242],
-    ",
-  0x50342bccu64 => "
-      GLCDC_NS.gr2_clut0()[243],
-    ",
-  0x50342bd0u64 => "
-      GLCDC_NS.gr2_clut0()[244],
-    ",
-  0x50342bd4u64 => "
-      GLCDC_NS.gr2_clut0()[245],
-    ",
-  0x50342bd8u64 => "
-      GLCDC_NS.gr2_clut0()[246],
-    ",
-  0x50342bdcu64 => "
-      GLCDC_NS.gr2_clut0()[247],
-    ",
-  0x50342be0u64 => "
-      GLCDC_NS.gr2_clut0()[248],
-    ",
-  0x50342be4u64 => "
-      GLCDC_NS.gr2_clut0()[249],
-    ",
-  0x50342be8u64 => "
-      GLCDC_NS.gr2_clut0()[250],
-    ",
-  0x50342becu64 => "
-      GLCDC_NS.gr2_clut0()[251],
-    ",
-  0x50342bf0u64 => "
-      GLCDC_NS.gr2_clut0()[252],
-    ",
-  0x50342bf4u64 => "
-      GLCDC_NS.gr2_clut0()[253],
-    ",
-  0x50342bf8u64 => "
-      GLCDC_NS.gr2_clut0()[254],
-    ",
-  0x50342bfcu64 => "
-      GLCDC_NS.gr2_clut0()[255],
-    ",
-  0x50342c00u64 => "
-      GLCDC_NS.gr2_clut1()[0],
-    ",
-  0x50342c04u64 => "
-      GLCDC_NS.gr2_clut1()[1],
-    ",
-  0x50342c08u64 => "
-      GLCDC_NS.gr2_clut1()[2],
-    ",
-  0x50342c0cu64 => "
-      GLCDC_NS.gr2_clut1()[3],
-    ",
-  0x50342c10u64 => "
-      GLCDC_NS.gr2_clut1()[4],
-    ",
-  0x50342c14u64 => "
-      GLCDC_NS.gr2_clut1()[5],
-    ",
-  0x50342c18u64 => "
-      GLCDC_NS.gr2_clut1()[6],
-    ",
-  0x50342c1cu64 => "
-      GLCDC_NS.gr2_clut1()[7],
-    ",
-  0x50342c20u64 => "
-      GLCDC_NS.gr2_clut1()[8],
-    ",
-  0x50342c24u64 => "
-      GLCDC_NS.gr2_clut1()[9],
-    ",
-  0x50342c28u64 => "
-      GLCDC_NS.gr2_clut1()[10],
-    ",
-  0x50342c2cu64 => "
-      GLCDC_NS.gr2_clut1()[11],
-    ",
-  0x50342c30u64 => "
-      GLCDC_NS.gr2_clut1()[12],
-    ",
-  0x50342c34u64 => "
-      GLCDC_NS.gr2_clut1()[13],
-    ",
-  0x50342c38u64 => "
-      GLCDC_NS.gr2_clut1()[14],
-    ",
-  0x50342c3cu64 => "
-      GLCDC_NS.gr2_clut1()[15],
-    ",
-  0x50342c40u64 => "
-      GLCDC_NS.gr2_clut1()[16],
-    ",
-  0x50342c44u64 => "
-      GLCDC_NS.gr2_clut1()[17],
-    ",
-  0x50342c48u64 => "
-      GLCDC_NS.gr2_clut1()[18],
-    ",
-  0x50342c4cu64 => "
-      GLCDC_NS.gr2_clut1()[19],
-    ",
-  0x50342c50u64 => "
-      GLCDC_NS.gr2_clut1()[20],
-    ",
-  0x50342c54u64 => "
-      GLCDC_NS.gr2_clut1()[21],
-    ",
-  0x50342c58u64 => "
-      GLCDC_NS.gr2_clut1()[22],
-    ",
-  0x50342c5cu64 => "
-      GLCDC_NS.gr2_clut1()[23],
-    ",
-  0x50342c60u64 => "
-      GLCDC_NS.gr2_clut1()[24],
-    ",
-  0x50342c64u64 => "
-      GLCDC_NS.gr2_clut1()[25],
-    ",
-  0x50342c68u64 => "
-      GLCDC_NS.gr2_clut1()[26],
-    ",
-  0x50342c6cu64 => "
-      GLCDC_NS.gr2_clut1()[27],
-    ",
-  0x50342c70u64 => "
-      GLCDC_NS.gr2_clut1()[28],
-    ",
-  0x50342c74u64 => "
-      GLCDC_NS.gr2_clut1()[29],
-    ",
-  0x50342c78u64 => "
-      GLCDC_NS.gr2_clut1()[30],
-    ",
-  0x50342c7cu64 => "
-      GLCDC_NS.gr2_clut1()[31],
-    ",
-  0x50342c80u64 => "
-      GLCDC_NS.gr2_clut1()[32],
-    ",
-  0x50342c84u64 => "
-      GLCDC_NS.gr2_clut1()[33],
-    ",
-  0x50342c88u64 => "
-      GLCDC_NS.gr2_clut1()[34],
-    ",
-  0x50342c8cu64 => "
-      GLCDC_NS.gr2_clut1()[35],
-    ",
-  0x50342c90u64 => "
-      GLCDC_NS.gr2_clut1()[36],
-    ",
-  0x50342c94u64 => "
-      GLCDC_NS.gr2_clut1()[37],
-    ",
-  0x50342c98u64 => "
-      GLCDC_NS.gr2_clut1()[38],
-    ",
-  0x50342c9cu64 => "
-      GLCDC_NS.gr2_clut1()[39],
-    ",
-  0x50342ca0u64 => "
-      GLCDC_NS.gr2_clut1()[40],
-    ",
-  0x50342ca4u64 => "
-      GLCDC_NS.gr2_clut1()[41],
-    ",
-  0x50342ca8u64 => "
-      GLCDC_NS.gr2_clut1()[42],
-    ",
-  0x50342cacu64 => "
-      GLCDC_NS.gr2_clut1()[43],
-    ",
-  0x50342cb0u64 => "
-      GLCDC_NS.gr2_clut1()[44],
-    ",
-  0x50342cb4u64 => "
-      GLCDC_NS.gr2_clut1()[45],
-    ",
-  0x50342cb8u64 => "
-      GLCDC_NS.gr2_clut1()[46],
-    ",
-  0x50342cbcu64 => "
-      GLCDC_NS.gr2_clut1()[47],
-    ",
-  0x50342cc0u64 => "
-      GLCDC_NS.gr2_clut1()[48],
-    ",
-  0x50342cc4u64 => "
-      GLCDC_NS.gr2_clut1()[49],
-    ",
-  0x50342cc8u64 => "
-      GLCDC_NS.gr2_clut1()[50],
-    ",
-  0x50342cccu64 => "
-      GLCDC_NS.gr2_clut1()[51],
-    ",
-  0x50342cd0u64 => "
-      GLCDC_NS.gr2_clut1()[52],
-    ",
-  0x50342cd4u64 => "
-      GLCDC_NS.gr2_clut1()[53],
-    ",
-  0x50342cd8u64 => "
-      GLCDC_NS.gr2_clut1()[54],
-    ",
-  0x50342cdcu64 => "
-      GLCDC_NS.gr2_clut1()[55],
-    ",
-  0x50342ce0u64 => "
-      GLCDC_NS.gr2_clut1()[56],
-    ",
-  0x50342ce4u64 => "
-      GLCDC_NS.gr2_clut1()[57],
-    ",
-  0x50342ce8u64 => "
-      GLCDC_NS.gr2_clut1()[58],
-    ",
-  0x50342cecu64 => "
-      GLCDC_NS.gr2_clut1()[59],
-    ",
-  0x50342cf0u64 => "
-      GLCDC_NS.gr2_clut1()[60],
-    ",
-  0x50342cf4u64 => "
-      GLCDC_NS.gr2_clut1()[61],
-    ",
-  0x50342cf8u64 => "
-      GLCDC_NS.gr2_clut1()[62],
-    ",
-  0x50342cfcu64 => "
-      GLCDC_NS.gr2_clut1()[63],
-    ",
-  0x50342d00u64 => "
-      GLCDC_NS.gr2_clut1()[64],
-    ",
-  0x50342d04u64 => "
-      GLCDC_NS.gr2_clut1()[65],
-    ",
-  0x50342d08u64 => "
-      GLCDC_NS.gr2_clut1()[66],
-    ",
-  0x50342d0cu64 => "
-      GLCDC_NS.gr2_clut1()[67],
-    ",
-  0x50342d10u64 => "
-      GLCDC_NS.gr2_clut1()[68],
-    ",
-  0x50342d14u64 => "
-      GLCDC_NS.gr2_clut1()[69],
-    ",
-  0x50342d18u64 => "
-      GLCDC_NS.gr2_clut1()[70],
-    ",
-  0x50342d1cu64 => "
-      GLCDC_NS.gr2_clut1()[71],
-    ",
-  0x50342d20u64 => "
-      GLCDC_NS.gr2_clut1()[72],
-    ",
-  0x50342d24u64 => "
-      GLCDC_NS.gr2_clut1()[73],
-    ",
-  0x50342d28u64 => "
-      GLCDC_NS.gr2_clut1()[74],
-    ",
-  0x50342d2cu64 => "
-      GLCDC_NS.gr2_clut1()[75],
-    ",
-  0x50342d30u64 => "
-      GLCDC_NS.gr2_clut1()[76],
-    ",
-  0x50342d34u64 => "
-      GLCDC_NS.gr2_clut1()[77],
-    ",
-  0x50342d38u64 => "
-      GLCDC_NS.gr2_clut1()[78],
-    ",
-  0x50342d3cu64 => "
-      GLCDC_NS.gr2_clut1()[79],
-    ",
-  0x50342d40u64 => "
-      GLCDC_NS.gr2_clut1()[80],
-    ",
-  0x50342d44u64 => "
-      GLCDC_NS.gr2_clut1()[81],
-    ",
-  0x50342d48u64 => "
-      GLCDC_NS.gr2_clut1()[82],
-    ",
-  0x50342d4cu64 => "
-      GLCDC_NS.gr2_clut1()[83],
-    ",
-  0x50342d50u64 => "
-      GLCDC_NS.gr2_clut1()[84],
-    ",
-  0x50342d54u64 => "
-      GLCDC_NS.gr2_clut1()[85],
-    ",
-  0x50342d58u64 => "
-      GLCDC_NS.gr2_clut1()[86],
-    ",
-  0x50342d5cu64 => "
-      GLCDC_NS.gr2_clut1()[87],
-    ",
-  0x50342d60u64 => "
-      GLCDC_NS.gr2_clut1()[88],
-    ",
-  0x50342d64u64 => "
-      GLCDC_NS.gr2_clut1()[89],
-    ",
-  0x50342d68u64 => "
-      GLCDC_NS.gr2_clut1()[90],
-    ",
-  0x50342d6cu64 => "
-      GLCDC_NS.gr2_clut1()[91],
-    ",
-  0x50342d70u64 => "
-      GLCDC_NS.gr2_clut1()[92],
-    ",
-  0x50342d74u64 => "
-      GLCDC_NS.gr2_clut1()[93],
-    ",
-  0x50342d78u64 => "
-      GLCDC_NS.gr2_clut1()[94],
-    ",
-  0x50342d7cu64 => "
-      GLCDC_NS.gr2_clut1()[95],
-    ",
-  0x50342d80u64 => "
-      GLCDC_NS.gr2_clut1()[96],
-    ",
-  0x50342d84u64 => "
-      GLCDC_NS.gr2_clut1()[97],
-    ",
-  0x50342d88u64 => "
-      GLCDC_NS.gr2_clut1()[98],
-    ",
-  0x50342d8cu64 => "
-      GLCDC_NS.gr2_clut1()[99],
-    ",
-  0x50342d90u64 => "
-      GLCDC_NS.gr2_clut1()[100],
-    ",
-  0x50342d94u64 => "
-      GLCDC_NS.gr2_clut1()[101],
-    ",
-  0x50342d98u64 => "
-      GLCDC_NS.gr2_clut1()[102],
-    ",
-  0x50342d9cu64 => "
-      GLCDC_NS.gr2_clut1()[103],
-    ",
-  0x50342da0u64 => "
-      GLCDC_NS.gr2_clut1()[104],
-    ",
-  0x50342da4u64 => "
-      GLCDC_NS.gr2_clut1()[105],
-    ",
-  0x50342da8u64 => "
-      GLCDC_NS.gr2_clut1()[106],
-    ",
-  0x50342dacu64 => "
-      GLCDC_NS.gr2_clut1()[107],
-    ",
-  0x50342db0u64 => "
-      GLCDC_NS.gr2_clut1()[108],
-    ",
-  0x50342db4u64 => "
-      GLCDC_NS.gr2_clut1()[109],
-    ",
-  0x50342db8u64 => "
-      GLCDC_NS.gr2_clut1()[110],
-    ",
-  0x50342dbcu64 => "
-      GLCDC_NS.gr2_clut1()[111],
-    ",
-  0x50342dc0u64 => "
-      GLCDC_NS.gr2_clut1()[112],
-    ",
-  0x50342dc4u64 => "
-      GLCDC_NS.gr2_clut1()[113],
-    ",
-  0x50342dc8u64 => "
-      GLCDC_NS.gr2_clut1()[114],
-    ",
-  0x50342dccu64 => "
-      GLCDC_NS.gr2_clut1()[115],
-    ",
-  0x50342dd0u64 => "
-      GLCDC_NS.gr2_clut1()[116],
-    ",
-  0x50342dd4u64 => "
-      GLCDC_NS.gr2_clut1()[117],
-    ",
-  0x50342dd8u64 => "
-      GLCDC_NS.gr2_clut1()[118],
-    ",
-  0x50342ddcu64 => "
-      GLCDC_NS.gr2_clut1()[119],
-    ",
-  0x50342de0u64 => "
-      GLCDC_NS.gr2_clut1()[120],
-    ",
-  0x50342de4u64 => "
-      GLCDC_NS.gr2_clut1()[121],
-    ",
-  0x50342de8u64 => "
-      GLCDC_NS.gr2_clut1()[122],
-    ",
-  0x50342decu64 => "
-      GLCDC_NS.gr2_clut1()[123],
-    ",
-  0x50342df0u64 => "
-      GLCDC_NS.gr2_clut1()[124],
-    ",
-  0x50342df4u64 => "
-      GLCDC_NS.gr2_clut1()[125],
-    ",
-  0x50342df8u64 => "
-      GLCDC_NS.gr2_clut1()[126],
-    ",
-  0x50342dfcu64 => "
-      GLCDC_NS.gr2_clut1()[127],
-    ",
-  0x50342e00u64 => "
-      GLCDC_NS.gr2_clut1()[128],
-    ",
-  0x50342e04u64 => "
-      GLCDC_NS.gr2_clut1()[129],
-    ",
-  0x50342e08u64 => "
-      GLCDC_NS.gr2_clut1()[130],
-    ",
-  0x50342e0cu64 => "
-      GLCDC_NS.gr2_clut1()[131],
-    ",
-  0x50342e10u64 => "
-      GLCDC_NS.gr2_clut1()[132],
-    ",
-  0x50342e14u64 => "
-      GLCDC_NS.gr2_clut1()[133],
-    ",
-  0x50342e18u64 => "
-      GLCDC_NS.gr2_clut1()[134],
-    ",
-  0x50342e1cu64 => "
-      GLCDC_NS.gr2_clut1()[135],
-    ",
-  0x50342e20u64 => "
-      GLCDC_NS.gr2_clut1()[136],
-    ",
-  0x50342e24u64 => "
-      GLCDC_NS.gr2_clut1()[137],
-    ",
-  0x50342e28u64 => "
-      GLCDC_NS.gr2_clut1()[138],
-    ",
-  0x50342e2cu64 => "
-      GLCDC_NS.gr2_clut1()[139],
-    ",
-  0x50342e30u64 => "
-      GLCDC_NS.gr2_clut1()[140],
-    ",
-  0x50342e34u64 => "
-      GLCDC_NS.gr2_clut1()[141],
-    ",
-  0x50342e38u64 => "
-      GLCDC_NS.gr2_clut1()[142],
-    ",
-  0x50342e3cu64 => "
-      GLCDC_NS.gr2_clut1()[143],
-    ",
-  0x50342e40u64 => "
-      GLCDC_NS.gr2_clut1()[144],
-    ",
-  0x50342e44u64 => "
-      GLCDC_NS.gr2_clut1()[145],
-    ",
-  0x50342e48u64 => "
-      GLCDC_NS.gr2_clut1()[146],
-    ",
-  0x50342e4cu64 => "
-      GLCDC_NS.gr2_clut1()[147],
-    ",
-  0x50342e50u64 => "
-      GLCDC_NS.gr2_clut1()[148],
-    ",
-  0x50342e54u64 => "
-      GLCDC_NS.gr2_clut1()[149],
-    ",
-  0x50342e58u64 => "
-      GLCDC_NS.gr2_clut1()[150],
-    ",
-  0x50342e5cu64 => "
-      GLCDC_NS.gr2_clut1()[151],
-    ",
-  0x50342e60u64 => "
-      GLCDC_NS.gr2_clut1()[152],
-    ",
-  0x50342e64u64 => "
-      GLCDC_NS.gr2_clut1()[153],
-    ",
-  0x50342e68u64 => "
-      GLCDC_NS.gr2_clut1()[154],
-    ",
-  0x50342e6cu64 => "
-      GLCDC_NS.gr2_clut1()[155],
-    ",
-  0x50342e70u64 => "
-      GLCDC_NS.gr2_clut1()[156],
-    ",
-  0x50342e74u64 => "
-      GLCDC_NS.gr2_clut1()[157],
-    ",
-  0x50342e78u64 => "
-      GLCDC_NS.gr2_clut1()[158],
-    ",
-  0x50342e7cu64 => "
-      GLCDC_NS.gr2_clut1()[159],
-    ",
-  0x50342e80u64 => "
-      GLCDC_NS.gr2_clut1()[160],
-    ",
-  0x50342e84u64 => "
-      GLCDC_NS.gr2_clut1()[161],
-    ",
-  0x50342e88u64 => "
-      GLCDC_NS.gr2_clut1()[162],
-    ",
-  0x50342e8cu64 => "
-      GLCDC_NS.gr2_clut1()[163],
-    ",
-  0x50342e90u64 => "
-      GLCDC_NS.gr2_clut1()[164],
-    ",
-  0x50342e94u64 => "
-      GLCDC_NS.gr2_clut1()[165],
-    ",
-  0x50342e98u64 => "
-      GLCDC_NS.gr2_clut1()[166],
-    ",
-  0x50342e9cu64 => "
-      GLCDC_NS.gr2_clut1()[167],
-    ",
-  0x50342ea0u64 => "
-      GLCDC_NS.gr2_clut1()[168],
-    ",
-  0x50342ea4u64 => "
-      GLCDC_NS.gr2_clut1()[169],
-    ",
-  0x50342ea8u64 => "
-      GLCDC_NS.gr2_clut1()[170],
-    ",
-  0x50342eacu64 => "
-      GLCDC_NS.gr2_clut1()[171],
-    ",
-  0x50342eb0u64 => "
-      GLCDC_NS.gr2_clut1()[172],
-    ",
-  0x50342eb4u64 => "
-      GLCDC_NS.gr2_clut1()[173],
-    ",
-  0x50342eb8u64 => "
-      GLCDC_NS.gr2_clut1()[174],
-    ",
-  0x50342ebcu64 => "
-      GLCDC_NS.gr2_clut1()[175],
-    ",
-  0x50342ec0u64 => "
-      GLCDC_NS.gr2_clut1()[176],
-    ",
-  0x50342ec4u64 => "
-      GLCDC_NS.gr2_clut1()[177],
-    ",
-  0x50342ec8u64 => "
-      GLCDC_NS.gr2_clut1()[178],
-    ",
-  0x50342eccu64 => "
-      GLCDC_NS.gr2_clut1()[179],
-    ",
-  0x50342ed0u64 => "
-      GLCDC_NS.gr2_clut1()[180],
-    ",
-  0x50342ed4u64 => "
-      GLCDC_NS.gr2_clut1()[181],
-    ",
-  0x50342ed8u64 => "
-      GLCDC_NS.gr2_clut1()[182],
-    ",
-  0x50342edcu64 => "
-      GLCDC_NS.gr2_clut1()[183],
-    ",
-  0x50342ee0u64 => "
-      GLCDC_NS.gr2_clut1()[184],
-    ",
-  0x50342ee4u64 => "
-      GLCDC_NS.gr2_clut1()[185],
-    ",
-  0x50342ee8u64 => "
-      GLCDC_NS.gr2_clut1()[186],
-    ",
-  0x50342eecu64 => "
-      GLCDC_NS.gr2_clut1()[187],
-    ",
-  0x50342ef0u64 => "
-      GLCDC_NS.gr2_clut1()[188],
-    ",
-  0x50342ef4u64 => "
-      GLCDC_NS.gr2_clut1()[189],
-    ",
-  0x50342ef8u64 => "
-      GLCDC_NS.gr2_clut1()[190],
-    ",
-  0x50342efcu64 => "
-      GLCDC_NS.gr2_clut1()[191],
-    ",
-  0x50342f00u64 => "
-      GLCDC_NS.gr2_clut1()[192],
-    ",
-  0x50342f04u64 => "
-      GLCDC_NS.gr2_clut1()[193],
-    ",
-  0x50342f08u64 => "
-      GLCDC_NS.gr2_clut1()[194],
-    ",
-  0x50342f0cu64 => "
-      GLCDC_NS.gr2_clut1()[195],
-    ",
-  0x50342f10u64 => "
-      GLCDC_NS.gr2_clut1()[196],
-    ",
-  0x50342f14u64 => "
-      GLCDC_NS.gr2_clut1()[197],
-    ",
-  0x50342f18u64 => "
-      GLCDC_NS.gr2_clut1()[198],
-    ",
-  0x50342f1cu64 => "
-      GLCDC_NS.gr2_clut1()[199],
-    ",
-  0x50342f20u64 => "
-      GLCDC_NS.gr2_clut1()[200],
-    ",
-  0x50342f24u64 => "
-      GLCDC_NS.gr2_clut1()[201],
-    ",
-  0x50342f28u64 => "
-      GLCDC_NS.gr2_clut1()[202],
-    ",
-  0x50342f2cu64 => "
-      GLCDC_NS.gr2_clut1()[203],
-    ",
-  0x50342f30u64 => "
-      GLCDC_NS.gr2_clut1()[204],
-    ",
-  0x50342f34u64 => "
-      GLCDC_NS.gr2_clut1()[205],
-    ",
-  0x50342f38u64 => "
-      GLCDC_NS.gr2_clut1()[206],
-    ",
-  0x50342f3cu64 => "
-      GLCDC_NS.gr2_clut1()[207],
-    ",
-  0x50342f40u64 => "
-      GLCDC_NS.gr2_clut1()[208],
-    ",
-  0x50342f44u64 => "
-      GLCDC_NS.gr2_clut1()[209],
-    ",
-  0x50342f48u64 => "
-      GLCDC_NS.gr2_clut1()[210],
-    ",
-  0x50342f4cu64 => "
-      GLCDC_NS.gr2_clut1()[211],
-    ",
-  0x50342f50u64 => "
-      GLCDC_NS.gr2_clut1()[212],
-    ",
-  0x50342f54u64 => "
-      GLCDC_NS.gr2_clut1()[213],
-    ",
-  0x50342f58u64 => "
-      GLCDC_NS.gr2_clut1()[214],
-    ",
-  0x50342f5cu64 => "
-      GLCDC_NS.gr2_clut1()[215],
-    ",
-  0x50342f60u64 => "
-      GLCDC_NS.gr2_clut1()[216],
-    ",
-  0x50342f64u64 => "
-      GLCDC_NS.gr2_clut1()[217],
-    ",
-  0x50342f68u64 => "
-      GLCDC_NS.gr2_clut1()[218],
-    ",
-  0x50342f6cu64 => "
-      GLCDC_NS.gr2_clut1()[219],
-    ",
-  0x50342f70u64 => "
-      GLCDC_NS.gr2_clut1()[220],
-    ",
-  0x50342f74u64 => "
-      GLCDC_NS.gr2_clut1()[221],
-    ",
-  0x50342f78u64 => "
-      GLCDC_NS.gr2_clut1()[222],
-    ",
-  0x50342f7cu64 => "
-      GLCDC_NS.gr2_clut1()[223],
-    ",
-  0x50342f80u64 => "
-      GLCDC_NS.gr2_clut1()[224],
-    ",
-  0x50342f84u64 => "
-      GLCDC_NS.gr2_clut1()[225],
-    ",
-  0x50342f88u64 => "
-      GLCDC_NS.gr2_clut1()[226],
-    ",
-  0x50342f8cu64 => "
-      GLCDC_NS.gr2_clut1()[227],
-    ",
-  0x50342f90u64 => "
-      GLCDC_NS.gr2_clut1()[228],
-    ",
-  0x50342f94u64 => "
-      GLCDC_NS.gr2_clut1()[229],
-    ",
-  0x50342f98u64 => "
-      GLCDC_NS.gr2_clut1()[230],
-    ",
-  0x50342f9cu64 => "
-      GLCDC_NS.gr2_clut1()[231],
-    ",
-  0x50342fa0u64 => "
-      GLCDC_NS.gr2_clut1()[232],
-    ",
-  0x50342fa4u64 => "
-      GLCDC_NS.gr2_clut1()[233],
-    ",
-  0x50342fa8u64 => "
-      GLCDC_NS.gr2_clut1()[234],
-    ",
-  0x50342facu64 => "
-      GLCDC_NS.gr2_clut1()[235],
-    ",
-  0x50342fb0u64 => "
-      GLCDC_NS.gr2_clut1()[236],
-    ",
-  0x50342fb4u64 => "
-      GLCDC_NS.gr2_clut1()[237],
-    ",
-  0x50342fb8u64 => "
-      GLCDC_NS.gr2_clut1()[238],
-    ",
-  0x50342fbcu64 => "
-      GLCDC_NS.gr2_clut1()[239],
-    ",
-  0x50342fc0u64 => "
-      GLCDC_NS.gr2_clut1()[240],
-    ",
-  0x50342fc4u64 => "
-      GLCDC_NS.gr2_clut1()[241],
-    ",
-  0x50342fc8u64 => "
-      GLCDC_NS.gr2_clut1()[242],
-    ",
-  0x50342fccu64 => "
-      GLCDC_NS.gr2_clut1()[243],
-    ",
-  0x50342fd0u64 => "
-      GLCDC_NS.gr2_clut1()[244],
-    ",
-  0x50342fd4u64 => "
-      GLCDC_NS.gr2_clut1()[245],
-    ",
-  0x50342fd8u64 => "
-      GLCDC_NS.gr2_clut1()[246],
-    ",
-  0x50342fdcu64 => "
-      GLCDC_NS.gr2_clut1()[247],
-    ",
-  0x50342fe0u64 => "
-      GLCDC_NS.gr2_clut1()[248],
-    ",
-  0x50342fe4u64 => "
-      GLCDC_NS.gr2_clut1()[249],
-    ",
-  0x50342fe8u64 => "
-      GLCDC_NS.gr2_clut1()[250],
-    ",
-  0x50342fecu64 => "
-      GLCDC_NS.gr2_clut1()[251],
-    ",
-  0x50342ff0u64 => "
-      GLCDC_NS.gr2_clut1()[252],
-    ",
-  0x50342ff4u64 => "
-      GLCDC_NS.gr2_clut1()[253],
-    ",
-  0x50342ff8u64 => "
-      GLCDC_NS.gr2_clut1()[254],
-    ",
-  0x50342ffcu64 => "
-      GLCDC_NS.gr2_clut1()[255],
-    ",
-  0x50343000u64 => "
-      GLCDC_NS.bg_en(),
-    ",
-  0x50343004u64 => "
-      GLCDC_NS.bg_peri(),
-    ",
-  0x50343008u64 => "
-      GLCDC_NS.bg_sync(),
-    ",
-  0x5034300cu64 => "
-      GLCDC_NS.bg_vsize(),
-    ",
-  0x50343010u64 => "
-      GLCDC_NS.bg_hsize(),
-    ",
-  0x50343014u64 => "
-      GLCDC_NS.bg_bgc(),
-    ",
-  0x50343018u64 => "
-      GLCDC_NS.bg_mon(),
-    ",
-  0x50343100u64 => "
-      GLCDC_NS.gr_ven()[0],
-    ",
-  0x50343200u64 => "
-      GLCDC_NS.gr_ven()[1],
-    ",
-  0x50343104u64 => "
-      GLCDC_NS.gr_flmrd()[0],
-    ",
-  0x50343204u64 => "
-      GLCDC_NS.gr_flmrd()[1],
-    ",
-  0x50343108u64 => "
-      GLCDC_NS.gr_flm1()[0],
-    ",
-  0x50343208u64 => "
-      GLCDC_NS.gr_flm1()[1],
-    ",
-  0x5034310cu64 => "
-      GLCDC_NS.gr_flm2()[0],
-    ",
-  0x5034320cu64 => "
-      GLCDC_NS.gr_flm2()[1],
-    ",
-  0x50343110u64 => "
-      GLCDC_NS.gr_flm3()[0],
-    ",
-  0x50343210u64 => "
-      GLCDC_NS.gr_flm3()[1],
-    ",
-  0x50343118u64 => "
-      GLCDC_NS.gr_flm5()[0],
-    ",
-  0x50343218u64 => "
-      GLCDC_NS.gr_flm5()[1],
-    ",
-  0x5034311cu64 => "
-      GLCDC_NS.gr_flm6()[0],
-    ",
-  0x5034321cu64 => "
-      GLCDC_NS.gr_flm6()[1],
-    ",
-  0x50343120u64 => "
-      GLCDC_NS.gr_ab1()[0],
-    ",
-  0x50343220u64 => "
-      GLCDC_NS.gr_ab1()[1],
-    ",
-  0x50343124u64 => "
-      GLCDC_NS.gr_ab2()[0],
-    ",
-  0x50343224u64 => "
-      GLCDC_NS.gr_ab2()[1],
-    ",
-  0x50343128u64 => "
-      GLCDC_NS.gr_ab3()[0],
-    ",
-  0x50343228u64 => "
-      GLCDC_NS.gr_ab3()[1],
-    ",
-  0x5034312cu64 => "
-      GLCDC_NS.gr_ab4()[0],
-    ",
-  0x5034322cu64 => "
-      GLCDC_NS.gr_ab4()[1],
-    ",
-  0x50343130u64 => "
-      GLCDC_NS.gr_ab5()[0],
-    ",
-  0x50343230u64 => "
-      GLCDC_NS.gr_ab5()[1],
-    ",
-  0x50343134u64 => "
-      GLCDC_NS.gr_ab6()[0],
-    ",
-  0x50343234u64 => "
-      GLCDC_NS.gr_ab6()[1],
-    ",
-  0x50343138u64 => "
-      GLCDC_NS.gr_ab7()[0],
-    ",
-  0x50343238u64 => "
-      GLCDC_NS.gr_ab7()[1],
-    ",
-  0x5034313cu64 => "
-      GLCDC_NS.gr_ab8()[0],
-    ",
-  0x5034323cu64 => "
-      GLCDC_NS.gr_ab8()[1],
-    ",
-  0x50343140u64 => "
-      GLCDC_NS.gr_ab9()[0],
-    ",
-  0x50343240u64 => "
-      GLCDC_NS.gr_ab9()[1],
-    ",
-  0x5034314cu64 => "
-      GLCDC_NS.gr_base()[0],
-    ",
-  0x5034324cu64 => "
-      GLCDC_NS.gr_base()[1],
-    ",
-  0x50343150u64 => "
-      GLCDC_NS.gr_clutint()[0],
-    ",
-  0x50343250u64 => "
-      GLCDC_NS.gr_clutint()[1],
-    ",
-  0x50343154u64 => "
-      GLCDC_NS.gr_mon()[0],
-    ",
-  0x50343254u64 => "
-      GLCDC_NS.gr_mon()[1],
-    ",
-  0x50343300u64 => "
-      GLCDC_NS.gamg_latch(),
-    ",
-  0x50343304u64 => "
-      GLCDC_NS.gam_sw(),
-    ",
-  0x50343308u64 => "
-      GLCDC_NS.gamg_lut1(),
-    ",
-  0x5034330cu64 => "
-      GLCDC_NS.gamg_lut2(),
-    ",
-  0x50343310u64 => "
-      GLCDC_NS.gamg_lut3(),
-    ",
-  0x50343314u64 => "
-      GLCDC_NS.gamg_lut4(),
-    ",
-  0x50343318u64 => "
-      GLCDC_NS.gamg_lut5(),
-    ",
-  0x5034331cu64 => "
-      GLCDC_NS.gamg_lut6(),
-    ",
-  0x50343320u64 => "
-      GLCDC_NS.gamg_lut7(),
-    ",
-  0x50343324u64 => "
-      GLCDC_NS.gamg_lut8(),
-    ",
-  0x50343328u64 => "
-      GLCDC_NS.gamg_area1(),
-    ",
-  0x5034332cu64 => "
-      GLCDC_NS.gamg_area2(),
-    ",
-  0x50343330u64 => "
-      GLCDC_NS.gamg_area3(),
-    ",
-  0x50343334u64 => "
-      GLCDC_NS.gamg_area4(),
-    ",
-  0x50343338u64 => "
-      GLCDC_NS.gamg_area5(),
-    ",
-  0x50343340u64 => "
-      GLCDC_NS.gamb_latch(),
-    ",
-  0x50343348u64 => "
-      GLCDC_NS.gamb_lut1(),
-    ",
-  0x5034334cu64 => "
-      GLCDC_NS.gamb_lut2(),
-    ",
-  0x50343350u64 => "
-      GLCDC_NS.gamb_lut3(),
-    ",
-  0x50343354u64 => "
-      GLCDC_NS.gamb_lut4(),
-    ",
-  0x50343358u64 => "
-      GLCDC_NS.gamb_lut5(),
-    ",
-  0x5034335cu64 => "
-      GLCDC_NS.gamb_lut6(),
-    ",
-  0x50343360u64 => "
-      GLCDC_NS.gamb_lut7(),
-    ",
-  0x50343364u64 => "
-      GLCDC_NS.gamb_lut8(),
-    ",
-  0x50343368u64 => "
-      GLCDC_NS.gamb_area1(),
-    ",
-  0x5034336cu64 => "
-      GLCDC_NS.gamb_area2(),
-    ",
-  0x50343370u64 => "
-      GLCDC_NS.gamb_area3(),
-    ",
-  0x50343374u64 => "
-      GLCDC_NS.gamb_area4(),
-    ",
-  0x50343378u64 => "
-      GLCDC_NS.gamb_area5(),
-    ",
-  0x50343380u64 => "
-      GLCDC_NS.gamr_latch(),
-    ",
-  0x50343388u64 => "
-      GLCDC_NS.gamr_lut1(),
-    ",
-  0x5034338cu64 => "
-      GLCDC_NS.gamr_lut2(),
-    ",
-  0x50343390u64 => "
-      GLCDC_NS.gamr_lut3(),
-    ",
-  0x50343394u64 => "
-      GLCDC_NS.gamr_lut4(),
-    ",
-  0x50343398u64 => "
-      GLCDC_NS.gamr_lut5(),
-    ",
-  0x5034339cu64 => "
-      GLCDC_NS.gamr_lut6(),
-    ",
-  0x503433a0u64 => "
-      GLCDC_NS.gamr_lut7(),
-    ",
-  0x503433a4u64 => "
-      GLCDC_NS.gamr_lut8(),
-    ",
-  0x503433a8u64 => "
-      GLCDC_NS.gamr_area1(),
-    ",
-  0x503433acu64 => "
-      GLCDC_NS.gamr_area2(),
-    ",
-  0x503433b0u64 => "
-      GLCDC_NS.gamr_area3(),
-    ",
-  0x503433b4u64 => "
-      GLCDC_NS.gamr_area4(),
-    ",
-  0x503433b8u64 => "
-      GLCDC_NS.gamr_area5(),
-    ",
-  0x503433c0u64 => "
-      GLCDC_NS.out_vlatch(),
-    ",
-  0x503433c4u64 => "
-      GLCDC_NS.out_set(),
-    ",
-  0x503433c8u64 => "
-      GLCDC_NS.out_bright1(),
-    ",
-  0x503433ccu64 => "
-      GLCDC_NS.out_bright2(),
-    ",
-  0x503433d0u64 => "
-      GLCDC_NS.out_contrast(),
-    ",
-  0x503433d4u64 => "
-      GLCDC_NS.out_pdtha(),
-    ",
-  0x503433e4u64 => "
-      GLCDC_NS.out_clkphase(),
-    ",
-  0x50343404u64 => "
-      GLCDC_NS.tcon_tim(),
-    ",
-  0x50343408u64 => "
-      GLCDC_NS.tcon_stva1(),
-    ",
-  0x5034340cu64 => "
-      GLCDC_NS.tcon_stva2(),
-    ",
-  0x50343410u64 => "
-      GLCDC_NS.tcon_stvb1(),
-    ",
-  0x50343414u64 => "
-      GLCDC_NS.tcon_stvb2(),
-    ",
-  0x50343418u64 => "
-      GLCDC_NS.tcon_stha1(),
-    ",
-  0x5034341cu64 => "
-      GLCDC_NS.tcon_stha2(),
-    ",
-  0x50343420u64 => "
-      GLCDC_NS.tcon_sthb1(),
-    ",
-  0x50343424u64 => "
-      GLCDC_NS.tcon_sthb2(),
-    ",
-  0x50343428u64 => "
-      GLCDC_NS.tcon_de(),
-    ",
-  0x50343440u64 => "
-      GLCDC_NS.syscnt_dtcten(),
-    ",
-  0x50343444u64 => "
-      GLCDC_NS.syscnt_inten(),
-    ",
-  0x50343448u64 => "
-      GLCDC_NS.syscnt_stclr(),
-    ",
-  0x5034344cu64 => "
-      GLCDC_NS.syscnt_stmon(),
-    ",
-  0x50343450u64 => "
-      GLCDC_NS.syscnt_panel_clk(),
-    ",
-  0x50344000u64 => "
-      DRW_NS.control(),
-      DRW_NS.status(),
-    ",
-  0x50344004u64 => "
-      DRW_NS.control2(),
-      DRW_NS.hwrevision(),
-    ",
-  0x50344010u64 => "
-      DRW_NS.lstart()[0],
-    ",
-  0x50344014u64 => "
-      DRW_NS.lstart()[1],
-    ",
-  0x50344018u64 => "
-      DRW_NS.lstart()[2],
-    ",
-  0x5034401cu64 => "
-      DRW_NS.lstart()[3],
-    ",
-  0x50344020u64 => "
-      DRW_NS.lstart()[4],
-    ",
-  0x50344024u64 => "
-      DRW_NS.lstart()[5],
-    ",
-  0x50344028u64 => "
-      DRW_NS.lxadd()[0],
-    ",
-  0x5034402cu64 => "
-      DRW_NS.lxadd()[1],
-    ",
-  0x50344030u64 => "
-      DRW_NS.lxadd()[2],
-    ",
-  0x50344034u64 => "
-      DRW_NS.lxadd()[3],
-    ",
-  0x50344038u64 => "
-      DRW_NS.lxadd()[4],
-    ",
-  0x5034403cu64 => "
-      DRW_NS.lxadd()[5],
-    ",
-  0x50344040u64 => "
-      DRW_NS.lyadd()[0],
-    ",
-  0x50344044u64 => "
-      DRW_NS.lyadd()[1],
-    ",
-  0x50344048u64 => "
-      DRW_NS.lyadd()[2],
-    ",
-  0x5034404cu64 => "
-      DRW_NS.lyadd()[3],
-    ",
-  0x50344050u64 => "
-      DRW_NS.lyadd()[4],
-    ",
-  0x50344054u64 => "
-      DRW_NS.lyadd()[5],
-    ",
-  0x50344058u64 => "
-      DRW_NS.lband()[0],
-    ",
-  0x5034405cu64 => "
-      DRW_NS.lband()[1],
-    ",
-  0x50344064u64 => "
-      DRW_NS.color1(),
-    ",
-  0x50344068u64 => "
-      DRW_NS.color2(),
-    ",
-  0x50344074u64 => "
-      DRW_NS.pattern(),
-    ",
-  0x50344078u64 => "
-      DRW_NS.size(),
-    ",
-  0x5034407cu64 => "
-      DRW_NS.pitch(),
-    ",
-  0x50344080u64 => "
-      DRW_NS.origin(),
-    ",
-  0x50344090u64 => "
-      DRW_NS.lustart(),
-    ",
-  0x50344094u64 => "
-      DRW_NS.luxadd(),
-    ",
-  0x50344098u64 => "
-      DRW_NS.luyadd(),
-    ",
-  0x5034409cu64 => "
-      DRW_NS.lvstarti(),
-    ",
-  0x503440a0u64 => "
-      DRW_NS.lvstartf(),
-    ",
-  0x503440a4u64 => "
-      DRW_NS.lvxaddi(),
-    ",
-  0x503440a8u64 => "
-      DRW_NS.lvyaddi(),
-    ",
-  0x503440acu64 => "
-      DRW_NS.lvyxaddf(),
-    ",
-  0x503440b4u64 => "
-      DRW_NS.texpitch(),
-    ",
-  0x503440b8u64 => "
-      DRW_NS.texmask(),
-    ",
-  0x503440bcu64 => "
-      DRW_NS.texorigin(),
-    ",
-  0x503440c0u64 => "
-      DRW_NS.irqctl(),
-    ",
-  0x503440c4u64 => "
-      DRW_NS.cachectl(),
-    ",
-  0x503440c8u64 => "
-      DRW_NS.dliststart(),
-    ",
-  0x503440ccu64 => "
-      DRW_NS.perfcount1(),
-      DRW_NS.perfcount2(),
-    ",
-  0x503440d4u64 => "
-      DRW_NS.perftrigger(),
-    ",
-  0x503440dcu64 => "
-      DRW_NS.texcladdr(),
-    ",
-  0x503440e0u64 => "
-      DRW_NS.texcldata(),
-    ",
-  0x503440e4u64 => "
-      DRW_NS.texcloffset(),
-    ",
-  0x503440e8u64 => "
-      DRW_NS.colkey(),
-    ",
-  0x50346000u64 => "
-      MIPI_DSI_NS.isr(),
-    ",
-  0x50346010u64 => "
-      MIPI_DSI_NS.linksr(),
-    ",
-  0x50346100u64 => "
-      MIPI_DSI_NS.txsetr(),
-    ",
-  0x50346104u64 => "
-      MIPI_DSI_NS.hsclksetr(),
-    ",
-  0x50346108u64 => "
-      MIPI_DSI_NS.ulpssetr(),
-    ",
-  0x5034610cu64 => "
-      MIPI_DSI_NS.ulpscr(),
-    ",
-  0x50346110u64 => "
-      MIPI_DSI_NS.rstcr(),
-    ",
-  0x50346114u64 => "
-      MIPI_DSI_NS.rstsr(),
-    ",
-  0x50346120u64 => "
-      MIPI_DSI_NS.dsisetr(),
-    ",
-  0x50346160u64 => "
-      MIPI_DSI_NS.txppd0r(),
-    ",
-  0x50346164u64 => "
-      MIPI_DSI_NS.txppd1r(),
-    ",
-  0x50346168u64 => "
-      MIPI_DSI_NS.txppd2r(),
-    ",
-  0x5034616cu64 => "
-      MIPI_DSI_NS.txppd3r(),
-    ",
-  0x50346200u64 => "
-      MIPI_DSI_NS.rxsr(),
-    ",
-  0x50346204u64 => "
-      MIPI_DSI_NS.rxscr(),
-    ",
-  0x50346208u64 => "
-      MIPI_DSI_NS.rxier(),
-    ",
-  0x50346210u64 => "
-      MIPI_DSI_NS.presptobtasetr(),
-    ",
-  0x50346214u64 => "
-      MIPI_DSI_NS.presptolpsetr(),
-    ",
-  0x50346218u64 => "
-      MIPI_DSI_NS.presptohssetr(),
-    ",
-  0x50346220u64 => "
-      MIPI_DSI_NS.akeplatir(),
-    ",
-  0x50346224u64 => "
-      MIPI_DSI_NS.akepacmsr(),
-    ",
-  0x50346228u64 => "
-      MIPI_DSI_NS.akepscr(),
-    ",
-  0x50346230u64 => "
-      MIPI_DSI_NS.rxrssr(),
-    ",
-  0x50346234u64 => "
-      MIPI_DSI_NS.rxrsscr(),
-    ",
-  0x50346238u64 => "
-      MIPI_DSI_NS.rxrinfoowsr(),
-    ",
-  0x5034623cu64 => "
-      MIPI_DSI_NS.rxrinfoowscr(),
-    ",
-  0x50346240u64 => "
-      MIPI_DSI_NS.rxrssr()[0],
-    ",
-  0x50346244u64 => "
-      MIPI_DSI_NS.rxrssr()[1],
-    ",
-  0x50346248u64 => "
-      MIPI_DSI_NS.rxrssr()[2],
-    ",
-  0x5034624cu64 => "
-      MIPI_DSI_NS.rxrssr()[3],
-    ",
-  0x503462c0u64 => "
-      MIPI_DSI_NS.rxppd0r(),
-    ",
-  0x503462c4u64 => "
-      MIPI_DSI_NS.rxppd1r(),
-    ",
-  0x503462c8u64 => "
-      MIPI_DSI_NS.rxppd2r(),
-    ",
-  0x503462ccu64 => "
-      MIPI_DSI_NS.rxppd3r(),
-    ",
-  0x503462e0u64 => "
-      MIPI_DSI_NS.hstxtosetr(),
-    ",
-  0x503462e4u64 => "
-      MIPI_DSI_NS.lrxhtosetr(),
-    ",
-  0x503462e8u64 => "
-      MIPI_DSI_NS.tatosetr(),
-    ",
-  0x50346300u64 => "
-      MIPI_DSI_NS.ferrsr(),
-    ",
-  0x50346304u64 => "
-      MIPI_DSI_NS.ferrscr(),
-    ",
-  0x50346308u64 => "
-      MIPI_DSI_NS.ferrier(),
-    ",
-  0x50346314u64 => "
-      MIPI_DSI_NS.clstptsetr(),
-    ",
-  0x50346318u64 => "
-      MIPI_DSI_NS.lptrnstsetr(),
-    ",
-  0x50346320u64 => "
-      MIPI_DSI_NS.plsr(),
-    ",
-  0x50346324u64 => "
-      MIPI_DSI_NS.plscr(),
-    ",
-  0x50346328u64 => "
-      MIPI_DSI_NS.plier(),
-    ",
-  0x50346400u64 => "
-      MIPI_DSI_NS.vmset0r(),
-    ",
-  0x50346404u64 => "
-      MIPI_DSI_NS.vmset1r(),
-    ",
-  0x50346410u64 => "
-      MIPI_DSI_NS.vmsr(),
-    ",
-  0x50346414u64 => "
-      MIPI_DSI_NS.vmscr(),
-    ",
-  0x50346418u64 => "
-      MIPI_DSI_NS.vmier(),
-    ",
-  0x50346420u64 => "
-      MIPI_DSI_NS.vmppsetr(),
-    ",
-  0x50346428u64 => "
-      MIPI_DSI_NS.vmvssetr(),
-    ",
-  0x5034642cu64 => "
-      MIPI_DSI_NS.vmvpsetr(),
-    ",
-  0x50346430u64 => "
-      MIPI_DSI_NS.vmhssetr(),
-    ",
-  0x50346434u64 => "
-      MIPI_DSI_NS.vmhpsetr(),
-    ",
-  0x503465c0u64 => "
-      MIPI_DSI_NS.sqch0set0r(),
-    ",
-  0x503465d0u64 => "
-      MIPI_DSI_NS.sqch0sr(),
-    ",
-  0x503465d4u64 => "
-      MIPI_DSI_NS.sqch0scr(),
-    ",
-  0x503465d8u64 => "
-      MIPI_DSI_NS.sqch0ier(),
-    ",
-  0x50346600u64 => "
-      MIPI_DSI_NS.sqch1set0r(),
-    ",
-  0x50346610u64 => "
-      MIPI_DSI_NS.sqch1sr(),
-    ",
-  0x50346614u64 => "
-      MIPI_DSI_NS.sqch1scr(),
-    ",
-  0x50346618u64 => "
-      MIPI_DSI_NS.sqch1ier(),
-    ",
-  0x50346780u64 => "
-      MIPI_DSI_NS.sqch0dscar()[0],
-    ",
-  0x50346790u64 => "
-      MIPI_DSI_NS.sqch0dscar()[1],
-    ",
-  0x503467a0u64 => "
-      MIPI_DSI_NS.sqch0dscar()[2],
-    ",
-  0x503467b0u64 => "
-      MIPI_DSI_NS.sqch0dscar()[3],
-    ",
-  0x503467c0u64 => "
-      MIPI_DSI_NS.sqch0dscar()[4],
-    ",
-  0x503467d0u64 => "
-      MIPI_DSI_NS.sqch0dscar()[5],
-    ",
-  0x503467e0u64 => "
-      MIPI_DSI_NS.sqch0dscar()[6],
-    ",
-  0x503467f0u64 => "
-      MIPI_DSI_NS.sqch0dscar()[7],
-    ",
-  0x50346784u64 => "
-      MIPI_DSI_NS.sqch0dscbr()[0],
-    ",
-  0x50346794u64 => "
-      MIPI_DSI_NS.sqch0dscbr()[1],
-    ",
-  0x503467a4u64 => "
-      MIPI_DSI_NS.sqch0dscbr()[2],
-    ",
-  0x503467b4u64 => "
-      MIPI_DSI_NS.sqch0dscbr()[3],
-    ",
-  0x503467c4u64 => "
-      MIPI_DSI_NS.sqch0dscbr()[4],
-    ",
-  0x503467d4u64 => "
-      MIPI_DSI_NS.sqch0dscbr()[5],
-    ",
-  0x503467e4u64 => "
-      MIPI_DSI_NS.sqch0dscbr()[6],
-    ",
-  0x503467f4u64 => "
-      MIPI_DSI_NS.sqch0dscbr()[7],
-    ",
-  0x50346788u64 => "
-      MIPI_DSI_NS.sqch0dsccr()[0],
-    ",
-  0x50346798u64 => "
-      MIPI_DSI_NS.sqch0dsccr()[1],
-    ",
-  0x503467a8u64 => "
-      MIPI_DSI_NS.sqch0dsccr()[2],
-    ",
-  0x503467b8u64 => "
-      MIPI_DSI_NS.sqch0dsccr()[3],
-    ",
-  0x503467c8u64 => "
-      MIPI_DSI_NS.sqch0dsccr()[4],
-    ",
-  0x503467d8u64 => "
-      MIPI_DSI_NS.sqch0dsccr()[5],
-    ",
-  0x503467e8u64 => "
-      MIPI_DSI_NS.sqch0dsccr()[6],
-    ",
-  0x503467f8u64 => "
-      MIPI_DSI_NS.sqch0dsccr()[7],
-    ",
-  0x5034678cu64 => "
-      MIPI_DSI_NS.sqch0dscdr()[0],
-    ",
-  0x5034679cu64 => "
-      MIPI_DSI_NS.sqch0dscdr()[1],
-    ",
-  0x503467acu64 => "
-      MIPI_DSI_NS.sqch0dscdr()[2],
-    ",
-  0x503467bcu64 => "
-      MIPI_DSI_NS.sqch0dscdr()[3],
-    ",
-  0x503467ccu64 => "
-      MIPI_DSI_NS.sqch0dscdr()[4],
-    ",
-  0x503467dcu64 => "
-      MIPI_DSI_NS.sqch0dscdr()[5],
-    ",
-  0x503467ecu64 => "
-      MIPI_DSI_NS.sqch0dscdr()[6],
-    ",
-  0x503467fcu64 => "
-      MIPI_DSI_NS.sqch0dscdr()[7],
-    ",
-  0x50346800u64 => "
-      MIPI_DSI_NS.sqch1dscar()[0],
-    ",
-  0x50346810u64 => "
-      MIPI_DSI_NS.sqch1dscar()[1],
-    ",
-  0x50346820u64 => "
-      MIPI_DSI_NS.sqch1dscar()[2],
-    ",
-  0x50346830u64 => "
-      MIPI_DSI_NS.sqch1dscar()[3],
-    ",
-  0x50346840u64 => "
-      MIPI_DSI_NS.sqch1dscar()[4],
-    ",
-  0x50346850u64 => "
-      MIPI_DSI_NS.sqch1dscar()[5],
-    ",
-  0x50346860u64 => "
-      MIPI_DSI_NS.sqch1dscar()[6],
-    ",
-  0x50346870u64 => "
-      MIPI_DSI_NS.sqch1dscar()[7],
-    ",
-  0x50346804u64 => "
-      MIPI_DSI_NS.sqch1dscbr()[0],
-    ",
-  0x50346814u64 => "
-      MIPI_DSI_NS.sqch1dscbr()[1],
-    ",
-  0x50346824u64 => "
-      MIPI_DSI_NS.sqch1dscbr()[2],
-    ",
-  0x50346834u64 => "
-      MIPI_DSI_NS.sqch1dscbr()[3],
-    ",
-  0x50346844u64 => "
-      MIPI_DSI_NS.sqch1dscbr()[4],
-    ",
-  0x50346854u64 => "
-      MIPI_DSI_NS.sqch1dscbr()[5],
-    ",
-  0x50346864u64 => "
-      MIPI_DSI_NS.sqch1dscbr()[6],
-    ",
-  0x50346874u64 => "
-      MIPI_DSI_NS.sqch1dscbr()[7],
-    ",
-  0x50346808u64 => "
-      MIPI_DSI_NS.sqch1dsccr()[0],
-    ",
-  0x50346818u64 => "
-      MIPI_DSI_NS.sqch1dsccr()[1],
-    ",
-  0x50346828u64 => "
-      MIPI_DSI_NS.sqch1dsccr()[2],
-    ",
-  0x50346838u64 => "
-      MIPI_DSI_NS.sqch1dsccr()[3],
-    ",
-  0x50346848u64 => "
-      MIPI_DSI_NS.sqch1dsccr()[4],
-    ",
-  0x50346858u64 => "
-      MIPI_DSI_NS.sqch1dsccr()[5],
-    ",
-  0x50346868u64 => "
-      MIPI_DSI_NS.sqch1dsccr()[6],
-    ",
-  0x50346878u64 => "
-      MIPI_DSI_NS.sqch1dsccr()[7],
-    ",
-  0x5034680cu64 => "
-      MIPI_DSI_NS.sqch1dscdr()[0],
-    ",
-  0x5034681cu64 => "
-      MIPI_DSI_NS.sqch1dscdr()[1],
-    ",
-  0x5034682cu64 => "
-      MIPI_DSI_NS.sqch1dscdr()[2],
-    ",
-  0x5034683cu64 => "
-      MIPI_DSI_NS.sqch1dscdr()[3],
-    ",
-  0x5034684cu64 => "
-      MIPI_DSI_NS.sqch1dscdr()[4],
-    ",
-  0x5034685cu64 => "
-      MIPI_DSI_NS.sqch1dscdr()[5],
-    ",
-  0x5034686cu64 => "
-      MIPI_DSI_NS.sqch1dscdr()[6],
-    ",
-  0x5034687cu64 => "
-      MIPI_DSI_NS.sqch1dscdr()[7],
-    ",
-  0x50346c00u64 => "
-      MIPI_PHY_0_NS.dphyrefcr(),
-    ",
-  0x50346c04u64 => "
-      MIPI_PHY_0_NS.dphyplfcr(),
-    ",
-  0x50346c08u64 => "
-      MIPI_PHY_0_NS.dphyplocr(),
-    ",
-  0x50346c0cu64 => "
-      MIPI_PHY_0_NS.dphyesccr(),
-    ",
-  0x50346c10u64 => "
-      MIPI_PHY_0_NS.dphypwrcr(),
-    ",
-  0x50346c1cu64 => "
-      MIPI_PHY_0_NS.dphysfr(),
-    ",
-  0x50346c20u64 => "
-      MIPI_PHY_0_NS.dphyocr(),
-    ",
-  0x50346c24u64 => "
-      MIPI_PHY_0_NS.dphytim1(),
-    ",
-  0x50346c28u64 => "
-      MIPI_PHY_0_NS.dphytim2(),
-    ",
-  0x50346c2cu64 => "
-      MIPI_PHY_0_NS.dphytim3(),
-    ",
-  0x50346c30u64 => "
-      MIPI_PHY_0_NS.dphytim4(),
-    ",
-  0x50346c34u64 => "
-      MIPI_PHY_0_NS.dphytim5(),
-    ",
-  0x50346c38u64 => "
-      MIPI_PHY_0_NS.dphytim6(),
-    ",
-  0x50348000u64 => "
-      CEU_NS.capsr(),
-    ",
-  0x50348004u64 => "
-      CEU_NS.capcr(),
-    ",
-  0x50348008u64 => "
-      CEU_NS.camcr(),
-    ",
-  0x5034800cu64 => "
-      CEU_NS.cmcyr(),
-    ",
-  0x50348010u64 => "
-      CEU_NS.camor(),
-    ",
-  0x50348014u64 => "
-      CEU_NS.capwr(),
-    ",
-  0x50348018u64 => "
-      CEU_NS.caifr(),
-    ",
-  0x50348028u64 => "
-      CEU_NS.crcntr(),
-    ",
-  0x5034802cu64 => "
-      CEU_NS.crcmpr(),
-    ",
-  0x50348030u64 => "
-      CEU_NS.cflcr(),
-    ",
-  0x50348034u64 => "
-      CEU_NS.cfszr(),
-    ",
-  0x50348038u64 => "
-      CEU_NS.cdwdr(),
-    ",
-  0x5034803cu64 => "
-      CEU_NS.cdayr(),
-    ",
-  0x50348040u64 => "
-      CEU_NS.cdacr(),
-    ",
-  0x50348044u64 => "
-      CEU_NS.cdbyr(),
-    ",
-  0x50348048u64 => "
-      CEU_NS.cdbcr(),
-    ",
-  0x5034804cu64 => "
-      CEU_NS.cbdsr(),
-    ",
-  0x5034805cu64 => "
-      CEU_NS.cfwcr(),
-    ",
-  0x50348060u64 => "
-      CEU_NS.clfcr(),
-    ",
-  0x50348064u64 => "
-      CEU_NS.cdocr(),
-    ",
-  0x50348070u64 => "
-      CEU_NS.ceier(),
-    ",
-  0x50348074u64 => "
-      CEU_NS.cetcr(),
-    ",
-  0x5034807cu64 => "
-      CEU_NS.cstsr(),
-    ",
-  0x50348084u64 => "
-      CEU_NS.cdssr(),
-    ",
-  0x50348090u64 => "
-      CEU_NS.cdayr2(),
-    ",
-  0x50348094u64 => "
-      CEU_NS.cdacr2(),
-    ",
-  0x50348098u64 => "
-      CEU_NS.cdbyr2(),
-    ",
-  0x5034809cu64 => "
-      CEU_NS.cdbcr2(),
-    ",
-  0x503480a0u64 => "
-      CEU_NS.cbwer(),
-    ",
-  0x50349010u64 => "
-      CEU_NS.camor_b(),
-    ",
-  0x50349014u64 => "
-      CEU_NS.capwr_b(),
-    ",
-  0x50349030u64 => "
-      CEU_NS.cflcr_b(),
-    ",
-  0x50349034u64 => "
-      CEU_NS.cfszr_b(),
-    ",
-  0x50349038u64 => "
-      CEU_NS.cdwdr_b(),
-    ",
-  0x5034903cu64 => "
-      CEU_NS.cdayr_b(),
-    ",
-  0x50349040u64 => "
-      CEU_NS.cdacr_b(),
-    ",
-  0x50349044u64 => "
-      CEU_NS.cdbyr_b(),
-    ",
-  0x50349048u64 => "
-      CEU_NS.cdbcr_b(),
-    ",
-  0x5034904cu64 => "
-      CEU_NS.cbdsr_b(),
-    ",
-  0x50349060u64 => "
-      CEU_NS.clfcr_b(),
-    ",
-  0x50349064u64 => "
-      CEU_NS.cdocr_b(),
-    ",
-  0x50349090u64 => "
-      CEU_NS.cdayr2_b(),
-    ",
-  0x50349094u64 => "
-      CEU_NS.cdacr2_b(),
-    ",
-  0x50349098u64 => "
-      CEU_NS.cdbyr2_b(),
-    ",
-  0x5034909cu64 => "
-      CEU_NS.cdbcr2_b(),
-    ",
-  0x5034a010u64 => "
-      CEU_NS.camor_m(),
-    ",
-  0x5034a014u64 => "
-      CEU_NS.capwr_m(),
-    ",
-  0x5034a030u64 => "
-      CEU_NS.cflcr_m(),
-    ",
-  0x5034a034u64 => "
-      CEU_NS.cfszr_m(),
-    ",
-  0x5034a038u64 => "
-      CEU_NS.cdwdr_m(),
-    ",
-  0x5034a03cu64 => "
-      CEU_NS.cdayr_m(),
-    ",
-  0x5034a040u64 => "
-      CEU_NS.cdacr_m(),
-    ",
-  0x5034a044u64 => "
-      CEU_NS.cdbyr_m(),
-    ",
-  0x5034a048u64 => "
-      CEU_NS.cdbcr_m(),
-    ",
-  0x5034a04cu64 => "
-      CEU_NS.cbdsr_m(),
-    ",
-  0x5034a060u64 => "
-      CEU_NS.clfcr_m(),
-    ",
-  0x5034a064u64 => "
-      CEU_NS.cdocr_m(),
-    ",
-  0x5034a090u64 => "
-      CEU_NS.cdayr2_m(),
-    ",
-  0x5034a094u64 => "
-      CEU_NS.cdacr2_m(),
-    ",
-  0x5034a098u64 => "
-      CEU_NS.cdbyr2_m(),
-    ",
-  0x5034a09cu64 => "
-      CEU_NS.cdbcr2_m(),
-    ",
-  0x50351000u64 => "
-      USBHS_NS.syscfg(),
-    ",
-  0x50351002u64 => "
-      USBHS_NS.buswait(),
-    ",
-  0x50351004u64 => "
-      USBHS_NS.syssts0(),
-    ",
-  0x50351006u64 => "
-      USBHS_NS.pllsta(),
-    ",
-  0x50351008u64 => "
-      USBHS_NS.dvstctr0(),
-    ",
-  0x5035100cu64 => "
-      USBHS_NS.testmode(),
-    ",
-  0x50351014u64 => "
-      USBHS_NS.cfifo(),
-      USBHS_NS.cfifol(),
-      USBHS_NS.cfifoll(),
-    ",
-  0x50351016u64 => "
-      USBHS_NS.cfifoh(),
-    ",
-  0x50351017u64 => "
-      USBHS_NS.cfifohh(),
-    ",
-  0x50351018u64 => "
-      USBHS_NS.dfifo()[0],
-      USBHS_NS.dfifol()[0],
-      USBHS_NS.dfifoll()[0],
-    ",
-  0x5035101cu64 => "
-      USBHS_NS.dfifo()[1],
-      USBHS_NS.dfifol()[1],
-      USBHS_NS.dfifoll()[1],
-    ",
-  0x5035101au64 => "
-      USBHS_NS.d0fifoh(),
-      USBHS_NS.d1fifoh(),
-    ",
-  0x5035101bu64 => "
-      USBHS_NS.d0fifohh(),
-      USBHS_NS.d1fifohh(),
-    ",
-  0x50351020u64 => "
-      USBHS_NS.cfifosel(),
-    ",
-  0x50351022u64 => "
-      USBHS_NS.cfifoctr(),
-    ",
-  0x50351028u64 => "
-      USBHS_NS.dfifosel()[0],
-    ",
-  0x5035102cu64 => "
-      USBHS_NS.dfifosel()[1],
-    ",
-  0x5035102au64 => "
-      USBHS_NS.dfifoctr()[0],
-    ",
-  0x5035102eu64 => "
-      USBHS_NS.dfifoctr()[1],
-    ",
-  0x50351030u64 => "
-      USBHS_NS.intenb0(),
-    ",
-  0x50351032u64 => "
-      USBHS_NS.intenb1(),
-    ",
-  0x50351036u64 => "
-      USBHS_NS.brdyenb(),
-    ",
-  0x50351038u64 => "
-      USBHS_NS.nrdyenb(),
-    ",
-  0x5035103au64 => "
-      USBHS_NS.bempenb(),
-    ",
-  0x5035103cu64 => "
-      USBHS_NS.sofcfg(),
-    ",
-  0x5035103eu64 => "
-      USBHS_NS.physet(),
-    ",
-  0x50351040u64 => "
-      USBHS_NS.intsts0(),
-    ",
-  0x50351042u64 => "
-      USBHS_NS.intsts1(),
-    ",
-  0x50351046u64 => "
-      USBHS_NS.brdysts(),
-    ",
-  0x50351048u64 => "
-      USBHS_NS.nrdysts(),
-    ",
-  0x5035104au64 => "
-      USBHS_NS.bempsts(),
-    ",
-  0x5035104cu64 => "
-      USBHS_NS.frmnum(),
-    ",
-  0x5035104eu64 => "
-      USBHS_NS.ufrmnum(),
-    ",
-  0x50351050u64 => "
-      USBHS_NS.usbaddr(),
-    ",
-  0x50351054u64 => "
-      USBHS_NS.usbreq(),
-    ",
-  0x50351056u64 => "
-      USBHS_NS.usbval(),
-    ",
-  0x50351058u64 => "
-      USBHS_NS.usbindx(),
-    ",
-  0x5035105au64 => "
-      USBHS_NS.usbleng(),
-    ",
-  0x5035105cu64 => "
-      USBHS_NS.dcpcfg(),
-    ",
-  0x5035105eu64 => "
-      USBHS_NS.dcpmaxp(),
-    ",
-  0x50351060u64 => "
-      USBHS_NS.dcpctr(),
-    ",
-  0x50351064u64 => "
-      USBHS_NS.pipesel(),
-    ",
-  0x50351068u64 => "
-      USBHS_NS.pipecfg(),
-    ",
-  0x5035106au64 => "
-      USBHS_NS.pipebuf(),
-    ",
-  0x5035106cu64 => "
-      USBHS_NS.pipemaxp(),
-    ",
-  0x5035106eu64 => "
-      USBHS_NS.pipeperi(),
-    ",
-  0x50351070u64 => "
-      USBHS_NS.pipectr()[0],
-    ",
-  0x50351072u64 => "
-      USBHS_NS.pipectr()[1],
-    ",
-  0x50351074u64 => "
-      USBHS_NS.pipectr()[2],
-    ",
-  0x50351076u64 => "
-      USBHS_NS.pipectr()[3],
-    ",
-  0x50351078u64 => "
-      USBHS_NS.pipectr()[4],
-    ",
-  0x5035107au64 => "
-      USBHS_NS.pipectr()[5],
-    ",
-  0x5035107cu64 => "
-      USBHS_NS.pipectr()[6],
-    ",
-  0x5035107eu64 => "
-      USBHS_NS.pipectr()[7],
-    ",
-  0x50351080u64 => "
-      USBHS_NS.pipectr()[8],
-    ",
-  0x50351090u64 => "
-      USBHS_NS.pipetre()[0],
-    ",
-  0x50351094u64 => "
-      USBHS_NS.pipetre()[1],
-    ",
-  0x50351098u64 => "
-      USBHS_NS.pipetre()[2],
-    ",
-  0x5035109cu64 => "
-      USBHS_NS.pipetre()[3],
-    ",
-  0x503510a0u64 => "
-      USBHS_NS.pipetre()[4],
-    ",
-  0x50351092u64 => "
-      USBHS_NS.pipetrn()[0],
-    ",
-  0x50351096u64 => "
-      USBHS_NS.pipetrn()[1],
-    ",
-  0x5035109au64 => "
-      USBHS_NS.pipetrn()[2],
-    ",
-  0x5035109eu64 => "
-      USBHS_NS.pipetrn()[3],
-    ",
-  0x503510a2u64 => "
-      USBHS_NS.pipetrn()[4],
-    ",
-  0x503510d0u64 => "
-      USBHS_NS.devadd()[0],
-    ",
-  0x503510d2u64 => "
-      USBHS_NS.devadd()[1],
-    ",
-  0x503510d4u64 => "
-      USBHS_NS.devadd()[2],
-    ",
-  0x503510d6u64 => "
-      USBHS_NS.devadd()[3],
-    ",
-  0x503510d8u64 => "
-      USBHS_NS.devadd()[4],
-    ",
-  0x503510dau64 => "
-      USBHS_NS.devadd()[5],
-    ",
-  0x503510dcu64 => "
-      USBHS_NS.devadd()[6],
-    ",
-  0x503510deu64 => "
-      USBHS_NS.devadd()[7],
-    ",
-  0x503510e0u64 => "
-      USBHS_NS.devadd()[8],
-    ",
-  0x503510e2u64 => "
-      USBHS_NS.devadd()[9],
-    ",
-  0x503510e4u64 => "
-      USBHS_NS.devadda(),
-    ",
-  0x50351100u64 => "
-      USBHS_NS.lpctrl(),
-    ",
-  0x50351102u64 => "
-      USBHS_NS.lpsts(),
-    ",
-  0x50351140u64 => "
-      USBHS_NS.bcctrl(),
-    ",
-  0x50351144u64 => "
-      USBHS_NS.pl1ctrl1(),
-    ",
-  0x50351146u64 => "
-      USBHS_NS.pl1ctrl2(),
-    ",
-  0x50351148u64 => "
-      USBHS_NS.hl1ctrl1(),
-    ",
-  0x5035114au64 => "
-      USBHS_NS.hl1ctrl2(),
-    ",
-  0x50351160u64 => "
-      USBHS_NS.dpusr0r(),
-    ",
-  0x50351164u64 => "
-      USBHS_NS.dpusr1r(),
-    ",
-  0x50351168u64 => "
-      USBHS_NS.dpusr2r(),
-    ",
-  0x5035116au64 => "
-      USBHS_NS.dpusrcr(),
-    ",
-  0x50354000u64 => "
-      EDMAC_0_NS.edmr(),
-    ",
-  0x50354008u64 => "
-      EDMAC_0_NS.edtrr(),
-    ",
-  0x50354010u64 => "
-      EDMAC_0_NS.edrrr(),
-    ",
-  0x50354018u64 => "
-      EDMAC_0_NS.tdlar(),
-    ",
-  0x50354020u64 => "
-      EDMAC_0_NS.rdlar(),
-    ",
-  0x50354028u64 => "
-      EDMAC_0_NS.eesr(),
-    ",
-  0x50354030u64 => "
-      EDMAC_0_NS.eesipr(),
-    ",
-  0x50354038u64 => "
-      EDMAC_0_NS.trscer(),
-    ",
-  0x50354040u64 => "
-      EDMAC_0_NS.rmfcr(),
-    ",
-  0x50354048u64 => "
-      EDMAC_0_NS.tftr(),
-    ",
-  0x50354050u64 => "
-      EDMAC_0_NS.fdr(),
-    ",
-  0x50354058u64 => "
-      EDMAC_0_NS.rmcr(),
-    ",
-  0x50354064u64 => "
-      EDMAC_0_NS.tfucr(),
-    ",
-  0x50354068u64 => "
-      EDMAC_0_NS.rfocr(),
-    ",
-  0x5035406cu64 => "
-      EDMAC_0_NS.iosr(),
-    ",
-  0x50354070u64 => "
-      EDMAC_0_NS.fcftr(),
-    ",
-  0x50354078u64 => "
-      EDMAC_0_NS.rpadir(),
-    ",
-  0x5035407cu64 => "
-      EDMAC_0_NS.trimd(),
-    ",
-  0x503540c8u64 => "
-      EDMAC_0_NS.rbwar(),
-    ",
-  0x503540ccu64 => "
-      EDMAC_0_NS.rdfar(),
-    ",
-  0x503540d4u64 => "
-      EDMAC_0_NS.tbrar(),
-    ",
-  0x503540d8u64 => "
-      EDMAC_0_NS.tdfar(),
-    ",
-  0x50354100u64 => "
-      ETHERC_0_NS.ecmr(),
-    ",
-  0x50354108u64 => "
-      ETHERC_0_NS.rflr(),
-    ",
-  0x50354110u64 => "
-      ETHERC_0_NS.ecsr(),
-    ",
-  0x50354118u64 => "
-      ETHERC_0_NS.ecsipr(),
-    ",
-  0x50354120u64 => "
-      ETHERC_0_NS.pir(),
-    ",
-  0x50354128u64 => "
-      ETHERC_0_NS.psr(),
-    ",
-  0x50354140u64 => "
-      ETHERC_0_NS.rdmlr(),
-    ",
-  0x50354150u64 => "
-      ETHERC_0_NS.ipgr(),
-    ",
-  0x50354154u64 => "
-      ETHERC_0_NS.apr(),
-    ",
-  0x50354158u64 => "
-      ETHERC_0_NS.mpr(),
-    ",
-  0x50354160u64 => "
-      ETHERC_0_NS.rfcf(),
-    ",
-  0x50354164u64 => "
-      ETHERC_0_NS.tpauser(),
-    ",
-  0x50354168u64 => "
-      ETHERC_0_NS.tpausecr(),
-    ",
-  0x5035416cu64 => "
-      ETHERC_0_NS.bcfrr(),
-    ",
-  0x503541c0u64 => "
-      ETHERC_0_NS.mahr(),
-    ",
-  0x503541c8u64 => "
-      ETHERC_0_NS.malr(),
-    ",
-  0x503541d0u64 => "
-      ETHERC_0_NS.trocr(),
-    ",
-  0x503541d4u64 => "
-      ETHERC_0_NS.cdcr(),
-    ",
-  0x503541d8u64 => "
-      ETHERC_0_NS.lccr(),
-    ",
-  0x503541dcu64 => "
-      ETHERC_0_NS.cndcr(),
-    ",
-  0x503541e4u64 => "
-      ETHERC_0_NS.cefcr(),
-    ",
-  0x503541e8u64 => "
-      ETHERC_0_NS.frecr(),
-    ",
-  0x503541ecu64 => "
-      ETHERC_0_NS.tsfrcr(),
-    ",
-  0x503541f0u64 => "
-      ETHERC_0_NS.tlfrcr(),
-    ",
-  0x503541f4u64 => "
-      ETHERC_0_NS.rfcr(),
-    ",
-  0x503541f8u64 => "
-      ETHERC_0_NS.mafcr(),
-    ",
-  0x50358000u64 => "
-      SCI_0_B_NS.rdr(),
-      SCI_0_B_NS.rdr_by(),
-    ",
-  0x50358004u64 => "
-      SCI_0_B_NS.tdr(),
-      SCI_0_B_NS.tdrll(),
-    ",
-  0x50358005u64 => "
-      SCI_0_B_NS.tdrlh(),
-    ",
-  0x50358008u64 => "
-      SCI_0_B_NS.ccr0(),
-    ",
-  0x5035800cu64 => "
-      SCI_0_B_NS.ccr1(),
-    ",
-  0x50358010u64 => "
-      SCI_0_B_NS.ccr2(),
-    ",
-  0x50358014u64 => "
-      SCI_0_B_NS.ccr3(),
-    ",
-  0x50358018u64 => "
-      SCI_0_B_NS.ccr4(),
-    ",
-  0x5035801cu64 => "
-      SCI_0_B_NS.cesr(),
-    ",
-  0x50358020u64 => "
-      SCI_0_B_NS.icr(),
-    ",
-  0x50358024u64 => "
-      SCI_0_B_NS.fcr(),
-    ",
-  0x5035802cu64 => "
-      SCI_0_B_NS.mcr(),
-    ",
-  0x50358030u64 => "
-      SCI_0_B_NS.dcr(),
-    ",
-  0x50358034u64 => "
-      SCI_0_B_NS.xcr0(),
-    ",
-  0x50358038u64 => "
-      SCI_0_B_NS.xcr1(),
-    ",
-  0x5035803cu64 => "
-      SCI_0_B_NS.xcr2(),
-    ",
-  0x50358048u64 => "
-      SCI_0_B_NS.csr(),
-    ",
-  0x5035804cu64 => "
-      SCI_0_B_NS.isr(),
-    ",
-  0x50358050u64 => "
-      SCI_0_B_NS.frsr(),
-    ",
-  0x50358054u64 => "
-      SCI_0_B_NS.ftsr(),
-    ",
-  0x50358058u64 => "
-      SCI_0_B_NS.msr(),
-    ",
-  0x5035805cu64 => "
-      SCI_0_B_NS.xsr0(),
-    ",
-  0x50358060u64 => "
-      SCI_0_B_NS.xsr1(),
-    ",
-  0x50358068u64 => "
-      SCI_0_B_NS.cfclr(),
-    ",
-  0x5035806cu64 => "
-      SCI_0_B_NS.icfclr(),
-    ",
-  0x50358070u64 => "
-      SCI_0_B_NS.ffclr(),
-    ",
-  0x50358074u64 => "
-      SCI_0_B_NS.mfclr(),
-    ",
-  0x50358078u64 => "
-      SCI_0_B_NS.xfclr(),
-    ",
-  0x5035c000u64 => "
-      SPI_0_B_NS.spdr(),
-    ",
-  0x5035c004u64 => "
-      SPI_0_B_NS.spdecr(),
-    ",
-  0x5035c008u64 => "
-      SPI_0_B_NS.spcr(),
-    ",
-  0x5035c00cu64 => "
-      SPI_0_B_NS.spcr2(),
-    ",
-  0x5035c010u64 => "
-      SPI_0_B_NS.spcr3(),
-    ",
-  0x5035c014u64 => "
-      SPI_0_B_NS.spcmd()[0],
-    ",
-  0x5035c018u64 => "
-      SPI_0_B_NS.spcmd()[1],
-    ",
-  0x5035c01cu64 => "
-      SPI_0_B_NS.spcmd()[2],
-    ",
-  0x5035c020u64 => "
-      SPI_0_B_NS.spcmd()[3],
-    ",
-  0x5035c024u64 => "
-      SPI_0_B_NS.spcmd()[4],
-    ",
-  0x5035c028u64 => "
-      SPI_0_B_NS.spcmd()[5],
-    ",
-  0x5035c02cu64 => "
-      SPI_0_B_NS.spcmd()[6],
-    ",
-  0x5035c030u64 => "
-      SPI_0_B_NS.spcmd()[7],
-    ",
-  0x5035c040u64 => "
-      SPI_0_B_NS.spdcr(),
-    ",
-  0x5035c044u64 => "
-      SPI_0_B_NS.spdcr2(),
-    ",
-  0x5035c050u64 => "
-      SPI_0_B_NS.spsr(),
-    ",
-  0x5035c058u64 => "
-      SPI_0_B_NS.sptfsr(),
-    ",
-  0x5035c05cu64 => "
-      SPI_0_B_NS.sprfsr(),
-    ",
-  0x5035c060u64 => "
-      SPI_0_B_NS.sppsr(),
-    ",
-  0x5035c068u64 => "
-      SPI_0_B_NS.spsrc(),
-    ",
-  0x5035c06cu64 => "
-      SPI_0_B_NS.spfcr(),
-    ",
-  0x5035f000u64 => "
-      I_3_C_NS.prts(),
-    ",
-  0x5035f010u64 => "
-      I_3_C_NS.cectl(),
-    ",
-  0x5035f014u64 => "
-      I_3_C_NS.bctl(),
-    ",
-  0x5035f018u64 => "
-      I_3_C_NS.msdvad(),
-    ",
-  0x5035f020u64 => "
-      I_3_C_NS.rstctl(),
-    ",
-  0x5035f024u64 => "
-      I_3_C_NS.prsst(),
-    ",
-  0x5035f030u64 => "
-      I_3_C_NS.inst(),
-    ",
-  0x5035f034u64 => "
-      I_3_C_NS.inste(),
-    ",
-  0x5035f038u64 => "
-      I_3_C_NS.inie(),
-    ",
-  0x5035f03cu64 => "
-      I_3_C_NS.instfc(),
-    ",
-  0x5035f044u64 => "
-      I_3_C_NS.dvct(),
-    ",
-  0x5035f058u64 => "
-      I_3_C_NS.ibinctl(),
-    ",
-  0x5035f060u64 => "
-      I_3_C_NS.bfctl(),
-    ",
-  0x5035f064u64 => "
-      I_3_C_NS.svctl(),
-    ",
-  0x5035f070u64 => "
-      I_3_C_NS.refckctl(),
-    ",
-  0x5035f074u64 => "
-      I_3_C_NS.stdbr(),
-    ",
-  0x5035f078u64 => "
-      I_3_C_NS.extbr(),
-    ",
-  0x5035f07cu64 => "
-      I_3_C_NS.bfrecdt(),
-    ",
-  0x5035f080u64 => "
-      I_3_C_NS.bavlcdt(),
-    ",
-  0x5035f084u64 => "
-      I_3_C_NS.bidlcdt(),
-    ",
-  0x5035f088u64 => "
-      I_3_C_NS.outctl(),
-    ",
-  0x5035f08cu64 => "
-      I_3_C_NS.inctl(),
-    ",
-  0x5035f090u64 => "
-      I_3_C_NS.tmoctl(),
-    ",
-  0x5035f098u64 => "
-      I_3_C_NS.wuctl(),
-    ",
-  0x5035f0a0u64 => "
-      I_3_C_NS.ackctl(),
-    ",
-  0x5035f0a4u64 => "
-      I_3_C_NS.scstrctl(),
-    ",
-  0x5035f0b0u64 => "
-      I_3_C_NS.scstlctl(),
-    ",
-  0x5035f0c0u64 => "
-      I_3_C_NS.svtdlg0(),
-    ",
-  0x5035f120u64 => "
-      I_3_C_NS.stctl(),
-    ",
-  0x5035f124u64 => "
-      I_3_C_NS.atctl(),
-    ",
-  0x5035f128u64 => "
-      I_3_C_NS.attrg(),
-    ",
-  0x5035f12cu64 => "
-      I_3_C_NS.atccnte(),
-    ",
-  0x5035f140u64 => "
-      I_3_C_NS.cndctl(),
-    ",
-  0x5035f150u64 => "
-      I_3_C_NS.ncmdqp(),
-    ",
-  0x5035f154u64 => "
-      I_3_C_NS.nrspqp(),
-    ",
-  0x5035f158u64 => "
-      I_3_C_NS.ntdtbp0(),
-      I_3_C_NS.ntdtbp0_by(),
-    ",
-  0x5035f17cu64 => "
-      I_3_C_NS.nibiqp(),
-    ",
-  0x5035f180u64 => "
-      I_3_C_NS.nrsqp(),
-    ",
-  0x5035f184u64 => "
-      I_3_C_NS.hcmdqp(),
-    ",
-  0x5035f188u64 => "
-      I_3_C_NS.hrspqp(),
-    ",
-  0x5035f18cu64 => "
-      I_3_C_NS.htdtbp(),
-    ",
-  0x5035f190u64 => "
-      I_3_C_NS.nqthctl(),
-    ",
-  0x5035f194u64 => "
-      I_3_C_NS.ntbthctl0(),
-    ",
-  0x5035f1c0u64 => "
-      I_3_C_NS.nrqthctl(),
-    ",
-  0x5035f1c4u64 => "
-      I_3_C_NS.hqthctl(),
-    ",
-  0x5035f1c8u64 => "
-      I_3_C_NS.htbthctl(),
-    ",
-  0x5035f1d0u64 => "
-      I_3_C_NS.bst(),
-    ",
-  0x5035f1d4u64 => "
-      I_3_C_NS.bste(),
-    ",
-  0x5035f1d8u64 => "
-      I_3_C_NS.bie(),
-    ",
-  0x5035f1dcu64 => "
-      I_3_C_NS.bstfc(),
-    ",
-  0x5035f1e0u64 => "
-      I_3_C_NS.ntst(),
-    ",
-  0x5035f1e4u64 => "
-      I_3_C_NS.ntste(),
-    ",
-  0x5035f1e8u64 => "
-      I_3_C_NS.ntie(),
-    ",
-  0x5035f1ecu64 => "
-      I_3_C_NS.ntstfc(),
-    ",
-  0x5035f200u64 => "
-      I_3_C_NS.htst(),
-    ",
-  0x5035f204u64 => "
-      I_3_C_NS.htste(),
-    ",
-  0x5035f208u64 => "
-      I_3_C_NS.htie(),
-    ",
-  0x5035f20cu64 => "
-      I_3_C_NS.htstfc(),
-    ",
-  0x5035f210u64 => "
-      I_3_C_NS.bcst(),
-    ",
-  0x5035f214u64 => "
-      I_3_C_NS.svst(),
-    ",
-  0x5035f218u64 => "
-      I_3_C_NS.wust(),
-    ",
-  0x5035f21cu64 => "
-      I_3_C_NS.mrccpt(),
-    ",
-  0x5035f224u64 => "
-      I_3_C_NS.datbas()[0],
-    ",
-  0x5035f22cu64 => "
-      I_3_C_NS.datbas()[1],
-    ",
-  0x5035f234u64 => "
-      I_3_C_NS.datbas()[2],
-    ",
-  0x5035f23cu64 => "
-      I_3_C_NS.datbas()[3],
-    ",
-  0x5035f244u64 => "
-      I_3_C_NS.datbas()[4],
-    ",
-  0x5035f24cu64 => "
-      I_3_C_NS.datbas()[5],
-    ",
-  0x5035f254u64 => "
-      I_3_C_NS.datbas()[6],
-    ",
-  0x5035f25cu64 => "
-      I_3_C_NS.datbas()[7],
-    ",
-  0x5035f2a0u64 => "
-      I_3_C_NS.exdatbas(),
-    ",
-  0x5035f2b0u64 => "
-      I_3_C_NS.sdatbas()[0],
-    ",
-  0x5035f2b4u64 => "
-      I_3_C_NS.sdatbas()[1],
-    ",
-  0x5035f2b8u64 => "
-      I_3_C_NS.sdatbas()[2],
-    ",
-  0x5035f2d0u64 => "
-      I_3_C_NS.msdct()[0],
-    ",
-  0x5035f2d4u64 => "
-      I_3_C_NS.msdct()[1],
-    ",
-  0x5035f2d8u64 => "
-      I_3_C_NS.msdct()[2],
-    ",
-  0x5035f2dcu64 => "
-      I_3_C_NS.msdct()[3],
-    ",
-  0x5035f2e0u64 => "
-      I_3_C_NS.msdct()[4],
-    ",
-  0x5035f2e4u64 => "
-      I_3_C_NS.msdct()[5],
-    ",
-  0x5035f2e8u64 => "
-      I_3_C_NS.msdct()[6],
-    ",
-  0x5035f2ecu64 => "
-      I_3_C_NS.msdct()[7],
-    ",
-  0x5035f320u64 => "
-      I_3_C_NS.svdct(),
-    ",
-  0x5035f324u64 => "
-      I_3_C_NS.sdctpidl(),
-    ",
-  0x5035f328u64 => "
-      I_3_C_NS.sdctpidh(),
-    ",
-  0x5035f330u64 => "
-      I_3_C_NS.svdvad()[0],
-    ",
-  0x5035f334u64 => "
-      I_3_C_NS.svdvad()[1],
-    ",
-  0x5035f338u64 => "
-      I_3_C_NS.svdvad()[2],
-    ",
-  0x5035f350u64 => "
-      I_3_C_NS.csecmd(),
-    ",
-  0x5035f354u64 => "
-      I_3_C_NS.ceactst(),
-    ",
-  0x5035f358u64 => "
-      I_3_C_NS.cmwlg(),
-    ",
-  0x5035f35cu64 => "
-      I_3_C_NS.cmrlg(),
-    ",
-  0x5035f360u64 => "
-      I_3_C_NS.cetstmd(),
-    ",
-  0x5035f364u64 => "
-      I_3_C_NS.cgdvst(),
-    ",
-  0x5035f368u64 => "
-      I_3_C_NS.cmdspw(),
-    ",
-  0x5035f36cu64 => "
-      I_3_C_NS.cmdspr(),
-    ",
-  0x5035f370u64 => "
-      I_3_C_NS.cmdspt(),
-    ",
-  0x5035f374u64 => "
-      I_3_C_NS.cetsm(),
-    ",
-  0x5035f378u64 => "
-      I_3_C_NS.cetss(),
-    ",
-  0x5035f37cu64 => "
-      I_3_C_NS.cghdrcap(),
-    ",
-  0x5035f380u64 => "
-      I_3_C_NS.bitcnt(),
-    ",
-  0x5035f394u64 => "
-      I_3_C_NS.nqstlv(),
-    ",
-  0x5035f398u64 => "
-      I_3_C_NS.ndbstlv0(),
-    ",
-  0x5035f3c0u64 => "
-      I_3_C_NS.nrsqstlv(),
-    ",
-  0x5035f3c4u64 => "
-      I_3_C_NS.hqstlv(),
-    ",
-  0x5035f3c8u64 => "
-      I_3_C_NS.hdbstlv(),
-    ",
-  0x5035f3ccu64 => "
-      I_3_C_NS.prstdbg(),
-    ",
-  0x5035f3d0u64 => "
-      I_3_C_NS.mserrcnt(),
-    ",
-  0x5035f3e0u64 => "
-      I_3_C_NS.sc1cpt(),
-    ",
-  0x5035f3e4u64 => "
-      I_3_C_NS.sc2cpt(),
-    ",
-  0x5036f200u64 => "
-      ECCMB_0_NS.ec710ctl(),
-    ",
-  0x5036f204u64 => "
-      ECCMB_0_NS.ec710tmc(),
-    ",
-  0x5036f20cu64 => "
-      ECCMB_0_NS.ec710ted(),
-    ",
-  0x5036f210u64 => "
-      ECCMB_0_NS.ec710ead0(),
-    ",
-  0x50380000u64 => "
-      CANFD_0_NS.cfdc0ncfg(),
-    ",
-  0x50380004u64 => "
-      CANFD_0_NS.cfdc0ctr(),
-    ",
-  0x50380008u64 => "
-      CANFD_0_NS.cfdc0sts(),
-    ",
-  0x5038000cu64 => "
-      CANFD_0_NS.cfdc0erfl(),
-    ",
-  0x50380014u64 => "
-      CANFD_0_NS.cfdgcfg(),
-    ",
-  0x50380018u64 => "
-      CANFD_0_NS.cfdgctr(),
-    ",
-  0x5038001cu64 => "
-      CANFD_0_NS.cfdgsts(),
-    ",
-  0x50380020u64 => "
-      CANFD_0_NS.cfdgerfl(),
-    ",
-  0x50380024u64 => "
-      CANFD_0_NS.cfdgtsc(),
-    ",
-  0x50380028u64 => "
-      CANFD_0_NS.cfdgaflectr(),
-    ",
-  0x5038002cu64 => "
-      CANFD_0_NS.cfdgaflcfg(),
-    ",
-  0x50380030u64 => "
-      CANFD_0_NS.cfdrmnb(),
-    ",
-  0x50380034u64 => "
-      CANFD_0_NS.cfdrmnd(),
-    ",
-  0x50380038u64 => "
-      CANFD_0_NS.cfdrmiec(),
-    ",
-  0x5038003cu64 => "
-      CANFD_0_NS.cfdrfcc()[0],
-    ",
-  0x50380040u64 => "
-      CANFD_0_NS.cfdrfcc()[1],
-    ",
-  0x50380044u64 => "
-      CANFD_0_NS.cfdrfsts()[0],
-    ",
-  0x50380048u64 => "
-      CANFD_0_NS.cfdrfsts()[1],
-    ",
-  0x5038004cu64 => "
-      CANFD_0_NS.cfdrfpctr()[0],
-    ",
-  0x50380050u64 => "
-      CANFD_0_NS.cfdrfpctr()[1],
-    ",
-  0x50380054u64 => "
-      CANFD_0_NS.cfdcfcc(),
-    ",
-  0x50380058u64 => "
-      CANFD_0_NS.cfdcfsts(),
-    ",
-  0x5038005cu64 => "
-      CANFD_0_NS.cfdcfpctr(),
-    ",
-  0x50380060u64 => "
-      CANFD_0_NS.cfdfests(),
-    ",
-  0x50380064u64 => "
-      CANFD_0_NS.cfdffsts(),
-    ",
-  0x50380068u64 => "
-      CANFD_0_NS.cfdfmsts(),
-    ",
-  0x5038006cu64 => "
-      CANFD_0_NS.cfdrfists(),
-    ",
-  0x50380070u64 => "
-      CANFD_0_NS.cfdtmc()[0],
-    ",
-  0x50380071u64 => "
-      CANFD_0_NS.cfdtmc()[1],
-    ",
-  0x50380072u64 => "
-      CANFD_0_NS.cfdtmc()[2],
-    ",
-  0x50380073u64 => "
-      CANFD_0_NS.cfdtmc()[3],
-    ",
-  0x50380074u64 => "
-      CANFD_0_NS.cfdtmsts()[0],
-    ",
-  0x50380075u64 => "
-      CANFD_0_NS.cfdtmsts()[1],
-    ",
-  0x50380076u64 => "
-      CANFD_0_NS.cfdtmsts()[2],
-    ",
-  0x50380077u64 => "
-      CANFD_0_NS.cfdtmsts()[3],
-    ",
-  0x50380078u64 => "
-      CANFD_0_NS.cfdtmtrsts(),
-    ",
-  0x5038007cu64 => "
-      CANFD_0_NS.cfdtmtarsts(),
-    ",
-  0x50380080u64 => "
-      CANFD_0_NS.cfdtmtcsts(),
-    ",
-  0x50380084u64 => "
-      CANFD_0_NS.cfdtmtasts(),
-    ",
-  0x50380088u64 => "
-      CANFD_0_NS.cfdtmiec(),
-    ",
-  0x5038008cu64 => "
-      CANFD_0_NS.cfdtxqcc(),
-    ",
-  0x50380090u64 => "
-      CANFD_0_NS.cfdtxqsts(),
-    ",
-  0x50380094u64 => "
-      CANFD_0_NS.cfdtxqpctr(),
-    ",
-  0x50380098u64 => "
-      CANFD_0_NS.cfdthlcc(),
-    ",
-  0x5038009cu64 => "
-      CANFD_0_NS.cfdthlsts(),
-    ",
-  0x503800a0u64 => "
-      CANFD_0_NS.cfdthlpctr(),
-    ",
-  0x503800a4u64 => "
-      CANFD_0_NS.cfdgtintsts(),
-    ",
-  0x503800a8u64 => "
-      CANFD_0_NS.cfdgtstcfg(),
-    ",
-  0x503800acu64 => "
-      CANFD_0_NS.cfdgtstctr(),
-    ",
-  0x503800b0u64 => "
-      CANFD_0_NS.cfdgfdcfg(),
-    ",
-  0x503800b8u64 => "
-      CANFD_0_NS.cfdglockk(),
-    ",
-  0x503800c0u64 => "
-      CANFD_0_NS.cfdgaflignent(),
-    ",
-  0x503800c4u64 => "
-      CANFD_0_NS.cfdgaflignctr(),
-    ",
-  0x503800c8u64 => "
-      CANFD_0_NS.cfdcdtct(),
-    ",
-  0x503800ccu64 => "
-      CANFD_0_NS.cfdcdtsts(),
-    ",
-  0x503800d8u64 => "
-      CANFD_0_NS.cfdgrstc(),
-    ",
-  0x50380100u64 => "
-      CANFD_0_NS.cfdc0dcfg(),
-    ",
-  0x50380104u64 => "
-      CANFD_0_NS.cfdc0fdcfg(),
-    ",
-  0x50380108u64 => "
-      CANFD_0_NS.cfdc0fdctr(),
-    ",
-  0x5038010cu64 => "
-      CANFD_0_NS.cfdc0fdsts(),
-    ",
-  0x50380110u64 => "
-      CANFD_0_NS.cfdc0fdcrc(),
-    ",
-  0x50380120u64 => "
-      CANFD_0_NS.cfdgaflid()[0],
-    ",
-  0x50380130u64 => "
-      CANFD_0_NS.cfdgaflid()[1],
-    ",
-  0x50380140u64 => "
-      CANFD_0_NS.cfdgaflid()[2],
-    ",
-  0x50380150u64 => "
-      CANFD_0_NS.cfdgaflid()[3],
-    ",
-  0x50380160u64 => "
-      CANFD_0_NS.cfdgaflid()[4],
-    ",
-  0x50380170u64 => "
-      CANFD_0_NS.cfdgaflid()[5],
-    ",
-  0x50380180u64 => "
-      CANFD_0_NS.cfdgaflid()[6],
-    ",
-  0x50380190u64 => "
-      CANFD_0_NS.cfdgaflid()[7],
-    ",
-  0x503801a0u64 => "
-      CANFD_0_NS.cfdgaflid()[8],
-    ",
-  0x503801b0u64 => "
-      CANFD_0_NS.cfdgaflid()[9],
-    ",
-  0x503801c0u64 => "
-      CANFD_0_NS.cfdgaflid()[10],
-    ",
-  0x503801d0u64 => "
-      CANFD_0_NS.cfdgaflid()[11],
-    ",
-  0x503801e0u64 => "
-      CANFD_0_NS.cfdgaflid()[12],
-    ",
-  0x503801f0u64 => "
-      CANFD_0_NS.cfdgaflid()[13],
-    ",
-  0x50380200u64 => "
-      CANFD_0_NS.cfdgaflid()[14],
-    ",
-  0x50380210u64 => "
-      CANFD_0_NS.cfdgaflid()[15],
-    ",
-  0x50380124u64 => "
-      CANFD_0_NS.cfdgaflm()[0],
-    ",
-  0x50380134u64 => "
-      CANFD_0_NS.cfdgaflm()[1],
-    ",
-  0x50380144u64 => "
-      CANFD_0_NS.cfdgaflm()[2],
-    ",
-  0x50380154u64 => "
-      CANFD_0_NS.cfdgaflm()[3],
-    ",
-  0x50380164u64 => "
-      CANFD_0_NS.cfdgaflm()[4],
-    ",
-  0x50380174u64 => "
-      CANFD_0_NS.cfdgaflm()[5],
-    ",
-  0x50380184u64 => "
-      CANFD_0_NS.cfdgaflm()[6],
-    ",
-  0x50380194u64 => "
-      CANFD_0_NS.cfdgaflm()[7],
-    ",
-  0x503801a4u64 => "
-      CANFD_0_NS.cfdgaflm()[8],
-    ",
-  0x503801b4u64 => "
-      CANFD_0_NS.cfdgaflm()[9],
-    ",
-  0x503801c4u64 => "
-      CANFD_0_NS.cfdgaflm()[10],
-    ",
-  0x503801d4u64 => "
-      CANFD_0_NS.cfdgaflm()[11],
-    ",
-  0x503801e4u64 => "
-      CANFD_0_NS.cfdgaflm()[12],
-    ",
-  0x503801f4u64 => "
-      CANFD_0_NS.cfdgaflm()[13],
-    ",
-  0x50380204u64 => "
-      CANFD_0_NS.cfdgaflm()[14],
-    ",
-  0x50380214u64 => "
-      CANFD_0_NS.cfdgaflm()[15],
-    ",
-  0x50380128u64 => "
-      CANFD_0_NS.cfdgaflp0()[0],
-    ",
-  0x50380138u64 => "
-      CANFD_0_NS.cfdgaflp0()[1],
-    ",
-  0x50380148u64 => "
-      CANFD_0_NS.cfdgaflp0()[2],
-    ",
-  0x50380158u64 => "
-      CANFD_0_NS.cfdgaflp0()[3],
-    ",
-  0x50380168u64 => "
-      CANFD_0_NS.cfdgaflp0()[4],
-    ",
-  0x50380178u64 => "
-      CANFD_0_NS.cfdgaflp0()[5],
-    ",
-  0x50380188u64 => "
-      CANFD_0_NS.cfdgaflp0()[6],
-    ",
-  0x50380198u64 => "
-      CANFD_0_NS.cfdgaflp0()[7],
-    ",
-  0x503801a8u64 => "
-      CANFD_0_NS.cfdgaflp0()[8],
-    ",
-  0x503801b8u64 => "
-      CANFD_0_NS.cfdgaflp0()[9],
-    ",
-  0x503801c8u64 => "
-      CANFD_0_NS.cfdgaflp0()[10],
-    ",
-  0x503801d8u64 => "
-      CANFD_0_NS.cfdgaflp0()[11],
-    ",
-  0x503801e8u64 => "
-      CANFD_0_NS.cfdgaflp0()[12],
-    ",
-  0x503801f8u64 => "
-      CANFD_0_NS.cfdgaflp0()[13],
-    ",
-  0x50380208u64 => "
-      CANFD_0_NS.cfdgaflp0()[14],
-    ",
-  0x50380218u64 => "
-      CANFD_0_NS.cfdgaflp0()[15],
-    ",
-  0x5038012cu64 => "
-      CANFD_0_NS.cfdgaflp1()[0],
-    ",
-  0x5038013cu64 => "
-      CANFD_0_NS.cfdgaflp1()[1],
-    ",
-  0x5038014cu64 => "
-      CANFD_0_NS.cfdgaflp1()[2],
-    ",
-  0x5038015cu64 => "
-      CANFD_0_NS.cfdgaflp1()[3],
-    ",
-  0x5038016cu64 => "
-      CANFD_0_NS.cfdgaflp1()[4],
-    ",
-  0x5038017cu64 => "
-      CANFD_0_NS.cfdgaflp1()[5],
-    ",
-  0x5038018cu64 => "
-      CANFD_0_NS.cfdgaflp1()[6],
-    ",
-  0x5038019cu64 => "
-      CANFD_0_NS.cfdgaflp1()[7],
-    ",
-  0x503801acu64 => "
-      CANFD_0_NS.cfdgaflp1()[8],
-    ",
-  0x503801bcu64 => "
-      CANFD_0_NS.cfdgaflp1()[9],
-    ",
-  0x503801ccu64 => "
-      CANFD_0_NS.cfdgaflp1()[10],
-    ",
-  0x503801dcu64 => "
-      CANFD_0_NS.cfdgaflp1()[11],
-    ",
-  0x503801ecu64 => "
-      CANFD_0_NS.cfdgaflp1()[12],
-    ",
-  0x503801fcu64 => "
-      CANFD_0_NS.cfdgaflp1()[13],
-    ",
-  0x5038020cu64 => "
-      CANFD_0_NS.cfdgaflp1()[14],
-    ",
-  0x5038021cu64 => "
-      CANFD_0_NS.cfdgaflp1()[15],
-    ",
-  0x50380280u64 => "
-      CANFD_0_NS.cfdrpgacc()[0],
-    ",
-  0x50380284u64 => "
-      CANFD_0_NS.cfdrpgacc()[1],
-    ",
-  0x50380288u64 => "
-      CANFD_0_NS.cfdrpgacc()[2],
-    ",
-  0x5038028cu64 => "
-      CANFD_0_NS.cfdrpgacc()[3],
-    ",
-  0x50380290u64 => "
-      CANFD_0_NS.cfdrpgacc()[4],
-    ",
-  0x50380294u64 => "
-      CANFD_0_NS.cfdrpgacc()[5],
-    ",
-  0x50380298u64 => "
-      CANFD_0_NS.cfdrpgacc()[6],
-    ",
-  0x5038029cu64 => "
-      CANFD_0_NS.cfdrpgacc()[7],
-    ",
-  0x503802a0u64 => "
-      CANFD_0_NS.cfdrpgacc()[8],
-    ",
-  0x503802a4u64 => "
-      CANFD_0_NS.cfdrpgacc()[9],
-    ",
-  0x503802a8u64 => "
-      CANFD_0_NS.cfdrpgacc()[10],
-    ",
-  0x503802acu64 => "
-      CANFD_0_NS.cfdrpgacc()[11],
-    ",
-  0x503802b0u64 => "
-      CANFD_0_NS.cfdrpgacc()[12],
-    ",
-  0x503802b4u64 => "
-      CANFD_0_NS.cfdrpgacc()[13],
-    ",
-  0x503802b8u64 => "
-      CANFD_0_NS.cfdrpgacc()[14],
-    ",
-  0x503802bcu64 => "
-      CANFD_0_NS.cfdrpgacc()[15],
-    ",
-  0x503802c0u64 => "
-      CANFD_0_NS.cfdrpgacc()[16],
-    ",
-  0x503802c4u64 => "
-      CANFD_0_NS.cfdrpgacc()[17],
-    ",
-  0x503802c8u64 => "
-      CANFD_0_NS.cfdrpgacc()[18],
-    ",
-  0x503802ccu64 => "
-      CANFD_0_NS.cfdrpgacc()[19],
-    ",
-  0x503802d0u64 => "
-      CANFD_0_NS.cfdrpgacc()[20],
-    ",
-  0x503802d4u64 => "
-      CANFD_0_NS.cfdrpgacc()[21],
-    ",
-  0x503802d8u64 => "
-      CANFD_0_NS.cfdrpgacc()[22],
-    ",
-  0x503802dcu64 => "
-      CANFD_0_NS.cfdrpgacc()[23],
-    ",
-  0x503802e0u64 => "
-      CANFD_0_NS.cfdrpgacc()[24],
-    ",
-  0x503802e4u64 => "
-      CANFD_0_NS.cfdrpgacc()[25],
-    ",
-  0x503802e8u64 => "
-      CANFD_0_NS.cfdrpgacc()[26],
-    ",
-  0x503802ecu64 => "
-      CANFD_0_NS.cfdrpgacc()[27],
-    ",
-  0x503802f0u64 => "
-      CANFD_0_NS.cfdrpgacc()[28],
-    ",
-  0x503802f4u64 => "
-      CANFD_0_NS.cfdrpgacc()[29],
-    ",
-  0x503802f8u64 => "
-      CANFD_0_NS.cfdrpgacc()[30],
-    ",
-  0x503802fcu64 => "
-      CANFD_0_NS.cfdrpgacc()[31],
-    ",
-  0x50380300u64 => "
-      CANFD_0_NS.cfdrpgacc()[32],
-    ",
-  0x50380304u64 => "
-      CANFD_0_NS.cfdrpgacc()[33],
-    ",
-  0x50380308u64 => "
-      CANFD_0_NS.cfdrpgacc()[34],
-    ",
-  0x5038030cu64 => "
-      CANFD_0_NS.cfdrpgacc()[35],
-    ",
-  0x50380310u64 => "
-      CANFD_0_NS.cfdrpgacc()[36],
-    ",
-  0x50380314u64 => "
-      CANFD_0_NS.cfdrpgacc()[37],
-    ",
-  0x50380318u64 => "
-      CANFD_0_NS.cfdrpgacc()[38],
-    ",
-  0x5038031cu64 => "
-      CANFD_0_NS.cfdrpgacc()[39],
-    ",
-  0x50380320u64 => "
-      CANFD_0_NS.cfdrpgacc()[40],
-    ",
-  0x50380324u64 => "
-      CANFD_0_NS.cfdrpgacc()[41],
-    ",
-  0x50380328u64 => "
-      CANFD_0_NS.cfdrpgacc()[42],
-    ",
-  0x5038032cu64 => "
-      CANFD_0_NS.cfdrpgacc()[43],
-    ",
-  0x50380330u64 => "
-      CANFD_0_NS.cfdrpgacc()[44],
-    ",
-  0x50380334u64 => "
-      CANFD_0_NS.cfdrpgacc()[45],
-    ",
-  0x50380338u64 => "
-      CANFD_0_NS.cfdrpgacc()[46],
-    ",
-  0x5038033cu64 => "
-      CANFD_0_NS.cfdrpgacc()[47],
-    ",
-  0x50380340u64 => "
-      CANFD_0_NS.cfdrpgacc()[48],
-    ",
-  0x50380344u64 => "
-      CANFD_0_NS.cfdrpgacc()[49],
-    ",
-  0x50380348u64 => "
-      CANFD_0_NS.cfdrpgacc()[50],
-    ",
-  0x5038034cu64 => "
-      CANFD_0_NS.cfdrpgacc()[51],
-    ",
-  0x50380350u64 => "
-      CANFD_0_NS.cfdrpgacc()[52],
-    ",
-  0x50380354u64 => "
-      CANFD_0_NS.cfdrpgacc()[53],
-    ",
-  0x50380358u64 => "
-      CANFD_0_NS.cfdrpgacc()[54],
-    ",
-  0x5038035cu64 => "
-      CANFD_0_NS.cfdrpgacc()[55],
-    ",
-  0x50380360u64 => "
-      CANFD_0_NS.cfdrpgacc()[56],
-    ",
-  0x50380364u64 => "
-      CANFD_0_NS.cfdrpgacc()[57],
-    ",
-  0x50380368u64 => "
-      CANFD_0_NS.cfdrpgacc()[58],
-    ",
-  0x5038036cu64 => "
-      CANFD_0_NS.cfdrpgacc()[59],
-    ",
-  0x50380370u64 => "
-      CANFD_0_NS.cfdrpgacc()[60],
-    ",
-  0x50380374u64 => "
-      CANFD_0_NS.cfdrpgacc()[61],
-    ",
-  0x50380378u64 => "
-      CANFD_0_NS.cfdrpgacc()[62],
-    ",
-  0x5038037cu64 => "
-      CANFD_0_NS.cfdrpgacc()[63],
-    ",
-  0x50380520u64 => "
-      CANFD_0_NS.cfdrfid()[0],
-    ",
-  0x5038056cu64 => "
-      CANFD_0_NS.cfdrfid()[1],
-    ",
-  0x50380524u64 => "
-      CANFD_0_NS.cfdrfptr()[0],
-    ",
-  0x50380570u64 => "
-      CANFD_0_NS.cfdrfptr()[1],
-    ",
-  0x50380528u64 => "
-      CANFD_0_NS.cfdrffdsts()[0],
-    ",
-  0x50380574u64 => "
-      CANFD_0_NS.cfdrffdsts()[1],
-    ",
-  0x5038052cu64 => "
-      CANFD_0_NS.cfdrfdf_0()[0],
-    ",
-  0x50380578u64 => "
-      CANFD_0_NS.cfdrfdf_0()[1],
-    ",
-  0x50380530u64 => "
-      CANFD_0_NS.cfdrfdf_1()[0],
-    ",
-  0x5038057cu64 => "
-      CANFD_0_NS.cfdrfdf_1()[1],
-    ",
-  0x50380534u64 => "
-      CANFD_0_NS.cfdrfdf_2()[0],
-    ",
-  0x50380580u64 => "
-      CANFD_0_NS.cfdrfdf_2()[1],
-    ",
-  0x50380538u64 => "
-      CANFD_0_NS.cfdrfdf_3()[0],
-    ",
-  0x50380584u64 => "
-      CANFD_0_NS.cfdrfdf_3()[1],
-    ",
-  0x5038053cu64 => "
-      CANFD_0_NS.cfdrfdf_4()[0],
-    ",
-  0x50380588u64 => "
-      CANFD_0_NS.cfdrfdf_4()[1],
-    ",
-  0x50380540u64 => "
-      CANFD_0_NS.cfdrfdf_5()[0],
-    ",
-  0x5038058cu64 => "
-      CANFD_0_NS.cfdrfdf_5()[1],
-    ",
-  0x50380544u64 => "
-      CANFD_0_NS.cfdrfdf_6()[0],
-    ",
-  0x50380590u64 => "
-      CANFD_0_NS.cfdrfdf_6()[1],
-    ",
-  0x50380548u64 => "
-      CANFD_0_NS.cfdrfdf_7()[0],
-    ",
-  0x50380594u64 => "
-      CANFD_0_NS.cfdrfdf_7()[1],
-    ",
-  0x5038054cu64 => "
-      CANFD_0_NS.cfdrfdf_8()[0],
-    ",
-  0x50380598u64 => "
-      CANFD_0_NS.cfdrfdf_8()[1],
-    ",
-  0x50380550u64 => "
-      CANFD_0_NS.cfdrfdf_9()[0],
-    ",
-  0x5038059cu64 => "
-      CANFD_0_NS.cfdrfdf_9()[1],
-    ",
-  0x50380554u64 => "
-      CANFD_0_NS.cfdrfdf_10()[0],
-    ",
-  0x503805a0u64 => "
-      CANFD_0_NS.cfdrfdf_10()[1],
-    ",
-  0x50380558u64 => "
-      CANFD_0_NS.cfdrfdf_11()[0],
-    ",
-  0x503805a4u64 => "
-      CANFD_0_NS.cfdrfdf_11()[1],
-    ",
-  0x5038055cu64 => "
-      CANFD_0_NS.cfdrfdf_12()[0],
-    ",
-  0x503805a8u64 => "
-      CANFD_0_NS.cfdrfdf_12()[1],
-    ",
-  0x50380560u64 => "
-      CANFD_0_NS.cfdrfdf_13()[0],
-    ",
-  0x503805acu64 => "
-      CANFD_0_NS.cfdrfdf_13()[1],
-    ",
-  0x50380564u64 => "
-      CANFD_0_NS.cfdrfdf_14()[0],
-    ",
-  0x503805b0u64 => "
-      CANFD_0_NS.cfdrfdf_14()[1],
-    ",
-  0x50380568u64 => "
-      CANFD_0_NS.cfdrfdf_15()[0],
-    ",
-  0x503805b4u64 => "
-      CANFD_0_NS.cfdrfdf_15()[1],
-    ",
-  0x503805b8u64 => "
-      CANFD_0_NS.cfdcfid(),
-    ",
-  0x503805bcu64 => "
-      CANFD_0_NS.cfdcfptr(),
-    ",
-  0x503805c0u64 => "
-      CANFD_0_NS.cfdcffdcsts(),
-    ",
-  0x503805c4u64 => "
-      CANFD_0_NS.cfdcfdf()[0],
-    ",
-  0x503805c8u64 => "
-      CANFD_0_NS.cfdcfdf()[1],
-    ",
-  0x503805ccu64 => "
-      CANFD_0_NS.cfdcfdf()[2],
-    ",
-  0x503805d0u64 => "
-      CANFD_0_NS.cfdcfdf()[3],
-    ",
-  0x503805d4u64 => "
-      CANFD_0_NS.cfdcfdf()[4],
-    ",
-  0x503805d8u64 => "
-      CANFD_0_NS.cfdcfdf()[5],
-    ",
-  0x503805dcu64 => "
-      CANFD_0_NS.cfdcfdf()[6],
-    ",
-  0x503805e0u64 => "
-      CANFD_0_NS.cfdcfdf()[7],
-    ",
-  0x503805e4u64 => "
-      CANFD_0_NS.cfdcfdf()[8],
-    ",
-  0x503805e8u64 => "
-      CANFD_0_NS.cfdcfdf()[9],
-    ",
-  0x503805ecu64 => "
-      CANFD_0_NS.cfdcfdf()[10],
-    ",
-  0x503805f0u64 => "
-      CANFD_0_NS.cfdcfdf()[11],
-    ",
-  0x503805f4u64 => "
-      CANFD_0_NS.cfdcfdf()[12],
-    ",
-  0x503805f8u64 => "
-      CANFD_0_NS.cfdcfdf()[13],
-    ",
-  0x503805fcu64 => "
-      CANFD_0_NS.cfdcfdf()[14],
-    ",
-  0x50380600u64 => "
-      CANFD_0_NS.cfdcfdf()[15],
-    ",
-  0x50380604u64 => "
-      CANFD_0_NS.cfdtmid()[0],
-    ",
-  0x50380650u64 => "
-      CANFD_0_NS.cfdtmid()[1],
-    ",
-  0x5038069cu64 => "
-      CANFD_0_NS.cfdtmid()[2],
-    ",
-  0x503806e8u64 => "
-      CANFD_0_NS.cfdtmid()[3],
-    ",
-  0x50380608u64 => "
-      CANFD_0_NS.cfdtmptr()[0],
-    ",
-  0x50380654u64 => "
-      CANFD_0_NS.cfdtmptr()[1],
-    ",
-  0x503806a0u64 => "
-      CANFD_0_NS.cfdtmptr()[2],
-    ",
-  0x503806ecu64 => "
-      CANFD_0_NS.cfdtmptr()[3],
-    ",
-  0x5038060cu64 => "
-      CANFD_0_NS.cfdtmfdctr()[0],
-    ",
-  0x50380658u64 => "
-      CANFD_0_NS.cfdtmfdctr()[1],
-    ",
-  0x503806a4u64 => "
-      CANFD_0_NS.cfdtmfdctr()[2],
-    ",
-  0x503806f0u64 => "
-      CANFD_0_NS.cfdtmfdctr()[3],
-    ",
-  0x50380610u64 => "
-      CANFD_0_NS.cfdtmdf_0()[0],
-    ",
-  0x5038065cu64 => "
-      CANFD_0_NS.cfdtmdf_0()[1],
-    ",
-  0x503806a8u64 => "
-      CANFD_0_NS.cfdtmdf_0()[2],
-    ",
-  0x503806f4u64 => "
-      CANFD_0_NS.cfdtmdf_0()[3],
-    ",
-  0x50380614u64 => "
-      CANFD_0_NS.cfdtmdf_1()[0],
-    ",
-  0x50380660u64 => "
-      CANFD_0_NS.cfdtmdf_1()[1],
-    ",
-  0x503806acu64 => "
-      CANFD_0_NS.cfdtmdf_1()[2],
-    ",
-  0x503806f8u64 => "
-      CANFD_0_NS.cfdtmdf_1()[3],
-    ",
-  0x50380618u64 => "
-      CANFD_0_NS.cfdtmdf_2()[0],
-    ",
-  0x50380664u64 => "
-      CANFD_0_NS.cfdtmdf_2()[1],
-    ",
-  0x503806b0u64 => "
-      CANFD_0_NS.cfdtmdf_2()[2],
-    ",
-  0x503806fcu64 => "
-      CANFD_0_NS.cfdtmdf_2()[3],
-    ",
-  0x5038061cu64 => "
-      CANFD_0_NS.cfdtmdf_3()[0],
-    ",
-  0x50380668u64 => "
-      CANFD_0_NS.cfdtmdf_3()[1],
-    ",
-  0x503806b4u64 => "
-      CANFD_0_NS.cfdtmdf_3()[2],
-    ",
-  0x50380700u64 => "
-      CANFD_0_NS.cfdtmdf_3()[3],
-    ",
-  0x50380620u64 => "
-      CANFD_0_NS.cfdtmdf_4()[0],
-    ",
-  0x5038066cu64 => "
-      CANFD_0_NS.cfdtmdf_4()[1],
-    ",
-  0x503806b8u64 => "
-      CANFD_0_NS.cfdtmdf_4()[2],
-    ",
-  0x50380704u64 => "
-      CANFD_0_NS.cfdtmdf_4()[3],
-    ",
-  0x50380624u64 => "
-      CANFD_0_NS.cfdtmdf_5()[0],
-    ",
-  0x50380670u64 => "
-      CANFD_0_NS.cfdtmdf_5()[1],
-    ",
-  0x503806bcu64 => "
-      CANFD_0_NS.cfdtmdf_5()[2],
-    ",
-  0x50380708u64 => "
-      CANFD_0_NS.cfdtmdf_5()[3],
-    ",
-  0x50380628u64 => "
-      CANFD_0_NS.cfdtmdf_6()[0],
-    ",
-  0x50380674u64 => "
-      CANFD_0_NS.cfdtmdf_6()[1],
-    ",
-  0x503806c0u64 => "
-      CANFD_0_NS.cfdtmdf_6()[2],
-    ",
-  0x5038070cu64 => "
-      CANFD_0_NS.cfdtmdf_6()[3],
-    ",
-  0x5038062cu64 => "
-      CANFD_0_NS.cfdtmdf_7()[0],
-    ",
-  0x50380678u64 => "
-      CANFD_0_NS.cfdtmdf_7()[1],
-    ",
-  0x503806c4u64 => "
-      CANFD_0_NS.cfdtmdf_7()[2],
-    ",
-  0x50380710u64 => "
-      CANFD_0_NS.cfdtmdf_7()[3],
-    ",
-  0x50380630u64 => "
-      CANFD_0_NS.cfdtmdf_8()[0],
-    ",
-  0x5038067cu64 => "
-      CANFD_0_NS.cfdtmdf_8()[1],
-    ",
-  0x503806c8u64 => "
-      CANFD_0_NS.cfdtmdf_8()[2],
-    ",
-  0x50380714u64 => "
-      CANFD_0_NS.cfdtmdf_8()[3],
-    ",
-  0x50380634u64 => "
-      CANFD_0_NS.cfdtmdf_9()[0],
-    ",
-  0x50380680u64 => "
-      CANFD_0_NS.cfdtmdf_9()[1],
-    ",
-  0x503806ccu64 => "
-      CANFD_0_NS.cfdtmdf_9()[2],
-    ",
-  0x50380718u64 => "
-      CANFD_0_NS.cfdtmdf_9()[3],
-    ",
-  0x50380638u64 => "
-      CANFD_0_NS.cfdtmdf_10()[0],
-    ",
-  0x50380684u64 => "
-      CANFD_0_NS.cfdtmdf_10()[1],
-    ",
-  0x503806d0u64 => "
-      CANFD_0_NS.cfdtmdf_10()[2],
-    ",
-  0x5038071cu64 => "
-      CANFD_0_NS.cfdtmdf_10()[3],
-    ",
-  0x5038063cu64 => "
-      CANFD_0_NS.cfdtmdf_11()[0],
-    ",
-  0x50380688u64 => "
-      CANFD_0_NS.cfdtmdf_11()[1],
-    ",
-  0x503806d4u64 => "
-      CANFD_0_NS.cfdtmdf_11()[2],
-    ",
-  0x50380720u64 => "
-      CANFD_0_NS.cfdtmdf_11()[3],
-    ",
-  0x50380640u64 => "
-      CANFD_0_NS.cfdtmdf_12()[0],
-    ",
-  0x5038068cu64 => "
-      CANFD_0_NS.cfdtmdf_12()[1],
-    ",
-  0x503806d8u64 => "
-      CANFD_0_NS.cfdtmdf_12()[2],
-    ",
-  0x50380724u64 => "
-      CANFD_0_NS.cfdtmdf_12()[3],
-    ",
-  0x50380644u64 => "
-      CANFD_0_NS.cfdtmdf_13()[0],
-    ",
-  0x50380690u64 => "
-      CANFD_0_NS.cfdtmdf_13()[1],
-    ",
-  0x503806dcu64 => "
-      CANFD_0_NS.cfdtmdf_13()[2],
-    ",
-  0x50380728u64 => "
-      CANFD_0_NS.cfdtmdf_13()[3],
-    ",
-  0x50380648u64 => "
-      CANFD_0_NS.cfdtmdf_14()[0],
-    ",
-  0x50380694u64 => "
-      CANFD_0_NS.cfdtmdf_14()[1],
-    ",
-  0x503806e0u64 => "
-      CANFD_0_NS.cfdtmdf_14()[2],
-    ",
-  0x5038072cu64 => "
-      CANFD_0_NS.cfdtmdf_14()[3],
-    ",
-  0x5038064cu64 => "
-      CANFD_0_NS.cfdtmdf_15()[0],
-    ",
-  0x50380698u64 => "
-      CANFD_0_NS.cfdtmdf_15()[1],
-    ",
-  0x503806e4u64 => "
-      CANFD_0_NS.cfdtmdf_15()[2],
-    ",
-  0x50380730u64 => "
-      CANFD_0_NS.cfdtmdf_15()[3],
-    ",
-  0x50380740u64 => "
-      CANFD_0_NS.cfdthlacc0(),
-    ",
-  0x50380744u64 => "
-      CANFD_0_NS.cfdthlacc1(),
-    ",
-  0x50380d20u64 => "
-      CANFD_0_NS.cfdrmid()[0],
-    ",
-  0x50380d6cu64 => "
-      CANFD_0_NS.cfdrmid()[1],
-    ",
-  0x50380db8u64 => "
-      CANFD_0_NS.cfdrmid()[2],
-    ",
-  0x50380e04u64 => "
-      CANFD_0_NS.cfdrmid()[3],
-    ",
-  0x50380e50u64 => "
-      CANFD_0_NS.cfdrmid()[4],
-    ",
-  0x50380e9cu64 => "
-      CANFD_0_NS.cfdrmid()[5],
-    ",
-  0x50380ee8u64 => "
-      CANFD_0_NS.cfdrmid()[6],
-    ",
-  0x50380f34u64 => "
-      CANFD_0_NS.cfdrmid()[7],
-    ",
-  0x50381524u64 => "
-      CANFD_0_NS.cfdrmptr()[0],
-    ",
-  0x50381570u64 => "
-      CANFD_0_NS.cfdrmptr()[1],
-    ",
-  0x503815bcu64 => "
-      CANFD_0_NS.cfdrmptr()[2],
-    ",
-  0x50381608u64 => "
-      CANFD_0_NS.cfdrmptr()[3],
-    ",
-  0x50381654u64 => "
-      CANFD_0_NS.cfdrmptr()[4],
-    ",
-  0x503816a0u64 => "
-      CANFD_0_NS.cfdrmptr()[5],
-    ",
-  0x503816ecu64 => "
-      CANFD_0_NS.cfdrmptr()[6],
-    ",
-  0x50381738u64 => "
-      CANFD_0_NS.cfdrmptr()[7],
-    ",
-  0x50381528u64 => "
-      CANFD_0_NS.cfdrmfdsts()[0],
-    ",
-  0x50381574u64 => "
-      CANFD_0_NS.cfdrmfdsts()[1],
-    ",
-  0x503815c0u64 => "
-      CANFD_0_NS.cfdrmfdsts()[2],
-    ",
-  0x5038160cu64 => "
-      CANFD_0_NS.cfdrmfdsts()[3],
-    ",
-  0x50381658u64 => "
-      CANFD_0_NS.cfdrmfdsts()[4],
-    ",
-  0x503816a4u64 => "
-      CANFD_0_NS.cfdrmfdsts()[5],
-    ",
-  0x503816f0u64 => "
-      CANFD_0_NS.cfdrmfdsts()[6],
-    ",
-  0x5038173cu64 => "
-      CANFD_0_NS.cfdrmfdsts()[7],
-    ",
-  0x5038152cu64 => "
-      CANFD_0_NS.cfdrmdf_0()[0],
-    ",
-  0x50381578u64 => "
-      CANFD_0_NS.cfdrmdf_0()[1],
-    ",
-  0x503815c4u64 => "
-      CANFD_0_NS.cfdrmdf_0()[2],
-    ",
-  0x50381610u64 => "
-      CANFD_0_NS.cfdrmdf_0()[3],
-    ",
-  0x5038165cu64 => "
-      CANFD_0_NS.cfdrmdf_0()[4],
-    ",
-  0x503816a8u64 => "
-      CANFD_0_NS.cfdrmdf_0()[5],
-    ",
-  0x503816f4u64 => "
-      CANFD_0_NS.cfdrmdf_0()[6],
-    ",
-  0x50381740u64 => "
-      CANFD_0_NS.cfdrmdf_0()[7],
-    ",
-  0x50381530u64 => "
-      CANFD_0_NS.cfdrmdf_1()[0],
-    ",
-  0x5038157cu64 => "
-      CANFD_0_NS.cfdrmdf_1()[1],
-    ",
-  0x503815c8u64 => "
-      CANFD_0_NS.cfdrmdf_1()[2],
-    ",
-  0x50381614u64 => "
-      CANFD_0_NS.cfdrmdf_1()[3],
-    ",
-  0x50381660u64 => "
-      CANFD_0_NS.cfdrmdf_1()[4],
-    ",
-  0x503816acu64 => "
-      CANFD_0_NS.cfdrmdf_1()[5],
-    ",
-  0x503816f8u64 => "
-      CANFD_0_NS.cfdrmdf_1()[6],
-    ",
-  0x50381744u64 => "
-      CANFD_0_NS.cfdrmdf_1()[7],
-    ",
-  0x50381534u64 => "
-      CANFD_0_NS.cfdrmdf_2()[0],
-    ",
-  0x50381580u64 => "
-      CANFD_0_NS.cfdrmdf_2()[1],
-    ",
-  0x503815ccu64 => "
-      CANFD_0_NS.cfdrmdf_2()[2],
-    ",
-  0x50381618u64 => "
-      CANFD_0_NS.cfdrmdf_2()[3],
-    ",
-  0x50381664u64 => "
-      CANFD_0_NS.cfdrmdf_2()[4],
-    ",
-  0x503816b0u64 => "
-      CANFD_0_NS.cfdrmdf_2()[5],
-    ",
-  0x503816fcu64 => "
-      CANFD_0_NS.cfdrmdf_2()[6],
-    ",
-  0x50381748u64 => "
-      CANFD_0_NS.cfdrmdf_2()[7],
-    ",
-  0x50381538u64 => "
-      CANFD_0_NS.cfdrmdf_3()[0],
-    ",
-  0x50381584u64 => "
-      CANFD_0_NS.cfdrmdf_3()[1],
-    ",
-  0x503815d0u64 => "
-      CANFD_0_NS.cfdrmdf_3()[2],
-    ",
-  0x5038161cu64 => "
-      CANFD_0_NS.cfdrmdf_3()[3],
-    ",
-  0x50381668u64 => "
-      CANFD_0_NS.cfdrmdf_3()[4],
-    ",
-  0x503816b4u64 => "
-      CANFD_0_NS.cfdrmdf_3()[5],
-    ",
-  0x50381700u64 => "
-      CANFD_0_NS.cfdrmdf_3()[6],
-    ",
-  0x5038174cu64 => "
-      CANFD_0_NS.cfdrmdf_3()[7],
-    ",
-  0x5038153cu64 => "
-      CANFD_0_NS.cfdrmdf_4()[0],
-    ",
-  0x50381588u64 => "
-      CANFD_0_NS.cfdrmdf_4()[1],
-    ",
-  0x503815d4u64 => "
-      CANFD_0_NS.cfdrmdf_4()[2],
-    ",
-  0x50381620u64 => "
-      CANFD_0_NS.cfdrmdf_4()[3],
-    ",
-  0x5038166cu64 => "
-      CANFD_0_NS.cfdrmdf_4()[4],
-    ",
-  0x503816b8u64 => "
-      CANFD_0_NS.cfdrmdf_4()[5],
-    ",
-  0x50381704u64 => "
-      CANFD_0_NS.cfdrmdf_4()[6],
-    ",
-  0x50381750u64 => "
-      CANFD_0_NS.cfdrmdf_4()[7],
-    ",
-  0x50381540u64 => "
-      CANFD_0_NS.cfdrmdf_5()[0],
-    ",
-  0x5038158cu64 => "
-      CANFD_0_NS.cfdrmdf_5()[1],
-    ",
-  0x503815d8u64 => "
-      CANFD_0_NS.cfdrmdf_5()[2],
-    ",
-  0x50381624u64 => "
-      CANFD_0_NS.cfdrmdf_5()[3],
-    ",
-  0x50381670u64 => "
-      CANFD_0_NS.cfdrmdf_5()[4],
-    ",
-  0x503816bcu64 => "
-      CANFD_0_NS.cfdrmdf_5()[5],
-    ",
-  0x50381708u64 => "
-      CANFD_0_NS.cfdrmdf_5()[6],
-    ",
-  0x50381754u64 => "
-      CANFD_0_NS.cfdrmdf_5()[7],
-    ",
-  0x50381544u64 => "
-      CANFD_0_NS.cfdrmdf_6()[0],
-    ",
-  0x50381590u64 => "
-      CANFD_0_NS.cfdrmdf_6()[1],
-    ",
-  0x503815dcu64 => "
-      CANFD_0_NS.cfdrmdf_6()[2],
-    ",
-  0x50381628u64 => "
-      CANFD_0_NS.cfdrmdf_6()[3],
-    ",
-  0x50381674u64 => "
-      CANFD_0_NS.cfdrmdf_6()[4],
-    ",
-  0x503816c0u64 => "
-      CANFD_0_NS.cfdrmdf_6()[5],
-    ",
-  0x5038170cu64 => "
-      CANFD_0_NS.cfdrmdf_6()[6],
-    ",
-  0x50381758u64 => "
-      CANFD_0_NS.cfdrmdf_6()[7],
-    ",
-  0x50381548u64 => "
-      CANFD_0_NS.cfdrmdf_7()[0],
-    ",
-  0x50381594u64 => "
-      CANFD_0_NS.cfdrmdf_7()[1],
-    ",
-  0x503815e0u64 => "
-      CANFD_0_NS.cfdrmdf_7()[2],
-    ",
-  0x5038162cu64 => "
-      CANFD_0_NS.cfdrmdf_7()[3],
-    ",
-  0x50381678u64 => "
-      CANFD_0_NS.cfdrmdf_7()[4],
-    ",
-  0x503816c4u64 => "
-      CANFD_0_NS.cfdrmdf_7()[5],
-    ",
-  0x50381710u64 => "
-      CANFD_0_NS.cfdrmdf_7()[6],
-    ",
-  0x5038175cu64 => "
-      CANFD_0_NS.cfdrmdf_7()[7],
-    ",
-  0x5038154cu64 => "
-      CANFD_0_NS.cfdrmdf_8()[0],
-    ",
-  0x50381598u64 => "
-      CANFD_0_NS.cfdrmdf_8()[1],
-    ",
-  0x503815e4u64 => "
-      CANFD_0_NS.cfdrmdf_8()[2],
-    ",
-  0x50381630u64 => "
-      CANFD_0_NS.cfdrmdf_8()[3],
-    ",
-  0x5038167cu64 => "
-      CANFD_0_NS.cfdrmdf_8()[4],
-    ",
-  0x503816c8u64 => "
-      CANFD_0_NS.cfdrmdf_8()[5],
-    ",
-  0x50381714u64 => "
-      CANFD_0_NS.cfdrmdf_8()[6],
-    ",
-  0x50381760u64 => "
-      CANFD_0_NS.cfdrmdf_8()[7],
-    ",
-  0x50381550u64 => "
-      CANFD_0_NS.cfdrmdf_9()[0],
-    ",
-  0x5038159cu64 => "
-      CANFD_0_NS.cfdrmdf_9()[1],
-    ",
-  0x503815e8u64 => "
-      CANFD_0_NS.cfdrmdf_9()[2],
-    ",
-  0x50381634u64 => "
-      CANFD_0_NS.cfdrmdf_9()[3],
-    ",
-  0x50381680u64 => "
-      CANFD_0_NS.cfdrmdf_9()[4],
-    ",
-  0x503816ccu64 => "
-      CANFD_0_NS.cfdrmdf_9()[5],
-    ",
-  0x50381718u64 => "
-      CANFD_0_NS.cfdrmdf_9()[6],
-    ",
-  0x50381764u64 => "
-      CANFD_0_NS.cfdrmdf_9()[7],
-    ",
-  0x50381554u64 => "
-      CANFD_0_NS.cfdrmdf_10()[0],
-    ",
-  0x503815a0u64 => "
-      CANFD_0_NS.cfdrmdf_10()[1],
-    ",
-  0x503815ecu64 => "
-      CANFD_0_NS.cfdrmdf_10()[2],
-    ",
-  0x50381638u64 => "
-      CANFD_0_NS.cfdrmdf_10()[3],
-    ",
-  0x50381684u64 => "
-      CANFD_0_NS.cfdrmdf_10()[4],
-    ",
-  0x503816d0u64 => "
-      CANFD_0_NS.cfdrmdf_10()[5],
-    ",
-  0x5038171cu64 => "
-      CANFD_0_NS.cfdrmdf_10()[6],
-    ",
-  0x50381768u64 => "
-      CANFD_0_NS.cfdrmdf_10()[7],
-    ",
-  0x50381558u64 => "
-      CANFD_0_NS.cfdrmdf_11()[0],
-    ",
-  0x503815a4u64 => "
-      CANFD_0_NS.cfdrmdf_11()[1],
-    ",
-  0x503815f0u64 => "
-      CANFD_0_NS.cfdrmdf_11()[2],
-    ",
-  0x5038163cu64 => "
-      CANFD_0_NS.cfdrmdf_11()[3],
-    ",
-  0x50381688u64 => "
-      CANFD_0_NS.cfdrmdf_11()[4],
-    ",
-  0x503816d4u64 => "
-      CANFD_0_NS.cfdrmdf_11()[5],
-    ",
-  0x50381720u64 => "
-      CANFD_0_NS.cfdrmdf_11()[6],
-    ",
-  0x5038176cu64 => "
-      CANFD_0_NS.cfdrmdf_11()[7],
-    ",
-  0x5038155cu64 => "
-      CANFD_0_NS.cfdrmdf_12()[0],
-    ",
-  0x503815a8u64 => "
-      CANFD_0_NS.cfdrmdf_12()[1],
-    ",
-  0x503815f4u64 => "
-      CANFD_0_NS.cfdrmdf_12()[2],
-    ",
-  0x50381640u64 => "
-      CANFD_0_NS.cfdrmdf_12()[3],
-    ",
-  0x5038168cu64 => "
-      CANFD_0_NS.cfdrmdf_12()[4],
-    ",
-  0x503816d8u64 => "
-      CANFD_0_NS.cfdrmdf_12()[5],
-    ",
-  0x50381724u64 => "
-      CANFD_0_NS.cfdrmdf_12()[6],
-    ",
-  0x50381770u64 => "
-      CANFD_0_NS.cfdrmdf_12()[7],
-    ",
-  0x50381560u64 => "
-      CANFD_0_NS.cfdrmdf_13()[0],
-    ",
-  0x503815acu64 => "
-      CANFD_0_NS.cfdrmdf_13()[1],
-    ",
-  0x503815f8u64 => "
-      CANFD_0_NS.cfdrmdf_13()[2],
-    ",
-  0x50381644u64 => "
-      CANFD_0_NS.cfdrmdf_13()[3],
-    ",
-  0x50381690u64 => "
-      CANFD_0_NS.cfdrmdf_13()[4],
-    ",
-  0x503816dcu64 => "
-      CANFD_0_NS.cfdrmdf_13()[5],
-    ",
-  0x50381728u64 => "
-      CANFD_0_NS.cfdrmdf_13()[6],
-    ",
-  0x50381774u64 => "
-      CANFD_0_NS.cfdrmdf_13()[7],
-    ",
-  0x50381564u64 => "
-      CANFD_0_NS.cfdrmdf_14()[0],
-    ",
-  0x503815b0u64 => "
-      CANFD_0_NS.cfdrmdf_14()[1],
-    ",
-  0x503815fcu64 => "
-      CANFD_0_NS.cfdrmdf_14()[2],
-    ",
-  0x50381648u64 => "
-      CANFD_0_NS.cfdrmdf_14()[3],
-    ",
-  0x50381694u64 => "
-      CANFD_0_NS.cfdrmdf_14()[4],
-    ",
-  0x503816e0u64 => "
-      CANFD_0_NS.cfdrmdf_14()[5],
-    ",
-  0x5038172cu64 => "
-      CANFD_0_NS.cfdrmdf_14()[6],
-    ",
-  0x50381778u64 => "
-      CANFD_0_NS.cfdrmdf_14()[7],
-    ",
-  0x50381568u64 => "
-      CANFD_0_NS.cfdrmdf_15()[0],
-    ",
-  0x503815b4u64 => "
-      CANFD_0_NS.cfdrmdf_15()[1],
-    ",
-  0x50381600u64 => "
-      CANFD_0_NS.cfdrmdf_15()[2],
-    ",
-  0x5038164cu64 => "
-      CANFD_0_NS.cfdrmdf_15()[3],
-    ",
-  0x50381698u64 => "
-      CANFD_0_NS.cfdrmdf_15()[4],
-    ",
-  0x503816e4u64 => "
-      CANFD_0_NS.cfdrmdf_15()[5],
-    ",
-  0x50381730u64 => "
-      CANFD_0_NS.cfdrmdf_15()[6],
-    ",
-  0x5038177cu64 => "
-      CANFD_0_NS.cfdrmdf_15()[7],
-    ",
-  0x50400000u64 => "
-      PORT_0_NS.pcntr1(),
-      PORT_0_NS.pdr(),
-    ",
-  0x50400002u64 => "
-      PORT_0_NS.podr(),
-    ",
-  0x50400004u64 => "
-      PORT_0_NS.pcntr2(),
-      PORT_0_NS.pidr(),
-    ",
-  0x50400008u64 => "
-      PORT_0_NS.pcntr3(),
-      PORT_0_NS.posr(),
-    ",
-  0x5040000au64 => "
-      PORT_0_NS.porr(),
-    ",
-  0x50400020u64 => "
-      PORT_1_NS.pcntr1(),
-      PORT_1_NS.pdr(),
-    ",
-  0x50400022u64 => "
-      PORT_1_NS.podr(),
-    ",
-  0x50400024u64 => "
-      PORT_1_NS.pcntr2(),
-      PORT_1_NS.pidr(),
-    ",
-  0x50400026u64 => "
-      PORT_1_NS.eidr(),
-    ",
-  0x50400028u64 => "
-      PORT_1_NS.pcntr3(),
-      PORT_1_NS.posr(),
-    ",
-  0x5040002au64 => "
-      PORT_1_NS.porr(),
-    ",
-  0x5040002cu64 => "
-      PORT_1_NS.pcntr4(),
-      PORT_1_NS.eosr(),
-    ",
-  0x5040002eu64 => "
-      PORT_1_NS.eorr(),
-    ",
-  0x50400140u64 => "
-      PORTA_NS.pcntr1(),
-      PORTA_NS.pdr(),
-    ",
-  0x50400142u64 => "
-      PORTA_NS.podr(),
-    ",
-  0x50400144u64 => "
-      PORTA_NS.pcntr2(),
-      PORTA_NS.pidr(),
-    ",
-  0x50400148u64 => "
-      PORTA_NS.pcntr3(),
-      PORTA_NS.posr(),
-    ",
-  0x5040014au64 => "
-      PORTA_NS.porr(),
-    ",
-  0x50400160u64 => "
-      PORTB_NS.pcntr1(),
-      PORTB_NS.pdr(),
-    ",
-  0x50400162u64 => "
-      PORTB_NS.podr(),
-    ",
-  0x50400164u64 => "
-      PORTB_NS.pcntr2(),
-      PORTB_NS.pidr(),
-    ",
-  0x50400168u64 => "
-      PORTB_NS.pcntr3(),
-      PORTB_NS.posr(),
-    ",
-  0x5040016au64 => "
-      PORTB_NS.porr(),
-    ",
-  0x50400800u64 => "
-      PFS_NS.p00pfs()[0],
-      PFS_NS.p00pfs_ha()[0],
-      PFS_NS.p00pfs_by()[0],
-    ",
-  0x50400804u64 => "
-      PFS_NS.p00pfs()[1],
-      PFS_NS.p00pfs_ha()[1],
-      PFS_NS.p00pfs_by()[1],
-    ",
-  0x50400808u64 => "
-      PFS_NS.p00pfs()[2],
-      PFS_NS.p00pfs_ha()[2],
-      PFS_NS.p00pfs_by()[2],
-    ",
-  0x5040080cu64 => "
-      PFS_NS.p00pfs()[3],
-      PFS_NS.p00pfs_ha()[3],
-      PFS_NS.p00pfs_by()[3],
-    ",
-  0x50400810u64 => "
-      PFS_NS.p00pfs()[4],
-      PFS_NS.p00pfs_ha()[4],
-      PFS_NS.p00pfs_by()[4],
-    ",
-  0x50400814u64 => "
-      PFS_NS.p00pfs()[5],
-      PFS_NS.p00pfs_ha()[5],
-      PFS_NS.p00pfs_by()[5],
-    ",
-  0x50400818u64 => "
-      PFS_NS.p00pfs()[6],
-      PFS_NS.p00pfs_ha()[6],
-      PFS_NS.p00pfs_by()[6],
-    ",
-  0x5040081cu64 => "
-      PFS_NS.p00pfs()[7],
-      PFS_NS.p00pfs_ha()[7],
-      PFS_NS.p00pfs_by()[7],
-    ",
-  0x50400820u64 => "
-      PFS_NS.p00pfs()[8],
-      PFS_NS.p00pfs_ha()[8],
-      PFS_NS.p00pfs_by()[8],
-    ",
-  0x50400824u64 => "
-      PFS_NS.p00pfs()[9],
-      PFS_NS.p00pfs_ha()[9],
-      PFS_NS.p00pfs_by()[9],
-    ",
-  0x50400838u64 => "
-      PFS_NS.p0pfs()[0],
-      PFS_NS.p0pfs_ha()[0],
-      PFS_NS.p0pfs_by()[0],
-    ",
-  0x5040083cu64 => "
-      PFS_NS.p0pfs()[1],
-      PFS_NS.p0pfs_ha()[1],
-      PFS_NS.p0pfs_by()[1],
-    ",
-  0x50400840u64 => "
-      PFS_NS.p10pfs()[0],
-      PFS_NS.p10pfs_ha()[0],
-      PFS_NS.p10pfs_by()[0],
-    ",
-  0x50400844u64 => "
-      PFS_NS.p10pfs()[1],
-      PFS_NS.p10pfs_ha()[1],
-      PFS_NS.p10pfs_by()[1],
-    ",
-  0x50400848u64 => "
-      PFS_NS.p10pfs()[2],
-      PFS_NS.p10pfs_ha()[2],
-      PFS_NS.p10pfs_by()[2],
-    ",
-  0x5040084cu64 => "
-      PFS_NS.p10pfs()[3],
-      PFS_NS.p10pfs_ha()[3],
-      PFS_NS.p10pfs_by()[3],
-    ",
-  0x50400850u64 => "
-      PFS_NS.p10pfs()[4],
-      PFS_NS.p10pfs_ha()[4],
-      PFS_NS.p10pfs_by()[4],
-    ",
-  0x50400854u64 => "
-      PFS_NS.p10pfs()[5],
-      PFS_NS.p10pfs_ha()[5],
-      PFS_NS.p10pfs_by()[5],
-    ",
-  0x50400858u64 => "
-      PFS_NS.p10pfs()[6],
-      PFS_NS.p10pfs_ha()[6],
-      PFS_NS.p10pfs_by()[6],
-    ",
-  0x5040085cu64 => "
-      PFS_NS.p10pfs()[7],
-      PFS_NS.p10pfs_ha()[7],
-      PFS_NS.p10pfs_by()[7],
-    ",
-  0x50400870u64 => "
-      PFS_NS.p1pfs()[0],
-      PFS_NS.p1pfs_ha()[0],
-      PFS_NS.p1pfs_by()[0],
-    ",
-  0x50400874u64 => "
-      PFS_NS.p1pfs()[1],
-      PFS_NS.p1pfs_ha()[1],
-      PFS_NS.p1pfs_by()[1],
-    ",
-  0x50400878u64 => "
-      PFS_NS.p1pfs()[2],
-      PFS_NS.p1pfs_ha()[2],
-      PFS_NS.p1pfs_by()[2],
-    ",
-  0x5040087cu64 => "
-      PFS_NS.p1pfs()[3],
-      PFS_NS.p1pfs_ha()[3],
-      PFS_NS.p1pfs_by()[3],
-    ",
-  0x50400880u64 => "
-      PFS_NS.p200pfs(),
-      PFS_NS.p200pfs_ha(),
-      PFS_NS.p200pfs_by(),
-    ",
-  0x50400884u64 => "
-      PFS_NS.p201pfs(),
-      PFS_NS.p201pfs_ha(),
-      PFS_NS.p201pfs_by(),
-    ",
-  0x50400888u64 => "
-      PFS_NS.p20pfs()[0],
-      PFS_NS.p20pfs_ha()[0],
-      PFS_NS.p20pfs_by()[0],
-    ",
-  0x5040088cu64 => "
-      PFS_NS.p20pfs()[1],
-      PFS_NS.p20pfs_ha()[1],
-      PFS_NS.p20pfs_by()[1],
-    ",
-  0x50400890u64 => "
-      PFS_NS.p20pfs()[2],
-      PFS_NS.p20pfs_ha()[2],
-      PFS_NS.p20pfs_by()[2],
-    ",
-  0x50400894u64 => "
-      PFS_NS.p20pfs()[3],
-      PFS_NS.p20pfs_ha()[3],
-      PFS_NS.p20pfs_by()[3],
-    ",
-  0x50400898u64 => "
-      PFS_NS.p20pfs()[4],
-      PFS_NS.p20pfs_ha()[4],
-      PFS_NS.p20pfs_by()[4],
-    ",
-  0x5040089cu64 => "
-      PFS_NS.p20pfs()[5],
-      PFS_NS.p20pfs_ha()[5],
-      PFS_NS.p20pfs_by()[5],
-    ",
-  0x504008a0u64 => "
-      PFS_NS.p208pfs(),
-      PFS_NS.p208pfs_ha(),
-      PFS_NS.p208pfs_by(),
-    ",
-  0x504008a4u64 => "
-      PFS_NS.p209pfs(),
-      PFS_NS.p209pfs_ha(),
-      PFS_NS.p209pfs_by(),
-    ",
-  0x504008a8u64 => "
-      PFS_NS.p210pfs(),
-      PFS_NS.p210pfs_ha(),
-      PFS_NS.p210pfs_by(),
-    ",
-  0x504008acu64 => "
-      PFS_NS.p211pfs(),
-      PFS_NS.p211pfs_ha(),
-      PFS_NS.p211pfs_by(),
-    ",
-  0x504008b0u64 => "
-      PFS_NS.p2pfs()[0],
-      PFS_NS.p2pfs_ha()[0],
-      PFS_NS.p2pfs_by()[0],
-    ",
-  0x504008b4u64 => "
-      PFS_NS.p2pfs()[1],
-      PFS_NS.p2pfs_ha()[1],
-      PFS_NS.p2pfs_by()[1],
-    ",
-  0x504008c0u64 => "
-      PFS_NS.p30pfs()[0],
-      PFS_NS.p30pfs_ha()[0],
-      PFS_NS.p30pfs_by()[0],
-    ",
-  0x504008c4u64 => "
-      PFS_NS.p30pfs()[1],
-      PFS_NS.p30pfs_ha()[1],
-      PFS_NS.p30pfs_by()[1],
-    ",
-  0x504008c8u64 => "
-      PFS_NS.p30pfs()[2],
-      PFS_NS.p30pfs_ha()[2],
-      PFS_NS.p30pfs_by()[2],
-    ",
-  0x504008ccu64 => "
-      PFS_NS.p30pfs()[3],
-      PFS_NS.p30pfs_ha()[3],
-      PFS_NS.p30pfs_by()[3],
-    ",
-  0x504008d0u64 => "
-      PFS_NS.p30pfs()[4],
-      PFS_NS.p30pfs_ha()[4],
-      PFS_NS.p30pfs_by()[4],
-    ",
-  0x504008d4u64 => "
-      PFS_NS.p30pfs()[5],
-      PFS_NS.p30pfs_ha()[5],
-      PFS_NS.p30pfs_by()[5],
-    ",
-  0x504008d8u64 => "
-      PFS_NS.p30pfs()[6],
-      PFS_NS.p30pfs_ha()[6],
-      PFS_NS.p30pfs_by()[6],
-    ",
-  0x504008dcu64 => "
-      PFS_NS.p30pfs()[7],
-      PFS_NS.p30pfs_ha()[7],
-      PFS_NS.p30pfs_by()[7],
-    ",
-  0x504008e0u64 => "
-      PFS_NS.p30pfs()[8],
-      PFS_NS.p30pfs_ha()[8],
-      PFS_NS.p30pfs_by()[8],
-    ",
-  0x504008e4u64 => "
-      PFS_NS.p30pfs()[9],
-      PFS_NS.p30pfs_ha()[9],
-      PFS_NS.p30pfs_by()[9],
-    ",
-  0x504008e8u64 => "
-      PFS_NS.p3pfs()[0],
-      PFS_NS.p3pfs_ha()[0],
-      PFS_NS.p3pfs_by()[0],
-    ",
-  0x504008ecu64 => "
-      PFS_NS.p3pfs()[1],
-      PFS_NS.p3pfs_ha()[1],
-      PFS_NS.p3pfs_by()[1],
-    ",
-  0x504008f0u64 => "
-      PFS_NS.p3pfs()[2],
-      PFS_NS.p3pfs_ha()[2],
-      PFS_NS.p3pfs_by()[2],
-    ",
-  0x504008f4u64 => "
-      PFS_NS.p3pfs()[3],
-      PFS_NS.p3pfs_ha()[3],
-      PFS_NS.p3pfs_by()[3],
-    ",
-  0x504008f8u64 => "
-      PFS_NS.p3pfs()[4],
-      PFS_NS.p3pfs_ha()[4],
-      PFS_NS.p3pfs_by()[4],
-    ",
-  0x504008fcu64 => "
-      PFS_NS.p3pfs()[5],
-      PFS_NS.p3pfs_ha()[5],
-      PFS_NS.p3pfs_by()[5],
-    ",
-  0x50400900u64 => "
-      PFS_NS.p40pfs()[0],
-      PFS_NS.p40pfs_ha()[0],
-      PFS_NS.p40pfs_by()[0],
-    ",
-  0x50400904u64 => "
-      PFS_NS.p40pfs()[1],
-      PFS_NS.p40pfs_ha()[1],
-      PFS_NS.p40pfs_by()[1],
-    ",
-  0x50400908u64 => "
-      PFS_NS.p40pfs()[2],
-      PFS_NS.p40pfs_ha()[2],
-      PFS_NS.p40pfs_by()[2],
-    ",
-  0x5040090cu64 => "
-      PFS_NS.p40pfs()[3],
-      PFS_NS.p40pfs_ha()[3],
-      PFS_NS.p40pfs_by()[3],
-    ",
-  0x50400910u64 => "
-      PFS_NS.p40pfs()[4],
-      PFS_NS.p40pfs_ha()[4],
-      PFS_NS.p40pfs_by()[4],
-    ",
-  0x50400914u64 => "
-      PFS_NS.p40pfs()[5],
-      PFS_NS.p40pfs_ha()[5],
-      PFS_NS.p40pfs_by()[5],
-    ",
-  0x50400918u64 => "
-      PFS_NS.p40pfs()[6],
-      PFS_NS.p40pfs_ha()[6],
-      PFS_NS.p40pfs_by()[6],
-    ",
-  0x5040091cu64 => "
-      PFS_NS.p40pfs()[7],
-      PFS_NS.p40pfs_ha()[7],
-      PFS_NS.p40pfs_by()[7],
-    ",
-  0x50400920u64 => "
-      PFS_NS.p40pfs()[8],
-      PFS_NS.p40pfs_ha()[8],
-      PFS_NS.p40pfs_by()[8],
-    ",
-  0x50400924u64 => "
-      PFS_NS.p40pfs()[9],
-      PFS_NS.p40pfs_ha()[9],
-      PFS_NS.p40pfs_by()[9],
-    ",
-  0x50400928u64 => "
-      PFS_NS.p4pfs()[0],
-      PFS_NS.p4pfs_ha()[0],
-      PFS_NS.p4pfs_by()[0],
-    ",
-  0x5040092cu64 => "
-      PFS_NS.p4pfs()[1],
-      PFS_NS.p4pfs_ha()[1],
-      PFS_NS.p4pfs_by()[1],
-    ",
-  0x50400930u64 => "
-      PFS_NS.p4pfs()[2],
-      PFS_NS.p4pfs_ha()[2],
-      PFS_NS.p4pfs_by()[2],
-    ",
-  0x50400934u64 => "
-      PFS_NS.p4pfs()[3],
-      PFS_NS.p4pfs_ha()[3],
-      PFS_NS.p4pfs_by()[3],
-    ",
-  0x50400938u64 => "
-      PFS_NS.p4pfs()[4],
-      PFS_NS.p4pfs_ha()[4],
-      PFS_NS.p4pfs_by()[4],
-    ",
-  0x5040093cu64 => "
-      PFS_NS.p4pfs()[5],
-      PFS_NS.p4pfs_ha()[5],
-      PFS_NS.p4pfs_by()[5],
-    ",
-  0x50400940u64 => "
-      PFS_NS.p50pfs()[0],
-      PFS_NS.p50pfs_ha()[0],
-      PFS_NS.p50pfs_by()[0],
-    ",
-  0x50400944u64 => "
-      PFS_NS.p50pfs()[1],
-      PFS_NS.p50pfs_ha()[1],
-      PFS_NS.p50pfs_by()[1],
-    ",
-  0x50400948u64 => "
-      PFS_NS.p50pfs()[2],
-      PFS_NS.p50pfs_ha()[2],
-      PFS_NS.p50pfs_by()[2],
-    ",
-  0x5040094cu64 => "
-      PFS_NS.p50pfs()[3],
-      PFS_NS.p50pfs_ha()[3],
-      PFS_NS.p50pfs_by()[3],
-    ",
-  0x50400950u64 => "
-      PFS_NS.p50pfs()[4],
-      PFS_NS.p50pfs_ha()[4],
-      PFS_NS.p50pfs_by()[4],
-    ",
-  0x50400954u64 => "
-      PFS_NS.p50pfs()[5],
-      PFS_NS.p50pfs_ha()[5],
-      PFS_NS.p50pfs_by()[5],
-    ",
-  0x50400958u64 => "
-      PFS_NS.p50pfs()[6],
-      PFS_NS.p50pfs_ha()[6],
-      PFS_NS.p50pfs_by()[6],
-    ",
-  0x5040095cu64 => "
-      PFS_NS.p50pfs()[7],
-      PFS_NS.p50pfs_ha()[7],
-      PFS_NS.p50pfs_by()[7],
-    ",
-  0x50400960u64 => "
-      PFS_NS.p50pfs()[8],
-      PFS_NS.p50pfs_ha()[8],
-      PFS_NS.p50pfs_by()[8],
-    ",
-  0x50400964u64 => "
-      PFS_NS.p50pfs()[9],
-      PFS_NS.p50pfs_ha()[9],
-      PFS_NS.p50pfs_by()[9],
-    ",
-  0x50400968u64 => "
-      PFS_NS.p5pfs()[0],
-      PFS_NS.p5pfs_ha()[0],
-      PFS_NS.p5pfs_by()[0],
-    ",
-  0x5040096cu64 => "
-      PFS_NS.p5pfs()[1],
-      PFS_NS.p5pfs_ha()[1],
-      PFS_NS.p5pfs_by()[1],
-    ",
-  0x50400970u64 => "
-      PFS_NS.p5pfs()[2],
-      PFS_NS.p5pfs_ha()[2],
-      PFS_NS.p5pfs_by()[2],
-    ",
-  0x50400974u64 => "
-      PFS_NS.p5pfs()[3],
-      PFS_NS.p5pfs_ha()[3],
-      PFS_NS.p5pfs_by()[3],
-    ",
-  0x50400978u64 => "
-      PFS_NS.p5pfs()[4],
-      PFS_NS.p5pfs_ha()[4],
-      PFS_NS.p5pfs_by()[4],
-    ",
-  0x5040097cu64 => "
-      PFS_NS.p5pfs()[5],
-      PFS_NS.p5pfs_ha()[5],
-      PFS_NS.p5pfs_by()[5],
-    ",
-  0x50400980u64 => "
-      PFS_NS.p60pfs()[0],
-      PFS_NS.p60pfs_ha()[0],
-      PFS_NS.p60pfs_by()[0],
-    ",
-  0x50400984u64 => "
-      PFS_NS.p60pfs()[1],
-      PFS_NS.p60pfs_ha()[1],
-      PFS_NS.p60pfs_by()[1],
-    ",
-  0x50400988u64 => "
-      PFS_NS.p60pfs()[2],
-      PFS_NS.p60pfs_ha()[2],
-      PFS_NS.p60pfs_by()[2],
-    ",
-  0x5040098cu64 => "
-      PFS_NS.p60pfs()[3],
-      PFS_NS.p60pfs_ha()[3],
-      PFS_NS.p60pfs_by()[3],
-    ",
-  0x50400990u64 => "
-      PFS_NS.p60pfs()[4],
-      PFS_NS.p60pfs_ha()[4],
-      PFS_NS.p60pfs_by()[4],
-    ",
-  0x50400994u64 => "
-      PFS_NS.p60pfs()[5],
-      PFS_NS.p60pfs_ha()[5],
-      PFS_NS.p60pfs_by()[5],
-    ",
-  0x50400998u64 => "
-      PFS_NS.p60pfs()[6],
-      PFS_NS.p60pfs_ha()[6],
-      PFS_NS.p60pfs_by()[6],
-    ",
-  0x5040099cu64 => "
-      PFS_NS.p60pfs()[7],
-      PFS_NS.p60pfs_ha()[7],
-      PFS_NS.p60pfs_by()[7],
-    ",
-  0x504009a0u64 => "
-      PFS_NS.p60pfs()[8],
-      PFS_NS.p60pfs_ha()[8],
-      PFS_NS.p60pfs_by()[8],
-    ",
-  0x504009a4u64 => "
-      PFS_NS.p60pfs()[9],
-      PFS_NS.p60pfs_ha()[9],
-      PFS_NS.p60pfs_by()[9],
-    ",
-  0x504009a8u64 => "
-      PFS_NS.p6pfs()[0],
-      PFS_NS.p6pfs_ha()[0],
-      PFS_NS.p6pfs_by()[0],
-    ",
-  0x504009acu64 => "
-      PFS_NS.p6pfs()[1],
-      PFS_NS.p6pfs_ha()[1],
-      PFS_NS.p6pfs_by()[1],
-    ",
-  0x504009b0u64 => "
-      PFS_NS.p6pfs()[2],
-      PFS_NS.p6pfs_ha()[2],
-      PFS_NS.p6pfs_by()[2],
-    ",
-  0x504009b4u64 => "
-      PFS_NS.p6pfs()[3],
-      PFS_NS.p6pfs_ha()[3],
-      PFS_NS.p6pfs_by()[3],
-    ",
-  0x504009b8u64 => "
-      PFS_NS.p6pfs()[4],
-      PFS_NS.p6pfs_ha()[4],
-      PFS_NS.p6pfs_by()[4],
-    ",
-  0x504009bcu64 => "
-      PFS_NS.p6pfs()[5],
-      PFS_NS.p6pfs_ha()[5],
-      PFS_NS.p6pfs_by()[5],
-    ",
-  0x504009c0u64 => "
-      PFS_NS.p70pfs()[0],
-      PFS_NS.p70pfs_ha()[0],
-      PFS_NS.p70pfs_by()[0],
-    ",
-  0x504009c4u64 => "
-      PFS_NS.p70pfs()[1],
-      PFS_NS.p70pfs_ha()[1],
-      PFS_NS.p70pfs_by()[1],
-    ",
-  0x504009c8u64 => "
-      PFS_NS.p70pfs()[2],
-      PFS_NS.p70pfs_ha()[2],
-      PFS_NS.p70pfs_by()[2],
-    ",
-  0x504009ccu64 => "
-      PFS_NS.p70pfs()[3],
-      PFS_NS.p70pfs_ha()[3],
-      PFS_NS.p70pfs_by()[3],
-    ",
-  0x504009d0u64 => "
-      PFS_NS.p70pfs()[4],
-      PFS_NS.p70pfs_ha()[4],
-      PFS_NS.p70pfs_by()[4],
-    ",
-  0x504009d4u64 => "
-      PFS_NS.p70pfs()[5],
-      PFS_NS.p70pfs_ha()[5],
-      PFS_NS.p70pfs_by()[5],
-    ",
-  0x504009d8u64 => "
-      PFS_NS.p70pfs()[6],
-      PFS_NS.p70pfs_ha()[6],
-      PFS_NS.p70pfs_by()[6],
-    ",
-  0x504009dcu64 => "
-      PFS_NS.p70pfs()[7],
-      PFS_NS.p70pfs_ha()[7],
-      PFS_NS.p70pfs_by()[7],
-    ",
-  0x504009e0u64 => "
-      PFS_NS.p70pfs()[8],
-      PFS_NS.p70pfs_ha()[8],
-      PFS_NS.p70pfs_by()[8],
-    ",
-  0x504009e4u64 => "
-      PFS_NS.p70pfs()[9],
-      PFS_NS.p70pfs_ha()[9],
-      PFS_NS.p70pfs_by()[9],
-    ",
-  0x504009e8u64 => "
-      PFS_NS.p7pfs()[0],
-      PFS_NS.p7pfs_ha()[0],
-      PFS_NS.p7pfs_by()[0],
-    ",
-  0x504009ecu64 => "
-      PFS_NS.p7pfs()[1],
-      PFS_NS.p7pfs_ha()[1],
-      PFS_NS.p7pfs_by()[1],
-    ",
-  0x504009f0u64 => "
-      PFS_NS.p7pfs()[2],
-      PFS_NS.p7pfs_ha()[2],
-      PFS_NS.p7pfs_by()[2],
-    ",
-  0x504009f4u64 => "
-      PFS_NS.p7pfs()[3],
-      PFS_NS.p7pfs_ha()[3],
-      PFS_NS.p7pfs_by()[3],
-    ",
-  0x504009f8u64 => "
-      PFS_NS.p7pfs()[4],
-      PFS_NS.p7pfs_ha()[4],
-      PFS_NS.p7pfs_by()[4],
-    ",
-  0x504009fcu64 => "
-      PFS_NS.p7pfs()[5],
-      PFS_NS.p7pfs_ha()[5],
-      PFS_NS.p7pfs_by()[5],
-    ",
-  0x50400a00u64 => "
-      PFS_NS.p80pfs()[0],
-      PFS_NS.p80pfs_ha()[0],
-      PFS_NS.p80pfs_by()[0],
-    ",
-  0x50400a04u64 => "
-      PFS_NS.p80pfs()[1],
-      PFS_NS.p80pfs_ha()[1],
-      PFS_NS.p80pfs_by()[1],
-    ",
-  0x50400a08u64 => "
-      PFS_NS.p80pfs()[2],
-      PFS_NS.p80pfs_ha()[2],
-      PFS_NS.p80pfs_by()[2],
-    ",
-  0x50400a0cu64 => "
-      PFS_NS.p80pfs()[3],
-      PFS_NS.p80pfs_ha()[3],
-      PFS_NS.p80pfs_by()[3],
-    ",
-  0x50400a10u64 => "
-      PFS_NS.p80pfs()[4],
-      PFS_NS.p80pfs_ha()[4],
-      PFS_NS.p80pfs_by()[4],
-    ",
-  0x50400a14u64 => "
-      PFS_NS.p80pfs()[5],
-      PFS_NS.p80pfs_ha()[5],
-      PFS_NS.p80pfs_by()[5],
-    ",
-  0x50400a18u64 => "
-      PFS_NS.p80pfs()[6],
-      PFS_NS.p80pfs_ha()[6],
-      PFS_NS.p80pfs_by()[6],
-    ",
-  0x50400a1cu64 => "
-      PFS_NS.p80pfs()[7],
-      PFS_NS.p80pfs_ha()[7],
-      PFS_NS.p80pfs_by()[7],
-    ",
-  0x50400a20u64 => "
-      PFS_NS.p80pfs()[8],
-      PFS_NS.p80pfs_ha()[8],
-      PFS_NS.p80pfs_by()[8],
-    ",
-  0x50400a24u64 => "
-      PFS_NS.p80pfs()[9],
-      PFS_NS.p80pfs_ha()[9],
-      PFS_NS.p80pfs_by()[9],
-    ",
-  0x50400a30u64 => "
-      PFS_NS.p8pfs()[2],
-      PFS_NS.p8pfs_ha()[2],
-      PFS_NS.p8pfs_by()[2],
-    ",
-  0x50400a34u64 => "
-      PFS_NS.p8pfs()[3],
-      PFS_NS.p8pfs_ha()[3],
-      PFS_NS.p8pfs_by()[3],
-    ",
-  0x50400a38u64 => "
-      PFS_NS.p8pfs()[0],
-      PFS_NS.p8pfs_ha()[0],
-      PFS_NS.p8pfs_by()[0],
-    ",
-  0x50400a3cu64 => "
-      PFS_NS.p8pfs()[1],
-      PFS_NS.p8pfs_ha()[1],
-      PFS_NS.p8pfs_by()[1],
-    ",
-  0x50400a40u64 => "
-      PFS_NS.p90pfs()[0],
-      PFS_NS.p90pfs_ha()[0],
-      PFS_NS.p90pfs_by()[0],
-    ",
-  0x50400a44u64 => "
-      PFS_NS.p90pfs()[1],
-      PFS_NS.p90pfs_ha()[1],
-      PFS_NS.p90pfs_by()[1],
-    ",
-  0x50400a48u64 => "
-      PFS_NS.p90pfs()[2],
-      PFS_NS.p90pfs_ha()[2],
-      PFS_NS.p90pfs_by()[2],
-    ",
-  0x50400a4cu64 => "
-      PFS_NS.p90pfs()[3],
-      PFS_NS.p90pfs_ha()[3],
-      PFS_NS.p90pfs_by()[3],
-    ",
-  0x50400a50u64 => "
-      PFS_NS.p90pfs()[4],
-      PFS_NS.p90pfs_ha()[4],
-      PFS_NS.p90pfs_by()[4],
-    ",
-  0x50400a54u64 => "
-      PFS_NS.p90pfs()[5],
-      PFS_NS.p90pfs_ha()[5],
-      PFS_NS.p90pfs_by()[5],
-    ",
-  0x50400a58u64 => "
-      PFS_NS.p90pfs()[6],
-      PFS_NS.p90pfs_ha()[6],
-      PFS_NS.p90pfs_by()[6],
-    ",
-  0x50400a5cu64 => "
-      PFS_NS.p90pfs()[7],
-      PFS_NS.p90pfs_ha()[7],
-      PFS_NS.p90pfs_by()[7],
-    ",
-  0x50400a60u64 => "
-      PFS_NS.p90pfs()[8],
-      PFS_NS.p90pfs_ha()[8],
-      PFS_NS.p90pfs_by()[8],
-    ",
-  0x50400a64u64 => "
-      PFS_NS.p90pfs()[9],
-      PFS_NS.p90pfs_ha()[9],
-      PFS_NS.p90pfs_by()[9],
-    ",
-  0x50400a68u64 => "
-      PFS_NS.p9pfs()[0],
-      PFS_NS.p9pfs_ha()[0],
-      PFS_NS.p9pfs_by()[0],
-    ",
-  0x50400a6cu64 => "
-      PFS_NS.p9pfs()[1],
-      PFS_NS.p9pfs_ha()[1],
-      PFS_NS.p9pfs_by()[1],
-    ",
-  0x50400a70u64 => "
-      PFS_NS.p9pfs()[2],
-      PFS_NS.p9pfs_ha()[2],
-      PFS_NS.p9pfs_by()[2],
-    ",
-  0x50400a74u64 => "
-      PFS_NS.p9pfs()[3],
-      PFS_NS.p9pfs_ha()[3],
-      PFS_NS.p9pfs_by()[3],
-    ",
-  0x50400a78u64 => "
-      PFS_NS.p9pfs()[4],
-      PFS_NS.p9pfs_ha()[4],
-      PFS_NS.p9pfs_by()[4],
-    ",
-  0x50400a7cu64 => "
-      PFS_NS.p9pfs()[5],
-      PFS_NS.p9pfs_ha()[5],
-      PFS_NS.p9pfs_by()[5],
-    ",
-  0x50400a80u64 => "
-      PFS_NS.pa0pfs()[0],
-      PFS_NS.pa0pfs_ha()[0],
-      PFS_NS.pa0pfs_by()[0],
-    ",
-  0x50400a84u64 => "
-      PFS_NS.pa0pfs()[1],
-      PFS_NS.pa0pfs_ha()[1],
-      PFS_NS.pa0pfs_by()[1],
-    ",
-  0x50400a88u64 => "
-      PFS_NS.pa0pfs()[2],
-      PFS_NS.pa0pfs_ha()[2],
-      PFS_NS.pa0pfs_by()[2],
-    ",
-  0x50400a8cu64 => "
-      PFS_NS.pa0pfs()[3],
-      PFS_NS.pa0pfs_ha()[3],
-      PFS_NS.pa0pfs_by()[3],
-    ",
-  0x50400a90u64 => "
-      PFS_NS.pa0pfs()[4],
-      PFS_NS.pa0pfs_ha()[4],
-      PFS_NS.pa0pfs_by()[4],
-    ",
-  0x50400a94u64 => "
-      PFS_NS.pa0pfs()[5],
-      PFS_NS.pa0pfs_ha()[5],
-      PFS_NS.pa0pfs_by()[5],
-    ",
-  0x50400a98u64 => "
-      PFS_NS.pa0pfs()[6],
-      PFS_NS.pa0pfs_ha()[6],
-      PFS_NS.pa0pfs_by()[6],
-    ",
-  0x50400a9cu64 => "
-      PFS_NS.pa0pfs()[7],
-      PFS_NS.pa0pfs_ha()[7],
-      PFS_NS.pa0pfs_by()[7],
-    ",
-  0x50400aa0u64 => "
-      PFS_NS.pa0pfs()[8],
-      PFS_NS.pa0pfs_ha()[8],
-      PFS_NS.pa0pfs_by()[8],
-    ",
-  0x50400aa4u64 => "
-      PFS_NS.pa0pfs()[9],
-      PFS_NS.pa0pfs_ha()[9],
-      PFS_NS.pa0pfs_by()[9],
-    ",
-  0x50400aa8u64 => "
-      PFS_NS.papfs()[0],
-      PFS_NS.papfs_ha()[0],
-      PFS_NS.papfs_by()[0],
-    ",
-  0x50400aacu64 => "
-      PFS_NS.papfs()[1],
-      PFS_NS.papfs_ha()[1],
-      PFS_NS.papfs_by()[1],
-    ",
-  0x50400ab0u64 => "
-      PFS_NS.papfs()[2],
-      PFS_NS.papfs_ha()[2],
-      PFS_NS.papfs_by()[2],
-    ",
-  0x50400ab4u64 => "
-      PFS_NS.papfs()[3],
-      PFS_NS.papfs_ha()[3],
-      PFS_NS.papfs_by()[3],
-    ",
-  0x50400ab8u64 => "
-      PFS_NS.papfs()[4],
-      PFS_NS.papfs_ha()[4],
-      PFS_NS.papfs_by()[4],
-    ",
-  0x50400abcu64 => "
-      PFS_NS.papfs()[5],
-      PFS_NS.papfs_ha()[5],
-      PFS_NS.papfs_by()[5],
-    ",
-  0x50400ac0u64 => "
-      PFS_NS.pb0pfs()[0],
-      PFS_NS.pb0pfs_ha()[0],
-      PFS_NS.pb0pfs_by()[0],
-    ",
-  0x50400ac4u64 => "
-      PFS_NS.pb0pfs()[1],
-      PFS_NS.pb0pfs_ha()[1],
-      PFS_NS.pb0pfs_by()[1],
-    ",
-  0x50400ac8u64 => "
-      PFS_NS.pb0pfs()[2],
-      PFS_NS.pb0pfs_ha()[2],
-      PFS_NS.pb0pfs_by()[2],
-    ",
-  0x50400accu64 => "
-      PFS_NS.pb0pfs()[3],
-      PFS_NS.pb0pfs_ha()[3],
-      PFS_NS.pb0pfs_by()[3],
-    ",
-  0x50400ad0u64 => "
-      PFS_NS.pb0pfs()[4],
-      PFS_NS.pb0pfs_ha()[4],
-      PFS_NS.pb0pfs_by()[4],
-    ",
-  0x50400ad4u64 => "
-      PFS_NS.pb0pfs()[5],
-      PFS_NS.pb0pfs_ha()[5],
-      PFS_NS.pb0pfs_by()[5],
-    ",
-  0x50400ad8u64 => "
-      PFS_NS.pb0pfs()[6],
-      PFS_NS.pb0pfs_ha()[6],
-      PFS_NS.pb0pfs_by()[6],
-    ",
-  0x50400adcu64 => "
-      PFS_NS.pb0pfs()[7],
-      PFS_NS.pb0pfs_ha()[7],
-      PFS_NS.pb0pfs_by()[7],
-    ",
-  0x50400d00u64 => "
-      PFS_NS.pfenet(),
-    ",
-  0x50400d0cu64 => "
-      PFS_NS.pwpr_ns(),
-    ",
-  0x50400d38u64 => "
-      PFS_NS.psar()[2],
-    ",
-  0x50400d3cu64 => "
-      PFS_NS.psar()[3],
-    ",
-  0x50400d40u64 => "
-      PFS_NS.psar()[4],
-    ",
-  0x50400d44u64 => "
-      PFS_NS.psar()[5],
-    ",
-  0x50400d48u64 => "
-      PFS_NS.psar()[6],
-    ",
-  0x50400d4cu64 => "
-      PFS_NS.psar()[7],
-    ",
-  0x50400d50u64 => "
-      PFS_NS.psar()[8],
-    ",
-  0x50400d54u64 => "
-      PFS_NS.psar()[9],
-    ",
-  0x50400d58u64 => "
-      PFS_NS.psar()[0],
-    ",
-  0x50400d5cu64 => "
-      PFS_NS.psar()[1],
+  0x40400d70u64 => "
+      PFS.pgsar(),
     ",
 };

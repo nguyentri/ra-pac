@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.1, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:46:11 +0000
+// Generated from SVD 1.1, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:00:31 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -2511,9 +2511,6 @@ pub mod adadc {
 
         #[doc = "16-time conversion (acquire the average of 16-time conversion)"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -3889,9 +3886,6 @@ pub mod addiscr {
 
         #[doc = "Setting prohibited"]
         pub const _0001: Self = Self::new(1);
-
-        #[doc = "( 1 / ADCLK ) x ADNDIS"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -3956,9 +3950,6 @@ pub mod adicr {
 
         #[doc = "ADC160_ADI is generated at the end of calibration"]
         pub const _11: Self = Self::new(3);
-
-        #[doc = "Settings are prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -7159,9 +7150,6 @@ pub mod adcmpbnsr {
 
         #[doc = "No channel is selected"]
         pub const _0_X_3_F: Self = Self::new(63);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

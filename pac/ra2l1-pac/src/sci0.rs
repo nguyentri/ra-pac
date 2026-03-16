@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.50.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:47:04 +0000
+// Generated from SVD 1.50.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:03:37 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -853,9 +853,6 @@ pub mod scr {
 
         #[doc = "In asynchronous mode, a clock with the same frequency as the bit rate is output from the SCKn pin. In clock synchronous mode, the SCKn pin functions as the clock output pin."]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "In asynchronous mode, input a clock with a frequency 16 times the bit rate from the SCKn pin when the SEMR.ABCS bit is 0. Input a clock signal with a frequency eight times the bit rate when the SEMR.ABCS bit is 1. In clock synchronous mode, the SCKn pin functions as the clock input pin."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Teie_SPEC;
@@ -2385,9 +2382,6 @@ pub mod snfr {
 
         #[doc = "In asynchronous mode: Setting prohibited In simple I2C mode: Use clock signal divided by 8 with noise filter"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2477,9 +2471,6 @@ pub mod simr1 {
     impl Iicdl {
         #[doc = "No output delay"]
         pub const _0_X_00: Self = Self::new(0);
-
-        #[doc = "(IICDL - 1) to (IICDL) cycles"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

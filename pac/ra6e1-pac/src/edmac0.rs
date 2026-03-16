@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:50:30 +0000
+// Generated from SVD 1.20.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:09:37 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -2229,9 +2229,6 @@ pub mod fdr {
     impl Rfd {
         #[doc = "4096 bytes"]
         pub const _0_X_0_F: Self = Self::new(15);
-
-        #[doc = "settings prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tfd_SPEC;
@@ -2239,9 +2236,6 @@ pub mod fdr {
     impl Tfd {
         #[doc = "2048 bytes"]
         pub const _0_X_07: Self = Self::new(7);
-
-        #[doc = "settings prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2503,9 +2497,6 @@ pub mod rpadir {
     impl Pads {
         #[doc = "Do not insert padding"]
         pub const _00: Self = Self::new(0);
-
-        #[doc = "settings prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

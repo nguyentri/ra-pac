@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:01 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:11:03 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -731,9 +731,6 @@ pub mod ssicr {
     impl Chnl {
         #[doc = "One channel"]
         pub const _00: Self = Self::new(0);
-
-        #[doc = "Settings other than above are prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Dwl_SPEC;
@@ -756,9 +753,6 @@ pub mod ssicr {
 
         #[doc = "24 bits"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Settings other than above are prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Swl_SPEC;
@@ -775,9 +769,6 @@ pub mod ssicr {
 
         #[doc = "32 bits (serial bit clock frequency = 64fs )"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "Settings other than above are prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Swsd_SPEC;
@@ -891,9 +882,6 @@ pub mod ssicr {
 
         #[doc = "CLK/96(These bits are only settable for channel 0. Setting these bits in the register for channel 1 is prohibited.)"]
         pub const _0_X_C: Self = Self::new(12);
-
-        #[doc = "Settings other than above are prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Muen_SPEC;

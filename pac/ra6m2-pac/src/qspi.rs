@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:16 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:11:44 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -858,9 +858,6 @@ pub mod sfmskc {
 
         #[doc = "48 x PCLKA"]
         pub const _11111: Self = Self::new(31);
-
-        #[doc = "( SFMDV + 2 ) x PCLKA"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -986,9 +983,6 @@ pub mod sfmsst {
     impl Pfcnt {
         #[doc = "Nodata has been prefetched."]
         pub const _00000: Self = Self::new(0);
-
-        #[doc = "Data of (PFCNT) bytes hs been prefetched."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1448,9 +1442,6 @@ pub mod sfmsdc {
     impl Sfmdn {
         #[doc = "Default dummy cycles of each instruction."]
         pub const _0000: Self = Self::new(0);
-
-        #[doc = "( SFMDN + 2 ) x SCK"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

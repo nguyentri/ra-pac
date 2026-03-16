@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -106,7 +106,7 @@ impl super::Etherc0 {
         }
     }
 
-    #[doc = "Interpacket Gap Register"]
+    #[doc = "IPG Register"]
     #[inline(always)]
     pub const fn ipgr(&self) -> &'static crate::common::Reg<self::Ipgr_SPEC, crate::common::RW> {
         unsafe {
@@ -601,6 +601,14 @@ impl Ecmr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 00000000000. The write value should be 00000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<21, 0x7ff, 1, 0, u16, u16, Ecmr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<21,0x7ff,1,0,u16,u16,Ecmr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Ecmr {
     #[inline(always)]
@@ -614,10 +622,10 @@ pub mod ecmr {
     pub struct Prm_SPEC;
     pub type Prm = crate::EnumBitfieldStruct<u8, Prm_SPEC>;
     impl Prm {
-        #[doc = "Disable promiscuous mode"]
+        #[doc = "Promiscuous mode is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable promiscuous mode."]
+        #[doc = "Promiscuous mode is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -627,7 +635,7 @@ pub mod ecmr {
         #[doc = "Half-duplex mode"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Full-duplex mode."]
+        #[doc = "Full-duplex mode"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -637,107 +645,107 @@ pub mod ecmr {
         #[doc = "10 Mbps"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "100 Mbps."]
+        #[doc = "100 Mbps"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ilb_SPEC;
     pub type Ilb = crate::EnumBitfieldStruct<u8, Ilb_SPEC>;
     impl Ilb {
-        #[doc = "Perform normal data transmission or reception"]
+        #[doc = "Normal data transmission or reception is performed."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Loop data back in the ETHERC when full-duplex mode is selected."]
+        #[doc = "Data is looped back in the ETHERC when full-duplex mode is selected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Te_SPEC;
     pub type Te = crate::EnumBitfieldStruct<u8, Te_SPEC>;
     impl Te {
-        #[doc = "Disable transmit function"]
+        #[doc = "Transmit function is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable transmit function."]
+        #[doc = "Transmit function is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Re_SPEC;
     pub type Re = crate::EnumBitfieldStruct<u8, Re_SPEC>;
     impl Re {
-        #[doc = "Disable receive function"]
+        #[doc = "Receive function is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable receive function."]
+        #[doc = "Receive function is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mpde_SPEC;
     pub type Mpde = crate::EnumBitfieldStruct<u8, Mpde_SPEC>;
     impl Mpde {
-        #[doc = "Disable Magic Packet detection"]
+        #[doc = "Magic Packet detection is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable Magic Packet detection."]
+        #[doc = "Magic Packet detection is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Prcef_SPEC;
     pub type Prcef = crate::EnumBitfieldStruct<u8, Prcef_SPEC>;
     impl Prcef {
-        #[doc = "Notify EDMAC of a CRC error"]
+        #[doc = "EDMAC is notified of a CRC error."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Do not notify EDMAC of a CRC error."]
+        #[doc = "EDMAC is not notified of a CRC error."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Txf_SPEC;
     pub type Txf = crate::EnumBitfieldStruct<u8, Txf_SPEC>;
     impl Txf {
-        #[doc = "Disable automatic PAUSE frame transmission (PAUSE frame is not automatically transmitted)"]
+        #[doc = "Automatic PAUSE frame transmission is disabled.(PAUSE frame is not automatically transmitted.)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable automatic PAUSE frame transmission (PAUSE frame is automatically transmitted as required)."]
+        #[doc = "Automatic PAUSE frame transmission is enabled.(PAUSE frame is automatically transmitted as required.)"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rxf_SPEC;
     pub type Rxf = crate::EnumBitfieldStruct<u8, Rxf_SPEC>;
     impl Rxf {
-        #[doc = "Disable PAUSE frame detection"]
+        #[doc = "PAUSE frame detection is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable PAUSE frame detection."]
+        #[doc = "PAUSE frame detection is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pfr_SPEC;
     pub type Pfr = crate::EnumBitfieldStruct<u8, Pfr_SPEC>;
     impl Pfr {
-        #[doc = "Do not transfer PAUSE frame to the EDMAC"]
+        #[doc = "PAUSE frame is not transferred to the EDMAC."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Transfer PAUSE frame to the EDMAC."]
+        #[doc = "PAUSE frame is transferred to the EDMAC."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Zpf_SPEC;
     pub type Zpf = crate::EnumBitfieldStruct<u8, Zpf_SPEC>;
     impl Zpf {
-        #[doc = "Do not use PAUSE frames that containing a pause_time parameter of 0"]
+        #[doc = "PAUSE frame that contains the pause_time parameter of 0 is not used."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Use PAUSE frames that containing a pause_time parameter of 0."]
+        #[doc = "PAUSE frame that contains the pause_time parameter of 0 is used."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tpc_SPEC;
     pub type Tpc = crate::EnumBitfieldStruct<u8, Tpc_SPEC>;
     impl Tpc {
-        #[doc = "Transmit PAUSE frame even during a PAUSE period"]
+        #[doc = "PAUSE frame is transmitted even during a PAUSE period."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Do not transmit PAUSE frame during a PAUSE period."]
+        #[doc = "PAUSE frame is not transmitted during a PAUSE period."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -752,12 +760,21 @@ impl crate::sealed::RegSpec for Rflr_SPEC {
 pub type Rflr = crate::RegValueT<Rflr_SPEC>;
 
 impl Rflr {
-    #[doc = "Receive Frame Maximum Length"]
+    #[doc = "Receive Frame Maximum LengthThe set value becomes the maximum frame length. The minimum value that can be set is 1,518 bytes, and the maximum value that can be set is 2,048 bytes. Values that are less than 1,518 bytes are regarded as 1,518 bytes, and values larger than 2,048 bytes are regarded as 2,048 bytes."]
     #[inline(always)]
     pub fn rfl(
         self,
     ) -> crate::common::RegisterField<0, 0xfff, 1, 0, u16, u16, Rflr_SPEC, crate::common::RW> {
         crate::common::RegisterField::<0,0xfff,1,0,u16,u16,Rflr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Rflr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Rflr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Rflr {
@@ -830,7 +847,7 @@ impl Ecsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Link Signal Change Flag"]
+    #[doc = "LCHNG Link Signal Change Flag"]
     #[inline(always)]
     pub fn lchng(
         self,
@@ -907,6 +924,15 @@ impl Ecsr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Ecsr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Ecsr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Ecsr {
     #[inline(always)]
@@ -920,50 +946,50 @@ pub mod ecsr {
     pub struct Icd_SPEC;
     pub type Icd = crate::EnumBitfieldStruct<u8, Icd_SPEC>;
     impl Icd {
-        #[doc = "PHY-LSI has not detected a false carrier on the line"]
+        #[doc = "PHY-LSI has not detected a false carrier on the line."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "PHY-LSI detected a false carrier on the line."]
+        #[doc = "PHY-LSI has detected a false carrier on the line."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mpd_SPEC;
     pub type Mpd = crate::EnumBitfieldStruct<u8, Mpd_SPEC>;
     impl Mpd {
-        #[doc = "Magic Packet not detected"]
+        #[doc = "Magic Packet has not been detected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Magic Packet detected."]
+        #[doc = "Magic Packet has been detected."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lchng_SPEC;
     pub type Lchng = crate::EnumBitfieldStruct<u8, Lchng_SPEC>;
     impl Lchng {
-        #[doc = "Change in the ET0_LINKSTA signal not detected"]
+        #[doc = "Change in the ETn_LINKSTA signal has not been detected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Change in the ET0_LINKSTA signal detected (high to low, or low to high)."]
+        #[doc = "Change in the ETn_LINKSTA signal has been detected (high to low, or low to high)."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psrto_SPEC;
     pub type Psrto = crate::EnumBitfieldStruct<u8, Psrto_SPEC>;
     impl Psrto {
-        #[doc = "PAUSE frame retransmit count has not reached the upper limit"]
+        #[doc = "PAUSE frame retransmit count has not reached the upper limit."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "PAUSE frame retransmit count reached the upper limit."]
+        #[doc = "PAUSE frame retransmit count has reached the upper limit."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bfr_SPEC;
     pub type Bfr = crate::EnumBitfieldStruct<u8, Bfr_SPEC>;
     impl Bfr {
-        #[doc = "Continuous reception of broadcast frames not detected"]
+        #[doc = "Continuous reception of broadcast frames has not been detected."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Continuous reception of broadcast frames detected."]
+        #[doc = "Continuous reception of broadcast frames has been detected."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1107,6 +1133,15 @@ impl Ecsipr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Ecsipr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Ecsipr_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Ecsipr {
     #[inline(always)]
@@ -1120,50 +1155,50 @@ pub mod ecsipr {
     pub struct Icdip_SPEC;
     pub type Icdip = crate::EnumBitfieldStruct<u8, Icdip_SPEC>;
     impl Icdip {
-        #[doc = "Disable interrupt notification"]
+        #[doc = "Notification of the false carrier detect interrupt is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt notification."]
+        #[doc = "Notification of the false carrier detect interrupt is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Mpdip_SPEC;
     pub type Mpdip = crate::EnumBitfieldStruct<u8, Mpdip_SPEC>;
     impl Mpdip {
-        #[doc = "Disable interrupt notification"]
+        #[doc = "Notification of the Magic Packet detect interrupt is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt notification."]
+        #[doc = "Notification of the Magic Packet detect interrupt is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Lchngip_SPEC;
     pub type Lchngip = crate::EnumBitfieldStruct<u8, Lchngip_SPEC>;
     impl Lchngip {
-        #[doc = "Disable interrupt notification"]
+        #[doc = "Notification of ETn_LINKSTA signal change interrupt is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt notification."]
+        #[doc = "Notification of ETn_LINKSTA signal change interrupt is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Psrtoip_SPEC;
     pub type Psrtoip = crate::EnumBitfieldStruct<u8, Psrtoip_SPEC>;
     impl Psrtoip {
-        #[doc = "Disable interrupt notification"]
+        #[doc = "Notification of PAUSE frame retransmit over interrupt is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt notification."]
+        #[doc = "Notification of PAUSE frame retransmit over interrupt is enabled."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bfsipr_SPEC;
     pub type Bfsipr = crate::EnumBitfieldStruct<u8, Bfsipr_SPEC>;
     impl Bfsipr {
-        #[doc = "Disable interrupt notification"]
+        #[doc = "Notification of continuous broadcast frame reception interrupt is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enable interrupt notification."]
+        #[doc = "Notification of continuous broadcast frame reception interrupt is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1178,7 +1213,7 @@ impl crate::sealed::RegSpec for Pir_SPEC {
 pub type Pir = crate::RegValueT<Pir_SPEC>;
 
 impl Pir {
-    #[doc = "MII/RMII Management Data Clock"]
+    #[doc = "MII/RMII Management Data ClockThe MDC bit value is output from the ETn_MDC pin to supply the management data clock to the MII or RMII."]
     #[inline(always)]
     pub fn mdc(self) -> crate::common::RegisterFieldBool<0, 1, 0, Pir_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<0, 1, 0, Pir_SPEC, crate::common::RW>::from_register(
@@ -1195,7 +1230,7 @@ impl Pir {
         crate::common::RegisterField::<1,0x1,1,0,pir::Mmd,pir::Mmd,Pir_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "MII/RMII Management Data-Out"]
+    #[doc = "MII/RMII Management Data-OutThe MDO bit value is output from the ETn_MDIO pin when the MMD bit is 1 (write). The value is not output when the MMD bit is 0 (read)."]
     #[inline(always)]
     pub fn mdo(self) -> crate::common::RegisterFieldBool<2, 1, 0, Pir_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<2, 1, 0, Pir_SPEC, crate::common::RW>::from_register(
@@ -1203,12 +1238,20 @@ impl Pir {
         )
     }
 
-    #[doc = "MII/RMII Management Data-In"]
+    #[doc = "MII/RMII Management Data-InThis bit indicates the level of the ETn_MDIO pin. The write value should be 0."]
     #[inline(always)]
     pub fn mdi(self) -> crate::common::RegisterFieldBool<3, 1, 0, Pir_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<3, 1, 0, Pir_SPEC, crate::common::R>::from_register(
             self, 0,
         )
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Pir_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Pir_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Pir {
@@ -1226,7 +1269,7 @@ pub mod pir {
         #[doc = "Read"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Write."]
+        #[doc = "Write"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1241,12 +1284,21 @@ impl crate::sealed::RegSpec for Psr_SPEC {
 pub type Psr = crate::RegValueT<Psr_SPEC>;
 
 impl Psr {
-    #[doc = "ET0_LINKSTA Pin Status Flag"]
+    #[doc = "ETn_LINKSTA Pin Status FlagThe link status can be read by connecting the link signal output from the PHY-LSI to the ETn_LINKSTA pin. For details on the polarity, refer to the specifications of the connected PHY-LSI."]
     #[inline(always)]
     pub fn lmon(self) -> crate::common::RegisterFieldBool<0, 1, 0, Psr_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<0, 1, 0, Psr_SPEC, crate::common::R>::from_register(
             self, 0,
         )
+    }
+
+    #[doc = "These bits are read as 0000000000000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<1, 0x7fffffff, 1, 0, u32, u32, Psr_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<1,0x7fffffff,1,0,u32,u32,Psr_SPEC,crate::common::R>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Psr {
@@ -1271,9 +1323,35 @@ impl Rdmlr {
     #[inline(always)]
     pub fn rmd(
         self,
-    ) -> crate::common::RegisterField<0, 0xfffff, 1, 0, u32, u32, Rdmlr_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<
+        0,
+        0xfffff,
+        1,
+        0,
+        rdmlr::Rmd,
+        rdmlr::Rmd,
+        Rdmlr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xfffff,
+            1,
+            0,
+            rdmlr::Rmd,
+            rdmlr::Rmd,
+            Rdmlr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 000000000000. The write value should be 000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<20, 0xfff, 1, 0, u16, u16, Rdmlr_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0xfffff,1,0,u32,u32,Rdmlr_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<20,0xfff,1,0,u16,u16,Rdmlr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Rdmlr {
@@ -1282,7 +1360,16 @@ impl ::core::default::Default for Rdmlr {
         <crate::RegValueT<Rdmlr_SPEC> as RegisterValue<_>>::new(0)
     }
 }
+pub mod rdmlr {
 
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Rmd_SPEC;
+    pub type Rmd = crate::EnumBitfieldStruct<u8, Rmd_SPEC>;
+    impl Rmd {
+        #[doc = "Normal operation"]
+        pub const _00000_H: Self = Self::new(0);
+    }
+}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipgr_SPEC;
@@ -1290,15 +1377,43 @@ impl crate::sealed::RegSpec for Ipgr_SPEC {
     type DataType = u32;
 }
 
-#[doc = "Interpacket Gap Register"]
+#[doc = "IPG Register"]
 pub type Ipgr = crate::RegValueT<Ipgr_SPEC>;
 
 impl Ipgr {
+    #[doc = "Interpacket Gap  Range from 16bit time(0x00) to 140bit time(0x1F)"]
     #[inline(always)]
     pub fn ipg(
         self,
-    ) -> crate::common::RegisterField<0, 0x1f, 1, 0, u8, u8, Ipgr_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0x1f,1,0,u8,u8,Ipgr_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x1f,
+        1,
+        0,
+        ipgr::Ipg,
+        ipgr::Ipg,
+        Ipgr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x1f,
+            1,
+            0,
+            ipgr::Ipg,
+            ipgr::Ipg,
+            Ipgr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 000000000000000000000000000. The write value should be 000000000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<5, 0x7ffffff, 1, 0, u32, u32, Ipgr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<5,0x7ffffff,1,0,u32,u32,Ipgr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Ipgr {
@@ -1307,7 +1422,16 @@ impl ::core::default::Default for Ipgr {
         <crate::RegValueT<Ipgr_SPEC> as RegisterValue<_>>::new(20)
     }
 }
+pub mod ipgr {
 
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Ipg_SPEC;
+    pub type Ipg = crate::EnumBitfieldStruct<u8, Ipg_SPEC>;
+    impl Ipg {
+        #[doc = "96 bit time (initial value)"]
+        pub const _14_H: Self = Self::new(20);
+    }
+}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Apr_SPEC;
@@ -1319,12 +1443,20 @@ impl crate::sealed::RegSpec for Apr_SPEC {
 pub type Apr = crate::RegValueT<Apr_SPEC>;
 
 impl Apr {
-    #[doc = "Automatic PAUSE Time Setting"]
+    #[doc = "Automatic PAUSE Time SettingThese bits set the value of the pause_time parameter for a PAUSE frame that is automatically transmitted. Transmission is not performed until the set value multiplied by 512 bit time has elapsed."]
     #[inline(always)]
     pub fn ap(
         self,
     ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Apr_SPEC, crate::common::RW> {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Apr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Apr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Apr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Apr {
@@ -1345,12 +1477,20 @@ impl crate::sealed::RegSpec for Mpr_SPEC {
 pub type Mpr = crate::RegValueT<Mpr_SPEC>;
 
 impl Mpr {
-    #[doc = "Manual PAUSE Time Setting"]
+    #[doc = "Manual PAUSE Time SettingThese bits set the value of the pause_time parameter for a PAUSE frame that is manually transmitted. Transmission is not performed until the set value multiplied by 512 bit time has elapsed. The read value is undefined."]
     #[inline(always)]
     pub fn mp(
         self,
     ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Mpr_SPEC, crate::common::RW> {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Mpr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Mpr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Mpr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Mpr {
@@ -1371,12 +1511,21 @@ impl crate::sealed::RegSpec for Rfcf_SPEC {
 pub type Rfcf = crate::RegValueT<Rfcf_SPEC>;
 
 impl Rfcf {
-    #[doc = "Received PAUSE Frame Count"]
+    #[doc = "Received PAUSE Frame CountNumber of received PAUSE frames"]
     #[inline(always)]
     pub fn rpause(
         self,
     ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, Rfcf_SPEC, crate::common::R> {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Rfcf_SPEC,crate::common::R>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 000000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<8, 0xffffff, 1, 0, u32, u32, Rfcf_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<8,0xffffff,1,0,u32,u32,Rfcf_SPEC,crate::common::R>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Rfcf {
@@ -1397,12 +1546,39 @@ impl crate::sealed::RegSpec for Tpauser_SPEC {
 pub type Tpauser = crate::RegValueT<Tpauser_SPEC>;
 
 impl Tpauser {
+    #[doc = "Automatic PAUSE Frame Retransmit Setting"]
     #[inline(always)]
     pub fn tpause(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Tpauser_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        tpauser::Tpause,
+        tpauser::Tpause,
+        Tpauser_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            tpauser::Tpause,
+            tpauser::Tpause,
+            Tpauser_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Tpauser_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Tpauser_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Tpauser_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Tpauser {
@@ -1411,7 +1587,16 @@ impl ::core::default::Default for Tpauser {
         <crate::RegValueT<Tpauser_SPEC> as RegisterValue<_>>::new(0)
     }
 }
+pub mod tpauser {
 
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Tpause_SPEC;
+    pub type Tpause = crate::EnumBitfieldStruct<u8, Tpause_SPEC>;
+    impl Tpause {
+        #[doc = "Number of retransmissions is unlimited"]
+        pub const _0_X_0000: Self = Self::new(0);
+    }
+}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tpausecr_SPEC;
@@ -1423,12 +1608,21 @@ impl crate::sealed::RegSpec for Tpausecr_SPEC {
 pub type Tpausecr = crate::RegValueT<Tpausecr_SPEC>;
 
 impl Tpausecr {
-    #[doc = "PAUSE Frame Retransmit Count"]
+    #[doc = "PAUSE Frame Retransmit CountNumber of times a PAUSE frame was retransmitted"]
     #[inline(always)]
     pub fn txp(
         self,
     ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, Tpausecr_SPEC, crate::common::R> {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Tpausecr_SPEC,crate::common::R>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 000000000000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<8, 0xffffff, 1, 0, u32, u32, Tpausecr_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<8,0xffffff,1,0,u32,u32,Tpausecr_SPEC,crate::common::R>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Tpausecr {
@@ -1449,12 +1643,39 @@ impl crate::sealed::RegSpec for Bcfrr_SPEC {
 pub type Bcfrr = crate::RegValueT<Bcfrr_SPEC>;
 
 impl Bcfrr {
+    #[doc = "Broadcast Frame Continuous Receive Count Setting"]
     #[inline(always)]
     pub fn bcf(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Bcfrr_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        bcfrr::Bcf,
+        bcfrr::Bcf,
+        Bcfrr_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            bcfrr::Bcf,
+            bcfrr::Bcf,
+            Bcfrr_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Bcfrr_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Bcfrr_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Bcfrr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Bcfrr {
@@ -1463,7 +1684,16 @@ impl ::core::default::Default for Bcfrr {
         <crate::RegValueT<Bcfrr_SPEC> as RegisterValue<_>>::new(0)
     }
 }
+pub mod bcfrr {
 
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Bcf_SPEC;
+    pub type Bcf = crate::EnumBitfieldStruct<u8, Bcf_SPEC>;
+    impl Bcf {
+        #[doc = "Number of receptions is unlimited."]
+        pub const _0000_H: Self = Self::new(0);
+    }
+}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mahr_SPEC;
@@ -1475,7 +1705,7 @@ impl crate::sealed::RegSpec for Mahr_SPEC {
 pub type Mahr = crate::RegValueT<Mahr_SPEC>;
 
 impl Mahr {
-    #[doc = "MAC Address Upper Bit"]
+    #[doc = "MAC Address Upper Bit RegisterThe MAHR register sets the upper 32 bits (b47 to b16) of the 48-bit MAC address."]
     #[inline(always)]
     pub fn mahr(
         self,
@@ -1502,12 +1732,21 @@ impl crate::sealed::RegSpec for Malr_SPEC {
 pub type Malr = crate::RegValueT<Malr_SPEC>;
 
 impl Malr {
-    #[doc = "MAC Address Lower Bit"]
+    #[doc = "MAC Address Lower Bit RegisterThe MALR register sets the lower 16 bits of the 48-bit MAC address."]
     #[inline(always)]
     pub fn malr(
         self,
     ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Malr_SPEC, crate::common::RW> {
         crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Malr_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "These bits are read as 0000000000000000. The write value should be 0000000000000000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Malr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Malr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Malr {
@@ -1528,7 +1767,7 @@ impl crate::sealed::RegSpec for Trocr_SPEC {
 pub type Trocr = crate::RegValueT<Trocr_SPEC>;
 
 impl Trocr {
-    #[doc = "Transmit Retry Over Counter"]
+    #[doc = "Transmit Retry Over Counter RegisterThe TROCR register is a counter indicating the number of frames that fail to be retransmitted."]
     #[inline(always)]
     pub fn trocr(
         self,
@@ -1555,7 +1794,7 @@ impl crate::sealed::RegSpec for Cdcr_SPEC {
 pub type Cdcr = crate::RegValueT<Cdcr_SPEC>;
 
 impl Cdcr {
-    #[doc = "Late Collision Detect Counter"]
+    #[doc = "Late Collision Detect Counter RegisterThe CDCR register is a counter indicating the number of late collisions that have been detected after transmission starts."]
     #[inline(always)]
     pub fn cdcr(
         self,
@@ -1582,7 +1821,7 @@ impl crate::sealed::RegSpec for Lccr_SPEC {
 pub type Lccr = crate::RegValueT<Lccr_SPEC>;
 
 impl Lccr {
-    #[doc = "Lost Carrier Counter"]
+    #[doc = "Lost Carrier Counter RegisterThe LCCR register is a counter indicating the number of times a loss of carrier is detected during frame transmission."]
     #[inline(always)]
     pub fn lccr(
         self,
@@ -1609,7 +1848,7 @@ impl crate::sealed::RegSpec for Cndcr_SPEC {
 pub type Cndcr = crate::RegValueT<Cndcr_SPEC>;
 
 impl Cndcr {
-    #[doc = "Carrier Not Detect Counter"]
+    #[doc = "Carrier Not Detect Counter RegisterThe CNDCR register is a counter indicating the number of times a carrier is not detected during preamble transmission."]
     #[inline(always)]
     pub fn cndcr(
         self,
@@ -1636,7 +1875,7 @@ impl crate::sealed::RegSpec for Cefcr_SPEC {
 pub type Cefcr = crate::RegValueT<Cefcr_SPEC>;
 
 impl Cefcr {
-    #[doc = "CRC Error Frame Receive Counter"]
+    #[doc = "CRC Error Frame Receive Counter RegisterThe CEFCR register is a counter indicating the number of received frames where a CRC error has been detected."]
     #[inline(always)]
     pub fn cefcr(
         self,
@@ -1663,7 +1902,7 @@ impl crate::sealed::RegSpec for Frecr_SPEC {
 pub type Frecr = crate::RegValueT<Frecr_SPEC>;
 
 impl Frecr {
-    #[doc = "Frame Receive Error Counter"]
+    #[doc = "Frame Receive Error Counter RegisterThe FRECR register is a counter indicating the number of times a frame receive error has occurred."]
     #[inline(always)]
     pub fn frecr(
         self,
@@ -1690,7 +1929,7 @@ impl crate::sealed::RegSpec for Tsfrcr_SPEC {
 pub type Tsfrcr = crate::RegValueT<Tsfrcr_SPEC>;
 
 impl Tsfrcr {
-    #[doc = "Too-Short Frame Receive Counter"]
+    #[doc = "Too-Short Frame Receive Counter RegisterThe TSFRCR register is a counter indicating the number of times a short frame that is shorter than 64 bytes has been received."]
     #[inline(always)]
     pub fn tsfrcr(
         self,
@@ -1717,7 +1956,7 @@ impl crate::sealed::RegSpec for Tlfrcr_SPEC {
 pub type Tlfrcr = crate::RegValueT<Tlfrcr_SPEC>;
 
 impl Tlfrcr {
-    #[doc = "Too-Long Frame Receive Counter"]
+    #[doc = "Too-Long Frame Receive Counter RegisterThe TLFRCR register is a counter indicating the number of times a long frame that is longer than the RFLR register value has been received."]
     #[inline(always)]
     pub fn tlfrcr(
         self,
@@ -1744,7 +1983,7 @@ impl crate::sealed::RegSpec for Rfcr_SPEC {
 pub type Rfcr = crate::RegValueT<Rfcr_SPEC>;
 
 impl Rfcr {
-    #[doc = "Received Alignment Error Frame Counter"]
+    #[doc = "Received Alignment Error Frame Counter RegisterThe RFCR register is a counter indicating the number of times a frame has been received with the alignment error (frame is not an integral number of octets)."]
     #[inline(always)]
     pub fn rfcr(
         self,
@@ -1771,7 +2010,7 @@ impl crate::sealed::RegSpec for Mafcr_SPEC {
 pub type Mafcr = crate::RegValueT<Mafcr_SPEC>;
 
 impl Mafcr {
-    #[doc = "Multicast Address Frame Receive Counter"]
+    #[doc = "Multicast Address Frame Receive Counter RegisterThe MAFCR register is a counter indicating the number of times a frame where the multicast address is set has been received."]
     #[inline(always)]
     pub fn mafcr(
         self,

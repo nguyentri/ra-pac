@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.41.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:52:06 +0000
+// Generated from SVD 1.30.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:13:42 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -1898,9 +1898,6 @@ pub mod dvstctr0 {
 
         #[doc = "Host controller mode High-speed connection Device controller mode USB bus reset in progress or high-speed connection"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "Host controller mode USB bus reset in progress Device controller mode Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Uact_SPEC;
@@ -2036,16 +2033,7 @@ impl crate::sealed::RegSpec for Cfifol_SPEC {
 #[doc = "FIFO Port Register"]
 pub type Cfifol = crate::RegValueT<Cfifol_SPEC>;
 
-impl Cfifol {
-    #[doc = "Read receive data from the FIFO buffer or write transmit data to the FIFO buffer by accessing these bits."]
-    #[inline(always)]
-    pub fn fifoport(
-        self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Cfifol_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Cfifol_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
+impl NoBitfieldReg<Cfifol_SPEC> for Cfifol {}
 impl ::core::default::Default for Cfifol {
     #[inline(always)]
     fn default() -> Cfifol {
@@ -2063,15 +2051,7 @@ impl crate::sealed::RegSpec for Cfifoll_SPEC {
 #[doc = "FIFO Port Register"]
 pub type Cfifoll = crate::RegValueT<Cfifoll_SPEC>;
 
-impl Cfifoll {
-    #[doc = "Read receive data from the FIFO buffer or write transmit data to the FIFO buffer by accessing these bits."]
-    #[inline(always)]
-    pub fn fifoport(
-        self,
-    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, Cfifoll_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0xff,1,0,u8,u8,Cfifoll_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
+impl NoBitfieldReg<Cfifoll_SPEC> for Cfifoll {}
 impl ::core::default::Default for Cfifoll {
     #[inline(always)]
     fn default() -> Cfifoll {
@@ -2196,16 +2176,7 @@ impl crate::sealed::RegSpec for D0Fifol_SPEC {
 #[doc = "FIFO Port Register"]
 pub type D0Fifol = crate::RegValueT<D0Fifol_SPEC>;
 
-impl D0Fifol {
-    #[doc = "Read receive data from the FIFO buffer or write transmit data to the FIFO buffer by accessing these bits."]
-    #[inline(always)]
-    pub fn fifoport(
-        self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, D0Fifol_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,D0Fifol_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
+impl NoBitfieldReg<D0Fifol_SPEC> for D0Fifol {}
 impl ::core::default::Default for D0Fifol {
     #[inline(always)]
     fn default() -> D0Fifol {
@@ -2223,16 +2194,7 @@ impl crate::sealed::RegSpec for D1Fifol_SPEC {
 #[doc = "FIFO Port Register"]
 pub type D1Fifol = crate::RegValueT<D1Fifol_SPEC>;
 
-impl D1Fifol {
-    #[doc = "Read receive data from the FIFO buffer or write transmit data to the FIFO buffer by accessing these bits."]
-    #[inline(always)]
-    pub fn fifoport(
-        self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, D1Fifol_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,D1Fifol_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
+impl NoBitfieldReg<D1Fifol_SPEC> for D1Fifol {}
 impl ::core::default::Default for D1Fifol {
     #[inline(always)]
     fn default() -> D1Fifol {
@@ -2250,15 +2212,7 @@ impl crate::sealed::RegSpec for D0Fifoll_SPEC {
 #[doc = "FIFO Port Register"]
 pub type D0Fifoll = crate::RegValueT<D0Fifoll_SPEC>;
 
-impl D0Fifoll {
-    #[doc = "Read receive data from the FIFO buffer or write transmit data to the FIFO buffer by accessing these bits."]
-    #[inline(always)]
-    pub fn fifoport(
-        self,
-    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, D0Fifoll_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0xff,1,0,u8,u8,D0Fifoll_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
+impl NoBitfieldReg<D0Fifoll_SPEC> for D0Fifoll {}
 impl ::core::default::Default for D0Fifoll {
     #[inline(always)]
     fn default() -> D0Fifoll {
@@ -2276,15 +2230,7 @@ impl crate::sealed::RegSpec for D1Fifoll_SPEC {
 #[doc = "FIFO Port Register"]
 pub type D1Fifoll = crate::RegValueT<D1Fifoll_SPEC>;
 
-impl D1Fifoll {
-    #[doc = "Read receive data from the FIFO buffer or write transmit data to the FIFO buffer by accessing these bits."]
-    #[inline(always)]
-    pub fn fifoport(
-        self,
-    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, D1Fifoll_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0xff,1,0,u8,u8,D1Fifoll_SPEC,crate::common::RW>::from_register(self,0)
-    }
-}
+impl NoBitfieldReg<D1Fifoll_SPEC> for D1Fifoll {}
 impl ::core::default::Default for D1Fifoll {
     #[inline(always)]
     fn default() -> D1Fifoll {
@@ -2606,9 +2552,6 @@ pub mod cfifosel {
 
         #[doc = "Pipe 9"]
         pub const _0_X_9: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Isel_SPEC;
@@ -3038,9 +2981,6 @@ pub mod dfifosel {
 
         #[doc = "Pipe 9"]
         pub const _0_X_9: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Bigend_SPEC;
@@ -4905,9 +4845,6 @@ pub mod intsts0 {
 
         #[doc = "Configured state"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "Suspend state"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Vbsts_SPEC;
@@ -6456,9 +6393,6 @@ pub mod dcpctr {
 
         #[doc = "STALL response"]
         pub const _10: Self = Self::new(2);
-
-        #[doc = "STALL response"]
-        pub const _10: Self = Self::new(2);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ccpl_SPEC;
@@ -6649,9 +6583,6 @@ pub mod pipesel {
 
         #[doc = "Pipe 9"]
         pub const _0_X_9: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -7697,9 +7628,6 @@ pub mod devadd {
     impl Hubport {
         #[doc = "Connect directly to the USBHS port"]
         pub const _000: Self = Self::new(0);
-
-        #[doc = "Port number of the hub"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Upphub_SPEC;
@@ -7707,9 +7635,6 @@ pub mod devadd {
     impl Upphub {
         #[doc = "Connect directly to the USBHS port"]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "USB address of the hub. The value as 0xB or more is reserved."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -7831,9 +7756,6 @@ pub mod devadda {
     impl Hubport {
         #[doc = "Connect directly to the USBHS port"]
         pub const _000: Self = Self::new(0);
-
-        #[doc = "Port number of the hub"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Upphub_SPEC;
@@ -7841,9 +7763,6 @@ pub mod devadda {
     impl Upphub {
         #[doc = "Connect directly to the USBHS port"]
         pub const _0_X_0: Self = Self::new(0);
-
-        #[doc = "USB address of the hub. The value as 0xB or more is reserved."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

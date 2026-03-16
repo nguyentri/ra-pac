@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:57:20 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -13090,30 +13090,6 @@ pub mod outctl {
 
         #[doc = "7 I3Cφ cycles"]
         pub const _111: Self = Self::new(7);
-
-        #[doc = "No output delay"]
-        pub const _000: Self = Self::new(0);
-
-        #[doc = "1 or 2 I3Cφ cycles"]
-        pub const _001: Self = Self::new(1);
-
-        #[doc = "3 or 4 I3Cφ cycles"]
-        pub const _010: Self = Self::new(2);
-
-        #[doc = "5 or 6 I3Cφ cycles"]
-        pub const _011: Self = Self::new(3);
-
-        #[doc = "7 or 8 I3Cφ cycles"]
-        pub const _100: Self = Self::new(4);
-
-        #[doc = "9 or 10 I3Cφ cycles"]
-        pub const _101: Self = Self::new(5);
-
-        #[doc = "11 or 12 I3Cφ cycles"]
-        pub const _110: Self = Self::new(6);
-
-        #[doc = "13 or 14 I3Cφ cycles"]
-        pub const _111: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Sdodcs_SPEC;
@@ -13376,30 +13352,6 @@ pub mod outctl_ha_l {
         pub const _110: Self = Self::new(6);
 
         #[doc = "7 I3Cφ cycles"]
-        pub const _111: Self = Self::new(7);
-
-        #[doc = "No output delay"]
-        pub const _000: Self = Self::new(0);
-
-        #[doc = "1 or 2 I3Cφ cycles"]
-        pub const _001: Self = Self::new(1);
-
-        #[doc = "3 or 4 I3Cφ cycles"]
-        pub const _010: Self = Self::new(2);
-
-        #[doc = "5 or 6 I3Cφ cycles"]
-        pub const _011: Self = Self::new(3);
-
-        #[doc = "7 or 8 I3Cφ cycles"]
-        pub const _100: Self = Self::new(4);
-
-        #[doc = "9 or 10 I3Cφ cycles"]
-        pub const _101: Self = Self::new(5);
-
-        #[doc = "11 or 12 I3Cφ cycles"]
-        pub const _110: Self = Self::new(6);
-
-        #[doc = "13 or 14 I3Cφ cycles"]
         pub const _111: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -13692,30 +13644,6 @@ pub mod outctl_by_lh {
         pub const _110: Self = Self::new(6);
 
         #[doc = "7 I3Cφ cycles"]
-        pub const _111: Self = Self::new(7);
-
-        #[doc = "No output delay"]
-        pub const _000: Self = Self::new(0);
-
-        #[doc = "1 or 2 I3Cφ cycles"]
-        pub const _001: Self = Self::new(1);
-
-        #[doc = "3 or 4 I3Cφ cycles"]
-        pub const _010: Self = Self::new(2);
-
-        #[doc = "5 or 6 I3Cφ cycles"]
-        pub const _011: Self = Self::new(3);
-
-        #[doc = "7 or 8 I3Cφ cycles"]
-        pub const _100: Self = Self::new(4);
-
-        #[doc = "9 or 10 I3Cφ cycles"]
-        pub const _101: Self = Self::new(5);
-
-        #[doc = "11 or 12 I3Cφ cycles"]
-        pub const _110: Self = Self::new(6);
-
-        #[doc = "13 or 14 I3Cφ cycles"]
         pub const _111: Self = Self::new(7);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -18194,9 +18122,6 @@ pub mod nqthctl {
     impl Ibiqth {
         #[doc = "Interrupt is generated when the Outstanding IBI Status count is >= 1"]
         pub const _0: Self = Self::new(0);
-
-        #[doc = "Interrupt is issued when IBI Data Buffer is completely empty"]
-        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -18451,9 +18376,6 @@ pub mod nqthctl_ha_h {
     impl Ibiqth {
         #[doc = "Interrupt is generated when the Outstanding IBI Status count is >= 1"]
         pub const _0: Self = Self::new(0);
-
-        #[doc = "Interrupt is issued when IBI Data Buffer is completely empty"]
-        pub const _0: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -18533,9 +18455,6 @@ pub mod nqthctl_by_hh {
     pub type Ibiqth = crate::EnumBitfieldStruct<u8, Ibiqth_SPEC>;
     impl Ibiqth {
         #[doc = "Interrupt is generated when the Outstanding IBI Status count is >= 1"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "Interrupt is issued when IBI Data Buffer is completely empty"]
         pub const _0: Self = Self::new(0);
     }
 }
@@ -25172,12 +25091,6 @@ pub mod ntst {
 
         #[doc = "Normal Tx Data Buffer 0 contains no transmit data."]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "The number of empties in the Normal Tx Data Buffer 0 is < the NTBTHCTL0.TXDBTH\\[2:0\\] threshold."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "The number of empties in the Normal Tx Data Buffer 0 is >= the NTBTHCTL0.TXDBTH\\[2:0\\] threshold."]
-        pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbff0_SPEC;
@@ -25187,12 +25100,6 @@ pub mod ntst {
         pub const _0: Self = Self::new(0);
 
         #[doc = "Normal Rx Data Buffer0 contains receive data."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "The number of entries in the Normal Rx Data Buffer 0 is < the NTBTHCTL0.RXDBTH\\[2:0\\] threshold."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "The number of entries in the Normal Rx Data Buffer 0 is >= the NTBTHCTL0.RXDBTH\\[2:0\\] threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -25204,18 +25111,6 @@ pub mod ntst {
 
         #[doc = "The number of IBI Status Queue entries is > the NQTHCTL.IBIQTH threshold"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "The number of IBI Data Buffer empties is < the IBI Data Buffer size."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "The number of IBI Data Buffer empties is the IBI Data Buffer size."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "The number of IBI Data Buffer empties is < the NQTHCTL.IBIQTH threshold."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "The number of IBI Data Buffer empties is >= the NQTHCTL.IBIQTH threshold."]
-        pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqef_SPEC;
@@ -25225,12 +25120,6 @@ pub mod ntst {
         pub const _0: Self = Self::new(0);
 
         #[doc = "The number of Command Queue empties is the Command Queue size."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "The number of Command Queue empties is < the NQTHCTL.CMDQTH threshold."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "The number of Command Queue empties is >= the NQTHCTL.CMDQTH threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -25492,12 +25381,6 @@ pub mod ntst_ha_l {
 
         #[doc = "Normal Tx Data Buffer 0 contains no transmit data."]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "The number of empties in the Normal Tx Data Buffer 0 is < the NTBTHCTL0.TXDBTH\\[2:0\\] threshold."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "The number of empties in the Normal Tx Data Buffer 0 is >= the NTBTHCTL0.TXDBTH\\[2:0\\] threshold."]
-        pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbff0_SPEC;
@@ -25507,12 +25390,6 @@ pub mod ntst_ha_l {
         pub const _0: Self = Self::new(0);
 
         #[doc = "Normal Rx Data Buffer0 contains receive data."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "The number of entries in the Normal Rx Data Buffer 0 is < the NTBTHCTL0.RXDBTH\\[2:0\\] threshold."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "The number of entries in the Normal Rx Data Buffer 0 is >= the NTBTHCTL0.RXDBTH\\[2:0\\] threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -25524,18 +25401,6 @@ pub mod ntst_ha_l {
 
         #[doc = "The number of IBI Status Queue entries is > the NQTHCTL.IBIQTH threshold"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "The number of IBI Data Buffer empties is < the IBI Data Buffer size."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "The number of IBI Data Buffer empties is the IBI Data Buffer size."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "The number of IBI Data Buffer empties is < the NQTHCTL.IBIQTH threshold."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "The number of IBI Data Buffer empties is >= the NQTHCTL.IBIQTH threshold."]
-        pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqef_SPEC;
@@ -25545,12 +25410,6 @@ pub mod ntst_ha_l {
         pub const _0: Self = Self::new(0);
 
         #[doc = "The number of Command Queue empties is the Command Queue size."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "The number of Command Queue empties is < the NQTHCTL.CMDQTH threshold."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "The number of Command Queue empties is >= the NQTHCTL.CMDQTH threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -25776,12 +25635,6 @@ pub mod ntst_by_ll {
 
         #[doc = "Normal Tx Data Buffer 0 contains no transmit data."]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "The number of empties in the Normal Tx Data Buffer 0 is < the NTBTHCTL0.TXDBTH\\[2:0\\] threshold."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "The number of empties in the Normal Tx Data Buffer 0 is >= the NTBTHCTL0.TXDBTH\\[2:0\\] threshold."]
-        pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rdbff0_SPEC;
@@ -25791,12 +25644,6 @@ pub mod ntst_by_ll {
         pub const _0: Self = Self::new(0);
 
         #[doc = "Normal Rx Data Buffer0 contains receive data."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "The number of entries in the Normal Rx Data Buffer 0 is < the NTBTHCTL0.RXDBTH\\[2:0\\] threshold."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "The number of entries in the Normal Rx Data Buffer 0 is >= the NTBTHCTL0.RXDBTH\\[2:0\\] threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -25808,18 +25655,6 @@ pub mod ntst_by_ll {
 
         #[doc = "The number of IBI Status Queue entries is > the NQTHCTL.IBIQTH threshold"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "The number of IBI Data Buffer empties is < the IBI Data Buffer size."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "The number of IBI Data Buffer empties is the IBI Data Buffer size."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "The number of IBI Data Buffer empties is < the NQTHCTL.IBIQTH threshold."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "The number of IBI Data Buffer empties is >= the NQTHCTL.IBIQTH threshold."]
-        pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdqef_SPEC;
@@ -25829,12 +25664,6 @@ pub mod ntst_by_ll {
         pub const _0: Self = Self::new(0);
 
         #[doc = "The number of Command Queue empties is the Command Queue size."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "The number of Command Queue empties is < the NQTHCTL.CMDQTH threshold."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "The number of Command Queue empties is >= the NQTHCTL.CMDQTH threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -29369,12 +29198,6 @@ pub mod htst {
 
         #[doc = "The number of Command Queue empties is the Command Queue size."]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "The number of High Priority Command Queue empties is < the HQTHCTL.CMDQTH threshold."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "The number of High Priority Command Queue empties is >= the HQTHCTL.CMDQTH threshold."]
-        pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqff_SPEC;
@@ -29619,12 +29442,6 @@ pub mod htst_ha_l {
 
         #[doc = "The number of Command Queue empties is the Command Queue size."]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "The number of High Priority Command Queue empties is < the HQTHCTL.CMDQTH threshold."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "The number of High Priority Command Queue empties is >= the HQTHCTL.CMDQTH threshold."]
-        pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rspqff_SPEC;
@@ -29842,12 +29659,6 @@ pub mod htst_by_ll {
         pub const _0: Self = Self::new(0);
 
         #[doc = "The number of Command Queue empties is the Command Queue size."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "The number of High Priority Command Queue empties is < the HQTHCTL.CMDQTH threshold."]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "The number of High Priority Command Queue empties is >= the HQTHCTL.CMDQTH threshold."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -41383,36 +41194,6 @@ pub mod msdct0 {
 
         #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
-        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -41478,36 +41259,6 @@ pub mod msdct0_ha_l {
 
         #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
-        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -41563,36 +41314,6 @@ pub mod msdct0_by_lh {
         pub const _0: Self = Self::new(0);
 
         #[doc = "– HDR Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -41659,36 +41380,6 @@ pub mod msdct1 {
 
         #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
-        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -41754,36 +41445,6 @@ pub mod msdct1_ha_l {
 
         #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
-        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -41839,36 +41500,6 @@ pub mod msdct1_by_lh {
         pub const _0: Self = Self::new(0);
 
         #[doc = "– HDR Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -41935,36 +41566,6 @@ pub mod msdct2 {
 
         #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
-        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -42030,36 +41631,6 @@ pub mod msdct2_ha_l {
 
         #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
-        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -42115,36 +41686,6 @@ pub mod msdct2_by_lh {
         pub const _0: Self = Self::new(0);
 
         #[doc = "– HDR Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -42211,36 +41752,6 @@ pub mod msdct3 {
 
         #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
-        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -42306,36 +41817,6 @@ pub mod msdct3_ha_l {
 
         #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
-        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -42391,36 +41872,6 @@ pub mod msdct3_by_lh {
         pub const _0: Self = Self::new(0);
 
         #[doc = "– HDR Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -42487,36 +41938,6 @@ pub mod msdct4 {
 
         #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
-        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -42582,36 +42003,6 @@ pub mod msdct4_ha_l {
 
         #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
-        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -42667,36 +42058,6 @@ pub mod msdct4_by_lh {
         pub const _0: Self = Self::new(0);
 
         #[doc = "– HDR Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -42763,36 +42124,6 @@ pub mod msdct5 {
 
         #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
-        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -42858,36 +42189,6 @@ pub mod msdct5_ha_l {
 
         #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
-        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -42943,36 +42244,6 @@ pub mod msdct5_by_lh {
         pub const _0: Self = Self::new(0);
 
         #[doc = "– HDR Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -43039,36 +42310,6 @@ pub mod msdct6 {
 
         #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
-        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -43134,36 +42375,6 @@ pub mod msdct6_ha_l {
 
         #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
-        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -43219,36 +42430,6 @@ pub mod msdct6_by_lh {
         pub const _0: Self = Self::new(0);
 
         #[doc = "– HDR Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -43315,36 +42496,6 @@ pub mod msdct7 {
 
         #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
-        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -43410,36 +42561,6 @@ pub mod msdct7_ha_l {
 
         #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
-        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -43495,36 +42616,6 @@ pub mod msdct7_by_lh {
         pub const _0: Self = Self::new(0);
 
         #[doc = "– HDR Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -43599,36 +42690,6 @@ pub mod svdct {
 
         #[doc = "– HDR Capable"]
         pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
-        pub const _1: Self = Self::new(1);
     }
 }
 #[doc(hidden)]
@@ -43692,36 +42753,6 @@ pub mod svdct_ha_l {
         pub const _0: Self = Self::new(0);
 
         #[doc = "– HDR Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -43805,36 +42836,6 @@ pub mod svdct_by_lh {
         pub const _0: Self = Self::new(0);
 
         #[doc = "– HDR Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not a Bridge Device"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Is a Bridge Device"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Device will always respond to I3C Bus commands"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Device will not always respond to I3C Bus commands"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No data byte follows the accepted IBI"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Mandatory one or more data bytes follow the accepted IBI."]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– Not Capable"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Capable"]
-        pub const _1: Self = Self::new(1);
-
-        #[doc = "– No Limitation"]
-        pub const _0: Self = Self::new(0);
-
-        #[doc = "– Limitation"]
         pub const _1: Self = Self::new(1);
     }
 }

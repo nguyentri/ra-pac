@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -24,7 +24,7 @@ http://www.renesas.com/disclaimer
 use crate::common::sealed;
 #[allow(unused_imports)]
 use crate::common::*;
-#[doc = r"Interrupt Controller"]
+#[doc = r"Common Interrupt Controller"]
 unsafe impl ::core::marker::Send for super::IcuCommon {}
 unsafe impl ::core::marker::Sync for super::IcuCommon {}
 impl super::IcuCommon {
@@ -209,7 +209,7 @@ impl crate::sealed::RegSpec for Irqcr_SPEC {
 pub type Irqcr = crate::RegValueT<Irqcr_SPEC>;
 
 impl Irqcr {
-    #[doc = "IRQi Detection Sense Select"]
+    #[doc = "IRQ Detection Sense Select"]
     #[inline(always)]
     pub fn irqmd(
         self,
@@ -235,7 +235,7 @@ impl Irqcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "IRQi Digital Filter Sampling Clock Select"]
+    #[doc = "IRQ Digital Filter Sampling Clock Select"]
     #[inline(always)]
     pub fn fclksel(
         self,
@@ -261,7 +261,17 @@ impl Irqcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "IRQi Digital Filter Enable"]
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<6, 1, 0, Irqcr_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<6, 1, 0, Irqcr_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
+
+    #[doc = "IRQ Digital Filter Enable"]
     #[inline(always)]
     pub fn flten(
         self,
@@ -334,7 +344,7 @@ pub mod irqcr {
         #[doc = "Digital filter is disabled"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Digital filter is enabled."]
+        #[doc = "Digital filter is enabled"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -375,7 +385,7 @@ impl Nmicr {
         >::from_register(self, 0)
     }
 
-    #[doc = "NMI Digital Filter Sampling Clock Select"]
+    #[doc = "NMI Digital Filter Sampling Clock"]
     #[inline(always)]
     pub fn nfclksel(
         self,
@@ -399,6 +409,16 @@ impl Nmicr {
             Nmicr_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<6, 1, 0, Nmicr_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<6, 1, 0, Nmicr_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
     }
 
     #[doc = "NMI Digital Filter Enable"]
@@ -465,10 +485,10 @@ pub mod nmicr {
     pub struct Nflten_SPEC;
     pub type Nflten = crate::EnumBitfieldStruct<u8, Nflten_SPEC>;
     impl Nflten {
-        #[doc = "Disabled"]
+        #[doc = "Digital filter is disabled."]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Enabled"]
+        #[doc = "Digital filter is enabled."]
         pub const _1: Self = Self::new(1);
     }
 }

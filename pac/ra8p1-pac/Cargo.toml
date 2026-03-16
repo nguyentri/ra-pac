@@ -17,7 +17,7 @@
 
 [package]
 name = "ra8p1-pac"
-version = "0.2.0"
+version = "0.3.0"
 edition = "2024"
 description = "Peripheral Access Crate (PAC) for R7FAA8P1."
 authors = ["Tri Nguyen <trongtribk06@gmail.com>"]

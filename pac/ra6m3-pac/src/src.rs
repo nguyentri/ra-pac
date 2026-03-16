@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:32 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:12:21 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -819,9 +819,6 @@ pub mod srcctrl {
 
         #[doc = "48.0 kHz"]
         pub const _1010: Self = Self::new(10);
-
-        #[doc = "Settings prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ofs_SPEC;
@@ -844,9 +841,6 @@ pub mod srcctrl {
 
         #[doc = "16.0 kHz  ( Valid only when IFS\\[3:0\\] =1001b )"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Settings other than above are prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -864,52 +858,16 @@ impl Srcstat {
     #[inline(always)]
     pub fn ofdn(
         self,
-    ) -> crate::common::RegisterField<
-        11,
-        0x1f,
-        1,
-        0,
-        srcstat::Ofdn,
-        srcstat::Ofdn,
-        Srcstat_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            11,
-            0x1f,
-            1,
-            0,
-            srcstat::Ofdn,
-            srcstat::Ofdn,
-            Srcstat_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<11, 0x1f, 1, 0, u8, u8, Srcstat_SPEC, crate::common::R> {
+        crate::common::RegisterField::<11,0x1f,1,0,u8,u8,Srcstat_SPEC,crate::common::R>::from_register(self,0)
     }
 
     #[doc = "Input FIFO Data Count"]
     #[inline(always)]
     pub fn ifdn(
         self,
-    ) -> crate::common::RegisterField<
-        7,
-        0xf,
-        1,
-        0,
-        srcstat::Ifdn,
-        srcstat::Ifdn,
-        Srcstat_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            7,
-            0xf,
-            1,
-            0,
-            srcstat::Ifdn,
-            srcstat::Ifdn,
-            Srcstat_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<7, 0xf, 1, 0, u8, u8, Srcstat_SPEC, crate::common::R> {
+        crate::common::RegisterField::<7,0xf,1,0,u8,u8,Srcstat_SPEC,crate::common::R>::from_register(self,0)
     }
 
     #[doc = "Conversion End Flag"]
@@ -1076,20 +1034,6 @@ impl ::core::default::Default for Srcstat {
 }
 pub mod srcstat {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ofdn_SPEC;
-    pub type Ofdn = crate::EnumBitfieldStruct<u8, Ofdn_SPEC>;
-    impl Ofdn {
-        #[doc = "The value of OFDN indicatethe number of data units in the output FIFO."]
-        pub const OFDN: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Ifdn_SPEC;
-    pub type Ifdn = crate::EnumBitfieldStruct<u8, Ifdn_SPEC>;
-    impl Ifdn {
-        #[doc = "The value of IFDN indicatethe number of data units in the input FIFO."]
-        pub const IFDN: Self = Self::new(0);
-    }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cef_SPEC;
     pub type Cef = crate::EnumBitfieldStruct<u8, Cef_SPEC>;

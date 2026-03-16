@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:01 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:11:03 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -1530,9 +1530,6 @@ pub mod dvstctr0 {
 
         #[doc = "Setting prohibited"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "USB bus reset in progress(When the host controller function is selected)"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1928,9 +1925,6 @@ pub mod cfifosel {
 
         #[doc = "Pipe 9"]
         pub const _1001: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2364,9 +2358,6 @@ pub mod d0fifosel {
 
         #[doc = "Pipe 9"]
         pub const _1001: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2800,9 +2791,6 @@ pub mod d1fifosel {
 
         #[doc = "Pipe 9"]
         pub const _1001: Self = Self::new(9);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -5226,9 +5214,6 @@ pub mod intsts0 {
 
         #[doc = "Configured state"]
         pub const _011: Self = Self::new(3);
-
-        #[doc = "Suspended state"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Valid_SPEC;
@@ -5264,9 +5249,6 @@ pub mod intsts0 {
 
         #[doc = "Control transfer sequence error"]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -6908,9 +6890,6 @@ pub mod usbaddr {
 
         #[doc = "Return to the full-speed state (bits DVSTCTR0.RHST\\[2:0\\] = 010b), bits INTSTS0.DVSQ\\[2:0\\] = 011b (Configured state);(Recovery when the function controller is selected)"]
         pub const _1011: Self = Self::new(11);
-
-        #[doc = "Settings other than above are prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -7194,9 +7173,6 @@ pub mod dcpmaxp {
 
         #[doc = "Address 0101"]
         pub const _0101: Self = Self::new(5);
-
-        #[doc = "Settings prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -7627,9 +7603,6 @@ pub mod pipesel {
 
         #[doc = "PIPE9"]
         pub const _1001: Self = Self::new(9);
-
-        #[doc = "Settings prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -7921,9 +7894,6 @@ pub mod pipemaxp {
 
         #[doc = "Address 0101"]
         pub const _0101: Self = Self::new(5);
-
-        #[doc = "Settings prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:57:20 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -691,26 +691,9 @@ impl Fsaddr {
     #[inline(always)]
     pub fn fsaddr(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0xffffffff,
-        1,
-        0,
-        fsaddr::Fsaddr,
-        fsaddr::Fsaddr,
-        Fsaddr_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0xffffffff,
-            1,
-            0,
-            fsaddr::Fsaddr,
-            fsaddr::Fsaddr,
-            Fsaddr_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, u32, Fsaddr_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffffffff,1,0,u32,u32,Fsaddr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Fsaddr {
@@ -719,16 +702,7 @@ impl ::core::default::Default for Fsaddr {
         <crate::RegValueT<Fsaddr_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod fsaddr {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Fsaddr_SPEC;
-    pub type Fsaddr = crate::EnumBitfieldStruct<u8, Fsaddr_SPEC>;
-    impl Fsaddr {
-        #[doc = "Specifies start address for each command processing."]
-        pub const OTHERS: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Feaddr_SPEC;
@@ -887,9 +861,6 @@ pub mod fmeprot {
     impl Key {
         #[doc = "Writing to the other bits in this register is enabled."]
         pub const _0_X_D_9: Self = Self::new(217);
-
-        #[doc = "Writing to the other bits in this register is disabled."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1289,9 +1260,6 @@ pub mod fbprot0 {
     impl Key {
         #[doc = "Writing to the other bits in this register is enabled."]
         pub const _0_X_78: Self = Self::new(120);
-
-        #[doc = "Writing to the other bits in this register is disabled."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1389,9 +1357,6 @@ pub mod fbprot1 {
     impl Key {
         #[doc = "Writing to the other bits in this register is enabled."]
         pub const _0_X_B_1: Self = Self::new(177);
-
-        #[doc = "Writing to the other bits in this register is disabled."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1924,9 +1889,6 @@ pub mod fentryr {
     impl Key {
         #[doc = "Writing to the other bits in this register is enabled."]
         pub const _0_X_AA: Self = Self::new(170);
-
-        #[doc = "Writing to the other bits in this register is disabled."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2024,9 +1986,6 @@ pub mod fsuinitr {
     impl Key {
         #[doc = "Writing to the other bits in this register is enabled."]
         pub const _0_X_2_D: Self = Self::new(45);
-
-        #[doc = "Writing to the other bits in this register is disabled."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2044,52 +2003,16 @@ impl Fcmdr {
     #[inline(always)]
     pub fn pcmdr(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0xff,
-        1,
-        0,
-        fcmdr::Pcmdr,
-        fcmdr::Pcmdr,
-        Fcmdr_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0xff,
-            1,
-            0,
-            fcmdr::Pcmdr,
-            fcmdr::Pcmdr,
-            Fcmdr_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, Fcmdr_SPEC, crate::common::R> {
+        crate::common::RegisterField::<0,0xff,1,0,u8,u8,Fcmdr_SPEC,crate::common::R>::from_register(self,0)
     }
 
     #[doc = "Command Register"]
     #[inline(always)]
     pub fn cmdr(
         self,
-    ) -> crate::common::RegisterField<
-        8,
-        0xff,
-        1,
-        0,
-        fcmdr::Cmdr,
-        fcmdr::Cmdr,
-        Fcmdr_SPEC,
-        crate::common::R,
-    > {
-        crate::common::RegisterField::<
-            8,
-            0xff,
-            1,
-            0,
-            fcmdr::Cmdr,
-            fcmdr::Cmdr,
-            Fcmdr_SPEC,
-            crate::common::R,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<8, 0xff, 1, 0, u8, u8, Fcmdr_SPEC, crate::common::R> {
+        crate::common::RegisterField::<8,0xff,1,0,u8,u8,Fcmdr_SPEC,crate::common::R>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Fcmdr {
@@ -2098,23 +2021,7 @@ impl ::core::default::Default for Fcmdr {
         <crate::RegValueT<Fcmdr_SPEC> as RegisterValue<_>>::new(0)
     }
 }
-pub mod fcmdr {
 
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Pcmdr_SPEC;
-    pub type Pcmdr = crate::EnumBitfieldStruct<u8, Pcmdr_SPEC>;
-    impl Pcmdr {
-        #[doc = "These bits store previous command accepted by FACI."]
-        pub const OTHERS: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Cmdr_SPEC;
-    pub type Cmdr = crate::EnumBitfieldStruct<u8, Cmdr_SPEC>;
-    impl Cmdr {
-        #[doc = "These bits store the latest command accepted by FACI."]
-        pub const OTHERS: Self = Self::new(0);
-    }
-}
 #[doc(hidden)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fbccnt_SPEC;
@@ -2496,26 +2403,8 @@ impl Fpckar {
     #[inline(always)]
     pub fn pcka(
         self,
-    ) -> crate::common::RegisterField<
-        0,
-        0xff,
-        1,
-        0,
-        fpckar::Pcka,
-        fpckar::Pcka,
-        Fpckar_SPEC,
-        crate::common::RW,
-    > {
-        crate::common::RegisterField::<
-            0,
-            0xff,
-            1,
-            0,
-            fpckar::Pcka,
-            fpckar::Pcka,
-            Fpckar_SPEC,
-            crate::common::RW,
-        >::from_register(self, 0)
+    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, Fpckar_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<0,0xff,1,0,u8,u8,Fpckar_SPEC,crate::common::RW>::from_register(self,0)
     }
 
     #[doc = "KEY Code"]
@@ -2553,21 +2442,11 @@ impl ::core::default::Default for Fpckar {
 pub mod fpckar {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
-    pub struct Pcka_SPEC;
-    pub type Pcka = crate::EnumBitfieldStruct<u8, Pcka_SPEC>;
-    impl Pcka {
-        #[doc = "Notifies operating frequency of clkf."]
-        pub const OTHERS: Self = Self::new(0);
-    }
-    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Key_SPEC;
     pub type Key = crate::EnumBitfieldStruct<u8, Key_SPEC>;
     impl Key {
         #[doc = "Writing to the other bits in this register is enabled."]
         pub const _0_X_1_E: Self = Self::new(30);
-
-        #[doc = "Writing to the other bits in this register is disabled."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2658,9 +2537,6 @@ pub mod fsuacr {
 
         #[doc = "The start-up area is temporarily switched to the alternate area (sector 1) regardless of the BTFLG bit. When a reset is generated after setting, the start-up area is selected according to the BTFLG bit."]
         pub const _11: Self = Self::new(3);
-
-        #[doc = "The start-up area is selected according to the start-up area setting of the configuration area (BTFLG bit)."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Key_SPEC;
@@ -2668,8 +2544,5 @@ pub mod fsuacr {
     impl Key {
         #[doc = "Writing to the other bits in this register is enabled."]
         pub const _0_X_66: Self = Self::new(102);
-
-        #[doc = "Writing to the other bits in this register is disabled."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }

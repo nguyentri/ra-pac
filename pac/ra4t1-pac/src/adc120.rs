@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:50:08 +0000
+// Generated from SVD 1.20.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:08:27 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -3541,9 +3541,6 @@ pub mod adadc {
 
         #[doc = "16-time conversion (15 additions)"]
         pub const _101: Self = Self::new(5);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Avee_SPEC;
@@ -5613,9 +5610,6 @@ pub mod addiscr {
 
         #[doc = "Setting prohibited"]
         pub const _0_X_1: Self = Self::new(1);
-
-        #[doc = "The number of states for the discharge or precharge period."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Pchg_SPEC;
@@ -11143,9 +11137,6 @@ pub mod adpgags0 {
 
         #[doc = "× 13.333"]
         pub const _0_X_E: Self = Self::new(14);
-
-        #[doc = "Settings are prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P001Gain_SPEC;
@@ -11195,9 +11186,6 @@ pub mod adpgags0 {
 
         #[doc = "× 13.333"]
         pub const _0_X_E: Self = Self::new(14);
-
-        #[doc = "Settings are prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct P002Gain_SPEC;
@@ -11247,9 +11235,6 @@ pub mod adpgags0 {
 
         #[doc = "× 13.333"]
         pub const _0_X_E: Self = Self::new(14);
-
-        #[doc = "Settings are prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]

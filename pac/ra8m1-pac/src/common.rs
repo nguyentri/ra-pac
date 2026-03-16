@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:57:20 +0000
 
 use core::convert::From;
 use core::marker::PhantomData;
@@ -295,15 +295,15 @@ where
             let val = {
                 let mut buf: u64 = 0x0;
                 tracing::READ_FN.with(|rf| {
-                    if let Some(rf) = rf.get() {
-                        buf = rf(self.addr(), std::mem::size_of::<T::DataType>());
-                    } else {
-                        #[cfg(not(feature = "tracing_dummy"))]
-                        panic!(
+                if let Some(rf) = rf.get() {
+                    buf = rf(self.addr(), std::mem::size_of::<T::DataType>());
+                } else {
+                    #[cfg(not(feature = "tracing_dummy"))]
+                    panic!(
                         "Please, provide an handler for read with tracing::set_read_fn(callback);"
                     );
-                    }
-                });
+                }
+            });
                 T::DataType::cast_from(buf)
             };
             #[cfg(not(feature = "tracing"))]

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -24,7 +24,7 @@ http://www.renesas.com/disclaimer
 use crate::common::sealed;
 #[allow(unused_imports)]
 use crate::common::*;
-#[doc = r"Low Power Asynchronous General Purpose Timer 0"]
+#[doc = r"Low Power Asynchronous General purpose Timer 0"]
 unsafe impl ::core::marker::Send for super::Agt0 {}
 unsafe impl ::core::marker::Sync for super::Agt0 {}
 impl super::Agt0 {
@@ -160,7 +160,15 @@ impl crate::sealed::RegSpec for Agt_SPEC {
 #[doc = "AGT Counter Register"]
 pub type Agt = crate::RegValueT<Agt_SPEC>;
 
-impl NoBitfieldReg<Agt_SPEC> for Agt {}
+impl Agt {
+    #[doc = "16bit counter and reload registerNOTE : When 1 is written to the TSTOP bit in the AGTCRn register, the 16-bit counter is forcibly stopped and set to FFFFH."]
+    #[inline(always)]
+    pub fn agt(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Agt_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Agt_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Agt {
     #[inline(always)]
     fn default() -> Agt {
@@ -178,7 +186,16 @@ impl crate::sealed::RegSpec for Agtcma_SPEC {
 #[doc = "AGT Compare Match A Register"]
 pub type Agtcma = crate::RegValueT<Agtcma_SPEC>;
 
-impl NoBitfieldReg<Agtcma_SPEC> for Agtcma {}
+impl Agtcma {
+    #[doc = "AGT Compare Match A RegisterNOTE : When 1 is written to the TSTOP bit in the AGTCRn register, set to FFFFH"]
+    #[inline(always)]
+    pub fn agtcma(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Agtcma_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Agtcma_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Agtcma {
     #[inline(always)]
     fn default() -> Agtcma {
@@ -196,7 +213,16 @@ impl crate::sealed::RegSpec for Agtcmb_SPEC {
 #[doc = "AGT Compare Match B Register"]
 pub type Agtcmb = crate::RegValueT<Agtcmb_SPEC>;
 
-impl NoBitfieldReg<Agtcmb_SPEC> for Agtcmb {}
+impl Agtcmb {
+    #[doc = "AGT Compare Match B RegisterNOTE : When 1 is written to the TSTOP bit in the AGTCR register, set to FFFFH"]
+    #[inline(always)]
+    pub fn agtcmb(
+        self,
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, Agtcmb_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,Agtcmb_SPEC,crate::common::RW>::from_register(self,0)
+    }
+}
 impl ::core::default::Default for Agtcmb {
     #[inline(always)]
     fn default() -> Agtcmb {
@@ -215,7 +241,7 @@ impl crate::sealed::RegSpec for Agtcr_SPEC {
 pub type Agtcr = crate::RegValueT<Agtcr_SPEC>;
 
 impl Agtcr {
-    #[doc = "AGT Count Start"]
+    #[doc = "AGT count start"]
     #[inline(always)]
     pub fn tstart(
         self,
@@ -241,7 +267,7 @@ impl Agtcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "AGT Count Status Flag"]
+    #[doc = "AGT count status flag"]
     #[inline(always)]
     pub fn tcstf(
         self,
@@ -267,7 +293,7 @@ impl Agtcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "AGT Count Forced Stop"]
+    #[doc = "AGT count forced stop"]
     #[inline(always)]
     pub fn tstop(
         self,
@@ -293,7 +319,17 @@ impl Agtcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Active Edge Judgment Flag"]
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<3, 1, 0, Agtcr_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<3, 1, 0, Agtcr_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
+
+    #[doc = "Active edge judgement flag"]
     #[inline(always)]
     pub fn tedgf(
         self,
@@ -319,7 +355,7 @@ impl Agtcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Underflow Flag"]
+    #[doc = "AGT underflow flag"]
     #[inline(always)]
     pub fn tundf(
         self,
@@ -345,7 +381,7 @@ impl Agtcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Match A Flag"]
+    #[doc = "AGT compare match A flag"]
     #[inline(always)]
     pub fn tcmaf(
         self,
@@ -371,7 +407,7 @@ impl Agtcr {
         >::from_register(self, 0)
     }
 
-    #[doc = "Compare Match B Flag"]
+    #[doc = "AGT compare match B flag"]
     #[inline(always)]
     pub fn tcmbf(
         self,
@@ -419,20 +455,20 @@ pub mod agtcr {
     pub struct Tcstf_SPEC;
     pub type Tcstf = crate::EnumBitfieldStruct<u8, Tcstf_SPEC>;
     impl Tcstf {
-        #[doc = "Count stopped"]
+        #[doc = "Count stops"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Count in progress"]
+        #[doc = "Count starts"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tstop_SPEC;
     pub type Tstop = crate::EnumBitfieldStruct<u8, Tstop_SPEC>;
     impl Tstop {
-        #[doc = "Writing is invalid"]
+        #[doc = "no effect"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "The count is forcibly stopped"]
+        #[doc = "The count is forcibly stopped."]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -459,7 +495,7 @@ pub mod agtcr {
     pub struct Tcmaf_SPEC;
     pub type Tcmaf = crate::EnumBitfieldStruct<u8, Tcmaf_SPEC>;
     impl Tcmaf {
-        #[doc = "No match"]
+        #[doc = "No Match"]
         pub const _0: Self = Self::new(0);
 
         #[doc = "Match"]
@@ -469,7 +505,7 @@ pub mod agtcr {
     pub struct Tcmbf_SPEC;
     pub type Tcmbf = crate::EnumBitfieldStruct<u8, Tcmbf_SPEC>;
     impl Tcmbf {
-        #[doc = "No match"]
+        #[doc = "No Match"]
         pub const _0: Self = Self::new(0);
 
         #[doc = "Match"]
@@ -487,7 +523,7 @@ impl crate::sealed::RegSpec for Agtmr1_SPEC {
 pub type Agtmr1 = crate::RegValueT<Agtmr1_SPEC>;
 
 impl Agtmr1 {
-    #[doc = "Operating Mode"]
+    #[doc = "AGT operating mode select"]
     #[inline(always)]
     pub fn tmod(
         self,
@@ -513,7 +549,7 @@ impl Agtmr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Edge Polarity"]
+    #[doc = "AGTIO edge polarity select"]
     #[inline(always)]
     pub fn tedgpl(
         self,
@@ -539,7 +575,7 @@ impl Agtmr1 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Count Source"]
+    #[doc = "AGT count source select"]
     #[inline(always)]
     pub fn tck(
         self,
@@ -563,6 +599,16 @@ impl Agtmr1 {
             Agtmr1_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<7, 1, 0, Agtmr1_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<7, 1, 0, Agtmr1_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
     }
 }
 impl ::core::default::Default for Agtmr1 {
@@ -591,18 +637,15 @@ pub mod agtmr1 {
 
         #[doc = "Pulse period measurement mode"]
         pub const _100: Self = Self::new(4);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tedgpl_SPEC;
     pub type Tedgpl = crate::EnumBitfieldStruct<u8, Tedgpl_SPEC>;
     impl Tedgpl {
-        #[doc = "Single-edge"]
+        #[doc = "One edge"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Both-edge"]
+        #[doc = "Both edges"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -618,17 +661,14 @@ pub mod agtmr1 {
         #[doc = "PCLKB/2"]
         pub const _011: Self = Self::new(3);
 
-        #[doc = "Divided clock AGTLCLK specified by CKS\\[2:0\\] bits in the AGTMR2 register"]
+        #[doc = "Divided clock LOCO specified by AGTMR2.CKS bit."]
         pub const _100: Self = Self::new(4);
 
-        #[doc = "Underflow event signal from AGT0"]
+        #[doc = "Underflow event signal from AGT"]
         pub const _101: Self = Self::new(5);
 
-        #[doc = "Divided clock AGTSCLK specified by CKS\\[2:0\\] bits in the AGTMR2 register"]
+        #[doc = "Divided clock fSUB specified by AGTMR2.CKS bit."]
         pub const _110: Self = Self::new(6);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -642,7 +682,7 @@ impl crate::sealed::RegSpec for Agtmr2_SPEC {
 pub type Agtmr2 = crate::RegValueT<Agtmr2_SPEC>;
 
 impl Agtmr2 {
-    #[doc = "AGTLCLK or AGTSCLK Count Source Clock Frequency Division Ratio"]
+    #[doc = "fsub/LOCO count source clock frequency division ratio select"]
     #[inline(always)]
     pub fn cks(
         self,
@@ -668,7 +708,15 @@ impl Agtmr2 {
         >::from_register(self, 0)
     }
 
-    #[doc = "Low Power Mode"]
+    #[doc = "These bits are read as 0000. The write value should be 0000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<3, 0xf, 1, 0, u8, u8, Agtmr2_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<3,0xf,1,0,u8,u8,Agtmr2_SPEC,crate::common::RW>::from_register(self,0)
+    }
+
+    #[doc = "AGT Low Power Mode"]
     #[inline(always)]
     pub fn lpm(
         self,
@@ -737,7 +785,7 @@ pub mod agtmr2 {
         #[doc = "Normal mode"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Low power mode"]
+        #[doc = "Low Power mode"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -752,7 +800,7 @@ impl crate::sealed::RegSpec for Agtioc_SPEC {
 pub type Agtioc = crate::RegValueT<Agtioc_SPEC>;
 
 impl Agtioc {
-    #[doc = "I/O Polarity Switch"]
+    #[doc = "I/O polarity switchFunction varies depending on the operating mode."]
     #[inline(always)]
     pub fn tedgsel(
         self,
@@ -762,7 +810,7 @@ impl Agtioc {
         )
     }
 
-    #[doc = "AGTOn pin Output Enable"]
+    #[doc = "AGTO output enable"]
     #[inline(always)]
     pub fn toe(
         self,
@@ -788,7 +836,17 @@ impl Agtioc {
         >::from_register(self, 0)
     }
 
-    #[doc = "Input Filter"]
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<3, 1, 0, Agtioc_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<3, 1, 0, Agtioc_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
+
+    #[doc = "AGTIO input filter select"]
     #[inline(always)]
     pub fn tipf(
         self,
@@ -814,7 +872,7 @@ impl Agtioc {
         >::from_register(self, 0)
     }
 
-    #[doc = "Count Control"]
+    #[doc = "AGTIO count control"]
     #[inline(always)]
     pub fn tiogt(
         self,
@@ -852,10 +910,10 @@ pub mod agtioc {
     pub struct Toe_SPEC;
     pub type Toe = crate::EnumBitfieldStruct<u8, Toe_SPEC>;
     impl Toe {
-        #[doc = "AGTOn pin output disabled"]
+        #[doc = "AGTO output disabled (port)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "AGTOn pin output enabled"]
+        #[doc = "AGTO output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
@@ -881,11 +939,8 @@ pub mod agtioc {
         #[doc = "Event is always counted"]
         pub const _00: Self = Self::new(0);
 
-        #[doc = "Event is counted during polarity period specified for AGTEEn pin"]
+        #[doc = "Event is counted during polarity period specified for AGTEE"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -899,7 +954,7 @@ impl crate::sealed::RegSpec for Agtisr_SPEC {
 pub type Agtisr = crate::RegValueT<Agtisr_SPEC>;
 
 impl Agtisr {
-    #[doc = "AGTEEn Polarity Selection"]
+    #[doc = "AGTEE  polarty selection"]
     #[inline(always)]
     pub fn eeps(
         self,
@@ -923,6 +978,14 @@ impl Agtisr {
             Agtisr_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
+    }
+
+    #[doc = "These bits are read as 00000. The write value should be 00000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<3, 0x1f, 1, 0, u8, u8, Agtisr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<3,0x1f,1,0,u8,u8,Agtisr_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Agtisr {
@@ -955,7 +1018,7 @@ impl crate::sealed::RegSpec for Agtcmsr_SPEC {
 pub type Agtcmsr = crate::RegValueT<Agtcmsr_SPEC>;
 
 impl Agtcmsr {
-    #[doc = "AGT Compare Match A Register Enable"]
+    #[doc = "Compare match A register enable"]
     #[inline(always)]
     pub fn tcmea(
         self,
@@ -981,7 +1044,7 @@ impl Agtcmsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "AGTOAn Pin Output Enable"]
+    #[doc = "AGTOA output enable"]
     #[inline(always)]
     pub fn toea(
         self,
@@ -1007,7 +1070,7 @@ impl Agtcmsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "AGTOAn Pin Polarity Select"]
+    #[doc = "AGTOA polarity select"]
     #[inline(always)]
     pub fn topola(
         self,
@@ -1033,7 +1096,7 @@ impl Agtcmsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "AGT Compare Match B Register Enable"]
+    #[doc = "Compare match B register enable"]
     #[inline(always)]
     pub fn tcmeb(
         self,
@@ -1059,7 +1122,7 @@ impl Agtcmsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "AGTOBn Pin Output Enable"]
+    #[doc = "AGTOB output enable"]
     #[inline(always)]
     pub fn toeb(
         self,
@@ -1085,7 +1148,7 @@ impl Agtcmsr {
         >::from_register(self, 0)
     }
 
-    #[doc = "AGTOBn Pin Polarity Select"]
+    #[doc = "AGTOB polarity select"]
     #[inline(always)]
     pub fn topolb(
         self,
@@ -1110,6 +1173,16 @@ impl Agtcmsr {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "This bit is read as 0. The write value should be 0."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterFieldBool<7, 1, 0, Agtcmsr_SPEC, crate::common::RW> {
+        crate::common::RegisterFieldBool::<7, 1, 0, Agtcmsr_SPEC, crate::common::RW>::from_register(
+            self, 0,
+        )
+    }
 }
 impl ::core::default::Default for Agtcmsr {
     #[inline(always)]
@@ -1123,60 +1196,60 @@ pub mod agtcmsr {
     pub struct Tcmea_SPEC;
     pub type Tcmea = crate::EnumBitfieldStruct<u8, Tcmea_SPEC>;
     impl Tcmea {
-        #[doc = "AGT Compare match A register disabled"]
+        #[doc = "Disable compare match A register"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "AGT Compare match A register enabled"]
+        #[doc = "Enable compare match A register"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Toea_SPEC;
     pub type Toea = crate::EnumBitfieldStruct<u8, Toea_SPEC>;
     impl Toea {
-        #[doc = "AGTOAn pin output disabled"]
+        #[doc = "AGTOA output disabled (port)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "AGTOAn pin output enabled"]
+        #[doc = "AGTOA output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Topola_SPEC;
     pub type Topola = crate::EnumBitfieldStruct<u8, Topola_SPEC>;
     impl Topola {
-        #[doc = "AGTOAn pin output is started on low. i.e. normal output"]
+        #[doc = "AGTOA Output is started at low"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "AGTOAn pin output is started on high. i.e. inverted output"]
+        #[doc = "AGTOA Output is started at high"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Tcmeb_SPEC;
     pub type Tcmeb = crate::EnumBitfieldStruct<u8, Tcmeb_SPEC>;
     impl Tcmeb {
-        #[doc = "Compare match B register disabled"]
+        #[doc = "Disable compare match B register"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Compare match B register enabled"]
+        #[doc = "Enable compare match B register"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Toeb_SPEC;
     pub type Toeb = crate::EnumBitfieldStruct<u8, Toeb_SPEC>;
     impl Toeb {
-        #[doc = "AGTOBn pin output disabled"]
+        #[doc = "AGTOB output disabled (port)"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "AGTOBn pin output enabled"]
+        #[doc = "AGTOB output enabled"]
         pub const _1: Self = Self::new(1);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Topolb_SPEC;
     pub type Topolb = crate::EnumBitfieldStruct<u8, Topolb_SPEC>;
     impl Topolb {
-        #[doc = "AGTOBn pin output is started on low. i.e. normal output"]
+        #[doc = "AGTOB Output is started at low"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "AGTOBn pin output is started on high. i.e. inverted output"]
+        #[doc = "AGTOB Output is started at high"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -1191,7 +1264,33 @@ impl crate::sealed::RegSpec for Agtiosel_SPEC {
 pub type Agtiosel = crate::RegValueT<Agtiosel_SPEC>;
 
 impl Agtiosel {
-    #[doc = "AGTIOn Pin Input Enable"]
+    #[doc = "AGTIO pin select"]
+    #[inline(always)]
+    pub fn sel(
+        self,
+    ) -> crate::common::RegisterField<
+        0,
+        0x3,
+        1,
+        0,
+        agtiosel::Sel,
+        agtiosel::Sel,
+        Agtiosel_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x3,
+            1,
+            0,
+            agtiosel::Sel,
+            agtiosel::Sel,
+            Agtiosel_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
+    }
+
+    #[doc = "AGTIO input enable"]
     #[inline(always)]
     pub fn ties(
         self,
@@ -1216,6 +1315,14 @@ impl Agtiosel {
             crate::common::RW,
         >::from_register(self, 0)
     }
+
+    #[doc = "These bits are read as 000. The write value should be 000."]
+    #[inline(always)]
+    pub fn reserved(
+        self,
+    ) -> crate::common::RegisterField<5, 0x7, 1, 0, u8, u8, Agtiosel_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<5,0x7,1,0,u8,u8,Agtiosel_SPEC,crate::common::RW>::from_register(self,0)
+    }
 }
 impl ::core::default::Default for Agtiosel {
     #[inline(always)]
@@ -1226,13 +1333,29 @@ impl ::core::default::Default for Agtiosel {
 pub mod agtiosel {
 
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
+    pub struct Sel_SPEC;
+    pub type Sel = crate::EnumBitfieldStruct<u8, Sel_SPEC>;
+    impl Sel {
+        #[doc = "AGTIO_A can not be used as AGTIO input pin in deep software standby mode"]
+        pub const _00: Self = Self::new(0);
+
+        #[doc = "Setting prohibited"]
+        pub const _01: Self = Self::new(1);
+
+        #[doc = "AGTIO_B can be used as AGTIO input pin in deep software standby mode. AGTIO_B is input only. It is not possible to output."]
+        pub const _10: Self = Self::new(2);
+
+        #[doc = "AGTIO_C can be used as AGTIO input pin in deep software standby mode. AGTIO_C is input only. It is not possible to output."]
+        pub const _11: Self = Self::new(3);
+    }
+    #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ties_SPEC;
     pub type Ties = crate::EnumBitfieldStruct<u8, Ties_SPEC>;
     impl Ties {
-        #[doc = "External event input is disabled during Software Standby mode"]
+        #[doc = "external event input disable during software standby mode"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "External event input is enabled during Software Standby mode"]
+        #[doc = "external event input enable during software standby mode"]
         pub const _1: Self = Self::new(1);
     }
 }

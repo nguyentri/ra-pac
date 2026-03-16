@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:55:06 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:57:20 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -591,9 +591,6 @@ pub mod sd_cmd {
 
         #[doc = "ACMD"]
         pub const _01: Self = Self::new(1);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rsptp_SPEC;
@@ -616,9 +613,6 @@ pub mod sd_cmd {
 
         #[doc = "Expansion mode and R3 or R4 response"]
         pub const _111: Self = Self::new(7);
-
-        #[doc = "Settings prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Cmdtp_SPEC;
@@ -2736,9 +2730,6 @@ pub mod sd_clk_ctrl {
 
         #[doc = "PCLKA divided by 512"]
         pub const _0_X_80: Self = Self::new(128);
-
-        #[doc = "Settings prohibited."]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Clken_SPEC;
@@ -2943,9 +2934,6 @@ pub mod sd_option {
     impl Ctop {
         #[doc = "Setting prohibited"]
         pub const _1111: Self = Self::new(15);
-
-        #[doc = "IMCLK x 2^(CTOP+10)"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Top_SPEC;
@@ -2953,9 +2941,6 @@ pub mod sd_option {
     impl Top {
         #[doc = "Setting prohibited"]
         pub const _1111: Self = Self::new(15);
-
-        #[doc = "SDHI clock x 2^(TOP+13)"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Toutmask_SPEC;

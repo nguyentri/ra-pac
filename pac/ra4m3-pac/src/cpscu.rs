@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.50.00, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:49:54 +0000
+// Generated from SVD 1.40.00, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:07:45 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -586,11 +586,8 @@ pub mod stbramsar {
         #[doc = "Region7-2 are Non-secure. Region 1-0 are Secure."]
         pub const _0_X_6: Self = Self::new(6);
 
-        #[doc = "Region7-1 are Non-secure. Region0 is Secure."]
+        #[doc = "Region7-1 are Non-Secure. Region0 is Secure."]
         pub const _0_X_7: Self = Self::new(7);
-
-        #[doc = "Region7-0 are all Non-secure."]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -5417,7 +5414,7 @@ pub mod bussara {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non-Secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5473,7 +5470,7 @@ pub mod bussarb {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non-Secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5529,7 +5526,7 @@ pub mod mmpusara {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non-Secure"]
         pub const _1: Self = Self::new(1);
     }
 }
@@ -5585,7 +5582,7 @@ pub mod mmpusarb {
         #[doc = "Secure"]
         pub const _0: Self = Self::new(0);
 
-        #[doc = "Non-secure"]
+        #[doc = "Non-Secure"]
         pub const _1: Self = Self::new(1);
     }
 }

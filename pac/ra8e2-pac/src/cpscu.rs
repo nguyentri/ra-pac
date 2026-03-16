@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.00.01, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:54:26 +0000
+// Generated from SVD 1.00.01, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:40:06 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -280,7 +280,7 @@ impl super::Cpscu {
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Sramsabar_SPEC, crate::common::RW>,
-        2,
+        3,
         0x4,
     > {
         unsafe {
@@ -304,6 +304,16 @@ impl super::Cpscu {
         unsafe {
             crate::common::Reg::<self::Sramsabar_SPEC, crate::common::RW>::from_ptr(
                 self._svd2pac_as_ptr().add(0x404usize),
+            )
+        }
+    }
+    #[inline(always)]
+    pub const fn sramsabar2(
+        &self,
+    ) -> &'static crate::common::Reg<self::Sramsabar_SPEC, crate::common::RW> {
+        unsafe {
+            crate::common::Reg::<self::Sramsabar_SPEC, crate::common::RW>::from_ptr(
+                self._svd2pac_as_ptr().add(0x408usize),
             )
         }
     }

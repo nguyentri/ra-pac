@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:51:32 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 07:12:21 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -486,9 +486,6 @@ pub mod jcmod {
 
         #[doc = "Setting prohibited(Compression) / YCbCr420/\\[Decompression\\]"]
         pub const _010: Self = Self::new(2);
-
-        #[doc = "Setting prohibited(Compression) / Error (this module cannot process normally.)(Decompression\\])"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -1570,9 +1567,6 @@ pub mod jcderr {
 
         #[doc = "Block data number error detected(Decompression error codes)/Block data number error(Segment error codes)"]
         pub const _1110: Self = Self::new(14);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
 }
 #[doc(hidden)]
@@ -2263,9 +2257,6 @@ pub mod jifdcnt {
 
         #[doc = "RGB565"]
         pub const _10: Self = Self::new(2);
-
-        #[doc = "Setting prohibited"]
-        pub const OTHERS: Self = Self::new(0);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Jinrini_SPEC;

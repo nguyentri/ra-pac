@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.20.02, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:53:12 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.1 on Sun, 15 Mar 2026 06:38:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,7 +34,7 @@ impl super::Flad {
         self.ptr
     }
 
-    #[doc = "Data Flash Access Frequency Register"]
+    #[doc = "Data Flash Reading Access Clock Frequency Register"]
     #[inline(always)]
     pub const fn fckmhz(
         &self,
@@ -53,11 +53,11 @@ impl crate::sealed::RegSpec for Fckmhz_SPEC {
     type DataType = u8;
 }
 
-#[doc = "Data Flash Access Frequency Register"]
+#[doc = "Data Flash Reading Access Clock Frequency Register"]
 pub type Fckmhz = crate::RegValueT<Fckmhz_SPEC>;
 
 impl Fckmhz {
-    #[doc = "Data Flash Access Frequency Register"]
+    #[doc = "Data Flash Reading Access Clock FrequencyNotifies operating frequency of clkf. Round up operating frequency in MHz unit, convert to binary, and write it to FCKMHZ bits.example) clkf = 35.9MHz (FCKMHZ = H\'24)Round up 35.9Convert 36 to binary"]
     #[inline(always)]
     pub fn fckmhz(
         self,
@@ -68,6 +68,6 @@ impl Fckmhz {
 impl ::core::default::Default for Fckmhz {
     #[inline(always)]
     fn default() -> Fckmhz {
-        <crate::RegValueT<Fckmhz_SPEC> as RegisterValue<_>>::new(60)
+        <crate::RegValueT<Fckmhz_SPEC> as RegisterValue<_>>::new(0)
     }
 }

@@ -536,7 +536,7 @@ impl super::Mfwd {
 
     #[doc = "Cut-Through Target Configuration Register i0"]
     #[inline(always)]
-    pub const fn fwcttc0(
+    pub const fn fwcttc_0(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Fwcttc0_SPEC, crate::common::RW>,
@@ -548,7 +548,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc00(
+    pub const fn fwcttc0_0(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc0_SPEC, crate::common::RW> {
         unsafe {
@@ -558,7 +558,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc10(
+    pub const fn fwcttc1_0(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc0_SPEC, crate::common::RW> {
         unsafe {
@@ -568,7 +568,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc20(
+    pub const fn fwcttc2_0(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc0_SPEC, crate::common::RW> {
         unsafe {
@@ -578,7 +578,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc30(
+    pub const fn fwcttc3_0(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc0_SPEC, crate::common::RW> {
         unsafe {
@@ -588,7 +588,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc40(
+    pub const fn fwcttc4_0(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc0_SPEC, crate::common::RW> {
         unsafe {
@@ -598,7 +598,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc50(
+    pub const fn fwcttc5_0(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc0_SPEC, crate::common::RW> {
         unsafe {
@@ -608,7 +608,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc60(
+    pub const fn fwcttc6_0(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc0_SPEC, crate::common::RW> {
         unsafe {
@@ -618,7 +618,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc70(
+    pub const fn fwcttc7_0(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc0_SPEC, crate::common::RW> {
         unsafe {
@@ -630,7 +630,7 @@ impl super::Mfwd {
 
     #[doc = "Cut-Through Target Configuration Register i1"]
     #[inline(always)]
-    pub const fn fwcttc1(
+    pub const fn fwcttc_1(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Fwcttc1_SPEC, crate::common::RW>,
@@ -642,7 +642,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc01(
+    pub const fn fwcttc0_1(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc1_SPEC, crate::common::RW> {
         unsafe {
@@ -652,7 +652,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc11(
+    pub const fn fwcttc1_1(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc1_SPEC, crate::common::RW> {
         unsafe {
@@ -662,7 +662,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc21(
+    pub const fn fwcttc2_1(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc1_SPEC, crate::common::RW> {
         unsafe {
@@ -672,7 +672,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc31(
+    pub const fn fwcttc3_1(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc1_SPEC, crate::common::RW> {
         unsafe {
@@ -682,7 +682,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc41(
+    pub const fn fwcttc4_1(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc1_SPEC, crate::common::RW> {
         unsafe {
@@ -692,7 +692,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc51(
+    pub const fn fwcttc5_1(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc1_SPEC, crate::common::RW> {
         unsafe {
@@ -702,7 +702,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc61(
+    pub const fn fwcttc6_1(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc1_SPEC, crate::common::RW> {
         unsafe {
@@ -712,7 +712,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc71(
+    pub const fn fwcttc7_1(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc1_SPEC, crate::common::RW> {
         unsafe {
@@ -724,7 +724,7 @@ impl super::Mfwd {
 
     #[doc = "Cut-Through Target Configuration Register i20"]
     #[inline(always)]
-    pub const fn fwcttc20(
+    pub const fn fwcttc_20(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Fwcttc20_SPEC, crate::common::RW>,
@@ -736,7 +736,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc020(
+    pub const fn fwcttc0_20(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc20_SPEC, crate::common::RW> {
         unsafe {
@@ -746,7 +746,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc120(
+    pub const fn fwcttc1_20(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc20_SPEC, crate::common::RW> {
         unsafe {
@@ -756,7 +756,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc220(
+    pub const fn fwcttc2_20(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc20_SPEC, crate::common::RW> {
         unsafe {
@@ -766,7 +766,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc320(
+    pub const fn fwcttc3_20(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc20_SPEC, crate::common::RW> {
         unsafe {
@@ -776,7 +776,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc420(
+    pub const fn fwcttc4_20(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc20_SPEC, crate::common::RW> {
         unsafe {
@@ -786,7 +786,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc520(
+    pub const fn fwcttc5_20(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc20_SPEC, crate::common::RW> {
         unsafe {
@@ -796,7 +796,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc620(
+    pub const fn fwcttc6_20(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc20_SPEC, crate::common::RW> {
         unsafe {
@@ -806,7 +806,7 @@ impl super::Mfwd {
         }
     }
     #[inline(always)]
-    pub const fn fwcttc720(
+    pub const fn fwcttc7_20(
         &self,
     ) -> &'static crate::common::Reg<self::Fwcttc20_SPEC, crate::common::RW> {
         unsafe {

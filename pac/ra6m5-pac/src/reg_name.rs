@@ -6365,388 +6365,388 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       CANFD.cfdrffdsts()[7],
     ",
   0x400b600cu64 => "
-      CANFD.cfdrfdf0()[0],
+      CANFD.cfdrfdf_0()[0],
     ",
   0x400b608cu64 => "
-      CANFD.cfdrfdf0()[1],
+      CANFD.cfdrfdf_0()[1],
     ",
   0x400b610cu64 => "
-      CANFD.cfdrfdf0()[2],
+      CANFD.cfdrfdf_0()[2],
     ",
   0x400b618cu64 => "
-      CANFD.cfdrfdf0()[3],
+      CANFD.cfdrfdf_0()[3],
     ",
   0x400b620cu64 => "
-      CANFD.cfdrfdf0()[4],
+      CANFD.cfdrfdf_0()[4],
     ",
   0x400b628cu64 => "
-      CANFD.cfdrfdf0()[5],
+      CANFD.cfdrfdf_0()[5],
     ",
   0x400b630cu64 => "
-      CANFD.cfdrfdf0()[6],
+      CANFD.cfdrfdf_0()[6],
     ",
   0x400b638cu64 => "
-      CANFD.cfdrfdf0()[7],
+      CANFD.cfdrfdf_0()[7],
     ",
   0x400b6010u64 => "
-      CANFD.cfdrfdf1()[0],
+      CANFD.cfdrfdf_1()[0],
     ",
   0x400b6090u64 => "
-      CANFD.cfdrfdf1()[1],
+      CANFD.cfdrfdf_1()[1],
     ",
   0x400b6110u64 => "
-      CANFD.cfdrfdf1()[2],
+      CANFD.cfdrfdf_1()[2],
     ",
   0x400b6190u64 => "
-      CANFD.cfdrfdf1()[3],
+      CANFD.cfdrfdf_1()[3],
     ",
   0x400b6210u64 => "
-      CANFD.cfdrfdf1()[4],
+      CANFD.cfdrfdf_1()[4],
     ",
   0x400b6290u64 => "
-      CANFD.cfdrfdf1()[5],
+      CANFD.cfdrfdf_1()[5],
     ",
   0x400b6310u64 => "
-      CANFD.cfdrfdf1()[6],
+      CANFD.cfdrfdf_1()[6],
     ",
   0x400b6390u64 => "
-      CANFD.cfdrfdf1()[7],
+      CANFD.cfdrfdf_1()[7],
     ",
   0x400b6014u64 => "
-      CANFD.cfdrfdf2()[0],
+      CANFD.cfdrfdf_2()[0],
     ",
   0x400b6094u64 => "
-      CANFD.cfdrfdf2()[1],
+      CANFD.cfdrfdf_2()[1],
     ",
   0x400b6114u64 => "
-      CANFD.cfdrfdf2()[2],
+      CANFD.cfdrfdf_2()[2],
     ",
   0x400b6194u64 => "
-      CANFD.cfdrfdf2()[3],
+      CANFD.cfdrfdf_2()[3],
     ",
   0x400b6214u64 => "
-      CANFD.cfdrfdf2()[4],
+      CANFD.cfdrfdf_2()[4],
     ",
   0x400b6294u64 => "
-      CANFD.cfdrfdf2()[5],
+      CANFD.cfdrfdf_2()[5],
     ",
   0x400b6314u64 => "
-      CANFD.cfdrfdf2()[6],
+      CANFD.cfdrfdf_2()[6],
     ",
   0x400b6394u64 => "
-      CANFD.cfdrfdf2()[7],
+      CANFD.cfdrfdf_2()[7],
     ",
   0x400b6018u64 => "
-      CANFD.cfdrfdf3()[0],
+      CANFD.cfdrfdf_3()[0],
     ",
   0x400b6098u64 => "
-      CANFD.cfdrfdf3()[1],
+      CANFD.cfdrfdf_3()[1],
     ",
   0x400b6118u64 => "
-      CANFD.cfdrfdf3()[2],
+      CANFD.cfdrfdf_3()[2],
     ",
   0x400b6198u64 => "
-      CANFD.cfdrfdf3()[3],
+      CANFD.cfdrfdf_3()[3],
     ",
   0x400b6218u64 => "
-      CANFD.cfdrfdf3()[4],
+      CANFD.cfdrfdf_3()[4],
     ",
   0x400b6298u64 => "
-      CANFD.cfdrfdf3()[5],
+      CANFD.cfdrfdf_3()[5],
     ",
   0x400b6318u64 => "
-      CANFD.cfdrfdf3()[6],
+      CANFD.cfdrfdf_3()[6],
     ",
   0x400b6398u64 => "
-      CANFD.cfdrfdf3()[7],
+      CANFD.cfdrfdf_3()[7],
     ",
   0x400b601cu64 => "
-      CANFD.cfdrfdf4()[0],
+      CANFD.cfdrfdf_4()[0],
     ",
   0x400b609cu64 => "
-      CANFD.cfdrfdf4()[1],
+      CANFD.cfdrfdf_4()[1],
     ",
   0x400b611cu64 => "
-      CANFD.cfdrfdf4()[2],
+      CANFD.cfdrfdf_4()[2],
     ",
   0x400b619cu64 => "
-      CANFD.cfdrfdf4()[3],
+      CANFD.cfdrfdf_4()[3],
     ",
   0x400b621cu64 => "
-      CANFD.cfdrfdf4()[4],
+      CANFD.cfdrfdf_4()[4],
     ",
   0x400b629cu64 => "
-      CANFD.cfdrfdf4()[5],
+      CANFD.cfdrfdf_4()[5],
     ",
   0x400b631cu64 => "
-      CANFD.cfdrfdf4()[6],
+      CANFD.cfdrfdf_4()[6],
     ",
   0x400b639cu64 => "
-      CANFD.cfdrfdf4()[7],
+      CANFD.cfdrfdf_4()[7],
     ",
   0x400b6020u64 => "
-      CANFD.cfdrfdf5()[0],
+      CANFD.cfdrfdf_5()[0],
     ",
   0x400b60a0u64 => "
-      CANFD.cfdrfdf5()[1],
+      CANFD.cfdrfdf_5()[1],
     ",
   0x400b6120u64 => "
-      CANFD.cfdrfdf5()[2],
+      CANFD.cfdrfdf_5()[2],
     ",
   0x400b61a0u64 => "
-      CANFD.cfdrfdf5()[3],
+      CANFD.cfdrfdf_5()[3],
     ",
   0x400b6220u64 => "
-      CANFD.cfdrfdf5()[4],
+      CANFD.cfdrfdf_5()[4],
     ",
   0x400b62a0u64 => "
-      CANFD.cfdrfdf5()[5],
+      CANFD.cfdrfdf_5()[5],
     ",
   0x400b6320u64 => "
-      CANFD.cfdrfdf5()[6],
+      CANFD.cfdrfdf_5()[6],
     ",
   0x400b63a0u64 => "
-      CANFD.cfdrfdf5()[7],
+      CANFD.cfdrfdf_5()[7],
     ",
   0x400b6024u64 => "
-      CANFD.cfdrfdf6()[0],
+      CANFD.cfdrfdf_6()[0],
     ",
   0x400b60a4u64 => "
-      CANFD.cfdrfdf6()[1],
+      CANFD.cfdrfdf_6()[1],
     ",
   0x400b6124u64 => "
-      CANFD.cfdrfdf6()[2],
+      CANFD.cfdrfdf_6()[2],
     ",
   0x400b61a4u64 => "
-      CANFD.cfdrfdf6()[3],
+      CANFD.cfdrfdf_6()[3],
     ",
   0x400b6224u64 => "
-      CANFD.cfdrfdf6()[4],
+      CANFD.cfdrfdf_6()[4],
     ",
   0x400b62a4u64 => "
-      CANFD.cfdrfdf6()[5],
+      CANFD.cfdrfdf_6()[5],
     ",
   0x400b6324u64 => "
-      CANFD.cfdrfdf6()[6],
+      CANFD.cfdrfdf_6()[6],
     ",
   0x400b63a4u64 => "
-      CANFD.cfdrfdf6()[7],
+      CANFD.cfdrfdf_6()[7],
     ",
   0x400b6028u64 => "
-      CANFD.cfdrfdf7()[0],
+      CANFD.cfdrfdf_7()[0],
     ",
   0x400b60a8u64 => "
-      CANFD.cfdrfdf7()[1],
+      CANFD.cfdrfdf_7()[1],
     ",
   0x400b6128u64 => "
-      CANFD.cfdrfdf7()[2],
+      CANFD.cfdrfdf_7()[2],
     ",
   0x400b61a8u64 => "
-      CANFD.cfdrfdf7()[3],
+      CANFD.cfdrfdf_7()[3],
     ",
   0x400b6228u64 => "
-      CANFD.cfdrfdf7()[4],
+      CANFD.cfdrfdf_7()[4],
     ",
   0x400b62a8u64 => "
-      CANFD.cfdrfdf7()[5],
+      CANFD.cfdrfdf_7()[5],
     ",
   0x400b6328u64 => "
-      CANFD.cfdrfdf7()[6],
+      CANFD.cfdrfdf_7()[6],
     ",
   0x400b63a8u64 => "
-      CANFD.cfdrfdf7()[7],
+      CANFD.cfdrfdf_7()[7],
     ",
   0x400b602cu64 => "
-      CANFD.cfdrfdf8()[0],
+      CANFD.cfdrfdf_8()[0],
     ",
   0x400b60acu64 => "
-      CANFD.cfdrfdf8()[1],
+      CANFD.cfdrfdf_8()[1],
     ",
   0x400b612cu64 => "
-      CANFD.cfdrfdf8()[2],
+      CANFD.cfdrfdf_8()[2],
     ",
   0x400b61acu64 => "
-      CANFD.cfdrfdf8()[3],
+      CANFD.cfdrfdf_8()[3],
     ",
   0x400b622cu64 => "
-      CANFD.cfdrfdf8()[4],
+      CANFD.cfdrfdf_8()[4],
     ",
   0x400b62acu64 => "
-      CANFD.cfdrfdf8()[5],
+      CANFD.cfdrfdf_8()[5],
     ",
   0x400b632cu64 => "
-      CANFD.cfdrfdf8()[6],
+      CANFD.cfdrfdf_8()[6],
     ",
   0x400b63acu64 => "
-      CANFD.cfdrfdf8()[7],
+      CANFD.cfdrfdf_8()[7],
     ",
   0x400b6030u64 => "
-      CANFD.cfdrfdf9()[0],
+      CANFD.cfdrfdf_9()[0],
     ",
   0x400b60b0u64 => "
-      CANFD.cfdrfdf9()[1],
+      CANFD.cfdrfdf_9()[1],
     ",
   0x400b6130u64 => "
-      CANFD.cfdrfdf9()[2],
+      CANFD.cfdrfdf_9()[2],
     ",
   0x400b61b0u64 => "
-      CANFD.cfdrfdf9()[3],
+      CANFD.cfdrfdf_9()[3],
     ",
   0x400b6230u64 => "
-      CANFD.cfdrfdf9()[4],
+      CANFD.cfdrfdf_9()[4],
     ",
   0x400b62b0u64 => "
-      CANFD.cfdrfdf9()[5],
+      CANFD.cfdrfdf_9()[5],
     ",
   0x400b6330u64 => "
-      CANFD.cfdrfdf9()[6],
+      CANFD.cfdrfdf_9()[6],
     ",
   0x400b63b0u64 => "
-      CANFD.cfdrfdf9()[7],
+      CANFD.cfdrfdf_9()[7],
     ",
   0x400b6034u64 => "
-      CANFD.cfdrfdf10()[0],
+      CANFD.cfdrfdf_10()[0],
     ",
   0x400b60b4u64 => "
-      CANFD.cfdrfdf10()[1],
+      CANFD.cfdrfdf_10()[1],
     ",
   0x400b6134u64 => "
-      CANFD.cfdrfdf10()[2],
+      CANFD.cfdrfdf_10()[2],
     ",
   0x400b61b4u64 => "
-      CANFD.cfdrfdf10()[3],
+      CANFD.cfdrfdf_10()[3],
     ",
   0x400b6234u64 => "
-      CANFD.cfdrfdf10()[4],
+      CANFD.cfdrfdf_10()[4],
     ",
   0x400b62b4u64 => "
-      CANFD.cfdrfdf10()[5],
+      CANFD.cfdrfdf_10()[5],
     ",
   0x400b6334u64 => "
-      CANFD.cfdrfdf10()[6],
+      CANFD.cfdrfdf_10()[6],
     ",
   0x400b63b4u64 => "
-      CANFD.cfdrfdf10()[7],
+      CANFD.cfdrfdf_10()[7],
     ",
   0x400b6038u64 => "
-      CANFD.cfdrfdf11()[0],
+      CANFD.cfdrfdf_11()[0],
     ",
   0x400b60b8u64 => "
-      CANFD.cfdrfdf11()[1],
+      CANFD.cfdrfdf_11()[1],
     ",
   0x400b6138u64 => "
-      CANFD.cfdrfdf11()[2],
+      CANFD.cfdrfdf_11()[2],
     ",
   0x400b61b8u64 => "
-      CANFD.cfdrfdf11()[3],
+      CANFD.cfdrfdf_11()[3],
     ",
   0x400b6238u64 => "
-      CANFD.cfdrfdf11()[4],
+      CANFD.cfdrfdf_11()[4],
     ",
   0x400b62b8u64 => "
-      CANFD.cfdrfdf11()[5],
+      CANFD.cfdrfdf_11()[5],
     ",
   0x400b6338u64 => "
-      CANFD.cfdrfdf11()[6],
+      CANFD.cfdrfdf_11()[6],
     ",
   0x400b63b8u64 => "
-      CANFD.cfdrfdf11()[7],
+      CANFD.cfdrfdf_11()[7],
     ",
   0x400b603cu64 => "
-      CANFD.cfdrfdf12()[0],
+      CANFD.cfdrfdf_12()[0],
     ",
   0x400b60bcu64 => "
-      CANFD.cfdrfdf12()[1],
+      CANFD.cfdrfdf_12()[1],
     ",
   0x400b613cu64 => "
-      CANFD.cfdrfdf12()[2],
+      CANFD.cfdrfdf_12()[2],
     ",
   0x400b61bcu64 => "
-      CANFD.cfdrfdf12()[3],
+      CANFD.cfdrfdf_12()[3],
     ",
   0x400b623cu64 => "
-      CANFD.cfdrfdf12()[4],
+      CANFD.cfdrfdf_12()[4],
     ",
   0x400b62bcu64 => "
-      CANFD.cfdrfdf12()[5],
+      CANFD.cfdrfdf_12()[5],
     ",
   0x400b633cu64 => "
-      CANFD.cfdrfdf12()[6],
+      CANFD.cfdrfdf_12()[6],
     ",
   0x400b63bcu64 => "
-      CANFD.cfdrfdf12()[7],
+      CANFD.cfdrfdf_12()[7],
     ",
   0x400b6040u64 => "
-      CANFD.cfdrfdf13()[0],
+      CANFD.cfdrfdf_13()[0],
     ",
   0x400b60c0u64 => "
-      CANFD.cfdrfdf13()[1],
+      CANFD.cfdrfdf_13()[1],
     ",
   0x400b6140u64 => "
-      CANFD.cfdrfdf13()[2],
+      CANFD.cfdrfdf_13()[2],
     ",
   0x400b61c0u64 => "
-      CANFD.cfdrfdf13()[3],
+      CANFD.cfdrfdf_13()[3],
     ",
   0x400b6240u64 => "
-      CANFD.cfdrfdf13()[4],
+      CANFD.cfdrfdf_13()[4],
     ",
   0x400b62c0u64 => "
-      CANFD.cfdrfdf13()[5],
+      CANFD.cfdrfdf_13()[5],
     ",
   0x400b6340u64 => "
-      CANFD.cfdrfdf13()[6],
+      CANFD.cfdrfdf_13()[6],
     ",
   0x400b63c0u64 => "
-      CANFD.cfdrfdf13()[7],
+      CANFD.cfdrfdf_13()[7],
     ",
   0x400b6044u64 => "
-      CANFD.cfdrfdf14()[0],
+      CANFD.cfdrfdf_14()[0],
     ",
   0x400b60c4u64 => "
-      CANFD.cfdrfdf14()[1],
+      CANFD.cfdrfdf_14()[1],
     ",
   0x400b6144u64 => "
-      CANFD.cfdrfdf14()[2],
+      CANFD.cfdrfdf_14()[2],
     ",
   0x400b61c4u64 => "
-      CANFD.cfdrfdf14()[3],
+      CANFD.cfdrfdf_14()[3],
     ",
   0x400b6244u64 => "
-      CANFD.cfdrfdf14()[4],
+      CANFD.cfdrfdf_14()[4],
     ",
   0x400b62c4u64 => "
-      CANFD.cfdrfdf14()[5],
+      CANFD.cfdrfdf_14()[5],
     ",
   0x400b6344u64 => "
-      CANFD.cfdrfdf14()[6],
+      CANFD.cfdrfdf_14()[6],
     ",
   0x400b63c4u64 => "
-      CANFD.cfdrfdf14()[7],
+      CANFD.cfdrfdf_14()[7],
     ",
   0x400b6048u64 => "
-      CANFD.cfdrfdf15()[0],
+      CANFD.cfdrfdf_15()[0],
     ",
   0x400b60c8u64 => "
-      CANFD.cfdrfdf15()[1],
+      CANFD.cfdrfdf_15()[1],
     ",
   0x400b6148u64 => "
-      CANFD.cfdrfdf15()[2],
+      CANFD.cfdrfdf_15()[2],
     ",
   0x400b61c8u64 => "
-      CANFD.cfdrfdf15()[3],
+      CANFD.cfdrfdf_15()[3],
     ",
   0x400b6248u64 => "
-      CANFD.cfdrfdf15()[4],
+      CANFD.cfdrfdf_15()[4],
     ",
   0x400b62c8u64 => "
-      CANFD.cfdrfdf15()[5],
+      CANFD.cfdrfdf_15()[5],
     ",
   0x400b6348u64 => "
-      CANFD.cfdrfdf15()[6],
+      CANFD.cfdrfdf_15()[6],
     ",
   0x400b63c8u64 => "
-      CANFD.cfdrfdf15()[7],
+      CANFD.cfdrfdf_15()[7],
     ",
   0x400b6400u64 => "
       CANFD.cfdcfid_0()[0],
@@ -6776,148 +6776,148 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       CANFD.cfdcffdcsts_0()[2],
     ",
   0x400b640cu64 => "
-      CANFD.cfdcfdf0_0()[0],
+      CANFD.cfdcfdf_0_0()[0],
     ",
   0x400b648cu64 => "
-      CANFD.cfdcfdf0_0()[1],
+      CANFD.cfdcfdf_0_0()[1],
     ",
   0x400b650cu64 => "
-      CANFD.cfdcfdf0_0()[2],
+      CANFD.cfdcfdf_0_0()[2],
     ",
   0x400b6410u64 => "
-      CANFD.cfdcfdf1_0()[0],
+      CANFD.cfdcfdf_1_0()[0],
     ",
   0x400b6490u64 => "
-      CANFD.cfdcfdf1_0()[1],
+      CANFD.cfdcfdf_1_0()[1],
     ",
   0x400b6510u64 => "
-      CANFD.cfdcfdf1_0()[2],
+      CANFD.cfdcfdf_1_0()[2],
     ",
   0x400b6414u64 => "
-      CANFD.cfdcfdf2_0()[0],
+      CANFD.cfdcfdf_2_0()[0],
     ",
   0x400b6494u64 => "
-      CANFD.cfdcfdf2_0()[1],
+      CANFD.cfdcfdf_2_0()[1],
     ",
   0x400b6514u64 => "
-      CANFD.cfdcfdf2_0()[2],
+      CANFD.cfdcfdf_2_0()[2],
     ",
   0x400b6418u64 => "
-      CANFD.cfdcfdf3_0()[0],
+      CANFD.cfdcfdf_3_0()[0],
     ",
   0x400b6498u64 => "
-      CANFD.cfdcfdf3_0()[1],
+      CANFD.cfdcfdf_3_0()[1],
     ",
   0x400b6518u64 => "
-      CANFD.cfdcfdf3_0()[2],
+      CANFD.cfdcfdf_3_0()[2],
     ",
   0x400b641cu64 => "
-      CANFD.cfdcfdf4_0()[0],
+      CANFD.cfdcfdf_4_0()[0],
     ",
   0x400b649cu64 => "
-      CANFD.cfdcfdf4_0()[1],
+      CANFD.cfdcfdf_4_0()[1],
     ",
   0x400b651cu64 => "
-      CANFD.cfdcfdf4_0()[2],
+      CANFD.cfdcfdf_4_0()[2],
     ",
   0x400b6420u64 => "
-      CANFD.cfdcfdf5_0()[0],
+      CANFD.cfdcfdf_5_0()[0],
     ",
   0x400b64a0u64 => "
-      CANFD.cfdcfdf5_0()[1],
+      CANFD.cfdcfdf_5_0()[1],
     ",
   0x400b6520u64 => "
-      CANFD.cfdcfdf5_0()[2],
+      CANFD.cfdcfdf_5_0()[2],
     ",
   0x400b6424u64 => "
-      CANFD.cfdcfdf6_0()[0],
+      CANFD.cfdcfdf_6_0()[0],
     ",
   0x400b64a4u64 => "
-      CANFD.cfdcfdf6_0()[1],
+      CANFD.cfdcfdf_6_0()[1],
     ",
   0x400b6524u64 => "
-      CANFD.cfdcfdf6_0()[2],
+      CANFD.cfdcfdf_6_0()[2],
     ",
   0x400b6428u64 => "
-      CANFD.cfdcfdf7_0()[0],
+      CANFD.cfdcfdf_7_0()[0],
     ",
   0x400b64a8u64 => "
-      CANFD.cfdcfdf7_0()[1],
+      CANFD.cfdcfdf_7_0()[1],
     ",
   0x400b6528u64 => "
-      CANFD.cfdcfdf7_0()[2],
+      CANFD.cfdcfdf_7_0()[2],
     ",
   0x400b642cu64 => "
-      CANFD.cfdcfdf8_0()[0],
+      CANFD.cfdcfdf_8_0()[0],
     ",
   0x400b64acu64 => "
-      CANFD.cfdcfdf8_0()[1],
+      CANFD.cfdcfdf_8_0()[1],
     ",
   0x400b652cu64 => "
-      CANFD.cfdcfdf8_0()[2],
+      CANFD.cfdcfdf_8_0()[2],
     ",
   0x400b6430u64 => "
-      CANFD.cfdcfdf9_0()[0],
+      CANFD.cfdcfdf_9_0()[0],
     ",
   0x400b64b0u64 => "
-      CANFD.cfdcfdf9_0()[1],
+      CANFD.cfdcfdf_9_0()[1],
     ",
   0x400b6530u64 => "
-      CANFD.cfdcfdf9_0()[2],
+      CANFD.cfdcfdf_9_0()[2],
     ",
   0x400b6434u64 => "
-      CANFD.cfdcfdf10_0()[0],
+      CANFD.cfdcfdf_10_0()[0],
     ",
   0x400b64b4u64 => "
-      CANFD.cfdcfdf10_0()[1],
+      CANFD.cfdcfdf_10_0()[1],
     ",
   0x400b6534u64 => "
-      CANFD.cfdcfdf10_0()[2],
+      CANFD.cfdcfdf_10_0()[2],
     ",
   0x400b6438u64 => "
-      CANFD.cfdcfdf11_0()[0],
+      CANFD.cfdcfdf_11_0()[0],
     ",
   0x400b64b8u64 => "
-      CANFD.cfdcfdf11_0()[1],
+      CANFD.cfdcfdf_11_0()[1],
     ",
   0x400b6538u64 => "
-      CANFD.cfdcfdf11_0()[2],
+      CANFD.cfdcfdf_11_0()[2],
     ",
   0x400b643cu64 => "
-      CANFD.cfdcfdf12_0()[0],
+      CANFD.cfdcfdf_12_0()[0],
     ",
   0x400b64bcu64 => "
-      CANFD.cfdcfdf12_0()[1],
+      CANFD.cfdcfdf_12_0()[1],
     ",
   0x400b653cu64 => "
-      CANFD.cfdcfdf12_0()[2],
+      CANFD.cfdcfdf_12_0()[2],
     ",
   0x400b6440u64 => "
-      CANFD.cfdcfdf13_0()[0],
+      CANFD.cfdcfdf_13_0()[0],
     ",
   0x400b64c0u64 => "
-      CANFD.cfdcfdf13_0()[1],
+      CANFD.cfdcfdf_13_0()[1],
     ",
   0x400b6540u64 => "
-      CANFD.cfdcfdf13_0()[2],
+      CANFD.cfdcfdf_13_0()[2],
     ",
   0x400b6444u64 => "
-      CANFD.cfdcfdf14_0()[0],
+      CANFD.cfdcfdf_14_0()[0],
     ",
   0x400b64c4u64 => "
-      CANFD.cfdcfdf14_0()[1],
+      CANFD.cfdcfdf_14_0()[1],
     ",
   0x400b6544u64 => "
-      CANFD.cfdcfdf14_0()[2],
+      CANFD.cfdcfdf_14_0()[2],
     ",
   0x400b6448u64 => "
-      CANFD.cfdcfdf15_0()[0],
+      CANFD.cfdcfdf_15_0()[0],
     ",
   0x400b64c8u64 => "
-      CANFD.cfdcfdf15_0()[1],
+      CANFD.cfdcfdf_15_0()[1],
     ",
   0x400b6548u64 => "
-      CANFD.cfdcfdf15_0()[2],
+      CANFD.cfdcfdf_15_0()[2],
     ",
   0x400b6580u64 => "
       CANFD.cfdcfid_1()[0],
@@ -6947,148 +6947,148 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       CANFD.cfdcffdcsts_1()[2],
     ",
   0x400b658cu64 => "
-      CANFD.cfdcfdf0_1()[0],
+      CANFD.cfdcfdf_0_1()[0],
     ",
   0x400b660cu64 => "
-      CANFD.cfdcfdf0_1()[1],
+      CANFD.cfdcfdf_0_1()[1],
     ",
   0x400b668cu64 => "
-      CANFD.cfdcfdf0_1()[2],
+      CANFD.cfdcfdf_0_1()[2],
     ",
   0x400b6590u64 => "
-      CANFD.cfdcfdf1_1()[0],
+      CANFD.cfdcfdf_1_1()[0],
     ",
   0x400b6610u64 => "
-      CANFD.cfdcfdf1_1()[1],
+      CANFD.cfdcfdf_1_1()[1],
     ",
   0x400b6690u64 => "
-      CANFD.cfdcfdf1_1()[2],
+      CANFD.cfdcfdf_1_1()[2],
     ",
   0x400b6594u64 => "
-      CANFD.cfdcfdf2_1()[0],
+      CANFD.cfdcfdf_2_1()[0],
     ",
   0x400b6614u64 => "
-      CANFD.cfdcfdf2_1()[1],
+      CANFD.cfdcfdf_2_1()[1],
     ",
   0x400b6694u64 => "
-      CANFD.cfdcfdf2_1()[2],
+      CANFD.cfdcfdf_2_1()[2],
     ",
   0x400b6598u64 => "
-      CANFD.cfdcfdf3_1()[0],
+      CANFD.cfdcfdf_3_1()[0],
     ",
   0x400b6618u64 => "
-      CANFD.cfdcfdf3_1()[1],
+      CANFD.cfdcfdf_3_1()[1],
     ",
   0x400b6698u64 => "
-      CANFD.cfdcfdf3_1()[2],
+      CANFD.cfdcfdf_3_1()[2],
     ",
   0x400b659cu64 => "
-      CANFD.cfdcfdf4_1()[0],
+      CANFD.cfdcfdf_4_1()[0],
     ",
   0x400b661cu64 => "
-      CANFD.cfdcfdf4_1()[1],
+      CANFD.cfdcfdf_4_1()[1],
     ",
   0x400b669cu64 => "
-      CANFD.cfdcfdf4_1()[2],
+      CANFD.cfdcfdf_4_1()[2],
     ",
   0x400b65a0u64 => "
-      CANFD.cfdcfdf5_1()[0],
+      CANFD.cfdcfdf_5_1()[0],
     ",
   0x400b6620u64 => "
-      CANFD.cfdcfdf5_1()[1],
+      CANFD.cfdcfdf_5_1()[1],
     ",
   0x400b66a0u64 => "
-      CANFD.cfdcfdf5_1()[2],
+      CANFD.cfdcfdf_5_1()[2],
     ",
   0x400b65a4u64 => "
-      CANFD.cfdcfdf6_1()[0],
+      CANFD.cfdcfdf_6_1()[0],
     ",
   0x400b6624u64 => "
-      CANFD.cfdcfdf6_1()[1],
+      CANFD.cfdcfdf_6_1()[1],
     ",
   0x400b66a4u64 => "
-      CANFD.cfdcfdf6_1()[2],
+      CANFD.cfdcfdf_6_1()[2],
     ",
   0x400b65a8u64 => "
-      CANFD.cfdcfdf7_1()[0],
+      CANFD.cfdcfdf_7_1()[0],
     ",
   0x400b6628u64 => "
-      CANFD.cfdcfdf7_1()[1],
+      CANFD.cfdcfdf_7_1()[1],
     ",
   0x400b66a8u64 => "
-      CANFD.cfdcfdf7_1()[2],
+      CANFD.cfdcfdf_7_1()[2],
     ",
   0x400b65acu64 => "
-      CANFD.cfdcfdf8_1()[0],
+      CANFD.cfdcfdf_8_1()[0],
     ",
   0x400b662cu64 => "
-      CANFD.cfdcfdf8_1()[1],
+      CANFD.cfdcfdf_8_1()[1],
     ",
   0x400b66acu64 => "
-      CANFD.cfdcfdf8_1()[2],
+      CANFD.cfdcfdf_8_1()[2],
     ",
   0x400b65b0u64 => "
-      CANFD.cfdcfdf9_1()[0],
+      CANFD.cfdcfdf_9_1()[0],
     ",
   0x400b6630u64 => "
-      CANFD.cfdcfdf9_1()[1],
+      CANFD.cfdcfdf_9_1()[1],
     ",
   0x400b66b0u64 => "
-      CANFD.cfdcfdf9_1()[2],
+      CANFD.cfdcfdf_9_1()[2],
     ",
   0x400b65b4u64 => "
-      CANFD.cfdcfdf10_1()[0],
+      CANFD.cfdcfdf_10_1()[0],
     ",
   0x400b6634u64 => "
-      CANFD.cfdcfdf10_1()[1],
+      CANFD.cfdcfdf_10_1()[1],
     ",
   0x400b66b4u64 => "
-      CANFD.cfdcfdf10_1()[2],
+      CANFD.cfdcfdf_10_1()[2],
     ",
   0x400b65b8u64 => "
-      CANFD.cfdcfdf11_1()[0],
+      CANFD.cfdcfdf_11_1()[0],
     ",
   0x400b6638u64 => "
-      CANFD.cfdcfdf11_1()[1],
+      CANFD.cfdcfdf_11_1()[1],
     ",
   0x400b66b8u64 => "
-      CANFD.cfdcfdf11_1()[2],
+      CANFD.cfdcfdf_11_1()[2],
     ",
   0x400b65bcu64 => "
-      CANFD.cfdcfdf12_1()[0],
+      CANFD.cfdcfdf_12_1()[0],
     ",
   0x400b663cu64 => "
-      CANFD.cfdcfdf12_1()[1],
+      CANFD.cfdcfdf_12_1()[1],
     ",
   0x400b66bcu64 => "
-      CANFD.cfdcfdf12_1()[2],
+      CANFD.cfdcfdf_12_1()[2],
     ",
   0x400b65c0u64 => "
-      CANFD.cfdcfdf13_1()[0],
+      CANFD.cfdcfdf_13_1()[0],
     ",
   0x400b6640u64 => "
-      CANFD.cfdcfdf13_1()[1],
+      CANFD.cfdcfdf_13_1()[1],
     ",
   0x400b66c0u64 => "
-      CANFD.cfdcfdf13_1()[2],
+      CANFD.cfdcfdf_13_1()[2],
     ",
   0x400b65c4u64 => "
-      CANFD.cfdcfdf14_1()[0],
+      CANFD.cfdcfdf_14_1()[0],
     ",
   0x400b6644u64 => "
-      CANFD.cfdcfdf14_1()[1],
+      CANFD.cfdcfdf_14_1()[1],
     ",
   0x400b66c4u64 => "
-      CANFD.cfdcfdf14_1()[2],
+      CANFD.cfdcfdf_14_1()[2],
     ",
   0x400b65c8u64 => "
-      CANFD.cfdcfdf15_1()[0],
+      CANFD.cfdcfdf_15_1()[0],
     ",
   0x400b6648u64 => "
-      CANFD.cfdcfdf15_1()[1],
+      CANFD.cfdcfdf_15_1()[1],
     ",
   0x400b66c8u64 => "
-      CANFD.cfdcfdf15_1()[2],
+      CANFD.cfdcfdf_15_1()[2],
     ",
   0x400b8000u64 => "
       CANFD.cfdthlacc0()[0],

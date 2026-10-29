@@ -1522,7 +1522,7 @@ pub use self::Interrupt as interrupt;
 pub use cortex_m_rt::interrupt;
 #[cfg(feature = "rt")]
 pub mod interrupt_handlers {
-    extern "C" {
+    unsafe extern "C" {
         pub fn IEL0();
         pub fn IEL1();
         pub fn IEL2();
@@ -1623,8 +1623,8 @@ pub mod interrupt_handlers {
 }
 #[cfg(feature = "rt")]
 #[doc(hidden)]
-#[link_section = ".vector_table.interrupts"]
-#[no_mangle]
+#[unsafe(link_section = ".vector_table.interrupts")]
+#[unsafe(no_mangle)]
 pub static __INTERRUPTS: [Vector; 96] = [
     Vector {
         _handler: interrupt_handlers::IEL0,

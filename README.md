@@ -49,8 +49,6 @@ Each device corresponds to a specific architecture target:
 - **RA4, RA6 Series**:
   - Cortex-M4 devices: `thumbv7em-none-eabihf`
     - `ra4m1` (Cortex-M4)
-    - `ra4m2` (Cortex-M4)
-    - `ra4m3` (Cortex-M4)
     - `ra4w1` (Cortex-M4)
     - `ra6m1` (Cortex-M4)
     - `ra6m2` (Cortex-M4)

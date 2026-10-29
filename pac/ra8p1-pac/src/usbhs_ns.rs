@@ -6404,7 +6404,7 @@ pub mod dcpctr {
         pub const _10: Self = Self::new(2);
 
         #[doc = "STALL response"]
-        pub const _10: Self = Self::new(2);
+        pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Ccpl_SPEC;

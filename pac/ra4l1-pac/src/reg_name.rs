@@ -4083,6 +4083,92 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
   0x40118325u64 => "
       SCI_3.mecr(),
     ",
+  0x40118500u64 => "
+      SCI_5.smr(),
+      SCI_5.smr_smci(),
+    ",
+  0x40118501u64 => "
+      SCI_5.brr(),
+    ",
+  0x40118502u64 => "
+      SCI_5.scr(),
+      SCI_5.scr_smci(),
+    ",
+  0x40118503u64 => "
+      SCI_5.tdr(),
+    ",
+  0x40118504u64 => "
+      SCI_5.ssr(),
+      SCI_5.ssr_fifo(),
+      SCI_5.ssr_smci(),
+    ",
+  0x40118505u64 => "
+      SCI_5.rdr(),
+    ",
+  0x40118506u64 => "
+      SCI_5.scmr(),
+    ",
+  0x40118507u64 => "
+      SCI_5.semr(),
+    ",
+  0x40118508u64 => "
+      SCI_5.snfr(),
+    ",
+  0x40118509u64 => "
+      SCI_5.simr1(),
+    ",
+  0x4011850au64 => "
+      SCI_5.simr2(),
+    ",
+  0x4011850bu64 => "
+      SCI_5.simr3(),
+    ",
+  0x4011850cu64 => "
+      SCI_5.sisr(),
+    ",
+  0x4011850du64 => "
+      SCI_5.spmr(),
+    ",
+  0x4011850eu64 => "
+      SCI_5.ftdrhl(),
+      SCI_5.tdrhl(),
+      SCI_5.ftdrh(),
+    ",
+  0x4011850fu64 => "
+      SCI_5.ftdrl(),
+    ",
+  0x40118510u64 => "
+      SCI_5.frdrhl(),
+      SCI_5.rdrhl(),
+      SCI_5.frdrh(),
+    ",
+  0x40118511u64 => "
+      SCI_5.frdrl(),
+    ",
+  0x40118512u64 => "
+      SCI_5.mddr(),
+    ",
+  0x40118513u64 => "
+      SCI_5.dccr(),
+    ",
+  0x40118514u64 => "
+      SCI_5.fcr(),
+    ",
+  0x40118516u64 => "
+      SCI_5.fdr(),
+    ",
+  0x40118518u64 => "
+      SCI_5.lsr(),
+    ",
+  0x4011851au64 => "
+      SCI_5.cdr(),
+    ",
+  0x4011851cu64 => "
+      SCI_5.sptr(),
+    ",
+  0x4011851du64 => "
+      SCI_5.actr(),
+    ",
   0x40118f00u64 => "
       SCI_5.ircr(),
     ",

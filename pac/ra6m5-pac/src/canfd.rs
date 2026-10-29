@@ -10012,7 +10012,7 @@ impl super::Canfd {
 
     #[doc = "RX FIFO Access Data Field 0 Register %s"]
     #[inline(always)]
-    pub const fn cfdrfdf0(
+    pub const fn cfdrfdf_0(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdrfdf0_SPEC, crate::common::R>,
@@ -10024,7 +10024,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf00(
+    pub const fn cfdrfdf0_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf0_SPEC, crate::common::R> {
         unsafe {
@@ -10034,7 +10034,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf01(
+    pub const fn cfdrfdf1_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf0_SPEC, crate::common::R> {
         unsafe {
@@ -10044,7 +10044,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf02(
+    pub const fn cfdrfdf2_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf0_SPEC, crate::common::R> {
         unsafe {
@@ -10054,7 +10054,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf03(
+    pub const fn cfdrfdf3_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf0_SPEC, crate::common::R> {
         unsafe {
@@ -10064,7 +10064,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf04(
+    pub const fn cfdrfdf4_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf0_SPEC, crate::common::R> {
         unsafe {
@@ -10074,7 +10074,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf05(
+    pub const fn cfdrfdf5_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf0_SPEC, crate::common::R> {
         unsafe {
@@ -10084,7 +10084,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf06(
+    pub const fn cfdrfdf6_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf0_SPEC, crate::common::R> {
         unsafe {
@@ -10094,7 +10094,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf07(
+    pub const fn cfdrfdf7_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf0_SPEC, crate::common::R> {
         unsafe {
@@ -10106,7 +10106,7 @@ impl super::Canfd {
 
     #[doc = "RX FIFO Access Data Field 1 Register %s"]
     #[inline(always)]
-    pub const fn cfdrfdf1(
+    pub const fn cfdrfdf_1(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdrfdf1_SPEC, crate::common::R>,
@@ -10118,7 +10118,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf10(
+    pub const fn cfdrfdf0_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf1_SPEC, crate::common::R> {
         unsafe {
@@ -10128,7 +10128,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf11(
+    pub const fn cfdrfdf1_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf1_SPEC, crate::common::R> {
         unsafe {
@@ -10138,7 +10138,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf12(
+    pub const fn cfdrfdf2_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf1_SPEC, crate::common::R> {
         unsafe {
@@ -10148,7 +10148,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf13(
+    pub const fn cfdrfdf3_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf1_SPEC, crate::common::R> {
         unsafe {
@@ -10158,7 +10158,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf14(
+    pub const fn cfdrfdf4_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf1_SPEC, crate::common::R> {
         unsafe {
@@ -10168,7 +10168,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf15(
+    pub const fn cfdrfdf5_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf1_SPEC, crate::common::R> {
         unsafe {
@@ -10178,7 +10178,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf16(
+    pub const fn cfdrfdf6_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf1_SPEC, crate::common::R> {
         unsafe {
@@ -10188,7 +10188,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf17(
+    pub const fn cfdrfdf7_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf1_SPEC, crate::common::R> {
         unsafe {
@@ -10200,7 +10200,7 @@ impl super::Canfd {
 
     #[doc = "RX FIFO Access Data Field 2 Register %s"]
     #[inline(always)]
-    pub const fn cfdrfdf2(
+    pub const fn cfdrfdf_2(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdrfdf2_SPEC, crate::common::R>,
@@ -10212,7 +10212,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf20(
+    pub const fn cfdrfdf0_2(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf2_SPEC, crate::common::R> {
         unsafe {
@@ -10222,7 +10222,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf21(
+    pub const fn cfdrfdf1_2(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf2_SPEC, crate::common::R> {
         unsafe {
@@ -10232,7 +10232,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf22(
+    pub const fn cfdrfdf2_2(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf2_SPEC, crate::common::R> {
         unsafe {
@@ -10242,7 +10242,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf23(
+    pub const fn cfdrfdf3_2(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf2_SPEC, crate::common::R> {
         unsafe {
@@ -10252,7 +10252,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf24(
+    pub const fn cfdrfdf4_2(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf2_SPEC, crate::common::R> {
         unsafe {
@@ -10262,7 +10262,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf25(
+    pub const fn cfdrfdf5_2(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf2_SPEC, crate::common::R> {
         unsafe {
@@ -10272,7 +10272,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf26(
+    pub const fn cfdrfdf6_2(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf2_SPEC, crate::common::R> {
         unsafe {
@@ -10282,7 +10282,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf27(
+    pub const fn cfdrfdf7_2(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf2_SPEC, crate::common::R> {
         unsafe {
@@ -10294,7 +10294,7 @@ impl super::Canfd {
 
     #[doc = "RX FIFO Access Data Field 3 Register %s"]
     #[inline(always)]
-    pub const fn cfdrfdf3(
+    pub const fn cfdrfdf_3(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdrfdf3_SPEC, crate::common::R>,
@@ -10306,7 +10306,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf30(
+    pub const fn cfdrfdf0_3(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf3_SPEC, crate::common::R> {
         unsafe {
@@ -10316,7 +10316,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf31(
+    pub const fn cfdrfdf1_3(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf3_SPEC, crate::common::R> {
         unsafe {
@@ -10326,7 +10326,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf32(
+    pub const fn cfdrfdf2_3(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf3_SPEC, crate::common::R> {
         unsafe {
@@ -10336,7 +10336,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf33(
+    pub const fn cfdrfdf3_3(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf3_SPEC, crate::common::R> {
         unsafe {
@@ -10346,7 +10346,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf34(
+    pub const fn cfdrfdf4_3(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf3_SPEC, crate::common::R> {
         unsafe {
@@ -10356,7 +10356,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf35(
+    pub const fn cfdrfdf5_3(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf3_SPEC, crate::common::R> {
         unsafe {
@@ -10366,7 +10366,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf36(
+    pub const fn cfdrfdf6_3(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf3_SPEC, crate::common::R> {
         unsafe {
@@ -10376,7 +10376,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf37(
+    pub const fn cfdrfdf7_3(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf3_SPEC, crate::common::R> {
         unsafe {
@@ -10388,7 +10388,7 @@ impl super::Canfd {
 
     #[doc = "RX FIFO Access Data Field 4 Register %s"]
     #[inline(always)]
-    pub const fn cfdrfdf4(
+    pub const fn cfdrfdf_4(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdrfdf4_SPEC, crate::common::R>,
@@ -10400,7 +10400,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf40(
+    pub const fn cfdrfdf0_4(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf4_SPEC, crate::common::R> {
         unsafe {
@@ -10410,7 +10410,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf41(
+    pub const fn cfdrfdf1_4(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf4_SPEC, crate::common::R> {
         unsafe {
@@ -10420,7 +10420,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf42(
+    pub const fn cfdrfdf2_4(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf4_SPEC, crate::common::R> {
         unsafe {
@@ -10430,7 +10430,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf43(
+    pub const fn cfdrfdf3_4(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf4_SPEC, crate::common::R> {
         unsafe {
@@ -10440,7 +10440,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf44(
+    pub const fn cfdrfdf4_4(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf4_SPEC, crate::common::R> {
         unsafe {
@@ -10450,7 +10450,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf45(
+    pub const fn cfdrfdf5_4(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf4_SPEC, crate::common::R> {
         unsafe {
@@ -10460,7 +10460,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf46(
+    pub const fn cfdrfdf6_4(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf4_SPEC, crate::common::R> {
         unsafe {
@@ -10470,7 +10470,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf47(
+    pub const fn cfdrfdf7_4(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf4_SPEC, crate::common::R> {
         unsafe {
@@ -10482,7 +10482,7 @@ impl super::Canfd {
 
     #[doc = "RX FIFO Access Data Field 5 Register %s"]
     #[inline(always)]
-    pub const fn cfdrfdf5(
+    pub const fn cfdrfdf_5(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdrfdf5_SPEC, crate::common::R>,
@@ -10494,7 +10494,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf50(
+    pub const fn cfdrfdf0_5(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf5_SPEC, crate::common::R> {
         unsafe {
@@ -10504,7 +10504,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf51(
+    pub const fn cfdrfdf1_5(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf5_SPEC, crate::common::R> {
         unsafe {
@@ -10514,7 +10514,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf52(
+    pub const fn cfdrfdf2_5(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf5_SPEC, crate::common::R> {
         unsafe {
@@ -10524,7 +10524,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf53(
+    pub const fn cfdrfdf3_5(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf5_SPEC, crate::common::R> {
         unsafe {
@@ -10534,7 +10534,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf54(
+    pub const fn cfdrfdf4_5(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf5_SPEC, crate::common::R> {
         unsafe {
@@ -10544,7 +10544,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf55(
+    pub const fn cfdrfdf5_5(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf5_SPEC, crate::common::R> {
         unsafe {
@@ -10554,7 +10554,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf56(
+    pub const fn cfdrfdf6_5(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf5_SPEC, crate::common::R> {
         unsafe {
@@ -10564,7 +10564,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf57(
+    pub const fn cfdrfdf7_5(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf5_SPEC, crate::common::R> {
         unsafe {
@@ -10576,7 +10576,7 @@ impl super::Canfd {
 
     #[doc = "RX FIFO Access Data Field 6 Register %s"]
     #[inline(always)]
-    pub const fn cfdrfdf6(
+    pub const fn cfdrfdf_6(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdrfdf6_SPEC, crate::common::R>,
@@ -10588,7 +10588,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf60(
+    pub const fn cfdrfdf0_6(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf6_SPEC, crate::common::R> {
         unsafe {
@@ -10598,7 +10598,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf61(
+    pub const fn cfdrfdf1_6(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf6_SPEC, crate::common::R> {
         unsafe {
@@ -10608,7 +10608,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf62(
+    pub const fn cfdrfdf2_6(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf6_SPEC, crate::common::R> {
         unsafe {
@@ -10618,7 +10618,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf63(
+    pub const fn cfdrfdf3_6(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf6_SPEC, crate::common::R> {
         unsafe {
@@ -10628,7 +10628,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf64(
+    pub const fn cfdrfdf4_6(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf6_SPEC, crate::common::R> {
         unsafe {
@@ -10638,7 +10638,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf65(
+    pub const fn cfdrfdf5_6(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf6_SPEC, crate::common::R> {
         unsafe {
@@ -10648,7 +10648,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf66(
+    pub const fn cfdrfdf6_6(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf6_SPEC, crate::common::R> {
         unsafe {
@@ -10658,7 +10658,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf67(
+    pub const fn cfdrfdf7_6(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf6_SPEC, crate::common::R> {
         unsafe {
@@ -10670,7 +10670,7 @@ impl super::Canfd {
 
     #[doc = "RX FIFO Access Data Field 7 Register %s"]
     #[inline(always)]
-    pub const fn cfdrfdf7(
+    pub const fn cfdrfdf_7(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdrfdf7_SPEC, crate::common::R>,
@@ -10682,7 +10682,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf70(
+    pub const fn cfdrfdf0_7(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf7_SPEC, crate::common::R> {
         unsafe {
@@ -10692,7 +10692,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf71(
+    pub const fn cfdrfdf1_7(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf7_SPEC, crate::common::R> {
         unsafe {
@@ -10702,7 +10702,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf72(
+    pub const fn cfdrfdf2_7(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf7_SPEC, crate::common::R> {
         unsafe {
@@ -10712,7 +10712,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf73(
+    pub const fn cfdrfdf3_7(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf7_SPEC, crate::common::R> {
         unsafe {
@@ -10722,7 +10722,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf74(
+    pub const fn cfdrfdf4_7(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf7_SPEC, crate::common::R> {
         unsafe {
@@ -10732,7 +10732,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf75(
+    pub const fn cfdrfdf5_7(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf7_SPEC, crate::common::R> {
         unsafe {
@@ -10742,7 +10742,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf76(
+    pub const fn cfdrfdf6_7(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf7_SPEC, crate::common::R> {
         unsafe {
@@ -10752,7 +10752,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf77(
+    pub const fn cfdrfdf7_7(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf7_SPEC, crate::common::R> {
         unsafe {
@@ -10764,7 +10764,7 @@ impl super::Canfd {
 
     #[doc = "RX FIFO Access Data Field 8 Register %s"]
     #[inline(always)]
-    pub const fn cfdrfdf8(
+    pub const fn cfdrfdf_8(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdrfdf8_SPEC, crate::common::R>,
@@ -10776,7 +10776,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf80(
+    pub const fn cfdrfdf0_8(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf8_SPEC, crate::common::R> {
         unsafe {
@@ -10786,7 +10786,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf81(
+    pub const fn cfdrfdf1_8(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf8_SPEC, crate::common::R> {
         unsafe {
@@ -10796,7 +10796,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf82(
+    pub const fn cfdrfdf2_8(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf8_SPEC, crate::common::R> {
         unsafe {
@@ -10806,7 +10806,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf83(
+    pub const fn cfdrfdf3_8(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf8_SPEC, crate::common::R> {
         unsafe {
@@ -10816,7 +10816,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf84(
+    pub const fn cfdrfdf4_8(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf8_SPEC, crate::common::R> {
         unsafe {
@@ -10826,7 +10826,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf85(
+    pub const fn cfdrfdf5_8(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf8_SPEC, crate::common::R> {
         unsafe {
@@ -10836,7 +10836,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf86(
+    pub const fn cfdrfdf6_8(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf8_SPEC, crate::common::R> {
         unsafe {
@@ -10846,7 +10846,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf87(
+    pub const fn cfdrfdf7_8(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf8_SPEC, crate::common::R> {
         unsafe {
@@ -10858,7 +10858,7 @@ impl super::Canfd {
 
     #[doc = "RX FIFO Access Data Field 9 Register %s"]
     #[inline(always)]
-    pub const fn cfdrfdf9(
+    pub const fn cfdrfdf_9(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdrfdf9_SPEC, crate::common::R>,
@@ -10870,7 +10870,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf90(
+    pub const fn cfdrfdf0_9(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf9_SPEC, crate::common::R> {
         unsafe {
@@ -10880,7 +10880,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf91(
+    pub const fn cfdrfdf1_9(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf9_SPEC, crate::common::R> {
         unsafe {
@@ -10890,7 +10890,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf92(
+    pub const fn cfdrfdf2_9(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf9_SPEC, crate::common::R> {
         unsafe {
@@ -10900,7 +10900,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf93(
+    pub const fn cfdrfdf3_9(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf9_SPEC, crate::common::R> {
         unsafe {
@@ -10910,7 +10910,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf94(
+    pub const fn cfdrfdf4_9(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf9_SPEC, crate::common::R> {
         unsafe {
@@ -10920,7 +10920,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf95(
+    pub const fn cfdrfdf5_9(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf9_SPEC, crate::common::R> {
         unsafe {
@@ -10930,7 +10930,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf96(
+    pub const fn cfdrfdf6_9(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf9_SPEC, crate::common::R> {
         unsafe {
@@ -10940,7 +10940,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf97(
+    pub const fn cfdrfdf7_9(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf9_SPEC, crate::common::R> {
         unsafe {
@@ -10952,7 +10952,7 @@ impl super::Canfd {
 
     #[doc = "RX FIFO Access Data Field 10 Register %s"]
     #[inline(always)]
-    pub const fn cfdrfdf10(
+    pub const fn cfdrfdf_10(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdrfdf10_SPEC, crate::common::R>,
@@ -10964,7 +10964,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf100(
+    pub const fn cfdrfdf0_10(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf10_SPEC, crate::common::R> {
         unsafe {
@@ -10974,7 +10974,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf101(
+    pub const fn cfdrfdf1_10(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf10_SPEC, crate::common::R> {
         unsafe {
@@ -10984,7 +10984,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf102(
+    pub const fn cfdrfdf2_10(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf10_SPEC, crate::common::R> {
         unsafe {
@@ -10994,7 +10994,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf103(
+    pub const fn cfdrfdf3_10(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf10_SPEC, crate::common::R> {
         unsafe {
@@ -11004,7 +11004,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf104(
+    pub const fn cfdrfdf4_10(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf10_SPEC, crate::common::R> {
         unsafe {
@@ -11014,7 +11014,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf105(
+    pub const fn cfdrfdf5_10(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf10_SPEC, crate::common::R> {
         unsafe {
@@ -11024,7 +11024,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf106(
+    pub const fn cfdrfdf6_10(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf10_SPEC, crate::common::R> {
         unsafe {
@@ -11034,7 +11034,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf107(
+    pub const fn cfdrfdf7_10(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf10_SPEC, crate::common::R> {
         unsafe {
@@ -11046,7 +11046,7 @@ impl super::Canfd {
 
     #[doc = "RX FIFO Access Data Field 11 Register %s"]
     #[inline(always)]
-    pub const fn cfdrfdf11(
+    pub const fn cfdrfdf_11(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdrfdf11_SPEC, crate::common::R>,
@@ -11058,7 +11058,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf110(
+    pub const fn cfdrfdf0_11(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf11_SPEC, crate::common::R> {
         unsafe {
@@ -11068,7 +11068,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf111(
+    pub const fn cfdrfdf1_11(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf11_SPEC, crate::common::R> {
         unsafe {
@@ -11078,7 +11078,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf112(
+    pub const fn cfdrfdf2_11(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf11_SPEC, crate::common::R> {
         unsafe {
@@ -11088,7 +11088,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf113(
+    pub const fn cfdrfdf3_11(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf11_SPEC, crate::common::R> {
         unsafe {
@@ -11098,7 +11098,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf114(
+    pub const fn cfdrfdf4_11(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf11_SPEC, crate::common::R> {
         unsafe {
@@ -11108,7 +11108,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf115(
+    pub const fn cfdrfdf5_11(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf11_SPEC, crate::common::R> {
         unsafe {
@@ -11118,7 +11118,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf116(
+    pub const fn cfdrfdf6_11(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf11_SPEC, crate::common::R> {
         unsafe {
@@ -11128,7 +11128,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf117(
+    pub const fn cfdrfdf7_11(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf11_SPEC, crate::common::R> {
         unsafe {
@@ -11140,7 +11140,7 @@ impl super::Canfd {
 
     #[doc = "RX FIFO Access Data Field 12 Register %s"]
     #[inline(always)]
-    pub const fn cfdrfdf12(
+    pub const fn cfdrfdf_12(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdrfdf12_SPEC, crate::common::R>,
@@ -11152,7 +11152,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf120(
+    pub const fn cfdrfdf0_12(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf12_SPEC, crate::common::R> {
         unsafe {
@@ -11162,7 +11162,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf121(
+    pub const fn cfdrfdf1_12(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf12_SPEC, crate::common::R> {
         unsafe {
@@ -11172,7 +11172,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf122(
+    pub const fn cfdrfdf2_12(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf12_SPEC, crate::common::R> {
         unsafe {
@@ -11182,7 +11182,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf123(
+    pub const fn cfdrfdf3_12(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf12_SPEC, crate::common::R> {
         unsafe {
@@ -11192,7 +11192,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf124(
+    pub const fn cfdrfdf4_12(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf12_SPEC, crate::common::R> {
         unsafe {
@@ -11202,7 +11202,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf125(
+    pub const fn cfdrfdf5_12(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf12_SPEC, crate::common::R> {
         unsafe {
@@ -11212,7 +11212,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf126(
+    pub const fn cfdrfdf6_12(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf12_SPEC, crate::common::R> {
         unsafe {
@@ -11222,7 +11222,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf127(
+    pub const fn cfdrfdf7_12(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf12_SPEC, crate::common::R> {
         unsafe {
@@ -11234,7 +11234,7 @@ impl super::Canfd {
 
     #[doc = "RX FIFO Access Data Field 13 Register %s"]
     #[inline(always)]
-    pub const fn cfdrfdf13(
+    pub const fn cfdrfdf_13(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdrfdf13_SPEC, crate::common::R>,
@@ -11246,7 +11246,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf130(
+    pub const fn cfdrfdf0_13(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf13_SPEC, crate::common::R> {
         unsafe {
@@ -11256,7 +11256,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf131(
+    pub const fn cfdrfdf1_13(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf13_SPEC, crate::common::R> {
         unsafe {
@@ -11266,7 +11266,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf132(
+    pub const fn cfdrfdf2_13(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf13_SPEC, crate::common::R> {
         unsafe {
@@ -11276,7 +11276,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf133(
+    pub const fn cfdrfdf3_13(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf13_SPEC, crate::common::R> {
         unsafe {
@@ -11286,7 +11286,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf134(
+    pub const fn cfdrfdf4_13(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf13_SPEC, crate::common::R> {
         unsafe {
@@ -11296,7 +11296,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf135(
+    pub const fn cfdrfdf5_13(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf13_SPEC, crate::common::R> {
         unsafe {
@@ -11306,7 +11306,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf136(
+    pub const fn cfdrfdf6_13(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf13_SPEC, crate::common::R> {
         unsafe {
@@ -11316,7 +11316,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf137(
+    pub const fn cfdrfdf7_13(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf13_SPEC, crate::common::R> {
         unsafe {
@@ -11328,7 +11328,7 @@ impl super::Canfd {
 
     #[doc = "RX FIFO Access Data Field 14 Register %s"]
     #[inline(always)]
-    pub const fn cfdrfdf14(
+    pub const fn cfdrfdf_14(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdrfdf14_SPEC, crate::common::R>,
@@ -11340,7 +11340,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf140(
+    pub const fn cfdrfdf0_14(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf14_SPEC, crate::common::R> {
         unsafe {
@@ -11350,7 +11350,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf141(
+    pub const fn cfdrfdf1_14(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf14_SPEC, crate::common::R> {
         unsafe {
@@ -11360,7 +11360,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf142(
+    pub const fn cfdrfdf2_14(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf14_SPEC, crate::common::R> {
         unsafe {
@@ -11370,7 +11370,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf143(
+    pub const fn cfdrfdf3_14(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf14_SPEC, crate::common::R> {
         unsafe {
@@ -11380,7 +11380,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf144(
+    pub const fn cfdrfdf4_14(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf14_SPEC, crate::common::R> {
         unsafe {
@@ -11390,7 +11390,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf145(
+    pub const fn cfdrfdf5_14(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf14_SPEC, crate::common::R> {
         unsafe {
@@ -11400,7 +11400,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf146(
+    pub const fn cfdrfdf6_14(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf14_SPEC, crate::common::R> {
         unsafe {
@@ -11410,7 +11410,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf147(
+    pub const fn cfdrfdf7_14(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf14_SPEC, crate::common::R> {
         unsafe {
@@ -11422,7 +11422,7 @@ impl super::Canfd {
 
     #[doc = "RX FIFO Access Data Field 15 Register %s"]
     #[inline(always)]
-    pub const fn cfdrfdf15(
+    pub const fn cfdrfdf_15(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdrfdf15_SPEC, crate::common::R>,
@@ -11434,7 +11434,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf150(
+    pub const fn cfdrfdf0_15(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf15_SPEC, crate::common::R> {
         unsafe {
@@ -11444,7 +11444,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf151(
+    pub const fn cfdrfdf1_15(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf15_SPEC, crate::common::R> {
         unsafe {
@@ -11454,7 +11454,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf152(
+    pub const fn cfdrfdf2_15(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf15_SPEC, crate::common::R> {
         unsafe {
@@ -11464,7 +11464,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf153(
+    pub const fn cfdrfdf3_15(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf15_SPEC, crate::common::R> {
         unsafe {
@@ -11474,7 +11474,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf154(
+    pub const fn cfdrfdf4_15(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf15_SPEC, crate::common::R> {
         unsafe {
@@ -11484,7 +11484,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf155(
+    pub const fn cfdrfdf5_15(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf15_SPEC, crate::common::R> {
         unsafe {
@@ -11494,7 +11494,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf156(
+    pub const fn cfdrfdf6_15(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf15_SPEC, crate::common::R> {
         unsafe {
@@ -11504,7 +11504,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdrfdf157(
+    pub const fn cfdrfdf7_15(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdrfdf15_SPEC, crate::common::R> {
         unsafe {
@@ -11648,7 +11648,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 0 Register %s Channel 0"]
     #[inline(always)]
-    pub const fn cfdcfdf0_0(
+    pub const fn cfdcfdf_0_0(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf00_SPEC, crate::common::RW>,
@@ -11660,7 +11660,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf00_0(
+    pub const fn cfdcfdf0_0_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf00_SPEC, crate::common::RW> {
         unsafe {
@@ -11670,7 +11670,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf01_0(
+    pub const fn cfdcfdf1_0_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf00_SPEC, crate::common::RW> {
         unsafe {
@@ -11680,7 +11680,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf02_0(
+    pub const fn cfdcfdf2_0_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf00_SPEC, crate::common::RW> {
         unsafe {
@@ -11692,7 +11692,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 1 Register %s Channel 0"]
     #[inline(always)]
-    pub const fn cfdcfdf1_0(
+    pub const fn cfdcfdf_1_0(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf10_SPEC, crate::common::RW>,
@@ -11704,7 +11704,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf10_0(
+    pub const fn cfdcfdf0_1_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf10_SPEC, crate::common::RW> {
         unsafe {
@@ -11714,7 +11714,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf11_0(
+    pub const fn cfdcfdf1_1_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf10_SPEC, crate::common::RW> {
         unsafe {
@@ -11724,7 +11724,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf12_0(
+    pub const fn cfdcfdf2_1_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf10_SPEC, crate::common::RW> {
         unsafe {
@@ -11736,7 +11736,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 2 Register %s Channel 0"]
     #[inline(always)]
-    pub const fn cfdcfdf2_0(
+    pub const fn cfdcfdf_2_0(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf20_SPEC, crate::common::RW>,
@@ -11748,7 +11748,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf20_0(
+    pub const fn cfdcfdf0_2_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf20_SPEC, crate::common::RW> {
         unsafe {
@@ -11758,7 +11758,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf21_0(
+    pub const fn cfdcfdf1_2_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf20_SPEC, crate::common::RW> {
         unsafe {
@@ -11768,7 +11768,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf22_0(
+    pub const fn cfdcfdf2_2_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf20_SPEC, crate::common::RW> {
         unsafe {
@@ -11780,7 +11780,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 3 Register %s Channel 0"]
     #[inline(always)]
-    pub const fn cfdcfdf3_0(
+    pub const fn cfdcfdf_3_0(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf30_SPEC, crate::common::RW>,
@@ -11792,7 +11792,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf30_0(
+    pub const fn cfdcfdf0_3_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf30_SPEC, crate::common::RW> {
         unsafe {
@@ -11802,7 +11802,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf31_0(
+    pub const fn cfdcfdf1_3_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf30_SPEC, crate::common::RW> {
         unsafe {
@@ -11812,7 +11812,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf32_0(
+    pub const fn cfdcfdf2_3_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf30_SPEC, crate::common::RW> {
         unsafe {
@@ -11824,7 +11824,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 4 Register %s Channel 0"]
     #[inline(always)]
-    pub const fn cfdcfdf4_0(
+    pub const fn cfdcfdf_4_0(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf40_SPEC, crate::common::RW>,
@@ -11836,7 +11836,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf40_0(
+    pub const fn cfdcfdf0_4_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf40_SPEC, crate::common::RW> {
         unsafe {
@@ -11846,7 +11846,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf41_0(
+    pub const fn cfdcfdf1_4_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf40_SPEC, crate::common::RW> {
         unsafe {
@@ -11856,7 +11856,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf42_0(
+    pub const fn cfdcfdf2_4_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf40_SPEC, crate::common::RW> {
         unsafe {
@@ -11868,7 +11868,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 5 Register %s Channel 0"]
     #[inline(always)]
-    pub const fn cfdcfdf5_0(
+    pub const fn cfdcfdf_5_0(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf50_SPEC, crate::common::RW>,
@@ -11880,7 +11880,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf50_0(
+    pub const fn cfdcfdf0_5_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf50_SPEC, crate::common::RW> {
         unsafe {
@@ -11890,7 +11890,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf51_0(
+    pub const fn cfdcfdf1_5_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf50_SPEC, crate::common::RW> {
         unsafe {
@@ -11900,7 +11900,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf52_0(
+    pub const fn cfdcfdf2_5_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf50_SPEC, crate::common::RW> {
         unsafe {
@@ -11912,7 +11912,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 6 Register %s Channel 0"]
     #[inline(always)]
-    pub const fn cfdcfdf6_0(
+    pub const fn cfdcfdf_6_0(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf60_SPEC, crate::common::RW>,
@@ -11924,7 +11924,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf60_0(
+    pub const fn cfdcfdf0_6_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf60_SPEC, crate::common::RW> {
         unsafe {
@@ -11934,7 +11934,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf61_0(
+    pub const fn cfdcfdf1_6_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf60_SPEC, crate::common::RW> {
         unsafe {
@@ -11944,7 +11944,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf62_0(
+    pub const fn cfdcfdf2_6_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf60_SPEC, crate::common::RW> {
         unsafe {
@@ -11956,7 +11956,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 7 Register %s Channel 0"]
     #[inline(always)]
-    pub const fn cfdcfdf7_0(
+    pub const fn cfdcfdf_7_0(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf70_SPEC, crate::common::RW>,
@@ -11968,7 +11968,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf70_0(
+    pub const fn cfdcfdf0_7_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf70_SPEC, crate::common::RW> {
         unsafe {
@@ -11978,7 +11978,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf71_0(
+    pub const fn cfdcfdf1_7_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf70_SPEC, crate::common::RW> {
         unsafe {
@@ -11988,7 +11988,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf72_0(
+    pub const fn cfdcfdf2_7_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf70_SPEC, crate::common::RW> {
         unsafe {
@@ -12000,7 +12000,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 8 Register %s Channel 0"]
     #[inline(always)]
-    pub const fn cfdcfdf8_0(
+    pub const fn cfdcfdf_8_0(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf80_SPEC, crate::common::RW>,
@@ -12012,7 +12012,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf80_0(
+    pub const fn cfdcfdf0_8_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf80_SPEC, crate::common::RW> {
         unsafe {
@@ -12022,7 +12022,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf81_0(
+    pub const fn cfdcfdf1_8_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf80_SPEC, crate::common::RW> {
         unsafe {
@@ -12032,7 +12032,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf82_0(
+    pub const fn cfdcfdf2_8_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf80_SPEC, crate::common::RW> {
         unsafe {
@@ -12044,7 +12044,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 9 Register %s Channel 0"]
     #[inline(always)]
-    pub const fn cfdcfdf9_0(
+    pub const fn cfdcfdf_9_0(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf90_SPEC, crate::common::RW>,
@@ -12056,7 +12056,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf90_0(
+    pub const fn cfdcfdf0_9_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf90_SPEC, crate::common::RW> {
         unsafe {
@@ -12066,7 +12066,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf91_0(
+    pub const fn cfdcfdf1_9_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf90_SPEC, crate::common::RW> {
         unsafe {
@@ -12076,7 +12076,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf92_0(
+    pub const fn cfdcfdf2_9_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf90_SPEC, crate::common::RW> {
         unsafe {
@@ -12088,7 +12088,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 10 Register %s Channel 0"]
     #[inline(always)]
-    pub const fn cfdcfdf10_0(
+    pub const fn cfdcfdf_10_0(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf100_SPEC, crate::common::RW>,
@@ -12100,7 +12100,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf100_0(
+    pub const fn cfdcfdf0_10_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf100_SPEC, crate::common::RW> {
         unsafe {
@@ -12110,7 +12110,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf101_0(
+    pub const fn cfdcfdf1_10_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf100_SPEC, crate::common::RW> {
         unsafe {
@@ -12120,7 +12120,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf102_0(
+    pub const fn cfdcfdf2_10_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf100_SPEC, crate::common::RW> {
         unsafe {
@@ -12132,7 +12132,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 11 Register %s Channel 0"]
     #[inline(always)]
-    pub const fn cfdcfdf11_0(
+    pub const fn cfdcfdf_11_0(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf110_SPEC, crate::common::RW>,
@@ -12144,7 +12144,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf110_0(
+    pub const fn cfdcfdf0_11_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf110_SPEC, crate::common::RW> {
         unsafe {
@@ -12154,7 +12154,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf111_0(
+    pub const fn cfdcfdf1_11_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf110_SPEC, crate::common::RW> {
         unsafe {
@@ -12164,7 +12164,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf112_0(
+    pub const fn cfdcfdf2_11_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf110_SPEC, crate::common::RW> {
         unsafe {
@@ -12176,7 +12176,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 12 Register %s Channel 0"]
     #[inline(always)]
-    pub const fn cfdcfdf12_0(
+    pub const fn cfdcfdf_12_0(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf120_SPEC, crate::common::RW>,
@@ -12188,7 +12188,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf120_0(
+    pub const fn cfdcfdf0_12_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf120_SPEC, crate::common::RW> {
         unsafe {
@@ -12198,7 +12198,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf121_0(
+    pub const fn cfdcfdf1_12_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf120_SPEC, crate::common::RW> {
         unsafe {
@@ -12208,7 +12208,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf122_0(
+    pub const fn cfdcfdf2_12_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf120_SPEC, crate::common::RW> {
         unsafe {
@@ -12220,7 +12220,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 13 Register %s Channel 0"]
     #[inline(always)]
-    pub const fn cfdcfdf13_0(
+    pub const fn cfdcfdf_13_0(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf130_SPEC, crate::common::RW>,
@@ -12232,7 +12232,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf130_0(
+    pub const fn cfdcfdf0_13_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf130_SPEC, crate::common::RW> {
         unsafe {
@@ -12242,7 +12242,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf131_0(
+    pub const fn cfdcfdf1_13_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf130_SPEC, crate::common::RW> {
         unsafe {
@@ -12252,7 +12252,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf132_0(
+    pub const fn cfdcfdf2_13_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf130_SPEC, crate::common::RW> {
         unsafe {
@@ -12264,7 +12264,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 14 Register %s Channel 0"]
     #[inline(always)]
-    pub const fn cfdcfdf14_0(
+    pub const fn cfdcfdf_14_0(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf140_SPEC, crate::common::RW>,
@@ -12276,7 +12276,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf140_0(
+    pub const fn cfdcfdf0_14_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf140_SPEC, crate::common::RW> {
         unsafe {
@@ -12286,7 +12286,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf141_0(
+    pub const fn cfdcfdf1_14_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf140_SPEC, crate::common::RW> {
         unsafe {
@@ -12296,7 +12296,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf142_0(
+    pub const fn cfdcfdf2_14_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf140_SPEC, crate::common::RW> {
         unsafe {
@@ -12308,7 +12308,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 15 Register %s Channel 0"]
     #[inline(always)]
-    pub const fn cfdcfdf15_0(
+    pub const fn cfdcfdf_15_0(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf150_SPEC, crate::common::RW>,
@@ -12320,7 +12320,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf150_0(
+    pub const fn cfdcfdf0_15_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf150_SPEC, crate::common::RW> {
         unsafe {
@@ -12330,7 +12330,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf151_0(
+    pub const fn cfdcfdf1_15_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf150_SPEC, crate::common::RW> {
         unsafe {
@@ -12340,7 +12340,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf152_0(
+    pub const fn cfdcfdf2_15_0(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf150_SPEC, crate::common::RW> {
         unsafe {
@@ -12484,7 +12484,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 0 Register %s Channel 1"]
     #[inline(always)]
-    pub const fn cfdcfdf0_1(
+    pub const fn cfdcfdf_0_1(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf01_SPEC, crate::common::RW>,
@@ -12496,7 +12496,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf00_1(
+    pub const fn cfdcfdf0_0_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf01_SPEC, crate::common::RW> {
         unsafe {
@@ -12506,7 +12506,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf01_1(
+    pub const fn cfdcfdf1_0_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf01_SPEC, crate::common::RW> {
         unsafe {
@@ -12516,7 +12516,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf02_1(
+    pub const fn cfdcfdf2_0_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf01_SPEC, crate::common::RW> {
         unsafe {
@@ -12528,7 +12528,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 1 Register %s Channel 1"]
     #[inline(always)]
-    pub const fn cfdcfdf1_1(
+    pub const fn cfdcfdf_1_1(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf11_SPEC, crate::common::RW>,
@@ -12540,7 +12540,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf10_1(
+    pub const fn cfdcfdf0_1_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf11_SPEC, crate::common::RW> {
         unsafe {
@@ -12550,7 +12550,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf11_1(
+    pub const fn cfdcfdf1_1_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf11_SPEC, crate::common::RW> {
         unsafe {
@@ -12560,7 +12560,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf12_1(
+    pub const fn cfdcfdf2_1_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf11_SPEC, crate::common::RW> {
         unsafe {
@@ -12572,7 +12572,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 2 Register %s Channel 1"]
     #[inline(always)]
-    pub const fn cfdcfdf2_1(
+    pub const fn cfdcfdf_2_1(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf21_SPEC, crate::common::RW>,
@@ -12584,7 +12584,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf20_1(
+    pub const fn cfdcfdf0_2_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf21_SPEC, crate::common::RW> {
         unsafe {
@@ -12594,7 +12594,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf21_1(
+    pub const fn cfdcfdf1_2_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf21_SPEC, crate::common::RW> {
         unsafe {
@@ -12604,7 +12604,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf22_1(
+    pub const fn cfdcfdf2_2_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf21_SPEC, crate::common::RW> {
         unsafe {
@@ -12616,7 +12616,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 3 Register %s Channel 1"]
     #[inline(always)]
-    pub const fn cfdcfdf3_1(
+    pub const fn cfdcfdf_3_1(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf31_SPEC, crate::common::RW>,
@@ -12628,7 +12628,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf30_1(
+    pub const fn cfdcfdf0_3_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf31_SPEC, crate::common::RW> {
         unsafe {
@@ -12638,7 +12638,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf31_1(
+    pub const fn cfdcfdf1_3_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf31_SPEC, crate::common::RW> {
         unsafe {
@@ -12648,7 +12648,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf32_1(
+    pub const fn cfdcfdf2_3_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf31_SPEC, crate::common::RW> {
         unsafe {
@@ -12660,7 +12660,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 4 Register %s Channel 1"]
     #[inline(always)]
-    pub const fn cfdcfdf4_1(
+    pub const fn cfdcfdf_4_1(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf41_SPEC, crate::common::RW>,
@@ -12672,7 +12672,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf40_1(
+    pub const fn cfdcfdf0_4_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf41_SPEC, crate::common::RW> {
         unsafe {
@@ -12682,7 +12682,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf41_1(
+    pub const fn cfdcfdf1_4_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf41_SPEC, crate::common::RW> {
         unsafe {
@@ -12692,7 +12692,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf42_1(
+    pub const fn cfdcfdf2_4_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf41_SPEC, crate::common::RW> {
         unsafe {
@@ -12704,7 +12704,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 5 Register %s Channel 1"]
     #[inline(always)]
-    pub const fn cfdcfdf5_1(
+    pub const fn cfdcfdf_5_1(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf51_SPEC, crate::common::RW>,
@@ -12716,7 +12716,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf50_1(
+    pub const fn cfdcfdf0_5_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf51_SPEC, crate::common::RW> {
         unsafe {
@@ -12726,7 +12726,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf51_1(
+    pub const fn cfdcfdf1_5_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf51_SPEC, crate::common::RW> {
         unsafe {
@@ -12736,7 +12736,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf52_1(
+    pub const fn cfdcfdf2_5_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf51_SPEC, crate::common::RW> {
         unsafe {
@@ -12748,7 +12748,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 6 Register %s Channel 1"]
     #[inline(always)]
-    pub const fn cfdcfdf6_1(
+    pub const fn cfdcfdf_6_1(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf61_SPEC, crate::common::RW>,
@@ -12760,7 +12760,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf60_1(
+    pub const fn cfdcfdf0_6_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf61_SPEC, crate::common::RW> {
         unsafe {
@@ -12770,7 +12770,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf61_1(
+    pub const fn cfdcfdf1_6_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf61_SPEC, crate::common::RW> {
         unsafe {
@@ -12780,7 +12780,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf62_1(
+    pub const fn cfdcfdf2_6_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf61_SPEC, crate::common::RW> {
         unsafe {
@@ -12792,7 +12792,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 7 Register %s Channel 1"]
     #[inline(always)]
-    pub const fn cfdcfdf7_1(
+    pub const fn cfdcfdf_7_1(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf71_SPEC, crate::common::RW>,
@@ -12804,7 +12804,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf70_1(
+    pub const fn cfdcfdf0_7_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf71_SPEC, crate::common::RW> {
         unsafe {
@@ -12814,7 +12814,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf71_1(
+    pub const fn cfdcfdf1_7_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf71_SPEC, crate::common::RW> {
         unsafe {
@@ -12824,7 +12824,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf72_1(
+    pub const fn cfdcfdf2_7_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf71_SPEC, crate::common::RW> {
         unsafe {
@@ -12836,7 +12836,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 8 Register %s Channel 1"]
     #[inline(always)]
-    pub const fn cfdcfdf8_1(
+    pub const fn cfdcfdf_8_1(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf81_SPEC, crate::common::RW>,
@@ -12848,7 +12848,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf80_1(
+    pub const fn cfdcfdf0_8_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf81_SPEC, crate::common::RW> {
         unsafe {
@@ -12858,7 +12858,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf81_1(
+    pub const fn cfdcfdf1_8_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf81_SPEC, crate::common::RW> {
         unsafe {
@@ -12868,7 +12868,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf82_1(
+    pub const fn cfdcfdf2_8_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf81_SPEC, crate::common::RW> {
         unsafe {
@@ -12880,7 +12880,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 9 Register %s Channel 1"]
     #[inline(always)]
-    pub const fn cfdcfdf9_1(
+    pub const fn cfdcfdf_9_1(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf91_SPEC, crate::common::RW>,
@@ -12892,7 +12892,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf90_1(
+    pub const fn cfdcfdf0_9_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf91_SPEC, crate::common::RW> {
         unsafe {
@@ -12902,7 +12902,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf91_1(
+    pub const fn cfdcfdf1_9_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf91_SPEC, crate::common::RW> {
         unsafe {
@@ -12912,7 +12912,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf92_1(
+    pub const fn cfdcfdf2_9_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf91_SPEC, crate::common::RW> {
         unsafe {
@@ -12924,7 +12924,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 10 Register %s Channel 1"]
     #[inline(always)]
-    pub const fn cfdcfdf10_1(
+    pub const fn cfdcfdf_10_1(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf101_SPEC, crate::common::RW>,
@@ -12936,7 +12936,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf100_1(
+    pub const fn cfdcfdf0_10_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf101_SPEC, crate::common::RW> {
         unsafe {
@@ -12946,7 +12946,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf101_1(
+    pub const fn cfdcfdf1_10_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf101_SPEC, crate::common::RW> {
         unsafe {
@@ -12956,7 +12956,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf102_1(
+    pub const fn cfdcfdf2_10_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf101_SPEC, crate::common::RW> {
         unsafe {
@@ -12968,7 +12968,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 11 Register %s Channel 1"]
     #[inline(always)]
-    pub const fn cfdcfdf11_1(
+    pub const fn cfdcfdf_11_1(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf111_SPEC, crate::common::RW>,
@@ -12980,7 +12980,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf110_1(
+    pub const fn cfdcfdf0_11_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf111_SPEC, crate::common::RW> {
         unsafe {
@@ -12990,7 +12990,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf111_1(
+    pub const fn cfdcfdf1_11_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf111_SPEC, crate::common::RW> {
         unsafe {
@@ -13000,7 +13000,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf112_1(
+    pub const fn cfdcfdf2_11_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf111_SPEC, crate::common::RW> {
         unsafe {
@@ -13012,7 +13012,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 12 Register %s Channel 1"]
     #[inline(always)]
-    pub const fn cfdcfdf12_1(
+    pub const fn cfdcfdf_12_1(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf121_SPEC, crate::common::RW>,
@@ -13024,7 +13024,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf120_1(
+    pub const fn cfdcfdf0_12_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf121_SPEC, crate::common::RW> {
         unsafe {
@@ -13034,7 +13034,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf121_1(
+    pub const fn cfdcfdf1_12_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf121_SPEC, crate::common::RW> {
         unsafe {
@@ -13044,7 +13044,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf122_1(
+    pub const fn cfdcfdf2_12_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf121_SPEC, crate::common::RW> {
         unsafe {
@@ -13056,7 +13056,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 13 Register %s Channel 1"]
     #[inline(always)]
-    pub const fn cfdcfdf13_1(
+    pub const fn cfdcfdf_13_1(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf131_SPEC, crate::common::RW>,
@@ -13068,7 +13068,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf130_1(
+    pub const fn cfdcfdf0_13_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf131_SPEC, crate::common::RW> {
         unsafe {
@@ -13078,7 +13078,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf131_1(
+    pub const fn cfdcfdf1_13_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf131_SPEC, crate::common::RW> {
         unsafe {
@@ -13088,7 +13088,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf132_1(
+    pub const fn cfdcfdf2_13_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf131_SPEC, crate::common::RW> {
         unsafe {
@@ -13100,7 +13100,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 14 Register %s Channel 1"]
     #[inline(always)]
-    pub const fn cfdcfdf14_1(
+    pub const fn cfdcfdf_14_1(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf141_SPEC, crate::common::RW>,
@@ -13112,7 +13112,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf140_1(
+    pub const fn cfdcfdf0_14_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf141_SPEC, crate::common::RW> {
         unsafe {
@@ -13122,7 +13122,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf141_1(
+    pub const fn cfdcfdf1_14_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf141_SPEC, crate::common::RW> {
         unsafe {
@@ -13132,7 +13132,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf142_1(
+    pub const fn cfdcfdf2_14_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf141_SPEC, crate::common::RW> {
         unsafe {
@@ -13144,7 +13144,7 @@ impl super::Canfd {
 
     #[doc = "Common FIFO Access Data Field 15 Register %s Channel 1"]
     #[inline(always)]
-    pub const fn cfdcfdf15_1(
+    pub const fn cfdcfdf_15_1(
         &self,
     ) -> &'static crate::common::ClusterRegisterArray<
         crate::common::Reg<self::Cfdcfdf151_SPEC, crate::common::RW>,
@@ -13156,7 +13156,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf150_1(
+    pub const fn cfdcfdf0_15_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf151_SPEC, crate::common::RW> {
         unsafe {
@@ -13166,7 +13166,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf151_1(
+    pub const fn cfdcfdf1_15_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf151_SPEC, crate::common::RW> {
         unsafe {
@@ -13176,7 +13176,7 @@ impl super::Canfd {
         }
     }
     #[inline(always)]
-    pub const fn cfdcfdf152_1(
+    pub const fn cfdcfdf2_15_1(
         &self,
     ) -> &'static crate::common::Reg<self::Cfdcfdf151_SPEC, crate::common::RW> {
         unsafe {

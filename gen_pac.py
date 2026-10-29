@@ -11,6 +11,7 @@ if hasattr(sys.stdout, "reconfigure"):
 if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
+import copy
 import shutil
 import subprocess
 import glob
@@ -493,13 +494,14 @@ def format_cargo_toml(content):
 
     return content
 
-def update_cargo_toml(pac_dir, package_name):
+def update_cargo_toml(pac_dir, package_name, svd_device_name=None):
     """
     Update the Cargo.toml file by replacing the [package] section with the manifest template.
 
     Args:
         pac_dir: Path to the PAC directory
         package_name: Name of the package (e.g., "ra0e1-pac")
+        svd_device_name: SVD device name (e.g., "R7FA0E107"), used for the crate description
 
     Returns:
         bool: True if successful, False otherwise
@@ -519,9 +521,11 @@ def update_cargo_toml(pac_dir, package_name):
         device_name = package_name.split('-')[0]
         family_name = device_name[:2] if len(device_name) >= 2 else device_name
 
-        # For Renesas devices, device_name is usually the full device name in uppercase
-        if package_name.startswith("ra"):
-            DEVICE_NAME = "R7FA" + device_name[1:].upper()
+        # For Renesas devices, use the part number prefix (e.g. "ra0e1" -> "R7FA0E1")
+        if svd_device_name and svd_device_name.upper().startswith(("R7FA", "R7KA")):
+            DEVICE_NAME = svd_device_name.upper()[:7]
+        elif package_name.startswith("ra"):
+            DEVICE_NAME = "R7FA" + device_name[2:].upper()
         else:
             DEVICE_NAME = device_name.upper()
 
@@ -901,6 +905,145 @@ def fix_icu_irqcr_layouts(root, svd_file_path):
         )
         break
 
+    return root
+
+def expand_dim_index(element):
+    """Return the dimIndex values of a dim element as strings (numeric ranges and lists)."""
+    dim_index_text = get_child_text(element, "dimIndex")
+    if not dim_index_text:
+        return [str(index) for index in range(parse_int(get_child_text(element, "dim")) or 0)]
+
+    indices = []
+    for part in dim_index_text.split(','):
+        part = part.strip()
+        start_text, _, end_text = part.partition('-')
+        if end_text and start_text.isdigit() and end_text.isdigit():
+            indices.extend(str(index) for index in range(int(start_text), int(end_text) + 1))
+        elif part:
+            indices.append(part)
+    return indices
+
+def fix_dim_name_collisions(root):
+    """
+    Rename dim registers whose expanded element names collide with another register array.
+
+    svd2pac emits one accessor for a register array (name without %s) plus one accessor per
+    element (%s replaced by the index). E.g. in RA6M5 CANFD, element 0 of CFDRFDF1%s
+    (cfdrfdf10) collides with the array CFDRFDF10%s (cfdrfdf10), so the PAC does not
+    compile. The whole register family is renamed to the scheme the other RA SVDs use,
+    CFDRFDF<n>%s -> CFDRFDF%s_<n> (likewise FWCTTC%s<n> -> FWCTTC%s_<n>); other names
+    get a separator: X%s -> X_%s.
+    """
+    print("Fixing register array name collisions...")
+
+    family_res = (
+        re.compile(r'(.*?[A-Za-z_])(\d+)%s(.*)'),  # CFDRFDF1%s, CFDCFDF1%s_0
+        re.compile(r'(.*?[A-Za-z_])%s(\d+)(.*)'),  # FWCTTC%s0, FWCTTC%s20
+    )
+
+    def is_dim_array(element, name):
+        return element.find("dim") is not None and "%s" in name and "[%s]" not in name
+
+    def find_collision(children):
+        array_names = {}
+        for child in children:
+            name = get_child_text(child, "name")
+            if name:
+                key = name.replace("%s", "") if is_dim_array(child, name) else name
+                array_names.setdefault(key.lower(), set()).add(name)
+
+        for child in children:
+            name = get_child_text(child, "name")
+            if not name or not is_dim_array(child, name):
+                continue
+            for index in expand_dim_index(child):
+                element_name = name.replace("%s", index)
+                if array_names.get(element_name.lower(), set()) - {name}:
+                    return child, element_name
+        return None
+
+    renamed_count = 0
+    containers = list(root.iter("registers")) + list(root.iter("cluster"))
+    for container in containers:
+        children = [child for child in container if child.tag in ("register", "cluster")]
+
+        while (collision := find_collision(children)) is not None:
+            child, element_name = collision
+            name = get_child_text(child, "name")
+            family_re = next((regex for regex in family_res if regex.fullmatch(name)), None)
+
+            if family_re:
+                prefix, _, suffix = family_re.fullmatch(name).groups()
+                renames = []
+                for sibling in children:
+                    sibling_name = get_child_text(sibling, "name")
+                    match = family_re.fullmatch(sibling_name or "")
+                    if match and is_dim_array(sibling, sibling_name) and (match.group(1), match.group(3)) == (prefix, suffix):
+                        renames.append((sibling, f"{prefix}%s_{match.group(2)}{suffix}"))
+            else:
+                renames = [(child, name.replace("%s", "_%s"))]
+
+            for element, new_name in renames:
+                old_name = get_child_text(element, "name")
+                element.find("name").text = new_name
+                renamed_count += 1
+                print(f"  Renamed '{old_name}' to '{new_name}' (element '{element_name}' collides)")
+
+    print(f"Renamed {renamed_count} colliding register arrays")
+    return root
+
+def fix_derived_peripherals_with_registers(root):
+    """
+    Expand derived peripherals that also declare their own registers.
+
+    svd2pac reuses the base peripheral's module and type for a derivedFrom peripheral, so
+    a derived peripheral with extra registers (e.g. RA4L1 SCI5 derived from SCI0 plus IRCR)
+    generates a second `mod sci0` / `struct Sci0`. Copy the base registers into the derived
+    peripheral and drop derivedFrom so it gets its own module and type.
+    """
+    print("Expanding derived peripherals with additional registers...")
+
+    peripherals = {get_child_text(peripheral, "name"): peripheral for peripheral in root.iter("peripheral")}
+    expanded_count = 0
+
+    for peripheral in root.iter("peripheral"):
+        base_name = peripheral.get("derivedFrom")
+        derived_registers = peripheral.find("registers")
+        if not base_name or derived_registers is None:
+            continue
+
+        base = peripherals.get(base_name)
+        if base is None or base.find("registers") is None:
+            print(f"  Warning: base peripheral '{base_name}' not found for '{get_child_text(peripheral, 'name')}'")
+            continue
+
+        own_registers = {get_child_text(register, "name"): register for register in derived_registers}
+        merged_registers = ET.Element("registers")
+        for register in base.find("registers"):
+            override = own_registers.pop(get_child_text(register, "name"), None)
+            merged_registers.append(override if override is not None else copy.deepcopy(register))
+        for register in own_registers.values():
+            merged_registers.append(register)
+
+        derived_blocks = peripheral.findall("addressBlock")
+        peripheral.remove(derived_registers)
+        for block in derived_blocks:
+            peripheral.remove(block)
+        for block in base.findall("addressBlock"):
+            peripheral.append(copy.deepcopy(block))
+        for block in derived_blocks:
+            peripheral.append(block)
+        peripheral.append(merged_registers)
+
+        for tag in ("groupName", "headerStructName", "size", "access", "resetValue", "resetMask"):
+            if peripheral.find(tag) is None and base.find(tag) is not None:
+                peripheral.insert(0, copy.deepcopy(base.find(tag)))
+
+        del peripheral.attrib["derivedFrom"]
+        expanded_count += 1
+        print(f"  Expanded '{get_child_text(peripheral, 'name')}' from '{base_name}'")
+
+    print(f"Expanded {expanded_count} derived peripherals")
     return root
 
 def fix_enumerated_values(root):
@@ -1697,6 +1840,10 @@ def preprocess_svd_file(svd_file_path):
 
         fix_icu_irqcr_layouts(root, svd_file_path)
 
+        fix_derived_peripherals_with_registers(root)
+
+        fix_dim_name_collisions(root)
+
         if FIX_DERIVED_FROM:
             fix_derived_from(root)
 
@@ -1855,6 +2002,12 @@ def process_device(device_name, patch_only=False, pac_only=False):
         pac_dir = Path(f"pac/{package_name}")
         pac_dir.mkdir(parents=True, exist_ok=True)
 
+        # svd2pac does not delete modules of peripherals that no longer exist, and stale
+        # files would still be packaged (include = ["src/*"]), so start from a clean src
+        src_dir_path = pac_dir / "src"
+        if src_dir_path.exists():
+            shutil.rmtree(src_dir_path)
+
         # If there's a patched SVD file available, try using that
         patched_svd = os.path.join("patched_svd", f"{device_name.upper()}.svd")
         if os.path.exists(patched_svd):
@@ -1905,7 +2058,7 @@ def process_device(device_name, patch_only=False, pac_only=False):
         # Check and generate docs for the device PAC
         if pac_dir.exists():
             # Update Cargo.toml with the manifest template
-            update_cargo_toml(pac_dir, package_name)
+            update_cargo_toml(pac_dir, package_name, device_name)
             # Change to the pac directory
             os.chdir(pac_dir)
             try:

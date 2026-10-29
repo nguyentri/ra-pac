@@ -109,12 +109,12 @@ pub mod rmpu;
 pub mod rtc;
 #[cfg(feature = "sci0")]
 pub mod sci0;
-#[cfg(feature = "sci5")]
-pub mod sci0;
 #[cfg(feature = "sci1")]
 pub mod sci1;
 #[cfg(feature = "sci3")]
 pub mod sci3;
+#[cfg(feature = "sci5")]
+pub mod sci5;
 #[cfg(feature = "slcdc")]
 pub mod slcdc;
 #[cfg(feature = "spi0")]
@@ -543,11 +543,11 @@ pub const SCI4: self::Sci3 = self::Sci3 {
 };
 #[cfg(feature = "sci5")]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Sci0 {
+pub struct Sci5 {
     ptr: *mut u8,
 }
 #[cfg(feature = "sci5")]
-pub const SCI5: self::Sci0 = self::Sci0 {
+pub const SCI5: self::Sci5 = self::Sci5 {
     ptr: 0x40118500u32 as _,
 };
 #[cfg(feature = "sci9")]
@@ -1504,7 +1504,7 @@ pub struct Peripherals {
     #[cfg(feature = "sci4")]
     pub SCI4: self::Sci3,
     #[cfg(feature = "sci5")]
-    pub SCI5: self::Sci0,
+    pub SCI5: self::Sci5,
     #[cfg(feature = "sci9")]
     pub SCI9: self::Sci0,
     #[cfg(feature = "spi0")]

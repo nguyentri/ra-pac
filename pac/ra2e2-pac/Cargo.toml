@@ -19,7 +19,7 @@
 name = "ra2e2-pac"
 version = "0.3.0"
 edition = "2024"
-description = "Peripheral Access Crate (PAC) for R7FAA2E2."
+description = "Peripheral Access Crate (PAC) for R7FA2E2."
 authors = ["Tri Nguyen <trongtribk06@gmail.com>"]
 keywords = ["ra2e2", "ra", "arm", "cortex-m", "renesas"]
 repository = "https://github.com/nguyentri/ra-pac"

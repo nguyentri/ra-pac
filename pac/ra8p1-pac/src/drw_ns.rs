@@ -2677,7 +2677,7 @@ pub mod control2 {
         pub const _10: Self = Self::new(2);
 
         #[doc = "(USEACB = 0) Use alpha from framebuffer (USEACB = 1) BC2A = 0: Use alpha from framebuffer as destination (DST_A)"]
-        pub const _10: Self = Self::new(2);
+        pub const _11: Self = Self::new(3);
     }
     #[derive(Clone, Copy, Eq, PartialEq, Ord, PartialOrd)]
     pub struct Rleenable_SPEC;

@@ -4613,772 +4613,772 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       CANFD.cfdrmfdsts_0()[15],
     ",
   0x400b200cu64 => "
-      CANFD.cfdrmdf0__0()[0],
+      CANFD.cfdrmdf_0_0()[0],
     ",
   0x400b208cu64 => "
-      CANFD.cfdrmdf0__0()[1],
+      CANFD.cfdrmdf_0_0()[1],
     ",
   0x400b210cu64 => "
-      CANFD.cfdrmdf0__0()[2],
+      CANFD.cfdrmdf_0_0()[2],
     ",
   0x400b218cu64 => "
-      CANFD.cfdrmdf0__0()[3],
+      CANFD.cfdrmdf_0_0()[3],
     ",
   0x400b220cu64 => "
-      CANFD.cfdrmdf0__0()[4],
+      CANFD.cfdrmdf_0_0()[4],
     ",
   0x400b228cu64 => "
-      CANFD.cfdrmdf0__0()[5],
+      CANFD.cfdrmdf_0_0()[5],
     ",
   0x400b230cu64 => "
-      CANFD.cfdrmdf0__0()[6],
+      CANFD.cfdrmdf_0_0()[6],
     ",
   0x400b238cu64 => "
-      CANFD.cfdrmdf0__0()[7],
+      CANFD.cfdrmdf_0_0()[7],
     ",
   0x400b240cu64 => "
-      CANFD.cfdrmdf0__0()[8],
+      CANFD.cfdrmdf_0_0()[8],
     ",
   0x400b248cu64 => "
-      CANFD.cfdrmdf0__0()[9],
+      CANFD.cfdrmdf_0_0()[9],
     ",
   0x400b250cu64 => "
-      CANFD.cfdrmdf0__0()[10],
+      CANFD.cfdrmdf_0_0()[10],
     ",
   0x400b258cu64 => "
-      CANFD.cfdrmdf0__0()[11],
+      CANFD.cfdrmdf_0_0()[11],
     ",
   0x400b260cu64 => "
-      CANFD.cfdrmdf0__0()[12],
+      CANFD.cfdrmdf_0_0()[12],
     ",
   0x400b268cu64 => "
-      CANFD.cfdrmdf0__0()[13],
+      CANFD.cfdrmdf_0_0()[13],
     ",
   0x400b270cu64 => "
-      CANFD.cfdrmdf0__0()[14],
+      CANFD.cfdrmdf_0_0()[14],
     ",
   0x400b278cu64 => "
-      CANFD.cfdrmdf0__0()[15],
+      CANFD.cfdrmdf_0_0()[15],
     ",
   0x400b2010u64 => "
-      CANFD.cfdrmdf1__0()[0],
+      CANFD.cfdrmdf_1_0()[0],
     ",
   0x400b2090u64 => "
-      CANFD.cfdrmdf1__0()[1],
+      CANFD.cfdrmdf_1_0()[1],
     ",
   0x400b2110u64 => "
-      CANFD.cfdrmdf1__0()[2],
+      CANFD.cfdrmdf_1_0()[2],
     ",
   0x400b2190u64 => "
-      CANFD.cfdrmdf1__0()[3],
+      CANFD.cfdrmdf_1_0()[3],
     ",
   0x400b2210u64 => "
-      CANFD.cfdrmdf1__0()[4],
+      CANFD.cfdrmdf_1_0()[4],
     ",
   0x400b2290u64 => "
-      CANFD.cfdrmdf1__0()[5],
+      CANFD.cfdrmdf_1_0()[5],
     ",
   0x400b2310u64 => "
-      CANFD.cfdrmdf1__0()[6],
+      CANFD.cfdrmdf_1_0()[6],
     ",
   0x400b2390u64 => "
-      CANFD.cfdrmdf1__0()[7],
+      CANFD.cfdrmdf_1_0()[7],
     ",
   0x400b2410u64 => "
-      CANFD.cfdrmdf1__0()[8],
+      CANFD.cfdrmdf_1_0()[8],
     ",
   0x400b2490u64 => "
-      CANFD.cfdrmdf1__0()[9],
+      CANFD.cfdrmdf_1_0()[9],
     ",
   0x400b2510u64 => "
-      CANFD.cfdrmdf1__0()[10],
+      CANFD.cfdrmdf_1_0()[10],
     ",
   0x400b2590u64 => "
-      CANFD.cfdrmdf1__0()[11],
+      CANFD.cfdrmdf_1_0()[11],
     ",
   0x400b2610u64 => "
-      CANFD.cfdrmdf1__0()[12],
+      CANFD.cfdrmdf_1_0()[12],
     ",
   0x400b2690u64 => "
-      CANFD.cfdrmdf1__0()[13],
+      CANFD.cfdrmdf_1_0()[13],
     ",
   0x400b2710u64 => "
-      CANFD.cfdrmdf1__0()[14],
+      CANFD.cfdrmdf_1_0()[14],
     ",
   0x400b2790u64 => "
-      CANFD.cfdrmdf1__0()[15],
+      CANFD.cfdrmdf_1_0()[15],
     ",
   0x400b2014u64 => "
-      CANFD.cfdrmdf2__0()[0],
+      CANFD.cfdrmdf_2_0()[0],
     ",
   0x400b2094u64 => "
-      CANFD.cfdrmdf2__0()[1],
+      CANFD.cfdrmdf_2_0()[1],
     ",
   0x400b2114u64 => "
-      CANFD.cfdrmdf2__0()[2],
+      CANFD.cfdrmdf_2_0()[2],
     ",
   0x400b2194u64 => "
-      CANFD.cfdrmdf2__0()[3],
+      CANFD.cfdrmdf_2_0()[3],
     ",
   0x400b2214u64 => "
-      CANFD.cfdrmdf2__0()[4],
+      CANFD.cfdrmdf_2_0()[4],
     ",
   0x400b2294u64 => "
-      CANFD.cfdrmdf2__0()[5],
+      CANFD.cfdrmdf_2_0()[5],
     ",
   0x400b2314u64 => "
-      CANFD.cfdrmdf2__0()[6],
+      CANFD.cfdrmdf_2_0()[6],
     ",
   0x400b2394u64 => "
-      CANFD.cfdrmdf2__0()[7],
+      CANFD.cfdrmdf_2_0()[7],
     ",
   0x400b2414u64 => "
-      CANFD.cfdrmdf2__0()[8],
+      CANFD.cfdrmdf_2_0()[8],
     ",
   0x400b2494u64 => "
-      CANFD.cfdrmdf2__0()[9],
+      CANFD.cfdrmdf_2_0()[9],
     ",
   0x400b2514u64 => "
-      CANFD.cfdrmdf2__0()[10],
+      CANFD.cfdrmdf_2_0()[10],
     ",
   0x400b2594u64 => "
-      CANFD.cfdrmdf2__0()[11],
+      CANFD.cfdrmdf_2_0()[11],
     ",
   0x400b2614u64 => "
-      CANFD.cfdrmdf2__0()[12],
+      CANFD.cfdrmdf_2_0()[12],
     ",
   0x400b2694u64 => "
-      CANFD.cfdrmdf2__0()[13],
+      CANFD.cfdrmdf_2_0()[13],
     ",
   0x400b2714u64 => "
-      CANFD.cfdrmdf2__0()[14],
+      CANFD.cfdrmdf_2_0()[14],
     ",
   0x400b2794u64 => "
-      CANFD.cfdrmdf2__0()[15],
+      CANFD.cfdrmdf_2_0()[15],
     ",
   0x400b2018u64 => "
-      CANFD.cfdrmdf3__0()[0],
+      CANFD.cfdrmdf_3_0()[0],
     ",
   0x400b2098u64 => "
-      CANFD.cfdrmdf3__0()[1],
+      CANFD.cfdrmdf_3_0()[1],
     ",
   0x400b2118u64 => "
-      CANFD.cfdrmdf3__0()[2],
+      CANFD.cfdrmdf_3_0()[2],
     ",
   0x400b2198u64 => "
-      CANFD.cfdrmdf3__0()[3],
+      CANFD.cfdrmdf_3_0()[3],
     ",
   0x400b2218u64 => "
-      CANFD.cfdrmdf3__0()[4],
+      CANFD.cfdrmdf_3_0()[4],
     ",
   0x400b2298u64 => "
-      CANFD.cfdrmdf3__0()[5],
+      CANFD.cfdrmdf_3_0()[5],
     ",
   0x400b2318u64 => "
-      CANFD.cfdrmdf3__0()[6],
+      CANFD.cfdrmdf_3_0()[6],
     ",
   0x400b2398u64 => "
-      CANFD.cfdrmdf3__0()[7],
+      CANFD.cfdrmdf_3_0()[7],
     ",
   0x400b2418u64 => "
-      CANFD.cfdrmdf3__0()[8],
+      CANFD.cfdrmdf_3_0()[8],
     ",
   0x400b2498u64 => "
-      CANFD.cfdrmdf3__0()[9],
+      CANFD.cfdrmdf_3_0()[9],
     ",
   0x400b2518u64 => "
-      CANFD.cfdrmdf3__0()[10],
+      CANFD.cfdrmdf_3_0()[10],
     ",
   0x400b2598u64 => "
-      CANFD.cfdrmdf3__0()[11],
+      CANFD.cfdrmdf_3_0()[11],
     ",
   0x400b2618u64 => "
-      CANFD.cfdrmdf3__0()[12],
+      CANFD.cfdrmdf_3_0()[12],
     ",
   0x400b2698u64 => "
-      CANFD.cfdrmdf3__0()[13],
+      CANFD.cfdrmdf_3_0()[13],
     ",
   0x400b2718u64 => "
-      CANFD.cfdrmdf3__0()[14],
+      CANFD.cfdrmdf_3_0()[14],
     ",
   0x400b2798u64 => "
-      CANFD.cfdrmdf3__0()[15],
+      CANFD.cfdrmdf_3_0()[15],
     ",
   0x400b201cu64 => "
-      CANFD.cfdrmdf4__0()[0],
+      CANFD.cfdrmdf_4_0()[0],
     ",
   0x400b209cu64 => "
-      CANFD.cfdrmdf4__0()[1],
+      CANFD.cfdrmdf_4_0()[1],
     ",
   0x400b211cu64 => "
-      CANFD.cfdrmdf4__0()[2],
+      CANFD.cfdrmdf_4_0()[2],
     ",
   0x400b219cu64 => "
-      CANFD.cfdrmdf4__0()[3],
+      CANFD.cfdrmdf_4_0()[3],
     ",
   0x400b221cu64 => "
-      CANFD.cfdrmdf4__0()[4],
+      CANFD.cfdrmdf_4_0()[4],
     ",
   0x400b229cu64 => "
-      CANFD.cfdrmdf4__0()[5],
+      CANFD.cfdrmdf_4_0()[5],
     ",
   0x400b231cu64 => "
-      CANFD.cfdrmdf4__0()[6],
+      CANFD.cfdrmdf_4_0()[6],
     ",
   0x400b239cu64 => "
-      CANFD.cfdrmdf4__0()[7],
+      CANFD.cfdrmdf_4_0()[7],
     ",
   0x400b241cu64 => "
-      CANFD.cfdrmdf4__0()[8],
+      CANFD.cfdrmdf_4_0()[8],
     ",
   0x400b249cu64 => "
-      CANFD.cfdrmdf4__0()[9],
+      CANFD.cfdrmdf_4_0()[9],
     ",
   0x400b251cu64 => "
-      CANFD.cfdrmdf4__0()[10],
+      CANFD.cfdrmdf_4_0()[10],
     ",
   0x400b259cu64 => "
-      CANFD.cfdrmdf4__0()[11],
+      CANFD.cfdrmdf_4_0()[11],
     ",
   0x400b261cu64 => "
-      CANFD.cfdrmdf4__0()[12],
+      CANFD.cfdrmdf_4_0()[12],
     ",
   0x400b269cu64 => "
-      CANFD.cfdrmdf4__0()[13],
+      CANFD.cfdrmdf_4_0()[13],
     ",
   0x400b271cu64 => "
-      CANFD.cfdrmdf4__0()[14],
+      CANFD.cfdrmdf_4_0()[14],
     ",
   0x400b279cu64 => "
-      CANFD.cfdrmdf4__0()[15],
+      CANFD.cfdrmdf_4_0()[15],
     ",
   0x400b2020u64 => "
-      CANFD.cfdrmdf5__0()[0],
+      CANFD.cfdrmdf_5_0()[0],
     ",
   0x400b20a0u64 => "
-      CANFD.cfdrmdf5__0()[1],
+      CANFD.cfdrmdf_5_0()[1],
     ",
   0x400b2120u64 => "
-      CANFD.cfdrmdf5__0()[2],
+      CANFD.cfdrmdf_5_0()[2],
     ",
   0x400b21a0u64 => "
-      CANFD.cfdrmdf5__0()[3],
+      CANFD.cfdrmdf_5_0()[3],
     ",
   0x400b2220u64 => "
-      CANFD.cfdrmdf5__0()[4],
+      CANFD.cfdrmdf_5_0()[4],
     ",
   0x400b22a0u64 => "
-      CANFD.cfdrmdf5__0()[5],
+      CANFD.cfdrmdf_5_0()[5],
     ",
   0x400b2320u64 => "
-      CANFD.cfdrmdf5__0()[6],
+      CANFD.cfdrmdf_5_0()[6],
     ",
   0x400b23a0u64 => "
-      CANFD.cfdrmdf5__0()[7],
+      CANFD.cfdrmdf_5_0()[7],
     ",
   0x400b2420u64 => "
-      CANFD.cfdrmdf5__0()[8],
+      CANFD.cfdrmdf_5_0()[8],
     ",
   0x400b24a0u64 => "
-      CANFD.cfdrmdf5__0()[9],
+      CANFD.cfdrmdf_5_0()[9],
     ",
   0x400b2520u64 => "
-      CANFD.cfdrmdf5__0()[10],
+      CANFD.cfdrmdf_5_0()[10],
     ",
   0x400b25a0u64 => "
-      CANFD.cfdrmdf5__0()[11],
+      CANFD.cfdrmdf_5_0()[11],
     ",
   0x400b2620u64 => "
-      CANFD.cfdrmdf5__0()[12],
+      CANFD.cfdrmdf_5_0()[12],
     ",
   0x400b26a0u64 => "
-      CANFD.cfdrmdf5__0()[13],
+      CANFD.cfdrmdf_5_0()[13],
     ",
   0x400b2720u64 => "
-      CANFD.cfdrmdf5__0()[14],
+      CANFD.cfdrmdf_5_0()[14],
     ",
   0x400b27a0u64 => "
-      CANFD.cfdrmdf5__0()[15],
+      CANFD.cfdrmdf_5_0()[15],
     ",
   0x400b2024u64 => "
-      CANFD.cfdrmdf6__0()[0],
+      CANFD.cfdrmdf_6_0()[0],
     ",
   0x400b20a4u64 => "
-      CANFD.cfdrmdf6__0()[1],
+      CANFD.cfdrmdf_6_0()[1],
     ",
   0x400b2124u64 => "
-      CANFD.cfdrmdf6__0()[2],
+      CANFD.cfdrmdf_6_0()[2],
     ",
   0x400b21a4u64 => "
-      CANFD.cfdrmdf6__0()[3],
+      CANFD.cfdrmdf_6_0()[3],
     ",
   0x400b2224u64 => "
-      CANFD.cfdrmdf6__0()[4],
+      CANFD.cfdrmdf_6_0()[4],
     ",
   0x400b22a4u64 => "
-      CANFD.cfdrmdf6__0()[5],
+      CANFD.cfdrmdf_6_0()[5],
     ",
   0x400b2324u64 => "
-      CANFD.cfdrmdf6__0()[6],
+      CANFD.cfdrmdf_6_0()[6],
     ",
   0x400b23a4u64 => "
-      CANFD.cfdrmdf6__0()[7],
+      CANFD.cfdrmdf_6_0()[7],
     ",
   0x400b2424u64 => "
-      CANFD.cfdrmdf6__0()[8],
+      CANFD.cfdrmdf_6_0()[8],
     ",
   0x400b24a4u64 => "
-      CANFD.cfdrmdf6__0()[9],
+      CANFD.cfdrmdf_6_0()[9],
     ",
   0x400b2524u64 => "
-      CANFD.cfdrmdf6__0()[10],
+      CANFD.cfdrmdf_6_0()[10],
     ",
   0x400b25a4u64 => "
-      CANFD.cfdrmdf6__0()[11],
+      CANFD.cfdrmdf_6_0()[11],
     ",
   0x400b2624u64 => "
-      CANFD.cfdrmdf6__0()[12],
+      CANFD.cfdrmdf_6_0()[12],
     ",
   0x400b26a4u64 => "
-      CANFD.cfdrmdf6__0()[13],
+      CANFD.cfdrmdf_6_0()[13],
     ",
   0x400b2724u64 => "
-      CANFD.cfdrmdf6__0()[14],
+      CANFD.cfdrmdf_6_0()[14],
     ",
   0x400b27a4u64 => "
-      CANFD.cfdrmdf6__0()[15],
+      CANFD.cfdrmdf_6_0()[15],
     ",
   0x400b2028u64 => "
-      CANFD.cfdrmdf7__0()[0],
+      CANFD.cfdrmdf_7_0()[0],
     ",
   0x400b20a8u64 => "
-      CANFD.cfdrmdf7__0()[1],
+      CANFD.cfdrmdf_7_0()[1],
     ",
   0x400b2128u64 => "
-      CANFD.cfdrmdf7__0()[2],
+      CANFD.cfdrmdf_7_0()[2],
     ",
   0x400b21a8u64 => "
-      CANFD.cfdrmdf7__0()[3],
+      CANFD.cfdrmdf_7_0()[3],
     ",
   0x400b2228u64 => "
-      CANFD.cfdrmdf7__0()[4],
+      CANFD.cfdrmdf_7_0()[4],
     ",
   0x400b22a8u64 => "
-      CANFD.cfdrmdf7__0()[5],
+      CANFD.cfdrmdf_7_0()[5],
     ",
   0x400b2328u64 => "
-      CANFD.cfdrmdf7__0()[6],
+      CANFD.cfdrmdf_7_0()[6],
     ",
   0x400b23a8u64 => "
-      CANFD.cfdrmdf7__0()[7],
+      CANFD.cfdrmdf_7_0()[7],
     ",
   0x400b2428u64 => "
-      CANFD.cfdrmdf7__0()[8],
+      CANFD.cfdrmdf_7_0()[8],
     ",
   0x400b24a8u64 => "
-      CANFD.cfdrmdf7__0()[9],
+      CANFD.cfdrmdf_7_0()[9],
     ",
   0x400b2528u64 => "
-      CANFD.cfdrmdf7__0()[10],
+      CANFD.cfdrmdf_7_0()[10],
     ",
   0x400b25a8u64 => "
-      CANFD.cfdrmdf7__0()[11],
+      CANFD.cfdrmdf_7_0()[11],
     ",
   0x400b2628u64 => "
-      CANFD.cfdrmdf7__0()[12],
+      CANFD.cfdrmdf_7_0()[12],
     ",
   0x400b26a8u64 => "
-      CANFD.cfdrmdf7__0()[13],
+      CANFD.cfdrmdf_7_0()[13],
     ",
   0x400b2728u64 => "
-      CANFD.cfdrmdf7__0()[14],
+      CANFD.cfdrmdf_7_0()[14],
     ",
   0x400b27a8u64 => "
-      CANFD.cfdrmdf7__0()[15],
+      CANFD.cfdrmdf_7_0()[15],
     ",
   0x400b202cu64 => "
-      CANFD.cfdrmdf8__0()[0],
+      CANFD.cfdrmdf_8_0()[0],
     ",
   0x400b20acu64 => "
-      CANFD.cfdrmdf8__0()[1],
+      CANFD.cfdrmdf_8_0()[1],
     ",
   0x400b212cu64 => "
-      CANFD.cfdrmdf8__0()[2],
+      CANFD.cfdrmdf_8_0()[2],
     ",
   0x400b21acu64 => "
-      CANFD.cfdrmdf8__0()[3],
+      CANFD.cfdrmdf_8_0()[3],
     ",
   0x400b222cu64 => "
-      CANFD.cfdrmdf8__0()[4],
+      CANFD.cfdrmdf_8_0()[4],
     ",
   0x400b22acu64 => "
-      CANFD.cfdrmdf8__0()[5],
+      CANFD.cfdrmdf_8_0()[5],
     ",
   0x400b232cu64 => "
-      CANFD.cfdrmdf8__0()[6],
+      CANFD.cfdrmdf_8_0()[6],
     ",
   0x400b23acu64 => "
-      CANFD.cfdrmdf8__0()[7],
+      CANFD.cfdrmdf_8_0()[7],
     ",
   0x400b242cu64 => "
-      CANFD.cfdrmdf8__0()[8],
+      CANFD.cfdrmdf_8_0()[8],
     ",
   0x400b24acu64 => "
-      CANFD.cfdrmdf8__0()[9],
+      CANFD.cfdrmdf_8_0()[9],
     ",
   0x400b252cu64 => "
-      CANFD.cfdrmdf8__0()[10],
+      CANFD.cfdrmdf_8_0()[10],
     ",
   0x400b25acu64 => "
-      CANFD.cfdrmdf8__0()[11],
+      CANFD.cfdrmdf_8_0()[11],
     ",
   0x400b262cu64 => "
-      CANFD.cfdrmdf8__0()[12],
+      CANFD.cfdrmdf_8_0()[12],
     ",
   0x400b26acu64 => "
-      CANFD.cfdrmdf8__0()[13],
+      CANFD.cfdrmdf_8_0()[13],
     ",
   0x400b272cu64 => "
-      CANFD.cfdrmdf8__0()[14],
+      CANFD.cfdrmdf_8_0()[14],
     ",
   0x400b27acu64 => "
-      CANFD.cfdrmdf8__0()[15],
+      CANFD.cfdrmdf_8_0()[15],
     ",
   0x400b2030u64 => "
-      CANFD.cfdrmdf9__0()[0],
+      CANFD.cfdrmdf_9_0()[0],
     ",
   0x400b20b0u64 => "
-      CANFD.cfdrmdf9__0()[1],
+      CANFD.cfdrmdf_9_0()[1],
     ",
   0x400b2130u64 => "
-      CANFD.cfdrmdf9__0()[2],
+      CANFD.cfdrmdf_9_0()[2],
     ",
   0x400b21b0u64 => "
-      CANFD.cfdrmdf9__0()[3],
+      CANFD.cfdrmdf_9_0()[3],
     ",
   0x400b2230u64 => "
-      CANFD.cfdrmdf9__0()[4],
+      CANFD.cfdrmdf_9_0()[4],
     ",
   0x400b22b0u64 => "
-      CANFD.cfdrmdf9__0()[5],
+      CANFD.cfdrmdf_9_0()[5],
     ",
   0x400b2330u64 => "
-      CANFD.cfdrmdf9__0()[6],
+      CANFD.cfdrmdf_9_0()[6],
     ",
   0x400b23b0u64 => "
-      CANFD.cfdrmdf9__0()[7],
+      CANFD.cfdrmdf_9_0()[7],
     ",
   0x400b2430u64 => "
-      CANFD.cfdrmdf9__0()[8],
+      CANFD.cfdrmdf_9_0()[8],
     ",
   0x400b24b0u64 => "
-      CANFD.cfdrmdf9__0()[9],
+      CANFD.cfdrmdf_9_0()[9],
     ",
   0x400b2530u64 => "
-      CANFD.cfdrmdf9__0()[10],
+      CANFD.cfdrmdf_9_0()[10],
     ",
   0x400b25b0u64 => "
-      CANFD.cfdrmdf9__0()[11],
+      CANFD.cfdrmdf_9_0()[11],
     ",
   0x400b2630u64 => "
-      CANFD.cfdrmdf9__0()[12],
+      CANFD.cfdrmdf_9_0()[12],
     ",
   0x400b26b0u64 => "
-      CANFD.cfdrmdf9__0()[13],
+      CANFD.cfdrmdf_9_0()[13],
     ",
   0x400b2730u64 => "
-      CANFD.cfdrmdf9__0()[14],
+      CANFD.cfdrmdf_9_0()[14],
     ",
   0x400b27b0u64 => "
-      CANFD.cfdrmdf9__0()[15],
+      CANFD.cfdrmdf_9_0()[15],
     ",
   0x400b2034u64 => "
-      CANFD.cfdrmdf10__0()[0],
+      CANFD.cfdrmdf_10_0()[0],
     ",
   0x400b20b4u64 => "
-      CANFD.cfdrmdf10__0()[1],
+      CANFD.cfdrmdf_10_0()[1],
     ",
   0x400b2134u64 => "
-      CANFD.cfdrmdf10__0()[2],
+      CANFD.cfdrmdf_10_0()[2],
     ",
   0x400b21b4u64 => "
-      CANFD.cfdrmdf10__0()[3],
+      CANFD.cfdrmdf_10_0()[3],
     ",
   0x400b2234u64 => "
-      CANFD.cfdrmdf10__0()[4],
+      CANFD.cfdrmdf_10_0()[4],
     ",
   0x400b22b4u64 => "
-      CANFD.cfdrmdf10__0()[5],
+      CANFD.cfdrmdf_10_0()[5],
     ",
   0x400b2334u64 => "
-      CANFD.cfdrmdf10__0()[6],
+      CANFD.cfdrmdf_10_0()[6],
     ",
   0x400b23b4u64 => "
-      CANFD.cfdrmdf10__0()[7],
+      CANFD.cfdrmdf_10_0()[7],
     ",
   0x400b2434u64 => "
-      CANFD.cfdrmdf10__0()[8],
+      CANFD.cfdrmdf_10_0()[8],
     ",
   0x400b24b4u64 => "
-      CANFD.cfdrmdf10__0()[9],
+      CANFD.cfdrmdf_10_0()[9],
     ",
   0x400b2534u64 => "
-      CANFD.cfdrmdf10__0()[10],
+      CANFD.cfdrmdf_10_0()[10],
     ",
   0x400b25b4u64 => "
-      CANFD.cfdrmdf10__0()[11],
+      CANFD.cfdrmdf_10_0()[11],
     ",
   0x400b2634u64 => "
-      CANFD.cfdrmdf10__0()[12],
+      CANFD.cfdrmdf_10_0()[12],
     ",
   0x400b26b4u64 => "
-      CANFD.cfdrmdf10__0()[13],
+      CANFD.cfdrmdf_10_0()[13],
     ",
   0x400b2734u64 => "
-      CANFD.cfdrmdf10__0()[14],
+      CANFD.cfdrmdf_10_0()[14],
     ",
   0x400b27b4u64 => "
-      CANFD.cfdrmdf10__0()[15],
+      CANFD.cfdrmdf_10_0()[15],
     ",
   0x400b2038u64 => "
-      CANFD.cfdrmdf11__0()[0],
+      CANFD.cfdrmdf_11_0()[0],
     ",
   0x400b20b8u64 => "
-      CANFD.cfdrmdf11__0()[1],
+      CANFD.cfdrmdf_11_0()[1],
     ",
   0x400b2138u64 => "
-      CANFD.cfdrmdf11__0()[2],
+      CANFD.cfdrmdf_11_0()[2],
     ",
   0x400b21b8u64 => "
-      CANFD.cfdrmdf11__0()[3],
+      CANFD.cfdrmdf_11_0()[3],
     ",
   0x400b2238u64 => "
-      CANFD.cfdrmdf11__0()[4],
+      CANFD.cfdrmdf_11_0()[4],
     ",
   0x400b22b8u64 => "
-      CANFD.cfdrmdf11__0()[5],
+      CANFD.cfdrmdf_11_0()[5],
     ",
   0x400b2338u64 => "
-      CANFD.cfdrmdf11__0()[6],
+      CANFD.cfdrmdf_11_0()[6],
     ",
   0x400b23b8u64 => "
-      CANFD.cfdrmdf11__0()[7],
+      CANFD.cfdrmdf_11_0()[7],
     ",
   0x400b2438u64 => "
-      CANFD.cfdrmdf11__0()[8],
+      CANFD.cfdrmdf_11_0()[8],
     ",
   0x400b24b8u64 => "
-      CANFD.cfdrmdf11__0()[9],
+      CANFD.cfdrmdf_11_0()[9],
     ",
   0x400b2538u64 => "
-      CANFD.cfdrmdf11__0()[10],
+      CANFD.cfdrmdf_11_0()[10],
     ",
   0x400b25b8u64 => "
-      CANFD.cfdrmdf11__0()[11],
+      CANFD.cfdrmdf_11_0()[11],
     ",
   0x400b2638u64 => "
-      CANFD.cfdrmdf11__0()[12],
+      CANFD.cfdrmdf_11_0()[12],
     ",
   0x400b26b8u64 => "
-      CANFD.cfdrmdf11__0()[13],
+      CANFD.cfdrmdf_11_0()[13],
     ",
   0x400b2738u64 => "
-      CANFD.cfdrmdf11__0()[14],
+      CANFD.cfdrmdf_11_0()[14],
     ",
   0x400b27b8u64 => "
-      CANFD.cfdrmdf11__0()[15],
+      CANFD.cfdrmdf_11_0()[15],
     ",
   0x400b203cu64 => "
-      CANFD.cfdrmdf12__0()[0],
+      CANFD.cfdrmdf_12_0()[0],
     ",
   0x400b20bcu64 => "
-      CANFD.cfdrmdf12__0()[1],
+      CANFD.cfdrmdf_12_0()[1],
     ",
   0x400b213cu64 => "
-      CANFD.cfdrmdf12__0()[2],
+      CANFD.cfdrmdf_12_0()[2],
     ",
   0x400b21bcu64 => "
-      CANFD.cfdrmdf12__0()[3],
+      CANFD.cfdrmdf_12_0()[3],
     ",
   0x400b223cu64 => "
-      CANFD.cfdrmdf12__0()[4],
+      CANFD.cfdrmdf_12_0()[4],
     ",
   0x400b22bcu64 => "
-      CANFD.cfdrmdf12__0()[5],
+      CANFD.cfdrmdf_12_0()[5],
     ",
   0x400b233cu64 => "
-      CANFD.cfdrmdf12__0()[6],
+      CANFD.cfdrmdf_12_0()[6],
     ",
   0x400b23bcu64 => "
-      CANFD.cfdrmdf12__0()[7],
+      CANFD.cfdrmdf_12_0()[7],
     ",
   0x400b243cu64 => "
-      CANFD.cfdrmdf12__0()[8],
+      CANFD.cfdrmdf_12_0()[8],
     ",
   0x400b24bcu64 => "
-      CANFD.cfdrmdf12__0()[9],
+      CANFD.cfdrmdf_12_0()[9],
     ",
   0x400b253cu64 => "
-      CANFD.cfdrmdf12__0()[10],
+      CANFD.cfdrmdf_12_0()[10],
     ",
   0x400b25bcu64 => "
-      CANFD.cfdrmdf12__0()[11],
+      CANFD.cfdrmdf_12_0()[11],
     ",
   0x400b263cu64 => "
-      CANFD.cfdrmdf12__0()[12],
+      CANFD.cfdrmdf_12_0()[12],
     ",
   0x400b26bcu64 => "
-      CANFD.cfdrmdf12__0()[13],
+      CANFD.cfdrmdf_12_0()[13],
     ",
   0x400b273cu64 => "
-      CANFD.cfdrmdf12__0()[14],
+      CANFD.cfdrmdf_12_0()[14],
     ",
   0x400b27bcu64 => "
-      CANFD.cfdrmdf12__0()[15],
+      CANFD.cfdrmdf_12_0()[15],
     ",
   0x400b2040u64 => "
-      CANFD.cfdrmdf13__0()[0],
+      CANFD.cfdrmdf_13_0()[0],
     ",
   0x400b20c0u64 => "
-      CANFD.cfdrmdf13__0()[1],
+      CANFD.cfdrmdf_13_0()[1],
     ",
   0x400b2140u64 => "
-      CANFD.cfdrmdf13__0()[2],
+      CANFD.cfdrmdf_13_0()[2],
     ",
   0x400b21c0u64 => "
-      CANFD.cfdrmdf13__0()[3],
+      CANFD.cfdrmdf_13_0()[3],
     ",
   0x400b2240u64 => "
-      CANFD.cfdrmdf13__0()[4],
+      CANFD.cfdrmdf_13_0()[4],
     ",
   0x400b22c0u64 => "
-      CANFD.cfdrmdf13__0()[5],
+      CANFD.cfdrmdf_13_0()[5],
     ",
   0x400b2340u64 => "
-      CANFD.cfdrmdf13__0()[6],
+      CANFD.cfdrmdf_13_0()[6],
     ",
   0x400b23c0u64 => "
-      CANFD.cfdrmdf13__0()[7],
+      CANFD.cfdrmdf_13_0()[7],
     ",
   0x400b2440u64 => "
-      CANFD.cfdrmdf13__0()[8],
+      CANFD.cfdrmdf_13_0()[8],
     ",
   0x400b24c0u64 => "
-      CANFD.cfdrmdf13__0()[9],
+      CANFD.cfdrmdf_13_0()[9],
     ",
   0x400b2540u64 => "
-      CANFD.cfdrmdf13__0()[10],
+      CANFD.cfdrmdf_13_0()[10],
     ",
   0x400b25c0u64 => "
-      CANFD.cfdrmdf13__0()[11],
+      CANFD.cfdrmdf_13_0()[11],
     ",
   0x400b2640u64 => "
-      CANFD.cfdrmdf13__0()[12],
+      CANFD.cfdrmdf_13_0()[12],
     ",
   0x400b26c0u64 => "
-      CANFD.cfdrmdf13__0()[13],
+      CANFD.cfdrmdf_13_0()[13],
     ",
   0x400b2740u64 => "
-      CANFD.cfdrmdf13__0()[14],
+      CANFD.cfdrmdf_13_0()[14],
     ",
   0x400b27c0u64 => "
-      CANFD.cfdrmdf13__0()[15],
+      CANFD.cfdrmdf_13_0()[15],
     ",
   0x400b2044u64 => "
-      CANFD.cfdrmdf14__0()[0],
+      CANFD.cfdrmdf_14_0()[0],
     ",
   0x400b20c4u64 => "
-      CANFD.cfdrmdf14__0()[1],
+      CANFD.cfdrmdf_14_0()[1],
     ",
   0x400b2144u64 => "
-      CANFD.cfdrmdf14__0()[2],
+      CANFD.cfdrmdf_14_0()[2],
     ",
   0x400b21c4u64 => "
-      CANFD.cfdrmdf14__0()[3],
+      CANFD.cfdrmdf_14_0()[3],
     ",
   0x400b2244u64 => "
-      CANFD.cfdrmdf14__0()[4],
+      CANFD.cfdrmdf_14_0()[4],
     ",
   0x400b22c4u64 => "
-      CANFD.cfdrmdf14__0()[5],
+      CANFD.cfdrmdf_14_0()[5],
     ",
   0x400b2344u64 => "
-      CANFD.cfdrmdf14__0()[6],
+      CANFD.cfdrmdf_14_0()[6],
     ",
   0x400b23c4u64 => "
-      CANFD.cfdrmdf14__0()[7],
+      CANFD.cfdrmdf_14_0()[7],
     ",
   0x400b2444u64 => "
-      CANFD.cfdrmdf14__0()[8],
+      CANFD.cfdrmdf_14_0()[8],
     ",
   0x400b24c4u64 => "
-      CANFD.cfdrmdf14__0()[9],
+      CANFD.cfdrmdf_14_0()[9],
     ",
   0x400b2544u64 => "
-      CANFD.cfdrmdf14__0()[10],
+      CANFD.cfdrmdf_14_0()[10],
     ",
   0x400b25c4u64 => "
-      CANFD.cfdrmdf14__0()[11],
+      CANFD.cfdrmdf_14_0()[11],
     ",
   0x400b2644u64 => "
-      CANFD.cfdrmdf14__0()[12],
+      CANFD.cfdrmdf_14_0()[12],
     ",
   0x400b26c4u64 => "
-      CANFD.cfdrmdf14__0()[13],
+      CANFD.cfdrmdf_14_0()[13],
     ",
   0x400b2744u64 => "
-      CANFD.cfdrmdf14__0()[14],
+      CANFD.cfdrmdf_14_0()[14],
     ",
   0x400b27c4u64 => "
-      CANFD.cfdrmdf14__0()[15],
+      CANFD.cfdrmdf_14_0()[15],
     ",
   0x400b2048u64 => "
-      CANFD.cfdrmdf15__0()[0],
+      CANFD.cfdrmdf_15_0()[0],
     ",
   0x400b20c8u64 => "
-      CANFD.cfdrmdf15__0()[1],
+      CANFD.cfdrmdf_15_0()[1],
     ",
   0x400b2148u64 => "
-      CANFD.cfdrmdf15__0()[2],
+      CANFD.cfdrmdf_15_0()[2],
     ",
   0x400b21c8u64 => "
-      CANFD.cfdrmdf15__0()[3],
+      CANFD.cfdrmdf_15_0()[3],
     ",
   0x400b2248u64 => "
-      CANFD.cfdrmdf15__0()[4],
+      CANFD.cfdrmdf_15_0()[4],
     ",
   0x400b22c8u64 => "
-      CANFD.cfdrmdf15__0()[5],
+      CANFD.cfdrmdf_15_0()[5],
     ",
   0x400b2348u64 => "
-      CANFD.cfdrmdf15__0()[6],
+      CANFD.cfdrmdf_15_0()[6],
     ",
   0x400b23c8u64 => "
-      CANFD.cfdrmdf15__0()[7],
+      CANFD.cfdrmdf_15_0()[7],
     ",
   0x400b2448u64 => "
-      CANFD.cfdrmdf15__0()[8],
+      CANFD.cfdrmdf_15_0()[8],
     ",
   0x400b24c8u64 => "
-      CANFD.cfdrmdf15__0()[9],
+      CANFD.cfdrmdf_15_0()[9],
     ",
   0x400b2548u64 => "
-      CANFD.cfdrmdf15__0()[10],
+      CANFD.cfdrmdf_15_0()[10],
     ",
   0x400b25c8u64 => "
-      CANFD.cfdrmdf15__0()[11],
+      CANFD.cfdrmdf_15_0()[11],
     ",
   0x400b2648u64 => "
-      CANFD.cfdrmdf15__0()[12],
+      CANFD.cfdrmdf_15_0()[12],
     ",
   0x400b26c8u64 => "
-      CANFD.cfdrmdf15__0()[13],
+      CANFD.cfdrmdf_15_0()[13],
     ",
   0x400b2748u64 => "
-      CANFD.cfdrmdf15__0()[14],
+      CANFD.cfdrmdf_15_0()[14],
     ",
   0x400b27c8u64 => "
-      CANFD.cfdrmdf15__0()[15],
+      CANFD.cfdrmdf_15_0()[15],
     ",
   0x400b2800u64 => "
       CANFD.cfdrmid_1()[0],
@@ -5525,772 +5525,772 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       CANFD.cfdrmfdsts_1()[15],
     ",
   0x400b280cu64 => "
-      CANFD.cfdrmdf0__1()[0],
+      CANFD.cfdrmdf_0_1()[0],
     ",
   0x400b288cu64 => "
-      CANFD.cfdrmdf0__1()[1],
+      CANFD.cfdrmdf_0_1()[1],
     ",
   0x400b290cu64 => "
-      CANFD.cfdrmdf0__1()[2],
+      CANFD.cfdrmdf_0_1()[2],
     ",
   0x400b298cu64 => "
-      CANFD.cfdrmdf0__1()[3],
+      CANFD.cfdrmdf_0_1()[3],
     ",
   0x400b2a0cu64 => "
-      CANFD.cfdrmdf0__1()[4],
+      CANFD.cfdrmdf_0_1()[4],
     ",
   0x400b2a8cu64 => "
-      CANFD.cfdrmdf0__1()[5],
+      CANFD.cfdrmdf_0_1()[5],
     ",
   0x400b2b0cu64 => "
-      CANFD.cfdrmdf0__1()[6],
+      CANFD.cfdrmdf_0_1()[6],
     ",
   0x400b2b8cu64 => "
-      CANFD.cfdrmdf0__1()[7],
+      CANFD.cfdrmdf_0_1()[7],
     ",
   0x400b2c0cu64 => "
-      CANFD.cfdrmdf0__1()[8],
+      CANFD.cfdrmdf_0_1()[8],
     ",
   0x400b2c8cu64 => "
-      CANFD.cfdrmdf0__1()[9],
+      CANFD.cfdrmdf_0_1()[9],
     ",
   0x400b2d0cu64 => "
-      CANFD.cfdrmdf0__1()[10],
+      CANFD.cfdrmdf_0_1()[10],
     ",
   0x400b2d8cu64 => "
-      CANFD.cfdrmdf0__1()[11],
+      CANFD.cfdrmdf_0_1()[11],
     ",
   0x400b2e0cu64 => "
-      CANFD.cfdrmdf0__1()[12],
+      CANFD.cfdrmdf_0_1()[12],
     ",
   0x400b2e8cu64 => "
-      CANFD.cfdrmdf0__1()[13],
+      CANFD.cfdrmdf_0_1()[13],
     ",
   0x400b2f0cu64 => "
-      CANFD.cfdrmdf0__1()[14],
+      CANFD.cfdrmdf_0_1()[14],
     ",
   0x400b2f8cu64 => "
-      CANFD.cfdrmdf0__1()[15],
+      CANFD.cfdrmdf_0_1()[15],
     ",
   0x400b2810u64 => "
-      CANFD.cfdrmdf1__1()[0],
+      CANFD.cfdrmdf_1_1()[0],
     ",
   0x400b2890u64 => "
-      CANFD.cfdrmdf1__1()[1],
+      CANFD.cfdrmdf_1_1()[1],
     ",
   0x400b2910u64 => "
-      CANFD.cfdrmdf1__1()[2],
+      CANFD.cfdrmdf_1_1()[2],
     ",
   0x400b2990u64 => "
-      CANFD.cfdrmdf1__1()[3],
+      CANFD.cfdrmdf_1_1()[3],
     ",
   0x400b2a10u64 => "
-      CANFD.cfdrmdf1__1()[4],
+      CANFD.cfdrmdf_1_1()[4],
     ",
   0x400b2a90u64 => "
-      CANFD.cfdrmdf1__1()[5],
+      CANFD.cfdrmdf_1_1()[5],
     ",
   0x400b2b10u64 => "
-      CANFD.cfdrmdf1__1()[6],
+      CANFD.cfdrmdf_1_1()[6],
     ",
   0x400b2b90u64 => "
-      CANFD.cfdrmdf1__1()[7],
+      CANFD.cfdrmdf_1_1()[7],
     ",
   0x400b2c10u64 => "
-      CANFD.cfdrmdf1__1()[8],
+      CANFD.cfdrmdf_1_1()[8],
     ",
   0x400b2c90u64 => "
-      CANFD.cfdrmdf1__1()[9],
+      CANFD.cfdrmdf_1_1()[9],
     ",
   0x400b2d10u64 => "
-      CANFD.cfdrmdf1__1()[10],
+      CANFD.cfdrmdf_1_1()[10],
     ",
   0x400b2d90u64 => "
-      CANFD.cfdrmdf1__1()[11],
+      CANFD.cfdrmdf_1_1()[11],
     ",
   0x400b2e10u64 => "
-      CANFD.cfdrmdf1__1()[12],
+      CANFD.cfdrmdf_1_1()[12],
     ",
   0x400b2e90u64 => "
-      CANFD.cfdrmdf1__1()[13],
+      CANFD.cfdrmdf_1_1()[13],
     ",
   0x400b2f10u64 => "
-      CANFD.cfdrmdf1__1()[14],
+      CANFD.cfdrmdf_1_1()[14],
     ",
   0x400b2f90u64 => "
-      CANFD.cfdrmdf1__1()[15],
+      CANFD.cfdrmdf_1_1()[15],
     ",
   0x400b2814u64 => "
-      CANFD.cfdrmdf2__1()[0],
+      CANFD.cfdrmdf_2_1()[0],
     ",
   0x400b2894u64 => "
-      CANFD.cfdrmdf2__1()[1],
+      CANFD.cfdrmdf_2_1()[1],
     ",
   0x400b2914u64 => "
-      CANFD.cfdrmdf2__1()[2],
+      CANFD.cfdrmdf_2_1()[2],
     ",
   0x400b2994u64 => "
-      CANFD.cfdrmdf2__1()[3],
+      CANFD.cfdrmdf_2_1()[3],
     ",
   0x400b2a14u64 => "
-      CANFD.cfdrmdf2__1()[4],
+      CANFD.cfdrmdf_2_1()[4],
     ",
   0x400b2a94u64 => "
-      CANFD.cfdrmdf2__1()[5],
+      CANFD.cfdrmdf_2_1()[5],
     ",
   0x400b2b14u64 => "
-      CANFD.cfdrmdf2__1()[6],
+      CANFD.cfdrmdf_2_1()[6],
     ",
   0x400b2b94u64 => "
-      CANFD.cfdrmdf2__1()[7],
+      CANFD.cfdrmdf_2_1()[7],
     ",
   0x400b2c14u64 => "
-      CANFD.cfdrmdf2__1()[8],
+      CANFD.cfdrmdf_2_1()[8],
     ",
   0x400b2c94u64 => "
-      CANFD.cfdrmdf2__1()[9],
+      CANFD.cfdrmdf_2_1()[9],
     ",
   0x400b2d14u64 => "
-      CANFD.cfdrmdf2__1()[10],
+      CANFD.cfdrmdf_2_1()[10],
     ",
   0x400b2d94u64 => "
-      CANFD.cfdrmdf2__1()[11],
+      CANFD.cfdrmdf_2_1()[11],
     ",
   0x400b2e14u64 => "
-      CANFD.cfdrmdf2__1()[12],
+      CANFD.cfdrmdf_2_1()[12],
     ",
   0x400b2e94u64 => "
-      CANFD.cfdrmdf2__1()[13],
+      CANFD.cfdrmdf_2_1()[13],
     ",
   0x400b2f14u64 => "
-      CANFD.cfdrmdf2__1()[14],
+      CANFD.cfdrmdf_2_1()[14],
     ",
   0x400b2f94u64 => "
-      CANFD.cfdrmdf2__1()[15],
+      CANFD.cfdrmdf_2_1()[15],
     ",
   0x400b2818u64 => "
-      CANFD.cfdrmdf3__1()[0],
+      CANFD.cfdrmdf_3_1()[0],
     ",
   0x400b2898u64 => "
-      CANFD.cfdrmdf3__1()[1],
+      CANFD.cfdrmdf_3_1()[1],
     ",
   0x400b2918u64 => "
-      CANFD.cfdrmdf3__1()[2],
+      CANFD.cfdrmdf_3_1()[2],
     ",
   0x400b2998u64 => "
-      CANFD.cfdrmdf3__1()[3],
+      CANFD.cfdrmdf_3_1()[3],
     ",
   0x400b2a18u64 => "
-      CANFD.cfdrmdf3__1()[4],
+      CANFD.cfdrmdf_3_1()[4],
     ",
   0x400b2a98u64 => "
-      CANFD.cfdrmdf3__1()[5],
+      CANFD.cfdrmdf_3_1()[5],
     ",
   0x400b2b18u64 => "
-      CANFD.cfdrmdf3__1()[6],
+      CANFD.cfdrmdf_3_1()[6],
     ",
   0x400b2b98u64 => "
-      CANFD.cfdrmdf3__1()[7],
+      CANFD.cfdrmdf_3_1()[7],
     ",
   0x400b2c18u64 => "
-      CANFD.cfdrmdf3__1()[8],
+      CANFD.cfdrmdf_3_1()[8],
     ",
   0x400b2c98u64 => "
-      CANFD.cfdrmdf3__1()[9],
+      CANFD.cfdrmdf_3_1()[9],
     ",
   0x400b2d18u64 => "
-      CANFD.cfdrmdf3__1()[10],
+      CANFD.cfdrmdf_3_1()[10],
     ",
   0x400b2d98u64 => "
-      CANFD.cfdrmdf3__1()[11],
+      CANFD.cfdrmdf_3_1()[11],
     ",
   0x400b2e18u64 => "
-      CANFD.cfdrmdf3__1()[12],
+      CANFD.cfdrmdf_3_1()[12],
     ",
   0x400b2e98u64 => "
-      CANFD.cfdrmdf3__1()[13],
+      CANFD.cfdrmdf_3_1()[13],
     ",
   0x400b2f18u64 => "
-      CANFD.cfdrmdf3__1()[14],
+      CANFD.cfdrmdf_3_1()[14],
     ",
   0x400b2f98u64 => "
-      CANFD.cfdrmdf3__1()[15],
+      CANFD.cfdrmdf_3_1()[15],
     ",
   0x400b281cu64 => "
-      CANFD.cfdrmdf4__1()[0],
+      CANFD.cfdrmdf_4_1()[0],
     ",
   0x400b289cu64 => "
-      CANFD.cfdrmdf4__1()[1],
+      CANFD.cfdrmdf_4_1()[1],
     ",
   0x400b291cu64 => "
-      CANFD.cfdrmdf4__1()[2],
+      CANFD.cfdrmdf_4_1()[2],
     ",
   0x400b299cu64 => "
-      CANFD.cfdrmdf4__1()[3],
+      CANFD.cfdrmdf_4_1()[3],
     ",
   0x400b2a1cu64 => "
-      CANFD.cfdrmdf4__1()[4],
+      CANFD.cfdrmdf_4_1()[4],
     ",
   0x400b2a9cu64 => "
-      CANFD.cfdrmdf4__1()[5],
+      CANFD.cfdrmdf_4_1()[5],
     ",
   0x400b2b1cu64 => "
-      CANFD.cfdrmdf4__1()[6],
+      CANFD.cfdrmdf_4_1()[6],
     ",
   0x400b2b9cu64 => "
-      CANFD.cfdrmdf4__1()[7],
+      CANFD.cfdrmdf_4_1()[7],
     ",
   0x400b2c1cu64 => "
-      CANFD.cfdrmdf4__1()[8],
+      CANFD.cfdrmdf_4_1()[8],
     ",
   0x400b2c9cu64 => "
-      CANFD.cfdrmdf4__1()[9],
+      CANFD.cfdrmdf_4_1()[9],
     ",
   0x400b2d1cu64 => "
-      CANFD.cfdrmdf4__1()[10],
+      CANFD.cfdrmdf_4_1()[10],
     ",
   0x400b2d9cu64 => "
-      CANFD.cfdrmdf4__1()[11],
+      CANFD.cfdrmdf_4_1()[11],
     ",
   0x400b2e1cu64 => "
-      CANFD.cfdrmdf4__1()[12],
+      CANFD.cfdrmdf_4_1()[12],
     ",
   0x400b2e9cu64 => "
-      CANFD.cfdrmdf4__1()[13],
+      CANFD.cfdrmdf_4_1()[13],
     ",
   0x400b2f1cu64 => "
-      CANFD.cfdrmdf4__1()[14],
+      CANFD.cfdrmdf_4_1()[14],
     ",
   0x400b2f9cu64 => "
-      CANFD.cfdrmdf4__1()[15],
+      CANFD.cfdrmdf_4_1()[15],
     ",
   0x400b2820u64 => "
-      CANFD.cfdrmdf5__1()[0],
+      CANFD.cfdrmdf_5_1()[0],
     ",
   0x400b28a0u64 => "
-      CANFD.cfdrmdf5__1()[1],
+      CANFD.cfdrmdf_5_1()[1],
     ",
   0x400b2920u64 => "
-      CANFD.cfdrmdf5__1()[2],
+      CANFD.cfdrmdf_5_1()[2],
     ",
   0x400b29a0u64 => "
-      CANFD.cfdrmdf5__1()[3],
+      CANFD.cfdrmdf_5_1()[3],
     ",
   0x400b2a20u64 => "
-      CANFD.cfdrmdf5__1()[4],
+      CANFD.cfdrmdf_5_1()[4],
     ",
   0x400b2aa0u64 => "
-      CANFD.cfdrmdf5__1()[5],
+      CANFD.cfdrmdf_5_1()[5],
     ",
   0x400b2b20u64 => "
-      CANFD.cfdrmdf5__1()[6],
+      CANFD.cfdrmdf_5_1()[6],
     ",
   0x400b2ba0u64 => "
-      CANFD.cfdrmdf5__1()[7],
+      CANFD.cfdrmdf_5_1()[7],
     ",
   0x400b2c20u64 => "
-      CANFD.cfdrmdf5__1()[8],
+      CANFD.cfdrmdf_5_1()[8],
     ",
   0x400b2ca0u64 => "
-      CANFD.cfdrmdf5__1()[9],
+      CANFD.cfdrmdf_5_1()[9],
     ",
   0x400b2d20u64 => "
-      CANFD.cfdrmdf5__1()[10],
+      CANFD.cfdrmdf_5_1()[10],
     ",
   0x400b2da0u64 => "
-      CANFD.cfdrmdf5__1()[11],
+      CANFD.cfdrmdf_5_1()[11],
     ",
   0x400b2e20u64 => "
-      CANFD.cfdrmdf5__1()[12],
+      CANFD.cfdrmdf_5_1()[12],
     ",
   0x400b2ea0u64 => "
-      CANFD.cfdrmdf5__1()[13],
+      CANFD.cfdrmdf_5_1()[13],
     ",
   0x400b2f20u64 => "
-      CANFD.cfdrmdf5__1()[14],
+      CANFD.cfdrmdf_5_1()[14],
     ",
   0x400b2fa0u64 => "
-      CANFD.cfdrmdf5__1()[15],
+      CANFD.cfdrmdf_5_1()[15],
     ",
   0x400b2824u64 => "
-      CANFD.cfdrmdf6__1()[0],
+      CANFD.cfdrmdf_6_1()[0],
     ",
   0x400b28a4u64 => "
-      CANFD.cfdrmdf6__1()[1],
+      CANFD.cfdrmdf_6_1()[1],
     ",
   0x400b2924u64 => "
-      CANFD.cfdrmdf6__1()[2],
+      CANFD.cfdrmdf_6_1()[2],
     ",
   0x400b29a4u64 => "
-      CANFD.cfdrmdf6__1()[3],
+      CANFD.cfdrmdf_6_1()[3],
     ",
   0x400b2a24u64 => "
-      CANFD.cfdrmdf6__1()[4],
+      CANFD.cfdrmdf_6_1()[4],
     ",
   0x400b2aa4u64 => "
-      CANFD.cfdrmdf6__1()[5],
+      CANFD.cfdrmdf_6_1()[5],
     ",
   0x400b2b24u64 => "
-      CANFD.cfdrmdf6__1()[6],
+      CANFD.cfdrmdf_6_1()[6],
     ",
   0x400b2ba4u64 => "
-      CANFD.cfdrmdf6__1()[7],
+      CANFD.cfdrmdf_6_1()[7],
     ",
   0x400b2c24u64 => "
-      CANFD.cfdrmdf6__1()[8],
+      CANFD.cfdrmdf_6_1()[8],
     ",
   0x400b2ca4u64 => "
-      CANFD.cfdrmdf6__1()[9],
+      CANFD.cfdrmdf_6_1()[9],
     ",
   0x400b2d24u64 => "
-      CANFD.cfdrmdf6__1()[10],
+      CANFD.cfdrmdf_6_1()[10],
     ",
   0x400b2da4u64 => "
-      CANFD.cfdrmdf6__1()[11],
+      CANFD.cfdrmdf_6_1()[11],
     ",
   0x400b2e24u64 => "
-      CANFD.cfdrmdf6__1()[12],
+      CANFD.cfdrmdf_6_1()[12],
     ",
   0x400b2ea4u64 => "
-      CANFD.cfdrmdf6__1()[13],
+      CANFD.cfdrmdf_6_1()[13],
     ",
   0x400b2f24u64 => "
-      CANFD.cfdrmdf6__1()[14],
+      CANFD.cfdrmdf_6_1()[14],
     ",
   0x400b2fa4u64 => "
-      CANFD.cfdrmdf6__1()[15],
+      CANFD.cfdrmdf_6_1()[15],
     ",
   0x400b2828u64 => "
-      CANFD.cfdrmdf7__1()[0],
+      CANFD.cfdrmdf_7_1()[0],
     ",
   0x400b28a8u64 => "
-      CANFD.cfdrmdf7__1()[1],
+      CANFD.cfdrmdf_7_1()[1],
     ",
   0x400b2928u64 => "
-      CANFD.cfdrmdf7__1()[2],
+      CANFD.cfdrmdf_7_1()[2],
     ",
   0x400b29a8u64 => "
-      CANFD.cfdrmdf7__1()[3],
+      CANFD.cfdrmdf_7_1()[3],
     ",
   0x400b2a28u64 => "
-      CANFD.cfdrmdf7__1()[4],
+      CANFD.cfdrmdf_7_1()[4],
     ",
   0x400b2aa8u64 => "
-      CANFD.cfdrmdf7__1()[5],
+      CANFD.cfdrmdf_7_1()[5],
     ",
   0x400b2b28u64 => "
-      CANFD.cfdrmdf7__1()[6],
+      CANFD.cfdrmdf_7_1()[6],
     ",
   0x400b2ba8u64 => "
-      CANFD.cfdrmdf7__1()[7],
+      CANFD.cfdrmdf_7_1()[7],
     ",
   0x400b2c28u64 => "
-      CANFD.cfdrmdf7__1()[8],
+      CANFD.cfdrmdf_7_1()[8],
     ",
   0x400b2ca8u64 => "
-      CANFD.cfdrmdf7__1()[9],
+      CANFD.cfdrmdf_7_1()[9],
     ",
   0x400b2d28u64 => "
-      CANFD.cfdrmdf7__1()[10],
+      CANFD.cfdrmdf_7_1()[10],
     ",
   0x400b2da8u64 => "
-      CANFD.cfdrmdf7__1()[11],
+      CANFD.cfdrmdf_7_1()[11],
     ",
   0x400b2e28u64 => "
-      CANFD.cfdrmdf7__1()[12],
+      CANFD.cfdrmdf_7_1()[12],
     ",
   0x400b2ea8u64 => "
-      CANFD.cfdrmdf7__1()[13],
+      CANFD.cfdrmdf_7_1()[13],
     ",
   0x400b2f28u64 => "
-      CANFD.cfdrmdf7__1()[14],
+      CANFD.cfdrmdf_7_1()[14],
     ",
   0x400b2fa8u64 => "
-      CANFD.cfdrmdf7__1()[15],
+      CANFD.cfdrmdf_7_1()[15],
     ",
   0x400b282cu64 => "
-      CANFD.cfdrmdf8__1()[0],
+      CANFD.cfdrmdf_8_1()[0],
     ",
   0x400b28acu64 => "
-      CANFD.cfdrmdf8__1()[1],
+      CANFD.cfdrmdf_8_1()[1],
     ",
   0x400b292cu64 => "
-      CANFD.cfdrmdf8__1()[2],
+      CANFD.cfdrmdf_8_1()[2],
     ",
   0x400b29acu64 => "
-      CANFD.cfdrmdf8__1()[3],
+      CANFD.cfdrmdf_8_1()[3],
     ",
   0x400b2a2cu64 => "
-      CANFD.cfdrmdf8__1()[4],
+      CANFD.cfdrmdf_8_1()[4],
     ",
   0x400b2aacu64 => "
-      CANFD.cfdrmdf8__1()[5],
+      CANFD.cfdrmdf_8_1()[5],
     ",
   0x400b2b2cu64 => "
-      CANFD.cfdrmdf8__1()[6],
+      CANFD.cfdrmdf_8_1()[6],
     ",
   0x400b2bacu64 => "
-      CANFD.cfdrmdf8__1()[7],
+      CANFD.cfdrmdf_8_1()[7],
     ",
   0x400b2c2cu64 => "
-      CANFD.cfdrmdf8__1()[8],
+      CANFD.cfdrmdf_8_1()[8],
     ",
   0x400b2cacu64 => "
-      CANFD.cfdrmdf8__1()[9],
+      CANFD.cfdrmdf_8_1()[9],
     ",
   0x400b2d2cu64 => "
-      CANFD.cfdrmdf8__1()[10],
+      CANFD.cfdrmdf_8_1()[10],
     ",
   0x400b2dacu64 => "
-      CANFD.cfdrmdf8__1()[11],
+      CANFD.cfdrmdf_8_1()[11],
     ",
   0x400b2e2cu64 => "
-      CANFD.cfdrmdf8__1()[12],
+      CANFD.cfdrmdf_8_1()[12],
     ",
   0x400b2eacu64 => "
-      CANFD.cfdrmdf8__1()[13],
+      CANFD.cfdrmdf_8_1()[13],
     ",
   0x400b2f2cu64 => "
-      CANFD.cfdrmdf8__1()[14],
+      CANFD.cfdrmdf_8_1()[14],
     ",
   0x400b2facu64 => "
-      CANFD.cfdrmdf8__1()[15],
+      CANFD.cfdrmdf_8_1()[15],
     ",
   0x400b2830u64 => "
-      CANFD.cfdrmdf9__1()[0],
+      CANFD.cfdrmdf_9_1()[0],
     ",
   0x400b28b0u64 => "
-      CANFD.cfdrmdf9__1()[1],
+      CANFD.cfdrmdf_9_1()[1],
     ",
   0x400b2930u64 => "
-      CANFD.cfdrmdf9__1()[2],
+      CANFD.cfdrmdf_9_1()[2],
     ",
   0x400b29b0u64 => "
-      CANFD.cfdrmdf9__1()[3],
+      CANFD.cfdrmdf_9_1()[3],
     ",
   0x400b2a30u64 => "
-      CANFD.cfdrmdf9__1()[4],
+      CANFD.cfdrmdf_9_1()[4],
     ",
   0x400b2ab0u64 => "
-      CANFD.cfdrmdf9__1()[5],
+      CANFD.cfdrmdf_9_1()[5],
     ",
   0x400b2b30u64 => "
-      CANFD.cfdrmdf9__1()[6],
+      CANFD.cfdrmdf_9_1()[6],
     ",
   0x400b2bb0u64 => "
-      CANFD.cfdrmdf9__1()[7],
+      CANFD.cfdrmdf_9_1()[7],
     ",
   0x400b2c30u64 => "
-      CANFD.cfdrmdf9__1()[8],
+      CANFD.cfdrmdf_9_1()[8],
     ",
   0x400b2cb0u64 => "
-      CANFD.cfdrmdf9__1()[9],
+      CANFD.cfdrmdf_9_1()[9],
     ",
   0x400b2d30u64 => "
-      CANFD.cfdrmdf9__1()[10],
+      CANFD.cfdrmdf_9_1()[10],
     ",
   0x400b2db0u64 => "
-      CANFD.cfdrmdf9__1()[11],
+      CANFD.cfdrmdf_9_1()[11],
     ",
   0x400b2e30u64 => "
-      CANFD.cfdrmdf9__1()[12],
+      CANFD.cfdrmdf_9_1()[12],
     ",
   0x400b2eb0u64 => "
-      CANFD.cfdrmdf9__1()[13],
+      CANFD.cfdrmdf_9_1()[13],
     ",
   0x400b2f30u64 => "
-      CANFD.cfdrmdf9__1()[14],
+      CANFD.cfdrmdf_9_1()[14],
     ",
   0x400b2fb0u64 => "
-      CANFD.cfdrmdf9__1()[15],
+      CANFD.cfdrmdf_9_1()[15],
     ",
   0x400b2834u64 => "
-      CANFD.cfdrmdf10__1()[0],
+      CANFD.cfdrmdf_10_1()[0],
     ",
   0x400b28b4u64 => "
-      CANFD.cfdrmdf10__1()[1],
+      CANFD.cfdrmdf_10_1()[1],
     ",
   0x400b2934u64 => "
-      CANFD.cfdrmdf10__1()[2],
+      CANFD.cfdrmdf_10_1()[2],
     ",
   0x400b29b4u64 => "
-      CANFD.cfdrmdf10__1()[3],
+      CANFD.cfdrmdf_10_1()[3],
     ",
   0x400b2a34u64 => "
-      CANFD.cfdrmdf10__1()[4],
+      CANFD.cfdrmdf_10_1()[4],
     ",
   0x400b2ab4u64 => "
-      CANFD.cfdrmdf10__1()[5],
+      CANFD.cfdrmdf_10_1()[5],
     ",
   0x400b2b34u64 => "
-      CANFD.cfdrmdf10__1()[6],
+      CANFD.cfdrmdf_10_1()[6],
     ",
   0x400b2bb4u64 => "
-      CANFD.cfdrmdf10__1()[7],
+      CANFD.cfdrmdf_10_1()[7],
     ",
   0x400b2c34u64 => "
-      CANFD.cfdrmdf10__1()[8],
+      CANFD.cfdrmdf_10_1()[8],
     ",
   0x400b2cb4u64 => "
-      CANFD.cfdrmdf10__1()[9],
+      CANFD.cfdrmdf_10_1()[9],
     ",
   0x400b2d34u64 => "
-      CANFD.cfdrmdf10__1()[10],
+      CANFD.cfdrmdf_10_1()[10],
     ",
   0x400b2db4u64 => "
-      CANFD.cfdrmdf10__1()[11],
+      CANFD.cfdrmdf_10_1()[11],
     ",
   0x400b2e34u64 => "
-      CANFD.cfdrmdf10__1()[12],
+      CANFD.cfdrmdf_10_1()[12],
     ",
   0x400b2eb4u64 => "
-      CANFD.cfdrmdf10__1()[13],
+      CANFD.cfdrmdf_10_1()[13],
     ",
   0x400b2f34u64 => "
-      CANFD.cfdrmdf10__1()[14],
+      CANFD.cfdrmdf_10_1()[14],
     ",
   0x400b2fb4u64 => "
-      CANFD.cfdrmdf10__1()[15],
+      CANFD.cfdrmdf_10_1()[15],
     ",
   0x400b2838u64 => "
-      CANFD.cfdrmdf11__1()[0],
+      CANFD.cfdrmdf_11_1()[0],
     ",
   0x400b28b8u64 => "
-      CANFD.cfdrmdf11__1()[1],
+      CANFD.cfdrmdf_11_1()[1],
     ",
   0x400b2938u64 => "
-      CANFD.cfdrmdf11__1()[2],
+      CANFD.cfdrmdf_11_1()[2],
     ",
   0x400b29b8u64 => "
-      CANFD.cfdrmdf11__1()[3],
+      CANFD.cfdrmdf_11_1()[3],
     ",
   0x400b2a38u64 => "
-      CANFD.cfdrmdf11__1()[4],
+      CANFD.cfdrmdf_11_1()[4],
     ",
   0x400b2ab8u64 => "
-      CANFD.cfdrmdf11__1()[5],
+      CANFD.cfdrmdf_11_1()[5],
     ",
   0x400b2b38u64 => "
-      CANFD.cfdrmdf11__1()[6],
+      CANFD.cfdrmdf_11_1()[6],
     ",
   0x400b2bb8u64 => "
-      CANFD.cfdrmdf11__1()[7],
+      CANFD.cfdrmdf_11_1()[7],
     ",
   0x400b2c38u64 => "
-      CANFD.cfdrmdf11__1()[8],
+      CANFD.cfdrmdf_11_1()[8],
     ",
   0x400b2cb8u64 => "
-      CANFD.cfdrmdf11__1()[9],
+      CANFD.cfdrmdf_11_1()[9],
     ",
   0x400b2d38u64 => "
-      CANFD.cfdrmdf11__1()[10],
+      CANFD.cfdrmdf_11_1()[10],
     ",
   0x400b2db8u64 => "
-      CANFD.cfdrmdf11__1()[11],
+      CANFD.cfdrmdf_11_1()[11],
     ",
   0x400b2e38u64 => "
-      CANFD.cfdrmdf11__1()[12],
+      CANFD.cfdrmdf_11_1()[12],
     ",
   0x400b2eb8u64 => "
-      CANFD.cfdrmdf11__1()[13],
+      CANFD.cfdrmdf_11_1()[13],
     ",
   0x400b2f38u64 => "
-      CANFD.cfdrmdf11__1()[14],
+      CANFD.cfdrmdf_11_1()[14],
     ",
   0x400b2fb8u64 => "
-      CANFD.cfdrmdf11__1()[15],
+      CANFD.cfdrmdf_11_1()[15],
     ",
   0x400b283cu64 => "
-      CANFD.cfdrmdf12__1()[0],
+      CANFD.cfdrmdf_12_1()[0],
     ",
   0x400b28bcu64 => "
-      CANFD.cfdrmdf12__1()[1],
+      CANFD.cfdrmdf_12_1()[1],
     ",
   0x400b293cu64 => "
-      CANFD.cfdrmdf12__1()[2],
+      CANFD.cfdrmdf_12_1()[2],
     ",
   0x400b29bcu64 => "
-      CANFD.cfdrmdf12__1()[3],
+      CANFD.cfdrmdf_12_1()[3],
     ",
   0x400b2a3cu64 => "
-      CANFD.cfdrmdf12__1()[4],
+      CANFD.cfdrmdf_12_1()[4],
     ",
   0x400b2abcu64 => "
-      CANFD.cfdrmdf12__1()[5],
+      CANFD.cfdrmdf_12_1()[5],
     ",
   0x400b2b3cu64 => "
-      CANFD.cfdrmdf12__1()[6],
+      CANFD.cfdrmdf_12_1()[6],
     ",
   0x400b2bbcu64 => "
-      CANFD.cfdrmdf12__1()[7],
+      CANFD.cfdrmdf_12_1()[7],
     ",
   0x400b2c3cu64 => "
-      CANFD.cfdrmdf12__1()[8],
+      CANFD.cfdrmdf_12_1()[8],
     ",
   0x400b2cbcu64 => "
-      CANFD.cfdrmdf12__1()[9],
+      CANFD.cfdrmdf_12_1()[9],
     ",
   0x400b2d3cu64 => "
-      CANFD.cfdrmdf12__1()[10],
+      CANFD.cfdrmdf_12_1()[10],
     ",
   0x400b2dbcu64 => "
-      CANFD.cfdrmdf12__1()[11],
+      CANFD.cfdrmdf_12_1()[11],
     ",
   0x400b2e3cu64 => "
-      CANFD.cfdrmdf12__1()[12],
+      CANFD.cfdrmdf_12_1()[12],
     ",
   0x400b2ebcu64 => "
-      CANFD.cfdrmdf12__1()[13],
+      CANFD.cfdrmdf_12_1()[13],
     ",
   0x400b2f3cu64 => "
-      CANFD.cfdrmdf12__1()[14],
+      CANFD.cfdrmdf_12_1()[14],
     ",
   0x400b2fbcu64 => "
-      CANFD.cfdrmdf12__1()[15],
+      CANFD.cfdrmdf_12_1()[15],
     ",
   0x400b2840u64 => "
-      CANFD.cfdrmdf13__1()[0],
+      CANFD.cfdrmdf_13_1()[0],
     ",
   0x400b28c0u64 => "
-      CANFD.cfdrmdf13__1()[1],
+      CANFD.cfdrmdf_13_1()[1],
     ",
   0x400b2940u64 => "
-      CANFD.cfdrmdf13__1()[2],
+      CANFD.cfdrmdf_13_1()[2],
     ",
   0x400b29c0u64 => "
-      CANFD.cfdrmdf13__1()[3],
+      CANFD.cfdrmdf_13_1()[3],
     ",
   0x400b2a40u64 => "
-      CANFD.cfdrmdf13__1()[4],
+      CANFD.cfdrmdf_13_1()[4],
     ",
   0x400b2ac0u64 => "
-      CANFD.cfdrmdf13__1()[5],
+      CANFD.cfdrmdf_13_1()[5],
     ",
   0x400b2b40u64 => "
-      CANFD.cfdrmdf13__1()[6],
+      CANFD.cfdrmdf_13_1()[6],
     ",
   0x400b2bc0u64 => "
-      CANFD.cfdrmdf13__1()[7],
+      CANFD.cfdrmdf_13_1()[7],
     ",
   0x400b2c40u64 => "
-      CANFD.cfdrmdf13__1()[8],
+      CANFD.cfdrmdf_13_1()[8],
     ",
   0x400b2cc0u64 => "
-      CANFD.cfdrmdf13__1()[9],
+      CANFD.cfdrmdf_13_1()[9],
     ",
   0x400b2d40u64 => "
-      CANFD.cfdrmdf13__1()[10],
+      CANFD.cfdrmdf_13_1()[10],
     ",
   0x400b2dc0u64 => "
-      CANFD.cfdrmdf13__1()[11],
+      CANFD.cfdrmdf_13_1()[11],
     ",
   0x400b2e40u64 => "
-      CANFD.cfdrmdf13__1()[12],
+      CANFD.cfdrmdf_13_1()[12],
     ",
   0x400b2ec0u64 => "
-      CANFD.cfdrmdf13__1()[13],
+      CANFD.cfdrmdf_13_1()[13],
     ",
   0x400b2f40u64 => "
-      CANFD.cfdrmdf13__1()[14],
+      CANFD.cfdrmdf_13_1()[14],
     ",
   0x400b2fc0u64 => "
-      CANFD.cfdrmdf13__1()[15],
+      CANFD.cfdrmdf_13_1()[15],
     ",
   0x400b2844u64 => "
-      CANFD.cfdrmdf14__1()[0],
+      CANFD.cfdrmdf_14_1()[0],
     ",
   0x400b28c4u64 => "
-      CANFD.cfdrmdf14__1()[1],
+      CANFD.cfdrmdf_14_1()[1],
     ",
   0x400b2944u64 => "
-      CANFD.cfdrmdf14__1()[2],
+      CANFD.cfdrmdf_14_1()[2],
     ",
   0x400b29c4u64 => "
-      CANFD.cfdrmdf14__1()[3],
+      CANFD.cfdrmdf_14_1()[3],
     ",
   0x400b2a44u64 => "
-      CANFD.cfdrmdf14__1()[4],
+      CANFD.cfdrmdf_14_1()[4],
     ",
   0x400b2ac4u64 => "
-      CANFD.cfdrmdf14__1()[5],
+      CANFD.cfdrmdf_14_1()[5],
     ",
   0x400b2b44u64 => "
-      CANFD.cfdrmdf14__1()[6],
+      CANFD.cfdrmdf_14_1()[6],
     ",
   0x400b2bc4u64 => "
-      CANFD.cfdrmdf14__1()[7],
+      CANFD.cfdrmdf_14_1()[7],
     ",
   0x400b2c44u64 => "
-      CANFD.cfdrmdf14__1()[8],
+      CANFD.cfdrmdf_14_1()[8],
     ",
   0x400b2cc4u64 => "
-      CANFD.cfdrmdf14__1()[9],
+      CANFD.cfdrmdf_14_1()[9],
     ",
   0x400b2d44u64 => "
-      CANFD.cfdrmdf14__1()[10],
+      CANFD.cfdrmdf_14_1()[10],
     ",
   0x400b2dc4u64 => "
-      CANFD.cfdrmdf14__1()[11],
+      CANFD.cfdrmdf_14_1()[11],
     ",
   0x400b2e44u64 => "
-      CANFD.cfdrmdf14__1()[12],
+      CANFD.cfdrmdf_14_1()[12],
     ",
   0x400b2ec4u64 => "
-      CANFD.cfdrmdf14__1()[13],
+      CANFD.cfdrmdf_14_1()[13],
     ",
   0x400b2f44u64 => "
-      CANFD.cfdrmdf14__1()[14],
+      CANFD.cfdrmdf_14_1()[14],
     ",
   0x400b2fc4u64 => "
-      CANFD.cfdrmdf14__1()[15],
+      CANFD.cfdrmdf_14_1()[15],
     ",
   0x400b2848u64 => "
-      CANFD.cfdrmdf15__1()[0],
+      CANFD.cfdrmdf_15_1()[0],
     ",
   0x400b28c8u64 => "
-      CANFD.cfdrmdf15__1()[1],
+      CANFD.cfdrmdf_15_1()[1],
     ",
   0x400b2948u64 => "
-      CANFD.cfdrmdf15__1()[2],
+      CANFD.cfdrmdf_15_1()[2],
     ",
   0x400b29c8u64 => "
-      CANFD.cfdrmdf15__1()[3],
+      CANFD.cfdrmdf_15_1()[3],
     ",
   0x400b2a48u64 => "
-      CANFD.cfdrmdf15__1()[4],
+      CANFD.cfdrmdf_15_1()[4],
     ",
   0x400b2ac8u64 => "
-      CANFD.cfdrmdf15__1()[5],
+      CANFD.cfdrmdf_15_1()[5],
     ",
   0x400b2b48u64 => "
-      CANFD.cfdrmdf15__1()[6],
+      CANFD.cfdrmdf_15_1()[6],
     ",
   0x400b2bc8u64 => "
-      CANFD.cfdrmdf15__1()[7],
+      CANFD.cfdrmdf_15_1()[7],
     ",
   0x400b2c48u64 => "
-      CANFD.cfdrmdf15__1()[8],
+      CANFD.cfdrmdf_15_1()[8],
     ",
   0x400b2cc8u64 => "
-      CANFD.cfdrmdf15__1()[9],
+      CANFD.cfdrmdf_15_1()[9],
     ",
   0x400b2d48u64 => "
-      CANFD.cfdrmdf15__1()[10],
+      CANFD.cfdrmdf_15_1()[10],
     ",
   0x400b2dc8u64 => "
-      CANFD.cfdrmdf15__1()[11],
+      CANFD.cfdrmdf_15_1()[11],
     ",
   0x400b2e48u64 => "
-      CANFD.cfdrmdf15__1()[12],
+      CANFD.cfdrmdf_15_1()[12],
     ",
   0x400b2ec8u64 => "
-      CANFD.cfdrmdf15__1()[13],
+      CANFD.cfdrmdf_15_1()[13],
     ",
   0x400b2f48u64 => "
-      CANFD.cfdrmdf15__1()[14],
+      CANFD.cfdrmdf_15_1()[14],
     ",
   0x400b2fc8u64 => "
-      CANFD.cfdrmdf15__1()[15],
+      CANFD.cfdrmdf_15_1()[15],
     ",
   0x400b6000u64 => "
       CANFD.cfdrfid()[0],
@@ -7367,388 +7367,388 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       CANFD.cfdtmfdctr_0()[7],
     ",
   0x400c100cu64 => "
-      CANFD.cfdtmdf0__0()[0],
+      CANFD.cfdtmdf_0_0()[0],
     ",
   0x400c108cu64 => "
-      CANFD.cfdtmdf0__0()[1],
+      CANFD.cfdtmdf_0_0()[1],
     ",
   0x400c110cu64 => "
-      CANFD.cfdtmdf0__0()[2],
+      CANFD.cfdtmdf_0_0()[2],
     ",
   0x400c118cu64 => "
-      CANFD.cfdtmdf0__0()[3],
+      CANFD.cfdtmdf_0_0()[3],
     ",
   0x400c120cu64 => "
-      CANFD.cfdtmdf0__0()[4],
+      CANFD.cfdtmdf_0_0()[4],
     ",
   0x400c128cu64 => "
-      CANFD.cfdtmdf0__0()[5],
+      CANFD.cfdtmdf_0_0()[5],
     ",
   0x400c130cu64 => "
-      CANFD.cfdtmdf0__0()[6],
+      CANFD.cfdtmdf_0_0()[6],
     ",
   0x400c138cu64 => "
-      CANFD.cfdtmdf0__0()[7],
+      CANFD.cfdtmdf_0_0()[7],
     ",
   0x400c1010u64 => "
-      CANFD.cfdtmdf1__0()[0],
+      CANFD.cfdtmdf_1_0()[0],
     ",
   0x400c1090u64 => "
-      CANFD.cfdtmdf1__0()[1],
+      CANFD.cfdtmdf_1_0()[1],
     ",
   0x400c1110u64 => "
-      CANFD.cfdtmdf1__0()[2],
+      CANFD.cfdtmdf_1_0()[2],
     ",
   0x400c1190u64 => "
-      CANFD.cfdtmdf1__0()[3],
+      CANFD.cfdtmdf_1_0()[3],
     ",
   0x400c1210u64 => "
-      CANFD.cfdtmdf1__0()[4],
+      CANFD.cfdtmdf_1_0()[4],
     ",
   0x400c1290u64 => "
-      CANFD.cfdtmdf1__0()[5],
+      CANFD.cfdtmdf_1_0()[5],
     ",
   0x400c1310u64 => "
-      CANFD.cfdtmdf1__0()[6],
+      CANFD.cfdtmdf_1_0()[6],
     ",
   0x400c1390u64 => "
-      CANFD.cfdtmdf1__0()[7],
+      CANFD.cfdtmdf_1_0()[7],
     ",
   0x400c1014u64 => "
-      CANFD.cfdtmdf2__0()[0],
+      CANFD.cfdtmdf_2_0()[0],
     ",
   0x400c1094u64 => "
-      CANFD.cfdtmdf2__0()[1],
+      CANFD.cfdtmdf_2_0()[1],
     ",
   0x400c1114u64 => "
-      CANFD.cfdtmdf2__0()[2],
+      CANFD.cfdtmdf_2_0()[2],
     ",
   0x400c1194u64 => "
-      CANFD.cfdtmdf2__0()[3],
+      CANFD.cfdtmdf_2_0()[3],
     ",
   0x400c1214u64 => "
-      CANFD.cfdtmdf2__0()[4],
+      CANFD.cfdtmdf_2_0()[4],
     ",
   0x400c1294u64 => "
-      CANFD.cfdtmdf2__0()[5],
+      CANFD.cfdtmdf_2_0()[5],
     ",
   0x400c1314u64 => "
-      CANFD.cfdtmdf2__0()[6],
+      CANFD.cfdtmdf_2_0()[6],
     ",
   0x400c1394u64 => "
-      CANFD.cfdtmdf2__0()[7],
+      CANFD.cfdtmdf_2_0()[7],
     ",
   0x400c1018u64 => "
-      CANFD.cfdtmdf3__0()[0],
+      CANFD.cfdtmdf_3_0()[0],
     ",
   0x400c1098u64 => "
-      CANFD.cfdtmdf3__0()[1],
+      CANFD.cfdtmdf_3_0()[1],
     ",
   0x400c1118u64 => "
-      CANFD.cfdtmdf3__0()[2],
+      CANFD.cfdtmdf_3_0()[2],
     ",
   0x400c1198u64 => "
-      CANFD.cfdtmdf3__0()[3],
+      CANFD.cfdtmdf_3_0()[3],
     ",
   0x400c1218u64 => "
-      CANFD.cfdtmdf3__0()[4],
+      CANFD.cfdtmdf_3_0()[4],
     ",
   0x400c1298u64 => "
-      CANFD.cfdtmdf3__0()[5],
+      CANFD.cfdtmdf_3_0()[5],
     ",
   0x400c1318u64 => "
-      CANFD.cfdtmdf3__0()[6],
+      CANFD.cfdtmdf_3_0()[6],
     ",
   0x400c1398u64 => "
-      CANFD.cfdtmdf3__0()[7],
+      CANFD.cfdtmdf_3_0()[7],
     ",
   0x400c101cu64 => "
-      CANFD.cfdtmdf4__0()[0],
+      CANFD.cfdtmdf_4_0()[0],
     ",
   0x400c109cu64 => "
-      CANFD.cfdtmdf4__0()[1],
+      CANFD.cfdtmdf_4_0()[1],
     ",
   0x400c111cu64 => "
-      CANFD.cfdtmdf4__0()[2],
+      CANFD.cfdtmdf_4_0()[2],
     ",
   0x400c119cu64 => "
-      CANFD.cfdtmdf4__0()[3],
+      CANFD.cfdtmdf_4_0()[3],
     ",
   0x400c121cu64 => "
-      CANFD.cfdtmdf4__0()[4],
+      CANFD.cfdtmdf_4_0()[4],
     ",
   0x400c129cu64 => "
-      CANFD.cfdtmdf4__0()[5],
+      CANFD.cfdtmdf_4_0()[5],
     ",
   0x400c131cu64 => "
-      CANFD.cfdtmdf4__0()[6],
+      CANFD.cfdtmdf_4_0()[6],
     ",
   0x400c139cu64 => "
-      CANFD.cfdtmdf4__0()[7],
+      CANFD.cfdtmdf_4_0()[7],
     ",
   0x400c1020u64 => "
-      CANFD.cfdtmdf5__0()[0],
+      CANFD.cfdtmdf_5_0()[0],
     ",
   0x400c10a0u64 => "
-      CANFD.cfdtmdf5__0()[1],
+      CANFD.cfdtmdf_5_0()[1],
     ",
   0x400c1120u64 => "
-      CANFD.cfdtmdf5__0()[2],
+      CANFD.cfdtmdf_5_0()[2],
     ",
   0x400c11a0u64 => "
-      CANFD.cfdtmdf5__0()[3],
+      CANFD.cfdtmdf_5_0()[3],
     ",
   0x400c1220u64 => "
-      CANFD.cfdtmdf5__0()[4],
+      CANFD.cfdtmdf_5_0()[4],
     ",
   0x400c12a0u64 => "
-      CANFD.cfdtmdf5__0()[5],
+      CANFD.cfdtmdf_5_0()[5],
     ",
   0x400c1320u64 => "
-      CANFD.cfdtmdf5__0()[6],
+      CANFD.cfdtmdf_5_0()[6],
     ",
   0x400c13a0u64 => "
-      CANFD.cfdtmdf5__0()[7],
+      CANFD.cfdtmdf_5_0()[7],
     ",
   0x400c1024u64 => "
-      CANFD.cfdtmdf6__0()[0],
+      CANFD.cfdtmdf_6_0()[0],
     ",
   0x400c10a4u64 => "
-      CANFD.cfdtmdf6__0()[1],
+      CANFD.cfdtmdf_6_0()[1],
     ",
   0x400c1124u64 => "
-      CANFD.cfdtmdf6__0()[2],
+      CANFD.cfdtmdf_6_0()[2],
     ",
   0x400c11a4u64 => "
-      CANFD.cfdtmdf6__0()[3],
+      CANFD.cfdtmdf_6_0()[3],
     ",
   0x400c1224u64 => "
-      CANFD.cfdtmdf6__0()[4],
+      CANFD.cfdtmdf_6_0()[4],
     ",
   0x400c12a4u64 => "
-      CANFD.cfdtmdf6__0()[5],
+      CANFD.cfdtmdf_6_0()[5],
     ",
   0x400c1324u64 => "
-      CANFD.cfdtmdf6__0()[6],
+      CANFD.cfdtmdf_6_0()[6],
     ",
   0x400c13a4u64 => "
-      CANFD.cfdtmdf6__0()[7],
+      CANFD.cfdtmdf_6_0()[7],
     ",
   0x400c1028u64 => "
-      CANFD.cfdtmdf7__0()[0],
+      CANFD.cfdtmdf_7_0()[0],
     ",
   0x400c10a8u64 => "
-      CANFD.cfdtmdf7__0()[1],
+      CANFD.cfdtmdf_7_0()[1],
     ",
   0x400c1128u64 => "
-      CANFD.cfdtmdf7__0()[2],
+      CANFD.cfdtmdf_7_0()[2],
     ",
   0x400c11a8u64 => "
-      CANFD.cfdtmdf7__0()[3],
+      CANFD.cfdtmdf_7_0()[3],
     ",
   0x400c1228u64 => "
-      CANFD.cfdtmdf7__0()[4],
+      CANFD.cfdtmdf_7_0()[4],
     ",
   0x400c12a8u64 => "
-      CANFD.cfdtmdf7__0()[5],
+      CANFD.cfdtmdf_7_0()[5],
     ",
   0x400c1328u64 => "
-      CANFD.cfdtmdf7__0()[6],
+      CANFD.cfdtmdf_7_0()[6],
     ",
   0x400c13a8u64 => "
-      CANFD.cfdtmdf7__0()[7],
+      CANFD.cfdtmdf_7_0()[7],
     ",
   0x400c102cu64 => "
-      CANFD.cfdtmdf8__0()[0],
+      CANFD.cfdtmdf_8_0()[0],
     ",
   0x400c10acu64 => "
-      CANFD.cfdtmdf8__0()[1],
+      CANFD.cfdtmdf_8_0()[1],
     ",
   0x400c112cu64 => "
-      CANFD.cfdtmdf8__0()[2],
+      CANFD.cfdtmdf_8_0()[2],
     ",
   0x400c11acu64 => "
-      CANFD.cfdtmdf8__0()[3],
+      CANFD.cfdtmdf_8_0()[3],
     ",
   0x400c122cu64 => "
-      CANFD.cfdtmdf8__0()[4],
+      CANFD.cfdtmdf_8_0()[4],
     ",
   0x400c12acu64 => "
-      CANFD.cfdtmdf8__0()[5],
+      CANFD.cfdtmdf_8_0()[5],
     ",
   0x400c132cu64 => "
-      CANFD.cfdtmdf8__0()[6],
+      CANFD.cfdtmdf_8_0()[6],
     ",
   0x400c13acu64 => "
-      CANFD.cfdtmdf8__0()[7],
+      CANFD.cfdtmdf_8_0()[7],
     ",
   0x400c1030u64 => "
-      CANFD.cfdtmdf9__0()[0],
+      CANFD.cfdtmdf_9_0()[0],
     ",
   0x400c10b0u64 => "
-      CANFD.cfdtmdf9__0()[1],
+      CANFD.cfdtmdf_9_0()[1],
     ",
   0x400c1130u64 => "
-      CANFD.cfdtmdf9__0()[2],
+      CANFD.cfdtmdf_9_0()[2],
     ",
   0x400c11b0u64 => "
-      CANFD.cfdtmdf9__0()[3],
+      CANFD.cfdtmdf_9_0()[3],
     ",
   0x400c1230u64 => "
-      CANFD.cfdtmdf9__0()[4],
+      CANFD.cfdtmdf_9_0()[4],
     ",
   0x400c12b0u64 => "
-      CANFD.cfdtmdf9__0()[5],
+      CANFD.cfdtmdf_9_0()[5],
     ",
   0x400c1330u64 => "
-      CANFD.cfdtmdf9__0()[6],
+      CANFD.cfdtmdf_9_0()[6],
     ",
   0x400c13b0u64 => "
-      CANFD.cfdtmdf9__0()[7],
+      CANFD.cfdtmdf_9_0()[7],
     ",
   0x400c1034u64 => "
-      CANFD.cfdtmdf10__0()[0],
+      CANFD.cfdtmdf_10_0()[0],
     ",
   0x400c10b4u64 => "
-      CANFD.cfdtmdf10__0()[1],
+      CANFD.cfdtmdf_10_0()[1],
     ",
   0x400c1134u64 => "
-      CANFD.cfdtmdf10__0()[2],
+      CANFD.cfdtmdf_10_0()[2],
     ",
   0x400c11b4u64 => "
-      CANFD.cfdtmdf10__0()[3],
+      CANFD.cfdtmdf_10_0()[3],
     ",
   0x400c1234u64 => "
-      CANFD.cfdtmdf10__0()[4],
+      CANFD.cfdtmdf_10_0()[4],
     ",
   0x400c12b4u64 => "
-      CANFD.cfdtmdf10__0()[5],
+      CANFD.cfdtmdf_10_0()[5],
     ",
   0x400c1334u64 => "
-      CANFD.cfdtmdf10__0()[6],
+      CANFD.cfdtmdf_10_0()[6],
     ",
   0x400c13b4u64 => "
-      CANFD.cfdtmdf10__0()[7],
+      CANFD.cfdtmdf_10_0()[7],
     ",
   0x400c1038u64 => "
-      CANFD.cfdtmdf11__0()[0],
+      CANFD.cfdtmdf_11_0()[0],
     ",
   0x400c10b8u64 => "
-      CANFD.cfdtmdf11__0()[1],
+      CANFD.cfdtmdf_11_0()[1],
     ",
   0x400c1138u64 => "
-      CANFD.cfdtmdf11__0()[2],
+      CANFD.cfdtmdf_11_0()[2],
     ",
   0x400c11b8u64 => "
-      CANFD.cfdtmdf11__0()[3],
+      CANFD.cfdtmdf_11_0()[3],
     ",
   0x400c1238u64 => "
-      CANFD.cfdtmdf11__0()[4],
+      CANFD.cfdtmdf_11_0()[4],
     ",
   0x400c12b8u64 => "
-      CANFD.cfdtmdf11__0()[5],
+      CANFD.cfdtmdf_11_0()[5],
     ",
   0x400c1338u64 => "
-      CANFD.cfdtmdf11__0()[6],
+      CANFD.cfdtmdf_11_0()[6],
     ",
   0x400c13b8u64 => "
-      CANFD.cfdtmdf11__0()[7],
+      CANFD.cfdtmdf_11_0()[7],
     ",
   0x400c103cu64 => "
-      CANFD.cfdtmdf12__0()[0],
+      CANFD.cfdtmdf_12_0()[0],
     ",
   0x400c10bcu64 => "
-      CANFD.cfdtmdf12__0()[1],
+      CANFD.cfdtmdf_12_0()[1],
     ",
   0x400c113cu64 => "
-      CANFD.cfdtmdf12__0()[2],
+      CANFD.cfdtmdf_12_0()[2],
     ",
   0x400c11bcu64 => "
-      CANFD.cfdtmdf12__0()[3],
+      CANFD.cfdtmdf_12_0()[3],
     ",
   0x400c123cu64 => "
-      CANFD.cfdtmdf12__0()[4],
+      CANFD.cfdtmdf_12_0()[4],
     ",
   0x400c12bcu64 => "
-      CANFD.cfdtmdf12__0()[5],
+      CANFD.cfdtmdf_12_0()[5],
     ",
   0x400c133cu64 => "
-      CANFD.cfdtmdf12__0()[6],
+      CANFD.cfdtmdf_12_0()[6],
     ",
   0x400c13bcu64 => "
-      CANFD.cfdtmdf12__0()[7],
+      CANFD.cfdtmdf_12_0()[7],
     ",
   0x400c1040u64 => "
-      CANFD.cfdtmdf13__0()[0],
+      CANFD.cfdtmdf_13_0()[0],
     ",
   0x400c10c0u64 => "
-      CANFD.cfdtmdf13__0()[1],
+      CANFD.cfdtmdf_13_0()[1],
     ",
   0x400c1140u64 => "
-      CANFD.cfdtmdf13__0()[2],
+      CANFD.cfdtmdf_13_0()[2],
     ",
   0x400c11c0u64 => "
-      CANFD.cfdtmdf13__0()[3],
+      CANFD.cfdtmdf_13_0()[3],
     ",
   0x400c1240u64 => "
-      CANFD.cfdtmdf13__0()[4],
+      CANFD.cfdtmdf_13_0()[4],
     ",
   0x400c12c0u64 => "
-      CANFD.cfdtmdf13__0()[5],
+      CANFD.cfdtmdf_13_0()[5],
     ",
   0x400c1340u64 => "
-      CANFD.cfdtmdf13__0()[6],
+      CANFD.cfdtmdf_13_0()[6],
     ",
   0x400c13c0u64 => "
-      CANFD.cfdtmdf13__0()[7],
+      CANFD.cfdtmdf_13_0()[7],
     ",
   0x400c1044u64 => "
-      CANFD.cfdtmdf14__0()[0],
+      CANFD.cfdtmdf_14_0()[0],
     ",
   0x400c10c4u64 => "
-      CANFD.cfdtmdf14__0()[1],
+      CANFD.cfdtmdf_14_0()[1],
     ",
   0x400c1144u64 => "
-      CANFD.cfdtmdf14__0()[2],
+      CANFD.cfdtmdf_14_0()[2],
     ",
   0x400c11c4u64 => "
-      CANFD.cfdtmdf14__0()[3],
+      CANFD.cfdtmdf_14_0()[3],
     ",
   0x400c1244u64 => "
-      CANFD.cfdtmdf14__0()[4],
+      CANFD.cfdtmdf_14_0()[4],
     ",
   0x400c12c4u64 => "
-      CANFD.cfdtmdf14__0()[5],
+      CANFD.cfdtmdf_14_0()[5],
     ",
   0x400c1344u64 => "
-      CANFD.cfdtmdf14__0()[6],
+      CANFD.cfdtmdf_14_0()[6],
     ",
   0x400c13c4u64 => "
-      CANFD.cfdtmdf14__0()[7],
+      CANFD.cfdtmdf_14_0()[7],
     ",
   0x400c1048u64 => "
-      CANFD.cfdtmdf15__0()[0],
+      CANFD.cfdtmdf_15_0()[0],
     ",
   0x400c10c8u64 => "
-      CANFD.cfdtmdf15__0()[1],
+      CANFD.cfdtmdf_15_0()[1],
     ",
   0x400c1148u64 => "
-      CANFD.cfdtmdf15__0()[2],
+      CANFD.cfdtmdf_15_0()[2],
     ",
   0x400c11c8u64 => "
-      CANFD.cfdtmdf15__0()[3],
+      CANFD.cfdtmdf_15_0()[3],
     ",
   0x400c1248u64 => "
-      CANFD.cfdtmdf15__0()[4],
+      CANFD.cfdtmdf_15_0()[4],
     ",
   0x400c12c8u64 => "
-      CANFD.cfdtmdf15__0()[5],
+      CANFD.cfdtmdf_15_0()[5],
     ",
   0x400c1348u64 => "
-      CANFD.cfdtmdf15__0()[6],
+      CANFD.cfdtmdf_15_0()[6],
     ",
   0x400c13c8u64 => "
-      CANFD.cfdtmdf15__0()[7],
+      CANFD.cfdtmdf_15_0()[7],
     ",
   0x400c3000u64 => "
       CANFD.cfdtmid_1()[0],
@@ -7823,388 +7823,388 @@ static REGISTER_NAMES: phf::Map<u64, &'static str> = phf_map! {
       CANFD.cfdtmfdctr_1()[7],
     ",
   0x400c300cu64 => "
-      CANFD.cfdtmdf0__1()[0],
+      CANFD.cfdtmdf_0_1()[0],
     ",
   0x400c308cu64 => "
-      CANFD.cfdtmdf0__1()[1],
+      CANFD.cfdtmdf_0_1()[1],
     ",
   0x400c310cu64 => "
-      CANFD.cfdtmdf0__1()[2],
+      CANFD.cfdtmdf_0_1()[2],
     ",
   0x400c318cu64 => "
-      CANFD.cfdtmdf0__1()[3],
+      CANFD.cfdtmdf_0_1()[3],
     ",
   0x400c320cu64 => "
-      CANFD.cfdtmdf0__1()[4],
+      CANFD.cfdtmdf_0_1()[4],
     ",
   0x400c328cu64 => "
-      CANFD.cfdtmdf0__1()[5],
+      CANFD.cfdtmdf_0_1()[5],
     ",
   0x400c330cu64 => "
-      CANFD.cfdtmdf0__1()[6],
+      CANFD.cfdtmdf_0_1()[6],
     ",
   0x400c338cu64 => "
-      CANFD.cfdtmdf0__1()[7],
+      CANFD.cfdtmdf_0_1()[7],
     ",
   0x400c3010u64 => "
-      CANFD.cfdtmdf1__1()[0],
+      CANFD.cfdtmdf_1_1()[0],
     ",
   0x400c3090u64 => "
-      CANFD.cfdtmdf1__1()[1],
+      CANFD.cfdtmdf_1_1()[1],
     ",
   0x400c3110u64 => "
-      CANFD.cfdtmdf1__1()[2],
+      CANFD.cfdtmdf_1_1()[2],
     ",
   0x400c3190u64 => "
-      CANFD.cfdtmdf1__1()[3],
+      CANFD.cfdtmdf_1_1()[3],
     ",
   0x400c3210u64 => "
-      CANFD.cfdtmdf1__1()[4],
+      CANFD.cfdtmdf_1_1()[4],
     ",
   0x400c3290u64 => "
-      CANFD.cfdtmdf1__1()[5],
+      CANFD.cfdtmdf_1_1()[5],
     ",
   0x400c3310u64 => "
-      CANFD.cfdtmdf1__1()[6],
+      CANFD.cfdtmdf_1_1()[6],
     ",
   0x400c3390u64 => "
-      CANFD.cfdtmdf1__1()[7],
+      CANFD.cfdtmdf_1_1()[7],
     ",
   0x400c3014u64 => "
-      CANFD.cfdtmdf2__1()[0],
+      CANFD.cfdtmdf_2_1()[0],
     ",
   0x400c3094u64 => "
-      CANFD.cfdtmdf2__1()[1],
+      CANFD.cfdtmdf_2_1()[1],
     ",
   0x400c3114u64 => "
-      CANFD.cfdtmdf2__1()[2],
+      CANFD.cfdtmdf_2_1()[2],
     ",
   0x400c3194u64 => "
-      CANFD.cfdtmdf2__1()[3],
+      CANFD.cfdtmdf_2_1()[3],
     ",
   0x400c3214u64 => "
-      CANFD.cfdtmdf2__1()[4],
+      CANFD.cfdtmdf_2_1()[4],
     ",
   0x400c3294u64 => "
-      CANFD.cfdtmdf2__1()[5],
+      CANFD.cfdtmdf_2_1()[5],
     ",
   0x400c3314u64 => "
-      CANFD.cfdtmdf2__1()[6],
+      CANFD.cfdtmdf_2_1()[6],
     ",
   0x400c3394u64 => "
-      CANFD.cfdtmdf2__1()[7],
+      CANFD.cfdtmdf_2_1()[7],
     ",
   0x400c3018u64 => "
-      CANFD.cfdtmdf3__1()[0],
+      CANFD.cfdtmdf_3_1()[0],
     ",
   0x400c3098u64 => "
-      CANFD.cfdtmdf3__1()[1],
+      CANFD.cfdtmdf_3_1()[1],
     ",
   0x400c3118u64 => "
-      CANFD.cfdtmdf3__1()[2],
+      CANFD.cfdtmdf_3_1()[2],
     ",
   0x400c3198u64 => "
-      CANFD.cfdtmdf3__1()[3],
+      CANFD.cfdtmdf_3_1()[3],
     ",
   0x400c3218u64 => "
-      CANFD.cfdtmdf3__1()[4],
+      CANFD.cfdtmdf_3_1()[4],
     ",
   0x400c3298u64 => "
-      CANFD.cfdtmdf3__1()[5],
+      CANFD.cfdtmdf_3_1()[5],
     ",
   0x400c3318u64 => "
-      CANFD.cfdtmdf3__1()[6],
+      CANFD.cfdtmdf_3_1()[6],
     ",
   0x400c3398u64 => "
-      CANFD.cfdtmdf3__1()[7],
+      CANFD.cfdtmdf_3_1()[7],
     ",
   0x400c301cu64 => "
-      CANFD.cfdtmdf4__1()[0],
+      CANFD.cfdtmdf_4_1()[0],
     ",
   0x400c309cu64 => "
-      CANFD.cfdtmdf4__1()[1],
+      CANFD.cfdtmdf_4_1()[1],
     ",
   0x400c311cu64 => "
-      CANFD.cfdtmdf4__1()[2],
+      CANFD.cfdtmdf_4_1()[2],
     ",
   0x400c319cu64 => "
-      CANFD.cfdtmdf4__1()[3],
+      CANFD.cfdtmdf_4_1()[3],
     ",
   0x400c321cu64 => "
-      CANFD.cfdtmdf4__1()[4],
+      CANFD.cfdtmdf_4_1()[4],
     ",
   0x400c329cu64 => "
-      CANFD.cfdtmdf4__1()[5],
+      CANFD.cfdtmdf_4_1()[5],
     ",
   0x400c331cu64 => "
-      CANFD.cfdtmdf4__1()[6],
+      CANFD.cfdtmdf_4_1()[6],
     ",
   0x400c339cu64 => "
-      CANFD.cfdtmdf4__1()[7],
+      CANFD.cfdtmdf_4_1()[7],
     ",
   0x400c3020u64 => "
-      CANFD.cfdtmdf5__1()[0],
+      CANFD.cfdtmdf_5_1()[0],
     ",
   0x400c30a0u64 => "
-      CANFD.cfdtmdf5__1()[1],
+      CANFD.cfdtmdf_5_1()[1],
     ",
   0x400c3120u64 => "
-      CANFD.cfdtmdf5__1()[2],
+      CANFD.cfdtmdf_5_1()[2],
     ",
   0x400c31a0u64 => "
-      CANFD.cfdtmdf5__1()[3],
+      CANFD.cfdtmdf_5_1()[3],
     ",
   0x400c3220u64 => "
-      CANFD.cfdtmdf5__1()[4],
+      CANFD.cfdtmdf_5_1()[4],
     ",
   0x400c32a0u64 => "
-      CANFD.cfdtmdf5__1()[5],
+      CANFD.cfdtmdf_5_1()[5],
     ",
   0x400c3320u64 => "
-      CANFD.cfdtmdf5__1()[6],
+      CANFD.cfdtmdf_5_1()[6],
     ",
   0x400c33a0u64 => "
-      CANFD.cfdtmdf5__1()[7],
+      CANFD.cfdtmdf_5_1()[7],
     ",
   0x400c3024u64 => "
-      CANFD.cfdtmdf6__1()[0],
+      CANFD.cfdtmdf_6_1()[0],
     ",
   0x400c30a4u64 => "
-      CANFD.cfdtmdf6__1()[1],
+      CANFD.cfdtmdf_6_1()[1],
     ",
   0x400c3124u64 => "
-      CANFD.cfdtmdf6__1()[2],
+      CANFD.cfdtmdf_6_1()[2],
     ",
   0x400c31a4u64 => "
-      CANFD.cfdtmdf6__1()[3],
+      CANFD.cfdtmdf_6_1()[3],
     ",
   0x400c3224u64 => "
-      CANFD.cfdtmdf6__1()[4],
+      CANFD.cfdtmdf_6_1()[4],
     ",
   0x400c32a4u64 => "
-      CANFD.cfdtmdf6__1()[5],
+      CANFD.cfdtmdf_6_1()[5],
     ",
   0x400c3324u64 => "
-      CANFD.cfdtmdf6__1()[6],
+      CANFD.cfdtmdf_6_1()[6],
     ",
   0x400c33a4u64 => "
-      CANFD.cfdtmdf6__1()[7],
+      CANFD.cfdtmdf_6_1()[7],
     ",
   0x400c3028u64 => "
-      CANFD.cfdtmdf7__1()[0],
+      CANFD.cfdtmdf_7_1()[0],
     ",
   0x400c30a8u64 => "
-      CANFD.cfdtmdf7__1()[1],
+      CANFD.cfdtmdf_7_1()[1],
     ",
   0x400c3128u64 => "
-      CANFD.cfdtmdf7__1()[2],
+      CANFD.cfdtmdf_7_1()[2],
     ",
   0x400c31a8u64 => "
-      CANFD.cfdtmdf7__1()[3],
+      CANFD.cfdtmdf_7_1()[3],
     ",
   0x400c3228u64 => "
-      CANFD.cfdtmdf7__1()[4],
+      CANFD.cfdtmdf_7_1()[4],
     ",
   0x400c32a8u64 => "
-      CANFD.cfdtmdf7__1()[5],
+      CANFD.cfdtmdf_7_1()[5],
     ",
   0x400c3328u64 => "
-      CANFD.cfdtmdf7__1()[6],
+      CANFD.cfdtmdf_7_1()[6],
     ",
   0x400c33a8u64 => "
-      CANFD.cfdtmdf7__1()[7],
+      CANFD.cfdtmdf_7_1()[7],
     ",
   0x400c302cu64 => "
-      CANFD.cfdtmdf8__1()[0],
+      CANFD.cfdtmdf_8_1()[0],
     ",
   0x400c30acu64 => "
-      CANFD.cfdtmdf8__1()[1],
+      CANFD.cfdtmdf_8_1()[1],
     ",
   0x400c312cu64 => "
-      CANFD.cfdtmdf8__1()[2],
+      CANFD.cfdtmdf_8_1()[2],
     ",
   0x400c31acu64 => "
-      CANFD.cfdtmdf8__1()[3],
+      CANFD.cfdtmdf_8_1()[3],
     ",
   0x400c322cu64 => "
-      CANFD.cfdtmdf8__1()[4],
+      CANFD.cfdtmdf_8_1()[4],
     ",
   0x400c32acu64 => "
-      CANFD.cfdtmdf8__1()[5],
+      CANFD.cfdtmdf_8_1()[5],
     ",
   0x400c332cu64 => "
-      CANFD.cfdtmdf8__1()[6],
+      CANFD.cfdtmdf_8_1()[6],
     ",
   0x400c33acu64 => "
-      CANFD.cfdtmdf8__1()[7],
+      CANFD.cfdtmdf_8_1()[7],
     ",
   0x400c3030u64 => "
-      CANFD.cfdtmdf9__1()[0],
+      CANFD.cfdtmdf_9_1()[0],
     ",
   0x400c30b0u64 => "
-      CANFD.cfdtmdf9__1()[1],
+      CANFD.cfdtmdf_9_1()[1],
     ",
   0x400c3130u64 => "
-      CANFD.cfdtmdf9__1()[2],
+      CANFD.cfdtmdf_9_1()[2],
     ",
   0x400c31b0u64 => "
-      CANFD.cfdtmdf9__1()[3],
+      CANFD.cfdtmdf_9_1()[3],
     ",
   0x400c3230u64 => "
-      CANFD.cfdtmdf9__1()[4],
+      CANFD.cfdtmdf_9_1()[4],
     ",
   0x400c32b0u64 => "
-      CANFD.cfdtmdf9__1()[5],
+      CANFD.cfdtmdf_9_1()[5],
     ",
   0x400c3330u64 => "
-      CANFD.cfdtmdf9__1()[6],
+      CANFD.cfdtmdf_9_1()[6],
     ",
   0x400c33b0u64 => "
-      CANFD.cfdtmdf9__1()[7],
+      CANFD.cfdtmdf_9_1()[7],
     ",
   0x400c3034u64 => "
-      CANFD.cfdtmdf10__1()[0],
+      CANFD.cfdtmdf_10_1()[0],
     ",
   0x400c30b4u64 => "
-      CANFD.cfdtmdf10__1()[1],
+      CANFD.cfdtmdf_10_1()[1],
     ",
   0x400c3134u64 => "
-      CANFD.cfdtmdf10__1()[2],
+      CANFD.cfdtmdf_10_1()[2],
     ",
   0x400c31b4u64 => "
-      CANFD.cfdtmdf10__1()[3],
+      CANFD.cfdtmdf_10_1()[3],
     ",
   0x400c3234u64 => "
-      CANFD.cfdtmdf10__1()[4],
+      CANFD.cfdtmdf_10_1()[4],
     ",
   0x400c32b4u64 => "
-      CANFD.cfdtmdf10__1()[5],
+      CANFD.cfdtmdf_10_1()[5],
     ",
   0x400c3334u64 => "
-      CANFD.cfdtmdf10__1()[6],
+      CANFD.cfdtmdf_10_1()[6],
     ",
   0x400c33b4u64 => "
-      CANFD.cfdtmdf10__1()[7],
+      CANFD.cfdtmdf_10_1()[7],
     ",
   0x400c3038u64 => "
-      CANFD.cfdtmdf11__1()[0],
+      CANFD.cfdtmdf_11_1()[0],
     ",
   0x400c30b8u64 => "
-      CANFD.cfdtmdf11__1()[1],
+      CANFD.cfdtmdf_11_1()[1],
     ",
   0x400c3138u64 => "
-      CANFD.cfdtmdf11__1()[2],
+      CANFD.cfdtmdf_11_1()[2],
     ",
   0x400c31b8u64 => "
-      CANFD.cfdtmdf11__1()[3],
+      CANFD.cfdtmdf_11_1()[3],
     ",
   0x400c3238u64 => "
-      CANFD.cfdtmdf11__1()[4],
+      CANFD.cfdtmdf_11_1()[4],
     ",
   0x400c32b8u64 => "
-      CANFD.cfdtmdf11__1()[5],
+      CANFD.cfdtmdf_11_1()[5],
     ",
   0x400c3338u64 => "
-      CANFD.cfdtmdf11__1()[6],
+      CANFD.cfdtmdf_11_1()[6],
     ",
   0x400c33b8u64 => "
-      CANFD.cfdtmdf11__1()[7],
+      CANFD.cfdtmdf_11_1()[7],
     ",
   0x400c303cu64 => "
-      CANFD.cfdtmdf12__1()[0],
+      CANFD.cfdtmdf_12_1()[0],
     ",
   0x400c30bcu64 => "
-      CANFD.cfdtmdf12__1()[1],
+      CANFD.cfdtmdf_12_1()[1],
     ",
   0x400c313cu64 => "
-      CANFD.cfdtmdf12__1()[2],
+      CANFD.cfdtmdf_12_1()[2],
     ",
   0x400c31bcu64 => "
-      CANFD.cfdtmdf12__1()[3],
+      CANFD.cfdtmdf_12_1()[3],
     ",
   0x400c323cu64 => "
-      CANFD.cfdtmdf12__1()[4],
+      CANFD.cfdtmdf_12_1()[4],
     ",
   0x400c32bcu64 => "
-      CANFD.cfdtmdf12__1()[5],
+      CANFD.cfdtmdf_12_1()[5],
     ",
   0x400c333cu64 => "
-      CANFD.cfdtmdf12__1()[6],
+      CANFD.cfdtmdf_12_1()[6],
     ",
   0x400c33bcu64 => "
-      CANFD.cfdtmdf12__1()[7],
+      CANFD.cfdtmdf_12_1()[7],
     ",
   0x400c3040u64 => "
-      CANFD.cfdtmdf13__1()[0],
+      CANFD.cfdtmdf_13_1()[0],
     ",
   0x400c30c0u64 => "
-      CANFD.cfdtmdf13__1()[1],
+      CANFD.cfdtmdf_13_1()[1],
     ",
   0x400c3140u64 => "
-      CANFD.cfdtmdf13__1()[2],
+      CANFD.cfdtmdf_13_1()[2],
     ",
   0x400c31c0u64 => "
-      CANFD.cfdtmdf13__1()[3],
+      CANFD.cfdtmdf_13_1()[3],
     ",
   0x400c3240u64 => "
-      CANFD.cfdtmdf13__1()[4],
+      CANFD.cfdtmdf_13_1()[4],
     ",
   0x400c32c0u64 => "
-      CANFD.cfdtmdf13__1()[5],
+      CANFD.cfdtmdf_13_1()[5],
     ",
   0x400c3340u64 => "
-      CANFD.cfdtmdf13__1()[6],
+      CANFD.cfdtmdf_13_1()[6],
     ",
   0x400c33c0u64 => "
-      CANFD.cfdtmdf13__1()[7],
+      CANFD.cfdtmdf_13_1()[7],
     ",
   0x400c3044u64 => "
-      CANFD.cfdtmdf14__1()[0],
+      CANFD.cfdtmdf_14_1()[0],
     ",
   0x400c30c4u64 => "
-      CANFD.cfdtmdf14__1()[1],
+      CANFD.cfdtmdf_14_1()[1],
     ",
   0x400c3144u64 => "
-      CANFD.cfdtmdf14__1()[2],
+      CANFD.cfdtmdf_14_1()[2],
     ",
   0x400c31c4u64 => "
-      CANFD.cfdtmdf14__1()[3],
+      CANFD.cfdtmdf_14_1()[3],
     ",
   0x400c3244u64 => "
-      CANFD.cfdtmdf14__1()[4],
+      CANFD.cfdtmdf_14_1()[4],
     ",
   0x400c32c4u64 => "
-      CANFD.cfdtmdf14__1()[5],
+      CANFD.cfdtmdf_14_1()[5],
     ",
   0x400c3344u64 => "
-      CANFD.cfdtmdf14__1()[6],
+      CANFD.cfdtmdf_14_1()[6],
     ",
   0x400c33c4u64 => "
-      CANFD.cfdtmdf14__1()[7],
+      CANFD.cfdtmdf_14_1()[7],
     ",
   0x400c3048u64 => "
-      CANFD.cfdtmdf15__1()[0],
+      CANFD.cfdtmdf_15_1()[0],
     ",
   0x400c30c8u64 => "
-      CANFD.cfdtmdf15__1()[1],
+      CANFD.cfdtmdf_15_1()[1],
     ",
   0x400c3148u64 => "
-      CANFD.cfdtmdf15__1()[2],
+      CANFD.cfdtmdf_15_1()[2],
     ",
   0x400c31c8u64 => "
-      CANFD.cfdtmdf15__1()[3],
+      CANFD.cfdtmdf_15_1()[3],
     ",
   0x400c3248u64 => "
-      CANFD.cfdtmdf15__1()[4],
+      CANFD.cfdtmdf_15_1()[4],
     ",
   0x400c32c8u64 => "
-      CANFD.cfdtmdf15__1()[5],
+      CANFD.cfdtmdf_15_1()[5],
     ",
   0x400c3348u64 => "
-      CANFD.cfdtmdf15__1()[6],
+      CANFD.cfdtmdf_15_1()[6],
     ",
   0x400c33c8u64 => "
-      CANFD.cfdtmdf15__1()[7],
+      CANFD.cfdtmdf_15_1()[7],
     ",
   0x400d0000u64 => "
       CTSU.ctsucr0(),

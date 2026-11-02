@@ -41,7 +41,7 @@ FIX_MISSING_ACCESS_TAGS = True
 FIX_N_TO_NAME_TAGS = True
 
 # Cargo version
-CARGO_VERSION = "0.3.0"
+CARGO_VERSION = "0.3.1"
 
 # Define manifest template
 manifest_template = '''
@@ -992,6 +992,36 @@ def fix_dim_name_collisions(root):
     print(f"Renamed {renamed_count} colliding register arrays")
     return root
 
+def fix_double_underscore_array_names(root):
+    """
+    Rename register arrays whose accessor name would contain a double underscore.
+
+    svd2pac names the array accessor after the register name with %s removed, so RA6M5
+    CANFD names like CFDRMDF0_%s_0 become cfdrmdf0__0, which trips the non_snake_case
+    lint. Use the scheme of the other CANFD registers instead: CFDRMDF0_%s_0 ->
+    CFDRMDF%s_0_0; other names drop the separator: X_%s_Y -> X%s_Y.
+    """
+    print("Fixing register array names with double underscores...")
+
+    numbered_re = re.compile(r'(.*?[A-Za-z])(\d+)_%s(_.*)')
+    renamed_count = 0
+    for element in list(root.iter("register")) + list(root.iter("cluster")):
+        name = get_child_text(element, "name")
+        if not name or element.find("dim") is None or "_%s_" not in name:
+            continue
+
+        match = numbered_re.fullmatch(name)
+        if match:
+            new_name = f"{match.group(1)}%s_{match.group(2)}{match.group(3)}"
+        else:
+            new_name = name.replace("_%s_", "%s_")
+        element.find("name").text = new_name
+        renamed_count += 1
+        print(f"  Renamed '{name}' to '{new_name}'")
+
+    print(f"Renamed {renamed_count} register arrays with double underscores")
+    return root
+
 def fix_derived_peripherals_with_registers(root):
     """
     Expand derived peripherals that also declare their own registers.
@@ -1841,6 +1871,8 @@ def preprocess_svd_file(svd_file_path):
         fix_icu_irqcr_layouts(root, svd_file_path)
 
         fix_derived_peripherals_with_registers(root)
+
+        fix_double_underscore_array_names(root)
 
         fix_dim_name_collisions(root)
 

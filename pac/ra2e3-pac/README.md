@@ -15,7 +15,7 @@ Include this crate in your `Cargo.toml`:
 
 ```toml
 [dependencies]
- ra2e3-pac = "0.3.0"
+ ra2e3-pac = "0.3.1"
 ```
 
 ## License

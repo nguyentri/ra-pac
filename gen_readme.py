@@ -42,7 +42,7 @@ Include this crate in your `Cargo.toml`:
 
 ```toml
 [dependencies]
- {package_name} = "0.3.0"
+ {package_name} = "0.3.1"
 ```
 
 ## License

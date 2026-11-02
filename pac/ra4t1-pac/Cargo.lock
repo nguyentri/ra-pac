@@ -136,7 +136,7 @@ dependencies = [
 
 [[package]]
 name = "ra4t1-pac"
-version = "0.3.0"
+version = "0.3.1"
 dependencies = [
  "cortex-m",
  "cortex-m-rt",

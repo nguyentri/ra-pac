@@ -17,7 +17,7 @@
 
 [package]
 name = "ra2e3-pac"
-version = "0.3.0"
+version = "0.3.1"
 edition = "2024"
 description = "Peripheral Access Crate (PAC) for R7FA2E3."
 authors = ["Tri Nguyen <trongtribk06@gmail.com>"]
